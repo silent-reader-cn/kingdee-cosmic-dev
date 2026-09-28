@@ -11,46 +11,47 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fyeardebitloc | 年借方金额本位币 | numeric | 23 | 10 | √ | 0 | 年借方金额本位币 |
-| 3 | fopenorgid | 开户公司 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 4 | faccountcashid | 现金账户 | int8 | 64 |  | √ | 0 | 现金账户 cas_accountcash |
-| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 6 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | fopenorgid | 开户公司 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 4 | faccountcashid | 现金账户 | int8 | 64 |  | √ | 0 | [现金账户 cas_accountcash](../cas_files/cas_accountcash.md) |
+| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 6 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fmonthcredit | 期贷方 | numeric | 23 | 10 | √ | 0.0000000000 | 期贷方 |
 | 8 | fyeardebit | 年借方 | numeric | 23 | 10 | √ | 0.0000000000 | 年借方 |
 | 9 | fyearcredit | 年贷方 | numeric | 23 | 10 | √ | 0.0000000000 | 年贷方 |
 | 10 | fyearbalance | 年末余额 | numeric | 23 | 10 | √ | 0.0000000000 | 年末余额 |
 | 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 12 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 15 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 16 | fmonthbalance | 期末余额 | numeric | 23 | 10 | √ | 0.0000000000 | 期末余额 |
 | 17 | fyearcreditloc | 年贷方金额本位币 | numeric | 23 | 10 | √ | 0 | 年贷方金额本位币 |
 | 18 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
 | 19 | fisbalanced | 是否结账 | bpchar | 1 |  | √ | '0' | 是否结账 |
-| 20 | fyearstart | 年初余额 | numeric | 23 | 10 | √ | 0.0000000000 | 年初余额 |
-| 21 | fmonthdebit | 期借方 | numeric | 23 | 10 | √ | 0.0000000000 | 期借方 |
-| 22 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 23 | fremark | fremark | varchar | 255 |  |  | null |  |
-| 24 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 25 | fname | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
-| 26 | fperiodid | 期间 | int8 | 64 |  | √ | 0 | 会计日历 bd_period |
-| 27 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 28 | fmonthdebitloc | 期借方金额本位币 | numeric | 23 | 10 | √ | 0 | 期借方金额本位币 |
-| 29 | fmonthcreditloc | 期贷方金额本位币 | numeric | 23 | 10 | √ | 0 | 期贷方金额本位币 |
-| 30 | fmonthstart | 期初余额 | numeric | 23 | 10 | √ | 0.0000000000 | 期初余额 |
-| 31 | fctrlstrategy | 控制策略 | bpchar | 1 |  | √ | '5' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
-| 32 | fbasecurrency | 本位币 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
-| 33 | fyearbalanceloc | 年末余额本位币 | numeric | 23 | 10 | √ | 0 | 年末余额本位币 |
-| 34 | fyearstartloc | 年初余额本位币 | numeric | 23 | 10 | √ | 0 | 年初余额本位币 |
-| 35 | ftype | 类型 | bpchar | 1 |  | √ | '1' | 类型,枚举: 1 :现金 2 :日记账 3 :对账单 |
-| 36 | fenable | 使用状态 | bpchar | 1 |  | √ | '0' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 37 | fmonthbalanceloc | 期末余额本位币 | numeric | 23 | 10 | √ | 0 | 期末余额本位币 |
-| 38 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
-| 39 | fmonthstartloc | 期初余额本位币 | numeric | 23 | 10 | √ | 0 | 期初余额本位币 |
-| 40 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
-| 41 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
-| 42 | faccountbankid | 银行账户 | int8 | 64 |  | √ | 0 | 银行账户 bd_accountbanks |
+| 20 | fmiginfo | 迁移数据信息 | varchar | 255 |  | √ | ' ' | 迁移数据信息 |
+| 21 | fyearstart | 年初余额 | numeric | 23 | 10 | √ | 0.0000000000 | 年初余额 |
+| 22 | fmonthdebit | 期借方 | numeric | 23 | 10 | √ | 0.0000000000 | 期借方 |
+| 23 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 24 | fremark | fremark | varchar | 255 |  |  | null |  |
+| 25 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 26 | fname | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
+| 27 | fperiodid | 期间 | int8 | 64 |  | √ | 0 | [会计日历 bd_period](../fibd_files/bd_period.md) |
+| 28 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 29 | fmonthdebitloc | 期借方金额本位币 | numeric | 23 | 10 | √ | 0 | 期借方金额本位币 |
+| 30 | fmonthcreditloc | 期贷方金额本位币 | numeric | 23 | 10 | √ | 0 | 期贷方金额本位币 |
+| 31 | fmonthstart | 期初余额 | numeric | 23 | 10 | √ | 0.0000000000 | 期初余额 |
+| 32 | fctrlstrategy | 控制策略 | bpchar | 1 |  | √ | '5' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
+| 33 | fbasecurrency | 本位币 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
+| 34 | fyearbalanceloc | 年末余额本位币 | numeric | 23 | 10 | √ | 0 | 年末余额本位币 |
+| 35 | fyearstartloc | 年初余额本位币 | numeric | 23 | 10 | √ | 0 | 年初余额本位币 |
+| 36 | ftype | 类型 | bpchar | 1 |  | √ | '1' | 类型,枚举: 1 :现金 2 :日记账 3 :对账单 |
+| 37 | fenable | 使用状态 | bpchar | 1 |  | √ | '0' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 38 | fmonthbalanceloc | 期末余额本位币 | numeric | 23 | 10 | √ | 0 | 期末余额本位币 |
+| 39 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
+| 40 | fmonthstartloc | 期初余额本位币 | numeric | 23 | 10 | √ | 0 | 期初余额本位币 |
+| 41 | fcurrencyid | 币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
+| 42 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
+| 43 | faccountbankid | 银行账户 | int8 | 64 |  | √ | 0 | [银行账户 bd_accountbanks](../basedata_files/bd_accountbanks.md) |
 
 ### 列规则定义
 

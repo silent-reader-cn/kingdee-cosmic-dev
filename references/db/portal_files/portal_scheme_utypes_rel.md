@@ -10,8 +10,8 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fschemeid | 方案 | int8 | 64 |  | √ | 0 | 首页方案 portal_scheme |
-| 3 | fusertypeid | 人员类型 | int8 | 64 |  | √ | 0 | 人员类型 bos_usertype |
+| 2 | fschemeid | 方案 | int8 | 64 |  | √ | 0 | [首页方案 portal_scheme](../portal_files/portal_scheme.md) |
+| 3 | fusertypeid | 人员类型 | int8 | 64 |  | √ | 0 | [人员类型 bos_usertype](../base_files/bos_usertype.md) |
 
 ### 列规则定义
 
@@ -23,6 +23,6 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_utype_fschemeid |  | fschemeid |
-| 2 | pk_bas_usertypesmainpage |  | fid |
+| 1 | pk_bas_usertypesmainpage |  | fid |
+| 2 | idx_utype_fschemeid |  | fschemeid |
 | 3 | idx_utypesmainpage |  | fusertypeid |

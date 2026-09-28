@@ -57,5 +57,5 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | t_er_futureweather_pkey |  | fentryid |
-| 2 | idx_er_fuwe_fseq |  | fid,fseq |
+| 1 | idx_er_fuwe_fseq |  | fid,fseq |
+| 2 | t_er_futureweather_pkey |  | fentryid |

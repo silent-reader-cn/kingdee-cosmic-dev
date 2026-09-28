@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | null | id |
-| 2 | forgid | 组织 | int8 | 64 |  |  | null | 业务单元 bos_org |
+| 2 | forgid | 组织 | int8 | 64 |  |  | null | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fk_ysq_publish_time | 流程发布时间 | timestamp | 0 |  |  | null | 流程发布时间 |
 | 4 | fk_ysq_parameter | 调度参数 | varchar | 255 |  | √ | ' ' | 调度参数 |
 | 5 | fk_ysq_fail_try_times | 失败重试次数 | int8 | 64 |  |  | null | 失败重试次数 |
@@ -44,7 +44,7 @@
 | 33 | fk_ysq_sch_type | 调度类型 | varchar | 50 |  | √ | ' ' | 调度类型,枚举: manager :管理者 unManager :非管理者 |
 | 34 | fk_ysq_owner_user_fid | 所有者ID | int8 | 64 |  |  | null | 所有者ID |
 | 35 | fk_ysq_status | 运行状态 | varchar | 50 |  | √ | ' ' | 运行状态,枚举: pending :等待运行 running :正在运行 success :运行成功 failed :已失败 stopping :准备停止 stopped :已停止 cancelled :已取消 |
-| 36 | fauditorid | 审核人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 36 | fauditorid | 审核人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 37 | fk_ysq_curr_robot_no | 当前执行机器人 | varchar | 128 |  | √ | ' ' | 当前执行机器人 |
 | 38 | fk_ysq_result_change_type | 结果修改方式 | varchar | 50 |  | √ | ' ' | 结果修改方式,枚举: CLIENT :客户端修改 SERVER :服务端修改 |
 | 39 | fk_ysq_run_time_sec | 运行时长 | int8 | 64 |  |  | null | 运行时长 |
@@ -55,7 +55,7 @@
 | 44 | fk_ysq_priority | 优先级 | varchar | 50 |  | √ | ' ' | 优先级,枚举: high :紧急 middle :普通 low :低级 higher :特急 |
 | 45 | fk_ysq_pending_timeout | 等待超时时间 | int8 | 64 |  |  | null | 等待超时时间 |
 | 46 | fk_ysq_exception_content | 异常内容 | varchar | 255 |  | √ | ' ' | 异常内容 |
-| 47 | fcreatorid | 创建人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 47 | fcreatorid | 创建人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 48 | fk_ysq_produce_type | 产生方式 | varchar | 50 |  | √ | ' ' | 产生方式,枚举: manual_run :手工运行 task_scheduling :任务调度 |
 | 49 | fk_ysq_description | 描述 | varchar | 254 |  | √ | ' ' | 描述 |
 | 50 | fk_ysq_proc_file | 流程文件 | varchar | 2000 |  | √ | ' ' | 流程文件 |
@@ -63,7 +63,7 @@
 | 52 | fk_ysq_exec_robots_names_tag | 候选机器人主机名_详情 | text | 0 |  |  | null | 候选机器人主机名_详情 |
 | 53 | fk_ysq_auto_stop_time | 自动停止时长 | int8 | 64 |  |  | null | 自动停止时长 |
 | 54 | fk_ysq_proc_code | 流程编号 | varchar | 32 |  | √ | ' ' | 流程编号 |
-| 55 | fmodifierid | 修改人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 55 | fmodifierid | 修改人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 56 | fk_ysq_run_times | 运行次数 | int8 | 64 |  |  | null | 运行次数 |
 | 57 | fk_ysq_exception_content_tag | 异常内容_详情 | text | 0 |  |  | null | 异常内容_详情 |
 | 58 | fk_ysq_dev_user_alias | 开发者用户名 | varchar | 512 |  | √ | ' ' | 开发者用户名 |

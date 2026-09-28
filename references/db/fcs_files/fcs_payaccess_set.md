@@ -11,21 +11,21 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
-| 3 | fmodifierid | 最后更新人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 最后更新人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fisfulllink | 全链路 | bpchar | 1 |  | √ | '0' | 全链路 |
 | 5 | fcomment | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 7 | fenabledate | 启用日期 | timestamp | 0 |  |  | null | 启用日期 |
 | 8 | fdisabledate | 禁用日期 | timestamp | 0 |  |  | null | 禁用日期 |
-| 9 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | fapipass | 自定义不校验支付准入 | bpchar | 1 |  | √ | '0' | 自定义不校验支付准入 |
 | 11 | fasync | 同步 | bpchar | 1 |  | √ | '0' | 同步 |
 | 12 | fmodifytime | 最后更新时间 | timestamp | 0 |  |  | null | 最后更新时间 |
 | 13 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 16 | fenable | 使用状态 | varchar | 30 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 17 | fenablerid | 启用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 17 | fenablerid | 启用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 18 | fnumber | 单据编码 | varchar | 80 |  | √ | ' ' | 单据编码 |
 
 ### 列规则定义

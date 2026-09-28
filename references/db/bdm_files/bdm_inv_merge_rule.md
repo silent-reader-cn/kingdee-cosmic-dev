@@ -39,12 +39,12 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
 | 4 | fbillmergekey | 单据合并key | varchar | 300 |  | √ | ' ' | 单据合并key |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 6 | fsamerowtypemerge | 同性质商品行合并处理 | varchar | 50 |  | √ | ' ' | 同性质商品行合并处理,枚举: 2 :数量置为1，反算单价 3 :数量、单价置空 |
-| 7 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 7 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | fnodeviationmergerule | 不允许尾差处理逻辑 | varchar | 50 |  | √ | ' ' | 不允许尾差处理逻辑,枚举: 1 :单据无法开票 2 :单据可开票，符合条件的数据合并成多行 |
 | 9 | fdeviationrule | 尾差处理规则 | varchar | 50 |  | √ | ' ' | 尾差处理规则,枚举: 1 :单据总税额、总不含税金额、价税合计不允许尾差 2 :单据价税合计不允许尾差 |
 | 10 | fitemmergekey | 明细合并key | varchar | 300 |  | √ | ' ' | 明细合并key |
@@ -54,7 +54,7 @@
 | 14 | fremarkmergetype | fremarkmergetype | varchar | 50 |  | √ | '1' |  |
 | 15 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 16 | fnegativeoffset | 负数未完全冲抵 | varchar | 50 |  | √ | ' ' | 负数未完全冲抵,枚举: 1 :无法开票 2 :明细剩余金额与同税率的行合并 |
-| 17 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 17 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 18 | fclearitemkey | fclearitemkey | varchar | 50 |  | √ | ' ' |  |
 | 19 | fbillmergename | 单据合并名称显示 | varchar | 600 |  | √ | ' ' | 单据合并名称显示 |
 | 20 | fenable | 状态 | varchar | 50 |  | √ | ' ' | 状态,枚举: 0 :禁用 1 :可用 |

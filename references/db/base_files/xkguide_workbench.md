@@ -12,7 +12,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fmaintitle | 主标题 | varchar | 100 |  |  | ' ' | 主标题 |
 | 3 | fsubtitle | 副标题 | varchar | 500 |  |  | ' ' | 副标题 |
-| 4 | fbizappid | 业务应用 | varchar | 50 |  | √ | ' ' | 业务应用实体 bos_devportal_bizapp |
+| 4 | fbizappid | 业务应用 | varchar | 50 |  | √ | ' ' | [业务应用实体 bos_devportal_bizapp](../mdl_files/bos_devportal_bizapp.md) |
 
 ### 列规则定义
 

@@ -15,15 +15,15 @@
 | 4 | fradiovalue | 默认时间维度精度 | varchar | 50 |  | √ | ' ' | 默认时间维度精度 |
 | 5 | frepeatday |  | varchar | 50 |  | √ | ' ' | ,枚举: |
 | 6 | fmodifytime | 修改时间 | timestamp | 0 |  |  | LOCALTIMESTAMP | 修改时间 |
-| 7 | fcatalogueid | 所属指标 | int8 | 64 |  | √ | 0 | 数智指标 didc_indexcatalogue |
+| 7 | fcatalogueid | 所属指标 | int8 | 64 |  | √ | 0 | [数智指标 didc_indexcatalogue](../didc_files/didc_indexcatalogue.md) |
 | 8 | fstatus | 启用 | varchar | 50 |  | √ | '1' | 启用 |
-| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | fnumbervalue | 时间数 | varchar | 50 |  | √ | ' ' | 时间数 |
 | 11 | fbillno | 单据编号 | varchar | 30 |  | √ | ' ' | 单据编号 |
 | 12 | fchannel | 发送 | varchar | 50 |  | √ | ' ' | 发送,枚举: |
 | 13 | fplan | 风险项名称 | varchar | 50 |  | √ | ' ' | 风险项名称 |
 | 14 | fdatetype | 维度时间类型 | varchar | 50 |  | √ | ' ' | 维度时间类型 |
-| 15 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 15 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 16 | fsuggest_tag | 行动建议_详情 | text | 0 |  |  | ' ' | 行动建议_详情 |
 | 17 | fbillstatus | 风险项状态 | varchar | 50 |  | √ | ' ' | 风险项状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 18 | fcreatetime | 创建时间 | timestamp | 0 |  |  | LOCALTIMESTAMP | 创建时间 |
@@ -40,7 +40,7 @@
 | 29 | fsuggest | 行动建议 | varchar | 255 |  | √ | ' ' | 行动建议 |
 | 30 | fcontent | 消息内容 | varchar | 255 |  | √ | ' ' | 消息内容 |
 | 31 | fnotice | 消息通知 | bpchar | 1 |  | √ | ' ' | 消息通知 |
-| 32 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 32 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 33 | fdimension | 分析维度 | varchar | 500 |  | √ | ' ' | 分析维度 |
 | 34 | findextrend | 指标趋势 | varchar | 50 |  | √ | ' ' | 指标趋势,枚举: high :越高越好 low :越低越好 |
 
@@ -116,8 +116,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | pk_t_didc_indexwarn_l |  | fpkid |
-| 2 | idx_didc_indexwarn_l |  | fid |
+| 1 | idx_didc_indexwarn_l |  | fid |
+| 2 | pk_t_didc_indexwarn_l |  | fpkid |
 
 ---
 
@@ -131,7 +131,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 用户信息 bos_usergroup_user |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [用户信息 bos_usergroup_user](../base_files/bos_usergroup_user.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义

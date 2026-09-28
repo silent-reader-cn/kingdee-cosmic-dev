@@ -12,7 +12,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | f_billentry_id | 需求单据分录ID | int8 | 64 |  | √ | 0 | 需求单据分录ID |
 | 3 | f_bill_no | 需求单据编号 | varchar | 100 |  | √ | ' ' | 需求单据编号 |
-| 4 | f_bill_obj_id | 需求单据实体 | varchar | 50 |  | √ | ' ' | 单据主实体 bos_billmainentity |
+| 4 | f_bill_obj_id | 需求单据实体 | varchar | 50 |  | √ | ' ' | [单据主实体 bos_billmainentity](../mdl_files/bos_billmainentity.md) |
 | 5 | flast_runtime | 最后运算时间 | timestamp | 0 |  |  | null | 最后运算时间 |
 | 6 | flast_runlogno | 最后计划运算号 | varchar | 100 |  | √ | ' ' | 最后计划运算号 |
 | 7 | f_billentry_seq | 需求单据分录行号 | int8 | 64 |  | √ | 0 | 需求单据分录行号 |

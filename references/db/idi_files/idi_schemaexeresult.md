@@ -14,11 +14,11 @@
 | 3 | fpageid | 页面 | varchar | 255 |  | √ | ' ' | 页面 |
 | 4 | fcreatedate | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 5 | ftraceid | 请求id | varchar | 50 |  | √ | ' ' | 请求id |
-| 6 | fcreaterid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 7 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | fcreaterid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 7 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | fbillid | 单据id | varchar | 50 |  | √ | ' ' | 单据id |
-| 9 | fschemaid | 智能洞察方案 | int8 | 64 |  | √ | 0 | 决策方案 idi_schema |
-| 10 | fbilltypeid | 单据类型 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 9 | fschemaid | 智能洞察方案 | int8 | 64 |  | √ | 0 | [决策方案 idi_schema](../idi_files/idi_schema.md) |
+| 10 | fbilltypeid | 单据类型 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 
 ### 列规则定义
 
@@ -33,3 +33,4 @@
 | 1 | idx_t_idi_schemaexeresult_tid |  | ftraceid |
 | 2 | pk_t_idi_schemaexeresult |  | fid |
 | 3 | idx_t_idi_schemaexeresult_sgid |  | fschemaid |
+| 4 | idx_idi_schemaexeresult |  | fpageid |

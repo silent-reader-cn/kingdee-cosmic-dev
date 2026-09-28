@@ -9,7 +9,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | 清理单 | int8 | 64 |  | √ | 0 | 清理单基础资料 fa_clearbill_base |
+| 1 | fid | 清理单 | int8 | 64 |  | √ | 0 | [清理单基础资料 fa_clearbill_base](../fa_files/fa_clearbill_base.md) |
 | 2 | faddupdepre | 清理累计折旧 | numeric | 19 | 6 | √ | 0.000000 | 清理累计折旧 |
 | 3 | fnetamount | fnetamount | numeric | 19 | 6 | √ | 0.000000 |  |
 | 4 | fclearloss | fclearloss | numeric | 19 | 6 | √ | 0 |  |
@@ -27,29 +27,30 @@
 | 16 | ffincardid | ffincardid | int8 | 64 |  | √ | 0 |  |
 | 17 | fbillno | 清理单号 | varchar | 30 |  | √ | ' ' | 清理单号 |
 | 18 | fclearfare | 清理费用 | numeric | 19 | 6 | √ | 0.000000 | 清理费用 |
-| 19 | fdepreuseid | 折旧用途 | int8 | 64 |  | √ | 0 | 折旧用途 fa_depreuse |
+| 19 | fdepreuseid | 折旧用途 | int8 | 64 |  | √ | 0 | [折旧用途 fa_depreuse](../fa_files/fa_depreuse.md) |
 | 20 | flocclearfare | flocclearfare | numeric | 19 | 6 | √ | 0 |  |
 | 21 | fremark | fremark | varchar | 255 |  |  | ' ' |  |
 | 22 | ftaxamount | ftaxamount | numeric | 19 | 6 | √ | 0 |  |
 | 23 | fclearperiodid | fclearperiodid | int8 | 64 |  | √ | 0 |  |
 | 24 | fclearincome | 清理收入 | numeric | 19 | 6 | √ | 0.000000 | 清理收入 |
-| 25 | fassetqty | 资产数量 | numeric | 23 | 10 | √ | 0.0000000000 | 资产数量 |
-| 26 | fcompfieldsv | fcompfieldsv | varchar | 200 |  | √ | ' ' |  |
-| 27 | fassetvalue | 资产原值 | numeric | 19 | 6 | √ | 0.000000 | 资产原值 |
-| 28 | frealcardid | 资产编码 | int8 | 64 |  | √ | 0 | 资产卡片基础资料 fa_card_real_base |
-| 29 | fpolicyid | fpolicyid | int8 | 64 |  | √ | 0 |  |
-| 30 | fclearqty | 清理数量 | numeric | 19 | 6 | √ | 0.000000 | 清理数量 |
-| 31 | fpreresidualval | fpreresidualval | numeric | 19 | 6 | √ | 0.000000 |  |
-| 32 | fbasecurrencyid | 本位币 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
-| 33 | flocclearincome | flocclearincome | numeric | 19 | 6 | √ | 0 |  |
-| 34 | fbizdate | 业务日期 | timestamp | 0 |  |  | null | 业务日期 |
-| 35 | fcurrencyrate | fcurrencyrate | numeric | 19 | 6 | √ | 0 |  |
-| 36 | fmeasureunitid | 计量单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 37 | fentrysid | 主键 | int8 | 64 |  | √ | 0 | 主键 |
-| 38 | fnetval | fnetval | numeric | 19 | 6 | √ | 0.000000 |  |
-| 39 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
-| 40 | fmonthadjustdepreforcur | fmonthadjustdepreforcur | numeric | 19 | 6 | √ | 0 |  |
-| 41 | fassetnumber | 资产编码 | varchar | 100 |  | √ | ' ' | 资产编码 |
+| 25 | frevaluationreserve | frevaluationreserve | numeric | 19 | 6 | √ | 0 |  |
+| 26 | fassetqty | 资产数量 | numeric | 23 | 10 | √ | 0.0000000000 | 资产数量 |
+| 27 | fcompfieldsv | fcompfieldsv | varchar | 200 |  | √ | ' ' |  |
+| 28 | fassetvalue | 资产原值 | numeric | 19 | 6 | √ | 0.000000 | 资产原值 |
+| 29 | frealcardid | 资产编码 | int8 | 64 |  | √ | 0 | [资产卡片基础资料 fa_card_real_base](../fa_files/fa_card_real_base.md) |
+| 30 | fpolicyid | fpolicyid | int8 | 64 |  | √ | 0 |  |
+| 31 | fclearqty | 清理数量 | numeric | 19 | 6 | √ | 0.000000 | 清理数量 |
+| 32 | fpreresidualval | fpreresidualval | numeric | 19 | 6 | √ | 0.000000 |  |
+| 33 | fbasecurrencyid | 本位币 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
+| 34 | flocclearincome | flocclearincome | numeric | 19 | 6 | √ | 0 |  |
+| 35 | fbizdate | 业务日期 | timestamp | 0 |  |  | null | 业务日期 |
+| 36 | fcurrencyrate | fcurrencyrate | numeric | 19 | 6 | √ | 0 |  |
+| 37 | fmeasureunitid | 计量单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 38 | fentrysid | 主键 | int8 | 64 |  | √ | 0 | 主键 |
+| 39 | fnetval | fnetval | numeric | 19 | 6 | √ | 0.000000 |  |
+| 40 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
+| 41 | fmonthadjustdepreforcur | fmonthadjustdepreforcur | numeric | 19 | 6 | √ | 0 |  |
+| 42 | fassetnumber | 资产编码 | varchar | 100 |  | √ | ' ' | 资产编码 |
 
 ### 列规则定义
 

@@ -44,6 +44,70 @@
 
 ---
 
+## 加密规则模板-多语言表 t_privacy_encrypt_tpl_l
+
+- **表名称：** 加密规则模板-多语言表
+- **表名：** t_privacy_encrypt_tpl_l
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fencrypt_cloud_name | 所属云 | varchar | 100 |  | √ | ' ' | 所属云 |
+| 2 | fencrypt_app_name | 所属应用 | varchar | 100 |  | √ | ' ' | 所属应用 |
+| 3 | fencrypt_entity_name | 所属实体 | varchar | 200 |  | √ | ' ' | 所属实体 |
+| 4 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
+| 5 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
+| 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
+| 7 | fencrypt_field_desc | 字段名称 | varchar | 100 |  | √ | ' ' | 字段名称 |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fpkid | fpkid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_privacy_encrypt_tpl_l_fid |  | fentryid,flocaleid |
+| 2 | pk_privacy_encrypt_tpl_l |  | fpkid |
+
+---
+
+## 脱敏规则模板-多语言表 t_privacy_desen_tpl_l
+
+- **表名称：** 脱敏规则模板-多语言表
+- **表名：** t_privacy_desen_tpl_l
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fdense_cloud_name | 所属云 | varchar | 100 |  | √ | ' ' | 所属云 |
+| 2 | fdense_entity_name | 所属实体 | varchar | 200 |  | √ | ' ' | 所属实体 |
+| 3 | fdense_app_name | 所属应用 | varchar | 100 |  | √ | ' ' | 所属应用 |
+| 4 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
+| 5 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
+| 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
+| 7 | fdense_field_desc | 字段名称 | varchar | 100 |  | √ | ' ' | 字段名称 |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fpkid | fpkid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_privacy_desen_tpl_l_fid |  | fentryid,flocaleid |
+| 2 | pk_privacy_desen_tpl_l |  | fpkid |
+
+---
+
 ## 隐私方案配置_模板-主表 t_privacy_config_tpl
 
 - **表名称：** 隐私方案配置_模板-主表
@@ -56,15 +120,15 @@
 | 1 | fid | fid | int8 | 64 |  | √ | null | id |
 | 2 | fscheme_status | 状态 | varchar | 50 |  | √ | ' ' | 状态,枚举: 0 :发布中 1 :已发布 |
 | 3 | fscheme_name | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 4 | fmodifier | 修改人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 4 | fmodifier | 修改人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fcreatedate | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
 | 6 | fmasterid | 主数据内码 | int8 | 64 |  |  | null | 主数据内码 |
 | 7 | fmodifydate | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
-| 8 | fcreater | 创建人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 8 | fcreater | 创建人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fmessagechannel | 消息渠道 | varchar | 50 |  | √ | ' ' | 消息渠道,枚举: CLOUDHUB :云之家 EMAIL :邮件 MESSAGE :短信 |
 | 10 | fscheme_code | 编码 | varchar | 50 |  | √ | ' ' | 编码 |
 | 11 | fscheme_desc | 说明 | varchar | 50 |  | √ | ' ' | 说明 |
-| 12 | fdatalabelid | 数据安全标签 | int8 | 64 |  |  | null | 数据安全标签模板 privacy_data_tags_temp |
+| 12 | fdatalabelid | 数据安全标签 | int8 | 64 |  |  | null | [数据安全标签模板 privacy_data_tags_temp](../privacy_files/privacy_data_tags_temp.md) |
 | 13 | ftemplate | 消息模板 | varchar | 255 |  | √ | ' ' | 消息模板 |
 
 ### 列规则定义
@@ -138,7 +202,8 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fscheme_name | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
 | 3 | flocaleid | flocaleid | varchar | 10 |  | √ | '' | localeid |
-| 4 | fpkid | fpkid | varchar | 36 |  | √ | null | pkid |
+| 4 | fscheme_desc | 说明 | varchar | 255 |  | √ | ' ' | 说明 |
+| 5 | fpkid | fpkid | varchar | 36 |  | √ | null | pkid |
 
 ### 列规则定义
 

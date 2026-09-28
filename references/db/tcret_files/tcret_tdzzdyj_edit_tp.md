@@ -13,10 +13,10 @@
 | 2 | fpreadjust | 调整数值前 | numeric | 23 | 10 | √ | 0 | 调整数值前 |
 | 3 | fyjxmid | 预缴项目id | int8 | 64 |  | √ | 0 | 预缴项目id |
 | 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 5 | forgid | 取数组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | forgid | 取数组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | fadjustexplain | 调整说明 | varchar | 1000 |  | √ | ' ' | 调整说明 |
 | 7 | fskssqq | 开始日期 | timestamp | 0 |  |  | null | 开始日期 |
-| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fadjusttype | 调整类型 | varchar | 50 |  | √ | ' ' | 调整类型,枚举: 1 :数据源调整 2 :手工录入调整 |
 | 10 | fpostadjust | 调整数值后 | numeric | 23 | 10 | √ | 0 | 调整数值后 |
 | 11 | fskssqz | 结束日期 | timestamp | 0 |  |  | null | 结束日期 |

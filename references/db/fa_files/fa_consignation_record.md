@@ -11,22 +11,22 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fdifference | 差异 | numeric | 23 | 10 | √ | 0.0000000000 | 差异 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fmodel | 规格型号 | varchar | 255 |  | √ | ' ' | 规格型号 |
-| 5 | finventorytaskid | 盘点任务 | int8 | 64 |  | √ | 0 | 我的盘点任务 fa_inventory_task |
+| 5 | finventorytaskid | 盘点任务 | int8 | 64 |  | √ | 0 | [我的盘点任务 fa_inventory_task](../fa_files/fa_inventory_task.md) |
 | 6 | fbillstatus | 单据状态 | bpchar | 1 |  | √ | 'C' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 7 | fconsignorid | 委托人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 7 | fconsignorid | 委托人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 8 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 9 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
 | 10 | fbillstate | fbillstate | bpchar | 1 |  | √ | '1' |  |
-| 11 | frealcardid | 实物卡片 | int8 | 64 |  | √ | 0 | 资产卡片基础资料 fa_card_real_base |
+| 11 | frealcardid | 实物卡片 | int8 | 64 |  | √ | 0 | [资产卡片基础资料 fa_card_real_base](../fa_files/fa_card_real_base.md) |
 | 12 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 13 | finventschemeentryid | 盘点方案 | int8 | 64 |  | √ | 0 | 盘点方案 fa_inventscheme_new |
-| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 15 | fconsigneeid | 被委托人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | finventschemeentryid | 盘点方案 | int8 | 64 |  | √ | 0 | [盘点方案 fa_inventscheme_new](../fa_files/fa_inventscheme_new.md) |
+| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 15 | fconsigneeid | 被委托人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 16 | fnumber | 资产编码 | varchar | 50 |  | √ | ' ' | 资产编码 |
 | 17 | fbillno | 单据编号 | varchar | 60 |  | √ | ' ' | 单据编号 |
-| 18 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 18 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

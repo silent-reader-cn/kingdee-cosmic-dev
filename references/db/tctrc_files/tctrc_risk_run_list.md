@@ -12,14 +12,14 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fplanid | 方案ID | int8 | 64 |  | √ | 0 | 方案ID |
 | 3 | flastruntime | 最后运行时间 | timestamp | 0 |  |  | null | 最后运行时间 |
-| 4 | frisk | 风险 | int8 | 64 |  | √ | 0 | 风险设置 tctrc_risk_definition |
-| 5 | frunorg | 运行组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 4 | frisk | 风险 | int8 | 64 |  | √ | 0 | [风险设置 tctrc_risk_definition](../tctrc_files/tctrc_risk_definition.md) |
+| 5 | frunorg | 运行组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | fmonth | 定时运行月份 | varchar | 100 |  | √ | ' ' | 定时运行月份 |
 | 7 | fday | 定时运行日 | varchar | 100 |  | √ | ' ' | 定时运行日 |
 | 8 | fsharingid | 风险分配主键 | int8 | 64 |  | √ | 0 | 风险分配主键 |
-| 9 | fruntime | 运行时间 | varchar | 100 |  | √ | ' ' | 运行时间 |
+| 9 | fruntime | 计算周期 | varchar | 100 |  | √ | ' ' | 计算周期 |
 | 10 | fcollect | 收藏 | varchar | 50 |  | √ | ' ' | 收藏 |
-| 11 | fassignorg | 分配组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 11 | fassignorg | 分配组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 12 | fplannumber | 方案号 | varchar | 100 |  | √ | ' ' | 方案号 |
 
 ### 列规则定义

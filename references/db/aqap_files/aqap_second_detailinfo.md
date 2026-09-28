@@ -53,12 +53,12 @@
 | 42 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 43 | fcustom_id | custom_id | varchar | 50 |  | √ | ' ' | custom_id |
 | 44 | fserial_no | serial_no | int8 | 64 |  |  | null | serial_no |
-| 45 | fcreatorid | 创建人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 45 | fcreatorid | 创建人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 46 | fmasterid | 主数据内码 | int8 | 64 |  |  | null | 主数据内码 |
 | 47 | fopp_bank_name | opp_bank_name | varchar | 255 |  | √ | ' ' | opp_bank_name |
 | 48 | fpay_detail_seq_id | pay_detail_seq_id | varchar | 50 |  | √ | ' ' | pay_detail_seq_id |
 | 49 | freversed_biz_field | reversed_biz_field | varchar | 600 |  | √ | ' ' | reversed_biz_field |
-| 50 | fmodifierid | 修改人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 50 | fmodifierid | 修改人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 51 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 52 | fcurrency | currency | varchar | 50 |  | √ | ' ' | currency |
 | 53 | fcredit_amount | credit_amount | numeric | 23 | 10 |  | null | credit_amount |

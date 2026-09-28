@@ -23,14 +23,15 @@
 | 12 | freqiureorg | freqiureorg | varchar | 500 |  |  | null |  |
 | 13 | fmodifytime | fmodifytime | timestamp | 0 |  |  | null |  |
 | 14 | fwarehouse | fwarehouse | varchar | 500 |  |  | null |  |
-| 15 | fcreatorid | fcreatorid | int8 | 64 |  |  | null |  |
-| 16 | fpredate | fpredate | int8 | 64 |  |  | null |  |
-| 17 | fplangroup | fplangroup | varchar | 500 |  |  | null |  |
-| 18 | fstartdate | fstartdate | timestamp | 0 |  |  | null |  |
-| 19 | fplanweek | fplanweek | int8 | 64 |  |  | null |  |
-| 20 | fmaterial | fmaterial | varchar | 500 |  |  | null |  |
-| 21 | fbillno | fbillno | varchar | 30 |  |  | null |  |
-| 22 | fauditorid | fauditorid | int8 | 64 |  |  | null |  |
+| 15 | fdemandmaterial | fdemandmaterial | bpchar | 1 |  |  | null |  |
+| 16 | fcreatorid | fcreatorid | int8 | 64 |  |  | null |  |
+| 17 | fpredate | fpredate | int8 | 64 |  |  | null |  |
+| 18 | fplangroup | fplangroup | varchar | 500 |  |  | null |  |
+| 19 | fstartdate | fstartdate | timestamp | 0 |  |  | null |  |
+| 20 | fplanweek | fplanweek | int8 | 64 |  |  | null |  |
+| 21 | fmaterial | fmaterial | varchar | 500 |  |  | null |  |
+| 22 | fbillno | fbillno | varchar | 30 |  |  | null |  |
+| 23 | fauditorid | fauditorid | int8 | 64 |  |  | null |  |
 
 ### 列规则定义
 

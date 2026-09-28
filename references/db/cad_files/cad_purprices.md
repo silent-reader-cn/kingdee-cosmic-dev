@@ -39,32 +39,32 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmaterialid | 物料编码 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 2 | fmaterialid | 物料编码 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 3 | fauxptyid | 辅助属性 | int8 | 64 |  | √ | 0 | null 001 |
 | 4 | fexpdate | 失效日期 | timestamp | 0 |  |  | null | 失效日期 |
 | 5 | famount | 标准金额 | numeric | 23 | 10 | √ | 0.0000000000 | 标准金额 |
-| 6 | fconfiguredcodeid | 配置号 | int8 | 64 |  | √ | 0 | 配置号 bd_configuredcode |
+| 6 | fconfiguredcodeid | 配置号 | int8 | 64 |  | √ | 0 | [配置号（废弃） bd_configuredcode](../sbd_files/bd_configuredcode.md) |
 | 7 | fistoupdate | 是否待更新 | bpchar | 1 |  | √ | '0' | 是否待更新 |
 | 8 | feffectdate | 生效日期 | timestamp | 0 |  |  | null | 生效日期 |
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 10 | fmatversionid | 物料版本 | int8 | 64 |  | √ | 0 | BOM版本 bd_bomversion |
-| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 12 | ftracknumberid | 跟踪号 | int8 | 64 |  | √ | 0 | 跟踪号 bd_tracknumber |
-| 13 | fkeycolid | 卷算维度数据 | int8 | 64 |  | √ | 0 | 卷算维度数据表 cad_keycol |
+| 10 | fmatversionid | 物料版本 | int8 | 64 |  | √ | 0 | [BOM版本 bd_bomversion](../basedata_files/bd_bomversion.md) |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 12 | ftracknumberid | 跟踪号 | int8 | 64 |  | √ | 0 | [跟踪号 bd_tracknumber](../sbd_files/bd_tracknumber.md) |
+| 13 | fkeycolid | 卷算维度数据 | int8 | 64 |  | √ | 0 | [卷算维度数据表 cad_keycol](../cad_files/cad_keycol.md) |
 | 14 | flot | 批号 | varchar | 80 |  | √ | ' ' | 批号 |
 | 15 | fbomversionid | fbomversionid | int8 | 64 |  | √ | 0 |  |
 | 16 | fbillno | 单据编号 | varchar | 60 |  | √ | ' ' | 单据编号 |
-| 17 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 18 | fprojectid | 项目号 | int8 | 64 |  | √ | 0 | 项目 bd_project |
+| 17 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 18 | fprojectid | 项目号 | int8 | 64 |  | √ | 0 | [项目 bd_project](../basedata_files/bd_project.md) |
 | 19 | fbillstatus | 单据状态 | varchar | 30 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 20 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 21 | fdatasrc | 数据来源 | varchar | 30 |  | √ | 'manual' | 数据来源,枚举: manual :手工新增 contract :采购合同 order :采购订单 costupdate :成本更新 |
 | 22 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
 | 23 | fmatcostid | 物料成本信息ID | int8 | 64 |  | √ | 0 | 物料成本信息ID |
-| 24 | fcosttypeid | 标准成本方案 | int8 | 64 |  | √ | 0 | 标准成本方案 cad_costtype |
+| 24 | fcosttypeid | 标准成本方案 | int8 | 64 |  | √ | 0 | [标准成本方案 cad_costtype](../basedata_files/cad_costtype.md) |
 | 25 | fbusinessctrl | fbusinessctrl | varchar | 30 |  | √ | ' ' |  |
-| 26 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
-| 27 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 26 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
+| 27 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 28 | fkeycol | 维度字段 | varchar | 255 |  | √ | ' ' | 维度字段 |
 
 ### 列规则定义
@@ -93,10 +93,10 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fsubelementid | 成本子要素 | int8 | 64 |  | √ | 0 | 成本子要素 cad_subelement |
+| 2 | fsubelementid | 成本子要素 | int8 | 64 |  | √ | 0 | [成本子要素 cad_subelement](../basedata_files/cad_subelement.md) |
 | 3 | frate | 比率(%) | numeric | 23 | 10 | √ | 0.0000000000 | 比率(%) |
 | 4 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 5 | felementid | 成本要素 | int8 | 64 |  | √ | 0 | 成本要素 cad_element |
+| 5 | felementid | 成本要素 | int8 | 64 |  | √ | 0 | [成本要素 cad_element](../basedata_files/cad_element.md) |
 | 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 7 | fprice | 标准单价 | numeric | 23 | 10 | √ | 0.0000000000 | 标准单价 |
 

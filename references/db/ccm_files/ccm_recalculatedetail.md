@@ -11,19 +11,19 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | farchiveid | 关联档案ID | int8 | 64 |  | √ | 0 | 关联档案ID |
-| 3 | fdimensionid | 维度 | int8 | 64 |  | √ | 0 | 信控维度 ccm_dimension |
-| 4 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | fdimensionid | 维度 | int8 | 64 |  | √ | 0 | [信控维度 ccm_dimension](../ccm_files/ccm_dimension.md) |
+| 4 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | fop | 单据操作 | varchar | 30 |  | √ | ' ' | 单据操作 |
-| 6 | fschemeid | 信控方案 | int8 | 64 |  | √ | 0 | （废弃）信控方案 ccm_scheme |
+| 6 | fschemeid | 信控方案 | int8 | 64 |  | √ | 0 | [（废弃）信控方案 ccm_scheme](../ccm_files/ccm_scheme.md) |
 | 7 | foriginalamount | 原始数额 | numeric | 23 | 10 | √ | 0 | 原始数额 |
 | 8 | famount | 数额 | numeric | 23 | 10 | √ | 0 | 数额 |
 | 9 | froleid0 | 维度成员值0 | int8 | 64 |  | √ | 0 | 维度成员值0 |
 | 10 | fmainbillid | 主业务单据ID | int8 | 64 |  | √ | 0 | 主业务单据ID |
 | 11 | froleid2 | 维度成员值2 | int8 | 64 |  | √ | 0 | 维度成员值2 |
 | 12 | froleid1 | 维度成员值1 | int8 | 64 |  | √ | 0 | 维度成员值1 |
-| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | froleid3 | 维度成员值3 | int8 | 64 |  | √ | 0 | 维度成员值3 |
-| 15 | fchecktypeid | 信用控制形式 | int8 | 64 |  | √ | 0 | （废弃）信用控制形式 ccm_checktype |
+| 15 | fchecktypeid | 信用控制形式 | int8 | 64 |  | √ | 0 | [（废弃）信用控制形式 ccm_checktype](../ccm_files/ccm_checktype.md) |
 | 16 | fbillno | 单据编号 | varchar | 80 |  | √ | ' ' | 单据编号 |
 | 17 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 18 | foriginalunitid | 原始单位 | int8 | 64 |  | √ | 0 | 原始单位 |

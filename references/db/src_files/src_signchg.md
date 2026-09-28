@@ -9,7 +9,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 附件字段实体 bd_attachment |
+| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [附件字段实体 bd_attachment](../frame_files/bd_attachment.md) |
 | 2 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 |  |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | FPKID |
 
@@ -41,14 +41,14 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | ftaxamount | 中标含税金额 | numeric | 23 | 10 | √ | 0 | 中标含税金额 |
 | 3 | fuparentid | 元数据ID | varchar | 50 |  | √ | ' ' | 元数据ID |
-| 4 | fprojectid | 项目 | int8 | 64 |  | √ | 0 | 招标项目F7 src_projectf7 |
+| 4 | fprojectid | 项目 | int8 | 64 |  | √ | 0 | [招标项目F7 src_projectf7](../src_files/src_projectf7.md) |
 | 5 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 6 | famount | 中标未税金额 | numeric | 23 | 10 | √ | 0 | 中标未税金额 |
 | 7 | fcontractamount | 签约中标未税金额 | numeric | 23 | 10 | √ | 0 | 签约中标未税金额 |
 | 8 | fsupplierid | 供应商 | int8 | 64 |  | √ | 0 | 注册供应商 src_supplier |
 | 9 | fsuppliertype | 供应商类别 | varchar | 30 |  | √ | ' ' | 供应商类别,枚举: src_supplier :注册供应商 src_supplier_inner :内部供应商(员工) src_supplier_tmp :临时供应商 bd_supplier :正式供应商 |
-| 10 | fpackageid | 标段 | int8 | 64 |  | √ | 0 | 标段名称 src_packagef7 |
-| 11 | fcategoryid | 品类 | int8 | 64 |  | √ | 0 | 物料分类 bd_materialgroup |
+| 10 | fpackageid | 标段 | int8 | 64 |  | √ | 0 | [标段名称 src_packagef7](../src_files/src_packagef7.md) |
+| 11 | fcategoryid | 品类 | int8 | 64 |  | √ | 0 | [物料分类 bd_materialgroup](../basedata_files/bd_materialgroup.md) |
 | 12 | fcontracttaxamount | 签约中标含税金额 | numeric | 23 | 10 | √ | 0 | 签约中标含税金额 |
 | 13 | forderratio | 未税占比(%) | numeric | 23 | 10 | √ | 0 | 未税占比(%) |
 | 14 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
@@ -90,7 +90,7 @@
 | 9 | fsumamount | 预估含税采购金额 | numeric | 23 | 10 | √ | 0 | 预估含税采购金额 |
 | 10 | fispackage | 按标段汇总 | bpchar | 1 |  | √ | '0' | 按标段汇总 |
 | 11 | fisprice | 基于未税单价进行计算 | bpchar | 1 |  | √ | '0' | 基于未税单价进行计算 |
-| 12 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 12 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 | 13 | fbillno | 单据编号 | varchar | 50 |  | √ | ' ' | 单据编号 |
 
 ### 列规则定义
@@ -122,7 +122,7 @@
 | 3 | fsignsupplierid | 签约供应商 | int8 | 64 |  | √ | 0 | 注册供应商 src_supplier |
 | 4 | fsignamount | 中标未税金额 | numeric | 23 | 10 | √ | 0 | 中标未税金额 |
 | 5 | fsigntaxamount | 中标含税金额 | numeric | 23 | 10 | √ | 0 | 中标含税金额 |
-| 6 | fcontractid | 签约合同号 | int8 | 64 |  | √ | 0 | 采购合同 pds_purcontract |
+| 6 | fcontractid | 签约合同号 | int8 | 64 |  | √ | 0 | [采购合同 pds_purcontract](../pds_files/pds_purcontract.md) |
 | 7 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 8 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 | id |
 | 9 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |

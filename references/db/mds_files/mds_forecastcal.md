@@ -127,28 +127,28 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fpredversion | 目标预测版本 | int8 | 64 |  | √ | 0 | 版本定义 mds_vrds |
-| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fpredversion | 目标预测版本 | int8 | 64 |  | √ | 0 | [版本定义 mds_vrds](../mds_files/mds_vrds.md) |
+| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | frepeat | 重复运算 | bpchar | 1 |  | √ | '0' | 重复运算 |
 | 5 | fcalculatepro | 计算进度 | numeric | 23 | 8 | √ | 0.00000000 | 计算进度 |
 | 6 | fpredtime | 预约时间 | int8 | 64 |  | √ | 0 | 预约时间 |
-| 7 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 7 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | frunningtype | 运行时间类型 | varchar | 50 |  | √ | ' ' | 运行时间类型,枚举: 0 :立即运算 1 :预约时间运算 |
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 10 | fplanid | 计划号 | varchar | 50 |  | √ | ' ' | 计划号 |
 | 11 | fstatus | 状态 | varchar | 5 |  | √ | ' ' | 状态,枚举: A :暂存 B :计划 C :关闭 |
 | 12 | fenddate | 结束时间 | timestamp | 0 |  |  | null | 结束时间 |
 | 13 | fsummin | 计算总时长（秒） | numeric | 23 | 8 | √ | 0.00000000 | 计算总时长（秒） |
-| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 16 | fdaysofmon | 月 | varchar | 100 |  | √ | ' ' | 月 |
 | 17 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
-| 18 | ffcalplanid | 预测计划方案 | int8 | 64 |  | √ | 0 | 预测计算方案定义F7 mds_forecastcalplanf7 |
+| 18 | ffcalplanid | 预测计划方案 | int8 | 64 |  | √ | 0 | [预测计算方案定义F7 mds_forecastcalplanf7](../mds_files/mds_forecastcalplanf7.md) |
 | 19 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
 | 20 | fdaysofweek | 周 | varchar | 50 |  | √ | ' ' | 周 |
-| 21 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 21 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 22 | fcalstatus | 计算状态 | varchar | 50 |  | √ | ' ' | 计算状态,枚举: A :待运算 B :运算中 C :完成 D :错误 E :终止 |
-| 23 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 23 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 24 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 25 | fjobid | 作业号 | varchar | 50 |  | √ | ' ' | 作业号 |
 | 26 | fctrlstrategy | 控制策略 | varchar | 50 |  | √ | ' ' | 控制策略,枚举: 2 :自由分配 5 :全局共享 7 :私有 1 :逐级分配 6 :管控范围内共享 |

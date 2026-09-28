@@ -14,7 +14,7 @@
 | 3 | fis_clean | 允许被归档清除 | bpchar | 1 |  | √ | ' ' | 允许被归档清除 |
 | 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 5 | fpreset | 是否预设 | bpchar | 1 |  | √ | '0' | 是否预设 |
-| 6 | fentitynumber | 表单名称 | varchar | 50 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 6 | fentitynumber | 实体名称 | varchar | 50 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 7 | fnumber | 编码 | varchar | 50 |  | √ | ' ' | 编码 |
 | 8 | fis_sync | 允许被归档同步 | bpchar | 1 |  | √ | '0' | 允许被归档同步 |
 
@@ -29,8 +29,8 @@
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
 | 1 | idx_cbs_archi_billset_no |  | fnumber |
-| 2 | idx_cbs_archi_billset_eno |  | fentitynumber |
-| 3 | pk_cbs_archi_billset |  | fid |
+| 2 | pk_cbs_archi_billset |  | fid |
+| 3 | idx_cbs_archi_billset_eno |  | fentitynumber |
 
 ---
 

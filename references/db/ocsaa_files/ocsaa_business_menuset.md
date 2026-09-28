@@ -72,10 +72,10 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fisleaf | 是否叶子 | bpchar | 1 |  | √ | '1' | 是否叶子 |
 | 5 | fnavmenu | 底部导航菜单 | varchar | 80 |  | √ | ' ' | 底部导航菜单,枚举: channel :渠道 |
-| 6 | fparentid | 上级 | int8 | 64 |  | √ | 0 | 渠道管家(移动)菜单设置 ocsaa_business_menuset |
+| 6 | fparentid | 上级 | int8 | 64 |  | √ | 0 | [渠道管家(移动)菜单设置 ocsaa_business_menuset](../ocsaa_files/ocsaa_business_menuset.md) |
 | 7 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 8 | findex | 序号 | int8 | 64 |  | √ | 0 | 序号 |
 | 9 | flongnumber | 长编码 | varchar | 255 |  | √ | ' ' | 长编码 |
@@ -83,13 +83,13 @@
 | 11 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 12 | flevel | 级次 | int8 | 64 |  | √ | 0 | 级次 |
 | 13 | ficon | 图标 | varchar | 255 |  | √ | ' ' | 图标 |
-| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 16 | fopentype | 打开方式 | bpchar | 1 |  | √ | 'A' | 打开方式,枚举: A :打开新页面 B :打开页面底部导航 |
 | 17 | fenable | 使用状态 | bpchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 18 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
 | 19 | fdesc | 描述 | varchar | 250 |  | √ | ' ' | 描述 |
-| 20 | fformid | 表单 | varchar | 80 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 20 | fformid | 表单 | varchar | 80 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 
 ### 列规则定义
 

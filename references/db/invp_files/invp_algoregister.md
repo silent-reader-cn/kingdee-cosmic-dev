@@ -68,25 +68,25 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fapproverid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fapproverid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | fdisabledate | 禁用时间 | timestamp | 0 |  |  | null | 禁用时间 |
-| 5 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 7 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 10 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 11 | fbitindex | 位图 | int8 | 64 |  | √ | 0 | 位图 |
 | 12 | falgoimpletcalss | 算法实现类 | varchar | 255 |  | √ | ' ' | 算法实现类 |
 | 13 | fversion | 版本 | varchar | 50 |  | √ | ' ' | 版本 |
-| 14 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 14 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 15 | fapprovedate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
 | 16 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 17 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 18 | fbizapp | 所属应用 | varchar | 36 |  | √ | ' ' | 业务应用实体 bos_devportal_bizapp |
+| 17 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 18 | fbizapp | 所属应用 | varchar | 36 |  | √ | ' ' | [业务应用实体 bos_devportal_bizapp](../mdl_files/bos_devportal_bizapp.md) |
 | 19 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 20 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 20 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 21 | fctrlstrategy | 控制策略 | varchar | 50 |  | √ | ' ' | 控制策略,枚举: 5 :全局共享 |
 | 22 | fissys | 系统预设 | bpchar | 1 |  | √ | '0' | 系统预设 |
 | 23 | fenable | 使用状态 | bpchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |

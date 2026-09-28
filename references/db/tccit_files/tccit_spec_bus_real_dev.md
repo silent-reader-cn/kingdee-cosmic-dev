@@ -43,17 +43,17 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fitemno | 房地产项目编号 | varchar | 50 |  | √ | ' ' | 房地产项目编号 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fbillstatus | 单据状态 | varchar | 50 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 6 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
 | 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | fitemname | 房地产项目名称 | varchar | 100 |  | √ | ' ' | 房地产项目名称 |
 | 11 | fsbtype | 申报类型 | varchar | 50 |  | √ | ' ' | 申报类型,枚举: yj :预缴 hj :汇算清缴 |
 | 12 | fbillno | 台账编号 | varchar | 30 |  | √ | ' ' | 台账编号 |
-| 13 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

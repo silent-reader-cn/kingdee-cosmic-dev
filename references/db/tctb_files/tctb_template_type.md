@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | varchar | 36 |  | √ | ' ' |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 税务云税种 tctb_tax_type |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [税务云税种 tctb_tax_type](../tctb_files/tctb_tax_type.md) |
 | 3 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
 
 ### 列规则定义
@@ -28,6 +28,35 @@
 
 ---
 
+## 模板类型-多语言表 t_tctb_template_type_l
+
+- **表名称：** 模板类型-多语言表
+- **表名：** t_tctb_template_type_l
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | varchar | 36 |  | √ | ' ' |  |
+| 2 | fname | 类型名称 | varchar | 255 |  | √ | ' ' | 类型名称 |
+| 3 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
+| 4 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fpkid | fpkid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | pk_tctb_template_type_l |  | fpkid |
+| 2 | idx_tctb_template_type_l_0 |  | fid,flocaleid |
+
+---
+
 ## 模板类型-主表 t_tctb_template_type
 
 - **表名称：** 模板类型-主表
@@ -38,10 +67,12 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | varchar | 36 |  | √ | ' ' | id |
-| 2 | fname | 类型名称 | varchar | 100 |  | √ | ' ' | 类型名称 |
-| 3 | funiquetype | 唯一约束 | varchar | 100 |  | √ | ' ' | 唯一约束,枚举: unique :唯一 multiple :不唯一 number :编码唯一 |
-| 4 | fmaintable | 主表 | varchar | 100 |  | √ | ' ' | 主表,枚举: tcvat_nsrxx :纳税申报主表 tdm_finance_main :财务报表主表 |
-| 5 | fnumber | 类型编码 | varchar | 100 |  | √ | ' ' | 类型编码 |
+| 2 | funiquetype | 唯一约束 | varchar | 100 |  | √ | ' ' | 唯一约束,枚举: unique :唯一 multiple :不唯一 number :编码唯一 |
+| 3 | fname | 类型名称 | varchar | 255 |  | √ | ' ' | 类型名称 |
+| 4 | fdimensionshow | fdimensionshow | varchar | 2000 |  | √ | ' ' |  |
+| 5 | fmaintable | 主表 | varchar | 100 |  | √ | ' ' | 主表,枚举: tcvat_nsrxx :纳税申报主表 tdm_finance_main :财务报表主表 |
+| 6 | fnumber | 类型编码 | varchar | 100 |  | √ | ' ' | 类型编码 |
+| 7 | fispreset | fispreset | bpchar | 1 |  | √ | '0' |  |
 
 ### 列规则定义
 

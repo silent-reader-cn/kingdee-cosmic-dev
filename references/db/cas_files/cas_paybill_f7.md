@@ -16,7 +16,7 @@
 | 5 | fbankcheckflag | fbankcheckflag | varchar | 1024 |  | √ | ' ' |  |
 | 6 | forgid | forgid | int8 | 64 |  | √ | 0 |  |
 | 7 | fpayeetypeid | fpayeetypeid | varchar | 30 |  | √ | ' ' |  |
-| 8 | fpayeebankid | 收款银行 | int8 | 64 |  | √ | 0 | 行名行号 bd_bebank |
+| 8 | fpayeebankid | 收款银行 | int8 | 64 |  | √ | 0 | [行名行号 bd_bebank](../basedata_files/bd_bebank.md) |
 | 9 | fpaymentidentifyid | fpaymentidentifyid | int8 | 64 |  | √ | 0 |  |
 | 10 | fpayeeaccformid | fpayeeaccformid | varchar | 30 |  | √ | ' ' |  |
 | 11 | fmodifytime | fmodifytime | timestamp | 0 |  |  | null |  |
@@ -39,47 +39,51 @@
 | 28 | fdescription | fdescription | varchar | 255 |  |  | null |  |
 | 29 | frecprovince | frecprovince | varchar | 80 |  | √ | ' ' |  |
 | 30 | fisvoucher | fisvoucher | bpchar | 1 |  | √ | '0' |  |
-| 31 | fauditorid | fauditorid | int8 | 64 |  | √ | 0 |  |
-| 32 | fbilltypeid | fbilltypeid | int8 | 64 |  | √ | 0 |  |
-| 33 | fcommitbetime | fcommitbetime | timestamp | 0 |  |  | null |  |
-| 34 | fpriority | fpriority | varchar | 30 |  | √ | ' ' |  |
-| 35 | frecaccbankname | frecaccbankname | varchar | 255 |  | √ | ' ' |  |
-| 36 | fdetailseqid | fdetailseqid | varchar | 80 |  | √ | ' ' |  |
-| 37 | fbankpayingid | fbankpayingid | int8 | 64 |  | √ | 0 |  |
-| 38 | fhotaccountbillid | fhotaccountbillid | int8 | 64 |  | √ | 0 |  |
-| 39 | fistop | fistop | bpchar | 1 |  | √ | '0' |  |
-| 40 | fusage | fusage | varchar | 255 |  |  | null |  |
-| 41 | fcreatorid | fcreatorid | int8 | 64 |  | √ | 0 |  |
-| 42 | fsourcetype | fsourcetype | varchar | 30 |  | √ | ' ' |  |
-| 43 | fisarchive | fisarchive | bpchar | 1 |  | √ | '0' |  |
-| 44 | finneraccountid | finneraccountid | int8 | 64 |  | √ | 0 |  |
-| 45 | fiscommitbe | fiscommitbe | bpchar | 1 |  | √ | '0' |  |
-| 46 | fisrefund | fisrefund | bpchar | 1 |  | √ | '0' |  |
-| 47 | fpayeename | fpayeename | varchar | 255 |  | √ | ' ' |  |
-| 48 | funiformsocialcreditcode | funiformsocialcreditcode | varchar | 100 |  | √ | ' ' |  |
-| 49 | fpayeracctbankid | 付款账号 | int8 | 64 |  | √ | 0 | 银行账户 bd_accountbanks |
-| 50 | fpayeracctcashid | fpayeracctcashid | int8 | 64 |  | √ | 0 |  |
-| 51 | fmodifierid | fmodifierid | int8 | 64 |  | √ | 0 |  |
-| 52 | fpayerbankid | 付款银行 | int8 | 64 |  | √ | 0 | 金融机构 bd_finorginfo |
-| 53 | fpayeebanknum | 收款账号 | varchar | 255 |  | √ | ' ' | 收款账号 |
-| 54 | flocalamount | flocalamount | numeric | 19 | 6 | √ | 0.000000 |  |
-| 55 | fcreatetime | fcreatetime | timestamp | 0 |  |  | null |  |
-| 56 | ffundflowitemid | ffundflowitemid | int8 | 64 |  | √ | 0 |  |
-| 57 | fsettlettypeid | fsettlettypeid | int8 | 64 |  | √ | 0 |  |
-| 58 | freccity | freccity | varchar | 80 |  | √ | ' ' |  |
-| 59 | fpayeenumber | fpayeenumber | varchar | 500 |  | √ | ' ' |  |
-| 60 | fpayeeid | fpayeeid | int8 | 64 |  | √ | 0 |  |
-| 61 | frecbanknumber | frecbanknumber | varchar | 30 |  | √ | ' ' |  |
-| 62 | fentrance | fentrance | varchar | 10 |  | √ | ' ' |  |
-| 63 | fbasecurrencyid | fbasecurrencyid | int8 | 64 |  | √ | 0 |  |
-| 64 | fsourcebillnumber | fsourcebillnumber | varchar | 255 |  | √ | ' ' |  |
-| 65 | fsettletnumber | fsettletnumber | varchar | 2000 |  | √ | ' ' |  |
-| 66 | fbizdate | fbizdate | timestamp | 0 |  |  | null |  |
-| 67 | fpaymenttypeid | fpaymenttypeid | int8 | 64 |  | √ | 0 |  |
-| 68 | fsourcebillid | fsourcebillid | int8 | 64 |  | √ | 0 |  |
-| 69 | fcurrencyid | 付款币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
-| 70 | fbankreturnmsg | fbankreturnmsg | varchar | 255 |  |  | null |  |
-| 71 | fpaydate | 付款日期 | timestamp | 0 |  |  | null | 付款日期 |
+| 31 | forgname | forgname | varchar | 50 |  | √ | ' ' |  |
+| 32 | fauditorid | fauditorid | int8 | 64 |  | √ | 0 |  |
+| 33 | fiscanchangeamt | fiscanchangeamt | bpchar | 1 |  | √ | '0' |  |
+| 34 | fbilltypeid | fbilltypeid | int8 | 64 |  | √ | 0 |  |
+| 35 | fcommitbetime | fcommitbetime | timestamp | 0 |  |  | null |  |
+| 36 | fpriority | fpriority | varchar | 30 |  | √ | ' ' |  |
+| 37 | frecaccbankname | frecaccbankname | varchar | 255 |  | √ | ' ' |  |
+| 38 | fdetailseqid | fdetailseqid | varchar | 80 |  | √ | ' ' |  |
+| 39 | fbankpayingid | fbankpayingid | int8 | 64 |  | √ | 0 |  |
+| 40 | fhotaccountbillid | fhotaccountbillid | int8 | 64 |  | √ | 0 |  |
+| 41 | fistop | fistop | bpchar | 1 |  | √ | '0' |  |
+| 42 | fusage | fusage | varchar | 255 |  |  | null |  |
+| 43 | fcreatorid | fcreatorid | int8 | 64 |  | √ | 0 |  |
+| 44 | fsourcetype | fsourcetype | varchar | 30 |  | √ | ' ' |  |
+| 45 | fisarchive | fisarchive | bpchar | 1 |  | √ | '0' |  |
+| 46 | finneraccountid | finneraccountid | int8 | 64 |  | √ | 0 |  |
+| 47 | fiscommitbe | fiscommitbe | bpchar | 1 |  | √ | '0' |  |
+| 48 | fisrefund | fisrefund | bpchar | 1 |  | √ | '0' |  |
+| 49 | fpayeename | fpayeename | varchar | 255 |  | √ | ' ' |  |
+| 50 | funiformsocialcreditcode | funiformsocialcreditcode | varchar | 100 |  | √ | ' ' |  |
+| 51 | fpayeracctbankid | 付款账号 | int8 | 64 |  | √ | 0 | [银行账户 bd_accountbanks](../basedata_files/bd_accountbanks.md) |
+| 52 | fpayeracctcashid | fpayeracctcashid | int8 | 64 |  | √ | 0 |  |
+| 53 | fmodifierid | fmodifierid | int8 | 64 |  | √ | 0 |  |
+| 54 | fpayerbankid | 付款银行 | int8 | 64 |  | √ | 0 | [金融机构 bd_finorginfo](../basedata_files/bd_finorginfo.md) |
+| 55 | fpayeebanknum | 收款账号 | varchar | 255 |  | √ | ' ' | 收款账号 |
+| 56 | flocalamount | flocalamount | numeric | 19 | 6 | √ | 0.000000 |  |
+| 57 | fsuretybiztype | fsuretybiztype | varchar | 50 |  | √ | ' ' |  |
+| 58 | fcreatetime | fcreatetime | timestamp | 0 |  |  | null |  |
+| 59 | ffundflowitemid | ffundflowitemid | int8 | 64 |  | √ | 0 |  |
+| 60 | fsettlettypeid | fsettlettypeid | int8 | 64 |  | √ | 0 |  |
+| 61 | freccity | freccity | varchar | 80 |  | √ | ' ' |  |
+| 62 | fpayeenumber | fpayeenumber | varchar | 500 |  | √ | ' ' |  |
+| 63 | fpayeeid | fpayeeid | int8 | 64 |  | √ | 0 |  |
+| 64 | fisdiffcur | 使用状态 | varchar | 50 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 65 | frecbanknumber | frecbanknumber | varchar | 30 |  | √ | ' ' |  |
+| 66 | fentrance | fentrance | varchar | 10 |  | √ | ' ' |  |
+| 67 | fbasecurrencyid | fbasecurrencyid | int8 | 64 |  | √ | 0 |  |
+| 68 | fsourcebillnumber | fsourcebillnumber | varchar | 255 |  | √ | ' ' |  |
+| 69 | fsettletnumber | fsettletnumber | varchar | 2000 |  | √ | ' ' |  |
+| 70 | fbizdate | fbizdate | timestamp | 0 |  |  | null |  |
+| 71 | fpaymenttypeid | fpaymenttypeid | int8 | 64 |  | √ | 0 |  |
+| 72 | fsourcebillid | fsourcebillid | int8 | 64 |  | √ | 0 |  |
+| 73 | fcurrencyid | 付款币别 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
+| 74 | fbankreturnmsg | fbankreturnmsg | varchar | 255 |  |  | null |  |
+| 75 | fpaydate | 付款日期 | timestamp | 0 |  |  | null | 付款日期 |
 
 ### 列规则定义
 
@@ -115,13 +119,19 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  |  | null |  |
+| 2 | fname | fname | varchar | 500 |  |  | null |  |
+| 3 | flocaleid | flocaleid | varchar | 10 |  |  | null | localeid |
+| 4 | fpkid | fpkid | varchar | 36 |  | √ | null | pkid |
 
 ### 列规则定义
 
 | 序号 | 键编码 | 列字段 |
 | :--- | :--- | :--- |
+| 1 | fpkid | fpkid |
 
 ### 索引定义
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
+| 1 | pk_cas_paymentbill_l |  | fpkid |

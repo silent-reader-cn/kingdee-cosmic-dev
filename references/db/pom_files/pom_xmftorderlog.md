@@ -18,7 +18,7 @@
 | 7 | fchangetype | fchangetype | varchar | 50 |  | √ | ' ' |  |
 | 8 | fsrcbillnoentry | 生产工单编号 | varchar | 50 |  | √ | ' ' | 生产工单编号 |
 | 9 | finwardept | 入库组织 | varchar | 500 |  | √ | ' ' | 入库组织 |
-| 10 | fmaterial | 产品编码 | int8 | 64 |  | √ | 0 | 物料生产信息 bd_materialmftinfo |
+| 10 | fmaterial | 产品编码 | int8 | 64 |  | √ | 0 | [物料生产信息 bd_materialmftinfo](../sbd_files/bd_materialmftinfo.md) |
 | 11 | fplanpreparetime | 计划准备时间 | varchar | 50 |  | √ | ' ' | 计划准备时间 |
 | 12 | finwarmin | 入库下限 | varchar | 50 |  | √ | ' ' | 入库下限 |
 | 13 | fqty | 数量 | varchar | 50 |  | √ | ' ' | 数量 |
@@ -26,7 +26,7 @@
 | 15 | fbatchno | 批号 | varchar | 110 |  | √ | ' ' | 批号 |
 | 16 | fchangetypeentity | fchangetypeentity | varchar | 50 |  | √ | ' ' |  |
 | 17 | frcvinlowlimit | 入库下限允差（%） | varchar | 50 |  | √ | ' ' | 入库下限允差（%） |
-| 18 | funitfield | 计量单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 18 | funitfield | 计量单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 19 | finwarmax | 入库上限 | varchar | 50 |  | √ | ' ' | 入库上限 |
 | 20 | fproducttype | 产品类型 | varchar | 50 |  | √ | ' ' | 产品类型,枚举: C :主产品 A :联产品 B :副产品 |
 | 21 | fwarehouse | 仓库 | varchar | 500 |  | √ | ' ' | 仓库 |
@@ -63,30 +63,31 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fxbillno | 单据编号 | varchar | 50 |  | √ | ' ' | 单据编号 |
 | 3 | fsrcbillno | 生产工单编号 | varchar | 50 |  | √ | ' ' | 生产工单编号 |
-| 4 | forgid | 生产组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 5 | fxmdjson | 变更md文本 | varchar | 255 |  | √ | ' ' | 变更md文本 |
-| 6 | fchangetype | 变更方式 | varchar | 50 |  | √ | ' ' | 变更方式,枚举: A :新增 B :修改 C :取消 |
-| 7 | fbiztime | 单据日期 | timestamp | 0 |  |  | null | 单据日期 |
-| 8 | fmodifytime | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
-| 9 | fsrcbillentryseq | 生产工单行号 | int8 | 64 |  | √ | 0 | 生产工单行号 |
-| 10 | fchangestatus | 变更状态 | varchar | 50 |  | √ | ' ' | 变更状态,枚举: A :变更中 B :变更完成 |
-| 11 | fcreatorid | 变更人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 12 | fxbilljson_tag | 变更单Json_详情 | text | 0 |  |  | null | 变更单Json_详情 |
-| 13 | fsrcbilljson_tag | 订单Json_详情 | text | 0 |  |  | null | 订单Json_详情 |
-| 14 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 15 | fsrcbillid | 生产工单ID | int8 | 64 |  | √ | 0 | 生产工单ID |
-| 16 | fcreatetime | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
-| 17 | fxbilljson | 变更单Json | varchar | 255 |  | √ | ' ' | 变更单Json |
-| 18 | fxmdjson_tag | 变更md文本_详情 | text | 0 |  |  | null | 变更md文本_详情 |
-| 19 | fsrcbillversion | 生产工单版本 | int8 | 64 |  | √ | 0 | 生产工单版本 |
-| 20 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
-| 21 | fxbillid | 变更单ID | int8 | 64 |  | √ | 0 | 变更单ID |
-| 22 | fsrcbilljson | 订单Json | varchar | 255 |  | √ | ' ' | 订单Json |
-| 23 | fsrcbillentryid | 生产工单分录ID | int8 | 64 |  | √ | 0 | 生产工单分录ID |
-| 24 | fxbillentryseq | 变更单分录行号 | int8 | 64 |  | √ | 0 | 变更单分录行号 |
-| 25 | fbeginbookdate | 开工记账日期 | timestamp | 0 |  |  | null | 开工记账日期 |
-| 26 | fxbillentryid | 变更单分录ID | int8 | 64 |  | √ | 0 | 变更单分录ID |
-| 27 | fxreason | 变更原因 | varchar | 255 |  | √ | ' ' | 变更原因 |
+| 4 | fisproduction | 是否投产 | bpchar | 1 |  | √ | '0' | 是否投产 |
+| 5 | forgid | 生产组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 6 | fxmdjson | 变更md文本 | varchar | 255 |  | √ | ' ' | 变更md文本 |
+| 7 | fchangetype | 变更方式 | varchar | 50 |  | √ | ' ' | 变更方式,枚举: A :新增 B :修改 C :取消 |
+| 8 | fbiztime | 单据日期 | timestamp | 0 |  |  | null | 单据日期 |
+| 9 | fmodifytime | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
+| 10 | fsrcbillentryseq | 生产工单行号 | int8 | 64 |  | √ | 0 | 生产工单行号 |
+| 11 | fchangestatus | 变更状态 | varchar | 50 |  | √ | ' ' | 变更状态,枚举: A :变更中 B :变更完成 |
+| 12 | fcreatorid | 变更人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 13 | fxbilljson_tag | 变更单Json_详情 | text | 0 |  |  | null | 变更单Json_详情 |
+| 14 | fsrcbilljson_tag | 订单Json_详情 | text | 0 |  |  | null | 订单Json_详情 |
+| 15 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 16 | fsrcbillid | 生产工单ID | int8 | 64 |  | √ | 0 | 生产工单ID |
+| 17 | fcreatetime | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
+| 18 | fxbilljson | 变更单Json | varchar | 255 |  | √ | ' ' | 变更单Json |
+| 19 | fxmdjson_tag | 变更md文本_详情 | text | 0 |  |  | null | 变更md文本_详情 |
+| 20 | fsrcbillversion | 生产工单版本 | int8 | 64 |  | √ | 0 | 生产工单版本 |
+| 21 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
+| 22 | fxbillid | 变更单ID | int8 | 64 |  | √ | 0 | 变更单ID |
+| 23 | fsrcbilljson | 订单Json | varchar | 255 |  | √ | ' ' | 订单Json |
+| 24 | fsrcbillentryid | 生产工单分录ID | int8 | 64 |  | √ | 0 | 生产工单分录ID |
+| 25 | fxbillentryseq | 变更单分录行号 | int8 | 64 |  | √ | 0 | 变更单分录行号 |
+| 26 | fbeginbookdate | 投产记账日期 | timestamp | 0 |  |  | null | 投产记账日期 |
+| 27 | fxbillentryid | 变更单分录ID | int8 | 64 |  | √ | 0 | 变更单分录ID |
+| 28 | fxreason | 变更原因 | varchar | 255 |  | √ | ' ' | 变更原因 |
 
 ### 列规则定义
 

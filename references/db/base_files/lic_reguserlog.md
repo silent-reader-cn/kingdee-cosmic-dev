@@ -13,7 +13,7 @@
 | 2 | fopname | 操作名称 | varchar | 255 |  | √ | ' ' | 操作名称 |
 | 3 | foptime | 操作时间 | timestamp | 0 |  |  | null | 操作时间 |
 | 4 | fopdescription | 操作描述 | varchar | 255 |  | √ | ' ' | 操作描述 |
-| 5 | fuserid | 操作用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | fuserid | 操作用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

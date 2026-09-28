@@ -41,16 +41,16 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | null | id |
 | 2 | fremark | fremark | varchar | 255 |  |  | ' ' |  |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fconfig_type | 前置机类型 | varchar | 50 |  | √ | ' ' | 前置机类型,枚举: 0 :主前置机 1 :专属前置机 |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 6 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 7 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 8 | fcustom_id | 租户编号 | varchar | 50 |  | √ | ' ' | 租户编号 |
-| 9 | fcreatorid | 创建人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 9 | fcreatorid | 创建人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | fmasterid | 主数据内码 | int8 | 64 |  |  | null | 主数据内码 |
 | 11 | ftype | ftype | varchar | 50 |  | √ | ' ' |  |
-| 12 | fbankversion | 银行版本 | int8 | 64 |  |  | null | 银行启用管理 aqap_bank |
+| 12 | fbankversion | 银行版本 | int8 | 64 |  |  | null | [银行启用管理 aqap_bank](../aqap_files/aqap_bank.md) |
 | 13 | fenable | 使用状态 | varchar | 50 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 14 | fnumber | 前置机编号 | varchar | 30 |  | √ | ' ' | 前置机编号 |
 | 15 | falias | falias | varchar | 255 |  |  | ' ' |  |

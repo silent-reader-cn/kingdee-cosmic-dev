@@ -43,7 +43,7 @@
 | 3 | fsysinit | 系统预设 | bpchar | 1 |  | √ | '0' | 系统预设 |
 | 4 | fmodifydate | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 5 | fno | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
-| 6 | fmodifier | 修改人 | int8 | 64 |  | √ | '0' | 人员 bos_user |
+| 6 | fmodifier | 修改人 | int8 | 64 |  | √ | '0' | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

@@ -10,10 +10,15 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fusergroupid | 人员分组 | int8 | 64 |  | √ | 0 | 用户组 bos_usergroup |
-| 3 | fuserid | 人员 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 4 | fusertype | fusertype | varchar | 10 |  | √ | ' ' |  |
-| 5 | ffrom_type | 来源类型 | varchar | 1 |  | √ | '0' | 来源类型,枚举: 0 :手动添加 1 :用户组同步 |
+| 2 | fmodifierid | fmodifierid | int8 | 64 |  | √ | 0 |  |
+| 3 | fcreatorid | fcreatorid | int8 | 64 |  | √ | 0 |  |
+| 4 | fcreatetime | fcreatetime | timestamp | 0 |  |  | null |  |
+| 5 | fusergroupid | 人员分组 | int8 | 64 |  | √ | 0 | [用户组 bos_usergroup](../base_files/bos_usergroup.md) |
+| 6 | fuserid | 人员 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 7 | fusertype | fusertype | varchar | 10 |  | √ | ' ' |  |
+| 8 | ffrom_type | 来源类型 | varchar | 1 |  | √ | '0' | 来源类型,枚举: 0 :手动添加 1 :用户组同步 |
+| 9 | ffromtypedesc | ffromtypedesc | varchar | 255 |  |  | ' ' |  |
+| 10 | fmodifytime | fmodifytime | timestamp | 0 |  |  | null |  |
 
 ### 列规则定义
 

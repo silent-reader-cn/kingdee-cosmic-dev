@@ -1,49 +1,33 @@
 # 渠道目标单-occbo_channelgoalsbill
 
-## 渠道目标单-主表 t_occbo_channelgoals
+## 关联子实体-子表 t_occbo_chlgoals_entry_lk
 
-- **表名称：** 渠道目标单-主表
-- **表名：** t_occbo_channelgoals
+- **表名称：** 关联子实体-子表
+- **表名：** t_occbo_chlgoals_entry_lk
 
 ### 表格列定义
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fremark | 目标说明 | varchar | 255 |  | √ | ' ' | 目标说明 |
-| 3 | fname | 目标名称 | varchar | 80 |  | √ | ' ' | 目标名称 |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 5 | fbillstatus | 单据状态 | bpchar | 1 |  | √ | 'A' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 7 | forgid | 销售组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 8 | fgoalsyearid | 目标年度 | int8 | 64 |  | √ | 0 | 营销周期 ocdbd_assess_period |
-| 9 | fregionid | 所属大区 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 10 | fdepartmentid | 销售部门 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 11 | fisautocalculate | 自动统计目标值 | bpchar | 1 |  | √ | '1' | 自动统计目标值 |
-| 12 | faudittime | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
-| 13 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 15 | fprovinceid | 所属省区 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 16 | fgoalstype | 目标类型 | bpchar | 1 |  | √ | ' ' | 目标类型,枚举: A :年度目标 B :月度目标 |
-| 17 | fgoalsmap | 年月对应分录关系 | varchar | 2000 |  | √ | ' ' | 年月对应分录关系 |
-| 18 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
-| 19 | fbillno | 目标编号 | varchar | 80 |  | √ | ' ' | 目标编号 |
-| 20 | fdimension | KPI维度 | bpchar | 1 |  | √ | '1' | KPI维度,枚举: 0 :金额 1 :数量 |
-| 21 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 22 | fkpiid | KPI | int8 | 64 |  | √ | 0 | KPI occbo_kpi_base |
+| 1 | fsbillid | 源单内码 | int8 | 64 |  |  | null | 源单内码 |
+| 2 | fstableid | 源单主实体编码 | int8 | 64 |  |  | null | 源单主实体编码 |
+| 3 | fsid | 源单主实体内码 | int8 | 64 |  |  | null | 源单主实体内码 |
+| 4 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
+| 5 | fentryid | fentryid | int8 | 64 |  | √ | null |  |
+| 6 | fpkid | fpkid | int8 | 64 |  | √ | null | id |
 
 ### 列规则定义
 
 | 序号 | 键编码 | 列字段 |
 | :--- | :--- | :--- |
-| 1 | fid | fid |
+| 1 | fpkid | fpkid |
 
 ### 索引定义
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_occbo_chlgoals |  | fbillno |
-| 2 | pk_occbo_channelgoals |  | fid |
+| 1 | pk_occbo_chlgoals_entry_lk |  | fpkid |
+| 2 | idx_occbo_chlgoals_entry_lk_fk |  | fentryid |
 
 ---
 
@@ -76,6 +60,39 @@
 
 ---
 
+## 渠道目标单-关联追踪表 t_occbo_channelgoals_tc
+
+- **表名称：** 渠道目标单-关联追踪表
+- **表名：** t_occbo_channelgoals_tc
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | null |  |
+| 2 | ftbillid | ftbillid | int8 | 64 |  |  | null |  |
+| 3 | fttableid | fttableid | int8 | 64 |  |  | null |  |
+| 4 | fsbillid | fsbillid | int8 | 64 |  |  | null |  |
+| 5 | fstableid | fstableid | int8 | 64 |  |  | null |  |
+| 6 | fsid | fsid | int8 | 64 |  |  | null |  |
+| 7 | ftid | ftid | int8 | 64 |  |  | null |  |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fid | fid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_occbo_channelgoals_tc_tid |  | ftid |
+| 2 | idx_occbo_channelgoals_tc_tbill |  | ftbillid |
+| 3 | pk_occbo_channelgoals_tc |  | fid |
+
+---
+
 ## 目标详情-子表 t_occbo_chlgoals_entry
 
 - **表名称：** 目标详情-子表
@@ -94,10 +111,10 @@
 | 7 | factualnum1 | 实际值1 | numeric | 23 | 10 | √ | 0 | 实际值1 |
 | 8 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 9 | fmodifydate | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 10 | fchannelid | 经销商 | int8 | 64 |  | √ | 0 | 渠道 ocdbd_channel |
+| 10 | fchannelid | 经销商 | int8 | 64 |  | √ | 0 | [渠道 ocdbd_channel](../ocdbd_files/ocdbd_channel.md) |
 | 11 | fgoalsnum16 | 目标值16 | numeric | 23 | 10 | √ | 0 | 目标值16 |
 | 12 | fgoalsnum15 | 目标值15 | numeric | 23 | 10 | √ | 0 | 目标值15 |
-| 13 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | fentrytotalnum | 合计 | numeric | 23 | 10 | √ | 0 | 合计 |
 | 15 | factualnum9 | 实际值9 | numeric | 23 | 10 | √ | 0 | 实际值9 |
 | 16 | factualnum8 | 实际值8 | numeric | 23 | 10 | √ | 0 | 实际值8 |
@@ -150,7 +167,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 营销周期 ocdbd_assess_entity |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [营销周期 ocdbd_assess_entity](../ocdbd_files/ocdbd_assess_entity.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -208,3 +225,85 @@
 | :--- | :--- | :--- | :--- |
 | 1 | idx_occbo_chlgoals_entry_a |  | fid |
 | 2 | pk_occbo_chlgoals_entry_a |  | fentryid |
+
+---
+
+## 渠道目标单-主表 t_occbo_channelgoals
+
+- **表名称：** 渠道目标单-主表
+- **表名：** t_occbo_channelgoals
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
+| 2 | fremark | 目标说明 | varchar | 255 |  | √ | ' ' | 目标说明 |
+| 3 | fname | 目标名称 | varchar | 80 |  | √ | ' ' | 目标名称 |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 5 | fbillstatus | 单据状态 | bpchar | 1 |  | √ | 'A' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
+| 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 7 | forgid | 销售组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 8 | fgoalsyearid | 目标年度 | int8 | 64 |  | √ | 0 | [营销周期 ocdbd_assess_period](../ocdbd_files/ocdbd_assess_period.md) |
+| 9 | fregionid | 所属大区 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 10 | fdepartmentid | 销售部门 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 11 | fisautocalculate | 自动统计目标值 | bpchar | 1 |  | √ | '1' | 自动统计目标值 |
+| 12 | faudittime | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
+| 13 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 15 | fprovinceid | 所属省区 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 16 | fgoalstype | 目标类型 | bpchar | 1 |  | √ | ' ' | 目标类型,枚举: A :年度目标 B :月度目标 |
+| 17 | fgoalsmap | 年月对应分录关系 | varchar | 2000 |  | √ | ' ' | 年月对应分录关系 |
+| 18 | fcurrencyid | 币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
+| 19 | fbillno | 目标编号 | varchar | 80 |  | √ | ' ' | 目标编号 |
+| 20 | fdimension | KPI维度 | bpchar | 1 |  | √ | '1' | KPI维度,枚举: 0 :金额 1 :数量 |
+| 21 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 22 | fkpiid | KPI | int8 | 64 |  | √ | 0 | [KPI occbo_kpi_base](../occbo_files/occbo_kpi_base.md) |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fid | fid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_occbo_chlgoals |  | fbillno |
+| 2 | pk_occbo_channelgoals |  | fid |
+
+---
+
+## 渠道目标单-反写记录表 t_occbo_channelgoals_wb
+
+- **表名称：** 渠道目标单-反写记录表
+- **表名：** t_occbo_channelgoals_wb
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | null |  |
+| 2 | foperate | foperate | varchar | 50 |  | √ | ' ' |  |
+| 3 | fruleverid | fruleverid | int8 | 64 |  |  | null |  |
+| 4 | fsbillid | fsbillid | int8 | 64 |  |  | null |  |
+| 5 | fstableid | fstableid | int8 | 64 |  |  | null |  |
+| 6 | fsid | fsid | int8 | 64 |  |  | null |  |
+| 7 | fwritevalue | fwritevalue | numeric | 23 | 10 |  | null |  |
+| 8 | fseq | fseq | int4 | 32 |  | √ | 0 |  |
+| 9 | fentryid | fentryid | int8 | 64 |  | √ | null |  |
+| 10 | fruleitemid | fruleitemid | int8 | 64 |  |  | null |  |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fentryid | fentryid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_occbo_channelgoals_wb_fk |  | fid |
+| 2 | pk_occbo_channelgoals_wb |  | fentryid |

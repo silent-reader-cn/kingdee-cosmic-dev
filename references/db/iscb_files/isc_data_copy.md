@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fcompare | 比较方式 | varchar | 30 |  | √ | ' ' | 比较方式,枚举: = :等于 STARTS_WITH :开头是 CONTAINS :包含 ENDS_WITH :结尾是 > :大于 >= :大于或等于 :不等于 in :IN not in :NOT IN NOT_STARTS_WITH :开头不是 NOT_CONTAINS :不包含 NOT_ENDS_WITH :结尾不是 IS_NULL :为空 IS_NOT_NULL :不为空 |
+| 2 | fcompare | 比较方式 | varchar | 30 |  | √ | ' ' | 比较方式,枚举: = :等于 STARTS_WITH :开头是 CONTAINS :包含 ENDS_WITH :结尾是 > :大于 >= :大于或等于 < :小于 <= :小于或等于 <> :不等于 in :IN not in :NOT IN NOT_STARTS_WITH :开头不是 NOT_CONTAINS :不包含 NOT_ENDS_WITH :结尾不是 IS_NULL :为空 IS_NOT_NULL :不为空 |
 | 3 | ffilter_value_param | ffilter_value_param | varchar | 30 |  | √ | ' ' |  |
 | 4 | ffield | ffield | int8 | 64 |  | √ | 0 |  |
 | 5 | fvalue_text | fvalue_text | varchar | 100 |  | √ | ' ' |  |
@@ -121,12 +121,12 @@
 | 5 | fentry_order_by | 分录表排序字段 | varchar | 150 |  | √ | ' ' | 分录表排序字段 |
 | 6 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 7 | ftable_alias | ftable_alias | varchar | 20 |  | √ | ' ' |  |
-| 8 | ftable_data_source | 数据源 | int8 | 64 |  | √ | 0 | 数据源管理 isc_data_source |
-| 9 | fdata_table | 引用数据表 | int8 | 64 |  | √ | 0 | 集成对象 isc_metadata_schema |
+| 8 | ftable_data_source | 数据源 | int8 | 64 |  | √ | 0 | [数据源管理 isc_data_source](../iscb_files/isc_data_source.md) |
+| 9 | fdata_table | 引用数据表 | int8 | 64 |  | √ | 0 | [集成对象 isc_metadata_schema](../iscb_files/isc_metadata_schema.md) |
 | 10 | ftable_primary_key | ftable_primary_key | varchar | 100 |  | √ | ' ' |  |
 | 11 | frelation_alias | 关系别名 | varchar | 50 |  | √ | ' ' | 关系别名 |
 | 12 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 13 | fmaster_table | 主数据表 | int8 | 64 |  | √ | 0 | 集成对象 isc_metadata_schema |
+| 13 | fmaster_table | 主数据表 | int8 | 64 |  | √ | 0 | [集成对象 isc_metadata_schema](../iscb_files/isc_metadata_schema.md) |
 
 ### 列规则定义
 
@@ -186,17 +186,18 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fvalue_conver_rule | 值转换规则 | int8 | 64 |  | √ | 0 | 值转换规则 isc_value_conver_rule |
-| 3 | fmapping_tar_column | 目标对象字段 | varchar | 100 |  | √ | ' ' | 目标对象字段 |
-| 4 | fdisable_key | 是否禁用 | bpchar | 1 |  | √ | ' ' | 是否禁用 |
-| 5 | faggr_fn | 聚合运算 | varchar | 300 |  | √ | ' ' | 聚合运算 |
-| 6 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 7 | ffixed_value | 直接赋值 | varchar | 255 |  | √ | ' ' | 直接赋值 |
-| 8 | fsrc_desc | 源字段描述 | varchar | 100 |  | √ | ' ' | 源字段描述 |
-| 9 | ftar_desc | 目标字段描述 | varchar | 510 |  | √ | ' ' | 目标字段描述 |
-| 10 | fmapping_src_column | 源对象字段 | varchar | 100 |  | √ | ' ' | 源对象字段 |
-| 11 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 12 | fcandidate_key | 是否候选键 | bpchar | 1 |  | √ | ' ' | 是否候选键 |
+| 2 | fvalue_conver_rule | 值转换规则 | int8 | 64 |  | √ | 0 | [值转换规则 isc_value_conver_rule](../iscb_files/isc_value_conver_rule.md) |
+| 3 | fprivacy_num | 数据标签 | varchar | 255 |  | √ | ' ' | 数据标签 |
+| 4 | faggr_fn | 聚合运算 | varchar | 300 |  | √ | ' ' | 聚合运算 |
+| 5 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
+| 6 | ffixed_value | 直接赋值 | varchar | 255 |  | √ | ' ' | 直接赋值 |
+| 7 | ftar_desc | 目标字段描述 | varchar | 510 |  | √ | ' ' | 目标字段描述 |
+| 8 | fmapping_src_column | 源对象字段 | varchar | 100 |  | √ | ' ' | 源对象字段 |
+| 9 | fmapping_tar_column | 目标对象字段 | varchar | 100 |  | √ | ' ' | 目标对象字段 |
+| 10 | fdisable_key | 是否禁用 | bpchar | 1 |  | √ | ' ' | 是否禁用 |
+| 11 | fsrc_desc | 源字段描述 | varchar | 100 |  | √ | ' ' | 源字段描述 |
+| 12 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 13 | fcandidate_key | 是否候选键 | bpchar | 1 |  | √ | ' ' | 是否候选键 |
 
 ### 列规则定义
 
@@ -256,7 +257,7 @@
 | 3 | froot_node_creteria | 目标对象的根节点判断标准 | varchar | 200 |  | √ | ' ' | 目标对象的根节点判断标准 |
 | 4 | ftarget_handler | 目标数据处理类 | varchar | 150 |  | √ | ' ' | 目标数据处理类 |
 | 5 | fsource_tenant | 来源 | varchar | 100 |  | √ | ' ' | 来源 |
-| 6 | fsource_schema | 源对象 | int8 | 64 |  | √ | 0 | 集成对象 isc_metadata_schema |
+| 6 | fsource_schema | 源对象 | int8 | 64 |  | √ | 0 | [集成对象 isc_metadata_schema](../iscb_files/isc_metadata_schema.md) |
 | 7 | fisv | 开发商 | varchar | 100 |  | √ | ' ' | 开发商 |
 | 8 | fparent_field | 目标对象的上级对象字段 | varchar | 50 |  | √ | ' ' | 目标对象的上级对象字段 |
 | 9 | fprotect_level | 保护等级 | varchar | 30 |  | √ | ' ' | 保护等级,枚举: DEFAULT :默认 READ_ONLY :只读 UNPROTECTED :无保护 |
@@ -264,33 +265,33 @@
 | 11 | fradiogroupfield | 单选按钮组1 | varchar | 30 |  | √ | ' ' | 单选按钮组1,枚举: |
 | 12 | fsrc_retrieve_script | 来源数据查询脚本 | varchar | 510 |  | √ | ' ' | 来源数据查询脚本 |
 | 13 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 16 | frecord_oid_mappings | 记录源单/目标单ID关联关系 | bpchar | 1 |  | √ | ' ' | 记录源单/目标单ID关联关系 |
-| 17 | fdata_target | 目标系统 | int8 | 64 |  | √ | 0 | 数据源管理 isc_data_source |
+| 17 | fdata_target | 目标系统 | int8 | 64 |  | √ | 0 | [数据源管理 isc_data_source](../iscb_files/isc_data_source.md) |
 | 18 | fsource_trace | 来源追溯 | varchar | 600 |  | √ | ' ' | 来源追溯 |
 | 19 | fproxy_user | 代理用户 | varchar | 50 |  | √ | ' ' | 代理用户 |
-| 20 | fschema_category | 方案分类 | int8 | 64 |  | √ | 0 | 自定义分类 isc_schema_category |
+| 20 | fschema_category | 方案分类 | int8 | 64 |  | √ | 0 | [自定义分类 isc_schema_category](../iscb_files/isc_schema_category.md) |
 | 21 | fmode | 模式 | varchar | 30 |  | √ | ' ' | 模式,枚举: RequiresTransaction :单个事务 BreakOnError :错误时中止 ResumeOnError :错误时忽略 |
 | 22 | ftarget_script_tag | 目标数据处理脚本_详情 | text | 0 |  |  | null | 目标数据处理脚本_详情 |
 | 23 | ftarget_script | 目标数据处理脚本 | varchar | 510 |  | √ | ' ' | 目标数据处理脚本 |
 | 24 | fremark | 备注 | varchar | 510 |  | √ | ' ' | 备注 |
-| 25 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 25 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 26 | freader_script | 来源数据处理脚本 | varchar | 510 |  | √ | ' ' | 来源数据处理脚本 |
-| 27 | fwrite_back_rule | 回写值转换规则 | int8 | 64 |  | √ | 0 | 值转换规则 isc_value_conver_rule |
-| 28 | ftarget_schema | 目标对象 | int8 | 64 |  | √ | 0 | 集成对象 isc_metadata_schema |
+| 27 | fwrite_back_rule | 回写值转换规则 | int8 | 64 |  | √ | 0 | [值转换规则 isc_value_conver_rule](../iscb_files/isc_value_conver_rule.md) |
+| 28 | ftarget_schema | 目标对象 | int8 | 64 |  | √ | 0 | [集成对象 isc_metadata_schema](../iscb_files/isc_metadata_schema.md) |
 | 29 | fsupports_file_copy | 附件同步 | bpchar | 1 |  | √ | '0' | 附件同步 |
 | 30 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 31 | freader_script_tag | 来源数据处理脚本_详情 | text | 0 |  |  | null | 来源数据处理脚本_详情 |
 | 32 | frecord_oid_log | 记录单据集成日志 | bpchar | 1 |  | √ | '0' | 记录单据集成日志 |
-| 33 | fdata_source | 源系统 | int8 | 64 |  | √ | 0 | 数据源管理 isc_data_source |
+| 33 | fdata_source | 源系统 | int8 | 64 |  | √ | 0 | [数据源管理 isc_data_source](../iscb_files/isc_data_source.md) |
 | 34 | fcontains_dynamic_filter | 过滤条件参数值包含变量 | bpchar | 1 |  | √ | '0' | 过滤条件参数值包含变量 |
 | 35 | fdefault_root_parent | 目标对象的根节点的上级对象ID | varchar | 50 |  | √ | ' ' | 目标对象的根节点的上级对象ID |
 | 36 | fenable | 启用 | varchar | 30 |  | √ | ' ' | 启用,枚举: 0 :禁用 1 :可用 |
 | 37 | fnumber | 编码 | varchar | 60 |  | √ | ' ' | 编码 |
 | 38 | fsrc_retrieve_script_tag | 来源数据查询脚本_详情 | text | 0 |  |  | null | 来源数据查询脚本_详情 |
 | 39 | fmapping_script_tag | 转换脚本_详情 | text | 0 |  |  | null | 转换脚本_详情 |
-| 40 | fattach_creator_rule | 附件创建人值转换规则 | int8 | 64 |  | √ | 0 | 值转换规则 isc_value_conver_rule |
+| 40 | fattach_creator_rule | 附件创建人值转换规则 | int8 | 64 |  | √ | 0 | [值转换规则 isc_value_conver_rule](../iscb_files/isc_value_conver_rule.md) |
 | 41 | fmapping_script | 转换脚本 | varchar | 510 |  | √ | ' ' | 转换脚本 |
 
 ### 列规则定义

@@ -23,8 +23,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | t_botp_convertrule_s_pkey |  | fid |
-| 2 | idx_botp_convertrule_s |  | fenabled |
+| 1 | idx_botp_convertrule_s |  | fenabled |
+| 2 | t_botp_convertrule_s_pkey |  | fid |
 
 ---
 
@@ -74,18 +74,18 @@
 | 5 | fparentid | fparentid | varchar | 36 |  |  | null |  |
 | 6 | fisv | fisv | varchar | 50 |  |  | null |  |
 | 7 | finheritpath | finheritpath | varchar | 300 |  | √ | ' ' |  |
-| 8 | fbizappid | 应用 | varchar | 36 |  | √ | ' ' | 业务应用实体 bos_devportal_bizapp |
+| 8 | fbizappid | 应用 | varchar | 36 |  | √ | ' ' | [业务应用实体 bos_devportal_bizapp](../mdl_files/bos_devportal_bizapp.md) |
 | 9 | fsysstatus | 出厂状态 | bpchar | 1 |  | √ | '0' | 出厂状态,枚举: 0 :正常 1 :禁用 |
 | 10 | fcreatedate | fcreatedate | timestamp | 0 |  | √ | LOCALTIMESTAMP |  |
-| 11 | fmasterid | 原始规则 | varchar | 36 |  | √ | ' ' | 转换规则 botp_crlist |
+| 11 | fmasterid | 原始规则 | varchar | 36 |  | √ | ' ' | [转换规则 botp_crlist](../botp_files/botp_crlist.md) |
 | 12 | ftype | 扩展状态 | bpchar | 1 |  | √ | '0' | 扩展状态,枚举: 0 :原始规则 1 :派生规则 2 :扩展规则 |
 | 13 | fmodifydate | fmodifydate | timestamp | 0 |  |  | null |  |
 | 14 | ftimestamp | ftimestamp | int8 | 64 |  |  | null |  |
 | 15 | fenabled | fenabled | bpchar | 1 |  | √ | '1' |  |
 | 16 | fdata | fdata | text | 0 |  |  | null |  |
-| 17 | fsourceentitynumber | 源单 | varchar | 36 |  | √ | ' ' | 业务对象 bos_objecttype |
+| 17 | fsourceentitynumber | 源单 | varchar | 36 |  | √ | ' ' | [业务对象 bos_objecttype](../mdl_files/bos_objecttype.md) |
 | 18 | fistemplate | fistemplate | bpchar | 1 |  |  | '0' |  |
-| 19 | ftargetentitynumber | 目标单 | varchar | 36 |  | √ | ' ' | 业务对象 bos_objecttype |
+| 19 | ftargetentitynumber | 目标单 | varchar | 36 |  | √ | ' ' | [业务对象 bos_objecttype](../mdl_files/bos_objecttype.md) |
 | 20 | fversion | fversion | int8 | 64 |  | √ | 0 |  |
 | 21 | fisdefault | fisdefault | bpchar | 1 |  | √ | '0' |  |
 

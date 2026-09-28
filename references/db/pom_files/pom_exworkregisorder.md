@@ -10,19 +10,19 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | forgid | 生产组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | forgid | 生产组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | forderid | 检修工单主ID | int8 | 64 |  | √ | 0 | 检修工单主ID |
-| 4 | fmanupersonid | 外派人工号 | int8 | 64 |  | √ | 0 | 基础资料带组织模板 mpdm_manuperson |
+| 4 | fmanupersonid | 外派人工号 | int8 | 64 |  | √ | 0 | [基础资料带组织模板 mpdm_manuperson](../mpdm_files/mpdm_manuperson.md) |
 | 5 | forderentryid | 检修工单行ID | int8 | 64 |  | √ | 0 | 检修工单行ID |
 | 6 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 7 | farrivedate | 到达工作地时间 | timestamp | 0 |  |  | null | 到达工作地时间 |
-| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fdepartureflight | 出发航班 | varchar | 50 |  | √ | ' ' | 出发航班 |
-| 10 | fentryprojectid | 项目号 | int8 | 64 |  | √ | 0 | 项目 pmpd_project |
+| 10 | fentryprojectid | 项目号 | int8 | 64 |  | √ | 0 | [项目 pmpd_project](../fmm_files/pmpd_project.md) |
 | 11 | fbillno | 单据编号 | varchar | 50 |  | √ | ' ' | 单据编号 |
 | 12 | freturndate | 返回时间 | timestamp | 0 |  |  | null | 返回时间 |
 | 13 | fremark | 备注 | varchar | 500 |  | √ | ' ' | 备注 |
-| 14 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | forderseq | 检修工单行号 | varchar | 50 |  | √ | ' ' | 检修工单行号 |
 | 16 | fregisdate | 登记日期 | timestamp | 0 |  |  | null | 登记日期 |
 | 17 | fbillstatus | 单据状态 | varchar | 50 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
@@ -34,7 +34,7 @@
 | 23 | fleaveworkbasedate | 离开工作地时间 | timestamp | 0 |  |  | null | 离开工作地时间 |
 | 24 | fleaveflight | 离开工作地航班 | varchar | 50 |  | √ | ' ' | 离开工作地航班 |
 | 25 | fbilltype | 单据类型 | int8 | 64 |  | √ | 0 | 单据类型 bos_billtype |
-| 26 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 26 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 27 | farriveassignedwork | 到达当天被安排工作 | bpchar | 1 |  | √ | ' ' | 到达当天被安排工作 |
 | 28 | fcustomerid | 客户 | int8 | 64 |  | √ | 0 | 客户 bd_customer |
 

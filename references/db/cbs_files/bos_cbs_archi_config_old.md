@@ -73,11 +73,11 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fremark | 备注 | varchar | 500 |  | √ | ' ' | 备注 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 4 | fgroupid | 归档库 | int8 | 64 |  | √ | 0 | 归档库管理 bos_cbs_archi_database |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 4 | fgroupid | 归档库 | int8 | 64 |  | √ | 0 | [归档库管理 bos_cbs_archi_database](../cbs_files/bos_cbs_archi_database.md) |
 | 5 | ffiltertype | 条件类型 | varchar | 50 |  | √ | ' ' | 条件类型,枚举: bill :单据 es :ElasticSearch custom :自定义 |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 7 | fentitynumber | 归档单据 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 7 | fentitynumber | 归档单据 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 8 | ftarget_type | ftarget_type | varchar | 50 |  | √ | ' ' |  |
 | 9 | fmovingtype | 转储或清除 | bpchar | 1 |  | √ | ' ' | 转储或清除,枚举: 0 :归档转储 1 :归档清除 |
 | 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
@@ -85,7 +85,7 @@
 | 12 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 13 | fbillsetid | fbillsetid | int8 | 64 |  | √ | 0 |  |
 | 14 | fconditiondesc | fconditiondesc | varchar | 2000 |  | √ | ' ' |  |
-| 15 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 15 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 16 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 17 | fconditiontype | 注册方式 | bpchar | 1 |  | √ | ' ' | 注册方式,枚举: 0 :单据注册 1 :实体插件注册 2 :表插件注册 |
 | 18 | fpreset | fpreset | bpchar | 1 |  | √ | '0' |  |

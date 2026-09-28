@@ -40,8 +40,8 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 4 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 4 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fcreatetime | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
 | 6 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
 | 7 | farchiveretaindays | 归档保留时长 | int4 | 32 |  | √ | 0 | 归档保留时长 |

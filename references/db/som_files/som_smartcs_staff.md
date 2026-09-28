@@ -95,7 +95,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fscs_createorgid | fscs_createorgid | varchar | 50 |  | √ | ' ' |  |
-| 3 | fgroupid | 组名 | int8 | 64 |  | √ | 0 | 人员分组 som_smartcs_group |
+| 3 | fgroupid | 组名 | int8 | 64 |  | √ | 0 | [人员分组 som_smartcs_group](../som_files/som_smartcs_group.md) |
 | 4 | fscs_group | fscs_group | varchar | 50 |  | √ | ' ' |  |
 | 5 | fisenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态 |
 | 6 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
@@ -128,21 +128,21 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 5 | fgroupid | 分组 | int8 | 64 |  | √ | 0 | 人员分组 som_smartcs_group |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 5 | fgroupid | 分组 | int8 | 64 |  | √ | 0 | [人员分组 som_smartcs_group](../som_files/som_smartcs_group.md) |
 | 6 | fuser_phone | fuser_phone | varchar | 50 |  | √ | ' ' |  |
 | 7 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 8 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 9 | fuserid | 人员 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 10 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 8 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 9 | fuserid | 人员 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 10 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 11 | fuser_number | fuser_number | varchar | 50 |  | √ | ' ' |  |
 | 12 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 13 | fctrlstrategy | 控制策略 | bpchar | 2 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
 | 14 | fentryenable | 分组可用 | varchar | 50 |  | √ | ' ' | 分组可用,枚举: 1 :可用 0 :禁用 |
 | 15 | fstatus | 数据状态 | bpchar | 2 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 16 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 16 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 17 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 18 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 19 | fbitindex | 位图 | int8 | 64 |  | √ | 0 | 位图 |

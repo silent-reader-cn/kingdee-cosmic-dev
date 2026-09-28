@@ -45,7 +45,7 @@
 | 3 | fcapitalorg | 资金组织 | varchar | 100 |  | √ | ' ' | 资金组织 |
 | 4 | fbillcomplete | 单据完整 | varchar | 10 |  | √ | '0' | 单据完整,枚举: 0 :完整 1 :待补充 |
 | 5 | ftextfield5 | 扩展字段5 | varchar | 150 |  | √ | ' ' | 扩展字段5 |
-| 6 | fsettlementorgbase | 结算组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | fsettlementorgbase | 结算组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | foriginbillseq | 批次序号 | varchar | 30 |  | √ | ' ' | 批次序号 |
 | 8 | ftextfield4 | 扩展字段4 | varchar | 150 |  | √ | ' ' | 扩展字段4 |
 | 9 | fsalesorg | 销售组织 | varchar | 100 |  | √ | ' ' | 销售组织 |
@@ -54,7 +54,7 @@
 | 12 | foribuyeraddr | 原购方地址电话 | varchar | 150 |  | √ | ' ' | 原购方地址电话 |
 | 13 | foribuyername | 原购方名称 | varchar | 100 |  | √ | ' ' | 原购方名称 |
 | 14 | feditable | 可编辑 | varchar | 10 |  | √ | ' ' | 可编辑,枚举: 0 :可编辑 1 :不可编辑 |
-| 15 | fsalesorgbase | 销售组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 15 | fsalesorgbase | 销售组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 16 | fredflushblue | 红冲蓝票源单 | varchar | 50 |  | √ | ' ' | 红冲蓝票源单 |
 | 17 | fbatchbelong | 所属批次 | varchar | 50 |  | √ | ' ' | 所属批次 |
 | 18 | fexchangerate | 汇率（文本） | varchar | 50 |  | √ | ' ' | 汇率（文本） |
@@ -72,13 +72,13 @@
 | 30 | fredreason | 冲红原因 | varchar | 50 |  | √ | ' ' | 冲红原因,枚举: 1 :销货退回 2 :开票有误 3 :服务中止 4 :销售折让 |
 | 31 | fdeduction | 扣除额(差额) | numeric | 23 | 10 | √ | 0.0000000000 | 扣除额(差额) |
 | 32 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
-| 33 | fcustomnameid | 客户 | int8 | 64 |  | √ | 0 | 客户 bd_customer |
+| 33 | fcustomnameid | 客户 | int8 | 64 |  | √ | 0 | [客户 bd_customer](../basedata_files/bd_customer.md) |
 | 34 | fabolishreason | 作废原因 | varchar | 50 |  | √ | ' ' | 作废原因 |
 | 35 | fmergelable | 当前处理人(合并标识) | varchar | 50 |  | √ | ' ' | 当前处理人(合并标识) |
 | 36 | fsurplustax | 剩余可开税额 | numeric | 23 | 10 | √ | 0.0000000000 | 剩余可开税额 |
 | 37 | fbillsource | 数据来源 | varchar | 50 |  | √ | ' ' | 数据来源,枚举: 1 :excel导入 2 :业务系统 3 :单据下推 4 :其他 5 :扫码开票 6 :手工新增 7 :应收单下推 |
 | 38 | fbotptype | 下推类型 | varchar | 10 |  | √ | ' ' | 下推类型,枚举: 01 :按物料匹配 03 :按物料分类匹配 00 :按优先级匹配 04 :按物料分类匹配，取物料分类名称开票 |
-| 39 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 39 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 40 | fplanamount | 参考金额 | numeric | 23 | 10 | √ | 0 | 参考金额 |
 | 41 | fmainissuedtax | 已开税额 | numeric | 23 | 10 | √ | 0.0000000000 | 已开税额 |
 | 42 | fbuyertype | fbuyertype | varchar | 10 |  | √ | ' ' |  |
@@ -96,21 +96,21 @@
 | 54 | fissuetime | 开票日期 | timestamp | 0 |  |  | null | 开票日期 |
 | 55 | fauditsuggestion | 审核意见 | varchar | 200 |  | √ | ' ' | 审核意见 |
 | 56 | fpushbillname | 下推单据名称 | varchar | 50 |  | √ | ' ' | 下推单据名称 |
-| 57 | foperator | 经办人 | int8 | 64 |  | √ | 0 | 经办人信息 bdm_operator_info |
+| 57 | foperator | 经办人 | int8 | 64 |  | √ | 0 | [经办人信息 bdm_operator_info](../bdm_files/bdm_operator_info.md) |
 | 58 | fmaintaxdeviation | 税额误差 | numeric | 23 | 10 | √ | 0.0000000000 | 税额误差 |
 | 59 | fsettlementorg | 结算组织 | varchar | 100 |  | √ | ' ' | 结算组织 |
 | 60 | fcurrency | 币别 | varchar | 50 |  | √ | ' ' | 币别 |
 | 61 | finfocode | 红字信息表编号/红字确认单编号 | varchar | 800 |  | √ | ' ' | 红字信息表编号/红字确认单编号 |
 | 62 | ftaxadjust | 税额微调 | varchar | 4 |  | √ | ' ' | 税额微调 |
-| 63 | fmaterialtypebase | 物料分类 | int8 | 64 |  | √ | 0 | 物料分类 bd_materialgroup |
+| 63 | fmaterialtypebase | 物料分类 | int8 | 64 |  | √ | 0 | [物料分类 bd_materialgroup](../basedata_files/bd_materialgroup.md) |
 | 64 | fapplicant | 申请方 | varchar | 50 |  | √ | ' ' | 申请方,枚举: 2 :销方申请 1 :购方申请-未抵扣 0 :购方申请-已抵扣 |
-| 65 | fbilltypebase | 单据类型 | int8 | 64 |  | √ | 0 | 单据类型 bos_billtype |
+| 65 | fbilltypebase | 单据类型 | int8 | 64 |  | √ | 0 | [单据类型 bos_billtype](../cts_files/bos_billtype.md) |
 | 66 | fmainissuedamount | 已开金额 | numeric | 23 | 10 | √ | 0.0000000000 | 已开金额 |
 | 67 | fproducttype | 商品类型 | varchar | 10 |  | √ | ' ' | 商品类型,枚举: 1 :开票项 2 :物料 3 :费用项目 |
 | 68 | fclosestatus | 关闭状态 | varchar | 10 |  | √ | ' ' | 关闭状态,枚举: 0 :未关闭 1 :关闭 |
 | 69 | foriginalissuetime | 待冲蓝票开票日期 | timestamp | 0 |  |  | null | 待冲蓝票开票日期 |
 | 70 | fblueinvoicetype | 待冲发票种类 | varchar | 10 |  | √ | ' ' | 待冲发票种类,枚举: 026 :电子普通发票 007 :纸质普通发票 025 :增值税普通发票（卷票） 08xdp :全电发票（增值税专用发票） 10xdp :全电发票（普通发票） |
-| 71 | fcapitalorgbase | 资金组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 71 | fcapitalorgbase | 资金组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 72 | fwxid | 微信id(扫码二次校验使用) | varchar | 50 |  | √ | ' ' | 微信id(扫码二次校验使用) |
 | 73 | fbilltype | 单据类型 | varchar | 50 |  | √ | ' ' | 单据类型,枚举: 01 :应收单 50 :业务单 |
 
@@ -181,7 +181,7 @@
 | 8 | fblueinvoiceitemid | 红冲单对应蓝票明细id | int8 | 64 |  | √ | 0 | 红冲单对应蓝票明细id |
 | 9 | funitprice | 单价(不含税) | numeric | 23 | 10 | √ | 0.0000000000 | 单价(不含税) |
 | 10 | fspecification | 规格型号 | varchar | 50 |  | √ | ' ' | 规格型号 |
-| 11 | ftaxratecodeid | 税收分类编码名称 | int8 | 64 |  | √ | 0 | 税收分类编码 er_taxclasscode |
+| 11 | ftaxratecodeid | 税收分类编码名称 | int8 | 64 |  | √ | 0 | [税收分类编码 er_taxclasscode](../basedata_files/er_taxclasscode.md) |
 | 12 | fbillsourceid | billsourceid | varchar | 50 |  | √ | ' ' | billsourceid |
 | 13 | fissuednum | 已开数量 | numeric | 23 | 10 | √ | 0 | 已开数量 |
 | 14 | fextrafield3 | 明细扩展字段3 | varchar | 150 |  | √ | ' ' | 明细扩展字段3 |
@@ -215,11 +215,11 @@
 | 42 | fcombineamount | 关联金额 | numeric | 23 | 10 | √ | 0 | 关联金额 |
 | 43 | fbenchmark | 基准类型 | varchar | 10 |  | √ | ' ' | 基准类型,枚举: 0 :数量基准 1 :金额基准 |
 | 44 | ffromissuedtaxamount | 原币已开价税合计 | numeric | 23 | 10 | √ | 0 | 原币已开价税合计 |
-| 45 | fgoodsid | 商品编码 | int8 | 64 |  | √ | 0 | 开票项管理 bdm_goods_info |
+| 45 | fgoodsid | 商品编码 | int8 | 64 |  | √ | 0 | [开票项管理 bdm_goods_info](../bdm_files/bdm_goods_info.md) |
 | 46 | fpolicycontants | 优惠政策内容 | varchar | 200 |  | √ | ' ' | 优惠政策内容 |
 | 47 | fdiscountamount | 折扣金额 | numeric | 23 | 10 | √ | 0.0000000000 | 折扣金额 |
 | 48 | forispecification | 原始规格型号 | varchar | 50 |  | √ | ' ' | 原始规格型号 |
-| 49 | fmaterielfield | 物料编码 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 49 | fmaterielfield | 物料编码 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 50 | forifromtaxamount | forifromtaxamount | numeric | 23 | 10 | √ | 0 |  |
 | 51 | famount | 金额(不含税) | numeric | 23 | 10 | √ | 0.0000000000 | 金额(不含税) |
 | 52 | fzeropushflag | 0金额下推标识 | varchar | 30 |  | √ | '0' | 0金额下推标识,枚举: 0 :未下推 1 :已下推 |
@@ -237,8 +237,8 @@
 | 64 | fsourceinfodetailid | 原红字信息明细id | varchar | 50 |  | √ | ' ' | 原红字信息明细id |
 | 65 | fissuedtotaltaxamount | 已开价税合计 | numeric | 23 | 10 | √ | 0.0000000000 | 已开价税合计 |
 | 66 | fpolicylogo | 是否享受优惠 | varchar | 10 |  | √ | ' ' | 是否享受优惠,枚举: 0 :不享受 1 :享受 |
-| 67 | fexpenseitem | 费用项目 | int8 | 64 |  | √ | 0 | 费用项目 er_expenseitemedit |
-| 68 | fmaterialtype | 物料分类 | int8 | 64 |  | √ | 0 | 物料分类 bd_materialgroup |
+| 67 | fexpenseitem | 费用项目 | int8 | 64 |  | √ | 0 | [费用项目 er_expenseitemedit](../basedata_files/er_expenseitemedit.md) |
+| 68 | fmaterialtype | 物料分类 | int8 | 64 |  | √ | 0 | [物料分类 bd_materialgroup](../basedata_files/bd_materialgroup.md) |
 | 69 | ftaxunitprice | 单价(含税) | numeric | 23 | 10 | √ | 0.0000000000 | 单价(含税) |
 | 70 | fsourceinfocode | 原红字信息表编号 | varchar | 50 |  | √ | ' ' | 原红字信息表编号 |
 | 71 | fgoodscode | 税收分类编码 | varchar | 50 |  | √ | ' ' | 税收分类编码 |
@@ -348,12 +348,12 @@
 | 3 | ftextfield2 | 扩展字段2 | varchar | 150 |  | √ | ' ' | 扩展字段2 |
 | 4 | fsuppliercontact | 供应商联系人 | varchar | 50 |  | √ | ' ' | 供应商联系人 |
 | 5 | ftextfield1 | 扩展字段1 | varchar | 150 |  | √ | ' ' | 扩展字段1 |
-| 6 | fexratetable | 汇率表 | int8 | 64 |  | √ | 0 | 汇率表 bd_exratetable |
+| 6 | fexratetable | 汇率表 | int8 | 64 |  | √ | 0 | [汇率表 bd_exratetable](../base_files/bd_exratetable.md) |
 | 7 | fcontractdate | 合同日期 | timestamp | 0 |  |  | null | 合同日期 |
-| 8 | ftaxorg | 税务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 8 | ftaxorg | 税务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 9 | fbilltaxrate | 单据税率 | varchar | 50 |  | √ | ' ' | 单据税率,枚举: 0 :0% 0.01 :1% 0.015 :1.5% 0.03 :3% 0.04 :4% 0.05 :5% 0.06 :6% 0.09 :9% 0.10 :10% 0.11 :11% 0.13 :13% 0.16 :16% 0.17 :17% |
 | 10 | ftotalamount | 申请价税合计 | numeric | 23 | 10 | √ | 0.0000000000 | 申请价税合计 |
-| 11 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 11 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 12 | ftextfield3 | 扩展字段3 | varchar | 150 |  | √ | ' ' | 扩展字段3 |
 | 13 | fforeigntax | 原币税额 | numeric | 23 | 10 | √ | 0 | 原币税额 |
 | 14 | fpurchasername | 采购商名称 | varchar | 50 |  | √ | ' ' | 采购商名称 |
@@ -377,7 +377,7 @@
 | 32 | fterminalno | 终端号 | varchar | 50 |  | √ | ' ' | 终端号,枚举: |
 | 33 | fconfirmamount | 已申请金额 | numeric | 23 | 10 | √ | 0.0000000000 | 已申请金额 |
 | 34 | fpayee | 收款人 | varchar | 50 |  | √ | ' ' | 收款人 |
-| 35 | fmergerule | 合并规则 | int8 | 64 |  | √ | 0 | 合并配置 bdm_merge_rule |
+| 35 | fmergerule | 合并规则 | int8 | 64 |  | √ | 0 | [合并配置 bdm_merge_rule](../bdm_files/bdm_merge_rule.md) |
 | 36 | fpriority | 优先级 | varchar | 30 |  | √ | ' ' | 优先级,枚举: 0 :正常 1 :加急 |
 | 37 | fhsbz | 是否含税 | varchar | 50 |  | √ | ' ' | 是否含税,枚举: 0 :不含税 1 :含税 |
 | 38 | fforeignissuedamount | 原币已开不含税金额 | numeric | 23 | 10 | √ | 0 | 原币已开不含税金额 |
@@ -385,9 +385,9 @@
 | 40 | fpurchasercontact | 采购商联系人 | varchar | 50 |  | √ | ' ' | 采购商联系人 |
 | 41 | ftotaltax | 申请税额 | numeric | 23 | 10 | √ | 0.0000000000 | 申请税额 |
 | 42 | fquotation | 换算方式 | varchar | 50 |  | √ | ' ' | 换算方式,枚举: 0 :直接汇率 1 :间接汇率 |
-| 43 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 43 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 44 | freviewer | 复核人 | varchar | 50 |  | √ | ' ' | 复核人 |
-| 45 | ffromcurr | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 45 | ffromcurr | 币别 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 | 46 | fbuyertaxno | 纳税人识别号 | varchar | 50 |  | √ | ' ' | 纳税人识别号 |
 | 47 | fsalerbank | 开户行及账号 | varchar | 100 |  | √ | ' ' | 开户行及账号 |
 | 48 | fforeignissuedtotalamount | 原币已开价税合计 | numeric | 23 | 10 | √ | 0 | 原币已开价税合计 |
@@ -397,7 +397,7 @@
 | 52 | fsuppliername | 供应商名称 | varchar | 50 |  | √ | ' ' | 供应商名称 |
 | 53 | fcontractamount | 合同金额 | numeric | 23 | 10 | √ | 0.0000000000 | 合同金额 |
 | 54 | fforeigninvoiceamount | 原币不含税金额 | numeric | 23 | 10 | √ | 0 | 原币不含税金额 |
-| 55 | ftocurr | 本位币 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 55 | ftocurr | 本位币 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 | 56 | fcontractno | 合同编号 | varchar | 50 |  | √ | ' ' | 合同编号 |
 | 57 | fforeignissuedtax | 原币已开税额 | numeric | 23 | 10 | √ | 0 | 原币已开税额 |
 | 58 | fsupplierphone | 供应商电话 | varchar | 50 |  | √ | ' ' | 供应商电话 |

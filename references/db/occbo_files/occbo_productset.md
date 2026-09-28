@@ -10,10 +10,10 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fitemclassid | 产品分类 | int8 | 64 |  | √ | 0 | 商品分类 mdr_item_class |
+| 2 | fitemclassid | 产品分类 | int8 | 64 |  | √ | 0 | [商品分类 mdr_item_class](../gmc_files/mdr_item_class.md) |
 | 3 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 4 | fuserid | 产品经理 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 5 | fitemid | 产品 | int8 | 64 |  | √ | 0 | 商品信息 ocdbd_iteminfo |
+| 4 | fuserid | 产品经理 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 5 | fitemid | 产品 | int8 | 64 |  | √ | 0 | [商品信息 ocdbd_iteminfo](../ocdbd_files/ocdbd_iteminfo.md) |
 
 ### 列规则定义
 

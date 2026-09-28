@@ -10,24 +10,24 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fuseorg | 业务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fuseorg | 业务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | fexpdate | 失效日期 | timestamp | 0 |  |  | null | 失效日期 |
-| 5 | ftaxarea | 税收辖区 | int8 | 64 |  | √ | 0 | 税收辖区 bastax_taxareagroup |
-| 6 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | ftaxarea | 税收辖区 | int8 | 64 |  | √ | 0 | [税收辖区 bastax_taxareagroup](../basedata_files/bastax_taxareagroup.md) |
+| 6 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 8 | ftaxationsys | 税收制度 | int8 | 64 |  | √ | 0 | 税收制度 bd_taxationsys |
+| 8 | ftaxationsys | 税收制度 | int8 | 64 |  | √ | 0 | [税收制度 bd_taxationsys](../basedata_files/bd_taxationsys.md) |
 | 9 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 12 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
-| 13 | ftaxcategoryid | 税种 | int8 | 64 |  | √ | 0 | 税种 bd_taxcategory |
+| 13 | ftaxcategoryid | 税种 | int8 | 64 |  | √ | 0 | [税种 bd_taxcategory](../basedata_files/bd_taxcategory.md) |
 | 14 | fissystem | 系统预置 | varchar | 50 |  | √ | ' ' | 系统预置,枚举: 0 :否 1 :是 |
 | 15 | fbitindex | 位图 | int8 | 64 |  | √ | 0 | 位图 |
-| 16 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 16 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 17 | factivedate | 生效日期 | timestamp | 0 |  |  | null | 生效日期 |
 | 18 | fname | 名称 | varchar | 200 |  | √ | ' ' | 名称 |
-| 19 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 19 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 20 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 21 | fdescription | 描述 | varchar | 2000 |  | √ | ' ' | 描述 |
 | 22 | fctrlstrategy | 控制策略 | varchar | 50 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |

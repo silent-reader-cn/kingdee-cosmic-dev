@@ -11,10 +11,10 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | masterid | masterid | int8 | 64 |  | √ | 0 |  |
 | 5 | fname | fname | varchar | 100 |  | √ | ' ' |  |
-| 6 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 7 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 8 | fenable | 使用状态 | bpchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 9 | fnumber | 编码 | varchar | 50 |  | √ | ' ' | 编码 |
@@ -49,7 +49,7 @@
 | 3 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 4 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 5 | fapiplugin | 插件 | varchar | 255 |  | √ | ' ' | 插件 |
-| 6 | fextapiid | 外部API | int8 | 64 |  | √ | 0 | 外部API注册 pbd_extapi |
+| 6 | fextapiid | 外部API | int8 | 64 |  | √ | 0 | [外部API注册 pbd_extapi](../pbd_files/pbd_extapi.md) |
 
 ### 列规则定义
 

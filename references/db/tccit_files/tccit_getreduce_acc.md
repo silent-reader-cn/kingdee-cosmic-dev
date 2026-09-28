@@ -51,19 +51,19 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | freducename | 优惠事项名称 | int8 | 64 |  | √ | 0 | 优惠项目（树） tpo_discount_tree |
 | 4 | fbillstatus | 单据状态 | varchar | 50 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 6 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | ffirstyear | 开始享受优惠的年度 | timestamp | 0 |  |  | null | 开始享受优惠的年度 |
 | 8 | fremarks | 备注 | varchar | 1000 |  | √ | ' ' | 备注 |
 | 9 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
 | 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 11 | fprojectname | 减免项目名称 | varchar | 200 |  | √ | ' ' | 减免项目名称 |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 13 | fbillno | 业务编码 | varchar | 30 |  | √ | ' ' | 业务编码 |
-| 14 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 13 | fbillno | 业务编号 | varchar | 30 |  | √ | ' ' | 业务编号 |
+| 14 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

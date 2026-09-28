@@ -10,22 +10,22 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | forgid | 客户 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | forgid | 客户 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fbiztypescope | fbiztypescope | varchar | 50 |  | √ | ' ' |  |
 | 4 | fdisabledate | fdisabledate | timestamp | 0 |  |  | null |  |
 | 5 | fbilldate | 业务日期 | timestamp | 0 |  |  | null | 业务日期 |
-| 6 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fcompareno | fcompareno | varchar | 80 |  | √ | ' ' |  |
 | 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 9 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :保存 B :已提交 C :已审核 |
-| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 12 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 13 | fpurorgscope | fpurorgscope | bpchar | 1 |  | √ | ' ' |  |
 | 14 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
-| 15 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 15 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 16 | fremark | fremark | varchar | 255 |  | √ | ' ' |  |
-| 17 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 17 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 18 | fname | fname | varchar | 100 |  | √ | ' ' |  |
 | 19 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 20 | fdisablerid | fdisablerid | int8 | 64 |  | √ | 0 |  |
@@ -35,7 +35,7 @@
 | 24 | fnumber | 方案编码 | varchar | 50 |  | √ | ' ' | 方案编码 |
 | 25 | fuseorgid | fuseorgid | int8 | 64 |  | √ | 0 |  |
 | 26 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
-| 27 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 27 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 
@@ -150,10 +150,10 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fgoodsid | 我方商品编码 | int8 | 64 |  | √ | 0 | 商品档案 pbd_goods |
+| 2 | fgoodsid | 我方商品编码 | int8 | 64 |  | √ | 0 | [商品档案 pbd_goods](../pbd_files/pbd_goods.md) |
 | 3 | fmaxorderqty | 最大订货量 | numeric | 19 | 6 | √ | 0.000000 | 最大订货量 |
 | 4 | ftaxrate | 税率(%) | numeric | 19 | 6 | √ | 0.000000 | 税率(%) |
-| 5 | fmaterialid | 客户物料编码 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 5 | fmaterialid | 客户物料编码 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 6 | ftotalordqty | 累计订货量 | numeric | 19 | 6 | √ | 0.000000 | 累计订货量 |
 | 7 | fentrystatus | 行状态 | bpchar | 1 |  | √ | ' ' | 行状态,枚举: A :正常 B :已禁用 |
 | 8 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
@@ -165,11 +165,11 @@
 | 14 | fquotaorder | fquotaorder | int8 | 64 |  | √ | 0 |  |
 | 15 | fdateto | 有效期至 | timestamp | 0 |  |  | null | 有效期至 |
 | 16 | fmatclassid | fmatclassid | int8 | 64 |  | √ | 0 |  |
-| 17 | funitid | 计量单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 18 | fpaycondid | 付款条件 | int8 | 64 |  | √ | 0 | 付款条件 pur_paycond |
+| 17 | funitid | 计量单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 18 | fpaycondid | 付款条件 | int8 | 64 |  | √ | 0 | [付款条件 pur_paycond](../basedata_files/pur_paycond.md) |
 | 19 | fgoodsdesc | 我方商品描述 | varchar | 255 |  | √ | ' ' | 我方商品描述 |
-| 20 | fsupplierid | 销售方 | int8 | 64 |  | √ | 0 | 供应商 bd_supplier |
-| 21 | fsettletypeid | 结算方式 | int8 | 64 |  | √ | 0 | 结算方式 bd_settlementtype |
+| 20 | fsupplierid | 销售方 | int8 | 64 |  | √ | 0 | [供应商 bd_supplier](../basedata_files/bd_supplier.md) |
+| 21 | fsettletypeid | 结算方式 | int8 | 64 |  | √ | 0 | [结算方式 bd_settlementtype](../basedata_files/bd_settlementtype.md) |
 | 22 | fpurleadday | 采购提前期 | int8 | 64 |  | √ | 0 | 采购提前期 |
 | 23 | fasstproid | fasstproid | varchar | 50 |  | √ | ' ' |  |
 | 24 | fquotaratio | fquotaratio | numeric | 19 | 6 | √ | 0.000000 |  |

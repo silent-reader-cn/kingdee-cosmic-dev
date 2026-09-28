@@ -11,14 +11,14 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | fname | varchar | 100 |  | √ | ' ' |  |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 4 | fgroupid | 分组 | int8 | 64 |  | √ | 0 | 场景卡片模板分类 bos_metafragtplcat |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 4 | fgroupid | 分组 | int8 | 64 |  | √ | 0 | [场景卡片模板分类 bos_metafragtplcat](../ide_files/bos_metafragtplcat.md) |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  | √ | LOCALTIMESTAMP | 创建时间 |
 | 6 | fdata_tag | 数据_详情 | text | 0 |  |  | null | 数据_详情 |
 | 7 | fsrc | 缩略图 | varchar | 256 |  | √ | ' ' | 缩略图 |
 | 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 9 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 12 | forder | 顺序 | int8 | 64 |  | √ | 0 | 顺序 |
 | 13 | fenable | 使用状态 | bpchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
@@ -35,8 +35,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_bas_metafragtpl_number |  | fnumber |
-| 2 | pk_t_bas_metafragtpl |  | fid |
+| 1 | pk_t_bas_metafragtpl |  | fid |
+| 2 | idx_bas_metafragtpl_number |  | fnumber |
 
 ---
 

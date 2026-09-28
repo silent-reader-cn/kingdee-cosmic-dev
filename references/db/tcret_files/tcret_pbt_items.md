@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fsm | fsm | varchar | 50 |  | √ | ' ' |  |
-| 3 | ftaxlimit | 缴纳期限 | varchar | 50 |  | √ | ' ' | 缴纳期限,枚举: month :按月申报 season :按季申报 halfyear :半年申报 year :按年申报 |
+| 3 | ftaxlimit | 缴纳期限 | varchar | 50 |  | √ | ' ' | 缴纳期限,枚举: month :按月申报 season :按季申报 halfyear :半年申报 year :按年申报 count :按次申报 |
 | 4 | ftaxstatus | 状态 | varchar | 50 |  | √ | ' ' | 状态 |
 | 5 | fseq | fseq | int4 | 32 |  | √ | 0 |  |
 | 6 | fskssqq | 所属税期起 | timestamp | 0 |  |  | null | 所属税期起 |
@@ -21,7 +21,7 @@
 | 10 | fynse | fynse | numeric | 23 | 10 | √ | 0.0000000000 |  |
 | 11 | fyjse | fyjse | numeric | 23 | 10 | √ | 0.0000000000 |  |
 | 12 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 13 | ftaxtype | 税种 | varchar | 50 |  | √ | ' ' | 税种,枚举: yhsaq :印花税（按期） yhsac :印花税（按次） fcscj :房产税（从价） fcscz :房产税（从租） cztdsys :城镇土地使用税 hbsaq :环保税（按期） ccscl :车船税（车辆） ccscb :车船税（船舶） qs :契税 tdzzs :土地增值税（尾盘） tdzzsyj :土地增值税（预征） tdzzsqs :土地增值税（清算） |
+| 13 | ftaxtype | 税种 | varchar | 50 |  | √ | ' ' | 税种,枚举: yhsaq :印花税（按期） yhsac :印花税（按次） fcscj :房产税（从价） fcscz :房产税（从租） cztdsys :城镇土地使用税 hbsaq :环保税（按期） ccscl :车船税（车辆） ccscb :车船税（船舶） qs :契税 tdzzs :土地增值税（尾盘） tdzzsyj :土地增值税（预征） tdzzsqs :土地增值税（清算） zysaj :资源税（按季） zysay :资源税（按月） zysac :资源税（按次） szysaj :水资源税（按季） szysay :水资源税（按月） szysan :水资源税（按年） tdzzszrjf :土地增值税（转让旧房） |
 | 14 | ftaxtypebrief | ftaxtypebrief | varchar | 50 |  | √ | ' ' |  |
 
 ### 列规则定义

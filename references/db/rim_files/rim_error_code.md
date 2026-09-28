@@ -13,7 +13,7 @@
 | 2 | frim_desc | 自定义描述 | varchar | 150 |  | √ | ' ' | 自定义描述 |
 | 3 | fout_desc | 外部系统错误描述 | varchar | 150 |  | √ | ' ' | 外部系统错误描述 |
 | 4 | fcreate_time | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
-| 5 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | finterface | 接口类型 | varchar | 50 |  | √ | ' ' | 接口类型,枚举: check :发票查验 |
 | 7 | frim_code | 自定义编码 | varchar | 30 |  | √ | ' ' | 自定义编码 |
 | 8 | fout_code | 外部系统错误代码 | varchar | 30 |  | √ | ' ' | 外部系统错误代码 |

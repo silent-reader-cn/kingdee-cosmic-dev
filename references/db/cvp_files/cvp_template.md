@@ -24,8 +24,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | pk_t_cvp_template_l |  | fpkid |
-| 2 | idx_cvp_template_l |  | fid,flocaleid |
+| 1 | idx_cvp_template_l |  | fid,flocaleid |
+| 2 | pk_t_cvp_template_l |  | fpkid |
 
 ---
 
@@ -39,7 +39,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | ftemptablehead | 模板识别表头信息 | text | 0 |  |  | ' ' | 模板识别表头信息 |
 | 4 | fbindingid | 绑定数据ID | int8 | 64 |  | √ | 0 | 绑定数据ID |
 | 5 | ftestimgpath | 测试图片 | varchar | 1000 |  | √ | ' ' | 测试图片 |
@@ -50,7 +50,7 @@
 | 10 | ftempimg | 模板原图 | varchar | 1000 |  | √ | ' ' | 模板原图 |
 | 11 | fstatus | 模板状态 | bpchar | 1 |  | √ | 'A' | 模板状态,枚举: A :未发布 B :可用 C :禁用 D :已发布-有更新 |
 | 12 | fcreatedate | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | fmodifydate | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 15 | fnumber | 模板编码 | varchar | 255 |  | √ | ' ' | 模板编码 |
 | 16 | fisvalid | 是否预置 | bpchar | 1 |  | √ | '1' | 是否预置,枚举: 0 :自定义 1 :预置-已发布识别服务 2 :预置-OCR自定义模板 |

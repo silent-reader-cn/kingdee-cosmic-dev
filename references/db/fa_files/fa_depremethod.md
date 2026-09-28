@@ -10,10 +10,10 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fname | 名称 | varchar | 100 |  |  | ' ' | 名称 |
+| 2 | fname | 名称 | varchar | 500 |  |  | ' ' | 名称 |
 | 3 | fformula | 静态折旧公式 | text | 0 |  |  | null | 静态折旧公式 |
 | 4 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
-| 5 | fdescription | 描述 | varchar | 255 |  |  | ' ' | 描述 |
+| 5 | fdescription | 描述 | varchar | 500 |  |  | ' ' | 描述 |
 | 6 | fformuladyn | 动态折旧公式 | text | 0 |  |  | null | 动态折旧公式 |
 | 7 | fpkid | fpkid | varchar | 18 |  | √ | ' ' | pkid |
 
@@ -27,8 +27,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | t_fa_depremethod_l_pkey |  | fpkid |
-| 2 | idx_fa_dm_l_fid_flocaleid |  | fid,flocaleid |
+| 1 | idx_fa_dm_l_fid_flocaleid |  | fid,flocaleid |
+| 2 | t_fa_depremethod_l_pkey |  | fpkid |
 
 ---
 
@@ -48,24 +48,26 @@
 | 5 | fdisabledate | 禁用时间 | timestamp | 0 |  |  | null | 禁用时间 |
 | 6 | fmodifytime | 修改时间 | timestamp | 0 |  |  | LOCALTIMESTAMP | 修改时间 |
 | 7 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 10 | fissystem | 系统预置 | bpchar | 1 |  | √ | '0' | 系统预置 |
-| 11 | fformula | 静态折旧公式 | text | 0 |  |  | ' ' | 静态折旧公式 |
-| 12 | fformuladyn | 动态折旧公式 | text | 0 |  |  | ' ' | 动态折旧公式 |
-| 13 | fperioddeprerate | fperioddeprerate | text | 0 |  |  | null |  |
-| 14 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 15 | fname | 名称 | varchar | 100 |  |  | ' ' | 名称 |
-| 16 | fcreatetime | 创建时间 | timestamp | 0 |  |  | LOCALTIMESTAMP | 创建时间 |
-| 17 | fperioddepreamount | 折旧期限 | int8 | 64 |  | √ | 0 | 折旧期限 |
-| 18 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 19 | fdescription | 描述 | varchar | 255 |  |  | ' ' | 描述 |
-| 20 | ftype | 类型 | varchar | 50 |  | √ | 'FORMULA' | 类型,枚举: 1 :表 2 :公式 3 :余额递减 4 :双倍余额递减 5 :工作量 6 :年数总和 7 :平均年限法 |
-| 21 | fenable | 使用状态 | bpchar | 1 |  | √ | '0' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 22 | fnumber | 编号 | varchar | 30 |  | √ | ' ' | 编号 |
-| 23 | fbase | 基数 | varchar | 30 |  | √ | ' ' | 基数,枚举: 1 :原值 2 :净额 |
-| 24 | fyeardepreamount | 折旧年限 | int8 | 64 |  | √ | 0 | 折旧年限 |
-| 25 | fdeductresidualval | 扣除残值 | bpchar | 1 |  | √ | '0' | 扣除残值 |
+| 10 | fformulascript | 静态折旧公式（脚本） | text | 0 |  |  | null | 静态折旧公式（脚本） |
+| 11 | fissystem | 系统预置 | bpchar | 1 |  | √ | '0' | 系统预置 |
+| 12 | fformula | 静态折旧公式 | text | 0 |  |  | ' ' | 静态折旧公式 |
+| 13 | fformuladyn | 动态折旧公式 | text | 0 |  |  | ' ' | 动态折旧公式 |
+| 14 | fperioddeprerate | fperioddeprerate | text | 0 |  |  | null |  |
+| 15 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 16 | fname | 名称 | varchar | 500 |  |  | ' ' | 名称 |
+| 17 | fcreatetime | 创建时间 | timestamp | 0 |  |  | LOCALTIMESTAMP | 创建时间 |
+| 18 | fperioddepreamount | 折旧期限 | int8 | 64 |  | √ | 0 | 折旧期限 |
+| 19 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 20 | fdescription | 描述 | varchar | 500 |  |  | ' ' | 描述 |
+| 21 | ftype | 类型 | varchar | 50 |  | √ | 'FORMULA' | 类型,枚举: 1 :固定折旧率 2 :公式 3 :余额递减 4 :双倍余额递减 5 :工作量 6 :年数总和 7 :平均年限法 8 :调整后的余额递减法 9 :自定义折旧公式 10 :按日折旧法 |
+| 22 | fenable | 使用状态 | bpchar | 1 |  | √ | '0' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 23 | fnumber | 编号 | varchar | 30 |  | √ | ' ' | 编号 |
+| 24 | fbase | 基数 | varchar | 30 |  | √ | ' ' | 基数,枚举: 1 :原值 2 :净额 |
+| 25 | fyeardepreamount | 折旧年限 | int8 | 64 |  | √ | 0 | 折旧年限 |
+| 26 | fdeductresidualval | 扣除残值 | bpchar | 1 |  | √ | '0' | 扣除残值 |
+| 27 | fformuladynscript | 动态折旧公式（脚本） | text | 0 |  |  | null | 动态折旧公式（脚本） |
 
 ### 列规则定义
 

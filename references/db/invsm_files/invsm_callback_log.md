@@ -15,7 +15,7 @@
 | 4 | fcallbacktype | 回调类型 | varchar | 30 |  | √ | ' ' | 回调类型,枚举: invoice :发票 bill :单据 3 :发票失败回调 4 :单据失败回调 5 :全部回调 |
 | 5 | fcallbackcontent | fcallbackcontent | varchar | 255 |  | √ | ' ' |  |
 | 6 | fbusinesstype | 业务类型(回调动作) | varchar | 50 |  | √ | ' ' | 业务类型(回调动作),枚举: INVOICE.OPEN :正常开票 INVOICE.CANCEL :发票作废 INVOICE.RED :发票红冲 |
-| 7 | forg | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 7 | forg | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | fcallbackcontents_tag | 回调内容_详情 | text | 0 |  |  | null | 回调内容_详情 |
 | 9 | fbusinessfid | 业务主键 | int8 | 64 |  | √ | 0 | 业务主键 |
 | 10 | finvoicecode | 发票代码 | varchar | 50 |  | √ | ' ' | 发票代码 |

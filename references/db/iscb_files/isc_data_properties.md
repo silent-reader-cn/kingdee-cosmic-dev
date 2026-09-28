@@ -13,15 +13,16 @@
 | 2 | fremark | 备注 | varchar | 100 |  | √ | ' ' | 备注 |
 | 3 | fname | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
 | 4 | flabel | flabel | varchar | 100 |  | √ | ' ' |  |
-| 5 | findex | findex | varchar | 100 |  | √ | ' ' |  |
-| 6 | fdata_schema | fdata_schema | varchar | 100 |  | √ | ' ' |  |
-| 7 | fis_primary_key | 主键 | bpchar | 1 |  | √ | ' ' | 主键 |
-| 8 | fseq | fseq | int8 | 64 |  | √ | 0 |  |
-| 9 | fis_encrypt | fis_encrypt | bpchar | 1 |  | √ | ' ' |  |
-| 10 | fcustomize | fcustomize | bpchar | 1 |  | √ | ' ' |  |
-| 11 | frequired | 必填 | bpchar | 1 |  | √ | ' ' | 必填 |
-| 12 | fdata_type | 数据类型 | varchar | 100 |  | √ | ' ' | 数据类型 |
-| 13 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 5 | flabel_en_us | flabel_en_us | varchar | 150 |  | √ | ' ' |  |
+| 6 | findex | findex | varchar | 100 |  | √ | ' ' |  |
+| 7 | fdata_schema | fdata_schema | varchar | 100 |  | √ | ' ' |  |
+| 8 | fis_primary_key | 主键 | bpchar | 1 |  | √ | ' ' | 主键 |
+| 9 | fseq | fseq | int8 | 64 |  | √ | 0 |  |
+| 10 | fis_encrypt | fis_encrypt | bpchar | 1 |  | √ | ' ' |  |
+| 11 | fcustomize | fcustomize | bpchar | 1 |  | √ | ' ' |  |
+| 12 | frequired | 必填 | bpchar | 1 |  | √ | ' ' | 必填 |
+| 13 | fdata_type | 数据类型 | varchar | 100 |  | √ | ' ' | 数据类型 |
+| 14 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 
 ### 列规则定义
 

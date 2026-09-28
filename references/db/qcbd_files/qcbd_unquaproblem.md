@@ -94,21 +94,21 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 4 | fgroupid | 分类 | int8 | 64 |  | √ | 0 | 不良品问题分类分组 qcbd_unquaprobgrp |
+| 2 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 4 | fgroupid | 分类 | int8 | 64 |  | √ | 0 | [不良品问题分类分组 qcbd_unquaprobgrp](../qcbd_files/qcbd_unquaprobgrp.md) |
 | 5 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
 | 6 | fcomment | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
 | 7 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 8 | fauditdatetime | fauditdatetime | timestamp | 0 |  |  | null |  |
-| 9 | fuseorg | 业务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 10 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 9 | fuseorg | 业务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 10 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 11 | fauditdate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
-| 12 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 12 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 13 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 14 | fctrlstrategy | 控制策略 | varchar | 30 |  | √ | ' ' | 控制策略,枚举: 5 :全局共享 |
 | 15 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 16 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 16 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 17 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 18 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 19 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
@@ -116,7 +116,7 @@
 | 21 | fxkallocationtype | 分配类型 | varchar | 30 |  | √ | ' ' | 分配类型,枚举: 1 :个性化 2 :共享型 |
 | 22 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
 | 23 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
-| 24 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 24 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

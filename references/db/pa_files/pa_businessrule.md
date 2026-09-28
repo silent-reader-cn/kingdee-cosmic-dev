@@ -94,32 +94,32 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 3 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 3 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 5 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 6 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 7 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 8 | fanalysismodelid | 分析模型 | int8 | 64 |  | √ | 0 | 分析模型 pa_analysismodel |
+| 8 | fanalysismodelid | 分析模型 | int8 | 64 |  | √ | 0 | [分析模型 pa_analysismodel](../pa_files/pa_analysismodel.md) |
 | 9 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 10 | fbitindex | 位图 | int8 | 64 |  | √ | 0 | 位图 |
 | 11 | faccountfilter | 科目过滤条件 | varchar | 255 |  | √ | ' ' | 科目过滤条件 |
 | 12 | fversion | 版本号 | varchar | 50 |  | √ | ' ' | 版本号 |
-| 13 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 13 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 14 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
-| 15 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 15 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 16 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 17 | fperiodbasetype | 期间基础资料类型 | varchar | 50 |  | √ | ' ' | 期间基础资料类型,枚举: bd_period :会计期间 |
-| 18 | fanalysissystemid | 分析体系 | int8 | 64 |  | √ | 0 | 分析体系 pa_anasystemsetting |
+| 18 | fanalysissystemid | 分析体系 | int8 | 64 |  | √ | 0 | [分析体系 pa_anasystemsetting](../pa_files/pa_anasystemsetting.md) |
 | 19 | fstartperiodid | 起始期间 | int8 | 64 |  | √ | 0 | 会计日历 bd_period |
 | 20 | faccountfilter_tag | 科目过滤条件_详情 | text | 0 |  |  | null | 科目过滤条件_详情 |
 | 21 | fctrlstrategy | 控制策略 | varchar | 10 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
-| 22 | faccounttypeid | 科目表 | int8 | 64 |  | √ | 0 | 科目表 pa_accounttype |
-| 23 | fperiodtype | 期间类型 | int8 | 64 |  | √ | 0 | 会计日历类型 bd_period_type |
+| 22 | faccounttypeid | 科目表 | int8 | 64 |  | √ | 0 | [科目表 pa_accounttype](../pa_files/pa_accounttype.md) |
+| 23 | fperiodtype | 期间类型 | int8 | 64 |  | √ | 0 | [会计日历类型 bd_period_type](../fibd_files/bd_period_type.md) |
 | 24 | fendperiodid | 结束期间 | int8 | 64 |  | √ | 0 | 会计日历 bd_period |
 | 25 | fenable | 使用状态 | bpchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 26 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
-| 27 | fuseorgid | 业务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 27 | fuseorgid | 业务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 28 | fdesc | 描述 | varchar | 255 |  | √ | ' ' | 描述 |
 | 29 | fsourcebitindex | 原资料位图 | int8 | 64 |  | √ | 0 | 原资料位图 |
 
@@ -152,10 +152,10 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fstepname |  | varchar | 50 |  | √ | ' ' |  |
 | 3 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 4 | fsharemodelid | 分摊模板 | int8 | 64 |  | √ | 0 | 分摊规则 pa_sharerulenew |
+| 4 | fsharemodelid | 分摊模板 | int8 | 64 |  | √ | 0 | [分摊规则 pa_sharerulenew](../pa_files/pa_sharerulenew.md) |
 | 5 | fhandletype | 处理类型 | varchar | 4 |  | √ | ' ' | 处理类型,枚举: A :推导 B :分摊 |
 | 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 7 | fderivationmodelid | 推导模板 | int8 | 64 |  | √ | 0 | 推导规则 pa_derivationrule |
+| 7 | fderivationmodelid | 推导模板 | int8 | 64 |  | √ | 0 | [推导规则 pa_derivationrule](../pa_files/pa_derivationrule.md) |
 
 ### 列规则定义
 

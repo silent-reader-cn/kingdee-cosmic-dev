@@ -14,7 +14,7 @@
 | 3 | fwarning_scheme | 预警方案id | int8 | 64 |  | √ | 0 | 预警方案id |
 | 4 | faudit_end_date | 审计范围.结束 | timestamp | 0 |  |  | null | 审计范围.结束 |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 6 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | foperate_type | 操作类型 | varchar | 2 |  | √ | ' ' | 操作类型,枚举: 0 :手动审计 1 :自动审计 |
 | 8 | faudit_start_date | 审计范围.开始 | timestamp | 0 |  |  | null | 审计范围.开始 |
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |

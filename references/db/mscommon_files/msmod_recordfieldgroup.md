@@ -14,9 +14,9 @@
 | 3 | fcreatedate | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
 | 4 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 2 :禁用 1 :可用 |
 | 5 | fnumber | 编码 | varchar | 50 |  | √ | ' ' | 编码 |
-| 6 | fbilltype | 单据类型 | int8 | 64 |  | √ | 0 | 核销单据类型 msmod_billtype |
+| 6 | fbilltype | 单据类型 | int8 | 64 |  | √ | 0 | [核销单据类型 msmod_billtype](../mscommon_files/msmod_billtype.md) |
 | 7 | fispreset | 系统预设 | bpchar | 1 |  | √ | '0' | 系统预设 |
-| 8 | fwftype | 核销类别 | int8 | 64 |  | √ | 0 | 核销类别 msmod_writeofftype |
+| 8 | fwftype | 核销类别 | int8 | 64 |  | √ | 0 | [核销类别 msmod_writeofftype](../mscommon_files/msmod_writeofftype.md) |
 | 9 | fgroupfield | 分组字段 | varchar | 255 |  | √ | ' ' | 分组字段,枚举: |
 
 ### 列规则定义

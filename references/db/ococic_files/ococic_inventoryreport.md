@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 2 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 | id |
-| 3 | fserialid | 序列号ID | int8 | 64 |  | √ | 0 | 商品序列号 ococic_snmainfile |
+| 3 | fserialid | 序列号ID | int8 | 64 |  | √ | 0 | [商品序列号 ococic_snmainfile](../ococic_files/ococic_snmainfile.md) |
 | 4 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 | 5 | fserialnumber | 序列号 | varchar | 80 |  | √ | ' ' | 序列号 |
 | 6 | fserialcomment | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
@@ -42,18 +42,18 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fremark | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fbillstatus | 单据状态 | bpchar | 1 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 6 | forgid | 渠道库存组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 7 | freportchannelid | 上报渠道 | int8 | 64 |  | √ | 0 | 渠道 ocdbd_channel |
+| 6 | forgid | 渠道库存组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 7 | freportchannelid | 上报渠道 | int8 | 64 |  | √ | 0 | [渠道 ocdbd_channel](../ocdbd_files/ocdbd_channel.md) |
 | 8 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
 | 9 | freportdate | 上报日期 | timestamp | 0 |  |  | null | 上报日期 |
 | 10 | finway | 入库方向 | bpchar | 1 |  | √ | '1' | 入库方向,枚举: 1 :正向 |
 | 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fbillno | 单据编号 | varchar | 80 |  | √ | ' ' | 单据编号 |
-| 14 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | fbilltypeid | 单据类型 | int8 | 64 |  | √ | 0 | 单据类型 bos_billtype |
 
 ### 列规则定义
@@ -81,26 +81,26 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fstockstatusid | 库存状态 | int8 | 64 |  | √ | 0 | 渠道库存状态 ococic_stockstatus |
+| 2 | fstockstatusid | 库存状态 | int8 | 64 |  | √ | 0 | [渠道库存状态 ococic_stockstatus](../ococic_files/ococic_stockstatus.md) |
 | 3 | flotnumber | 批号 | varchar | 80 |  | √ | ' ' | 批号 |
-| 4 | fmaterialid | 物料 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 4 | fmaterialid | 物料 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 5 | fauxptyid | 辅助属性 | int8 | 64 |  | √ | 0 | null 001 |
 | 6 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 7 | fproductdate | 生产日期 | timestamp | 0 |  |  | null | 生产日期 |
-| 8 | fstocktypeid | 库存类型 | int8 | 64 |  | √ | 0 | 渠道库存类型 ococic_stocktype |
+| 8 | fstocktypeid | 库存类型 | int8 | 64 |  | √ | 0 | [渠道库存类型 ococic_stocktype](../ococic_files/ococic_stocktype.md) |
 | 9 | fexpiredate | 有效期至 | timestamp | 0 |  |  | null | 有效期至 |
 | 10 | fownertype | 货主类型 | varchar | 36 |  | √ | ' ' | 货主类型,枚举: ocdbd_channel :渠道 |
 | 11 | fkeeperid | 保管者 | int8 | 64 |  | √ | 0 | 渠道 ocdbd_channel |
-| 12 | fbaseunitid | 基本计量单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 13 | fassistunitid | 辅助计量单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 12 | fbaseunitid | 基本计量单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 13 | fassistunitid | 辅助计量单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 14 | fqty | 数量 | numeric | 23 | 10 | √ | 0 | 数量 |
-| 15 | flotnumberid | 批号ID | int8 | 64 |  | √ | 0 | 商品批号 ococic_lot |
-| 16 | funitid | 计量单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 15 | flotnumberid | 批号ID | int8 | 64 |  | √ | 0 | [商品批号 ococic_lot](../ococic_files/ococic_lot.md) |
+| 16 | funitid | 计量单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 17 | fkeepertype | 保管者类型 | varchar | 36 |  | √ | ' ' | 保管者类型,枚举: ocdbd_channel :渠道 |
-| 18 | fwarehouseid | 仓库 | int8 | 64 |  | √ | 0 | 渠道仓库 ococic_warehouse |
-| 19 | fitemid | 商品编码 | int8 | 64 |  | √ | 0 | 商品信息 ocdbd_iteminfo |
+| 18 | fwarehouseid | 仓库 | int8 | 64 |  | √ | 0 | [渠道仓库 ococic_warehouse](../ococic_files/ococic_warehouse.md) |
+| 19 | fitemid | 商品编码 | int8 | 64 |  | √ | 0 | [商品信息 ocdbd_iteminfo](../ocdbd_files/ocdbd_iteminfo.md) |
 | 20 | fownerid | 货主 | int8 | 64 |  | √ | 0 | 渠道 ocdbd_channel |
-| 21 | flocationid | 仓位 | int8 | 64 |  | √ | 0 | 渠道仓位 ococic_location |
+| 21 | flocationid | 仓位 | int8 | 64 |  | √ | 0 | [渠道仓位 ococic_location](../ococic_files/ococic_location.md) |
 | 22 | fentryremark | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
 | 23 | fbaseqty | 基本计量单位数量 | numeric | 23 | 10 | √ | 0 | 基本计量单位数量 |
 | 24 | fassistqty | 辅助计量单位数量 | numeric | 23 | 10 | √ | 0 | 辅助计量单位数量 |

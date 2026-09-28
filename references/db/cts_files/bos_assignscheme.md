@@ -39,21 +39,21 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | fincludesuborg | 包含下级组织 | bpchar | 1 |  | √ | '0' | 包含下级组织,枚举: 1 :是 0 :否 |
-| 5 | fappid | 所属应用 | varchar | 36 |  | √ | ' ' | 业务应用实体 bos_devportal_bizapp |
-| 6 | flayoutschemeid | 界面方案 | int8 | 64 |  | √ | 0 | 界面个性化配置 bos_newpageconfig |
+| 5 | fappid | 所属应用 | varchar | 36 |  | √ | ' ' | [业务应用实体 bos_devportal_bizapp](../mdl_files/bos_devportal_bizapp.md) |
+| 6 | flayoutschemeid | 界面方案 | int8 | 64 |  | √ | 0 | [界面个性化配置 bos_newpageconfig](../cts_files/bos_newpageconfig.md) |
 | 7 | fstatus | 数据状态 | bpchar | 1 |  | √ | '0' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 8 | fcreatedate | 创建日期 | timestamp | 0 |  | √ | LOCALTIMESTAMP | 创建日期 |
 | 9 | ftype | 分配类型 | bpchar | 1 |  | √ | ' ' | 分配类型,枚举: 1 :组织分配 2 :单据类型分配 3 :单据类型+组织分配 |
-| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 12 | fmodifydate | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
-| 13 | fcloudid | 所属云 | varchar | 36 |  | √ | ' ' | 业务云 bos_devportal_bizcloud |
+| 13 | fcloudid | 所属云 | varchar | 36 |  | √ | ' ' | [业务云 bos_devportal_bizcloud](../mdl_files/bos_devportal_bizcloud.md) |
 | 14 | fenable | 使用状态 | bpchar | 1 |  | √ | '0' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 15 | fnumber | 编码 | varchar | 36 |  | √ | ' ' | 编码 |
-| 16 | fbilltypeid | 单据类型 | int8 | 64 |  | √ | 0 | 单据类型 bos_billtype |
+| 16 | fbilltypeid | 单据类型 | int8 | 64 |  | √ | 0 | [单据类型 bos_billtype](../cts_files/bos_billtype.md) |
 
 ### 列规则定义
 

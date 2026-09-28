@@ -54,7 +54,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | ftaxperiod | 所属税期： | timestamp | 0 |  |  | null | 所属税期： |
 | 3 | fillegal | 从事国家限制或禁止行业 | bpchar | 1 |  | √ | '0' | 从事国家限制或禁止行业 |
-| 4 | forgid | 组织名称： | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 4 | forgid | 组织名称： | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | fsuittype | 软件集成电路企业优惠政策适用类型： | varchar | 50 |  | √ | ' ' | 软件集成电路企业优惠政策适用类型：,枚举: 1 :新政策 2 :原政策 |
 | 6 | fdeclaretype | 申报企业类型： | varchar | 50 |  | √ | ' ' | 申报企业类型：,枚举: 100 :非跨地区经营企业 210 :总机构（跨省）——适用《跨地区经营汇总纳税企业所得税征收管理办法》 220 :总机构（跨省）——不适用《跨地区经营汇总纳税企业所得税征收管理办法》 230 :总机构（省内） 311 :分支机构（须进行完整年度申报并按比例纳税） 312 :分支机构（须进行完整年度申报但不就地缴纳） |
 | 7 | fenddate | 结束时间 | timestamp | 0 |  |  | null | 结束时间 |
@@ -63,7 +63,7 @@
 | 10 | fprepaytype | 预缴方式： | varchar | 50 |  | √ | ' ' | 预缴方式：,枚举: 1 :按照实际利润额预缴 2 :按照上一纳税年度应纳税所得额平均额预缴 3 :按照税务机关确定的其他方法预缴 |
 | 11 | fyear | 所属税期： | varchar | 50 |  | √ | ' ' | 所属税期：,枚举: 2019 :2019年 : |
 | 12 | fjidu | 季度 | varchar | 50 |  | √ | ' ' | 季度,枚举: 1 :一季度 2 :二季度 3 :三季度 4 :四季度 |
-| 13 | fregistertype | 登记注册类型： | int8 | 64 |  | √ | 0 | 注册登记类型 tax_info_registertype |
+| 13 | fregistertype | 登记注册类型： | int8 | 64 |  | √ | 0 | [注册登记类型 tax_info_registertype](../tctb_files/tax_info_registertype.md) |
 
 ### 列规则定义
 
@@ -75,5 +75,5 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | pk_tccit_branch_confpolicy |  | fid |
-| 2 | idx_tccit_branch_confpolicy_1 |  | forgid,fstartdate,fenddate |
+| 1 | idx_tccit_branch_confpolicy_1 |  | forgid,fstartdate,fenddate |
+| 2 | pk_tccit_branch_confpolicy |  | fid |

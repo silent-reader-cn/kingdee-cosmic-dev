@@ -28,8 +28,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_aef_efientry_fid |  | fid |
-| 2 | pk_t_aef_efientry |  | fentryid |
+| 1 | pk_t_aef_efientry |  | fentryid |
+| 2 | idx_aef_efientry_fid |  | fid |
 
 ---
 
@@ -49,7 +49,7 @@
 | 5 | flargejson | 接收端json | varchar | 500 |  | √ | ' ' | 接收端json |
 | 6 | fdateofissue | 开票日期 | timestamp | 0 |  |  | null | 开票日期 |
 | 7 | ftotalamount | 总金额 | numeric | 23 | 10 | √ | 0 | 总金额 |
-| 8 | forgid | 归档组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 8 | forgid | 归档组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 9 | fdirectvoucherid | 凭证ID | int8 | 64 |  | √ | 0 | 凭证ID |
 | 10 | fxbrlurl | xbrlurl | varchar | 200 |  | √ | ' ' | xbrlurl |
 | 11 | fsocialcreditcode | 会计主体统一社会信用代码 | varchar | 50 |  | √ | ' ' | 会计主体统一社会信用代码 |
@@ -58,7 +58,7 @@
 | 14 | fhasbeenchecked | 是否已验真 | bpchar | 1 |  | √ | ' ' | 是否已验真 |
 | 15 | fhasbeenbooked | 是否已入账 | bpchar | 1 |  | √ | ' ' | 是否已入账 |
 | 16 | fsourcebillno | 源单号码 | varchar | 50 |  | √ | ' ' | 源单号码 |
-| 17 | fbilltype | 单据类型 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 17 | fbilltype | 单据类型 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 18 | flargejson_tag | 接收端json_详情 | text | 0 |  |  | null | 接收端json_详情 |
 
 ### 列规则定义

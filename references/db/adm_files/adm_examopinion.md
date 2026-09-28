@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | 供应商ID | int8 | 64 |  | √ | 0 | 供应商ID |
 | 2 | fexamtime | 评审时间 | timestamp | 0 |  |  | null | 评审时间 |
-| 3 | fexamerid | 评审人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fexamerid | 评审人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fsrcbillno | 源单单号 | varchar | 80 |  | √ | ' ' | 源单单号 |
 | 5 | fexamstatus | 评审结果 | bpchar | 1 |  | √ | ' ' | 评审结果,枚举: A :拟定 B :提交审批 C :审批通过 D :审批驳回 E :退回修改 |
 | 6 | fsrcbillid | 源单ID | int8 | 64 |  | √ | 0 | 源单ID |

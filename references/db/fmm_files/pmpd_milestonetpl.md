@@ -24,8 +24,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | pk_fmm_milestonetpl_l |  | fpkid |
-| 2 | idx_fmm_milestonetpl_l |  | fid,flocaleid |
+| 1 | idx_fmm_milestonetpl_l |  | fid,flocaleid |
+| 2 | pk_fmm_milestonetpl_l |  | fpkid |
 
 ---
 
@@ -96,7 +96,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fplanbegin | 计划开始 | int4 | 32 |  | √ | 0 | 计划开始 |
 | 3 | fposttaskid | 后置任务ID | int8 | 64 |  | √ | 0 | 后置任务ID |
-| 4 | ftasktype | 任务类型 | int8 | 64 |  | √ | 0 | 任务类型 pmbd_jobtype |
+| 4 | ftasktype | 任务类型 | int8 | 64 |  | √ | 0 | [任务类型 pmbd_jobtype](../fmm_files/pmbd_jobtype.md) |
 | 5 | fpostrelation | 后置任务关系 | varchar | 5 |  | √ | ' ' | 后置任务关系,枚举: 1 :FS 2 :FF 3 :SS 4 :SF |
 | 6 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 7 | fplanfinish | 计划完成 | int4 | 32 |  | √ | 0 | 计划完成 |
@@ -106,17 +106,17 @@
 | 11 | fpostdelay | 后置延时设置 | numeric | 23 | 10 |  | null | 后置延时设置 |
 | 12 | fparententryid | fparententryid | int8 | 64 |  | √ | 0 | pid |
 | 13 | fmilestonename | 里程碑名称 | varchar | 255 |  | √ | ' ' | 里程碑名称 |
-| 14 | fwbstype | WBS类型 | int8 | 64 |  | √ | 0 | 项目WBS类型 pmbd_projectwbstype |
+| 14 | fwbstype | WBS类型 | int8 | 64 |  | √ | 0 | [项目WBS类型 pmbd_projectwbstype](../fmm_files/pmbd_projectwbstype.md) |
 | 15 | fpercent | 进度比（%） | numeric | 23 | 10 | √ | 0 | 进度比（%） |
 | 16 | ffrontrelation | 前置任务关系 | varchar | 5 |  | √ | ' ' | 前置任务关系,枚举: 1 :FS 2 :FF 3 :SS 4 :SF |
 | 17 | ffronttask | 前置任务 | varchar | 50 |  | √ | ' ' | 前置任务 |
 | 18 | ftaskname | 任务名称 | varchar | 255 |  | √ | ' ' | 任务名称 |
 | 19 | fwbsname | WBS名称 | varchar | 255 |  | √ | ' ' | WBS名称 |
 | 20 | ffrontdelay | 前置延时设置 | numeric | 23 | 10 |  | null | 前置延时设置 |
-| 21 | fstandardmile | 标准里程碑 | int8 | 64 |  | √ | 0 | 标准任务清单 fmm_standardtask |
+| 21 | fstandardmile | 标准里程碑 | int8 | 64 |  | √ | 0 | [标准任务清单 fmm_standardtask](../fmm_files/fmm_standardtask.md) |
 | 22 | fparent | 上级 | varchar | 50 |  | √ | ' ' | 上级 |
-| 23 | ftimeunit | 工期单位 | int8 | 64 |  | √ | 0 | 工期单位 pmpd_timeunit |
-| 24 | fstandardtask | 标准任务 | int8 | 64 |  | √ | 0 | 标准任务清单 fmm_standardtask |
+| 23 | ftimeunit | 工期单位 | int8 | 64 |  | √ | 0 | [工期单位 pmpd_timeunit](../fmm_files/pmpd_timeunit.md) |
+| 24 | fstandardtask | 标准任务 | int8 | 64 |  | √ | 0 | [标准任务清单 fmm_standardtask](../fmm_files/fmm_standardtask.md) |
 | 25 | ffronttaskid | 前置任务ID | int8 | 64 |  | √ | 0 | 前置任务ID |
 | 26 | fposttask | 后置任务 | varchar | 50 |  | √ | ' ' | 后置任务 |
 | 27 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
@@ -146,24 +146,24 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fgroupid | 计划模板类型 | int8 | 64 |  | √ | 0 | 计划模板类型 pmts_wbs_modeltype |
-| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 4 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fgroupid | 计划模板类型 | int8 | 64 |  | √ | 0 | [计划模板类型 pmts_wbs_modeltype](../fmm_files/pmts_wbs_modeltype.md) |
+| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 4 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | faudittime | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
 | 6 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 7 | fchecktype | 检修级别 | int8 | 64 |  | √ | 0 | 检修级别 mpdm_checktype |
+| 7 | fchecktype | 检修级别 | int8 | 64 |  | √ | 0 | [检修级别 mpdm_checktype](../mpdm_files/mpdm_checktype.md) |
 | 8 | fstatus | 数据状态 | varchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 9 | ffixweek | 维修周期 | numeric | 23 | 10 | √ | 0 | 维修周期 |
-| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 12 | fauditor | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fauditor | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 14 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
-| 15 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 15 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 16 | fremark | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
-| 17 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 17 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 18 | fname | 模板名称 | varchar | 50 |  | √ | ' ' | 模板名称 |
-| 19 | fcustomer | 客户 | int8 | 64 |  | √ | 0 | 客户 bd_customer |
+| 19 | fcustomer | 客户 | int8 | 64 |  | √ | 0 | [客户 bd_customer](../basedata_files/bd_customer.md) |
 | 20 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 21 | fstructure | 模板结构 | varchar | 50 |  | √ | ' ' | 模板结构,枚举: A :里程碑模板 B :WBS模板 C :任务模板 D :全量模板 |
 | 22 | fctrlstrategy | 控制策略 | varchar | 5 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
@@ -172,7 +172,7 @@
 | 25 | fenable | 使用状态 | varchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 26 | fnumber | 模板编码 | varchar | 30 |  | √ | ' ' | 模板编码 |
 | 27 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
-| 28 | fmrtype | 检修设备类型 | int8 | 64 |  | √ | 0 | 检修设备类型 mpdm_mrtype |
+| 28 | fmrtype | 检修设备类型 | int8 | 64 |  | √ | 0 | [检修设备类型 mpdm_mrtype](../mpdm_files/mpdm_mrtype.md) |
 
 ### 列规则定义
 
@@ -185,6 +185,6 @@
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
 | 1 | idx_t_fmm_milestonetpl_createorg |  | fcreateorgid |
-| 2 | idx_fmm_milestonetpl_fnumber |  | fnumber |
-| 3 | pk_fmm_milestonetpl |  | fid |
+| 2 | pk_fmm_milestonetpl |  | fid |
+| 3 | idx_fmm_milestonetpl_fnumber |  | fnumber |
 | 4 | idx_t_fmm_milestonetpl_master |  | fmasterid |

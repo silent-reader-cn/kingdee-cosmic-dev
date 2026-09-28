@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | ftemplateid | 报表模板编码 | varchar | 36 |  | √ | ' ' | 报表模板 xkrpt_rptsample |
+| 2 | ftemplateid | 报表模板编码 | varchar | 36 |  | √ | ' ' | [报表模板 xkrpt_rptsample](../xkrpt_files/xkrpt_rptsample.md) |
 | 3 | fsubmitcontrolstrength | 提交控制强度 | bpchar | 1 |  | √ | ' ' | 提交控制强度,枚举: 0 :不检查 1 :仅提示可提交 2 :不可提交 |
 | 4 | freportcontrolstrength | 上报控制强度 | bpchar | 1 |  | √ | '0' | 上报控制强度,枚举: 0 :不检查 1 :仅提示可上报 2 :不可上报 |
 | 5 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
@@ -74,14 +74,14 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | frexpress | 右等式 | varchar | 2000 |  | √ | ' ' | 右等式 |
 | 3 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 5 | fapplication | 所属应用 | bpchar | 1 |  | √ | '0' | 所属应用,枚举: 0 :xkrpt 1 :xkcr |
-| 6 | famountunit | 金额单位 | int8 | 64 |  | √ | 0 | 金额单位 xkbd_amountunit |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 5 | fapplication | 所属应用 | bpchar | 1 |  | √ | '0' | 所属应用,枚举: 0 :xkrpt 1 :xkcr 2 :xkfsa |
+| 6 | famountunit | 金额单位 | int8 | 64 |  | √ | 0 | [金额单位 xkbd_amountunit](../fibd_files/xkbd_amountunit.md) |
 | 7 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 8 | frelationoperator | 等式关系 | bpchar | 1 |  | √ | ' ' | 等式关系,枚举: 0 := 1 :> 2 := 4 : |
+| 8 | frelationoperator | 等式关系 | bpchar | 1 |  | √ | ' ' | 等式关系,枚举: 0 := 1 :> 2 :< 3 :>= 4 :<= 5 :<> |
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 10 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 13 | ferrorrange | 允许误差 | numeric | 23 | 4 | √ | 0 | 允许误差 |
 | 14 | flexpress | 左等式 | varchar | 2000 |  | √ | ' ' | 左等式 |
@@ -90,7 +90,7 @@
 | 17 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
 | 18 | fforbiddate | 禁用时间 | timestamp | 0 |  |  | null | 禁用时间 |
 | 19 | fissyspreset | 系统预置 | bpchar | 1 |  | √ | '0' | 系统预置 |
-| 20 | fforbidderid | 禁用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 20 | fforbidderid | 禁用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

@@ -40,18 +40,18 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fbillstatus | 单据状态 | varchar | 80 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 H :变更处理中 E :退单 |
 | 4 | fapplydate | 申请日期 | timestamp | 0 |  |  | null | 申请日期 |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 6 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
 | 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 9 | fapplyuserid | 申请人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 9 | fapplyuserid | 申请人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | fbillno | 单据编号 | varchar | 80 |  | √ | ' ' | 单据编号 |
-| 11 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 12 | faccountbankid | 银行账号 | int8 | 64 |  | √ | 0 | 银行账户 bd_accountbanks |
-| 13 | fcompanyid | 资金组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 11 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 12 | faccountbankid | 银行账号 | int8 | 64 |  | √ | 0 | [银行账户 bd_accountbanks](../basedata_files/bd_accountbanks.md) |
+| 13 | fcompanyid | 资金组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 
 ### 列规则定义
 
@@ -63,8 +63,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_t_am_changeapply_num |  | fbillno |
-| 2 | pk_t_am_changeapply |  | fid |
+| 1 | pk_t_am_changeapply |  | fid |
+| 2 | idx_t_am_changeapply_num |  | fbillno |
 
 ---
 
@@ -114,7 +114,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 | 2 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 | 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 
@@ -142,7 +142,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 结算方式 bd_settlementtype |
+| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [结算方式 bd_settlementtype](../basedata_files/bd_settlementtype.md) |
 | 2 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 | 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 
@@ -173,7 +173,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | feremark | feremark | varchar | 255 |  | √ | ' ' |  |
 | 3 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 4 | feaccountbankid | 银行账号 | int8 | 64 |  | √ | 0 | 银行账户 bd_accountbanks |
+| 4 | feaccountbankid | 银行账号 | int8 | 64 |  | √ | 0 | [银行账户 bd_accountbanks](../basedata_files/bd_accountbanks.md) |
 | 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 
 ### 列规则定义

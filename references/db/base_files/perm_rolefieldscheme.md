@@ -10,13 +10,13 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 3 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 4 | froleid | 角色 | varchar | 18 |  | √ | ' ' | 通用角色 perm_role |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 3 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 4 | froleid | 角色 | varchar | 18 |  | √ | ' ' | [通用角色 perm_role](../base_files/perm_role.md) |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 6 | fentnum | 业务对象 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
-| 7 | ffieldpermschemeid | 字段权限方案 | int8 | 64 |  | √ | 0 | 字段权限方案 perm_fieldscheme |
-| 8 | fappid | 应用 | varchar | 36 |  | √ | ' ' | 业务应用实体 bos_devportal_bizapp |
+| 6 | fentnum | 业务对象 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
+| 7 | ffieldpermschemeid | 字段权限方案 | int8 | 64 |  | √ | 0 | [属性/明细字段权限方案 perm_fieldscheme](../base_files/perm_fieldscheme.md) |
+| 8 | fappid | 应用 | varchar | 36 |  | √ | ' ' | [业务应用实体 bos_devportal_bizapp](../mdl_files/bos_devportal_bizapp.md) |
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 
 ### 列规则定义

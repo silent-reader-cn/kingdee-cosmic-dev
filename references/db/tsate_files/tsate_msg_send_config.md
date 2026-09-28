@@ -10,14 +10,14 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreaterfield | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fcreaterfield | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fnodetype | 系统类型 | varchar | 30 |  | √ | ' ' | 系统类型,枚举: |
 | 4 | fmodifydatefield | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
 | 5 | fmsgurl | URL | varchar | 600 |  | √ | ' ' | URL |
 | 6 | fsendtype | 发送类型 | varchar | 30 |  | √ | ' ' | 发送类型,枚举: post :post get :get |
 | 7 | fcreatedatefield | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
 | 8 | fmsgtype | 消息类型 | varchar | 30 |  | √ | ' ' | 消息类型,枚举: |
-| 9 | fmodifierfield | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fmodifierfield | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

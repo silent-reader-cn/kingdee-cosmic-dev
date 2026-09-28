@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fcheckdetail_tag | 检查明细_详情 | text | 0 |  |  | null | 检查明细_详情 |
-| 3 | fentrycostcenterid | 成本中心编码 | int8 | 64 |  | √ | 0 | 成本中心 bos_costcenter |
+| 3 | fentrycostcenterid | 成本中心编码 | int8 | 64 |  | √ | 0 | [成本中心 bos_costcenter](../basedata_files/bos_costcenter.md) |
 | 4 | fcheckdetail | 检查明细 | varchar | 255 |  | √ | ' ' | 检查明细 |
 | 5 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
@@ -42,12 +42,12 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fcheckitemdesc | 检查项 | varchar | 255 |  | √ | ' ' | 检查项 |
-| 3 | fperiodid | 会计期间 | int8 | 64 |  | √ | 0 | 会计日历 bd_period |
-| 4 | forgid | 核算组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 5 | fcostaccountid | 成本主体 | int8 | 64 |  | √ | 0 | 成本主体 cal_bd_costaccount |
+| 3 | fperiodid | 会计期间 | int8 | 64 |  | √ | 0 | [会计日历 bd_period](../fibd_files/bd_period.md) |
+| 4 | forgid | 核算组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 5 | fcostaccountid | 成本主体 | int8 | 64 |  | √ | 0 | [成本主体 cal_bd_costaccount](../cal_files/cal_bd_costaccount.md) |
 | 6 | fcalcdate | 计算日期 | timestamp | 0 |  |  | null | 计算日期 |
 | 7 | ftaskid | 任务 | int8 | 64 |  | √ | 0 | 任务 |
-| 8 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 8 | fcurrencyid | 币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 | 9 | fitemid | 检查项 | int8 | 64 |  | √ | 0 | 检查项 |
 | 10 | fcheckdesc | fcheckdesc | varchar | 255 |  | √ | ' ' |  |
 

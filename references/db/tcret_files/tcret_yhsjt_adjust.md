@@ -10,10 +10,10 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | faccountorg | 核算组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | faccountorg | 核算组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fserialno | 台账流水号 | varchar | 50 |  | √ | ' ' | 台账流水号 |
 | 4 | ftaxitem | 税目 | varchar | 50 |  | √ | ' ' | 税目 |
-| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | ftotalamount | 总额 | numeric | 23 | 10 | √ | 0 | 总额 |
 | 7 | famount | 金额 | numeric | 23 | 10 | √ | 0 | 金额 |
 | 8 | fadjustexplain | 调整说明 | varchar | 1000 |  | √ | ' ' | 调整说明 |

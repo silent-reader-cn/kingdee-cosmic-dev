@@ -13,7 +13,7 @@
 | 2 | fbqsjwkjfpxse | 本期实际未开具发票销售额 | numeric | 23 | 10 | √ | 0 | 本期实际未开具发票销售额 |
 | 3 | fewblxh | 二维表序号 | varchar | 50 |  | √ | ' ' | 二维表序号,枚举: 1 :1 2 :2 |
 | 4 | fbillstatus | 单据状态 | varchar | 50 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | fseqno | 序号 | varchar | 50 |  | √ | ' ' | 序号 |
 | 7 | flevytype | 征收方式 | varchar | 50 |  | √ | ' ' | 征收方式 |
 | 8 | fyssr | 应税收入 | numeric | 23 | 10 | √ | 0 | 应税收入 |

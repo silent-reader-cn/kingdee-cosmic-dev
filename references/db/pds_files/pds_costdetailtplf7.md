@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 成本项目 pds_costitem |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [成本项目 pds_costitem](../pds_files/pds_costitem.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -39,7 +39,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 物料分类 bd_materialgroup |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [物料分类 bd_materialgroup](../basedata_files/bd_materialgroup.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -77,7 +77,7 @@
 | 8 | fcategoryid | fcategoryid | int8 | 64 |  | √ | 0 |  |
 | 9 | fissyspreset | fissyspreset | bpchar | 1 |  | √ | '0' |  |
 | 10 | fbillno | 方案编码 | varchar | 30 |  | √ | ' ' | 方案编码 |
-| 11 | ftemplate | 组件模板 | int8 | 64 |  | √ | 0 | 组件模板配置 pds_tplconfig |
+| 11 | ftemplate | 组件模板 | int8 | 64 |  | √ | 0 | [组件模板配置 pds_tplconfig](../pds_files/pds_tplconfig.md) |
 | 12 | fremark | fremark | varchar | 255 |  | √ | ' ' |  |
 | 13 | fisv_id | fisv_id | varchar | 50 |  | √ | ' ' |  |
 | 14 | fmodifierid | fmodifierid | int8 | 64 |  | √ | 0 |  |
@@ -109,6 +109,35 @@
 
 ---
 
+## 成本明细方案F7-多语言表 t_pds_costdetailtpl_l
+
+- **表名称：** 成本明细方案F7-多语言表
+- **表名：** t_pds_costdetailtpl_l
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fname | 方案名称 | varchar | 500 |  | √ | ' ' | 方案名称 |
+| 3 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
+| 4 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fpkid | fpkid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | pk_pds_costdetailtpl_l |  | fpkid |
+| 2 | idx_pds_costdetailtpl_l_fid |  | fid,flocaleid |
+
+---
+
 ## 寻源流程-多选基础资料表 t_pds_cost_srctype
 
 - **表名称：** 寻源流程-多选基础资料表
@@ -119,7 +148,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 流程配置 pds_flowconfig |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [流程配置 pds_flowconfig](../pds_files/pds_flowconfig.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -148,7 +177,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 招标辅助资料 pds_extdata |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [招标辅助资料 pds_extdata](../pds_files/pds_extdata.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义

@@ -24,8 +24,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | pk_cbs_shard_config_l |  | fpkid |
-| 2 | idx_cbs_shard_config_l |  | fid,flocaleid |
+| 1 | idx_cbs_shard_config_l |  | fid,flocaleid |
+| 2 | pk_cbs_shard_config_l |  | fpkid |
 
 ---
 
@@ -41,13 +41,13 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fstrategyzh_cn | 分片策略 | varchar | 100 |  | √ | ' ' | 分片策略 |
 | 3 | fcreatetime | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
-| 4 | fentitynumber | 表单 | varchar | 50 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 4 | fentitynumber | 实体名称 | varchar | 50 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 5 | fstrategy | 分片策略值 | varchar | 50 |  | √ | ' ' | 分片策略值 |
 | 6 | fmodifytime | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
-| 7 | fstrategyparams | 分片策略参数 | varchar | 1000 |  | √ | ' ' | 分片策略参数 |
-| 8 | fconfigstatus | 是否启用 | bpchar | 1 |  | √ | ' ' | 是否启用,枚举: 0 :未启用 1 :启用中 2 :已启用 3 :还原中 4 :索引迁移中 |
+| 7 | fstrategyparams | 分片参数 | varchar | 1000 |  | √ | ' ' | 分片参数 |
+| 8 | fconfigstatus | 是否启用 | bpchar | 1 |  | √ | ' ' | 是否启用,枚举: 0 :未启用 1 :启用中 2 :已启用 3 :还原中 4 :索引迁移中 5 :分表归档中 |
 | 9 | fshardingfields | 分片属性 | varchar | 200 |  | √ | ' ' | 分片属性 |
-| 10 | fnumber | 表单编码 | varchar | 50 |  | √ | ' ' | 表单编码 |
+| 10 | fnumber | 实体编码 | varchar | 50 |  | √ | ' ' | 实体编码 |
 | 11 | frwmark | 读写标志值 | varchar | 512 |  | √ | ' ' | 读写标志值 |
 | 12 | foperationlog | 操作日志 | varchar | 2000 |  | √ | ' ' | 操作日志 |
 | 13 | fversion | 变更版本号 | int8 | 64 |  | √ | 0 | 变更版本号 |

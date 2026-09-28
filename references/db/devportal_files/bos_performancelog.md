@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fbugcode | bug号 | varchar | 50 |  | √ | ' ' | bug号 |
-| 3 | fcreaterfield | 点击人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fcreaterfield | 点击人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | ferrormsg | 推送失败信息 | varchar | 50 |  | √ | ' ' | 推送失败信息 |
 | 5 | fhassended | 已录 | bpchar | 1 |  | √ | '0' | 已录 |
 | 6 | fcheckboxfield | 性能异常 | bpchar | 1 |  | √ | '0' | 性能异常 |

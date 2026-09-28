@@ -40,8 +40,8 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fname | 名称 | varchar | 230 |  | √ | ' ' | 名称 |
-| 3 | fgroupid | 分组名 | varchar | 100 |  | √ | ' ' | 分组名 |
+| 2 | fgroupid | 分组名 | varchar | 100 |  | √ | ' ' | 分组名 |
+| 3 | fname | 名称 | varchar | 230 |  | √ | ' ' | 名称 |
 | 4 | fispreinsdata | 是否预置数据 | bpchar | 1 |  | √ | '0' | 是否预置数据 |
 | 5 | fvaluecomboitems | 结果下拉列表 | varchar | 2000 |  | √ | ' ' | 结果下拉列表 |
 | 6 | fcontroltype | 空间类型 | varchar | 100 |  | √ | ' ' | 空间类型 |

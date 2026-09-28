@@ -11,12 +11,18 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | ftaxperiod | 所属税期 | varchar | 100 |  | √ | ' ' | 所属税期 |
-| 3 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 4 | fcurrentdecrease | 本期调减额 | numeric | 23 | 10 | √ | 0.0000000000 | 本期调减额 |
-| 5 | fdeadline | 缴纳期限 | varchar | 50 |  | √ | ' ' | 缴纳期限,枚举: aysb :按月申报 ajsb :按季申报 |
-| 6 | fservicetype | 业务类型 | varchar | 100 |  | √ | ' ' | 业务类型 |
-| 7 | frowno | 序号 | varchar | 100 |  | √ | ' ' | 序号 |
-| 8 | fcurrentamount | 本期发生额 | numeric | 23 | 10 | √ | 0.0000000000 | 本期发生额 |
+| 3 | faccountorg | 核算组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 4 | fewblxh | ewblxh | varchar | 30 |  | √ | ' ' | ewblxh,枚举: 1 :行号 count :合计行 |
+| 5 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 6 | fbizdimension | 业务维度 | int8 | 64 |  | √ | 0 | null 001 |
+| 7 | fservicetype | 业务类型 | varchar | 100 |  | √ | ' ' | 业务类型 |
+| 8 | fewblname | ewblname | varchar | 50 |  | √ | ' ' | ewblname |
+| 9 | ftaxplan | 计税方案 | int8 | 64 |  | √ | 0 | [计税方案 itp_proviston_plan](../tctb_files/itp_proviston_plan.md) |
+| 10 | fcurrentdecrease | 本期调减额 | numeric | 23 | 10 | √ | 0.0000000000 | 本期调减额 |
+| 11 | fdeadline | 缴纳期限 | varchar | 50 |  | √ | ' ' | 缴纳期限,枚举: aysb :按月申报 ajsb :按季申报 |
+| 12 | fsbbid | sbbid | varchar | 50 |  | √ | ' ' | sbbid |
+| 13 | frowno | 序号 | varchar | 100 |  | √ | ' ' | 序号 |
+| 14 | fcurrentamount | 本期发生额 | numeric | 23 | 10 | √ | 0.0000000000 | 本期发生额 |
 
 ### 列规则定义
 

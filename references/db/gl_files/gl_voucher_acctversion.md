@@ -15,9 +15,9 @@
 | 4 | fversiondate | 版本化日期 | timestamp | 0 |  |  | null | 版本化日期 |
 | 5 | fvoucherentryid | 凭证分录ID | int8 | 64 |  | √ | 0 | 凭证分录ID |
 | 6 | fcreatedate | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
-| 7 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 7 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 8 | fbefasstvalue | 版本化前核算维度值 | int8 | 64 |  | √ | 0 | 版本化前核算维度值 |
-| 9 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 9 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 10 | freaccountid | 版本化前科目ID | int8 | 64 |  | √ | 0 | 版本化前科目ID |
 
 ### 列规则定义

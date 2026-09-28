@@ -13,7 +13,7 @@
 | 2 | ftaxamount | 合计 | numeric | 23 | 10 | √ | 0.0000000000 | 合计 |
 | 3 | ftaxrate | 税率 | varchar | 50 |  | √ | ' ' | 税率 |
 | 4 | fserialno | 流水号 | varchar | 50 |  | √ | ' ' | 流水号 |
-| 5 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | fdeclaretype | 申报类型 | varchar | 30 |  | √ | ' ' | 申报类型,枚举: 1 :汇总申报 2 :自主申报 |
 | 7 | ftaxreductionid | 减免税性质代码 | int8 | 64 |  | √ | 0 | 减免政策代码 tpo_taxdeduction |
 | 8 | fdescription | 业务描述 | varchar | 50 |  | √ | ' ' | 业务描述 |

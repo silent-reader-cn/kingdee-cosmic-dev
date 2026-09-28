@@ -12,13 +12,13 @@
 | 1 | fid | fid | varchar | 36 |  | √ | ' ' | id |
 | 2 | fassignobject | 分配对象 | varchar | 500 |  |  | ' ' | 分配对象 |
 | 3 | fwidgetcontainer | 小部件运行期内容 | text | 0 |  |  | null | 小部件运行期内容 |
-| 4 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fschemedesign | 方案 （设计期） | text | 0 |  |  | null | 方案 （设计期） |
 | 6 | fappid | 应用 | varchar | 36 |  | √ | ' ' | 应用 |
-| 7 | fcreatedate | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
+| 7 | fcreatedate | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 8 | ftype | 类型 | varchar | 1 |  | √ | '0' | 类型,枚举: 0 :管理员（出厂预制） 1 :全员（出厂预制） 2 :标准 3 :缺省（出厂预制） |
-| 9 | fmodifydate | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
-| 10 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fmodifydate | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 10 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fscene | 场景 | varchar | 1 |  | √ | '0' | 场景,枚举: 0 :首页方案 1 :应用首页方案 |
 | 12 | fscheme | 方案 （运行期） | text | 0 |  |  | null | 方案 （运行期） |
 | 13 | fnumber | 编码 | varchar | 50 |  | √ | ' ' | 编码 |

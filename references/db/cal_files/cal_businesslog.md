@@ -15,9 +15,9 @@
 | 4 | fisclose | 是否关闭 | bpchar | 1 |  | √ | ' ' | 是否关闭 |
 | 5 | flog_tag | 日志_详情 | text | 0 |  |  | null | 日志_详情 |
 | 6 | ftimes | 重试次数 | int4 | 32 |  | √ | 0 | 重试次数 |
-| 7 | fbizentityobjectid | 业务对象 | varchar | 80 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 7 | fbizentityobjectid | 业务对象 | varchar | 80 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 8 | fparammap | 参数 | varchar | 255 |  | √ | ' ' | 参数 |
-| 9 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 9 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 10 | fentrykey | fentrykey | varchar | 80 |  | √ | ' ' |  |
 | 11 | factionname | 功能名称 | varchar | 80 |  | √ | ' ' | 功能名称,枚举: AUDIT :库存审核 UNAUDIT :库存反审核 SETTLEACCOUNT :存货结账 UNSETTLEACCOUNT :存货反结账 COSTESTIMATECREATE :费用暂估单创建 COSTESTIMATEDELETE :费用暂估单删除 MATERIALWRITEOFF :材料核销 RESYNC :重新同步 REESTIMATE :暂估调价 HOOKACCOUNT :勾稽入库核算 UNHOOKACCOUNT :反勾稽入库核算 APSETTLEBILLAUDIT :应付结算清单审核 FEEHOOKACCOUNT :费用分摊入库核算 FEEUNHOOKACCOUNT :费用反分摊入库核算 |
 | 12 | fparammap_tag | 参数_详情 | text | 0 |  |  | null | 参数_详情 |

@@ -41,7 +41,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fstatus | 数据状态 | bpchar | 1 |  | √ | 'C' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 3 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
-| 4 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 6 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 7 | fnumber | 编码 | bpchar | 50 |  | √ | ' ' | 编码 |

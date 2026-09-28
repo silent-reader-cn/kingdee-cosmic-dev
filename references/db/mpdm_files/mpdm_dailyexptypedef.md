@@ -41,9 +41,9 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
 | 3 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: C :已审核 |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 5 | fbiztype | 业务类型 | int8 | 64 |  | √ | 0 | 业务类型 bd_biztype |
-| 6 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 5 | fbiztype | 业务类型 | int8 | 64 |  | √ | 0 | [业务类型 bd_biztype](../sbd_files/bd_biztype.md) |
+| 6 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 7 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 8 | ftype | 类型属性 | varchar | 50 |  | √ | ' ' | 类型属性,枚举: A :项目 B :公司 |
 | 9 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |

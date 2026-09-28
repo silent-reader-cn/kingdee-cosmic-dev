@@ -25,7 +25,7 @@
 | 14 | fisextended | fisextended | bpchar | 1 |  | √ | '1' |  |
 | 15 | fnumber | 编码 | varchar | 36 |  | √ | ' ' | 编码 |
 | 16 | fisvsign | fisvsign | varchar | 255 |  | √ | ' ' |  |
-| 17 | fentityid | 实体元数据 | varchar | 36 |  | √ | ' ' | 实体元数据 bos_entitymeta |
+| 17 | fentityid | 实体元数据 | varchar | 36 |  | √ | ' ' | [实体元数据 bos_entitymeta](../mdl_files/bos_entitymeta.md) |
 | 18 | ftimestamp | ftimestamp | int8 | 64 |  | √ | 0 |  |
 | 19 | fdata | fdata | text | 0 |  |  | null |  |
 | 20 | findustry | findustry | int8 | 64 |  | √ | 0 |  |

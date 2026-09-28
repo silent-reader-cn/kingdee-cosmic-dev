@@ -11,20 +11,20 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fcreateorgid | fcreateorgid | int8 | 64 |  | √ | 0 |  |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fname | fname | varchar | 50 |  | √ | ' ' |  |
-| 5 | fautopay | 匹配后付款单自动确认付款 | bpchar | 1 |  | √ | '0' | 匹配后付款单自动确认付款 |
+| 5 | fautopay | 匹配后自动确认付款 | bpchar | 1 |  | √ | '0' | 匹配后自动确认付款 |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 7 | fuseorg | fuseorg | int8 | 64 |  | √ | 0 |  |
-| 8 | forgid | 组织(历史数据) | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 8 | forgid | 组织(历史数据) | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 9 | fautorec | 匹配后收款单自动确认收款 | bpchar | 1 |  | √ | '0' | 匹配后收款单自动确认收款 |
 | 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 11 | fcreateorg | fcreateorg | int8 | 64 |  | √ | 0 |  |
 | 12 | fctrlstrategy | fctrlstrategy | varchar | 30 |  | √ | ' ' |  |
 | 13 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 14 | fbiztype | 匹配业务单据 | varchar | 30 |  | √ | ' ' | 匹配业务单据,枚举: rec :收款单 pay :付款单 agentpay :代发单 transup :上划单 transdown :下拨单 transhandle :付款交易处理单 |
+| 14 | fbiztype | 匹配业务单据 | varchar | 30 |  | √ | ' ' | 匹配业务单据,枚举: rec :收款单 pay :付款单/同名转账 agentpay :报销/薪资付款单 transup :上划单 transdown :下拨单 transhandle :付款交易处理单 agentreturn :报销/薪资退款单 |
 | 15 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 16 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 16 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 17 | fissystem | 系统预置 | bpchar | 1 |  | √ | '0' | 系统预置 |
 | 18 | fenable | 使用状态 | varchar | 5 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 19 | fnumber | 规则编码 | varchar | 30 |  | √ | ' ' | 规则编码 |
@@ -54,7 +54,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fuorgid | 组织名称 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fuorgid | 组织名称 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 4 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 

@@ -30,6 +30,36 @@
 
 ---
 
+## 字段携带配置-子表 t_sm_expectqtyfieldcarry
+
+- **表名称：** 字段携带配置-子表
+- **表名：** t_sm_expectqtyfieldcarry
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
+| 3 | fenable | 携带 | bpchar | 1 |  | √ | '0' | 携带 |
+| 4 | fcarryfield | 携带字段 | varchar | 50 |  | √ | ' ' | 携带字段 |
+| 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fentryid | fentryid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_sm_expectqtyfieldcarry |  | fid |
+| 2 | pk_sm_expectqtyfieldcarry |  | fentryid |
+
+---
+
 ## 可发量操作配置-多语言表 t_sm_expectqtyoperateset_l
 
 - **表名称：** 可发量操作配置-多语言表
@@ -102,28 +132,29 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | finvdirection | 库存方向 | bpchar | 1 |  | √ | ' ' | 库存方向,枚举: 0 :普通 1 :退货 |
 | 3 | fdisabledate | 禁用时间 | timestamp | 0 |  |  | null | 禁用时间 |
-| 4 | faudittime | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
-| 5 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 6 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 7 | fcreatorid | 创建人 | int8 | 64 |  |  | 0 | 人员 bos_user |
-| 8 | fmasterid | 主数据内码 | int8 | 64 |  |  | 0 | 主数据内码 |
-| 9 | fformula | fformula | varchar | 200 |  | √ | ' ' |  |
-| 10 | ffilter | 过滤条件 | varchar | 255 |  | √ | ' ' | 过滤条件 |
-| 11 | fsupplysourcetype | 供应来源类别 | bpchar | 1 |  | √ | ' ' | 供应来源类别,枚举: 0 :客户 1 :供应商 2 :部门 |
-| 12 | fissyspreset | 系统预置 | bpchar | 1 |  | √ | '0' | 系统预置 |
-| 13 | fformid | 单据名称 | varchar | 36 |  | √ | ' ' | 单据主实体 bos_billmainentity |
-| 14 | fmodifierid | 修改人 | int8 | 64 |  |  | 0 | 人员 bos_user |
-| 15 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 16 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 17 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 18 | fdescription | 备注 | varchar | 500 |  | √ | ' ' | 备注 |
-| 19 | ffilter_tag | 过滤条件_详情 | text | 0 |  |  | ' ' | 过滤条件_详情 |
-| 20 | fexpectqtydirection | 预计可发量方向 | bpchar | 1 |  | √ | ' ' | 预计可发量方向,枚举: 0 :预计出 1 :预计入 |
-| 21 | fonlyprocesscurrow | 仅处理光标所在当前行 | bpchar | 1 |  | √ | '0' | 仅处理光标所在当前行 |
-| 22 | fenable | 使用状态 | bpchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 23 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
-| 24 | ffilterdesc | 过滤条件描述 | varchar | 500 |  | √ | ' ' | 过滤条件描述 |
-| 25 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fbillentrykey | 单据明细 | varchar | 50 |  | √ | ' ' | 单据明细,枚举: |
+| 5 | faudittime | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
+| 6 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 7 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
+| 8 | fcreatorid | 创建人 | int8 | 64 |  |  | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 9 | fmasterid | 主数据内码 | int8 | 64 |  |  | 0 | 主数据内码 |
+| 10 | fformula | fformula | varchar | 200 |  | √ | ' ' |  |
+| 11 | ffilter | 过滤条件 | varchar | 255 |  | √ | ' ' | 过滤条件 |
+| 12 | fsupplysourcetype | 供应来源类别 | bpchar | 1 |  | √ | ' ' | 供应来源类别,枚举: 0 :客户 1 :供应商 2 :部门 |
+| 13 | fissyspreset | 系统预置 | bpchar | 1 |  | √ | '0' | 系统预置 |
+| 14 | fformid | 单据名称 | varchar | 36 |  | √ | ' ' | [单据主实体 bos_billmainentity](../mdl_files/bos_billmainentity.md) |
+| 15 | fmodifierid | 修改人 | int8 | 64 |  |  | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 16 | fname | 名称 | varchar | 128 |  | √ | ' ' | 名称 |
+| 17 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 18 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 19 | fdescription | 备注 | varchar | 500 |  | √ | ' ' | 备注 |
+| 20 | ffilter_tag | 过滤条件_详情 | text | 0 |  |  | ' ' | 过滤条件_详情 |
+| 21 | fexpectqtydirection | 预计可发量方向 | bpchar | 1 |  | √ | ' ' | 预计可发量方向,枚举: 0 :预计出 1 :预计入 |
+| 22 | fonlyprocesscurrow | 仅处理光标所在当前行 | bpchar | 1 |  | √ | '0' | 仅处理光标所在当前行 |
+| 23 | fenable | 使用状态 | bpchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 24 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
+| 25 | ffilterdesc | 过滤条件描述 | varchar | 500 |  | √ | ' ' | 过滤条件描述 |
+| 26 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

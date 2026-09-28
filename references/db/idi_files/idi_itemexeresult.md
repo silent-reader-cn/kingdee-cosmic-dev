@@ -14,15 +14,17 @@
 | 3 | fitemid | 检查项id | varchar | 50 |  | √ | ' ' | 检查项id |
 | 4 | fstatus | 执行状态 | varchar | 50 |  | √ | ' ' | 执行状态,枚举: running :执行中 succeed :执行成功 failed :执行失败 |
 | 5 | fschemaresultid | 方案执行结果id | int8 | 64 |  | √ | 0 | 方案执行结果id |
-| 6 | fcreatedate | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 7 | fmatchtype | 检查项类型 | varchar | 50 |  | √ | ' ' | 检查项类型,枚举: linkup_bill :单据检查 news :新闻类 alarm :事件重复 general_ledger :账表查询类 future :未来计划展示 keyword :敏感词检测 invoice :票据检查 budget :预算查询 logistics_information :物流信息查询 billflow :上下游关键单据节点 statistics :数据统计及展示 fasindex :指标查询 attachment :附件检查 |
-| 8 | fconfig | 检查项配置 | varchar | 255 |  |  | ' ' | 检查项配置 |
-| 9 | freuslt | 检查项执行结果 | varchar | 255 |  |  | ' ' | 检查项执行结果 |
-| 10 | fitem | 检查项名 | varchar | 50 |  | √ | ' ' | 检查项名 |
-| 11 | fconfig_tag | 检查项配置_详情 | text | 0 |  |  | null | 检查项配置_详情 |
-| 12 | farea | 分类名 | varchar | 50 |  | √ | ' ' | 分类名 |
-| 13 | fareaid | 分类id | varchar | 50 |  | √ | ' ' | 分类id |
-| 14 | freuslt_tag | 检查项执行结果_详情 | text | 0 |  |  | null | 检查项执行结果_详情 |
+| 6 | fhighlightresult | 检查项高亮信息 | varchar | 255 |  | √ | ' ' | 检查项高亮信息 |
+| 7 | fcreatedate | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 8 | fmatchtype | 检查项类型 | varchar | 50 |  | √ | ' ' | 检查项类型,枚举: linkup_bill :单据检查 news :新闻类 alarm :事件重复 general_ledger :账表查询类 future :未来计划展示 keyword :敏感词检测 invoice :票据检查 budget :预算查询 logistics_information :物流信息查询 billflow :上下游关键单据节点 statistics :数据统计及展示 fasindex :指标查询 attachment :附件检查 |
+| 9 | fconfig | 检查项配置 | varchar | 255 |  |  | ' ' | 检查项配置 |
+| 10 | freuslt | 检查项执行结果 | varchar | 255 |  |  | ' ' | 检查项执行结果 |
+| 11 | fitem | 检查项名 | varchar | 50 |  | √ | ' ' | 检查项名 |
+| 12 | fconfig_tag | 检查项配置_详情 | text | 0 |  |  | null | 检查项配置_详情 |
+| 13 | farea | 分类名 | varchar | 50 |  | √ | ' ' | 分类名 |
+| 14 | fareaid | 分类id | varchar | 50 |  | √ | ' ' | 分类id |
+| 15 | fhighlightresult_tag | 检查项高亮信息_详情 | text | 0 |  |  | null | 检查项高亮信息_详情 |
+| 16 | freuslt_tag | 检查项执行结果_详情 | text | 0 |  |  | null | 检查项执行结果_详情 |
 
 ### 列规则定义
 

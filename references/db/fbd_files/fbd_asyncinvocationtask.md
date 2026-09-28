@@ -40,7 +40,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fresultmessage_tag | 调用结果_详情 | text | 0 |  |  | null | 调用结果_详情 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fnexttriggertime | 预计下次触发时间 | timestamp | 0 |  |  | null | 预计下次触发时间 |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 6 | fmethod | 调用方法 | varchar | 100 |  | √ | ' ' | 调用方法 |
@@ -52,7 +52,7 @@
 | 12 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 13 | fstatus | 状态 | varchar | 30 |  | √ | '1' | 状态,枚举: 1 :待执行 2 :正在执行 3 :执行成功 4 :失败 5 :终止 |
 | 14 | flastendtime | 最近调用完成时间 | timestamp | 0 |  |  | null | 最近调用完成时间 |
-| 15 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 15 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 16 | fcloudid | 目标云 | varchar | 50 |  | √ | ' ' | 目标云 |
 | 17 | fmaxretrycount | 最大尝试次数 | int8 | 64 |  | √ | 0 | 最大尝试次数 |
 | 18 | flongtimetask | 是否耗时任务 | bpchar | 1 |  | √ | '0' | 是否耗时任务 |
@@ -71,6 +71,6 @@
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
 | 1 | idx_fbd_asytask_fidentcode |  | fidentificationcode |
-| 2 | idx_fbd_asytask_fcreatetime |  | fcreatetime |
-| 3 | t_fbd_asynctask_pkey |  | fid |
+| 2 | t_fbd_asynctask_pkey |  | fid |
+| 3 | idx_fbd_asytask_fcreatetime |  | fcreatetime |
 | 4 | idx_fbd_asytask_fstatus |  | fstatus |

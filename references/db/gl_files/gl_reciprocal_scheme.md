@@ -84,9 +84,9 @@
 
 ---
 
-## 币别-多选基础资料表 t_gl_reciprocal_currency
+## 币种-多选基础资料表 t_gl_reciprocal_currency
 
-- **表名称：** 币别-多选基础资料表
+- **表名称：** 币种-多选基础资料表
 - **表名：** t_gl_reciprocal_currency
 
 ### 表格列定义
@@ -94,7 +94,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -122,7 +122,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 会计科目 bd_accountview |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [会计科目 bd_accountview](../gl_files/bd_accountview.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -151,26 +151,26 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fequalamountpriority | 金额相等优先核销 | bpchar | 1 |  | √ | '1' | 金额相等优先核销 |
-| 3 | fuseorg | 核算组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 4 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | fuseorg | 核算组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 4 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | freverordersamedire | 按倒序进行同向冲销 | bpchar | 1 |  | √ | ' ' | 按倒序进行同向冲销 |
 | 6 | fnoverifibusinoempty | 业务编号为空不允许核销 | bpchar | 1 |  | √ | ' ' | 业务编号为空不允许核销 |
-| 7 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 7 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | fmoneyequacanverfi | 金额相等才能核销 | bpchar | 1 |  | √ | ' ' | 金额相等才能核销 |
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 10 | fstatus | 数据状态 | bpchar | 1 |  | √ | 'C' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 13 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 14 | fverifidiffbusino | 业务编号不相同允许核销 | bpchar | 1 |  | √ | ' ' | 业务编号不相同允许核销 |
 | 15 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
-| 16 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 17 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 16 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 17 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 18 | fname | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
 | 19 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 20 | fverifiorder | 核销顺序 | bpchar | 1 |  | √ | ' ' | 核销顺序,枚举: 0 :业务日期+业务编号 1 :业务编号+业务日期 |
 | 21 | fvoucherfilter | 凭证过滤 | varchar | 512 |  | √ | ' ' | 凭证过滤 |
-| 22 | faccounttableid | 科目表 | int8 | 64 |  | √ | 0 | 科目表 bd_accounttable |
+| 22 | faccounttableid | 科目表 | int8 | 64 |  | √ | 0 | [科目表 bd_accounttable](../fibd_files/bd_accounttable.md) |
 | 23 | fiscopy | 是否复制 | bpchar | 1 |  | √ | '0' | 是否复制 |
 | 24 | fctrlstrategy | 控制策略 | bpchar | 1 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
 | 25 | fvoucherfilterjson | 凭证过滤JSON | varchar | 2000 |  |  | ' ' | 凭证过滤JSON |

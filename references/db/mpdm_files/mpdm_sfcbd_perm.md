@@ -10,29 +10,29 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 3 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 4 | fdisableuser | 禁用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 3 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 4 | fdisableuser | 禁用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | faudittime | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
 | 6 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 7 | fdisabletime | 禁用时间 | timestamp | 0 |  |  | null | 禁用时间 |
 | 8 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 11 | fauditor | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fauditor | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 13 | fbitindex | 位图 | int8 | 64 |  | √ | 0 | 位图 |
-| 14 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 14 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 15 | fname | 姓名 | varchar | 255 |  | √ | ' ' | 姓名 |
-| 16 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 16 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 17 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 18 | fuserid | 用户 | int8 | 64 |  | √ | 0 | 用户信息 bos_usergroup_user |
+| 18 | fuserid | 用户 | int8 | 64 |  | √ | 0 | [用户信息 bos_usergroup_user](../base_files/bos_usergroup_user.md) |
 | 19 | fctrlstrategy | 控制策略 | varchar | 5 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
 | 20 | fenabletime | 启用时间 | timestamp | 0 |  |  | null | 启用时间 |
-| 21 | fenableuser | 启用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 21 | fenableuser | 启用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 22 | fenable | 使用状态 | bpchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 23 | fnumber | 工号 | varchar | 100 |  | √ | ' ' | 工号 |
-| 24 | fuseorgid | 业务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 24 | fuseorgid | 业务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 25 | fsourcebitindex | 原资料位图 | int8 | 64 |  | √ | 0 | 原资料位图 |
 
 ### 列规则定义
@@ -64,7 +64,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 工作中心 sfc_workcenter |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [工作中心 sfc_workcenter](../mpdm_files/sfc_workcenter.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -82,6 +82,34 @@
 
 ---
 
+## 设备权限-多选基础资料表 t_mpdm_sfcbd_perm_eqp
+
+- **表名称：** 设备权限-多选基础资料表
+- **表名：** t_mpdm_sfcbd_perm_eqp
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [设备 sfc_equipment](../mpdm_files/sfc_equipment.md) |
+| 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fpkid | fpkid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | pk_mpdm_sfcbd_perm_eqp |  | fpkid |
+| 2 | idx_mpdm_sfcbdperm_eqp_fidbdid |  | fid,fbasedataid |
+
+---
+
 ## 车间权限-多选基础资料表 t_mpdm_sfcbd_perm_wss
 
 - **表名称：** 车间权限-多选基础资料表
@@ -92,7 +120,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 车间设置 mpdm_workshopsetup |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [车间设置 mpdm_workshopsetup](../mpdm_files/mpdm_workshopsetup.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义

@@ -12,7 +12,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 消息推送名称 | varchar | 30 |  | √ | 'msgpushinfo' | 消息推送名称 |
 | 3 | fsendor | fsendor | varchar | 100 |  | √ | ' ' |  |
-| 4 | fsendor2 | 消息发送人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fsendor2 | 消息发送人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fnumber | 消息推送编码 | varchar | 30 |  | √ | 'default' | 消息推送编码 |
 
 ### 列规则定义

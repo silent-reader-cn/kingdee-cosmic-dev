@@ -24,7 +24,7 @@
 | 13 | fservicename | serviceName | varchar | 50 |  | √ | ' ' | serviceName |
 | 14 | fcount | 执行次数 | int4 | 32 |  | √ | 0 | 执行次数 |
 | 15 | fparam_tag | param_详情 | text | 0 |  |  | null | param_详情 |
-| 16 | fexecutorid | 执行人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 16 | fexecutorid | 执行人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

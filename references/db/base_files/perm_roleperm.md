@@ -11,13 +11,13 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | varchar | 18 |  | √ | ' ' |  |
 | 2 | froleid | 通用角色id | varchar | 18 |  | √ | ' ' | 通用角色id |
-| 3 | fpermitemid | 权限项 | varchar | 18 |  | √ | ' ' | 权限项 perm_permitem |
+| 3 | fpermitemid | 权限项 | varchar | 18 |  | √ | ' ' | [权限项 perm_permitem](../base_files/perm_permitem.md) |
 | 4 | finheritmode | 权限继承策略 | varchar | 10 |  | √ | ' ' | 权限继承策略 |
 | 5 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 6 | fcontrolmode | 状态 | varchar | 10 |  | √ | ' ' | 状态,枚举: 10 :有权 20 :禁用 |
-| 7 | fentitytypeid | 业务对象编码 | varchar | 36 |  | √ | ' ' | 业务对象 bos_objecttype |
+| 7 | fentitytypeid | 业务对象编码 | varchar | 36 |  | √ | ' ' | [业务对象 bos_objecttype](../mdl_files/bos_objecttype.md) |
 | 8 | fentryid | fentryid | varchar | 18 |  | √ | ' ' | id |
-| 9 | fbizappid | 业务应用 | varchar | 36 |  | √ | ' ' | 业务应用实体 bos_devportal_bizapp |
+| 9 | fbizappid | 业务应用 | varchar | 36 |  | √ | ' ' | [业务应用实体 bos_devportal_bizapp](../mdl_files/bos_devportal_bizapp.md) |
 
 ### 列规则定义
 
@@ -75,11 +75,11 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | varchar | 18 |  | √ | ' ' | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 4 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fmasterid | 主数据内码 | varchar | 18 |  | √ | ' ' | 主数据内码 |
-| 6 | froleid | 角色编码 | varchar | 18 |  | √ | ' ' | 通用角色 perm_role |
+| 6 | froleid | 角色编码 | varchar | 18 |  | √ | ' ' | [通用角色 perm_role](../base_files/perm_role.md) |
 | 7 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 8 | fenable | 使用状态 | bpchar | 1 |  | √ | '0' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 9 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |

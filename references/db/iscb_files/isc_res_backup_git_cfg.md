@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreator | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fcreator | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fbranch | 分支 | varchar | 50 |  |  | ' ' | 分支,枚举: |
 | 4 | fcreatedate | 创建日期 | timestamp | 0 |  |  | LOCALTIMESTAMP | 创建日期 |
 | 5 | fproject_id | 项目全名 | varchar | 50 |  |  | ' ' | 项目全名 |
@@ -18,7 +18,7 @@
 | 7 | fmodifydate | 修改日期 | timestamp | 0 |  |  | LOCALTIMESTAMP | 修改日期 |
 | 8 | fdomain | 远程仓库域名 | varchar | 100 |  |  | ' ' | 远程仓库域名 |
 | 9 | fproject_name | 项目名称 | varchar | 50 |  |  | ' ' | 项目名称 |
-| 10 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

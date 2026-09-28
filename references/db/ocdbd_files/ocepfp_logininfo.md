@@ -15,10 +15,10 @@
 | 4 | fpageopentype | 页面打开方式 | varchar | 50 |  | √ | ' ' | 页面打开方式 |
 | 5 | flogintime | 登录日期 | timestamp | 0 |  |  | null | 登录日期 |
 | 6 | fisdefaluttheme | 是否默认主题 | bpchar | 1 |  | √ | '0' | 是否默认主题 |
-| 7 | fuserid | 用户 | int8 | 64 |  | √ | 0 | 用户信息 bos_usergroup_user |
+| 7 | fuserid | 用户 | int8 | 64 |  | √ | 0 | [用户信息 bos_usergroup_user](../base_files/bos_usergroup_user.md) |
 | 8 | ftabshowtype | 内容排版方式 | varchar | 50 |  | √ | ' ' | 内容排版方式 |
-| 9 | fsupplierid | 供货方 | int8 | 64 |  | √ | 0 | 供货关系 ocdbd_channel_authorize |
-| 10 | fcustomerid | 当前登录渠道 | int8 | 64 |  | √ | 0 | 渠道 ocdbd_channel |
+| 9 | fsupplierid | 供货方 | int8 | 64 |  | √ | 0 | [供货关系 ocdbd_channel_authorize](../ocdbd_files/ocdbd_channel_authorize.md) |
+| 10 | fcustomerid | 当前登录渠道 | int8 | 64 |  | √ | 0 | [渠道 ocdbd_channel](../ocdbd_files/ocdbd_channel.md) |
 
 ### 列规则定义
 

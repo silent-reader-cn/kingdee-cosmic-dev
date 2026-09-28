@@ -19,7 +19,7 @@
 | 8 | fauditdate | fauditdate | timestamp | 0 |  |  | null |  |
 | 9 | fcfmdate | 确认时间 | timestamp | 0 |  |  | null | 确认时间 |
 | 10 | fauditorid | fauditorid | int8 | 64 |  | √ | 0 |  |
-| 11 | fcfmid | 确认人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fcfmid | 确认人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fmodifytime | fmodifytime | timestamp | 0 |  |  | null |  |
 
 ### 列规则定义
@@ -55,7 +55,7 @@
 | 7 | fbilldate | 业务日期 | timestamp | 0 |  |  | null | 业务日期 |
 | 8 | flastupdateuserid | flastupdateuserid | int8 | 64 |  | √ | 0 |  |
 | 9 | fbizpartnerid | fbizpartnerid | int8 | 64 |  | √ | 0 |  |
-| 10 | fsupplierid | 供应商 | int8 | 64 |  | √ | 0 | 供应商 bd_supplier |
+| 10 | fsupplierid | 供应商 | int8 | 64 |  | √ | 0 | [供应商 bd_supplier](../basedata_files/bd_supplier.md) |
 | 11 | flastupdatetime | flastupdatetime | timestamp | 0 |  |  | null |  |
 | 12 | fcfmstatus | 确认状态 | bpchar | 1 |  | √ | ' ' | 确认状态,枚举: A :待确认 B :同意 C :驳回 |
 | 13 | fbiztype | fbiztype | bpchar | 1 |  | √ | ' ' |  |
@@ -74,6 +74,6 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_pur_quality_fbilldate |  | fbilldate |
-| 2 | t_pur_quality_pkey |  | fid |
+| 1 | t_pur_quality_pkey |  | fid |
+| 2 | idx_pur_quality_fbilldate |  | fbilldate |
 | 3 | idx_pur_quality_fbillno |  | fbillno |

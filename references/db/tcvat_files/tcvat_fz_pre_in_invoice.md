@@ -14,7 +14,7 @@
 | 3 | fenddate | 结束日期 | timestamp | 0 |  |  | null | 结束日期 |
 | 4 | ftaxrate | 税率 | numeric | 23 | 10 | √ | 0.0000000000 | 税率 |
 | 5 | fstartdate | 开始日期 | timestamp | 0 |  |  | null | 开始日期 |
-| 6 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | finvoiceamount | 不含税金额 | numeric | 23 | 10 | √ | 0.0000000000 | 不含税金额 |
 | 8 | ftaxaccountserialno | 台账流水号 | varchar | 50 |  | √ | ' ' | 台账流水号 |
 | 9 | ffiltercondition | 过滤条件设置 | varchar | 255 |  | √ | ' ' | 过滤条件设置 |

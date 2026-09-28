@@ -1,8 +1,8 @@
 # 现金账户-cas_accountcash
 
-## 币别-多选基础资料表 t_cas_currencycash
+## 币种-多选基础资料表 t_cas_currencycash
 
-- **表名称：** 币别-多选基础资料表
+- **表名称：** 币种-多选基础资料表
 - **表名：** t_cas_currencycash
 
 ### 表格列定义
@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -38,32 +38,32 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fopenorgid | 开户组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 3 | fdefaultcurrencyid | 默认币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
-| 4 | forgid | 收付组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fopenorgid | 开户组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 3 | fdefaultcurrencyid | 默认币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
+| 4 | forgid | 收付组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | fclosedate | 销户日期 | timestamp | 0 |  |  | null | 销户日期 |
-| 6 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 7 | fadminid | 账户管理员 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 7 | fadminid | 账户管理员 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 9 | fstatus | 数据状态 | varchar | 5 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 10 | fisdefaultpayee | 默认收款户 | bpchar | 1 |  | √ | '0' | 默认收款户 |
-| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 13 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 14 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
 | 15 | fissysgen | 是否系统预插 | bpchar | 1 |  | √ | '0' | 是否系统预插 |
 | 16 | fremark | 备注 | varchar | 255 |  |  | null | 备注 |
-| 17 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 18 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 17 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 18 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 19 | fisdefaultpayer | 默认付款户 | bpchar | 1 |  | √ | '0' | 默认付款户 |
 | 20 | fname | 账户名称 | varchar | 100 |  | √ | ' ' | 账户名称 |
 | 21 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 22 | faccountpropertyid | 账户用途 | varchar | 30 |  | √ | ' ' | 账户用途,枚举: |
 | 23 | fopendate | 开户日期 | timestamp | 0 |  |  | null | 开户日期 |
-| 24 | fcurrencyname | 币别 | varchar | 255 |  |  | null | 币别 |
+| 24 | fcurrencyname | 币种 | varchar | 255 |  |  | null | 币种 |
 | 25 | fclosestatus | 是否销户 | bpchar | 1 |  | √ | '0' | 是否销户,枚举: 0 :正常 1 :销户 |
 | 26 | fctrlstrategy | 控制策略 | bpchar | 1 |  | √ | '0' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
-| 27 | fisbycurrency | 单一币别 | bpchar | 1 |  | √ | '0' | 单一币别 |
+| 27 | fisbycurrency | 单一币种 | bpchar | 1 |  | √ | '0' | 单一币种 |
 | 28 | fenable | 使用状态 | bpchar | 1 |  | √ | '0' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 29 | fnumber | 账户编码 | varchar | 80 |  | √ | ' ' | 账户编码 |
 | 30 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |

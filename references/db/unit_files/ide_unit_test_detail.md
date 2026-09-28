@@ -43,7 +43,7 @@
 | 1 | fid | fid | varchar | 18 |  | √ | ' ' | id |
 | 2 | fparam | 自定义参数 | varchar | 1000 |  |  | null | 自定义参数 |
 | 3 | fbizunitid | 应用单元 | varchar | 36 |  |  | null | 应用单元 |
-| 4 | fresponser | 负责人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 4 | fresponser | 负责人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fjmxlocation | fjmxlocation | varchar | 100 |  |  | null |  |
 | 6 | fframechose | 测试框架 | bpchar | 1 |  | √ | '0' | 测试框架,枚举: 0 :插件框架 1 :action框架 |
 | 7 | flistform | 列表模板 | varchar | 36 |  |  | null | 列表模板 |
@@ -51,14 +51,14 @@
 | 9 | fdevicetype | 用例平台类型 | bpchar | 1 |  | √ | ' ' | 用例平台类型,枚举: 0 :PC端 1 :移动端 |
 | 10 | ftestplugin | 单元测试插件 | varchar | 2000 |  | √ | ' ' | 单元测试插件 |
 | 11 | fperpareindex | fperpareindex | varchar | 30 |  |  | null |  |
-| 12 | fbizappid | 所属应用 | varchar | 36 |  |  | null | 业务应用实体 bos_devportal_bizapp |
+| 12 | fbizappid | 所属应用 | varchar | 36 |  |  | null | [业务应用实体 bos_devportal_bizapp](../mdl_files/bos_devportal_bizapp.md) |
 | 13 | fjmxcontext | fjmxcontext | varchar | 255 |  |  | null |  |
 | 14 | flevel | 用例级别 | bpchar | 1 |  | √ | '0' | 用例级别,枚举: 0 :0 1 :1 2 :2 |
 | 15 | fquerylistnumber | 查询列表编码 | varchar | 30 |  | √ | ' ' | 查询列表编码 |
 | 16 | ftype | 发布类型 | varchar | 30 |  |  | null | 发布类型,枚举: 0 :列表 1 :表单 2 :移动列表 3 :移动表单 |
 | 17 | fsubsystemid | fsubsystemid | varchar | 32 |  | √ | ' ' |  |
 | 18 | freleasetype | 是否发布 | bpchar | 1 |  |  | null | 是否发布 |
-| 19 | fobject | 业务对象 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 19 | fobject | 业务对象 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 20 | fnumber | 用例编码 | varchar | 100 |  |  | null | 用例编码 |
 
 ### 列规则定义

@@ -10,14 +10,14 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fmaxvalue | 编码最大值 | int4 | 32 |  | √ | 0 | 编码最大值 |
-| 4 | fprojectid | 项目号 | int8 | 64 |  | √ | 0 | 项目 pmpd_project |
+| 4 | fprojectid | 项目号 | int8 | 64 |  | √ | 0 | [项目 pmpd_project](../fmm_files/pmpd_project.md) |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 6 | finitdata | 初始值 | int4 | 32 |  | √ | 0 | 初始值 |
 | 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 8 | fstatus | 数据状态 | varchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 11 | ftaskstring | 作业前缀 | varchar | 50 |  | √ | ' ' | 作业前缀 |
 | 12 | ftaskstep | 作业增量 | varchar | 50 |  | √ | ' ' | 作业增量 |

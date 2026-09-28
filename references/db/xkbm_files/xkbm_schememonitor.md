@@ -11,17 +11,17 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fperiodstartdate | 起始日期 | timestamp | 0 |  |  | null | 起始日期 |
-| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 4 | fschemeid | 预算方案 | int8 | 64 |  | √ | 0 | 预算方案 xkbm_scheme |
+| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 4 | fschemeid | 预算方案 | int8 | 64 |  | √ | 0 | [预算方案 xkbm_scheme](../xkbm_files/xkbm_scheme.md) |
 | 5 | forgtype | 预算组织类型 | varchar | 30 |  | √ | ' ' | 预算组织类型,枚举: DEPT :部门 ORG :组织 |
 | 6 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 7 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 8 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 10 | fcalendarid | 预算日历 | int8 | 64 |  | √ | 0 | 预算日历 xkbm_budgetcalendar |
+| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 10 | fcalendarid | 预算日历 | int8 | 64 |  | √ | 0 | [预算日历 xkbm_budgetcalendar](../xkbm_files/xkbm_budgetcalendar.md) |
 | 11 | fperiodenddate | 结束日期 | timestamp | 0 |  |  | null | 结束日期 |
-| 12 | forgunitid | 预算组织 | int8 | 64 |  | √ | 0 | 预算组织 xkbm_budgetorgunit |
-| 13 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | forgunitid | 预算组织 | int8 | 64 |  | √ | 0 | [预算组织 xkbm_budgetorgunit](../xkbm_files/xkbm_budgetorgunit.md) |
+| 13 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
 | 15 | factivestatus | 分发状态 | bpchar | 1 |  | √ | '0' | 分发状态,枚举: 0 :取消分发 1 :正常分发 |
 | 16 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
@@ -46,7 +46,9 @@
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
 | 1 | pk_xkbm_schememonitor |  | fid |
-| 2 | idx_xkbm_monitor_period |  | fyear,fperiod,fperiodtype |
+| 2 | idx_xkbm_monitor_factive |  | factivestatus |
+| 3 | idx_xkbm_monitor_schemeid |  | fschemeid |
+| 4 | idx_xkbm_monitor_period |  | fyear,fperiod,fperiodtype |
 
 ---
 
@@ -62,10 +64,10 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fvalidity | 有效日期范围 | bpchar | 1 |  | √ | '0' | 有效日期范围,枚举: 0 :否 1 :是 |
 | 3 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 4 | fnewsampleid | 分发预算复制模板ID | varchar | 36 |  | √ | ' ' | 预算模板 xkbm_reportsample |
+| 4 | fnewsampleid | 分发预算复制模板ID | varchar | 36 |  | √ | ' ' | [预算模板 xkbm_reportsample](../xkbm_files/xkbm_reportsample.md) |
 | 5 | factivestatusrpt | 分发状态 | bpchar | 1 |  | √ | '0' | 分发状态,枚举: 0 :取消分发 1 :正常分发 |
 | 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 7 | fdistributeorgunitid | 编制组织 | int8 | 64 |  | √ | 0 | 预算组织 xkbm_budgetorgunit |
+| 7 | fdistributeorgunitid | 编制组织 | int8 | 64 |  | √ | 0 | [预算组织 xkbm_budgetorgunit](../xkbm_files/xkbm_budgetorgunit.md) |
 | 8 | fsamplebuildstatus | 编制状态 | bpchar | 1 |  | √ | '1' | 编制状态,枚举: 1 :未编 2 :编制中 3 :完编 |
 
 ### 列规则定义

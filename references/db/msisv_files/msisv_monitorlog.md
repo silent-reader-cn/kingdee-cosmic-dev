@@ -17,10 +17,10 @@
 | 6 | fbatchno | 批号 | varchar | 50 |  | √ | ' ' | 批号 |
 | 7 | fecologicmonitor | 生态接入监听 | varchar | 50 |  | √ | ' ' | 生态接入监听 |
 | 8 | foperationname | 监听操作名称 | varchar | 50 |  | √ | ' ' | 监听操作名称 |
-| 9 | fuserid | 操作用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fuserid | 操作用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | fbizno | 业务编号 | varchar | 50 |  | √ | ' ' | 业务编号 |
 | 11 | flog | 日志 | varchar | 50 |  | √ | ' ' | 日志 |
-| 12 | fentity | 单据实体 | varchar | 50 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 12 | fentity | 单据实体 | varchar | 50 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 13 | ftype | 集成类型 | varchar | 50 |  | √ | ' ' | 集成类型,枚举: A :联合下推 B :关联更新 C :服务调用 |
 | 14 | factionnumber | 集成活动编码 | varchar | 50 |  | √ | ' ' | 集成活动编码 |
 | 15 | fisfinish | 是否执行完成 | bpchar | 1 |  | √ | '0' | 是否执行完成 |

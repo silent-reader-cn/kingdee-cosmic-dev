@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fentrymodifier | fentrymodifier | int8 | 64 |  | √ | 0 |  |
-| 3 | fallocateorgid | 供货组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | fallocateorgid | 供货组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | fentrycreatedate | fentrycreatedate | timestamp | 0 |  |  | null |  |
 | 5 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 6 | fquotamod | 配额比例(%) | numeric | 23 | 10 | √ | 0.0000000000 | 配额比例(%) |
@@ -130,18 +130,18 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fmaterialid | 产品型号/物料编码 | int8 | 64 |  | √ | 0 | 产品目录 bd_productsummary |
 | 3 | fuseorg | fuseorg | int8 | 64 |  | √ | 0 |  |
-| 4 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 5 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 4 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 5 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | feffectdate | 生效日期 | timestamp | 0 |  |  | null | 生效日期 |
 | 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 8 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 11 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 12 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
 | 13 | fbillno | fbillno | varchar | 30 |  | √ | ' ' |  |
-| 14 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 15 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 15 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 16 | fbillstatus | fbillstatus | varchar | 30 |  | √ | ' ' |  |
 | 17 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 18 | funitid | funitid | int8 | 64 |  | √ | 0 |  |
@@ -166,7 +166,7 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_mds_quota |  | fnumber,fcreateorgid |
-| 2 | idx_t_mds_quota_createorg |  | fcreateorgid |
+| 1 | idx_t_mds_quota_createorg |  | fcreateorgid |
+| 2 | idx_mds_quota |  | fnumber,fcreateorgid |
 | 3 | pk_t_mds_quota |  | fid |
 | 4 | idx_t_mds_quota_master |  | fmasterid |

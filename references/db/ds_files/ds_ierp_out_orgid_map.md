@@ -1,8 +1,8 @@
-# 苍穹与外部组织ID映射-ds_ierp_out_orgid_map
+# （废弃）苍穹与外部组织ID映射-ds_ierp_out_orgid_map
 
-## 苍穹与外部组织ID映射-主表 t_ds_ierp_out_orgid_map
+## （废弃）苍穹与外部组织ID映射-主表 t_ds_ierp_out_orgid_map
 
-- **表名称：** 苍穹与外部组织ID映射-主表
+- **表名称：** （废弃）苍穹与外部组织ID映射-主表
 - **表名：** t_ds_ierp_out_orgid_map
 
 ### 表格列定义

@@ -38,7 +38,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fbasedataid | fbasedataid | varchar | 80 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 1 | fbasedataid | fbasedataid | varchar | 80 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 2 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
@@ -67,7 +67,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 成本子要素 cad_subelement |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [成本子要素 cad_subelement](../basedata_files/cad_subelement.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -96,10 +96,10 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 5 | fcostcolumn | 成组成本字段 | varchar | 255 |  | √ | ' ' | 成组成本字段,枚举: materialcost :材料成本 processcost :委外费用 fee :采购成本 manufacturecost :制造费用 resource :人工费用 |
-| 6 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 7 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 8 | fenable | 使用状态 | bpchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 9 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
@@ -130,7 +130,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fbasedataid | fbasedataid | varchar | 80 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 1 | fbasedataid | fbasedataid | varchar | 80 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 2 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
@@ -160,8 +160,8 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fdbilltypeids | 目标单类型ID | varchar | 255 |  | √ | ' ' | 目标单类型ID |
-| 3 | fwftypeid | 核销类别 | int8 | 64 |  | √ | 0 | 核销类别 msmod_writeofftype |
-| 4 | fwfrecordid | 核销记录实体 | varchar | 80 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 3 | fwftypeid | 核销类别 | int8 | 64 |  | √ | 0 | [核销类别 msmod_writeofftype](../mscommon_files/msmod_writeofftype.md) |
+| 4 | fwfrecordid | 核销记录实体 | varchar | 80 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 5 | fsbilltypeids | 源单类型ID | varchar | 255 |  | √ | ' ' | 源单类型ID |
 | 6 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 7 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
@@ -195,7 +195,7 @@
 | 3 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 4 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 5 | fmainfieldname | 主字段名称 | varchar | 80 |  | √ | ' ' | 主字段名称 |
-| 6 | fbilltypeid | 单据类型 | varchar | 80 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 6 | fbilltypeid | 单据类型 | varchar | 80 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 
 ### 列规则定义
 

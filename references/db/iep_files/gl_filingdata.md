@@ -13,12 +13,12 @@
 | 2 | fvoucherid | 凭证id | int8 | 64 |  | √ | 0 | 凭证id |
 | 3 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 4 | ffilingstatus | 归档状态 | bpchar | 1 |  | √ | '1' | 归档状态,枚举: 1 :已归档 2 :未归档 |
-| 5 | ffilingpersonid | 归档人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | ffilingpersonid | 归档人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | fbillid | 单据id | int8 | 64 |  | √ | 0 | 单据id |
-| 7 | fscanpersonid | 扫描人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 7 | fscanpersonid | 扫描人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 8 | ffilingdate | 归档日期 | timestamp | 0 |  |  | null | 归档日期 |
 | 9 | fsendvoucherid | 通知单凭证id | int8 | 64 |  | √ | 0 | 通知单凭证id |
-| 10 | fbilltypeid | 单据类型 | varchar | 30 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 10 | fbilltypeid | 单据类型 | varchar | 30 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 
 ### 列规则定义
 

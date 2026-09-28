@@ -10,19 +10,19 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fname | fname | varchar | 100 |  | √ | ' ' |  |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 6 | forgid | 货主组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | forgid | 货主组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fmsg | fmsg | text | 0 |  |  | null |  |
-| 8 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 8 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 9 | frealcardid | frealcardid | int8 | 64 |  | √ | 0 |  |
-| 10 | fpolicyid | 会计政策 | int8 | 64 |  | √ | 0 | 会计政策 xkbd_policy |
+| 10 | fpolicyid | 会计政策 | int8 | 64 |  | √ | 0 | [会计政策 xkbd_policy](../fibd_files/xkbd_policy.md) |
 | 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 12 | fctrlstrategy | 控制策略 | varchar | 10 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
 | 13 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 16 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 17 | fendperiodid | fendperiodid | int8 | 64 |  | √ | 0 |  |
@@ -44,8 +44,8 @@
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
 | 1 | idx_t_fa_depresplitsetup_master |  | fmasterid |
-| 2 | idx_fa_depresplitsetup |  | forgid,fdepreuseid,fbeginperiodid,fendperiodid |
-| 3 | idx_t_fa_depresplitsetup_createorg |  | fcreateorgid |
+| 2 | idx_t_fa_depresplitsetup_createorg |  | fcreateorgid |
+| 3 | idx_fa_depresplitsetup |  | forgid,fdepreuseid,fbeginperiodid,fendperiodid |
 | 4 | t_fa_depresplitsetup_pkey |  | fid |
 | 5 | idx_fa_depresplitsetupcard |  | frealcardid |
 

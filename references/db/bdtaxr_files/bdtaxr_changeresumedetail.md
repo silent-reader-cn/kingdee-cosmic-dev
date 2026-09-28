@@ -21,7 +21,7 @@
 | 10 | fcurrentpagenum4 | 当前页 | int8 | 64 |  | √ | 0 | 当前页 |
 | 11 | fxbillid | 变更单ID | int8 | 64 |  | √ | 0 | 变更单ID |
 | 12 | fcrdentryjson | 单据体变更履历json | varchar | 255 |  | √ | ' ' | 单据体变更履历json |
-| 13 | fxcreatorid | 变更人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fxcreatorid | 变更人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | fcurrentpagenum3 | 当前页 | int8 | 64 |  | √ | 0 | 当前页 |
 | 15 | fxbillentity | 变更单实体 | varchar | 50 |  | √ | ' ' | 变更单实体 |
 | 16 | fcurrentpagenum2 | 当前页 | int8 | 64 |  | √ | 0 | 当前页 |

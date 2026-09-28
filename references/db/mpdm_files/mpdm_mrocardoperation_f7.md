@@ -18,7 +18,7 @@
 | 7 | fchecktype | fchecktype | varchar | 50 |  | √ | ' ' |  |
 | 8 | fbasebatchqty | fbasebatchqty | numeric | 23 | 10 | √ | 0 |  |
 | 9 | foperationid | foperationid | int8 | 64 |  | √ | 0 |  |
-| 10 | fprocessgroup | 工序组 | int8 | 64 |  | √ | 0 | 工序组(废弃) mpdm_progroup |
+| 10 | fprocessgroup | 工序组 | int8 | 64 |  | √ | 0 | [工序组(废弃) mpdm_progroup](../mpdm_files/mpdm_progroup.md) |
 | 11 | fcardid | 工卡ID | int8 | 64 |  | √ | 0 | 工卡ID |
 | 12 | fversionid | fversionid | int8 | 64 |  | √ | 0 |  |
 | 13 | fpageseq1 | 页码 | varchar | 50 |  | √ | ' ' | 页码 |
@@ -32,7 +32,7 @@
 | 21 | foverlaptimeunit | foverlaptimeunit | varchar | 50 |  | √ | ' ' |  |
 | 22 | ftimeunit | ftimeunit | varchar | 50 |  | √ | ' ' |  |
 | 23 | fisprocessoverlap | fisprocessoverlap | bpchar | 1 |  | √ | '0' |  |
-| 24 | fprofessiona | 专业 | int8 | 64 |  | √ | 0 | 树形基础资料模板 mpdm_professiona |
+| 24 | fprofessiona | 专业 | int8 | 64 |  | √ | 0 | [树形基础资料模板 mpdm_professiona](../mpdm_files/mpdm_professiona.md) |
 | 25 | fcurrencyfield | fcurrencyfield | int8 | 64 |  | √ | 0 |  |
 | 26 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 27 | foperationno | 工序号 | varchar | 50 |  | √ | ' ' | 工序号 |
@@ -45,7 +45,7 @@
 | 34 | foverlapunitid | foverlapunitid | int8 | 64 |  | √ | 0 |  |
 | 35 | ffloorratio | ffloorratio | numeric | 23 | 10 | √ | 0 |  |
 | 36 | fentrymaterialid | fentrymaterialid | int8 | 64 |  | √ | 0 |  |
-| 37 | fworkcenterid | 工作中心 | int8 | 64 |  | √ | 0 | 工作中心定义(废弃) mpdm_workcentre |
+| 37 | fworkcenterid | 工作中心 | int8 | 64 |  | √ | 0 | [工作中心定义(废弃) mpdm_workcentre](../mpdm_files/mpdm_workcentre.md) |
 | 38 | fminoverlaptime | fminoverlaptime | numeric | 23 | 10 | √ | 0 |  |
 | 39 | fstandardhours | fstandardhours | numeric | 23 | 10 | √ | 0 |  |
 | 40 | fminworktime | fminworktime | numeric | 23 | 10 | √ | 0 |  |
@@ -54,9 +54,9 @@
 | 43 | fsettlementcoefficient | fsettlementcoefficient | numeric | 23 | 10 | √ | 0 |  |
 | 44 | fissplit | fissplit | bpchar | 1 |  | √ | '0' |  |
 | 45 | fpurchasepersonid | fpurchasepersonid | int8 | 64 |  | √ | 0 |  |
-| 46 | foprctrlstrategy | 工序控制策略 | int8 | 64 |  | √ | 0 | 工序控制策略(废弃) mpdm_proctrlstrategy |
+| 46 | foprctrlstrategy | 工序控制策略 | int8 | 64 |  | √ | 0 | [工序控制策略(废弃) mpdm_proctrlstrategy](../mpdm_files/mpdm_proctrlstrategy.md) |
 | 47 | fbottleprocedure | fbottleprocedure | bpchar | 1 |  | √ | '0' |  |
-| 48 | fproductionorgid | 生产组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 48 | fproductionorgid | 生产组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 49 | fheadunitid | fheadunitid | int8 | 64 |  | √ | 0 |  |
 | 50 | fupperratio | fupperratio | numeric | 23 | 10 | √ | 0 |  |
 | 51 | fismilestoneprocess | fismilestoneprocess | bpchar | 1 |  | √ | '0' |  |

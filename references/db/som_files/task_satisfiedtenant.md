@@ -10,8 +10,8 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fsscid | 共享中心 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fsscid | 共享中心 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fname | fname | varchar | 50 |  | √ | ' ' |  |
 | 5 | fpasswd | 用户密码 | varchar | 50 |  | √ | ' ' | 用户密码 |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
@@ -22,7 +22,7 @@
 | 11 | faeskey | aes_key | varchar | 200 |  | √ | ' ' | aes_key |
 | 12 | fstatus | 数据状态 | varchar | 4 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 13 | fsuperadmin | 超级管理员账号 | varchar | 50 |  | √ | ' ' | 超级管理员账号 |
-| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 16 | fthirdorgid | 第三方系统租户id | varchar | 200 |  | √ | ' ' | 第三方系统租户id |
 | 17 | finstanceid | 租户id | varchar | 200 |  | √ | ' ' | 租户id |

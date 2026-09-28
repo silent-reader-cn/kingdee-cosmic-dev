@@ -25,8 +25,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_mpdm_progroup_l |  | fid,flocaleid |
-| 2 | t_mpdm_progroup_l_pkey |  | fpkid |
+| 1 | t_mpdm_progroup_l_pkey |  | fpkid |
+| 2 | idx_mpdm_progroup_l |  | fid,flocaleid |
 
 ---
 
@@ -41,11 +41,11 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fremark | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fisleaf | 是否叶子 | bpchar | 1 |  | √ | '1' | 是否叶子 |
 | 5 | fname | fname | varchar | 60 |  | √ | ' ' |  |
 | 6 | fismronrc | 适用于非例行工卡 | bpchar | 1 |  | √ | '0' | 适用于非例行工卡 |
-| 7 | fparentid | 上级分组 | int8 | 64 |  | √ | 0 | 工序组(废弃) mpdm_progroup |
+| 7 | fparentid | 上级分组 | int8 | 64 |  | √ | 0 | [工序组(废弃) mpdm_progroup](../mpdm_files/mpdm_progroup.md) |
 | 8 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 9 | flongnumber | 长编码 | varchar | 255 |  | √ | ' ' | 长编码 |
 | 10 | fparenttypeid | fparenttypeid | int8 | 64 |  | √ | 0 |  |
@@ -53,7 +53,7 @@
 | 12 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 13 | flevel | 级次 | int8 | 64 |  | √ | 0 | 级次 |
 | 14 | fscoperange | 适用工卡范围 | varchar | 50 |  | √ | ' ' | 适用工卡范围,枚举: A :适用标准工卡 B :适用非例行工卡 |
-| 15 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 15 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 16 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 17 | fdefaultworksort | 默认工作顺序 | int8 | 64 |  | √ | 0 | 默认工作顺序 |
 | 18 | fenable | 使用状态 | varchar | 30 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
@@ -85,7 +85,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | varchar | 36 |  | √ | ' ' | 工卡类型 mpdm_jobcardtype |
+| 2 | fbasedataid | fbasedataid | varchar | 36 |  | √ | ' ' | [工卡类型 mpdm_jobcardtype](../mpdm_files/mpdm_jobcardtype.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义

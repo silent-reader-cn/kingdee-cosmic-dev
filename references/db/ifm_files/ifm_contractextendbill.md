@@ -13,7 +13,7 @@
 | 2 | fcontractbizdate | fcontractbizdate | timestamp | 0 |  |  | null |  |
 | 3 | flender | flender | varchar | 80 |  | √ | ' ' |  |
 | 4 | frenewalexpiredate | 展期后合同到期日期 | timestamp | 0 |  |  | null | 展期后合同到期日期 |
-| 5 | fregistorgid | 登记组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | fregistorgid | 登记组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 7 | fexchangerate | fexchangerate | numeric | 23 | 10 | √ | 0.0000000000 |  |
 | 8 | fenddate | 合同结束日期 | timestamp | 0 |  |  | null | 合同结束日期 |
@@ -21,8 +21,8 @@
 | 10 | fbitbackinfo | 退单信息 | varchar | 255 |  | √ | ' ' | 退单信息 |
 | 11 | fratefloatpoint | 利率浮动基点 | numeric | 19 | 6 | √ | 0.000000 | 利率浮动基点 |
 | 12 | fbillno | 展期单编号 | varchar | 80 |  | √ | ' ' | 展期单编号 |
-| 13 | fclientorgid | 受托机构 | int8 | 64 |  | √ | 0 | 金融机构 bd_finorginfo |
-| 14 | ffinproductid | 融资品种 | int8 | 64 |  | √ | 0 | 融资品种 cfm_financingvarieties |
+| 13 | fclientorgid | 受托机构 | int8 | 64 |  | √ | 0 | [金融机构 bd_finorginfo](../basedata_files/bd_finorginfo.md) |
+| 14 | ffinproductid | 融资品种 | int8 | 64 |  | √ | 0 | [融资品种 cfm_financingvarieties](../cfm_files/cfm_financingvarieties.md) |
 | 15 | flendernature | 贷款人性质 | varchar | 30 |  | √ | ' ' | 贷款人性质,枚举: outgroup :集团外 ingroup :集团内 |
 | 16 | fbillstatus | 单据状态 | varchar | 30 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 17 | fcontractname | fcontractname | varchar | 255 |  | √ | ' ' |  |
@@ -34,7 +34,7 @@
 | 23 | fcontractbillno | 合同单据编号 | varchar | 80 |  | √ | ' ' | 合同单据编号 |
 | 24 | fdatasource | 数据来源 | varchar | 30 |  | √ | ' ' | 数据来源,枚举: cfm :融资管理 invest :投资管理 bond :债券 ifm :内部金融管理 |
 | 25 | fconfirmtime | 确认时间 | timestamp | 0 |  |  | null | 确认时间 |
-| 26 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 26 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 27 | flocamt | flocamt | numeric | 19 | 6 | √ | 0.000000 |  |
 | 28 | fcompanyid | fcompanyid | int8 | 64 |  | √ | 0 |  |
 | 29 | ffinorginfoid | ffinorginfoid | int8 | 64 |  | √ | 0 |  |
@@ -46,18 +46,18 @@
 | 35 | famount | 借款金额 | numeric | 19 | 6 | √ | 0.000000 | 借款金额 |
 | 36 | freturnreason | 退回原因 | varchar | 255 |  | √ | ' ' | 退回原因 |
 | 37 | fisinit | 是否初始化 | bpchar | 1 |  | √ | '0' | 是否初始化 |
-| 38 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 38 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 39 | fdrawamount | 已放款金额 | numeric | 19 | 6 | √ | 0.000000 | 已放款金额 |
-| 40 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 40 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 41 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 42 | fcontractno | fcontractno | varchar | 80 |  | √ | ' ' |  |
 | 43 | floanorgid | floanorgid | int8 | 64 |  | √ | 0 |  |
 | 44 | floantype | 贷款类型 | varchar | 30 |  | √ | ' ' | 贷款类型,枚举: loan :普通贷款 sl :银团贷款 ec :企业往来 entrust :委托贷款 bond :债券发行 |
 | 45 | fratetypeid | fratetypeid | int8 | 64 |  | √ | 0 |  |
-| 46 | fconfirmerid | 确认人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 46 | fconfirmerid | 确认人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 47 | fbizdate | 展期签订日期 | timestamp | 0 |  |  | null | 展期签订日期 |
 | 48 | fsourcebillid | 源单id | int8 | 64 |  | √ | 0 | 源单id |
-| 49 | fcurrencyid | 借款币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 49 | fcurrencyid | 借款币别 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 | 50 | fratesign | 利率浮动基点（BP） | varchar | 80 |  | √ | ' ' | 利率浮动基点（BP）,枚举: add :加 subtract :减 |
 | 51 | fprotocolno | 展期协议号 | varchar | 80 |  | √ | ' ' | 展期协议号 |
 | 52 | fratedeadlineid | fratedeadlineid | int8 | 64 |  | √ | 0 |  |
@@ -221,19 +221,19 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | ftextdebtor | 借款人 | varchar | 255 |  | √ | ' ' | 借款人 |
 | 3 | fprevrenewalexpiredate | 展期前合同到期日期 | timestamp | 0 |  |  | null | 展期前合同到期日期 |
-| 4 | fproductfactoryid | 融资模型 | int8 | 64 |  | √ | 0 | 融资模型 cfm_productfactory |
-| 5 | freferrateid | 参考利率 | int8 | 64 |  | √ | 0 | 参考利率 tbd_referrate |
-| 6 | forgid | 借款组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 7 | floancontractbillid | 合同单据编号 | int8 | 64 |  | √ | 0 | 融资合同 cfm_loancontractbill_f7 |
+| 4 | fproductfactoryid | 融资模型 | int8 | 64 |  | √ | 0 | [融资模型 cfm_productfactory](../cfm_files/cfm_productfactory.md) |
+| 5 | freferrateid | 参考利率 | int8 | 64 |  | √ | 0 | [参考利率表 tbd_referrate](../fbd_files/tbd_referrate.md) |
+| 6 | forgid | 借款组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 7 | floancontractbillid | 合同单据编号 | int8 | 64 |  | √ | 0 | [借款合同 cfm_loancontractbill_f7](../cfm_files/cfm_loancontractbill_f7.md) |
 | 8 | fdebtortype | 借款人类型 | varchar | 30 |  | √ | ' ' | 借款人类型,枚举: innerunit :内部单位 bank :银行 finorg :非银行金融机构 custom :客商 other :其他 |
 | 9 | ftextcreditor | 债权人 | varchar | 255 |  | √ | ' ' | 债权人 |
 | 10 | frateadjustcycletype | 利率重置周期 | varchar | 30 |  | √ | ' ' | 利率重置周期,枚举: D :按天 W :按周 M :按月 |
 | 11 | fsettlestatus | 提交结算中心状态 | varchar | 30 |  | √ | ' ' | 提交结算中心状态,枚举: addnew :新增 submit :已提交 accept :已受理 bitback :已退回 |
 | 12 | fisadjustinterestrate | 调整利率 | bpchar | 1 |  | √ | '0' | 调整利率 |
-| 13 | fextendapplyid | 展期申请 | int8 | 64 |  | √ | 0 | 展期申请 cfm_extapplybill_f7 |
+| 13 | fextendapplyid | 展期申请 | int8 | 64 |  | √ | 0 | [展期申请 cfm_extapplybill_f7](../cfm_files/cfm_extapplybill_f7.md) |
 | 14 | frenewalnum | 展期次数 | int4 | 32 |  | √ | 0 | 展期次数 |
 | 15 | fbizdealno | 受理单编号 | varchar | 80 |  | √ | ' ' | 受理单编号 |
-| 16 | fcreditorgid | 债权组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 16 | fcreditorgid | 债权组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 17 | fbondtype | fbondtype | varchar | 50 |  | √ | ' ' |  |
 | 18 | fcreditorid | 债权人id | int8 | 64 |  | √ | 0 | 债权人id |
 | 19 | fcreditortype | 债权人类型 | varchar | 30 |  | √ | ' ' | 债权人类型,枚举: innerunit :内部单位 bank :银行 finorg :非银行金融机构 settlecenter :结算中心 custom :客商 other :其他 |
@@ -265,7 +265,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fdrawcurrencyid | 放款币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 2 | fdrawcurrencyid | 放款币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 | 3 | fprevrenewalexpiredate | 展期前到期日期 | timestamp | 0 |  |  | null | 展期前到期日期 |
 | 4 | finteresttype | finteresttype | varchar | 20 |  | √ | ' ' |  |
 | 5 | fdrawbillno | 放款单编号 | varchar | 80 |  | √ | ' ' | 放款单编号 |

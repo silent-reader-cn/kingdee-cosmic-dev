@@ -11,12 +11,12 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | 单据ID | int8 | 64 |  | √ | 0 | 单据ID |
 | 2 | fsuppliertype | 专家类别 | varchar | 50 |  | √ | ' ' | 专家类别,枚举: src_expert :评标专家 |
-| 3 | fpackageid | 标段名称 | int8 | 64 |  | √ | 0 | 标段名称 src_packagef7 |
+| 3 | fpackageid | 标段名称 | int8 | 64 |  | √ | 0 | [标段名称 src_packagef7](../src_files/src_packagef7.md) |
 | 4 | fseq | fseq | int4 | 32 |  | √ | 0 |  |
 | 5 | fnote | fnote | varchar | 255 |  | √ | ' ' |  |
 | 6 | fisevaluatepush | 是否下达 | bpchar | 1 |  | √ | '0' | 是否下达 |
 | 7 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 8 | fsupplierid | 专家 | int8 | 64 |  | √ | 0 | 专家资料 src_expert |
+| 8 | fsupplierid | 专家 | int8 | 64 |  | √ | 0 | [专家资料 src_expert](../src_files/src_expert.md) |
 | 9 | fentryparentid | 父单据ID | int8 | 64 |  | √ | 0 | 父单据ID |
 
 ### 列规则定义

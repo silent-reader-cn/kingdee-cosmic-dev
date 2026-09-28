@@ -37,5 +37,5 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_rim_invoice_file_aws |  | fserial_no |
-| 2 | pk_rim_invoice_file_aws |  | fid |
+| 1 | pk_rim_invoice_file_aws |  | fid |
+| 2 | idx_rim_invoice_file_aws |  | fserial_no |

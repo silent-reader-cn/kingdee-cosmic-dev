@@ -39,7 +39,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | null | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fblock_flag | 阻塞标识 | varchar | 10 |  | √ | ' ' | 阻塞标识 |
 | 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 5 | fwait_lock_time | 开始获取锁时间 | timestamp | 0 |  |  | null | 开始获取锁时间 |
@@ -54,7 +54,7 @@
 | 14 | freq_number | 请求编号 | varchar | 50 |  | √ | ' ' | 请求编号 |
 | 15 | fprocess_millis | 请求处理耗时 | int8 | 64 |  |  | null | 请求处理耗时 |
 | 16 | fcustom_id | 租户号 | varchar | 50 |  | √ | ' ' | 租户号 |
-| 17 | fcreatorid | 创建人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 17 | fcreatorid | 创建人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 18 | fmasterid | 主数据内码 | int8 | 64 |  |  | null | 主数据内码 |
 | 19 | fblock_millis | 锁等待耗时 | int8 | 64 |  |  | null | 锁等待耗时 |
 | 20 | fenable | 使用状态 | varchar | 50 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |

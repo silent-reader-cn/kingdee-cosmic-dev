@@ -11,18 +11,18 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fbankcheckflag | 对账标识码 | varchar | 80 |  | √ | ' ' | 对账标识码 |
-| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | famount | 总金额 | numeric | 19 | 6 | √ | 0.000000 | 总金额 |
 | 5 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 6 | fexchangerate | 汇率 | numeric | 19 | 6 | √ | 0.000000 | 汇率 |
-| 7 | fcreatorid | 制单人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 7 | fcreatorid | 制单人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 8 | fexpectdealtime | 期望交易时间 | timestamp | 0 |  |  | null | 期望交易时间 |
 | 9 | factamount | 确认金额 | numeric | 19 | 6 | √ | 0.000000 | 确认金额 |
 | 10 | factcount | 确认笔数 | int8 | 64 |  | √ | 0 | 确认笔数 |
 | 11 | fcount | 总笔数 | int8 | 64 |  | √ | 0 | 总笔数 |
 | 12 | fbillno | 单据编号 | varchar | 80 |  | √ | ' ' | 单据编号 |
-| 13 | fpayeracctbankid | 付款账户 | int8 | 64 |  | √ | 0 | 银行账户 bd_accountbanks |
-| 14 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fpayeracctbankid | 付款账户 | int8 | 64 |  | √ | 0 | [银行账户 bd_accountbanks](../basedata_files/bd_accountbanks.md) |
+| 14 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | flocalamount | 折本位币金额 | numeric | 19 | 6 | √ | 0.000000 | 折本位币金额 |
 | 16 | fbillstatus | 单据状态 | varchar | 5 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 TF :交易失败 NC :交易未确认 OP :准备提交 OF :银企异常 |
 | 17 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
@@ -30,11 +30,11 @@
 | 19 | fsubmittime | 提交银企时间 | timestamp | 0 |  |  | null | 提交银企时间 |
 | 20 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
 | 21 | fserialnumber | 序列号 | varchar | 80 |  | √ | ' ' | 序列号 |
-| 22 | fbasecurrencyid | 组织本位币 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 22 | fbasecurrencyid | 组织本位币 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 | 23 | fbizdate | 业务日期 | timestamp | 0 |  |  | null | 业务日期 |
 | 24 | fsourcebillid | 源单ID | int8 | 64 |  | √ | 0 | 源单ID |
-| 25 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
-| 26 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 25 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
+| 26 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 27 | fisbitback | 打回标识 | bpchar | 1 |  | √ | ' ' | 打回标识 |
 
 ### 列规则定义

@@ -16,7 +16,7 @@
 | 5 | fapplicationdate | 灰度许可申请时间 | timestamp | 0 |  |  | null | 灰度许可申请时间 |
 | 6 | fbegindate | 租赁起始时间 | timestamp | 0 |  |  | null | 租赁起始时间 |
 | 7 | fgrayenddate | 灰度过期时间 | timestamp | 0 |  |  | null | 灰度过期时间 |
-| 8 | fschemeid | 灰度特性 | int8 | 64 |  | √ | 0 | 灰度特性 lic_grayfeaturescheme |
+| 8 | fschemeid | 灰度特性 | int8 | 64 |  | √ | 0 | [灰度特性 lic_grayfeaturescheme](../base_files/lic_grayfeaturescheme.md) |
 
 ### 列规则定义
 

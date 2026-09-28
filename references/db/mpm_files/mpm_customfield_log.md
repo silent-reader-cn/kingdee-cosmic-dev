@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fbizobjectid | 业务对象 | varchar | 80 |  | √ | ' ' | 业务对象 bos_objecttype |
+| 2 | fbizobjectid | 业务对象 | varchar | 80 |  | √ | ' ' | [业务对象 bos_objecttype](../mdl_files/bos_objecttype.md) |
 | 3 | fcusfield | 自定义字段 | varchar | 255 |  | √ | ' ' | 自定义字段 |
 | 4 | fusenum | 使用次数 | int8 | 64 |  | √ | 0 | 使用次数 |
 

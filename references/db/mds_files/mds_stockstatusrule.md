@@ -93,7 +93,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 备货状态 mds_stockstatus |
+| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [备货状态 mds_stockstatus](../mds_files/mds_stockstatus.md) |
 | 2 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 | 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 
@@ -122,19 +122,19 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fremark | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
 | 4 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
-| 5 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 7 | ftargetentity | 目标实体 | varchar | 80 |  | √ | ' ' | 主实体对象 bos_entityobject |
-| 8 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 7 | ftargetentity | 目标实体 | varchar | 80 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
+| 8 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 9 | ftargetstatus | 目标状态 | varchar | 5 |  | √ | ' ' | 目标状态,枚举: 0 :按BOM备货状态 1 :按历史用量备货状态 2 :按客户需求备货状态 |
-| 10 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 10 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 12 | fctrlstrategy | 控制策略 | varchar | 50 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
 | 13 | fstatus | 数据状态 | varchar | 5 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 16 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 17 | fbitindex | 位图 | int8 | 64 |  | √ | 0 | 位图 |
@@ -169,7 +169,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fstockstatus | 备货状态 | int8 | 64 |  | √ | 0 | 备货状态 mds_stockstatus |
+| 2 | fstockstatus | 备货状态 | int8 | 64 |  | √ | 0 | [备货状态 mds_stockstatus](../mds_files/mds_stockstatus.md) |
 | 3 | fmatchelement | 匹配要素 | varchar | 255 |  | √ | ' ' | 匹配要素,枚举: 0 :客户编码 1 :检修设备类型 2 :检修级别 3 :客舱构型 4 :资源计划状态 |
 | 4 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 5 | fallowadjust | 允许手工调整 | bpchar | 1 |  | √ | '0' | 允许手工调整 |

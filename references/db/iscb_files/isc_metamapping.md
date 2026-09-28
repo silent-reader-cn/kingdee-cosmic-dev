@@ -10,16 +10,16 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 3 | fgroupid | 所属系统 | int8 | 64 |  | √ | 0 | 外部集成信息（废弃） isc_sysconn |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 3 | fgroupid | 所属系统 | int8 | 64 |  | √ | 0 | [外部集成信息（废弃） isc_sysconn](../iscb_files/isc_sysconn.md) |
 | 4 | fsourcebilltype | 原单类型 | varchar | 100 |  | √ | ' ' | 原单类型 |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 6 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 7 | ftextfield | 实现类 | varchar | 100 |  | √ | ' ' | 实现类 |
 | 8 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 11 | fbasedatafield | 目标实体 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 11 | fbasedatafield | 目标实体 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 12 | fenable | 使用状态 | varchar | 30 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 13 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
 | 14 | fcombofield | 操作类型 | varchar | 30 |  | √ | ' ' | 操作类型,枚举: 0 :新增 1 :更新 2 :新增或更新 |

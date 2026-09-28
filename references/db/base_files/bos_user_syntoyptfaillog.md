@@ -11,9 +11,9 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | ftype | 同步方式 | varchar | 30 |  | √ | '1' | 同步方式,枚举: 1 :定时任务 2 :手动重试 |
-| 3 | fcreatetime | 执行日期 | timestamp | 0 |  |  | null | 执行日期 |
-| 4 | fopuserid | 执行者 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 5 | fuserid | 被同步人员 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fcreatetime | 执行时间 | timestamp | 0 |  |  | null | 执行时间 |
+| 4 | fopuserid | 执行者 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 5 | fuserid | 被同步人员 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | freason | 原因 | varchar | 255 |  | √ | ' ' | 原因 |
 
 ### 列规则定义

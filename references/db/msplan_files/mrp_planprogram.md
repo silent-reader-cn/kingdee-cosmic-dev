@@ -11,12 +11,12 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | ffruncondition_tag | 生效条件_详情 | text | 0 |  |  | null | 生效条件_详情 |
 | 2 | felementtype | 要素类型 | varchar | 30 |  | √ | ' ' | 要素类型,枚举: 0 :数值 1 :日期 2 :实体 |
-| 3 | fdemandentity | 业务实体 | varchar | 50 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 3 | fdemandentity | 业务实体 | varchar | 50 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 4 | fdemandlogo | 字段标识 | varchar | 100 |  | √ | ' ' | 字段标识 |
 | 5 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 6 | fdemandname | 字段名称 | varchar | 100 |  | √ | ' ' | 字段名称 |
 | 7 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 | id |
-| 8 | ftypename | 名称 | int8 | 64 |  | √ | 0 | 优先级类型定义 mrp_priority_type |
+| 8 | ftypename | 名称 | int8 | 64 |  | √ | 0 | [优先级类型定义 mrp_priority_type](../msplan_files/mrp_priority_type.md) |
 | 9 | ffruncondition | 生效条件 | varchar | 255 |  | √ | ' ' | 生效条件 |
 | 10 | ffrunconditiondesc | 生效条件 | varchar | 255 |  | √ | ' ' | 生效条件 |
 | 11 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
@@ -49,14 +49,14 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | foutofrange | 超范围数据处理方式 | bpchar | 1 |  | √ | 'A' | 超范围数据处理方式,枚举: A :移除 B :标记例外 |
 | 3 | fislossrate | 考虑损耗率 | bpchar | 1 |  | √ | '0' | 考虑损耗率 |
-| 4 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 5 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 4 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 5 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | freleasemode | 预留释放方式 | varchar | 30 |  | √ | ' ' | 预留释放方式,枚举: 0 :不释放预留 1 :释放全部预留（除手工） 2 :仅释放弱预留 |
 | 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 8 | fcomputemode | 优先级计算模式 | varchar | 30 |  | √ | ' ' | 优先级计算模式,枚举: A :继承父项 B :重新计算 |
 | 9 | fiscustomize | 定制 | bpchar | 1 |  | √ | '0' | 定制 |
 | 10 | fadjusteffectset | 调整生效设置 | varchar | 30 |  | √ | ' ' | 调整生效设置,枚举: A :物料设置优先生效 B :方案设置优先生效 |
-| 11 | finvlevel | 库存水位 | int8 | 64 |  | √ | 0 | 库存水位信息 msplan_invlevel |
+| 11 | finvlevel | 库存水位 | int8 | 64 |  | √ | 0 | [库存水位信息 msplan_invlevel](../msplan_files/msplan_invlevel.md) |
 | 12 | fmrpsetup | MRP参数设置ID | int8 | 64 |  | √ | 0 | MRP参数设置ID |
 | 13 | fhiloinv | 最大最小库存 | bpchar | 1 |  | √ | '0' | 最大最小库存 |
 | 14 | fsafestockeffectset | 安全库存生效设置 | varchar | 30 |  | √ | ' ' | 安全库存生效设置,枚举: A :按制造策略生效 B :按计划方案生效 C :空 |
@@ -67,10 +67,10 @@
 | 19 | fisreplace | 考虑替代 | bpchar | 1 |  | √ | '0' | 考虑替代 |
 | 20 | fisnotsetup | 未设置 | bpchar | 1 |  | √ | '0' | 未设置 |
 | 21 | fallowdelaytime | 允许延后期间（天） | int4 | 32 |  |  | 0 | 允许延后期间（天） |
-| 22 | finvsupplystrategy | 库存供应策略 | int8 | 64 |  | √ | 0 | 库存供应策略 mrp_stocksupply_policy |
+| 22 | finvsupplystrategy | 库存供应策略 | int8 | 64 |  | √ | 0 | [库存供应策略 mrp_stocksupply_policy](../msplan_files/mrp_stocksupply_policy.md) |
 | 23 | fiscenterwarehouse | 考虑央仓 | bpchar | 1 |  | √ | '0' | 考虑央仓 |
 | 24 | fismps | MPS | bpchar | 1 |  | √ | '0' | MPS |
-| 25 | fsupplymodel | 供应模型 | int8 | 64 |  | √ | 0 | 资源注册模型 mrp_resourceregister_cf |
+| 25 | fsupplymodel | 供应模型 | int8 | 64 |  | √ | 0 | [资源注册模型 mrp_resourceregister_cf](../msplan_files/mrp_resourceregister_cf.md) |
 | 26 | fselorgrangid | 选择的组织过滤范围id | varchar | 255 |  | √ | ' ' | 选择的组织过滤范围id |
 | 27 | fiscommon | 通用 | bpchar | 1 |  | √ | '0' | 通用 |
 | 28 | fscday | 供应拖期期间 | int4 | 32 |  |  | 0 | 供应拖期期间 |
@@ -82,13 +82,13 @@
 | 34 | focpweakreserve | 按优先级占用弱预留 | varchar | 30 |  | √ | ' ' | 按优先级占用弱预留,枚举: 1 :是 0 :否 |
 | 35 | fstockreserve | 考虑库存预留 | bpchar | 1 |  | √ | '0' | 考虑库存预留 |
 | 36 | fisyield | 考虑成品率 | bpchar | 1 |  | √ | '0' | 考虑成品率 |
-| 37 | fsupplynet | 供应网络 | int8 | 64 |  | √ | 0 | 供应网络定义 mrp_definitionsupply |
-| 38 | fdemandmodel | 需求模型 | int8 | 64 |  | √ | 0 | 资源注册模型 mrp_resourceregister_cf |
+| 37 | fsupplynet | 供应网络 | int8 | 64 |  | √ | 0 | [供应网络定义 mrp_definitionsupply](../msplan_files/mrp_definitionsupply.md) |
+| 38 | fdemandmodel | 需求模型 | int8 | 64 |  | √ | 0 | [资源注册模型 mrp_resourceregister_cf](../msplan_files/mrp_resourceregister_cf.md) |
 | 39 | foutofdate | 需求：拖期期间 | varchar | 30 |  | √ | ' ' | 需求：拖期期间,枚举: 1 :所有拖期期间 2 :指定拖期期间（天） |
 | 40 | fstepnum | 步骤数 | varchar | 255 |  | √ | ' ' | 步骤数 |
 | 41 | fismrp | MRP | bpchar | 1 |  | √ | '0' | MRP |
 | 42 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 43 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 43 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 44 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 45 | fscoutofdate | 供应：拖期期间 | varchar | 30 |  | √ | ' ' | 供应：拖期期间,枚举: 1 :所有拖期期间 2 :指定拖期期间（天） |
 | 46 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
@@ -98,8 +98,8 @@
 | 50 | fisadjust | 考虑调整 | bpchar | 1 |  | √ | '0' | 考虑调整 |
 | 51 | fissafestock | 考虑安全库存 | bpchar | 1 |  | √ | '0' | 考虑安全库存 |
 | 52 | fearlytoler | 提前容差（天） | int4 | 32 |  |  | 0 | 提前容差（天） |
-| 53 | fcreateorgid | 计划组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 54 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 53 | fcreateorgid | 计划组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 54 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 55 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 56 | fallowleadtime | 允许提前期间（天） | int4 | 32 |  |  | 0 | 允许提前期间（天） |
 | 57 | forgrangid | 需求组织运算范围存储id | varchar | 255 |  | √ | ' ' | 需求组织运算范围存储id |
@@ -113,8 +113,8 @@
 | 65 | forgrangid_tag | 需求组织运算范围存储id_详情 | text | 0 |  |  | null | 需求组织运算范围存储id_详情 |
 | 66 | fisreserve | 考虑预留 | bpchar | 1 |  | √ | '0' | 考虑预留 |
 | 67 | ftype | 类型 | varchar | 50 |  | √ | ' ' | 类型,枚举: A :MRP B :SCM |
-| 68 | frelativetransfer | 供需匹配维度 | int8 | 64 |  | √ | 0 | 实体字段映射 mrp_billfieldtransfer |
-| 69 | fmulid | 多组织供需关系 | int8 | 64 |  | √ | 0 | 多组织供需关系 mrp_multiorgsupdem |
+| 68 | frelativetransfer | 供需匹配维度 | int8 | 64 |  | √ | 0 | [实体字段映射 mrp_billfieldtransfer](../msplan_files/mrp_billfieldtransfer.md) |
+| 69 | fmulid | 多组织供需关系 | int8 | 64 |  | √ | 0 | [多组织供需关系 mrp_multiorgsupdem](../msplan_files/mrp_multiorgsupdem.md) |
 
 ### 列规则定义
 
@@ -143,8 +143,8 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fresourceregisters | 数据源配置 | int8 | 64 |  | √ | 0 | 数据源配置 mrp_resource_dataconfig |
-| 3 | fsupplyres | 供应资源 | varchar | 50 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 2 | fresourceregisters | 数据源配置 | int8 | 64 |  | √ | 0 | [数据源配置 mrp_resource_dataconfig](../msplan_files/mrp_resource_dataconfig.md) |
+| 3 | fsupplyres | 供应资源 | varchar | 50 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 4 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 5 | fsupplypriority | 供应优先级 | int4 | 32 |  | √ | 0 | 供应优先级 |
 | 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
@@ -177,11 +177,11 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | ffruncondition_tag | 生效条件_详情 | text | 0 |  |  | null | 生效条件_详情 |
 | 3 | felementtype | 要素类型 | varchar | 30 |  | √ | ' ' | 要素类型,枚举: 0 :数值 1 :日期 2 :实体 |
-| 4 | fdemandentity | 业务实体 | varchar | 50 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 4 | fdemandentity | 业务实体 | varchar | 50 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 5 | fdemandlogo | 字段标识 | varchar | 100 |  | √ | ' ' | 字段标识 |
 | 6 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 7 | fdemandname | 字段名称 | varchar | 100 |  | √ | ' ' | 字段名称 |
-| 8 | ftypename | 名称 | int8 | 64 |  | √ | 0 | 优先级类型定义 mrp_priority_type |
+| 8 | ftypename | 名称 | int8 | 64 |  | √ | 0 | [优先级类型定义 mrp_priority_type](../msplan_files/mrp_priority_type.md) |
 | 9 | fpentryfrunconditiondesc | 生效条件 | varchar | 255 |  | √ | ' ' | 生效条件 |
 | 10 | ffruncondition | 生效条件 | varchar | 255 |  | √ | ' ' | 生效条件 |
 | 11 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
@@ -267,10 +267,10 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | finvstrategy | 库存供应策略 | int8 | 64 |  | √ | 0 | 库存供应策略 mrp_stocksupply_policy |
-| 3 | fsupplynet | 供应网络 | int8 | 64 |  | √ | 0 | 供应网络定义 mrp_definitionsupply |
+| 2 | finvstrategy | 库存供应策略 | int8 | 64 |  | √ | 0 | [库存供应策略 mrp_stocksupply_policy](../msplan_files/mrp_stocksupply_policy.md) |
+| 3 | fsupplynet | 供应网络 | int8 | 64 |  | √ | 0 | [供应网络定义 mrp_definitionsupply](../msplan_files/mrp_definitionsupply.md) |
 | 4 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 5 | fdemandorg | 需求组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | fdemandorg | 需求组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 
 ### 列规则定义
@@ -327,7 +327,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 计划标识 mpdm_plantag |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [计划标识 mpdm_plantag](../mpdm_files/mpdm_plantag.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -356,9 +356,9 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fismrpoperat | 参与MRP运算 | bpchar | 1 |  | √ | '0' | 参与MRP运算 |
-| 3 | fresourceregister | 数据源配置 | int8 | 64 |  | √ | 0 | 数据源配置 msplan_resource_dataconf |
+| 3 | fresourceregister | 数据源配置 | int8 | 64 |  | √ | 0 | [数据源配置 msplan_resource_dataconf](../msplan_files/msplan_resource_dataconf.md) |
 | 4 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 5 | fdemandsrc | 需求来源 | varchar | 50 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 5 | fdemandsrc | 需求来源 | varchar | 50 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 
 ### 列规则定义
@@ -389,7 +389,7 @@
 | 2 | fadjuststrategy | 调整策略 | varchar | 30 |  | √ | ' ' | 调整策略,枚举: C :不调整 A :整单调整 B :部分调整 |
 | 3 | fresulttype | 输出类型 | varchar | 50 |  | √ | ' ' | 输出类型,枚举: 0 :建议取消 1 :建议延后 2 :建议提前 |
 | 4 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 5 | fentitytype | 供应单据实体 | varchar | 50 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 5 | fentitytype | 供应单据实体 | varchar | 50 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 
 ### 列规则定义

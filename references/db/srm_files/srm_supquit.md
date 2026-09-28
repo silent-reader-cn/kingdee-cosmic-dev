@@ -43,19 +43,22 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fremark | 退出说明 | varchar | 255 |  | √ | ' ' | 退出说明 |
 | 3 | fbillstatus | 单据状态 | bpchar | 1 |  | √ | ' ' | 单据状态,枚举: A :保存 B :已提交 C :已审核 |
-| 4 | forgid | 采购组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 5 | fquittype | 退出类型 | bpchar | 1 |  | √ | ' ' | 退出类型,枚举: 1 :主动退出 2 :绩效退出 3 :品质退出 4 :策略退出 |
-| 6 | fbilldate | 业务日期 | timestamp | 0 |  |  | null | 业务日期 |
-| 7 | flastupdateuserid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 8 | fbizpartnerid | 商务伙伴 | int8 | 64 |  | √ | 0 | 商务伙伴 bd_bizpartner |
-| 9 | fsupplierid | 供应商 | int8 | 64 |  | √ | 0 | 供应商 srm_supplier |
-| 10 | flastupdatetime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 11 | fauditstatus | 审批状态 | bpchar | 1 |  | √ | ' ' | 审批状态,枚举: A :拟定 B :提交审批 C :审批通过 D :审批驳回 |
-| 12 | fcfmstatus | 确认状态 | bpchar | 1 |  | √ | ' ' | 确认状态,枚举: A :待确认 B :已确认 C :已打回 |
-| 13 | fbiztype | 业务类型 | bpchar | 1 |  | √ | ' ' | 业务类型,枚举: 8 :供应商退出 |
-| 14 | fbillno | 单据编号 | varchar | 80 |  | √ | ' ' | 单据编号 |
-| 15 | fbilltypeid | fbilltypeid | int8 | 64 |  | √ | 0 |  |
-| 16 | fscope | 退出范围 | bpchar | 1 |  | √ | ' ' | 退出范围,枚举: 1 :整体退出 2 :部分退出 |
+| 4 | forgid | 采购组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 5 | fchecknodeids_tag | 选择退出组织id_详情 | text | 0 |  |  | null | 选择退出组织id_详情 |
+| 6 | fquittype | 退出类型 | bpchar | 1 |  | √ | ' ' | 退出类型,枚举: 1 :主动退出 2 :绩效退出 3 :品质退出 4 :策略退出 |
+| 7 | fbilldate | 业务日期 | timestamp | 0 |  |  | null | 业务日期 |
+| 8 | flastupdateuserid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 9 | fbizpartnerid | 商务伙伴 | int8 | 64 |  | √ | 0 | [商务伙伴 bd_bizpartner](../base_files/bd_bizpartner.md) |
+| 10 | fsupplierid | 供应商 | int8 | 64 |  | √ | 0 | [供应商 srm_supplier](../srm_files/srm_supplier.md) |
+| 11 | flastupdatetime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 12 | fauditstatus | 审批状态 | bpchar | 1 |  | √ | ' ' | 审批状态,枚举: A :拟定 B :提交审批 C :审批通过 D :审批驳回 |
+| 13 | fcfmstatus | 确认状态 | bpchar | 1 |  | √ | ' ' | 确认状态,枚举: A :待确认 B :已确认 C :已打回 |
+| 14 | fbiztype | 业务类型 | bpchar | 1 |  | √ | ' ' | 业务类型,枚举: 8 :供应商退出 |
+| 15 | fchecknodeids | 选择退出组织id | text | 0 |  |  | null | 选择退出组织id |
+| 16 | fdisablesupplier | 禁用供应商 | bpchar | 1 |  | √ | '0' | 禁用供应商 |
+| 17 | fbillno | 单据编号 | varchar | 80 |  | √ | ' ' | 单据编号 |
+| 18 | fbilltypeid | fbilltypeid | int8 | 64 |  | √ | 0 |  |
+| 19 | fscope | 退出范围 | bpchar | 1 |  | √ | ' ' | 退出范围,枚举: 1 :整体退出 2 :部分退出 |
 
 ### 列规则定义
 
@@ -120,7 +123,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | forgstatus | 当前状态 | bpchar | 1 |  | √ | ' ' | 当前状态,枚举: 1 :有效 2 :无效 3 :冻结 4 :退出 9 :未引入 |
 | 3 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 4 | fquitorgid | 采购组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 4 | fquitorgid | 采购组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | fnote | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
 | 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 7 | fisquit | 是否退出 | bpchar | 1 |  | √ | ' ' | 是否退出 |
@@ -135,8 +138,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | t_pur_supplierquitentry_pkey |  | fentryid |
-| 2 | idx_pur_supplierquit_fid_fseq |  | fid,fseq |
+| 1 | idx_pur_supplierquit_fid_fseq |  | fid,fseq |
+| 2 | t_pur_supplierquitentry_pkey |  | fentryid |
 
 ---
 
@@ -151,14 +154,14 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fremark | fremark | varchar | 255 |  | √ | ' ' |  |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 4 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 4 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 6 | fauditdate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
 | 7 | fcfmdate | 确认时间 | timestamp | 0 |  |  | null | 确认时间 |
 | 8 | fauditopinion | 审批意见 | varchar | 255 |  | √ | ' ' | 审批意见 |
-| 9 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 10 | fcfmid | 确认人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 10 | fcfmid | 确认人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 
 ### 列规则定义

@@ -13,7 +13,7 @@
 | 2 | fexecutedetails | 执行详情 | varchar | 200 |  | √ | ' ' | 执行详情 |
 | 3 | fexecstatus | 执行状态 | bpchar | 1 |  | √ | '0' | 执行状态,枚举: 1 :进行中 2 :成功 3 :失败 4 :已中止 |
 | 4 | ftype | 执行类型 | bpchar | 1 |  | √ | ' ' | 执行类型,枚举: 0 :自动执行 1 :手动执行 |
-| 5 | fintelschemaid | 执行方案 | int8 | 64 |  | √ | 0 | 智能执行方案 gl_intellexecschema |
+| 5 | fintelschemaid | 执行方案 | int8 | 64 |  | √ | 0 | [智能执行方案 gl_intellexecschema](../iep_files/gl_intellexecschema.md) |
 | 6 | fdate | 日期 | int8 | 64 |  | √ | 0 | 日期 |
 | 7 | fexecstartdate | 方案开始时间 | timestamp | 0 |  |  | null | 方案开始时间 |
 | 8 | fexecenddate | 方案结束时间 | timestamp | 0 |  |  | null | 方案结束时间 |

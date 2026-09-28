@@ -13,14 +13,14 @@
 | 2 | fparentinvtype | 显示上级库存 | bpchar | 1 |  | √ | ' ' | 显示上级库存,枚举: 0 :不显示 1 :模糊显示 2 :精确显示 |
 | 3 | fdiscountrate | 折扣率（小数） | numeric | 23 | 10 | √ | 0 | 折扣率（小数） |
 | 4 | ftaxrate | 税率（%） | numeric | 23 | 10 | √ | 0 | 税率（%） |
-| 5 | forgid | 管理组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 6 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | forgid | 管理组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 6 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fisagentdistribut | 代配送商 | bpchar | 1 |  | √ | '0' | 代配送商 |
-| 8 | fsalechannelid | 销售渠道 | int8 | 64 |  | √ | 0 | 渠道 ocdbd_channel |
+| 8 | fsalechannelid | 销售渠道 | int8 | 64 |  | √ | 0 | [渠道 ocdbd_channel](../ocdbd_files/ocdbd_channel.md) |
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 12 | forderchannelid | 订货渠道 | int8 | 64 |  | √ | 0 | 渠道 ocdbd_channel |
+| 12 | forderchannelid | 订货渠道 | int8 | 64 |  | √ | 0 | [渠道 ocdbd_channel](../ocdbd_files/ocdbd_channel.md) |
 | 13 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 14 | fshippingtypecontrol | 运输方式控制 | bpchar | 1 |  | √ | '0' | 运输方式控制 |
 | 15 | fbitindex | 位图 | int8 | 64 |  | √ | 0 | 位图 |
@@ -28,12 +28,12 @@
 | 17 | fregion | fregion | int8 | 64 |  | √ | 0 |  |
 | 18 | fhundredrate | 折扣率（%） | numeric | 23 | 10 | √ | 0 | 折扣率（%） |
 | 19 | fis3distribut | 第三方配送 | bpchar | 1 |  | √ | '0' | 第三方配送 |
-| 20 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 21 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 20 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 21 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 22 | fname | 名称 | varchar | 80 |  | √ | ' ' | 名称 |
 | 23 | fcomment | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
 | 24 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 25 | fsaleorgid | 销售组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 25 | fsaleorgid | 销售组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 26 | fctrlstrategy | 控制策略 | bpchar | 1 |  | √ | '5' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
 | 27 | fsupplyrelation | 供货关系 | bpchar | 1 |  | √ | ' ' | 供货关系,枚举: A :组织直供 B :渠道供货 |
 | 28 | flogistics | flogistics | varchar | 30 |  | √ | '0' |  |
@@ -41,8 +41,8 @@
 | 30 | fonlycash | 仅现销 | bpchar | 1 |  | √ | '0' | 仅现销 |
 | 31 | fmarketability | 可销商品控制 | bpchar | 1 |  | √ | '0' | 可销商品控制 |
 | 32 | fupdowncontrol | 渠道上下架控制 | bpchar | 1 |  | √ | '0' | 渠道上下架控制 |
-| 33 | fadminorgid | 销售部门 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 34 | fchannelclassid | 所属渠道分类 | int8 | 64 |  | √ | 0 | 渠道分类 ocdbd_channel_class |
+| 33 | fadminorgid | 销售部门 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 34 | fchannelclassid | 所属渠道分类 | int8 | 64 |  | √ | 0 | [渠道分类 ocdbd_channel_class](../ocdbd_files/ocdbd_channel_class.md) |
 | 35 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 36 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
 | 37 | fisnotintax | 不含税 | bpchar | 1 |  | √ | '0' | 不含税 |

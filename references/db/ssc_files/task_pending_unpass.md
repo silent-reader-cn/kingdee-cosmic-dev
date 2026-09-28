@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | ftask | 任务id | int8 | 64 |  | √ | 0 | 任务id |
-| 3 | fpending | 暂挂原因 | int8 | 64 |  | √ | 0 | 暂挂原因 task_pendingreason |
+| 3 | fpending | 暂挂原因 | int8 | 64 |  | √ | 0 | [暂挂原因 task_pendingreason](../ssc_files/task_pendingreason.md) |
 
 ### 列规则定义
 

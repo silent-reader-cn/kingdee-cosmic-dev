@@ -22,7 +22,7 @@
 | 11 | fbuildingcode | 房产编号 | varchar | 50 |  | √ | ' ' | 房产编号 |
 | 12 | famount | 减免税房产原值 | numeric | 23 | 10 | √ | 0.0000000000 | 减免税房产原值 |
 | 13 | fskssqq | 所属期起 | timestamp | 0 |  |  | null | 所属期起 |
-| 14 | forg | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 14 | forg | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 15 | fskssqz | 所属期止 | timestamp | 0 |  |  | null | 所属期止 |
 | 16 | frowno | 序号 | int8 | 64 |  | √ | 0 | 序号 |
 

@@ -17,7 +17,7 @@
 | 6 | ftitmappinvapi | API开票 | bpchar | 1 |  | √ | '0' | API开票 |
 | 7 | fautosavetitle | 是否自动保存企业抬头信息 | bpchar | 1 |  | √ | '0' | 是否自动保存企业抬头信息 |
 | 8 | fapiinvoice | 接口同步 | bpchar | 1 |  | √ | '0' | 接口同步 |
-| 9 | forg | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 9 | forg | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 10 | fbatchinvoice | 批量开票 | bpchar | 1 |  | √ | '0' | 批量开票 |
 | 11 | fscaninvoice | 扫码开票 | bpchar | 1 |  | √ | '0' | 扫码开票 |
 | 12 | ftitmappbillimport | 原始单据导入 | bpchar | 1 |  | √ | '0' | 原始单据导入 |

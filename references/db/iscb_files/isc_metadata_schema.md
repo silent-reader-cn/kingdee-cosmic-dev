@@ -14,7 +14,7 @@
 | 3 | ffunction_description | ffunction_description | varchar | 200 |  | √ | ' ' |  |
 | 4 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 6 | ffunction | 自定义函数 | int8 | 64 |  | √ | 0 | 自定义函数 isc_custom_function |
+| 6 | ffunction | 自定义函数 | int8 | 64 |  | √ | 0 | [自定义函数 isc_custom_function](../iscb_files/isc_custom_function.md) |
 
 ### 列规则定义
 
@@ -205,15 +205,16 @@
 | 2 | fremark | 备注 | varchar | 100 |  | √ | ' ' | 备注 |
 | 3 | fname | 编码 | varchar | 100 |  | √ | ' ' | 编码 |
 | 4 | flabel | 标题 | varchar | 100 |  | √ | ' ' | 标题 |
-| 5 | findex | 序号 | varchar | 100 |  | √ | ' ' | 序号 |
-| 6 | fdata_schema | 数据模型 | varchar | 100 |  | √ | ' ' | 数据模型 |
-| 7 | fis_primary_key | 主键 | bpchar | 1 |  | √ | ' ' | 主键 |
-| 8 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 9 | fis_encrypt | 数据脱敏 | bpchar | 1 |  | √ | ' ' | 数据脱敏 |
-| 10 | fcustomize | 自定义 | bpchar | 1 |  | √ | ' ' | 自定义 |
-| 11 | frequired | 必填 | bpchar | 1 |  | √ | ' ' | 必填 |
-| 12 | fdata_type | 数据类型 | varchar | 100 |  | √ | ' ' | 数据类型 |
-| 13 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 5 | flabel_en_us | 标题 | varchar | 150 |  | √ | ' ' | 标题 |
+| 6 | findex | 序号 | varchar | 100 |  | √ | ' ' | 序号 |
+| 7 | fdata_schema | 数据模型 | varchar | 100 |  | √ | ' ' | 数据模型 |
+| 8 | fis_primary_key | 主键 | bpchar | 1 |  | √ | ' ' | 主键 |
+| 9 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
+| 10 | fis_encrypt | 数据脱敏 | bpchar | 1 |  | √ | ' ' | 数据脱敏 |
+| 11 | fcustomize | 自定义 | bpchar | 1 |  | √ | ' ' | 自定义 |
+| 12 | frequired | 必填 | bpchar | 1 |  | √ | ' ' | 必填 |
+| 13 | fdata_type | 数据类型 | varchar | 100 |  | √ | ' ' | 数据类型 |
+| 14 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 
 ### 列规则定义
 
@@ -241,7 +242,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fgroupid | 数据源 | int8 | 64 |  | √ | 0 | 数据源管理 isc_data_source |
+| 2 | fgroupid | 数据源 | int8 | 64 |  | √ | 0 | [数据源管理 isc_data_source](../iscb_files/isc_data_source.md) |
 | 3 | fresult_jst | 结果转换脚本 | varchar | 2000 |  | √ | ' ' | 结果转换脚本 |
 | 4 | fsource_tenant | 来源 | varchar | 100 |  | √ | ' ' | 来源 |
 | 5 | fresult_jst_tag | 结果转换脚本_详情 | text | 0 |  |  | null | 结果转换脚本_详情 |
@@ -254,12 +255,12 @@
 | 12 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 13 | fis_init | 已初始化 | bpchar | 1 |  | √ | ' ' | 已初始化 |
 | 14 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 15 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 15 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 16 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 17 | fsource_trace | 来源追溯 | varchar | 600 |  | √ | ' ' | 来源追溯 |
 | 18 | ffull_name | 全名 | varchar | 200 |  | √ | ' ' | 全名 |
 | 19 | fremark | 备注 | varchar | 150 |  | √ | ' ' | 备注 |
-| 20 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 20 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 21 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 22 | ferror_stack_tag | 错误堆栈_详情 | text | 0 |  |  | null | 错误堆栈_详情 |
 | 23 | fview_sql_tag | 视图SQL_详情 | text | 0 |  |  | null | 视图SQL_详情 |

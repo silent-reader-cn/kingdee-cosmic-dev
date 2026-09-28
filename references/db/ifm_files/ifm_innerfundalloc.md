@@ -78,31 +78,31 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fpayerbanknum | 付款账号 | varchar | 255 |  | √ | ' ' | 付款账号 |
 | 3 | fitempayerid | 付款单位 | int8 | 64 |  | √ | 0 | 客户 bd_customer |
-| 4 | fagentfinorgid | 开户行 | int8 | 64 |  | √ | 0 | 金融机构 bd_finorginfo |
+| 4 | fagentfinorgid | 开户行 | int8 | 64 |  | √ | 0 | [金融机构 bd_finorginfo](../basedata_files/bd_finorginfo.md) |
 | 5 | fitempayertypeid | 付款单位类型 | varchar | 50 |  | √ | ' ' | 付款单位类型,枚举: bd_customer :客户 bd_supplier :供应商 bos_user :职员 bos_org :公司 cas_othercontactunit :其他往来单位 other :其他 |
-| 6 | forg | 资金组织(没有使用) | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | forg | 资金组织(没有使用) | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 8 | fexchangerate | 收款汇率 | numeric | 23 | 10 | √ | 0.00 | 收款汇率 |
 | 9 | fpayername | 付款单位 | varchar | 255 |  | √ | ' ' | 付款单位 |
-| 10 | fagentpayeeaccountid | 收款账号 | int8 | 64 |  | √ | 0 | 银行账户 bd_accountbanks |
+| 10 | fagentpayeeaccountid | 收款账号 | int8 | 64 |  | √ | 0 | [银行账户 bd_accountbanks](../basedata_files/bd_accountbanks.md) |
 | 11 | fquotation | 换算方式 | varchar | 50 |  | √ | ' ' | 换算方式,枚举: 0 :直接汇率 1 :间接汇率 |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 13 | fpayeracctbank | 付款账号 | int8 | 64 |  | √ | 0 | 银行账户 bd_accountbanks |
-| 14 | fexratetableid | 汇率表 | int8 | 64 |  | √ | 0 | 汇率表 bd_exratetable |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 13 | fpayeracctbank | 付款账号 | int8 | 64 |  | √ | 0 | [银行账户 bd_accountbanks](../basedata_files/bd_accountbanks.md) |
+| 14 | fexratetableid | 汇率表 | int8 | 64 |  | √ | 0 | [汇率表 bd_exratetable](../base_files/bd_exratetable.md) |
 | 15 | fbillno | 单据编号 | varchar | 30 |  | √ | ' ' | 单据编号 |
-| 16 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 17 | fpayerbankid | 付款银行 | int8 | 64 |  | √ | 0 | 行名行号 bd_bebank |
+| 16 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 17 | fpayerbankid | 付款银行 | int8 | 64 |  | √ | 0 | [行名行号 bd_bebank](../basedata_files/bd_bebank.md) |
 | 18 | fsourcebilltype | 源单类型 | varchar | 50 |  | √ | ' ' | 源单类型,枚举: ifm_transrecvbill :收款结算单 |
-| 19 | fagentfinorgcatid | 银行类别 | int8 | 64 |  | √ | 0 | 银行类别 bd_bankcgsetting |
+| 19 | fagentfinorgcatid | 银行类别 | int8 | 64 |  | √ | 0 | [银行类别 bd_bankcgsetting](../basedata_files/bd_bankcgsetting.md) |
 | 20 | fbillstatus | 单据状态 | varchar | 50 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 21 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 22 | fsettlettypeid | 结算方式 | int8 | 64 |  | √ | 0 | 结算方式 bd_settlementtype |
+| 22 | fsettlettypeid | 结算方式 | int8 | 64 |  | √ | 0 | [结算方式 bd_settlementtype](../basedata_files/bd_settlementtype.md) |
 | 23 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
 | 24 | fdescription | 摘要 | varchar | 255 |  | √ | ' ' | 摘要 |
-| 25 | fscorgid | 资金组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 26 | fisdiffcur | 异币别付款 | bpchar | 1 |  | √ | '0' | 异币别付款 |
+| 25 | fscorgid | 资金组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 26 | fisdiffcur | 异币种付款 | bpchar | 1 |  | √ | '0' | 异币种付款 |
 | 27 | fsourcebillnumber | 源单编码 | varchar | 255 |  | √ | ' ' | 源单编码 |
-| 28 | fbasecurrencyid | 本位币 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 28 | fbasecurrencyid | 本位币 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 | 29 | flocalamt | 收款金额本位币 | numeric | 23 | 10 | √ | 0.00 | 收款金额本位币 |
 | 30 | ftranstype | 交易类型 | varchar | 50 |  | √ | ' ' | 交易类型,枚举: 1 :内部代付 2 :内部转账 3 :资金下拨 6 :内部扣款 7 :贷款收回 8 :贷款结息 10 :银行扣款 11 :活转定 12 :定转活 13 :供应链融资还款 14 :内部代收 |
 | 31 | fsettletnumber | 结算号 | varchar | 50 |  | √ | ' ' | 结算号 |
@@ -110,8 +110,8 @@
 | 33 | fsourcebillid | 源单ID | int8 | 64 |  | √ | 0 | 源单ID |
 | 34 | fexratedate | 汇率日期 | timestamp | 0 |  |  | null | 汇率日期 |
 | 35 | freceiptamt | 收款金额 | numeric | 23 | 10 | √ | 0.00 | 收款金额 |
-| 36 | fcurrencyid | 收款币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
-| 37 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 36 | fcurrencyid | 收款币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
+| 37 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 38 | fpayerbankname | 付款银行 | varchar | 255 |  | √ | ' ' | 付款银行 |
 
 ### 列规则定义
@@ -177,16 +177,16 @@
 | 6 | freceivablelocalamt | 收款金额本位币 | numeric | 23 | 10 | √ | 0 | 收款金额本位币 |
 | 7 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 8 | freceivableamt | 收款金额 | numeric | 23 | 10 | √ | 0.0 | 收款金额 |
-| 9 | finnerpayeeaccount | 内部账户 | int8 | 64 |  | √ | 0 | 内部账户管理 ifm_inneracct |
-| 10 | fpayeebank | 收款银行 | int8 | 64 |  | √ | 0 | 金融机构 bd_finorginfo |
-| 11 | fsettlecur | 内部账户币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 9 | finnerpayeeaccount | 内部账户 | int8 | 64 |  | √ | 0 | [内部账户管理 ifm_inneracct](../ifm_files/ifm_inneracct.md) |
+| 10 | fpayeebank | 收款银行 | int8 | 64 |  | √ | 0 | [金融机构 bd_finorginfo](../basedata_files/bd_finorginfo.md) |
+| 11 | fsettlecur | 内部账户币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 | 12 | fsettlerate | 结算汇率 | numeric | 23 | 10 | √ | 0.00 | 结算汇率 |
-| 13 | fmemberorgid | 成员单位 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 13 | fmemberorgid | 成员单位 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 14 | fcontactunit | 往来单位 | int8 | 64 |  | √ | 0 | 客户 bd_customer |
-| 15 | frecbilltypeid | 收款单类型 | int8 | 64 |  | √ | 0 | 单据类型 bos_billtype |
+| 15 | frecbilltypeid | 收款单类型 | int8 | 64 |  | √ | 0 | [单据类型 bos_billtype](../cts_files/bos_billtype.md) |
 | 16 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 17 | fsettleamount | 结算金额 | numeric | 23 | 10 | √ | 0.00 | 结算金额 |
-| 18 | fpayeeaccount | 收款账户（银行） | int8 | 64 |  | √ | 0 | 银行账户 bd_accountbanks |
+| 18 | fpayeeaccount | 收款账户（银行） | int8 | 64 |  | √ | 0 | [银行账户 bd_accountbanks](../basedata_files/bd_accountbanks.md) |
 | 19 | fsettlementlocalamt | 结算金额本位币 | numeric | 23 | 10 | √ | 0 | 结算金额本位币 |
 
 ### 列规则定义

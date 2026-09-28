@@ -10,13 +10,13 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | freqstoreplace | 领用存放地点 | int8 | 64 |  | √ | 0 | 存放地点 fa_storeplace |
-| 3 | fstoreplace | 存放地点 | int8 | 64 |  | √ | 0 | 存放地点 fa_storeplace |
-| 4 | frequsestatus | 领用使用状态 | int8 | 64 |  | √ | 0 | 使用状态 fa_usestatus |
+| 2 | freqstoreplace | 领用存放地点 | int8 | 64 |  | √ | 0 | [存放地点 fa_storeplace](../fa_files/fa_storeplace.md) |
+| 3 | fstoreplace | 存放地点 | int8 | 64 |  | √ | 0 | [存放地点 fa_storeplace](../fa_files/fa_storeplace.md) |
+| 4 | frequsestatus | 领用使用状态 | int8 | 64 |  | √ | 0 | [使用状态 fa_usestatus](../fa_files/fa_usestatus.md) |
 | 5 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 7 | frealcardid | 资产名称 | int8 | 64 |  | √ | 0 | 资产卡片基础资料 fa_card_real_base |
-| 8 | fusestate | 使用状态 | int8 | 64 |  | √ | 0 | 使用状态 fa_usestatus |
+| 7 | frealcardid | 资产名称 | int8 | 64 |  | √ | 0 | [资产卡片基础资料 fa_card_real_base](../fa_files/fa_card_real_base.md) |
+| 8 | fusestate | 使用状态 | int8 | 64 |  | √ | 0 | [使用状态 fa_usestatus](../fa_files/fa_usestatus.md) |
 
 ### 列规则定义
 
@@ -46,24 +46,25 @@
 | 2 | fremark | 备注 | varchar | 1000 |  |  | ' ' | 备注 |
 | 3 | fphone | fphone | varchar | 30 |  | √ | ' ' |  |
 | 4 | fassetapplyid | 资产申请单id | int8 | 64 |  | √ | 0 | 资产申请单id |
-| 5 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | fbillstatus | 单据状态 | varchar | 30 |  | √ | 'C' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 D :废弃 |
-| 7 | fassetorgid | 资产组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 7 | fassetorgid | 资产组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 9 | forgid | 领用人公司 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 9 | forgid | 领用人公司 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 10 | fsigndate | 签收日期 | timestamp | 0 |  |  | null | 签收日期 |
 | 11 | fhasvoucher | 凭证 | bpchar | 1 |  | √ | '0' | 凭证 |
 | 12 | foperatedate | 业务日期 | timestamp | 0 |  |  | null | 业务日期 |
 | 13 | fauditdate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
-| 14 | fsignuser | 签收人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 15 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 16 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 17 | fapplyreason | 申请事由 | varchar | 1000 |  |  | ' ' | 申请事由 |
-| 18 | fdepartment | 领用人部门 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 19 | fsourcetype | 来源方式 | varchar | 30 |  | √ | ' ' | 来源方式,枚举: 1 :移动端移交或领用 2 :手工新增 |
-| 20 | frequisitionuser | 领用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 21 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 22 | fbillno | 单据编号 | varchar | 30 |  | √ | ' ' | 单据编号 |
+| 14 | fmigsrc | 是否迁移 | int4 | 32 |  | √ | 0 | 是否迁移 |
+| 15 | fsignuser | 签收人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 16 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 17 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 18 | fapplyreason | 申请事由 | varchar | 1000 |  |  | ' ' | 申请事由 |
+| 19 | fdepartment | 领用人部门 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 20 | fsourcetype | 来源方式 | varchar | 30 |  | √ | ' ' | 来源方式,枚举: 1 :移动端移交或领用 2 :手工新增 |
+| 21 | frequisitionuser | 领用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 22 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 23 | fbillno | 单据编号 | varchar | 30 |  | √ | ' ' | 单据编号 |
 
 ### 列规则定义
 

@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | varchar | 30 |  | √ | ' ' | id |
-| 2 | fname | 名称 | varchar | 50 |  |  | ' ' | 名称 |
+| 2 | fname | 名称 | varchar | 100 |  |  | ' ' | 名称 |
 | 3 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
 
 ### 列规则定义
@@ -38,7 +38,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | varchar | 30 |  | √ | ' ' |  |
-| 2 | fname | 名称 | varchar | 50 |  |  | null | 名称 |
+| 2 | fname | 名称 | varchar | 100 |  |  | null | 名称 |
 | 3 | flocaleid | flocaleid | varchar | 10 |  |  | null | localeid |
 | 4 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
 

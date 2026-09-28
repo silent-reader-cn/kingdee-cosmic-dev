@@ -18,7 +18,7 @@
 | 7 | freportdate | 报告期 | timestamp | 0 |  |  | null | 报告期 |
 | 8 | fproperatingamount | 其他营业外收支净额占比 | numeric | 23 | 10 |  | null | 其他营业外收支净额占比 |
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 10 | fipoorgld | IPO主体 | int8 | 64 |  | √ | 0 | IPO编制组织 ipo_org |
+| 10 | fipoorgld | IPO主体 | int8 | 64 |  | √ | 0 | [IPO编制组织 ipo_org](../ipobase_files/ipo_org.md) |
 | 11 | fprrefundreduction | 税收返还、减免占比 | numeric | 23 | 10 |  | null | 税收返还、减免占比 |
 | 12 | fprlfinancialliabilities | 持有(或处置)交易性金融资产和负债产生的变动损益或投资收益占比 | numeric | 23 | 10 |  | null | 持有(或处置)交易性金融资产和负债产生的变动损益或投资收益占比 |
 | 13 | fprlossrealestate | 公允价值计量的投资性房地产价值变动损占比 | numeric | 23 | 10 |  | null | 公允价值计量的投资性房地产价值变动损占比 |
@@ -44,8 +44,8 @@
 | 33 | flossrealestate | 公允价值计量的投资性房地产价值变动损 | numeric | 23 | 10 |  | null | 公允价值计量的投资性房地产价值变动损 |
 | 34 | fcustodyfee | 受托经营取得的托管费收入 | numeric | 23 | 10 |  | null | 受托经营取得的托管费收入 |
 | 35 | fprlossesdebt | 债务重组损益占比 | numeric | 23 | 10 |  | null | 债务重组损益占比 |
-| 36 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 37 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 36 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 37 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 38 | fprprojectscsrc | 中国证监会认定的其他项目占比 | numeric | 23 | 10 |  | null | 中国证监会认定的其他项目占比 |
 | 39 | fcorporatecost | 企业重组费用 | numeric | 23 | 10 |  | null | 企业重组费用 |
 | 40 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |

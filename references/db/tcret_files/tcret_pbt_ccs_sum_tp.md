@@ -28,8 +28,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | pk_tcret_pbt_ccs_entry_tp |  | fentryid |
-| 2 | idx_tcret_pbt_ccs_entry_tp_fk |  | fid |
+| 1 | idx_tcret_pbt_ccs_entry_tp_fk |  | fid |
+| 2 | pk_tcret_pbt_ccs_entry_tp |  | fentryid |
 
 ---
 
@@ -43,10 +43,10 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | faccountorg | 核算组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | faccountorg | 核算组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fdraftid | 底稿ID | int8 | 64 |  | √ | 0 | 底稿ID |
 | 4 | ftaxrate | 税率 | numeric | 23 | 10 | √ | 0 | 税率 |
-| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | fsourceid | 税源id | int8 | 64 |  | √ | 0 | 税源id |
 | 7 | fmaindataid | 主数据ID（废弃） | int8 | 64 |  | √ | 0 | 主数据ID（废弃） |
 | 8 | fccsbdm | 车/船识别代码 | varchar | 50 |  | √ | ' ' | 车/船识别代码 |
@@ -59,7 +59,7 @@
 | 15 | fzxrq | 注销日期 | timestamp | 0 |  |  | null | 注销日期 |
 | 16 | fskssqz | 税款所属期止 | timestamp | 0 |  |  | null | 税款所属期止 |
 | 17 | ftaxbasis | 计税依据 | numeric | 23 | 10 | √ | 0 | 计税依据 |
-| 18 | fsbbid | 申报表ID | int8 | 64 |  | √ | 0 | 纳税申报表基础资料 bdtaxr_nsrxx |
+| 18 | fsbbid | 申报表ID | int8 | 64 |  | √ | 0 | [纳税申报表基础资料 bdtaxr_nsrxx](../bdtaxr_files/bdtaxr_nsrxx.md) |
 | 19 | fcclx | 车/船类型 | varchar | 50 |  | √ | ' ' | 车/船类型,枚举: |
 | 20 | fcczcrq | 车/船注册日期 | timestamp | 0 |  |  | null | 车/船注册日期 |
 | 21 | fynse | 应纳税额 | numeric | 23 | 10 | √ | 0 | 应纳税额 |

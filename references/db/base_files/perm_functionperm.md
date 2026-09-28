@@ -10,9 +10,9 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | varchar | 18 |  | √ | ' ' | id |
-| 2 | fpermitemid | 权限项 | varchar | 18 |  | √ | ' ' | 权限项 perm_permitem |
+| 2 | fpermitemid | 权限项 | varchar | 18 |  | √ | ' ' | [权限项 perm_permitem](../base_files/perm_permitem.md) |
 | 3 | fseq | 序号 | int8 | 64 |  | √ | 0 | 序号 |
-| 4 | fentitytypeid | 业务对象 | varchar | 36 |  | √ | ' ' | 业务对象 bos_objecttype |
+| 4 | fentitytypeid | 业务对象 | varchar | 36 |  | √ | ' ' | [业务对象 bos_objecttype](../mdl_files/bos_objecttype.md) |
 | 5 | fdentitytypeid | 业务对象的ID | varchar | 36 |  | √ | ' ' | 业务对象的ID |
 
 ### 列规则定义

@@ -61,14 +61,14 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | f_request_bill_id | 需求单据 | int8 | 64 |  | √ | 0 | 主实体对象 bos_entityobject |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | f_request_bill_id | 需求单据 | int8 | 64 |  | √ | 0 | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | f_enable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 5 | f_number | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
 | 6 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 7 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 8 | f_name | 名称 | varchar | 510 |  | √ | ' ' | 名称 |
-| 9 | f_creator_id | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | f_creator_id | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | f_status | 数据状态 | bpchar | 1 |  | √ | 'A' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 

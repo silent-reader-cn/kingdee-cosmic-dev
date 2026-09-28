@@ -44,6 +44,6 @@
 | 1 | t_im_inv_realbalance_sp_pkey |  | fid |
 | 2 | idx_im_realbalc_sp_updtime |  | fupdatetime |
 | 3 | idx_im_realbalc_sp_billid |  | fbillid |
-| 4 | idx_im_realbalc_sp_entryid |  | fentryid |
-| 5 | idx_im_realbalc_sp_bno |  | fbillno |
+| 4 | idx_im_realbalc_sp_bno |  | fbillno |
+| 5 | idx_im_realbalc_sp_entryid |  | fentryid |
 | 6 | idx_im_realbalc_sp_keycol |  | fkeycol |

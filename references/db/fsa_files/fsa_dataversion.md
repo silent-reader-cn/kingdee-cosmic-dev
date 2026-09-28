@@ -75,7 +75,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fstatus | 状态 | varchar | 2 |  | √ | ' ' | 状态,枚举: 0 :新增 1 :进行中 2 :可用 3 :启用 9 :失败 -1 :删除 |
-| 3 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | frefparam | 引用参数 | int8 | 64 |  | √ | 0 | 引用参数 |
 | 5 | ftargetentity | 目标实体对象编码 | varchar | 30 |  | √ | ' ' | 目标实体对象编码 |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |

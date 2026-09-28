@@ -12,7 +12,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fewblxh | 二维表序号 | varchar | 50 |  | √ | ' ' | 二维表序号,枚举: 1 :1 2 :2 3 :3 4 :4 5 :5 6 :6 7 :7 |
 | 3 | fysfwjzjtfpse | 应税服务即征即退分配税额 | numeric | 23 | 10 | √ | 0.0000000000 | 应税服务即征即退分配税额 |
-| 4 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 4 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | fysfwfpse | 应税服务分配税额 | numeric | 23 | 10 | √ | 0.0000000000 | 应税服务分配税额 |
 | 6 | fysfwjzjtxssr | 应税服务即征即退销售收入 | numeric | 23 | 10 | √ | 0.0000000000 | 应税服务即征即退销售收入 |
 | 7 | fewblname | 二维表行名称 | varchar | 50 |  | √ | ' ' | 二维表行名称 |

@@ -10,15 +10,15 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreator | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 3 | fbiztype | 任务类型 | int8 | 64 |  | √ | 0 | 业务类型 bd_biztype |
+| 2 | fcreator | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 3 | fbiztype | 任务类型 | int8 | 64 |  | √ | 0 | [业务类型 bd_biztype](../sbd_files/bd_biztype.md) |
 | 4 | ftype | 操作类型 | varchar | 1 |  | √ | '1' | 操作类型,枚举: 1 :认领 2 :指派 3 :委托 4 :完成 |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 6 | fexpectdate | 期望完成日期 | timestamp | 0 |  |  | null | 期望完成日期 |
 | 7 | fnumber | 任务编号 | varchar | 30 |  | √ | ' ' | 任务编号 |
 | 8 | freason | 委托事由 | varchar | 255 |  |  | ' ' | 委托事由 |
-| 9 | ftaskid | 移动任务单 | int8 | 64 |  | √ | 0 | 移动质检任务单 qcmp_taskinfo |
-| 10 | ftouser | 接受人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | ftaskid | 移动任务单 | int8 | 64 |  | √ | 0 | [移动质检任务单 qcmp_taskinfo](../qcbd_files/qcmp_taskinfo.md) |
+| 10 | ftouser | 接受人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | freceivetime | 接受时间 | timestamp | 0 |  |  | null | 接受时间 |
 
 ### 列规则定义

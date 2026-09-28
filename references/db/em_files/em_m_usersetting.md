@@ -11,10 +11,10 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fotherinfo | 扩展信息 | text | 0 |  |  | null | 扩展信息 |
-| 3 | fuserid | 用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 4 | fexratetableid | 汇率表 | int8 | 64 |  | √ | 0 | 汇率表 bd_exratetable |
+| 3 | fuserid | 用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 4 | fexratetableid | 汇率表 | int8 | 64 |  | √ | 0 | [汇率表 bd_exratetable](../base_files/bd_exratetable.md) |
 | 5 | fotherinfo_tag | 扩展信息_详情 | varchar | 60 |  | √ | ' ' | 扩展信息_详情 |
-| 6 | fcurrencyid | 报告币 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 6 | fcurrencyid | 报告币 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 | 7 | funit | 单位 | varchar | 5 |  | √ | '0' | 单位,枚举: 0 :元 1 :千 2 :万 3 :亿 4 :十亿 99 :自适应 |
 
 ### 列规则定义

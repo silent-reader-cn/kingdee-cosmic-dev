@@ -10,13 +10,13 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcustomer | 甲方负责人 | varchar | 100 |  | √ | ' ' | 甲方负责人 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 4 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fcustomer | 甲方负责人 | varchar | 255 |  | √ | ' ' | 甲方负责人 |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 4 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 6 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 7 | fadviser | 实施顾问 | varchar | 100 |  | √ | ' ' | 实施顾问 |
-| 8 | fitemid | 初始化事项 | int8 | 64 |  | √ | 0 | 初始化事项配置 ipop_init_itemcfg |
+| 6 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 7 | fadviser | 实施顾问 | varchar | 255 |  | √ | ' ' | 实施顾问 |
+| 8 | fitemid | 初始化事项 | int8 | 64 |  | √ | 0 | [初始化事项配置 ipop_init_itemcfg](../ipop_files/ipop_init_itemcfg.md) |
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 
 ### 列规则定义

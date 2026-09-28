@@ -14,7 +14,7 @@
 | 3 | fname | 资源名称 | varchar | 255 |  | √ | ' ' | 资源名称 |
 | 4 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 5 | fres_pk | 资源ID | varchar | 50 |  | √ | ' ' | 资源ID |
-| 6 | ftype | 资源类型 | varchar | 36 |  | √ | ' ' | 业务对象 bos_objecttype |
+| 6 | ftype | 资源类型 | varchar | 36 |  | √ | ' ' | [业务对象 bos_objecttype](../mdl_files/bos_objecttype.md) |
 | 7 | flocal_time | 本地最近修改时间 | timestamp | 0 |  |  | null | 本地最近修改时间 |
 | 8 | fsize | 大小（字节） | int8 | 64 |  | √ | 0 | 大小（字节） |
 | 9 | fcontent_tag | 资源内容_详情 | text | 0 |  |  | null | 资源内容_详情 |
@@ -34,8 +34,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_iscb_res_comp_mr |  | fid |
-| 2 | pk_t_iscb_res_comp_mr |  | fentryid |
+| 1 | pk_t_iscb_res_comp_mr |  | fentryid |
+| 2 | idx_iscb_res_comp_mr |  | fid |
 
 ---
 
@@ -52,7 +52,7 @@
 | 2 | fname | 资源名称 | varchar | 255 |  | √ | ' ' | 资源名称 |
 | 3 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 4 | fres_pk | 资源ID | varchar | 50 |  | √ | ' ' | 资源ID |
-| 5 | ftype | 资源类型 | varchar | 36 |  | √ | ' ' | 业务对象 bos_objecttype |
+| 5 | ftype | 资源类型 | varchar | 36 |  | √ | ' ' | [业务对象 bos_objecttype](../mdl_files/bos_objecttype.md) |
 | 6 | flocal_time | 本地最近修改时间 | timestamp | 0 |  |  | null | 本地最近修改时间 |
 | 7 | fsize | 大小（字节） | int8 | 64 |  | √ | 0 | 大小（字节） |
 | 8 | fcontent_tag | 资源内容_详情 | text | 0 |  |  | null | 资源内容_详情 |
@@ -88,12 +88,12 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fremark | 备注 | varchar | 50 |  | √ | ' ' | 备注 |
-| 3 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 5 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | fnumber | 任务编号 | varchar | 50 |  | √ | ' ' | 任务编号 |
 | 7 | fprogress | 进度 | varchar | 50 |  | √ | ' ' | 进度,枚举: READY :暂存 COMPARING :对比中 COMPARED :对比完成 UPDATED :更新完成 UPDATE_FAILED :更新失败 |
-| 8 | fsolution | 解决方案 | int8 | 64 |  | √ | 0 | 我的方案 isc_solution_center |
+| 8 | fsolution | 解决方案 | int8 | 64 |  | √ | 0 | [我的方案 isc_solution_center](../iscb_files/isc_solution_center.md) |
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 
 ### 列规则定义

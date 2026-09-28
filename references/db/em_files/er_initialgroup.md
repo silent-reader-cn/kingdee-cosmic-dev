@@ -1,8 +1,8 @@
-# 初始化任务项分类维护-er_initialgroup
+# 初始化任务项分类维护（废弃）-er_initialgroup
 
-## 初始化任务项分类维护-主表 t_er_initialgroup
+## 初始化任务项分类维护（废弃）-主表 t_er_initialgroup
 
-- **表名称：** 初始化任务项分类维护-主表
+- **表名称：** 初始化任务项分类维护（废弃）-主表
 - **表名：** t_er_initialgroup
 
 ### 表格列定义
@@ -12,8 +12,8 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
 | 3 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 5 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 5 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 7 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 8 | fpreset | 预设 | bpchar | 1 |  | √ | ' ' | 预设 |
@@ -37,9 +37,9 @@
 
 ---
 
-## 初始化任务项分类维护-多语言表 t_er_initialgroup_l
+## 初始化任务项分类维护（废弃）-多语言表 t_er_initialgroup_l
 
-- **表名称：** 初始化任务项分类维护-多语言表
+- **表名称：** 初始化任务项分类维护（废弃）-多语言表
 - **表名：** t_er_initialgroup_l
 
 ### 表格列定义

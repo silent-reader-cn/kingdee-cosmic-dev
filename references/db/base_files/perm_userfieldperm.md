@@ -11,10 +11,10 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | varchar | 18 |  | √ | ' ' | id |
 | 2 | fisincludesuborg | 包含下级组织 | bpchar | 1 |  | √ | '0' | 包含下级组织 |
-| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | fdimtype | 隔离维度 | varchar | 30 |  | √ | ' ' | 隔离维度 |
-| 5 | ffieldpermid | 字段权限 | varchar | 18 |  | √ | ' ' | 字段权限 perm_fieldperm |
-| 6 | fuserid | 用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | ffieldpermid | 字段权限 | varchar | 18 |  | √ | ' ' | [字段权限 perm_fieldperm](../base_files/perm_fieldperm.md) |
+| 6 | fuserid | 用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

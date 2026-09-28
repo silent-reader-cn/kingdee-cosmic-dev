@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | ftask | 任务id | int8 | 64 |  | √ | 0 | 任务id |
-| 3 | frescan | 退回重扫原因 | int8 | 64 |  | √ | 0 | 退扫原因 task_rescanreason |
+| 3 | frescan | 退回重扫原因 | int8 | 64 |  | √ | 0 | [退扫原因 task_rescanreason](../ssc_files/task_rescanreason.md) |
 
 ### 列规则定义
 

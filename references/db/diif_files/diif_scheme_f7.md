@@ -10,11 +10,11 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreator | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fcreator | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fapproverid | fapproverid | int8 | 64 |  | √ | 0 |  |
 | 4 | fnextforecastdate | fnextforecastdate | timestamp | 0 |  |  | null |  |
 | 5 | fcycleunit | 预测周期单位 | varchar | 50 |  | √ | ' ' | 预测周期单位,枚举: MONTH :月 WEEK :周 DAY :日 |
-| 6 | fsourceid | 数据源 | int8 | 64 |  | √ | 0 | 预测数据源 diif_source |
+| 6 | fsourceid | 数据源 | int8 | 64 |  | √ | 0 | [预测数据源 diif_source](../diif_files/diif_source.md) |
 | 7 | fcustomerstdid | fcustomerstdid | int8 | 64 |  | √ | 0 |  |
 | 8 | fmaterialdim | fmaterialdim | varchar | 50 |  | √ | ' ' |  |
 | 9 | frefhistorycyclecount | frefhistorycyclecount | int4 | 32 |  | √ | 0 |  |

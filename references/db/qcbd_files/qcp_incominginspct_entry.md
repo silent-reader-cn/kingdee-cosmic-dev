@@ -9,7 +9,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | 来料检验单单头f7 | int8 | 64 |  | √ | 0 | 来料检验单单头F7 qcp_incominginspct_f7 |
+| 1 | fid | 来料检验单单头f7 | int8 | 64 |  | √ | 0 | [来料检验单单头F7 qcp_incominginspct_f7](../qcbd_files/qcp_incominginspct_f7.md) |
 | 2 | fsupplyorg | fsupplyorg | int8 | 64 |  | √ | 0 |  |
 | 3 | fseq | 分录序号 | int4 | 32 |  | √ | 0 | 分录序号 |
 | 4 | fconvertunqty | fconvertunqty | numeric | 23 | 10 | √ | 0 |  |
@@ -26,10 +26,10 @@
 | 15 | fwbbillentryid | fwbbillentryid | varchar | 50 |  | √ | ' ' |  |
 | 16 | funqualifiedqty | 不合格数 | numeric | 23 | 10 | √ | 0 | 不合格数 |
 | 17 | fsrcbillid | fsrcbillid | int8 | 64 |  | √ | 0 |  |
-| 18 | funitid | 计量单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 18 | funitid | 计量单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 19 | fmversion | fmversion | int8 | 64 |  | √ | 0 |  |
-| 20 | fwarehouseid | 仓库 | int8 | 64 |  | √ | 0 | 仓库 bd_warehouse |
-| 21 | finspectproid | 检验方案 | int8 | 64 |  | √ | 0 | 检验方案 qcbd_inspectpro |
+| 20 | fwarehouseid | 仓库 | int8 | 64 |  | √ | 0 | [仓库 bd_warehouse](../sbd_files/bd_warehouse.md) |
+| 21 | finspectproid | 检验方案 | int8 | 64 |  | √ | 0 | [检验方案 qcbd_inspectpro](../qcbd_files/qcbd_inspectpro.md) |
 | 22 | fwbbillentityentity | fwbbillentityentity | varchar | 50 |  | √ | ' ' |  |
 | 23 | fsubcomment | fsubcomment | varchar | 512 |  | √ | ' ' |  |
 | 24 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
@@ -41,7 +41,7 @@
 | 30 | fjoinqty | fjoinqty | numeric | 23 | 10 | √ | 0 |  |
 | 31 | fwbbillentity | fwbbillentity | varchar | 50 |  | √ | ' ' |  |
 | 32 | fmanudate | fmanudate | timestamp | 0 |  |  | null |  |
-| 33 | flocationorg | 库存组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 33 | flocationorg | 库存组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 34 | fsrcbillentity | fsrcbillentity | varchar | 50 |  | √ | ' ' |  |
 | 35 | fvaluerecqty | fvaluerecqty | int4 | 32 |  | √ | 0 |  |
 | 36 | fresultstatus | fresultstatus | varchar | 10 |  | √ | ' ' |  |
@@ -49,11 +49,11 @@
 | 38 | fwbbillentryseq | fwbbillentryseq | varchar | 50 |  | √ | ' ' |  |
 | 39 | fsrcbillentryid | fsrcbillentryid | int8 | 64 |  | √ | 0 |  |
 | 40 | fduedate | fduedate | timestamp | 0 |  |  | null |  |
-| 41 | flocationid | 仓位 | int8 | 64 |  | √ | 0 | 仓位 bd_location |
+| 41 | flocationid | 仓位 | int8 | 64 |  | √ | 0 | [仓位 bd_location](../sbd_files/bd_location.md) |
 | 42 | fscsystem | fscsystem | varchar | 50 |  | √ | ' ' |  |
 | 43 | fsettlorg | fsettlorg | int8 | 64 |  | √ | 0 |  |
 | 44 | frinsqty | 样本数量 | numeric | 23 | 10 | √ | 0 | 样本数量 |
-| 45 | ftaskid | 任务ID | int8 | 64 |  | √ | 0 | 移动质检任务单 qcmp_taskinfo |
+| 45 | ftaskid | 任务ID | int8 | 64 |  | √ | 0 | [移动质检任务单 qcmp_taskinfo](../qcbd_files/qcmp_taskinfo.md) |
 | 46 | fauxpty | fauxpty | int8 | 64 |  | √ | 0 |  |
 | 47 | facceptno | facceptno | varchar | 30 |  | √ | ' ' |  |
 | 48 | fsamplingsizeqty | fsamplingsizeqty | numeric | 23 | 10 | √ | 0 |  |
@@ -64,29 +64,29 @@
 | 53 | fsamplingresult | 质量判定 | varchar | 5 |  | √ | ' ' | 质量判定,枚举: B :接受 C :不接受 |
 | 54 | fsrcbillentryseq | fsrcbillentryseq | int8 | 64 |  | √ | 0 |  |
 | 55 | fbasequaliqty | 基本单位合格数 | numeric | 23 | 10 | √ | 0 | 基本单位合格数 |
-| 56 | fbaseunitid | 基本单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 56 | fbaseunitid | 基本单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 57 | fpriceandtax | fpriceandtax | numeric | 23 | 10 | √ | 0 |  |
 | 58 | finsdepartment | finsdepartment | int8 | 64 |  | √ | 0 |  |
 | 59 | fsampingunqualqty | 样本不合格数 | numeric | 23 | 10 | √ | 0 | 样本不合格数 |
 | 60 | fsourcebilltype | fsourcebilltype | varchar | 50 |  | √ | ' ' |  |
 | 61 | fprojectid | fprojectid | int8 | 64 |  | √ | 0 |  |
 | 62 | fheadbillno | 单据编号（不可编辑） | varchar | 80 |  | √ | ' ' | 单据编号（不可编辑） |
-| 63 | fmaterialcfg | 物料编码 | int8 | 64 |  | √ | 0 | 物料质检信息 bd_inspect_cfg |
+| 63 | fmaterialcfg | 物料编码 | int8 | 64 |  | √ | 0 | [物料质检信息 bd_inspect_cfg](../sbd_files/bd_inspect_cfg.md) |
 | 64 | fsettlcurrency | fsettlcurrency | int8 | 64 |  | √ | 0 |  |
 | 65 | fsampingqualqty | 样本合格数 | numeric | 23 | 10 | √ | 0 | 样本合格数 |
 | 66 | forderno | forderno | varchar | 50 |  | √ | ' ' |  |
 | 67 | femergency | 是否加急 | varchar | 5 |  | √ | ' ' | 是否加急,枚举: A :是 B :否 |
 | 68 | fwbbillno | fwbbillno | varchar | 50 |  | √ | ' ' |  |
-| 69 | fsampscheme | 抽样方案 | int8 | 64 |  | √ | 0 | 抽样方案 qcbd_sampscheme |
+| 69 | fsampscheme | 抽样方案 | int8 | 64 |  | √ | 0 | [抽样方案 qcbd_sampscheme](../qcbd_files/qcbd_sampscheme.md) |
 | 70 | facstr | facstr | varchar | 50 |  | √ | ' ' |  |
 | 71 | fprocureorg | fprocureorg | int8 | 64 |  | √ | 0 |  |
 | 72 | finspectionstd | finspectionstd | int8 | 64 |  | √ | 0 |  |
 | 73 | fsrcbilltype | fsrcbilltype | int8 | 64 |  | √ | 0 |  |
 | 74 | fisexistsnnumber | fisexistsnnumber | bpchar | 1 |  | √ | '0' |  |
-| 75 | fsupplieid | 供应商 | int8 | 64 |  | √ | 0 | 供应商 bd_supplier |
+| 75 | fsupplieid | 供应商 | int8 | 64 |  | √ | 0 | [供应商 bd_supplier](../basedata_files/bd_supplier.md) |
 | 76 | fsecondck | 二次检验 | bpchar | 1 |  | √ | '0' | 二次检验 |
 | 77 | fsamppercentage | fsamppercentage | numeric | 23 | 10 | √ | 0 |  |
-| 78 | fmaterialid | 物料主数据 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 78 | fmaterialid | 物料主数据 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 79 | fproposer | fproposer | int8 | 64 |  | √ | 0 |  |
 | 80 | fwsruleid | fwsruleid | int8 | 64 |  | √ | 0 |  |
 | 81 | fbaddealsnnumberbotp | fbaddealsnnumberbotp | int8 | 64 |  | √ | 0 |  |
@@ -96,7 +96,7 @@
 | 85 | fsuppliermasterid | fsuppliermasterid | int8 | 64 |  | √ | 0 |  |
 | 86 | facceptid | facceptid | int8 | 64 |  | √ | 0 |  |
 | 87 | fbaddeal | 不良品处理 | varchar | 5 |  | √ | 'B' | 不良品处理,枚举: 0 :检验单 1 :不良品处理单 |
-| 88 | fsubinspector | 质检员 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 88 | fsubinspector | 质检员 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 89 | fdamageqtybasic | fdamageqtybasic | numeric | 23 | 10 | √ | 0 |  |
 | 90 | fconvertqty | fconvertqty | numeric | 23 | 10 | √ | 0 |  |
 | 91 | fbasesampqlyqty | 基本单位样本合格数 | numeric | 23 | 10 | √ | 0 | 基本单位样本合格数 |
@@ -105,7 +105,7 @@
 | 94 | fenterresult | fenterresult | bpchar | 1 |  | √ | '0' |  |
 | 95 | fsupplydep | fsupplydep | int8 | 64 |  | √ | 0 |  |
 | 96 | fbaseunqlyqty | 基本单位不合格数 | numeric | 23 | 10 | √ | 0 | 基本单位不合格数 |
-| 97 | fmaterialcomid | 物料公共信息 | int8 | 64 |  | √ | 0 | 物料组织公共信息 bd_materialcommon |
+| 97 | fmaterialcomid | 物料公共信息 | int8 | 64 |  | √ | 0 | [物料组织公共信息 bd_materialcommon](../basedata_files/bd_materialcommon.md) |
 | 98 | fdamageqty | fdamageqty | numeric | 23 | 10 | √ | 0 |  |
 | 99 | fbaseqty | 基本数量 | numeric | 23 | 10 | √ | 0 | 基本数量 |
 
@@ -137,12 +137,25 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fcustomer | fcustomer | int8 | 64 |  | √ | 0 |  |
-| 3 | fentryextf | fentryextf | varchar | 50 |  | √ | ' ' |  |
-| 4 | freturnnumber | freturnnumber | varchar | 80 |  | √ | ' ' |  |
-| 5 | fexpectcompletedate | 期望完成日期 | timestamp | 0 |  |  | null | 期望完成日期 |
-| 6 | finstocknumber | finstocknumber | varchar | 80 |  | √ | ' ' |  |
-| 7 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
+| 2 | furgentqty | furgentqty | numeric | 23 | 10 | √ | 0 |  |
+| 3 | fcustomer | fcustomer | int8 | 64 |  | √ | 0 |  |
+| 4 | furgentjoinbaseqty | furgentjoinbaseqty | numeric | 23 | 10 | √ | 0 |  |
+| 5 | finspectstatus | finspectstatus | varchar | 30 |  | √ | 'INSPECTING' |  |
+| 6 | furgentjoinqty | furgentjoinqty | numeric | 23 | 10 | √ | 0 |  |
+| 7 | furgentbaseqty | furgentbaseqty | numeric | 23 | 10 | √ | 0 |  |
+| 8 | fentryextf | fentryextf | varchar | 50 |  | √ | ' ' |  |
+| 9 | flicensenoid | flicensenoid | int8 | 64 |  | √ | 0 |  |
+| 10 | furgentrelease | furgentrelease | bpchar | 1 |  | √ | '0' |  |
+| 11 | fexpectcompletedate | 期望完成日期 | timestamp | 0 |  |  | null | 期望完成日期 |
+| 12 | fassqty2 | fassqty2 | numeric | 23 | 10 | √ | 0 |  |
+| 13 | fassunit2id | fassunit2id | int8 | 64 |  | √ | 0 |  |
+| 14 | fbonded | fbonded | bpchar | 1 |  | √ | '0' |  |
+| 15 | fassunitid | fassunitid | int8 | 64 |  | √ | 0 |  |
+| 16 | fassqty | fassqty | numeric | 23 | 10 | √ | 0 |  |
+| 17 | fursaveunwrite | fursaveunwrite | bpchar | 1 |  | √ | '0' |  |
+| 18 | freturnnumber | freturnnumber | varchar | 80 |  | √ | ' ' |  |
+| 19 | finstocknumber | finstocknumber | varchar | 80 |  | √ | ' ' |  |
+| 20 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 
 ### 列规则定义
 

@@ -17,11 +17,11 @@
 | 6 | fyoy | 同比 | bpchar | 1 |  | √ | '0' | 同比 |
 | 7 | ftarget | 目标 | bpchar | 1 |  | √ | '0' | 目标 |
 | 8 | frelativenyname | 相对年初名称 | varchar | 50 |  | √ | ' ' | 相对年初名称 |
-| 9 | fcurrentperiodquota | 本期指标 | int8 | 64 |  | √ | 0 | 指标库 ipo_quota_info |
+| 9 | fcurrentperiodquota | 本期指标 | int8 | 64 |  | √ | 0 | [指标库 ipo_quota_info](../ipobase_files/ipo_quota_info.md) |
 | 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 11 | frelativenydecreasediffer | 显示增减差值（相对年初） | bpchar | 1 |  | √ | '0' | 显示增减差值（相对年初） |
 | 12 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 15 | fqoqname | 环比名词 | varchar | 50 |  | √ | ' ' | 环比名词 |
 | 16 | frelativenydecreaseratio | 显示增减比例(%)（相对年初） | bpchar | 1 |  | √ | '0' | 显示增减比例(%)（相对年初） |
@@ -29,10 +29,10 @@
 | 18 | fqoq | 环比 | bpchar | 1 |  | √ | '0' | 环比 |
 | 19 | fyoydecreaseratio | 显示增减比例(%)（同比） | bpchar | 1 |  | √ | '0' | 显示增减比例(%)（同比） |
 | 20 | fshowredfont | 负数以红色字体显示 | bpchar | 1 |  | √ | '0' | 负数以红色字体显示 |
-| 21 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 21 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 22 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 23 | ftargetdecreasedifference | 显示增减差值（目标） | bpchar | 1 |  | √ | '0' | 显示增减差值（目标） |
-| 24 | fcurrentyearquota | 本年指标 | int8 | 64 |  | √ | 0 | 指标库 ipo_quota_info |
+| 24 | fcurrentyearquota | 本年指标 | int8 | 64 |  | √ | 0 | [指标库 ipo_quota_info](../ipobase_files/ipo_quota_info.md) |
 | 25 | ftargetname | 目标名称 | varchar | 50 |  | √ | ' ' | 目标名称 |
 | 26 | fqoqdecreaseratio | 显示增减比例(%)（环比） | bpchar | 1 |  | √ | '0' | 显示增减比例(%)（环比） |
 | 27 | fqoqdecreasedifference | 显示增减差值（环比） | bpchar | 1 |  | √ | '0' | 显示增减差值（环比） |

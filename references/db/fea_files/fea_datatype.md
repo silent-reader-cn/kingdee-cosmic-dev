@@ -13,7 +13,7 @@
 | 2 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 3 | fintegerlength | 位数 | int8 | 64 |  | √ | 0 | 位数 |
 | 4 | fname | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
-| 5 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | flength | 长度 | int8 | 64 |  | √ | 0 | 长度 |
 | 7 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 8 | fcomments | 注释 | varchar | 255 |  | √ | ' ' | 注释 |
@@ -21,10 +21,10 @@
 | 10 | fdescription | 值范围 | varchar | 255 |  | √ | ' ' | 值范围 |
 | 11 | flengthrange | 长度范围 | bpchar | 1 |  | √ | ' ' | 长度范围,枚举: 0 :固定值 1 :最大值 |
 | 12 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 13 | fstandardid | 文件标准 | int8 | 64 |  | √ | 0 | 文件标准 fea_standard |
+| 13 | fstandardid | 文件标准 | int8 | 64 |  | √ | 0 | [文件标准 fea_standard](../fea_files/fea_standard.md) |
 | 14 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 15 | ftype | 类型 | varchar | 30 |  | √ | ' ' | 类型,枚举: |
-| 16 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 16 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 17 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 18 | fformatter | 格式 | varchar | 30 |  | √ | ' ' | 格式,枚举: |
 | 19 | fenable | 使用状态 | bpchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |

@@ -10,13 +10,13 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fprojectid | 招标项目 | int8 | 64 |  | √ | 0 | 寻源项目 pds_projectf7 |
-| 3 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fprojectid | 招标项目 | int8 | 64 |  | √ | 0 | [寻源项目 pds_projectf7](../pds_files/pds_projectf7.md) |
+| 3 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | ffilename | 文件名称 | varchar | 255 |  | √ | ' ' | 文件名称 |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 6 | fcontent_tag | 标书内容_详情 | text | 0 |  |  | null | 标书内容_详情 |
-| 7 | forgid | 采购组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 8 | fbiddoctplld | 标书模板 | int8 | 64 |  | √ | 0 | 公告模板配置 pds_noticetpl |
+| 7 | forgid | 采购组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 8 | fbiddoctplld | 标书模板 | int8 | 64 |  | √ | 0 | [模板配置 pds_noticetpl](../pds_files/pds_noticetpl.md) |
 | 9 | fbillid | 单据ID | int8 | 64 |  | √ | 0 | 单据ID |
 | 10 | fcontent | 标书内容 | varchar | 255 |  | √ | ' ' | 标书内容 |
 

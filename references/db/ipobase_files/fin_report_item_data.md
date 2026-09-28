@@ -12,11 +12,11 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | famount | 金额 | numeric | 23 | 10 |  | null | 金额 |
 | 3 | freportdate | 报告期 | timestamp | 0 |  |  | null | 报告期 |
-| 4 | fipoorgld | IPO编制组织 | int8 | 64 |  | √ | 0 | IPO编制组织 ipo_org |
-| 5 | ffinreportitem | IPO财务报表项目 | int8 | 64 |  | √ | 0 | 财务报表项目 ipo_fin_report_item |
+| 4 | fipoorgld | IPO编制组织 | int8 | 64 |  | √ | 0 | [IPO编制组织 ipo_org](../ipobase_files/ipo_org.md) |
+| 5 | ffinreportitem | IPO财务报表项目 | int8 | 64 |  | √ | 0 | [财务报表项目 ipo_fin_report_item](../ipobase_files/ipo_fin_report_item.md) |
 | 6 | fcreatedate | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
 | 7 | fsourcetype | 来源方式 | varchar | 50 |  | √ | ' ' | 来源方式,枚举: 1 :手工引入 2 :数据同步-旗舰版 3 :数据同步-企业版 |
-| 8 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fyear | 年 | int8 | 64 |  | √ | 0 | 年 |
 | 10 | freporttype | 报表类型 | varchar | 50 |  | √ | ' ' | 报表类型,枚举: 1 :个别报表 2 :合并报表 |
 | 11 | fperiod | 期 | int8 | 64 |  | √ | 0 | 期 |

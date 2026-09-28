@@ -12,7 +12,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | forigin | 发起方 | bpchar | 1 |  | √ | ' ' | 发起方,枚举: 1 :采购方端 2 :供应商端 3 :两端公用 |
 | 3 | fparentid | 父单据ID | varchar | 50 |  | √ | ' ' | 父单据ID |
-| 4 | fschemeid | 待考评专家批量获取方案 | int8 | 64 |  | √ | 0 | 扩展过滤 pds_extfilter |
+| 4 | fschemeid | 待考评专家批量获取方案 | int8 | 64 |  | √ | 0 | [扩展过滤 pds_extfilter](../pds_files/pds_extfilter.md) |
 | 5 | fentitykey | 组件标识 | varchar | 50 |  | √ | ' ' | 组件标识 |
 | 6 | fpentitykey | 父单据标识 | varchar | 50 |  | √ | ' ' | 父单据标识 |
 
@@ -42,12 +42,12 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fsuppliertype | 专家类别 | varchar | 50 |  | √ | ' ' | 专家类别,枚举: src_expert :评标专家 |
-| 3 | fpackageid | 标段名称 | int8 | 64 |  | √ | 0 | 标段名称 src_packagef7 |
+| 3 | fpackageid | 标段名称 | int8 | 64 |  | √ | 0 | [标段名称 src_packagef7](../src_files/src_packagef7.md) |
 | 4 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 5 | fnote | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
 | 6 | fisevaluatepush | 下达否 | bpchar | 1 |  | √ | '0' | 下达否 |
 | 7 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 8 | fsupplierid | 专家编码 | int8 | 64 |  | √ | 0 | 专家资料 src_expert |
+| 8 | fsupplierid | 专家编码 | int8 | 64 |  | √ | 0 | [专家资料 src_expert](../src_files/src_expert.md) |
 | 9 | fentryparentid | 父单据ID | int8 | 64 |  | √ | 0 | 父单据ID |
 
 ### 列规则定义

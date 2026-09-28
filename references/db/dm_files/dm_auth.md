@@ -10,9 +10,9 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreator | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fcreator | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fcreatetime | 创建日期 | timestamp | 0 |  | √ | LOCALTIMESTAMP | 创建日期 |
-| 4 | fmodifier | 申请人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmodifier | 申请人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | ftenantid | 租户ID | varchar | 50 |  | √ | ' ' | 租户ID |
 | 6 | ferpid | 云端ID（弃用） | varchar | 50 |  | √ | ' ' | 云端ID（弃用） |
 | 7 | fmodifytime | 最后申请时间 | timestamp | 0 |  | √ | LOCALTIMESTAMP | 最后申请时间 |

@@ -14,16 +14,16 @@
 | 3 | foptype | 操作类型 | bpchar | 1 |  | √ | '0' | 操作类型,枚举: 0 :下推 1 :选单 S :保存 B :提交 A :审核 D :删除 U :反审核 C :撤销 I :作废 V :反作废 |
 | 4 | foperatetime | 操作时间 | timestamp | 0 |  |  | null | 操作时间 |
 | 5 | fstableid | 源单主表编码 | int8 | 64 |  | √ | 0 | 源单主表编码 |
-| 6 | fuserid | 用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | fuserid | 用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 7 | fsbillno | 源单编号 | varchar | 200 |  | √ | ' ' | 源单编号 |
 | 8 | ftbillid | 下游单内码 | int8 | 64 |  | √ | 0 | 下游单内码 |
 | 9 | fsbillid | 源单内码 | int8 | 64 |  | √ | 0 | 源单内码 |
 | 10 | ftbillno | 下游单编号 | varchar | 200 |  | √ | ' ' | 下游单编号 |
-| 11 | fsentitynumber | 源单类型 | varchar | 100 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 11 | fsentitynumber | 源单类型 | varchar | 100 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 12 | fsid | 源单分录主键 | int8 | 64 |  | √ | 0 | 源单分录主键 |
 | 13 | fdesc | 描述 | varchar | 255 |  | √ | ' ' | 描述 |
 | 14 | fitd | 下游单分录主键 | int8 | 64 |  | √ | 0 | 下游单分录主键 |
-| 15 | ftentitynumber | 下游单据类型 | varchar | 100 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 15 | ftentitynumber | 下游单据类型 | varchar | 100 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 16 | fdesc_tag | 描述_详情 | text | 0 |  |  | null | 描述_详情 |
 
 ### 列规则定义

@@ -14,13 +14,13 @@
 | 3 | fworkflowid | 工作流任务id | int8 | 64 |  | √ | 0 | 工作流任务id |
 | 4 | finstantid | 并行任务实例id | int8 | 64 |  | √ | 0 | 并行任务实例id |
 | 5 | fparenttaskid | 上级节点任务id | int8 | 64 |  | √ | 0 | 上级节点任务id |
-| 6 | fparenttype | 上级节点任务类型 | int8 | 64 |  | √ | 0 | 任务类型 task_tasktype |
+| 6 | fparenttype | 上级节点任务类型 | int8 | 64 |  | √ | 0 | [任务类型 task_tasktype](../ssc_files/task_tasktype.md) |
 | 7 | fstate | 节点任务状态 | int8 | 64 |  | √ | 0 | 节点任务状态 |
 | 8 | fcreatedate | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 9 | ftype | 节点任务类型 | int8 | 64 |  | √ | 0 | 任务类型 task_tasktype |
+| 9 | ftype | 节点任务类型 | int8 | 64 |  | √ | 0 | [任务类型 task_tasktype](../ssc_files/task_tasktype.md) |
 | 10 | fdealdate | 处理时间 | timestamp | 0 |  |  | null | 处理时间 |
 | 11 | fbillid | 单据id | int8 | 64 |  | √ | 0 | 单据id |
-| 12 | fpersonid | 处理人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fpersonid | 处理人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | ftaskid | 任务id | int8 | 64 |  | √ | 0 | 任务id |
 | 14 | fauditmsg | 审批意见 | varchar | 1024 |  | √ | ' ' | 审批意见 |
 | 15 | fnodedefid | 节点定义id | varchar | 100 |  | √ | ' ' | 节点定义id |

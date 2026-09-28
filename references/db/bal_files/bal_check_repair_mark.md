@@ -14,7 +14,7 @@
 | 3 | ftasktype | 任务类型 | bpchar | 1 |  | √ | ' ' | 任务类型,枚举: A :检查 或 直接修复KEYCOL B :检查 或 直接修复单据生成快照 C :检查 或 直接修复快照合计余额 D :检查 或 直接修复单据删除 E :检查 或 直接修复规则禁用 |
 | 4 | fpointinfo | 增量信息 | varchar | 80 |  | √ | ' ' | 增量信息 |
 | 5 | fpointkey | 增量标识 | varchar | 80 |  | √ | ' ' | 增量标识 |
-| 6 | fmodifier | 修改人 | int8 | 64 |  | √ | '0' | 人员 bos_user |
+| 6 | fmodifier | 修改人 | int8 | 64 |  | √ | '0' | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 
@@ -26,6 +26,6 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | pk_bal_check_repair_mark |  | fid |
-| 2 | idx_bal_crmk_key |  | fpointkey |
+| 1 | idx_bal_crmk_key |  | fpointkey |
+| 2 | pk_bal_check_repair_mark |  | fid |
 | 3 | idx_bal_crmk_mt |  | fmodifydate |

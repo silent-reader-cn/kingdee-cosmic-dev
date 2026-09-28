@@ -13,7 +13,7 @@
 | 2 | fcheckemail | 邮箱校验 | bpchar | 1 |  | √ | ' ' | 邮箱校验 |
 | 3 | fpushmessagecenter | fpushmessagecenter | bpchar | 1 |  | √ | ' ' |  |
 | 4 | fmsgswitch | 短信推送服务 | bpchar | 1 |  | √ | ' ' | 短信推送服务 |
-| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | fcheckphone | 下拉列表 | bpchar | 1 |  | √ | ' ' | 下拉列表,枚举: |
 
 ### 列规则定义

@@ -1,4 +1,4 @@
-# 外部数据接口库-pbd_business_info
+# 企业查询结果-pbd_business_info
 
 ## 被执行人-子表 t_pbd_busi_exeentity
 
@@ -12,13 +12,15 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fexeccaseno | 案号 | varchar | 50 |  | √ | ' ' | 案号 |
 | 3 | fexecmoney | 执行标的 | varchar | 50 |  | √ | ' ' | 执行标的 |
-| 4 | fexecpname | 被执行人 | varchar | 255 |  | √ | ' ' | 被执行人 |
-| 5 | fexeccasetime | 立案日期 | timestamp | 0 |  |  | null | 立案日期 |
-| 6 | fupdatetime | 更新日期 | timestamp | 0 |  |  | null | 更新日期 |
-| 7 | fexeccourt | 执行法院 | varchar | 200 |  | √ | ' ' | 执行法院 |
-| 8 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 9 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 10 | fexecid | 合作方Id | int8 | 64 |  | √ | 0 | 合作方Id |
+| 4 | fexecthirdpk | 第三方数据主键 | varchar | 100 |  | √ | ' ' | 第三方数据主键 |
+| 5 | fexecpname | 被执行人 | varchar | 255 |  | √ | ' ' | 被执行人 |
+| 6 | fexeccasetime | 立案日期 | timestamp | 0 |  |  | null | 立案日期 |
+| 7 | fupdatetime | 更新日期 | timestamp | 0 |  |  | null | 更新日期 |
+| 8 | fexeccourt | 执行法院 | varchar | 200 |  | √ | ' ' | 执行法院 |
+| 9 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
+| 10 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 11 | fexecid | 合作方Id | int8 | 64 |  | √ | 0 | 合作方Id |
+| 12 | fexechistory | 历史 | bpchar | 1 |  | √ | '0' | 历史 |
 
 ### 列规则定义
 
@@ -30,8 +32,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_pbd_busi_exe_fid_fseq |  | fid,fseq |
-| 2 | pk_pbd_busi_exeentity |  | fentryid |
+| 1 | pk_pbd_busi_exeentity |  | fentryid |
+| 2 | idx_pbd_busi_exe_fid_fseq |  | fid,fseq |
 
 ---
 
@@ -65,8 +67,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | pk_pbd_busi_comcheckentity |  | fentryid |
-| 2 | idx_pbd_budi_comcheck_fid_fseq |  | fid,fseq |
+| 1 | idx_pbd_budi_comcheck_fid_fseq |  | fid,fseq |
+| 2 | pk_pbd_busi_comcheckentity |  | fentryid |
 
 ---
 
@@ -153,16 +155,17 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fremovedepartment | 移出决定机关 | varchar | 200 |  | √ | ' ' | 移出决定机关 |
-| 3 | fabnremovereason_tag | 移出经营异常名录原因_详情 | text | 0 |  |  | null | 移出经营异常名录原因_详情 |
-| 4 | fupdatetime | 更新日期 | timestamp | 0 |  |  | null | 更新日期 |
-| 5 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 6 | fremovedate | 移出日期 | timestamp | 0 |  |  | null | 移出日期 |
-| 7 | fputdepartment | 作出决定机关 | varchar | 200 |  | √ | ' ' | 作出决定机关 |
-| 8 | fabnputreason_tag | 列入异常名录原因_详情 | text | 0 |  |  | null | 列入异常名录原因_详情 |
-| 9 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 10 | fputdate | 列入日期 | timestamp | 0 |  |  | null | 列入日期 |
-| 11 | fabnremovereason | 移出经营异常名录原因 | varchar | 255 |  | √ | ' ' | 移出经营异常名录原因 |
-| 12 | fabnputreason | 列入异常名录原因 | varchar | 255 |  | √ | ' ' | 列入异常名录原因 |
+| 3 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
+| 4 | fputdepartment | 作出决定机关 | varchar | 200 |  | √ | ' ' | 作出决定机关 |
+| 5 | fabnhistory | 历史 | bpchar | 1 |  | √ | '0' | 历史 |
+| 6 | fabnremovereason | 移出经营异常名录原因 | varchar | 255 |  | √ | ' ' | 移出经营异常名录原因 |
+| 7 | fabnremovereason_tag | 移出经营异常名录原因_详情 | text | 0 |  |  | null | 移出经营异常名录原因_详情 |
+| 8 | fupdatetime | 更新日期 | timestamp | 0 |  |  | null | 更新日期 |
+| 9 | fremovedate | 移出日期 | timestamp | 0 |  |  | null | 移出日期 |
+| 10 | fabnputreason_tag | 列入异常名录原因_详情 | text | 0 |  |  | null | 列入异常名录原因_详情 |
+| 11 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 12 | fputdate | 列入日期 | timestamp | 0 |  |  | null | 列入日期 |
+| 13 | fabnputreason | 列入异常名录原因 | varchar | 255 |  | √ | ' ' | 列入异常名录原因 |
 
 ### 列规则定义
 
@@ -227,14 +230,15 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbranchname | 分支机构名称 | varchar | 255 |  | √ | ' ' | 分支机构名称 |
-| 3 | flegalpersonname | 法人 | varchar | 100 |  | √ | ' ' | 法人 |
-| 4 | fregstatus | 企业状态 | varchar | 50 |  | √ | ' ' | 企业状态 |
-| 5 | festiblishtime | 成立时间 | timestamp | 0 |  |  | null | 成立时间 |
-| 6 | fbranchid | 合作方Id | int8 | 64 |  | √ | 0 | 合作方Id |
-| 7 | fupdatetime | 更新日期 | timestamp | 0 |  |  | null | 更新日期 |
-| 8 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 9 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 2 | fbranthirdpk | 第三方数据主键 | varchar | 100 |  | √ | ' ' | 第三方数据主键 |
+| 3 | fbranchname | 分支机构名称 | varchar | 255 |  | √ | ' ' | 分支机构名称 |
+| 4 | flegalpersonname | 法人 | varchar | 100 |  | √ | ' ' | 法人 |
+| 5 | fregstatus | 企业状态 | varchar | 50 |  | √ | ' ' | 企业状态 |
+| 6 | festiblishtime | 成立时间 | timestamp | 0 |  |  | null | 成立时间 |
+| 7 | fbranchid | 合作方Id | int8 | 64 |  | √ | 0 | 合作方Id |
+| 8 | fupdatetime | 更新日期 | timestamp | 0 |  |  | null | 更新日期 |
+| 9 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
+| 10 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 
 ### 列规则定义
 
@@ -263,19 +267,21 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fremark | 备注 | varchar | 100 |  | √ | ' ' | 备注 |
 | 3 | fpunishstatus | 处罚状态 | varchar | 100 |  | √ | ' ' | 处罚状态 |
-| 4 | fpunishname | 处罚名称 | varchar | 100 |  | √ | ' ' | 处罚名称 |
-| 5 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 6 | fevidence | 处罚依据 | varchar | 1000 |  | √ | ' ' | 处罚依据 |
-| 7 | freason | 处罚事由 | varchar | 255 |  | √ | ' ' | 处罚事由 |
-| 8 | freason_tag | 处罚事由_详情 | text | 0 |  |  | null | 处罚事由_详情 |
-| 9 | fcontent_tag | 处罚结果/内容_详情 | text | 0 |  |  | null | 处罚结果/内容_详情 |
-| 10 | fupdatetime | 更新日期 | timestamp | 0 |  |  | null | 更新日期 |
-| 11 | flegalpersonname1 | 法定代表人 | varchar | 120 |  | √ | ' ' | 法定代表人 |
-| 12 | fdecisiondate | 处罚日期 | timestamp | 0 |  |  | null | 处罚日期 |
-| 13 | fdepartmentname | 处罚单位 | varchar | 512 |  | √ | ' ' | 处罚单位 |
-| 14 | fcontent | 处罚结果/内容 | varchar | 255 |  | √ | ' ' | 处罚结果/内容 |
-| 15 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 16 | fpunishnumber | 决定文书号 | varchar | 500 |  | √ | ' ' | 决定文书号 |
+| 4 | fpunishthirdpk | 第三方数据主键 | varchar | 100 |  | √ | ' ' | 第三方数据主键 |
+| 5 | fpunishhistory | 历史 | bpchar | 1 |  | √ | '0' | 历史 |
+| 6 | fpunishname | 处罚名称 | varchar | 100 |  | √ | ' ' | 处罚名称 |
+| 7 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
+| 8 | fevidence | 处罚依据 | varchar | 1000 |  | √ | ' ' | 处罚依据 |
+| 9 | freason | 处罚事由 | varchar | 255 |  | √ | ' ' | 处罚事由 |
+| 10 | freason_tag | 处罚事由_详情 | text | 0 |  |  | null | 处罚事由_详情 |
+| 11 | fcontent_tag | 处罚结果/内容_详情 | text | 0 |  |  | null | 处罚结果/内容_详情 |
+| 12 | fupdatetime | 更新日期 | timestamp | 0 |  |  | null | 更新日期 |
+| 13 | flegalpersonname1 | 法定代表人 | varchar | 120 |  | √ | ' ' | 法定代表人 |
+| 14 | fdecisiondate | 处罚日期 | timestamp | 0 |  |  | null | 处罚日期 |
+| 15 | fdepartmentname | 处罚单位 | varchar | 512 |  | √ | ' ' | 处罚单位 |
+| 16 | fcontent | 处罚结果/内容 | varchar | 255 |  | √ | ' ' | 处罚结果/内容 |
+| 17 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 18 | fpunishnumber | 决定文书号 | varchar | 500 |  | √ | ' ' | 决定文书号 |
 
 ### 列规则定义
 
@@ -302,20 +308,22 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fktdefendant | 被告 | varchar | 255 |  | √ | ' ' | 被告 |
-| 3 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 4 | fktlitigant | 当事人 | varchar | 1000 |  | √ | ' ' | 当事人 |
-| 5 | fktcourtroom | 法庭 | varchar | 50 |  | √ | ' ' | 法庭 |
-| 6 | fktcourt | 法院 | varchar | 200 |  | √ | ' ' | 法院 |
-| 7 | fktcaseno | 案号 | varchar | 50 |  | √ | ' ' | 案号 |
-| 8 | fktcourtregreason | 案由 | varchar | 200 |  | √ | ' ' | 案由 |
-| 9 | fktdefendant_tag | 被告_详情 | text | 0 |  |  | null | 被告_详情 |
-| 10 | fktplaintiff | 原告 | varchar | 255 |  | √ | ' ' | 原告 |
-| 11 | fupdatetime | 更新日期 | timestamp | 0 |  |  | null | 更新日期 |
-| 12 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 13 | fktannouncementid | 合作方Id | int8 | 64 |  | √ | 0 | 合作方Id |
-| 14 | fktdate | 开庭日期 | timestamp | 0 |  |  | null | 开庭日期 |
-| 15 | fktplaintiff_tag | 原告_详情 | text | 0 |  |  | null | 原告_详情 |
+| 2 | fkthistory | 历史 | bpchar | 1 |  | √ | '0' | 历史 |
+| 3 | fktdefendant | 被告 | varchar | 255 |  | √ | ' ' | 被告 |
+| 4 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
+| 5 | fktlitigant | 当事人 | varchar | 1000 |  | √ | ' ' | 当事人 |
+| 6 | fktcourtroom | 法庭 | varchar | 50 |  | √ | ' ' | 法庭 |
+| 7 | fktcourt | 法院 | varchar | 200 |  | √ | ' ' | 法院 |
+| 8 | fktcaseno | 案号 | varchar | 50 |  | √ | ' ' | 案号 |
+| 9 | fktcourtregreason | 案由 | varchar | 200 |  | √ | ' ' | 案由 |
+| 10 | fktdefendant_tag | 被告_详情 | text | 0 |  |  | null | 被告_详情 |
+| 11 | fktplaintiff | 原告 | varchar | 255 |  | √ | ' ' | 原告 |
+| 12 | fupdatetime | 更新日期 | timestamp | 0 |  |  | null | 更新日期 |
+| 13 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 14 | fktannouncementid | 合作方Id | int8 | 64 |  | √ | 0 | 合作方Id |
+| 15 | fktdate | 开庭日期 | timestamp | 0 |  |  | null | 开庭日期 |
+| 16 | fktplaintiff_tag | 原告_详情 | text | 0 |  |  | null | 原告_详情 |
+| 17 | fktthirdpk | 第三方数据主键 | varchar | 100 |  | √ | ' ' | 第三方数据主键 |
 
 ### 列规则定义
 
@@ -410,9 +418,9 @@
 
 ---
 
-## 外部数据接口库-主表 t_pbd_business_info
+## 企业查询结果-主表 t_pbd_business_info
 
-- **表名称：** 外部数据接口库-主表
+- **表名称：** 企业查询结果-主表
 - **表名：** t_pbd_business_info
 
 ### 表格列定义
@@ -425,7 +433,7 @@
 | 4 | fpercentilescore | 企业评分 | numeric | 23 | 10 | √ | 0 | 企业评分 |
 | 5 | fillegalinfototal | 严重违法总数 | int4 | 32 |  | √ | 0 | 严重违法总数 |
 | 6 | fexecuteetotal | 被执行人总数 | int4 | 32 |  | √ | 0 | 被执行人总数 |
-| 7 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 7 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | fcasetotal | 诉讼总数 | int4 | 32 |  | √ | 0 | 诉讼总数 |
 | 9 | fcompanyintro | 公司简介 | varchar | 500 |  | √ | ' ' | 公司简介 |
 | 10 | fcompanychecktotal | 市场监管抽查总数 | int4 | 32 |  | √ | 0 | 市场监管抽查总数 |
@@ -447,13 +455,13 @@
 | 26 | fsocialstaffnum | 参保人数 | int8 | 64 |  | √ | 0 | 参保人数 |
 | 27 | forgnumber | 组织机构代码 | varchar | 50 |  | √ | ' ' | 组织机构代码 |
 | 28 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
-| 29 | fsupplierid | 供应商 | int8 | 64 |  | √ | 0 | 供应商 bd_supplier |
+| 29 | fsupplierid | 供应商 | int8 | 64 |  | √ | 0 | [供应商 bd_supplier](../basedata_files/bd_supplier.md) |
 | 30 | festiblishtime | 成立日期 | timestamp | 0 |  |  | null | 成立日期 |
 | 31 | factualcapital | 实缴资本 | varchar | 50 |  | √ | ' ' | 实缴资本 |
 | 32 | fktannouncementtotal | 开庭总数 | int4 | 32 |  | √ | 0 | 开庭总数 |
 | 33 | fcanceldate | 注销日期 | timestamp | 0 |  |  | null | 注销日期 |
 | 34 | fregnumber | 注册号 | varchar | 50 |  | √ | ' ' | 注册号 |
-| 35 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 35 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 36 | fbusinessscope_tag | 经营范围_详情 | text | 0 |  |  | null | 经营范围_详情 |
 | 37 | fchangetotal | 变更总数 | int4 | 32 |  | √ | 0 | 变更总数 |
 | 38 | fcompanyid | 公司Id | varchar | 50 |  | √ | ' ' | 公司Id |
@@ -461,11 +469,11 @@
 | 40 | fcreditcode | 统一社会信用代码 | varchar | 255 |  | √ | ' ' | 统一社会信用代码 |
 | 41 | ftaxnumber | 纳税人识别号 | varchar | 255 |  | √ | ' ' | 纳税人识别号 |
 | 42 | freglocation | 企业注册地址 | varchar | 255 |  | √ | ' ' | 企业注册地址 |
-| 43 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 43 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 44 | fdishonesttotal | 失信人总数 | int4 | 32 |  | √ | 0 | 失信人总数 |
 | 45 | fabntotal | 经营异常总数 | int4 | 32 |  | √ | 0 | 经营异常总数 |
 | 46 | frevokedate | 吊销日期 | timestamp | 0 |  |  | null | 吊销日期 |
-| 47 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 47 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 48 | fregstatus | 经营状态 | varchar | 50 |  | √ | ' ' | 经营状态 |
 | 49 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 50 | fstaffnumrange | 人员规模 | varchar | 255 |  | √ | ' ' | 人员规模 |
@@ -510,12 +518,13 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fputreason_tag | 列入原因_详情 | text | 0 |  |  | null | 列入原因_详情 |
-| 3 | fupdatetime | 更新日期 | timestamp | 0 |  |  | null | 更新日期 |
-| 4 | fputreason | 列入原因 | varchar | 255 |  | √ | ' ' | 列入原因 |
-| 5 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 6 | fputdepartment | 决定列入部门 | varchar | 200 |  | √ | ' ' | 决定列入部门 |
-| 7 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 8 | fputdate | 列入日期 | timestamp | 0 |  |  | null | 列入日期 |
+| 3 | fputhistory | 历史 | bpchar | 1 |  | √ | '0' | 历史 |
+| 4 | fupdatetime | 更新日期 | timestamp | 0 |  |  | null | 更新日期 |
+| 5 | fputreason | 列入原因 | varchar | 255 |  | √ | ' ' | 列入原因 |
+| 6 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
+| 7 | fputdepartment | 决定列入部门 | varchar | 200 |  | √ | ' ' | 决定列入部门 |
+| 8 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 9 | fputdate | 列入日期 | timestamp | 0 |  |  | null | 列入日期 |
 
 ### 列规则定义
 
@@ -544,16 +553,18 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fperformance | 履行情况 | varchar | 200 |  | √ | ' ' | 履行情况 |
 | 3 | fdishonestid | 合作方Id | int8 | 64 |  | √ | 0 | 合作方Id |
-| 4 | fdishonestcasetime | 立案日期 | timestamp | 0 |  |  | null | 立案日期 |
-| 5 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 6 | fdishonestregdate | 发布日期 | timestamp | 0 |  |  | null | 发布日期 |
-| 7 | fupdatetime | 更新日期 | timestamp | 0 |  |  | null | 更新日期 |
-| 8 | fgistid | 执行依据文号 | varchar | 200 |  | √ | ' ' | 执行依据文号 |
-| 9 | fdishonestcaseno | 案号 | varchar | 50 |  | √ | ' ' | 案号 |
-| 10 | fdishonestcourt | 执行法院 | varchar | 200 |  | √ | ' ' | 执行法院 |
-| 11 | fdisrupttypename | 行为具体情形 | varchar | 2000 |  | √ | ' ' | 行为具体情形 |
-| 12 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 13 | fdishonestiname | 失信人名称 | varchar | 255 |  | √ | ' ' | 失信人名称 |
+| 4 | fdishonesthistory | 历史 | bpchar | 1 |  | √ | '0' | 历史 |
+| 5 | fdishonestcasetime | 立案日期 | timestamp | 0 |  |  | null | 立案日期 |
+| 6 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
+| 7 | fdishonestthirdpk | 第三方数据主键 | varchar | 100 |  | √ | ' ' | 第三方数据主键 |
+| 8 | fdishonestregdate | 发布日期 | timestamp | 0 |  |  | null | 发布日期 |
+| 9 | fupdatetime | 更新日期 | timestamp | 0 |  |  | null | 更新日期 |
+| 10 | fgistid | 执行依据文号 | varchar | 200 |  | √ | ' ' | 执行依据文号 |
+| 11 | fdishonestcaseno | 案号 | varchar | 50 |  | √ | ' ' | 案号 |
+| 12 | fdishonestcourt | 执行法院 | varchar | 200 |  | √ | ' ' | 执行法院 |
+| 13 | fdisrupttypename | 行为具体情形 | varchar | 2000 |  | √ | ' ' | 行为具体情形 |
+| 14 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 15 | fdishonestiname | 失信人名称 | varchar | 255 |  | √ | ' ' | 失信人名称 |
 
 ### 列规则定义
 
@@ -587,8 +598,9 @@
 | 7 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 8 | fnewsabstracts | 简介 | varchar | 255 |  | √ | ' ' | 简介 |
 | 9 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 10 | fdocid | 新闻唯一标识符 | varchar | 255 |  | √ | ' ' | 新闻唯一标识符 |
-| 11 | fnewsabstracts_tag | 简介_详情 | text | 0 |  |  | null | 简介_详情 |
+| 10 | fnewsthirdpk | 第三方数据主键 | bpchar | 1 |  | √ | '0' | 第三方数据主键 |
+| 11 | fdocid | 新闻唯一标识符 | varchar | 255 |  | √ | ' ' | 新闻唯一标识符 |
+| 12 | fnewsabstracts_tag | 简介_详情 | text | 0 |  |  | null | 简介_详情 |
 
 ### 列规则定义
 
@@ -616,20 +628,22 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fbltncourt | 受理法院 | varchar | 200 |  | √ | ' ' | 受理法院 |
-| 3 | fbltncontent | 案件内容 | varchar | 2000 |  | √ | ' ' | 案件内容 |
-| 4 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 5 | fbltntype | 公告类型 | varchar | 50 |  | √ | ' ' | 公告类型 |
-| 6 | fbltndefendant | 被告 | varchar | 2000 |  | √ | ' ' | 被告 |
-| 7 | fparty2 | 公告人 | varchar | 2000 |  | √ | ' ' | 公告人 |
-| 8 | fbltnno | 公告号 | varchar | 50 |  | √ | ' ' | 公告号 |
-| 9 | fbltnpublishdate | 刊登日期 | timestamp | 0 |  |  | null | 刊登日期 |
-| 10 | fcourtannoid | 合作方Id | int8 | 64 |  | √ | 0 | 合作方Id |
-| 11 | fbltncaseno | 案号 | varchar | 200 |  | √ | ' ' | 案号 |
-| 12 | fupdatetime | 更新日期 | timestamp | 0 |  |  | null | 更新日期 |
-| 13 | fparty1 | 原告 | varchar | 2000 |  | √ | ' ' | 原告 |
-| 14 | fbltnreason | 案由 | varchar | 500 |  | √ | ' ' | 案由 |
-| 15 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 16 | fbltncontent_tag | 案件内容_详情 | text | 0 |  |  | null | 案件内容_详情 |
+| 3 | fbltnthistory | 历史 | bpchar | 1 |  | √ | '0' | 历史 |
+| 4 | fbitnthirdpk | 第三方数据主键 | varchar | 100 |  | √ | ' ' | 第三方数据主键 |
+| 5 | fbltncontent | 案件内容 | varchar | 2000 |  | √ | ' ' | 案件内容 |
+| 6 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
+| 7 | fbltntype | 公告类型 | varchar | 50 |  | √ | ' ' | 公告类型 |
+| 8 | fbltndefendant | 被告 | varchar | 2000 |  | √ | ' ' | 被告 |
+| 9 | fparty2 | 公告人 | varchar | 2000 |  | √ | ' ' | 公告人 |
+| 10 | fbltnno | 公告号 | varchar | 50 |  | √ | ' ' | 公告号 |
+| 11 | fbltnpublishdate | 刊登日期 | timestamp | 0 |  |  | null | 刊登日期 |
+| 12 | fcourtannoid | 合作方Id | int8 | 64 |  | √ | 0 | 合作方Id |
+| 13 | fbltncaseno | 案号 | varchar | 200 |  | √ | ' ' | 案号 |
+| 14 | fupdatetime | 更新日期 | timestamp | 0 |  |  | null | 更新日期 |
+| 15 | fparty1 | 原告 | varchar | 2000 |  | √ | ' ' | 原告 |
+| 16 | fbltnreason | 案由 | varchar | 500 |  | √ | ' ' | 案由 |
+| 17 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 18 | fbltncontent_tag | 案件内容_详情 | text | 0 |  |  | null | 案件内容_详情 |
 
 ### 列规则定义
 
@@ -699,10 +713,11 @@
 | 10 | fcourtregcontent | 案件内容 | varchar | 255 |  | √ | ' ' | 案件内容 |
 | 11 | fcasestatus | 案件状态 | varchar | 50 |  | √ | ' ' | 案件状态 |
 | 12 | fupdatetime | 更新日期 | timestamp | 0 |  |  | null | 更新日期 |
-| 13 | fcourtregreason | 案由 | varchar | 50 |  | √ | ' ' | 案由 |
-| 14 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 15 | ffilingdate | 立案日期 | timestamp | 0 |  |  | null | 立案日期 |
-| 16 | fcourtregcaseno | 案号 | varchar | 50 |  | √ | ' ' | 案号 |
+| 13 | fcourtthirdpk | 第三方数据主键 | varchar | 100 |  | √ | ' ' | 第三方数据主键 |
+| 14 | fcourtregreason | 案由 | varchar | 50 |  | √ | ' ' | 案由 |
+| 15 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 16 | ffilingdate | 立案日期 | timestamp | 0 |  |  | null | 立案日期 |
+| 17 | fcourtregcaseno | 案号 | varchar | 50 |  | √ | ' ' | 案号 |
 
 ### 列规则定义
 
@@ -729,12 +744,14 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fholderid | 合作方Id | int8 | 64 |  | √ | 0 | 合作方Id |
-| 3 | ficholderpercent | 持股比例 | varchar | 50 |  | √ | ' ' | 持股比例 |
-| 4 | fupdatetime | 更新日期 | timestamp | 0 |  |  | null | 更新日期 |
-| 5 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 7 | fholdername | 股东 | varchar | 255 |  | √ | ' ' | 股东 |
+| 2 | fholderhistory | 历史 | bpchar | 1 |  | √ | '0' | 历史 |
+| 3 | fholderid | 合作方Id | int8 | 64 |  | √ | 0 | 合作方Id |
+| 4 | ficholderpercent | 持股比例 | varchar | 50 |  | √ | ' ' | 持股比例 |
+| 5 | fupdatetime | 更新日期 | timestamp | 0 |  |  | null | 更新日期 |
+| 6 | fholderthirdpk | 第三方数据主键 | varchar | 100 |  | √ | ' ' | 第三方数据主键 |
+| 7 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
+| 8 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 9 | fholdername | 股东 | varchar | 255 |  | √ | ' ' | 股东 |
 
 ### 列规则定义
 

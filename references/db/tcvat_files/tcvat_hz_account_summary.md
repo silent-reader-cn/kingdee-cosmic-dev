@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | ftaxrate | 税率 | varchar | 50 |  | √ | ' ' | 税率 |
-| 3 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | finvoicetaxamount | 发票收入（合计税额） | numeric | 23 | 10 | √ | 0.0000000000 | 发票收入（合计税额） |
 | 5 | fspecialtaxamount | 开专票税额 | numeric | 23 | 10 | √ | 0 | 开专票税额 |
 | 6 | fjzjt | 即征即退业务 | varchar | 30 |  | √ | ' ' | 即征即退业务,枚举: 0 :否 1 :是 |
@@ -21,27 +21,29 @@
 | 10 | fenddate | 税款所属期止 | timestamp | 0 |  |  | null | 税款所属期止 |
 | 11 | fbusinessamount | 业务口径 | numeric | 23 | 10 | √ | 0.0000000000 | 业务口径 |
 | 12 | fothertaxamount | 开其他票税额 | numeric | 23 | 10 | √ | 0 | 开其他票税额 |
-| 13 | fsuborgid | 组织编码 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 13 | fsuborgid | 组织编码 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 14 | finitaccountingamount | 未开票收入-初始值 | numeric | 23 | 10 | √ | 0 | 未开票收入-初始值 |
 | 15 | ftaxreductionname | 减税项目名称 | varchar | 200 |  | √ | ' ' | 减税项目名称 |
 | 16 | ftaxmethodtype | 征收方式编码 | varchar | 20 |  | √ | ' ' | 征收方式编码 |
 | 17 | ftaxpayertype | 纳税人类型 | varchar | 50 |  | √ | ' ' | 纳税人类型 |
 | 18 | fruleid | 规则id | int8 | 64 |  | √ | 0 | 规则id |
 | 19 | ftaxreductiontype | 减税项目类型 | varchar | 30 |  | √ | ' ' | 减税项目类型,枚举: 1 :免税 2 :减征 3 :扣减 4 :递减 : |
-| 20 | faccountingamount | 未开票收入 | numeric | 23 | 10 | √ | 0.0000000000 | 未开票收入 |
-| 21 | ftaxamount | 合计 | numeric | 23 | 10 | √ | 0.0000000000 | 合计 |
-| 22 | fserialno | 流水号 | varchar | 50 |  | √ | ' ' | 流水号 |
-| 23 | fotherinvoiceamount | 开其他票销售额 | numeric | 23 | 10 | √ | 0 | 开其他票销售额 |
-| 24 | fdeclaretype | 申报方式 | varchar | 30 |  | √ | ' ' | 申报方式,枚举: |
-| 25 | ftaxreductionid | 减免税性质代码 | int8 | 64 |  | √ | 0 | 减免政策代码 tpo_taxdeduction |
-| 26 | fdescription | 业务描述 | varchar | 50 |  | √ | ' ' | 业务描述 |
-| 27 | ftaxmethod | 征收方式 | varchar | 50 |  | √ | ' ' | 征收方式 |
-| 28 | ftaxreductioncode | 减税性质代码 | varchar | 50 |  | √ | ' ' | 减税性质代码 |
-| 29 | fstartdate | 税款所属期起 | timestamp | 0 |  |  | null | 税款所属期起 |
-| 30 | finvoiceamount | 发票收入 | numeric | 23 | 10 | √ | 0.0000000000 | 发票收入 |
-| 31 | fbusinesstypeid | 业务类型 | int8 | 64 |  | √ | 0 | 税收分类编码表 tpo_tcvat_taxrateentry |
-| 32 | ftotaltaxamount | 税额-合计 | numeric | 23 | 10 | √ | 0 | 税额-合计 |
-| 33 | flevelname | 层级 | varchar | 50 |  | √ | ' ' | 层级,枚举: 1 :1级 2 :2级 3 :3级 4 :4级 |
+| 20 | fnrjzjtjs | 纳入进项即征即退分摊计算 | varchar | 50 |  | √ | ' ' | 纳入进项即征即退分摊计算,枚举: 0 :否 1 :是 |
+| 21 | faccountingamount | 未开票收入 | numeric | 23 | 10 | √ | 0.0000000000 | 未开票收入 |
+| 22 | ftaxamount | 合计 | numeric | 23 | 10 | √ | 0.0000000000 | 合计 |
+| 23 | fserialno | 流水号 | varchar | 50 |  | √ | ' ' | 流水号 |
+| 24 | fotherinvoiceamount | 开其他票销售额 | numeric | 23 | 10 | √ | 0 | 开其他票销售额 |
+| 25 | fdeclaretype | 申报方式 | varchar | 30 |  | √ | ' ' | 申报方式,枚举: |
+| 26 | ftaxreductionid | 减免税性质代码 | int8 | 64 |  | √ | 0 | 减免政策代码 tpo_taxdeduction |
+| 27 | fdescription | 业务描述 | varchar | 50 |  | √ | ' ' | 业务描述 |
+| 28 | ftaxmethod | 征收方式 | varchar | 50 |  | √ | ' ' | 征收方式 |
+| 29 | ftaxreductioncode | 减税性质代码 | varchar | 50 |  | √ | ' ' | 减税性质代码 |
+| 30 | fstartdate | 税款所属期起 | timestamp | 0 |  |  | null | 税款所属期起 |
+| 31 | finvoiceamount | 发票收入 | numeric | 23 | 10 | √ | 0.0000000000 | 发票收入 |
+| 32 | fdeadline | 缴纳期限 | varchar | 50 |  | √ | ' ' | 缴纳期限,枚举: aysb :按月申报 ajsb :按季申报 |
+| 33 | fbusinesstypeid | 业务类型 | int8 | 64 |  | √ | 0 | 税收分类编码表 tpo_tcvat_taxrateentry |
+| 34 | ftotaltaxamount | 税额-合计 | numeric | 23 | 10 | √ | 0 | 税额-合计 |
+| 35 | flevelname | 层级 | varchar | 50 |  | √ | ' ' | 层级,枚举: 1 :1级 2 :2级 3 :3级 4 :4级 |
 
 ### 列规则定义
 

@@ -12,20 +12,20 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fqty | 消耗数量 | numeric | 19 | 6 | √ | 0.000000 | 消耗数量 |
 | 3 | fgoodsid | fgoodsid | int8 | 64 |  | √ | 0 |  |
-| 4 | fmaterialid | 商品编码 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 4 | fmaterialid | 商品编码 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 5 | finvqty | 开票数量 | numeric | 19 | 6 | √ | 0.000000 | 开票数量 |
-| 6 | funitid | 计量单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 6 | funitid | 计量单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 7 | fbilldate | 业务日期 | timestamp | 0 |  |  | null | 业务日期 |
 | 8 | fentryseq | 行号 | int8 | 64 |  | √ | 0 | 行号 |
-| 9 | fwarehouseid | 仓库 | int8 | 64 |  | √ | 0 | 仓库 bd_warehouse |
+| 9 | fwarehouseid | 仓库 | int8 | 64 |  | √ | 0 | [仓库 bd_warehouse](../sbd_files/bd_warehouse.md) |
 | 10 | fgoodsdesc | fgoodsdesc | varchar | 255 |  | √ | ' ' |  |
-| 11 | finvorgid | 库存组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 12 | fownerid | 货主 | int8 | 64 |  | √ | 0 | 供应商 bd_supplier |
-| 13 | flotid | 批号 | int8 | 64 |  | √ | 0 | 批号 pur_lot |
+| 11 | finvorgid | 库存组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 12 | fownerid | 货主 | int8 | 64 |  | √ | 0 | [供应商 bd_supplier](../basedata_files/bd_supplier.md) |
+| 13 | flotid | 批号 | int8 | 64 |  | √ | 0 | [批号 pur_lot](../pbd_files/pur_lot.md) |
 | 14 | fsuplot | 销售方批号 | varchar | 80 |  | √ | ' ' | 销售方批号 |
 | 15 | fbillid | fbillid | int8 | 64 |  | √ | 0 |  |
 | 16 | fasstproid | fasstproid | varchar | 50 |  | √ | ' ' |  |
-| 17 | fuseorgid | 使用组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 17 | fuseorgid | 使用组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 18 | fsettleqty | 结算数量 | numeric | 19 | 6 | √ | 0.000000 | 结算数量 |
 | 19 | fmaterialdesc | fmaterialdesc | varchar | 255 |  | √ | ' ' |  |
 | 20 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |

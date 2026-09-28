@@ -39,8 +39,8 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | null | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  |  | null | 人员 bos_user |
-| 3 | fgroupid | 分组 | int8 | 64 |  |  | null | 银行启用管理 aqap_bank |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
+| 3 | fgroupid | 分组 | int8 | 64 |  |  | null | [银行启用管理 aqap_bank](../aqap_files/aqap_bank.md) |
 | 4 | fdes | 字段说明 | varchar | 500 |  | √ | ' ' | 字段说明 |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 6 | fbank_version_id | 银行版本ID | varchar | 50 |  | √ | ' ' | 银行版本ID |
@@ -49,7 +49,7 @@
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 10 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: |
 | 11 | fcustom_id | 租户号 | varchar | 50 |  | √ | ' ' | 租户号 |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fmasterid | 主数据内码 | int8 | 64 |  |  | null | 主数据内码 |
 | 14 | fenable | 使用状态 | varchar | 50 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 15 | fextra_field | 扩展字段 | varchar | 50 |  | √ | ' ' | 扩展字段 |

@@ -12,9 +12,9 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | fname | varchar | 256 |  | √ | ' ' |  |
 | 3 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 5 | fbillformid | 业务实体 | varchar | 50 |  | √ | ' ' | 主实体对象 bos_entityobject |
-| 6 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 5 | fbillformid | 业务实体 | varchar | 50 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
+| 6 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 7 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 8 | fcreatetime | 创建时间 | timestamp | 0 |  | √ | LOCALTIMESTAMP | 创建时间 |
 | 9 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
@@ -77,7 +77,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | ffiltername | 匹配条件 | varchar | 100 |  | √ | ' ' | 匹配条件 |
 | 3 | fpriority | 优先级 | int4 | 32 |  | √ | 1 | 优先级 |
-| 4 | fbasedatafield | 脚本模板 | varchar | 50 |  | √ | ' ' | 脚本模板 bos_scripttemplate |
+| 4 | fbasedatafield | 脚本模板 | varchar | 50 |  | √ | ' ' | [脚本模板 bos_scripttemplate](../cts_files/bos_scripttemplate.md) |
 | 5 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 7 | ffiltercondition | 条件 | text | 0 |  |  | null | 条件 |

@@ -10,21 +10,21 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fname | 名称 | varchar | 80 |  | √ | ' ' | 名称 |
-| 4 | ftemplateid | 套打模板 | int8 | 64 |  | √ | 0 | 套打模板 bei_template |
+| 4 | ftemplateid | 套打模板 | int8 | 64 |  | √ | 0 | [套打模板 bei_template](../bei_files/bei_template.md) |
 | 5 | fcomment | 备注 | varchar | 100 |  | √ | ' ' | 备注 |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 7 | fenabledate | 启用日期 | timestamp | 0 |  |  | null | 启用日期 |
 | 8 | fdisabledate | 禁用日期 | timestamp | 0 |  |  | null | 禁用日期 |
-| 9 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 10 | ffinorgid | 银行类别 | int8 | 64 |  | √ | 0 | 银行类别 bd_bankcgsetting |
+| 9 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 10 | ffinorgid | 银行类别 | int8 | 64 |  | √ | 0 | [银行类别 bd_bankcgsetting](../basedata_files/bd_bankcgsetting.md) |
 | 11 | fmodifytime | 最后更新时间 | timestamp | 0 |  |  | null | 最后更新时间 |
 | 12 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 15 | fenable | 使用状态 | varchar | 30 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 16 | fenablerid | 启用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 16 | fenablerid | 启用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 17 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
 | 18 | fisdefault | 是否默认 | bpchar | 1 |  | √ | '0' | 是否默认 |
 

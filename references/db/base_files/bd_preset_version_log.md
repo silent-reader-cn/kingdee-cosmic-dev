@@ -13,9 +13,9 @@
 | 2 | frestoretime | frestoretime | timestamp | 0 |  |  | null |  |
 | 3 | fupdatetime | 更新时间 | timestamp | 0 |  |  | null | 更新时间 |
 | 4 | frestorerid | frestorerid | int8 | 64 |  | √ | 0 |  |
-| 5 | fversionid | 预置数据版本 | int8 | 64 |  | √ | 0 | 预置数据版本信息 bd_predata_version |
+| 5 | fversionid | 预置数据版本 | int8 | 64 |  | √ | 0 | [预置数据版本信息 bd_predata_version](../base_files/bd_predata_version.md) |
 | 6 | frestorestatus | frestorestatus | varchar | 50 |  | √ | '0' |  |
-| 7 | fupdater | 更新人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 7 | fupdater | 更新人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

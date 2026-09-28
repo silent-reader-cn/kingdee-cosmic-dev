@@ -11,20 +11,20 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 规则名称 | varchar | 100 |  | √ | ' ' | 规则名称 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fcreatetime | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
-| 5 | fperformbill | 履行单据 | varchar | 80 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 5 | fperformbill | 履行单据 | varchar | 80 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 6 | fdescription | 描述 | varchar | 255 |  |  | null | 描述 |
 | 7 | fauditdate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
-| 8 | frecordbill | 登记单据 | varchar | 80 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 8 | frecordbill | 登记单据 | varchar | 80 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 9 | fmodifytime | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
 | 10 | fstatus | 数据状态 | varchar | 5 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 11 | fmasterid | fmasterid | int8 | 64 |  | √ | 0 |  |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fissys | 预置 | bpchar | 1 |  | √ | '0' | 预置 |
 | 14 | fenable | 使用状态 | varchar | 5 |  | √ | ' ' | 使用状态,枚举: 1 :可用 0 :禁用 |
 | 15 | fnumber | 规则编码 | varchar | 80 |  | √ | ' ' | 规则编码 |
-| 16 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 16 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

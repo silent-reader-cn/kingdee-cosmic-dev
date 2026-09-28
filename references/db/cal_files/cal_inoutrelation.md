@@ -13,9 +13,9 @@
 | 2 | finqty | 入库数量 | numeric | 23 | 10 | √ | 0 | 入库数量 |
 | 3 | finbillnunber | 入库单编码 | varchar | 80 |  | √ | ' ' | 入库单编码 |
 | 4 | finbilldate | 入库记账日期 | timestamp | 0 |  |  | null | 入库记账日期 |
-| 5 | fmaterialid | 物料 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 5 | fmaterialid | 物料 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 6 | finbillentryid | 入库单分录id | int8 | 64 |  | √ | 0 | 入库单分录id |
-| 7 | fcostaccountid | 成本主体 | int8 | 64 |  | √ | 0 | 成本主体 cal_bd_costaccount |
+| 7 | fcostaccountid | 成本主体 | int8 | 64 |  | √ | 0 | [成本主体 cal_bd_costaccount](../cal_files/cal_bd_costaccount.md) |
 | 8 | finbillid | 入库单单据id | int8 | 64 |  | √ | 0 | 入库单单据id |
 | 9 | fsumoutqty | 已出库数量 | numeric | 23 | 10 | √ | 0 | 已出库数量 |
 

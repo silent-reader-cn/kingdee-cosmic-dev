@@ -10,10 +10,10 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fmindaydiff | 最小时间间隔（天） | int4 | 32 |  | √ | 0 | 最小时间间隔（天） |
 | 4 | fcreatedate | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
-| 5 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | fmodifydate | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 7 | freportid | 报表标识 | varchar | 50 |  | √ | ' ' | 报表标识 |
 | 8 | ftimefield | 时间过滤字段 | varchar | 50 |  | √ | ' ' | 时间过滤字段 |

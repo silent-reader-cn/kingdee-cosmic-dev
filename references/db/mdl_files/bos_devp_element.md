@@ -32,6 +32,35 @@
 
 ---
 
+## 单据体-多语言表 t_dm_elementtypeentry_l
+
+- **表名称：** 单据体-多语言表
+- **表名：** t_dm_elementtypeentry_l
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
+| 2 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
+| 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
+| 4 | fpropertyname | 名称 | varchar | 106 |  | √ | ' ' | 名称 |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fpkid | fpkid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | pk_dm_elementtypeentry_l |  | fpkid |
+| 2 | idx_dm_elementtypeentry_l |  | fentryid,flocaleid |
+
+---
+
 ## 元素-主表 t_dm_elementtype
 
 - **表名称：** 元素-主表
@@ -98,32 +127,3 @@
 | :--- | :--- | :--- | :--- |
 | 1 | pk_dm_elementtypeentry |  | fentryid |
 | 2 | idx_dm_elementtypeentry |  | fid,fseq |
-
----
-
-## 单据体-多语言表 t_dm_elementtypeentry_l
-
-- **表名称：** 单据体-多语言表
-- **表名：** t_dm_elementtypeentry_l
-
-### 表格列定义
-
-| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
-| 2 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
-| 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
-| 4 | fpropertyname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-
-### 列规则定义
-
-| 序号 | 键编码 | 列字段 |
-| :--- | :--- | :--- |
-| 1 | fpkid | fpkid |
-
-### 索引定义
-
-| 序号 | 索引名 | 唯一 | 列字段 |
-| :--- | :--- | :--- | :--- |
-| 1 | pk_dm_elementtypeentry_l |  | fpkid |
-| 2 | idx_dm_elementtypeentry_l |  | fentryid,flocaleid |

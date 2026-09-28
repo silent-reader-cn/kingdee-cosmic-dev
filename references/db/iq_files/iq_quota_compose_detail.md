@@ -14,7 +14,7 @@
 | 3 | fisask | 是否符合要求 | bpchar | 1 |  | √ | '0' | 是否符合要求 |
 | 4 | factualvalueshow | 实际值格式 | varchar | 50 |  | √ | ' ' | 实际值格式 |
 | 5 | factualvalue | 实际值 | numeric | 23 | 10 |  | null | 实际值 |
-| 6 | fquotaid | 指标 | int8 | 64 |  | √ | 0 | 指标库 ipo_quota_info |
+| 6 | fquotaid | 指标 | int8 | 64 |  | √ | 0 | [指标库 ipo_quota_info](../ipobase_files/ipo_quota_info.md) |
 
 ### 列规则定义
 

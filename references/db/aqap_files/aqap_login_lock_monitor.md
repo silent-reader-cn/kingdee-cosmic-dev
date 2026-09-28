@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | flock_path | 所节点路径 | varchar | 500 |  | √ | ' ' | 所节点路径 |
 | 5 | ftime_stamp | 时间戳 | varchar | 50 |  | √ | ' ' | 时间戳 |
 | 6 | fthread_name | 线程名称 | varchar | 500 |  | √ | ' ' | 线程名称 |
@@ -22,7 +22,7 @@
 | 11 | fbank_version | 银行版本 | varchar | 50 |  | √ | ' ' | 银行版本 |
 | 12 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 13 | flog_no | 业务日志号 | varchar | 50 |  | √ | ' ' | 业务日志号 |
-| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 16 | fdate_time | 登记时间 | varchar | 50 |  | √ | ' ' | 登记时间 |
 | 17 | fenable | 使用状态 | varchar | 50 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
@@ -40,8 +40,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | pk_aqap_login_lock_monitor |  | fid |
-| 2 | idx_c_aqap_login_lock_monitor |  | fnumber |
+| 1 | idx_c_aqap_login_lock_monitor |  | fnumber |
+| 2 | pk_aqap_login_lock_monitor |  | fid |
 | 3 | idx_login_lock_monitor_3 |  | flock_path |
 | 4 | idx_login_lock_monitor_2 |  | fbank_login |
 | 5 | idx_login_lock_monitor_1 |  | fbank_version |

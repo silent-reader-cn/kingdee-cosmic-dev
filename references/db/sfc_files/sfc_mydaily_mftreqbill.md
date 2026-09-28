@@ -15,14 +15,14 @@
 | 4 | fheadproject | fheadproject | int8 | 64 |  | √ | 0 |  |
 | 5 | fbiztime | fbiztime | timestamp | 0 |  |  | null |  |
 | 6 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 7 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 7 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 8 | fapplyuserid | fapplyuserid | int8 | 64 |  | √ | 0 |  |
 | 9 | finvorg | finvorg | int8 | 64 |  | √ | 0 |  |
 | 10 | fbiztypeid | fbiztypeid | int8 | 64 |  | √ | 0 |  |
 | 11 | fcloserid | fcloserid | int8 | 64 |  | √ | 0 |  |
 | 12 | fbillno | 单据编号 | varchar | 50 |  | √ | ' ' | 单据编号 |
 | 13 | funitsrctype | funitsrctype | varchar | 30 |  | √ | 'NULL' |  |
-| 14 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | fdeptid | fdeptid | int8 | 64 |  | √ | 0 |  |
 | 16 | fbillstatus | 单据状态 | varchar | 50 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 17 | fcomment | fcomment | varchar | 512 |  | √ | ' ' |  |
@@ -34,7 +34,7 @@
 | 23 | flastupdatetime | flastupdatetime | timestamp | 0 |  |  | null |  |
 | 24 | fmaterialtype | fmaterialtype | varchar | 50 |  | √ | ' ' |  |
 | 25 | fprofessiona | fprofessiona | int8 | 64 |  | √ | 0 |  |
-| 26 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 26 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 27 | fbilltypeid | fbilltypeid | int8 | 64 |  | √ | 0 |  |
 
 ### 列规则定义
@@ -79,7 +79,7 @@
 | 15 | fauditqty | 审批数量 | numeric | 23 | 10 | √ | 0 | 审批数量 |
 | 16 | frowstatus | frowstatus | varchar | 50 |  | √ | ' ' |  |
 | 17 | fisstockallot | 备料调拨 | bpchar | 1 |  | √ | '0' | 备料调拨 |
-| 18 | fbaseunitid | 基本单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 18 | fbaseunitid | 基本单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 19 | fisreplace | fisreplace | bpchar | 1 |  | √ | '0' |  |
 | 20 | forderentryseq | 工单行号 | varchar | 50 |  | √ | ' ' | 工单行号 |
 | 21 | fqty | 申请数量 | numeric | 23 | 10 | √ | 0 | 申请数量 |
@@ -89,21 +89,21 @@
 | 25 | fprojectid | fprojectid | int8 | 64 |  | √ | 0 |  |
 | 26 | fsrcbillid | 来源单据ID | int8 | 64 |  | √ | 0 | 来源单据ID |
 | 27 | fmainbillnumber | 核心单据编号 | varchar | 50 |  | √ | ' ' | 核心单据编号 |
-| 28 | funitid | 计量单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 28 | funitid | 计量单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 29 | fmversion | fmversion | int8 | 64 |  | √ | 0 |  |
 | 30 | fwarehouseid | fwarehouseid | int8 | 64 |  | √ | 0 |  |
 | 31 | forderno | 工单号 | varchar | 50 |  | √ | ' ' | 工单号 |
 | 32 | fsupplierid | fsupplierid | int8 | 64 |  | √ | 0 |  |
 | 33 | fmaterialmasterid | fmaterialmasterid | int8 | 64 |  | √ | 0 |  |
-| 34 | fworkstation | 工位 | int8 | 64 |  | √ | 0 | 工位 mpdm_workstation |
+| 34 | fworkstation | 工位 | int8 | 64 |  | √ | 0 | [工位 mpdm_workstation](../mpdm_files/mpdm_workstation.md) |
 | 35 | flengthunit | flengthunit | int8 | 64 |  | √ | 0 |  |
 | 36 | fqtyunit2nd | fqtyunit2nd | numeric | 23 | 10 | √ | 0 |  |
 | 37 | fsrcsysbillentryid | fsrcsysbillentryid | varchar | 50 |  | √ | ' ' |  |
 | 38 | fsupplymode | fsupplymode | varchar | 50 |  | √ | ' ' |  |
-| 39 | flotid | 批号主档 | int8 | 64 |  | √ | 0 | 批号主档 bd_lot |
+| 39 | flotid | 批号主档 | int8 | 64 |  | √ | 0 | [批号主档 bd_lot](../sbd_files/bd_lot.md) |
 | 40 | fexpirydate | fexpirydate | timestamp | 0 |  |  | null |  |
 | 41 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 42 | flinetypeid | 行类型 | int8 | 64 |  | √ | 0 | 行类型 bd_linetype |
+| 42 | flinetypeid | 行类型 | int8 | 64 |  | √ | 0 | [行类型 bd_linetype](../sbd_files/bd_linetype.md) |
 | 43 | fmaterialname | 物料名称 | varchar | 255 |  | √ | ' ' | 物料名称 |
 | 44 | fmaterialgroup | fmaterialgroup | int8 | 64 |  | √ | 0 |  |
 | 45 | foutqty | 下推领料数量 | numeric | 23 | 10 | √ | 0 | 下推领料数量 |
@@ -111,20 +111,20 @@
 | 47 | fmainbillentryseq | 核心单据分录序号 | int8 | 64 |  | √ | 0 | 核心单据分录序号 |
 | 48 | flotnumber | flotnumber | varchar | 50 |  | √ | ' ' |  |
 | 49 | fuseoutbaseqty | 已领基本数量 | numeric | 23 | 10 | √ | 0 | 已领基本数量 |
-| 50 | fmaterialid | 物料编码 | int8 | 64 |  | √ | 0 | 物料库存信息 bd_materialinventoryinfo |
+| 50 | fmaterialid | 物料编码 | int8 | 64 |  | √ | 0 | [物料库存信息 bd_materialinventoryinfo](../sbd_files/bd_materialinventoryinfo.md) |
 | 51 | funit2ndid | funit2ndid | int8 | 64 |  | √ | 0 |  |
 | 52 | fpriority | fpriority | int8 | 64 |  | √ | 0 |  |
 | 53 | fwmssstatus | 配送状态 | varchar | 50 |  | √ | ' ' | 配送状态,枚举: A :已配送 |
 | 54 | fconfiguredcodeid | fconfiguredcodeid | int8 | 64 |  | √ | 0 |  |
-| 55 | fmaterielmasterid | 物料(主数据) | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 55 | fmaterielmasterid | 物料(主数据) | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 56 | forderentryid | 工单分录id | int8 | 64 |  | √ | 0 | 工单分录id |
 | 57 | freplaceplan | freplaceplan | int8 | 64 |  | √ | 0 |  |
 | 58 | ftracknumberid | ftracknumberid | int8 | 64 |  | √ | 0 |  |
-| 59 | fworkcard | 工卡 | int8 | 64 |  | √ | 0 | 工卡 mpdm_mrocardroute |
+| 59 | fworkcard | 工卡 | int8 | 64 |  | √ | 0 | [工卡 mpdm_mrocardroute](../mpdm_files/mpdm_mrocardroute.md) |
 | 60 | fsrcbillentity | 来源单据实体 | varchar | 50 |  | √ | ' ' | 来源单据实体 |
 | 61 | fuseoutqty | 已领数量 | numeric | 23 | 10 | √ | 0 | 已领数量 |
 | 62 | ffullsize | ffullsize | bpchar | 1 |  | √ | '0' |  |
-| 63 | foutinvorg | 调出库存组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 63 | foutinvorg | 调出库存组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 64 | fismainreplace | fismainreplace | bpchar | 1 |  | √ | '0' |  |
 | 65 | fpickbaseqty | fpickbaseqty | numeric | 23 | 10 | √ | 0 |  |
 | 66 | fwidth | fwidth | numeric | 23 | 10 | √ | 0 |  |

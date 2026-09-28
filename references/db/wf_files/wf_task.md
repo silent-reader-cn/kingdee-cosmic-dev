@@ -25,12 +25,12 @@
 | 14 | fyzjgroupid | 云之家组ID | varchar | 36 |  | √ | ' ' | 云之家组ID |
 | 15 | ftaskdefid | 节点ID | varchar | 255 |  | √ | ' ' | 节点ID |
 | 16 | fbillno | 单据编码 | varchar | 255 |  | √ | ' ' | 单据编码 |
-| 17 | fname | 节点名称 | varchar | 500 |  | √ | ' ' | 节点名称 |
-| 18 | fextendformat | 业务字段格式 | text | 0 |  |  | null | 业务字段格式 |
+| 17 | fextendformat | 业务字段格式 | text | 0 |  |  | null | 业务字段格式 |
+| 18 | fname | 节点名称 | varchar | 500 |  | √ | ' ' | 节点名称 |
 | 19 | fcategory | 类别 | varchar | 100 |  | √ | ' ' | 类别 |
 | 20 | fformkey | 表单KEY | varchar | 50 |  | √ | ' ' | 表单KEY |
-| 21 | fstartname | 发起人 | varchar | 255 |  | √ | ' ' | 发起人 |
-| 22 | ftaskstate | 任务状态 | varchar | 30 |  | √ | ' ' | 任务状态 |
+| 21 | ftaskstate | 任务状态 | varchar | 30 |  | √ | ' ' | 任务状态 |
+| 22 | fstartname | 发起人 | varchar | 255 |  | √ | ' ' | 发起人 |
 | 23 | fstarterid | 发起人ID | int8 | 64 |  | √ | 0 | 发起人ID |
 | 24 | fhandlestate | 处理状态 | varchar | 30 |  | √ | ' ' | 处理状态,枚举: dismissed :被驳回 willApproval :待审批 freeze :已冻结 willHandled :待处理 unConverted :待转换 converted :已转换 converting :转换中 manualSuspended :已挂起 |
 | 25 | fexecutionid | 执行实例ID | int8 | 64 |  | √ | 0 | 执行实例ID |
@@ -50,7 +50,7 @@
 | 39 | fextendmulstr1 | 多语言字符串1 | varchar | 255 |  | √ | ' ' | 多语言字符串1 |
 | 40 | fprocdefid | 流程定义ID | int8 | 64 |  | √ | 0 | 流程定义ID |
 | 41 | fentitynumber | 实体编码 | varchar | 50 |  | √ | ' ' | 实体编码,枚举: |
-| 42 | fgroupnumber | 待办分组 | int8 | 64 |  | √ | 0 | 待办分组 wf_tohandlegroup |
+| 42 | fgroupnumber | 待办分组 | int8 | 64 |  | √ | 0 | [待办分组 wf_tohandlegroup](../wf_files/wf_tohandlegroup.md) |
 | 43 | fprocinstid | 流程实例ID | int8 | 64 |  | √ | 0 | 流程实例ID |
 | 44 | fsource | 来源 | varchar | 100 |  | √ | ' ' | 来源 |
 | 45 | fexecutiontype | 执行类型 | varchar | 30 |  | √ | ' ' | 执行类型,枚举: byHand :手工执行 byAuto :自动执行 skip :忽略执行 jump :跳转执行 |
@@ -67,11 +67,13 @@
 | 56 | fprocessingmobilepage | 移动处理页面 | varchar | 50 |  | √ | ' ' | 移动处理页面 |
 | 57 | fsubactivityname | 节点子标题 | varchar | 100 |  | √ | ' ' | 节点子标题 |
 | 58 | fsubject | 主题 | varchar | 3000 |  | √ | ' ' | 主题 |
-| 59 | fprocesstype | 流程类型 | varchar | 100 |  | √ | ' ' | 流程类型,枚举: AuditFlow :审批流 BizFlow :业务流 |
-| 60 | fowner | 拥有人 | varchar | 50 |  | √ | ' ' | 拥有人 |
-| 61 | fduedate | 到期时间 | timestamp | 0 |  |  | null | 到期时间 |
-| 62 | fdelegation | 委托类型 | varchar | 30 |  | √ | ' ' | 委托类型 |
-| 63 | fbilltype | 业务单据类型 | varchar | 50 |  | √ | ' ' | 业务单据类型 |
+| 59 | fresourceid | 外部资源ID | varchar | 100 |  | √ | ' ' | 外部资源ID |
+| 60 | fsourcename | 来源系统名称 | varchar | 100 |  | √ | ' ' | 来源系统名称 |
+| 61 | fprocesstype | 流程类型 | varchar | 100 |  | √ | ' ' | 流程类型,枚举: AuditFlow :审批流 BizFlow :业务流 NoCodeFlow :无代码 |
+| 62 | fowner | 拥有人 | varchar | 50 |  | √ | ' ' | 拥有人 |
+| 63 | fduedate | 到期时间 | timestamp | 0 |  |  | null | 到期时间 |
+| 64 | fdelegation | 委托类型 | varchar | 30 |  | √ | ' ' | 委托类型 |
+| 65 | fbilltype | 业务单据类型 | varchar | 50 |  | √ | ' ' | 业务单据类型 |
 
 ### 列规则定义
 
@@ -111,16 +113,17 @@
 | 6 | fsubject | 主题 | varchar | 3000 |  | √ | ' ' | 主题 |
 | 7 | fsendername | 发送人名称 | varchar | 1000 |  | √ | ' ' | 发送人名称 |
 | 8 | fextendmulstr2 | 多语言字符串2 | varchar | 255 |  | √ | ' ' | 多语言字符串2 |
-| 9 | fextendmulstr1 | 多语言字符串1 | varchar | 255 |  | √ | ' ' | 多语言字符串1 |
-| 10 | fcaptionmob | 页面标题_mob | varchar | 300 |  | √ | ' ' | 页面标题_mob |
-| 11 | flocaleid | flocaleid | varchar | 8 |  | √ | ' ' | localeid |
-| 12 | fdescription | 节点描述 | varchar | 255 |  | √ | ' ' | 节点描述 |
-| 13 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
-| 14 | fassignee | 处理人 | varchar | 255 |  | √ | ' ' | 处理人 |
-| 15 | fentityname | 单据类型 | varchar | 115 |  | √ | ' ' | 单据类型 |
-| 16 | fparticipantname | 当前参与人 | varchar | 3000 |  | √ | ' ' | 当前参与人 |
-| 17 | fsendernameformat | 上一步处理人显示设置 | varchar | 500 |  | √ | ' ' | 上一步处理人显示设置 |
-| 18 | fstartnameformat | 发起人显示设置 | varchar | 500 |  | √ | ' ' | 发起人显示设置 |
+| 9 | fsourcename | 来源系统名称 | varchar | 100 |  | √ | ' ' | 来源系统名称 |
+| 10 | fextendmulstr1 | 多语言字符串1 | varchar | 255 |  | √ | ' ' | 多语言字符串1 |
+| 11 | fcaptionmob | 页面标题_mob | varchar | 300 |  | √ | ' ' | 页面标题_mob |
+| 12 | flocaleid | flocaleid | varchar | 8 |  | √ | ' ' | localeid |
+| 13 | fdescription | 节点描述 | varchar | 255 |  | √ | ' ' | 节点描述 |
+| 14 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
+| 15 | fassignee | 处理人 | varchar | 255 |  | √ | ' ' | 处理人 |
+| 16 | fentityname | 单据类型 | varchar | 115 |  | √ | ' ' | 单据类型 |
+| 17 | fparticipantname | 当前参与人 | varchar | 3000 |  | √ | ' ' | 当前参与人 |
+| 18 | fsendernameformat | 上一步处理人显示设置 | varchar | 500 |  | √ | ' ' | 上一步处理人显示设置 |
+| 19 | fstartnameformat | 发起人显示设置 | varchar | 500 |  | √ | ' ' | 发起人显示设置 |
 
 ### 列规则定义
 
@@ -148,7 +151,9 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fextendnumber2 | 数字(金额)2 | numeric | 23 | 10 | √ | 0 | 数字(金额)2 |
-| 3 | fextenddate2 | 时间2 | timestamp | 0 |  |  | null | 时间2 |
+| 3 | furl | 任务链接 | text | 0 |  |  | null | 任务链接 |
+| 4 | fextenddate2 | 时间2 | timestamp | 0 |  |  | null | 时间2 |
+| 5 | fmobileurl | 任务移动端链接 | text | 0 |  |  | null | 任务移动端链接 |
 
 ### 列规则定义
 

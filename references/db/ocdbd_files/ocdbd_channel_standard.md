@@ -10,26 +10,28 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fname | 分类标准名称 | varchar | 100 |  | √ | ' ' | 分类标准名称 |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 6 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fdisabledate | fdisabledate | timestamp | 0 |  |  | null |  |
-| 8 | fdisablerid | fdisablerid | int8 | 64 |  | √ | 0 |  |
-| 9 | fdescription | 描述 | varchar | 100 |  | √ | ' ' | 描述 |
-| 10 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 11 | fispreset | 系统预置 | bpchar | 1 |  | √ | '0' | 系统预置 |
-| 12 | fctrlstrategy | 控制策略 | varchar | 10 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
-| 13 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 14 | fstatus | 数据状态 | bpchar | 1 |  | √ | 'C' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 15 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 16 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 17 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
-| 18 | fbitindex | 位图 | int8 | 64 |  | √ | 0 | 位图 |
-| 19 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 20 | fnumber | 分类标准编码 | varchar | 80 |  | √ | ' ' | 分类标准编码 |
-| 21 | fsourcebitindex | 原资料位图 | int8 | 64 |  | √ | 0 | 原资料位图 |
+| 8 | fcustomerstandardid | 客户分类标准 | int8 | 64 |  | √ | 0 | [客户分类标准 bd_customergroupstandard](../basedata_files/bd_customergroupstandard.md) |
+| 9 | fdisablerid | fdisablerid | int8 | 64 |  | √ | 0 |  |
+| 10 | fdescription | 描述 | varchar | 100 |  | √ | ' ' | 描述 |
+| 11 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 12 | fispreset | 系统预置 | bpchar | 1 |  | √ | '0' | 系统预置 |
+| 13 | fctrlstrategy | 控制策略 | varchar | 10 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
+| 14 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 15 | fstatus | 数据状态 | bpchar | 1 |  | √ | 'C' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
+| 16 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 17 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
+| 18 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
+| 19 | fbitindex | 位图 | int8 | 64 |  | √ | 0 | 位图 |
+| 20 | fissync | 是否同步 | bpchar | 1 |  | √ | '1' | 是否同步 |
+| 21 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 22 | fnumber | 分类标准编码 | varchar | 80 |  | √ | ' ' | 分类标准编码 |
+| 23 | fsourcebitindex | 原资料位图 | int8 | 64 |  | √ | 0 | 原资料位图 |
 
 ### 列规则定义
 

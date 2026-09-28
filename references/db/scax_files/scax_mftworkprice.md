@@ -11,21 +11,21 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fremark | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 4 | fcostcenterid | 成本中心 | int8 | 64 |  | √ | 0 | 成本中心 bos_costcenter |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 4 | fcostcenterid | 成本中心 | int8 | 64 |  | √ | 0 | [成本中心 bos_costcenter](../basedata_files/bos_costcenter.md) |
 | 5 | fbillstatus | 单据状态 | bpchar | 1 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 7 | fexpdate | 失效日期 | timestamp | 0 |  |  | null | 失效日期 |
 | 8 | fdatasrc | 数据来源 | varchar | 25 |  | √ | ' ' | 数据来源,枚举: manual :手工新增 contract :采购合同 order :采购订单 costupdate :成本更新 |
-| 9 | fworksplitid | 作业分割方案 | int8 | 64 |  | √ | 0 | 作业分割方案 scax_worksplit |
+| 9 | fworksplitid | 作业分割方案 | int8 | 64 |  | √ | 0 | [作业分割方案 scax_worksplit](../scax_files/scax_worksplit.md) |
 | 10 | fauditdate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
 | 11 | feffectdate | 生效日期 | timestamp | 0 |  |  | null | 生效日期 |
 | 12 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 14 | fcosttypeid | 标准成本方案 | int8 | 64 |  | √ | 0 | 标准成本方案 cad_costtype |
-| 15 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 14 | fcosttypeid | 标准成本方案 | int8 | 64 |  | √ | 0 | [标准成本方案 cad_costtype](../basedata_files/cad_costtype.md) |
+| 15 | fcurrencyid | 币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 | 16 | fbillno | 单据编号 | varchar | 255 |  | √ | ' ' | 单据编号 |
-| 17 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 17 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 
@@ -81,10 +81,10 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fsubbaseunitprice | 拆分费率基准单位转化费率 | numeric | 23 | 10 | √ | 0 | 拆分费率基准单位转化费率 |
-| 2 | fsubelementid | 成本子要素 | int8 | 64 |  | √ | 0 | 成本子要素 cad_subelement |
+| 2 | fsubelementid | 成本子要素 | int8 | 64 |  | √ | 0 | [成本子要素 cad_subelement](../basedata_files/cad_subelement.md) |
 | 3 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 4 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 | id |
-| 5 | felementid | 成本要素 | int8 | 64 |  | √ | 0 | 成本要素 cad_element |
+| 5 | felementid | 成本要素 | int8 | 64 |  | √ | 0 | [成本要素 cad_element](../basedata_files/cad_element.md) |
 | 6 | fsubweight | 子要素权重 | numeric | 23 | 10 | √ | 0 | 子要素权重 |
 | 7 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 | 8 | fsubelementprice | 子要素拆分费率 | numeric | 23 | 10 | √ | 0 | 子要素拆分费率 |
@@ -115,7 +115,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fweight | 权重 | numeric | 23 | 10 | √ | 0 | 权重 |
-| 3 | fworktypeid | 作业类型 | int8 | 64 |  | √ | 0 | 作业类型 scax_worktype |
+| 3 | fworktypeid | 作业类型 | int8 | 64 |  | √ | 0 | [作业类型 scax_worktype](../scax_files/scax_worktype.md) |
 | 4 | fbaseunitnum | 基准单位分子 | numeric | 23 | 10 | √ | 0 | 基准单位分子 |
 | 5 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 6 | fbaseunitden | 基准单位分母 | numeric | 23 | 10 | √ | 0 | 基准单位分母 |

@@ -11,9 +11,9 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 名称 | varchar | 300 |  | √ | ' ' | 名称 |
-| 3 | forgid | 审批组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | forgid | 审批组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | fnumber | 编码 | varchar | 50 |  | √ | ' ' | 编码 |
-| 5 | faudituserid | 审批人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | faudituserid | 审批人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

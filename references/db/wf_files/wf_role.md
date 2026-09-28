@@ -42,16 +42,17 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 名称 | varchar | 500 |  | √ | ' ' | 名称 |
 | 3 | froledimension | 多维度信息 | varchar | 1000 |  | √ | ' ' | 多维度信息 |
-| 4 | fmanager | 管理员 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 5 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmanager | 管理员 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 5 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | fdescription | 描述 | varchar | 500 |  | √ | ' ' | 描述 |
 | 7 | fcreatedate | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 8 | forgunit | 所属组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 8 | forgunit | 所属组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 9 | fmodifydate | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 10 | fusecount | 被用次数 | int8 | 64 |  | √ | 0 | 被用次数 |
-| 11 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | froletype | 角色类型 | varchar | 50 |  | √ | 'user' | 角色类型,枚举: user :人员角色 approvalposition :岗位角色 |
-| 13 | fnumber | 编码 | varchar | 36 |  | √ | ' ' | 编码 |
+| 13 | fenable | 使用状态 | varchar | 10 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :启用 |
+| 14 | fnumber | 编码 | varchar | 36 |  | √ | ' ' | 编码 |
 
 ### 列规则定义
 
@@ -112,17 +113,17 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fparam | 参数 | varchar | 255 |  | √ | ' ' | 参数 |
 | 3 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 4 | forg | 审批组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 4 | forg | 审批组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | ffunctiontype | 职能类型 | int8 | 64 |  | √ | 0 | 职能类型 |
 | 6 | fposition | fposition | int8 | 64 |  | √ | 0 |  |
-| 7 | fapprovalposition | 审批岗位 | int8 | 64 |  | √ | 0 | 岗位 bos_position |
-| 8 | falternateuser | 指定处理人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 7 | fapprovalposition | 审批岗位 | int8 | 64 |  | √ | 0 | [岗位 bos_position](../base_files/bos_position.md) |
+| 8 | falternateuser | 指定处理人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fdimension1 | 维度1（id） | varchar | 36 |  | √ | ' ' | 维度1（id） |
 | 10 | fnumberdimension1 | 维度1（编码） | varchar | 100 |  | √ | ' ' | 维度1（编码） |
 | 11 | fnumberdimension2 | 维度2（编码） | varchar | 100 |  | √ | ' ' | 维度2（编码） |
 | 12 | fdimension3 | 维度3（id） | varchar | 36 |  | √ | ' ' | 维度3（id） |
 | 13 | fdimension2 | 维度2（id） | varchar | 36 |  | √ | ' ' | 维度2（id） |
-| 14 | fuser | 审批人员 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fuser | 审批人员 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | fdimension4 | 维度4（id） | varchar | 36 |  | √ | ' ' | 维度4（id） |
 | 16 | fnumberdimension3 | 维度3（编码） | varchar | 100 |  | √ | ' ' | 维度3（编码） |
 | 17 | fnumberdimension4 | 维度4（编码） | varchar | 100 |  | √ | ' ' | 维度4（编码） |
@@ -130,11 +131,11 @@
 | 19 | fmulilangdimension2 | 维度2（多语言） | varchar | 500 |  | √ | ' ' | 维度2（多语言） |
 | 20 | fmulilangdimension3 | 维度3（多语言） | varchar | 500 |  | √ | ' ' | 维度3（多语言） |
 | 21 | fmulilangdimension4 | 维度4（多语言） | varchar | 500 |  | √ | ' ' | 维度4（多语言） |
-| 22 | falternatetype | 审批人员不可用时处理策略 | varchar | 36 |  | √ | ' ' | 审批人员不可用时处理策略,枚举: superior :由组织负责人审批 designatedPerson :由指定人员审批 |
+| 22 | falternatetype | 审批人员不可用时处理策略 | varchar | 36 |  | √ | ' ' | 审批人员不可用时处理策略,枚举: superior :由直接上级审批 designatedPerson :由指定人员审批 |
 | 23 | ftype | ftype | varchar | 36 |  | √ | ' ' |  |
 | 24 | fincludadminsub | 包含行政组织下级 | bpchar | 1 |  | √ | '1' | 包含行政组织下级 |
 | 25 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 26 | fuserposition | 审批显示职位 | int8 | 64 |  | √ | 0 | 人员任职 bos_userposition |
+| 26 | fuserposition | 审批显示职位 | int8 | 64 |  | √ | 0 | [人员任职 bos_userposition](../base_files/bos_userposition.md) |
 
 ### 列规则定义
 

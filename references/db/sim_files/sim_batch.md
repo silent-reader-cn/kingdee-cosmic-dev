@@ -68,7 +68,7 @@
 | 5 | fbatchstate | 开票状态 | varchar | 30 |  | √ | ' ' | 开票状态,枚举: 0 :开票成功 1 :开票中 2 :未开票 3 :开票失败 4 :已作废 5 :已红冲 |
 | 6 | fpayee | 收款人 | varchar | 50 |  | √ | ' ' | 收款人 |
 | 7 | ftotalamount | 价税合计 | numeric | 23 | 10 | √ | 0.0000000000 | 价税合计 |
-| 8 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 8 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 9 | fhsbz | 是否含税 | varchar | 30 |  | √ | ' ' | 是否含税,枚举: 0 :不含税 1 :含税 |
 | 10 | ftaxedtype | 征税方式 | varchar | 30 |  | √ | ' ' | 征税方式,枚举: 0 :普通征税 2 :差额征税 |
 | 11 | fbilldate | 单据日期 | timestamp | 0 |  |  | null | 单据日期 |
@@ -88,7 +88,7 @@
 | 25 | fbuyertaxno | 购方纳税人识别号 | varchar | 50 |  | √ | ' ' | 购方纳税人识别号 |
 | 26 | fsalerbank | 销方开户行及账号 | varchar | 180 |  | √ | ' ' | 销方开户行及账号 |
 | 27 | fremark | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
-| 28 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 28 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 29 | fcopyflag | 复制标记 | int8 | 64 |  | √ | 0 | 复制标记 |
 | 30 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 31 | fbuyerphone | 购方手机号 | varchar | 50 |  | √ | ' ' | 购方手机号 |

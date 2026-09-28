@@ -15,7 +15,7 @@
 | 4 | fisarray | 是否多值 | bpchar | 1 |  | √ | '0' | 是否多值 |
 | 5 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 6 | fparententryid | fparententryid | int8 | 64 |  | √ | 0 | pid |
-| 7 | fesmappingid | 取自es属性 | int8 | 64 |  | √ | 0 | 全文检索映射属性 pbd_esmapping_property |
+| 7 | fesmappingid | 取自es属性 | int8 | 64 |  | √ | 0 | [全文检索映射属性 pbd_esmapping_property](../pbd_files/pbd_esmapping_property.md) |
 | 8 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 9 | fcandidatekey | 是否候选键 | bpchar | 1 |  | √ | '0' | 是否候选键 |
 | 10 | ffieldkey | 字段标识 | varchar | 50 |  | √ | ' ' | 字段标识 |
@@ -47,17 +47,17 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 4 | findexentityid | 索引实体 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 4 | findexentityid | 索引实体 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 6 | fispreset | 预置 | bpchar | 1 |  | √ | '0' | 预置 |
 | 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 8 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 11 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 12 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
-| 13 | ftargetid | 目标实体 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 13 | ftargetid | 目标实体 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 
 ### 列规则定义
 

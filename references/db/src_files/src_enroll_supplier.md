@@ -55,39 +55,40 @@
 | 44 | fwinruleid | fwinruleid | int8 | 64 |  | √ | 0 |  |
 | 45 | fpurdeptid | fpurdeptid | int8 | 64 |  | √ | 0 |  |
 | 46 | famount | famount | numeric | 23 | 10 | √ | 0 |  |
-| 47 | fisaptitude | fisaptitude | bpchar | 1 |  | √ | '0' |  |
-| 48 | fsurplusamount | fsurplusamount | numeric | 23 | 10 | √ | 0 |  |
-| 49 | fsupopentype | fsupopentype | bpchar | 1 |  | √ | '1' |  |
-| 50 | fopentype | fopentype | bpchar | 1 |  | √ | ' ' |  |
-| 51 | fclosetask | fclosetask | varchar | 255 |  | √ | ' ' |  |
-| 52 | fpurgroupid | fpurgroupid | int8 | 64 |  | √ | 0 |  |
-| 53 | fbiztypeid | fbiztypeid | int8 | 64 |  | √ | 0 |  |
-| 54 | fismultipackage | fismultipackage | bpchar | 1 |  | √ | '0' |  |
-| 55 | fishidesupplier | fishidesupplier | bpchar | 1 |  | √ | '0' |  |
-| 56 | fsourceclassid | fsourceclassid | int8 | 64 |  | √ | 0 |  |
-| 57 | fopenstatus | fopenstatus | bpchar | 1 |  | √ | '1' |  |
-| 58 | fmanagetype | fmanagetype | bpchar | 1 |  | √ | ' ' |  |
-| 59 | ftaxtype | ftaxtype | varchar | 30 |  | √ | ' ' |  |
-| 60 | fbidname | fbidname | varchar | 300 |  | √ | ' ' |  |
-| 61 | fterminalnode | fterminalnode | int8 | 64 |  | √ | 0 |  |
-| 62 | fparentid | 父单据ID | varchar | 50 |  | √ | ' ' | 父单据ID |
-| 63 | fdonetask | fdonetask | varchar | 255 |  | √ | ' ' |  |
-| 64 | fisbypackage | fisbypackage | bpchar | 1 |  | √ | '0' |  |
-| 65 | fisbidpublish | fisbidpublish | bpchar | 1 |  | √ | '0' |  |
-| 66 | fentitykey | 组件标识 | varchar | 50 |  | √ | ' ' | 组件标识 |
-| 67 | fopendate | fopendate | timestamp | 0 |  |  | null |  |
-| 68 | fdecisiontype | fdecisiontype | bpchar | 1 |  | √ | ' ' |  |
-| 69 | fratio_biz | fratio_biz | numeric | 23 | 10 | √ | 0 |  |
-| 70 | fratio_tec | fratio_tec | numeric | 23 | 10 | √ | 0 |  |
-| 71 | fisopencontrol | fisopencontrol | bpchar | 1 |  | √ | '0' |  |
-| 72 | fisbypackage_apt | fisbypackage_apt | bpchar | 1 |  | √ | '0' |  |
-| 73 | fsourcetypeid | fsourcetypeid | int8 | 64 |  | √ | 0 |  |
-| 74 | fsumtaxamount | fsumtaxamount | numeric | 23 | 10 | √ | 0 |  |
-| 75 | fextfilterid | fextfilterid | int8 | 64 |  | √ | 0 |  |
-| 76 | fcurrentnode | fcurrentnode | int8 | 64 |  | √ | 0 |  |
-| 77 | fisquickpur | fisquickpur | bpchar | 1 |  | √ | '0' |  |
-| 78 | fcurrencyid | fcurrencyid | int8 | 64 |  | √ | 0 |  |
-| 79 | fratiotype | fratiotype | bpchar | 1 |  | √ | '1' |  |
+| 47 | fsystype | fsystype | bpchar | 1 |  | √ | '1' |  |
+| 48 | fisaptitude | fisaptitude | bpchar | 1 |  | √ | '0' |  |
+| 49 | fsurplusamount | fsurplusamount | numeric | 23 | 10 | √ | 0 |  |
+| 50 | fsupopentype | fsupopentype | bpchar | 1 |  | √ | '1' |  |
+| 51 | fopentype | fopentype | bpchar | 1 |  | √ | ' ' |  |
+| 52 | fclosetask | fclosetask | varchar | 255 |  | √ | ' ' |  |
+| 53 | fpurgroupid | fpurgroupid | int8 | 64 |  | √ | 0 |  |
+| 54 | fbiztypeid | fbiztypeid | int8 | 64 |  | √ | 0 |  |
+| 55 | fismultipackage | fismultipackage | bpchar | 1 |  | √ | '0' |  |
+| 56 | fishidesupplier | fishidesupplier | bpchar | 1 |  | √ | '0' |  |
+| 57 | fsourceclassid | fsourceclassid | int8 | 64 |  | √ | 0 |  |
+| 58 | fopenstatus | fopenstatus | bpchar | 1 |  | √ | '1' |  |
+| 59 | fmanagetype | fmanagetype | bpchar | 1 |  | √ | ' ' |  |
+| 60 | ftaxtype | ftaxtype | varchar | 30 |  | √ | ' ' |  |
+| 61 | fbidname | fbidname | varchar | 300 |  | √ | ' ' |  |
+| 62 | fterminalnode | fterminalnode | int8 | 64 |  | √ | 0 |  |
+| 63 | fparentid | 父单据ID | varchar | 50 |  | √ | ' ' | 父单据ID |
+| 64 | fdonetask | fdonetask | varchar | 255 |  | √ | ' ' |  |
+| 65 | fisbypackage | fisbypackage | bpchar | 1 |  | √ | '0' |  |
+| 66 | fisbidpublish | fisbidpublish | bpchar | 1 |  | √ | '0' |  |
+| 67 | fentitykey | 组件标识 | varchar | 50 |  | √ | ' ' | 组件标识 |
+| 68 | fopendate | fopendate | timestamp | 0 |  |  | null |  |
+| 69 | fdecisiontype | fdecisiontype | bpchar | 1 |  | √ | ' ' |  |
+| 70 | fratio_biz | fratio_biz | numeric | 23 | 10 | √ | 0 |  |
+| 71 | fratio_tec | fratio_tec | numeric | 23 | 10 | √ | 0 |  |
+| 72 | fisopencontrol | fisopencontrol | bpchar | 1 |  | √ | '0' |  |
+| 73 | fisbypackage_apt | fisbypackage_apt | bpchar | 1 |  | √ | '0' |  |
+| 74 | fsourcetypeid | fsourcetypeid | int8 | 64 |  | √ | 0 |  |
+| 75 | fsumtaxamount | fsumtaxamount | numeric | 23 | 10 | √ | 0 |  |
+| 76 | fextfilterid | fextfilterid | int8 | 64 |  | √ | 0 |  |
+| 77 | fcurrentnode | fcurrentnode | int8 | 64 |  | √ | 0 |  |
+| 78 | fisquickpur | fisquickpur | bpchar | 1 |  | √ | '0' |  |
+| 79 | fcurrencyid | fcurrencyid | int8 | 64 |  | √ | 0 |  |
+| 80 | fratiotype | fratiotype | bpchar | 1 |  | √ | '1' |  |
 
 ### 列规则定义
 
@@ -102,9 +103,38 @@
 | 1 | idx_src_project_sourceid |  | fsourceid |
 | 2 | idx_src_project_parentid |  | fparentid |
 | 3 | pk_src_project |  | fid |
-| 4 | idx_src_project_type |  | fsrctypeid |
-| 5 | idx_src_project_sourceclassid |  | fsourceclassid |
-| 6 | idx_src_project_status |  | fopenstatus |
+| 4 | idx_src_project_sourceclassid |  | fsourceclassid |
+| 5 | idx_src_project_status |  | fopenstatus |
+| 6 | idx_src_project_type |  | fsrctypeid |
+
+---
+
+## 报名附件-附件表 t_src_enrollsupplier_fj
+
+- **表名称：** 报名附件-附件表
+- **表名：** t_src_enrollsupplier_fj
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [附件字段实体 bd_attachment](../frame_files/bd_attachment.md) |
+| 2 | fpkid | fpkid | int8 | 64 |  | √ | 0 | FPKID |
+| 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fpkid | fpkid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_src_enrollsupplier_fj_eid |  | fentryid |
+| 2 | pk_src_enrollsupplier_fj |  | fpkid |
+| 3 | idx_src_enrollsupplier_fj_bid |  | fbasedataid |
 
 ---
 
@@ -121,43 +151,46 @@
 | 2 | frisknum | frisknum | int4 | 32 |  | √ | 0 |  |
 | 3 | faddress | 联系地址 | varchar | 100 |  | √ | ' ' | 联系地址 |
 | 4 | fisaptpush | fisaptpush | bpchar | 1 |  | √ | '0' |  |
-| 5 | fsocietycreditcode | fsocietycreditcode | varchar | 255 |  | √ | ' ' |  |
-| 6 | fisbidpush | fisbidpush | bpchar | 1 |  | √ | '0' |  |
-| 7 | fisselect | 是否推荐 | bpchar | 1 |  | √ | '0' | 是否推荐 |
-| 8 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 9 | fnote | 推荐原因说明 | varchar | 100 |  | √ | ' ' | 推荐原因说明 |
-| 10 | fenrollemail | fenrollemail | varchar | 50 |  | √ | ' ' |  |
-| 11 | fapplytime | 报名时间 | timestamp | 0 |  |  | null | 报名时间 |
-| 12 | fisaptitude | 资审结果 | bpchar | 1 |  | √ | '0' | 资审结果,枚举: 0 :未资审 1 :资审合格 2 :资审不合格 |
-| 13 | fisdownload | 是否下载标书 | bpchar | 1 |  | √ | '0' | 是否下载标书 |
-| 14 | fenrolllinkman | fenrolllinkman | varchar | 50 |  | √ | ' ' |  |
-| 15 | fisdiscard | fisdiscard | bpchar | 1 |  | √ | '0' |  |
-| 16 | fenrollphone | fenrollphone | varchar | 50 |  | √ | ' ' |  |
-| 17 | fenrollremark | fenrollremark | varchar | 255 |  | √ | ' ' |  |
-| 18 | fpackageid | 标段名称 | int8 | 64 |  | √ | 0 | 标段名称 src_packagef7 |
-| 19 | fsupname | fsupname | varchar | 255 |  | √ | ' ' |  |
-| 20 | fpublisherid | fpublisherid | int8 | 64 |  | √ | 0 |  |
-| 21 | fremark | 报名说明 | varchar | 100 |  | √ | ' ' | 报名说明 |
-| 22 | fenrolladdress | fenrolladdress | varchar | 100 |  | √ | ' ' |  |
-| 23 | fphone | 联系电话 | varchar | 50 |  | √ | ' ' | 联系电话 |
-| 24 | fpublishstatus | fpublishstatus | bpchar | 1 |  | √ | 'A' |  |
-| 25 | fenrollduty | fenrollduty | varchar | 50 |  | √ | ' ' |  |
-| 26 | fparentid | 父单据ID | varchar | 50 |  | √ | ' ' | 父单据ID |
-| 27 | friskremark | friskremark | varchar | 510 |  | √ | ' ' |  |
-| 28 | femail | 电子邮件 | varchar | 50 |  | √ | ' ' | 电子邮件 |
-| 29 | faptitudenote | 资审意见 | varchar | 255 |  | √ | ' ' | 资审意见 |
-| 30 | freason | freason | varchar | 255 |  | √ | ' ' |  |
-| 31 | fenrollpackageid | fenrollpackageid | int8 | 64 |  | √ | 0 |  |
-| 32 | fsupplierid | 供应商 | int8 | 64 |  | √ | 0 | 供应商 bd_supplier |
-| 33 | fduty | 职位 | varchar | 50 |  | √ | ' ' | 职位 |
-| 34 | fsuppliertype | 供应商类别 | varchar | 30 |  | √ | ' ' | 供应商类别,枚举: src_supplier :注册供应商 src_supplier_inner :内部供应商(员工) src_supplier_tmp :临时供应商 bd_supplier :供应商 |
-| 35 | fenrollnote | fenrollnote | varchar | 255 |  | √ | ' ' |  |
-| 36 | fisaptpush2 | fisaptpush2 | bpchar | 1 |  | √ | '0' |  |
-| 37 | fsupplierip | 供应商IP | varchar | 100 |  | √ | ' ' | 供应商IP |
-| 38 | fenrollsupplierid | fenrollsupplierid | int8 | 64 |  | √ | 0 |  |
-| 39 | fpublishdate | fpublishdate | timestamp | 0 |  |  | null |  |
-| 40 | flinkman | 联系人 | varchar | 50 |  | √ | ' ' | 联系人 |
-| 41 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 5 | fisexemptapt | fisexemptapt | bpchar | 1 |  | √ | '0' |  |
+| 6 | fsocietycreditcode | fsocietycreditcode | varchar | 255 |  | √ | ' ' |  |
+| 7 | fisbidpush | fisbidpush | bpchar | 1 |  | √ | '0' |  |
+| 8 | fisselect | 是否推荐 | bpchar | 1 |  | √ | '0' | 是否推荐 |
+| 9 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
+| 10 | fnote | 推荐原因说明 | varchar | 100 |  | √ | ' ' | 推荐原因说明 |
+| 11 | fenrollemail | fenrollemail | varchar | 50 |  | √ | ' ' |  |
+| 12 | fapplytime | 报名时间 | timestamp | 0 |  |  | null | 报名时间 |
+| 13 | fisaptitude | 资审结果 | bpchar | 1 |  | √ | '0' | 资审结果,枚举: 0 :未资审 1 :资审合格 2 :资审不合格 |
+| 14 | fisdownload | 是否下载标书 | bpchar | 1 |  | √ | '0' | 是否下载标书 |
+| 15 | fenrolllinkman | fenrolllinkman | varchar | 50 |  | √ | ' ' |  |
+| 16 | fisdiscard | fisdiscard | bpchar | 1 |  | √ | '0' |  |
+| 17 | fenrollphone | fenrollphone | varchar | 50 |  | √ | ' ' |  |
+| 18 | fenrollremark | fenrollremark | varchar | 255 |  | √ | ' ' |  |
+| 19 | fpurlistnote | fpurlistnote | varchar | 50 |  | √ | ' ' |  |
+| 20 | fpackageid | 标段名称 | int8 | 64 |  | √ | 0 | [标段名称 src_packagef7](../src_files/src_packagef7.md) |
+| 21 | fsupname | fsupname | varchar | 255 |  | √ | ' ' |  |
+| 22 | fpublisherid | fpublisherid | int8 | 64 |  | √ | 0 |  |
+| 23 | fremark | 报名说明 | varchar | 100 |  | √ | ' ' | 报名说明 |
+| 24 | fenrolladdress | fenrolladdress | varchar | 100 |  | √ | ' ' |  |
+| 25 | fphone | 联系电话 | varchar | 50 |  | √ | ' ' | 联系电话 |
+| 26 | fpublishstatus | fpublishstatus | bpchar | 1 |  | √ | 'A' |  |
+| 27 | fenrollduty | fenrollduty | varchar | 50 |  | √ | ' ' |  |
+| 28 | fparentid | 父单据ID | varchar | 50 |  | √ | ' ' | 父单据ID |
+| 29 | friskremark | friskremark | varchar | 510 |  | √ | ' ' |  |
+| 30 | femail | 电子邮件 | varchar | 50 |  | √ | ' ' | 电子邮件 |
+| 31 | faptitudenote | 资审意见 | varchar | 255 |  | √ | ' ' | 资审意见 |
+| 32 | freason | freason | varchar | 255 |  | √ | ' ' |  |
+| 33 | fenrollpackageid | fenrollpackageid | int8 | 64 |  | √ | 0 |  |
+| 34 | fsupplierid | 供应商 | int8 | 64 |  | √ | 0 | [供应商 bd_supplier](../basedata_files/bd_supplier.md) |
+| 35 | fduty | 职位 | varchar | 50 |  | √ | ' ' | 职位 |
+| 36 | fsuppliertype | 供应商类别 | varchar | 30 |  | √ | ' ' | 供应商类别,枚举: src_supplier :注册供应商 src_supplier_inner :内部供应商(员工) src_supplier_tmp :临时供应商 bd_supplier :供应商 |
+| 37 | fisaptitudereply | fisaptitudereply | bpchar | 1 |  | √ | '0' |  |
+| 38 | fenrollnote | fenrollnote | varchar | 255 |  | √ | ' ' |  |
+| 39 | fisaptpush2 | fisaptpush2 | bpchar | 1 |  | √ | '0' |  |
+| 40 | fsupplierip | 供应商IP | varchar | 100 |  | √ | ' ' | 供应商IP |
+| 41 | fenrollsupplierid | fenrollsupplierid | int8 | 64 |  | √ | 0 |  |
+| 42 | fpublishdate | fpublishdate | timestamp | 0 |  |  | null |  |
+| 43 | flinkman | 联系人 | varchar | 50 |  | √ | ' ' | 联系人 |
+| 44 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 
 ### 列规则定义
 

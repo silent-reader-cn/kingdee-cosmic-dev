@@ -40,30 +40,30 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fgroupid | fgroupid | int8 | 64 |  | √ | 0 |  |
-| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | fcardspecial | fcardspecial | int8 | 64 |  | √ | 0 |  |
 | 5 | fchecklevel | fchecklevel | int8 | 64 |  | √ | 0 |  |
-| 6 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | faudittime | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
 | 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 9 | fdisabletime | 禁用日期 | timestamp | 0 |  |  | null | 禁用日期 |
 | 10 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 13 | fminlimitsymbol | fminlimitsymbol | varchar | 50 |  | √ | ' ' |  |
-| 14 | fauditor | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fauditor | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 16 | fbitindex | 位图 | int8 | 64 |  | √ | 0 | 位图 |
-| 17 | fdisabler | 禁用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 17 | fdisabler | 禁用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 18 | fmaterial | fmaterial | int8 | 64 |  | √ | 0 |  |
 | 19 | fmaxlimitsymbol | fmaxlimitsymbol | varchar | 50 |  | √ | ' ' |  |
-| 20 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 20 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 21 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 22 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 22 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 23 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 24 | fsuggestion | fsuggestion | varchar | 255 |  | √ | ' ' |  |
-| 25 | fenabler | 启用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 26 | fmaterialtype | 检修设备类型 | int8 | 64 |  | √ | 0 | 检修设备类型 mpdm_mrtype |
+| 25 | fenabler | 启用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 26 | fmaterialtype | 检修设备类型 | int8 | 64 |  | √ | 0 | [检修设备类型 mpdm_mrtype](../mpdm_files/mpdm_mrtype.md) |
 | 27 | fctrlstrategy | 控制策略 | varchar | 50 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
 | 28 | fenabletime | 启用日期 | timestamp | 0 |  |  | null | 启用日期 |
 | 29 | fmaxlinitnum | fmaxlinitnum | numeric | 23 | 10 | √ | 0 |  |
@@ -71,7 +71,7 @@
 | 31 | fminlinitnum | fminlinitnum | numeric | 23 | 10 | √ | 0 |  |
 | 32 | fnumber | 编码 | varchar | 50 |  | √ | ' ' | 编码 |
 | 33 | fsourcebitindex | 原资料位图 | int8 | 64 |  | √ | 0 | 原资料位图 |
-| 34 | fcard | 工卡编码 | int8 | 64 |  | √ | 0 | 工卡 mpdm_mrocardroute |
+| 34 | fcard | 工卡编码 | int8 | 64 |  | √ | 0 | [工卡 mpdm_mrocardroute](../mpdm_files/mpdm_mrocardroute.md) |
 
 ### 列规则定义
 
@@ -101,13 +101,13 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | flowerlimit | 维修周期阈值下限 | numeric | 23 | 10 | √ | 0 | 维修周期阈值下限 |
-| 3 | frepairlevel | 检修等级 | int8 | 64 |  | √ | 0 | 检修等级 mpdm_checklevel |
+| 3 | frepairlevel | 检修等级 | int8 | 64 |  | √ | 0 | [检修等级 mpdm_checklevel](../mpdm_files/mpdm_checklevel.md) |
 | 4 | fupperlimitsymbol | 上限公式符号 | varchar | 50 |  | √ | ' ' | 上限公式符号,枚举: A := B :< |
 | 5 | friskadvice | 风险应对建议 | varchar | 255 |  | √ | ' ' | 风险应对建议 |
 | 6 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 7 | fupperlimit | 维修周期阈值上限 | numeric | 23 | 10 | √ | 0 | 维修周期阈值上限 |
 | 8 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 9 | friskdeftype | 风险类别 | int8 | 64 |  | √ | 0 | 风险类别 mpdm_risktype |
+| 9 | friskdeftype | 风险类别 | int8 | 64 |  | √ | 0 | [风险类别 mpdm_risktype](../mpdm_files/mpdm_risktype.md) |
 | 10 | flowerlimitsymbol | 下限公式符号 | varchar | 50 |  | √ | ' ' | 下限公式符号,枚举: A := C :> |
 | 11 | friskdefdsc | 风险描述 | varchar | 255 |  | √ | ' ' | 风险描述 |
 
@@ -205,5 +205,5 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | pk_t_mpdm_riskdef_u |  | fdataid,fuseorgid |
-| 2 | idx_t_mpdm_riskdef_u_uo |  | fuseorgid |
+| 1 | idx_t_mpdm_riskdef_u_uo |  | fuseorgid |
+| 2 | pk_t_mpdm_riskdef_u |  | fdataid,fuseorgid |

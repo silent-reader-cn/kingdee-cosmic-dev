@@ -14,7 +14,7 @@
 | 3 | ftzsy | 9.投资收益 | numeric | 23 | 10 | √ | 0.0000000000 | 9.投资收益 |
 | 4 | fskssqz | 日期范围.结束 | timestamp | 0 |  |  | null | 日期范围.结束 |
 | 5 | fyysjfj | 3.营业税金及附加 | numeric | 23 | 10 | √ | 0.0000000000 | 3.营业税金及附加 |
-| 6 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fgyjzbdsy | 8.公允价值变动收益 | numeric | 23 | 10 | √ | 0.0000000000 | 8.公允价值变动收益 |
 | 8 | fskssqq | 日期范围.开始 | timestamp | 0 |  |  | null | 日期范围.开始 |
 
@@ -28,5 +28,5 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | t_tccit_tz_a100000_1_pkey |  | fid |
-| 2 | idx_tccit_tz_a100000_1 |  | forgid,fskssqq,fskssqz |
+| 1 | idx_tccit_tz_a100000_1 |  | forgid,fskssqq,fskssqz |
+| 2 | t_tccit_tz_a100000_1_pkey |  | fid |

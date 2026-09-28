@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fsynumber | 税源编号 | int8 | 64 |  | √ | 0 | 土地税源信息 tdm_tds_basic_info |
-| 3 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | fdetailaddr | 土地房屋坐落地 | varchar | 50 |  | √ | ' ' | 土地房屋坐落地 |
 | 5 | fqszyfs | 权属转移方式 | varchar | 50 |  | √ | ' ' | 权属转移方式,枚举: tucr :土地使用权出让 tdcs :土地使用权出售(包括作价投资入股、偿还债务等应交付经济利益的方式) tdzu :土地使用权赠与(包括以划转、奖励、继承等没有价格的方式) tdhh :土地使用权互换 fwmm :房屋买卖(包括作价投资入股、偿还债务等应交付经济利益的方式) fwzy :房屋赠与(包括以划转、奖励、继承等没有价格的方式) fwhh :房屋互换 |
 | 6 | fdealprice | 成交价格 | numeric | 23 | 10 | √ | 0 | 成交价格 |
@@ -20,7 +20,7 @@
 | 9 | fhtqdrq | 合同签订日期 | timestamp | 0 |  |  | null | 合同签订日期 |
 | 10 | faffpbl | 按份分配比例 | numeric | 23 | 10 | √ | 0 | 按份分配比例 |
 | 11 | fenddate | 所属税期止 | timestamp | 0 |  |  | null | 所属税期止 |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fcjdj | 成交单价 | numeric | 23 | 10 | √ | 0 | 成交单价 |
 | 14 | fsbbbillno | 申报表编号 | varchar | 50 |  | √ | ' ' | 申报表编号 |
 | 15 | fynse | 应纳税额 | numeric | 23 | 10 | √ | 0 | 应纳税额 |
@@ -28,7 +28,7 @@
 | 17 | fsbbstatus | 申报表单据状态 | varchar | 50 |  | √ | ' ' | 申报表单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 18 | fqszydxej | 权属转移对象（二级） | varchar | 50 |  | √ | ' ' | 权属转移对象（二级）,枚举: gytd :国有土地 jttd :集体土地 zlf :增量房 clf :存量房 |
 | 19 | fbillno | 单据编号 | varchar | 30 |  | √ | ' ' | 单据编号 |
-| 20 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 20 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 21 | fjsjg | 计税价格 | numeric | 23 | 10 | √ | 0 | 计税价格 |
 | 22 | fsbbapplystatus | 申报状态 | varchar | 50 |  | √ | ' ' | 申报状态,枚举: editing :未申报 declared :申报成功 declaring :申报中 declarefailed :申报失败 |
 | 23 | fbillstatus | 单据状态 | varchar | 50 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
@@ -46,12 +46,13 @@
 | 35 | fhtbh | 合同编号 | varchar | 50 |  | √ | ' ' | 合同编号 |
 | 36 | fsysl | 适用税率 | numeric | 23 | 10 | √ | 0 | 适用税率 |
 | 37 | fbdcdydm | 不动产单元代码 | varchar | 50 |  | √ | ' ' | 不动产单元代码 |
-| 38 | fsbbid | 申报表ID | int8 | 64 |  | √ | 0 | 纳税申报表基础资料 bdtaxr_nsrxx |
+| 38 | fsbbid | 申报表ID | int8 | 64 |  | √ | 0 | [纳税申报表基础资料 bdtaxr_nsrxx](../bdtaxr_files/bdtaxr_nsrxx.md) |
 | 39 | fqszymj | 权属转移面积 | numeric | 23 | 10 | √ | 0 | 权属转移面积 |
 | 40 | fenable | 使用状态 | varchar | 50 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 41 | ftaxoffice | 土地房屋所属主管税务机关 | int8 | 64 |  | √ | 0 | 税务机关 bastax_taxorgan |
-| 42 | fjmbl | 减免比例 | numeric | 23 | 10 | √ | 0 | 减免比例 |
-| 43 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 41 | ftaxoffice | 土地房屋所属主管税务机关 | int8 | 64 |  | √ | 0 | [税务机关 bastax_taxorgan](../bastax_files/bastax_taxorgan.md) |
+| 42 | fnumber | 税源编号 | varchar | 50 |  | √ | ' ' | 税源编号 |
+| 43 | fjmbl | 减免比例 | numeric | 23 | 10 | √ | 0 | 减免比例 |
+| 44 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

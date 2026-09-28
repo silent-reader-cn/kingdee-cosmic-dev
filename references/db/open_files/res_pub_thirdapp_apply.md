@@ -16,15 +16,15 @@
 | 5 | fapplytime | fapplytime | timestamp | 0 |  |  | null |  |
 | 6 | fsource | 来源 | bpchar | 1 |  | √ | '1' | 来源,枚举: 1 :金蝶云.星瀚 2 :星空旗舰 3 :其他 |
 | 7 | fmodifytime | 最后申请时间 | timestamp | 0 |  |  | null | 最后申请时间 |
-| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 9 | fapplier | 申请人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 9 | fapplier | 申请人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | finstancenumber | 产品实例编码 | varchar | 100 |  | √ | ' ' | 产品实例编码 |
 | 11 | fbillno | 编码 | varchar | 50 |  | √ | ' ' | 编码 |
 | 12 | fversion | 版本 | int4 | 32 |  | √ | 1 | 版本 |
 | 13 | fremark | 备注 | varchar | 256 |  | √ | ' ' | 备注 |
 | 14 | fname | 开放应用名称 | varchar | 50 |  | √ | ' ' | 开放应用名称 |
 | 15 | fphone | 电话 | varchar | 50 |  | √ | ' ' | 电话 |
-| 16 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 16 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 17 | fbillstatus | 申请状态 | bpchar | 1 |  | √ | ' ' | 申请状态,枚举: A :暂存 R :申请中 S :申请成功 F :申请失败 D :禁用 |
 | 18 | fparentid | 上级 | int8 | 64 |  | √ | 0 | 上级 |
 | 19 | fcreatetime | 创建时间 | timestamp | 0 |  | √ | LOCALTIMESTAMP | 创建时间 |
@@ -37,7 +37,7 @@
 | 26 | fpublickey | 摘要认证密钥 | varchar | 256 |  | √ | ' ' | 摘要认证密钥 |
 | 27 | ftenantname | 当前租户 | varchar | 100 |  | √ | ' ' | 当前租户 |
 | 28 | faccountid | 当前账套ID | varchar | 50 |  | √ | ' ' | 当前账套ID |
-| 29 | ftargeturl | 云端地址 | varchar | 256 |  | √ | ' ' | 云端地址 |
+| 29 | ftargeturl | 连接云端环境 | varchar | 256 |  | √ | ' ' | 连接云端环境,枚举: https://resource.kdcloud.com/ :资源云-生产环境 https://resource.test.kdcloud.com/ :资源云-沙箱环境 https://devtest.kingdee.com:2024/resource_cloud/ :资源云-测试环境 |
 
 ### 列规则定义
 

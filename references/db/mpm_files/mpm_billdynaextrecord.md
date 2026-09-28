@@ -13,8 +13,8 @@
 | 2 | fextendid | 元数据扩展id | varchar | 50 |  | √ | ' ' | 元数据扩展id |
 | 3 | fparentmetaid | 父元数据id | varchar | 50 |  | √ | ' ' | 父元数据id |
 | 4 | fparentmetaname | 父元数据名 | varchar | 80 |  | √ | ' ' | 父元数据名 |
-| 5 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 6 | fbillobjectid | 业务对象 | varchar | 255 |  | √ | ' ' | 业务对象 bos_objecttype |
+| 5 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 6 | fbillobjectid | 业务对象 | varchar | 255 |  | √ | ' ' | [业务对象 bos_objecttype](../mdl_files/bos_objecttype.md) |
 | 7 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 8 | fextendname | 元数据扩展名 | varchar | 80 |  | √ | ' ' | 元数据扩展名 |
 

@@ -11,17 +11,17 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 方案名称 | varchar | 50 |  | √ | ' ' | 方案名称 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fcustomparameter_tag | 详情 | text | 0 |  |  | null | 详情 |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 6 | fsrcbillid | 源单 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 6 | fsrcbillid | 源单 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 7 | fareaconditionjson_tag | 数据范围条件json_详情 | text | 0 |  |  | null | 数据范围条件json_详情 |
 | 8 | fvalidoptype | 校验时机 | varchar | 50 |  | √ | ' ' | 校验时机,枚举: submit :提交 audit :审核 |
-| 9 | fxbillid | 变更单 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 9 | fxbillid | 变更单 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 11 | fcustomparameter |  | varchar | 255 |  | √ | ' ' |  |
 | 12 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 15 | fareaconditionjson | 数据范围条件json | varchar | 255 |  | √ | ' ' | 数据范围条件json |
 | 16 | fissys | 系统预置 | bpchar | 1 |  | √ | '0' | 系统预置 |

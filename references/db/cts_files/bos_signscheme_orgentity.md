@@ -9,9 +9,9 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | 签名方案 | int8 | 64 |  | √ | 0 | 签名方案 sign_scheme |
+| 1 | fid | 签名方案 | int8 | 64 |  | √ | 0 | [签名方案 sign_scheme](../cts_files/sign_scheme.md) |
 | 2 | fisincludesuborg | 包含下级 | bpchar | 1 |  | √ | '0' | 包含下级 |
-| 3 | forgid | 签名组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | forgid | 签名组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | fseq | fseq | int8 | 64 |  | √ | 0 |  |
 | 5 | fentryid | fentryid | varchar | 20 |  | √ | ' ' | id |
 

@@ -40,7 +40,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fentity | 单据名称 | int8 | 64 |  | √ | 0 | 计划方案供需参数 pm_plansdparamdefault |
+| 2 | fentity | 单据名称 | int8 | 64 |  | √ | 0 | [计划方案供需参数 pm_plansdparamdefault](../pm_files/pm_plansdparamdefault.md) |
 | 3 | fbillformuladesc | 计算公式配置 | varchar | 512 |  | √ | ' ' | 计算公式配置 |
 | 4 | fbillstatus | 生效状态 | varchar | 36 |  | √ | ' ' | 生效状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 5 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
@@ -59,8 +59,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_pm_plansdparamentry_fid |  | fid |
-| 2 | pk_t_pm_plansdparamentry |  | fentryid |
+| 1 | pk_t_pm_plansdparamentry |  | fentryid |
+| 2 | idx_pm_plansdparamentry_fid |  | fid |
 
 ---
 
@@ -76,7 +76,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fenablematerialmerge | 物料 | bpchar | 1 |  | √ | '1' | 物料 |
 | 3 | fenableavailablestock | 考虑现有库存 | bpchar | 1 |  | √ | '0' | 考虑现有库存 |
-| 4 | fdisableor | 禁用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fdisableor | 禁用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fdisabledate | 禁用时间 | timestamp | 0 |  |  | null | 禁用时间 |
 | 6 | fenablematvermerge | 物料版本 | bpchar | 1 |  | √ | '1' | 物料版本 |
 | 7 | fenableauxmerge | 辅助属性 | bpchar | 1 |  | √ | '0' | 辅助属性 |
@@ -85,9 +85,9 @@
 | 10 | fstatus | 数据状态 | varchar | 5 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 11 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 12 | fperiodordermerge | 期间订货合并 | varchar | 5 |  | √ | ' ' | 期间订货合并,枚举: A :合并到当前日期 B :合并至周期内的第一笔净需求日期 |
-| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | fname | 方案名称 | varchar | 100 |  | √ | ' ' | 方案名称 |
-| 15 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 15 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 16 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 17 | fenablesafestock | 考虑安全库存 | bpchar | 1 |  | √ | '0' | 考虑安全库存 |
 | 18 | frequirereleaseway | 需求下达方式 | varchar | 5 |  | √ | ' ' | 需求下达方式,枚举: A :合并下达 B :独立下达 |
@@ -100,7 +100,7 @@
 | 25 | fnumber | 方案编码 | varchar | 80 |  | √ | ' ' | 方案编码 |
 | 26 | fenablenegativestock | 负库存作为需求 | bpchar | 1 |  | √ | '0' | 负库存作为需求 |
 | 27 | fschemedesc | 方案说明 | varchar | 512 |  | √ | ' ' | 方案说明 |
-| 28 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 28 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 
@@ -126,7 +126,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 单据状态 pm_billstatus |
+| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [单据状态 pm_billstatus](../pm_files/pm_billstatus.md) |
 | 2 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 | 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 
@@ -154,7 +154,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 单据类型 bos_billtype |
+| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [单据类型 bos_billtype](../cts_files/bos_billtype.md) |
 | 2 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 | 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 

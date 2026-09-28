@@ -96,13 +96,13 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fexceptionmsg | fexceptionmsg | text | 0 |  |  | null |  |
-| 3 | fopenorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | fopenorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | fbanklogtype | 执行任务 | varchar | 30 |  | √ | ' ' | 执行任务,枚举: queryNotePayable :应付票据查询 queryNoteReceivable :应收票据查询 notePayable_remit_register :开票登记 notePayable_remit_revocation :撤销出票 notePayable_remit_accept :提示承兑 notePayable_remit_receive :提示收票 noteReceivable_note_endorse :票据背书 noteReceivable_note_discount :票据贴现 noteReceivable_note_signin :票据通用签收 noteReceivable_pledge_note :票据质押 noteReceivable_remove_pledge :票据解除质押 noteReceivable_note_cancle :票据通用撤销 |
 | 5 | fsourceid | 主键ID | varchar | 100 |  | √ | ' ' | 主键ID |
 | 6 | fbizexceptioninfo_tag | fbizexceptioninfo_tag | text | 0 |  |  | null |  |
 | 7 | fsrcbizid | fsrcbizid | int8 | 64 |  | √ | 0 |  |
 | 8 | fdisabledate | fdisabledate | timestamp | 0 |  |  | null |  |
-| 9 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 9 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 10 | fmodifytime | fmodifytime | timestamp | 0 |  |  | null |  |
 | 11 | fbankinterface | fbankinterface | varchar | 100 |  | √ | ' ' |  |
 | 12 | fsendexceptioninfo | fsendexceptioninfo | text | 0 |  |  | null |  |
@@ -122,7 +122,7 @@
 | 26 | fenable | 使用状态 | bpchar | 1 |  | √ | '0' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 27 | fnumber | fnumber | varchar | 80 |  | √ | ' ' |  |
 | 28 | fsourcebitindex | fsourcebitindex | int4 | 32 |  | √ | 0 |  |
-| 29 | fcompanyid | 收付组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 29 | fcompanyid | 资金组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 30 | fbankpaystate | fbankpaystate | varchar | 30 |  | √ | 'OP' |  |
 | 31 | fpaycurrencyid | fpaycurrencyid | int8 | 64 |  | √ | 0 |  |
 | 32 | fstatus | fstatus | bpchar | 5 |  | √ | '0' |  |
@@ -130,19 +130,20 @@
 | 34 | fcreatorid | fcreatorid | int8 | 64 |  | √ | 0 |  |
 | 35 | fmasterid | fmasterid | int8 | 64 |  | √ | 0 |  |
 | 36 | fsourcedataid | fsourcedataid | int8 | 64 |  | √ | 0 |  |
-| 37 | fpaytotalamt | fpaytotalamt | numeric | 19 | 6 | √ | 0 |  |
-| 38 | fisexception | 执行结果 | varchar | 30 |  | √ | ' ' | 执行结果,枚举: 0 :成功 1 :失败 |
-| 39 | fexecutorid | fexecutorid | int8 | 64 |  | √ | 0 |  |
-| 40 | ftime | 交易日期 | timestamp | 0 |  |  | null | 交易日期 |
-| 41 | fcreateorgid | fcreateorgid | int8 | 64 |  | √ | 0 |  |
-| 42 | fmodifierid | fmodifierid | int8 | 64 |  | √ | 0 |  |
-| 43 | fsendexceptioninfo_tag | fsendexceptioninfo_tag | text | 0 |  |  | null |  |
-| 44 | fcomment | fcomment | varchar | 255 |  |  | ' ' |  |
-| 45 | fcreatetime | fcreatetime | timestamp | 0 |  |  | null |  |
-| 46 | fpayeeacnt | fpayeeacnt | varchar | 100 |  | √ | ' ' |  |
-| 47 | fenabledate | fenabledate | timestamp | 0 |  |  | null |  |
-| 48 | freceiveexceptioninfo_tag | freceiveexceptioninfo_tag | text | 0 |  |  | null |  |
-| 49 | freceiveexceptioninfo | freceiveexceptioninfo | text | 0 |  |  | null |  |
+| 37 | frequestid | frequestid | int8 | 64 |  | √ | 0 |  |
+| 38 | fpaytotalamt | fpaytotalamt | numeric | 19 | 6 | √ | 0 |  |
+| 39 | fisexception | 执行结果 | varchar | 30 |  | √ | ' ' | 执行结果,枚举: 0 :成功 1 :失败 |
+| 40 | fexecutorid | fexecutorid | int8 | 64 |  | √ | 0 |  |
+| 41 | ftime | 交易日期 | timestamp | 0 |  |  | null | 交易日期 |
+| 42 | fcreateorgid | fcreateorgid | int8 | 64 |  | √ | 0 |  |
+| 43 | fmodifierid | fmodifierid | int8 | 64 |  | √ | 0 |  |
+| 44 | fsendexceptioninfo_tag | fsendexceptioninfo_tag | text | 0 |  |  | null |  |
+| 45 | fcomment | fcomment | varchar | 255 |  |  | ' ' |  |
+| 46 | fcreatetime | fcreatetime | timestamp | 0 |  |  | null |  |
+| 47 | fpayeeacnt | fpayeeacnt | varchar | 100 |  | √ | ' ' |  |
+| 48 | fenabledate | fenabledate | timestamp | 0 |  |  | null |  |
+| 49 | freceiveexceptioninfo_tag | freceiveexceptioninfo_tag | text | 0 |  |  | null |  |
+| 50 | freceiveexceptioninfo | freceiveexceptioninfo | text | 0 |  |  | null |  |
 
 ### 列规则定义
 

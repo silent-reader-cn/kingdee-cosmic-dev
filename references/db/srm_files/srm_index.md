@@ -1,5 +1,120 @@
 # 评估指标-srm_index
 
+## 评估类型-多选基础资料表 t_pur_index_evatype
+
+- **表名称：** 评估类型-多选基础资料表
+- **表名：** t_pur_index_evatype
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [辅助资料 bos_assistantdata_detail](../base_files/bos_assistantdata_detail.md) |
+| 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fpkid | fpkid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | t_pur_index_evatype_pkey |  | fpkid |
+| 2 | idx_pur_index_evatype_fid |  | fid,fbasedataid |
+
+---
+
+## 指标对象分录-子表 t_pur_indexentry1
+
+- **表名称：** 指标对象分录-子表
+- **表名：** t_pur_indexentry1
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fisgenericrule | 是否通用规则 | bpchar | 1 |  | √ | '1' | 是否通用规则 |
+| 3 | fmaterialid | 物料编码 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
+| 4 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
+| 5 | fcategoryid | 品类编码 | int8 | 64 |  | √ | 0 | [物料分类 bd_materialgroup](../basedata_files/bd_materialgroup.md) |
+| 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fentryid | fentryid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_pur_indexentry1_fid_fseq |  | fid,fseq |
+| 2 | pk_pur_indexentry1 |  | fentryid |
+
+---
+
+## 评估组织-多选基础资料表 t_pur_index_org
+
+- **表名称：** 评估组织-多选基础资料表
+- **表名：** t_pur_index_org
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fpkid | fpkid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | pk_pur_index_org |  | fpkid |
+| 2 | idx_pur_index_org_fid |  | fid,fbasedataid |
+
+---
+
+## 评估品类-多选基础资料表 t_pur_index_category
+
+- **表名称：** 评估品类-多选基础资料表
+- **表名：** t_pur_index_category
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [物料分类 bd_materialgroup](../basedata_files/bd_materialgroup.md) |
+| 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fpkid | fpkid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | pk_pur_index_category |  | fpkid |
+| 2 | idx_pur_index_category_fid |  | fid,fbasedataid |
+
+---
+
 ## 评分规则分录（旧）-子表 t_pur_indexentry
 
 - **表名称：** 评分规则分录（旧）-子表
@@ -47,41 +162,41 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fisevatype | 设定评估类型 | bpchar | 1 |  | √ | ' ' | 设定评估类型 |
-| 3 | forgid | 业务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 4 | fformulaid | 计算公式 | int8 | 64 |  | √ | 0 | 计算公式配置 srm_cal_formula |
+| 3 | forgid | 业务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 4 | fformulaid | 计算公式 | int8 | 64 |  | √ | 0 | [计算公式配置 srm_cal_formula](../srm_files/srm_cal_formula.md) |
 | 5 | fdisabledate | fdisabledate | timestamp | 0 |  |  | null |  |
-| 6 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fapiplugin | 指标对应的API插件类名(全限定名) | varchar | 100 |  | √ | ' ' | 指标对应的API插件类名(全限定名) |
 | 8 | fisformula | 计算公式 | bpchar | 1 |  | √ | ' ' | 计算公式 |
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 10 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :保存 B :已提交 C :已审核 |
 | 11 | fscoretype | 评分方式 | bpchar | 1 |  | √ | ' ' | 评分方式,枚举: 1 :手工评分 9 :自动评分 |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 14 | findexclassid | 指标分类 | int8 | 64 |  | √ | 0 | 指标分类 srm_indexclass |
+| 14 | findexclassid | 指标分类 | int8 | 64 |  | √ | 0 | [指标分类 srm_indexclass](../srm_files/srm_indexclass.md) |
 | 15 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 16 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
 | 17 | fisorg | 设置组织范围 | bpchar | 1 |  | √ | ' ' | 设置组织范围 |
-| 18 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 18 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 19 | fremark | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
-| 20 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 20 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 21 | fname | 指标名称 | varchar | 100 |  | √ | ' ' | 指标名称 |
 | 22 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 23 | fproperty | 指标性质 | bpchar | 1 |  | √ | ' ' | 指标性质,枚举: 1 :定量指标 2 :定性指标 3 :符合项指标 |
 | 24 | fdisablerid | fdisablerid | int8 | 64 |  | √ | 0 |  |
-| 25 | flastupdateuserid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 25 | flastupdateuserid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 26 | fauditdate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
 | 27 | flastupdatetime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 28 | fctrlstrategy | 控制策略 | bpchar | 1 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
-| 29 | findextypeid | 指标类型 | int8 | 64 |  | √ | 0 | 指标分类 srm_indexclass |
+| 29 | findextypeid | 指标类型 | int8 | 64 |  | √ | 0 | [指标分类 srm_indexclass](../srm_files/srm_indexclass.md) |
 | 30 | fiscategory | 设置品类范围 | bpchar | 1 |  | √ | ' ' | 设置品类范围 |
 | 31 | fenable | 使用状态 | bpchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 32 | fnumber | 指标编码 | varchar | 50 |  | √ | ' ' | 指标编码 |
-| 33 | fuseorgid | 使用组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 33 | fuseorgid | 使用组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 34 | fisdeduct | 扣分指标 | bpchar | 1 |  | √ | ' ' | 扣分指标 |
 | 35 | fscore | 指标最高分值 | numeric | 19 | 6 | √ | 0.000000 | 指标最高分值 |
 | 36 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
-| 37 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 37 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 
@@ -134,34 +249,6 @@
 | :--- | :--- | :--- | :--- |
 | 1 | pk_pur_indexentry1sub |  | fdetailid |
 | 2 | idx_pur_index1esub_feid_fseq |  | fseq,fentryid |
-
----
-
-## 评估类型-多选基础资料表 t_pur_index_evatype
-
-- **表名称：** 评估类型-多选基础资料表
-- **表名：** t_pur_index_evatype
-
-### 表格列定义
-
-| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 辅助资料 bos_assistantdata_detail |
-| 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
-
-### 列规则定义
-
-| 序号 | 键编码 | 列字段 |
-| :--- | :--- | :--- |
-| 1 | fpkid | fpkid |
-
-### 索引定义
-
-| 序号 | 索引名 | 唯一 | 列字段 |
-| :--- | :--- | :--- | :--- |
-| 1 | t_pur_index_evatype_pkey |  | fpkid |
-| 2 | idx_pur_index_evatype_fid |  | fid,fbasedataid |
 
 ---
 
@@ -247,90 +334,3 @@
 | :--- | :--- | :--- | :--- |
 | 1 | idx_t_pur_index_u_uo |  | fuseorgid |
 | 2 | t_pur_index_u_pkey |  | fdataid,fuseorgid |
-
----
-
-## 指标对象分录-子表 t_pur_indexentry1
-
-- **表名称：** 指标对象分录-子表
-- **表名：** t_pur_indexentry1
-
-### 表格列定义
-
-| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fisgenericrule | 是否通用规则 | bpchar | 1 |  | √ | '1' | 是否通用规则 |
-| 3 | fmaterialid | 物料编码 | int8 | 64 |  | √ | 0 | 物料 bd_material |
-| 4 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 5 | fcategoryid | 品类编码 | int8 | 64 |  | √ | 0 | 物料分类 bd_materialgroup |
-| 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-
-### 列规则定义
-
-| 序号 | 键编码 | 列字段 |
-| :--- | :--- | :--- |
-| 1 | fentryid | fentryid |
-
-### 索引定义
-
-| 序号 | 索引名 | 唯一 | 列字段 |
-| :--- | :--- | :--- | :--- |
-| 1 | idx_pur_indexentry1_fid_fseq |  | fid,fseq |
-| 2 | pk_pur_indexentry1 |  | fentryid |
-
----
-
-## 评估组织-多选基础资料表 t_pur_index_org
-
-- **表名称：** 评估组织-多选基础资料表
-- **表名：** t_pur_index_org
-
-### 表格列定义
-
-| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
-
-### 列规则定义
-
-| 序号 | 键编码 | 列字段 |
-| :--- | :--- | :--- |
-| 1 | fpkid | fpkid |
-
-### 索引定义
-
-| 序号 | 索引名 | 唯一 | 列字段 |
-| :--- | :--- | :--- | :--- |
-| 1 | pk_pur_index_org |  | fpkid |
-| 2 | idx_pur_index_org_fid |  | fid,fbasedataid |
-
----
-
-## 评估品类-多选基础资料表 t_pur_index_category
-
-- **表名称：** 评估品类-多选基础资料表
-- **表名：** t_pur_index_category
-
-### 表格列定义
-
-| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 物料分类 bd_materialgroup |
-| 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
-
-### 列规则定义
-
-| 序号 | 键编码 | 列字段 |
-| :--- | :--- | :--- |
-| 1 | fpkid | fpkid |
-
-### 索引定义
-
-| 序号 | 索引名 | 唯一 | 列字段 |
-| :--- | :--- | :--- | :--- |
-| 1 | pk_pur_index_category |  | fpkid |
-| 2 | idx_pur_index_category_fid |  | fid,fbasedataid |

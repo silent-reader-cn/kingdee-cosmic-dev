@@ -10,8 +10,8 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fconnsys2 | 连接系统2 | int8 | 64 |  | √ | 0 | 外部集成信息（废弃） isc_sysconn |
-| 3 | fconnsys1 | 连接系统1 | int8 | 64 |  | √ | 0 | 外部集成信息（废弃） isc_sysconn |
+| 2 | fconnsys2 | 连接系统2 | int8 | 64 |  | √ | 0 | [外部集成信息（废弃） isc_sysconn](../iscb_files/isc_sysconn.md) |
+| 3 | fconnsys1 | 连接系统1 | int8 | 64 |  | √ | 0 | [外部集成信息（废弃） isc_sysconn](../iscb_files/isc_sysconn.md) |
 | 4 | fnumber | 编码 | varchar | 60 |  | √ | ' ' | 编码 |
 
 ### 列规则定义

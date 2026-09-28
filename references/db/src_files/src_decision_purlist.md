@@ -54,8 +54,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | pk_src_decisionlistentry |  | fentryid |
-| 2 | idx_src_decisionlistentry_fid |  | fid |
+| 1 | idx_src_decisionlistentry_fid |  | fid |
+| 2 | pk_src_decisionlistentry |  | fentryid |
 
 ---
 
@@ -98,7 +98,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 标段名称 src_packagef7 |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [标段名称 src_packagef7](../src_files/src_packagef7.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义

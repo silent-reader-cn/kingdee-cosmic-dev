@@ -42,22 +42,22 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fremark | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
 | 3 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 6 | fmaterialid | 物料编号 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 6 | fmaterialid | 物料编号 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 7 | fscopetype | 适用范围 | bpchar | 1 |  | √ | ' ' | 适用范围,枚举: A :全局 B :按组织 |
 | 8 | fauditdate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
-| 9 | finvorgid | 库存组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 9 | finvorgid | 库存组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 11 | fbarcode | 条码 | varchar | 255 |  |  | ' ' | 条码 |
 | 12 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 13 | finvunitid | 库存单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | finvunitid | 库存单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 16 | fenable | 使用状态 | bpchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 17 | fauxptyld | 辅助属性 | int8 | 64 |  | √ | 0 | null 001 |
 | 18 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
-| 19 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 19 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

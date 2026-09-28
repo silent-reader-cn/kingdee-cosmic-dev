@@ -46,14 +46,14 @@
 | 5 | fpublish_condition | 发行条件 | varchar | 3000 |  | √ | ' ' | 发行条件 |
 | 6 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 7 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 10 | fstandard_content_tag | 标准内容_详情 | text | 0 |  |  | null | 标准内容_详情 |
 | 11 | fipo_condition_tag | 上市条件_详情 | text | 0 |  |  | null | 上市条件_详情 |
-| 12 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 13 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 13 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
 | 14 | fshowrows | 报表显示行次 | int8 | 64 |  | √ | 0 | 报表显示行次 |
-| 15 | fparentid | 上级 | int8 | 64 |  | √ | 0 | 上市条件类型 ipo_list_conditions_type |
+| 15 | fparentid | 上级 | int8 | 64 |  | √ | 0 | [上市条件类型 ipo_list_conditions_type](../ipobase_files/ipo_list_conditions_type.md) |
 | 16 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 17 | fstandard_content | 标准内容 | varchar | 3000 |  | √ | ' ' | 标准内容 |
 | 18 | fmarket_position_tag | 板块定位_详情 | text | 0 |  |  | null | 板块定位_详情 |

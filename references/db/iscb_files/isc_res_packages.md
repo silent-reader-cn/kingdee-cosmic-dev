@@ -12,11 +12,11 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fremark | 备注 | varchar | 500 |  |  | ' ' | 备注 |
 | 3 | fname | 名称 | varchar | 80 |  | √ | ' ' | 名称 |
-| 4 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | ftag | 标签 | varchar | 50 |  |  | ' ' | 标签 |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 7 | fres_count | 资源数 | int8 | 64 |  | √ | 0 | 资源数 |
-| 8 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fnumber | 编码 | varchar | 50 |  | √ | ' ' | 编码 |
 | 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 
@@ -45,7 +45,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fres_type | 资源类型 | varchar | 36 |  |  | ' ' | 业务对象 bos_objecttype |
+| 2 | fres_type | 资源类型 | varchar | 36 |  |  | ' ' | [业务对象 bos_objecttype](../mdl_files/bos_objecttype.md) |
 | 3 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 4 | fres_pk | 资源ID | varchar | 50 |  |  | ' ' | 资源ID |
 | 5 | fres_name | 名称 | varchar | 100 |  |  | ' ' | 名称 |

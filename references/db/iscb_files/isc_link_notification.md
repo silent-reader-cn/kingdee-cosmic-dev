@@ -13,15 +13,17 @@
 | 2 | fperson | 消息接收人-苍穹用户 | varchar | 1000 |  | √ | ' ' | 消息接收人-苍穹用户 |
 | 3 | fmethod | 通知方式 | varchar | 50 |  | √ | ' ' | 通知方式,枚举: system_message :系统消息 |
 | 4 | foutsideperson | 非苍穹用户 | varchar | 1000 |  | √ | ' ' | 非苍穹用户 |
-| 5 | fdblink | 连接配置 | int8 | 64 |  | √ | 0 | 连接器配置 isc_database_link |
-| 6 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | fdblink | 连接配置 | int8 | 64 |  | √ | 0 | [连接器配置 isc_database_link](../iscb_files/isc_database_link.md) |
+| 6 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 7 | fmsg_title | 消息标题 | varchar | 50 |  | √ | ' ' | 消息标题 |
 | 8 | fmsgcontent | 消息编辑 | varchar | 1000 |  | √ | ' ' | 消息编辑 |
 | 9 | fstate | 使用状态 | varchar | 50 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 10 | fcreatedate | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 11 | ftarget_system | 消息接收系统 | varchar | 50 |  | √ | ' ' | 消息接收系统,枚举: COSMIC :当前苍穹 |
 | 12 | fmodifydate | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 13 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 14 | fnotifytype | 消息渠道 | varchar | 100 |  | √ | ' ' | 消息渠道,枚举: |
+| 15 | fposition | 消息接收人-苍穹岗位 | varchar | 1000 |  | √ | ' ' | 消息接收人-苍穹岗位 |
 
 ### 列规则定义
 

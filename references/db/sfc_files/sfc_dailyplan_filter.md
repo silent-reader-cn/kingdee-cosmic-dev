@@ -11,20 +11,20 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fisallocation | 是否已分配 | bpchar | 1 |  | √ | '0' | 是否已分配 |
-| 3 | fprocessgroup | 工序组 | int8 | 64 |  | √ | 0 | 工序组(废弃) mpdm_progroup |
-| 4 | fzone | 功能位置 | int8 | 64 |  | √ | 0 | 功能位置 mpdm_functionlocation |
+| 3 | fprocessgroup | 工序组 | int8 | 64 |  | √ | 0 | [工序组(废弃) mpdm_progroup](../mpdm_files/mpdm_progroup.md) |
+| 4 | fzone | 功能位置 | int8 | 64 |  | √ | 0 | [功能位置 mpdm_functionlocation](../mpdm_files/mpdm_functionlocation.md) |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 6 | fuser | 用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | fuser | 用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 7 | fsrctype | 来源类型 | varchar | 50 |  | √ | ' ' | 来源类型,枚举: |
 | 8 | fplantime | 计划时间 | timestamp | 0 |  |  | null | 计划时间 |
-| 9 | fplanarea | 计划区域 | int8 | 64 |  | √ | 0 | 计划区域 fmm_planningarea |
-| 10 | fworkarea | 工作区域 | int8 | 64 |  | √ | 0 | 工作区域 mpdm_area |
+| 9 | fplanarea | 计划区域 | int8 | 64 |  | √ | 0 | [计划区域 fmm_planningarea](../fmm_files/fmm_planningarea.md) |
+| 10 | fworkarea | 工作区域 | int8 | 64 |  | √ | 0 | [工作区域 mpdm_area](../mpdm_files/mpdm_area.md) |
 | 11 | fordertaskstatus | 工单任务状态 | varchar | 50 |  | √ | ' ' | 工单任务状态,枚举: A :未开工 B :开工 C :完工 D :部分完工 |
 | 12 | fplanendtime | fplanendtime | timestamp | 0 |  |  | null |  |
-| 13 | fproject | 项目 | int8 | 64 |  | √ | 0 | 项目 pmpd_project |
-| 14 | fworkstage | 工作类别 | int8 | 64 |  | √ | 0 | 工作类别 mpdm_workcategories |
+| 13 | fproject | 项目 | int8 | 64 |  | √ | 0 | [项目 pmpd_project](../fmm_files/pmpd_project.md) |
+| 14 | fworkstage | 工作类别 | int8 | 64 |  | √ | 0 | [工作类别 mpdm_workcategories](../mpdm_files/mpdm_workcategories.md) |
 | 15 | fplanstarttime | fplanstarttime | timestamp | 0 |  |  | null |  |
-| 16 | fprofession | 行业 | int8 | 64 |  | √ | 0 | 树形基础资料模板 mpdm_professiona |
+| 16 | fprofession | 行业 | int8 | 64 |  | √ | 0 | [树形基础资料模板 mpdm_professiona](../mpdm_files/mpdm_professiona.md) |
 
 ### 列规则定义
 
@@ -51,7 +51,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 项目 pmpd_project |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [项目 pmpd_project](../fmm_files/pmpd_project.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义

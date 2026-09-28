@@ -20,9 +20,9 @@
 | 9 | fagent | 经办人 | varchar | 25 |  | √ | ' ' | 经办人 |
 | 10 | fresultaskflag | 结果查询标记 | varchar | 4 |  | √ | ' ' | 结果查询标记,枚举: 0 :未处理 1 :申领已处理 2 :领购已处理 3 :已分发 |
 | 11 | fstartnumber | 起始号码 | varchar | 30 |  | √ | ' ' | 起始号码 |
-| 12 | forg | 组织 | int8 | 64 |  | √ | 0 | 企业管理 bdm_org |
-| 13 | fepinfo | 企业信息 | int8 | 64 |  | √ | 0 | 企业基础信息 bdm_enterprise_baseinfo |
-| 14 | fconductor | 处理人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | forg | 组织 | int8 | 64 |  | √ | 0 | [企业管理 bdm_org](../bdm_files/bdm_org.md) |
+| 13 | fepinfo | 企业信息 | int8 | 64 |  | √ | 0 | [企业基础信息 bdm_enterprise_baseinfo](../bdm_files/bdm_enterprise_baseinfo.md) |
+| 14 | fconductor | 处理人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | fpreappnumber | 预申请编号 | varchar | 30 |  | √ | ' ' | 预申请编号 |
 | 16 | fendnumber | 终止号码 | varchar | 30 |  | √ | ' ' | 终止号码 |
 | 17 | finvoicetype | 发票类型 | varchar | 30 |  | √ | ' ' | 发票类型,枚举: 026 :普通电子发票 027 :专用电子发票 |

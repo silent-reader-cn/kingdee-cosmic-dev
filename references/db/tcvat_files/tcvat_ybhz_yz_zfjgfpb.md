@@ -27,7 +27,7 @@
 | 16 | fynsefpse | 应纳税额(分配税额) | numeric | 23 | 10 | √ | 0 | 应纳税额(分配税额) |
 | 17 | ffpbl | 分配比例 | numeric | 23 | 10 | √ | 0 | 分配比例 |
 | 18 | fsbbid | 申报表id | varchar | 50 |  | √ | ' ' | 申报表id |
-| 19 | ftaxoffice | 主管税务机关 | int8 | 64 |  | √ | 0 | 税务机关 bastax_taxorgan |
+| 19 | ftaxoffice | 主管税务机关 | int8 | 64 |  | √ | 0 | [税务机关 bastax_taxorgan](../bastax_files/bastax_taxorgan.md) |
 | 20 | fybjsynse | 一般计税方法应纳税额 | numeric | 23 | 10 | √ | 0 | 一般计税方法应纳税额 |
 | 21 | frowno | 序号 | varchar | 50 |  | √ | ' ' | 序号 |
 

@@ -11,8 +11,8 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | finquirybillid | 共享问询工单id | int8 | 64 |  | √ | 0 | 共享问询工单id |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 4 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 4 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fbillstatus | 单据状态 | bpchar | 1 |  | √ | 'C' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
@@ -44,10 +44,10 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fknowledgeid | 知识问答 | int8 | 64 |  | √ | 0 | 知识问答 |
 | 3 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 4 | fareaid | 知识领域 | int8 | 64 |  | √ | 0 | 知识库管理 som_knowledge_area |
+| 4 | fareaid | 知识领域 | int8 | 64 |  | √ | 0 | [知识库管理 som_knowledge_area](../som_files/som_knowledge_area.md) |
 | 5 | fknowledgenum | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
 | 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 7 | fsubjectid | 知识类目 | int8 | 64 |  | √ | 0 | 知识类目f7专用 som_knowledge_subject_f7 |
+| 7 | fsubjectid | 知识类目 | int8 | 64 |  | √ | 0 | [知识类目f7专用 som_knowledge_subject_f7](../som_files/som_knowledge_subject_f7.md) |
 | 8 | fknowledgename | 问题名称/知识名称 | varchar | 80 |  | √ | ' ' | 问题名称/知识名称 |
 
 ### 列规则定义

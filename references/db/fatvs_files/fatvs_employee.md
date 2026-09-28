@@ -15,14 +15,14 @@
 | 4 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 5 | fstatus | 数据状态 | varchar | 2 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 6 | favatar | 形象照 | varchar | 255 |  | √ | ' ' | 形象照 |
-| 7 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 7 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 8 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 9 | fdepartment | 组织架构 | varchar | 100 |  | √ | ' ' | 组织架构 |
-| 10 | fpositionid | 虚拟职位 | int8 | 64 |  | √ | 0 | 虚拟职位 fatvs_position |
+| 10 | fpositionid | 虚拟职位 | int8 | 64 |  | √ | 0 | [虚拟职位 fatvs_position](../fatvs_files/fatvs_position.md) |
 | 11 | fusertype | 员工类型 | bpchar | 1 |  | √ | ' ' | 员工类型,枚举: 0 :系统预置 1 :自定义 |
-| 12 | fofficeid | 办公室 | int8 | 64 |  | √ | 0 | 办公室 fatvs_office |
+| 12 | fofficeid | 办公室 | int8 | 64 |  | √ | 0 | [办公室 fatvs_office](../fatvs_files/fatvs_office.md) |
 | 13 | fname | 姓名 | varchar | 50 |  | √ | ' ' | 姓名 |
-| 14 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | fbirthday | 出生年月 | timestamp | 0 |  |  | null | 出生年月 |
 | 16 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 17 | fmotto | 座右铭 | varchar | 100 |  | √ | ' ' | 座右铭 |

@@ -13,14 +13,14 @@
 | 2 | f_api_interface | api接口 | bpchar | 1 |  | √ | ' ' | api接口 |
 | 3 | finvcancelapproval | 发票作废审批 | bpchar | 1 |  | √ | ' ' | 发票作废审批 |
 | 4 | finvoiceapproval | 开票审批 | bpchar | 1 |  | √ | ' ' | 开票审批 |
-| 5 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 6 | forg | 组织 | int8 | 64 |  | √ | 0 | 企业管理 bdm_org |
+| 5 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 6 | forg | 组织 | int8 | 64 |  | √ | 0 | [企业管理 bdm_org](../bdm_files/bdm_org.md) |
 | 7 | f_bill_split_merge | 单据拆合 | bpchar | 1 |  | √ | ' ' | 单据拆合 |
 | 8 | fcreatedate | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
 | 9 | f_batch_import | 批量导入 | bpchar | 1 |  | √ | ' ' | 批量导入 |
 | 10 | fbillapproval | 单据审批 | bpchar | 1 |  | √ | ' ' | 单据审批 |
 | 11 | fmodifydate | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
-| 12 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | f_manual_new | 手工新增 | bpchar | 1 |  | √ | ' ' | 手工新增 |
 | 14 | f_redinfo_approval | 红字信息表审批 | bpchar | 1 |  | √ | ' ' | 红字信息表审批 |
 

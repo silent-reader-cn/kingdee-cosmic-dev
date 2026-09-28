@@ -48,7 +48,7 @@
 | 3 | fassignor_tag | 派工人_详情 | text | 0 |  |  | null | 派工人_详情 |
 | 4 | fplanbegintime | 计划开始时间 | varchar | 50 |  | √ | ' ' | 计划开始时间 |
 | 5 | freceiver | 接收人 | varchar | 255 |  | √ | ' ' | 接收人 |
-| 6 | fchangerid | 变更人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | fchangerid | 变更人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 7 | fchangetime | 变更时间 | timestamp | 0 |  |  | null | 变更时间 |
 | 8 | freceiver_tag | 接收人_详情 | text | 0 |  |  | null | 接收人_详情 |
 | 9 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |

@@ -1,8 +1,8 @@
-# 应收收款定时核销-ar_rpa_settlescheme
+# 应收基础资料模板-ar_rpa_settlescheme
 
-## 应收收款定时核销-主表 t_ar_rpascheme
+## 应收基础资料模板-主表 t_ar_rpascheme
 
-- **表名称：** 应收收款定时核销-主表
+- **表名称：** 应收基础资料模板-主表
 - **表名：** t_ar_rpascheme
 
 ### 表格列定义
@@ -12,17 +12,17 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fremark | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
 | 3 | fname | 方案名称 | varchar | 100 |  | √ | ' ' | 方案名称 |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 6 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 7 | fstatus | 数据状态 | varchar | 5 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 8 | fsheduleplanid | 调度计划id | varchar | 50 |  | √ | ' ' | 调度计划id |
 | 9 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fenable | 使用状态 | bpchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :启用 |
 | 12 | fexceplandesc | 执行计划 | varchar | 255 |  | √ | ' ' | 执行计划 |
 | 13 | fnumber | 方案编码 | varchar | 80 |  | √ | ' ' | 方案编码 |
-| 14 | fexecuterid | 执行人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fexecuterid | 执行人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 
@@ -49,7 +49,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | forgid | 结算组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | forgid | 结算组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 4 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 
@@ -69,9 +69,9 @@
 
 ---
 
-## 应收收款定时核销-多语言表 t_ar_rpascheme_l
+## 应收基础资料模板-多语言表 t_ar_rpascheme_l
 
-- **表名称：** 应收收款定时核销-多语言表
+- **表名称：** 应收基础资料模板-多语言表
 - **表名：** t_ar_rpascheme_l
 
 ### 表格列定义
@@ -120,7 +120,7 @@
 | 11 | fmatchfieldinfo | 匹配字段信息 | varchar | 2000 |  | √ | ' ' | 匹配字段信息 |
 | 12 | fasstbill | 辅方单据 | varchar | 30 |  | √ | ' ' | 辅方单据 |
 | 13 | fmainfilter | 主方过滤条件 | varchar | 255 |  | √ | ' ' | 主方过滤条件 |
-| 14 | fcurrencymatch | 币别匹配规则 | varchar | 5 |  | √ | '0' | 币别匹配规则,枚举: 0 :相同 |
+| 14 | fcurrencymatch | 币种匹配规则 | varchar | 5 |  | √ | '0' | 币种匹配规则,枚举: 0 :相同 |
 | 15 | fasstactmatch | 往来单位匹配规则 | varchar | 5 |  | √ | ' ' | 往来单位匹配规则,枚举: 0 :相同 1 :可以不同 |
 | 16 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 17 | fasstfilter_tag | 辅方过滤条件_详情 | text | 0 |  |  | null | 辅方过滤条件_详情 |

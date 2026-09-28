@@ -1,4 +1,4 @@
-# 项目归集配置单-pca_collconfig
+# 项目归集映射配置-pca_collconfig
 
 ## 字段映射-子表 t_pca_collfieldmapentity
 
@@ -38,9 +38,9 @@
 
 ---
 
-## 项目归集配置单-多语言表 t_pca_costcollectconfig_l
+## 项目归集映射配置-多语言表 t_pca_costcollectconfig_l
 
-- **表名称：** 项目归集配置单-多语言表
+- **表名称：** 项目归集映射配置-多语言表
 - **表名：** t_pca_costcollectconfig_l
 
 ### 表格列定义
@@ -67,9 +67,9 @@
 
 ---
 
-## 项目归集配置单-主表 t_pca_costcollectconfig
+## 项目归集映射配置-主表 t_pca_costcollectconfig
 
-- **表名称：** 项目归集配置单-主表
+- **表名称：** 项目归集映射配置-主表
 - **表名：** t_pca_costcollectconfig
 
 ### 表格列定义
@@ -79,21 +79,25 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fremark | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
 | 3 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 6 | forgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | forgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | ffilter_tag | 过滤条件_详情 | text | 0 |  |  | ' ' | 过滤条件_详情 |
-| 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 9 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 11 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 12 | fcostbillid | 成本单据 | varchar | 255 |  | √ | ' ' | 主实体对象 bos_entityobject |
-| 13 | fpreset | 系统预设 | bpchar | 1 |  | √ | '0' | 系统预设 |
-| 14 | fsourcebillid | 源单 | varchar | 255 |  | √ | ' ' | 主实体对象 bos_entityobject |
-| 15 | fenable | 使用状态 | varchar | 30 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 16 | ffilter | 过滤条件 | varchar | 2000 |  | √ | ' ' | 过滤条件 |
-| 17 | fplugin | 插件 | varchar | 255 |  | √ | ' ' | 插件 |
-| 18 | fnumber | 编码 | varchar | 255 |  | √ | ' ' | 编码 |
+| 8 | fauditdate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
+| 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 10 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 12 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
+| 13 | ffieldscope | ffieldscope | varchar | 255 |  | √ | ' ' |  |
+| 14 | fcostbillid | 成本单据 | varchar | 255 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
+| 15 | fpreset | 系统预设 | bpchar | 1 |  | √ | '0' | 系统预设 |
+| 16 | fsourcebillid | 源单 | varchar | 255 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
+| 17 | fbasedatatype | 数据基础资料类型 | varchar | 255 |  | √ | ' ' | 数据基础资料类型 |
+| 18 | fenable | 使用状态 | varchar | 30 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 19 | ffilter | 过滤条件 | varchar | 2000 |  | √ | ' ' | 过滤条件 |
+| 20 | fplugin | 插件 | varchar | 255 |  | √ | ' ' | 插件 |
+| 21 | fnumber | 编码 | varchar | 255 |  | √ | ' ' | 编码 |
+| 22 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

@@ -12,13 +12,13 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fremark | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
 | 3 | fname | 横道类型名称 | varchar | 50 |  | √ | ' ' | 横道类型名称 |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 6 | fcrosstype | 横道类型 | varchar | 5 |  | √ | ' ' | 横道类型,枚举: 1 :当前横道 2 :完成百分比横道 3 :计划横道 4 :实际横道 5 :尚需横道 6 :目标横道 |
 | 7 | fcrossobj | 横道对象 | varchar | 5 |  | √ | ' ' | 横道对象,枚举: 1 :任务横道 2 :里程碑横道 3 :关键路径横道 4 :汇总横道 5 :空闲横道 6 :二级关键路径横道 |
 | 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 9 | fstatus | 数据状态 | varchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 12 | fenable | 使用状态 | varchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 13 | fnumber | 横道类型编码 | varchar | 30 |  | √ | ' ' | 横道类型编码 |

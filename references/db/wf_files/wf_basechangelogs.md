@@ -15,9 +15,9 @@
 | 4 | fdetail | 内容 | text | 0 |  |  | null | 内容 |
 | 5 | ftype | 基础资料类型 | varchar | 30 |  | √ | ' ' | 基础资料类型,枚举: admin :流程管理员 role :工作流角色 orgtype :组织类型 comment :常用审批意见 attribute :单据流程属性 summary :移动单据摘要 |
 | 6 | fmodifydate | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 7 | fop | 操作 | varchar | 30 |  | √ | ' ' | 操作,枚举: insert :新增 modify :修改 delete :删除 enable :启用 disable :禁用 importdata :引入 exportlist :引出 |
+| 7 | fop | 操作 | varchar | 30 |  | √ | ' ' | 操作,枚举: insert :新增 modify :修改 delete :删除 enable :启用 disable :禁用 importdata :导入 exportlist :导出 |
 | 8 | fshowdetail | fshowdetail | varchar | 1000 |  | √ | ' ' |  |
-| 9 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 
@@ -60,5 +60,5 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | t_wf_basechangelogs_l_pkey |  | fpkid |
-| 2 | idx_wf_basechangelogs_l |  | fid,flocaleid |
+| 1 | idx_wf_basechangelogs_l |  | fid,flocaleid |
+| 2 | t_wf_basechangelogs_l_pkey |  | fpkid |

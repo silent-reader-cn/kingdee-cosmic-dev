@@ -11,14 +11,14 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | ftake_time | 接口耗时(ms) | int8 | 64 |  | √ | 0 | 接口耗时(ms) |
-| 3 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fcreate_time | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
 | 5 | finvoice_code | 发票代码 | varchar | 32 |  | √ | ' ' | 发票代码 |
 | 6 | ferrcode | errcode | varchar | 10 |  | √ | ' ' | errcode |
 | 7 | finvoice_no | 发票号码 | varchar | 32 |  | √ | ' ' | 发票号码 |
 | 8 | finterface | 接口类型 | varchar | 50 |  | √ | ' ' | 接口类型 |
 | 9 | fdescription | description | varchar | 200 |  | √ | ' ' | description |
-| 10 | forg | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 10 | forg | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 
 ### 列规则定义
 
@@ -31,5 +31,5 @@
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
 | 1 | idx_rim_check_log_time |  | fcreate_time,ferrcode |
-| 2 | idx_rim_check_log |  | finvoice_code,finvoice_no |
-| 3 | pk_t_rim_check_log |  | fid |
+| 2 | pk_t_rim_check_log |  | fid |
+| 3 | idx_rim_check_log |  | finvoice_code,finvoice_no |

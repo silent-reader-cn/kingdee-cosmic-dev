@@ -1,5 +1,37 @@
 # 项目团队操作记录-mpm_operlog_projecteam
 
+## 项目团队操作记录-主表 t_mpm_proteamoplog
+
+- **表名称：** 项目团队操作记录-主表
+- **表名：** t_mpm_proteamoplog
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
+| 2 | fbizobjectid | 业务对象 | varchar | 80 |  | √ | ' ' | [业务对象 bos_objecttype](../mdl_files/bos_objecttype.md) |
+| 3 | foptime | 操作时间 | timestamp | 0 |  |  | null | 操作时间 |
+| 4 | foptype | 操作类型 | bpchar | 1 |  | √ | 'A' | 操作类型,枚举: A :新增 B :修改 C :删除 |
+| 5 | fobjectid | billid | int8 | 64 |  | √ | 0 | billid |
+| 6 | fuserid | 用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 7 | frelationbillid | 关联单据id | varchar | 255 |  | √ | ' ' | 关联单据id |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fid | fid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_mpm_proteamoplog_fi |  | fobjectid |
+| 2 | pk_mpm_proteamoplog |  | fid |
+
+---
+
 ## 单据体-多语言表 t_mpm_proteamopentry_l
 
 - **表名称：** 单据体-多语言表
@@ -28,38 +60,6 @@
 | :--- | :--- | :--- | :--- |
 | 1 | idx_mpm_protmopen_l_fl |  | fentryid,flocaleid |
 | 2 | pk_mpm_proteamopentry_l |  | fpkid |
-
----
-
-## 项目团队操作记录-主表 t_mpm_proteamoplog
-
-- **表名称：** 项目团队操作记录-主表
-- **表名：** t_mpm_proteamoplog
-
-### 表格列定义
-
-| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fbizobjectid | 业务对象 | varchar | 80 |  | √ | ' ' | 业务对象 bos_objecttype |
-| 3 | foptime | 操作时间 | timestamp | 0 |  |  | null | 操作时间 |
-| 4 | foptype | 操作类型 | bpchar | 1 |  | √ | 'A' | 操作类型,枚举: A :新增 B :修改 C :删除 |
-| 5 | fobjectid | billid | int8 | 64 |  | √ | 0 | billid |
-| 6 | fuserid | 用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 7 | frelationbillid | 关联单据id | varchar | 255 |  | √ | ' ' | 关联单据id |
-
-### 列规则定义
-
-| 序号 | 键编码 | 列字段 |
-| :--- | :--- | :--- |
-| 1 | fid | fid |
-
-### 索引定义
-
-| 序号 | 索引名 | 唯一 | 列字段 |
-| :--- | :--- | :--- | :--- |
-| 1 | idx_mpm_proteamoplog_fi |  | fobjectid |
-| 2 | pk_mpm_proteamoplog |  | fid |
 
 ---
 

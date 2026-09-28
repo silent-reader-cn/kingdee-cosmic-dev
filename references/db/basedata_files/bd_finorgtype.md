@@ -10,14 +10,14 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
 | 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 5 | flongnumber | 长编码 | varchar | 80 |  | √ | ' ' | 长编码 |
 | 6 | fdescription | 描述 | varchar | 255 |  | √ | ' ' | 描述 |
 | 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 8 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 11 | ftype | 类型 | varchar | 30 |  | √ | ' ' | 类型,枚举: 0 :银行 1 :结算中心 3 :财务公司 2 :其他金融机构 4 :第三方支付机构 5 :信托公司 6 :金融资产管理公司 7 :金融租赁公司 8 :证券公司 9 :基金管理公司 10 :保险公司 11 :其他 |
 | 12 | fnameloc | fnameloc | varchar | 50 |  | √ | ' ' |  |

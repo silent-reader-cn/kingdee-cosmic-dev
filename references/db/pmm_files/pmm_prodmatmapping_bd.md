@@ -12,14 +12,16 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fmodifierid | fmodifierid | int8 | 64 |  | √ | 0 |  |
 | 3 | fcategory | fcategory | int8 | 64 |  | √ | 0 |  |
-| 4 | fcreatorid | fcreatorid | int8 | 64 |  | √ | 0 |  |
-| 5 | fgoodsid | 商品 | int8 | 64 |  | √ | 0 | 商品管理 pmm_prodmanage |
-| 6 | fmaterialid | 物料 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 4 | fecgoodsid | fecgoodsid | int8 | 64 |  | √ | 0 |  |
+| 5 | fgoodsid | 商品 | int8 | 64 |  | √ | 0 | [自建商品池 pmm_prodmanage](../pmm_files/pmm_prodmanage.md) |
+| 6 | fmaterialid | 物料 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 7 | fcreatetime | fcreatetime | timestamp | 0 |  |  | null |  |
-| 8 | fpurchasetype | fpurchasetype | int8 | 64 |  | √ | 0 |  |
-| 9 | fbilldate | fbilldate | timestamp | 0 |  |  | null |  |
-| 10 | fbillno | fbillno | varchar | 80 |  | √ | ' ' |  |
-| 11 | fmodifytime | fmodifytime | timestamp | 0 |  |  | null |  |
+| 8 | fbilldate | fbilldate | timestamp | 0 |  |  | null |  |
+| 9 | fmodifytime | fmodifytime | timestamp | 0 |  |  | null |  |
+| 10 | fcreatorid | fcreatorid | int8 | 64 |  | √ | 0 |  |
+| 11 | fpurchasetype | fpurchasetype | int8 | 64 |  | √ | 0 |  |
+| 12 | fplatform | fplatform | bpchar | 1 |  | √ | ' ' |  |
+| 13 | fbillno | fbillno | varchar | 80 |  | √ | ' ' |  |
 
 ### 列规则定义
 

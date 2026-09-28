@@ -13,7 +13,7 @@
 | 2 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 3 | fcheckrule | 自动检查规则 | varchar | 80 |  | √ | ' ' | 自动检查规则 |
 | 4 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 5 | ftaskcheckid | 检查项 | int8 | 64 |  | √ | 0 | 人工检查项 task_checkpoint |
+| 5 | ftaskcheckid | 检查项 | int8 | 64 |  | √ | 0 | [人工检查项 task_checkpoint](../ssc_files/task_checkpoint.md) |
 | 6 | fchecktype | 类型 | bpchar | 1 |  | √ | '0' | 类型,枚举: 0 :自动 1 :手动 |
 
 ### 列规则定义
@@ -42,10 +42,10 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fexecuteoprt | 执行操作 | varchar | 50 |  | √ | ' ' | 执行操作 |
-| 3 | fautodecision | 智能检查项方案配置 | int8 | 64 |  | √ | 0 | 决策方案 idi_schema |
+| 3 | fautodecision | 智能检查项方案配置 | int8 | 64 |  | √ | 0 | [决策方案 idi_schema](../idi_files/idi_schema.md) |
 | 4 | fissame | 与前置任务处理人不同 | bpchar | 1 |  | √ | '0' | 与前置任务处理人不同 |
 | 5 | ftaskcount | 最大分配任务条数 | int8 | 64 |  | √ | 0 | 最大分配任务条数 |
-| 6 | ftasktypeid | 任务类型 | int8 | 64 |  | √ | 0 | 任务类型 task_tasktype |
+| 6 | ftasktypeid | 任务类型 | int8 | 64 |  | √ | 0 | [任务类型 task_tasktype](../ssc_files/task_tasktype.md) |
 | 7 | fbillattriconfigjson_tag | 单据修改权限配置json_详情 | text | 0 |  |  | null | 单据修改权限配置json_详情 |
 | 8 | fimagenumgenoprtnumber | 影像编码生成节点编码 | varchar | 50 |  | √ | ' ' | 影像编码生成节点编码 |
 | 9 | fisvoucherhandler | 共享处理人为凭证制单人 | bpchar | 1 |  | √ | '0' | 共享处理人为凭证制单人 |
@@ -57,12 +57,12 @@
 | 15 | freverseoprt | 反向操作 | varchar | 50 |  | √ | ' ' | 反向操作 |
 | 16 | fisintelldecision | 是否启用小K洞察 | bpchar | 1 |  | √ | '0' | 是否启用小K洞察 |
 | 17 | ftasksubject | 任务主题 | varchar | 500 |  | √ | ' ' | 任务主题 |
-| 18 | fchildssc | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 18 | fchildssc | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 19 | fneedimage | 是否需要影像上传 | bpchar | 1 |  | √ | '0' | 是否需要影像上传 |
 | 20 | fbillattriconfigjson | 单据修改权限配置json | varchar | 128 |  | √ | ' ' | 单据修改权限配置json |
 | 21 | ftaskoprtnumber | 任务触发操作编码 | varchar | 50 |  | √ | ' ' | 任务触发操作编码 |
 | 22 | freverseoprtnumber | 反向操作编码 | varchar | 50 |  | √ | ' ' | 反向操作编码 |
-| 23 | fpretasktypeid | 前置触发任务 | int8 | 64 |  | √ | 0 | 任务类型 task_tasktype |
+| 23 | fpretasktypeid | 前置触发任务 | int8 | 64 |  | √ | 0 | [任务类型 task_tasktype](../ssc_files/task_tasktype.md) |
 | 24 | fimagenumgenoprt | 创建影像编码节点 | varchar | 50 |  | √ | ' ' | 创建影像编码节点 |
 | 25 | fnexttasks | 后置任务 | varchar | 100 |  | √ | ' ' | 后置任务 |
 | 26 | fbillattriconfig | 单据权限配置 | varchar | 2000 |  | √ | ' ' | 单据权限配置 |
@@ -131,7 +131,7 @@
 | 3 | fpriorityrule | 满足优先级的条件 | varchar | 2000 |  | √ | ' ' | 满足优先级的条件 |
 | 4 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 5 | fwarningtime | 预警时间（小时） | numeric | 10 | 2 | √ | 0.00 | 预警时间（小时） |
-| 6 | fpriorityid | 优先级 | int8 | 64 |  | √ | 0 | 任务优先级 task_tasklevel |
+| 6 | fpriorityid | 优先级 | int8 | 64 |  | √ | 0 | [任务优先级 task_tasklevel](../ssc_files/task_tasklevel.md) |
 | 7 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 8 | fpriorityrulejson | 满足优先级的条件Json | text | 0 |  |  | null | 满足优先级的条件Json |
 | 9 | fpriorityrulejson_tag | 满足优先级的条件Json_详情 | text | 0 |  |  | null | 满足优先级的条件Json_详情 |
@@ -161,7 +161,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 任务类型 task_tasktype |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [任务类型 task_tasktype](../ssc_files/task_tasktype.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -195,7 +195,7 @@
 | 5 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 6 | frelation | 逻辑 | bpchar | 1 |  | √ | '0' | 逻辑,枚举: 0 :AND 1 :OR |
 | 7 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 8 | fcomparesign | 比较符 | bpchar | 1 |  | √ | '0' | 比较符,枚举: 0 :> 1 := 5 :<= |
+| 8 | fcomparesign | 比较符 | bpchar | 1 |  | √ | '0' | 比较符,枚举: 0 :> 1 :< 2 := 3 :!= 4 :>= 5 :<= |
 
 ### 列规则定义
 
@@ -222,7 +222,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 决策方案 idi_schema |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [决策方案 idi_schema](../idi_files/idi_schema.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -250,7 +250,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 人工检查项 task_checkpoint |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [人工检查项 task_checkpoint](../ssc_files/task_checkpoint.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -263,6 +263,6 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | pk_t_tk_articheckpointconfig |  | fpkid |
-| 2 | idx_ssc_checkpointconfig_bdt |  | fbasedataid |
+| 1 | idx_ssc_checkpointconfig_bdt |  | fbasedataid |
+| 2 | pk_t_tk_articheckpointconfig |  | fpkid |
 | 3 | idx_ssc_checkpointconfig_id |  | fid |

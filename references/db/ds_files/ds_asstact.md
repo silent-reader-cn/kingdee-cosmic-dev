@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | varchar | 20 |  | √ | ' ' | id |
 | 2 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
-| 3 | fssid | 来源系统 | int8 | 64 |  | √ | 0 | 来源系统 ds_srcsys |
+| 3 | fssid | 来源系统 | int8 | 64 |  | √ | 0 | [来源系统 ds_srcsys](../ds_files/ds_srcsys.md) |
 | 4 | fasstacttypeid | 核算项目类型ID | varchar | 100 |  | √ | ' ' | 核算项目类型ID |
 | 5 | fgroupnumber | 核算项目类型 | varchar | 100 |  | √ | ' ' | 核算项目类型 |
 | 6 | fnumber | 编码 | varchar | 255 |  | √ | ' ' | 编码 |

@@ -9,7 +9,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fobjtypeid | 对象类型 | varchar | 255 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 1 | fobjtypeid | 对象类型 | varchar | 255 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 2 | ffisrepaired | 是否已修复 | bpchar | 1 |  | √ | '0' | 是否已修复 |
 | 3 | fobjid | 异常对象ID | int8 | 64 |  | √ | 0 | 异常对象ID |
 | 4 | fextralinfo | 其它信息 | varchar | 255 |  | √ | ' ' | 其它信息 |
@@ -44,10 +44,10 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fstatus | 状态 | varchar | 30 |  | √ | ' ' | 状态,枚举: A :进行中 B :已完成 |
-| 3 | fuserid | 检查用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fuserid | 检查用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fappnum | 所属应用 | varchar | 10 |  | √ | ' ' | 所属应用,枚举: sco :标准成本 aca :实际成本 |
 | 5 | fchecktime | 检查日期 | timestamp | 0 |  |  | null | 检查日期 |
-| 6 | fchecktaskid | 检查任务 | int8 | 64 |  | √ | 0 | 数据检查任务 sco_datachecktask |
+| 6 | fchecktaskid | 检查任务 | int8 | 64 |  | √ | 0 | [数据检查任务 sco_datachecktask](../sco_files/sco_datachecktask.md) |
 
 ### 列规则定义
 
@@ -78,7 +78,7 @@
 | 3 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 4 | fruningstatus | 运行状态 | varchar | 30 |  | √ | ' ' | 运行状态,枚举: A :未开始 B :运行中 C :已完成 |
 | 5 | fdescription | 描述 | varchar | 255 |  | √ | ' ' | 描述 |
-| 6 | fcheckitemid | 检查项 | int8 | 64 |  | √ | 0 | 数据检查项 sco_datacheckitem |
+| 6 | fcheckitemid | 检查项 | int8 | 64 |  | √ | 0 | [数据检查项 sco_datacheckitem](../sco_files/sco_datacheckitem.md) |
 | 7 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 
 ### 列规则定义

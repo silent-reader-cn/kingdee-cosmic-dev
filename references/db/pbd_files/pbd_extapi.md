@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fisenable | 启用 | bpchar | 1 |  | √ | ' ' | 启用 |
-| 3 | fbillform | 表单 | varchar | 80 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 3 | fbillform | 表单 | varchar | 80 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 4 | fentityoperate | 表单操作 | varchar | 80 |  | √ | ' ' | 表单操作,枚举: |
 | 5 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |

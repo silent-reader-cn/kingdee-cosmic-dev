@@ -12,7 +12,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fissunrest | 周日 | bpchar | 1 |  | √ | ' ' | 周日 |
 | 3 | fexpiringyearto | 结束年 | varchar | 64 |  | √ | ' ' | 结束年,枚举: |
-| 4 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 4 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | fminofendtimeam | 工作日上午结束-分 | int8 | 64 |  | √ | 0 | 工作日上午结束-分 |
 | 6 | fiswedrest | 周三 | bpchar | 1 |  | √ | ' ' | 周三 |
 | 7 | fishalfmonrest | 周一 | bpchar | 1 |  | √ | ' ' | 周一 |
@@ -21,7 +21,7 @@
 | 10 | fishalftuerest | 周二 | bpchar | 1 |  | √ | ' ' | 周二 |
 | 11 | fishalfsatrest | 周六 | bpchar | 1 |  | √ | ' ' | 周六 |
 | 12 | fstatus | 数据状态 | varchar | 64 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 15 | fishalfwedrest | 周三 | bpchar | 1 |  | √ | ' ' | 周三 |
 | 16 | fhourofendtimepm | 工作日下午结束-时 | int8 | 64 |  | √ | 0 | 工作日下午结束-时 |
@@ -29,9 +29,9 @@
 | 18 | fishalfthurest | 周四 | bpchar | 1 |  | √ | ' ' | 周四 |
 | 19 | fismonrest | 周一 | bpchar | 1 |  | √ | ' ' | 周一 |
 | 20 | fhourofendtimeam | 工作日上午结束-时 | int8 | 64 |  | √ | 0 | 工作日上午结束-时 |
-| 21 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 21 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 22 | fname | 名称 | varchar | 64 |  | √ | ' ' | 名称 |
-| 23 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 23 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 24 | fminofbegintimepm | 工作日下午开始-分 | int8 | 64 |  | √ | 0 | 工作日下午开始-分 |
 | 25 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 26 | fisindividuation | 个性化标志 | int4 | 32 |  | √ | 0 | 个性化标志 |

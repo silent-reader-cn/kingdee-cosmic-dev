@@ -38,5 +38,5 @@
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
 | 1 | idx_wf_processcfg_pdef |  | fprocdefid |
-| 2 | t_wf_processconfig_pkey |  | fid |
-| 3 | idx_wf_processcfg_enti_oper |  | fentitynumber,foperation,fisallownextperson,fenable |
+| 2 | idx_wf_processcfg_enti_oper |  | fentitynumber,foperation,fisallownextperson,fenable |
+| 3 | t_wf_processconfig_pkey |  | fid |

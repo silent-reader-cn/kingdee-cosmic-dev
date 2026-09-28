@@ -12,7 +12,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fsnnumbertext | 序列号文本 | varchar | 80 |  | √ | ' ' | 序列号文本 |
 | 3 | fmatchentryid | 匹配分录id | int8 | 64 |  | √ | 0 | 匹配分录id |
-| 4 | fsnnumberid | 序列号 | int8 | 64 |  | √ | 0 | 序列号主档 bd_snmainfile |
+| 4 | fsnnumberid | 序列号 | int8 | 64 |  | √ | 0 | [序列号主档 bd_snmainfile](../sbd_files/bd_snmainfile.md) |
 
 ### 列规则定义
 

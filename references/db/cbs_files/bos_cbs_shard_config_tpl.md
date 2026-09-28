@@ -1,8 +1,8 @@
-# 分片配置模板-bos_cbs_shard_config_tpl
+# 分表配置模板-bos_cbs_shard_config_tpl
 
-## 分片配置模板-多语言表 t_cbs_shard_config_tpl_l
+## 分表配置模板-多语言表 t_cbs_shard_config_tpl_l
 
-- **表名称：** 分片配置模板-多语言表
+- **表名称：** 分表配置模板-多语言表
 - **表名：** t_cbs_shard_config_tpl_l
 
 ### 表格列定义
@@ -29,9 +29,9 @@
 
 ---
 
-## 分片配置模板-主表 t_cbs_shard_config_tpl
+## 分表配置模板-主表 t_cbs_shard_config_tpl
 
-- **表名称：** 分片配置模板-主表
+- **表名称：** 分表配置模板-主表
 - **表名：** t_cbs_shard_config_tpl
 
 ### 表格列定义
@@ -41,10 +41,10 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fstrategyzh_cn | 分片策略 | varchar | 100 |  | √ | ' ' | 分片策略 |
 | 3 | fstrategyparams | 分片策略参数 | varchar | 1000 |  | √ | ' ' | 分片策略参数 |
-| 4 | fentitynumber | 表单 | varchar | 50 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 4 | fentitynumber | 实体 | varchar | 50 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 5 | fshardingfields | 分片属性 | varchar | 200 |  | √ | ' ' | 分片属性 |
 | 6 | fstrategy | 分片策略值 | varchar | 50 |  | √ | ' ' | 分片策略值 |
-| 7 | fnumber | 表单编码 | varchar | 50 |  | √ | ' ' | 表单编码 |
+| 7 | fnumber | 实体编码 | varchar | 50 |  | √ | ' ' | 实体编码 |
 | 8 | fisoem | 是否原厂 | bpchar | 1 |  | √ | ' ' | 是否原厂 |
 
 ### 列规则定义

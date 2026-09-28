@@ -1,8 +1,8 @@
-# 基础资料引入分配-bd_assign_import
+# 基础资料导入分配-bd_assign_import
 
-## 基础资料引入分配-主表 t_assign_import
+## 基础资料导入分配-主表 t_assign_import
 
-- **表名称：** 基础资料引入分配-主表
+- **表名称：** 基础资料导入分配-主表
 - **表名：** t_assign_import
 
 ### 表格列定义

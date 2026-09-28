@@ -18,12 +18,12 @@
 | 7 | fdepredamount | 已折旧期间数 | numeric | 23 | 10 | √ | 0.0000000000 | 已折旧期间数 |
 | 8 | fbfpreresidualval | 重估前残值 | numeric | 19 | 6 | √ | 0.000000 | 重估前残值 |
 | 9 | fbfyearorigvalchg | 重估前本年原值变动 | numeric | 19 | 6 | √ | 0.000000 | 重估前本年原值变动 |
-| 10 | ffincardid | 财务卡片 | int8 | 64 |  | √ | 0 | 财务卡片基础资料 fa_card_fin_base |
+| 10 | ffincardid | 财务卡片 | int8 | 64 |  | √ | 0 | [财务卡片基础资料 fa_card_fin_base](../fa_files/fa_card_fin_base.md) |
 | 11 | fmonthorigvalchg | 本期原值变动 | numeric | 19 | 6 | √ | 0.000000 | 本期原值变动 |
 | 12 | fmonthdepre | 本期折旧 | numeric | 19 | 6 | √ | 0.000000 | 本期折旧 |
 | 13 | fbfdepredamount | 重估前已折旧期间数 | numeric | 23 | 10 | √ | 0.0000000000 | 重估前已折旧期间数 |
 | 14 | fbfnetamount | 重估前净额 | numeric | 19 | 6 | √ | 0.000000 | 重估前净额 |
-| 15 | frealcardid | 卡片编号 | int8 | 64 |  | √ | 0 | 资产卡片基础资料 fa_card_real_base |
+| 15 | frealcardid | 卡片编号 | int8 | 64 |  | √ | 0 | [资产卡片基础资料 fa_card_real_base](../fa_files/fa_card_real_base.md) |
 | 16 | fbfaccumdepre | 重估前累计折旧 | numeric | 19 | 6 | √ | 0.000000 | 重估前累计折旧 |
 | 17 | fbfmonthdepre | 重估前本期折旧 | numeric | 19 | 6 | √ | 0.000000 | 重估前本期折旧 |
 | 18 | faddupyea | 本年累计折旧 | numeric | 19 | 6 | √ | 0.000000 | 本年累计折旧 |
@@ -34,7 +34,7 @@
 | 23 | fnetworth | 净值 | numeric | 19 | 6 | √ | 0.000000 | 净值 |
 | 24 | fbfmonthorigvalchg | 重估前本期原值变动 | numeric | 19 | 6 | √ | 0.000000 | 重估前本期原值变动 |
 | 25 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 26 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 26 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 
 ### 列规则定义
 
@@ -61,18 +61,18 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fbillstatus | 单据状态 | bpchar | 1 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 5 | forgid | 货主组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | forgid | 货主组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | fauditdate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
 | 7 | fcoefficientf | 重估系数（%） | numeric | 23 | 10 | √ | 0.0000000000 | 重估系数（%） |
 | 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | fbizdate | 重估日期 | timestamp | 0 |  |  | null | 重估日期 |
 | 11 | fbillno | 重估单号 | varchar | 30 |  | √ | ' ' | 重估单号 |
-| 12 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 13 | fdepreuseid | 折旧用途 | int8 | 64 |  | √ | 0 | 折旧用途 fa_depreuse |
+| 12 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 13 | fdepreuseid | 折旧用途 | int8 | 64 |  | √ | 0 | [折旧用途 fa_depreuse](../fa_files/fa_depreuse.md) |
 
 ### 列规则定义
 

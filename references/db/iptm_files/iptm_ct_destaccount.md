@@ -41,19 +41,20 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 目标数据中心名称 | varchar | 50 |  | √ | ' ' | 目标数据中心名称 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 5 | fappsecuret_enp | fappsecuret_enp | text | 0 |  |  | null |  |
 | 6 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 7 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 10 | fappsecuret | 目标环境传输密钥(iptm对应的密钥) | varchar | 1001 |  | √ | ' ' | 目标环境传输密钥(iptm对应的密钥) |
-| 11 | fenable | 使用状态 | varchar | 50 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 12 | fnumber | 目标数据中心ID | varchar | 30 |  | √ | ' ' | 目标数据中心ID |
-| 13 | fevntype | 目标环境类型 | varchar | 50 |  | √ | ' ' | 目标环境类型,枚举: 5 :开发环境 0 :配置环境 4 :SIT环境 2 :UAT环境 1 :生产环境 6 :非受控环境 |
-| 14 | fisdefault | 默认数据中心 | bpchar | 1 |  | √ | '0' | 默认数据中心 |
-| 15 | fevnurl | 目标环境地址 | varchar | 50 |  | √ | ' ' | 目标环境地址 |
+| 10 | fxacgwsecret | 目标环境的x-acgw-identity密钥（简称网关密钥） | varchar | 1001 |  | √ | ' ' | 目标环境的x-acgw-identity密钥（简称网关密钥） |
+| 11 | fappsecuret | 目标环境的AccessToken认证密钥 | varchar | 1001 |  | √ | ' ' | 目标环境的AccessToken认证密钥 |
+| 12 | fenable | 使用状态 | varchar | 50 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 13 | fnumber | 目标数据中心ID | varchar | 30 |  | √ | ' ' | 目标数据中心ID |
+| 14 | fevntype | 目标环境类型 | varchar | 50 |  | √ | ' ' | 目标环境类型,枚举: 5 :开发环境 0 :配置环境 4 :SIT环境 2 :UAT环境 1 :生产环境 6 :非受控环境 |
+| 15 | fisdefault | 默认数据中心 | bpchar | 1 |  | √ | '0' | 默认数据中心 |
+| 16 | fevnurl | 目标环境地址 | varchar | 50 |  | √ | ' ' | 目标环境地址 |
 
 ### 列规则定义
 

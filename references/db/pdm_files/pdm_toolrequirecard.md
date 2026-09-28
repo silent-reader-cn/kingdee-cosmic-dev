@@ -105,7 +105,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 2 | fuserid | 维护人员 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fuserid | 维护人员 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 | id |
 | 4 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 
@@ -133,7 +133,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 2 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 | 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 
@@ -166,11 +166,11 @@
 | 3 | ftoolstatus | 工卡工具需求维护状态 | varchar | 50 |  | √ | ' ' | 工卡工具需求维护状态,枚举: A :未开始 B :已分配 C :已完成 D :取消 |
 | 4 | fmoddate | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 5 | fsrcbillid | 来源单据ID | int8 | 64 |  | √ | 0 | 来源单据ID |
-| 6 | fmoduser | 修改人 | varchar | 50 |  | √ | ' ' | 人员 bos_user |
+| 6 | fmoduser | 修改人 | varchar | 50 |  | √ | ' ' | [人员 bos_user](../base_files/bos_user.md) |
 | 7 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 8 | fworkcardtoolid | 工卡工具需求 | int8 | 64 |  | √ | 0 | 工卡工具需求 mpdm_cardtooldemand |
+| 8 | fworkcardtoolid | 工卡工具需求 | int8 | 64 |  | √ | 0 | [工卡工具需求 mpdm_cardtooldemand](../mpdm_files/mpdm_cardtooldemand.md) |
 | 9 | fsrcbillentity | 来源单据实体 | varchar | 50 |  | √ | ' ' | 来源单据实体 |
-| 10 | fcardnum | 工卡编码 | int8 | 64 |  | √ | 0 | 工卡 mpdm_mrocardroute |
+| 10 | fcardnum | 工卡编码 | int8 | 64 |  | √ | 0 | [工卡 mpdm_mrocardroute](../mpdm_files/mpdm_mrocardroute.md) |
 | 11 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 12 | fsrcbillentryid | 来源单据分录ID | int8 | 64 |  | √ | 0 | 来源单据分录ID |
 
@@ -200,22 +200,22 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fenginetype | 发动机型号 | int8 | 64 |  | √ | 0 | 发动机型号 mpdm_enginetype |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fenginetype | 发动机型号 | int8 | 64 |  | √ | 0 | [发动机型号 mpdm_enginetype](../mpdm_files/mpdm_enginetype.md) |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fbillstatus | 单据状态 | varchar | 50 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 6 | fmratype | 检修设备类型 | int8 | 64 |  | √ | 0 | 检修设备类型 mpdm_mrtype |
-| 7 | forgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 8 | fprojectnum | 项目编码 | int8 | 64 |  | √ | 0 | 项目 pmpd_project |
+| 6 | fmratype | 检修设备类型 | int8 | 64 |  | √ | 0 | [检修设备类型 mpdm_mrtype](../mpdm_files/mpdm_mrtype.md) |
+| 7 | forgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 8 | fprojectnum | 项目编码 | int8 | 64 |  | √ | 0 | [项目 pmpd_project](../fmm_files/pmpd_project.md) |
 | 9 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
-| 10 | fcheckregno | 检修设备注册号 | int8 | 64 |  | √ | 0 | 物料检修信息 mpdm_materialmtcinfo |
+| 10 | fcheckregno | 检修设备注册号 | int8 | 64 |  | √ | 0 | [物料检修信息 mpdm_materialmtcinfo](../mpdm_files/mpdm_materialmtcinfo.md) |
 | 11 | fsource | 单据来源 | varchar | 5 |  | √ | ' ' | 单据来源,枚举: A :工作包 B :项目范围 |
 | 12 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 13 | fprojectrange | 项目范围 | int8 | 64 |  | √ | 0 | 项目范围F7（废弃） pdm_projectscope_f7 |
-| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fprojectrange | 项目范围 | int8 | 64 |  | √ | 0 | [项目范围F7（废弃） pdm_projectscope_f7](../pdm_files/pdm_projectscope_f7.md) |
+| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | ftoolcreatestatus | 工卡工具创建状态 | varchar | 50 |  | √ | ' ' | 工卡工具创建状态,枚举: A :未完成 B :已完成 |
 | 16 | fbillno | 单据编号 | varchar | 50 |  | √ | ' ' | 单据编号 |
-| 17 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 17 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

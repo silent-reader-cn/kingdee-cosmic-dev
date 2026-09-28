@@ -12,8 +12,8 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | famount | 金额 | numeric | 23 | 10 |  | null | 金额 |
 | 3 | freportdate | 报告期 | timestamp | 0 |  |  | null | 报告期 |
-| 4 | fipoorgld | IPO主体 | int8 | 64 |  | √ | 0 | IPO编制组织 ipo_org |
-| 5 | ffinreportitem | IPO财务报表项目 | int8 | 64 |  | √ | 0 | 财务报表项目 ipo_fin_report_item |
+| 4 | fipoorgld | IPO主体 | int8 | 64 |  | √ | 0 | [IPO编制组织 ipo_org](../ipobase_files/ipo_org.md) |
+| 5 | ffinreportitem | IPO财务报表项目 | int8 | 64 |  | √ | 0 | [财务报表项目 ipo_fin_report_item](../ipobase_files/ipo_fin_report_item.md) |
 | 6 | fcreatedate | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
 | 7 | fsourcetype | fsourcetype | varchar | 50 |  | √ | ' ' |  |
 | 8 | fcreater | fcreater | int8 | 64 |  | √ | 0 |  |

@@ -10,11 +10,11 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreator | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fcreator | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fname | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
 | 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 5 | fdemo2 | demo2 | int8 | 64 |  | √ | 0 | 基础资料demo2 isc_demo_basedata_2 |
-| 6 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | fdemo2 | demo2 | int8 | 64 |  | √ | 0 | [基础资料demo2 isc_demo_basedata_2](../iscb_files/isc_demo_basedata_2.md) |
+| 6 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 7 | fnumber | 编码 | varchar | 100 |  | √ | ' ' | 编码 |
 | 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 
@@ -28,8 +28,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_isc_demo_base_4 |  | fnumber |
-| 2 | t_isc_demo_basedata_4_pkey |  | fid |
+| 1 | t_isc_demo_basedata_4_pkey |  | fid |
+| 2 | idx_isc_demo_base_4 |  | fnumber |
 
 ---
 

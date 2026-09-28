@@ -43,7 +43,7 @@
 | 2 | flevel | 操作级别 | varchar | 30 |  | √ | ' ' | 操作级别,枚举: A :提醒 B :自动生成 |
 | 3 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 4 | fopcycle | 操作周期 | varchar | 30 |  | √ | ' ' | 操作周期,枚举: A :每半天 B :每日 C :每周 D :每月 E :不重复 |
-| 5 | fcheckitemid | 检查项 | int8 | 64 |  | √ | 0 | 数据检查项 sco_datacheckitem |
+| 5 | fcheckitemid | 检查项 | int8 | 64 |  | √ | 0 | [数据检查项 sco_datacheckitem](../sco_files/sco_datacheckitem.md) |
 | 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 7 | fentryenable | 启用 | bpchar | 1 |  | √ | '0' | 启用 |
 
@@ -74,9 +74,9 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fstatus | 使用状态 | varchar | 30 |  | √ | '0' | 使用状态,枚举: 1 :启用 0 :禁用 |
 | 3 | fcreatedate | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
-| 4 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 5 | foperatorid | 执行人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 6 | freceiverid | 消息接收人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 5 | foperatorid | 执行人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 6 | freceiverid | 消息接收人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 7 | fnumber | 编码 | varchar | 255 |  | √ | ' ' | 编码 |
 | 8 | fappnum | 所属应用 | varchar | 10 |  | √ | ' ' | 所属应用,枚举: sco :标准成本 aca :实际成本 |
 | 9 | fispreset | 系统预置 | bpchar | 1 |  | √ | '0' | 系统预置 |

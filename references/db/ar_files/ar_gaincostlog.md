@@ -41,7 +41,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fbillstatus | 单据状态 | varchar | 5 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 4 | fcreatetime | 执行时间 | timestamp | 0 |  |  | null | 执行时间 |
 | 5 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
@@ -49,10 +49,10 @@
 | 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 8 | foperate | 操作 | varchar | 50 |  | √ | ' ' | 操作,枚举: A :查看失败详情 |
 | 9 | ffailnum | 执行失败数量 | int4 | 32 |  | √ | 0 | 执行失败数量 |
-| 10 | fcreatorid | 执行人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fcreatorid | 执行人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fexecutetype | 执行方式 | varchar | 5 |  | √ | ' ' | 执行方式,枚举: 1 :手工 0 :自动 |
 | 12 | fbillno | 方案编码 | varchar | 80 |  | √ | ' ' | 方案编码 |
-| 13 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

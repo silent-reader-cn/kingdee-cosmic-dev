@@ -10,25 +10,25 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fwdbillobj | 冲减单据 | varchar | 50 |  | √ | ' ' | 业务对象 bos_objecttype |
+| 2 | fwdbillobj | 冲减单据 | varchar | 50 |  | √ | ' ' | [业务对象 bos_objecttype](../mdl_files/bos_objecttype.md) |
 | 3 | fwdbillid | 冲减单单据内码 | int8 | 64 |  | √ | 0 | 冲减单单据内码 |
 | 4 | fauxpropid | 辅助属性 | int8 | 64 |  | √ | 0 | null 001 |
-| 5 | fprojectid | 项目 | int8 | 64 |  | √ | 0 | 项目 bd_project |
+| 5 | fprojectid | 项目 | int8 | 64 |  | √ | 0 | [项目 bd_project](../basedata_files/bd_project.md) |
 | 6 | fwdbillentryid | 冲减单分录内码 | int8 | 64 |  | √ | 0 | 冲减单分录内码 |
-| 7 | fmaterialid | 物料 | int8 | 64 |  | √ | 0 | 物料 bd_material |
-| 8 | fmatverid | 物料版本 | int8 | 64 |  | √ | 0 | 物料版本 bd_bomversion_new |
-| 9 | fconfiguredcode | 配置号 | int8 | 64 |  | √ | 0 | 配置号 bd_configuredcode |
-| 10 | ftracknumid | 跟踪号 | int8 | 64 |  | √ | 0 | 跟踪号 bd_tracknumber |
-| 11 | fmodifierfield | 操作人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 7 | fmaterialid | 物料 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
+| 8 | fmatverid | 物料版本 | int8 | 64 |  | √ | 0 | [物料版本 bd_bomversion_new](../basedata_files/bd_bomversion_new.md) |
+| 9 | fconfiguredcode | 配置号 | int8 | 64 |  | √ | 0 | [配置号（废弃） bd_configuredcode](../sbd_files/bd_configuredcode.md) |
+| 10 | ftracknumid | 跟踪号 | int8 | 64 |  | √ | 0 | [跟踪号 bd_tracknumber](../sbd_files/bd_tracknumber.md) |
+| 11 | fmodifierfield | 操作人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fwdbillno | 冲减单单据编码 | varchar | 80 |  | √ | ' ' | 冲减单单据编码 |
 | 13 | fbaseorderqty | 订单确认数量 | numeric | 23 | 10 | √ | 0 | 订单确认数量 |
 | 14 | fmodifydatefield | 操作时间 | timestamp | 0 |  |  | null | 操作时间 |
 | 15 | fdemandbillno | 需求单据编号 | varchar | 80 |  | √ | ' ' | 需求单据编号 |
 | 16 | fbaseremainqty | 剩余需求数量 | numeric | 23 | 10 | √ | 0 | 剩余需求数量 |
-| 17 | fdemandbillobj | 需求单据 | varchar | 50 |  | √ | ' ' | 业务对象 bos_objecttype |
+| 17 | fdemandbillobj | 需求单据 | varchar | 50 |  | √ | ' ' | [业务对象 bos_objecttype](../mdl_files/bos_objecttype.md) |
 | 18 | fwdbillseq | 冲减单行号 | int8 | 64 |  | √ | 0 | 冲减单行号 |
 | 19 | fdisablestatus | 禁用状态 | bpchar | 1 |  | √ | '0' | 禁用状态,枚举: 0 :启用 1 :禁用 |
-| 20 | fbaseunitid | 基本单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 20 | fbaseunitid | 基本单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 21 | fbasewdqty | 冲减数量 | numeric | 23 | 10 | √ | 0 | 冲减数量 |
 | 22 | fbaseqty | 业务数量 | numeric | 23 | 10 | √ | 0 | 业务数量 |
 | 23 | fdemandbillid | 需求单据内码 | int8 | 64 |  | √ | 0 | 需求单据内码 |

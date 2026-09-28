@@ -39,23 +39,23 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 1 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 2 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 3 | fisleaf | 是否叶子 | bpchar | 1 |  | √ | '1' | 是否叶子 |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
 | 6 | fentitysettingkey | 实体配置 | varchar | 50 |  | √ | ' ' | 实体配置 |
-| 7 | fparentid | 上级 | int8 | 64 |  | √ | 0 | 配置映射 plm_rm_profession |
+| 7 | fparentid | 上级 | int8 | 64 |  | √ | 0 | [配置映射 plm_rm_profession](../plmrm_files/plm_rm_profession.md) |
 | 8 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 9 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 9 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 10 | flongnumber | 长编码 | varchar | 50 |  | √ | ' ' | 长编码 |
-| 11 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 11 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 12 | fctrlstrategy | 控制策略 | varchar | 50 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
 | 13 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 14 | flevel | 级次 | int8 | 64 |  | √ | 0 | 级次 |
 | 15 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 16 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 17 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 17 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 18 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 19 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
 | 20 | fenable | 使用状态 | varchar | 50 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |

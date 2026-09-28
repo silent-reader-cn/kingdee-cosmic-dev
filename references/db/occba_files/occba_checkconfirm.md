@@ -13,7 +13,7 @@
 | 2 | fcheckamount | 确认金额 | numeric | 23 | 10 | √ | 0 | 确认金额 |
 | 3 | fsrcbillno | 源单编号 | varchar | 80 |  | √ | ' ' | 源单编号 |
 | 4 | fsrcbillid | 源单ID | int8 | 64 |  | √ | 0 | 源单ID |
-| 5 | fcheckerid | 确认人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | fcheckerid | 确认人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | fsrcbilltype | 单据类型 | varchar | 80 |  | √ | ' ' | 单据类型 |
 | 7 | fchecktime | 确认时间 | timestamp | 0 |  |  | null | 确认时间 |
 

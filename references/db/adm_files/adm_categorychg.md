@@ -18,10 +18,10 @@
 | 7 | fcategorytype | 类型 | bpchar | 1 |  | √ | 'B' | 类型,枚举: A :物料 B :品类 |
 | 8 | fcategorystatus | 变更后状态 | bpchar | 1 |  | √ | ' ' | 变更后状态,枚举: 1 :有效 2 :无效 3 :冻结 |
 | 9 | fexpirydate | 失效日期 | timestamp | 0 |  |  | null | 失效日期 |
-| 10 | fcategoryid | 采购品类 | int8 | 64 |  | √ | 0 | 物料分类 bd_materialgroup |
-| 11 | fmaterial | 物料名称 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 10 | fcategoryid | 采购品类 | int8 | 64 |  | √ | 0 | [物料分类 bd_materialgroup](../basedata_files/bd_materialgroup.md) |
+| 11 | fmaterial | 物料名称 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 12 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 13 | fcategorystatus_old | 当前品类状态 | bpchar | 1 |  | √ | ' ' | 当前品类状态,枚举: 1 :有效 2 :无效 3 :冻结 4 :退出 9 :未引入 |
+| 13 | fcategorystatus_old | 当前品类状态 | bpchar | 1 |  | √ | ' ' | 当前品类状态,枚举: 1 :有效 2 :无效 3 :冻结 4 :退出 9 :未引入 5 :新增 |
 
 ### 列规则定义
 
@@ -51,11 +51,11 @@
 | 2 | fremark | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
 | 3 | finitiator | 发起方 | bpchar | 1 |  | √ | '0' | 发起方,枚举: 0 :采购方 1 :供应商 |
 | 4 | fbillstatus | 单据状态 | bpchar | 1 |  | √ | ' ' | 单据状态,枚举: A :保存 B :已提交 C :已审核 |
-| 5 | forgid | 采购组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | forgid | 采购组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | fbilldate | 业务日期 | timestamp | 0 |  |  | null | 业务日期 |
-| 7 | flastupdateuserid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 8 | fbizpartnerid | 商务伙伴 | int8 | 64 |  | √ | 0 | 商务伙伴 bd_bizpartner |
-| 9 | fsupplierid | 供应商 | int8 | 64 |  | √ | 0 | 供应商 srm_supplier |
+| 7 | flastupdateuserid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 8 | fbizpartnerid | 商务伙伴 | int8 | 64 |  | √ | 0 | [商务伙伴 bd_bizpartner](../base_files/bd_bizpartner.md) |
+| 9 | fsupplierid | 供应商 | int8 | 64 |  | √ | 0 | [供应商 srm_supplier](../srm_files/srm_supplier.md) |
 | 10 | flastupdatetime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 11 | fauditstatus | 审批状态 | bpchar | 1 |  | √ | ' ' | 审批状态,枚举: A :拟定 B :提交审批 C :审批通过 D :审批驳回 |
 | 12 | fcfmstatus | 确认状态 | bpchar | 1 |  | √ | ' ' | 确认状态,枚举: A :待确认 B :已确认 C :已打回 |
@@ -120,14 +120,14 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fremark | fremark | varchar | 255 |  | √ | ' ' |  |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 4 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 4 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 6 | fauditdate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
 | 7 | fcfmdate | 处理时间 | timestamp | 0 |  |  | null | 处理时间 |
 | 8 | fauditopinion | 审批意见 | varchar | 255 |  | √ | ' ' | 审批意见 |
-| 9 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 10 | fcfmid | 处理人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 10 | fcfmid | 处理人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 
 ### 列规则定义

@@ -14,7 +14,7 @@
 | 3 | fenable | 启用 | bpchar | 1 |  | √ | '1' | 启用 |
 | 4 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 | id |
 | 5 | fclasspath | 插件类路径 | varchar | 200 |  | √ | ' ' | 插件类路径 |
-| 6 | ffunction | 功能 | varchar | 50 |  | √ | ' ' | 功能,枚举: orgInvoke :组织 userInvoke :人员 tripReqBillInvoke :出差申请单 loginInvoke :登录 orderInvoke :订单 checkingInvoke :结算单 invoiceSendInvoke :发票开具 invoiceReceiveInvoke :发票接收 |
+| 6 | ffunction | 功能 | varchar | 50 |  | √ | ' ' | 功能,枚举: orgInvoke :组织 userInvoke :人员 tripReqBillInvoke :出差申请单 loginInvoke :登录 orderInvoke :订单 checkingInvoke :结算单 invoiceSendInvoke :发票开具 invoiceReceiveInvoke :发票接收 orderUpdateInvoke :订单t+2 |
 
 ### 列规则定义
 
@@ -41,7 +41,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fnumber | 服务商 | varchar | 80 |  | √ | ' ' | 服务商,枚举: ZHONGXING :中兴 XIECHENG :携程 CHAILVYIHAO :差旅壹号 DIDI :滴滴 MEITUAN :美团 GAODE :高德 |
+| 2 | fnumber | 服务商 | varchar | 80 |  | √ | ' ' | 服务商,枚举: ZHONGXING :中兴 XIECHENG :携程 CHAILVYIHAO :差旅壹号 DIDI :滴滴 MEITUAN :美团 GAODE :高德 TONGCHENG :同程 |
 
 ### 列规则定义
 

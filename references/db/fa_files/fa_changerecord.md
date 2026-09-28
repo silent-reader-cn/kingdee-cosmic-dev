@@ -11,14 +11,14 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fentityname | 单据类型 | varchar | 30 |  | √ | ' ' | 单据类型 |
-| 3 | fperiodid | 期间 | int8 | 64 |  | √ | 0 | 会计日历 bd_period |
+| 3 | fperiodid | 期间 | int8 | 64 |  | √ | 0 | [会计日历 bd_period](../fibd_files/bd_period.md) |
 | 4 | fdynamic | 是否动态 | bpchar | 1 |  | √ | '0' | 是否动态 |
 | 5 | fchangebillid | 单据id | int8 | 64 |  | √ | 0 | 单据id |
 | 6 | ftracedate | 追溯日期 | timestamp | 0 |  |  | null | 追溯日期 |
 | 7 | fneedtrace | 是否需要追溯调整折旧 | bpchar | 1 |  | √ | '0' | 是否需要追溯调整折旧 |
-| 8 | frealcardmasterid | 实物卡片master | int8 | 64 |  | √ | 0 | 资产卡片基础资料 fa_card_real_base |
+| 8 | frealcardmasterid | 实物卡片master | int8 | 64 |  | √ | 0 | [资产卡片基础资料 fa_card_real_base](../fa_files/fa_card_real_base.md) |
 | 9 | fdesc | 备注 | varchar | 100 |  | √ | ' ' | 备注 |
-| 10 | fassetbookid | 资产账簿 | int8 | 64 |  | √ | 0 | 启用期间设置 fa_assetbook |
+| 10 | fassetbookid | 资产账簿 | int8 | 64 |  | √ | 0 | [启用期间设置 fa_assetbook](../fa_files/fa_assetbook.md) |
 
 ### 列规则定义
 

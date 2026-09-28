@@ -94,33 +94,34 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fgroupid | 版本定义分组 | int8 | 64 |  | √ | 0 | 版本定义分组 mds_vrdsgroup |
-| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fgroupid | 版本定义分组 | int8 | 64 |  | √ | 0 | [版本定义分组 mds_vrdsgroup](../mds_files/mds_vrdsgroup.md) |
+| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | finputcontrol | 录入控制 | varchar | 30 |  | √ | ' ' | 录入控制,枚举: material :物料 material_org :物料-供应组织 no :不控制 |
-| 5 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 7 | fauditordate | fauditordate | timestamp | 0 |  |  | null |  |
 | 8 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 11 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 12 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
-| 13 | fvertype | 版本类型 | varchar | 30 |  | √ | ' ' | 版本类型,枚举: 0 :预测 1 :需求计划 2 :日生产计划 |
-| 14 | fcytype | 周期类型 | varchar | 30 |  | √ | ' ' | 周期类型,枚举: 0 :日 1 :周 2 :自定义周期 |
-| 15 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 16 | fdayofweek | 时间点 | varchar | 5 |  | √ | 'Mon' | 时间点,枚举: Mon :星期一 Tue :星期二 Wed :星期三 Thu :星期四 Fri :星期五 Sat :星期六 Sun :星期天 |
-| 17 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fvertype | 版本类型 | varchar | 30 |  | √ | ' ' | 版本类型,枚举: 0 :预测计划 1 :需求计划 2 :日生产计划 3 :预测单 |
+| 14 | fcytype | 周期类型 | varchar | 30 |  | √ | ' ' | 周期类型,枚举: 0 :日 1 :周 3 :月 |
+| 15 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 16 | fdayofweek | 时间点 | varchar | 5 |  | √ | 'Mon' | 时间点,枚举: Mon :星期一 Tue :星期二 Wed :星期三 Thu :星期四 Fri :星期五 Sat :星期六 Sun :星期天 eMon :当月最早 lMon :当月最晚 |
+| 17 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 18 | fplandm | 计划维度 | varchar | 30 |  | √ | ' ' | 计划维度,枚举: 0 :物料编码 1 :物料编码-客户 |
 | 19 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 20 | fctrlstrategy | 控制策略 | varchar | 30 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
 | 21 | fperiods | 期数 | int8 | 64 |  | √ | 0 | 期数 |
-| 22 | fenable | 使用状态 | varchar | 30 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 23 | fnumber | 版本编码 | varchar | 30 |  | √ | ' ' | 版本编码 |
-| 24 | flosedate | 失效日期 | timestamp | 0 |  |  | null | 失效日期 |
-| 25 | fdefaultorg | 默认供应组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 26 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
-| 27 | fdtype | 需求类型 | int8 | 64 |  | √ | 0 | 需求类型 mds_dmtp |
-| 28 | fauditorid | fauditorid | int8 | 64 |  | √ | 0 |  |
+| 22 | fenableplanchange | 是否启用计划变更 | bpchar | 1 |  | √ | '0' | 是否启用计划变更 |
+| 23 | fenable | 使用状态 | varchar | 30 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 24 | fnumber | 版本编码 | varchar | 30 |  | √ | ' ' | 版本编码 |
+| 25 | flosedate | 失效日期 | timestamp | 0 |  |  | null | 失效日期 |
+| 26 | fdefaultorg | 默认供应组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 27 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
+| 28 | fdtype | 需求类型 | int8 | 64 |  | √ | 0 | [需求类型 mds_dmtp](../msplan_files/mds_dmtp.md) |
+| 29 | fauditorid | fauditorid | int8 | 64 |  | √ | 0 |  |
 
 ### 列规则定义
 

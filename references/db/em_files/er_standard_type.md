@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fexpenseitem | 费用项目编码 | int8 | 64 |  | √ | 0 | 费用项目 er_expenseitemedit |
+| 2 | fexpenseitem | 费用项目编码 | int8 | 64 |  | √ | 0 | [费用项目 er_expenseitemedit](../basedata_files/er_expenseitemedit.md) |
 | 3 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 4 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 
@@ -26,6 +26,35 @@
 | :--- | :--- | :--- | :--- |
 | 1 | pk_t_er_standard_entry |  | fentryid |
 | 2 | idx_er_standentry_fid |  | fid |
+
+---
+
+## 差旅项目范围-子表 t_er_standard_tripitem
+
+- **表名称：** 差旅项目范围-子表
+- **表名：** t_er_standard_tripitem
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
+| 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 4 | ftripexpenseitem | 差旅项目编码 | int8 | 64 |  | √ | 0 | [差旅项目 er_tripexpenseitem](../em_files/er_tripexpenseitem.md) |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fentryid | fentryid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_er_standard_trip_id |  | fid |
+| 2 | pk_er_standard_tripitem |  | fentryid |
 
 ---
 
@@ -132,23 +161,24 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fcreateorgid | fcreateorgid | int8 | 64 |  | √ | 0 |  |
 | 3 | fname | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 6 | fdescribe | 描述 | varchar | 255 |  | √ | ' ' | 描述 |
 | 7 | forgid | forgid | int8 | 64 |  | √ | 0 |  |
-| 8 | fispreset | 系统预置 | bpchar | 1 |  | √ | '0' | 系统预置 |
-| 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 10 | fctrlstrategy | fctrlstrategy | varchar | 20 |  | √ | ' ' |  |
-| 11 | fispreapply | 事前申请 | bpchar | 1 |  | √ | '0' | 事前申请 |
-| 12 | fstatus | 数据状态 | varchar | 10 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 14 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 15 | fsourcedataid | fsourcedataid | int8 | 64 |  | √ | 0 |  |
-| 16 | fbitindex | fbitindex | int8 | 64 |  | √ | 0 |  |
-| 17 | fenable | 使用状态 | varchar | 10 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 18 | fnumber | 编码 | varchar | 100 |  | √ | ' ' | 编码 |
-| 19 | fsourcebitindex | fsourcebitindex | int8 | 64 |  | √ | 0 |  |
-| 20 | fbilltype | 标准类型 | varchar | 255 |  | √ | ' ' | 标准类型,枚举: f1 :通用标准 f2 :会议费标准 f3 :招待费标准 f4 :宣传费标准 |
+| 8 | fistrip | 适用差旅 | bpchar | 1 |  | √ | '0' | 适用差旅 |
+| 9 | fispreset | 系统预置 | bpchar | 1 |  | √ | '0' | 系统预置 |
+| 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 11 | fctrlstrategy | fctrlstrategy | varchar | 20 |  | √ | ' ' |  |
+| 12 | fispreapply | 事前申请 | bpchar | 1 |  | √ | '0' | 事前申请 |
+| 13 | fstatus | 数据状态 | varchar | 10 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
+| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 15 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
+| 16 | fsourcedataid | fsourcedataid | int8 | 64 |  | √ | 0 |  |
+| 17 | fbitindex | fbitindex | int8 | 64 |  | √ | 0 |  |
+| 18 | fenable | 使用状态 | varchar | 10 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 19 | fnumber | 编码 | varchar | 100 |  | √ | ' ' | 编码 |
+| 20 | fsourcebitindex | fsourcebitindex | int8 | 64 |  | √ | 0 |  |
+| 21 | fbilltype | 标准类型 | varchar | 255 |  | √ | ' ' | 标准类型,枚举: f1 :通用标准 f2 :会议费标准 f3 :招待费标准 f4 :宣传费标准 |
 
 ### 列规则定义
 
@@ -196,6 +226,63 @@
 
 ---
 
+## 差旅维度-子表 t_er_trip_dimension
+
+- **表名称：** 差旅维度-子表
+- **表名：** t_er_trip_dimension
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
+| 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 4 | ftripattribute | 差旅项目属性 | varchar | 50 |  | √ | ' ' | 差旅项目属性,枚举: 1 :补助 2 :飞机 3 :汽车 4 :火车 5 :住宿 7 :轮船 6 :其他 8 :私车公用 9 :交通补贴 10 :伙食补贴 |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fentryid | fentryid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_er_standard_dim_id |  | fid |
+| 2 | pk_t_er_trip_dimension |  | fentryid |
+
+---
+
+## 业务维度-多选基础资料表 t_er_standard_trip_dim
+
+- **表名称：** 业务维度-多选基础资料表
+- **表名：** t_er_standard_trip_dim
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [事项维度 er_standard_dimension](../em_files/er_standard_dimension.md) |
+| 2 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
+| 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fpkid | fpkid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_er_trip_dim_id |  | fentryid |
+| 2 | pk_er_standard_trip_dim |  | fpkid |
+
+---
+
 ## 附件范围-子表 t_er_standard_attach
 
 - **表名称：** 附件范围-子表
@@ -209,7 +296,7 @@
 | 2 | fattachname | 附件名称 | varchar | 1000 |  | √ | ' ' | 附件名称 |
 | 3 | fattdescription | 备注 | varchar | 1000 |  | √ | ' ' | 备注 |
 | 4 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 5 | fattachno | 附件编码 | varchar | 1000 |  | √ | ' ' | 附件编码 |
+| 5 | fattachno | 附件编号 | varchar | 1000 |  | √ | ' ' | 附件编号 |
 | 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 
 ### 列规则定义
@@ -237,7 +324,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 事项维度 er_standard_dimension |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [事项维度 er_standard_dimension](../em_files/er_standard_dimension.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义

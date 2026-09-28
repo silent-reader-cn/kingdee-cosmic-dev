@@ -10,24 +10,24 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 3 | fperiodid | 单据名称 | int8 | 64 |  | √ | 0 | 销售计划周期 ids_salesplan_period |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 3 | fperiodid | 单据名称 | int8 | 64 |  | √ | 0 | [销售计划周期 ids_salesplan_period](../ids_files/ids_salesplan_period.md) |
 | 4 | fbillstatus | 单据状态 | bpchar | 1 |  | √ | 'A' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 6 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fcustid | 客户 | int8 | 64 |  | √ | 0 | 客户 bd_customer |
-| 8 | fbosuserid | 人员 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | fbosuserid | 人员 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fbilldate | 单据日期 | timestamp | 0 |  |  | null | 单据日期 |
-| 10 | fwarehouseid | 仓库 | int8 | 64 |  | √ | 0 | 仓库 bd_warehouse |
+| 10 | fwarehouseid | 仓库 | int8 | 64 |  | √ | 0 | [仓库 bd_warehouse](../sbd_files/bd_warehouse.md) |
 | 11 | fauditdate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
-| 12 | fbizoperatorid | 业务员 | int8 | 64 |  | √ | 0 | 供应链业务员 bd_operator |
+| 12 | fbizoperatorid | 业务员 | int8 | 64 |  | √ | 0 | [供应链业务员 bd_operator](../sbd_files/bd_operator.md) |
 | 13 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 14 | fmodeltypename | 预测方案名称 | varchar | 100 |  | √ | ' ' | 预测方案名称 |
-| 15 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 15 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 16 | fmodeltypeid | 预测方案 | varchar | 50 |  | √ | ' ' | 预测方案,枚举: |
 | 17 | fissysgen | 系统自动生成 | bpchar | 1 |  | √ | '1' | 系统自动生成 |
 | 18 | fbillno | 单据编号 | varchar | 30 |  | √ | ' ' | 单据编号 |
-| 19 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 19 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 
@@ -56,15 +56,15 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fentrymodifier | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fentrymodifier | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fentrymodifytime | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
-| 4 | fsupplier | 供应商 | int8 | 64 |  | √ | 0 | 供应商 bd_supplier |
-| 5 | fbase2level | 基本分类2级分组 | int8 | 64 |  | √ | 0 | 物料分类 bd_materialgroup |
-| 6 | fmaterialid | 物料名称 | int8 | 64 |  | √ | 0 | 物料 bd_material |
-| 7 | funitid | 计量单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 8 | fbase3level | 基本分类3级分组 | int8 | 64 |  | √ | 0 | 物料分类 bd_materialgroup |
+| 4 | fsupplier | 供应商 | int8 | 64 |  | √ | 0 | [供应商 bd_supplier](../basedata_files/bd_supplier.md) |
+| 5 | fbase2level | 基本分类2级分组 | int8 | 64 |  | √ | 0 | [物料分类 bd_materialgroup](../basedata_files/bd_materialgroup.md) |
+| 6 | fmaterialid | 物料名称 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
+| 7 | funitid | 计量单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 8 | fbase3level | 基本分类3级分组 | int8 | 64 |  | √ | 0 | [物料分类 bd_materialgroup](../basedata_files/bd_materialgroup.md) |
 | 9 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 10 | fbase1level | 基本分类1级分组 | int8 | 64 |  | √ | 0 | 物料分类 bd_materialgroup |
+| 10 | fbase1level | 基本分类1级分组 | int8 | 64 |  | √ | 0 | [物料分类 bd_materialgroup](../basedata_files/bd_materialgroup.md) |
 | 11 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 12 | fprice | 单价 | numeric | 23 | 10 | √ | 0 | 单价 |
 

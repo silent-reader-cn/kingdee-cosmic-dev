@@ -18,26 +18,31 @@
 | 7 | fdiscountamount | 折让金额 | numeric | 23 | 10 | √ | 0 | 折让金额 |
 | 8 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 9 | fentryextf | 单据体扩展值 | varchar | 50 |  | √ | ' ' | 单据体扩展值,枚举: A :赠品 B :合并检验 |
-| 10 | fmaterielid | 物料编码 | int8 | 64 |  | √ | 0 | 物料 bd_material |
-| 11 | fdisprocureorgfield | 采购组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 12 | fbaseunit | 基本单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 13 | fdissettlementorg | 结算组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 14 | fbaseqyt | 基本数量 | numeric | 23 | 10 | √ | 0 | 基本数量 |
-| 15 | fchkobjid | 检验对象id（上游带下来） | int8 | 64 |  | √ | 0 | 检验对象id（上游带下来） |
-| 16 | fisdiscount | 是否折让 | bpchar | 1 |  | √ | '0' | 是否折让 |
-| 17 | fqyt | 让步接收申请数量 | numeric | 23 | 10 | √ | 0 | 让步接收申请数量 |
-| 18 | ftracknumberid | 跟踪号 | int8 | 64 |  | √ | 0 | 跟踪号 bd_tracknumber |
-| 19 | fsourcebillno | 来源单据编号 | varchar | 50 |  | √ | ' ' | 来源单据编号 |
-| 20 | fpriceandtax | 含税单价 | numeric | 23 | 10 | √ | 0 | 含税单价 |
-| 21 | fsourcebilltype | 来源单据类型 | int8 | 64 |  | √ | 0 | 单据类型 bos_billtype |
-| 22 | fprojectid | 项目编码 | int8 | 64 |  | √ | 0 | 项目 bd_project |
-| 23 | fsrcbillid | 来源单据id | varchar | 50 |  | √ | ' ' | 来源单据id |
-| 24 | fdiscountcurrency | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
-| 25 | fmversion | 物料版本 | int8 | 64 |  | √ | 0 | 物料版本 bd_bomversion_new |
-| 26 | freason | 让步接收申请理由 | varchar | 255 |  | √ | ' ' | 让步接收申请理由 |
-| 27 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 28 | fauxpty | 辅助属性 | int8 | 64 |  | √ | 0 | null 001 |
-| 29 | funit | 计量单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 10 | furgentrelease | 紧急放行 | bpchar | 1 |  | √ | '0' | 紧急放行 |
+| 11 | fresult | 让步接收申请结果 | varchar | 1 |  | √ | ' ' | 让步接收申请结果,枚举: Y :同意 N :不同意 |
+| 12 | fmaterielid | 物料编码 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
+| 13 | fdisprocureorgfield | 采购组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 14 | fbaseunit | 基本单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 15 | fdissettlementorg | 结算组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 16 | fbonded | 保税 | bpchar | 1 |  | √ | '0' | 保税 |
+| 17 | fbaseqyt | 基本数量 | numeric | 23 | 10 | √ | 0 | 基本数量 |
+| 18 | fchkobjid | 检验对象id（上游带下来） | int8 | 64 |  | √ | 0 | 检验对象id（上游带下来） |
+| 19 | fisdiscount | 是否折让 | bpchar | 1 |  | √ | '0' | 是否折让 |
+| 20 | fqyt | 让步接收申请数量 | numeric | 23 | 10 | √ | 0 | 让步接收申请数量 |
+| 21 | ftracknumberid | 跟踪号 | int8 | 64 |  | √ | 0 | [跟踪号 bd_tracknumber](../sbd_files/bd_tracknumber.md) |
+| 22 | fsourcebillno | 来源单据编号 | varchar | 50 |  | √ | ' ' | 来源单据编号 |
+| 23 | fpriceandtax | 含税单价 | numeric | 23 | 10 | √ | 0 | 含税单价 |
+| 24 | fsourcebilltype | 来源单据类型 | int8 | 64 |  | √ | 0 | [单据类型 bos_billtype](../cts_files/bos_billtype.md) |
+| 25 | fprojectid | 项目编码 | int8 | 64 |  | √ | 0 | [项目 bd_project](../basedata_files/bd_project.md) |
+| 26 | fsrcbillid | 来源单据id | varchar | 50 |  | √ | ' ' | 来源单据id |
+| 27 | fdiscountcurrency | 币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
+| 28 | fmversion | 物料版本 | int8 | 64 |  | √ | 0 | [物料版本 bd_bomversion_new](../basedata_files/bd_bomversion_new.md) |
+| 29 | flicensenoid | 许可证编号 | int8 | 64 |  | √ | 0 | [许可证 bd_licence](../sbd_files/bd_licence.md) |
+| 30 | freason | 让步接收申请理由 | varchar | 255 |  | √ | ' ' | 让步接收申请理由 |
+| 31 | fsnnumber | 序列号 | int8 | 64 |  | √ | 0 | [序列号记录 qcbd_serialnumber](../qcbd_files/qcbd_serialnumber.md) |
+| 32 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 33 | fauxpty | 辅助属性 | int8 | 64 |  | √ | 0 | null 001 |
+| 34 | funit | 计量单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 
 ### 列规则定义
 
@@ -63,21 +68,22 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fsrcid | 源单编码 | varchar | 80 |  | √ | ' ' | 源单编码 |
 | 4 | fbillstatus | 单据状态 | varchar | 1 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 5 | fcomment | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 7 | forgid | 申请组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 7 | forgid | 申请组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | fauditdate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
 | 9 | fapplytime | 单据日期 | timestamp | 0 |  |  | null | 单据日期 |
-| 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 11 | fbaddegree | 不良程度 | varchar | 1 |  | √ | ' ' | 不良程度,枚举: 0 :轻微 5 :严重 |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 13 | fapplyuserid | 申请人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 14 | fbiztypeid | 业务类型 | int8 | 64 |  | √ | 0 | 业务类型 bd_biztype |
-| 15 | fbillno | 单据编号 | varchar | 80 |  | √ | ' ' | 单据编号 |
-| 16 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fconfirmauxpty | 确认辅助属性 | int4 | 32 |  | √ | 0 | 确认辅助属性 |
+| 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 12 | fbaddegree | 不良程度 | varchar | 1 |  | √ | ' ' | 不良程度,枚举: 0 :轻微 5 :严重 |
+| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 14 | fapplyuserid | 申请人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 15 | fbiztypeid | 业务类型 | int8 | 64 |  | √ | 0 | [业务类型 bd_biztype](../sbd_files/bd_biztype.md) |
+| 16 | fbillno | 单据编号 | varchar | 80 |  | √ | ' ' | 单据编号 |
+| 17 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 
@@ -186,6 +192,36 @@
 | :--- | :--- | :--- | :--- |
 | 1 | pk_qcpp_ycbill_bad_lk |  | fpkid |
 | 2 | idx_qcpp_ycbill_bad_lk_fk |  | fentryid |
+
+---
+
+## 单据体-分表 t_qcpp_ycbill_bad_a
+
+- **表名称：** 单据体-分表
+- **表名：** t_qcpp_ycbill_bad_a
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fassunitid | 辅助单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 3 | fassqty | 辅助数量 | numeric | 23 | 10 | √ | 0 | 辅助数量 |
+| 4 | fassqty2 | 辅助数量(2) | numeric | 23 | 10 | √ | 0 | 辅助数量(2) |
+| 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
+| 6 | fassunit2id | 辅助单位(2) | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fentryid | fentryid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | pk_qcpp_ycbill_a |  | fentryid |
 
 ---
 

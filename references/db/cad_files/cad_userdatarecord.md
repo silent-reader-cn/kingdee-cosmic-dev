@@ -14,7 +14,7 @@
 | 3 | fconforcostreduct | 条件-实际成本还原 | varchar | 2000 |  | √ | ' ' | 条件-实际成本还原 |
 | 4 | faudittoconfirm | 更新申请单审核后直接进入确认单 | bpchar | 1 |  | √ | '0' | 更新申请单审核后直接进入确认单 |
 | 5 | fcondition | 条件-完工json | varchar | 2000 |  | √ | ' ' | 条件-完工json |
-| 6 | fuserid | 用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | fuserid | 用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 7 | funconfirmnottip | 成本确认单不再提示反确认 | bpchar | 1 |  | √ | '0' | 成本确认单不再提示反确认 |
 | 8 | fconfirmnottip | 成本确认单不再提示确认 | bpchar | 1 |  | √ | '0' | 成本确认单不再提示确认 |
 | 9 | fautoendperiodcal | 更新前自动执行期末成本计算 | bpchar | 1 |  | √ | '1' | 更新前自动执行期末成本计算 |

@@ -53,8 +53,8 @@
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
 | 1 | idx_pur_improve_fbillno |  | fbillno |
-| 2 | idx_pur_improve_fbilldate |  | fbilldate |
-| 3 | t_pur_improve_pkey |  | fid |
+| 2 | t_pur_improve_pkey |  | fid |
+| 3 | idx_pur_improve_fbilldate |  | fbilldate |
 
 ---
 
@@ -68,7 +68,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fapproverid | 审批人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fapproverid | 审批人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fapprovedate | 审批时间 | timestamp | 0 |  |  | null | 审批时间 |
 | 4 | fremark | fremark | varchar | 2000 |  | √ | ' ' |  |
 | 5 | fmodifierid | fmodifierid | int8 | 64 |  | √ | 0 |  |
@@ -82,7 +82,7 @@
 | 13 | fauditdate | fauditdate | timestamp | 0 |  |  | null |  |
 | 14 | fcfmdate | 确认时间 | timestamp | 0 |  |  | null | 确认时间 |
 | 15 | fauditopinion | 审批意见 | varchar | 255 |  | √ | ' ' | 审批意见 |
-| 16 | fcfmid | 确认人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 16 | fcfmid | 确认人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 17 | fmodifytime | fmodifytime | timestamp | 0 |  |  | null |  |
 | 18 | forigin | forigin | bpchar | 1 |  | √ | ' ' |  |
 | 19 | finvalidid | finvalidid | int8 | 64 |  | √ | 0 |  |

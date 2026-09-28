@@ -17,10 +17,10 @@
 | 6 | fexit | 出口 | varchar | 40 |  | √ | ' ' | 出口 |
 | 7 | fplace | 发票所在地 | varchar | 40 |  | √ | ' ' | 发票所在地 |
 | 8 | fticketcreatetime | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
-| 9 | forg | 税务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 9 | forg | 税务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 12 | fbaseinvoicetype | 发票类型 | int8 | 64 |  | √ | 0 | 发票类型 bd_invoicetype |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 12 | fbaseinvoicetype | 发票类型 | int8 | 64 |  | √ | 0 | [发票种类 bd_invoicetype](../basedata_files/bd_invoicetype.md) |
 | 13 | finvoicedate | 开票日期 | timestamp | 0 |  |  | null | 开票日期 |
 | 14 | finvoicecode | 发票代码 | varchar | 64 |  | √ | ' ' | 发票代码 |
 | 15 | freviewer | 复核人 | varchar | 16 |  | √ | ' ' | 复核人 |
@@ -31,7 +31,7 @@
 | 20 | fbuyertaxno | 购方税号 | varchar | 70 |  | √ | ' ' | 购方税号 |
 | 21 | fremark | 备注 | varchar | 400 |  | √ | ' ' | 备注 |
 | 22 | ftime | 过路过桥发票时间 格式：时分秒 | varchar | 20 |  | √ | ' ' | 过路过桥发票时间 格式：时分秒 |
-| 23 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 23 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 24 | fbillstatus | 单据状态 | varchar | 30 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 25 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 26 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
@@ -40,7 +40,7 @@
 | 29 | ftype | 发票类型 | varchar | 30 |  | √ | ' ' | 发票类型,枚举: 7 :通用机打发票 17 :过路过桥费 |
 | 30 | fsalername | 销方名称 | varchar | 200 |  | √ | ' ' | 销方名称 |
 | 31 | fdatasource | 数据来源 | varchar | 50 |  | √ | ' ' | 数据来源 |
-| 32 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 32 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

@@ -13,7 +13,7 @@
 | 2 | fadjustamount | 调整数值 | numeric | 23 | 10 | √ | 0 | 调整数值 |
 | 3 | fcardname | 卡片名称 | varchar | 300 |  | √ | ' ' | 卡片名称 |
 | 4 | ftotalamount | 总数 | numeric | 23 | 10 | √ | 0 | 总数 |
-| 5 | ffetchorg | 取数组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | ffetchorg | 取数组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | fseq | fseq | int4 | 32 |  | √ | 0 |  |
 | 7 | fruleid | 规则id | int8 | 64 |  | √ | 0 | 规则id |
 | 8 | famount | 取数金额 | numeric | 23 | 10 | √ | 0 | 取数金额 |
@@ -45,23 +45,25 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | famountfield | 金额字段 | int8 | 64 |  | √ | 0 | 数据源字段配置 tctb_datasource_entry |
-| 2 | fadvancedconfjson | fadvancedconfjson | text | 0 |  |  | null |  |
-| 3 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 4 | ffetchdirection | 取数方向 | varchar | 50 |  | √ | ' ' | 取数方向,枚举: positive :正向 reverse :反向 |
-| 5 | fbizname | 业务名称 | varchar | 50 |  | √ | ' ' | 业务名称 |
-| 6 | fconditionjson | fconditionjson | text | 0 |  |  | null |  |
-| 7 | fenddate | 所属税期.结束 | timestamp | 0 |  |  | null | 所属税期.结束 |
-| 8 | fstartdate | 所属税期.开始 | timestamp | 0 |  |  | null | 所属税期.开始 |
-| 9 | ffetchamount | 取数金额 | numeric | 23 | 10 | √ | 0 | 取数金额 |
-| 10 | fabsolute | 绝对值 | varchar | 50 |  | √ | ' ' | 绝对值 |
-| 11 | famounttype | famounttype | varchar | 50 |  | √ | ' ' |  |
-| 12 | fdatasource | 数据源 | int8 | 64 |  | √ | 0 | 数据源配置 tctb_custom_datasource |
-| 13 | foriginamount | 源金额 | numeric | 23 | 10 | √ | 0 | 源金额 |
-| 14 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 | id |
-| 15 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
-| 16 | ffiltercondition | 过滤条件 | varchar | 2000 |  | √ | ' ' | 过滤条件 |
-| 17 | ffetchtype | 取数方式 | varchar | 50 |  | √ | ' ' | 取数方式 |
+| 1 | faccountorg | faccountorg | int8 | 64 |  | √ | 0 |  |
+| 2 | famountfield | 金额字段 | int8 | 64 |  | √ | 0 | [数据源字段配置 tctb_datasource_entry](../tctb_files/tctb_datasource_entry.md) |
+| 3 | fadvancedconfjson | fadvancedconfjson | text | 0 |  |  | null |  |
+| 4 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
+| 5 | ffetchdirection | 取数方向 | varchar | 50 |  | √ | ' ' | 取数方向,枚举: positive :正向 reverse :反向 |
+| 6 | fbizname | 业务名称 | varchar | 50 |  | √ | ' ' | 业务名称 |
+| 7 | fconditionjson | fconditionjson | text | 0 |  |  | null |  |
+| 8 | fenddate | 所属税期.结束 | timestamp | 0 |  |  | null | 所属税期.结束 |
+| 9 | fbizdimensionfilter | fbizdimensionfilter | text | 0 |  |  | null |  |
+| 10 | fstartdate | 所属税期.开始 | timestamp | 0 |  |  | null | 所属税期.开始 |
+| 11 | ffetchamount | 取数金额 | numeric | 23 | 10 | √ | 0 | 取数金额 |
+| 12 | fabsolute | 绝对值 | varchar | 50 |  | √ | ' ' | 绝对值 |
+| 13 | famounttype | famounttype | varchar | 50 |  | √ | ' ' |  |
+| 14 | fdatasource | 数据源 | int8 | 64 |  | √ | 0 | [数据源配置 tctb_custom_datasource](../tctb_files/tctb_custom_datasource.md) |
+| 15 | foriginamount | 源金额 | numeric | 23 | 10 | √ | 0 | 源金额 |
+| 16 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 | id |
+| 17 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
+| 18 | ffiltercondition | 过滤条件 | varchar | 2000 |  | √ | ' ' | 过滤条件 |
+| 19 | ffetchtype | 取数方式 | varchar | 50 |  | √ | ' ' | 取数方式 |
 
 ### 列规则定义
 

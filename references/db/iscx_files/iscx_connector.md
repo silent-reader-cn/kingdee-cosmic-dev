@@ -11,13 +11,13 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fremark | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
-| 3 | fcreator | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fcreator | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fname | 名称 | varchar | 150 |  | √ | ' ' | 名称 |
 | 5 | ftype | 类型 | varchar | 50 |  | √ | ' ' | 类型,枚举: isc_database_link :系统连接 isc_mq_server :消息队列 |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 7 | fconnection | 连接配置／消息队列 | int8 | 64 |  | √ | 0 | 连接器配置 isc_database_link |
 | 8 | fsourceapp | 来源应用 | varchar | 50 |  | √ | ' ' | 来源应用 |
-| 9 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
 | 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 

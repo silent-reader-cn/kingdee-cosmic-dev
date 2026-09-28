@@ -10,14 +10,14 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | freleaseplugin | 释放插件 | int8 | 64 |  | √ | 0 | 算法注册配置 mrp_algoregister |
+| 2 | freleaseplugin | 释放插件 | int8 | 64 |  | √ | 0 | [算法注册配置 mrp_algoregister](../msplan_files/mrp_algoregister.md) |
 | 3 | fname | 名称 | varchar | 80 |  | √ | ' ' | 名称 |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 6 | frelconfigbasedata | 释放配置基础资料 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 6 | frelconfigbasedata | 释放配置基础资料 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 8 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 11 | fenable | 使用状态 | varchar | 30 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 12 | fsystempreset | 系统预设 | bpchar | 1 |  | √ | '0' | 系统预设 |
@@ -111,8 +111,8 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 4 | fbilltype | 供应单据实体 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
-| 5 | fchangebill | 变更单实体 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 4 | fbilltype | 供应单据实体 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
+| 5 | fchangebill | 变更单实体 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 
 ### 列规则定义
 

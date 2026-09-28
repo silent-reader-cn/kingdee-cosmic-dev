@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fadminschemeid | 管理员权限控制策略id | int8 | 64 |  | √ | 0 | 管理员权限控制策略id |
-| 3 | fadmintypeid | 虚拟管理员类型 | int8 | 64 |  | √ | 0 | 虚拟管理员类型 perm_admintype |
+| 3 | fadmintypeid | 虚拟管理员类型 | int8 | 64 |  | √ | 0 | [虚拟管理员类型 perm_admintype](../base_files/perm_admintype.md) |
 | 4 | fenablepswstrategy | 密码策略维护 | bpchar | 1 |  | √ | ' ' | 密码策略维护 |
 | 5 | fresetpswscopeid | 重置密码范围 | varchar | 50 |  | √ | ' ' | 重置密码范围 |
 | 6 | funlockscopeid | 解锁范围 | varchar | 50 |  | √ | ' ' | 解锁范围 |

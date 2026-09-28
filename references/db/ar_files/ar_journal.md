@@ -11,40 +11,45 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fbizdescription | 业务描述 | varchar | 30 |  | √ | ' ' | 业务描述,枚举: fin :应收款发生额 rec :收款额 received :预收款额 fin_woff :应收款冲抵额 received_woff :预收款冲抵额 rec_woff :收款冲抵额 bus :暂估款发生额 pay :付款额 pay_woff :付款冲抵额 refund_sale :退销售回款 refund_sale_woff :退销售回款冲抵额 refund_received :退预收 refund_received_woff :退预收冲抵额 |
-| 3 | fisdiffcurrencysettle | 异币别核销 | bpchar | 1 |  | √ | '0' | 异币别核销 |
-| 4 | fsalesmanid | 销售员 | int8 | 64 |  | √ | 0 | 供应链业务员 bd_operator |
-| 5 | forgid | 核算主体 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 6 | flocalreceivableamt | 应收金额折本位币 | numeric | 23 | 10 | √ | 0.0000000000 | 应收金额折本位币 |
-| 7 | fsourcejournalid | 源流水id | int8 | 64 |  | √ | 0 | 源流水id |
-| 8 | fiswrittenoff | 红冲流水 | bpchar | 1 |  | √ | '0' | 红冲流水 |
-| 9 | fsourceentryid | 源单分录ID | int8 | 64 |  | √ | 0 | 源单分录ID |
-| 10 | fasstacttype | 往来类型 | varchar | 30 |  | √ | ' ' | 往来类型,枚举: bd_supplier :供应商 bd_customer :客户 bos_user :人员 cas_othercontactunit :其他往来单位 |
-| 11 | freceivedamt | 收款金额 | numeric | 23 | 10 | √ | 0.0000000000 | 收款金额 |
-| 12 | freceivingtypeid | 收款用途 | int8 | 64 |  | √ | 0 | 收款用途 cas_receivingbilltype |
-| 13 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 14 | fbiztype | 业务类型 | varchar | 30 |  | √ | ' ' | 业务类型 |
-| 15 | festimatedamt | 暂估金额 | numeric | 23 | 10 | √ | 0.0000000000 | 暂估金额 |
-| 16 | fbillno | 源单编号 | varchar | 80 |  | √ | ' ' | 源单编号 |
-| 17 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 18 | fsourcebilltype | 源单类型 | varchar | 30 |  | √ | ' ' | 源单类型,枚举: ar_busbill :暂估应收单 ar_finarbill :财务应收单 ar_receivedbill :初始化预收单 ar_settlerecord :应收核销记录 cas_recbill :收款单 ap_settlerecord :应付核销记录 ar_adjustexchbill :调汇单 ap_paidbill :初始化预付单 cas_paybill :付款单 ar_settlebill :应收核销单 ap_settlebill :应付核销单 ar_baddebtlossbill :坏账损失单 |
-| 19 | fhadwrittenoff | 已被红冲 | bpchar | 1 |  | √ | '0' | 已被红冲 |
-| 20 | fprojectid | 项目 | int8 | 64 |  | √ | 0 | 项目 bd_project |
-| 21 | fmpmtasknoid | 项目任务号 | int8 | 64 |  | √ | 0 | 项目任务F7 mpm_task_f7 |
-| 22 | fsalesdeptid | 销售部门 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 23 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 24 | fasstactid | 往来单位 | int8 | 64 |  | √ | 0 | 供应商 bd_supplier |
-| 25 | freceivableamt | 应收金额 | numeric | 23 | 10 | √ | 0.0000000000 | 应收金额 |
-| 26 | fbasecurrencyid | 本位币 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
-| 27 | fbizdate | 日期 | timestamp | 0 |  |  | null | 日期 |
-| 28 | fsourcebillid | 源单ID | int8 | 64 |  | √ | 0 | 源单ID |
-| 29 | fpaymenttypeid | 付款用途 | int8 | 64 |  | √ | 0 | 付款用途 cas_paymentbilltype |
-| 30 | fsalesorgid | 销售组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 31 | flocalestimatedamt | 暂估金额折本位币 | numeric | 23 | 10 | √ | 0.0000000000 | 暂估金额折本位币 |
-| 32 | flocalreceivedamt | 收款金额折本位币 | numeric | 23 | 10 | √ | 0.0000000000 | 收款金额折本位币 |
-| 33 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
-| 34 | fsalesgroupid | 销售组 | int8 | 64 |  | √ | 0 | 供应链业务组 bd_operatorgroup |
-| 35 | fisperiod | 是否初始化 | bpchar | 1 |  | √ | '0' | 是否初始化 |
-| 36 | fbilltypeid | 单据类型 | int8 | 64 |  | √ | 0 | 单据类型 bos_billtype |
+| 3 | fsourcebillentity | 源单标识 | varchar | 30 |  | √ | ' ' | 源单标识 |
+| 4 | fisdiffcurrencysettle | 异币种核销 | bpchar | 1 |  | √ | '0' | 异币种核销 |
+| 5 | fsalesmanid | 销售员 | int8 | 64 |  | √ | 0 | [供应链业务员 bd_operator](../sbd_files/bd_operator.md) |
+| 6 | forgid | 核算主体 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 7 | flocalreceivableamt | 应收金额本位币 | numeric | 23 | 10 | √ | 0.0000000000 | 应收金额本位币 |
+| 8 | fsourcejournalid | 源流水id | int8 | 64 |  | √ | 0 | 源流水id |
+| 9 | fiswrittenoff | 红冲流水 | bpchar | 1 |  | √ | '0' | 红冲流水 |
+| 10 | fsourceentryid | 源单分录ID | int8 | 64 |  | √ | 0 | 源单分录ID |
+| 11 | fasstacttype | 往来类型 | varchar | 30 |  | √ | ' ' | 往来类型,枚举: bd_supplier :供应商 bd_customer :客户 bos_user :人员 cas_othercontactunit :其他往来单位 |
+| 12 | freceivedamt | 收款金额 | numeric | 23 | 10 | √ | 0.0000000000 | 收款金额 |
+| 13 | freceivingtypeid | 收款用途 | int8 | 64 |  | √ | 0 | [收款用途 cas_receivingbilltype](../cas_files/cas_receivingbilltype.md) |
+| 14 | fbonded | 保税 | bpchar | 1 |  | √ | '0' | 保税 |
+| 15 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 16 | fbiztype | 业务类型 | varchar | 30 |  | √ | ' ' | 业务类型 |
+| 17 | findepadjustexch | 独立调汇 | bpchar | 1 |  | √ | '0' | 独立调汇 |
+| 18 | festimatedamt | 暂估金额 | numeric | 23 | 10 | √ | 0.0000000000 | 暂估金额 |
+| 19 | fbillno | 源单编号 | varchar | 80 |  | √ | ' ' | 源单编号 |
+| 20 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 21 | fsourcebilltype | 源单类型 | varchar | 30 |  | √ | ' ' | 源单类型,枚举: ar_busbill :暂估应收单 ar_finarbill :财务应收单 ar_receivedbill :初始化预收单 ar_settlerecord :应收核销记录 cas_recbill :收款单 ap_settlerecord :应付核销记录 ar_adjustexchbill :应收调汇单 ap_paidbill :初始化预付单 cas_paybill :付款单 ar_settlebill :应收核销单 ap_settlebill :应付核销单 ar_baddebtlossbill :坏账损失单 |
+| 22 | fhadwrittenoff | 已被红冲 | bpchar | 1 |  | √ | '0' | 已被红冲 |
+| 23 | fprojectid | 项目 | int8 | 64 |  | √ | 0 | [项目 bd_project](../basedata_files/bd_project.md) |
+| 24 | fmpmtasknoid | 项目任务号 | int8 | 64 |  | √ | 0 | [项目任务 bd_projecttask](../basedata_files/bd_projecttask.md) |
+| 25 | fsalesdeptid | 销售部门 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 26 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 27 | fasstactid | 往来单位 | int8 | 64 |  | √ | 0 | 供应商 bd_supplier |
+| 28 | freceivableamt | 应收金额 | numeric | 23 | 10 | √ | 0.0000000000 | 应收金额 |
+| 29 | fmigsrc | 来源系统 | int4 | 32 |  | √ | 0 | 来源系统 |
+| 30 | fbasecurrencyid | 本位币 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
+| 31 | fbizdate | 日期 | timestamp | 0 |  |  | null | 日期 |
+| 32 | fsourcebillid | 源单ID | int8 | 64 |  | √ | 0 | 源单ID |
+| 33 | fpaymenttypeid | 付款用途 | int8 | 64 |  | √ | 0 | [付款用途 cas_paymentbilltype](../cas_files/cas_paymentbilltype.md) |
+| 34 | fsalesorgid | 销售组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 35 | flocalestimatedamt | 暂估金额本位币 | numeric | 23 | 10 | √ | 0.0000000000 | 暂估金额本位币 |
+| 36 | flocalreceivedamt | 收款金额本位币 | numeric | 23 | 10 | √ | 0.0000000000 | 收款金额本位币 |
+| 37 | fcurrencyid | 币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
+| 38 | fsalesgroupid | 销售组 | int8 | 64 |  | √ | 0 | [供应链业务组 bd_operatorgroup](../sbd_files/bd_operatorgroup.md) |
+| 39 | fisperiod | 是否初始化 | bpchar | 1 |  | √ | '0' | 是否初始化 |
+| 40 | fbilltypeid | 单据类型 | int8 | 64 |  | √ | 0 | [单据类型 bos_billtype](../cts_files/bos_billtype.md) |
+| 41 | flicenseno | 许可证编号 | int8 | 64 |  | √ | 0 | [许可证 bd_licence](../sbd_files/bd_licence.md) |
 
 ### 列规则定义
 

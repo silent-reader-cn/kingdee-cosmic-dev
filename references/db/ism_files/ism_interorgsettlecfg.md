@@ -13,7 +13,7 @@
 | 2 | fname | fname | varchar | 50 |  | √ | ' ' |  |
 | 3 | fsettlerelationname | fsettlerelationname | varchar | 100 |  | √ | ' ' |  |
 | 4 | fsettlerelation | 结算关系标识 | varchar | 80 |  | √ | ' ' | 结算关系标识 |
-| 5 | fbill | 单据对象 | varchar | 80 |  | √ | ' ' | 单据主实体 bos_billmainentity |
+| 5 | fbill | 单据对象 | varchar | 80 |  | √ | ' ' | [单据主实体 bos_billmainentity](../mdl_files/bos_billmainentity.md) |
 | 6 | fpriority | 优先级 | int8 | 64 |  | √ | 0 | 优先级 |
 | 7 | fdescription | 描述 | varchar | 500 |  | √ | ' ' | 描述 |
 | 8 | fbillfilterstr_tag | 单据过滤条件_详情 | text | 0 |  |  | null | 单据过滤条件_详情 |
@@ -22,9 +22,10 @@
 | 11 | fownerorg | 需求方结算组织标识 | varchar | 80 |  | √ | ' ' | 需求方结算组织标识 |
 | 12 | fisenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 1 :可用 0 :禁用 |
 | 13 | fbalanceorg | 供应方结算组织标识 | varchar | 80 |  | √ | ' ' | 供应方结算组织标识 |
-| 14 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
-| 15 | fownerorgname | fownerorgname | varchar | 100 |  | √ | ' ' |  |
-| 16 | fbillfilterstr | 单据过滤条件 | varchar | 255 |  | √ | ' ' | 单据过滤条件 |
+| 14 | fbiztypeid | 业务类型 | int8 | 64 |  | √ | 0 | [业务类型 bd_biztype](../sbd_files/bd_biztype.md) |
+| 15 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
+| 16 | fownerorgname | fownerorgname | varchar | 100 |  | √ | ' ' |  |
+| 17 | fbillfilterstr | 单据过滤条件 | varchar | 255 |  | √ | ' ' | 单据过滤条件 |
 
 ### 列规则定义
 

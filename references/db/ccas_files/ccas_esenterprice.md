@@ -15,14 +15,14 @@
 | 4 | fcertifystatus | 企业认证状态 | varchar | 30 |  | √ | ' ' | 企业认证状态,枚举: A :待认证 B :已认证 C :认证中 D :认证失败 |
 | 5 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 6 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 7 | fenterprice | 企业名称 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 7 | fenterprice | 企业名称 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fesstatus | 印章状态 | varchar | 30 |  | √ | ' ' | 印章状态,枚举: A :待设置 B :已设置 C :设置中 D :设置失败 |
 | 10 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 11 | fesserviceprovider | 集成服务 | int8 | 64 |  | √ | 0 | 集成服务配置 ccas_cisconfig |
+| 11 | fesserviceprovider | 集成服务 | int8 | 64 |  | √ | 0 | [集成服务配置 ccas_cisconfig](../ccas_files/ccas_cisconfig.md) |
 | 12 | funiformsocialcreditcode | 统一社会信用代码(上次认证) | varchar | 255 |  | √ | ' ' | 统一社会信用代码(上次认证) |
-| 13 | fserviceadmin | 服务管理员 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 14 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fserviceadmin | 服务管理员 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 14 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
 | 16 | fphone | fphone | varchar | 255 |  | √ | ' ' |  |
 | 17 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |

@@ -14,7 +14,7 @@
 | 3 | fprogressrate | 进度 | int4 | 32 |  | √ | 0 | 进度 |
 | 4 | fcreatetime | 操作时间 | timestamp | 0 |  |  | null | 操作时间 |
 | 5 | fsessionid | 线程ID | varchar | 100 |  | √ | ' ' | 线程ID |
-| 6 | fuserid | 操作用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | fuserid | 操作用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 
@@ -26,5 +26,5 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | pk_ism_settleproclog |  | fid |
-| 2 | idx_ism_settleproclog |  | fcreatetime |
+| 1 | idx_ism_settleproclog |  | fcreatetime |
+| 2 | pk_ism_settleproclog |  | fid |

@@ -48,19 +48,19 @@
 | 2 | fisautolift | 到期自动解除受限 | bpchar | 1 |  | √ | '0' | 到期自动解除受限 |
 | 3 | fsrcbillno | 受限资金单据编号 | varchar | 30 |  | √ | ' ' | 受限资金单据编号 |
 | 4 | festimatedliftdate | 预计解除受限日期 | timestamp | 0 |  |  | null | 预计解除受限日期 |
-| 5 | forgid | 收付组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | forgid | 收付组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | factualliftdate | 实际解除受限日期 | timestamp | 0 |  |  | null | 实际解除受限日期 |
 | 7 | fbusinesstype | 业务分类 | varchar | 50 |  | √ | ' ' | 业务分类,枚举: 1 :增加受限 2 :解除受限 |
 | 8 | fliftdate | 解除受限日期 | timestamp | 0 |  |  | null | 解除受限日期 |
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 10 | fisallrestricted | fisallrestricted | bpchar | 1 |  | √ | '0' |  |
-| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 12 | frestrictedfoundstypeid | 受限资金类型 | int8 | 64 |  | √ | 0 | 受限资金类型 am_restrictedfundstype |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 12 | frestrictedfoundstypeid | 受限资金类型 | int8 | 64 |  | √ | 0 | [受限资金类型 am_restrictedfundstype](../am_files/am_restrictedfundstype.md) |
 | 13 | funrestrictedamt | 当前可解除受限金额 | numeric | 23 | 10 | √ | 0 | 当前可解除受限金额 |
 | 14 | fbillno | 单据编号 | varchar | 30 |  | √ | ' ' | 单据编号 |
-| 15 | fbankacctid | 银行账户 | int8 | 64 |  | √ | 0 | 银行账户 bd_accountbanks |
+| 15 | fbankacctid | 银行账户 | int8 | 64 |  | √ | 0 | [银行账户 bd_accountbanks](../basedata_files/bd_accountbanks.md) |
 | 16 | fthistimeunblockamt | 本次解除受限金额 | numeric | 23 | 10 | √ | 0 | 本次解除受限金额 |
-| 17 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 17 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 18 | fbillstatus | 单据状态 | varchar | 50 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 19 | fcomment | 说明 | varchar | 50 |  | √ | ' ' | 说明 |
 | 20 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
@@ -68,9 +68,9 @@
 | 22 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
 | 23 | fbusinessdate | 业务日期 | timestamp | 0 |  |  | null | 业务日期 |
 | 24 | frestrictedamt | 受限金额 | numeric | 23 | 10 | √ | 0 | 受限金额 |
-| 25 | fbankid | 开户行 | int8 | 64 |  | √ | 0 | 金融机构 bd_finorginfo |
-| 26 | fcurrencyid | 受限资金币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
-| 27 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 25 | fbankid | 开户行 | int8 | 64 |  | √ | 0 | [金融机构 bd_finorginfo](../basedata_files/bd_finorginfo.md) |
+| 26 | fcurrencyid | 受限资金币别 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
+| 27 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

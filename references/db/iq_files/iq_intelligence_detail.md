@@ -13,7 +13,7 @@
 | 2 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 3 | forderid | 测评单ID | int8 | 64 |  | √ | 0 | 测评单ID |
 | 4 | factualvalue | 实际值 | numeric | 23 | 10 |  | null | 实际值 |
-| 5 | fquotaid | 指标 | int8 | 64 |  | √ | 0 | 指标库 ipo_quota_info |
+| 5 | fquotaid | 指标 | int8 | 64 |  | √ | 0 | [指标库 ipo_quota_info](../ipobase_files/ipo_quota_info.md) |
 | 6 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 
 ### 列规则定义

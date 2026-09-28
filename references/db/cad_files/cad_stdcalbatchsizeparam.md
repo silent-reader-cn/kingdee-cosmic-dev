@@ -22,5 +22,5 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | pk_t_cad_stdcalbatchsizepara |  | fid |
-| 2 | idx_cad_stdcalbatchsizepara |  | fbatchsize |
+| 1 | idx_cad_stdcalbatchsizepara |  | fbatchsize |
+| 2 | pk_t_cad_stdcalbatchsizepara |  | fid |

@@ -42,7 +42,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 3 | fentitynumber | 表单 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 3 | fentitynumber | 实体 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 4 | fshardingfields | 选择属性列 | varchar | 50 |  | √ | ' ' | 选择属性列 |
 
 ### 列规则定义

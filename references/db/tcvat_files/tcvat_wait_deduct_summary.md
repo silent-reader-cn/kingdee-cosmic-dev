@@ -12,12 +12,18 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | ftaxperiod | 所属税期 | varchar | 50 |  | √ | ' ' | 所属税期 |
 | 3 | ftaxamount | 税额 | numeric | 23 | 10 | √ | 0 | 税额 |
-| 4 | fserialno | 流水号 | varchar | 50 |  | √ | ' ' | 流水号 |
-| 5 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 6 | fdeadline | 缴纳期限 | varchar | 50 |  | √ | ' ' | 缴纳期限,枚举: aysb :按月申报 ajsb :按季申报 |
-| 7 | famount | 金额 | numeric | 23 | 10 | √ | 0 | 金额 |
-| 8 | fcount | 份数 | int8 | 64 |  | √ | 0 | 份数 |
-| 9 | fdeductiontype | 抵扣类型 | int8 | 64 |  | √ | 0 | 业务定义 tpo_tcvat_bizdef |
+| 4 | faccountorg | 核算组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 5 | fewblxh | ewblxh | varchar | 30 |  | √ | ' ' | ewblxh,枚举: 1 :行号 count :合计行 |
+| 6 | fserialno | 流水号 | varchar | 50 |  | √ | ' ' | 流水号 |
+| 7 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 8 | fbizdimension | 业务维度 | int8 | 64 |  | √ | 0 | null 001 |
+| 9 | famount | 金额 | numeric | 23 | 10 | √ | 0 | 金额 |
+| 10 | fewblname | ewblname | varchar | 50 |  | √ | ' ' | ewblname |
+| 11 | ftaxplan | 计税方案 | int8 | 64 |  | √ | 0 | [计税方案 itp_proviston_plan](../tctb_files/itp_proviston_plan.md) |
+| 12 | fdeadline | 缴纳期限 | varchar | 50 |  | √ | ' ' | 缴纳期限,枚举: aysb :按月申报 ajsb :按季申报 |
+| 13 | fsbbid | sbbid | varchar | 50 |  | √ | ' ' | sbbid |
+| 14 | fcount | 份数 | int8 | 64 |  | √ | 0 | 份数 |
+| 15 | fdeductiontype | 抵扣类型 | int8 | 64 |  | √ | 0 | 业务定义 tpo_tcvat_bizdef |
 
 ### 列规则定义
 

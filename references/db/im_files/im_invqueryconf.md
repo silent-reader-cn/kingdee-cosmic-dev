@@ -69,6 +69,33 @@
 
 ---
 
+## 库存查询配置-分表 t_im_invqueryconf_e
+
+- **表名称：** 库存查询配置-分表
+- **表名：** t_im_invqueryconf_e
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fbillfilter_tag | 单据过滤条件_详情 | text | 0 |  |  | null | 单据过滤条件_详情 |
+| 3 | fbillfilter | 单据过滤条件 | varchar | 255 |  | √ | ' ' | 单据过滤条件 |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fid | fid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | pk_t_im_invqueryconf_e |  | fid |
+
+---
+
 ## 库存查询配置-主表 t_im_invqueryconf
 
 - **表名称：** 库存查询配置-主表
@@ -79,16 +106,16 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fsrcbillobj | 单据 | varchar | 36 |  | √ | ' ' | 单据主实体 bos_billmainentity |
+| 2 | fsrcbillobj | 单据 | varchar | 36 |  | √ | ' ' | [单据主实体 bos_billmainentity](../mdl_files/bos_billmainentity.md) |
 | 3 | fispreset | 系统预设 | bpchar | 1 |  | √ | '0' | 系统预设 |
 | 4 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 5 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 6 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 7 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 8 | foperatekey | 操作代码 | varchar | 50 |  | √ | ' ' | 操作代码 |
 | 9 | fnewdeal | 当返回条件不满足时新增单据行 | bpchar | 1 |  | √ | '1' | 当返回条件不满足时新增单据行 |
 | 10 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 11 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fmiddleinsert | 新增单据行时添加至指定行之后 | bpchar | 1 |  | √ | '0' | 新增单据行时添加至指定行之后 |
 | 13 | fqtyrule | 返回数量规则 | varchar | 50 |  | √ | ' ' | 返回数量规则,枚举: proqty :供给数量 reqqty :需求数量 minrule :孰小原则 |
 | 14 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
@@ -98,14 +125,15 @@
 | 18 | fsrcbillentry | 单据体标识 | varchar | 50 |  | √ | ' ' | 单据体标识 |
 | 19 | freturntype | 返回值 | varchar | 50 |  | √ | ' ' | 返回值,枚举: null :不返回 single :单行 multi :多行 |
 | 20 | fdealtype | 返回值处理方式 | varchar | 50 |  | √ | ' ' | 返回值处理方式,枚举: systemdeal :系统处理 plugindeal :插件处理 |
-| 21 | funittran | 库存单位数量按换算率计算返回 | bpchar | 1 |  | √ | '0' | 库存单位数量按换算率计算返回 |
-| 22 | fenable | 使用状态 | varchar | 50 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 23 | factionid | 关闭回调参数 | varchar | 50 |  | √ | ' ' | 关闭回调参数 |
-| 24 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
-| 25 | fsrcbillentryname | fsrcbillentryname | varchar | 100 |  | √ | ' ' |  |
-| 26 | fproqtyfield | 供给数量字段(废弃) | varchar | 50 |  | √ | ' ' | 供给数量字段(废弃),枚举: avbqty :可用量 qty :库存量 |
-| 27 | fpluginname | 返回处理插件 | varchar | 100 |  | √ | ' ' | 返回处理插件 |
-| 28 | ffilterpluginname | 过滤插件 | varchar | 100 |  | √ | ' ' | 过滤插件 |
+| 21 | frcvprjkey | 需求项目字段标识 | varchar | 100 |  | √ | ' ' | 需求项目字段标识 |
+| 22 | funittran | 库存单位数量按换算率计算返回 | bpchar | 1 |  | √ | '0' | 库存单位数量按换算率计算返回 |
+| 23 | fenable | 使用状态 | varchar | 50 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 24 | factionid | 关闭回调参数 | varchar | 50 |  | √ | ' ' | 关闭回调参数 |
+| 25 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
+| 26 | fsrcbillentryname | fsrcbillentryname | varchar | 100 |  | √ | ' ' |  |
+| 27 | fproqtyfield | 供给数量字段(废弃) | varchar | 50 |  | √ | ' ' | 供给数量字段(废弃),枚举: avbqty :可用量 qty :库存量 |
+| 28 | fpluginname | 返回处理插件 | varchar | 100 |  | √ | ' ' | 返回处理插件 |
+| 29 | ffilterpluginname | 过滤插件 | varchar | 100 |  | √ | ' ' | 过滤插件 |
 
 ### 列规则定义
 

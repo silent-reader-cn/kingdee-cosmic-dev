@@ -76,7 +76,7 @@
 | 4 | fischange | 允许修改 | bpchar | 1 |  | √ | '0' | 允许修改 |
 | 5 | fispreitem | 系统预设 | bpchar | 1 |  | √ | '0' | 系统预设 |
 | 6 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 7 | fcheckitemid | 检查项 | int8 | 64 |  | √ | 0 | 检查项 cal_datacheck_item |
+| 7 | fcheckitemid | 检查项 | int8 | 64 |  | √ | 0 | [检查项 cal_datacheck_item](../cal_files/cal_datacheck_item.md) |
 | 8 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 
 ### 列规则定义

@@ -10,11 +10,11 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreatetime | 创建日期 | timestamp | 0 |  | √ | LOCALTIMESTAMP | 创建日期 |
-| 3 | fuserid | 用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 4 | fmenuid | 最近使用菜单 | varchar | 36 |  | √ | ' ' | 最近使用菜单 |
+| 2 | fcreatetime | 创建时间 | timestamp | 0 |  | √ | LOCALTIMESTAMP | 创建时间 |
+| 3 | fuserid | 用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 4 | fmenuid | 最近使用菜单 | varchar | 50 |  | √ | ' ' | 最近使用菜单 |
 | 5 | fappid | 最近使用应用 | varchar | 36 |  | √ | ' ' | 最近使用应用 |
-| 6 | fmodifytime | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
+| 6 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 
 ### 列规则定义
 

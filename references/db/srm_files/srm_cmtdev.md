@@ -10,11 +10,11 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fprojectid | 寻源项目F7 | int8 | 64 |  | √ | 0 | 招标项目F7 src_projectf7 |
+| 2 | fprojectid | 寻源项目F7 | int8 | 64 |  | √ | 0 | [招标项目F7 src_projectf7](../src_files/src_projectf7.md) |
 | 3 | fparentid | 父单据ID | varchar | 100 |  | √ | ' ' | 父单据ID |
 | 4 | fclassiccase | 经典案例（请简要说明） | varchar | 255 |  | √ | ' ' | 经典案例（请简要说明） |
 | 5 | fentitykey | 组件标识 | varchar | 100 |  | √ | ' ' | 组件标识 |
-| 6 | fmainorgid | 主业务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | fmainorgid | 主业务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fpentitykey | 父单据标识 | varchar | 100 |  | √ | ' ' | 父单据标识 |
 
 ### 列规则定义
@@ -32,9 +32,9 @@
 
 ---
 
-## 专利&#x2f;专用技术&#x2f;许可-子表 t_srm_compdevelopentry
+## 专利/专用技术/许可-子表 t_srm_compdevelopentry
 
-- **表名称：** 专利&#x2f;专用技术&#x2f;许可-子表
+- **表名称：** 专利/专用技术/许可-子表
 - **表名：** t_srm_compdevelopentry
 
 ### 表格列定义

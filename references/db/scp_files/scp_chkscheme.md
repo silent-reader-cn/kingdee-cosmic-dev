@@ -39,7 +39,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -67,7 +67,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 协同辅助资料 pbd_mallextdata |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [协同辅助资料 pbd_mallextdata](../pbd_files/pbd_mallextdata.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -95,7 +95,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 协同辅助资料 pbd_mallextdata |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [协同辅助资料 pbd_mallextdata](../pbd_files/pbd_mallextdata.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -127,10 +127,10 @@
 | 3 | finvdetail | 开票要求 | bpchar | 1 |  | √ | ' ' | 开票要求,枚举: 1 :汇总开具 2 :按明细开具 |
 | 4 | ftaxrate | 按税率 | bpchar | 1 |  | √ | ' ' | 按税率 |
 | 5 | fautocfm | 对账单确认方式 | bpchar | 1 |  | √ | ' ' | 对账单确认方式,枚举: 1 :无差异对账单自动确认 2 :无差异对账单手工确认 |
-| 6 | forgid | 业务单元 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | forgid | 业务单元 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fnodifftype | 判定对账有无差异的依据 | bpchar | 1 |  | √ | ' ' | 判定对账有无差异的依据,枚举: 1 :数量和金额都要相等 2 :金额相等，数量可不等 3 :数量相等，金额可不等 |
 | 8 | fasstattrib | 按辅助属性 | bpchar | 1 |  | √ | ' ' | 按辅助属性 |
-| 9 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 9 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 10 | fsumupamount | 每月对账总金额上限 | numeric | 19 | 6 | √ | 0.000000 | 每月对账总金额上限 |
 | 11 | fdefault | 默认方案 | bpchar | 1 |  | √ | ' ' | 默认方案 |
 | 12 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :保存 B :已提交 C :已审核 |
@@ -147,8 +147,8 @@
 | 23 | fcreateorgid | fcreateorgid | int8 | 64 |  | √ | 0 |  |
 | 24 | fname | fname | varchar | 100 |  | √ | ' ' |  |
 | 25 | fdateto | 每月对账截止日 | int8 | 64 |  | √ | 0 | 每月对账截止日 |
-| 26 | fcurrid | 结算币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
-| 27 | forgscope | forgscope | bpchar | 1 |  | √ | ' ' |  |
+| 26 | fcurrid | 结算币别 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
+| 27 | forgscope | 使用组织范围 | bpchar | 1 |  | √ | ' ' | 使用组织范围,枚举: 1 :所有组织 2 :指定组织 |
 | 28 | fcurrency | 按结算币别 | bpchar | 1 |  | √ | ' ' | 按结算币别 |
 | 29 | fdatasrc1 | 销售方数据来源 | bpchar | 1 |  | √ | ' ' | 销售方数据来源,枚举: 1 :销售发货单(含退货) |
 | 30 | fsalbillno | 按销售订单 | bpchar | 1 |  | √ | ' ' | 按销售订单 |
@@ -157,8 +157,8 @@
 | 33 | fdatasrc2 | 采购方数据来源 | bpchar | 1 |  | √ | ' ' | 采购方数据来源,枚举: 1 :采购入库单(含退货) |
 | 34 | fsettleorg | 按客户核算方 | bpchar | 1 |  | √ | ' ' | 按客户核算方 |
 | 35 | fhavefinish | 订单发货状态 | bpchar | 1 |  | √ | ' ' | 订单发货状态,枚举: 1 :部分发货即可对账 2 :整单发货才能对账 |
-| 36 | fbizpartnerid | 商务伙伴 | int8 | 64 |  | √ | 0 | 商务伙伴 bd_bizpartner |
-| 37 | fsupplierid | 销售方 | int8 | 64 |  | √ | 0 | 供应商 bd_supplier |
+| 36 | fbizpartnerid | 商务伙伴 | int8 | 64 |  | √ | 0 | [商务伙伴 bd_bizpartner](../base_files/bd_bizpartner.md) |
+| 37 | fsupplierid | 销售方 | int8 | 64 |  | √ | 0 | [供应商 bd_supplier](../basedata_files/bd_supplier.md) |
 | 38 | fpoentryid | 按订单分录行 | bpchar | 1 |  | √ | ' ' | 按订单分录行 |
 | 39 | finvupamount | 发票金额上限 | numeric | 19 | 6 | √ | 0.000000 | 发票金额上限 |
 | 40 | fupamount | 每张对账单金额上限 | numeric | 19 | 6 | √ | 0.000000 | 每张对账单金额上限 |
@@ -182,8 +182,8 @@
 | 1 | idx_pur_chkscheme_fnumber |  | fnumber |
 | 2 | t_pur_chkscheme_pkey |  | fid |
 | 3 | idx_t_pur_chkscheme_master |  | fmasterid |
-| 4 | idx_pur_chkscheme_fmasterid |  | fmasterid |
-| 5 | idx_t_pur_chkscheme_createorg |  | fcreateorgid |
+| 4 | idx_t_pur_chkscheme_createorg |  | fcreateorgid |
+| 5 | idx_pur_chkscheme_fmasterid |  | fmasterid |
 
 ---
 
@@ -197,18 +197,18 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fremark | fremark | varchar | 255 |  | √ | ' ' |  |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 6 | fdisabledate | fdisabledate | timestamp | 0 |  |  | null |  |
 | 7 | fdisablerid | fdisablerid | int8 | 64 |  | √ | 0 |  |
 | 8 | fauditdate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 10 | fctrlstrategy | 控制策略 | bpchar | 1 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
-| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 12 | fuseorgid | 业务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 13 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 12 | fuseorgid | 业务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 13 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 
@@ -235,7 +235,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -304,5 +304,5 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_pur_chkscheme_l_fid |  | fid,flocaleid |
-| 2 | t_pur_chkscheme_l_pkey |  | fpkid |
+| 1 | t_pur_chkscheme_l_pkey |  | fpkid |
+| 2 | idx_pur_chkscheme_l_fid |  | fid,flocaleid |

@@ -149,7 +149,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fmainbillentryseq | 核心单据分录行号 | int4 | 32 |  | √ | 0 | 核心单据分录行号 |
 | 3 | flotnumber | 批号 | varchar | 80 |  | √ | ' ' | 批号 |
-| 4 | fmaterialid | 物料编码 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 4 | fmaterialid | 物料编码 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 5 | fquaproblem | 问题分类 | bpchar | 1 |  | √ | ' ' | 问题分类,枚举: A :尺寸不良 B :外观不良 C :异物 D :混料/错料 E :物理特性不良 F :力学特性不良 G :化学特性不良 H :其他 |
 | 6 | fmainbillentity | 核心单据实体 | varchar | 50 |  | √ | ' ' | 核心单据实体 |
 | 7 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
@@ -160,19 +160,19 @@
 | 12 | fdetails_tag | 问题说明_详情 | text | 0 |  |  | null | 问题说明_详情 |
 | 13 | fmainbillid | 核心单据ID | varchar | 50 |  | √ | ' ' | 核心单据ID |
 | 14 | fpobillid | 订单ID | varchar | 50 |  | √ | ' ' | 订单ID |
-| 15 | fbaseunitid | 基本单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 15 | fbaseunitid | 基本单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 16 | fsrcbillentity | 来源单据实体 | varchar | 50 |  | √ | ' ' | 来源单据实体 |
 | 17 | fqty | 数量 | numeric | 23 | 10 | √ | 0 | 数量 |
-| 18 | frcvorgid | 收货组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 18 | frcvorgid | 收货组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 19 | fsrcbillnumber | 来源单据编号 | varchar | 80 |  | √ | ' ' | 来源单据编号 |
 | 20 | freceiptbillid | 收货单ID | varchar | 50 |  | √ | ' ' | 收货单ID |
-| 21 | fcurrid | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 21 | fcurrid | 币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 | 22 | fsrcbillid | 来源单据ID | varchar | 50 |  | √ | ' ' | 来源单据ID |
 | 23 | fmainbillnumber | 核心单据编号 | varchar | 80 |  | √ | ' ' | 核心单据编号 |
-| 24 | funitid | 计量单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 24 | funitid | 计量单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 25 | fsrcbillentryid | 来源单据行ID | int8 | 64 |  | √ | 0 | 来源单据行ID |
 | 26 | fmainbillentryid | 核心单据行ID | varchar | 50 |  | √ | ' ' | 核心单据行ID |
-| 27 | fsettleorgid | 核算组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 27 | fsettleorgid | 核算组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 28 | fbaseqty | 基本数量 | numeric | 23 | 10 | √ | 0 | 基本数量 |
 | 29 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 30 | fpobillno | 订单编号 | varchar | 80 |  | √ | ' ' | 订单编号 |
@@ -203,7 +203,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 附件字段实体 bd_attachment |
+| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [附件字段实体 bd_attachment](../frame_files/bd_attachment.md) |
 | 2 | fpkid | fpkid | int8 | 64 |  | √ | 0 | FPKID |
 | 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 
@@ -232,7 +232,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 附件字段实体 bd_attachment |
+| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [附件字段实体 bd_attachment](../frame_files/bd_attachment.md) |
 | 2 | fpkid | fpkid | int8 | 64 |  | √ | 0 | FPKID |
 | 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 
@@ -261,7 +261,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 附件字段实体 bd_attachment |
+| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [附件字段实体 bd_attachment](../frame_files/bd_attachment.md) |
 | 2 | fpkid | fpkid | int8 | 64 |  | √ | 0 | FPKID |
 | 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 
@@ -328,7 +328,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 附件字段实体 bd_attachment |
+| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [附件字段实体 bd_attachment](../frame_files/bd_attachment.md) |
 | 2 | fpkid | fpkid | int8 | 64 |  | √ | 0 | FPKID |
 | 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 
@@ -358,10 +358,10 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fpcaconfirmer | PCA确认人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fpcaconfirmer | PCA确认人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fpcafeedbacktime | PCA反馈时间 | timestamp | 0 |  |  | null | PCA反馈时间 |
-| 4 | ficaconfirmer | ICA确认人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 5 | forgid | 发起方 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 4 | ficaconfirmer | ICA确认人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 5 | forgid | 发起方 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | fcancelstatus | 取消状态 | bpchar | 1 |  | √ | ' ' | 取消状态,枚举: A :未取消 Z :已取消 |
 | 7 | fpcastatus | PCA状态 | bpchar | 1 |  | √ | ' ' | PCA状态,枚举: A :待反馈 B :待确认 C :已确认 D :待重新反馈 |
 | 8 | fbilldate | 业务日期 | timestamp | 0 |  |  | null | 业务日期 |
@@ -370,31 +370,31 @@
 | 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 12 | fpcarequiretime | PCA要求时间 | timestamp | 0 |  |  | null | PCA要求时间 |
 | 13 | forigin | 发起方 | bpchar | 1 |  | √ | ' ' | 发起方,枚举: 1 :供应商 2 :采购方 |
-| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 15 | fcancelid | 取消人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 15 | fcancelid | 取消人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 16 | fbillno | 单据编号 | varchar | 80 |  | √ | ' ' | 单据编号 |
 | 17 | ficastatus | ICA状态 | bpchar | 1 |  | √ | ' ' | ICA状态,枚举: A :待反馈 B :待确认 C :已确认 D :待重新反馈 |
 | 18 | fpcaconfirmtime | PCA确认时间 | timestamp | 0 |  |  | null | PCA确认时间 |
 | 19 | fremark | 备注 | varchar | 512 |  | √ | ' ' | 备注 |
-| 20 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 20 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 21 | fbillstatus | 单据状态 | bpchar | 1 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 22 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 23 | fverifyfeedbacktime | 验证反馈时间 | timestamp | 0 |  |  | null | 验证反馈时间 |
 | 24 | fverifyconfirmtime | 验证确认时间 | timestamp | 0 |  |  | null | 验证确认时间 |
 | 25 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
 | 26 | ficaexplanation | ICA确认说明 | varchar | 512 |  | √ | ' ' | ICA确认说明 |
-| 27 | fbizpartnerid | 商务伙伴 | int8 | 64 |  | √ | 0 | 商务伙伴 bd_bizpartner |
-| 28 | fsupplierid | 供应商 | int8 | 64 |  | √ | 0 | 供应商 bd_supplier |
-| 29 | fverifyconfirmer | 验证确认人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 27 | fbizpartnerid | 商务伙伴 | int8 | 64 |  | √ | 0 | [商务伙伴 bd_bizpartner](../base_files/bd_bizpartner.md) |
+| 28 | fsupplierid | 供应商 | int8 | 64 |  | √ | 0 | [供应商 bd_supplier](../basedata_files/bd_supplier.md) |
+| 29 | fverifyconfirmer | 验证确认人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 30 | fpcaexplanation | PCA确认说明 | varchar | 512 |  | √ | ' ' | PCA确认说明 |
 | 31 | fcanceldate | 取消日期 | timestamp | 0 |  |  | null | 取消日期 |
-| 32 | fpersonid | 发起人 | int8 | 64 |  | √ | 0 | 业务员 pur_bizperson |
+| 32 | fpersonid | 发起人 | int8 | 64 |  | √ | 0 | [业务员 pur_bizperson](../pbd_files/pur_bizperson.md) |
 | 33 | ficaconfirmtime | ICA确认时间 | timestamp | 0 |  |  | null | ICA确认时间 |
 | 34 | ficarequiretime | ICA要求时间 | timestamp | 0 |  |  | null | ICA要求时间 |
 | 35 | fsrcbilltype | 来源单据类型 | bpchar | 1 |  | √ | ' ' | 来源单据类型,枚举: 0 :新增 1 :质量问题通知 2 :纠正预防措施报告 |
-| 36 | fcontacterid | 供应商联系人 | int8 | 64 |  | √ | 0 | 供应商用户 pur_supuser |
+| 36 | fcontacterid | 供应商联系人 | int8 | 64 |  | √ | 0 | [协同业务员 scp_bizperson](../scp_files/scp_bizperson.md) |
 | 37 | fverifyexplanation | 验证确认说明 | varchar | 512 |  | √ | ' ' | 验证确认说明 |
-| 38 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 38 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 39 | fsummary | 问题总结 | varchar | 512 |  | √ | ' ' | 问题总结 |
 | 40 | fverifystatus | 验证状态 | bpchar | 1 |  | √ | ' ' | 验证状态,枚举: A :待反馈 B :待确认 C :已确认 D :待重新反馈 |
 | 41 | frectificationtitle | 整改标题 | varchar | 255 |  | √ | ' ' | 整改标题 |
@@ -460,7 +460,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 附件字段实体 bd_attachment |
+| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [附件字段实体 bd_attachment](../frame_files/bd_attachment.md) |
 | 2 | fpkid | fpkid | int8 | 64 |  | √ | 0 | FPKID |
 | 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 
@@ -523,7 +523,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 附件字段实体 bd_attachment |
+| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [附件字段实体 bd_attachment](../frame_files/bd_attachment.md) |
 | 2 | fpkid | fpkid | int8 | 64 |  | √ | 0 | FPKID |
 | 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 

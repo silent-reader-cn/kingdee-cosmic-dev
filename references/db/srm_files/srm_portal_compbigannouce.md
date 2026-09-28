@@ -9,7 +9,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fnoticeformid | 字段来源 | varchar | 50 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 1 | fnoticeformid | 字段来源 | varchar | 50 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 2 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 3 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 | id |
 | 4 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
@@ -30,35 +30,6 @@
 
 ---
 
-## 展示字段-多语言表 t_srm_showfiledentry_l
-
-- **表名称：** 展示字段-多语言表
-- **表名：** t_srm_showfiledentry_l
-
-### 表格列定义
-
-| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | ffieldname | 公告列名称 | varchar | 50 |  | √ | ' ' | 公告列名称 |
-| 2 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
-| 3 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
-| 4 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
-
-### 列规则定义
-
-| 序号 | 键编码 | 列字段 |
-| :--- | :--- | :--- |
-| 1 | fpkid | fpkid |
-
-### 索引定义
-
-| 序号 | 索引名 | 唯一 | 列字段 |
-| :--- | :--- | :--- | :--- |
-| 1 | idx_showfieldentry_l_fenid |  | fentryid |
-| 2 | pk_t_srm_showfiledentry_l |  | fpkid |
-
----
-
 ## 大公告-主表 t_srm_component
 
 - **表名称：** 大公告-主表
@@ -69,11 +40,11 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fgroupid | 组件类型 | int8 | 64 |  | √ | 0 | 门户组件类型 srm_portal_compgroup |
+| 2 | fgroupid | 组件类型 | int8 | 64 |  | √ | 0 | [门户组件类型 srm_portal_compgroup](../srm_files/srm_portal_compgroup.md) |
 | 3 | faddress | faddress | varchar | 200 |  | √ | ' ' |  |
-| 4 | forgid | 业务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 4 | forgid | 业务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | frightbidtype | frightbidtype | varchar | 50 |  | √ | ' ' |  |
-| 6 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 8 | fregquerybutton | fregquerybutton | varchar | 255 |  | √ | ' ' |  |
 | 9 | fregbuttonname | fregbuttonname | varchar | 255 |  | √ | ' ' |  |
@@ -103,11 +74,11 @@
 | 33 | fleftname | fleftname | varchar | 255 |  | √ | ' ' |  |
 | 34 | frightname | frightname | varchar | 255 |  | √ | ' ' |  |
 | 35 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 36 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 36 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 37 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 38 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
-| 39 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 40 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 39 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 40 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 41 | fcomponentsys | 系统预置 | bpchar | 1 |  | √ | '0' | 系统预置 |
 | 42 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 43 | fnetlink | fnetlink | varchar | 255 |  | √ | ' ' |  |
@@ -117,8 +88,8 @@
 | 47 | ficpdata | ficpdata | varchar | 512 |  | √ | ' ' |  |
 | 48 | floginbutton | floginbutton | varchar | 255 |  | √ | ' ' |  |
 | 49 | fallthemecololr | fallthemecololr | varchar | 100 |  | √ | ' ' |  |
-| 50 | fuseorgid | 使用组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 51 | fnoticetype | 公告类型 | varchar | 100 |  | √ | ' ' | 公告类型,枚举: 1 :询价公告 2 :招标公告 3 :竞价公告 4 :比价公告 5 :中标公告 6 :招募公告 7 :行业动态 8 :系统公告 A :询价结果公告 B :竞价结果公告 C :寻源公告 D :流标公告 |
+| 50 | fuseorgid | 使用组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 51 | fnoticetype | 公告类型 | varchar | 100 |  | √ | ' ' | 公告类型,枚举: 1 :询价公告 2 :招标公告 3 :竞价公告 4 :比价公告 5 :中标公告 6 :招募公告 7 :行业动态 8 :系统公告 A :询价结果公告 B :竞价结果公告 C :招标公告 D :流标公告 |
 
 ### 列规则定义
 
@@ -216,7 +187,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | varchar | 50 |  | √ | ' ' | 招标辅助资料 pds_extdata |
+| 2 | fbasedataid | fbasedataid | varchar | 50 |  | √ | ' ' | [招标辅助资料 pds_extdata](../pds_files/pds_extdata.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -260,5 +231,34 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | pk_t_srm_showfiledentry |  | fentryid |
-| 2 | idx_srm_showfieldentry_fid |  | fid |
+| 1 | idx_srm_showfieldentry_fid |  | fid |
+| 2 | pk_t_srm_showfiledentry |  | fentryid |
+
+---
+
+## 展示字段-多语言表 t_srm_showfiledentry_l
+
+- **表名称：** 展示字段-多语言表
+- **表名：** t_srm_showfiledentry_l
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | ffieldname | 公告列名称 | varchar | 50 |  | √ | ' ' | 公告列名称 |
+| 2 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
+| 3 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
+| 4 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fpkid | fpkid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_showfieldentry_l_fenid |  | fentryid |
+| 2 | pk_t_srm_showfiledentry_l |  | fpkid |

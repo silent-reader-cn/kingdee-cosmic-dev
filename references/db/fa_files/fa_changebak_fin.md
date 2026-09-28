@@ -22,24 +22,24 @@
 | 11 | faddupyeardepre | 本年累计折旧 | numeric | 23 | 10 | √ | 0.0000000000 | 本年累计折旧 |
 | 12 | fdecval | 减值准备 | numeric | 23 | 10 | √ | 0.0000000000 | 减值准备 |
 | 13 | fmonthdeprechg | 本期减值变动 | numeric | 19 | 6 | √ | 0.000000 | 本期减值变动 |
-| 14 | fdepreuseid | 折旧用途 | int8 | 64 |  | √ | 0 | 折旧用途 fa_depreuse |
+| 14 | fdepreuseid | 折旧用途 | int8 | 64 |  | √ | 0 | [折旧用途 fa_depreuse](../fa_files/fa_depreuse.md) |
 | 15 | fisneeddepre | 是否需要折旧 | bpchar | 1 |  | √ | '1' | 是否需要折旧 |
 | 16 | fmonthorigvalchg | 本期原值变动 | numeric | 23 | 10 | √ | 0.0000000000 | 本期原值变动 |
-| 17 | fdepremethodid | 折旧方法 | int8 | 64 |  | √ | 0 | 折旧方法 fa_depremethod |
-| 18 | fbizperiodid | 发生期间 | int8 | 64 |  | √ | 0 | 会计日历 bd_period |
+| 17 | fdepremethodid | 折旧方法 | int8 | 64 |  | √ | 0 | [折旧方法 fa_depremethod](../fa_files/fa_depremethod.md) |
+| 18 | fbizperiodid | 发生期间 | int8 | 64 |  | √ | 0 | [会计日历 bd_period](../fibd_files/bd_period.md) |
 | 19 | fmonthdepre | 本期折旧 | numeric | 19 | 6 | √ | 0.000000 | 本期折旧 |
 | 20 | fcardid | 卡片id | int8 | 64 |  | √ | 0 | 卡片id |
-| 21 | fassetcatid | 资产类别 | int8 | 64 |  | √ | 0 | 资产类别 fa_assetcategory |
+| 21 | fassetcatid | 资产类别 | int8 | 64 |  | √ | 0 | [资产类别 fa_assetcategory](../fa_files/fa_assetcategory.md) |
 | 22 | fpreusingamount | 预计使用期间数 | numeric | 23 | 10 | √ | 0.0000000000 | 预计使用期间数 |
-| 23 | frealcardid | 实物信息 | int8 | 64 |  | √ | 0 | 资产卡片基础资料 fa_card_real_base |
-| 24 | fassetbookid | 资产账簿 | int8 | 64 |  | √ | 0 | 启用期间设置 fa_assetbook |
+| 23 | frealcardid | 实物信息 | int8 | 64 |  | √ | 0 | [资产卡片基础资料 fa_card_real_base](../fa_files/fa_card_real_base.md) |
+| 24 | fassetbookid | 资产账簿 | int8 | 64 |  | √ | 0 | [启用期间设置 fa_assetbook](../fa_files/fa_assetbook.md) |
 | 25 | fpreresidualval | 预计净残值 | numeric | 23 | 10 | √ | 0.0000000000 | 预计净残值 |
 | 26 | foriginalval | 资产原值 | numeric | 23 | 10 | √ | 0.0000000000 | 资产原值 |
-| 27 | fendperiodid | 结束期间 | int8 | 64 |  | √ | 0 | 会计日历 bd_period |
+| 27 | fendperiodid | 结束期间 | int8 | 64 |  | √ | 0 | [会计日历 bd_period](../fibd_files/bd_period.md) |
 | 28 | fnetworth | 净值 | numeric | 23 | 10 | √ | 0.0000000000 | 净值 |
 | 29 | fcurrencyrate | 汇率 | numeric | 23 | 10 | √ | 0.0000000000 | 汇率 |
 | 30 | fnumber | 资产编码 | varchar | 100 |  | √ | ' ' | 资产编码 |
-| 31 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 31 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 
 ### 列规则定义
 

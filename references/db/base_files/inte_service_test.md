@@ -56,8 +56,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_t_int_stest_fid |  | fid |
-| 2 | pk_t_int_servicetest_entry |  | fentryid |
+| 1 | pk_t_int_servicetest_entry |  | fentryid |
+| 2 | idx_t_int_stest_fid |  | fid |
 
 ---
 
@@ -71,14 +71,14 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fmethodname | 方法名 | varchar | 50 |  | √ | ' ' | 方法名 |
 | 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 5 | fuserid | 负责人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | fuserid | 负责人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 7 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 8 | fcloudname | 云名称 | varchar | 50 |  | √ | ' ' | 云名称 |
-| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 11 | ftype | 类型 | varchar | 50 |  | √ | ' ' | 类型,枚举: 0 :微服务接口 1 :反射 2 :脚本 |
 | 12 | frefclassname | 反射类名 | varchar | 500 |  | √ | ' ' | 反射类名 |

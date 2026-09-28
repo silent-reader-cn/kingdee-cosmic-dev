@@ -10,8 +10,8 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | 业务组内码 | int8 | 64 |  | √ | 0 | 业务组内码 |
-| 2 | fdeptid | 部门 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 3 | foperatorid | 人员 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fdeptid | 部门 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 3 | foperatorid | 人员 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fopergrptype | 业务组类型 | varchar | 5 |  | √ | ' ' | 业务组类型,枚举: CGZ :采购组 KCZ :库管组 XSZ :销售组 JHZ :计划组 ZJZ :质检组 |
 | 5 | fseq | fseq | int8 | 64 |  | √ | 0 |  |
 | 6 | fopergrpnumber | 业务组编码 | varchar | 80 |  | √ | ' ' | 业务组编码 |

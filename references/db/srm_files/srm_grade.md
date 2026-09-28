@@ -95,31 +95,31 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | forgid | 业务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | forgid | 业务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fdisabledate | fdisabledate | timestamp | 0 |  |  | null |  |
-| 4 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 4 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 6 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :保存 B :已提交 C :已审核 |
-| 7 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 7 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 8 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 9 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 10 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
-| 11 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 11 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 12 | fremark | 方案描述 | varchar | 255 |  | √ | ' ' | 方案描述 |
-| 13 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | fname | 方案名称 | varchar | 100 |  | √ | ' ' | 方案名称 |
 | 15 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 16 | fevatypeid | 评估类型 | int8 | 64 |  | √ | 0 | 辅助资料 bos_assistantdata_detail |
+| 16 | fevatypeid | 评估类型 | int8 | 64 |  | √ | 0 | [辅助资料 bos_assistantdata_detail](../base_files/bos_assistantdata_detail.md) |
 | 17 | fdisablerid | fdisablerid | int8 | 64 |  | √ | 0 |  |
-| 18 | flastupdateuserid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 18 | flastupdateuserid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 19 | fauditdate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
 | 20 | flastupdatetime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 21 | fctrlstrategy | 控制策略 | bpchar | 1 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
 | 22 | fenable | 使用状态 | bpchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 23 | fnumber | 方案编码 | varchar | 30 |  | √ | ' ' | 方案编码 |
-| 24 | fuseorgid | 使用组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 24 | fuseorgid | 使用组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 25 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
-| 26 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 26 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 27 | fscope | fscope | varchar | 50 |  | √ | ' ' |  |
 
 ### 列规则定义
@@ -154,7 +154,7 @@
 | 4 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 5 | fnote | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
 | 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 7 | fevagradeid | 评估等级 | int8 | 64 |  | √ | 0 | 评估等级 bd_evagrade |
+| 7 | fevagradeid | 评估等级 | int8 | 64 |  | √ | 0 | [评估等级 bd_evagrade](../basedata_files/bd_evagrade.md) |
 
 ### 列规则定义
 

@@ -29,7 +29,7 @@
 | 18 | fresource | 发票来源 | varchar | 50 |  | √ | ' ' | 发票来源 |
 | 19 | fbillno | 单据编号 | varchar | 36 |  | √ | ' ' | 单据编号 |
 | 20 | fsaler_phone | 卖方电话号码 | varchar | 30 |  | √ | ' ' | 卖方电话号码 |
-| 21 | forg_id | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 21 | forg_id | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 22 | ftotal_amount | 价税合计 | numeric | 23 | 10 | √ | 0.0000000000 | 价税合计 |
 | 23 | fdeduction_purpose | 抵扣用途 | varchar | 2 |  | √ | ' ' | 抵扣用途,枚举: 1 :抵扣 2 :不抵扣 3 :退税 |
 | 24 | fbillstatus | 单据状态 | varchar | 2 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
@@ -41,9 +41,9 @@
 | 30 | fsaler_tax_no | 卖方税号 | varchar | 20 |  | √ | ' ' | 卖方税号 |
 | 31 | fdelete | 可用状态 | varchar | 4 |  |  | '1' | 可用状态,枚举: 1 :可用 2 :作废 3 :删除 |
 | 32 | fexpense_status | 报销状态 | varchar | 2 |  | √ | ' ' | 报销状态,枚举: 1 :未报销 30 :审核中 60 :已报销 65 :已入账 |
-| 33 | fproject | 项目 | int8 | 64 |  | √ | 0 | 项目 bd_project |
+| 33 | fproject | 项目 | int8 | 64 |  | √ | 0 | [项目 bd_project](../basedata_files/bd_project.md) |
 | 34 | fbrand_model | 厂牌型号 | varchar | 80 |  | √ | ' ' | 厂牌型号 |
-| 35 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 35 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 36 | fover_tax_code | 完税凭证号码 | varchar | 20 |  | √ | ' ' | 完税凭证号码 |
 | 37 | ftax_authority_code | 税务机关代码 | varchar | 50 |  | √ | ' ' | 税务机关代码 |
 | 38 | fbuyer_name | 买方名称 | varchar | 120 |  | √ | ' ' | 买方名称 |
@@ -55,12 +55,12 @@
 | 44 | fmanage_status | 管理状态 | varchar | 2 |  | √ | ' ' | 管理状态,枚举: 0 :正常 1 :非正常 |
 | 45 | finvoice_status | 发票状态 | varchar | 2 |  | √ | ' ' | 发票状态,枚举: 0 :正常 1 :失控 2 :作废 3 :红冲 7 :部分红冲 4 :异常 |
 | 46 | fserial_no | 发票流水号 | varchar | 36 |  | √ | ' ' | 发票流水号 |
-| 47 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 47 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 48 | fproxy_mark | 代开标识 | varchar | 4 |  | √ | ' ' | 代开标识,枚举: 0 :否 1 :是 |
 | 49 | faccount_date | 会计属期 | timestamp | 0 |  |  | null | 会计属期 |
 | 50 | fbuyer_cardno | 买方身份证号/组织机构代码 | varchar | 100 |  | √ | ' ' | 买方身份证号/组织机构代码 |
 | 51 | fremark | 备注 | varchar | 400 |  | √ | ' ' | 备注 |
-| 52 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 52 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 53 | faws_serial_no | AWS发票流水号 | varchar | 36 |  | √ | ' ' | AWS发票流水号 |
 | 54 | ftax_authority_name | 税务机关名称 | varchar | 50 |  | √ | ' ' | 税务机关名称 |
 | 55 | ftax_rate | 税率 | numeric | 23 | 10 | √ | 0.0000000000 | 税率 |
@@ -72,11 +72,11 @@
 | 61 | ftotal_ton | 吨位 | varchar | 50 |  | √ | ' ' | 吨位 |
 | 62 | fbuyer_tax_no | 买方税号 | varchar | 20 |  | √ | ' ' | 买方税号 |
 | 63 | fsaler_bank_name | 销方开户银行 | varchar | 100 |  | √ | ' ' | 销方开户银行 |
-| 64 | ftax_org | 纳税主体 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 64 | ftax_org | 纳税主体 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 65 | fsaler_name | 卖方名称 | varchar | 120 |  | √ | ' ' | 卖方名称 |
 | 66 | fproducing_area | 产地 | varchar | 30 |  | √ | ' ' | 产地 |
 | 67 | foriginal_state | 原件签收状态 | varchar | 2 |  | √ | ' ' | 原件签收状态,枚举: 0 :未签收 1 :已签收 |
-| 68 | finvoice_type | 发票类型 | int8 | 64 |  | √ | 0 | 发票类型 bd_invoicetype |
+| 68 | finvoice_type | 发票类型 | int8 | 64 |  | √ | 0 | [发票种类 bd_invoicetype](../basedata_files/bd_invoicetype.md) |
 | 69 | foriginal_invoice_code | 原发票代码 | varchar | 32 |  | √ | ' ' | 原发票代码 |
 | 70 | foriginal_invoice_no | 原发票号码 | varchar | 32 |  | √ | ' ' | 原发票号码 |
 

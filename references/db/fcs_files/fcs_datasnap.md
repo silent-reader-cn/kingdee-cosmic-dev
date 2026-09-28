@@ -41,27 +41,27 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
-| 3 | fmodifierid | 最后更新人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 最后更新人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fsnap | 快照 | varchar | 255 |  | √ | ' ' | 快照 |
 | 5 | fcomment | fcomment | varchar | 255 |  | √ | ' ' |  |
 | 6 | fcolumns | fcolumns | varchar | 255 |  | √ | ' ' |  |
 | 7 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 8 | fcolumns_tag | fcolumns_tag | text | 0 |  |  | ' ' |  |
-| 9 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 9 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 10 | fsnapdate | 快照日期 | timestamp | 0 |  |  | null | 快照日期 |
 | 11 | fenabledate | 启用日期 | timestamp | 0 |  |  | null | 启用日期 |
 | 12 | fdisabledate | 禁用日期 | timestamp | 0 |  |  | null | 禁用日期 |
-| 13 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | ffields_tag | datasetfields_详情 | text | 0 |  |  | ' ' | datasetfields_详情 |
 | 15 | fmodifytime | 最后更新时间 | timestamp | 0 |  |  | null | 最后更新时间 |
 | 16 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 17 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 17 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 18 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 19 | fenable | 使用状态 | varchar | 30 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 20 | fenablerid | 启用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 20 | fenablerid | 启用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 21 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
 | 22 | fsnap_tag | 快照_详情 | text | 0 |  |  | ' ' | 快照_详情 |
-| 23 | fformid | 报表 | varchar | 80 |  | √ | ' ' | 表单元数据 bos_formmeta |
+| 23 | fformid | 报表 | varchar | 80 |  | √ | ' ' | [表单元数据 bos_formmeta](../mdl_files/bos_formmeta.md) |
 | 24 | ffields | datasetfields | varchar | 255 |  | √ | ' ' | datasetfields |
 
 ### 列规则定义

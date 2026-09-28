@@ -10,10 +10,10 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fprojectid | 寻源项目F7 | int8 | 64 |  | √ | 0 | 招标项目F7 src_projectf7 |
+| 2 | fprojectid | 寻源项目F7 | int8 | 64 |  | √ | 0 | [招标项目F7 src_projectf7](../src_files/src_projectf7.md) |
 | 3 | fparentid | 父单据ID | varchar | 100 |  | √ | ' ' | 父单据ID |
 | 4 | fentitykey | 组件标识 | varchar | 100 |  | √ | ' ' | 组件标识 |
-| 5 | fmainorgid | 主业务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | fmainorgid | 主业务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | fpentitykey | 父单据标识 | varchar | 100 |  | √ | ' ' | 父单据标识 |
 
 ### 列规则定义

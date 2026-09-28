@@ -119,5 +119,5 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | pk_cfa_risk_financial_type |  | fentryid |
-| 2 | idx_cfa_risk_financial_type_fk |  | fid |
+| 1 | idx_cfa_risk_financial_type_fk |  | fid |
+| 2 | pk_cfa_risk_financial_type |  | fentryid |

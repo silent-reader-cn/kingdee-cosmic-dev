@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fproductionworkshopid | 生产车间 | int8 | 64 |  | √ | 0 | 车间设置 mpdm_workshopsetup |
+| 2 | fproductionworkshopid | 生产车间 | int8 | 64 |  | √ | 0 | [车间设置 mpdm_workshopsetup](../mpdm_files/mpdm_workshopsetup.md) |
 | 3 | ffirstcheck | 首检 | bpchar | 1 |  | √ | '0' | 首检 |
 | 4 | fworkhours | 工时 | numeric | 23 | 10 | √ | 0 | 工时 |
 | 5 | fprocessno | 工序号 | varchar | 100 |  | √ | ' ' | 工序号 |
@@ -20,19 +20,19 @@
 | 9 | fchecktype | 检验方式 | varchar | 50 |  | √ | ' ' | 检验方式,枚举: 1011 :免检 1012 :车间检验 1013 :质量检验 |
 | 10 | ffloorratio | 汇报下限允差(%) | numeric | 23 | 10 | √ | 0 | 汇报下限允差(%) |
 | 11 | fbasebatchqty | 基本批量 | numeric | 23 | 10 | √ | 0 | 基本批量 |
-| 12 | foperationid | 工序编码 | int8 | 64 |  | √ | 0 | 标准工序定义(废弃) mpdm_workprocedure |
-| 13 | fprocessgroup | 工序组 | int8 | 64 |  | √ | 0 | 工序组(废弃) mpdm_progroup |
-| 14 | foperationunitid | 工序单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 15 | fworkcenter | 工作中心 | int8 | 64 |  | √ | 0 | 工作中心定义(废弃) mpdm_workcentre |
-| 16 | fworkstation | 工位 | int8 | 64 |  | √ | 0 | 工位 mpdm_workstation |
+| 12 | foperationid | 工序编码 | int8 | 64 |  | √ | 0 | [标准工序定义(废弃) mpdm_workprocedure](../mpdm_files/mpdm_workprocedure.md) |
+| 13 | fprocessgroup | 工序组 | int8 | 64 |  | √ | 0 | [工序组(废弃) mpdm_progroup](../mpdm_files/mpdm_progroup.md) |
+| 14 | foperationunitid | 工序单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 15 | fworkcenter | 工作中心 | int8 | 64 |  | √ | 0 | [工作中心定义(废弃) mpdm_workcentre](../mpdm_files/mpdm_workcentre.md) |
+| 16 | fworkstation | 工位 | int8 | 64 |  | √ | 0 | [工位 mpdm_workstation](../mpdm_files/mpdm_workstation.md) |
 | 17 | fheadqty | 表头数量 | numeric | 23 | 10 | √ | 0 | 表头数量 |
-| 18 | foprctrlstrategy | 工序控制策略 | int8 | 64 |  | √ | 0 | 工序控制策略(废弃) mpdm_proctrlstrategy |
+| 18 | foprctrlstrategy | 工序控制策略 | int8 | 64 |  | √ | 0 | [工序控制策略(废弃) mpdm_proctrlstrategy](../mpdm_files/mpdm_proctrlstrategy.md) |
 | 19 | foperationdesc | 工序说明 | varchar | 255 |  | √ | ' ' | 工序说明 |
 | 20 | fbottleprocedure | 瓶颈工序 | bpchar | 1 |  | √ | '0' | 瓶颈工序 |
-| 21 | fprofessiona | 专业 | int8 | 64 |  | √ | 0 | 树形基础资料模板 mpdm_professiona |
-| 22 | fproductionorgid | 生产组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 21 | fprofessiona | 专业 | int8 | 64 |  | √ | 0 | [树形基础资料模板 mpdm_professiona](../mpdm_files/mpdm_professiona.md) |
+| 22 | fproductionorgid | 生产组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 23 | fupperratio | 汇报上限允差(%) | numeric | 23 | 10 | √ | 0 | 汇报上限允差(%) |
-| 24 | fheadunitid | 表头单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 24 | fheadunitid | 表头单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 25 | fismilestoneprocess | 里程碑工序 | bpchar | 1 |  | √ | '0' | 里程碑工序 |
 | 26 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 27 | fcollaborative | 协作工序 | bpchar | 1 |  | √ | '0' | 协作工序 |
@@ -147,37 +147,37 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcardnoid | 工卡编码 | int8 | 64 |  | √ | 0 | 工卡维护 mpdm_workcards |
-| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fcardnoid | 工卡编码 | int8 | 64 |  | √ | 0 | [工卡维护 mpdm_workcards](../mpdm_files/mpdm_workcards.md) |
+| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | fmajordesc | 重要工作描述 | varchar | 255 |  | √ | ' ' | 重要工作描述 |
-| 5 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | faudittime | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
 | 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 8 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 9 | fcancelerid | 禁用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fcancelerid | 禁用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | fmajorflag | 重要工作标记 | bpchar | 1 |  | √ | '0' | 重要工作标记 |
 | 11 | fproductenvironment | 生产环境 | varchar | 255 |  | √ | ' ' | 生产环境 |
 | 12 | fcanceltime | 禁用时间 | timestamp | 0 |  |  | null | 禁用时间 |
 | 13 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 16 | fsumhours | 工时（汇总） | numeric | 23 | 10 | √ | 0 | 工时（汇总） |
 | 17 | fbitindex | 位图 | int8 | 64 |  | √ | 0 | 位图 |
-| 18 | fenableuserid | 启用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 19 | fworkunit | 工时单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 20 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 18 | fenableuserid | 启用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 19 | fworkunit | 工时单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 20 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 21 | fremark | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
 | 22 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 23 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 23 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 24 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 25 | fenabledate | 启用日期 | timestamp | 0 |  |  | null | 启用日期 |
 | 26 | fctrlstrategy | 控制策略 | bpchar | 1 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
 | 27 | ffirstexe | 首次执行（待定） | bpchar | 1 |  | √ | '0' | 首次执行（待定） |
-| 28 | fmaterialunit | 基本单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 28 | fmaterialunit | 基本单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 29 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 30 | fnumber | 编码 | varchar | 50 |  | √ | ' ' | 编码 |
 | 31 | fsourcebitindex | 原资料位图 | int8 | 64 |  | √ | 0 | 原资料位图 |
-| 32 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 32 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

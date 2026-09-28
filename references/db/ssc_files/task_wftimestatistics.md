@@ -10,17 +10,17 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fsscid | 共享中心 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fsscid | 共享中心 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | ftimemax | 节点最长耗时 | numeric | 23 | 10 | √ | 0 | 节点最长耗时 |
-| 4 | ftasktypeid | 任务类型 | int8 | 64 |  | √ | 0 | 任务类型 task_tasktype |
-| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 4 | ftasktypeid | 任务类型 | int8 | 64 |  | √ | 0 | [任务类型 task_tasktype](../ssc_files/task_tasktype.md) |
+| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | fdate | 日期 | timestamp | 0 |  |  | null | 日期 |
-| 7 | fpersonid | 处理人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 7 | fpersonid | 处理人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 8 | fprocdefid | 流程定义ID | int8 | 64 |  | √ | 0 | 流程定义ID |
 | 9 | fcount | 执行次数 | int8 | 64 |  | √ | 0 | 执行次数 |
 | 10 | ftaskdefkey | 流程节点ID | varchar | 100 |  | √ | ' ' | 流程节点ID |
 | 11 | ftimesum | 节点总耗时 | numeric | 23 | 10 | √ | 0 | 节点总耗时 |
-| 12 | fbilltypeid | 业务单据 | int8 | 64 |  | √ | 0 | 业务单据 task_taskbill |
+| 12 | fbilltypeid | 业务单据 | int8 | 64 |  | √ | 0 | [业务单据 task_taskbill](../ssc_files/task_taskbill.md) |
 
 ### 列规则定义
 

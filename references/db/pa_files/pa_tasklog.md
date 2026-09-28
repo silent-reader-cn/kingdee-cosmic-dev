@@ -16,7 +16,7 @@
 | 5 | fcreatetime | 日志创建时间 | timestamp | 0 |  |  | null | 日志创建时间 |
 | 6 | ftasktype | 任务类型 | bpchar | 2 |  | √ | ' ' | 任务类型,枚举: 11 :从实体同步数据任务 |
 | 7 | fmsg | 日志信息 | varchar | 255 |  | √ | ' ' | 日志信息 |
-| 8 | fdatasourceid | 数据源 | int8 | 64 |  | √ | 0 | 数据源 pa_datasourceconfig |
+| 8 | fdatasourceid | 数据源 | int8 | 64 |  | √ | 0 | [数据源 pa_datasourceconfig](../pa_files/pa_datasourceconfig.md) |
 | 9 | ftaskoperatetoken | 任务操作所使用的Token | int8 | 64 |  | √ | 0 | 任务操作所使用的Token |
 | 10 | fstatus | 同步状态： | bpchar | 1 |  | √ | ' ' | 同步状态：,枚举: 0 :未开始 1 :进行中 2 :成功完成 9 :失败 5 :手动终止 |
 | 11 | fdatasynctaskid | 所属的同步任务ID | int8 | 64 |  | √ | 0 | 所属的同步任务ID |

@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | foptype | 更新类型 | varchar | 30 |  | √ | ' ' | 更新类型,枚举: update :更新 close :关闭 |
-| 3 | fentitykey | 信用单据 | varchar | 50 |  | √ | ' ' | 单据主实体 bos_billmainentity |
+| 3 | fentitykey | 信用单据 | varchar | 50 |  | √ | ' ' | [单据主实体 bos_billmainentity](../mdl_files/bos_billmainentity.md) |
 | 4 | fops | 支持的操作 | varchar | 512 |  | √ | ' ' | 支持的操作,枚举: |
 
 ### 列规则定义

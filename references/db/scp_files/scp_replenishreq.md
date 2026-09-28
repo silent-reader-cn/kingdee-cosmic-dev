@@ -44,19 +44,19 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fremark | 备注 | varchar | 512 |  | √ | ' ' | 备注 |
-| 3 | fbizpartner | 商务伙伴 | int8 | 64 |  | √ | 0 | 商务伙伴 bd_bizpartner |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 5 | fbillstatus | 单据状态 | bpchar | 1 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已确认订货 |
+| 3 | fbizpartner | 商务伙伴 | int8 | 64 |  | √ | 0 | [商务伙伴 bd_bizpartner](../base_files/bd_bizpartner.md) |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 5 | fbillstatus | 单据状态 | bpchar | 1 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 7 | forgid | 采购方 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 7 | forgid | 采购方 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | fbilldate | 业务日期 | timestamp | 0 |  |  | null | 业务日期 |
 | 9 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
 | 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 11 | fsupplier | 供应商 | int8 | 64 |  | √ | 0 | 供应商 bd_supplier |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fsupplier | 供应商 | int8 | 64 |  | √ | 0 | [供应商 bd_supplier](../basedata_files/bd_supplier.md) |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | forderstatus | 订货状态 | bpchar | 1 |  | √ | ' ' | 订货状态,枚举: A :待订货 B :部分订货 C :已订货 |
 | 14 | fbillno | 单据编号 | varchar | 80 |  | √ | ' ' | 单据编号 |
-| 15 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 15 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 
@@ -182,26 +182,26 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fqty | 数量 | numeric | 23 | 10 | √ | 0 | 数量 |
 | 3 | fsrcbillnumber | 来源单据编号 | varchar | 80 |  | √ | ' ' | 来源单据编号 |
-| 4 | fmaterialid | 物料编码 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 4 | fmaterialid | 物料编码 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 5 | fsrcbillid | 来源单据ID | varchar | 50 |  | √ | ' ' | 来源单据ID |
 | 6 | fauxptyid | 辅助属性 | int8 | 64 |  | √ | 0 | null 001 |
-| 7 | funitid | 计量单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 7 | funitid | 计量单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 8 | fentrystatus | 行状态 | bpchar | 1 |  | √ | ' ' | 行状态,枚举: A :正常 B :已关闭 C :已冻结 D :已终止 E :变更中 |
 | 9 | fordernum | 订单编号 | varchar | 80 |  | √ | ' ' | 订单编号 |
 | 10 | fconfirmqty | 确认数量 | numeric | 23 | 10 | √ | 0 | 确认数量 |
 | 11 | fnote | 备注 | varchar | 512 |  | √ | ' ' | 备注 |
 | 12 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 13 | fbaseunit | 基本单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 13 | fbaseunit | 基本单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 14 | forderedqty | 已订货数量 | numeric | 23 | 10 | √ | 0 | 已订货数量 |
 | 15 | fsrcbillentryid | 来源单据行ID | varchar | 50 |  | √ | ' ' | 来源单据行ID |
 | 16 | fsrcbillentryseq | 来源单据分录序号 | int8 | 64 |  | √ | 0 | 来源单据分录序号 |
 | 17 | fdeliverdate | 交货日期 | timestamp | 0 |  |  | null | 交货日期 |
-| 18 | finvorg | 库存组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 18 | finvorg | 库存组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 19 | fbaseqty | 基本数量 | numeric | 23 | 10 | √ | 0 | 基本数量 |
 | 20 | fsrcbillentity | 来源单据实体 | varchar | 50 |  | √ | ' ' | 来源单据实体 |
 | 21 | forderedbaseqty | 已订货基本数量 | numeric | 23 | 10 | √ | 0 | 已订货基本数量 |
 | 22 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 23 | flinetypeid | 行类型 | int8 | 64 |  | √ | 0 | 行类型 bd_linetype |
+| 23 | flinetypeid | 行类型 | int8 | 64 |  | √ | 0 | [行类型 bd_linetype](../sbd_files/bd_linetype.md) |
 | 24 | fmaterialname | 物料名称 | varchar | 255 |  | √ | ' ' | 物料名称 |
 
 ### 列规则定义

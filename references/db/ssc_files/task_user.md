@@ -16,7 +16,7 @@
 | 5 | fdptname | fdptname | int8 | 64 |  | √ | 0 |  |
 | 6 | fusestatus | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态 |
 | 7 | fseq | fseq | int8 | 64 |  | √ | 0 |  |
-| 8 | fuserid | 用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | fuserid | 用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fteamleader | 组长 | bpchar | 1 |  | √ | '0' | 组长 |
 | 10 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 11 | fability | 能力值 | numeric | 19 | 10 | √ | 1.0000000000 | 能力值 |
@@ -31,7 +31,7 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_ssc_usergroup_e_fgrpid |  | fgroupid |
+| 1 | index_usergroupentry |  | fuserid |
 | 2 | t_tk_usergroupentry_pkey |  | fentryid |
-| 3 | index_usergroupentry |  | fuserid |
+| 3 | idx_ssc_usergroup_e_fgrpid |  | fgroupid |
 | 4 | idx_ssc_usergroup_e_fid |  | fid |

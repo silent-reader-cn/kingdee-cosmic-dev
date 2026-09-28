@@ -10,16 +10,16 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 3 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 3 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fsrcbillno | 源单单据编号 | varchar | 36 |  | √ | ' ' | 源单单据编号 |
 | 5 | fbillstatus | 单据状态 | varchar | 50 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 7 | forgid | 收付组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 7 | forgid | 收付组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
 | 9 | fsource | 数据来源 | varchar | 50 |  | √ | ' ' | 数据来源,枚举: 0 :手工维护 1 :业务申请 |
 | 10 | fbillno | 单据编号 | varchar | 80 |  | √ | ' ' | 单据编号 |
-| 11 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 
 ### 列规则定义
@@ -32,8 +32,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_t_am_goodsbill_num |  | fbillno |
-| 2 | pk_t_am_holdgoodsinfo |  | fid |
+| 1 | pk_t_am_holdgoodsinfo |  | fid |
+| 2 | idx_t_am_goodsbill_num |  | fbillno |
 
 ---
 
@@ -115,16 +115,16 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 3 | fkeeper | 保管人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fkeeper | 保管人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fauthority | 权限 | varchar | 50 |  | √ | ' ' | 权限,枚举: A :查询 B :制单 C :复核 D :管理员 |
-| 5 | fmodifierfield | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | fmodifierfield | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | fobjectno | 实物编号 | varchar | 100 |  | √ | ' ' | 实物编号 |
 | 7 | fobjectname | 实物名称 | varchar | 30 |  | √ | ' ' | 实物名称 |
 | 8 | fenddate | 失效日期 | timestamp | 0 |  |  | null | 失效日期 |
 | 9 | fmodifydatefield | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
 | 10 | fstartdate | 生效日期 | timestamp | 0 |  |  | null | 生效日期 |
 | 11 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 12 | fobjecttypeid | 实物类型 | int8 | 64 |  | √ | 0 | 实物类型设置 am_objecttype |
+| 12 | fobjecttypeid | 实物类型 | int8 | 64 |  | √ | 0 | [实物类型设置 am_objecttype](../am_files/am_objecttype.md) |
 | 13 | fexplain | 说明 | varchar | 50 |  | √ | ' ' | 说明 |
 
 ### 列规则定义
@@ -137,8 +137,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_t_am_goods_detail_fid |  | fid |
-| 2 | pk_t_am_goodsdetail |  | fentryid |
+| 1 | pk_t_am_goodsdetail |  | fentryid |
+| 2 | idx_t_am_goods_detail_fid |  | fid |
 
 ---
 
@@ -251,7 +251,7 @@
 | 2 | fbillid | 关联单据主键 | varchar | 50 |  | √ | '0' | 关联单据主键 |
 | 3 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 4 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 | id |
-| 5 | fdetailmodifier | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | fdetailmodifier | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 | 7 | fdetailmodifydate | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
 | 8 | fbillinfo | 关联单据编号 | varchar | 50 |  | √ | ' ' | 关联单据编号 |
@@ -280,7 +280,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 附件字段实体 bd_attachment |
+| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [附件字段实体 bd_attachment](../frame_files/bd_attachment.md) |
 | 2 | fpkid | fpkid | int8 | 64 |  | √ | 0 | FPKID |
 | 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 

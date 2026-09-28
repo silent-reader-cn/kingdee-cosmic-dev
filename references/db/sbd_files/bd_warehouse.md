@@ -95,39 +95,41 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fgroupid | 分组 | int8 | 64 |  | √ | 0 | 仓库分组 bd_warehousegroup |
+| 2 | fgroupid | 分组 | int8 | 64 |  | √ | 0 | [仓库分组 bd_warehousegroup](../sbd_files/bd_warehousegroup.md) |
 | 3 | fisallowpartialneginv | 仅允许部分物料负库存 | bpchar | 1 |  | √ | '0' | 仅允许部分物料负库存 |
-| 4 | forgid | 管理组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 5 | fprincipalid | 仓库负责人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | forgid | 管理组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 5 | fprincipalid | 仓库负责人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | fdisabledate | 禁用时间 | timestamp | 0 |  |  | null | 禁用时间 |
 | 7 | fisopenlocation | 启用仓位 | bpchar | 1 |  | √ | '0' | 启用仓位 |
-| 8 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 8 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 9 | faudittime | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
 | 10 | fisallowallneginv | 允许全部物料负库存 | bpchar | 1 |  | √ | '0' | 允许全部物料负库存 |
 | 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 12 | fstatus | 数据状态 | varchar | 5 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 13 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 16 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
 | 17 | fdetailaddress | 详细地址 | varchar | 255 |  |  | ' ' | 详细地址 |
-| 18 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 18 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 19 | fisentrustverifyware | 委托代销仓 | bpchar | 1 |  | √ | '0' | 委托代销仓 |
-| 20 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 20 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 21 | fname | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
 | 22 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 23 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 24 | fdescription | 描述 | varchar | 255 |  | √ | ' ' | 描述 |
-| 25 | finvorgid | finvorgid | int8 | 64 |  | √ | 0 |  |
-| 26 | ftelephone | 联系电话 | varchar | 100 |  | √ | ' ' | 联系电话 |
-| 27 | fctrlstrategy | 控制策略 | varchar | 5 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
-| 28 | fadmdivisionid | 仓库地址 | varchar | 100 |  | √ | '0' | 仓库地址 |
-| 29 | fpartiexpectqty | 可发量控制 | bpchar | 1 |  | √ | '1' | 可发量控制 |
-| 30 | fenable | 使用状态 | varchar | 5 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 31 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
-| 32 | fissuptransvirtualware | 直运虚拟仓 | bpchar | 1 |  | √ | '0' | 直运虚拟仓 |
-| 33 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
-| 34 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 23 | fbondedwarehouse | 保税仓 | bpchar | 1 |  | √ | '0' | 保税仓 |
+| 24 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 25 | fdescription | 描述 | varchar | 255 |  | √ | ' ' | 描述 |
+| 26 | finvorgid | finvorgid | int8 | 64 |  | √ | 0 |  |
+| 27 | ftelephone | 联系电话 | varchar | 100 |  | √ | ' ' | 联系电话 |
+| 28 | fctrlstrategy | 控制策略 | varchar | 5 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
+| 29 | fadmdivisionid | 仓库地址 | varchar | 100 |  | √ | '0' | 仓库地址 |
+| 30 | fk_bj73_checkboxfield | 订单发货 | bpchar | 1 |  | √ | '0' | 订单发货 |
+| 31 | fpartiexpectqty | 可发量控制 | bpchar | 1 |  | √ | '1' | 可发量控制 |
+| 32 | fenable | 使用状态 | varchar | 5 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 33 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
+| 34 | fissuptransvirtualware | 直运虚拟仓 | bpchar | 1 |  | √ | '0' | 直运虚拟仓 |
+| 35 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
+| 36 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 
@@ -156,7 +158,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | foperatoruserid | 业务员 | int8 | 64 |  | √ | 0 | 供应链业务员 bd_operator |
+| 2 | foperatoruserid | 业务员 | int8 | 64 |  | √ | 0 | [供应链业务员 bd_operator](../sbd_files/bd_operator.md) |
 | 3 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 4 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 
@@ -185,15 +187,25 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fcreateorgid | fcreateorgid | int8 | 64 |  | √ | 0 |  |
-| 3 | flocationid | 仓位编码 | int8 | 64 |  | √ | 0 | 仓位 bd_location |
-| 4 | fmasterid | fmasterid | int8 | 64 |  | √ | 0 |  |
-| 5 | fsourcedataid | fsourcedataid | int8 | 64 |  | √ | 0 |  |
-| 6 | fbitindex | fbitindex | int4 | 32 |  | √ | 0 |  |
-| 7 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 8 | fsrccreateorgid | fsrccreateorgid | int8 | 64 |  | √ | 0 |  |
-| 9 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 10 | fsourcebitindex | fsourcebitindex | int4 | 32 |  | √ | 0 |  |
-| 11 | fisdefaultloc | 默认仓位 | bpchar | 1 |  | √ | '0' | 默认仓位 |
+| 3 | fname | fname | varchar | 50 |  | √ | ' ' |  |
+| 4 | fmodifierid | fmodifierid | int8 | 64 |  | √ | 0 |  |
+| 5 | fcreatetime | fcreatetime | timestamp | 0 |  |  | null |  |
+| 6 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
+| 7 | fsrccreateorgid | fsrccreateorgid | int8 | 64 |  | √ | 0 |  |
+| 8 | fisdefaultloc | 默认仓位 | bpchar | 1 |  | √ | '0' | 默认仓位 |
+| 9 | fmodifytime | fmodifytime | timestamp | 0 |  |  | null |  |
+| 10 | fstatus | fstatus | varchar | 50 |  | √ | ' ' |  |
+| 11 | flocationid | 仓位编码 | int8 | 64 |  | √ | 0 | [仓位 bd_location](../sbd_files/bd_location.md) |
+| 12 | fmasterid | fmasterid | int8 | 64 |  | √ | 0 |  |
+| 13 | fcreatorid | fcreatorid | int8 | 64 |  | √ | 0 |  |
+| 14 | flocationstatus | 可用 | bpchar | 1 |  |  | '1' | 可用 |
+| 15 | fsourcedataid | fsourcedataid | int8 | 64 |  | √ | 0 |  |
+| 16 | fenbale | fenbale | bpchar | 1 |  | √ | '1' |  |
+| 17 | fbitindex | fbitindex | int4 | 32 |  | √ | 0 |  |
+| 18 | fenable | fenable | bpchar | 1 |  | √ | '1' |  |
+| 19 | fnumber | fnumber | varchar | 30 |  | √ | ' ' |  |
+| 20 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 21 | fsourcebitindex | fsourcebitindex | int4 | 32 |  | √ | 0 |  |
 
 ### 列规则定义
 

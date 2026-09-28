@@ -14,10 +14,11 @@
 | 3 | fimageheight | 高 | int4 | 32 |  | √ | 0 | 高 |
 | 4 | fpagenum | 页码 | int4 | 32 |  | √ | 0 | 页码 |
 | 5 | fsourcefiletype | 文件业务类型 | varchar | 255 |  | √ | ' ' | 文件业务类型 |
-| 6 | ftaskid | 任务ID | varchar | 255 |  | √ | ' ' | 任务ID |
-| 7 | fimagewidth | 宽 | int4 | 32 |  | √ | 0 | 宽 |
-| 8 | fimagepath | 图片存储地址 | varchar | 255 |  | √ | ' ' | 图片存储地址 |
-| 9 | fimageid | 差异分析转换文件ID | int8 | 64 |  | √ | 0 | 差异分析转换文件ID |
+| 6 | fsourcepath | 图片持久化地址 | varchar | 255 |  | √ | ' ' | 图片持久化地址 |
+| 7 | ftaskid | 任务ID | varchar | 255 |  | √ | ' ' | 任务ID |
+| 8 | fimagewidth | 宽 | int4 | 32 |  | √ | 0 | 宽 |
+| 9 | fimagepath | 图片存储地址 | varchar | 2000 |  | √ | ' ' | 图片存储地址 |
+| 10 | fimageid | 差异分析转换文件ID | int8 | 64 |  | √ | 0 | 差异分析转换文件ID |
 
 ### 列规则定义
 

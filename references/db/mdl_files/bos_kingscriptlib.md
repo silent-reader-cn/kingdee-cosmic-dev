@@ -41,9 +41,9 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fcomment | 代码提示 | varchar | 200 |  | √ | ' ' | 代码提示 |
 | 3 | fcreatetime | 创建时间 | timestamp | 0 |  | √ | LOCALTIMESTAMP | 创建时间 |
-| 4 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fseq | 序号 | int4 | 32 |  | √ | 0 | 序号 |
-| 6 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 7 | fnumber | 编码 | varchar | 50 |  | √ | ' ' | 编码 |
 | 8 | fscripttype | 脚本类型 | varchar | 50 |  | √ | '1' | 脚本类型,枚举: 1 :表单插件 2 :单据插件 3 :列表插件 4 :操作插件 |
 | 9 | fcode | 代码 | text | 0 |  |  | null | 代码 |

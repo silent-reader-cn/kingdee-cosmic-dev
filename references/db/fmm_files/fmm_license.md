@@ -10,22 +10,22 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 3 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 4 | femployeeid | 员工工号 | int8 | 64 |  | √ | 0 | 企业人力资源池 pmbd_enterprise_hm_res_po |
+| 2 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 3 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 4 | femployeeid | 员工工号 | int8 | 64 |  | √ | 0 | [企业人力资源池 pmbd_enterprise_hm_res_po](../fmm_files/pmbd_enterprise_hm_res_po.md) |
 | 5 | faudittime | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
 | 6 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 7 | flicensetypeid | 执照类型 | int8 | 64 |  | √ | 0 | 执照类型 fmm_license_type |
+| 7 | flicensetypeid | 执照类型 | int8 | 64 |  | √ | 0 | [执照类型 fmm_license_type](../fmm_files/fmm_license_type.md) |
 | 8 | fstatus | 数据状态 | varchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 11 | fpermanent | 永久有效 | bpchar | 1 |  | √ | '0' | 永久有效 |
 | 12 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 13 | fexpiredate | 有效截止日期 | timestamp | 0 |  |  | null | 有效截止日期 |
 | 14 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
-| 15 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 15 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 16 | fremark | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
-| 17 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 17 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 18 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 19 | fissuedate | 发照日期 | timestamp | 0 |  |  | null | 发照日期 |
 | 20 | fissuer | 签发人 | varchar | 50 |  | √ | ' ' | 签发人 |
@@ -33,12 +33,12 @@
 | 22 | fissueauthority | 发证机关 | varchar | 50 |  | √ | ' ' | 发证机关 |
 | 23 | fqrcode | 二维码号 | varchar | 255 |  | √ | ' ' | 二维码号 |
 | 24 | fenable | 使用状态 | varchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 25 | fauthtypeid | 类别 | int8 | 64 |  | √ | 0 | 授权类别 fmm_authorizecategory |
+| 25 | fauthtypeid | 类别 | int8 | 64 |  | √ | 0 | [授权类别 fmm_authorizecategory](../fmm_files/fmm_authorizecategory.md) |
 | 26 | fnumber | 编号 | varchar | 50 |  | √ | ' ' | 编号 |
-| 27 | fuseorgid | 业务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 28 | fenglishlevelid | 英语等级 | int8 | 64 |  | √ | 0 | 英语等级 fmm_english_level |
+| 27 | fuseorgid | 业务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 28 | fenglishlevelid | 英语等级 | int8 | 64 |  | √ | 0 | [英语等级 fmm_english_level](../fmm_files/fmm_english_level.md) |
 | 29 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
-| 30 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 30 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 
@@ -69,8 +69,8 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fsignedauthority | 签署机关 | varchar | 50 |  | √ | ' ' | 签署机关 |
-| 3 | fenginemodelid | 发动机型号 | int8 | 64 |  | √ | 0 | 发动机型号 mpdm_enginetype |
-| 4 | fmodelid | 机型 | int8 | 64 |  | √ | 0 | 检修设备型号 mpdm_over_device_number |
+| 3 | fenginemodelid | 发动机型号 | int8 | 64 |  | √ | 0 | [发动机型号 mpdm_enginetype](../mpdm_files/mpdm_enginetype.md) |
+| 4 | fmodelid | 机型 | int8 | 64 |  | √ | 0 | [检修设备型号 mpdm_over_device_number](../mpdm_files/mpdm_over_device_number.md) |
 | 5 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 6 | fvaliddate | 有效期 | timestamp | 0 |  |  | null | 有效期 |
 | 7 | fsignremark | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
@@ -188,7 +188,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fissueday | 颁发日期 | timestamp | 0 |  |  | null | 颁发日期 |
 | 3 | fissueby | 颁发人 | varchar | 50 |  | √ | ' ' | 颁发人 |
-| 4 | faddtypeid | 增加类别 | int8 | 64 |  | √ | 0 | 授权类别 fmm_authorizecategory |
+| 4 | faddtypeid | 增加类别 | int8 | 64 |  | √ | 0 | [授权类别 fmm_authorizecategory](../fmm_files/fmm_authorizecategory.md) |
 | 5 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 

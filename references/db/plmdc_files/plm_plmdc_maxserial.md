@@ -10,10 +10,10 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fdrawnorule | 图号规则 | int8 | 64 |  | √ | 0 | 图号规则列表 plm_plmdc_drawnorule |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fdrawnorule | 图号规则 | int8 | 64 |  | √ | 0 | [图号规则列表 plm_plmdc_drawnorule](../plmdc_files/plm_plmdc_drawnorule.md) |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fsortitemvalue | 流水号依据 | varchar | 50 |  | √ | ' ' | 流水号依据 |
-| 5 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | fmaxserial | 最大流水号 | int8 | 64 |  | √ | 0 | 最大流水号 |
 | 7 | fcreatetime | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
 | 8 | finitserial | 初始流水号 | int8 | 64 |  | √ | 0 | 初始流水号 |

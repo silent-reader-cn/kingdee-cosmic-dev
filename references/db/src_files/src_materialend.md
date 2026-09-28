@@ -10,16 +10,17 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fbidchangeid | 寻源项目变更F7 | int8 | 64 |  | √ | 0 | 寻源项目变更F7 src_bidchangef7 |
-| 3 | fprojectid | 寻源项目F7 | int8 | 64 |  | √ | 0 | 招标项目F7 src_projectf7 |
-| 4 | fparentid | 父单据ID | varchar | 50 |  | √ | ' ' | 父单据ID |
-| 5 | fbillstatus | 单据状态 | bpchar | 1 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 6 | fchgsrcbillid | 变更源单ID | int8 | 64 |  | √ | 0 | 变更源单ID |
-| 7 | forgid | 主业务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 8 | fschemeid | 标的流标方案 | int8 | 64 |  | √ | 0 | 扩展过滤 pds_extfilter |
-| 9 | fentitykey | 组件标识 | varchar | 50 |  | √ | ' ' | 组件标识 |
-| 10 | fcompbillno | 单据编号 | varchar | 30 |  | √ | ' ' | 单据编号 |
-| 11 | fpentitykey | 父单据标识 | varchar | 50 |  | √ | ' ' | 父单据标识 |
+| 2 | fbidchangeid | 寻源项目变更F7 | int8 | 64 |  | √ | 0 | [寻源项目变更F7 src_bidchangef7](../pds_files/src_bidchangef7.md) |
+| 3 | fprojectid | 寻源项目F7 | int8 | 64 |  | √ | 0 | [招标项目F7 src_projectf7](../src_files/src_projectf7.md) |
+| 4 | ftype | 流标方式 | bpchar | 1 |  | √ | '1' | 流标方式,枚举: 1 :按 供应商+部分标的 进行流标 2 :按 标的+所有供应商 进行流标 |
+| 5 | fparentid | 父单据ID | varchar | 50 |  | √ | ' ' | 父单据ID |
+| 6 | fbillstatus | 单据状态 | bpchar | 1 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
+| 7 | fchgsrcbillid | 变更源单ID | int8 | 64 |  | √ | 0 | 变更源单ID |
+| 8 | forgid | 主业务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 9 | fschemeid | 标的流标方案 | int8 | 64 |  | √ | 0 | [扩展过滤 pds_extfilter](../pds_files/pds_extfilter.md) |
+| 10 | fentitykey | 组件标识 | varchar | 50 |  | √ | ' ' | 组件标识 |
+| 11 | fcompbillno | 单据编号 | varchar | 30 |  | √ | ' ' | 单据编号 |
+| 12 | fpentitykey | 父单据标识 | varchar | 50 |  | √ | ' ' | 父单据标识 |
 
 ### 列规则定义
 
@@ -47,17 +48,17 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fqty | 招标数量 | numeric | 23 | 10 | √ | 0 | 招标数量 |
-| 3 | fprojectid | 招标项目编号 | int8 | 64 |  | √ | 0 | 招标项目F7 src_projectf7 |
-| 4 | funitid | 计量单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 3 | fprojectid | 招标项目编号 | int8 | 64 |  | √ | 0 | [招标项目F7 src_projectf7](../src_files/src_projectf7.md) |
+| 4 | funitid | 计量单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 5 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 6 | fnote | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
 | 7 | fpurlistid | 流标标的名称 | int8 | 64 |  | √ | 0 | 采购清单F7 src_purlistf7 |
-| 8 | fsrctypeid | 招标流程 | int8 | 64 |  | √ | 0 | 流程配置 pds_flowconfig |
-| 9 | fsupplierid | 流标供应商 | int8 | 64 |  | √ | 0 | 供应商 bd_supplier |
+| 8 | fsrctypeid | 招标流程 | int8 | 64 |  | √ | 0 | [流程配置 pds_flowconfig](../pds_files/pds_flowconfig.md) |
+| 9 | fsupplierid | 流标供应商 | int8 | 64 |  | √ | 0 | [供应商 bd_supplier](../basedata_files/bd_supplier.md) |
 | 10 | fissource | 是否重新招标 | bpchar | 1 |  | √ | '1' | 是否重新招标 |
 | 11 | fcount | 报价供应商数 | int4 | 32 |  | √ | 0 | 报价供应商数 |
 | 12 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 13 | fbidname | 招标项目名称 | varchar | 80 |  | √ | ' ' | 招标项目名称 |
+| 13 | fbidname | 招标项目名称 | varchar | 300 |  | √ | ' ' | 招标项目名称 |
 
 ### 列规则定义
 

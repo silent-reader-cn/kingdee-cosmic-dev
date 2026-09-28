@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fcreatedate | 导出时间 | timestamp | 0 |  |  | null | 导出时间 |
-| 3 | fcreatorid | 操作人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fcreatorid | 操作人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | ffilename | 文件名 | varchar | 80 |  | √ | ' ' | 文件名 |
 | 5 | fjarcombo | JAR包信息 | varchar | 500 |  | √ | ' ' | JAR包信息,枚举: |
 | 6 | fdesc | 备注 | varchar | 255 |  | √ | ' ' | 备注 |

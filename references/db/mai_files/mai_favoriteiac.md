@@ -12,7 +12,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | ffavordate | 收藏日期 | timestamp | 0 |  |  | null | 收藏日期 |
 | 3 | fcompanyname | 企业名称 | varchar | 100 |  | √ | ' ' | 企业名称 |
-| 4 | fuser | 收藏用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fuser | 收藏用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fcompanyid | 企业编码 | varchar | 100 |  | √ | ' ' | 企业编码 |
 
 ### 列规则定义

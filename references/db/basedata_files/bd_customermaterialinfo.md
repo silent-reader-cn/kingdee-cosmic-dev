@@ -13,15 +13,16 @@
 | 2 | fcusmatmod | 客户物料规格型号 | varchar | 255 |  | √ | ' ' | 客户物料规格型号 |
 | 3 | fcusmatgroupnumber | 客户物料分组编码 | varchar | 50 |  | √ | ' ' | 客户物料分组编码 |
 | 4 | fismatch | 默认携带 | bpchar | 1 |  | √ | '0' | 默认携带 |
-| 5 | fmaterialid | 物料编码 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 5 | fmaterialid | 物料编码 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 6 | fauxptyid | 辅助属性 | int8 | 64 |  | √ | 0 | null 001 |
 | 7 | fcusmatname | 客户物料名称 | varchar | 255 |  | √ | ' ' | 客户物料名称 |
 | 8 | fseq | fseq | int8 | 64 |  | √ | 0 |  |
 | 9 | fcusmatgroupname | 客户物料分组名称 | varchar | 500 |  | √ | ' ' | 客户物料分组名称 |
 | 10 | fisenable | 启用 | bpchar | 1 |  | √ | '0' | 启用 |
 | 11 | fentrycomment | 备注 | varchar | 50 |  | √ | ' ' | 备注 |
-| 12 | fcusmatid | 客户物料编码 | varchar | 255 |  | √ | ' ' | 客户物料编码 |
-| 13 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 12 | fmaterialversionid | 物料版本 | int8 | 64 |  | √ | 0 | [物料版本 bd_bomversion_new](../basedata_files/bd_bomversion_new.md) |
+| 13 | fcusmatid | 客户物料编码 | varchar | 255 |  | √ | ' ' | 客户物料编码 |
+| 14 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 
 ### 列规则定义
 

@@ -1,6 +1,6 @@
 # ococic 模块表清单
 
-> 本模块共收录 **90** 张表定义，来自 `ococic_files/`。
+> 本模块共收录 **103** 张表定义，来自 `ococic_files/`。
 
 > 索引由 `scripts/build_index.py` 从 Markdown 自动生成，请勿手工编辑。
 > 检索本模块表结构请用统一检索脚本（比翻本文件更快）：
@@ -62,41 +62,54 @@
 | 50 | `t_ococic_allotsubentry` | 分配单子单体-子表 | 4 | [ococic_allotbill.md](./ococic_allotbill.md) |
 | 51 | `t_ococic_channelinbill_tc` | 渠道入库-关联追踪表 | 7 | [ococic_channelinbill.md](./ococic_channelinbill.md) |
 | 52 | `t_ococic_channelinbill_wb` | 渠道入库-反写记录表 | 10 | [ococic_channelinbill.md](./ococic_channelinbill.md) |
-| 53 | `t_ococic_channelinlist` | 渠道库存初始化-主表 | 29 | [ococic_channelinlist.md](./ococic_channelinlist.md) |
+| 53 | `t_ococic_channelinlist` | 渠道库存初始化-主表 | 31 | [ococic_channelinlist.md](./ococic_channelinlist.md) |
 | 54 | `t_ococic_channelinvacc` | 渠道即时库存-主表 | 34 | [ococic_channelinvacc.md](./ococic_channelinvacc.md) |
 | 55 | `t_ococic_channelinvacc` | 库存查询-主表 | 34 | [ococic_channelinvacc_b2b.md](./ococic_channelinvacc_b2b.md) |
 | 56 | `t_ococic_chlinvacclog` | 渠道即时库存更新日志2-主表 | 32 | [ococic_channelinvacclog.md](./ococic_channelinvacclog.md) |
-| 57 | `t_ococic_chnlout` | 渠道出库-主表 | 21 | [ococic_channeloutbill.md](./ococic_channeloutbill.md) |
-| 58 | `t_ococic_chnlout_entry` | 单据体-子表 | 30 | [ococic_channeloutbill.md](./ococic_channeloutbill.md) |
-| 59 | `t_ococic_chnlout_entry_f` | 单据体-分表 | 10 | [ococic_channeloutbill.md](./ococic_channeloutbill.md) |
+| 57 | `t_ococic_chnlout` | 渠道出库-主表 | 26 | [ococic_channeloutbill.md](./ococic_channeloutbill.md) |
+| 58 | `t_ococic_chnlout_entry` | 单据体-子表 | 39 | [ococic_channeloutbill.md](./ococic_channeloutbill.md) |
+| 59 | `t_ococic_chnlout_entry_f` | 单据体-分表 | 16 | [ococic_channeloutbill.md](./ococic_channeloutbill.md) |
 | 60 | `t_ococic_chnlout_entry_lk` | 关联子实体-子表 | 6 | [ococic_channeloutbill.md](./ococic_channeloutbill.md) |
 | 61 | `t_ococic_chnlout_entry_r` | 单据体-分表 | 15 | [ococic_channeloutbill.md](./ococic_channeloutbill.md) |
-| 62 | `t_ococic_chnlout_lk` | 关联子实体-子表 | 6 | [ococic_channeloutbill.md](./ococic_channeloutbill.md) |
-| 63 | `t_ococic_chnlout_sn` | 子单据体-子表 | 6 | [ococic_channeloutbill.md](./ococic_channeloutbill.md) |
-| 64 | `t_ococic_chnlout_sn_lk` | 关联子实体-子表 | 6 | [ococic_channeloutbill.md](./ococic_channeloutbill.md) |
-| 65 | `t_ococic_chnlout_tc` | 渠道出库-关联追踪表 | 7 | [ococic_channeloutbill.md](./ococic_channeloutbill.md) |
-| 66 | `t_ococic_chnlout_wb` | 渠道出库-反写记录表 | 10 | [ococic_channeloutbill.md](./ococic_channeloutbill.md) |
-| 67 | `t_ococic_entityinv` | 实体库存-主表 | 19 | [ococic_entityinventory.md](./ococic_entityinventory.md) |
-| 68 | `t_ococic_inbill` | 渠道入库-主表 | 23 | [ococic_channelinbill.md](./ococic_channelinbill.md) |
-| 69 | `t_ococic_inbill_lk` | 关联子实体-子表 | 6 | [ococic_channelinbill.md](./ococic_channelinbill.md) |
-| 70 | `t_ococic_inbillentry` | 单据体-子表 | 16 | [ococic_channelinbill.md](./ococic_channelinbill.md) |
-| 71 | `t_ococic_inbillentry_f` | 单据体-分表 | 9 | [ococic_channelinbill.md](./ococic_channelinbill.md) |
-| 72 | `t_ococic_inbillentry_lk` | 关联子实体-子表 | 6 | [ococic_channelinbill.md](./ococic_channelinbill.md) |
-| 73 | `t_ococic_inbillentry_s` | 单据体-分表 | 15 | [ococic_channelinbill.md](./ococic_channelinbill.md) |
-| 74 | `t_ococic_inbillentry_w` | 单据体-分表 | 12 | [ococic_channelinbill.md](./ococic_channelinbill.md) |
-| 75 | `t_ococic_inbillseria` | 子单据体-子表 | 10 | [ococic_channelinbill.md](./ococic_channelinbill.md) |
-| 76 | `t_ococic_inbillseria_lk` | 关联子实体-子表 | 6 | [ococic_channelinbill.md](./ococic_channelinbill.md) |
-| 77 | `t_ococic_inven_report` | 渠道库存上报-主表 | 15 | [ococic_inventoryreport.md](./ococic_inventoryreport.md) |
-| 78 | `t_ococic_invenreport_e` | 单据体-子表 | 25 | [ococic_inventoryreport.md](./ococic_inventoryreport.md) |
-| 79 | `t_ococic_invenreport_sn` | 子单据体-子表 | 6 | [ococic_inventoryreport.md](./ococic_inventoryreport.md) |
-| 80 | `t_ococic_occupyrecords` | 负卖占用记录-主表 | 22 | [ococic_occupyrecords.md](./ococic_occupyrecords.md) |
-| 81 | `t_ococic_transbill` | 渠道调拨单-主表 | 45 | [ococic_transbill.md](./ococic_transbill.md) |
-| 82 | `t_ococic_transdirbill_tc` | 渠道调拨单-关联追踪表 | 7 | [ococic_transbill.md](./ococic_transbill.md) |
-| 83 | `t_ococic_transdirbill_wb` | 渠道调拨单-反写记录表 | 10 | [ococic_transbill.md](./ococic_transbill.md) |
-| 84 | `t_ococic_transdirentry_lk` | 关联子实体-子表 | 8 | [ococic_transbill.md](./ococic_transbill.md) |
-| 85 | `t_ococic_transentry` | 商品明细-子表 | 20 | [ococic_transbill.md](./ococic_transbill.md) |
-| 86 | `t_ococic_transentry_f` | 商品明细-分表 | 18 | [ococic_transbill.md](./ococic_transbill.md) |
-| 87 | `t_ococic_transentry_r` | 商品明细-分表 | 30 | [ococic_transbill.md](./ococic_transbill.md) |
-| 88 | `t_ococic_transentry_t` | 商品明细-分表 | 20 | [ococic_transbill.md](./ococic_transbill.md) |
-| 89 | `t_ococic_transrecentry` | 源单收款抵扣-子表 | 14 | [ococic_transbill.md](./ococic_transbill.md) |
-| 90 | `t_ococic_transserial` | 序列号单体-子表 | 6 | [ococic_transbill.md](./ococic_transbill.md) |
+| 62 | `t_ococic_chnlout_f` | 渠道出库-分表 | 15 | [ococic_channeloutbill.md](./ococic_channeloutbill.md) |
+| 63 | `t_ococic_chnlout_lk` | 关联子实体-子表 | 6 | [ococic_channeloutbill.md](./ococic_channeloutbill.md) |
+| 64 | `t_ococic_chnlout_sn` | 子单据体-子表 | 6 | [ococic_channeloutbill.md](./ococic_channeloutbill.md) |
+| 65 | `t_ococic_chnlout_sn_lk` | 关联子实体-子表 | 6 | [ococic_channeloutbill.md](./ococic_channeloutbill.md) |
+| 66 | `t_ococic_chnlout_tc` | 渠道出库-关联追踪表 | 7 | [ococic_channeloutbill.md](./ococic_channeloutbill.md) |
+| 67 | `t_ococic_chnlout_wb` | 渠道出库-反写记录表 | 10 | [ococic_channeloutbill.md](./ococic_channeloutbill.md) |
+| 68 | `t_ococic_entityinv` | 实体库存-主表 | 19 | [ococic_entityinventory.md](./ococic_entityinventory.md) |
+| 69 | `t_ococic_inbill` | 渠道入库-主表 | 29 | [ococic_channelinbill.md](./ococic_channelinbill.md) |
+| 70 | `t_ococic_inbill_f` | 渠道入库-分表 | 15 | [ococic_channelinbill.md](./ococic_channelinbill.md) |
+| 71 | `t_ococic_inbill_lk` | 关联子实体-子表 | 6 | [ococic_channelinbill.md](./ococic_channelinbill.md) |
+| 72 | `t_ococic_inbillentry` | 单据体-子表 | 19 | [ococic_channelinbill.md](./ococic_channelinbill.md) |
+| 73 | `t_ococic_inbillentry_f` | 单据体-分表 | 16 | [ococic_channelinbill.md](./ococic_channelinbill.md) |
+| 74 | `t_ococic_inbillentry_lk` | 关联子实体-子表 | 6 | [ococic_channelinbill.md](./ococic_channelinbill.md) |
+| 75 | `t_ococic_inbillentry_s` | 单据体-分表 | 15 | [ococic_channelinbill.md](./ococic_channelinbill.md) |
+| 76 | `t_ococic_inbillentry_w` | 单据体-分表 | 18 | [ococic_channelinbill.md](./ococic_channelinbill.md) |
+| 77 | `t_ococic_inbillseria` | 子单据体-子表 | 10 | [ococic_channelinbill.md](./ococic_channelinbill.md) |
+| 78 | `t_ococic_inbillseria_lk` | 关联子实体-子表 | 6 | [ococic_channelinbill.md](./ococic_channelinbill.md) |
+| 79 | `t_ococic_integratconfig` | 全网库存集成配置-主表 | 2 | [ococic_integrationconfig.md](./ococic_integrationconfig.md) |
+| 80 | `t_ococic_inven_report` | 渠道库存上报-主表 | 15 | [ococic_inventoryreport.md](./ococic_inventoryreport.md) |
+| 81 | `t_ococic_invenreport_e` | 单据体-子表 | 25 | [ococic_inventoryreport.md](./ococic_inventoryreport.md) |
+| 82 | `t_ococic_invenreport_sn` | 子单据体-子表 | 6 | [ococic_inventoryreport.md](./ococic_inventoryreport.md) |
+| 83 | `t_ococic_occupyrecords` | 负卖占用记录-主表 | 22 | [ococic_occupyrecords.md](./ococic_occupyrecords.md) |
+| 84 | `t_ococic_transbill` | 渠道调拨单-主表 | 46 | [ococic_transbill.md](./ococic_transbill.md) |
+| 85 | `t_ococic_transdirbill_tc` | 渠道调拨单-关联追踪表 | 7 | [ococic_transbill.md](./ococic_transbill.md) |
+| 86 | `t_ococic_transdirbill_wb` | 渠道调拨单-反写记录表 | 10 | [ococic_transbill.md](./ococic_transbill.md) |
+| 87 | `t_ococic_transdirentry_lk` | 关联子实体-子表 | 8 | [ococic_transbill.md](./ococic_transbill.md) |
+| 88 | `t_ococic_transentry` | 商品明细-子表 | 20 | [ococic_transbill.md](./ococic_transbill.md) |
+| 89 | `t_ococic_transentry_f` | 商品明细-分表 | 18 | [ococic_transbill.md](./ococic_transbill.md) |
+| 90 | `t_ococic_transentry_r` | 商品明细-分表 | 30 | [ococic_transbill.md](./ococic_transbill.md) |
+| 91 | `t_ococic_transentry_t` | 商品明细-分表 | 20 | [ococic_transbill.md](./ococic_transbill.md) |
+| 92 | `t_ococic_transrecentry` | 源单收款抵扣-子表 | 14 | [ococic_transbill.md](./ococic_transbill.md) |
+| 93 | `t_ococic_transserial` | 序列号单体-子表 | 6 | [ococic_transbill.md](./ococic_transbill.md) |
+| 94 | `t_rtswm_saleout` | 店铺销售出库单-主表 | 25 | [rtswm_sale_out.md](./rtswm_sale_out.md) |
+| 95 | `t_rtswm_saleout_f` | 店铺销售出库单-分表 | 15 | [rtswm_sale_out.md](./rtswm_sale_out.md) |
+| 96 | `t_rtswm_saleout_tc` | 店铺销售出库单-关联追踪表 | 7 | [rtswm_sale_out.md](./rtswm_sale_out.md) |
+| 97 | `t_rtswm_saleout_wb` | 店铺销售出库单-反写记录表 | 10 | [rtswm_sale_out.md](./rtswm_sale_out.md) |
+| 98 | `t_rtswm_saleoutentry` | 商品明细-子表 | 33 | [rtswm_sale_out.md](./rtswm_sale_out.md) |
+| 99 | `t_rtswm_saleoutentry_f` | 商品明细-分表 | 17 | [rtswm_sale_out.md](./rtswm_sale_out.md) |
+| 100 | `t_rtswm_saleoutentry_lk` | 关联子实体-子表 | 6 | [rtswm_sale_out.md](./rtswm_sale_out.md) |
+| 101 | `t_rtswm_saleoutentry_r` | 商品明细-分表 | 18 | [rtswm_sale_out.md](./rtswm_sale_out.md) |
+| 102 | `t_rtswm_saleoutserial` | 序列号明细-子表 | 6 | [rtswm_sale_out.md](./rtswm_sale_out.md) |
+| 103 | `t_rtswm_saleoutsettle` | 结算明细-子表 | 12 | [rtswm_sale_out.md](./rtswm_sale_out.md) |

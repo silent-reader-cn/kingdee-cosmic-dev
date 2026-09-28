@@ -11,8 +11,8 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fscript_tag_tag | 脚本_详情 | text | 0 |  |  | null | 脚本_详情 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 4 | fgroupid | 分类 | int8 | 64 |  | √ | 0 | API分类 isc_interface_category |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 4 | fgroupid | 分类 | int8 | 64 |  | √ | 0 | [API分类 isc_interface_category](../iscb_files/isc_interface_category.md) |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 6 | fout_digest | API结果摘要模板 | varchar | 150 |  | √ | ' ' | API结果摘要模板 |
 | 7 | fdescription | 备注 | varchar | 500 |  | √ | ' ' | 备注 |
@@ -21,7 +21,7 @@
 | 10 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 11 | fauth_required | 需要授权 | bpchar | 1 |  | √ | '0' | 需要授权 |
 | 12 | fnot_publish | 不发布到开放平台 | bpchar | 1 |  | √ | '1' | 不发布到开放平台 |
-| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 15 | fpreset | 是否预置 | bpchar | 1 |  | √ | '1' | 是否预置 |
 | 16 | fenable | 使用状态 | varchar | 30 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |

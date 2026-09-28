@@ -15,11 +15,11 @@
 | 4 | fcreatedate | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
 | 5 | ftype | 卡片类型 | varchar | 50 |  | √ | ' ' | 卡片类型 |
 | 6 | fconfig | 配置信息 | text | 0 |  |  | null | 配置信息 |
-| 7 | fapp | 应用 | varchar | 36 |  | √ | ' ' | 业务应用实体 bos_devportal_bizapp |
+| 7 | fapp | 应用 | varchar | 36 |  | √ | ' ' | [业务应用实体 bos_devportal_bizapp](../mdl_files/bos_devportal_bizapp.md) |
 | 8 | fmodifydate | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
-| 9 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 10 | fform | 表单 | varchar | 36 |  | √ | ' ' | 表单元数据 bos_formmeta |
-| 11 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 10 | fform | 表单 | varchar | 36 |  | √ | ' ' | [表单元数据 bos_formmeta](../mdl_files/bos_formmeta.md) |
+| 11 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fimage | 图片 | varchar | 500 |  | √ | ' ' | 图片 |
 
 ### 列规则定义

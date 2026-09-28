@@ -67,7 +67,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 消息推送名称 | varchar | 32 |  | √ | ' ' | 消息推送名称 |
-| 3 | fsendor | 消息发送人 | varchar | 100 |  | √ | ' ' | 人员 bos_user |
+| 3 | fsendor | 消息发送人 | varchar | 100 |  | √ | ' ' | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fnumber | 消息推送编码 | varchar | 32 |  | √ | ' ' | 消息推送编码 |
 
 ### 列规则定义

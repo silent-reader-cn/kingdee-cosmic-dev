@@ -20,14 +20,14 @@
 | 9 | ftotalamount | 车价合计 | numeric | 23 | 10 | √ | 0.0000000000 | 车价合计 |
 | 10 | fauctionphonenumber | 拍卖/经营电话 | varchar | 60 |  | √ | ' ' | 拍卖/经营电话 |
 | 11 | fbuyeraddress | 购方地址 | varchar | 300 |  | √ | ' ' | 购方地址 |
-| 12 | forg | 税务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 12 | forg | 税务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 13 | fvehiclemanagementname | 转入地车辆管理所名称 | varchar | 100 |  | √ | ' ' | 转入地车辆管理所名称 |
 | 14 | fissuingoffice | 开票单位 | varchar | 100 |  | √ | ' ' | 开票单位 |
 | 15 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 16 | fmarketbankaccout | 二手市场开户银行帐号 | varchar | 200 |  | √ | ' ' | 二手市场开户银行帐号 |
-| 17 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 17 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 18 | fmachineno | 机器编号 | varchar | 100 |  | √ | ' ' | 机器编号 |
-| 19 | fbaseinvoicetype | 发票类型 | int8 | 64 |  | √ | 0 | 发票类型 bd_invoicetype |
+| 19 | fbaseinvoicetype | 发票类型 | int8 | 64 |  | √ | 0 | [发票种类 bd_invoicetype](../basedata_files/bd_invoicetype.md) |
 | 20 | finvoicedate | 开票日期 | timestamp | 0 |  |  | null | 开票日期 |
 | 21 | fvehicleidentificationno | 车辆识别代码/车驾号码 | varchar | 60 |  | √ | ' ' | 车辆识别代码/车驾号码 |
 | 22 | finvoicecode | 发票代码 | varchar | 100 |  | √ | ' ' | 发票代码 |
@@ -35,7 +35,7 @@
 | 24 | finvoiceno | 发票号码 | varchar | 100 |  | √ | ' ' | 发票号码 |
 | 25 | fbillno | 单据编号 | varchar | 60 |  | √ | ' ' | 单据编号 |
 | 26 | fremark | 备注 | varchar | 200 |  | √ | ' ' | 备注 |
-| 27 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 27 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 28 | fbandmodel | 厂牌型号 | varchar | 60 |  | √ | ' ' | 厂牌型号 |
 | 29 | fbillstatus | 单据状态 | varchar | 30 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 30 | fbuyerphonenumber | 购方电话 | varchar | 60 |  | √ | ' ' | 购方电话 |
@@ -55,7 +55,7 @@
 | 44 | ftype | 发票类型 | varchar | 30 |  | √ | ' ' | 发票类型,枚举: 13 :二手车发票 |
 | 45 | fdatasource | 数据来源 | varchar | 50 |  | √ | ' ' | 数据来源 |
 | 46 | fregistrationnumber | 登记证号 | varchar | 60 |  | √ | ' ' | 登记证号 |
-| 47 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 47 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 48 | fauctionbankaccout | 拍卖/经营开户银行帐号 | varchar | 200 |  | √ | ' ' | 拍卖/经营开户银行帐号 |
 
 ### 列规则定义

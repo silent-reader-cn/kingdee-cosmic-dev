@@ -13,7 +13,7 @@
 | 2 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 3 | foriginalamount | 原币金额 | numeric | 19 | 6 | √ | 0.000000 | 原币金额 |
 | 4 | fprice | 单价 | numeric | 23 | 4 | √ | 0.0000 | 单价 |
-| 5 | fdatasourcetype | 数据来源 | varchar | 5 |  | √ | '0' | 数据来源,枚举: 1 :转入 2 :按比例转出余额 3 :按比例转出本期借方发生额 4 :按比例转出本期贷方发生额 12 :按公式转出 13 :按公式转入 5 :按指定科目转出 6 :按指定科目转入 7 :按差额转入 8 :按报表设置转出 9 :按报表设置转入 10 :按Excel设置转出 11 :按Excel设置转入 |
+| 5 | fdatasourcetype | 数据来源 | varchar | 5 |  | √ | '0' | 数据来源,枚举: 1 :转入 2 :按本科目余额转出 3 :按本科目本期借方发生额转出 4 :按本科目本期贷方发生额转出 12 :按公式转出 13 :按公式转入 5 :按指定科目转出 6 :按指定科目转入 7 :按差额转入 8 :按报表设置转出 9 :按报表设置转入 10 :按Excel设置转出 11 :按Excel设置转入 |
 | 6 | fqtyformula | 数量取数公式 | varchar | 2000 |  |  | ' ' | 数量取数公式 |
 | 7 | fautorowid | 行ID | varchar | 50 |  | √ | ' ' | 行ID |
 | 8 | fhaspostvoucher | fhaspostvoucher | bpchar | 1 |  | √ | '0' |  |
@@ -28,9 +28,9 @@
 | 17 | fbcmformulajson | 金额取数公式（ACCT） | varchar | 2000 |  |  | ' ' | 金额取数公式（ACCT） |
 | 18 | frptexp | 取数表达式 | varchar | 300 |  | √ | ' ' | 取数表达式 |
 | 19 | fpercentexp | 比例公式id | int8 | 64 |  | √ | 0 | 比例公式id |
-| 20 | fmeasureunitid | 计量单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 20 | fmeasureunitid | 计量单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 21 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 22 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 22 | fcurrencyid | 币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 | 23 | fautopercent | 转账比例 | numeric | 19 | 6 | √ | 0.000000 | 转账比例 |
 | 24 | fautodescription | 摘要 | varchar | 255 |  | √ | ' ' | 摘要 |
 | 25 | faccountid | 科目 | int8 | 64 |  | √ | 0 | 会计科目 bd_accountview |
@@ -60,31 +60,32 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | forgid | 核算组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | forgid | 核算组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 4 | fcreatorid | 编制人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fcreatorid | 编制人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | faccountbook | faccountbook | int8 | 64 |  | √ | 0 |  |
-| 6 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 7 | fname | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
 | 8 | fvoucherentrysort | 凭证分录顺序 | bpchar | 1 |  | √ | '0' | 凭证分录顺序,枚举: 1 :模板顺序 2 :先转出后转入 3 :先借后贷 |
 | 9 | fincurredamount | 应该发生金额 | numeric | 19 | 6 | √ | 0.000000 | 应该发生金额 |
 | 10 | fbillstatus | 单据状态 | bpchar | 1 |  | √ | 'C' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 11 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 12 | fdptnames | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 12 | fdptnames | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 13 | fvouchernumber | fvouchernumber | varchar | 255 |  | √ | ' ' |  |
 | 14 | fdescription | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
 | 15 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
-| 16 | fbookid | 账簿类型 | int8 | 64 |  | √ | 0 | 账簿类型 bd_accountbookstype |
-| 17 | fvouchertypeid | 凭证字 | int8 | 64 |  | √ | 0 | 凭证字 gl_vouchertype |
-| 18 | faccountbookid | 账簿 | int8 | 64 |  | √ | 0 | 账簿 gl_accountbook |
+| 16 | fbookid | 账簿类型 | int8 | 64 |  | √ | 0 | [账簿类型 bd_accountbookstype](../fibd_files/bd_accountbookstype.md) |
+| 17 | fvouchertypeid | 凭证字 | int8 | 64 |  | √ | 0 | [凭证字 gl_vouchertype](../gl_files/gl_vouchertype.md) |
+| 18 | faccountbookid | 账簿 | int8 | 64 |  | √ | 0 | [账簿 gl_accountbook](../gl_files/gl_accountbook.md) |
 | 19 | fattachments | 附件数 | int8 | 64 |  | √ | 0 | 附件数 |
 | 20 | ftransfertype | 转账类型 | bpchar | 1 |  | √ | '0' | 转账类型,枚举: 1 :普通转账 2 :结转损益 |
 | 21 | fgeneratedamount | 已发生金额 | numeric | 19 | 6 | √ | 0.000000 | 已发生金额 |
 | 22 | fvoucherdatetype | 凭证日期 | bpchar | 1 |  | √ | '1' | 凭证日期,枚举: 1 :期末最后一天 2 :系统日期 |
-| 23 | fenable | 使用状态 | bpchar | 1 |  | √ | '0' | 使用状态,枚举: 0 :禁用 1 :启用 |
-| 24 | fleafintype | 转入非明细科目 | bpchar | 1 |  | √ | '0' | 转入非明细科目,枚举: 0 :平均结转 1 :按编码结转 |
-| 25 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
-| 26 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 23 | faccounttype | 科目类型 | bpchar | 1 |  | √ | '1' | 科目类型,枚举: 1 :财务会计 2 :预算会计 |
+| 24 | fenable | 使用状态 | bpchar | 1 |  | √ | '0' | 使用状态,枚举: 0 :禁用 1 :启用 |
+| 25 | fleafintype | 转入非明细科目 | bpchar | 1 |  | √ | '0' | 转入非明细科目,枚举: 0 :平均结转 1 :按编码结转 |
+| 26 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
+| 27 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

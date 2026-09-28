@@ -18,7 +18,7 @@
 | 7 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 8 | fexec_exception_context | 异常信息 | varchar | 255 |  |  | null | 异常信息 |
 | 9 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 10 | fmodifierfield | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fmodifierfield | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fexec_scene | 执行场景 | varchar | 50 |  |  | null | 执行场景,枚举: engine_init :引擎初始化 engine_eval :脚本运行 engine_load_script :脚本加载 transpiler_trans :脚本编译 |
 | 12 | fexec_max_time | 最大时间(s) | numeric | 23 | 10 |  | null | 最大时间(s) |
 
@@ -47,14 +47,14 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 3 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 3 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fbillstatus | 单据状态 | varchar | 10 |  |  | null | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  | √ | LOCALTIMESTAMP | 创建时间 |
-| 6 | fscript_basedata | 轻脚本 | varchar | 50 |  |  | null | 插件脚本编辑 ide_pluginscript |
+| 6 | fscript_basedata | 轻脚本 | varchar | 50 |  |  | null | [插件脚本编辑 ide_pluginscript](../mdl_files/ide_pluginscript.md) |
 | 7 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
 | 8 | fbillno | 单据编号 | varchar | 50 |  | √ | ' ' | 单据编号 |
-| 9 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 11 | fall_count | 执行总次数 | int8 | 64 |  | √ | 0 | 执行总次数 |
 

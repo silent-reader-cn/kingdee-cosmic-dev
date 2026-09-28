@@ -11,12 +11,12 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fpermission | 授权 | varchar | 30 |  | √ | ' ' | 授权,枚举: READ :读取 WRITE :写入 EXECUTE :执行 |
-| 3 | fcreaterfield | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fcreaterfield | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fmodifydatefield | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 5 | fcreatedatefield | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 6 | fschema | 集成对象 | int8 | 64 |  | √ | 0 | 集成对象 isc_metadata_schema |
-| 7 | fdata_source | 数据源 | int8 | 64 |  | √ | 0 | 数据源管理 isc_data_source |
-| 8 | fmodifierfield | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | fschema | 集成对象 | int8 | 64 |  | √ | 0 | [集成对象 isc_metadata_schema](../iscb_files/isc_metadata_schema.md) |
+| 7 | fdata_source | 数据源 | int8 | 64 |  | √ | 0 | [数据源管理 isc_data_source](../iscb_files/isc_data_source.md) |
+| 8 | fmodifierfield | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

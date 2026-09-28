@@ -10,25 +10,25 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fgroupid | 组件类型 | int8 | 64 |  | √ | 0 | 门户组件类型 srm_compgroup |
+| 2 | fgroupid | 组件类型 | int8 | 64 |  | √ | 0 | [门户组件类型 srm_compgroup](../srm_files/srm_compgroup.md) |
 | 3 | forgfield | forgfield | int8 | 64 |  | √ | 0 |  |
-| 4 | forgid | 业务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 4 | forgid | 业务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | fitemclass | fitemclass | varchar | 100 |  | √ | ' ' |  |
 | 6 | fmulilangtextfield | fmulilangtextfield | varchar | 100 |  | √ | ' ' |  |
 | 7 | fitembrands | fitembrands | varchar | 100 |  | √ | ' ' |  |
 | 8 | fsaleunit | fsaleunit | int8 | 64 |  | √ | 0 |  |
-| 9 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 9 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 11 | fstatus | 数据状态 | varchar | 80 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 14 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 15 | fcurrencyprice | fcurrencyprice | int8 | 64 |  | √ | 0 |  |
 | 16 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
 | 17 | fissyspreset | 是否预置 | bpchar | 1 |  | √ | ' ' | 是否预置,枚举: 1 :是 0 :否 |
 | 18 | fmateril | fmateril | varchar | 100 |  | √ | ' ' |  |
-| 19 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 20 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 19 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 20 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 21 | fname | fname | varchar | 100 |  | √ | ' ' |  |
 | 22 | fdelay | fdelay | int8 | 64 |  | √ | 0 |  |
 | 23 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
@@ -39,7 +39,7 @@
 | 28 | fisautoplay | fisautoplay | bpchar | 1 |  | √ | ' ' |  |
 | 29 | fcurrencyfield | fcurrencyfield | int8 | 64 |  | √ | 0 |  |
 | 30 | fnumber | 组件编码 | varchar | 80 |  | √ | ' ' | 组件编码 |
-| 31 | fuseorgid | 使用组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 31 | fuseorgid | 使用组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 32 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
 
 ### 列规则定义

@@ -10,15 +10,15 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fgroupid | 自定义数据源分组 | int8 | 64 |  | √ | 0 | 自定义数据源分组 tctb_datasource_group |
-| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fgroupid | 自定义数据源分组 | int8 | 64 |  | √ | 0 | [自定义数据源分组 tctb_datasource_group](../tctb_files/tctb_datasource_group.md) |
+| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | fbizname | 业务名称 | varchar | 200 |  | √ | ' ' | 业务名称 |
 | 5 | fischild | 是否主子关系 | bpchar | 1 |  | √ | ' ' | 是否主子关系 |
-| 6 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 8 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 9 | fentityname | 实体名称 | varchar | 50 |  | √ | ' ' | 实体名称 |
-| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 12 | fsubentityname | 子实体名称 | varchar | 50 |  | √ | ' ' | 子实体名称 |
 | 13 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
@@ -26,9 +26,9 @@
 | 15 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
 | 16 | fcondition | 关联条件 | varchar | 50 |  | √ | ' ' | 关联条件 |
 | 17 | ftaxtype | 适用税种类型 | varchar | 50 |  | √ | ' ' | 适用税种类型,枚举: VAT_INCOME :增值税-收入取数规则 VAT_ROLLOUT :增值税-进项税额转出取数规则 VAT_DIFF :增值税-差额扣除取数规则 CSD_AQHZ :印花税-按期汇总 CSD_HDZS :印花税-核定征收 VAT_DEDUCTION :增值税-减税项目取数规则 CIT_YJ :企业所得税-预缴取数 VAT-PREPAY :增值税-预缴项目规则 CIT-ZCZJ :企业所得税-资产折旧摊销规则 |
-| 18 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 19 | fuserorg | 业务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 20 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 18 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 19 | fuserorg | 业务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 20 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 21 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 22 | fctrlstrategy | 控制策略 | varchar | 50 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
 | 23 | ftype | 表类型 | varchar | 50 |  | √ | ' ' | 表类型,枚举: 0 :自定义 1 :发票数据 2 :财务数据 3 :增值税台账 4 :增值税申报表 5 :所得税底稿 6 :所得税申报表季报 7 :所得税申报表年报 8 :所得税季报台账 9 :印花税 10 :房产税城镇土地使用税 11 :小规模申报表 12 :所得税申报表月报 13 :分支机构所得税申报表年报 14 :所得税核定征收月报 15 :所得税核定征收季报 16 :所得税核定征收年报 17 :小规模台账 |

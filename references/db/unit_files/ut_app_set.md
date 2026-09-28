@@ -16,7 +16,7 @@
 | 5 | fsvnpath | SVN路径 | varchar | 1000 |  |  | null | SVN路径 |
 | 6 | fgitrootpath | 元数据目录 | varchar | 255 |  | √ | ' ' | 元数据目录 |
 | 7 | fgitrepository | 本地仓库地址 | varchar | 500 |  | √ | ' ' | 本地仓库地址 |
-| 8 | fappid | 所属应用 | varchar | 36 |  | √ | ' ' | 业务应用实体 bos_devportal_bizapp |
+| 8 | fappid | 所属应用 | varchar | 36 |  | √ | ' ' | [业务应用实体 bos_devportal_bizapp](../mdl_files/bos_devportal_bizapp.md) |
 | 9 | fgiturl | Git远程地址 | varchar | 500 |  | √ | ' ' | Git远程地址 |
 
 ### 列规则定义

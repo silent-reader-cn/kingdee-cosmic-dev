@@ -12,19 +12,20 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | ftimes | 已报警次数 | int4 | 32 |  | √ | 0 | 已报警次数 |
 | 3 | fchannelname | 渠道名称 | varchar | 200 |  | √ | ' ' | 渠道名称 |
-| 4 | freceiver | 接收人 | varchar | 2000 |  | √ | ' ' | 接收人 |
-| 5 | falarmscene | 报警场景 | varchar | 200 |  | √ | ' ' | 报警场景,枚举: plugintimeouterror :插件执行超时 errorAddress :寻址异常没有进入流程时 conflict :找到多条满足条件的流程而没有进入流程时 notFind :无匹配的流程而没有进入流程时 |
-| 6 | fmessageids | 消息id集合 | varchar | 255 |  | √ | ' ' | 消息id集合 |
-| 7 | fmessageids_tag | 消息id集合_详情 | text | 0 |  |  | null | 消息id集合_详情 |
-| 8 | ftitle | 消息标题 | varchar | 2000 |  | √ | ' ' | 消息标题 |
-| 9 | falarmruleid | 报警规则id | int8 | 64 |  | √ | 0 | 报警规则id |
-| 10 | fstate | 状态 | varchar | 50 |  | √ | ' ' | 状态,枚举: unfinish :未完成 suspend :中断 complete :完成 |
-| 11 | fcreatedate | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 12 | fmodifydate | 报警时间 | timestamp | 0 |  |  | null | 报警时间 |
-| 13 | fmonitorid | 关联mq监控id | int8 | 64 |  | √ | 0 | 关联mq监控id |
-| 14 | fgroup | 报警场景关联key | varchar | 500 |  | √ | ' ' | 报警场景关联key |
-| 15 | fcontent | 消息内容 | varchar | 2000 |  | √ | ' ' | 消息内容 |
-| 16 | fchannel | 发送渠道 | varchar | 200 |  | √ | ' ' | 发送渠道,枚举: |
+| 4 | fappnumber | 应用编码 | varchar | 20 |  | √ | 'wf' | 应用编码,枚举: wf :工作流 bec :业务实事件中心 |
+| 5 | freceiver | 接收人 | varchar | 2000 |  | √ | ' ' | 接收人 |
+| 6 | falarmscene | 报警场景 | varchar | 200 |  | √ | ' ' | 报警场景,枚举: plugintimeouterror :插件执行超时 errorAddress :寻址异常没有进入流程时 conflict :找到多条满足条件的流程而没有进入流程时 notFind :无匹配的流程而没有进入流程时 |
+| 7 | fmessageids | 消息id集合 | varchar | 255 |  | √ | ' ' | 消息id集合 |
+| 8 | fmessageids_tag | 消息id集合_详情 | text | 0 |  |  | null | 消息id集合_详情 |
+| 9 | ftitle | 消息标题 | varchar | 2000 |  | √ | ' ' | 消息标题 |
+| 10 | falarmruleid | 报警规则id | int8 | 64 |  | √ | 0 | 报警规则id |
+| 11 | fstate | 状态 | varchar | 50 |  | √ | ' ' | 状态,枚举: unfinish :未完成 suspend :中断 complete :完成 |
+| 12 | fcreatedate | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 13 | fmodifydate | 报警时间 | timestamp | 0 |  |  | null | 报警时间 |
+| 14 | fmonitorid | 关联mq监控id | int8 | 64 |  | √ | 0 | 关联mq监控id |
+| 15 | fgroup | 报警场景关联key | varchar | 500 |  | √ | ' ' | 报警场景关联key |
+| 16 | fcontent | 消息内容 | varchar | 2000 |  | √ | ' ' | 消息内容 |
+| 17 | fchannel | 发送渠道 | varchar | 200 |  | √ | ' ' | 发送渠道,枚举: |
 
 ### 列规则定义
 

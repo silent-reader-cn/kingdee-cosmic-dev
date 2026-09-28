@@ -10,12 +10,12 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fsscid | 共享中心 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 3 | fgroupid | 用户组 | int8 | 64 |  | √ | 0 | 用户组 task_usergroup |
+| 2 | fsscid | 共享中心 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 3 | fgroupid | 用户组 | int8 | 64 |  | √ | 0 | [用户组 task_usergroup](../ssc_files/task_usergroup.md) |
 | 4 | ftaskamount | 任务量 | numeric | 12 | 2 | √ | 0.00 | 任务量 |
 | 5 | ftaskefficiency | 平均耗时(单/小时) | numeric | 10 | 2 | √ | 0.00 | 平均耗时(单/小时) |
 | 6 | ftaskcount | 任务数 | int8 | 64 |  | √ | 0 | 任务数 |
-| 7 | fuser | 用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 7 | fuser | 用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 8 | fupdatetime | 更新时间 | timestamp | 0 |  |  | null | 更新时间 |
 
 ### 列规则定义

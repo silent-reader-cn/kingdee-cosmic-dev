@@ -40,7 +40,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fremark | 备注 | varchar | 500 |  | √ | ' ' | 备注 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fgroupid | fgroupid | int8 | 64 |  | √ | 0 |  |
 | 5 | ffiltertype | 条件类型 | varchar | 50 |  | √ | ' ' | 条件类型,枚举: bill :单据 custom :自定义 |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
@@ -50,9 +50,9 @@
 | 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 11 | farchiveplugin | farchiveplugin | varchar | 2000 |  | √ | ' ' |  |
 | 12 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 13 | fbillsetid | 同步单据 | int8 | 64 |  | √ | 0 | 可归档单据范围 bos_cbs_archi_billset |
+| 13 | fbillsetid | 同步实体 | int8 | 64 |  | √ | 0 | [可归档单据范围 bos_cbs_archi_billset](../cbs_files/bos_cbs_archi_billset.md) |
 | 14 | fconditiondesc | 同步条件 | varchar | 2000 |  | √ | ' ' | 同步条件 |
-| 15 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 15 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 16 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 17 | fconditiontype | fconditiontype | bpchar | 1 |  | √ | ' ' |  |
 | 18 | fpreset | fpreset | bpchar | 1 |  | √ | '0' |  |
@@ -60,7 +60,7 @@
 | 20 | fenable | 使用状态 | bpchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :启用 |
 | 21 | fcondition | 同步条件序列值 | text | 0 |  |  | null | 同步条件序列值 |
 | 22 | fregion | 目标地址区域 | varchar | 50 |  | √ | ' ' | 目标地址区域 |
-| 23 | fnumber | 单据编码 | varchar | 30 |  | √ | ' ' | 单据编码 |
+| 23 | fnumber | 实体编码 | varchar | 30 |  | √ | ' ' | 实体编码 |
 
 ### 列规则定义
 

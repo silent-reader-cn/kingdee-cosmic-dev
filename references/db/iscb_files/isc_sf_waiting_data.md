@@ -14,7 +14,7 @@
 | 3 | fstate | 状态 | varchar | 50 |  | √ | ' ' | 状态,枚举: W :就绪 F :失败 S :成功 N :忽略 |
 | 4 | fmodified_time | 处理时间 | timestamp | 0 |  |  | null | 处理时间 |
 | 5 | fnode_title | 节点标题 | varchar | 50 |  | √ | ' ' | 节点标题 |
-| 6 | fservice_flow_id | 服务流程 | int8 | 64 |  | √ | 0 | 服务流程 isc_service_flow |
+| 6 | fservice_flow_id | 服务流程 | int8 | 64 |  | √ | 0 | [服务流程 isc_service_flow](../iscb_files/isc_service_flow.md) |
 | 7 | fdata_tag | 数据_详情 | text | 0 |  |  | null | 数据_详情 |
 | 8 | fhash_code | 哈希码 | int4 | 32 |  | √ | 0 | 哈希码 |
 | 9 | fdata | 数据 | varchar | 255 |  | √ | ' ' | 数据 |

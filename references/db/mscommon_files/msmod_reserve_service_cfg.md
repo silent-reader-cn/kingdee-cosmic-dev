@@ -40,15 +40,15 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 4 | fgroupid | 预留服务 | int8 | 64 |  | √ | 0 | 预留服务分组 msmod_reservesergroup |
-| 5 | fbillobject | 单据对象 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 4 | fgroupid | 预留服务 | int8 | 64 |  | √ | 0 | [预留服务分组（旧） msmod_reservesergroup](../mscommon_files/msmod_reservesergroup.md) |
+| 5 | fbillobject | 单据对象 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 7 | fdescription | 描述 | varchar | 512 |  | √ | ' ' | 描述 |
 | 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 9 | fbilloperation | 单据操作 | varchar | 512 |  | √ | ' ' | 单据操作,枚举: |
 | 10 | fstatus | 数据状态 | varchar | 50 |  | √ | 'C' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 13 | f_filter_value | 过滤器值 | varchar | 255 |  | √ | ' ' | 过滤器值 |
 | 14 | f_filter_value_tag | 过滤器值_详情 | text | 0 |  |  | null | 过滤器值_详情 |

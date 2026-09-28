@@ -38,7 +38,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 参数枚举(供方案选择) tctb_paramenum |
+| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [参数枚举(供方案选择) tctb_paramenum](../tctb_files/tctb_paramenum.md) |
 | 2 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 | 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 
@@ -67,10 +67,10 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fparamname | 参数名称 | int8 | 64 |  | √ | 0 | 税务参数 tctb_taxparam |
+| 2 | fparamname | 参数名称 | int8 | 64 |  | √ | 0 | [税务参数 tctb_taxparam](../tctb_files/tctb_taxparam.md) |
 | 3 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 4 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 5 | fparamval | 参数值 | int8 | 64 |  | √ | 0 | 参数枚举(供方案选择) tctb_paramenum |
+| 5 | fparamval | 参数值 | int8 | 64 |  | √ | 0 | [参数枚举(供方案选择) tctb_paramenum](../tctb_files/tctb_paramenum.md) |
 
 ### 列规则定义
 
@@ -99,8 +99,8 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 参数方案名称 | varchar | 250 |  | √ | ' ' | 参数方案名称 |
 | 3 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 5 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 5 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 7 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 8 | fenable | 使用状态 | varchar | 50 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
@@ -134,7 +134,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 4 | forg | 业务单元编码 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 4 | forg | 业务单元编码 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 
 ### 列规则定义
 

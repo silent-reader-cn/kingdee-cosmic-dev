@@ -71,7 +71,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | frptid | 报表 | varchar | 50 |  | √ | ' ' | 报表 |
 | 5 | faudittips | 审核提示 | bpchar | 1 |  | √ | '0' | 审核提示,枚举: 0 : 1 :审核-提示 2 :审核-不可审核 |
 | 6 | fmessage | 审核不满足时显示 | varchar | 255 |  | √ | ' ' | 审核不满足时显示 |
@@ -82,7 +82,7 @@
 | 11 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 12 | fsavetips | 保存提示 | bpchar | 1 |  | √ | '0' | 保存提示,枚举: 0 : 1 :保存-提示 |
 | 13 | fsubmittips | 提交提示 | bpchar | 1 |  | √ | '0' | 提交提示,枚举: 0 : 1 :提交-提示 2 :提交-不可提交 |
-| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 16 | fformula | 公式 | varchar | 255 |  | √ | ' ' | 公式 |
 | 17 | fenable | 使用状态 | bpchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |

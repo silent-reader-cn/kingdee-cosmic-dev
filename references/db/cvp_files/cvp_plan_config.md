@@ -25,5 +25,5 @@
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
 | 1 | idx_cvp_plan_config_template |  | ftemplatenumber |
-| 2 | pk_t_cvp_plan_config |  | fid |
-| 3 | idx_cvp_plan_config_paln |  | fplannumber |
+| 2 | idx_cvp_plan_config_paln |  | fplannumber |
+| 3 | pk_t_cvp_plan_config |  | fid |

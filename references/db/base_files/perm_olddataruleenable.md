@@ -10,9 +10,11 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fenable | 启用旧数据规则 | bpchar | 1 |  | √ | '1' | 启用旧数据规则 |
-| 4 | fmodifytime | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
+| 4 | fispropcollapse | 启用属性压缩 | bpchar | 1 |  | √ | '0' | 启用属性压缩 |
+| 5 | fisnewmodel | 启用新模型 | bpchar | 1 |  | √ | '0' | 启用新模型 |
+| 6 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 
 ### 列规则定义
 

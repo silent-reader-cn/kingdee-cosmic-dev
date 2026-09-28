@@ -40,19 +40,21 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fisv_id | 开发商标识 | varchar | 50 |  | √ | ' ' | 开发商标识 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 4 | fname | 名称 | varchar | 300 |  | √ | ' ' | 名称 |
-| 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 6 | fsourcebill | 来源单据 | varchar | 36 |  | √ | ' ' | 业务对象 bos_objecttype |
-| 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 8 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 10 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 11 | ftargetbill | 目标单据 | varchar | 36 |  | √ | ' ' | 业务对象 bos_objecttype |
-| 12 | fenable | 可用状态 | bpchar | 1 |  | √ | ' ' | 可用状态,枚举: 0 :禁用 1 :可用 |
-| 13 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
-| 14 | fissyspreset | 系统预置 | bpchar | 1 |  | √ | '0' | 系统预置 |
-| 15 | fisdefault | 是否默认 | bpchar | 1 |  | √ | '0' | 是否默认 |
+| 3 | fremark | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 5 | fname | 名称 | varchar | 300 |  | √ | ' ' | 名称 |
+| 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 7 | fsourcebill | 来源单据 | varchar | 36 |  | √ | ' ' | [业务对象 bos_objecttype](../mdl_files/bos_objecttype.md) |
+| 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 9 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
+| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 11 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
+| 12 | fscene | 应用场景 | bpchar | 1 |  | √ | ' ' | 应用场景,枚举: 1 :寻源项目复制 |
+| 13 | ftargetbill | 目标单据 | varchar | 36 |  | √ | ' ' | [业务对象 bos_objecttype](../mdl_files/bos_objecttype.md) |
+| 14 | fenable | 可用状态 | bpchar | 1 |  | √ | ' ' | 可用状态,枚举: 0 :禁用 1 :可用 |
+| 15 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
+| 16 | fissyspreset | 系统预置 | bpchar | 1 |  | √ | '0' | 系统预置 |
+| 17 | fisdefault | 是否默认 | bpchar | 1 |  | √ | '0' | 是否默认 |
 
 ### 列规则定义
 

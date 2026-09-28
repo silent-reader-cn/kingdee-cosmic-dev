@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 4 | fdefaultfiltering | 启用默认过滤 | bpchar | 1 |  | √ | ' ' | 启用默认过滤 |
 | 5 | fdatasrctype | 数据源类型 | varchar | 50 |  | √ | ' ' | 数据源类型,枚举: 0 :自定义 bcmParamSource :星瀚合并报表 2 :星瀚预算 3 :星瀚总账 fileParamSource :导入离线数据 |
@@ -19,7 +19,7 @@
 | 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 9 | fallowdimnull | 允许默认度量值为空 | bpchar | 1 |  | √ | ' ' | 允许默认度量值为空 |
 | 10 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 13 | fparamsrc_tag | 来源参数_详情 | text | 0 |  |  | null | 来源参数_详情 |
 | 14 | fsuperlongdata | 支持超长数据值 | bpchar | 1 |  | √ | '0' | 支持超长数据值 |
@@ -232,5 +232,5 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | pk_t_fsa_datacolsrcfilter |  | fentryid |
-| 2 | idx_t_fsa_datacolsrcfilter_1 |  | fid,ffieldnumber |
+| 1 | idx_t_fsa_datacolsrcfilter_1 |  | fid,ffieldnumber |
+| 2 | pk_t_fsa_datacolsrcfilter |  | fentryid |

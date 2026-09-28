@@ -26,56 +26,58 @@
 | 15 | fparententryid | fparententryid | int8 | 64 |  | √ | 0 |  |
 | 16 | fvaliddate | 生效日期 | timestamp | 0 |  |  | null | 生效日期 |
 | 17 | fisjumplevel | fisjumplevel | bpchar | 1 |  | √ | '0' |  |
-| 18 | fisreplace | fisreplace | bpchar | 1 |  | √ | '0' |  |
+| 18 | fisreplace | 替代件 | bpchar | 1 |  | √ | '0' | 替代件 |
 | 19 | fqty | fqty | numeric | 23 | 10 | √ | 0.0000000000 |  |
 | 20 | fentrychildtype | fentrychildtype | varchar | 30 |  | √ | ' ' |  |
 | 21 | fqtydenominator | 基本单位用量：分母 | numeric | 23 | 10 | √ | 0.0000000000 | 基本单位用量：分母 |
 | 22 | fecnvaliddate | fecnvaliddate | timestamp | 0 |  |  | null |  |
-| 23 | funitid | 基本单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 24 | fversionid | 版本号 | int8 | 64 |  | √ | 0 | BOM版本 bd_bomversion |
+| 23 | funitid | 基本单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 24 | fversionid | 版本号 | int8 | 64 |  | √ | 0 | [物料版本 bd_bomversion_new](../basedata_files/bd_bomversion_new.md) |
 | 25 | fwarehouseid | fwarehouseid | int8 | 64 |  | √ | 0 |  |
-| 26 | fownerid | fownerid | int8 | 64 |  | √ | 0 |  |
-| 27 | fsupplymode | fsupplymode | varchar | 30 |  | √ | ' ' |  |
-| 28 | fismodifiable | fismodifiable | bpchar | 1 |  | √ | '0' |  |
-| 29 | foutorgid | foutorgid | int8 | 64 |  | √ | 0 |  |
-| 30 | ftimeunit | ftimeunit | varchar | 30 |  | √ | ' ' |  |
-| 31 | fisoptional | fisoptional | bpchar | 1 |  | √ | '0' |  |
-| 32 | fisreplaceshow | fisreplaceshow | bpchar | 1 |  | √ | '0' |  |
-| 33 | fnumber | 编码 | varchar | 50 |  | √ | ' ' | 编码 |
-| 34 | fsupplyorgid | fsupplyorgid | int8 | 64 |  | √ | 0 |  |
-| 35 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 36 | fentryecn | ECN版本 | int8 | 64 |  | √ | 0 | ECN版本 pdm_ecnversion |
-| 37 | fprocessseq | fprocessseq | varchar | 50 |  | √ | ' ' |  |
-| 38 | fsupplytype | fsupplytype | varchar | 30 |  | √ | ' ' |  |
-| 39 | fiskey | fiskey | bpchar | 1 |  | √ | '0' |  |
-| 40 | fmaterialid | 子项编码 | int8 | 64 |  | √ | 0 | 物料生产信息 bd_materialmftinfo |
-| 41 | freplacemode | freplacemode | varchar | 5 |  | √ | ' ' |  |
-| 42 | fchildnumerator | fchildnumerator | numeric | 23 | 10 | √ | 0 |  |
-| 43 | foperationnumber | foperationnumber | varchar | 50 |  | √ | ' ' |  |
-| 44 | fleadtime | fleadtime | int8 | 64 |  | √ | 0 |  |
-| 45 | fmaterialattr | 物料属性 | varchar | 30 |  | √ | ' ' | 物料属性,枚举: 10030 :自制 10040 :外购 10050 :委外 10020 :虚拟 |
-| 46 | foutlocationid | foutlocationid | int8 | 64 |  | √ | 0 |  |
-| 47 | fentryconfigcode | fentryconfigcode | int8 | 64 |  | √ | 0 |  |
-| 48 | fisreplaceplanmm | fisreplaceplanmm | bpchar | 1 |  | √ | '0' |  |
-| 49 | fchildunitid | 子项单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 50 | fqtytype | 用量类型 | varchar | 30 |  | √ | ' ' | 用量类型,枚举: A :变动 B :固定 C :阶梯 |
-| 51 | fqtynumerator | 基本单位用量：分子 | numeric | 23 | 10 | √ | 0.0000000000 | 基本单位用量：分子 |
-| 52 | fecnno | fecnno | varchar | 50 |  | √ | ' ' |  |
-| 53 | fisbackflush | fisbackflush | varchar | 30 |  | √ | ' ' |  |
-| 54 | fisreplaceable | fisreplaceable | bpchar | 1 |  | √ | '0' |  |
-| 55 | fprovidetype | fprovidetype | int8 | 64 |  | √ | 0 |  |
-| 56 | ffixscrap | ffixscrap | numeric | 23 | 10 | √ | 0.0000000000 |  |
-| 57 | ftype | ftype | varchar | 30 |  | √ | ' ' |  |
-| 58 | flocationid | flocationid | int8 | 64 |  | √ | 0 |  |
-| 59 | foutwarehouseid | foutwarehouseid | int8 | 64 |  | √ | 0 |  |
-| 60 | fisstockalloc | fisstockalloc | bpchar | 1 |  | √ | '0' |  |
-| 61 | freplaceplanstrategy | freplaceplanstrategy | varchar | 10 |  | √ | ' ' |  |
-| 62 | fisbulkmaterial | fisbulkmaterial | bpchar | 1 |  | √ | '0' |  |
-| 63 | fprovideorgid | fprovideorgid | int8 | 64 |  | √ | 0 |  |
-| 64 | fisselectable | fisselectable | bpchar | 1 |  | √ | '0' |  |
-| 65 | fauxpropertyid | fauxpropertyid | int8 | 64 |  | √ | 0 |  |
-| 66 | fisbackflushnew | fisbackflushnew | varchar | 30 |  | √ | ' ' |  |
-| 67 | freplaceplanid | freplaceplanid | int8 | 64 |  | √ | 0 |  |
+| 26 | frepacetype | frepacetype | varchar | 50 |  | √ | ' ' |  |
+| 27 | fownerid | fownerid | int8 | 64 |  | √ | 0 |  |
+| 28 | fsupplymode | fsupplymode | varchar | 30 |  | √ | ' ' |  |
+| 29 | fismodifiable | fismodifiable | bpchar | 1 |  | √ | '0' |  |
+| 30 | foutorgid | foutorgid | int8 | 64 |  | √ | 0 |  |
+| 31 | ftimeunit | ftimeunit | varchar | 30 |  | √ | ' ' |  |
+| 32 | fisoptional | fisoptional | bpchar | 1 |  | √ | '0' |  |
+| 33 | fentrymasterid | fentrymasterid | int8 | 64 |  | √ | 0 |  |
+| 34 | fisreplaceshow | fisreplaceshow | bpchar | 1 |  | √ | '0' |  |
+| 35 | fnumber | 编码 | varchar | 50 |  | √ | ' ' | 编码 |
+| 36 | fsupplyorgid | fsupplyorgid | int8 | 64 |  | √ | 0 |  |
+| 37 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 38 | fentryecn | ECN版本 | int8 | 64 |  | √ | 0 | [ECN版本 pdm_ecnversion](../fmm_files/pdm_ecnversion.md) |
+| 39 | fprocessseq | fprocessseq | varchar | 50 |  | √ | ' ' |  |
+| 40 | fsupplytype | fsupplytype | varchar | 30 |  | √ | ' ' |  |
+| 41 | fiskey | fiskey | bpchar | 1 |  | √ | '0' |  |
+| 42 | fmaterialid | 子项编码 | int8 | 64 |  | √ | 0 | [物料生产信息 bd_materialmftinfo](../sbd_files/bd_materialmftinfo.md) |
+| 43 | freplacemode | freplacemode | varchar | 5 |  | √ | ' ' |  |
+| 44 | fchildnumerator | fchildnumerator | numeric | 23 | 10 | √ | 0 |  |
+| 45 | foperationnumber | foperationnumber | varchar | 50 |  | √ | ' ' |  |
+| 46 | fleadtime | fleadtime | int8 | 64 |  | √ | 0 |  |
+| 47 | fmaterialattr | 物料属性 | varchar | 30 |  | √ | ' ' | 物料属性,枚举: 10030 :自制 10040 :外购 10050 :委外 10020 :虚拟 |
+| 48 | foutlocationid | foutlocationid | int8 | 64 |  | √ | 0 |  |
+| 49 | fentryconfigcode | fentryconfigcode | int8 | 64 |  | √ | 0 |  |
+| 50 | fisreplaceplanmm | fisreplaceplanmm | bpchar | 1 |  | √ | '0' |  |
+| 51 | fchildunitid | 子项单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 52 | fqtytype | 用量类型 | varchar | 30 |  | √ | ' ' | 用量类型,枚举: A :变动 B :固定 C :阶梯 |
+| 53 | fqtynumerator | 基本单位用量：分子 | numeric | 23 | 10 | √ | 0.0000000000 | 基本单位用量：分子 |
+| 54 | fecnno | fecnno | varchar | 50 |  | √ | ' ' |  |
+| 55 | fisbackflush | fisbackflush | varchar | 30 |  | √ | ' ' |  |
+| 56 | fisreplaceable | fisreplaceable | bpchar | 1 |  | √ | '0' |  |
+| 57 | fprovidetype | fprovidetype | int8 | 64 |  | √ | 0 |  |
+| 58 | ffixscrap | ffixscrap | numeric | 23 | 10 | √ | 0.0000000000 |  |
+| 59 | ftype | ftype | varchar | 30 |  | √ | ' ' |  |
+| 60 | flocationid | flocationid | int8 | 64 |  | √ | 0 |  |
+| 61 | foutwarehouseid | foutwarehouseid | int8 | 64 |  | √ | 0 |  |
+| 62 | fisstockalloc | fisstockalloc | bpchar | 1 |  | √ | '0' |  |
+| 63 | freplaceplanstrategy | freplaceplanstrategy | varchar | 10 |  | √ | ' ' |  |
+| 64 | fisbulkmaterial | fisbulkmaterial | bpchar | 1 |  | √ | '0' |  |
+| 65 | fprovideorgid | fprovideorgid | int8 | 64 |  | √ | 0 |  |
+| 66 | fisselectable | fisselectable | bpchar | 1 |  | √ | '0' |  |
+| 67 | fauxpropertyid | fauxpropertyid | int8 | 64 |  | √ | 0 |  |
+| 68 | fisbackflushnew | fisbackflushnew | varchar | 30 |  | √ | ' ' |  |
+| 69 | freplaceplanid | freplaceplanid | int8 | 64 |  | √ | 0 |  |
 
 ### 列规则定义
 

@@ -13,7 +13,7 @@
 | 2 | foriginalid | 开票申请单id | int8 | 64 |  | √ | 0 | 开票申请单id |
 | 3 | ftotaltaxdiffer | 税额差值 | numeric | 23 | 10 | √ | 0 | 税额差值 |
 | 4 | ftotalamount | 发票价税汇总 | numeric | 23 | 10 | √ | 0 | 发票价税汇总 |
-| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | fbilldate | 单据日期 | timestamp | 0 |  |  | null | 单据日期 |
 | 7 | forigtotalamount | 申请价税汇总 | numeric | 23 | 10 | √ | 0 | 申请价税汇总 |
 | 8 | ftotaltax | 发票税额汇总 | numeric | 23 | 10 | √ | 0 | 发票税额汇总 |

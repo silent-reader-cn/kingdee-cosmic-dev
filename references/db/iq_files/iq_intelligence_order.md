@@ -13,13 +13,13 @@
 | 2 | fmarket_plate_type | 上市板块 | varchar | 50 |  | √ | ' ' | 上市板块,枚举: HZB :上交所主板 KCB :科创板 SZB :深交所主板 CYB :创业板 BJS :北交所 |
 | 3 | fipoorgname | IPO主体名称(固化) | varchar | 50 |  | √ | ' ' | IPO主体名称(固化) |
 | 4 | fhadbuildnum | 已生成报告次数 | int4 | 32 |  | √ | 0 | 已生成报告次数 |
-| 5 | fipo_org | IPO主体 | int8 | 64 |  | √ | 0 | IPO编制组织 ipo_org |
+| 5 | fipo_org | IPO主体 | int8 | 64 |  | √ | 0 | [IPO编制组织 ipo_org](../ipobase_files/ipo_org.md) |
 | 6 | fperiodstartyear | 三年财务数据开始年份 | int8 | 64 |  | √ | 2020 | 三年财务数据开始年份 |
-| 7 | findustrytype | 行业类型(固化) | int8 | 64 |  | √ | 0 | 证监会行业 csrc_industry_info |
+| 7 | findustrytype | 行业类型(固化) | int8 | 64 |  | √ | 0 | [证监会行业 csrc_industry_info](../ipobase_files/csrc_industry_info.md) |
 | 8 | freportcurperiod | 报告当年期 | int8 | 64 |  | √ | 12 | 报告当年期 |
 | 9 | fcompany_type | 企业类型 | varchar | 50 |  | √ | ' ' | 企业类型,枚举: YBQY :一般企业 BJQCY :表决权差异 HCQYW :红筹企业（境外未上市） HCQYY :红筹企业（境外已上市） |
 | 10 | fupdatetime | 测评更新时间 | timestamp | 0 |  |  | null | 测评更新时间 |
-| 11 | fop_user | 测评人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fop_user | 测评人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fnicestandardnum | 最佳标准号 | int8 | 64 |  | √ | 0 | 最佳标准号 |
 | 13 | freportcycle | 周期 | varchar | 50 |  | √ | '4' | 周期,枚举: 4 :月报 5 :季报 6 :半年报 7 :年报 |
 | 14 | fop_time | 测评创建时间 | timestamp | 0 |  |  | null | 测评创建时间 |

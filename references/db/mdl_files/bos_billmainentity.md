@@ -24,7 +24,7 @@
 | 13 | fnumberfieldkey | fnumberfieldkey | varchar | 30 |  | √ | ' ' |  |
 | 14 | fnosearchenabled | fnosearchenabled | bpchar | 1 |  | √ | '0' |  |
 | 15 | fdentityid | fdentityid | varchar | 36 |  | √ | ' ' |  |
-| 16 | fbizappid | 应用 | varchar | 36 |  | √ | ' ' | 业务应用实体 bos_devportal_bizapp |
+| 16 | fbizappid | 应用 | varchar | 36 |  | √ | ' ' | [业务应用实体 bos_devportal_bizapp](../mdl_files/bos_devportal_bizapp.md) |
 | 17 | fappid | fappid | varchar | 50 |  | √ | ' ' |  |
 | 18 | fpkfieldtype | fpkfieldtype | int8 | 64 |  | √ | 0 |  |
 | 19 | fpkfieldname | fpkfieldname | varchar | 30 |  | √ | ' ' |  |

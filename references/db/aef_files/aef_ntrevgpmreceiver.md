@@ -14,7 +14,7 @@
 | 3 | faccountingentityname | 会计主体名称 | varchar | 50 |  | √ | ' ' | 会计主体名称 |
 | 4 | feinvoiceid | 电子缴款书标识 | varchar | 50 |  | √ | ' ' | 电子缴款书标识 |
 | 5 | flargejson | 接收端json | varchar | 500 |  | √ | ' ' | 接收端json |
-| 6 | forgid | 归档组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | forgid | 归档组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fdirectvoucherid | 凭证ID | int8 | 64 |  | √ | 0 | 凭证ID |
 | 8 | fbilldate | 开票日期 | timestamp | 0 |  |  | null | 开票日期 |
 | 9 | fxbrlurl | xbrlurl | varchar | 200 |  | √ | ' ' | xbrlurl |
@@ -25,7 +25,7 @@
 | 14 | fhasbeenchecked | 是否已验真 | bpchar | 1 |  | √ | ' ' | 是否已验真 |
 | 15 | fhasbeenbooked | 是否已入账 | bpchar | 1 |  | √ | ' ' | 是否已入账 |
 | 16 | fsourcebillno | 源单号码 | varchar | 30 |  | √ | ' ' | 源单号码 |
-| 17 | fbilltype | 单据类型 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 17 | fbilltype | 单据类型 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 18 | flargejson_tag | 接收端json_详情 | text | 0 |  |  | null | 接收端json_详情 |
 
 ### 列规则定义

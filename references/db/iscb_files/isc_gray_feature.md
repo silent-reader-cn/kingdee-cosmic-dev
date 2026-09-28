@@ -13,7 +13,7 @@
 | 2 | ftenant | 租户标识 | varchar | 50 |  | √ | ' ' | 租户标识 |
 | 3 | fcreated_time | 申请时间 | timestamp | 0 |  |  | null | 申请时间 |
 | 4 | fenv_sign | 环境特征码 | varchar | 50 |  | √ | ' ' | 环境特征码 |
-| 5 | fcreator_id | 申请人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 5 | fcreator_id | 申请人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | fstate | 状态 | varchar | 50 |  | √ | ' ' | 状态,枚举: S :有效 X :许可过期 X1 :许可非法 X2 :账套不符 X3 :特征码不符 |
 | 7 | flicense_content | 许可密钥 | varchar | 2000 |  | √ | ' ' | 许可密钥 |
 | 8 | fnumber | 特性编码 | varchar | 50 |  | √ | ' ' | 特性编码 |

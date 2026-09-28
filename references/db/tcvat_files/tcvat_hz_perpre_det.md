@@ -10,16 +10,16 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | famountfield | 金额字段 | int8 | 64 |  | √ | 0 | 数据源字段配置 tctb_datasource_entry |
-| 3 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | famountfield | 金额字段 | int8 | 64 |  | √ | 0 | [数据源字段配置 tctb_datasource_entry](../tctb_files/tctb_datasource_entry.md) |
+| 3 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | fconditionjson | 过滤条件 | text | 0 |  |  | null | 过滤条件 |
 | 5 | famount | 不含税金额 | numeric | 23 | 10 | √ | 0 | 不含税金额 |
 | 6 | fenddate | 税款所属期止 | timestamp | 0 |  |  | null | 税款所属期止 |
 | 7 | ftype | 取数类型 | varchar | 50 |  | √ | ' ' | 取数类型,枚举: currentamount :本期发生额 |
-| 8 | fsuborgid | 组织编码 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 8 | fsuborgid | 组织编码 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 9 | fstartdate | 税款所属期起 | timestamp | 0 |  |  | null | 税款所属期起 |
 | 10 | ffetchamount | 取数金额 | numeric | 23 | 10 | √ | 0 | 取数金额 |
-| 11 | ftable | 数据源 | int8 | 64 |  | √ | 0 | 数据源配置 tctb_custom_datasource |
+| 11 | ftable | 数据源 | int8 | 64 |  | √ | 0 | [数据源配置 tctb_custom_datasource](../tctb_files/tctb_custom_datasource.md) |
 | 12 | ftaxaccountserialno | 台账流水号 | varchar | 50 |  | √ | ' ' | 台账流水号 |
 | 13 | fabsolute | 绝对值 | bpchar | 1 |  | √ | '0' | 绝对值 |
 | 14 | ftaxpayertype | 纳税人类型 | varchar | 50 |  | √ | ' ' | 纳税人类型 |

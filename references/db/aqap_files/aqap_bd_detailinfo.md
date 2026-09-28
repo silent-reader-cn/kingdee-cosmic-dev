@@ -24,8 +24,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | t_aqap_bd_detailinfo_l_pkey |  | fpkid |
-| 2 | idx_aqap_bd_detailinfo_l_0 |  | fid,flocaleid |
+| 1 | idx_aqap_bd_detailinfo_l_0 |  | fid,flocaleid |
+| 2 | t_aqap_bd_detailinfo_l_pkey |  | fpkid |
 
 ---
 
@@ -82,13 +82,13 @@
 | 42 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 43 | fcustom_id | custom_id | varchar | 50 |  | √ | ' ' | custom_id |
 | 44 | fserial_no | serial_no | int8 | 64 |  |  | null | serial_no |
-| 45 | fcreatorid | 创建人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 45 | fcreatorid | 创建人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 46 | fmasterid | 主数据内码 | int8 | 64 |  |  | null | 主数据内码 |
 | 47 | fopp_bank_name | opp_bank_name | varchar | 255 |  | √ | ' ' | opp_bank_name |
 | 48 | kd_flag | kd_flag | varchar | 50 |  | √ | ' ' |  |
 | 49 | fpay_detail_seq_id | pay_detail_seq_id | varchar | 50 |  | √ | ' ' | pay_detail_seq_id |
 | 50 | freversed_biz_field | reversed_biz_field | varchar | 600 |  | √ | ' ' | reversed_biz_field |
-| 51 | fmodifierid | 修改人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 51 | fmodifierid | 修改人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 52 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 53 | fcurrency | currency | varchar | 50 |  | √ | ' ' | currency |
 | 54 | fmatch_node | 匹配节点 | varchar | 2 |  |  | null | 匹配节点 |
@@ -109,6 +109,7 @@
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
 | 1 | idx_aqap_funique_seq_uindex |  | funique_seq |
-| 2 | idx_aqap_bd_detailinfo_1 |  | ftrans_date |
-| 3 | idx_aqap_bd_detailinfo_0 |  | facc_no,ftrans_date |
-| 4 | t_aqap_bd_detailinfo_pkey |  | fid |
+| 2 | idx_aqap_bd_detailinfo_3 |  | fpay_detail_seq_id |
+| 3 | idx_aqap_bd_detailinfo_1 |  | ftrans_date |
+| 4 | idx_aqap_bd_detailinfo_0 |  | facc_no,ftrans_date |
+| 5 | t_aqap_bd_detailinfo_pkey |  | fid |

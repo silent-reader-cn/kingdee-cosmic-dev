@@ -13,7 +13,7 @@
 | 2 | fcreatedate | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
 | 3 | ftemplateid | 模板id | int8 | 64 |  | √ | 0 | 模板id |
 | 4 | fcomment | 评价 | varchar | 500 |  | √ | ' ' | 评价 |
-| 5 | fuid | 用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | fuid | 用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | fscore | 评分 | int4 | 32 |  | √ | 0 | 评分 |
 
 ### 列规则定义

@@ -26,6 +26,6 @@
 | 14 | `t_ks_scriptlet_group` | 脚本片段分组-主表 | 14 | [bos_scriptlet_group.md](./bos_scriptlet_group.md) |
 | 15 | `t_ks_scriptlet_group_l` | 脚本片段分组-多语言表 | 5 | [bos_scriptlet_group.md](./bos_scriptlet_group.md) |
 | 16 | `t_ks_scriptlet_l` | 脚本片段-多语言表 | 5 | [bos_scriptlet.md](./bos_scriptlet.md) |
-| 17 | `t_meta_bizobj_ext` | 轻扩展元数据-主表 | 0 | [bos_bizextmeta.md](./bos_bizextmeta.md) |
-| 18 | `t_meta_formdesign` | 业务对象导入-表单元数据-主表 | 0 | [bos_bizobj_formmeta.md](./bos_bizobj_formmeta.md) |
-| 19 | `t_meta_formdesign_l` | 业务对象导入-表单元数据-多语言表 | 0 | [bos_bizobj_formmeta.md](./bos_bizobj_formmeta.md) |
+| 17 | `t_meta_bizobj_ext` | 轻扩展元数据-主表 | 17 | [bos_bizextmeta.md](./bos_bizextmeta.md) |
+| 18 | `t_meta_formdesign` | 业务对象导入-表单元数据-主表 | 23 | [bos_bizobj_formmeta.md](./bos_bizobj_formmeta.md) |
+| 19 | `t_meta_formdesign_l` | 业务对象导入-表单元数据-多语言表 | 7 | [bos_bizobj_formmeta.md](./bos_bizobj_formmeta.md) |

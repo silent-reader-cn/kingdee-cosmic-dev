@@ -43,14 +43,14 @@
 | 2 | fstatus | 数据状态 | bpchar | 1 |  |  | null | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 3 | fname | fname | varchar | 30 |  | √ | ' ' |  |
 | 4 | fentrymarkid | 单据体 | varchar | 255 |  |  | null | 单据体,枚举: |
-| 5 | fbilldetailform | 待办任务自定义详情 | varchar | 255 |  |  | null | 业务对象 bos_objecttype |
+| 5 | fbilldetailform | 待办任务自定义详情 | varchar | 255 |  |  | null | [业务对象 bos_objecttype](../mdl_files/bos_objecttype.md) |
 | 6 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 7 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 7 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 8 | fisusemobile | 启用移动审批 | bpchar | 1 |  |  | null | 启用移动审批 |
 | 9 | fenable | 使用状态 | bpchar | 1 |  | √ | '0' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 10 | fshowcount | 审批项 | varchar | 255 |  |  | null | 审批项,枚举: |
 | 11 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
-| 12 | fbilltype | 单据 | varchar | 255 |  |  | null | 主实体对象 bos_entityobject |
+| 12 | fbilltype | 单据 | varchar | 255 |  |  | null | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 
 ### 列规则定义
 

@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | forgid | 销售组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | forgid | 销售组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fclosedate | fclosedate | timestamp | 0 |  |  | null |  |
 | 4 | fcancelstatus | fcancelstatus | varchar | 5 |  | √ | ' ' |  |
 | 5 | fsplitschemeid | fsplitschemeid | int8 | 64 |  | √ | 0 |  |
@@ -24,53 +24,66 @@
 | 13 | fbillno | 合同编号 | varchar | 80 |  | √ | ' ' | 合同编号 |
 | 14 | fversion | fversion | varchar | 30 |  | √ | '1' |  |
 | 15 | fconfirmdate | fconfirmdate | timestamp | 0 |  |  | null |  |
-| 16 | fdeptid | fdeptid | int8 | 64 |  | √ | 0 |  |
-| 17 | ftemplateid | ftemplateid | int8 | 64 |  | √ | 0 |  |
-| 18 | fbillstatus | 单据状态 | varchar | 5 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 19 | fmpmrecmethod | fmpmrecmethod | varchar | 50 |  | √ | ' ' |  |
-| 20 | fauditdate | fauditdate | timestamp | 0 |  |  | null |  |
-| 21 | fbillcretype | fbillcretype | varchar | 5 |  | √ | '0' |  |
-| 22 | fbiztimeend | fbiztimeend | timestamp | 0 |  |  | null |  |
-| 23 | fbillname | 合同名称 | varchar | 100 |  | √ | ' ' | 合同名称 |
-| 24 | ftypeid | 合同类型 | int8 | 64 |  | √ | 0 | 合同类型 conm_type |
-| 25 | fvalidstatus | 生效状态 | varchar | 5 |  | √ | ' ' | 生效状态,枚举: A :未生效 B :已生效 C :已失效 |
-| 26 | fcanceldate | fcanceldate | timestamp | 0 |  |  | null |  |
-| 27 | fchangerid | fchangerid | int8 | 64 |  | √ | 0 |  |
-| 28 | fpartaid | fpartaid | int8 | 64 |  | √ | 0 |  |
-| 29 | fisonlist | fisonlist | bpchar | 1 |  | √ | '0' |  |
-| 30 | fauditorid | fauditorid | int8 | 64 |  | √ | 0 |  |
-| 31 | fbilltypeid | fbilltypeid | int8 | 64 |  | √ | 0 |  |
-| 32 | fvaliderid | fvaliderid | int8 | 64 |  | √ | 0 |  |
-| 33 | fiselecsignature | fiselecsignature | bpchar | 1 |  | √ | '0' |  |
-| 34 | foperatorid | foperatorid | int8 | 64 |  | √ | 0 |  |
-| 35 | fconfirmstatus | fconfirmstatus | varchar | 5 |  | √ | ' ' |  |
-| 36 | fbiztime | 签订日期 | timestamp | 0 |  |  | null | 签订日期 |
-| 37 | fchangestatus | fchangestatus | varchar | 5 |  | √ | ' ' |  |
-| 38 | fdocumentid | fdocumentid | varchar | 50 |  | √ | ' ' |  |
-| 39 | fcancelerid | fcancelerid | int8 | 64 |  | √ | 0 |  |
-| 40 | fpricelistid | fpricelistid | int8 | 64 |  | √ | 0 |  |
-| 41 | fcreatorid | fcreatorid | int8 | 64 |  | √ | 0 |  |
-| 42 | ffilingstatus | ffilingstatus | varchar | 5 |  | √ | ' ' |  |
-| 43 | fchangedate | fchangedate | timestamp | 0 |  |  | null |  |
-| 44 | fsignstatus | fsignstatus | varchar | 5 |  | √ | ' ' |  |
-| 45 | frecconditionid | frecconditionid | int8 | 64 |  | √ | 0 |  |
-| 46 | ffreezedate | ffreezedate | timestamp | 0 |  |  | null |  |
-| 47 | funitsrctype | funitsrctype | varchar | 30 |  | √ | ' ' |  |
-| 48 | fmodifierid | fmodifierid | int8 | 64 |  | √ | 0 |  |
-| 49 | fbizmode | fbizmode | varchar | 5 |  | √ | ' ' |  |
-| 50 | fconmprop | fconmprop | varchar | 5 |  | √ | ' ' |  |
-| 51 | fcomment | fcomment | varchar | 2000 |  |  | ' ' |  |
-| 52 | foperatorgroupid | foperatorgroupid | int8 | 64 |  | √ | 0 |  |
-| 53 | fcreatetime | fcreatetime | timestamp | 0 |  |  | null |  |
-| 54 | flastupdateuserid | flastupdateuserid | int8 | 64 |  | √ | 0 |  |
-| 55 | flastupdatetime | flastupdatetime | timestamp | 0 |  |  | null |  |
-| 56 | fclosestatus | fclosestatus | varchar | 5 |  | √ | ' ' |  |
-| 57 | ffreezestatus | ffreezestatus | varchar | 5 |  | √ | ' ' |  |
-| 58 | fpartbid | fpartbid | int8 | 64 |  | √ | 0 |  |
-| 59 | fsubversion | fsubversion | varchar | 30 |  | √ | '1' |  |
-| 60 | fconfirmerid | fconfirmerid | int8 | 64 |  | √ | 0 |  |
-| 61 | ftemplateentryid | ftemplateentryid | int8 | 64 |  | √ | 0 |  |
-| 62 | fbiztimebegin | fbiztimebegin | timestamp | 0 |  |  | null |  |
+| 16 | ftotalamountcn | ftotalamountcn | varchar | 50 |  | √ | ' ' |  |
+| 17 | fdeptid | fdeptid | int8 | 64 |  | √ | 0 |  |
+| 18 | ftemplateid | ftemplateid | int8 | 64 |  | √ | 0 |  |
+| 19 | fbillstatus | 单据状态 | varchar | 5 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
+| 20 | fmpmrecmethod | fmpmrecmethod | varchar | 50 |  | √ | ' ' |  |
+| 21 | fauditdate | fauditdate | timestamp | 0 |  |  | null |  |
+| 22 | fbillcretype | fbillcretype | varchar | 5 |  | √ | '0' |  |
+| 23 | fbiztimeend | fbiztimeend | timestamp | 0 |  |  | null |  |
+| 24 | fbillname | 合同名称 | varchar | 100 |  | √ | ' ' | 合同名称 |
+| 25 | ftypeid | 合同类型 | int8 | 64 |  | √ | 0 | [合同类型 conm_type](../conm_files/conm_type.md) |
+| 26 | fdescountryid | fdescountryid | int8 | 64 |  | √ | 0 |  |
+| 27 | fvalidstatus | 生效状态 | varchar | 5 |  | √ | ' ' | 生效状态,枚举: A :未生效 B :已生效 C :已失效 |
+| 28 | fcanceldate | fcanceldate | timestamp | 0 |  |  | null |  |
+| 29 | fchangerid | fchangerid | int8 | 64 |  | √ | 0 |  |
+| 30 | fpartaid | fpartaid | int8 | 64 |  | √ | 0 |  |
+| 31 | fisonlist | fisonlist | bpchar | 1 |  | √ | '0' |  |
+| 32 | fauditorid | fauditorid | int8 | 64 |  | √ | 0 |  |
+| 33 | fbilltypeid | fbilltypeid | int8 | 64 |  | √ | 0 |  |
+| 34 | fvaliderid | fvaliderid | int8 | 64 |  | √ | 0 |  |
+| 35 | fiselecsignature | fiselecsignature | bpchar | 1 |  | √ | '0' |  |
+| 36 | foperatorid | foperatorid | int8 | 64 |  | √ | 0 |  |
+| 37 | fconfirmstatus | fconfirmstatus | varchar | 5 |  | √ | ' ' |  |
+| 38 | ftradetermid | ftradetermid | int8 | 64 |  | √ | 0 |  |
+| 39 | fprojinvctrltype | fprojinvctrltype | varchar | 50 |  | √ | ' ' |  |
+| 40 | fbiztime | 签订日期 | timestamp | 0 |  |  | null | 签订日期 |
+| 41 | fchangestatus | fchangestatus | varchar | 5 |  | √ | ' ' |  |
+| 42 | fdocumentid | fdocumentid | varchar | 50 |  | √ | ' ' |  |
+| 43 | fcancelerid | fcancelerid | int8 | 64 |  | √ | 0 |  |
+| 44 | fpricelistid | fpricelistid | int8 | 64 |  | √ | 0 |  |
+| 45 | fcreatorid | fcreatorid | int8 | 64 |  | √ | 0 |  |
+| 46 | fsrccountryid | fsrccountryid | int8 | 64 |  | √ | 0 |  |
+| 47 | ffilingstatus | ffilingstatus | varchar | 5 |  | √ | ' ' |  |
+| 48 | fchangedate | fchangedate | timestamp | 0 |  |  | null |  |
+| 49 | fsignstatus | fsignstatus | varchar | 5 |  | √ | ' ' |  |
+| 50 | frecconditionid | frecconditionid | int8 | 64 |  | √ | 0 |  |
+| 51 | ffreezedate | ffreezedate | timestamp | 0 |  |  | null |  |
+| 52 | funitsrctype | funitsrctype | varchar | 30 |  | √ | ' ' |  |
+| 53 | fmodifierid | fmodifierid | int8 | 64 |  | √ | 0 |  |
+| 54 | fbizmode | fbizmode | varchar | 5 |  | √ | ' ' |  |
+| 55 | fconmprop | fconmprop | varchar | 5 |  | √ | ' ' |  |
+| 56 | ftotaltaxamountcn | ftotaltaxamountcn | varchar | 50 |  | √ | ' ' |  |
+| 57 | fcomment | fcomment | varchar | 2000 |  |  | ' ' |  |
+| 58 | fdesport | fdesport | varchar | 512 |  | √ | ' ' |  |
+| 59 | freceiveaddressf7 | freceiveaddressf7 | int8 | 64 |  | √ | 0 |  |
+| 60 | foperatorgroupid | foperatorgroupid | int8 | 64 |  | √ | 0 |  |
+| 61 | fcreatetime | fcreatetime | timestamp | 0 |  |  | null |  |
+| 62 | flastupdateuserid | flastupdateuserid | int8 | 64 |  | √ | 0 |  |
+| 63 | fsrcport | fsrcport | varchar | 512 |  | √ | ' ' |  |
+| 64 | ftotalallamountcn | ftotalallamountcn | varchar | 50 |  | √ | ' ' |  |
+| 65 | flastupdatetime | flastupdatetime | timestamp | 0 |  |  | null |  |
+| 66 | fclosestatus | fclosestatus | varchar | 5 |  | √ | ' ' |  |
+| 67 | ffreezestatus | ffreezestatus | varchar | 5 |  | √ | ' ' |  |
+| 68 | fpartbid | fpartbid | int8 | 64 |  | √ | 0 |  |
+| 69 | fsubversion | fsubversion | varchar | 30 |  | √ | '1' |  |
+| 70 | fconfirmerid | fconfirmerid | int8 | 64 |  | √ | 0 |  |
+| 71 | ftemplateentryid | ftemplateentryid | int8 | 64 |  | √ | 0 |  |
+| 72 | ftransportmodeid | ftransportmodeid | int8 | 64 |  | √ | 0 |  |
+| 73 | finputamount | finputamount | bpchar | 1 |  | √ | '0' |  |
+| 74 | fbiztimebegin | fbiztimebegin | timestamp | 0 |  |  | null |  |
+| 75 | fcarrierid | fcarrierid | int8 | 64 |  | √ | 0 |  |
 
 ### 列规则定义
 
@@ -106,23 +119,25 @@
 | 6 | freclinkmanid | freclinkmanid | int8 | 64 |  | √ | 0 |  |
 | 7 | freviewdate | freviewdate | timestamp | 0 |  |  | null |  |
 | 8 | fparty2nd | fparty2nd | varchar | 255 |  | √ | ' ' |  |
-| 9 | fphone2nd | fphone2nd | varchar | 255 |  |  | null |  |
-| 10 | ffilingerid | ffilingerid | int8 | 64 |  | √ | 0 |  |
-| 11 | fpayingcustomerid | fpayingcustomerid | int8 | 64 |  | √ | 0 |  |
-| 12 | freccustomerid | freccustomerid | int8 | 64 |  | √ | 0 |  |
-| 13 | fframename | fframename | varchar | 100 |  | √ | ' ' |  |
-| 14 | fcontactperson1st | fcontactperson1st | varchar | 60 |  | √ | ' ' |  |
-| 15 | fframeversion | fframeversion | varchar | 30 |  | √ | ' ' |  |
-| 16 | fframenum | fframenum | varchar | 80 |  | √ | ' ' |  |
-| 17 | fpartcid | fpartcid | int8 | 64 |  | √ | 0 |  |
-| 18 | fsignerid | fsignerid | int8 | 64 |  | √ | 0 |  |
-| 19 | fparty1st | fparty1st | varchar | 255 |  | √ | ' ' |  |
-| 20 | fsettlecustomerid | fsettlecustomerid | int8 | 64 |  | √ | 0 |  |
-| 21 | fphone1st | fphone1st | varchar | 255 |  |  | null |  |
-| 22 | ffilingdate | ffilingdate | timestamp | 0 |  |  | null |  |
-| 23 | fcontactperson2nd | fcontactperson2nd | varchar | 60 |  | √ | ' ' |  |
-| 24 | fcustomerid | 订货客户 | int8 | 64 |  | √ | 0 | 客户 bd_customer |
-| 25 | freceiveaddress | freceiveaddress | varchar | 512 |  |  | ' ' |  |
+| 9 | femail2nd | femail2nd | varchar | 100 |  | √ | ' ' |  |
+| 10 | fphone2nd | fphone2nd | varchar | 255 |  |  | null |  |
+| 11 | ffilingerid | ffilingerid | int8 | 64 |  | √ | 0 |  |
+| 12 | fpayingcustomerid | fpayingcustomerid | int8 | 64 |  | √ | 0 |  |
+| 13 | freccustomerid | freccustomerid | int8 | 64 |  | √ | 0 |  |
+| 14 | fframename | fframename | varchar | 100 |  | √ | ' ' |  |
+| 15 | fcontactperson1st | fcontactperson1st | varchar | 60 |  | √ | ' ' |  |
+| 16 | fframeversion | fframeversion | varchar | 30 |  | √ | ' ' |  |
+| 17 | fframenum | fframenum | varchar | 80 |  | √ | ' ' |  |
+| 18 | fpartcid | fpartcid | int8 | 64 |  | √ | 0 |  |
+| 19 | fsignerid | fsignerid | int8 | 64 |  | √ | 0 |  |
+| 20 | fparty1st | fparty1st | varchar | 255 |  | √ | ' ' |  |
+| 21 | fsettlecustomerid | fsettlecustomerid | int8 | 64 |  | √ | 0 |  |
+| 22 | fphone1st | fphone1st | varchar | 255 |  |  | null |  |
+| 23 | ffilingdate | ffilingdate | timestamp | 0 |  |  | null |  |
+| 24 | femail1st | femail1st | varchar | 100 |  | √ | ' ' |  |
+| 25 | fcontactperson2nd | fcontactperson2nd | varchar | 60 |  | √ | ' ' |  |
+| 26 | fcustomerid | 订货客户 | int8 | 64 |  | √ | 0 | [客户 bd_customer](../basedata_files/bd_customer.md) |
+| 27 | freceiveaddress | freceiveaddress | varchar | 512 |  |  | ' ' |  |
 
 ### 列规则定义
 
@@ -150,9 +165,11 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fcomment | fcomment | varchar | 2000 |  |  | ' ' |  |
-| 3 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
-| 4 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
-| 5 | fbillname | 合同名称 | varchar | 100 |  | √ | ' ' | 合同名称 |
+| 3 | fdesport | fdesport | varchar | 512 |  | √ | ' ' |  |
+| 4 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
+| 5 | fsrcport | fsrcport | varchar | 512 |  | √ | ' ' |  |
+| 6 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
+| 7 | fbillname | 合同名称 | varchar | 100 |  | √ | ' ' | 合同名称 |
 
 ### 列规则定义
 

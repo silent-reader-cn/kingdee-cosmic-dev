@@ -81,12 +81,12 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | frequestbaseqty | 需求基本数量 | numeric | 23 | 10 | √ | 0 | 需求基本数量 |
-| 3 | forgid | 需求组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 4 | foutlocation | 调出仓位 | int8 | 64 |  | √ | 0 | 仓位 bd_location |
+| 3 | forgid | 需求组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 4 | foutlocation | 调出仓位 | int8 | 64 |  | √ | 0 | [仓位 bd_location](../sbd_files/bd_location.md) |
 | 5 | fbilldate | 单据日期 | timestamp | 0 |  |  | null | 单据日期 |
-| 6 | finwarehouse | 调入仓库 | int8 | 64 |  | √ | 0 | 仓库 bd_warehouse |
-| 7 | fmaterielid | 物料编码 | int8 | 64 |  | √ | 0 | 物料库存信息 bd_materialinventoryinfo |
-| 8 | fconfiguredcodeid | 配置号 | int8 | 64 |  | √ | 0 | 配置号 bd_configuredcode |
+| 6 | finwarehouse | 调入仓库 | int8 | 64 |  | √ | 0 | [仓库 bd_warehouse](../sbd_files/bd_warehouse.md) |
+| 7 | fmaterielid | 物料编码 | int8 | 64 |  | √ | 0 | [物料库存信息 bd_materialinventoryinfo](../sbd_files/bd_materialinventoryinfo.md) |
+| 8 | fconfiguredcodeid | 配置号 | int8 | 64 |  | √ | 0 | [配置号（废弃） bd_configuredcode](../sbd_files/bd_configuredcode.md) |
 | 9 | frequestdate | 需求日期 | timestamp | 0 |  |  | null | 需求日期 |
 | 10 | fsource | 来源 | varchar | 30 |  | √ | ' ' | 来源,枚举: A :手工 B :发料计划运算 |
 | 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
@@ -94,31 +94,31 @@
 | 13 | fclosetime | 关闭时间 | timestamp | 0 |  |  | null | 关闭时间 |
 | 14 | fallocationqty | 已调拨数量 | numeric | 23 | 10 | √ | 0 | 已调拨数量 |
 | 15 | fstatus | 业务状态 | varchar | 30 |  | √ | ' ' | 业务状态,枚举: A :正常 B :手工关闭 C :自动关闭 D :运算关闭 |
-| 16 | fauxunitid | 辅助单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 17 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 18 | ftracknumberid | 跟踪号 | int8 | 64 |  | √ | 0 | 跟踪号 bd_tracknumber |
+| 16 | fauxunitid | 辅助单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 17 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 18 | ftracknumberid | 跟踪号 | int8 | 64 |  | √ | 0 | [跟踪号 bd_tracknumber](../sbd_files/bd_tracknumber.md) |
 | 19 | fbillno | 单据编码 | varchar | 30 |  | √ | ' ' | 单据编码 |
-| 20 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 20 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 21 | fupperbillid_tag | 上游单据主键_详情 | text | 0 |  |  | null | 上游单据主键_详情 |
-| 22 | fstockunitid | 库存单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 22 | fstockunitid | 库存单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 23 | frequestauxqty | 需求辅助数量 | numeric | 23 | 10 | √ | 0 | 需求辅助数量 |
 | 24 | fbillstatus | 单据状态 | varchar | 30 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 25 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 26 | fauditdate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
 | 27 | fmplanbaseqty | 计划调拨基本数量 | numeric | 23 | 10 | √ | 0 | 计划调拨基本数量 |
-| 28 | foutwarehouse | 调出仓库 | int8 | 64 |  | √ | 0 | 仓库 bd_warehouse |
+| 28 | foutwarehouse | 调出仓库 | int8 | 64 |  | √ | 0 | [仓库 bd_warehouse](../sbd_files/bd_warehouse.md) |
 | 29 | fupperbillid | 上游单据主键 | varchar | 255 |  | √ | ' ' | 上游单据主键 |
 | 30 | fsupplierid | 货主 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
 | 31 | fsupplymode | 货主类型 | varchar | 30 |  | √ | ' ' | 货主类型,枚举: bos_org :业务单元 bd_customer :客户 bd_supplier :供应商 |
-| 32 | fcloser | 关闭人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 32 | fcloser | 关闭人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 33 | fmplanqty | 计划调拨数量 | numeric | 23 | 10 | √ | 0 | 计划调拨数量 |
 | 34 | fmplanauxqty | 计划调拨辅助数量 | numeric | 23 | 10 | √ | 0 | 计划调拨辅助数量 |
-| 35 | finlocation | 调入仓位 | int8 | 64 |  | √ | 0 | 仓位 bd_location |
-| 36 | fmaterialunitid | 基本单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 37 | finstockorg | 调入库存组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 35 | finlocation | 调入仓位 | int8 | 64 |  | √ | 0 | [仓位 bd_location](../sbd_files/bd_location.md) |
+| 36 | fmaterialunitid | 基本单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 37 | finstockorg | 调入库存组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 38 | frequestqty | 需求数量 | numeric | 23 | 10 | √ | 0 | 需求数量 |
-| 39 | foutstockorg | 调出库存组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 40 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 39 | foutstockorg | 调出库存组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 40 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 41 | fallocbaseqty | 已调拨基本数量 | numeric | 23 | 10 | √ | 0 | 已调拨基本数量 |
 
 ### 列规则定义

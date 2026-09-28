@@ -13,7 +13,7 @@
 | 2 | fyearissuestandradcost | 本年累计发出标准成本 | numeric | 23 | 10 | √ | 0.0000000000 | 本年累计发出标准成本 |
 | 3 | fyearissuecostdiff | 本年累计发出成本差异 | numeric | 23 | 10 | √ | 0.0000000000 | 本年累计发出成本差异 |
 | 4 | fperiodissuecostdiff | 本期发出成本差异 | numeric | 23 | 10 | √ | 0.0000000000 | 本期发出成本差异 |
-| 5 | fcostsubelementid | 成本子要素 | int8 | 64 |  | √ | 0 | 成本子要素 cad_subelement |
+| 5 | fcostsubelementid | 成本子要素 | int8 | 64 |  | √ | 0 | [成本子要素 cad_subelement](../basedata_files/cad_subelement.md) |
 | 6 | fperiodissuestandardcost | 本期发出标准成本 | numeric | 23 | 10 | √ | 0.0000000000 | 本期发出标准成本 |
 | 7 | fseq | 序号 | int8 | 64 |  | √ | 0 | 序号 |
 | 8 | fyearinactualcost | 本年累计收入实际成本 | numeric | 23 | 10 | √ | 0.0000000000 | 本年累计收入实际成本 |
@@ -32,7 +32,7 @@
 | 21 | fbalid | fbalid | int8 | 64 |  | √ | 0 |  |
 | 22 | fperiodbegincostdiff | 期初成本差异 | numeric | 23 | 10 | √ | 0.0000000000 | 期初成本差异 |
 | 23 | fperiodissueqty | 本期发出数量 | numeric | 23 | 10 | √ | 0.0000000000 | 本期发出数量 |
-| 24 | fcostelementid | 成本要素 | int8 | 64 |  | √ | 0 | 成本要素 cad_element |
+| 24 | fcostelementid | 成本要素 | int8 | 64 |  | √ | 0 | [成本要素 cad_element](../basedata_files/cad_element.md) |
 | 25 | fperiodinqty | 本期收入数量 | numeric | 23 | 10 | √ | 0.0000000000 | 本期收入数量 |
 | 26 | fperiodincostdiff | 本期收入成本差异 | numeric | 23 | 10 | √ | 0.0000000000 | 本期收入成本差异 |
 | 27 | fperiodendqty | 期末结存数量 | numeric | 23 | 10 | √ | 0.0000000000 | 期末结存数量 |

@@ -10,10 +10,10 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fbasedataid | 黑名单资料 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
-| 3 | fbizcloudid | 云 | varchar | 36 |  | √ | ' ' | 业务云 bos_devportal_bizcloud |
+| 2 | fbasedataid | 黑名单资料 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
+| 3 | fbizcloudid | 云 | varchar | 36 |  | √ | ' ' | [业务云 bos_devportal_bizcloud](../mdl_files/bos_devportal_bizcloud.md) |
 | 4 | fistpl | 是否为模板 | bpchar | 1 |  | √ | '0' | 是否为模板 |
-| 5 | fbizappid | 应用 | varchar | 36 |  | √ | ' ' | 业务应用实体 bos_devportal_bizapp |
+| 5 | fbizappid | 应用 | varchar | 36 |  | √ | ' ' | [业务应用实体 bos_devportal_bizapp](../mdl_files/bos_devportal_bizapp.md) |
 
 ### 列规则定义
 

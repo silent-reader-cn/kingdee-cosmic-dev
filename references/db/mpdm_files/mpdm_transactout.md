@@ -94,16 +94,16 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fbackflushtime | 倒冲时机 | varchar | 30 |  | √ | ' ' | 倒冲时机,枚举: A :入库倒冲 |
-| 4 | ftransactiontype | 业务类型 | int8 | 64 |  | √ | 0 | 业务类型 bd_biztype |
+| 4 | ftransactiontype | 业务类型 | int8 | 64 |  | √ | 0 | [业务类型 bd_biztype](../sbd_files/bd_biztype.md) |
 | 5 | fisstockchange | 启用委外组件清单变更 | bpchar | 1 |  | √ | '0' | 启用委外组件清单变更 |
 | 6 | fbackflusherr | 倒冲失败中止审核 | bpchar | 1 |  | √ | '0' | 倒冲失败中止审核 |
-| 7 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 7 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | fbackflushmore | 倒冲数量允许大于需求数量 | bpchar | 1 |  | √ | '0' | 倒冲数量允许大于需求数量 |
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 10 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 C :已审核 |
-| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 13 | fwarehousrang | 控制范围 | varchar | 30 |  | √ | ' ' | 控制范围,枚举: A :非倒冲物料 B :关键物料 C :全部物料 |
 | 14 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
@@ -111,8 +111,8 @@
 | 16 | fisreturn | 已消耗不允许退料 | bpchar | 1 |  | √ | '0' | 已消耗不允许退料 |
 | 17 | ffeedtype | 投料方式 | varchar | 30 |  | √ | ' ' | 投料方式,枚举: A :展BOM B :手工录入 C :不投料 D :已投料 E :仅委外件 |
 | 18 | fisvolcal | 自动计算领料 | bpchar | 1 |  | √ | '0' | 自动计算领料 |
-| 19 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 20 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 19 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 20 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 21 | fisauditstock | 自动审核组件清单 | bpchar | 1 |  | √ | '0' | 自动审核组件清单 |
 | 22 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 23 | fisconsiderloss | 委外组件清单考虑损耗 | bpchar | 1 |  | √ | '1' | 委外组件清单考虑损耗 |
@@ -122,7 +122,7 @@
 | 27 | fdeduction | 在制材料扣减 | varchar | 50 |  | √ | ' ' | 在制材料扣减,枚举: A :入库扣减 |
 | 28 | fwarehouscontrol | 控制强度 | varchar | 30 |  | √ | ' ' | 控制强度,枚举: A :警告 B :严格控制 |
 | 29 | fctrlstrategy | 控制策略 | varchar | 30 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
-| 30 | fbomtype | BOM类型(废弃) | int8 | 64 |  | √ | 0 | BOM类型 mpdm_bomtype |
+| 30 | fbomtype | BOM类型(废弃) | int8 | 64 |  | √ | 0 | [BOM类型 mpdm_bomtype](../mpdm_files/mpdm_bomtype.md) |
 | 31 | freturncontrol | 控制强度 | varchar | 30 |  | √ | 'A' | 控制强度,枚举: A :警告 B :严格控制 |
 | 32 | fcontrolscope | 计算领料控制范围 | varchar | 30 |  | √ | ' ' | 计算领料控制范围,枚举: A :非倒冲物料 B :关键物料 C :全部物料 |
 | 33 | fenable | 使用状态 | varchar | 30 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
@@ -141,8 +141,8 @@
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
 | 1 | t_mpdm_transactout_pkey |  | fid |
-| 2 | idx_t_mpdm_transactout_master |  | fmasterid |
-| 3 | idx_mpdm_transactout_fnumber |  | fnumber |
+| 2 | idx_mpdm_transactout_fnumber |  | fnumber |
+| 3 | idx_t_mpdm_transactout_master |  | fmasterid |
 | 4 | idx_t_mpdm_transactout_createorg |  | fcreateorgid |
 
 ---
@@ -157,7 +157,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | BOM类型 mpdm_bomtype |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [BOM类型 mpdm_bomtype](../mpdm_files/mpdm_bomtype.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -170,5 +170,5 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | pk_t_mpdm_transoutbomtypes |  | fpkid |
-| 2 | idx_mpdm_transoutbomtypes |  | fid |
+| 1 | idx_mpdm_transoutbomtypes |  | fid |
+| 2 | pk_t_mpdm_transoutbomtypes |  | fpkid |

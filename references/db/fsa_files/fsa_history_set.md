@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fcreatedate | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
-| 3 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fdatacontent | 数据内容（json） | varchar | 255 |  | √ | ' ' | 数据内容（json） |
 | 5 | fdataid | 数据主键 | int8 | 64 |  | √ | 0 | 数据主键 |
 | 6 | fdescription | 描述 | varchar | 100 |  | √ | ' ' | 描述 |

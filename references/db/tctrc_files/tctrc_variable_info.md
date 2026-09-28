@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | frisknumber | 父页面风险编号 | varchar | 100 |  | √ | ' ' | 父页面风险编号 |
 | 4 | fjson | 存储公式 | varchar | 510 |  | √ | ' ' | 存储公式 |
 | 5 | ftimedeviationdirection | 时间偏移方向 | varchar | 100 |  | √ | ' ' | 时间偏移方向 |
@@ -21,7 +21,7 @@
 | 10 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 11 | ftimedeviation | 时间偏移 | varchar | 100 |  | √ | ' ' | 时间偏移 |
 | 12 | felementnumber | 元素/指标编号 | varchar | 100 |  | √ | ' ' | 元素/指标编号 |
-| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 15 | ftimedeviationtype | 时间偏移跨度 | varchar | 100 |  | √ | ' ' | 时间偏移跨度 |
 | 16 | fbottom | 是否底层 | bpchar | 1 |  | √ | ' ' | 是否底层 |

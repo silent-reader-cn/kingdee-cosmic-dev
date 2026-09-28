@@ -14,7 +14,7 @@
 | 3 | fcheck_result_tag | 查验结果_详情 | text | 0 |  |  | null | 查验结果_详情 |
 | 4 | finvoice_code | 发票代码 | varchar | 50 |  | √ | ' ' | 发票代码 |
 | 5 | fcheck_result | 查验结果 | varchar | 255 |  | √ | ' ' | 查验结果 |
-| 6 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 7 | finvoice_no | 发票号码 | varchar | 50 |  | √ | ' ' | 发票号码 |
 | 8 | fcheck_type | 查验方式 | varchar | 50 |  | √ | ' ' | 查验方式 |
 

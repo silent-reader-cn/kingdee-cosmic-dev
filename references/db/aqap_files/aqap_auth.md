@@ -40,7 +40,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | null | id |
 | 2 | forganization | 公司组织 | varchar | 50 |  | √ | ' ' | 公司组织 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 5 | fpublic_key | 证书公钥 | varchar | 255 |  | √ | ' ' | 证书公钥 |
 | 6 | fpublic_key_tag | 证书公钥_详情 | text | 0 |  |  | null | 证书公钥_详情 |
@@ -49,7 +49,7 @@
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 10 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 11 | fcustom_id | 租户号 | varchar | 50 |  | √ | ' ' | 租户号 |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fmasterid | 主数据内码 | int8 | 64 |  |  | null | 主数据内码 |
 | 14 | ftype | 证书类型 | varchar | 50 |  | √ | ' ' | 证书类型 |
 | 15 | fcert_name | 证书名称 | varchar | 50 |  | √ | ' ' | 证书名称 |

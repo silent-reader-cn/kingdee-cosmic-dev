@@ -32,18 +32,18 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fshardingenable | 是否分表 | bpchar | 1 |  | √ | '1' | 是否分表 |
 | 4 | fcreatetime | 创建时间 | timestamp | 0 |  | √ | LOCALTIMESTAMP | 创建时间 |
 | 5 | fprogressdesc | fprogressdesc | varchar | 255 |  | √ | ' ' |  |
-| 6 | fentitynumber | 实体名称 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 6 | fentitynumber | 实体名称 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 7 | fstrategy | 分片策略 | varchar | 30 |  | √ | ' ' | 分片策略,枚举: ModHashStrategy :模哈希 LongValueStrategy :Long值 DateHashStrategy :日期哈希 ConsistentHashStrategy :一致性哈希 RangeValueStrategy :值范围 MapValueStrategy :值映射 |
 | 8 | fprogress | fprogress | varchar | 255 |  | √ | ' ' |  |
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | LOCALTIMESTAMP | 修改时间 |
 | 10 | ffromshardingstatus | ffromshardingstatus | varchar | 100 |  | √ | ' ' |  |
 | 11 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 12 | fstrategyparams | fstrategyparams | varchar | 2000 |  | √ | ' ' |  |
-| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 15 | fshardingcompleted | fshardingcompleted | bpchar | 1 |  | √ | '0' |  |
 | 16 | ftoshardingstatus | ftoshardingstatus | varchar | 100 |  | √ | ' ' |  |

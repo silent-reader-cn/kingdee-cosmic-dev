@@ -21,11 +21,11 @@
 | 10 | flogjson_tag | 日志明细文本_详情 | text | 0 |  |  | null | 日志明细文本_详情 |
 | 11 | fquotebillentryid | 取价单据分录id | int8 | 64 |  | √ | 0 | 取价单据分录id |
 | 12 | fquotesrcseq | 价格来源行号 | int8 | 64 |  | √ | 0 | 价格来源行号 |
-| 13 | fquoteorgid | 取价组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 14 | fquotebill | 取价单据 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 13 | fquoteorgid | 取价组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 14 | fquotebill | 取价单据 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 15 | flogtype | 日志类型 | varchar | 5 |  | √ | ' ' | 日志类型,枚举: norm :正常 exp :异常 |
-| 16 | fquoteuserid | 取价员 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 17 | fquotesrcbill | 取价来源单据 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 16 | fquoteuserid | 取价员 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 17 | fquotesrcbill | 取价来源单据 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 
 ### 列规则定义
 
@@ -39,3 +39,4 @@
 | :--- | :--- | :--- | :--- |
 | 1 | pk_t_plat_quotelog |  | fid |
 | 2 | idx_plat_quotelog |  | fquoteorgid,fquotebill,fquotestarttime |
+| 3 | idx_plat_quotelogkey |  | fquotebill,flogkey |

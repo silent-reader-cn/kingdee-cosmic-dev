@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fcreatedate | 创建时间(yyyy-mm-dd) | varchar | 10 |  | √ | ' ' | 创建时间(yyyy-mm-dd) |
-| 3 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | ffiletype | 文件类型 | varchar | 30 |  | √ | ' ' | 文件类型,枚举: excel :excel zip :zip |
 | 5 | fdownloadnumber | 数量 | int8 | 64 |  | √ | 0 | 数量 |
 

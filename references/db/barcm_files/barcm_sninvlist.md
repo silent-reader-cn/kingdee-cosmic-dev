@@ -12,7 +12,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fcreatedate | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
 | 3 | fsnnumbertext | 序列号文本 | varchar | 255 |  | √ | ' ' | 序列号文本 |
-| 4 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fbillstatus | 单据状态 | bpchar | 1 |  | √ | ' ' | 单据状态,枚举: A :创建 B :审核中 C :已审核 D :重新审核 |
 | 6 | fbillno | 单据编号 | varchar | 80 |  | √ | ' ' | 单据编号 |
 

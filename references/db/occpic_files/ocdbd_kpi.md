@@ -11,21 +11,23 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 4 | fnladdertypeid | 返利判断标准 | int8 | 64 |  | √ | 0 | 返利计算公式库 msrcs_rebateformula |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 4 | fnladdertypeid | 返利判断标准 | int8 | 64 |  | √ | 0 | [返利计算公式 msrcs_rebateformula](../msrcs_files/msrcs_rebateformula.md) |
 | 5 | fcomment | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 7 | fnrebateclassid | 返利类别 | int8 | 64 |  | √ | 0 | 返利类别 msrcs_rebateclass |
-| 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 9 | fstatus | 数据状态 | bpchar | 1 |  | √ | 'C' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 10 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 12 | fcalscopetype | 政策设置方式 | bpchar | 1 |  | √ | ' ' | 政策设置方式,枚举: A :一个政策只定义一组条件政策 B :一个政策可定义多组条件政策 |
-| 13 | fpushtype | 政策生成目标控制 | bpchar | 1 |  | √ | 'A' | 政策生成目标控制,枚举: A :审核自动生成全部 B :自动生成到上一结算周期 C :手工指定结算周期生成 |
-| 14 | fcalbilltypeid | 考核业务数据类型 | int8 | 64 |  | √ | 0 | 业务数据类型 ocdbd_bizdatatype |
-| 15 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 16 | fnrebatetypeid | 返利计算公式 | int8 | 64 |  | √ | 0 | 返利计算公式库 msrcs_rebateformula |
-| 17 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
+| 7 | faccrualformulaid | 预提计算公式 | int8 | 64 |  | √ | 0 | [返利计算公式 msrcs_rebateformula](../msrcs_files/msrcs_rebateformula.md) |
+| 8 | fnrebateclassid | 返利类别 | int8 | 64 |  | √ | 0 | [返利类别 msrcs_rebateclass](../msrcs_files/msrcs_rebateclass.md) |
+| 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 10 | fstatus | 数据状态 | bpchar | 1 |  | √ | 'C' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
+| 11 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 13 | fcalscopetype | 政策设置方式 | bpchar | 1 |  | √ | ' ' | 政策设置方式,枚举: A :一个政策只定义一组条件政策 B :一个政策可定义多组条件政策 |
+| 14 | fpushtype | 政策生成目标控制 | bpchar | 1 |  | √ | 'A' | 政策生成目标控制,枚举: A :审核自动生成全部 B :自动生成到上一结算周期 C :手工指定结算周期生成 |
+| 15 | fexpensetypeid | 费用类型 | int8 | 64 |  | √ | 0 | [营销费用类型 ocdbd_expensetype](../ocmem_files/ocdbd_expensetype.md) |
+| 16 | fcalbilltypeid | 考核业务数据类型 | int8 | 64 |  | √ | 0 | [业务数据类型 ocdbd_bizdatatype](../occpic_files/ocdbd_bizdatatype.md) |
+| 17 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 18 | fnrebatetypeid | 返利计算公式 | int8 | 64 |  | √ | 0 | [返利计算公式 msrcs_rebateformula](../msrcs_files/msrcs_rebateformula.md) |
+| 19 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
 
 ### 列规则定义
 

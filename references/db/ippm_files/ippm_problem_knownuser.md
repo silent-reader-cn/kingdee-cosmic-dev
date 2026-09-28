@@ -12,7 +12,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fcreatedate | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
 | 3 | fisknow | 是否已知 | bpchar | 1 |  | √ | '0' | 是否已知 |
-| 4 | fuserid | 用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fuserid | 用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

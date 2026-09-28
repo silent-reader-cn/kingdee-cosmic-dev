@@ -70,9 +70,9 @@
 | 58 | `t_am_restrictedfundsmanag_wb` | 受限资金管理-反写记录表 | 10 | [am_restrictedfundsmanager.md](./am_restrictedfundsmanager.md) |
 | 59 | `t_am_restrictedfundstype` | 受限资金类型-主表 | 15 | [am_restrictedfundstype.md](./am_restrictedfundstype.md) |
 | 60 | `t_am_restrictedfundstype_l` | 受限资金类型-多语言表 | 5 | [am_restrictedfundstype.md](./am_restrictedfundstype.md) |
-| 61 | `t_am_strategy` | 账户管理策略-主表 | 36 | [am_strategy.md](./am_strategy.md) |
+| 61 | `t_am_strategy` | 账户管理策略-主表 | 37 | [am_strategy.md](./am_strategy.md) |
 | 62 | `t_am_strategy_l` | 账户管理策略-多语言表 | 5 | [am_strategy.md](./am_strategy.md) |
-| 63 | `t_bd_accountbanks` | 银行账户调度-主表 | 59 | [am_acctbank_schedule.md](./am_acctbank_schedule.md) |
+| 63 | `t_bd_accountbanks` | 银行账户调度-主表 | 61 | [am_acctbank_schedule.md](./am_acctbank_schedule.md) |
 | 64 | `t_bd_accountbanks_a` | 银行账户调度-分表 | 4 | [am_acctbank_schedule.md](./am_acctbank_schedule.md) |
 | 65 | `t_bd_accountbanks_cur` | 币别范围-多选基础资料表 | 3 | [am_acctbank_schedule.md](./am_acctbank_schedule.md) |
 | 66 | `t_bd_accountbanks_l` | 银行账户调度-多语言表 | 10 | [am_acctbank_schedule.md](./am_acctbank_schedule.md) |

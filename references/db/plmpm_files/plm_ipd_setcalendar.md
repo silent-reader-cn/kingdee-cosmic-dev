@@ -88,7 +88,7 @@
 | 6 | fwednesdayam | 上午 | bpchar | 1 |  | √ | '1' | 上午 |
 | 7 | ftuesdaypm | 下午 | bpchar | 1 |  | √ | '1' | 下午 |
 | 8 | fweeksizeenddate | 日期范围.结束 | timestamp | 0 |  |  | null | 日期范围.结束 |
-| 9 | fcaltempleteld | 日历模版 | int8 | 64 |  | √ | 0 | 日历模版 plm_ipd_calendar |
+| 9 | fcaltempleteld | 日历模版 | int8 | 64 |  | √ | 0 | [日历模板 plm_ipd_calendar](../plmpm_files/plm_ipd_calendar.md) |
 | 10 | fsaturdaypm | 下午 | bpchar | 1 |  | √ | '0' | 下午 |
 | 11 | fweekdaypmend | 工作日下午.结束 | int4 | 32 |  | √ | '-1' | 工作日下午.结束 |
 | 12 | ffridaypm | 下午 | bpchar | 1 |  | √ | '1' | 下午 |

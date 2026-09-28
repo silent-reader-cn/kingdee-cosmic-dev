@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fbsdprinter | 云打印机 | int8 | 64 |  |  | null | 云打印机 bos_cloudprinter |
+| 2 | fbsdprinter | 云打印机 | int8 | 64 |  |  | null | [云打印机 bos_cloudprinter](../frame_files/bos_cloudprinter.md) |
 | 3 | fapproverid | fapproverid | int8 | 64 |  | √ | 0 |  |
 | 4 | fprintstatus | 打印状态 | bpchar | 1 |  | √ | ' ' | 打印状态,枚举: 1 :未打印 2 :打印中 3 :已打印 4 :废弃 |
 | 5 | fforbidstatus | fforbidstatus | bpchar | 1 |  |  | ' ' |  |
@@ -20,15 +20,15 @@
 | 9 | fcreatedate | fcreatedate | timestamp | 0 |  | √ | LOCALTIMESTAMP |  |
 | 10 | fprinteraddress | 打印机地址 | varchar | 256 |  | √ | ' ' | 打印机地址 |
 | 11 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fmodifydate | fmodifydate | timestamp | 0 |  |  | LOCALTIMESTAMP |  |
 | 14 | fcreatetimestamp | 创建日期时间戳 | int8 | 64 |  | √ | 0 | 创建日期时间戳 |
-| 15 | fserviceid | 服务名称 | int8 | 64 |  |  | null | 云打印服务 bos_cloudprintservice |
+| 15 | fserviceid | 服务名称 | int8 | 64 |  |  | null | [云打印服务 bos_cloudprintservice](../frame_files/bos_cloudprintservice.md) |
 | 16 | fcacheid | 缓存Id | varchar | 256 |  | √ | ' ' | 缓存Id |
 | 17 | fapprovedate | fapprovedate | timestamp | 0 |  |  | null |  |
-| 18 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 18 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 19 | fcreatetime | 创建时间 | timestamp | 0 |  | √ | LOCALTIMESTAMP | 创建时间 |
-| 20 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 20 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 21 | fcachekey | 缓存配置Key | varchar | 256 |  | √ | ' ' | 缓存配置Key |
 | 22 | fprinttype | 打印类型 | varchar | 10 |  | √ | ' ' | 打印类型,枚举: pdf :PDF zpl :ZPL epl :EPL |
 | 23 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |

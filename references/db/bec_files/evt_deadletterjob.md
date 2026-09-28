@@ -13,7 +13,7 @@
 | 2 | fexceptionmsg | 异常信息 | text | 0 |  |  | null | 异常信息 |
 | 3 | fexceptionstackmsg | 异常堆栈信息 | text | 0 |  |  | null | 异常堆栈信息 |
 | 4 | frepeat | 重复 | varchar | 30 |  | √ | ' ' | 重复 |
-| 5 | fhandlertype | 服务类型 | varchar | 30 |  | √ | ' ' | 服务类型,枚举: trigger-http-api :执行restful服务 event-execute-operation :执行操作服务 customevent-execute-operation :自定义事件执行操作服务 event-send-message :发送消息服务 event-execute-plugin :执行插件服务 async-event-dispatch :事件分发 execute-ext-event :自定义服务 event-execute-microservice :执行微服务 |
+| 5 | fhandlertype | 服务类型 | varchar | 30 |  | √ | ' ' | 服务类型,枚举: trigger-http-api :执行restful服务 event-execute-operation :执行操作服务 customevent-execute-operation :自定义事件执行操作服务 event-send-message :发送消息服务 event-execute-plugin :执行插件服务 async-event-dispatch :事件分发 execute-ext-event :自定义服务 event-execute-microservice :执行微服务 event-execute-rpa :调用RPA event-start-process :启动流程 tryCloseBizFlow :尝试关闭业务流 |
 | 6 | fprocdefid | 服务ID | int8 | 64 |  | √ | 0 | 服务ID |
 | 7 | fentitynumber | 实体编码 | varchar | 50 |  | √ | ' ' | 实体编码 |
 | 8 | fretries | 重试次数 | int8 | 64 |  | √ | 0 | 重试次数 |

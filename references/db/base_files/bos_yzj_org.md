@@ -11,16 +11,18 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fyzjorgid | 云之家组织内码 | varchar | 36 |  | √ | ' ' | 云之家组织内码 |
-| 3 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 5 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 6 | fbackuptype | 数据备份类型 | varchar | 30 |  | √ | ' ' | 数据备份类型,枚举: cloud-hub :云之家 before :同步前 after :同步后 |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 4 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
+| 5 | fbackuptype | 数据备份类型 | varchar | 30 |  | √ | ' ' | 数据备份类型,枚举: cloud-hub :云之家 before :同步前 after :同步后 |
+| 6 | fcomment | 描述 | varchar | 255 |  | √ | ' ' | 描述 |
 | 7 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 8 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 9 | fenable | 使用状态 | bpchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 10 | fnumber | 编码 | varchar | 50 |  | √ | ' ' | 编码 |
-| 11 | ftaskid | 云之家同步任务 | int8 | 64 |  | √ | 0 | 协同云同步任务 bos_yzj_synctask |
-| 12 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 8 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 10 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 12 | fenable | 使用状态 | bpchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 13 | fnumber | 编码 | varchar | 50 |  | √ | ' ' | 编码 |
+| 14 | ftaskid | 云之家同步任务 | int8 | 64 |  | √ | 0 | [协同云同步任务 bos_yzj_synctask](../base_files/bos_yzj_synctask.md) |
 
 ### 列规则定义
 

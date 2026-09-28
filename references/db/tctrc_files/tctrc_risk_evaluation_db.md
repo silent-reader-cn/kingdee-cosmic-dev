@@ -14,7 +14,7 @@
 | 3 | ftype | 类型 | varchar | 30 |  | √ | ' ' | 类型,枚举: 1 :指标 |
 | 4 | fstarlevel | 星级 | int8 | 64 |  | √ | 0 | 星级 |
 | 5 | fadvice | 建议 | varchar | 100 |  | √ | ' ' | 建议 |
-| 6 | fuser | 用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | fuser | 用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 7 | fadvicetag | 建议标签 | varchar | 100 |  | √ | ' ' | 建议标签 |
 | 8 | fnumber | 指标编号 | varchar | 100 |  | √ | ' ' | 指标编号 |
 

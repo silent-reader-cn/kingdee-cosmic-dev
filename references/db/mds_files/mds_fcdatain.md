@@ -20,9 +20,9 @@
 | 9 | fcycles | 期数 | int8 | 64 |  | √ | 0 | 期数 |
 | 10 | fupdowndct | 上下级编码冲减控制 | bpchar | 1 |  | √ | '0' | 上下级编码冲减控制 |
 | 11 | fplandate | 计划时间 | timestamp | 0 |  |  | null | 计划时间 |
-| 12 | fmaterial | 物料编码 | int8 | 64 |  | √ | 0 | 物料生产信息 bd_materialmftinfo |
+| 12 | fmaterial | 物料编码 | int8 | 64 |  | √ | 0 | [物料生产信息 bd_materialmftinfo](../sbd_files/bd_materialmftinfo.md) |
 | 13 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 14 | fplangpp | 计划组 | varchar | 50 |  | √ | ' ' | 计划业务组 mpdm_demandgroup |
+| 14 | fplangpp | 计划组 | varchar | 50 |  | √ | ' ' | [计划业务组 mpdm_demandgroup](../mpdm_files/mpdm_demandgroup.md) |
 
 ### 列规则定义
 
@@ -49,22 +49,22 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fprededucts | 向前冲减天数 | int8 | 64 |  | √ | 0 | 向前冲减天数 |
-| 4 | fsuporg | 供应组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 4 | fsuporg | 供应组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | fenablestatus | 使用状态 | varchar | 30 |  | √ | ' ' | 使用状态,枚举: A :可用 B :禁用 |
 | 6 | fbillstatus | 单据状态 | varchar | 30 |  | √ | ' ' | 单据状态,枚举: A :暂存 S :已确认 |
 | 7 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 8 | forgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 8 | forgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 9 | fauditdate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
-| 10 | ffcvrnnum | 版本编码 | int8 | 64 |  | √ | 0 | 版本定义 mds_vrds |
+| 10 | ffcvrnnum | 版本编码 | int8 | 64 |  | √ | 0 | [版本定义 mds_vrds](../mds_files/mds_vrds.md) |
 | 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 12 | fbkdeducts | 向后冲减天数 | int8 | 64 |  | √ | 0 | 向后冲减天数 |
-| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | fdeduct | 冲减 | bpchar | 1 |  | √ | '0' | 冲减 |
 | 15 | finvaldate | 失效时间 | timestamp | 0 |  |  | null | 失效时间 |
 | 16 | fbillno | 单据编号 | varchar | 30 |  | √ | ' ' | 单据编号 |
-| 17 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 17 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 
@@ -96,14 +96,22 @@
 | 4 | fcycletyped | 周期类型 | varchar | 30 |  | √ | ' ' | 周期类型,枚举: 0 :日 1 :周 2 :自定义周期 3 :月 4 :年 |
 | 5 | fnowqty | 现有数量 | numeric | 23 | 10 | √ | 0.0000000000 | 现有数量 |
 | 6 | fprodorg | fprodorg | int8 | 64 |  | √ | 0 |  |
-| 7 | fplangp | 计划组 | int8 | 64 |  | √ | 0 | 计划业务组 mpdm_demandgroup |
-| 8 | fmaterialid | 物料编码 | int8 | 64 |  | √ | 0 | 物料生产信息 bd_materialmftinfo |
-| 9 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 10 | ffcqty | 原始数量 | numeric | 23 | 10 | √ | 0.0000000000 | 原始数量 |
-| 11 | fbaseunitid | fbaseunitid | int8 | 64 |  | √ | 0 |  |
-| 12 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 13 | fdatenode | 时间点 | timestamp | 0 |  |  | null | 时间点 |
-| 14 | fqtysrc | 来源 | varchar | 50 |  | √ | ' ' | 来源 |
+| 7 | fplangp | 计划组 | int8 | 64 |  | √ | 0 | [计划业务组 mpdm_demandgroup](../mpdm_files/mpdm_demandgroup.md) |
+| 8 | fprojectid | fprojectid | int8 | 64 |  | √ | 0 |  |
+| 9 | fmaterialid | 物料编码 | int8 | 64 |  | √ | 0 | [物料生产信息 bd_materialmftinfo](../sbd_files/bd_materialmftinfo.md) |
+| 10 | fmatverid | fmatverid | int8 | 64 |  | √ | 0 |  |
+| 11 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
+| 12 | ffcqty | 原始数量 | numeric | 23 | 10 | √ | 0.0000000000 | 原始数量 |
+| 13 | fbonded | fbonded | bpchar | 1 |  | √ | '0' |  |
+| 14 | fauxproperty | fauxproperty | int8 | 64 |  | √ | 0 |  |
+| 15 | fbom | fbom | int8 | 64 |  | √ | 0 |  |
+| 16 | fbaseunitid | fbaseunitid | int8 | 64 |  | √ | 0 |  |
+| 17 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 18 | fdatenode | 时间点 | timestamp | 0 |  |  | null | 时间点 |
+| 19 | ftracknumber | ftracknumber | int8 | 64 |  | √ | 0 |  |
+| 20 | fqtysrc | 来源 | varchar | 50 |  | √ | ' ' | 来源 |
+| 21 | fcustomerid | fcustomerid | int8 | 64 |  | √ | 0 |  |
+| 22 | flicenseno | flicenseno | int8 | 64 |  | √ | 0 |  |
 
 ### 列规则定义
 

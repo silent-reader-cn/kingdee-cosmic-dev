@@ -12,7 +12,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | farchiveroute | 归档库 | varchar | 50 |  | √ | ' ' | 归档库 |
 | 3 | fcreatetime | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
-| 4 | fentitynumber | 基础资料 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 4 | fentitynumber | 基础资料 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 
 ### 列规则定义
 
@@ -24,5 +24,5 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | pk_cbs_archi_basedata |  | fid |
-| 2 | idx_cbs_archi_bd_number |  | fentitynumber |
+| 1 | idx_cbs_archi_bd_number |  | fentitynumber |
+| 2 | pk_cbs_archi_basedata |  | fid |

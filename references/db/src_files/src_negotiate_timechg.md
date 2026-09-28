@@ -12,9 +12,10 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fparentid | 父单据ID | varchar | 50 |  | √ | ' ' | 父单据ID |
 | 3 | fentitykey | 组件标识 | varchar | 50 |  | √ | ' ' | 组件标识 |
-| 4 | fnegotiateid | 议价单号 | int8 | 64 |  | √ | 0 | 议价单F7 src_negotiatebillf7 |
-| 5 | fpentitykey | 父单据标识 | varchar | 50 |  | √ | ' ' | 父单据标识 |
-| 6 | fnewstopbiddate | 报价截止时间(变更后) | timestamp | 0 |  |  | null | 报价截止时间(变更后) |
+| 4 | fstopbiddate | 报价截止时间(变更前) | timestamp | 0 |  |  | null | 报价截止时间(变更前) |
+| 5 | fnegotiateid | 议价单号 | int8 | 64 |  | √ | 0 | [议价单F7 src_negotiatebillf7](../src_files/src_negotiatebillf7.md) |
+| 6 | fpentitykey | 父单据标识 | varchar | 50 |  | √ | ' ' | 父单据标识 |
+| 7 | fnewstopbiddate | 报价截止时间(变更后) | timestamp | 0 |  |  | null | 报价截止时间(变更后) |
 
 ### 列规则定义
 

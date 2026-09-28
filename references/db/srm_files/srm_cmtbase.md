@@ -46,8 +46,8 @@
 | 4 | faccounttype | 账户类型 | varchar | 10 |  | √ | ' ' | 账户类型,枚举: 1 :基本账户 2 :请款账户 |
 | 5 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 6 | faccount | 银行账号 | varchar | 100 |  | √ | ' ' | 银行账号 |
-| 7 | fbankid | 开户银行 | int8 | 64 |  | √ | 0 | 行名行号 bd_bebank |
-| 8 | facccurrid | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 7 | fbankid | 开户银行 | int8 | 64 |  | √ | 0 | [行名行号 bd_bebank](../basedata_files/bd_bebank.md) |
+| 8 | facccurrid | 币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 | 9 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 10 | fisdefault | 默认 | bpchar | 1 |  | √ | '0' | 默认 |
 
@@ -117,19 +117,19 @@
 | 2 | fname | 供应商名称 | varchar | 255 |  | √ | ' ' | 供应商名称 |
 | 3 | faddress | 联系地址 | varchar | 255 |  | √ | ' ' | 联系地址 |
 | 4 | fdatachannel | 信息获取渠道 | varchar | 255 |  | √ | ' ' | 信息获取渠道 |
-| 5 | finvoicetypeid | 发票类型 | int8 | 64 |  | √ | 0 | 发票类型 bd_invoicetype |
-| 6 | fprojectid | 寻源项目F7 | int8 | 64 |  | √ | 0 | 招标项目F7 src_projectf7 |
+| 5 | finvoicetypeid | 发票类型 | int8 | 64 |  | √ | 0 | [发票种类 bd_invoicetype](../basedata_files/bd_invoicetype.md) |
+| 6 | fprojectid | 寻源项目F7 | int8 | 64 |  | √ | 0 | [招标项目F7 src_projectf7](../src_files/src_projectf7.md) |
 | 7 | fparentid | 父单据ID | varchar | 100 |  | √ | ' ' | 父单据ID |
 | 8 | fsocietycreditcode | 统一社会信用代码 | varchar | 255 |  | √ | ' ' | 统一社会信用代码 |
 | 9 | ftaxclass | 纳税人类型 | varchar | 10 |  | √ | ' ' | 纳税人类型,枚举: 1 :一般纳税人 2 :小规模纳税人 3 :非增值税纳税人 |
 | 10 | fentitykey | 组件标识 | varchar | 100 |  | √ | ' ' | 组件标识 |
-| 11 | fmainorgid | 主业务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 11 | fmainorgid | 主业务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 12 | fregcapital | 注册资本 | numeric | 23 | 10 | √ | 0 | 注册资本 |
 | 13 | fpentitykey | 父单据标识 | varchar | 100 |  | √ | ' ' | 父单据标识 |
 | 14 | fregdate | 企业成立日期 | timestamp | 0 |  |  | null | 企业成立日期 |
 | 15 | ftelephone | 企业电话 | varchar | 100 |  | √ | ' ' | 企业电话 |
 | 16 | ftype | 企业类型 | varchar | 10 |  | √ | ' ' | 企业类型,枚举: 1 :法人企业 2 :国家机关 3 :事业单位 4 :社会团体 5 :其他组织机构 6 :个体户 7 :个人 8 :非法人企业 |
-| 17 | ftaxrateid | 税率 | int8 | 64 |  | √ | 0 | 税率 bd_taxrate |
+| 17 | ftaxrateid | 税率 | int8 | 64 |  | √ | 0 | [税率 bd_taxrate](../basedata_files/bd_taxrate.md) |
 | 18 | furl | 企业网址 | varchar | 255 |  | √ | ' ' | 企业网址 |
 | 19 | fartificialperson | 法人代表 | varchar | 255 |  | √ | ' ' | 法人代表 |
 | 20 | ftxregisterno | 纳税人识别号 | varchar | 255 |  | √ | ' ' | 纳税人识别号 |

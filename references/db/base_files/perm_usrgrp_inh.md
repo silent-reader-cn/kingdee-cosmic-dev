@@ -10,10 +10,10 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreaterfield | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 3 | fparentid | 被继承用户组ID | int8 | 64 |  | √ | 0 | 用户组 bos_usergroup |
-| 4 | fchildrenid | 继承用户组ID | int8 | 64 |  | √ | 0 | 用户组 bos_usergroup |
-| 5 | fcreatedatefield | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
+| 2 | fcreaterfield | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 3 | fparentid | 被继承用户组ID | int8 | 64 |  | √ | 0 | [用户组 bos_usergroup](../base_files/bos_usergroup.md) |
+| 4 | fchildrenid | 继承用户组ID | int8 | 64 |  | √ | 0 | [用户组 bos_usergroup](../base_files/bos_usergroup.md) |
+| 5 | fcreatedatefield | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 
 ### 列规则定义
 

@@ -13,10 +13,10 @@
 | 2 | fnamefieldkey | fnamefieldkey | varchar | 30 |  | √ | ' ' |  |
 | 3 | fnameislocale | fnameislocale | bpchar | 1 |  | √ | '0' |  |
 | 4 | fisqinganalysis | 支持轻分析 | bpchar | 1 |  | √ | '1' | 支持轻分析 |
-| 5 | fmodeltype | 类型 | varchar | 50 |  | √ | ' ' | 类型,枚举: BillFormModel :单据 BaseFormModel :基础资料 ReportFormModel :报表 DynamicFormModel :动态表单 QueryListModel :查询 MobileFormModel :移动表单 BalanceModel :余额模型 LogBillFormModel :日志表单 |
+| 5 | fmodeltype | 类型 | varchar | 50 |  | √ | ' ' | 类型,枚举: BillFormModel :单据 BaseFormModel :基础资料 ReportFormModel :报表 DynamicFormModel :动态表单 QueryListModel :查询 MobileFormModel :移动表单 BalanceModel :余额模型 LogBillFormModel :日志表单 KMModel :知识库 ParameterFormModel_application :应用参数 ParameterFormModel_bill :单据参数 ParameterFormModel_public :公共参数 WidgetFormModel :小部件 |
 | 6 | fbotp | 单据转换 | bpchar | 1 |  | √ | '0' | 单据转换 |
 | 7 | fworkflow | 是否工作流 | bpchar | 1 |  | √ | '0' | 是否工作流 |
-| 8 | fenableimport | 允许引入引出 | bpchar | 1 |  | √ | '1' | 允许引入引出 |
+| 8 | fenableimport | 允许导入导出 | bpchar | 1 |  | √ | '1' | 允许导入导出 |
 | 9 | fenablenameversion | 支持名称版本化 | bpchar | 1 |  | √ | '0' | 支持名称版本化 |
 | 10 | fmainorgfieldkey | fmainorgfieldkey | varchar | 30 |  | √ | ' ' |  |
 | 11 | fvoucher | 是否凭证 | bpchar | 1 |  | √ | '0' | 是否凭证 |
@@ -24,7 +24,7 @@
 | 13 | fnumberfieldkey | fnumberfieldkey | varchar | 30 |  | √ | ' ' |  |
 | 14 | fnosearchenabled | fnosearchenabled | bpchar | 1 |  | √ | '0' |  |
 | 15 | fdentityid | 实体 | varchar | 36 |  | √ | ' ' | 实体 |
-| 16 | fbizappid | 应用 | varchar | 36 |  | √ | ' ' | 业务应用实体 bos_devportal_bizapp |
+| 16 | fbizappid | 应用 | varchar | 36 |  | √ | ' ' | [业务应用实体 bos_devportal_bizapp](../mdl_files/bos_devportal_bizapp.md) |
 | 17 | fappid | fappid | varchar | 50 |  | √ | ' ' |  |
 | 18 | fpkfieldtype | 主键字段类型 | int8 | 64 |  | √ | 0 | 主键字段类型 |
 | 19 | fpkfieldname | 主键字段名 | varchar | 30 |  | √ | ' ' | 主键字段名 |

@@ -10,12 +10,12 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | ftaxassign | 应税服务分配比例 | numeric | 23 | 10 | √ | 0.0000000000 | 应税服务分配比例 |
 | 4 | ftaxjzjtassign | 应税服务即征即退分配比例 | numeric | 23 | 10 | √ | 0.0000000000 | 应税服务即征即退分配比例 |
 | 5 | fdeclaretype | 申报方式 | varchar | 50 |  | √ | ' ' | 申报方式,枚举: 1 :被汇总 2 :汇总 |
 | 6 | fnormaljzjtassign | 一般货物及劳务即征即退分配额 | numeric | 23 | 10 | √ | 0.0000000000 | 一般货物及劳务即征即退分配额 |
-| 7 | fmainorgid | 税务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 7 | fmainorgid | 税务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | fenddate | 税款所属期止 | timestamp | 0 |  |  | null | 税款所属期止 |
 | 9 | fnormalassign | 一般货物及劳务分配比例 | numeric | 23 | 10 | √ | 0.0000000000 | 一般货物及劳务分配比例 |
 | 10 | fstartdate | 税款所属期起 | timestamp | 0 |  |  | null | 税款所属期起 |

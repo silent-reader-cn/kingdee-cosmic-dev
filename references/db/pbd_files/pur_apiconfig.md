@@ -95,11 +95,11 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | forgid | 业务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | forgid | 业务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fdisabledate | fdisabledate | timestamp | 0 |  |  | null |  |
 | 4 | fissynsupgroup | 供应商分组 | bpchar | 1 |  | √ | ' ' | 供应商分组 |
 | 5 | fissynorg | 组织 | bpchar | 1 |  | √ | ' ' | 组织 |
-| 6 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fip | IP地址 | varchar | 100 |  | √ | ' ' | IP地址 |
 | 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 9 | fissynproject | 项目 | bpchar | 1 |  | √ | ' ' | 项目 |
@@ -122,24 +122,24 @@
 | 26 | fenable | 可用状态 | bpchar | 1 |  | √ | ' ' | 可用状态,枚举: 0 :禁用 1 :可用 |
 | 27 | fnumber | 方案编码 | varchar | 50 |  | √ | ' ' | 方案编码 |
 | 28 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
-| 29 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 29 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 30 | fissynunitgroup | 计量单位组 | bpchar | 1 |  | √ | ' ' | 计量单位组 |
 | 31 | fissynlot | 批号 | bpchar | 1 |  | √ | ' ' | 批号 |
-| 32 | fissyncurrency | 币别 | bpchar | 1 |  | √ | ' ' | 币别 |
+| 32 | fissyncurrency | 币种 | bpchar | 1 |  | √ | ' ' | 币种 |
 | 33 | fissynmaterial | 物料 | bpchar | 1 |  | √ | ' ' | 物料 |
 | 34 | fpassword | 密码 | varchar | 50 |  | √ | ' ' | 密码 |
 | 35 | fsystem | 对接系统 | bpchar | 1 |  | √ | ' ' | 对接系统,枚举: 1 :EAS 2 :票无忧 3 :快递100 4 :金蝶云平台 5 :苍穹供应链 6 :天眼查 7 :企查查 8 :大数据云平台 |
 | 36 | fissyntrace | 跟踪号 | bpchar | 1 |  | √ | ' ' | 跟踪号 |
 | 37 | fusername | 用户名 | varchar | 50 |  | √ | ' ' | 用户名 |
 | 38 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :保存 B :已提交 C :已审核 |
-| 39 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 39 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 40 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 41 | fislock | 启用锁 | bpchar | 1 |  | √ | ' ' | 启用锁,枚举: 0 :禁用 1 :启用 |
 | 42 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 43 | ftid | 开票组织 | varchar | 50 |  | √ | ' ' | 开票组织 |
-| 44 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 44 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 45 | fremark | fremark | varchar | 255 |  | √ | ' ' |  |
-| 46 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 46 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 47 | fclient_secret | 客户端密匙 | varchar | 255 |  | √ | ' ' | 客户端密匙 |
 | 48 | fissynmatgroup | 物料分组 | bpchar | 1 |  | √ | ' ' | 物料分组 |
 | 49 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
@@ -160,8 +160,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_t_pur_apiconfig_createorg |  | fcreateorgid |
-| 2 | idx_pur_apiconfig_fmasterid |  | fmasterid |
-| 3 | idx_pur_apiconfig_fnumber |  | fnumber |
+| 1 | idx_pur_apiconfig_fmasterid |  | fmasterid |
+| 2 | idx_pur_apiconfig_fnumber |  | fnumber |
+| 3 | idx_t_pur_apiconfig_createorg |  | fcreateorgid |
 | 4 | idx_t_pur_apiconfig_master |  | fmasterid |
 | 5 | t_pur_apiconfig_pkey |  | fid |

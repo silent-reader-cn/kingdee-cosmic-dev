@@ -17,7 +17,7 @@
 | 6 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 7 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 8 | fmonitorstatus | 监控状态 | bpchar | 1 |  | √ | ' ' | 监控状态,枚举: A :未监控 B :监控中 C :停止监控 |
-| 9 | fsupplierid | 供应商编码 | int8 | 64 |  | √ | 0 | 供应商 bd_supplier |
+| 9 | fsupplierid | 供应商编码 | int8 | 64 |  | √ | 0 | [供应商 bd_supplier](../basedata_files/bd_supplier.md) |
 
 ### 列规则定义
 
@@ -45,21 +45,21 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fremark | 描述 | varchar | 255 |  | √ | ' ' | 描述 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 4 | fgroupid | 监控维度分组 | int8 | 64 |  | √ | 0 | 监控维度分组 pbd_monitor_group |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 4 | fgroupid | 监控维度分组 | int8 | 64 |  | √ | 0 | [监控维度分组 pbd_monitor_group](../pbd_files/pbd_monitor_group.md) |
 | 5 | fbillstatus | 单据状态 | bpchar | 1 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 6 | fopttype | 操作类型 | bpchar | 1 |  | √ | '1' | 操作类型,枚举: 0 :暂停监控 1 :新增企业 2 :修改分组 |
 | 7 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 8 | fjobid | jobid | varchar | 100 |  | √ | ' ' | jobid |
-| 9 | forgid | 审批组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 9 | forgid | 审批组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 10 | fisbindurl | 是否已绑定回调 | bpchar | 1 |  | √ | '0' | 是否已绑定回调 |
 | 11 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
 | 12 | fgroupidstr | 第三方分组id | varchar | 50 |  | √ | ' ' | 第三方分组id |
 | 13 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 14 | fmonitortype | 监控类型 | bpchar | 1 |  | √ | '0' | 监控类型,枚举: 0 :企业监控 1 :企业监控 L2 2 :企业监控 L3 |
-| 15 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 15 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 16 | fbillno | 审批单编号 | varchar | 80 |  | √ | ' ' | 审批单编号 |
-| 17 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 17 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

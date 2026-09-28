@@ -39,10 +39,10 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 3 | fgroupid | 净改变服务 | int8 | 64 |  | √ | 0 | 净改变服务配置分组 msplan_reservecfg_group |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 3 | fgroupid | 净改变服务 | int8 | 64 |  | √ | 0 | [净改变服务配置分组 msplan_reservecfg_group](../msplan_files/msplan_reservecfg_group.md) |
 | 4 | fname | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
-| 5 | fbillobject | 单据对象 | varchar | 50 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 5 | fbillobject | 单据对象 | varchar | 50 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 7 | fresourceid | 来源服务ID | int8 | 64 |  | √ | 0 | 来源服务ID |
 | 8 | ffiltervalue | 过滤器值 | varchar | 255 |  | √ | ' ' | 过滤器值 |
@@ -50,7 +50,7 @@
 | 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 11 | fbilloperation | 单据操作 | varchar | 512 |  | √ | ' ' | 单据操作,枚举: |
 | 12 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 15 | fresourcetype | 来源类型 | varchar | 30 |  | √ | ' ' | 来源类型,枚举: 0 :手工新增 1 :供应链 2 :系统预设 |
 | 16 | ffiltervalue_tag | 过滤器值_详情 | text | 0 |  |  | null | 过滤器值_详情 |

@@ -41,7 +41,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 方案名称 | varchar | 255 |  | √ | ' ' | 方案名称 |
 | 3 | fschemekey | 方案密文 | varchar | 512 |  | √ | ' ' | 方案密文 |
-| 4 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | flength | 密钥长度 | varchar | 10 |  | √ | ' ' | 密钥长度,枚举: |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 7 | fissystem | 系统预置 | bpchar | 1 |  | √ | '0' | 系统预置 |
@@ -49,6 +49,7 @@
 | 9 | falgorithm | 加密算法 | varchar | 50 |  | √ | ' ' | 加密算法,枚举: |
 | 10 | fnumber | 方案编码 | varchar | 80 |  | √ | ' ' | 方案编码 |
 | 11 | fsource | 密钥来源 | bpchar | 1 |  | √ | '0' | 密钥来源,枚举: 0 :原生 1 :托管 2 :迁移 |
+| 12 | fusage | 方案用途 | bpchar | 1 |  | √ | '0' | 方案用途,枚举: 0 :字段加密 1 :文件加密 |
 
 ### 列规则定义
 

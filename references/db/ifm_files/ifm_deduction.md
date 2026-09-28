@@ -59,8 +59,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | pk_ifm_deduction_wb |  | fentryid |
-| 2 | idx_ifm_deduction_wb_fk |  | fid |
+| 1 | idx_ifm_deduction_wb_fk |  | fid |
+| 2 | pk_ifm_deduction_wb |  | fentryid |
 
 ---
 
@@ -74,17 +74,17 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fopenorgid | 核算组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 3 | fpaybankid | 付款银行 | int8 | 64 |  | √ | 0 | 金融机构 bd_finorginfo |
+| 2 | fopenorgid | 核算组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 3 | fpaybankid | 付款银行 | int8 | 64 |  | √ | 0 | [金融机构 bd_finorginfo](../basedata_files/bd_finorginfo.md) |
 | 4 | fpaymentchannel | 支付渠道 | varchar | 30 |  | √ | ' ' | 支付渠道,枚举: bei :银企互联 onlinebank :网上银行 counter :柜台 |
 | 5 | fbizstatus | 业务状态 | varchar | 30 |  | √ | ' ' | 业务状态,枚举: normal :正常 chargeback :已退单 |
 | 6 | frecaccbankname | 收款人实名 | varchar | 255 |  | √ | ' ' | 收款人实名 |
-| 7 | fpaybankaccountid | 付款账号 | int8 | 64 |  | √ | 0 | 银行账户 bd_accountbanks |
-| 8 | fpayeebankid | 收款银行 | int8 | 64 |  | √ | 0 | 行名行号 bd_bebank |
+| 7 | fpaybankaccountid | 付款账号 | int8 | 64 |  | √ | 0 | [银行账户 bd_accountbanks](../basedata_files/bd_accountbanks.md) |
+| 8 | fpayeebankid | 收款银行 | int8 | 64 |  | √ | 0 | [行名行号 bd_bebank](../basedata_files/bd_bebank.md) |
 | 9 | fsource | 单据来源 | varchar | 50 |  | √ | ' ' | 单据来源,枚举: center :手工新增 company :扣款申请 transdetail :交易明细 |
 | 10 | freceivecompanyid | 收款方ID | int8 | 64 |  | √ | 0 | 收款方ID |
 | 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fisbackfill | 备注回填转账附言 | bpchar | 1 |  | √ | '0' | 备注回填转账附言 |
 | 14 | fdeductiontype | 扣款类型 | varchar | 50 |  | √ | ' ' | 扣款类型,枚举: A :结算中心代扣 B :结算中心扣款 C :银行扣款 D :结算中心退款 E :结算中心代付 |
 | 15 | frealamount | 实际扣款金额 | numeric | 19 | 6 | √ | 0.000000 | 实际扣款金额 |
@@ -92,27 +92,27 @@
 | 17 | fbillno | 单据编号 | varchar | 80 |  | √ | ' ' | 单据编号 |
 | 18 | fpayeename | 收款人 | varchar | 255 |  | √ | ' ' | 收款人 |
 | 19 | fbeibankcheckflag | 对账标识码 | varchar | 255 |  | √ | ' ' | 对账标识码 |
-| 20 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 20 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 21 | fpayeebanknum | 收款账号 | varchar | 80 |  | √ | ' ' | 收款账号 |
-| 22 | fcenterid | 结算中心 | int8 | 64 |  | √ | 0 | 金融机构 bd_finorginfo |
+| 22 | fcenterid | 结算中心 | int8 | 64 |  | √ | 0 | [金融机构 bd_finorginfo](../basedata_files/bd_finorginfo.md) |
 | 23 | fsourcebilltype | 源单类型 | varchar | 30 |  | √ | ' ' | 源单类型,枚举: cas_paybill :付款单 bei_transdetail :交易明细 |
 | 24 | fbillstatus | 单据状态 | varchar | 30 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 25 | fcomment | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
 | 26 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 27 | fpayeebankname | 收款银行 | varchar | 255 |  | √ | ' ' | 收款银行 |
-| 28 | fsettlettypeid | 结算方式 | int8 | 64 |  | √ | 0 | 结算方式 bd_settlementtype |
+| 28 | fsettlettypeid | 结算方式 | int8 | 64 |  | √ | 0 | [结算方式 bd_settlementtype](../basedata_files/bd_settlementtype.md) |
 | 29 | fpayeetype | 收款人类型 | varchar | 30 |  | √ | ' ' | 收款人类型,枚举: bd_supplier :供应商 bd_customer :客户 bos_user :职员 bos_org :公司 other :其他 |
 | 30 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
 | 31 | freason | 退单意见 | varchar | 255 |  | √ | ' ' | 退单意见 |
-| 32 | fscorgid | 付款人 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 32 | fscorgid | 付款人 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 33 | freceiveaccountid | 收款账号ID | int8 | 64 |  | √ | 0 | 收款账号ID |
 | 34 | freceiveamount | 金额 | numeric | 19 | 6 | √ | 0.000000 | 金额 |
 | 35 | frecbanknumber | 收款行号 | varchar | 30 |  | √ | ' ' | 收款行号 |
 | 36 | fbizdate | 业务日期 | timestamp | 0 |  |  | null | 业务日期 |
 | 37 | fsourcebillid | 源单ID | int8 | 64 |  | √ | 0 | 源单ID |
 | 38 | fisvoucher | 生成凭证 | bpchar | 1 |  | √ | '0' | 生成凭证 |
-| 39 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 40 | freceivecurrencyid | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 39 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 40 | freceivecurrencyid | 币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 
 ### 列规则定义
 
@@ -235,10 +235,10 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fpaystatus | 状态 | varchar | 30 |  | √ | ' ' | 状态,枚举: wait :待付款 doing :处理中 succeed :已付款 failed :付款失败 |
-| 3 | fpayaccountid | 账号 | int8 | 64 |  | √ | 0 | 银行账户 bd_accountbanks |
-| 4 | fpaycompanyid | 资金组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | fpayaccountid | 账号 | int8 | 64 |  | √ | 0 | [银行账户 bd_accountbanks](../basedata_files/bd_accountbanks.md) |
+| 4 | fpaycompanyid | 资金组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | freturncomment | 返回信息 | varchar | 255 |  | √ | ' ' | 返回信息 |
-| 6 | fpaycurrencyid | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 6 | fpaycurrencyid | 币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 | 7 | fsourceentryid | 源分录ID | int8 | 64 |  | √ | 0 | 源分录ID |
 | 8 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 9 | fpayamount | 金额 | numeric | 19 | 6 | √ | 0.000000 | 金额 |

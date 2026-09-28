@@ -26,8 +26,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | t_bd_supplierlinkman_l_pkey |  | fpkid |
-| 2 | idx_bd_supplinkman_l_entry |  | fentryid,flocaleid |
+| 1 | idx_bd_supplinkman_l_entry |  | fentryid,flocaleid |
+| 2 | t_bd_supplierlinkman_l_pkey |  | fpkid |
 
 ---
 
@@ -44,7 +44,7 @@
 | 2 | fexpirytime | 失效日期 | timestamp | 0 |  |  | null | 失效日期 |
 | 3 | fstate | 使用状态 | bpchar | 1 |  | √ | '0' | 使用状态 |
 | 4 | feffectime | 生效日期 | timestamp | 0 |  |  | null | 生效日期 |
-| 5 | foriginator | 变更人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | foriginator | 变更人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | fchangedate | 变更日期 | timestamp | 0 |  |  | null | 变更日期 |
 | 7 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 8 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
@@ -142,12 +142,12 @@
 | 3 | fsocietycreditcode | 统一社会信用代码 | varchar | 255 |  | √ | ' ' | 统一社会信用代码 |
 | 4 | forgcode | 组织机构代码(已废弃) | varchar | 255 |  | √ | ' ' | 组织机构代码(已废弃) |
 | 5 | fspsupplier | 简易供应商标识 | bpchar | 1 |  | √ | '0' | 简易供应商标识 |
-| 6 | fcountryid | 国家/地区 | int8 | 64 |  | √ | 0 | 国家和地区 bd_country |
-| 7 | fcuregcapital | 注册资本币种 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 6 | fcountryid | 国家/地区 | int8 | 64 |  | √ | 0 | [国家和地区 bd_country](../base_files/bd_country.md) |
+| 7 | fcuregcapital | 注册资本币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 | 8 | fidno | 身份证号 | varchar | 50 |  | √ | ' ' | 身份证号 |
 | 9 | fduns | 邓白氏编码 | varchar | 9 |  | √ | ' ' | 邓白氏编码 |
 | 10 | fpostalcode | 电子邮箱 | varchar | 50 |  | √ | ' ' | 电子邮箱 |
-| 11 | finternalcompanyid | 内部业务单元 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 11 | finternalcompanyid | 内部业务单元 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 12 | festablishdate | 成立日期 | timestamp | 0 |  |  | null | 成立日期 |
 | 13 | ffax | 传真 | varchar | 40 |  | √ | ' ' | 传真 |
 | 14 | fexpirydate | 失效日期（废弃） | timestamp | 0 |  |  | null | 失效日期（废弃） |
@@ -242,32 +242,32 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | null | id |
-| 2 | fapproverid | 审核人 | int8 | 64 |  |  | null | 人员 bos_user |
-| 3 | fgroupid | 供应商分组 | int8 | 64 |  |  | null | 供应商分类 bd_suppliergroup |
-| 4 | fdeliversupplierid | 供货供应商 | int8 | 64 |  |  | null | 供应商 bd_supplier |
+| 2 | fapproverid | 审核人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
+| 3 | fgroupid | 供应商分类 | int8 | 64 |  |  | null | [供应商分类 bd_suppliergroup](../basedata_files/bd_suppliergroup.md) |
+| 4 | fdeliversupplierid | 供货供应商 | int8 | 64 |  |  | null | [供应商 bd_supplier](../basedata_files/bd_supplier.md) |
 | 5 | faddress | 详细地址 | varchar | 300 |  | √ | ' ' | 详细地址 |
-| 6 | forgid | 使用组织 | int8 | 64 |  |  | null | 业务单元 bos_org |
+| 6 | forgid | 使用组织 | int8 | 64 |  |  | null | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fdisabledate | 禁用时间 | timestamp | 0 |  |  | null | 禁用时间 |
 | 8 | feffectivedt | 生效日期 | timestamp | 0 |  |  | null | 生效日期 |
-| 9 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 10 | fblocsupplier | 所属集团 | int8 | 64 |  | √ | 0 | 供应商 bd_supplier |
-| 11 | fbilladdress | 开票地址 | int8 | 64 |  | √ | 0 | 地址 bd_address |
-| 12 | finvoicecategory | 发票类型 | int8 | 64 |  | √ | 0 | 发票类型 bd_invoicetype |
+| 9 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 10 | fblocsupplier | 所属集团 | int8 | 64 |  | √ | 0 | [供应商 bd_supplier](../basedata_files/bd_supplier.md) |
+| 11 | fbilladdress | 开票地址 | int8 | 64 |  | √ | 0 | [地址 bd_address](../basedata_files/bd_address.md) |
+| 12 | finvoicecategory | 发票类型 | int8 | 64 |  | √ | 0 | [发票种类 bd_invoicetype](../basedata_files/bd_invoicetype.md) |
 | 13 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 14 | fpayhold | 付款冻结 | bpchar | 1 |  | √ | '0' | 付款冻结 |
 | 15 | fbusinessscope | 经营范围 | varchar | 2000 |  | √ | ' ' | 经营范围 |
 | 16 | fenablevmi | 可VMI | bpchar | 1 |  | √ | '0' | 可VMI |
-| 17 | finvoicesupplierid | 结算供应商 | int8 | 64 |  |  | null | 供应商 bd_supplier |
+| 17 | finvoicesupplierid | 结算供应商 | int8 | 64 |  |  | null | [供应商 bd_supplier](../basedata_files/bd_supplier.md) |
 | 18 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
 | 19 | ftaxno | 税号 | varchar | 60 |  | √ | ' ' | 税号 |
-| 20 | freceivingsupplierid | 收款供应商 | int8 | 64 |  |  | null | 供应商 bd_supplier |
-| 21 | fpuroperatorid | 采购员 | int8 | 64 |  | √ | 0 | 供应链业务员 bd_operator |
-| 22 | fpurdepartid | 采购部门 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 20 | freceivingsupplierid | 收款供应商 | int8 | 64 |  |  | null | [供应商 bd_supplier](../basedata_files/bd_supplier.md) |
+| 21 | fpuroperatorid | 采购员 | int8 | 64 |  | √ | 0 | [供应链业务员 bd_operator](../sbd_files/bd_operator.md) |
+| 22 | fpurdepartid | 采购部门 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 23 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
 | 24 | fbizfunction | 业务职能 | varchar | 20 |  | √ | ' ' | 业务职能,枚举: 1 :采购 2 :结算 3 :收款 4 :供货 |
 | 25 | finvoicehold | 发票冻结 | bpchar | 1 |  | √ | '0' | 发票冻结 |
-| 26 | fdisablerid | 禁用人 | int8 | 64 |  |  | null | 人员 bos_user |
-| 27 | fpaymentcondid | 付款条件 | int8 | 64 |  |  | null | 付款条件 bd_paycondition |
+| 26 | fdisablerid | 禁用人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
+| 27 | fpaymentcondid | 付款条件 | int8 | 64 |  |  | null | [付款条件 bd_paycondition](../sbd_files/bd_paycondition.md) |
 | 28 | fmallstatus | 商城入驻状态 | varchar | 10 |  |  | null | 商城入驻状态,枚举: A :未入驻 B :已入驻 C :已冻结 D :已终止 |
 | 29 | fsimplepinyin | 简拼 | varchar | 255 |  | √ | ' ' | 简拼 |
 | 30 | finvoicetype | 发票类型(已失效) | bpchar | 1 |  | √ | '0' | 发票类型(已失效),枚举: 1 :增值税专用发票 2 :普通发票 |
@@ -277,39 +277,39 @@
 | 34 | flinkman | 联系人 | varchar | 255 |  | √ | ' ' | 联系人 |
 | 35 | fartificialperson | 法人代表 | varchar | 255 |  | √ | ' ' | 法人代表 |
 | 36 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
-| 37 | fpaymentcurrency | 付款币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
-| 38 | fpurchaserid | 负责人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 37 | fpaymentcurrency | 付款币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
+| 38 | fpurchaserid | 负责人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 39 | flogo | 图片 | varchar | 255 |  | √ | ' ' | 图片 |
-| 40 | fsupplierstatus | 供应商状态 | int8 | 64 |  | √ | 0 | 供应商状态 bd_supplierstatus |
-| 41 | fpurchasedeptid | 负责组织 | int8 | 64 |  |  | null | 业务单元 bos_org |
+| 40 | fsupplierstatus | 供应商状态 | int8 | 64 |  | √ | 0 | [供应商状态 bd_supplierstatus](../basedata_files/bd_supplierstatus.md) |
+| 41 | fpurchasedeptid | 负责组织 | int8 | 64 |  |  | null | [业务单元 bos_org](../base_files/bos_org.md) |
 | 42 | fexpirydt | 失效日期 | timestamp | 0 |  |  | null | 失效日期 |
-| 43 | finvoiceaddress | 收票地址 | int8 | 64 |  | √ | 0 | 辅助资料 bos_assistantdata_detail |
+| 43 | finvoiceaddress | 收票地址 | int8 | 64 |  | √ | 0 | [辅助资料 bos_assistantdata_detail](../base_files/bos_assistantdata_detail.md) |
 | 44 | fstatus | 数据状态 | varchar | 30 |  |  | null | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 45 | fcreatorid | 创建人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 45 | fcreatorid | 创建人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 46 | fmasterid | 主数据内码 | int8 | 64 |  |  | null | 主数据内码 |
 | 47 | fblocflag | 集团供应商 | bpchar | 1 |  | √ | '0' | 集团供应商 |
 | 48 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
-| 49 | ftaxrateid | 默认税率(%) | int8 | 64 |  | √ | 0 | 税率 bd_taxrate |
-| 50 | fpurgroupid | 采购组 | int8 | 64 |  | √ | 0 | 供应链业务组 bd_operatorgroup |
-| 51 | fsettlementtypeid | 结算方式 | int8 | 64 |  |  | null | 结算方式 bd_settlementtype |
+| 49 | ftaxrateid | 默认税率(%) | int8 | 64 |  | √ | 0 | [税率 bd_taxrate](../basedata_files/bd_taxrate.md) |
+| 50 | fpurgroupid | 采购组 | int8 | 64 |  | √ | 0 | [供应链业务组 bd_operatorgroup](../sbd_files/bd_operatorgroup.md) |
+| 51 | fsettlementtypeid | 结算方式 | int8 | 64 |  |  | null | [结算方式 bd_settlementtype](../basedata_files/bd_settlementtype.md) |
 | 52 | ftaxtype | 计税类型 | varchar | 10 |  |  | null | 计税类型,枚举: 1 :价外税(含税) 2 :价外税(不含税) 3 :价内税(含税) |
 | 53 | fapprovedate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
-| 54 | fcreateorgid | 创建组织 | int8 | 64 |  |  | null | 业务单元 bos_org |
-| 55 | fmodifierid | 修改人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 54 | fcreateorgid | 创建组织 | int8 | 64 |  |  | null | [业务单元 bos_org](../base_files/bos_org.md) |
+| 55 | fmodifierid | 修改人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 56 | fpaymentunit | 支付周期 | varchar | 30 |  | √ | ' ' | 支付周期,枚举: 1 :日 2 :周 3 :月 |
 | 57 | fmatchingrule | 发票匹配规则 | varchar | 30 |  | √ | ' ' | 发票匹配规则,枚举: two :匹配订单（2重匹配） three :匹配接收（3重匹配） four :匹配验收（4重匹配） |
 | 58 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 59 | fmalldate | 商城入驻时间 | timestamp | 0 |  |  | null | 商城入驻时间 |
-| 60 | ftaxregistplace | 税务注册地 | int8 | 64 |  | √ | 0 | 国家和地区 bd_country |
-| 61 | fbizpartnerid | 商务伙伴 | int8 | 64 |  |  | null | 商务伙伴 bd_bizpartner |
+| 60 | ftaxregistplace | 税务注册地 | int8 | 64 |  | √ | 0 | [国家和地区 bd_country](../base_files/bd_country.md) |
+| 61 | fbizpartnerid | 商务伙伴 | int8 | 64 |  |  | null | [商务伙伴 bd_bizpartner](../base_files/bd_bizpartner.md) |
 | 62 | fregcapital | 注册资本 | varchar | 40 |  | √ | ' ' | 注册资本 |
 | 63 | fctrlstrategy | 控制策略 | varchar | 10 |  |  | null | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
 | 64 | ftype | 伙伴类型 | varchar | 30 |  | √ | ' ' | 伙伴类型,枚举: 1 :法人企业 2 :非法人企业 3 :非企业单位 4 :个人 5 :个体户 |
-| 65 | femployee | 员工 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 65 | femployee | 员工 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 66 | fpurchasehold | 采购冻结 | bpchar | 1 |  | √ | '0' | 采购冻结 |
-| 67 | fadminorgid | 管理组织 | int8 | 64 |  |  | null | 业务单元 bos_org |
+| 67 | fadminorgid | 管理组织 | int8 | 64 |  |  | null | [业务单元 bos_org](../base_files/bos_org.md) |
 | 68 | fsimplename | 简称 | varchar | 255 |  | √ | ' ' | 简称 |
-| 69 | fsettlementcyid | 交易币别 | int8 | 64 |  |  | null | 币种 bd_currency |
+| 69 | fsettlementcyid | 交易币种 | int8 | 64 |  |  | null | [币种 bd_currency](../base_files/bd_currency.md) |
 | 70 | fissuppcolla | 启用采购协同 | bpchar | 1 |  |  | null | 启用采购协同 |
 
 ### 列规则定义
@@ -348,7 +348,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | ftaxcertificate | 税务资质 | int8 | 64 |  | √ | 0 | 税务资质 bd_taxaptitudes |
+| 2 | ftaxcertificate | 税务资质 | int8 | 64 |  | √ | 0 | [税务资质 bd_taxaptitudes](../basedata_files/bd_taxaptitudes.md) |
 | 3 | feffectivedate | 生效日期 | timestamp | 0 |  |  | null | 生效日期 |
 | 4 | fexpirydate | 失效日期 | timestamp | 0 |  |  | null | 失效日期 |
 | 5 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
@@ -415,7 +415,7 @@
 | 6 | femail | 邮箱 | varchar | 255 |  | √ | ' ' | 邮箱 |
 | 7 | fdept | 部门 | varchar | 80 |  | √ | ' ' | 部门 |
 | 8 | fseq | 分录行号 | int8 | 64 |  |  | null | 分录行号 |
-| 9 | fassociatedaddress | 关联地址 | int8 | 64 |  | √ | 0 | 地址 bd_address |
+| 9 | fassociatedaddress | 关联地址 | int8 | 64 |  | √ | 0 | [地址 bd_address](../basedata_files/bd_address.md) |
 | 10 | faddresspurpose | faddresspurpose | int8 | 64 |  | √ | 0 |  |
 | 11 | fmobile | 手机(已废弃) | varchar | 40 |  |  | null | 手机(已废弃) |
 | 12 | frole | 角色 | varchar | 30 |  | √ | ' ' | 角色,枚举: 1 :业务 2 :财务 |
@@ -493,7 +493,7 @@
 | 7 | fcommissionbearer | 默认手续费承担方 | varchar | 30 |  | √ | ' ' | 默认手续费承担方,枚举: 1 :付款方 2 :收款方 |
 | 8 | fcreatedate | fcreatedate | timestamp | 0 |  |  | null |  |
 | 9 | fcreatorid | fcreatorid | int8 | 64 |  |  | null |  |
-| 10 | fsettlment | 默认结算方式 | int8 | 64 |  | √ | 0 | 结算方式 bd_settlementtype |
+| 10 | fsettlment | 默认结算方式 | int8 | 64 |  | √ | 0 | [结算方式 bd_settlementtype](../basedata_files/bd_settlementtype.md) |
 | 11 | fmodifydate | fmodifydate | timestamp | 0 |  |  | null |  |
 | 12 | fliquidationparam | 默认清算要求参数 | varchar | 125 |  | √ | ' ' | 默认清算要求参数 |
 | 13 | fpayeeadmindivision | 收款方行政区划 | varchar | 50 |  | √ | ' ' | 收款方行政区划 |
@@ -507,12 +507,12 @@
 | 21 | fagentbankaccount | 代理行账号 | varchar | 80 |  | √ | ' ' | 代理行账号 |
 | 22 | fadminorgid | fadminorgid | int8 | 64 |  |  | null |  |
 | 23 | fdisablestatus | fdisablestatus | bpchar | 1 |  |  | null |  |
-| 24 | fbankid | 开户银行 | int8 | 64 |  |  | null | 行名行号 bd_bebank |
+| 24 | fbankid | 开户银行 | int8 | 64 |  |  | null | [行名行号 bd_bebank](../basedata_files/bd_bebank.md) |
 | 25 | fibanid | 国际银行账户号码 | varchar | 50 |  | √ | ' ' | 国际银行账户号码 |
 | 26 | fentryid | fentryid | int8 | 64 |  | √ | null | id |
-| 27 | fcurrencyid | 币别 | int8 | 64 |  |  | null | 币种 bd_currency |
+| 27 | fcurrencyid | 币种 | int8 | 64 |  |  | null | [币种 bd_currency](../base_files/bd_currency.md) |
 | 28 | fisdefault | 默认 | bpchar | 1 |  |  | null | 默认 |
-| 29 | fagentbank | 默认代理行 | int8 | 64 |  | √ | 0 | 行名行号 bd_bebank |
+| 29 | fagentbank | 默认代理行 | int8 | 64 |  | √ | 0 | [行名行号 bd_bebank](../basedata_files/bd_bebank.md) |
 
 ### 列规则定义
 

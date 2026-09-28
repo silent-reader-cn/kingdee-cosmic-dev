@@ -12,7 +12,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 3 | fchilditem | 子项 | varchar | 50 |  | √ | ' ' | 子项 |
-| 4 | fdatasrc | 数据源 | int8 | 64 |  | √ | 0 | 数据源配置 mrp_resource_dataconf_sfc |
+| 4 | fdatasrc | 数据源 | int8 | 64 |  | √ | 0 | [数据源配置 mrp_resource_dataconf_sfc](../msplan_files/mrp_resource_dataconf_sfc.md) |
 | 5 | fdescription | 说明 | varchar | 255 |  | √ | ' ' | 说明 |
 | 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 
@@ -41,20 +41,20 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fremark | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
 | 4 | fismeetcontent | 是否会议内容 | bpchar | 1 |  | √ | '0' | 是否会议内容 |
 | 5 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 6 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 7 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 8 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 8 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 9 | fsortcode | 排序码 | int8 | 64 |  | √ | 0 | 排序码 |
-| 10 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 10 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 11 | fispreset | 是否系统预置 | bpchar | 1 |  | √ | '0' | 是否系统预置 |
 | 12 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 13 | fctrlstrategy | 控制策略 | varchar | 50 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
 | 14 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 15 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 15 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 16 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 17 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 18 | fmatchitem | 匹配维度 | varchar | 50 |  | √ | ' ' | 匹配维度,枚举: XM :项目 KH :客户 HY :行业 JXSBNO :检修设备注册号 XHL1 :型号L1 XHLIMPD :型号L1-MPD XHL2 :型号L2 XHL3 :型号L3 HYFQBM :会议发起部门 |
@@ -62,7 +62,7 @@
 | 20 | fisallowedmodify | 是否允许手工修改 | bpchar | 1 |  | √ | '0' | 是否允许手工修改 |
 | 21 | fenable | 使用状态 | varchar | 50 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 22 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
-| 23 | fresource | 数据源 | int8 | 64 |  | √ | 0 | 数据源配置 mrp_resource_dataconf_sfc |
+| 23 | fresource | 数据源 | int8 | 64 |  | √ | 0 | [数据源配置 mrp_resource_dataconf_sfc](../msplan_files/mrp_resource_dataconf_sfc.md) |
 | 24 | fsourcebitindex | 原资料位图 | int8 | 64 |  | √ | 0 | 原资料位图 |
 
 ### 列规则定义

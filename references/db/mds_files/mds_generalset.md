@@ -12,29 +12,29 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fcusandactype | 客户+检修设备类型 | bpchar | 1 |  | √ | '0' | 客户+检修设备类型 |
 | 3 | fcustomercount | 客户≥ | int8 | 64 |  | √ | 0 | 客户≥ |
-| 4 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 4 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | fusecountmax | 到 | int8 | 64 |  | √ | 0 | 到 |
 | 6 | fspecialreq | 启用特殊备货需求 | bpchar | 1 |  | √ | '0' | 启用特殊备货需求 |
-| 7 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 7 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | factypecount | 检修设备类型≥ | int8 | 64 |  | √ | 0 | 检修设备类型≥ |
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 10 | fplanid | 任务号 | varchar | 50 |  | √ | ' ' | 任务号 |
 | 11 | fstatus | 数据状态 | varchar | 5 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 14 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 15 | fbitindex | 位图 | int8 | 64 |  | √ | 0 | 位图 |
 | 16 | fusecountmin | 使用频率 | int8 | 64 |  | √ | 0 | 使用频率 |
 | 17 | fisall | 全选 | bpchar | 1 |  | √ | '0' | 全选 |
 | 18 | fsetval | 设置数据 | varchar | 2000 |  | √ | ' ' | 设置数据 |
-| 19 | fgeneralplan | 通用备货计划 | int8 | 64 |  | √ | 0 | 取数方案定义 mds_datafetchset |
+| 19 | fgeneralplan | 通用备货计划 | int8 | 64 |  | √ | 0 | [取数方案定义 mds_datafetchset](../mds_files/mds_datafetchset.md) |
 | 20 | frepeatcal | 重运算 | bpchar | 1 |  | √ | '0' | 重运算 |
-| 21 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 21 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 22 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
-| 23 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 23 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 24 | fcustomer | 客户 | bpchar | 1 |  | √ | '0' | 客户 |
 | 25 | fchecktypecount | 检修级别≥ | int8 | 64 |  | √ | 0 | 检修级别≥ |
-| 26 | fhisuseset | 历史用量运算方案 | int8 | 64 |  | √ | 0 | 历史用量运算方案定义 mds_hisuseset |
+| 26 | fhisuseset | 历史用量运算方案 | int8 | 64 |  | √ | 0 | [历史用量运算方案定义 mds_hisuseset](../mds_files/mds_hisuseset.md) |
 | 27 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 28 | fjobid | 作业号 | varchar | 50 |  | √ | ' ' | 作业号 |
 | 29 | factype | 检修设备类型 | bpchar | 1 |  | √ | '0' | 检修设备类型 |
@@ -130,7 +130,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 物料分类 bd_materialgroup |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [物料分类 bd_materialgroup](../basedata_files/bd_materialgroup.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义

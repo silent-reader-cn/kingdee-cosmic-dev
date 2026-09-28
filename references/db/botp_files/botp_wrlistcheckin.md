@@ -70,21 +70,21 @@
 | 2 | fmodifierid | fmodifierid | int8 | 64 |  | √ | 0 |  |
 | 3 | fsubsysid | fsubsysid | int8 | 64 |  |  | null |  |
 | 4 | fmodeltype | fmodeltype | varchar | 50 |  |  | null |  |
-| 5 | fparentid | 父规则 | varchar | 36 |  |  | null | 反写规则 botp_writebackrule |
+| 5 | fparentid | 父规则 | varchar | 36 |  |  | null | [反写规则 botp_writebackrule](../botp_files/botp_writebackrule.md) |
 | 6 | fisv | 开发商 | varchar | 50 |  |  | null | 开发商 |
 | 7 | finheritpath | finheritpath | varchar | 300 |  | √ | ' ' |  |
-| 8 | fbizappid | 应用 | varchar | 36 |  | √ | ' ' | 业务应用实体 bos_devportal_bizapp |
+| 8 | fbizappid | 应用 | varchar | 36 |  | √ | ' ' | [业务应用实体 bos_devportal_bizapp](../mdl_files/bos_devportal_bizapp.md) |
 | 9 | fsysstatus | 出厂状态 | bpchar | 1 |  |  | '0' | 出厂状态,枚举: 0 :正常 1 :禁用 |
 | 10 | fcreatedate | fcreatedate | timestamp | 0 |  | √ | LOCALTIMESTAMP |  |
-| 11 | fmasterid | 原始规则 | varchar | 36 |  | √ | ' ' | 反写规则 botp_writebackrule |
+| 11 | fmasterid | 原始规则 | varchar | 36 |  | √ | ' ' | [反写规则 botp_writebackrule](../botp_files/botp_writebackrule.md) |
 | 12 | ftype | 扩展状态 | bpchar | 1 |  | √ | '0' | 扩展状态,枚举: 0 :原始规则 1 :派生规则 2 :扩展规则 |
 | 13 | fmodifydate | fmodifydate | timestamp | 0 |  |  | null |  |
 | 14 | ftimestamp | ftimestamp | int8 | 64 |  |  | null |  |
 | 15 | fdata | fdata | text | 0 |  |  | null |  |
 | 16 | fistemplate | fistemplate | bpchar | 1 |  |  | '0' |  |
-| 17 | fsourceentitynumber | 源单 | varchar | 36 |  | √ | ' ' | 业务对象 bos_objecttype |
+| 17 | fsourceentitynumber | 源单 | varchar | 36 |  | √ | ' ' | [业务对象 bos_objecttype](../mdl_files/bos_objecttype.md) |
 | 18 | fversion | fversion | int8 | 64 |  | √ | 0 |  |
-| 19 | ftargetentitynumber | 目标单 | varchar | 36 |  | √ | ' ' | 业务对象 bos_objecttype |
+| 19 | ftargetentitynumber | 目标单 | varchar | 36 |  | √ | ' ' | [业务对象 bos_objecttype](../mdl_files/bos_objecttype.md) |
 | 20 | fcuststatus | fcuststatus | bpchar | 1 |  |  | '0' |  |
 
 ### 列规则定义

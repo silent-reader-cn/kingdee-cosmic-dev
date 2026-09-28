@@ -11,14 +11,14 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fmzzzsxmxse | 免征增值税项目销售额 | numeric | 23 | 10 | √ | 0.0000000000 | 免征增值税项目销售额 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fkchmsxse | 扣除后免税销售额 | numeric | 23 | 10 | √ | 0.0000000000 | 扣除后免税销售额 |
 | 5 | fbqsjkcje | 本期实际扣除金额 | numeric | 23 | 10 | √ | 0.0000000000 | 本期实际扣除金额 |
 | 6 | fserialno | 流水号 | varchar | 50 |  | √ | ' ' | 流水号 |
 | 7 | fmsxsedyjxse | 免税销售额对应的进项税额 | numeric | 23 | 10 | √ | 0.0000000000 | 免税销售额对应的进项税额 |
 | 8 | funiquekey | 减免税数据分组标识 | varchar | 250 |  | √ | ' ' | 减免税数据分组标识 |
-| 9 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 10 | fcreaterid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 10 | fcreaterid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fmse | 免税额 | numeric | 23 | 10 | √ | 0.0000000000 | 免税额 |
 | 12 | ftaxreductionid | 减免税性质代码 | int8 | 64 |  | √ | 0 | 减免政策代码 tpo_taxdeduction |
 | 13 | fenddate | 结束日期 | timestamp | 0 |  |  | null | 结束日期 |

@@ -10,13 +10,13 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 3 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 3 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fbillstatus | 单据状态 | varchar | 50 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 6 | fauditdate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
 | 7 | fbillno | 单据编号 | varchar | 30 |  | √ | ' ' | 单据编号 |
-| 8 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 
 ### 列规则定义
@@ -47,7 +47,7 @@
 | 2 | fflex | 弹性域 | int8 | 64 |  | √ | 0 | null 002 |
 | 3 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 4 | fnumber | 编码 | varchar | 50 |  | √ | ' ' | 编码 |
-| 5 | fbase | 基础资料 | int8 | 64 |  | √ | 0 | 弹性域配置测试 isc_demo_flex |
+| 5 | fbase | 基础资料 | int8 | 64 |  | √ | 0 | [弹性域配置测试 isc_demo_flex](../iscb_files/isc_demo_flex.md) |
 | 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 
 ### 列规则定义

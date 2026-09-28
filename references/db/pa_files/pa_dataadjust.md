@@ -10,24 +10,24 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreateorgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fcreateorgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fperiodid | 期间 | int8 | 64 |  | √ | 0 | 会计日历 bd_period |
 | 5 | fbillstatus | 单据状态 | varchar | 50 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :审核中 D :审核不通过 E :审核通过 |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 7 | fperiodbasetype | 期间基础资料类型 | varchar | 50 |  | √ | ' ' | 期间基础资料类型,枚举: bd_period :会计期间 |
-| 8 | fanalysissystemid | 分析体系 | int8 | 64 |  | √ | 0 | 分析体系 pa_anasystemsetting |
+| 8 | fanalysissystemid | 分析体系 | int8 | 64 |  | √ | 0 | [分析体系 pa_anasystemsetting](../pa_files/pa_anasystemsetting.md) |
 | 9 | fadjustjson | 调整表数据 | varchar | 255 |  | √ | ' ' | 调整表数据 |
 | 10 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
 | 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | ffaildesc | 失败原因 | varchar | 255 |  | √ | ' ' | 失败原因 |
-| 14 | fanalysismodelid | 分析模型 | int8 | 64 |  | √ | 0 | 分析模型 pa_analysismodel |
+| 14 | fanalysismodelid | 分析模型 | int8 | 64 |  | √ | 0 | [分析模型 pa_analysismodel](../pa_files/pa_analysismodel.md) |
 | 15 | fadjustdesc | 调整原因 | varchar | 255 |  | √ | ' ' | 调整原因 |
 | 16 | fadjuststatus | 调整状态 | varchar | 50 |  | √ | ' ' | 调整状态,枚举: 1 :未调整 2 :已调整 0 :调整失败 3 :作废 4 :已冲销 |
-| 17 | fperiodtype | 期间类型 | int8 | 64 |  | √ | 0 | 会计日历类型 bd_period_type |
+| 17 | fperiodtype | 期间类型 | int8 | 64 |  | √ | 0 | [会计日历类型 bd_period_type](../fibd_files/bd_period_type.md) |
 | 18 | fbillno | 单据编号 | varchar | 30 |  | √ | ' ' | 单据编号 |
-| 19 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 19 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 20 | fadjustjson_tag | 调整表数据_详情 | text | 0 |  |  | null | 调整表数据_详情 |
 
 ### 列规则定义

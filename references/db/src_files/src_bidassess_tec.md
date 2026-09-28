@@ -21,7 +21,7 @@
 | 10 | finputscore | 评估得分(线下) | numeric | 19 | 6 | √ | 0 | 评估得分(线下) |
 | 11 | fpackageid | fpackageid | int8 | 64 |  | √ | 0 |  |
 | 12 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 13 | fscoretaskid | 评标任务单号 | int8 | 64 |  | √ | 0 | 评标任务F7 src_scoretaskf7 |
+| 13 | fscoretaskid | 评标任务单号 | int8 | 64 |  | √ | 0 | [评标任务F7 src_scoretaskf7](../src_files/src_scoretaskf7.md) |
 
 ### 列规则定义
 

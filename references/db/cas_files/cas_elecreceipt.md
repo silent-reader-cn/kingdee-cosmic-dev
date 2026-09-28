@@ -13,7 +13,7 @@
 | 2 | ftcpurl | tcpurl | varchar | 255 |  |  | null | tcpurl |
 | 3 | fcreditdebitflag | 借贷标记 | varchar | 30 |  | √ | ' ' | 借贷标记,枚举: 1 :出账 2 :入账 |
 | 4 | fbankcheckflag | 对账标识码 | varchar | 30 |  | √ | ' ' | 对账标识码 |
-| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | foppunit | 对方单位 | varchar | 255 |  | √ | ' ' | 对方单位 |
 | 7 | ffileserverurl | 文件服务url | varchar | 255 |  |  | null | 文件服务url |
 | 8 | ftransnetcode | 记账网点 | varchar | 100 |  | √ | ' ' | 记账网点 |
@@ -40,26 +40,26 @@
 | 29 | fpayeeacntname | 收款方账户名 | varchar | 100 |  | √ | ' ' | 收款方账户名 |
 | 30 | ftransdate | 交易日期 | timestamp | 0 |  |  | null | 交易日期 |
 | 31 | ffileflag | 是否文件 | bpchar | 1 |  | √ | '0' | 是否文件 |
-| 32 | fbankid | 金融机构 | int8 | 64 |  | √ | 0 | 金融机构 bd_finorginfo |
+| 32 | fbankid | 金融机构 | int8 | 64 |  | √ | 0 | [金融机构 bd_finorginfo](../basedata_files/bd_finorginfo.md) |
 | 33 | ftransdetailid | 银行交易明细id | int8 | 64 |  | √ | 0 | 银行交易明细id |
-| 34 | faccountbankid | 银行账户 | int8 | 64 |  | √ | 0 | 银行账户 bd_accountbanks |
+| 34 | faccountbankid | 银行账户 | int8 | 64 |  | √ | 0 | [银行账户 bd_accountbanks](../basedata_files/bd_accountbanks.md) |
 | 35 | fpayerbankname | 付款方开户银行 | varchar | 100 |  | √ | ' ' | 付款方开户银行 |
-| 36 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 36 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 37 | foppbank | 对方银行 | varchar | 255 |  | √ | ' ' | 对方银行 |
 | 38 | fcompleteflag | 是否完成标识 | bpchar | 1 |  | √ | '0' | 是否完成标识 |
 | 39 | famount | 金额 | numeric | 19 | 6 | √ | 0.000000 | 金额 |
 | 40 | fpassword | 服务器认证密码 | varchar | 30 |  | √ | ' ' | 服务器认证密码 |
 | 41 | fuse | 用途 | varchar | 255 |  |  | null | 用途 |
 | 42 | fusername | 服务器认证用户名 | varchar | 30 |  | √ | ' ' | 服务器认证用户名 |
-| 43 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 43 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 44 | fisarchive | 是否归档 | bpchar | 1 |  | √ | '0' | 是否归档 |
 | 45 | ftranstellno | 记账柜员号 | varchar | 30 |  | √ | ' ' | 记账柜员号 |
 | 46 | fvalidcode | 验证码 | varchar | 30 |  | √ | ' ' | 验证码 |
 | 47 | fremark | 备注 | varchar | 255 |  |  | null | 备注 |
-| 48 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 48 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 49 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 50 | fprintcount | 打印次数 | int8 | 64 |  | √ | 0 | 打印次数 |
-| 51 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 51 | fcurrencyid | 币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 | 52 | fdetaildatetime | 明细交易时间 | timestamp | 0 |  |  | null | 明细交易时间 |
 | 53 | ffilepath | 文件路径 | varchar | 100 |  | √ | ' ' | 文件路径 |
 

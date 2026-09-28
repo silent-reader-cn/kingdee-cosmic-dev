@@ -12,9 +12,9 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fflagid | 标记id | int8 | 64 |  | √ | 0 | 标记id |
 | 3 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 4 | fcreaterid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fcreaterid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fupdatetime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 6 | fbilltype | 单据类型 | varchar | 50 |  | √ | ' ' | 表单元数据 bos_formmeta |
+| 6 | fbilltype | 单据类型 | varchar | 50 |  | √ | ' ' | [表单元数据 bos_formmeta](../mdl_files/bos_formmeta.md) |
 
 ### 列规则定义
 

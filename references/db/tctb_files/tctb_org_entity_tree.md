@@ -12,9 +12,9 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | factivedate | factivedate | timestamp | 0 |  |  | null |  |
 | 3 | fname | 组织名称 | varchar | 200 |  | √ | ' ' | 组织名称 |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 5 | forgfield | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 6 | fparentid | 上级组织id | int8 | 64 |  | √ | 0 | 税务组织实体树（仅供查询展示组织树） tctb_org_entity_tree |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 5 | forgfield | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 6 | fparentid | 上级组织id | int8 | 64 |  | √ | 0 | [税务组织实体树（仅供查询展示组织树） tctb_org_entity_tree](../tctb_files/tctb_org_entity_tree.md) |
 | 7 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 8 | fsourceid | 来源ID | varchar | 100 |  | √ | ' ' | 来源ID |
 | 9 | flongnumber | 长编码 | varchar | 200 |  | √ | ' ' | 长编码 |
@@ -24,7 +24,7 @@
 | 13 | fmodifytime | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
 | 14 | fstatus | 组织状态 | varchar | 30 |  | √ | ' ' | 组织状态,枚举: 1 :保存 2 :启用 3 :禁用 |
 | 15 | fcanceluserid | fcanceluserid | int8 | 64 |  | √ | 0 |  |
-| 16 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 16 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 17 | flicensestatus | flicensestatus | varchar | 30 |  | √ | 'A' |  |
 | 18 | fcanceldate | fcanceldate | timestamp | 0 |  |  | null |  |
 | 19 | fnumber | 组织编码 | varchar | 100 |  | √ | ' ' | 组织编码 |

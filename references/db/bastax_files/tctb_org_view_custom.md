@@ -11,9 +11,9 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 5 | fcreaterid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | fcreaterid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | fenable | 是否启用 | bpchar | 1 |  | √ | ' ' | 是否启用 |
 | 7 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
 | 8 | fisdefault | 是否默认方案 | bpchar | 1 |  | √ | ' ' | 是否默认方案 |

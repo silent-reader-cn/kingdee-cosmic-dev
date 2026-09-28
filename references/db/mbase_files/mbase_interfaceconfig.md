@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreator | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fcreator | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fname | 接口名称 | varchar | 50 |  | √ | ' ' | 接口名称 |
 | 4 | fmethodname | methodName | varchar | 50 |  | √ | ' ' | methodName |
 | 5 | ftype | 接口类型 | bpchar | 1 |  | √ | '1' | 接口类型,枚举: 0 :定时消息服务 |

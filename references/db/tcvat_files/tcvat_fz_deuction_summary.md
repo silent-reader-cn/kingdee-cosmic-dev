@@ -11,11 +11,11 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | ftaxamount | 税额 | numeric | 23 | 10 | √ | 0.0000000000 | 税额 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fparentid | 父ID | int8 | 64 |  | √ | 0 | 父ID |
 | 5 | fserialno | 流水号 | varchar | 50 |  | √ | ' ' | 流水号 |
-| 6 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 7 | fcreaterid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 7 | fcreaterid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 8 | famount | 金额 | numeric | 23 | 10 | √ | 0.0000000000 | 金额 |
 | 9 | finputtaxamount | 即征即退进项税额 | numeric | 23 | 10 | √ | 0.0000000000 | 即征即退进项税额 |
 | 10 | fenddate | 结束日期 | timestamp | 0 |  |  | null | 结束日期 |
@@ -36,5 +36,5 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | pk_tcvat_fz_deduction |  | fid |
-| 2 | idx_tcvat_fz_deduction |  | forgid,fstartdate,fenddate |
+| 1 | idx_tcvat_fz_deduction |  | forgid,fstartdate,fenddate |
+| 2 | pk_tcvat_fz_deduction |  | fid |

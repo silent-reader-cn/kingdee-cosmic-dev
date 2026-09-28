@@ -10,11 +10,11 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fgroupid | 组件类型 | int8 | 64 |  | √ | 0 | 门户组件类型 srm_portal_compgroup |
+| 2 | fgroupid | 组件类型 | int8 | 64 |  | √ | 0 | [门户组件类型 srm_portal_compgroup](../srm_files/srm_portal_compgroup.md) |
 | 3 | faddress | faddress | varchar | 200 |  | √ | ' ' |  |
-| 4 | forgid | 业务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 4 | forgid | 业务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | frightbidtype | frightbidtype | varchar | 50 |  | √ | ' ' |  |
-| 6 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 8 | fregquerybutton | fregquerybutton | varchar | 255 |  | √ | ' ' |  |
 | 9 | fregbuttonname | fregbuttonname | varchar | 255 |  | √ | ' ' |  |
@@ -44,11 +44,11 @@
 | 33 | fleftname | fleftname | varchar | 255 |  | √ | ' ' |  |
 | 34 | frightname | frightname | varchar | 255 |  | √ | ' ' |  |
 | 35 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 36 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 36 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 37 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 38 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
-| 39 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 40 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 39 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 40 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 41 | fcomponentsys | 系统预置 | bpchar | 1 |  | √ | '0' | 系统预置 |
 | 42 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 43 | fnetlink | fnetlink | varchar | 255 |  | √ | ' ' |  |
@@ -58,7 +58,7 @@
 | 47 | ficpdata | ficpdata | varchar | 512 |  | √ | ' ' |  |
 | 48 | floginbutton | floginbutton | varchar | 255 |  | √ | ' ' |  |
 | 49 | fallthemecololr | fallthemecololr | varchar | 100 |  | √ | ' ' |  |
-| 50 | fuseorgid | 使用组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 50 | fuseorgid | 使用组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 51 | fnoticetype | fnoticetype | varchar | 100 |  | √ | ' ' |  |
 
 ### 列规则定义

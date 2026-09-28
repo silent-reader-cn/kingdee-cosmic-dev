@@ -78,7 +78,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 1 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 2 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 3 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 | id |
 | 4 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
@@ -93,8 +93,38 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | pk_totf_sharingplan_orgs |  | fdetailid |
-| 2 | idx_taxc_shareplan_org_entryid |  | fentryid |
+| 1 | idx_taxc_shareplan_org_entryid |  | fentryid |
+| 2 | pk_totf_sharingplan_orgs |  | fdetailid |
+
+---
+
+## 其他税费共享方案-主表 t_totf_sharingplan_edit
+
+- **表名称：** 其他税费共享方案-主表
+- **表名：** t_totf_sharingplan_edit
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
+| 2 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 3 | fsharetype | 共享方案类型 | varchar | 50 |  | √ | ' ' | 共享方案类型,枚举: sljsjj :水利基金不含税收入 whsyjsf :文化事业建设费应征收入 |
+| 4 | fautoshar | 自动共享 | bpchar | 1 |  | √ | '0' | 自动共享 |
+| 5 | fplanname | 方案名称 | varchar | 50 |  | √ | ' ' | 方案名称 |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fid | fid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | pk_totf_sharingplan_edit |  | fid |
+| 2 | idx_taxc_shareplan_edit_org |  | forgid |
 
 ---
 
@@ -122,35 +152,5 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | pk_totf_sharingplan_l |  | fpkid |
-| 2 | idx_totf_sharingplan_l_0 |  | fentryid,flocaleid |
-
----
-
-## 其他税费共享方案-主表 t_totf_sharingplan_edit
-
-- **表名称：** 其他税费共享方案-主表
-- **表名：** t_totf_sharingplan_edit
-
-### 表格列定义
-
-| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 3 | fsharetype | 共享方案类型 | varchar | 50 |  | √ | ' ' | 共享方案类型,枚举: sljsjj :水利基金不含税收入 whsyjsf :文化事业建设费应征收入 |
-| 4 | fautoshar | 自动共享 | bpchar | 1 |  | √ | '0' | 自动共享 |
-| 5 | fplanname | 方案名称 | varchar | 50 |  | √ | ' ' | 方案名称 |
-
-### 列规则定义
-
-| 序号 | 键编码 | 列字段 |
-| :--- | :--- | :--- |
-| 1 | fid | fid |
-
-### 索引定义
-
-| 序号 | 索引名 | 唯一 | 列字段 |
-| :--- | :--- | :--- | :--- |
-| 1 | pk_totf_sharingplan_edit |  | fid |
-| 2 | idx_taxc_shareplan_edit_org |  | forgid |
+| 1 | idx_totf_sharingplan_l_0 |  | fentryid,flocaleid |
+| 2 | pk_totf_sharingplan_l |  | fpkid |

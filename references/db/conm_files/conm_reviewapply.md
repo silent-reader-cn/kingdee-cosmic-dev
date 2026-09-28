@@ -30,8 +30,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_conm_reviewapply_wb_fk |  | fid |
-| 2 | t_conm_reviewapply_wb_pkey |  | fentryid |
+| 1 | t_conm_reviewapply_wb_pkey |  | fentryid |
+| 2 | idx_conm_reviewapply_wb_fk |  | fid |
 
 ---
 
@@ -45,30 +45,30 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | forgid | 申请组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | forgid | 申请组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fbiztime | 申请日期 | timestamp | 0 |  |  | null | 申请日期 |
 | 4 | fparty2nd | 乙方 | varchar | 255 |  | √ | ' ' | 乙方 |
 | 5 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 6 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 7 | fsrcbillentity | 来源单据实体 | varchar | 36 |  | √ | ' ' | 来源单据实体 |
 | 8 | fbillno | 单据编号 | varchar | 80 |  | √ | ' ' | 单据编号 |
-| 9 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 10 | fdeptid | 申请部门 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 9 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 10 | fdeptid | 申请部门 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 11 | fbillstatus | 单据状态 | varchar | 5 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已通过 D :未通过 |
 | 12 | fcomment | 备注 | varchar | 512 |  |  | null | 备注 |
 | 13 | fsrcbillid | 来源单据ID | int8 | 64 |  | √ | 0 | 来源单据ID |
 | 14 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 15 | fbizuserid | 申请人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 15 | fbizuserid | 申请人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 16 | fcontractname | 合同名称 | varchar | 100 |  | √ | ' ' | 合同名称 |
-| 17 | flastupdateuserid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 17 | flastupdateuserid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 18 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
 | 19 | fbillname | 单据名称 | varchar | 100 |  | √ | ' ' | 单据名称 |
 | 20 | flastupdatetime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 21 | ftypeid | 合同类型 | int8 | 64 |  | √ | 0 | 合同类型 conm_type |
-| 22 | fpartcid | 第三方 | int8 | 64 |  | √ | 0 | 商务伙伴 bd_bizpartner |
+| 21 | ftypeid | 合同类型 | int8 | 64 |  | √ | 0 | [合同类型 conm_type](../conm_files/conm_type.md) |
+| 22 | fpartcid | 第三方 | int8 | 64 |  | √ | 0 | [商务伙伴 bd_bizpartner](../base_files/bd_bizpartner.md) |
 | 23 | fparty1st | 甲方 | varchar | 255 |  | √ | ' ' | 甲方 |
 | 24 | fcontractnum | 合同编号 | varchar | 80 |  | √ | ' ' | 合同编号 |
-| 25 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 25 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | finvestrate | 投资比例（%） | numeric | 23 | 10 |  | null | 投资比例（%） |
-| 3 | fnationality | 国籍 | int8 | 64 |  | √ | 0 | 国家和地区 bd_country |
+| 3 | fnationality | 国籍 | int8 | 64 |  | √ | 0 | [国家和地区 bd_country](../base_files/bd_country.md) |
 | 4 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 6 | fgdname | 股东名称 | varchar | 50 |  | √ | ' ' | 股东名称 |
@@ -28,8 +28,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_tccit_policy_fhsbb_fk |  | fid |
-| 2 | pk_tccit_policy_fhsbb |  | fentryid |
+| 1 | pk_tccit_policy_fhsbb |  | fentryid |
+| 2 | idx_tccit_policy_fhsbb_fk |  | fid |
 
 ---
 
@@ -84,7 +84,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | forgid | 组织 | int8 | 64 |  | √ | 0 | 税务组织信息 bastax_taxorg |
+| 2 | forgid | 组织 | int8 | 64 |  | √ | 0 | [税务组织信息 bastax_taxorg](../bastax_files/bastax_taxorg.md) |
 | 3 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 4 | fparententryid | fparententryid | int8 | 64 |  | √ | 0 | pid |
 | 5 | fdeclaration | 申报方式 | varchar | 50 |  | √ | ' ' | 申报方式,枚举: 1 :独立 2 :汇总 3 :被汇总 |
@@ -120,10 +120,10 @@
 | 3 | fstatus | 状态 | varchar | 50 |  | √ | ' ' | 状态,枚举: 0 :未开始 1 :第一步 2 :第二步 3 :第三步 4 :第四步 5 :第五步 |
 | 4 | fillegal | 从事国家限制或禁止行业： | varchar | 50 |  | √ | ' ' | 从事国家限制或禁止行业：,枚举: 1 :是 0 :否 |
 | 5 | fstartdate | 年度期间： | timestamp | 0 |  |  | null | 年度期间： |
-| 6 | forgid | 组织名称： | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | forgid | 组织名称： | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fcodeandname | 行业代码及名称： | int8 | 64 |  | √ | 0 | 行业代码及名称 tpo_tcvat_industrycode |
 | 8 | fdeclaretype | 申报企业类型： | varchar | 50 |  | √ | ' ' | 申报企业类型：,枚举: 100 :非跨地区经营企业 210 :总机构（跨省）——适用《跨地区经营汇总纳税企业所得税征收管理办法》 220 :总机构（跨省）——不适用《跨地区经营汇总纳税企业所得税征收管理办法》 230 :总机构（省内） 311 :分支机构（须进行完整年度申报并按比例纳税） 312 :分支机构（须进行完整年度申报但不就地缴纳） |
-| 9 | fregistertype | 登记注册类型： | int8 | 64 |  | √ | 0 | 注册登记类型 tax_info_registertype |
+| 9 | fregistertype | 登记注册类型： | int8 | 64 |  | √ | 0 | [注册登记类型 tax_info_registertype](../tctb_files/tax_info_registertype.md) |
 | 10 | faccountcriterion | 会计准则或会计制度： | int8 | 64 |  | √ | 0 | 业务定义分录 tpo_tccit_bizdef_entry |
 
 ### 列规则定义

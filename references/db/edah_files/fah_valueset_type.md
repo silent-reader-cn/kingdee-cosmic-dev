@@ -11,10 +11,10 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 4 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 4 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fcreatetime | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
-| 6 | fstrucid | 值集扩展字段 | int8 | 64 |  | √ | 0 | 值集扩展字段定义 fah_flex_struc_type |
+| 6 | fstrucid | 值集扩展字段 | int8 | 64 |  | √ | 0 | [值集扩展字段定义 fah_flex_struc_type](../edah_files/fah_flex_struc_type.md) |
 | 7 | fenable | 使用状态 | bpchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :启用 |
 | 8 | fnumber | 编码 | varchar | 50 |  | √ | ' ' | 编码 |
 | 9 | fdescription | 描述 | varchar | 255 |  | √ | ' ' | 描述 |

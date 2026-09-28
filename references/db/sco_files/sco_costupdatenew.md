@@ -12,14 +12,14 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fmatversion | fmatversion | int8 | 64 |  | √ | 0 |  |
 | 3 | fprojectid | fprojectid | int8 | 64 |  | √ | 0 |  |
-| 4 | fmaterialid | 物料编码 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 4 | fmaterialid | 物料编码 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 5 | fmatgrpid | fmatgrpid | int8 | 64 |  | √ | 0 |  |
 | 6 | fsalcalclogid | fsalcalclogid | int8 | 64 |  | √ | 0 |  |
 | 7 | ftracknumberid | ftracknumberid | int8 | 64 |  | √ | 0 |  |
 | 8 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 9 | fauxprop | fauxprop | int8 | 64 |  | √ | 0 |  |
 | 10 | fconfiguredcodeid | fconfiguredcodeid | int8 | 64 |  | √ | 0 |  |
-| 11 | flot | flot | varchar | 80 |  | √ | ' ' |  |
+| 11 | flot | flot | varchar | 255 |  | √ | ' ' |  |
 | 12 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 
 ### 列规则定义
@@ -49,30 +49,31 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 3 | fresmatbyuseauxpt_tag | fresmatbyuseauxpt_tag | text | 0 |  |  | null |  |
-| 4 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fupdatebillno | 确认单编号 | varchar | 80 |  | √ | ' ' | 确认单编号 |
-| 6 | ftargetcosttype | 目标标准成本方案 | int8 | 64 |  | √ | 0 | 标准成本方案 cad_costtype |
+| 6 | ftargetcosttype | 目标标准成本方案 | int8 | 64 |  | √ | 0 | [标准成本方案 cad_costtype](../basedata_files/cad_costtype.md) |
 | 7 | fresbynoref | fresbynoref | varchar | 2000 |  | √ | ' ' |  |
 | 8 | fupdatestatus | 更新状态 | varchar | 30 |  | √ | ' ' | 更新状态,枚举: N :未完成 Y :已完成 |
 | 9 | fresmatbyuseauxpt | fresmatbyuseauxpt | varchar | 2000 |  | √ | ' ' |  |
 | 10 | fbillno | 单据编号 | varchar | 255 |  | √ | ' ' | 单据编号 |
-| 11 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 12 | fperiodid | 生效期间 | int8 | 64 |  | √ | 0 | 会计日历 bd_period |
-| 13 | fbillstatus | 单据状态 | varchar | 30 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 14 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 15 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
-| 16 | fsrccosttype | 源标准成本方案 | int8 | 64 |  | √ | 0 | 标准成本方案 cad_costtype |
-| 17 | fisquickupdate | 来源于快速更新 | bpchar | 1 |  | √ | '0' | 来源于快速更新 |
-| 18 | fiscalccurlevel | 仅更新本层 | bpchar | 1 |  | √ | '0' | 仅更新本层 |
-| 19 | fisspecifymaterial | fisspecifymaterial | bpchar | 1 |  | √ | '0' |  |
-| 20 | fmatgrpstdid | fmatgrpstdid | int8 | 64 |  | √ | 0 |  |
-| 21 | fupdatebillid | 确认单ID | int8 | 64 |  | √ | 0 | 确认单ID |
-| 22 | fupdatetime | 更新时间 | timestamp | 0 |  |  | null | 更新时间 |
-| 23 | feffecttime | feffecttime | timestamp | 0 |  |  | null |  |
-| 24 | fresbynoref_tag | fresbynoref_tag | text | 0 |  |  | null |  |
-| 25 | fisallupdate | 全量更新 | bpchar | 1 |  | √ | '0' | 全量更新 |
-| 26 | fsourcepage | fsourcepage | varchar | 50 |  | √ | ' ' |  |
-| 27 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fupdatecheckpass | 仅更新合法数据 | bpchar | 1 |  | √ | '0' | 仅更新合法数据 |
+| 12 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 13 | fperiodid | 生效期间 | int8 | 64 |  | √ | 0 | [会计日历 bd_period](../fibd_files/bd_period.md) |
+| 14 | fbillstatus | 单据状态 | varchar | 30 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
+| 15 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 16 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
+| 17 | fsrccosttype | 源标准成本方案 | int8 | 64 |  | √ | 0 | [标准成本方案 cad_costtype](../basedata_files/cad_costtype.md) |
+| 18 | fisquickupdate | 来源于快速更新 | bpchar | 1 |  | √ | '0' | 来源于快速更新 |
+| 19 | fiscalccurlevel | 仅更新本层 | bpchar | 1 |  | √ | '0' | 仅更新本层 |
+| 20 | fisspecifymaterial | fisspecifymaterial | bpchar | 1 |  | √ | '0' |  |
+| 21 | fmatgrpstdid | fmatgrpstdid | int8 | 64 |  | √ | 0 |  |
+| 22 | fupdatebillid | 确认单ID | int8 | 64 |  | √ | 0 | 确认单ID |
+| 23 | fupdatetime | 更新时间 | timestamp | 0 |  |  | null | 更新时间 |
+| 24 | feffecttime | feffecttime | timestamp | 0 |  |  | null |  |
+| 25 | fresbynoref_tag | fresbynoref_tag | text | 0 |  |  | null |  |
+| 26 | fisallupdate | 全量更新 | bpchar | 1 |  | √ | '0' | 全量更新 |
+| 27 | fsourcepage | fsourcepage | varchar | 50 |  | √ | ' ' |  |
+| 28 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

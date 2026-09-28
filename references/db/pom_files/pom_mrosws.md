@@ -105,34 +105,34 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fzone | 功能位置 | int8 | 64 |  | √ | 0 | 功能位置 mpdm_functionlocation |
-| 3 | forgid | 生产组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fzone | 功能位置 | int8 | 64 |  | √ | 0 | [功能位置 mpdm_functionlocation](../mpdm_files/mpdm_functionlocation.md) |
+| 3 | forgid | 生产组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 5 | fattachmentcount | 附件数 | int8 | 64 |  | √ | 0 | 附件数 |
-| 6 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 7 | fcarduser | 出卡者 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 8 | fmaintrade | 主行业 | int8 | 64 |  | √ | 0 | 树形基础资料模板 mpdm_professiona |
-| 9 | fworkcard | 工卡 | int8 | 64 |  | √ | 0 | 工卡 mpdm_mrocardroute |
+| 6 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 7 | fcarduser | 出卡者 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 8 | fmaintrade | 主行业 | int8 | 64 |  | √ | 0 | [树形基础资料模板 mpdm_professiona](../mpdm_files/mpdm_professiona.md) |
+| 9 | fworkcard | 工卡 | int8 | 64 |  | √ | 0 | [工卡 mpdm_mrocardroute](../mpdm_files/mpdm_mrocardroute.md) |
 | 10 | fsorderno | 来源检修工单号 | varchar | 50 |  | √ | ' ' | 来源检修工单号 |
 | 11 | fbillno | 单据编号 | varchar | 30 |  | √ | ' ' | 单据编号 |
 | 12 | fremark | 备注 | varchar | 512 |  | √ | ' ' | 备注 |
-| 13 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | fcustomer | 客户 | int8 | 64 |  | √ | 0 | 客户 bd_customer |
 | 15 | fbillstatus | 单据状态 | varchar | 50 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 16 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 17 | fsrcbillid | 来源检修工单id | int8 | 64 |  | √ | 0 | 来源检修工单id |
 | 18 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
 | 19 | fdatefield | 业务日期 | timestamp | 0 |  |  | null | 业务日期 |
-| 20 | fworkhourunit | 工时单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 20 | fworkhourunit | 工时单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 21 | fprintformat | 打印格式 | varchar | 50 |  | √ | ' ' | 打印格式,枚举: A :CWS B :DIC |
 | 22 | fsrcbillentryid | 来源检修工单分录id | int8 | 64 |  | √ | 0 | 来源检修工单分录id |
 | 23 | fplanhours | 计划消耗工时 | numeric | 23 | 10 | √ | 0 | 计划消耗工时 |
 | 24 | fprintcount | 打印次数 | int8 | 64 |  | √ | 0 | 打印次数 |
-| 25 | farea | 工作区域 | int8 | 64 |  | √ | 0 | 工作区域 mpdm_area |
-| 26 | fmaterielmtc | 检修设备注册号 | int8 | 64 |  | √ | 0 | 物料检修信息 mpdm_materialmtcinfo |
-| 27 | fproject | 项目号 | int8 | 64 |  | √ | 0 | 项目 pmpd_project |
-| 28 | fworkstage | 工作类别 | int8 | 64 |  | √ | 0 | 工作类别 mpdm_workcategories |
-| 29 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 25 | farea | 工作区域 | int8 | 64 |  | √ | 0 | [工作区域 mpdm_area](../mpdm_files/mpdm_area.md) |
+| 26 | fmaterielmtc | 检修设备注册号 | int8 | 64 |  | √ | 0 | [物料检修信息 mpdm_materialmtcinfo](../mpdm_files/mpdm_materialmtcinfo.md) |
+| 27 | fproject | 项目号 | int8 | 64 |  | √ | 0 | [项目 pmpd_project](../fmm_files/pmpd_project.md) |
+| 28 | fworkstage | 工作类别 | int8 | 64 |  | √ | 0 | [工作类别 mpdm_workcategories](../mpdm_files/mpdm_workcategories.md) |
+| 29 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 30 | fbilltype | 单据类型 | int8 | 64 |  | √ | 0 | 单据类型 bos_billtype |
 
 ### 列规则定义
@@ -161,8 +161,8 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fprogroup | 工序组 | int8 | 64 |  | √ | 0 | 工序组(废弃) mpdm_progroup |
-| 3 | fentrymodifier | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fprogroup | 工序组 | int8 | 64 |  | √ | 0 | [工序组(废弃) mpdm_progroup](../mpdm_files/mpdm_progroup.md) |
+| 3 | fentrymodifier | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fmanualversion | 版本号 | varchar | 50 |  | √ | ' ' | 版本号 |
 | 5 | fentrycreatedate | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
 | 6 | fworkhours | 工时 | numeric | 23 | 10 | √ | 0 | 工时 |
@@ -172,20 +172,20 @@
 | 10 | fworkdesc | 工作描述 | varchar | 512 |  | √ | ' ' | 工作描述 |
 | 11 | fhelphours | fhelphours | numeric | 23 | 10 | √ | 0 |  |
 | 12 | fisexistorder | 是否已生成工单 | bpchar | 1 |  | √ | '0' | 是否已生成工单 |
-| 13 | fentryauditor | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fentryauditor | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | frefmanual | 参考手册 | varchar | 50 |  | √ | ' ' | 参考手册,枚举: AMM :AMM WDM :WDM SRM :SRM SWPM :SWPM IPC :IPC CMM :CMM BULLETIN :BULLETIN OTHERS :OTHERS |
 | 15 | fmanualcode | 文件编码 | varchar | 50 |  | √ | ' ' | 文件编码 |
 | 16 | fmodifierfield | fmodifierfield | int8 | 64 |  | √ | 0 |  |
 | 17 | forderno | 补充检修工单号 | varchar | 50 |  | √ | ' ' | 补充检修工单号 |
-| 18 | fentrycreator | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 19 | fenworkhourunit | 工时单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 18 | fentrycreator | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 19 | fenworkhourunit | 工时单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 20 | fishelpmanual | 协助填写手册 | bpchar | 1 |  | √ | '0' | 协助填写手册 |
 | 21 | fmodifydatefield | fmodifydatefield | timestamp | 0 |  |  | null |  |
-| 22 | fhelpuser | 协助者 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 22 | fhelpuser | 协助者 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 23 | frecheck | 复检 | bpchar | 1 |  | √ | '0' | 复检 |
-| 24 | fdoctype | 文件类型 | int8 | 64 |  | √ | 0 | 文件类型 mpdm_doctype |
+| 24 | fdoctype | 文件类型 | int8 | 64 |  | √ | 0 | [文件类型 mpdm_doctype](../mpdm_files/mpdm_doctype.md) |
 | 25 | fentryauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
-| 26 | fprofessiona | 执行行业 | int8 | 64 |  | √ | 0 | 树形基础资料模板 mpdm_professiona |
+| 26 | fprofessiona | 执行行业 | int8 | 64 |  | √ | 0 | [树形基础资料模板 mpdm_professiona](../mpdm_files/mpdm_professiona.md) |
 | 27 | fishelphours | 协助填写预估工时 | bpchar | 1 |  | √ | '0' | 协助填写预估工时 |
 | 28 | fishelp | 请求协助 | bpchar | 1 |  | √ | '0' | 请求协助 |
 | 29 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
@@ -215,7 +215,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 附件字段实体 bd_attachment |
+| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [附件字段实体 bd_attachment](../frame_files/bd_attachment.md) |
 | 2 | fpkid | fpkid | int8 | 64 |  | √ | 0 | FPKID |
 | 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 

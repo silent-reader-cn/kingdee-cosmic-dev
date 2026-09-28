@@ -10,17 +10,17 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fname | fname | varchar | 100 |  | √ | ' ' |  |
 | 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 5 | ftargetentity | 目标单类型 | varchar | 50 |  | √ | ' ' | 单据主实体 bos_billmainentity |
+| 5 | ftargetentity | 目标单类型 | varchar | 50 |  | √ | ' ' | [单据主实体 bos_billmainentity](../mdl_files/bos_billmainentity.md) |
 | 6 | faudittime | faudittime | timestamp | 0 |  |  | null |  |
 | 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 8 | fstatus | 数据状态 | varchar | 5 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 11 | fenable | 使用状态 | varchar | 5 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 12 | fsourceentity | 源单类型 | varchar | 50 |  | √ | ' ' | 单据主实体 bos_billmainentity |
+| 12 | fsourceentity | 源单类型 | varchar | 50 |  | √ | ' ' | [单据主实体 bos_billmainentity](../mdl_files/bos_billmainentity.md) |
 | 13 | fnumber | 编码 | varchar | 50 |  | √ | ' ' | 编码 |
 | 14 | fauditorid | fauditorid | int8 | 64 |  | √ | 0 |  |
 
@@ -49,7 +49,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fname | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
+| 2 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
 | 3 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
 | 4 | fpkid | fpkid | varchar | 18 |  | √ | ' ' | pkid |
 

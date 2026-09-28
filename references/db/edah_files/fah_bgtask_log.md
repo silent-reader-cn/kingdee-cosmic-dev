@@ -10,8 +10,8 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 3 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 3 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | ftasktype | 任务类型 | varchar | 5 |  | √ | ' ' | 任务类型,枚举: 0 :外部数据模型迁出 1 :外部数据模型迁入 |
 | 5 | finstanceid | 运行任务的实例ID | varchar | 50 |  | √ | ' ' | 运行任务的实例ID |
 | 6 | fcreatetime | 任务启动时间 | timestamp | 0 |  |  | null | 任务启动时间 |
@@ -64,5 +64,5 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_fah_bgtask_log_detail |  | fid |
-| 2 | pk_fah_bgtask_log_detail |  | fentryid |
+| 1 | pk_fah_bgtask_log_detail |  | fentryid |
+| 2 | idx_fah_bgtask_log_detail |  | fid |

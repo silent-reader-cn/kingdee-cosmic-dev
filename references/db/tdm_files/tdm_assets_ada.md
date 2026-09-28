@@ -14,7 +14,7 @@
 | 3 | fmodifierid | fmodifierid | int8 | 64 |  | √ | 0 |  |
 | 4 | fbillstatus | fbillstatus | varchar | 30 |  | √ | ' ' |  |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 6 | forgid | 核算组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | forgid | 核算组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | ftotalallowance | 累计折旧摊销额 | numeric | 23 | 10 | √ | 0.0000000000 | 累计折旧摊销额 |
 | 8 | faccountingperiod | 会计期间 | timestamp | 0 |  |  | null | 会计期间 |
 | 9 | fauditdate | fauditdate | timestamp | 0 |  |  | null |  |

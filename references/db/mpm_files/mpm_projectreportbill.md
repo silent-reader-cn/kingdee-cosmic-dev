@@ -88,6 +88,34 @@
 
 ---
 
+## 附件-附件表 t_mpm_taskreport_att
+
+- **表名称：** 附件-附件表
+- **表名：** t_mpm_taskreport_att
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [附件字段实体 bd_attachment](../frame_files/bd_attachment.md) |
+| 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | FPKID |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fpkid | fpkid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_mpm_reportatt_fid |  | fid |
+| 2 | pk_mpm_report_att |  | fpkid |
+
+---
+
 ## 项目汇报单-主表 t_mpm_taskreport
 
 - **表名称：** 项目汇报单-主表
@@ -98,23 +126,33 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 3 | fbillstatus | 单据状态 | bpchar | 1 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 5 | factualenddate | 实际结束时间 | timestamp | 0 |  |  | null | 实际结束时间 |
-| 6 | freporthours | freporthours | numeric | 23 | 10 | √ | 0 |  |
-| 7 | factualstartdate | 实际开始时间 | timestamp | 0 |  |  | null | 实际开始时间 |
-| 8 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
-| 9 | freportdate | 汇报日期 | timestamp | 0 |  |  | null | 汇报日期 |
-| 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 11 | fplanhours | fplanhours | numeric | 23 | 10 | √ | 0 |  |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 13 | fschedule | 累计进度(%) | numeric | 23 | 10 | √ | 0 | 累计进度(%) |
-| 14 | fcurreporthours | 本次汇报工时(小时) | numeric | 23 | 10 | √ | 0 | 本次汇报工时(小时) |
-| 15 | ftaskid | 项目任务 | int8 | 64 |  | √ | 0 | 项目任务F7 mpm_task_f7 |
-| 16 | freportuserid | 汇报用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 17 | fbillno | 单据编号 | varchar | 80 |  | √ | ' ' | 单据编号 |
-| 18 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | factualenddate | 实际结束时间 | timestamp | 0 |  |  | null | 实际结束时间 |
+| 3 | factualstartdate | 实际开始时间 | timestamp | 0 |  |  | null | 实际开始时间 |
+| 4 | freportdate | 汇报日期 | timestamp | 0 |  |  | null | 汇报日期 |
+| 5 | fiscancel | 是否作废 | bpchar | 1 |  | √ | '0' | 是否作废 |
+| 6 | freporterdept | 汇报人部门 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 9 | foriginalhours | 原始汇报工时(小时) | numeric | 23 | 10 | √ | 0 | 原始汇报工时(小时) |
+| 10 | freporterorg | 汇报人组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 11 | fschedule | 累计进度(%) | numeric | 23 | 10 | √ | 0 | 累计进度(%) |
+| 12 | freportuserid | 汇报用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 13 | fcheckdate | 复核时间 | timestamp | 0 |  |  | null | 复核时间 |
+| 14 | fbillno | 单据编号 | varchar | 80 |  | √ | ' ' | 单据编号 |
+| 15 | fisadjusthour | 是否调整工时 | bpchar | 1 |  | √ | '0' | 是否调整工时 |
+| 16 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 17 | fprojectid | 项目 | int8 | 64 |  | √ | 0 | [项目 bd_project](../basedata_files/bd_project.md) |
+| 18 | fbillstatus | 单据状态 | bpchar | 1 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
+| 19 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 20 | fcheckerid | 复核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 21 | freporthours | freporthours | numeric | 23 | 10 | √ | 0 |  |
+| 22 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
+| 23 | fplanhours | fplanhours | numeric | 23 | 10 | √ | 0 |  |
+| 24 | fmodifyhourdesc | 修改工时说明 | varchar | 2000 |  | √ | ' ' | 修改工时说明 |
+| 25 | fcurreporthours | 本次汇报工时(小时) | numeric | 23 | 10 | √ | 0 | 本次汇报工时(小时) |
+| 26 | ftaskid | 项目任务 | int8 | 64 |  | √ | 0 | [项目任务F7 mpm_task_f7](../mpm_files/mpm_task_f7.md) |
+| 27 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 28 | fcheckstatus | 工时复核状态 | bpchar | 1 |  | √ | ' ' | 工时复核状态,枚举: 0 :待确认 1 :已确认 2 :已驳回 |
 
 ### 列规则定义
 
@@ -129,3 +167,32 @@
 | 1 | idx_mpm_taskreport |  | fid |
 | 2 | idx_mpm_taskreport_fbillno |  | fbillno |
 | 3 | pk_mpm_taskreport |  | fid |
+
+---
+
+## 项目汇报单-多语言表 t_mpm_taskreport_l
+
+- **表名称：** 项目汇报单-多语言表
+- **表名：** t_mpm_taskreport_l
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fmodifyhourdesc | 修改工时说明 | varchar | 2000 |  | √ | ' ' | 修改工时说明 |
+| 3 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
+| 4 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fpkid | fpkid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_mpm_taskreport_l |  | fid,flocaleid |
+| 2 | pk_mpm_taskreport_l |  | fpkid |

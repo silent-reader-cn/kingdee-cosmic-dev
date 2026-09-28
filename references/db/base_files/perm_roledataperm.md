@@ -10,11 +10,11 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | varchar | 18 |  | √ | ' ' | id |
-| 2 | froleid | 角色 | varchar | 18 |  | √ | ' ' | 通用角色 perm_role |
+| 2 | froleid | 角色 | varchar | 18 |  | √ | ' ' | [通用角色 perm_role](../base_files/perm_role.md) |
 | 3 | fisupdate | 是否升级成功 | bpchar | 1 |  | √ | '0' | 是否升级成功 |
 | 4 | fupdatetime | 升级时间 | timestamp | 0 |  |  | null | 升级时间 |
-| 5 | fupdatorid | 升级人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 6 | fdatapermid | 数据权限id | varchar | 18 |  | √ | ' ' | 数据权限 perm_dataperm |
+| 5 | fupdatorid | 升级人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 6 | fdatapermid | 数据权限id | varchar | 18 |  | √ | ' ' | [数据权限 perm_dataperm](../base_files/perm_dataperm.md) |
 
 ### 列规则定义
 

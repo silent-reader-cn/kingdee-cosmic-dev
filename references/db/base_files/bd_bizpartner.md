@@ -18,28 +18,28 @@
 | 7 | fsocietycreditcode | 统一社会信用代码 | varchar | 255 |  |  | null | 统一社会信用代码 |
 | 8 | forgcode | 组织机构代码 | varchar | 255 |  |  | null | 组织机构代码 |
 | 9 | fdisabledate | 禁用时间 | timestamp | 0 |  |  | null | 禁用时间 |
-| 10 | fcuregcapital | 注册资本币种 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 10 | fcuregcapital | 注册资本币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 | 11 | fbusilicence | fbusilicence | varchar | 255 |  |  | null |  |
 | 12 | fidno | 身份证号 | varchar | 50 |  | √ | ' ' | 身份证号 |
 | 13 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 14 | fbusinessscope | 经营范围 | varchar | 2000 |  | √ | ' ' | 经营范围 |
 | 15 | fstatus | 数据状态 | varchar | 30 |  |  | null | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 16 | fpostalcode | 电子邮箱 | varchar | 50 |  | √ | ' ' | 电子邮箱 |
-| 17 | fcreatorid | 创建人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 17 | fcreatorid | 创建人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 18 | fmasterid | 主数据内码 | int8 | 64 |  |  | null | 主数据内码 |
-| 19 | finternalcompanyid | 内部业务单元 | int8 | 64 |  |  | null | 业务单元 bos_org |
+| 19 | finternalcompanyid | 内部业务单元 | int8 | 64 |  |  | null | [业务单元 bos_org](../base_files/bos_org.md) |
 | 20 | fcorporation | 集团总公司 | bpchar | 1 |  | √ | '0' | 集团总公司 |
 | 21 | festablishdate | 成立日期 | timestamp | 0 |  |  | null | 成立日期 |
 | 22 | ffax | 传真 | varchar | 40 |  |  | null | 传真 |
 | 23 | fadmindivision | 行政区划 | varchar | 100 |  | √ | ' ' | 行政区划 |
-| 24 | faffiliatedgroup | 所属集团 | int8 | 64 |  | √ | 0 | 商务伙伴 bd_bizpartner |
+| 24 | faffiliatedgroup | 所属集团 | int8 | 64 |  | √ | 0 | [商务伙伴 bd_bizpartner](../base_files/bd_bizpartner.md) |
 | 25 | fapprovedate | fapprovedate | timestamp | 0 |  |  | null |  |
 | 26 | fphone | 联系电话 | varchar | 60 |  |  | null | 联系电话 |
-| 27 | fmodifierid | 修改人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 27 | fmodifierid | 修改人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 28 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
 | 29 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 30 | fcountryid | 国家/地区 | int8 | 64 |  |  | null | 国家和地区 bd_country |
-| 31 | fdisablerid | 禁用人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 30 | fcountryid | 国家/地区 | int8 | 64 |  |  | null | [国家和地区 bd_country](../base_files/bd_country.md) |
+| 31 | fdisablerid | 禁用人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 32 | fregcapital | 注册资本 | varchar | 40 |  | √ | ' ' | 注册资本 |
 | 33 | fyzjid | 云之家内码 | varchar | 36 |  |  | null | 云之家内码 |
 | 34 | fbackgroundimg | fbackgroundimg | varchar | 255 |  |  | null |  |

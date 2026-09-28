@@ -11,12 +11,12 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | varchar | 22 |  | √ | ' ' | id |
 | 2 | fcreated_time | 时间戳（服务器时间） | int8 | 64 |  | √ | 0 | 时间戳（服务器时间） |
-| 3 | ftarget_system | 目标系统 | int8 | 64 |  | √ | 0 | 连接器配置 isc_database_link |
+| 3 | ftarget_system | 目标系统 | int8 | 64 |  | √ | 0 | [连接器配置 isc_database_link](../iscb_files/isc_database_link.md) |
 | 4 | fsource_type | 源单类型 | varchar | 50 |  | √ | ' ' | 源单类型 |
 | 5 | fentry_mapping | 分录ID映射关系 | varchar | 2000 |  | √ | ' ' | 分录ID映射关系 |
 | 6 | fentry_mapping_tag | 分录ID映射关系_详情 | text | 0 |  |  | null | 分录ID映射关系_详情 |
 | 7 | ftarget_oid | 目标单ID | varchar | 100 |  | √ | ' ' | 目标单ID |
-| 8 | fsource_system | 源系统 | int8 | 64 |  | √ | 0 | 连接器配置 isc_database_link |
+| 8 | fsource_system | 源系统 | int8 | 64 |  | √ | 0 | [连接器配置 isc_database_link](../iscb_files/isc_database_link.md) |
 | 9 | fsource_oid | 源单ID | varchar | 100 |  | √ | ' ' | 源单ID |
 | 10 | ftarget_type | 目标单类型 | varchar | 50 |  | √ | ' ' | 目标单类型 |
 

@@ -41,40 +41,41 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fgroupid | 分类 | int8 | 64 |  | √ | 0 | 执行方案分类 qcbd_invimpschemgrp |
-| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 4 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fgroupid | 分类 | int8 | 64 |  | √ | 0 | [执行方案分类 qcbd_invimpschemgrp](../qcbd_files/qcbd_invimpschemgrp.md) |
+| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 4 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | filterstring | 通用过滤控件文本 | varchar | 255 |  | √ | ' ' | 通用过滤控件文本 |
 | 6 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 7 | fstatus | 数据状态 | varchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 10 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 11 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
 | 12 | filterstring_tag | 通用过滤控件文本_详情 | text | 0 |  |  | null | 通用过滤控件文本_详情 |
 | 13 | fxkallocationtype | 分配类型 | varchar | 30 |  | √ | ' ' | 分配类型,枚举: 1 :个性化 2 :共享型 |
-| 14 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 14 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 15 | finspectfreezeinv | 启用库存冻结 | bpchar | 1 |  | √ | '0' | 启用库存冻结 |
 | 16 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 17 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 18 | fapplyorgid | 申请组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 17 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 18 | fapplyorgid | 申请组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 19 | finspectleadtime | 检验提前期（天） | int4 | 32 |  | √ | 0 | 检验提前期（天） |
 | 20 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 21 | fsetdate | 指定日期 | timestamp | 0 |  |  | null | 指定日期 |
-| 22 | ffirstinspectdate | 首次检验日期 | varchar | 5 |  | √ | ' ' | 首次检验日期,枚举: A :生产日期 B :到期日期 C :指定日期 |
+| 22 | ffirstinspectdate | 首次检验日期 | varchar | 5 |  | √ | ' ' | 首次检验日期,枚举: A :生产日期 B :到期日期 C :指定日期 D :生产日期+固定期 E :有效期至-固定期 F :有效期至+固定期 G :入库日期 H :入库日期+固定期 |
 | 23 | finspectcyscle | 检验周期 | varchar | 5 |  | √ | ' ' | 检验周期,枚举: A :月 B :天 |
-| 24 | fauditdate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
-| 25 | fautoexec | 自动执行 | bpchar | 1 |  | √ | '0' | 自动执行 |
-| 26 | flongmon | 月 | int4 | 32 |  | √ | 0 | 月 |
-| 27 | fctrlstrategy | 控制策略 | varchar | 5 |  | √ | ' ' | 控制策略,枚举: 5 :全局共享 |
-| 28 | fquaorgid | 质检组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 29 | fenable | 使用状态 | varchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 30 | fdatasource | 数据源 | varchar | 5 |  | √ | ' ' | 数据源,枚举: A :即时库存 B :物料主数据 |
-| 31 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
-| 32 | flongday | 天 | int4 | 32 |  | √ | 0 | 天 |
-| 33 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
-| 34 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 35 | finspectnumstyle | 检验数量取值 | varchar | 5 |  | √ | ' ' | 检验数量取值,枚举: A :数量 B :可用量 |
+| 24 | ffixterm | 固定期（天） | int4 | 32 |  | √ | 0 | 固定期（天） |
+| 25 | fauditdate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
+| 26 | fautoexec | 自动执行 | bpchar | 1 |  | √ | '0' | 自动执行 |
+| 27 | flongmon | 月 | int4 | 32 |  | √ | 0 | 月 |
+| 28 | fctrlstrategy | 控制策略 | varchar | 5 |  | √ | ' ' | 控制策略,枚举: 5 :全局共享 |
+| 29 | fquaorgid | 质检组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 30 | fenable | 使用状态 | varchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 31 | fdatasource | 数据源 | varchar | 5 |  | √ | ' ' | 数据源,枚举: A :即时库存 B :物料主数据 |
+| 32 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
+| 33 | flongday | 天 | int4 | 32 |  | √ | 0 | 天 |
+| 34 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
+| 35 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 36 | finspectnumstyle | 检验数量取值 | varchar | 5 |  | √ | ' ' | 检验数量取值,枚举: A :数量 B :可用量 |
 
 ### 列规则定义
 
@@ -89,8 +90,8 @@
 | 1 | idx_t_qcbd_invpscm_createorg |  | fcreateorgid |
 | 2 | idx_qcbd_invpcm_fcreatetime |  | fcreatetime |
 | 3 | pk_qcbd_invpscm |  | fid |
-| 4 | uidx_qcbd_invpscm_billno |  | fnumber |
-| 5 | idx_t_qcbd_invpscm_master |  | fmasterid |
+| 4 | idx_t_qcbd_invpscm_master |  | fmasterid |
+| 5 | uidx_qcbd_invpscm_billno |  | fnumber |
 
 ---
 
@@ -189,7 +190,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -251,7 +252,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 物料分类 bd_materialgroup |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [物料分类 bd_materialgroup](../basedata_files/bd_materialgroup.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义

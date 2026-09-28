@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fsubelementid | 成本子要素编码 | int8 | 64 |  | √ | 0 | 成本子要素 cad_subelement |
+| 2 | fsubelementid | 成本子要素编码 | int8 | 64 |  | √ | 0 | [成本子要素 cad_subelement](../basedata_files/cad_subelement.md) |
 | 3 | funjoindiffamt | 未吸收费用 | numeric | 23 | 10 | √ | 0 | 未吸收费用 |
 | 4 | ffalldiff | 跌价差异 | numeric | 23 | 10 | √ | 0 | 跌价差异 |
 | 5 | fmadediff | 制造费用差异 | numeric | 23 | 10 | √ | 0 | 制造费用差异 |
@@ -26,10 +26,10 @@
 | 15 | ftransferamount | 转出金额(无意义删除 | numeric | 23 | 10 | √ | 0 | 转出金额(无意义删除 |
 | 16 | finvoicediff | 发票价差 | numeric | 23 | 10 | √ | 0 | 发票价差 |
 | 17 | fotherdiff | 其他价差 | numeric | 23 | 10 | √ | 0 | 其他价差 |
-| 18 | felementid | 成本要素编码 | int8 | 64 |  | √ | 0 | 成本要素 cad_element |
+| 18 | felementid | 成本要素编码 | int8 | 64 |  | √ | 0 | [成本要素 cad_element](../basedata_files/cad_element.md) |
 | 19 | ffeediff | 费用价差 | numeric | 23 | 10 | √ | 0 | 费用价差 |
 | 20 | fstdcostupamt | 标准成本变更差异 | numeric | 23 | 10 | √ | 0 | 标准成本变更差异 |
-| 21 | fcostobjectid | 成本核算对象 | int8 | 64 |  | √ | 0 | 成本核算对象 cad_costobjectf7 |
+| 21 | fcostobjectid | 成本核算对象 | int8 | 64 |  | √ | 0 | [成本核算对象 cad_costobjectf7](../aca_files/cad_costobjectf7.md) |
 | 22 | fdifamount | fdifamount | numeric | 23 | 10 | √ | 0 |  |
 | 23 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 24 | fbalanceamount | 待转余额 | numeric | 23 | 10 | √ | 0 | 待转余额 |
@@ -92,35 +92,37 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fdifftotal | 差异总额 | numeric | 23 | 10 | √ | 0 | 差异总额 |
-| 3 | fmaterialid | 物料 | int8 | 64 |  | √ | 0 | 物料 bd_material |
-| 4 | forgid | 核算组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | fmaterialid | 物料 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
+| 4 | forgid | 核算组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | fauxptyid | 辅助属性 | int8 | 64 |  | √ | 0 | null 001 |
-| 6 | fconfiguredcodeid | 配置号 | int8 | 64 |  | √ | 0 | 配置号 bd_configuredcode |
+| 6 | fconfiguredcodeid | 配置号 | int8 | 64 |  | √ | 0 | [配置号（废弃） bd_configuredcode](../sbd_files/bd_configuredcode.md) |
 | 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 8 | fbiztype | 分配单类型 | varchar | 30 |  | √ | ' ' | 分配单类型,枚举: 00 :完工 01 :在制 |
-| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 10 | fbecostobjectid | 所属成本核算对象 | int8 | 64 |  | √ | 0 | 成本核算对象 sco_costobjectf7 |
+| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 10 | fbecostobjectid | 所属成本核算对象 | int8 | 64 |  | √ | 0 | [成本核算对象f7 sco_costobjectf7](../sco_files/sco_costobjectf7.md) |
 | 11 | fcalcschemeid | fcalcschemeid | int8 | 64 |  | √ | 0 |  |
-| 12 | fcostaccountid | 成本主体 | int8 | 64 |  | √ | 0 | 成本主体 cal_bd_costaccount |
-| 13 | ftracknumberid | 跟踪号 | int8 | 64 |  | √ | 0 | 跟踪号 bd_tracknumber |
-| 14 | fkeycolid | 卷算维度数据 | int8 | 64 |  | √ | 0 | 卷算维度数据表 cad_keycol |
-| 15 | flot | 批号 | varchar | 80 |  | √ | ' ' | 批号 |
-| 16 | fbillno | 单据编号 | varchar | 255 |  | √ | ' ' | 单据编号 |
-| 17 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 18 | fcostcenterid | 成本中心 | int8 | 64 |  | √ | 0 | 成本中心 bos_costcenter |
-| 19 | fperiodid | 会计期间 | int8 | 64 |  | √ | 0 | 会计日历 bd_period |
-| 20 | fprojectid | 项目号 | int8 | 64 |  | √ | 0 | 项目 bd_project |
-| 21 | fbillstatus | 单据状态 | varchar | 30 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 22 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 23 | fversionid | 物料版本 | int8 | 64 |  | √ | 0 | BOM版本 bd_bomversion |
-| 24 | fvouchernum | 凭证号 | varchar | 80 |  | √ | ' ' | 凭证号 |
-| 25 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
-| 26 | fcostobjbizstatus | 业务状态 | varchar | 30 |  | √ | ' ' | 业务状态,枚举: A :未结算 B :已结算 |
-| 27 | fdifftype | 差异类型 | varchar | 30 |  | √ | ' ' | 差异类型,枚举: G :订单价差 H :发票价差 K :费用价差 M :标准成本变更差异 P :材料耗用差异 Q :制造费用差异 R :未吸收费用差异 S :成本更新差异 T :其他差异 C :跌价差异 |
-| 28 | fmaincostobjectid | 主成本核算对象 | int8 | 64 |  | √ | 0 | 成本核算对象 sco_costobjectf7 |
-| 29 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
-| 30 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 31 | fkeycol | 维度字段 | varchar | 50 |  | √ | ' ' | 维度字段 |
+| 12 | fcostaccountid | 成本主体 | int8 | 64 |  | √ | 0 | [成本主体 cal_bd_costaccount](../cal_files/cal_bd_costaccount.md) |
+| 13 | ftracknumberid | 跟踪号 | int8 | 64 |  | √ | 0 | [跟踪号 bd_tracknumber](../sbd_files/bd_tracknumber.md) |
+| 14 | fkeycolid | 卷算维度数据 | int8 | 64 |  | √ | 0 | [卷算维度数据表 cad_keycol](../cad_files/cad_keycol.md) |
+| 15 | flot | 批号 | varchar | 255 |  | √ | ' ' | 批号 |
+| 16 | fsettlementobj | 结算对象 | varchar | 50 |  | √ | 'MAT' | 结算对象,枚举: MAT :物料 GL :总账 FAX :固定资产 |
+| 17 | fbillno | 单据编号 | varchar | 255 |  | √ | ' ' | 单据编号 |
+| 18 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 19 | fcostcenterid | 成本中心 | int8 | 64 |  | √ | 0 | [成本中心 bos_costcenter](../basedata_files/bos_costcenter.md) |
+| 20 | fperiodid | 会计期间 | int8 | 64 |  | √ | 0 | [会计日历 bd_period](../fibd_files/bd_period.md) |
+| 21 | fprojectid | 项目号 | int8 | 64 |  | √ | 0 | [项目 bd_project](../basedata_files/bd_project.md) |
+| 22 | fbillstatus | 单据状态 | varchar | 30 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
+| 23 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 24 | fversionid | 物料版本 | int8 | 64 |  | √ | 0 | [BOM版本 bd_bomversion](../basedata_files/bd_bomversion.md) |
+| 25 | fvouchernum | 凭证号 | varchar | 80 |  | √ | ' ' | 凭证号 |
+| 26 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
+| 27 | fcostobjbizstatus | 业务状态 | varchar | 30 |  | √ | ' ' | 业务状态,枚举: A :未结算 B :已结算 |
+| 28 | fdifftype | 差异类型 | varchar | 30 |  | √ | ' ' | 差异类型,枚举: G :订单价差 H :发票价差 K :费用价差 M :标准成本变更差异 P :材料耗用差异 Q :制造费用差异 R :未吸收费用差异 S :成本更新差异 T :其他差异 C :跌价差异 |
+| 29 | fmaincostobjectid | 主成本核算对象 | int8 | 64 |  | √ | 0 | [成本核算对象f7 sco_costobjectf7](../sco_files/sco_costobjectf7.md) |
+| 30 | fbookdate | 记账日期 | timestamp | 0 |  |  | null | 记账日期 |
+| 31 | fcurrencyid | 币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
+| 32 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 33 | fkeycol | 维度字段 | varchar | 50 |  | √ | ' ' | 维度字段 |
 
 ### 列规则定义
 
@@ -147,14 +149,14 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | flastmaterialid | 子项物料 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 1 | flastmaterialid | 子项物料 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 2 | fweightvalue | 比值 | numeric | 23 | 10 | √ | 0 | 比值 |
 | 3 | flastauxptyid | 辅助属性 | int8 | 64 |  | √ | 0 | null 001 |
 | 4 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 5 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 | id |
 | 6 | fadjamount | 调整金额 | numeric | 23 | 10 | √ | 0 | 调整金额 |
 | 7 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
-| 8 | flastversionid | 版本 | int8 | 64 |  | √ | 0 | BOM版本 bd_bomversion |
+| 8 | flastversionid | 版本 | int8 | 64 |  | √ | 0 | [BOM版本 bd_bomversion](../basedata_files/bd_bomversion.md) |
 
 ### 列规则定义
 

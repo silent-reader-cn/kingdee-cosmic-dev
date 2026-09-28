@@ -13,7 +13,7 @@
 | 2 | ftaxpayer_name | 纳税人名称 | varchar | 120 |  | √ | ' ' | 纳税人名称 |
 | 3 | ftaxpayer_tax_no | 纳税人税号 | varchar | 32 |  | √ | ' ' | 纳税人税号 |
 | 4 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 5 | ftaxpayer_org | 核算组织 | int8 | 64 |  | √ | 0 | 企业管理 bdm_org |
+| 5 | ftaxpayer_org | 核算组织 | int8 | 64 |  | √ | 0 | [企业管理 bdm_org](../bdm_files/bdm_org.md) |
 | 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 
 ### 列规则定义
@@ -43,16 +43,16 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | freceipttype | 按签收状态 | varchar | 50 |  | √ | ' ' | 按签收状态,枚举: -1 :不限 0 :未签收 1 :已签收 |
-| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | finput_out_amount | 进项转出 | numeric | 23 | 10 | √ | 0 | 进项转出 |
-| 5 | faccountingorgid | 核算组织 | int8 | 64 |  | √ | 0 | 企业管理 bdm_org |
+| 5 | faccountingorgid | 核算组织 | int8 | 64 |  | √ | 0 | [企业管理 bdm_org](../bdm_files/bdm_org.md) |
 | 6 | fexit_return_taxamount | 出口退税 | numeric | 23 | 10 | √ | 0 | 出口退税 |
-| 7 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 7 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 9 | ftaxname | 纳税人名称 | varchar | 50 |  | √ | ' ' | 纳税人名称 |
 | 10 | ftick | 按是否勾选 | varchar | 50 |  | √ | ' ' | 按是否勾选,枚举: -1 :不限 1 :是 0 :否 |
 | 11 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 14 | finvoiceresouce | 按来源方式 | varchar | 50 |  | √ | ' ' | 按来源方式,枚举: -1 :不限 12 :扫描仪采集 21 :拍照采集 22 :扫码采集 23 :邮箱收票 29 :短信收票 15 :税局同步 27 :微信卡包 25 :云票儿 24 :滴滴发票 |
 | 15 | finvovicestatus | 按使用状态 | varchar | 50 |  | √ | ' ' | 按使用状态,枚举: -1 :不限 1 :未用 30 :在用 60 :已用 65 :已入账 |
@@ -61,8 +61,8 @@
 | 18 | fbitindex | 位图 | int8 | 64 |  | √ | 0 | 位图 |
 | 19 | ftaxno | 纳税人识别号 | varchar | 50 |  | √ | ' ' | 纳税人识别号 |
 | 20 | fdeductconfig | 抵扣规则 | varchar | 50 |  | √ | ' ' | 抵扣规则,枚举: 1 :按固定税负率倒算进项税，进行抵扣 2 :按可抵扣票据全自动抵扣 |
-| 21 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 22 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 21 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 22 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 23 | finput_taxamount | 进项税额 | numeric | 23 | 10 | √ | 0 | 进项税额 |
 | 24 | fname | 方案名称 | varchar | 100 |  | √ | ' ' | 方案名称 |
 | 25 | fdeduction_purpose | 抵扣用途按钮组 | varchar | 50 |  | √ | ' ' | 抵扣用途按钮组,枚举: 3 :退税勾选 1 :抵扣勾选 2 :不抵扣勾选 -1 :不限 |
@@ -109,7 +109,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 手动添加单据类型 rim_expense_type |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [手动添加单据类型 rim_expense_type](../rim_files/rim_expense_type.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义

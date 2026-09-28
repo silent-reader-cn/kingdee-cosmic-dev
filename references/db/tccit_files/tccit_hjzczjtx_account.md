@@ -1,23 +1,23 @@
-# 汇缴资产折旧摊销台账-tccit_hjzczjtx_account
+# 汇缴资产折旧摊销台账（废弃）-tccit_hjzczjtx_account
 
-## 汇缴资产折旧摊销台账-主表 t_tccit_hjzczjtx_account
+## 汇缴资产折旧摊销台账（废弃）-主表 t_tccit_hjzczjtx_account
 
-- **表名称：** 汇缴资产折旧摊销台账-主表
+- **表名称：** 汇缴资产折旧摊销台账（废弃）-主表
 - **表名：** t_tccit_hjzczjtx_account
 
 ### 表格列定义
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 1 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 2 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 3 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | fjszjtxlx | 加速折旧摊销类型 | int8 | 64 |  | √ | 0 | 项目取数（树） tpo_yearitems_tree |
 | 5 | fbuytime | 购入日期 | timestamp | 0 |  |  | null | 购入日期 |
 | 6 | ftaxassetstype | 税务资产类别 | int8 | 64 |  | √ | 0 | 项目取数（树） tpo_yearitems_tree |
 | 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 8 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 11 | fassetsname | 资产名称 | varchar | 50 |  | √ | ' ' | 资产名称 |
 | 12 | fpostingdate | 折旧起始日期 | timestamp | 0 |  |  | null | 折旧起始日期 |
@@ -160,9 +160,9 @@
 
 ---
 
-## 汇缴资产折旧摊销台账-多语言表 t_tccit_hjzczjtx_account_l
+## 汇缴资产折旧摊销台账（废弃）-多语言表 t_tccit_hjzczjtx_account_l
 
-- **表名称：** 汇缴资产折旧摊销台账-多语言表
+- **表名称：** 汇缴资产折旧摊销台账（废弃）-多语言表
 - **表名：** t_tccit_hjzczjtx_account_l
 
 ### 表格列定义

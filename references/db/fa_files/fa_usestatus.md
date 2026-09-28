@@ -65,9 +65,9 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fremark | 备注 | varchar | 255 |  |  | ' ' | 备注 |
-| 3 | fname | 名称 | varchar | 100 |  |  | ' ' | 名称 |
-| 4 | ffullname | 长名称 | varchar | 100 |  |  | ' ' | 长名称 |
+| 2 | fremark | 备注 | varchar | 500 |  |  | ' ' | 备注 |
+| 3 | fname | 名称 | varchar | 500 |  |  | ' ' | 名称 |
+| 4 | ffullname | 长名称 | varchar | 500 |  |  | ' ' | 长名称 |
 | 5 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
 | 6 | fpkid | fpkid | varchar | 18 |  | √ | ' ' | pkid |
 
@@ -97,30 +97,31 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fisleaf | 是否叶子 | bpchar | 1 |  | √ | '0' | 是否叶子 |
-| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 4 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 4 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 6 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 7 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 7 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 8 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 9 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 10 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
 | 11 | fissyspreset | 系统预置 | bpchar | 1 |  | √ | '0' | 系统预置 |
-| 12 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 13 | fremark | 备注 | varchar | 255 |  |  | ' ' | 备注 |
-| 14 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 15 | fname | 名称 | varchar | 100 |  |  | ' ' | 名称 |
-| 16 | fparentid | 上级 | int8 | 64 |  | √ | 0 | 使用状态 fa_usestatus |
+| 12 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 13 | fremark | 备注 | varchar | 500 |  |  | ' ' | 备注 |
+| 14 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 15 | fname | 名称 | varchar | 500 |  |  | ' ' | 名称 |
+| 16 | fparentid | 上级 | int8 | 64 |  | √ | 0 | [使用状态 fa_usestatus](../fa_files/fa_usestatus.md) |
 | 17 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 18 | ffullname | 长名称 | varchar | 100 |  |  | ' ' | 长名称 |
+| 18 | ffullname | 长名称 | varchar | 500 |  |  | ' ' | 长名称 |
 | 19 | fisdepre | 是否计提折旧 | bpchar | 1 |  | √ | '0' | 是否计提折旧 |
 | 20 | flongnumber | 长编码 | varchar | 80 |  | √ | ' ' | 长编码 |
-| 21 | fctrlstrategy | 控制策略 | varchar | 10 |  | √ | ' ' | 控制策略,枚举: 5 :全局共享 7 :私有 |
-| 22 | flevel | 级次 | int8 | 64 |  | √ | 0 | 级次 |
-| 23 | fenable | 使用状态 | varchar | 1 |  | √ | '0' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 24 | fnumber | 编号 | varchar | 30 |  | √ | ' ' | 编号 |
-| 25 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
-| 26 | fisdefault | 是否默认 | bpchar | 1 |  | √ | '0' | 是否默认 |
+| 21 | fmigsrc | 是否迁移 | int4 | 32 |  | √ | 0 | 是否迁移 |
+| 22 | fctrlstrategy | 控制策略 | varchar | 10 |  | √ | ' ' | 控制策略,枚举: 5 :全局共享 7 :私有 |
+| 23 | flevel | 级次 | int8 | 64 |  | √ | 0 | 级次 |
+| 24 | fenable | 使用状态 | varchar | 1 |  | √ | '0' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 25 | fnumber | 编号 | varchar | 30 |  | √ | ' ' | 编号 |
+| 26 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
+| 27 | fisdefault | 是否默认 | bpchar | 1 |  | √ | '0' | 是否默认 |
 
 ### 列规则定义
 

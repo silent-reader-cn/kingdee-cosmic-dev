@@ -41,7 +41,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fcreateorgid | fcreateorgid | int8 | 64 |  | √ | 0 |  |
 | 3 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 6 | forgid | forgid | int8 | 64 |  | √ | 0 |  |
 | 7 | fispreset | 系统预置 | bpchar | 1 |  | √ | '0' | 系统预置 |
@@ -49,8 +49,8 @@
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 10 | fctrlstrategy | fctrlstrategy | varchar | 50 |  | √ | ' ' |  |
 | 11 | fstatus | 数据状态 | varchar | 10 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 12 | fvaluesource | 值来源 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
-| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fvaluesource | 值来源 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
+| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 15 | fsourcedataid | fsourcedataid | int8 | 64 |  | √ | 0 |  |
 | 16 | foptiontype | 值类型 | varchar | 200 |  | √ | ' ' | 值类型,枚举: enum :枚举 metabase :基础资料 |

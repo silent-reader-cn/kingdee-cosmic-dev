@@ -64,7 +64,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 制造策略 bd_manustrategy |
+| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [制造策略 bd_manustrategy](../sbd_files/bd_manustrategy.md) |
 | 2 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 | 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 
@@ -121,7 +121,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 制造策略 bd_manustrategy |
+| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [制造策略 bd_manustrategy](../sbd_files/bd_manustrategy.md) |
 | 2 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 | 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 
@@ -153,10 +153,11 @@
 | 2 | fentrymodifier | fentrymodifier | int8 | 64 |  | √ | 0 |  |
 | 3 | fentrycreatedate | fentrycreatedate | timestamp | 0 |  |  | null |  |
 | 4 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 6 | fentrycreator | fentrycreator | int8 | 64 |  | √ | 0 |  |
-| 7 | fentrymodifydate | fentrymodifydate | timestamp | 0 |  |  | null |  |
-| 8 | fprovidersetid | 供方取数 | int8 | 64 |  | √ | 0 | 数据源配置 mrp_resource_dataconf_rgt |
+| 5 | fprovidergroupno | 组号 | int4 | 32 |  | √ | 0 | 组号 |
+| 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 7 | fentrycreator | fentrycreator | int8 | 64 |  | √ | 0 |  |
+| 8 | fentrymodifydate | fentrymodifydate | timestamp | 0 |  |  | null |  |
+| 9 | fprovidersetid | 供方取数 | int8 | 64 |  | √ | 0 | [数据源配置 mrp_resource_dataconf_rgt](../msplan_files/mrp_resource_dataconf_rgt.md) |
 
 ### 列规则定义
 
@@ -183,10 +184,10 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fgfdataid | 供方取数 | int8 | 64 |  | √ | 0 | 数据源配置 mrp_resource_dataconf_rgt |
+| 2 | fgfdataid | 供方取数 | int8 | 64 |  | √ | 0 | [数据源配置 mrp_resource_dataconf_rgt](../msplan_files/mrp_resource_dataconf_rgt.md) |
 | 3 | fmanustrategy | 需方制造策略 | varchar | 500 |  | √ | ' ' | 需方制造策略 |
 | 4 | fsxhcopy | 顺序号 | int8 | 64 |  | √ | 0 | 顺序号 |
-| 5 | fxfdataid | 需方取数 | int8 | 64 |  | √ | 0 | 数据源配置 mrp_resource_dataconf_rgt |
+| 5 | fxfdataid | 需方取数 | int8 | 64 |  | √ | 0 | [数据源配置 mrp_resource_dataconf_rgt](../msplan_files/mrp_resource_dataconf_rgt.md) |
 | 6 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 7 | fmanustrategysup | 供方制造策略 | varchar | 500 |  | √ | ' ' | 供方制造策略 |
 | 8 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
@@ -216,7 +217,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fsalesetid | 需方取数 | int8 | 64 |  | √ | 0 | 数据源配置 mrp_resource_dataconf_rgt |
+| 2 | fsalesetid | 需方取数 | int8 | 64 |  | √ | 0 | [数据源配置 mrp_resource_dataconf_rgt](../msplan_files/mrp_resource_dataconf_rgt.md) |
 | 3 | fentrymodifier | fentrymodifier | int8 | 64 |  | √ | 0 |  |
 | 4 | fentrycreatedate | fentrycreatedate | timestamp | 0 |  |  | null |  |
 | 5 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
@@ -224,6 +225,7 @@
 | 7 | fsxh | 顺序号 | int8 | 64 |  | √ | 0 | 顺序号 |
 | 8 | fentrycreator | fentrycreator | int8 | 64 |  | √ | 0 |  |
 | 9 | fentrymodifydate | fentrymodifydate | timestamp | 0 |  |  | null |  |
+| 10 | fgroupno | 组号 | int4 | 32 |  | √ | 0 | 组号 |
 
 ### 列规则定义
 
@@ -250,30 +252,31 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fsetofforderid | 预测冲减顺序定义 | int8 | 64 |  | √ | 0 | 预测冲减顺序定义 mds_setofforder |
-| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 4 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fsetofforderid | 预测冲减顺序定义 | int8 | 64 |  | √ | 0 | [预测冲减顺序定义 mds_setofforder](../mds_files/mds_setofforder.md) |
+| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 4 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 6 | fplanid | 任务号 | varchar | 100 |  | √ | ' ' | 任务号 |
 | 7 | fstatus | 数据状态 | varchar | 5 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 10 | fpfilter_tag | 供方查询条件存储_详情 | text | 0 |  |  | null | 供方查询条件存储_详情 |
 | 11 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 12 | fsfilter_tag | 需方查询条件存储_详情 | text | 0 |  |  | null | 需方查询条件存储_详情 |
 | 13 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
-| 14 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 15 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 15 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 16 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 17 | fjobid | 作业号 | varchar | 100 |  | √ | ' ' | 作业号 |
 | 18 | fsfilter | 需方查询条件存储 | varchar | 255 |  | √ | ' ' | 需方查询条件存储 |
 | 19 | fmod | fmod | int8 | 64 |  | √ | 0 |  |
-| 20 | fdataver | 数据版本 | int8 | 64 |  | √ | 0 | 数据版本 msplan_ds_version |
+| 20 | fdataver | 数据版本(弃用) | int8 | 64 |  | √ | 0 | [数据版本 msplan_ds_version](../msplan_files/msplan_ds_version.md) |
 | 21 | fctrlstrategy | 控制策略 | varchar | 50 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
-| 22 | fpfilter | 供方查询条件存储 | varchar | 255 |  | √ | ' ' | 供方查询条件存储 |
-| 23 | fenable | 使用状态 | varchar | 5 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 24 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
-| 25 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
+| 22 | fsetofftype | 冲减类型 | varchar | 30 |  | √ | 'A' | 冲减类型,枚举: A :普通冲减 B :子项冲减 |
+| 23 | fpfilter | 供方查询条件存储 | varchar | 255 |  | √ | ' ' | 供方查询条件存储 |
+| 24 | fenable | 使用状态 | varchar | 5 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 25 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
+| 26 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
 
 ### 列规则定义
 

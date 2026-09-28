@@ -11,9 +11,9 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fperiodtypeid | fperiodtypeid | int8 | 64 |  | √ | 0 |  |
-| 3 | fbasecurrrencyid | 综合本位币 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
-| 4 | fexratetableid | 汇率表 | int8 | 64 |  | √ | 0 | 汇率表 bd_exratetable |
-| 5 | fbaseacctorgid | 核算组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | fbasecurrrencyid | 综合本位币 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
+| 4 | fexratetableid | 汇率表 | int8 | 64 |  | √ | 0 | [汇率表 bd_exratetable](../base_files/bd_exratetable.md) |
+| 5 | fbaseacctorgid | 核算组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 
 ### 列规则定义
 

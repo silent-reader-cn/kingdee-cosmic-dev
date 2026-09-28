@@ -12,11 +12,11 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 名称 | varchar | 100 |  |  | ' ' | 名称 |
 | 3 | fvalue | 值 | varchar | 255 |  |  | ' ' | 值 |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fvalue_tag | 值_详情 | text | 0 |  |  | null | 值_详情 |
 | 6 | fcreatetime | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
-| 7 | fcreaterid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 8 | fuserid | 用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 7 | fcreaterid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 8 | fuserid | 用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
 | 10 | fmodifytime | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
 

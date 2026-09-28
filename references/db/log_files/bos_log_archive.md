@@ -12,16 +12,16 @@
 | 1 | fid | fid | varchar | 36 |  | √ | null | id |
 | 2 | fmodifybillid | 数据更新源单内码 | varchar | 36 |  | √ | ' ' | 数据更新源单内码 |
 | 3 | fbizobjname | fbizobjname | varchar | 255 |  | √ | ' ' |  |
-| 4 | forgid | 操作组织 | int8 | 64 |  |  | null | 业务单元 bos_org |
+| 4 | forgid | 操作组织 | int8 | 64 |  |  | null | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | fclienttype | 客户端类型 | varchar | 30 |  |  | null | 客户端类型,枚举: web :PC端 mobile :移动端 api :接口 |
 | 6 | fbizappname | fbizappname | varchar | 255 |  | √ | ' ' |  |
 | 7 | fopdescription | fopdescription | varchar | 255 |  | √ | ' ' |  |
-| 8 | fuserid | 操作用户 | int8 | 64 |  |  | null | 人员 bos_user |
+| 8 | fuserid | 操作用户 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fmodifybillno | 数据更新源单标识 | varchar | 255 |  | √ | ' ' | 数据更新源单标识 |
 | 10 | fmodifycontent_tag | 数据更新内容_详情 | text | 0 |  |  | null | 数据更新内容_详情 |
 | 11 | fmodifyfields | 数据更新字段 | varchar | 1020 |  | √ | ' ' | 数据更新字段 |
 | 12 | farchivetime | 归档时间 | timestamp | 0 |  |  | null | 归档时间 |
-| 13 | fbizappid | 应用 | varchar | 36 |  |  | null | 业务应用实体 bos_devportal_bizapp |
+| 13 | fbizappid | 应用 | varchar | 36 |  |  | null | [业务应用实体 bos_devportal_bizapp](../mdl_files/bos_devportal_bizapp.md) |
 | 14 | fclientip | 客户端地址 | varchar | 128 |  |  | null | 客户端地址 |
 | 15 | fusername | fusername | varchar | 255 |  | √ | ' ' |  |
 | 16 | fopname | fopname | varchar | 255 |  | √ | ' ' |  |
@@ -30,7 +30,7 @@
 | 19 | fmodifycontent | 数据更新内容 | varchar | 510 |  |  | null | 数据更新内容 |
 | 20 | fopdescriptione | fopdescriptione | varchar | 255 |  | √ | ' ' |  |
 | 21 | fopnamee | fopnamee | varchar | 255 |  | √ | ' ' |  |
-| 22 | fbizobjid | 操作对象 | varchar | 36 |  |  | null | 业务对象 bos_objecttype |
+| 22 | fbizobjid | 操作对象 | varchar | 36 |  |  | null | [业务对象 bos_objecttype](../mdl_files/bos_objecttype.md) |
 | 23 | forgname | forgname | varchar | 255 |  | √ | ' ' |  |
 | 24 | fclientname | fclientname | varchar | 255 |  | √ | ' ' |  |
 

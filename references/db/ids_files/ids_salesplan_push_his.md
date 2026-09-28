@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fsalesplanid | 销售计划单 | int8 | 64 |  | √ | 0 | 销售计划单 ids_salesplan |
-| 3 | fperiodid | 销售计划周期 | int8 | 64 |  | √ | 0 | 销售计划周期 ids_salesplan_period |
+| 3 | fperiodid | 销售计划周期 | int8 | 64 |  | √ | 0 | [销售计划周期 ids_salesplan_period](../ids_files/ids_salesplan_period.md) |
 | 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 5 | frequireplanid | 需求计划单 | int8 | 64 |  | √ | 0 | 需求计划单 ids_requireplan |
 

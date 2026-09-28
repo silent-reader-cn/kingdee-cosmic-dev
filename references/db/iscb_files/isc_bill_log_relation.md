@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | ftime | 集成时间 | timestamp | 0 |  |  | null | 集成时间 |
-| 3 | fsystem | 业务系统 | int8 | 64 |  | √ | 0 | 连接器配置 isc_database_link |
+| 3 | fsystem | 业务系统 | int8 | 64 |  | √ | 0 | [连接器配置 isc_database_link](../iscb_files/isc_database_link.md) |
 | 4 | frole | 集成方向 | varchar | 30 |  | √ | ' ' | 集成方向,枚举: 1 :源单 2 :目标单 |
 | 5 | fvoid | fvoid | varchar | 80 |  | √ | ' ' |  |
 | 6 | flog_id | 详细日志 | varchar | 100 |  | √ | ' ' | 详细日志 |
@@ -19,10 +19,10 @@
 | 8 | ftable_name | 数据表 | varchar | 140 |  | √ | ' ' | 数据表 |
 | 9 | foid | 单据ID | varchar | 100 |  | √ | ' ' | 单据ID |
 | 10 | ftask_id | ftask_id | varchar | 100 |  | √ | ' ' |  |
-| 11 | ftask | 集成任务 | int8 | 64 |  | √ | 0 | 执行结果 isc_data_copy_execution |
-| 12 | ftrigger | 启动方案 | int8 | 64 |  | √ | 0 | 启动方案 isc_data_copy_trigger |
+| 11 | ftask | 集成任务 | int8 | 64 |  | √ | 0 | [执行结果 isc_data_copy_execution](../iscb_files/isc_data_copy_execution.md) |
+| 12 | ftrigger | 启动方案 | int8 | 64 |  | √ | 0 | [启动方案 isc_data_copy_trigger](../iscb_files/isc_data_copy_trigger.md) |
 | 13 | fnumber | 单据编码 | varchar | 100 |  | √ | ' ' | 单据编码 |
-| 14 | fschema | 集成方案 | int8 | 64 |  | √ | 0 | 数据集成方案 isc_data_copy |
+| 14 | fschema | 集成方案 | int8 | 64 |  | √ | 0 | [数据集成方案 isc_data_copy](../iscb_files/isc_data_copy.md) |
 | 15 | fvid | 单据虚拟ID | varchar | 80 |  | √ | ' ' | 单据虚拟ID |
 
 ### 列规则定义

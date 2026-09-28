@@ -24,7 +24,7 @@
 | 13 | fserial_no | 发票流水号 | varchar | 36 |  | √ | ' ' | 发票流水号 |
 | 14 | fimage_url | 图片url | varchar | 300 |  | √ | ' ' | 图片url |
 | 15 | fcreate_time | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 16 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 16 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 17 | foriginal_state | 是否源文件 | varchar | 2 |  | √ | ' ' | 是否源文件,枚举: 0 :非源文件 1 :源文件 2 :底账图片 |
 | 18 | fregion | 发票区域 | varchar | 35 |  | √ | ' ' | 发票区域 |
 | 19 | fpdf_url | pdf url | varchar | 300 |  | √ | ' ' | pdf url |

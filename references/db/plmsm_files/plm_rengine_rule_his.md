@@ -42,7 +42,7 @@
 | 2 | foperate | 操作 | varchar | 20 |  | √ | ' ' | 操作,枚举: new :新增 modify :修改 delete :删除 |
 | 3 | fname | fname | varchar | 100 |  | √ | ' ' |  |
 | 4 | fpolicynumber | 策略编码 | varchar | 50 |  | √ | ' ' | 策略编码 |
-| 5 | foperatorid | 操作人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | foperatorid | 操作人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | foperatetime | 操作时间 | timestamp | 0 |  |  | null | 操作时间 |
 | 7 | fruleid | 规则id | int8 | 64 |  | √ | 0 | 规则id |
 | 8 | fnumber | 规则编码 | varchar | 50 |  | √ | ' ' | 规则编码 |

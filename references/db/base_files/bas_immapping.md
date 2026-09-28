@@ -15,8 +15,8 @@
 | 4 | fopenid | 移动平台用户ID | varchar | 80 |  | √ | ' ' | 移动平台用户ID |
 | 5 | fthirdappusername | 移动平台用户名 | varchar | 50 |  | √ | ' ' | 移动平台用户名 |
 | 6 | fthird_user_phone_num | 移动平台用户手机号 | varchar | 20 |  | √ | ' ' | 移动平台用户手机号 |
-| 7 | fimtypeid | 移动平台类型 | int8 | 64 |  | √ | 0 | 移动平台类型 bas_instantmsgtype |
-| 8 | frefuserid | 用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 7 | fimtypeid | 移动平台类型 | int8 | 64 |  | √ | 0 | [移动平台类型 bas_instantmsgtype](../base_files/bas_instantmsgtype.md) |
+| 8 | frefuserid | 用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fuserid | 金蝶云用户 | int8 | 64 |  | √ | 0 | 金蝶云用户 |
 | 10 | fthirdappcorpid | 企业团队ID | varchar | 50 |  | √ | ' ' | 企业团队ID |
 

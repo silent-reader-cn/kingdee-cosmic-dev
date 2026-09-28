@@ -38,7 +38,7 @@
 | 27 | fdebitlocal | 本期借方本位币 | numeric | 23 | 10 | √ | 0.0000000000 | 本期借方本位币 |
 | 28 | faccountid2 | 科目ID | varchar | 100 |  | √ | ' ' | 科目ID |
 | 29 | flastupdatetime | 最后更新时间 | timestamp | 0 |  |  | null | 最后更新时间 |
-| 30 | fssid | 来源系统 | int8 | 64 |  | √ | 0 | 来源系统 ds_srcsys |
+| 30 | fssid | 来源系统 | int8 | 64 |  | √ | 0 | [来源系统 ds_srcsys](../ds_files/ds_srcsys.md) |
 | 31 | fyearpnlfor | 本年损益发生额原币 | numeric | 23 | 10 | √ | 0.0000000000 | 本年损益发生额原币 |
 | 32 | fendqty | 期末数量余额 | numeric | 23 | 10 | √ | 0.0000000000 | 期末数量余额 |
 | 33 | fdetailcount | 本期发生次数 | int8 | 64 |  | √ | 0 | 本期发生次数 |
@@ -51,7 +51,7 @@
 | 40 | fendbalancefor | 期末余额原币 | numeric | 23 | 10 | √ | 0.0000000000 | 期末余额原币 |
 | 41 | fcreditfor | 本期贷方发生原币 | numeric | 23 | 10 | √ | 0.0000000000 | 本期贷方发生原币 |
 | 42 | fmonthpnllocal | 本期损益发生额本位币 | numeric | 23 | 10 | √ | 0.0000000000 | 本期损益发生额本位币 |
-| 43 | fcurrencyid | 币别 | varchar | 100 |  | √ | ' ' | 币别 |
+| 43 | fcurrencyid | 币种 | varchar | 100 |  | √ | ' ' | 币种 |
 | 44 | faccountid | 科目 | varchar | 100 |  | √ | ' ' | 科目 |
 
 ### 列规则定义

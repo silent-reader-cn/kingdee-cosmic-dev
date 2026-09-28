@@ -42,25 +42,26 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fremark | fremark | varchar | 300 |  | √ | ' ' |  |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 4 | fname | 节点名称 | varchar | 300 |  | √ | ' ' | 节点名称 |
-| 5 | ftemplateid | 默认的组件模板 | int8 | 64 |  | √ | 0 | 组件模板配置 pds_tplconfig |
-| 6 | fissupplier | 供应商端节点 | bpchar | 1 |  | √ | '0' | 供应商端节点 |
-| 7 | fbizobject | 节点对应的业务对象 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
-| 8 | fischangenode | 允许发起变更的节点 | bpchar | 1 |  | √ | '0' | 允许发起变更的节点 |
-| 9 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 11 | fisautonextnode | 审核后自动跳转到下一个节点 | bpchar | 1 |  | √ | '1' | 审核后自动跳转到下一个节点 |
-| 12 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 14 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 15 | fisautoclose | 跳转后自动关闭当前节点 | bpchar | 1 |  | √ | '1' | 跳转后自动关闭当前节点 |
-| 16 | fuserplugin | 获取节点用户插件 | varchar | 100 |  | √ | ' ' | 获取节点用户插件 |
-| 17 | fextobject | 节点对应的状态表 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
-| 18 | fenable | 使用状态 | bpchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 19 | fnumber | 节点编码 | varchar | 30 |  | √ | ' ' | 节点编码 |
-| 20 | fissyspreset | 系统预置 | bpchar | 1 |  | √ | '0' | 系统预置 |
-| 21 | fpluginname | 获取节点状态插件 | varchar | 100 |  | √ | ' ' | 获取节点状态插件 |
+| 3 | fishidden | 是否隐藏 | bpchar | 1 |  | √ | '0' | 是否隐藏 |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 5 | fname | 节点名称 | varchar | 300 |  | √ | ' ' | 节点名称 |
+| 6 | ftemplateid | 默认的组件模板 | int8 | 64 |  | √ | 0 | [组件模板配置 pds_tplconfig](../pds_files/pds_tplconfig.md) |
+| 7 | fissupplier | 供应商端节点 | bpchar | 1 |  | √ | '0' | 供应商端节点 |
+| 8 | fbizobject | 节点对应的业务对象 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
+| 9 | fischangenode | 允许发起变更的节点 | bpchar | 1 |  | √ | '0' | 允许发起变更的节点 |
+| 10 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 12 | fisautonextnode | 审核后自动跳转到下一个节点 | bpchar | 1 |  | √ | '1' | 审核后自动跳转到下一个节点 |
+| 13 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
+| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 15 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
+| 16 | fisautoclose | 跳转后自动关闭当前节点 | bpchar | 1 |  | √ | '1' | 跳转后自动关闭当前节点 |
+| 17 | fuserplugin | 获取节点用户插件 | varchar | 100 |  | √ | ' ' | 获取节点用户插件 |
+| 18 | fextobject | 节点对应的状态表 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
+| 19 | fenable | 使用状态 | bpchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 20 | fnumber | 节点编码 | varchar | 30 |  | √ | ' ' | 节点编码 |
+| 21 | fissyspreset | 系统预置 | bpchar | 1 |  | √ | '0' | 系统预置 |
+| 22 | fpluginname | 获取节点状态插件 | varchar | 100 |  | √ | ' ' | 获取节点状态插件 |
 
 ### 列规则定义
 

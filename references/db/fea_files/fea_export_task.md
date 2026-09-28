@@ -11,17 +11,17 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 3 | fbookid | 账簿类型 | int8 | 64 |  | √ | 0 | 账簿类型 bd_accountbookstype |
+| 3 | fbookid | 账簿类型 | int8 | 64 |  | √ | 0 | [账簿类型 bd_accountbookstype](../fibd_files/bd_accountbookstype.md) |
 | 4 | fstarttime | 开始时间 | timestamp | 0 |  |  | null | 开始时间 |
 | 5 | ftotalprocess | 任务进度 | numeric | 19 | 6 | √ | 0 | 任务进度 |
-| 6 | fperiodtypeid | 会计期间类型 | int8 | 64 |  | √ | 0 | 会计日历类型 bd_period_type |
-| 7 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 8 | fendperiodid | 结束期间 | int8 | 64 |  | √ | 0 | 会计日历 bd_period |
+| 6 | fperiodtypeid | 会计期间类型 | int8 | 64 |  | √ | 0 | [会计日历类型 bd_period_type](../fibd_files/bd_period_type.md) |
+| 7 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 8 | fendperiodid | 结束期间 | int8 | 64 |  | √ | 0 | [会计日历 bd_period](../fibd_files/bd_period.md) |
 | 9 | ftaskstatus | 状态 | bpchar | 1 |  | √ | 'A' | 状态,枚举: A :等待 B :进行中 C :已完成 D :出错 E :终止 |
-| 10 | fbeginperiodid | 开始期间 | int8 | 64 |  | √ | 0 | 会计日历 bd_period |
+| 10 | fbeginperiodid | 开始期间 | int8 | 64 |  | √ | 0 | [会计日历 bd_period](../fibd_files/bd_period.md) |
 | 11 | fnumber | 任务编码 | varchar | 255 |  | √ | ' ' | 任务编码 |
 | 12 | fendtime | 结束时间 | timestamp | 0 |  |  | null | 结束时间 |
-| 13 | fexportplanid | 导出方案 | int8 | 64 |  | √ | 0 | 导出方案 fea_plan |
+| 13 | fexportplanid | 导出方案 | int8 | 64 |  | √ | 0 | [导出方案 fea_plan](../fea_files/fea_plan.md) |
 
 ### 列规则定义
 
@@ -47,7 +47,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fstructid | 数据结构 | int8 | 64 |  | √ | 0 | 数据结构 fea_datastructure |
+| 1 | fstructid | 数据结构 | int8 | 64 |  | √ | 0 | [数据结构 fea_datastructure](../fea_files/fea_datastructure.md) |
 | 2 | ftaskdetailstatus | 状态 | bpchar | 1 |  | √ | 'A' | 状态,枚举: A :等待 B :进行中 C :已完成 D :出错 |
 | 3 | fendindex | 结束行 | int4 | 32 |  | √ | 0 | 结束行 |
 | 4 | ftmpfileurl | 临时文件地址 | varchar | 500 |  | √ | ' ' | 临时文件地址 |
@@ -85,14 +85,14 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | ferrorinfo | 异常信息 | varchar | 255 |  | √ | ' ' | 异常信息 |
-| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | fzipfileurl | 文件下载地址 | varchar | 500 |  | √ | ' ' | 文件下载地址 |
 | 5 | ftaskendtime | 结束时间 | timestamp | 0 |  |  | null | 结束时间 |
 | 6 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 7 | ffileexpiretime | 文件过期时间 | timestamp | 0 |  |  | null | 文件过期时间 |
 | 8 | fsubtaskstatus | 状态 | bpchar | 1 |  | √ | 'A' | 状态,枚举: A :等待 B :进行中 C :已完成 D :出错 E :终止 |
 | 9 | fstandardentryid | 文件标准分录ID | int8 | 64 |  | √ | 0 | 文件标准分录ID |
-| 10 | fstructid | 数据结构 | int8 | 64 |  | √ | 0 | 数据结构 fea_datastructure |
+| 10 | fstructid | 数据结构 | int8 | 64 |  | √ | 0 | [数据结构 fea_datastructure](../fea_files/fea_datastructure.md) |
 | 11 | fsubprocess | 进度 | numeric | 16 | 9 | √ | 0 | 进度 |
 | 12 | fzipfilesize | 文件大小(字节) | int8 | 64 |  | √ | 0 | 文件大小(字节) |
 | 13 | ftaskstarttime | 开始时间 | timestamp | 0 |  |  | null | 开始时间 |

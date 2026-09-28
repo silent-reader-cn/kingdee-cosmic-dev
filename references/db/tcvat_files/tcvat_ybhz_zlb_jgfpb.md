@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fysfwjzjtfpse | 应税服务即征即退分配税额 | numeric | 23 | 10 | √ | 0 | 应税服务即征即退分配税额 |
-| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | fysfwfpse | 应税服务分配税额 | numeric | 23 | 10 | √ | 0 | 应税服务分配税额 |
 | 5 | fsuborgname | 组织名称 | varchar | 100 |  | √ | ' ' | 组织名称 |
 | 6 | fysfwjzjtxssr | 应税服务即征即退销售收入 | numeric | 23 | 10 | √ | 0 | 应税服务即征即退销售收入 |
@@ -24,7 +24,7 @@
 | 13 | fenddate | 税款所属期止 | timestamp | 0 |  |  | null | 税款所属期止 |
 | 14 | fxssr | 一般货物及劳务销售收入 | numeric | 23 | 10 | √ | 0 | 一般货物及劳务销售收入 |
 | 15 | fstartdate | 税款所属期起 | timestamp | 0 |  |  | null | 税款所属期起 |
-| 16 | fsuborgid | 组织编码 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 16 | fsuborgid | 组织编码 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 17 | ffpbl | 一般货物及劳务分配比例 | numeric | 23 | 10 |  | null | 一般货物及劳务分配比例 |
 | 18 | fjzjtfpbl | 一般货物及劳务即征即退分配比例 | numeric | 23 | 10 |  | null | 一般货物及劳务即征即退分配比例 |
 | 19 | fysfwxssr | 应税服务销售收入 | numeric | 23 | 10 | √ | 0 | 应税服务销售收入 |

@@ -11,19 +11,19 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | flogo | 图片 | varchar | 255 |  | √ | ' ' | 图片 |
 | 5 | fformatplanid | 区域格式 | int8 | 64 |  | √ | 0 | 区域格式 |
 | 6 | ftwocountrycode | 二字码 | varchar | 10 |  | √ | ' ' | 二字码 |
-| 7 | ffullname | 全称 | varchar | 255 |  | √ | ' ' | 全称 |
+| 7 | ffullname | 全称 | varchar | 1024 |  | √ | ' ' | 全称 |
 | 8 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 9 | fdisabledate | 禁用时间 | timestamp | 0 |  |  | null | 禁用时间 |
-| 10 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fdescription | 英文全称 | varchar | 255 |  | √ | ' ' | 英文全称 |
 | 12 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 13 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 14 | fthreecountrycode | 三字码 | varchar | 10 |  | √ | ' ' | 三字码 |
-| 15 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 15 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 16 | fnumericcode | 数字编码 | varchar | 10 |  | √ | ' ' | 数字编码 |
 | 17 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 18 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |

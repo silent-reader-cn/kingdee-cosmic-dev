@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fsaleable | 可售状态 | bpchar | 1 |  | √ | ' ' | 可售状态,枚举: 0 :不可售 1 :可售 |
-| 3 | fmallgoodsid | 电商商品 | int8 | 64 |  | √ | 0 | 电商商品 pbd_mallgoods |
+| 3 | fmallgoodsid | 电商商品 | int8 | 64 |  | √ | 0 | [电商商品 pbd_mallgoods](../pbd_files/pbd_mallgoods.md) |
 | 4 | fecstatus | 电商上架状态 | bpchar | 1 |  | √ | ' ' | 电商上架状态,枚举: 1 :上架 0 :下架 |
 | 5 | fmallstatus | 企业上架状态 | bpchar | 1 |  | √ | ' ' | 企业上架状态,枚举: 1 :上架 0 :下架 |
 | 6 | fmodifytime | fmodifytime | timestamp | 0 |  |  | null |  |

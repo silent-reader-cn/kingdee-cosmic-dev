@@ -20,7 +20,7 @@
 | 9 | fdescription | 描述 | varchar | 512 |  |  | null | 描述 |
 | 10 | fruningprocess | 运行进度 | varchar | 5 |  | √ | ' ' | 运行进度,枚举: A :0%（处理插件） B :10%（处理插件） C :20%（处理插件） D :30%（处理插件） E :40%（处理插件） F :50%（处理插件） G :60%（处理插件） H :70%（处理插件） I :80%（处理插件） J :90%（处理插件） K :100%（处理插件） L :0%（校验条件） M :10%（校验条件） N :20%（校验条件） O :30%（校验条件） P :40%（校验条件） Q :50%（校验条件） R :60%（校验条件） S :70%（校验条件） T :80%（校验条件） U :90%（校验条件） V :100%（校验条件） W :100% X :0% |
 | 11 | ffixeddatadetail | 修复数据详情 | varchar | 512 |  |  | null | 修复数据详情 |
-| 12 | finspectunitid | 数据巡检模型编码 | int8 | 64 |  | √ | 0 | 数据巡检模型 msbd_inspectunit |
+| 12 | finspectunitid | 数据巡检模型编码 | int8 | 64 |  | √ | 0 | [数据巡检模型 msbd_inspectunit](../msbd_files/msbd_inspectunit.md) |
 | 13 | fisfixed | 是否修复 | bpchar | 1 |  | √ | '0' | 是否修复 |
 | 14 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 
@@ -50,13 +50,13 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fexetime | 巡检时间 | timestamp | 0 |  |  | null | 巡检时间 |
-| 3 | fexeuserid | 执行用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 4 | finspectplanid | 数据巡检计划 | int8 | 64 |  | √ | 0 | 数据巡检计划 msbd_inspectplan |
-| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 6 | finspectjobid | 数据巡检任务 | int8 | 64 |  | √ | 0 | 数据巡检任务 msbd_inspectjob |
+| 3 | fexeuserid | 执行用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 4 | finspectplanid | 数据巡检计划 | int8 | 64 |  | √ | 0 | [数据巡检计划 msbd_inspectplan](../msbd_files/msbd_inspectplan.md) |
+| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 6 | finspectjobid | 数据巡检任务 | int8 | 64 |  | √ | 0 | [数据巡检任务 msbd_inspectjob](../msbd_files/msbd_inspectjob.md) |
 | 7 | fendtime | 巡检完成时间 | timestamp | 0 |  |  | null | 巡检完成时间 |
 | 8 | fexestatus | 执行状态 | varchar | 5 |  | √ | ' ' | 执行状态,枚举: A :进行中 B :已完成 |
-| 9 | fbizappid | 业务应用 | varchar | 36 |  | √ | ' ' | 业务应用实体 bos_devportal_bizapp |
+| 9 | fbizappid | 业务应用 | varchar | 36 |  | √ | ' ' | [业务应用实体 bos_devportal_bizapp](../mdl_files/bos_devportal_bizapp.md) |
 
 ### 列规则定义
 
@@ -82,7 +82,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fobjtypeid | 对象类型 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 1 | fobjtypeid | 对象类型 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 2 | fobjid | 对象ID | int8 | 64 |  | √ | 0 | 对象ID |
 | 3 | fextralinfo | 其他信息 | varchar | 500 |  | √ | ' ' | 其他信息 |
 | 4 | fobjentryid | 对象分录ID | int8 | 64 |  | √ | 0 | 对象分录ID |

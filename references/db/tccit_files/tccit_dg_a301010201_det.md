@@ -12,7 +12,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | famountfield | 金额字段 | int8 | 64 |  | √ | 0 | 规则金额字段 tpo_rule_fields |
 | 3 | fadvancedconfjson | 高级配置JSON | text | 0 |  |  | null | 高级配置JSON |
-| 4 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 4 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | ftabletype | 取数表 | varchar | 50 |  | √ | ' ' | 取数表,枚举: tpo_tcvat_balancetype :科目余额表 tpo_tcvat_vouchertype :凭证 |
 | 6 | fbizname | 业务名称 | varchar | 50 |  | √ | ' ' | 业务名称 |
 | 7 | fconditionjson | 过滤条件JSON | text | 0 |  |  | null | 过滤条件JSON |
@@ -25,8 +25,8 @@
 | 14 | ftaxaccountserialno | 台账流水号 | varchar | 50 |  | √ | ' ' | 台账流水号 |
 | 15 | fabsolute | 绝对值 | bpchar | 1 |  | √ | '0' | 绝对值 |
 | 16 | fentrytype | 取数类型 | varchar | 50 |  | √ | ' ' | 取数类型 |
-| 17 | ftaxorgid | 取数组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 18 | fruleid | 规则id | int8 | 64 |  | √ | 0 | 年报取数规则 tccit_year_rule |
+| 17 | ftaxorgid | 取数组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 18 | fruleid | 规则id | int8 | 64 |  | √ | 0 | [年报取数规则 tccit_year_rule](../tccit_files/tccit_year_rule.md) |
 | 19 | fexrate | 汇率 | numeric | 23 | 10 | √ | 0 | 汇率 |
 | 20 | ffiltercondition | 过滤条件 | varchar | 255 |  | √ | ' ' | 过滤条件 |
 | 21 | fdatadirection | 取数方向 | varchar | 50 |  | √ | ' ' | 取数方向,枚举: positive :正向 reverse :反向 |

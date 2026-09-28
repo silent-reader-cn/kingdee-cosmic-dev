@@ -42,7 +42,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | fname | varchar | 255 |  | √ | ' ' |  |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 5 | fdescription | 巡查项说明 | varchar | 255 |  | √ | ' ' | 巡查项说明 |
 | 6 | ftips | 提示语 | varchar | 255 |  | √ | ' ' | 提示语 |
@@ -51,7 +51,7 @@
 | 9 | fchecktype | 巡查项类型 | varchar | 30 |  | √ | ' ' | 巡查项类型,枚举: plugin :插件 custom :自定义条件 |
 | 10 | fcustomfilter | 自定义条件 | varchar | 255 |  | √ | ' ' | 自定义条件 |
 | 11 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 14 | fcustomfilter_tag | 自定义条件_详情 | text | 0 |  |  | null | 自定义条件_详情 |
 | 15 | fapp | 应用 | varchar | 30 |  | √ | ' ' | 应用,枚举: ar :应收 ap :应付 |
@@ -60,7 +60,7 @@
 | 18 | fenable | 使用状态 | varchar | 30 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 19 | fplugin | 插件 | varchar | 255 |  | √ | ' ' | 插件 |
 | 20 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
-| 21 | fbizobj | 巡查对象 | varchar | 30 |  | √ | ' ' | 业务对象 bos_objecttype |
+| 21 | fbizobj | 巡查对象 | varchar | 30 |  | √ | ' ' | [业务对象 bos_objecttype](../mdl_files/bos_objecttype.md) |
 
 ### 列规则定义
 

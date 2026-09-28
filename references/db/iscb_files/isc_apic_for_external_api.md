@@ -18,15 +18,15 @@
 | 7 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 8 | fauth_required | 需要授权 | bpchar | 1 |  | √ | ' ' | 需要授权 |
 | 9 | fnot_publish | 不发布到开放平台 | bpchar | 1 |  | √ | '0' | 不发布到开放平台 |
-| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 12 | fnamespace | 命名空间 | varchar | 255 |  | √ | ' ' | 命名空间 |
 | 13 | fsource_trace | 来源追溯 | varchar | 600 |  | √ | ' ' | 来源追溯 |
-| 14 | fschema_category | 分类 | int8 | 64 |  | √ | 0 | 自定义分类 isc_schema_category |
+| 14 | fschema_category | 分类 | int8 | 64 |  | √ | 0 | [自定义分类 isc_schema_category](../iscb_files/isc_schema_category.md) |
 | 15 | fwsinputparam | 输入参数名 | varchar | 150 |  | √ | ' ' | 输入参数名 |
 | 16 | fin_digest | API参数摘要模板 | varchar | 150 |  | √ | ' ' | API参数摘要模板 |
-| 17 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 18 | fname | fname | varchar | 30 |  | √ | ' ' |  |
+| 17 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 18 | fname | fname | varchar | 100 |  | √ | ' ' |  |
 | 19 | fcheck_param_type | 校验参数格式 | bpchar | 1 |  | √ | '0' | 校验参数格式 |
 | 20 | fpub_status | fpub_status | varchar | 30 |  | √ | ' ' |  |
 | 21 | fservice_url | 接口标识（URL） | varchar | 255 |  | √ | ' ' | 接口标识（URL） |
@@ -35,7 +35,7 @@
 | 24 | fdescription | 备注 | varchar | 500 |  | √ | ' ' | 备注 |
 | 25 | fomit_empty_params | 忽略空参数 | bpchar | 1 |  | √ | '0' | 忽略空参数 |
 | 26 | fopenapi_version | 开放平台版本 | varchar | 10 |  | √ | ' ' | 开放平台版本,枚举: 2 :2.0 1 :1.0 |
-| 27 | fdata_source_id | 数据源 | int8 | 64 |  | √ | 0 | 数据源管理 isc_data_source |
+| 27 | fdata_source_id | 数据源 | int8 | 64 |  | √ | 0 | [数据源管理 isc_data_source](../iscb_files/isc_data_source.md) |
 | 28 | fenable | 使用状态 | varchar | 30 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 29 | fnumber | 编码 | varchar | 100 |  | √ | ' ' | 编码 |
 | 30 | fdisable_trace | 禁止记录追溯信息 | varchar | 10 |  | √ | ' ' | 禁止记录追溯信息 |

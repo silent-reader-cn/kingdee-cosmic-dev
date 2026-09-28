@@ -14,8 +14,8 @@
 | 3 | fcreatetime | 操作时间 | timestamp | 0 |  |  | null | 操作时间 |
 | 4 | fsessionid | 线程ID | varchar | 100 |  | √ | ' ' | 线程ID |
 | 5 | fctrltype | 控制类型 | varchar | 30 |  | √ | ' ' | 控制类型,枚举: createsettle :创建结算清单 |
-| 6 | fentitykey | 操作业务对象 | varchar | 50 |  | √ | ' ' | 业务对象 bos_objecttype |
-| 7 | fuserid | 操作用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | fentitykey | 操作业务对象 | varchar | 50 |  | √ | ' ' | [业务对象 bos_objecttype](../mdl_files/bos_objecttype.md) |
+| 7 | fuserid | 操作用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 8 | fbizbillno | 业务单据编号 | varchar | 100 |  | √ | ' ' | 业务单据编号 |
 
 ### 列规则定义

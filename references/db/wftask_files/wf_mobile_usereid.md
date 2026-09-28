@@ -12,9 +12,9 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fcreatedate | 创建时间1 | timestamp | 0 |  |  | null | 创建时间1 |
 | 3 | fmodifydate | 修改时间1 | timestamp | 0 |  |  | null | 修改时间1 |
-| 4 | fcreaterid | 创建人1 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fcreaterid | 创建人1 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fcomname | 企业名称 | varchar | 100 |  | √ | ' ' | 企业名称 |
-| 6 | fuserid | 企业用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | fuserid | 企业用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

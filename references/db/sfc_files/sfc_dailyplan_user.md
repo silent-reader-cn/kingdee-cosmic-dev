@@ -9,18 +9,18 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fclassgroupid | 班组 | int8 | 64 |  | √ | 0 | 班组 mpdm_classgroup |
+| 1 | fclassgroupid | 班组 | int8 | 64 |  | √ | 0 | [班组 mpdm_classgroup](../mpdm_files/mpdm_classgroup.md) |
 | 2 | fjobsrctype | 任务来源类型 | varchar | 50 |  | √ | ' ' | 任务来源类型,枚举: A :分配 B :分派 C :交接 D :退回 E :通知 F :转交 |
 | 3 | fstudystatus | 学习状态 | varchar | 50 |  | √ | ' ' | 学习状态,枚举: A :未学习 B :已学习 C :手工编辑 |
-| 4 | froleid | 角色编码 | varchar | 36 |  | √ | ' ' | 通用角色 perm_role |
-| 5 | fuserinchargeid | 责任人 | int8 | 64 |  | √ | 0 | 基础资料带组织模板 mpdm_manuperson |
+| 4 | froleid | 角色编码 | varchar | 36 |  | √ | ' ' | [通用角色 perm_role](../base_files/perm_role.md) |
+| 5 | fuserinchargeid | 责任人 | int8 | 64 |  | √ | 0 | [基础资料带组织模板 mpdm_manuperson](../mpdm_files/mpdm_manuperson.md) |
 | 6 | fissure | 接收状态 | varchar | 50 |  | √ | ' ' | 接收状态,枚举: A :待确认 B :已确认 |
 | 7 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 8 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 | id |
 | 9 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
-| 10 | fuserprofession | 行业 | int8 | 64 |  | √ | 0 | 树形基础资料模板 mpdm_professiona |
+| 10 | fuserprofession | 行业 | int8 | 64 |  | √ | 0 | [树形基础资料模板 mpdm_professiona](../mpdm_files/mpdm_professiona.md) |
 | 11 | fnoticeinfo | 通知内容 | varchar | 512 |  | √ | ' ' | 通知内容 |
-| 12 | fhandoveruser | 交接人 | int8 | 64 |  | √ | 0 | 基础资料带组织模板 mpdm_manuperson |
+| 12 | fhandoveruser | 交接人 | int8 | 64 |  | √ | 0 | [基础资料带组织模板 mpdm_manuperson](../mpdm_files/mpdm_manuperson.md) |
 
 ### 列规则定义
 
@@ -145,14 +145,14 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | ftasktype | 任务类型 | varchar | 50 |  | √ | ' ' | 任务类型,枚举: pom_coordination_FAC_S :表面处理 pom_coordination_HEA_S :热处理 pom_coordination_INWORK_S :工作内部单 pom_coordination_MAC_S :机型加工 pom_coordination_SPR_S :零件喷漆 |
-| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | fbizstatus | 业务状态 | varchar | 50 |  | √ | ' ' | 业务状态,枚举: A :计划 B :下达 |
 | 5 | fallocationstatus | 分配状态 | varchar | 50 |  | √ | ' ' | 分配状态,枚举: A :未分配 B :已分配 |
 | 6 | fisfilltask | 是否补全任务 | bpchar | 1 |  | √ | '0' | 是否补全任务 |
 | 7 | fplantimedym_tag | 计划时间(列表显示)_详情 | text | 0 |  |  | null | 计划时间(列表显示)_详情 |
 | 8 | fmodifytime | 排班时间 | timestamp | 0 |  |  | null | 排班时间 |
 | 9 | fbegintime | 任务起始时间 | timestamp | 0 |  |  | null | 任务起始时间 |
-| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fjobsrctypedym | 任务来源类型(列表显示) | varchar | 50 |  | √ | ' ' | 任务来源类型(列表显示),枚举: A :分配 B :分派 C :交接 D :退回 E :通知 F :转交 |
 | 12 | ftaskno | 任务编码 | varchar | 50 |  | √ | ' ' | 任务编码 |
 | 13 | fbeginstatusdym | 开工状态(列表显示) | varchar | 50 |  | √ | ' ' | 开工状态(列表显示) |
@@ -160,7 +160,7 @@
 | 15 | fisexception | 异常状态 | bpchar | 1 |  | √ | '0' | 异常状态 |
 | 16 | fbillno | 单据编号 | varchar | 30 |  | √ | ' ' | 单据编号 |
 | 17 | fprofessiondym | 行业(列表显示) | varchar | 50 |  | √ | ' ' | 行业(列表显示) |
-| 18 | fmodifierid | 排班人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 18 | fmodifierid | 排班人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 19 | fplanuserdym | 计划执行人(列表显示) | varchar | 255 |  | √ | ' ' | 计划执行人(列表显示) |
 | 20 | fbillstatus | 单据状态 | varchar | 50 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 21 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
@@ -175,7 +175,7 @@
 | 30 | fistaskchange | 上游任务是否变更 | bpchar | 1 |  | √ | '0' | 上游任务是否变更 |
 | 31 | fdispatchstatus | 派工状态 | varchar | 50 |  | √ | ' ' | 派工状态,枚举: A :待派工 B :已派工 |
 | 32 | fendtime | 任务完结时间 | timestamp | 0 |  |  | null | 任务完结时间 |
-| 33 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 33 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 34 | fbilltype | 单据类型 | int8 | 64 |  | √ | 0 | 单据类型 bos_billtype |
 
 ### 列规则定义
@@ -235,9 +235,9 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | freportbegintime | 开工时间 | timestamp | 0 |  |  | null | 开工时间 |
-| 2 | fworkhourunitid | 工时单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 2 | fworkhourunitid | 工时单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 3 | fworktype | 业务活动 | varchar | 50 |  | √ | ' ' | 业务活动,枚举: A :维修开工 B :检验开工 |
-| 4 | fpersonid | 责任人 | int8 | 64 |  | √ | 0 | 基础资料带组织模板 mpdm_manuperson |
+| 4 | fpersonid | 责任人 | int8 | 64 |  | √ | 0 | [基础资料带组织模板 mpdm_manuperson](../mpdm_files/mpdm_manuperson.md) |
 | 5 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 6 | freportendtime | 收工时间 | timestamp | 0 |  |  | null | 收工时间 |
 | 7 | ffinishlog | 收工记录 | varchar | 512 |  | √ | ' ' | 收工记录 |
@@ -270,7 +270,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fposttaskrelation | 后置任务关系 | varchar | 50 |  | √ | ' ' | 后置任务关系,枚举: 1 :FS 2 :FF 3 :SS 4 :SF |
-| 2 | fposttaskid | 后置任务 | int8 | 64 |  | √ | 0 | 项目任务清单 pmts_task |
+| 2 | fposttaskid | 后置任务 | int8 | 64 |  | √ | 0 | [项目任务清单 pmts_task](../fmm_files/pmts_task.md) |
 | 3 | fpostdelay | 后置延时 | numeric | 23 | 10 | √ | 0 | 后置延时 |
 | 4 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 5 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 | id |
@@ -337,37 +337,37 @@
 | 2 | ffinishworktime | 工作人员完工时间 | timestamp | 0 |  |  | null | 工作人员完工时间 |
 | 3 | ftaskendtime | 任务结束时间 | timestamp | 0 |  |  | null | 任务结束时间 |
 | 4 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 5 | fworkcardid | 工卡 | int8 | 64 |  | √ | 0 | 工卡 mpdm_mrocardroute |
-| 6 | ffinishworkuser | 工作完工人 | int8 | 64 |  | √ | 0 | 基础资料带组织模板 mpdm_manuperson |
-| 7 | fprocessgroupid | 工序组 | int8 | 64 |  | √ | 0 | 工序组(废弃) mpdm_progroup |
+| 5 | fworkcardid | 工卡 | int8 | 64 |  | √ | 0 | [工卡 mpdm_mrocardroute](../mpdm_files/mpdm_mrocardroute.md) |
+| 6 | ffinishworkuser | 工作完工人 | int8 | 64 |  | √ | 0 | [基础资料带组织模板 mpdm_manuperson](../mpdm_files/mpdm_manuperson.md) |
+| 7 | fprocessgroupid | 工序组 | int8 | 64 |  | √ | 0 | [工序组(废弃) mpdm_progroup](../mpdm_files/mpdm_progroup.md) |
 | 8 | fstatus | 状态 | varchar | 50 |  | √ | ' ' | 状态,枚举: A :未开工 E :开工 F :检验完工 H :维修完工 G :异常 |
 | 9 | fcheckworktime | 检验人员完工时间 | timestamp | 0 |  |  | null | 检验人员完工时间 |
-| 10 | fmroorderentryid | 检修工单分录ID | int8 | 64 |  | √ | 0 | 检修工单分录F7(废弃) sfc_mroorder_f7 |
+| 10 | fmroorderentryid | 检修工单分录ID | int8 | 64 |  | √ | 0 | [检修工单分录F7(废弃) sfc_mroorder_f7](../sfc_files/sfc_mroorder_f7.md) |
 | 11 | ftechno | 工序计划编号 | varchar | 50 |  | √ | ' ' | 工序计划编号 |
-| 12 | fzoneid | 功能位置 | int8 | 64 |  | √ | 0 | 功能位置 mpdm_functionlocation |
+| 12 | fzoneid | 功能位置 | int8 | 64 |  | √ | 0 | [功能位置 mpdm_functionlocation](../mpdm_files/mpdm_functionlocation.md) |
 | 13 | fisoprexception | 异常 | bpchar | 1 |  | √ | '0' | 异常 |
 | 14 | fcheckhours | 检修人员合计消耗工时 | numeric | 23 | 10 | √ | 0 | 检修人员合计消耗工时 |
 | 15 | fsrctime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 16 | foprworkhourunitid | 工时单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 17 | fprofessionid | 行业 | int8 | 64 |  | √ | 0 | 树形基础资料模板 mpdm_professiona |
-| 18 | frecheckworkuser | 复检完工人 | int8 | 64 |  | √ | 0 | 基础资料带组织模板 mpdm_manuperson |
-| 19 | fprojectid | 项目号 | int8 | 64 |  | √ | 0 | 项目 pmpd_project |
+| 16 | foprworkhourunitid | 工时单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 17 | fprofessionid | 行业 | int8 | 64 |  | √ | 0 | [树形基础资料模板 mpdm_professiona](../mpdm_files/mpdm_professiona.md) |
+| 18 | frecheckworkuser | 复检完工人 | int8 | 64 |  | √ | 0 | [基础资料带组织模板 mpdm_manuperson](../mpdm_files/mpdm_manuperson.md) |
+| 19 | fprojectid | 项目号 | int8 | 64 |  | √ | 0 | [项目 pmpd_project](../fmm_files/pmpd_project.md) |
 | 20 | fisemergent | 紧急 | bpchar | 1 |  | √ | '0' | 紧急 |
 | 21 | fsrcbillid | 来源单据ID | int8 | 64 |  | √ | 0 | 来源单据ID |
 | 22 | frecheckworktime | 复检人员完工时间 | timestamp | 0 |  |  | null | 复检人员完工时间 |
-| 23 | fsrcbiztype | 业务类型 | int8 | 64 |  | √ | 0 | 业务类型 bd_biztype |
-| 24 | fpmtstask | 项目任务清单 | int8 | 64 |  | √ | 0 | 项目任务清单 pmts_task |
+| 23 | fsrcbiztype | 业务类型 | int8 | 64 |  | √ | 0 | [业务类型 bd_biztype](../sbd_files/bd_biztype.md) |
+| 24 | fpmtstask | 项目任务清单 | int8 | 64 |  | √ | 0 | [项目任务清单 pmts_task](../fmm_files/pmts_task.md) |
 | 25 | forderno | 工单编号 | varchar | 50 |  | √ | ' ' | 工单编号 |
-| 26 | fplanareaid | 计划区域 | int8 | 64 |  | √ | 0 | 计划区域 fmm_planningarea |
-| 27 | fcheckworkuser | 检验完工人 | int8 | 64 |  | √ | 0 | 基础资料带组织模板 mpdm_manuperson |
+| 26 | fplanareaid | 计划区域 | int8 | 64 |  | √ | 0 | [计划区域 fmm_planningarea](../fmm_files/fmm_planningarea.md) |
+| 27 | fcheckworkuser | 检验完工人 | int8 | 64 |  | √ | 0 | [基础资料带组织模板 mpdm_manuperson](../mpdm_files/mpdm_manuperson.md) |
 | 28 | fsrcbillentryid | 来源单据分录ID | int8 | 64 |  | √ | 0 | 来源单据分录ID |
 | 29 | fsrctype | 来源单据类型 | varchar | 50 |  | √ | ' ' | 来源单据类型,枚举: sfc_mromanuftech :检修工序计划 pom_mroorder :检修工单 |
 | 30 | fworkcardtitle | 工卡标题 | varchar | 50 |  | √ | ' ' | 工卡标题 |
-| 31 | fstageid | 工作类别 | int8 | 64 |  | √ | 0 | 工作类别 mpdm_workcategories |
-| 32 | fmaterialmtcid | 检修设备注册号 | int8 | 64 |  | √ | 0 | 物料检修信息 mpdm_materialmtcinfo |
+| 31 | fstageid | 工作类别 | int8 | 64 |  | √ | 0 | [工作类别 mpdm_workcategories](../mpdm_files/mpdm_workcategories.md) |
+| 32 | fmaterialmtcid | 检修设备注册号 | int8 | 64 |  | √ | 0 | [物料检修信息 mpdm_materialmtcinfo](../mpdm_files/mpdm_materialmtcinfo.md) |
 | 33 | fresreadys | 资源就绪 | varchar | 512 |  | √ | ' ' | 资源就绪,枚举: A1 :物料未就绪 B1 :物料预计就绪 C1 :物料已就绪 A2 :设备未就绪 B2 :设备预计就绪 C2 :设备已就绪 A3 :工具未就绪 B3 :工具预计就绪 C3 :工具已就绪 A4 :文件未就绪 B4 :文件预计就绪 C4 :文件已就绪 A5 :技术支持未就绪 B5 :技术支持预计就绪 C5 :技术支持已就绪 A6 :工卡未就绪 B6 :工卡预计就绪 C6 :工卡已就绪 |
 | 34 | fdefaultworksort | 默认工作顺序 | int8 | 64 |  | √ | 0 | 默认工作顺序 |
-| 35 | fareaid | 工作区域 | int8 | 64 |  | √ | 0 | 工作区域 mpdm_area |
+| 35 | fareaid | 工作区域 | int8 | 64 |  | √ | 0 | [工作区域 mpdm_area](../mpdm_files/mpdm_area.md) |
 | 36 | fworkhour | 标准工时 | numeric | 23 | 10 | √ | 0 | 标准工时 |
 | 37 | fresready | 资源就绪(弃用) | varchar | 50 |  | √ | ' ' | 资源就绪(弃用),枚举: A1 :物料未就绪 B1 :物料预计就绪 C1 :物料已就绪 A2 :设备未就绪 B2 :设备预计就绪 C2 :设备已就绪 A3 :工具未就绪 B3 :工具预计就绪 C3 :工具已就绪 A4 :文件未就绪 B4 :文件预计就绪 C4 :文件已就绪 A5 :技术支持未就绪 B5 :技术支持预计就绪 C5 :技术支持已就绪 A6 :工卡未就绪 B6 :工卡预计就绪 C6 :工卡已就绪 |
 | 38 | frepairhours | 维修人员合计消耗工时 | numeric | 23 | 10 | √ | 0 | 维修人员合计消耗工时 |
@@ -398,7 +398,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fpretaskid | 前置任务 | int8 | 64 |  | √ | 0 | 项目任务清单 pmts_task |
+| 1 | fpretaskid | 前置任务 | int8 | 64 |  | √ | 0 | [项目任务清单 pmts_task](../fmm_files/pmts_task.md) |
 | 2 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 3 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 | id |
 | 4 | fpretaskrelation | 前置任务关系 | varchar | 50 |  | √ | ' ' | 前置任务关系,枚举: 1 :FS 2 :FF 3 :SS 4 :SF |

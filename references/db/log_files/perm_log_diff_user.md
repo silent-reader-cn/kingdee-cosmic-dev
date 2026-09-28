@@ -16,12 +16,12 @@
 | 5 | fperm_logid | 操作日志ID | int8 | 64 |  | √ | 0 | 操作日志ID |
 | 6 | femail | 邮箱 | varchar | 100 |  | √ | ' ' | 邮箱 |
 | 7 | fuser_number | 用户工号 | varchar | 36 |  | √ | ' ' | 用户工号 |
-| 8 | fstarttime | 生效日期 | timestamp | 0 |  |  | null | 生效日期 |
+| 8 | fstarttime | 生效时间 | timestamp | 0 |  |  | null | 生效时间 |
 | 9 | fuser_username | 用户用户名 | varchar | 255 |  | √ | ' ' | 用户用户名 |
 | 10 | fcreate_time | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 11 | fdatachange_type | 数据变更类型 | int4 | 32 |  | √ | 0 | 数据变更类型 |
 | 12 | fuser_id | 用户id | int8 | 64 |  | √ | 0 | 用户id |
-| 13 | fendtime | 失效日期 | timestamp | 0 |  |  | null | 失效日期 |
+| 13 | fendtime | 失效时间 | timestamp | 0 |  |  | null | 失效时间 |
 | 14 | fop_desc | 操作描述 | varchar | 300 |  | √ | ' ' | 操作描述 |
 
 ### 列规则定义

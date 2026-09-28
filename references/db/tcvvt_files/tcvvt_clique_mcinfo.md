@@ -13,8 +13,8 @@
 | 2 | fewblxh | 二维表序号 | varchar | 30 |  | √ | ' ' | 二维表序号,枚举: 1 :1 |
 | 3 | fsynyysr | 上一年度营业收入（单位：万元） | numeric | 23 | 10 | √ | 0 | 上一年度营业收入（单位：万元） |
 | 4 | fleverno | 企业管理层级编号 | varchar | 50 |  | √ | ' ' | 企业管理层级编号 |
-| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 6 | fregistertypeid | 登记注册类型 | int8 | 64 |  | √ | 0 | 注册登记类型 tax_info_registertype |
+| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 6 | fregistertypeid | 登记注册类型 | int8 | 64 |  | √ | 0 | [注册登记类型 tax_info_registertype](../tctb_files/tax_info_registertype.md) |
 | 7 | fcreditcode | 统一社会信用代码 | varchar | 50 |  | √ | ' ' | 统一社会信用代码 |
 | 8 | fstockno | 股票代码 | varchar | 50 |  | √ | ' ' | 股票代码 |
 | 9 | flocaltaxsn | 纳税人识别号（地税） | varchar | 50 |  | √ | ' ' | 纳税人识别号（地税） |

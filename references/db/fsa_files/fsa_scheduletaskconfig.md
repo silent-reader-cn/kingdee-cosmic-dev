@@ -14,14 +14,14 @@
 | 3 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 4 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 5 | fmonths | 选择的月份 | varchar | 50 |  | √ | ' ' | 选择的月份 |
-| 6 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 7 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 8 | fweeks | 选择的星期 | varchar | 50 |  | √ | ' ' | 选择的星期 |
 | 9 | fschid | 对应平台调度计划id | varchar | 36 |  | √ | ' ' | 对应平台调度计划id |
 | 10 | fplan | cron表达式 | varchar | 300 |  | √ | ' ' | cron表达式 |
 | 11 | fnoweek | 星期几 | varchar | 4 |  | √ | ' ' | 星期几,枚举: 1 :星期日 2 :星期一 3 :星期二 4 :星期三 5 :星期四 6 :星期五 7 :星期六 8 :自然日 9 :工作日 |
 | 12 | fname | 定时任务名称 | varchar | 50 |  | √ | ' ' | 定时任务名称 |
-| 13 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 15 | fbyweek | 星期 | varchar | 1 |  | √ | ' ' | 星期 |
 | 16 | fno | 第几个 | varchar | 4 |  | √ | ' ' | 第几个,枚举: 1 :第一个 2 :第二个 3 :第三个 4 :第四个 5 :第五个 L :最后一个 |
@@ -188,7 +188,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fmsgreceiver | 消息接收人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmsgreceiver | 消息接收人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fssuccessnotify | 成功 | varchar | 1 |  | √ | ' ' | 成功 |
 | 4 | fsmsgcontent | 消息内容 | varchar | 2000 |  | √ | ' ' | 消息内容 |
 | 5 | fsnotifytype | 消息渠道 | varchar | 300 |  | √ | ' ' | 消息渠道,枚举: |

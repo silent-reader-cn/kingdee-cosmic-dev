@@ -41,8 +41,9 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 3 | foperation | 操作 | varchar | 36 |  | √ | ' ' | 操作 |
-| 4 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 3 | fforcerelease | 强制释放 | bpchar | 1 |  | √ | '0' | 强制释放 |
+| 4 | foperation | 操作 | varchar | 36 |  | √ | ' ' | 操作 |
+| 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 
 ### 列规则定义
 
@@ -70,9 +71,9 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 4 | fgroupid | 预留服务 | int8 | 64 |  | √ | 0 | 预留服务分组 reserve_servicegroup |
-| 5 | fbillobject | 单据对象 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 4 | fgroupid | 预留服务 | int8 | 64 |  | √ | 0 | [预留服务分组 reserve_servicegroup](../msplan_files/reserve_servicegroup.md) |
+| 5 | fbillobject | 单据对象 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 7 | freservetype | 预留类型 | varchar | 10 |  | √ | ' ' | 预留类型,枚举: 1 :强预留 0 :弱预留 |
 | 8 | fissysinit | 系统预置 | bpchar | 1 |  | √ | '0' | 系统预置 |
@@ -81,7 +82,7 @@
 | 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 12 | fbilloperation | 单据操作 | varchar | 200 |  | √ | ' ' | 单据操作,枚举: |
 | 13 | fstatus | 数据状态 | varchar | 10 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 16 | f_filter_value | 过滤器值 | varchar | 512 |  | √ | ' ' | 过滤器值 |
 | 17 | freleasetype | 释放类型 | varchar | 20 |  | √ | ' ' | 释放类型,枚举: 1 :关闭 2 :释放 |

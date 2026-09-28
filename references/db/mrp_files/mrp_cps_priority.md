@@ -13,7 +13,7 @@
 | 2 | fmaterialshortagetag | 欠料处理标志 | bpchar | 1 |  | √ | '0' | 欠料处理标志 |
 | 3 | fpriority | 优先级 | int4 | 32 |  | √ | 0 | 优先级 |
 | 4 | forderid | 订单id | int8 | 64 |  | √ | 0 | 订单id |
-| 5 | fbillentity | 订单实体 | varchar | 50 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 5 | fbillentity | 订单实体 | varchar | 50 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 6 | forderentryid | 订单分录id | int8 | 64 |  | √ | 0 | 订单分录id |
 
 ### 列规则定义

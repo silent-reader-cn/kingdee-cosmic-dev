@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | frootcategory | 报表项类别一 | int8 | 64 |  | √ | 0 | 标准报表项目 fsa_rptitems |
+| 2 | frootcategory | 报表项类别一 | int8 | 64 |  | √ | 0 | [标准报表项目 fsa_rptitems](../fsa_files/fsa_rptitems.md) |
 | 3 | flevel | 层级 | int4 | 32 |  | √ | 0 | 层级 |
 | 4 | fisleaf | 是否为叶子节点 | bpchar | 1 |  | √ | ' ' | 是否为叶子节点,枚举: 0 :非叶子节点 1 :叶子节点 |
 | 5 | fitemtype | 报表项类型 | bpchar | 1 |  | √ | ' ' | 报表项类型,枚举: 1 :计算型 2 :展示型 3 :报表分类 |
@@ -18,9 +18,9 @@
 | 7 | fseqno | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 8 | flongnumber | 长编码 | varchar | 100 |  | √ | ' ' | 长编码 |
 | 9 | flineno | 行次 | int4 | 32 |  | √ | 0 | 行次 |
-| 10 | frptitemid | 报表项ID | int8 | 64 |  | √ | 0 | 标准报表项目 fsa_rptitems |
+| 10 | frptitemid | 报表项ID | int8 | 64 |  | √ | 0 | [标准报表项目 fsa_rptitems](../fsa_files/fsa_rptitems.md) |
 | 11 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 12 | fseccategory | 报表项类别二 | int8 | 64 |  | √ | 0 | 标准报表项目 fsa_rptitems |
+| 12 | fseccategory | 报表项类别二 | int8 | 64 |  | √ | 0 | [标准报表项目 fsa_rptitems](../fsa_files/fsa_rptitems.md) |
 
 ### 列规则定义
 
@@ -78,9 +78,9 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 4 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 7 | fenable | 使用状态 | bpchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |

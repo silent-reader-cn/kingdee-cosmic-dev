@@ -17,7 +17,7 @@
 | 6 | forgid | 组织 | int8 | 64 |  | √ | 0 | 组织 |
 | 7 | fmeasureunitid | 计量单位 | int8 | 64 |  | √ | 0 | 计量单位 |
 | 8 | fbookid | 账簿 | int8 | 64 |  | √ | 0 | 账簿 |
-| 9 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | 币别 |
+| 9 | fcurrencyid | 币种 | int8 | 64 |  | √ | 0 | 币种 |
 | 10 | faccountid | 科目 | int8 | 64 |  | √ | 0 | 科目 |
 
 ### 列规则定义

@@ -11,35 +11,35 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fapplycause | 申请事由 | varchar | 512 |  | √ | ' ' | 申请事由 |
-| 3 | fpaycurrencyid | 付款币别（弃用） | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 3 | fpaycurrencyid | 付款币别（弃用） | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 | 4 | fpayamount | 付款总额（弃用） | numeric | 19 | 6 | √ | 0.000000 | 付款总额（弃用） |
-| 5 | fscheuser | 确认排款人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 6 | fpaymentidentifyid | 付款标识 | int8 | 64 |  | √ | 0 | 付款标识 cas_paymentidentify |
+| 5 | fscheuser | 确认排款人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 6 | fpaymentidentifyid | 付款标识 | int8 | 64 |  | √ | 0 | [付款标识 cas_paymentidentify](../cas_files/cas_paymentidentify.md) |
 | 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 8 | fexchangerate | 汇率（弃用） | numeric | 23 | 10 | √ | 0.0000000000 | 汇率（弃用） |
 | 9 | fpayeeamount | 收款总额 | numeric | 19 | 6 | √ | 0.000000 | 收款总额 |
 | 10 | fquotation | 换算方式(废弃) | varchar | 30 |  | √ | '0' | 换算方式(废弃),枚举: 0 :直接汇率 1 :间接汇率 |
-| 11 | fcreatorid | 申请人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 12 | fexratetableid | 汇率表（弃用） | int8 | 64 |  | √ | 0 | 汇率表 bd_exratetable |
+| 11 | fcreatorid | 申请人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 12 | fexratetableid | 汇率表（弃用） | int8 | 64 |  | √ | 0 | [汇率表 bd_exratetable](../base_files/bd_exratetable.md) |
 | 13 | fpartpay | 部分付款 | bpchar | 1 |  | √ | '0' | 部分付款 |
 | 14 | fbillno | 单据编号 | varchar | 80 |  | √ | ' ' | 单据编号 |
-| 15 | fpayeracctbankid | 付款账号（弃用） | int8 | 64 |  | √ | 0 | 银行账户 bd_accountbanks |
-| 16 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 17 | fapplyorgid | 申请组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 15 | fpayeracctbankid | 付款账号（弃用） | int8 | 64 |  | √ | 0 | [银行账户 bd_accountbanks](../basedata_files/bd_accountbanks.md) |
+| 16 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 17 | fapplyorgid | 申请组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 18 | fpaidstatus | 付款状态 | varchar | 5 |  | √ | ' ' | 付款状态,枚举: A :未付款 B :付款中 C :已付款 D :已排款 |
 | 19 | fbillstatus | 单据状态 | varchar | 5 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 20 | fapplydate | 申请日期 | timestamp | 0 |  |  | null | 申请日期 |
 | 21 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 22 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
-| 23 | fpayorgid | 付款组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 23 | fpayorgid | 付款组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 24 | fbackbillflag | 退单 | bpchar | 1 |  | √ | '0' | 退单 |
 | 25 | fisdiffcur | 异币别付款（弃用） | bpchar | 1 |  | √ | '0' | 异币别付款（弃用） |
 | 26 | fpartpaysche | 部分排款 | bpchar | 1 |  | √ | '0' | 部分排款 |
-| 27 | fpaymenttypeid | 付款用途 | int8 | 64 |  | √ | 0 | 付款用途 cas_paymentbilltype |
+| 27 | fpaymenttypeid | 付款用途 | int8 | 64 |  | √ | 0 | [付款用途 cas_paymentbilltype](../cas_files/cas_paymentbilltype.md) |
 | 28 | fexratedate | 汇率日期（弃用） | timestamp | 0 |  |  | null | 汇率日期（弃用） |
-| 29 | fpayeecurrencyid | 收款币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 29 | fpayeecurrencyid | 收款币别 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 | 30 | finvalidflag | 作废 | bpchar | 1 |  | √ | '0' | 作废 |
-| 31 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 31 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 32 | fplanpaydate | 计划付款日期 | timestamp | 0 |  |  | null | 计划付款日期 |
 
 ### 列规则定义
@@ -132,10 +132,10 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fexpenseitemid | 费用项目 | int8 | 64 |  | √ | 0 | 费用项目 er_expenseitemedit |
-| 3 | fprojectid | 项目 | int8 | 64 |  | √ | 0 | 项目 bd_project |
+| 2 | fexpenseitemid | 费用项目 | int8 | 64 |  | √ | 0 | [费用项目 er_expenseitemedit](../basedata_files/er_expenseitemedit.md) |
+| 3 | fprojectid | 项目 | int8 | 64 |  | √ | 0 | [项目 bd_project](../basedata_files/bd_project.md) |
 | 4 | fbuspayeeamount | 收款金额 | numeric | 19 | 6 | √ | 0.000000 | 收款金额 |
-| 5 | fmaterielfield | 物料 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 5 | fmaterielfield | 物料 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 6 | fcontractnumber | 合同号 | varchar | 50 |  | √ | ' ' | 合同号 |
 | 7 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 8 | fbusremark | 备注 | varchar | 512 |  | √ | ' ' | 备注 |
@@ -198,7 +198,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 应收应付票据登记 cdm_payandrecdraft_f7 |
+| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [应收应付票据登记 cdm_payandrecdraft_f7](../cdm_files/cdm_payandrecdraft_f7.md) |
 | 2 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 | 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 
@@ -233,7 +233,7 @@
 | 5 | fpaymentchannel | 支付渠道 | varchar | 50 |  | √ | ' ' | 支付渠道,枚举: bei :银企互联 notbei :非银企互联 |
 | 6 | fpriority | 紧急程度 | varchar | 50 |  | √ | ' ' | 紧急程度,枚举: prior :优先 public :普通 defer :暂缓 |
 | 7 | fpaybillno | 付款单 | varchar | 30 |  | √ | ' ' | 付款单 |
-| 8 | fpaycurrencyid | 付款币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 8 | fpaycurrencyid | 付款币别 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 | 9 | frecaccbankname | 收款人实名 | varchar | 50 |  | √ | ' ' | 收款人实名 |
 | 10 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 11 | fpayamount | 付款金额 | numeric | 19 | 6 | √ | 0 | 付款金额 |
@@ -246,14 +246,14 @@
 | 18 | fapplyid | 申请明细id（隐藏） | int8 | 64 |  | √ | 0 | 申请明细id（隐藏） |
 | 19 | finvalid | 拒付 | bpchar | 1 |  | √ | '0' | 拒付 |
 | 20 | flastmodifytime | 最后更新时间 | timestamp | 0 |  |  | null | 最后更新时间 |
-| 21 | fpayeraccbankid | 付款账号 | int8 | 64 |  | √ | 0 | 银行账户 bd_accountbanks |
+| 21 | fpayeraccbankid | 付款账号 | int8 | 64 |  | √ | 0 | [银行账户 bd_accountbanks](../basedata_files/bd_accountbanks.md) |
 | 22 | flockedamount | 已锁定金额 | numeric | 19 | 6 | √ | 0.000000 | 已锁定金额 |
-| 23 | fexratetableid | 汇率表 | int8 | 64 |  | √ | 0 | 汇率表 bd_exratetable |
-| 24 | fsettlementtypeid | 结算方式 | int8 | 64 |  | √ | 0 | 结算方式 bd_settlementtype |
+| 23 | fexratetableid | 汇率表 | int8 | 64 |  | √ | 0 | [汇率表 bd_exratetable](../base_files/bd_exratetable.md) |
+| 24 | fsettlementtypeid | 结算方式 | int8 | 64 |  | √ | 0 | [结算方式 bd_settlementtype](../basedata_files/bd_settlementtype.md) |
 | 25 | fpayeename | 收款人 | varchar | 255 |  | √ | ' ' | 收款人 |
 | 26 | fremark | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
 | 27 | fbackbill | 退票 | bpchar | 1 |  | √ | '0' | 退票 |
-| 28 | fpayerbankid | 付款银行 | int8 | 64 |  | √ | 0 | 金融机构 bd_finorginfo |
+| 28 | fpayerbankid | 付款银行 | int8 | 64 |  | √ | 0 | [金融机构 bd_finorginfo](../basedata_files/bd_finorginfo.md) |
 | 29 | fpayeeaccbanknum | 收款账号 | varchar | 255 |  | √ | ' ' | 收款账号 |
 | 30 | fexpectdate | 期望付款日期 | timestamp | 0 |  |  | null | 期望付款日期 |
 | 31 | fpayeetype | 收款人类型 | varchar | 50 |  | √ | ' ' | 收款人类型,枚举: bd_customer :客户 bd_supplier :供应商 bos_user :职员 bos_org :公司 cas_othercontactunit :其他 |
@@ -263,7 +263,7 @@
 | 35 | feaccountname | 账户名称 | varchar | 255 |  | √ | ' ' | 账户名称 |
 | 36 | frecothercode | 收款银行其他代码 | varchar | 50 |  | √ | ' ' | 收款银行其他代码 |
 | 37 | fisdiffcur | 异币别付款 | bpchar | 1 |  | √ | '0' | 异币别付款 |
-| 38 | fpayeebank | 收款银行 | int8 | 64 |  | √ | 0 | 行名行号 bd_bebank |
+| 38 | fpayeebank | 收款银行 | int8 | 64 |  | √ | 0 | [行名行号 bd_bebank](../basedata_files/bd_bebank.md) |
 | 39 | frecbanknumber | 收款银行联行号 | varchar | 50 |  | √ | ' ' | 收款银行联行号 |
 | 40 | fsettletnumber | 结算号 | varchar | 2000 |  | √ | ' ' | 结算号 |
 | 41 | fbalance | 当前余额 | numeric | 19 | 6 | √ | 0.000000 | 当前余额 |
@@ -342,25 +342,25 @@
 | 6 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 7 | felockedamount | 已锁定金额 | numeric | 19 | 6 | √ | 0.000000 | 已锁定金额 |
 | 8 | fchgstatus | 变更状态 | varchar | 50 |  | √ | ' ' | 变更状态,枚举: A :未变更 B :变更中 C :已变更 |
-| 9 | fechguseraccbank | 变更收款信息基础资料(隐藏) | int8 | 64 |  | √ | 0 | 收款信息 er_payeer |
+| 9 | fechguseraccbank | 变更收款信息基础资料(隐藏) | int8 | 64 |  | √ | 0 | [收款信息 er_payeer](../em_files/er_payeer.md) |
 | 10 | fechgpayeeaccbanknum | 变更后收款账号 | varchar | 255 |  | √ | ' ' | 变更后收款账号 |
-| 11 | feuseraccbank | 收款信息基础资料(隐藏) | int8 | 64 |  | √ | 0 | 收款信息 er_payeer |
+| 11 | feuseraccbank | 收款信息基础资料(隐藏) | int8 | 64 |  | √ | 0 | [收款信息 er_payeer](../em_files/er_payeer.md) |
 | 12 | fepayeeaccbankid | 收款账号ID | int8 | 64 |  | √ | 0 | 收款账号ID |
 | 13 | fepayeeaccbanknum | 收款账号 | varchar | 255 |  | √ | ' ' | 收款账号 |
-| 14 | fechgpayeeaccbank | 变更收款账号基础资料(隐藏) | int8 | 64 |  | √ | 0 | 银行账户 bd_accountbanks |
-| 15 | fsettlementtypeid | 申请结算方式 | int8 | 64 |  | √ | 0 | 结算方式 bd_settlementtype |
+| 14 | fechgpayeeaccbank | 变更收款账号基础资料(隐藏) | int8 | 64 |  | √ | 0 | [银行账户 bd_accountbanks](../basedata_files/bd_accountbanks.md) |
+| 15 | fsettlementtypeid | 申请结算方式 | int8 | 64 |  | √ | 0 | [结算方式 bd_settlementtype](../basedata_files/bd_settlementtype.md) |
 | 16 | feremark | 备注 | varchar | 512 |  |  | null | 备注 |
-| 17 | fechgpayeebankid | 变更后收款银行 | int8 | 64 |  | √ | 0 | 行名行号 bd_bebank |
+| 17 | fechgpayeebankid | 变更后收款银行 | int8 | 64 |  | √ | 0 | [行名行号 bd_bebank](../basedata_files/bd_bebank.md) |
 | 18 | fsplitid | 申请明细id | int8 | 64 |  | √ | 0 | 申请明细id |
 | 19 | fepayeeamount | 收款金额 | numeric | 19 | 6 | √ | 0.000000 | 收款金额 |
 | 20 | fepayeetype | 收款人类型 | varchar | 100 |  | √ | ' ' | 收款人类型,枚举: bd_customer :客户 bd_supplier :供应商 bos_user :职员 bos_org :公司 cas_othercontactunit :其他 |
 | 21 | feaccountname | 账户名称 | varchar | 255 |  | √ | ' ' | 账户名称 |
 | 22 | fepaidamount | 已付款金额 | numeric | 19 | 6 | √ | 0.000000 | 已付款金额 |
-| 23 | fepayeebankid | 收款银行 | int8 | 64 |  | √ | 0 | 行名行号 bd_bebank |
+| 23 | fepayeebankid | 收款银行 | int8 | 64 |  | √ | 0 | [行名行号 bd_bebank](../basedata_files/bd_bebank.md) |
 | 24 | fepayeeid | 收款人ID | int8 | 64 |  | √ | 0 | 收款人ID |
 | 25 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 26 | fepayeename | 收款人 | varchar | 255 |  | √ | ' ' | 收款人 |
-| 27 | fepayeeaccbank | 收款账号基础资料(隐藏) | int8 | 64 |  | √ | 0 | 银行账户 bd_accountbanks |
+| 27 | fepayeeaccbank | 收款账号基础资料(隐藏) | int8 | 64 |  | √ | 0 | [银行账户 bd_accountbanks](../basedata_files/bd_accountbanks.md) |
 
 ### 列规则定义
 

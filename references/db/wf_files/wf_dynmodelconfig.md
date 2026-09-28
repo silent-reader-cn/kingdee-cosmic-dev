@@ -14,13 +14,13 @@
 | 3 | flifecycleconfig | 生命周期配置 | varchar | 3000 |  | √ | ' ' | 生命周期配置 |
 | 4 | fcustomruntimeconfig | 自定义运行时配置 | text | 0 |  |  | null | 自定义运行时配置 |
 | 5 | fmandatory | 是否必选 | bpchar | 1 |  | √ | '0' | 是否必选 |
-| 6 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 7 | fisv | 开发商标识 | varchar | 30 |  | √ | 'kingdee' | 开发商标识 |
-| 8 | fappid | 应用ID | varchar | 36 |  | √ | ' ' | 业务应用实体 bos_devportal_bizapp |
+| 8 | fappid | 应用ID | varchar | 36 |  | √ | ' ' | [业务应用实体 bos_devportal_bizapp](../mdl_files/bos_devportal_bizapp.md) |
 | 9 | fcreatedate | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 10 | fmodifydate | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 11 | fcloudid | 云ID | varchar | 500 |  | √ | ' ' | 云ID |
-| 12 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fcustomuiconfig | 自定义界面配置 | text | 0 |  |  | null | 自定义界面配置 |
 | 14 | fstenciltype | 节点类型 | varchar | 100 |  | √ | ' ' | 节点类型 |
 | 15 | fstenciltypename | 节点类型名称 | varchar | 100 |  | √ | ' ' | 节点类型名称 |

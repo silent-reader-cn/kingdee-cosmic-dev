@@ -12,7 +12,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fleft_bracket | 左括号 | varchar | 50 |  | √ | ' ' | 左括号,枚举: ( :( (( :(( |
 | 3 | ffilter_column | 条件字段 | varchar | 150 |  | √ | ' ' | 条件字段 |
-| 4 | fcompare | 比较方式 | varchar | 50 |  | √ | ' ' | 比较方式,枚举: = :等于 STARTS_WITH :开头是 CONTAINS :包含 ENDS_WITH :结尾是 > :大于 >= :大于或等于 :不等于 in :IN not in :NOT IN NOT_STARTS_WITH :开头不是 NOT_CONTAINS :不包含 NOT_ENDS_WITH :结尾不是 IS_NULL :为空 IS_NOT_NULL :不为空 |
+| 4 | fcompare | 比较方式 | varchar | 50 |  | √ | ' ' | 比较方式,枚举: = :等于 STARTS_WITH :开头是 CONTAINS :包含 ENDS_WITH :结尾是 > :大于 >= :大于或等于 < :小于 <= :小于或等于 <> :不等于 in :IN not in :NOT IN NOT_STARTS_WITH :开头不是 NOT_CONTAINS :不包含 NOT_ENDS_WITH :结尾不是 IS_NULL :为空 IS_NOT_NULL :不为空 |
 | 5 | flink | 逻辑连接符 | varchar | 50 |  | √ | ' ' | 逻辑连接符,枚举: AND :与 OR :或 |
 | 6 | ffilter_label | 字段描述 | varchar | 200 |  | √ | ' ' | 字段描述 |
 | 7 | fvalue_var | 比较值变量 | varchar | 50 |  | √ | ' ' | 比较值变量,枚举: |
@@ -142,10 +142,10 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 3 | fgroupid | 数据源 | int8 | 64 |  | √ | 0 | 数据源管理 isc_data_source |
+| 3 | fgroupid | 数据源 | int8 | 64 |  | √ | 0 | [数据源管理 isc_data_source](../iscb_files/isc_data_source.md) |
 | 4 | fsource_tenant | 来源 | varchar | 100 |  | √ | ' ' | 来源 |
 | 5 | ffiletype | 文件类型 | varchar | 50 |  | √ | ' ' | 文件类型,枚举: json :Json 对象格式(*.json) xlsx :Excel 工作簿(*.xlsx) xls :Excel 97-2003 工作簿(*.xls) csv :CSV 文件(*.csv) |
-| 6 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 7 | fisv | 开发商 | varchar | 100 |  | √ | ' ' | 开发商 |
 | 8 | fprotect_level | 保护等级 | varchar | 30 |  | √ | ' ' | 保护等级,枚举: DEFAULT :默认 READ_ONLY :只读 UNPROTECTED :无保护 |
 | 9 | fexport_source_type | 导出对象类别 | varchar | 50 |  | √ | ' ' | 导出对象类别,枚举: isc_metadata_schema :集成对象 |
@@ -154,8 +154,8 @@
 | 12 | fcreatedate | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 13 | fmodifydate | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 14 | fsource_trace | 来源追溯 | varchar | 600 |  | √ | ' ' | 来源追溯 |
-| 15 | fdelimiter | 自定义分隔符 | varchar | 30 |  | √ | ' ' | 自定义分隔符,枚举: COMMA :逗号（,） SEMICOLON :分号（;） VERTICAL :竖线（|） TAB :制表符（\t） SPACE :空格（ ） |
-| 16 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 15 | fdelimiter | 自定义分隔符 | varchar | 30 |  | √ | ' ' | 自定义分隔符,枚举: COMMA :逗号（,） SEMICOLON :分号（;） VERTICAL :竖线（\|） TAB :制表符（\t） SPACE :空格（ ） |
+| 16 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 17 | ffilesize | 文件大小（M） | int4 | 32 |  | √ | 0 | 文件大小（M） |
 | 18 | fnumber | 编码 | varchar | 60 |  | √ | ' ' | 编码 |
 | 19 | fsrc_retrieve_script_tag | 导出数据获取脚本_详情 | text | 0 |  |  | null | 导出数据获取脚本_详情 |

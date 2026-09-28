@@ -17,19 +17,19 @@
 | 6 | fstatus | 数据状态 | varchar | 10 |  | √ | ' ' | 数据状态,枚举: A :创建 B :审核中 C :已审核 D :重新审核 |
 | 7 | fcustomfield1 | 自定义字段1 | varchar | 50 |  | √ | ' ' | 自定义字段1 |
 | 8 | fcustomfield2 | 自定义字段2 | varchar | 50 |  | √ | ' ' | 自定义字段2 |
-| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | flastname | 尾名 | varchar | 50 |  | √ | ' ' | 尾名 |
 | 11 | fpositionaltitle | 职称 | varchar | 50 |  | √ | ' ' | 职称 |
 | 12 | ffixedtext2 | 固定文本2 | varchar | 50 |  | √ | ' ' | 固定文本2 |
 | 13 | ffixedtext1 | 固定文本1 | varchar | 50 |  | √ | ' ' | 固定文本1 |
 | 14 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
-| 15 | fmodifierid | 最后修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 16 | fnameconfig | 单据格式 | int8 | 64 |  | √ | 0 | 姓名文本格式 cts_nameconfigformat |
+| 15 | fmodifierid | 最后修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 16 | fnameconfig | 单据格式 | int8 | 64 |  | √ | 0 | [姓名文本格式 cts_nameconfigformat](../cts_files/cts_nameconfigformat.md) |
 | 17 | fabbreviation | 缩写 | varchar | 50 |  | √ | ' ' | 缩写 |
 | 18 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 19 | fcountryid | 国家 | int8 | 64 |  | √ | 0 | 国家和地区 bd_country |
+| 19 | fcountryid | 国家 | int8 | 64 |  | √ | 0 | [国家和地区 bd_country](../base_files/bd_country.md) |
 | 20 | ffirstname | 首名 | varchar | 50 |  | √ | ' ' | 首名 |
-| 21 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 21 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 22 | fmiddlename | 中间名 | varchar | 50 |  | √ | ' ' | 中间名 |
 | 23 | fnickname | 昵称 | varchar | 50 |  | √ | ' ' | 昵称 |
 | 24 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :启用 |

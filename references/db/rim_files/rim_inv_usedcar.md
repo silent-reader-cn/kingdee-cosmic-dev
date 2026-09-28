@@ -26,7 +26,7 @@
 | 15 | fresource | 发票来源 | varchar | 50 |  | √ | ' ' | 发票来源 |
 | 16 | fbillno | 单据编号 | varchar | 36 |  | √ | ' ' | 单据编号 |
 | 17 | fbuyer_id_no | 购方组织代码/身份证号码 | varchar | 30 |  | √ | ' ' | 购方组织代码/身份证号码 |
-| 18 | forg_id | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 18 | forg_id | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 19 | ftotal_amount | 车价合计 | numeric | 23 | 10 | √ | 0.0000000000 | 车价合计 |
 | 20 | fmarket_bank_accout | 二手市场开户银行帐号 | varchar | 100 |  | √ | ' ' | 二手市场开户银行帐号 |
 | 21 | fdeduction_purpose | 抵扣用途 | varchar | 2 |  | √ | ' ' | 抵扣用途,枚举: 1 :抵扣 2 :不抵扣 |
@@ -46,18 +46,18 @@
 | 35 | fauction_bank_accout | 拍卖/经营开户银行帐号 | varchar | 100 |  | √ | ' ' | 拍卖/经营开户银行帐号 |
 | 36 | fdelete | 可用状态 | varchar | 4 |  |  | '1' | 可用状态,枚举: 1 :可用 2 :作废 3 :删除 |
 | 37 | fexpense_status | 报销状态 | varchar | 2 |  | √ | ' ' | 报销状态,枚举: 1 :未报销 30 :审核中 60 :已报销 65 :已入账 |
-| 38 | fproject | 项目 | int8 | 64 |  | √ | 0 | 项目 bd_project |
-| 39 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 38 | fproject | 项目 | int8 | 64 |  | √ | 0 | [项目 bd_project](../basedata_files/bd_project.md) |
+| 39 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 40 | fbuyer_name | 购方名称 | varchar | 120 |  | √ | ' ' | 购方名称 |
 | 41 | fmarket_name | 二手市场单位 | varchar | 100 |  | √ | ' ' | 二手市场单位 |
 | 42 | fmachine_no | 机器编码 | varchar | 50 |  | √ | ' ' | 机器编码 |
 | 43 | fmanage_status | 管理状态 | varchar | 2 |  | √ | ' ' | 管理状态,枚举: 0 :正常 1 :非正常 |
 | 44 | finvoice_status | 发票状态 | varchar | 2 |  | √ | ' ' | 发票状态,枚举: 0 :正常 1 :失控 2 :作废 3 :红冲 7 :部分红冲 4 :异常 |
 | 45 | fserial_no | 发票流水号 | varchar | 36 |  | √ | ' ' | 发票流水号 |
-| 46 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 46 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 47 | faccount_date | 会计属期 | timestamp | 0 |  |  | null | 会计属期 |
 | 48 | fremark | 备注 | varchar | 400 |  | √ | ' ' | 备注 |
-| 49 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 49 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 50 | fvehicle_management_name | 转入地车辆管理所名称 | varchar | 50 |  | √ | ' ' | 转入地车辆管理所名称 |
 | 51 | faws_serial_no | AWS发票流水号 | varchar | 36 |  | √ | ' ' | AWS发票流水号 |
 | 52 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
@@ -67,11 +67,11 @@
 | 56 | fvehicle_type | 车辆类型 | varchar | 30 |  | √ | ' ' | 车辆类型 |
 | 57 | fvehicle_identification_no | 车辆识别代码/车驾号码 | varchar | 30 |  | √ | ' ' | 车辆识别代码/车驾号码 |
 | 58 | fissuing_office | 开票单位 | varchar | 50 |  | √ | ' ' | 开票单位 |
-| 59 | ftax_org | 纳税主体 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 59 | ftax_org | 纳税主体 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 60 | fsaler_name | 销方名称 | varchar | 120 |  | √ | ' ' | 销方名称 |
 | 61 | fauction_phone_number | 拍卖/经营电话 | varchar | 30 |  | √ | ' ' | 拍卖/经营电话 |
 | 62 | foriginal_state | 原件签收状态 | varchar | 2 |  | √ | ' ' | 原件签收状态,枚举: 0 :未签收 1 :已签收 |
-| 63 | finvoice_type | 发票类型 | int8 | 64 |  | √ | 0 | 发票类型 bd_invoicetype |
+| 63 | finvoice_type | 发票类型 | int8 | 64 |  | √ | 0 | [发票种类 bd_invoicetype](../basedata_files/bd_invoicetype.md) |
 
 ### 列规则定义
 

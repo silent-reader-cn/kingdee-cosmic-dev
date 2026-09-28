@@ -11,13 +11,14 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fisenable | 启用 | bpchar | 1 |  | √ | ' ' | 启用 |
-| 3 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 4 | fapvaluenames | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
-| 5 | fapvaluenum | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
-| 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 7 | fauxptyvalueid | 辅助属性值ID | int8 | 64 |  | √ | 0 | 辅助属性值ID |
-| 8 | fapvaluename | 文本名称 | varchar | 100 |  | √ | ' ' | 文本名称 |
-| 9 | fisdefault | 默认值 | bpchar | 1 |  | √ | ' ' | 默认值 |
+| 3 | fassistantid | 辅助资料 | int8 | 64 |  | √ | 0 | [辅助资料 bos_assistantdata_detail](../base_files/bos_assistantdata_detail.md) |
+| 4 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
+| 5 | fapvaluenames | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
+| 6 | fapvaluenum | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
+| 7 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 8 | fauxptyvalueid | 辅助属性值ID | int8 | 64 |  | √ | 0 | 辅助属性值ID |
+| 9 | fapvaluename | 文本名称 | varchar | 100 |  | √ | ' ' | 文本名称 |
+| 10 | fisdefault | 默认值 | bpchar | 1 |  | √ | ' ' | 默认值 |
 
 ### 列规则定义
 
@@ -74,12 +75,12 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fcreatedate | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
-| 4 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fmodifydate | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
-| 6 | fmaterialid | 物料编码 | int8 | 64 |  | √ | 0 | 物料 bd_material |
-| 7 | fauxptyid | 辅助属性 | int8 | 64 |  | √ | 0 | 辅助属性定义 bd_auxproperty |
+| 6 | fmaterialid | 物料编码 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
+| 7 | fauxptyid | 辅助属性 | int8 | 64 |  | √ | 0 | [辅助属性定义 bd_auxproperty](../sbd_files/bd_auxproperty.md) |
 
 ### 列规则定义
 

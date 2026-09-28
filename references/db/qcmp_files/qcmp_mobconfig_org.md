@@ -72,19 +72,19 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fuseorg | 业务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 4 | fbillobj | 单据 | varchar | 50 |  | √ | ' ' | 单据主实体 bos_billmainentity |
-| 5 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fuseorg | 业务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 4 | fbillobj | 单据 | varchar | 50 |  | √ | ' ' | [单据主实体 bos_billmainentity](../mdl_files/bos_billmainentity.md) |
+| 5 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 7 | fstatus | 数据状态 | varchar | 1 |  | √ | 'A' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 10 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 11 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
-| 12 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 12 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 13 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 14 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 16 | fbillentry | 单据体标识（这里暂时隐藏，目前限定死为检验单的分录，后续配置界面需要调整） | varchar | 50 |  | √ | ' ' | 单据体标识（这里暂时隐藏，目前限定死为检验单的分录，后续配置界面需要调整） |
 | 17 | fauditdate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
@@ -94,7 +94,7 @@
 | 21 | fenable | 使用状态 | varchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 22 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
 | 23 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
-| 24 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 24 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 25 | fisdefault | 默认配置 | bpchar | 1 |  | √ | '0' | 默认配置 |
 
 ### 列规则定义

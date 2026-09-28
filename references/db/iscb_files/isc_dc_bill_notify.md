@@ -20,12 +20,14 @@
 | 9 | fmsg_title | 消息标题 | varchar | 50 |  | √ | ' ' | 消息标题 |
 | 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 11 | fstate | 状态 | varchar | 10 |  | √ | ' ' | 状态,枚举: 0 :禁用 1 :可用 |
-| 12 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 13 | ftrigger | 启动方案 | int8 | 64 |  | √ | 0 | 启动方案 isc_data_copy_trigger |
-| 14 | fcondition | 发送条件 | varchar | 50 |  | √ | ' ' | 发送条件,枚举: success :单据集成成功 failed :单据集成失败 |
-| 15 | fnumber | 消息推送编码 | varchar | 100 |  | √ | ' ' | 消息推送编码 |
-| 16 | fperson_var | 接收人变量-苍穹用户 | varchar | 1000 |  | √ | ' ' | 接收人变量-苍穹用户 |
-| 17 | fchannel | 发送渠道 | varchar | 50 |  | √ | ' ' | 发送渠道,枚举: 1 :系统消息 |
+| 12 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 13 | fnotifytype | 消息渠道 | varchar | 100 |  | √ | ' ' | 消息渠道,枚举: |
+| 14 | ftrigger | 启动方案 | int8 | 64 |  | √ | 0 | [启动方案 isc_data_copy_trigger](../iscb_files/isc_data_copy_trigger.md) |
+| 15 | fcondition | 发送条件 | varchar | 50 |  | √ | ' ' | 发送条件,枚举: success :单据集成成功 failed :单据集成失败 |
+| 16 | fposition | 苍穹岗位 | varchar | 1000 |  | √ | ' ' | 苍穹岗位 |
+| 17 | fnumber | 消息推送编码 | varchar | 100 |  | √ | ' ' | 消息推送编码 |
+| 18 | fperson_var | 接收人变量-苍穹用户 | varchar | 1000 |  | √ | ' ' | 接收人变量-苍穹用户 |
+| 19 | fchannel | 消息渠道（旧） | varchar | 50 |  | √ | ' ' | 消息渠道（旧）,枚举: 1 :系统消息 |
 
 ### 列规则定义
 

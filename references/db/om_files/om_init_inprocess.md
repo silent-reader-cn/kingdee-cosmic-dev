@@ -41,18 +41,19 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fmaterialid | 物料 | int8 | 64 |  | √ | 0 | 物料生产信息 bd_materialmftinfo |
+| 2 | fmaterialid | 物料 | int8 | 64 |  | √ | 0 | [物料生产信息 bd_materialmftinfo](../sbd_files/bd_materialmftinfo.md) |
 | 3 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 4 | fstockid | 委外用料清单 | int8 | 64 |  | √ | 0 | 委外组件清单f7 om_mftstock_headf7 |
-| 5 | fwarehouseid | 发料仓库 | int8 | 64 |  | √ | 0 | 仓库 bd_warehouse |
-| 6 | fstockentryid | 委外用料清单分录 | int8 | 64 |  | √ | 0 | 委外用料清单分录f7 om_mftstockf7 |
+| 4 | fstockid | 委外用料清单 | int8 | 64 |  | √ | 0 | [委外用料清单f7 om_mftstock_headf7](../om_files/om_mftstock_headf7.md) |
+| 5 | fwarehouseid | 发料仓库 | int8 | 64 |  | √ | 0 | [仓库 bd_warehouse](../sbd_files/bd_warehouse.md) |
+| 6 | fstockentryid | 委外用料清单分录 | int8 | 64 |  | √ | 0 | [委外用料清单分录f7 om_mftstockf7](../om_files/om_mftstockf7.md) |
 | 7 | finpbuswipbaseqty | 本次分摊基本数量 | numeric | 23 | 10 | √ | 0 | 本次分摊基本数量 |
 | 8 | finpentryentityid | 期初委外在制材料分录ID | int8 | 64 |  | √ | 0 | 期初委外在制材料分录ID |
-| 9 | finpsubunitid | 期初委外在制材料.子项单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 10 | flocationid | 发料仓位 | int8 | 64 |  | √ | 0 | 仓位 bd_location |
-| 11 | fbaseunitid | 期初在制材料.基本单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 12 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 13 | finpbuswipqty | 本次分摊数量 | numeric | 23 | 10 | √ | 0 | 本次分摊数量 |
+| 9 | finpsubunitid | 期初委外在制材料.子项单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 10 | flocationid | 发料仓位 | int8 | 64 |  | √ | 0 | [仓位 bd_location](../sbd_files/bd_location.md) |
+| 11 | fbaseunitid | 期初在制材料.基本单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 12 | fsupplyorgid | 发料组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 13 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 14 | finpbuswipqty | 本次分摊数量 | numeric | 23 | 10 | √ | 0 | 本次分摊数量 |
 
 ### 列规则定义
 
@@ -80,18 +81,18 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fremark | 备注 | varchar | 512 |  | √ | ' ' | 备注 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fbillstatus | 单据状态 | varchar | 10 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 6 | fproducedeptid | fproducedeptid | int8 | 64 |  | √ | 0 |  |
-| 7 | forgid | 生产组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 7 | forgid | 生产组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | fisnewbill | 是否新单 | bpchar | 1 |  | √ | '0' | 是否新单 |
 | 9 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
-| 10 | fprddeptid | 生产部门 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 10 | fprddeptid | 生产部门 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fbillno | 单据编号 | varchar | 30 |  | √ | ' ' | 单据编号 |
-| 14 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 
@@ -151,23 +152,28 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fmaterialid | 物料编码 | int8 | 64 |  | √ | 0 | 物料生产信息 bd_materialmftinfo |
-| 3 | fproducedeptid | 生产部门 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 4 | forgid | 生产组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fmaterialid | 物料编码 | int8 | 64 |  | √ | 0 | [物料生产信息 bd_materialmftinfo](../sbd_files/bd_materialmftinfo.md) |
+| 3 | fproducedeptid | 生产部门 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 4 | forgid | 生产组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | fisshare | 已分摊 | bpchar | 1 |  | √ | '0' | 已分摊 |
 | 6 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 7 | fsubunitid | 子项单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 8 | fwarehouseid | 仓库 | int8 | 64 |  | √ | 0 | 仓库 bd_warehouse |
-| 9 | fsupplierid | 委外加工商 | int8 | 64 |  | √ | 0 | 供应商 bd_supplier |
-| 10 | finvunitid | 库存单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 11 | flocationid | 仓位 | int8 | 64 |  | √ | 0 | 仓位 bd_location |
-| 12 | fmaterialversionid | 物料版本 | int8 | 64 |  | √ | 0 | 物料版本 bd_bomversion_new |
-| 13 | finpinvorgid | 库存组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 14 | finvunitqty | 库存单位.在制数量 | numeric | 23 | 10 | √ | 0 | 库存单位.在制数量 |
-| 15 | fauxpropertyid | 辅助属性 | int8 | 64 |  | √ | 0 | null 001 |
-| 16 | fsubunitqty | 子项单位.在制数量 | numeric | 23 | 10 | √ | 0 | 子项单位.在制数量 |
-| 17 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 18 | fisrealation | 已关联用料清单 | bpchar | 1 |  | √ | '0' | 已关联用料清单 |
+| 7 | fsubunitid | 子项单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 8 | fwarehouseid | 仓库 | int8 | 64 |  | √ | 0 | [仓库 bd_warehouse](../sbd_files/bd_warehouse.md) |
+| 9 | fsupplierid | 委外加工商 | int8 | 64 |  | √ | 0 | [供应商 bd_supplier](../basedata_files/bd_supplier.md) |
+| 10 | fbonded | 保税 | bpchar | 1 |  | √ | '0' | 保税 |
+| 11 | finvunitid | 库存单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 12 | flotid | 批号 | int8 | 64 |  | √ | 0 | [批号主档 bd_lot](../sbd_files/bd_lot.md) |
+| 13 | flocationid | 仓位 | int8 | 64 |  | √ | 0 | [仓位 bd_location](../sbd_files/bd_location.md) |
+| 14 | fexpirydate | 有效期至 | timestamp | 0 |  |  | null | 有效期至 |
+| 15 | fmaterialversionid | 物料版本 | int8 | 64 |  | √ | 0 | [物料版本 bd_bomversion_new](../basedata_files/bd_bomversion_new.md) |
+| 16 | finpinvorgid | 库存组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 17 | finvunitqty | 库存单位.在制数量 | numeric | 23 | 10 | √ | 0 | 库存单位.在制数量 |
+| 18 | fauxpropertyid | 辅助属性 | int8 | 64 |  | √ | 0 | null 001 |
+| 19 | fsubunitqty | 子项单位.在制数量 | numeric | 23 | 10 | √ | 0 | 子项单位.在制数量 |
+| 20 | fproducedate | 生产日期 | timestamp | 0 |  |  | null | 生产日期 |
+| 21 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 22 | fisrealation | 已关联用料清单 | bpchar | 1 |  | √ | '0' | 已关联用料清单 |
+| 23 | flicenseno | 许可证编号 | int8 | 64 |  | √ | 0 | [许可证 bd_licence](../sbd_files/bd_licence.md) |
 
 ### 列规则定义
 

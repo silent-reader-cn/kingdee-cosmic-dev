@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 流程配置 pds_flowconfig |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [流程配置 pds_flowconfig](../pds_files/pds_flowconfig.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -40,21 +40,22 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fremark | 校验结果说明 | varchar | 510 |  | √ | ' ' | 校验结果说明 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 4 | fname | 名称 | varchar | 300 |  | √ | ' ' | 名称 |
-| 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 6 | fbizobject | 业务对象 | varchar | 36 |  | √ | ' ' | 业务对象 bos_objecttype |
-| 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 8 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 10 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 11 | forder | 在同一业务对象+操作类型中的校验顺序 | int4 | 32 |  | √ | 0 | 在同一业务对象+操作类型中的校验顺序 |
-| 12 | fisforbidden | 是否允许禁用 | bpchar | 1 |  | √ | '0' | 是否允许禁用 |
-| 13 | fenable | 使用状态 | bpchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 14 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
-| 15 | foperation | 操作类型 | varchar | 30 |  | √ | ' ' | 操作类型,枚举: save :保存 submit :提交 unsubmit :撤销 audit :审核 unaudit :反审核 allopen :全部开标 tecopen :开技术标 bizopen :开商务标 confirm :确认 reject :打回 push :下推 nextnode :下一步 viehall :竞价大厅 send :发送消息 negopen :议价开标 resend :重新发送 pushscore :下达评分任务 recalculate :重新下达/计算 aptopen :资审开标 pushaptitude :下达资审任务 gather :收集 archive :归档 refuse :拒绝 calculate :综合计算 unenroll :撤回报名 pushevaluate :下达考评任务 autorecommend :自动推荐入围 aptpush :下达资审任务 aptpush2 :下达后审任务 bidpush :下达评标任务 matchcontract :匹配合同 repushaptitude :重新下达资审任务 unpushevaluate :撤销考评任务下达 publish :发布 unpublish :撤销发布 |
-| 16 | fissyspreset | 系统预置 | bpchar | 1 |  | √ | '0' | 系统预置 |
-| 17 | fpluginname | 数据校验插件 | varchar | 100 |  | √ | ' ' | 数据校验插件 |
+| 3 | fishidden | 是否隐藏 | bpchar | 1 |  | √ | '0' | 是否隐藏 |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 5 | fname | 名称 | varchar | 300 |  | √ | ' ' | 名称 |
+| 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 7 | fbizobject | 业务对象 | varchar | 36 |  | √ | ' ' | [业务对象 bos_objecttype](../mdl_files/bos_objecttype.md) |
+| 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 9 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
+| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 11 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
+| 12 | forder | 在同一业务对象+操作类型中的校验顺序 | int4 | 32 |  | √ | 0 | 在同一业务对象+操作类型中的校验顺序 |
+| 13 | fisforbidden | 是否允许禁用 | bpchar | 1 |  | √ | '0' | 是否允许禁用 |
+| 14 | fenable | 使用状态 | bpchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 15 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
+| 16 | foperation | 操作类型 | varchar | 30 |  | √ | ' ' | 操作类型,枚举: save :保存 submit :提交 unsubmit :撤销 audit :审核 unaudit :反审核 allopen :全部开标 tecopen :开技术标 bizopen :开商务标 confirm :确认 reject :打回 push :下推 nextnode :下一步 viehall :竞价大厅 send :发送消息 negopen :议价开标 resend :重新发送 pushscore :下达评分任务 recalculate :重新下达/计算 aptopen :资审开标 pushaptitude :下达资审任务 gather :收集 archive :归档 refuse :拒绝 calculate :综合计算 unenroll :撤回报名 pushevaluate :下达考评任务 autorecommend :自动推荐入围 aptpush :下达资审任务 aptpush2 :下达后审任务 bidpush :下达评标任务 matchcontract :匹配合同 repushaptitude :重新下达资审任务 unpushevaluate :撤销考评任务下达 publish :发布 unpublish :撤销发布 ratiocalculate :占比及汇总计算 |
+| 17 | fissyspreset | 系统预置 | bpchar | 1 |  | √ | '0' | 系统预置 |
+| 18 | fpluginname | 数据校验插件 | varchar | 100 |  | √ | ' ' | 数据校验插件 |
 
 ### 列规则定义
 
@@ -84,7 +85,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 组件模板配置 pds_tplconfig |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [组件模板配置 pds_tplconfig](../pds_files/pds_tplconfig.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -97,8 +98,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_pds_validatorchgtype_bid |  | fbasedataid |
-| 2 | pk_pds_validatorchgtype |  | fpkid |
+| 1 | pk_pds_validatorchgtype |  | fpkid |
+| 2 | idx_pds_validatorchgtype_bid |  | fbasedataid |
 | 3 | idx_pds_validatorchgtype_fid |  | fid |
 
 ---
@@ -143,7 +144,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 招标辅助资料 pds_extdata |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [招标辅助资料 pds_extdata](../pds_files/pds_extdata.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -172,7 +173,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 组件模板配置 pds_tplconfig |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [组件模板配置 pds_tplconfig](../pds_files/pds_tplconfig.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -202,7 +203,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fparamvalue | 默认值 | varchar | 512 |  | √ | ' ' | 默认值 |
-| 3 | fparameterid | 参数编码 | int8 | 64 |  | √ | 0 | 招标辅助资料 pds_extdata |
+| 3 | fparameterid | 参数编码 | int8 | 64 |  | √ | 0 | [招标辅助资料 pds_extdata](../pds_files/pds_extdata.md) |
 | 4 | fparamname | fparamname | varchar | 50 |  | √ | ' ' |  |
 | 5 | fbasedatainfo | 参数说明 | varchar | 512 |  | √ | ' ' | 参数说明 |
 | 6 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
@@ -235,7 +236,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 招标辅助资料 pds_extdata |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [招标辅助资料 pds_extdata](../pds_files/pds_extdata.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -264,7 +265,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 流程配置 pds_flowconfig |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [流程配置 pds_flowconfig](../pds_files/pds_flowconfig.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义

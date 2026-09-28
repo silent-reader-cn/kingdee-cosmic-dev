@@ -16,11 +16,11 @@
 | 5 | fupdate_time | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
 | 6 | fpagesum | 总页码 | int4 | 32 |  | √ | 0 | 总页码 |
 | 7 | fattach_name | 附件名称 | varchar | 100 |  | √ | ' ' | 附件名称 |
-| 8 | fuser | 采集人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | fuser | 采集人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fattach_hash_value | 文件的hash值 | varchar | 100 |  | √ | ' ' | 文件的hash值 |
 | 10 | fsnapshot_url | 快照地址 | varchar | 200 |  | √ | ' ' | 快照地址 |
 | 11 | fattach_url | 附件url | varchar | 200 |  | √ | ' ' | 附件url |
-| 12 | fattach_category | 附件类别 | int8 | 64 |  | √ | 0 | 附件类型基础资料 bdm_attach_type |
+| 12 | fattach_category | 附件类别 | int8 | 64 |  | √ | 0 | [附件类型基础资料 bdm_attach_type](../bdm_files/bdm_attach_type.md) |
 | 13 | frim_user | 外部系统用户 | int8 | 64 |  | √ | 0 | 外部系统用户 |
 | 14 | ffile_extension | 文件后缀名 | varchar | 8 |  | √ | ' ' | 文件后缀名 |
 | 15 | fattach_type | 文件类型 | varchar | 2 |  | √ | ' ' | 文件类型,枚举: 1 :PDF 2 :图片 3 :影像文件 4 :office 5 :文本 |

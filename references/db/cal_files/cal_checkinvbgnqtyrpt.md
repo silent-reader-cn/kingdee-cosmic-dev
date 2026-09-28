@@ -10,35 +10,35 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | festorageorgunitid | 库存组织（库存） | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 3 | fmaterialid | 物料（存货） | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 2 | festorageorgunitid | 库存组织（库存） | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 3 | fmaterialid | 物料（存货） | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 4 | fseq | fseq | int4 | 32 |  | √ | 0 |  |
-| 5 | fconfiguredcodeid | 配置号（存货） | int8 | 64 |  | √ | 0 | 配置号 bd_configuredcode |
-| 6 | fematerialid | 物料（库存） | int8 | 64 |  | √ | 0 | 物料 bd_material |
-| 7 | finvstatusid | 库存状态（存货） | int8 | 64 |  | √ | 0 | 库存状态 bd_invstatus |
+| 5 | fconfiguredcodeid | 配置号（存货） | int8 | 64 |  | √ | 0 | [配置号（废弃） bd_configuredcode](../sbd_files/bd_configuredcode.md) |
+| 6 | fematerialid | 物料（库存） | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
+| 7 | finvstatusid | 库存状态（存货） | int8 | 64 |  | √ | 0 | [库存状态 bd_invstatus](../sbd_files/bd_invstatus.md) |
 | 8 | feownerid | 货主（库存） | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 9 | feinvstatusid | 库存状态（库存） | int8 | 64 |  | √ | 0 | 库存状态 bd_invstatus |
-| 10 | feprojectid | 项目号（库存） | int8 | 64 |  | √ | 0 | 项目 bd_project |
+| 9 | feinvstatusid | 库存状态（库存） | int8 | 64 |  | √ | 0 | [库存状态 bd_invstatus](../sbd_files/bd_invstatus.md) |
+| 10 | feprojectid | 项目号（库存） | int8 | 64 |  | √ | 0 | [项目 bd_project](../basedata_files/bd_project.md) |
 | 11 | fassistid | 辅助属性（存货） | int8 | 64 |  | √ | 0 | null 001 |
-| 12 | fcostaccountid | 成本主体 | int8 | 64 |  | √ | 0 | 成本主体 cal_bd_costaccount |
-| 13 | feconfiguredcodeid | 配置号（库存） | int8 | 64 |  | √ | 0 | 配置号 bd_configuredcode |
+| 12 | fcostaccountid | 成本主体 | int8 | 64 |  | √ | 0 | [成本主体 cal_bd_costaccount](../cal_files/cal_bd_costaccount.md) |
+| 13 | feconfiguredcodeid | 配置号（库存） | int8 | 64 |  | √ | 0 | [配置号（废弃） bd_configuredcode](../sbd_files/bd_configuredcode.md) |
 | 14 | fownertype | 货主类型（存货） | varchar | 30 |  | √ | ' ' | 货主类型（存货）,枚举: bos_org :核算组织 |
-| 15 | fstorageorgid | 库存组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 15 | fstorageorgid | 库存组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 16 | flot | 批号（存货） | varchar | 255 |  | √ | ' ' | 批号（存货） |
-| 17 | fbaseunitid | 基本单位（存货） | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 18 | febaseunitid | 基本单位（库存） | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 17 | fbaseunitid | 基本单位（存货） | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 18 | febaseunitid | 基本单位（库存） | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 19 | febaseqty | 数量（库存） | numeric | 23 | 10 | √ | 0 | 数量（库存） |
-| 20 | fstorageorgunitid | 库存组织（存货） | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 21 | fprojectid | 项目号（存货） | int8 | 64 |  | √ | 0 | 项目 bd_project |
-| 22 | finvtypeid | 库存类型（存货） | int8 | 64 |  | √ | 0 | 库存类型 bd_invtype |
-| 23 | felocationid | 仓位（库存） | int8 | 64 |  | √ | 0 | 仓位 bd_location |
-| 24 | fewarehouseid | 仓库（库存） | int8 | 64 |  | √ | 0 | 仓库 bd_warehouse |
-| 25 | fwarehouseid | 仓库（存货） | int8 | 64 |  | √ | 0 | 仓库 bd_warehouse |
+| 20 | fstorageorgunitid | 库存组织（存货） | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 21 | fprojectid | 项目号（存货） | int8 | 64 |  | √ | 0 | [项目 bd_project](../basedata_files/bd_project.md) |
+| 22 | finvtypeid | 库存类型（存货） | int8 | 64 |  | √ | 0 | [库存类型 bd_invtype](../sbd_files/bd_invtype.md) |
+| 23 | felocationid | 仓位（库存） | int8 | 64 |  | √ | 0 | [仓位 bd_location](../sbd_files/bd_location.md) |
+| 24 | fewarehouseid | 仓库（库存） | int8 | 64 |  | √ | 0 | [仓库 bd_warehouse](../sbd_files/bd_warehouse.md) |
+| 25 | fwarehouseid | 仓库（存货） | int8 | 64 |  | √ | 0 | [仓库 bd_warehouse](../sbd_files/bd_warehouse.md) |
 | 26 | fownerid | 货主（存货） | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 27 | flocationid | 仓位（存货） | int8 | 64 |  | √ | 0 | 仓位 bd_location |
+| 27 | flocationid | 仓位（存货） | int8 | 64 |  | √ | 0 | [仓位 bd_location](../sbd_files/bd_location.md) |
 | 28 | feownertype | 货主类型（库存） | varchar | 30 |  | √ | ' ' | 货主类型（库存）,枚举: bos_org :核算组织 |
 | 29 | fbaseqty | 数量（存货） | numeric | 23 | 10 | √ | 0 | 数量（存货） |
-| 30 | feinvtypeid | 库存类型（库存） | int8 | 64 |  | √ | 0 | 库存类型 bd_invtype |
+| 30 | feinvtypeid | 库存类型（库存） | int8 | 64 |  | √ | 0 | [库存类型 bd_invtype](../sbd_files/bd_invtype.md) |
 | 31 | felot | 批号（库存） | varchar | 255 |  | √ | ' ' | 批号（库存） |
 | 32 | feassistid | 辅助属性（库存） | int8 | 64 |  | √ | 0 | null 001 |
 

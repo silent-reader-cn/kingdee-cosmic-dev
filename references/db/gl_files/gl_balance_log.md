@@ -19,7 +19,7 @@
 | 8 | fcalculated | 是否已算余额 | bpchar | 1 |  | √ | '0' | 是否已算余额 |
 | 9 | forgid | 核算主体 | int8 | 64 |  | √ | 0 | 核算主体 |
 | 10 | faccounttableid | 科目表 | int8 | 64 |  | √ | 0 | 科目表 |
-| 11 | fbookid | 账簿 | int8 | 64 |  | √ | 0 | 账簿 gl_accountbook |
+| 11 | fbookid | 账簿 | int8 | 64 |  | √ | 0 | [账簿 gl_accountbook](../gl_files/gl_accountbook.md) |
 | 12 | fdebitlocal | 本位币借方 | numeric | 24 | 6 | √ | 0.000000 | 本位币借方 |
 | 13 | fcreditqty | 贷方数量 | numeric | 24 | 6 | √ | 0.000000 | 贷方数量 |
 | 14 | fbooktypeid | 账簿类型 | int8 | 64 |  | √ | 0 | 账簿类型 |

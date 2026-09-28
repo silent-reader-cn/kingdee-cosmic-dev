@@ -16,24 +16,25 @@
 | 5 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 6 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 7 | fisshowsign | 显示货币符号 | bpchar | 1 |  | √ | ' ' | 显示货币符号 |
-| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 10 | fissystem | 是否系统预置 | bpchar | 1 |  | √ | '1' | 是否系统预置 |
-| 11 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 12 | fpositiveformat | fpositiveformat | varchar | 30 |  | √ | ' ' |  |
-| 13 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
-| 14 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 15 | fsortcode | 排序码 | varchar | 10 |  | √ | ' ' | 排序码 |
-| 16 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 17 | fdescription | 描述 | varchar | 255 |  | √ | ' ' | 描述 |
-| 18 | fsign | 币种符号 | varchar | 20 |  | √ | ' ' | 币种符号 |
-| 19 | fseparator | fseparator | varchar | 1 |  | √ | ' ' |  |
-| 20 | fpriceprecision | 单价精度 | int8 | 64 |  | √ | 0 | 单价精度 |
-| 21 | fnegativeformat | fnegativeformat | varchar | 30 |  | √ | ' ' |  |
-| 22 | famtprecision | 金额精度 | int8 | 64 |  | √ | 0 | 金额精度 |
-| 23 | fenable | 使用状态 | bpchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 24 | fnumber | 货币代码 | varchar | 80 |  | √ | ' ' | 货币代码 |
-| 25 | fgroupformat | fgroupformat | varchar | 30 |  | √ | ' ' |  |
+| 11 | fk_kdxk_orgfield | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 12 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 13 | fpositiveformat | fpositiveformat | varchar | 30 |  | √ | ' ' |  |
+| 14 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
+| 15 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 16 | fsortcode | 排序码 | varchar | 10 |  | √ | ' ' | 排序码 |
+| 17 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 18 | fdescription | 描述 | varchar | 255 |  | √ | ' ' | 描述 |
+| 19 | fsign | 币种符号 | varchar | 20 |  | √ | ' ' | 币种符号 |
+| 20 | fseparator | fseparator | varchar | 1 |  | √ | ' ' |  |
+| 21 | fpriceprecision | 单价精度 | int8 | 64 |  | √ | 0 | 单价精度 |
+| 22 | fnegativeformat | fnegativeformat | varchar | 30 |  | √ | ' ' |  |
+| 23 | famtprecision | 金额精度 | int8 | 64 |  | √ | 0 | 金额精度 |
+| 24 | fenable | 使用状态 | bpchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 25 | fnumber | 货币代码 | varchar | 80 |  | √ | ' ' | 货币代码 |
+| 26 | fgroupformat | fgroupformat | varchar | 30 |  | √ | ' ' |  |
 
 ### 列规则定义
 

@@ -77,38 +77,45 @@
 | 30 | forgcode | forgcode | varchar | 60 |  | √ | ' ' |  |
 | 31 | ftaxkind | ftaxkind | bpchar | 1 |  | √ | ' ' |  |
 | 32 | fsupplierstatus | fsupplierstatus | int8 | 64 |  | √ | 0 |  |
-| 33 | fauditstatus | fauditstatus | bpchar | 1 |  | √ | ' ' |  |
-| 34 | fstatus | fstatus | bpchar | 1 |  | √ | ' ' |  |
-| 35 | fbiztype | fbiztype | bpchar | 1 |  | √ | ' ' |  |
-| 36 | fmasterid | fmasterid | int8 | 64 |  | √ | 0 |  |
-| 37 | fsourcedataid | fsourcedataid | int8 | 64 |  | √ | 0 |  |
-| 38 | fpost | fpost | varchar | 10 |  | √ | ' ' |  |
-| 39 | ffax | ffax | varchar | 50 |  | √ | ' ' |  |
-| 40 | ftaxrateid | ftaxrateid | int8 | 64 |  | √ | 0 |  |
-| 41 | ftaxtype | ftaxtype | bpchar | 1 |  | √ | ' ' |  |
-| 42 | fcreateorgid | fcreateorgid | int8 | 64 |  | √ | 0 |  |
-| 43 | fremark | fremark | varchar | 255 |  | √ | ' ' |  |
-| 44 | fcurrid | fcurrid | int8 | 64 |  | √ | 0 |  |
-| 45 | finvoicetypeid | finvoicetypeid | int8 | 64 |  | √ | 0 |  |
-| 46 | ftaxclass | ftaxclass | bpchar | 1 |  | √ | ' ' |  |
-| 47 | fcountryid | fcountryid | int8 | 64 |  | √ | 0 |  |
-| 48 | fauditstatus1 | fauditstatus1 | bpchar | 1 |  | √ | ' ' |  |
-| 49 | flastupdateuserid | flastupdateuserid | int8 | 64 |  | √ | 0 |  |
-| 50 | fauditstatus2 | fauditstatus2 | bpchar | 1 |  | √ | ' ' |  |
-| 51 | fauditstatus3 | fauditstatus3 | bpchar | 1 |  | √ | ' ' |  |
-| 52 | fregcapital | fregcapital | numeric | 19 | 6 | √ | 0.000000 |  |
-| 53 | fbizpartnerid | fbizpartnerid | int8 | 64 |  | √ | 0 |  |
-| 54 | fauditstatus4 | fauditstatus4 | bpchar | 1 |  | √ | ' ' |  |
-| 55 | fregdate | fregdate | timestamp | 0 |  |  | null |  |
-| 56 | flastupdatetime | flastupdatetime | timestamp | 0 |  |  | null |  |
-| 57 | fsettletypeid | fsettletypeid | int8 | 64 |  | √ | 0 |  |
-| 58 | fctrlstrategy | fctrlstrategy | bpchar | 1 |  | √ | ' ' |  |
-| 59 | ftype | 企业类型： | bpchar | 1 |  | √ | ' ' | 企业类型：,枚举: 1 :法人企业 2 :国家机关 3 :事业单位 4 :社会团体 5 :其他组织机构 6 :个体户 7 :个人 8 :非法人企业 |
-| 60 | findustryid | findustryid | int8 | 64 |  | √ | 0 |  |
-| 61 | fsimplename | fsimplename | varchar | 255 |  | √ | ' ' |  |
-| 62 | furl | furl | varchar | 100 |  | √ | ' ' |  |
-| 63 | fdeductible | fdeductible | bpchar | 1 |  | √ | ' ' |  |
-| 64 | ftxregisterno | ftxregisterno | varchar | 60 |  | √ | ' ' |  |
+| 33 | fnewemail | fnewemail | varchar | 50 |  | √ | ' ' |  |
+| 34 | fauditstatus | fauditstatus | bpchar | 1 |  | √ | ' ' |  |
+| 35 | fstatus | fstatus | bpchar | 1 |  | √ | ' ' |  |
+| 36 | fregtype | fregtype | bpchar | 1 |  | √ | ' ' |  |
+| 37 | fbiztype | fbiztype | bpchar | 1 |  | √ | ' ' |  |
+| 38 | fmasterid | fmasterid | int8 | 64 |  | √ | 0 |  |
+| 39 | fsourcedataid | fsourcedataid | int8 | 64 |  | √ | 0 |  |
+| 40 | fpost | fpost | varchar | 10 |  | √ | ' ' |  |
+| 41 | ffax | ffax | varchar | 50 |  | √ | ' ' |  |
+| 42 | ftaxrateid | ftaxrateid | int8 | 64 |  | √ | 0 |  |
+| 43 | fregsuptplid | fregsuptplid | int8 | 64 |  | √ | 0 |  |
+| 44 | ftaxtype | ftaxtype | bpchar | 1 |  | √ | ' ' |  |
+| 45 | fcreateorgid | fcreateorgid | int8 | 64 |  | √ | 0 |  |
+| 46 | fremark | fremark | varchar | 255 |  | √ | ' ' |  |
+| 47 | fcurrid | fcurrid | int8 | 64 |  | √ | 0 |  |
+| 48 | finvoicetypeid | finvoicetypeid | int8 | 64 |  | √ | 0 |  |
+| 49 | ftaxclass | ftaxclass | bpchar | 1 |  | √ | ' ' |  |
+| 50 | ftarsupplierstatus | ftarsupplierstatus | bpchar | 1 |  | √ | 'A' |  |
+| 51 | fcountryid | fcountryid | int8 | 64 |  | √ | 0 |  |
+| 52 | fauditstatus1 | fauditstatus1 | bpchar | 1 |  | √ | ' ' |  |
+| 53 | flastupdateuserid | flastupdateuserid | int8 | 64 |  | √ | 0 |  |
+| 54 | fauditstatus2 | fauditstatus2 | bpchar | 1 |  | √ | ' ' |  |
+| 55 | fauditstatus3 | fauditstatus3 | bpchar | 1 |  | √ | ' ' |  |
+| 56 | fregcapital | fregcapital | numeric | 19 | 6 | √ | 0.000000 |  |
+| 57 | fbizpartnerid | fbizpartnerid | int8 | 64 |  | √ | 0 |  |
+| 58 | fauditstatus4 | fauditstatus4 | bpchar | 1 |  | √ | ' ' |  |
+| 59 | fregdate | fregdate | timestamp | 0 |  |  | null |  |
+| 60 | flastupdatetime | flastupdatetime | timestamp | 0 |  |  | null |  |
+| 61 | fsettletypeid | fsettletypeid | int8 | 64 |  | √ | 0 |  |
+| 62 | fctrlstrategy | fctrlstrategy | bpchar | 1 |  | √ | ' ' |  |
+| 63 | fnewphone | fnewphone | varchar | 50 |  | √ | ' ' |  |
+| 64 | ftype | 企业类型： | bpchar | 1 |  | √ | ' ' | 企业类型：,枚举: 1 :法人企业 2 :国家机关 3 :事业单位 4 :社会团体 5 :其他组织机构 6 :个体户 7 :个人 8 :非法人企业 |
+| 65 | findustryid | findustryid | int8 | 64 |  | √ | 0 |  |
+| 66 | fsimplename | fsimplename | varchar | 255 |  | √ | ' ' |  |
+| 67 | furl | furl | varchar | 100 |  | √ | ' ' |  |
+| 68 | ftoexam | ftoexam | bpchar | 1 |  | √ | '1' |  |
+| 69 | fdeductible | fdeductible | bpchar | 1 |  | √ | ' ' |  |
+| 70 | ftxregisterno | ftxregisterno | varchar | 60 |  | √ | ' ' |  |
+| 71 | fenterprisespros | fenterprisespros | bpchar | 1 |  | √ | '0' |  |
 
 ### 列规则定义
 

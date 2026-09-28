@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | faccountfield | 科目字段名 | varchar | 30 |  | √ | ' ' | 科目字段名 |
-| 3 | fmetadata | 元数据 | varchar | 30 |  | √ | ' ' | 业务对象 bos_objecttype |
+| 3 | fmetadata | 元数据 | varchar | 30 |  | √ | ' ' | [业务对象 bos_objecttype](../mdl_files/bos_objecttype.md) |
 | 4 | frowidfield | 特殊表单行ID字段名 | varchar | 30 |  | √ | ' ' | 特殊表单行ID字段名 |
 | 5 | fassgrpfield | 核算维度字段名 | varchar | 30 |  | √ | ' ' | 核算维度字段名 |
 | 6 | fsubentryassgrp | 子分录核算维度字段名 | varchar | 30 |  | √ | ' ' | 子分录核算维度字段名 |

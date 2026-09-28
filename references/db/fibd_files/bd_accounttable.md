@@ -12,21 +12,21 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fcreateorgid | fcreateorgid | int8 | 64 |  | √ | 0 |  |
 | 3 | fmaxlevel | 最大级次 | int8 | 64 |  | √ | 0 | 最大级次 |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
 | 6 | fisextendpnum | 校验下级科目编码 | bpchar | 1 |  | √ | '1' | 校验下级科目编码 |
 | 7 | fseperator | 分隔符 | bpchar | 1 |  | √ | ' ' | 分隔符,枚举: : . :. |
 | 8 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 9 | forgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 9 | forgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 10 | fisuseseperator | fisuseseperator | bpchar | 1 |  | √ | '0' |  |
 | 11 | fisuserlevel | fisuserlevel | bpchar | 1 |  | √ | '0' |  |
 | 12 | fdescription | 描述 | varchar | 255 |  | √ | ' ' | 描述 |
-| 13 | felementid | 会计要素表 | int8 | 64 |  | √ | 0 | 会计要素表 bd_element_table |
+| 13 | felementid | 会计要素表 | int8 | 64 |  | √ | 0 | [会计要素表 bd_element_table](../gl_files/bd_element_table.md) |
 | 14 | fisinternational | 启用国际会计准则 | bpchar | 1 |  | √ | '0' | 启用国际会计准则 |
 | 15 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 16 | faccountlevel | 科目级次 | varchar | 50 |  | √ | ' ' | 科目级次 |
 | 17 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 18 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 18 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 19 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 20 | fenable | 使用状态 | bpchar | 1 |  | √ | '0' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 21 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |

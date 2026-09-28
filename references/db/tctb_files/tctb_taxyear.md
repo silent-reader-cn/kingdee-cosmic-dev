@@ -75,15 +75,15 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 5 | fapplicationscope | 适用范围 | varchar | 50 |  | √ | ' ' | 适用范围,枚举: 1 :全局适用 2 :局部适用 |
 | 6 | fispreset | 系统预置 | varchar | 50 |  | √ | ' ' | 系统预置,枚举: 1 :是 0 :否 |
 | 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 8 | ftaxationsys | 税收制度 | int8 | 64 |  | √ | 0 | 税收制度 bd_taxationsys |
-| 9 | ftaxcategory | 税种 | int8 | 64 |  | √ | 0 | 税种 bd_taxcategory |
+| 8 | ftaxationsys | 税收制度 | int8 | 64 |  | √ | 0 | [税收制度 bd_taxationsys](../basedata_files/bd_taxationsys.md) |
+| 9 | ftaxcategory | 税种 | int8 | 64 |  | √ | 0 | [税种 bd_taxcategory](../basedata_files/bd_taxcategory.md) |
 | 10 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 13 | fstartdate | 起始日 | timestamp | 0 |  |  | null | 起始日 |
 | 14 | fenable | 使用状态 | varchar | 50 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
@@ -116,7 +116,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 4 | forg | 编码 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 4 | forg | 编码 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 
 ### 列规则定义
 
@@ -128,5 +128,5 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | pk_tctb_taxyear_orgentity |  | fentryid |
-| 2 | idx_tctb_taxyear_orgentity_fk |  | fid |
+| 1 | idx_tctb_taxyear_orgentity_fk |  | fid |
+| 2 | pk_tctb_taxyear_orgentity |  | fentryid |

@@ -10,20 +10,20 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fbillstatus | 单据状态 | varchar | 30 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
-| 7 | fdatasourceid | 业务对象 | varchar | 50 |  | √ | ' ' | 单据主实体 bos_billmainentity |
+| 7 | fdatasourceid | 业务对象 | varchar | 50 |  | √ | ' ' | [单据主实体 bos_billmainentity](../mdl_files/bos_billmainentity.md) |
 | 8 | fbiztime | 消费时间 | timestamp | 0 |  |  | null | 消费时间 |
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 11 | fsubscriberid | 订阅方案编码 | int8 | 64 |  | √ | 0 | 订阅方案 fbd_subscribe |
-| 12 | frecuserid | 消息接收人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 11 | fsubscriberid | 订阅方案编码 | int8 | 64 |  | √ | 0 | [订阅方案 fbd_subscribe](../fbd_files/fbd_subscribe.md) |
+| 12 | frecuserid | 消息接收人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fbillid | 单据ID | int8 | 64 |  | √ | 0 | 单据ID |
 | 14 | fbillno | 单据编号 | varchar | 50 |  | √ | ' ' | 单据编号 |
-| 15 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 15 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

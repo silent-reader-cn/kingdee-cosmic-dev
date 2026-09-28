@@ -11,10 +11,10 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fsigntime | 标识时间 | timestamp | 0 |  |  | null | 标识时间 |
-| 3 | foperator | 操作人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | foperator | 操作人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fsignedtax | 已标识税额 | numeric | 23 | 10 | √ | 0 | 已标识税额 |
 | 5 | fsubinvoiceid | 发票子表id | int8 | 64 |  | √ | 0 | 发票子表id |
-| 6 | fjzjtproduct | 即征即退产品 | int8 | 64 |  | √ | 0 | 即征即退产品 tcvat_jzjt_product |
+| 6 | fjzjtproduct | 即征即退产品 | int8 | 64 |  | √ | 0 | [即征即退产品 tcvat_jzjt_product](../tcvat_files/tcvat_jzjt_product.md) |
 | 7 | fmaininvoiceid | 发票主表id | int8 | 64 |  | √ | 0 | 发票主表id |
 | 8 | finvoiceno | 发票号码 | varchar | 100 |  | √ | ' ' | 发票号码 |
 | 9 | fjzjtsign | 即征即退标识 | varchar | 50 |  | √ | ' ' | 即征即退标识,枚举: 1 :是 |

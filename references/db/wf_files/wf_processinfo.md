@@ -11,11 +11,11 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fresourceid | 资源ID | int8 | 64 |  | √ | 0 | 资源ID |
-| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 4 | fschemeid | 流程方案 | int8 | 64 |  | √ | 0 | 流程动态方案配置 wf_processdynamicconfig |
-| 5 | fprocdefid | 流程定义 | int8 | 64 |  | √ | 0 | 流程管理 wf_processdefinition |
+| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 4 | fschemeid | 流程方案 | int8 | 64 |  | √ | 0 | [流程动态方案配置 wf_processdynamicconfig](../wf_files/wf_processdynamicconfig.md) |
+| 5 | fprocdefid | 流程定义 | int8 | 64 |  | √ | 0 | [流程管理 wf_processdefinition](../wf_files/wf_processdefinition.md) |
 | 6 | fprocesstype | 流程类型 | varchar | 30 |  | √ | ' ' | 流程类型,枚举: AuditFlow :审批流 BizFlow :业务流 |
-| 7 | fentityid | 流程单据 | varchar | 36 |  | √ | ' ' | 实体元数据 bos_entitymeta |
+| 7 | fentityid | 流程单据 | varchar | 36 |  | √ | ' ' | [实体元数据 bos_entitymeta](../mdl_files/bos_entitymeta.md) |
 | 8 | fschemetype | 方案类型 | varchar | 15 |  | √ | ' ' | 方案类型,枚举: default :默认方案 custom :自定义方案 |
 
 ### 列规则定义
@@ -28,8 +28,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | pk_t_wf_processinfo |  | fid |
-| 2 | idx_wf_processinfo_procdef |  | fprocdefid |
+| 1 | idx_wf_processinfo_procdef |  | fprocdefid |
+| 2 | pk_t_wf_processinfo |  | fid |
 | 3 | idx_wf_processinfo_scheme |  | fschemeid |
 
 ---
@@ -51,7 +51,7 @@
 | 6 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 7 | factivityid | 节点ID | varchar | 255 |  | √ | ' ' | 节点ID |
 | 8 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 9 | factivityentityid | 节点单据 | varchar | 36 |  | √ | ' ' | 实体元数据 bos_entitymeta |
+| 9 | factivityentityid | 节点单据 | varchar | 36 |  | √ | ' ' | [实体元数据 bos_entitymeta](../mdl_files/bos_entitymeta.md) |
 | 10 | factivitytypename | 节点类型名称 | varchar | 50 |  | √ | ' ' | 节点类型名称 |
 
 ### 列规则定义

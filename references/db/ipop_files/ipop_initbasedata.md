@@ -10,12 +10,12 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | ftypeid | 类型id | int8 | 64 |  | √ | 0 | 基础资料录入类型（废弃） ipop_initbasedatatype |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | ftypeid | 类型id | int8 | 64 |  | √ | 0 | [基础资料录入类型（废弃） ipop_initbasedatatype](../ipop_files/ipop_initbasedatatype.md) |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fappnumber | 应用编码 | varchar | 50 |  | √ | ' ' | 应用编码 |
-| 5 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 7 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 7 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | fmodulecode | 模块编码 | varchar | 50 |  | √ | ' ' | 模块编码 |
 | 9 | fmarkfinish | 标记完成 | bpchar | 1 |  | √ | ' ' | 标记完成 |
 | 10 | fformid | 实体标识 | varchar | 50 |  | √ | ' ' | 实体标识 |

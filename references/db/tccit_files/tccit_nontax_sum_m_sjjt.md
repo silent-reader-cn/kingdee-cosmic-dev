@@ -13,7 +13,7 @@
 | 2 | ftype | 规则类型 | varchar | 50 |  | √ | ' ' | 规则类型 |
 | 3 | fdiscounttype | 优惠类型 | varchar | 50 |  | √ | ' ' | 优惠类型,枚举: 1 :全额免税 2 :收入减计10% 3 :收入减计50% 4 :减半征收 |
 | 4 | fskssqz | 日期范围.结束 | timestamp | 0 |  |  | null | 日期范围.结束 |
-| 5 | forgid | 运行组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | forgid | 运行组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | fitem | 优惠项目取数 | int8 | 64 |  | √ | 0 | 优惠项目（树） tpo_discount_tree |
 | 7 | fseq | 流水号 | varchar | 50 |  | √ | ' ' | 流水号 |
 | 8 | fruleid | 规则id | int8 | 64 |  | √ | 0 | 规则id |

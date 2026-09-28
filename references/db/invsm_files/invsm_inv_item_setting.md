@@ -14,12 +14,12 @@
 | 3 | fcreatedate | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
 | 4 | fmodifydate | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
 | 5 | fbatchinvoice | 批量开票 | bpchar | 1 |  | √ | ' ' | 批量开票 |
-| 6 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 7 | foriginalbillimport | 原始单据导入 | bpchar | 1 |  | √ | ' ' | 原始单据导入 |
-| 8 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fapiinvoice | API开票 | bpchar | 1 |  | √ | ' ' | API开票 |
 | 10 | forginalbillnew | 原始单据API新增 | bpchar | 1 |  | √ | ' ' | 原始单据API新增 |
-| 11 | forg | 组织 | int8 | 64 |  | √ | 0 | 企业管理 bdm_org |
+| 11 | forg | 组织 | int8 | 64 |  | √ | 0 | [企业管理 bdm_org](../bdm_files/bdm_org.md) |
 
 ### 列规则定义
 

@@ -55,5 +55,5 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | pk_bd_regtextownership |  | fentryid |
-| 2 | idx_bd_regtextownership_1 |  | fid |
+| 1 | idx_bd_regtextownership_1 |  | fid |
+| 2 | pk_bd_regtextownership |  | fentryid |

@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | varchar | 36 |  | √ | ' ' |  |
-| 2 | fname | 节点名称 | varchar | 255 |  | √ | ' ' | 节点名称 |
+| 2 | fname | 节点名称 | varchar | 500 |  | √ | ' ' | 节点名称 |
 | 3 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
 | 4 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
 
@@ -39,8 +39,8 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | varchar | 36 |  | √ | ' ' | id |
-| 2 | fname | 节点名称 | varchar | 255 |  | √ | ' ' | 节点名称 |
-| 3 | fbusflowid | 业务流程 | int8 | 64 |  | √ | 0 | 可视化业务流程 xkbus_flow |
+| 2 | fname | 节点名称 | varchar | 500 |  | √ | ' ' | 节点名称 |
+| 3 | fbusflowid | 业务流程 | int8 | 64 |  | √ | 0 | [可视化业务流程 xkbus_flow](../xkbase_files/xkbus_flow.md) |
 
 ### 列规则定义
 

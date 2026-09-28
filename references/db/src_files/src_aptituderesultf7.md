@@ -15,7 +15,7 @@
 | 4 | fnote | fnote | varchar | 100 |  | √ | ' ' |  |
 | 5 | faptitudenote | 资审意见 | varchar | 255 |  | √ | ' ' | 资审意见 |
 | 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 7 | fscoretaskid | 评标任务单号 | int8 | 64 |  | √ | 0 | 评标任务F7 src_scoretaskf7 |
+| 7 | fscoretaskid | 评标任务单号 | int8 | 64 |  | √ | 0 | [评标任务F7 src_scoretaskf7](../src_files/src_scoretaskf7.md) |
 | 8 | fisaptitude | 资审通过否 | bpchar | 1 |  | √ | '1' | 资审通过否,枚举: 0 :未资审 1 :资审通过 2 :资审不通过 |
 
 ### 列规则定义

@@ -10,11 +10,11 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fgroupid | 组件类型 | int8 | 64 |  | √ | 0 | 门户组件类型 srm_portal_compgroup |
+| 2 | fgroupid | 组件类型 | int8 | 64 |  | √ | 0 | [门户组件类型 srm_portal_compgroup](../srm_files/srm_portal_compgroup.md) |
 | 3 | faddress | faddress | varchar | 200 |  | √ | ' ' |  |
-| 4 | forgid | 业务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 4 | forgid | 业务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | frightbidtype | frightbidtype | varchar | 50 |  | √ | ' ' |  |
-| 6 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 8 | fregquerybutton | 【注册进度查询】按钮(1.0) | varchar | 255 |  | √ | ' ' | 【注册进度查询】按钮(1.0) |
 | 9 | fregbuttonname | 【注册】按钮(1.0) | varchar | 255 |  | √ | ' ' | 【注册】按钮(1.0) |
@@ -44,11 +44,11 @@
 | 33 | fleftname | fleftname | varchar | 255 |  | √ | ' ' |  |
 | 34 | frightname | frightname | varchar | 255 |  | √ | ' ' |  |
 | 35 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 36 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 36 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 37 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 38 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
-| 39 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 40 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 39 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 40 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 41 | fcomponentsys | 系统预置 | bpchar | 1 |  | √ | '0' | 系统预置 |
 | 42 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 43 | fnetlink | fnetlink | varchar | 255 |  | √ | ' ' |  |
@@ -58,7 +58,7 @@
 | 47 | ficpdata | ficpdata | varchar | 512 |  | √ | ' ' |  |
 | 48 | floginbutton | 【登录】按钮(1.0) | varchar | 255 |  | √ | ' ' | 【登录】按钮(1.0) |
 | 49 | fallthemecololr | 全局主题色 | varchar | 100 |  | √ | ' ' | 全局主题色,枚举: #4671FD :深蓝 #4EB544 :绿 #C1CEDF :灰 #EB7B60 :浅红 #FF9041 :橙 #F8E252 :黄 #F8525D :深红 #52A8F8 :浅蓝 |
-| 50 | fuseorgid | 使用组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 50 | fuseorgid | 使用组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 51 | fnoticetype | fnoticetype | varchar | 100 |  | √ | ' ' |  |
 
 ### 列规则定义
@@ -75,68 +75,6 @@
 | 2 | idx_t_srm_component_createorg |  | fcreateorgid |
 | 3 | idx_t_srm_component_master |  | fmasterid |
 | 4 | idx_srm_component_number |  | fnumber |
-
----
-
-## 入口配置-子表 t_srm_compeentryconfig
-
-- **表名称：** 入口配置-子表
-- **表名：** t_srm_compeentryconfig
-
-### 表格列定义
-
-| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | ficon | 图标 | varchar | 255 |  | √ | ' ' | 图标 |
-| 3 | fpcurl | PC端url | varchar | 255 |  | √ | ' ' | PC端url |
-| 4 | fopentype | 打开方式 | varchar | 2 |  | √ | '2' | 打开方式,枚举: 1 :新页签iframe 2 :新页签 |
-| 5 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 6 | fentrytype | 入口类型 | varchar | 2 |  | √ | ' ' | 入口类型,枚举: 2 :供应商注册 A :外部专家注册 3 :注册进度查询 5 :登录 |
-| 7 | fentryname | 入口名称(2.0) | varchar | 80 |  | √ | ' ' | 入口名称(2.0) |
-| 8 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-
-### 列规则定义
-
-| 序号 | 键编码 | 列字段 |
-| :--- | :--- | :--- |
-| 1 | fentryid | fentryid |
-
-### 索引定义
-
-| 序号 | 索引名 | 唯一 | 列字段 |
-| :--- | :--- | :--- | :--- |
-| 1 | pk_t_srm_compeentryconfig |  | fentryid |
-| 2 | idx_t_srm_compeentryconfig_fid |  | fid,fseq |
-
----
-
-## 入口配置-多语言表 t_srm_compeentryconfig_l
-
-- **表名称：** 入口配置-多语言表
-- **表名：** t_srm_compeentryconfig_l
-
-### 表格列定义
-
-| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
-| 2 | fentryname | 入口名称(2.0) | varchar | 80 |  | √ | ' ' | 入口名称(2.0) |
-| 3 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
-| 4 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
-
-### 列规则定义
-
-| 序号 | 键编码 | 列字段 |
-| :--- | :--- | :--- |
-| 1 | fpkid | fpkid |
-
-### 索引定义
-
-| 序号 | 索引名 | 唯一 | 列字段 |
-| :--- | :--- | :--- | :--- |
-| 1 | idx_srm_compeentryconfig_l |  | fentryid,flocaleid |
-| 2 | pk_t_srm_compeentryconfig_l |  | fpkid |
 
 ---
 
@@ -206,3 +144,65 @@
 | :--- | :--- | :--- | :--- |
 | 1 | pk_t_srm_component_u |  | fdataid,fuseorgid |
 | 2 | idx_t_srm_component_u_uo |  | fuseorgid |
+
+---
+
+## 入口配置-子表 t_srm_compeentryconfig
+
+- **表名称：** 入口配置-子表
+- **表名：** t_srm_compeentryconfig
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | ficon | 图标 | varchar | 255 |  | √ | ' ' | 图标 |
+| 3 | fpcurl | PC端url | varchar | 255 |  | √ | ' ' | PC端url |
+| 4 | fopentype | 打开方式 | varchar | 2 |  | √ | '2' | 打开方式,枚举: 1 :新页签iframe 2 :新页签 |
+| 5 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
+| 6 | fentrytype | 入口类型 | varchar | 2 |  | √ | ' ' | 入口类型,枚举: 2 :供应商注册 A :外部专家注册 3 :注册进度查询 5 :登录 |
+| 7 | fentryname | 入口名称 | varchar | 80 |  | √ | ' ' | 入口名称 |
+| 8 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fentryid | fentryid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | pk_t_srm_compeentryconfig |  | fentryid |
+| 2 | idx_t_srm_compeentryconfig_fid |  | fid,fseq |
+
+---
+
+## 入口配置-多语言表 t_srm_compeentryconfig_l
+
+- **表名称：** 入口配置-多语言表
+- **表名：** t_srm_compeentryconfig_l
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
+| 2 | fentryname | 入口名称 | varchar | 80 |  | √ | ' ' | 入口名称 |
+| 3 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
+| 4 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fpkid | fpkid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_srm_compeentryconfig_l |  | fentryid,flocaleid |
+| 2 | pk_t_srm_compeentryconfig_l |  | fpkid |

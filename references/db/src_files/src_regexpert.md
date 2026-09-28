@@ -48,7 +48,7 @@
 | 5 | fissueorg | 签发机构 | varchar | 255 |  | √ | ' ' | 签发机构 |
 | 6 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 7 | faptitudenote | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
-| 8 | faptitudetypeid | 证书类型 | int8 | 64 |  | √ | 0 | 招标辅助资料 pds_extdata |
+| 8 | faptitudetypeid | 证书类型 | int8 | 64 |  | √ | 0 | [招标辅助资料 pds_extdata](../pds_files/pds_extdata.md) |
 | 9 | fissuedate | 签发日期 | timestamp | 0 |  |  | null | 签发日期 |
 | 10 | fcheckdate | 最近年检日期 | timestamp | 0 |  |  | null | 最近年检日期 |
 | 11 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
@@ -79,7 +79,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 指标类型 src_indexclass |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [指标类型 src_indexclass](../src_files/src_indexclass.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -107,7 +107,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 招标辅助资料 pds_extdata |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [招标辅助资料 pds_extdata](../pds_files/pds_extdata.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -173,10 +173,10 @@
 | 2 | fjobtitle | fjobtitle | varchar | 300 |  | √ | ' ' |  |
 | 3 | fexecuteresult | 执行结果 | bpchar | 1 |  | √ | ' ' | 执行结果,枚举: 2 :执行中 3 :执行失败 4 :已完成 |
 | 4 | fcityid | 城市 | int8 | 64 |  | √ | 0 | 行政区划 bd_admindivision |
-| 5 | forgid | 审批组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | forgid | 审批组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | fevaluatetime | 职称评定时间 | timestamp | 0 |  |  | null | 职称评定时间 |
 | 7 | fofficeaddress | fofficeaddress | varchar | 300 |  | √ | ' ' |  |
-| 8 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 8 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 10 | foffice | foffice | varchar | 300 |  | √ | ' ' |  |
 | 11 | fpicture | 头像 | varchar | 300 |  | √ | ' ' | 头像 |
@@ -184,21 +184,21 @@
 | 13 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 14 | fvocationalqualification | fvocationalqualification | varchar | 300 |  | √ | ' ' |  |
 | 15 | forigin | 发起方 | bpchar | 1 |  | √ | '2' | 发起方,枚举: 1 :专家 2 :采购方 |
-| 16 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 16 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 17 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 18 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 19 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
 | 20 | fispushexpert | 下推评标专家 | bpchar | 1 |  | √ | '0' | 下推评标专家 |
 | 21 | fofficephone | 单位电话 | varchar | 50 |  | √ | ' ' | 单位电话 |
-| 22 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 22 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 23 | fqualifytime | 执业资格取得时间 | timestamp | 0 |  |  | null | 执业资格取得时间 |
 | 24 | fremark | 注册事由 | varchar | 300 |  | √ | ' ' | 注册事由 |
-| 25 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 25 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 26 | fname | 姓名 | varchar | 300 |  | √ | ' ' | 姓名 |
 | 27 | fworktime | 从事时间 | timestamp | 0 |  |  | null | 从事时间 |
 | 28 | fcreatetime | 申请时间 | timestamp | 0 |  |  | null | 申请时间 |
 | 29 | femail | E-mail | varchar | 50 |  | √ | ' ' | E-mail |
-| 30 | fuserid | 对应的系统用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 30 | fuserid | 对应的系统用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 31 | fpoliticalstatus | 政治面貌 | bpchar | 1 |  | √ | ' ' | 政治面貌,枚举: 1 :中共党员 2 :共青团员 3 :群众 4 :民主党派成员 5 :其他 |
 | 32 | fauditopinion | 审批意见 | varchar | 255 |  | √ | ' ' | 审批意见 |
 | 33 | fidnumber | 身份证号码 | varchar | 50 |  | √ | ' ' | 身份证号码 |
@@ -206,9 +206,9 @@
 | 35 | ftelephone | 手机号 | varchar | 50 |  | √ | ' ' | 手机号 |
 | 36 | fsex | 性别 | bpchar | 1 |  | √ | ' ' | 性别,枚举: 1 :男 2 :女 0 :保密 |
 | 37 | ftype | 专家来源 | bpchar | 1 |  | √ | ' ' | 专家来源,枚举: 1 :内部专家 2 :外部专家 |
-| 38 | fproficientlevelid | 专家级别 | int8 | 64 |  | √ | 0 | 招标辅助资料 pds_extdata |
+| 38 | fproficientlevelid | 专家级别 | int8 | 64 |  | √ | 0 | [招标辅助资料 pds_extdata](../pds_files/pds_extdata.md) |
 | 39 | fworkingmajor | fworkingmajor | varchar | 300 |  | √ | ' ' |  |
-| 40 | fproficienttypeid | 专家类型(单选) | int8 | 64 |  | √ | 0 | 招标辅助资料 pds_extdata |
+| 40 | fproficienttypeid | 专家类型(单选) | int8 | 64 |  | √ | 0 | [招标辅助资料 pds_extdata](../pds_files/pds_extdata.md) |
 | 41 | fbirthdate | 出生年月日 | timestamp | 0 |  |  | null | 出生年月日 |
 | 42 | fjob | fjob | varchar | 300 |  | √ | ' ' |  |
 | 43 | fenable | 使用状态 | bpchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
@@ -277,7 +277,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 附件字段实体 bd_attachment |
+| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [附件字段实体 bd_attachment](../frame_files/bd_attachment.md) |
 | 2 | fpkid | fpkid | int8 | 64 |  | √ | 0 | FPKID |
 | 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 
@@ -307,7 +307,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 招标辅助资料 pds_extdata |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [招标辅助资料 pds_extdata](../pds_files/pds_extdata.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -405,7 +405,7 @@
 | 2 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 4 | fsuppliernote | 备注 | varchar | 510 |  | √ | ' ' | 备注 |
-| 5 | fsupplierid | 供应商编码 | int8 | 64 |  | √ | 0 | 供应商 bd_supplier |
+| 5 | fsupplierid | 供应商编码 | int8 | 64 |  | √ | 0 | [供应商 bd_supplier](../basedata_files/bd_supplier.md) |
 
 ### 列规则定义
 

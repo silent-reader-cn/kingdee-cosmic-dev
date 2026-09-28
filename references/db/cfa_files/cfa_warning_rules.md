@@ -75,22 +75,22 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | frptitemdatatype | 项目数据类型 | int8 | 64 |  | √ | 0 | 项目数据类型 xkbd_rptitemdatatype |
+| 2 | frptitemdatatype | 项目数据类型 | int8 | 64 |  | √ | 0 | [项目数据类型 xkbd_rptitemdatatype](../fibd_files/xkbd_rptitemdatatype.md) |
 | 3 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fwarningobject | 预警对象 | varchar | 50 |  | √ | ' ' | 预警对象,枚举: reportitem :报表项目 quota :指标 |
 | 6 | fenablerules | 启用规则 | bpchar | 1 |  | √ | '1' | 启用规则 |
 | 7 | fexpression | 预警提示语表达式 | varchar | 600 |  | √ | ' ' | 预警提示语表达式 |
 | 8 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 9 | fwarningruletype | 预警规则类型 | bpchar | 1 |  | √ | '1' | 预警规则类型,枚举: 1 :常规预警 2 :连续多期趋势预警 3 :目标达成预警 4 :消息设置 |
 | 10 | fwarningprompttitle | 预警提示语(解析后) | varchar | 500 |  | √ | ' ' | 预警提示语(解析后) |
-| 11 | frptitemgroup | 报表项目分组 | int8 | 64 |  | √ | 0 | 报表项目分组 xkbd_rptitemgroup |
+| 11 | frptitemgroup | 报表项目分组 | int8 | 64 |  | √ | 0 | [报表项目分组 xkbd_rptitemgroup](../fibd_files/xkbd_rptitemgroup.md) |
 | 12 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 13 | fquotainfo | 指标 | int8 | 64 |  | √ | 0 | 指标库 ipo_quota_info |
+| 13 | fquotainfo | 指标 | int8 | 64 |  | √ | 0 | [指标库 ipo_quota_info](../ipobase_files/ipo_quota_info.md) |
 | 14 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 15 | frptitem | 项目 | int8 | 64 |  | √ | 0 | 报表项目 xkbd_rptitem |
+| 15 | frptitem | 项目 | int8 | 64 |  | √ | 0 | [报表项目 xkbd_rptitem](../fibd_files/xkbd_rptitem.md) |
 | 16 | fwarningcolor | 预警颜色 | varchar | 50 |  | √ | 'red' | 预警颜色,枚举: red :红 orange :橙 yellow :黄 |
-| 17 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 17 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 18 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 19 | fwarningrules | 预警规则 | varchar | 500 |  | √ | ' ' | 预警规则 |
 | 20 | fenable | 使用状态 | varchar | 50 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |

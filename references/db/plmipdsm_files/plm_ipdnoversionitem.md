@@ -1,9 +1,9 @@
 # 不带版本工作项-plm_ipdnoversionitem
 
-## 不带版本工作项-多语言表 t_plm_ipditem_l
+## 不带版本工作项-主表 t_plm_ipditem
 
-- **表名称：** 不带版本工作项-多语言表
-- **表名：** t_plm_ipditem_l
+- **表名称：** 不带版本工作项-主表
+- **表名：** t_plm_ipditem
 
 ### 表格列定义
 
@@ -22,10 +22,10 @@
 
 ---
 
-## 不带版本工作项-主表 t_plm_ipditem
+## 不带版本工作项-多语言表 t_plm_ipditem_l
 
-- **表名称：** 不带版本工作项-主表
-- **表名：** t_plm_ipditem
+- **表名称：** 不带版本工作项-多语言表
+- **表名：** t_plm_ipditem_l
 
 ### 表格列定义
 

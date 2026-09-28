@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 组件页面配置 pds_compconfig |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [组件页面配置 pds_compconfig](../pds_files/pds_compconfig.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -41,13 +41,13 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 名称 | varchar | 300 |  | √ | ' ' | 名称 |
 | 3 | fstatus | 数据状态 | bpchar | 1 |  | √ | 'A' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 5 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 5 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 7 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 8 | ffield | 待更新字段(可多选) | varchar | 2000 |  | √ | ' ' | 待更新字段(可多选),枚举: |
 | 9 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 10 | fcompid | 待更新组件 | int8 | 64 |  | √ | 0 | 组件注册 pds_compreg |
+| 10 | fcompid | 待更新组件 | int8 | 64 |  | √ | 0 | [组件注册 pds_compreg](../pds_files/pds_compreg.md) |
 | 11 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
 | 12 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 
@@ -78,7 +78,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fsrcentryid | 页面配置分录id | int8 | 64 |  | √ | 0 | 页面配置分录id |
-| 3 | fbiznodeid | 业务节点 | int8 | 64 |  | √ | 0 | 业务节点 pds_biznode |
+| 3 | fbiznodeid | 业务节点 | int8 | 64 |  | √ | 0 | [业务节点 pds_biznode](../pds_files/pds_biznode.md) |
 | 4 | fdisplayname | 显示的名称 | bpchar | 50 |  | √ | ' ' | 显示的名称 |
 | 5 | ffieldname | 字段名称 | varchar | 300 |  | √ | ' ' | 字段名称 |
 | 6 | fismustinput | 是否必录 | bpchar | 1 |  | √ | '0' | 是否必录 |
@@ -86,11 +86,11 @@
 | 8 | fiseditable | 是否可编辑 | bpchar | 1 |  | √ | '0' | 是否可编辑 |
 | 9 | ffieldid | 字段标识 | varchar | 50 |  | √ | ' ' | 字段标识 |
 | 10 | fisvisible | 是否可见 | bpchar | 1 |  | √ | '0' | 是否可见 |
-| 11 | fcompcfgid | 页面配置方案 | int8 | 64 |  | √ | 0 | 组件页面配置 pds_compconfig |
+| 11 | fcompcfgid | 页面配置方案 | int8 | 64 |  | √ | 0 | [组件页面配置 pds_compconfig](../pds_files/pds_compconfig.md) |
 | 12 | fiswriteback | 是否可回写 | bpchar | 1 |  | √ | '0' | 是否可回写 |
-| 13 | fisexport | 是否可引出 | bpchar | 1 |  | √ | '0' | 是否可引出 |
+| 13 | fisexport | 是否可导出 | bpchar | 1 |  | √ | '0' | 是否可导出 |
 | 14 | fisclearup | 需要清空 | bpchar | 1 |  | √ | '0' | 需要清空 |
-| 15 | fisimport | 是否可引入 | bpchar | 1 |  | √ | '0' | 是否可引入 |
+| 15 | fisimport | 是否可导入 | bpchar | 1 |  | √ | '0' | 是否可导入 |
 | 16 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 
 ### 列规则定义

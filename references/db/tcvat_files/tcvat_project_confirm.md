@@ -10,20 +10,20 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fbillstatus | 单据状态 | varchar | 30 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
 | 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 8 | freportperiod | freportperiod | timestamp | 0 |  |  | null |  |
 | 9 | ftaxplayeraptitude | 纳税人资质： | varchar | 30 |  | √ | ' ' | 纳税人资质：,枚举: zzsybnsr :一般纳税人 2 :小规模纳税人 3 :非增值税纳税人 |
 | 10 | fstatus | 状态 | varchar | 50 |  | √ | ' ' | 状态 |
 | 11 | fenddate | 税款所属期止 | timestamp | 0 |  |  | null | 税款所属期止 |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fstartdate | 税款所属期起 | timestamp | 0 |  |  | null | 税款所属期起 |
 | 14 | fbillno | 单据编号 | varchar | 30 |  | √ | ' ' | 单据编号 |
-| 15 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 15 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 
@@ -56,7 +56,7 @@
 | 5 | fprojectid | 项目id | varchar | 50 |  | √ | ' ' | 项目id |
 | 6 | flevytype | 征收方式 | varchar | 30 |  | √ | ' ' | 征收方式,枚举: normal :一般计税 simple :简易计税 |
 | 7 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 8 | forg | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 8 | forg | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 9 | fprepaytype | 预缴项目类型 | varchar | 30 |  | √ | ' ' | 预缴项目类型,枚举: VAT_YJXMLX_001 :异地建筑服务 VAT_YJXMLX_002 :建筑服务预收款 VAT_YJXMLX_003 :房地产预售 VAT_YJXMLX_004 :转让不动产 VAT_YJXMLX_005 :出租不动产 |
 | 10 | fdeadline | 缴纳期限 | varchar | 30 |  | √ | ' ' | 缴纳期限,枚举: aysb :按月申报 ajsb :按季申报 |
 | 11 | fnumber | 项目编码 | varchar | 50 |  | √ | ' ' | 项目编码 |

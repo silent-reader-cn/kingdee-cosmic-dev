@@ -12,23 +12,23 @@
 | 1 | fid | fid | int8 | 64 |  | √ | null | id |
 | 2 | fk_ysq_org_sel | 所属业务组织 | varchar | 50 |  | √ | ' ' | 所属业务组织,枚举: |
 | 3 | fk_ysq_robots_no | 机器人编号 -all- -deptall- -机器人唯一标识- 多个英文,隔开 | varchar | 255 |  | √ | ' ' | 机器人编号 -all- -deptall- -机器人唯一标识- 多个英文,隔开 |
-| 4 | forgid | 组织 | int8 | 64 |  |  | null | 业务单元 bos_org |
-| 5 | fk_useorg | 业务组织 | int8 | 64 |  |  | null | 业务单元 bos_org |
+| 4 | forgid | 组织 | int8 | 64 |  |  | null | [业务单元 bos_org](../base_files/bos_org.md) |
+| 5 | fk_useorg | 业务组织 | int8 | 64 |  |  | null | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | fk_ysq_is_client_edit | 客户端可修改 yes 是 no 否 | bpchar | 1 |  | √ | '0' | 客户端可修改 yes 是 no 否 |
-| 7 | fsrccreateorgid | 原创建组织 | int8 | 64 |  |  | null | 业务单元 bos_org |
+| 7 | fsrccreateorgid | 原创建组织 | int8 | 64 |  |  | null | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 9 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 10 | fk_ysq_agent_alias_tag | 机器人别名 -all- -deptall- -别名- 多个英文,隔开_详情 | text | 0 |  | √ | ' ' | 机器人别名 -all- -deptall- -别名- 多个英文,隔开_详情 |
 | 11 | fk_ysq_is_python_expr | 保存为python类型 | bpchar | 1 |  | √ | '0' | 保存为python类型 |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fmasterid | 主数据内码 | int8 | 64 |  |  | null | 主数据内码 |
 | 14 | fsourcedataid | 原资料id | int8 | 64 |  |  | null | 原资料id |
 | 15 | fbitindex | 位图 | int8 | 64 |  |  | null | 位图 |
 | 16 | fk_ysq_robots_no_tag | 机器人编号 -all- -deptall- -机器人唯一标识- 多个英文,隔开_详情 | text | 0 |  | √ | ' ' | 机器人编号 -all- -deptall- -机器人唯一标识- 多个英文,隔开_详情 |
 | 17 | fk_ysq_robots_no_sel | 机器人下拉选项 | varchar | 2000 |  | √ | ' ' | 机器人下拉选项,枚举: |
-| 18 | fcreateorgid | 创建组织 | int8 | 64 |  |  | null | 业务单元 bos_org |
+| 18 | fcreateorgid | 创建组织 | int8 | 64 |  |  | null | [业务单元 bos_org](../base_files/bos_org.md) |
 | 19 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 20 | fmodifierid | 修改人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 20 | fmodifierid | 修改人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 21 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 22 | fctrlstrategy | 控制策略 | varchar | 254 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
 | 23 | fk_ysq_asset_value | 变量值 | varchar | 255 |  | √ | ' ' | 变量值 |

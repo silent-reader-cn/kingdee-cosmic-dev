@@ -143,22 +143,22 @@
 | 8 | fislogin | 登陆服务 | int8 | 64 |  | √ | 0 | 登陆服务 |
 | 9 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 10 | fusername | 用户名 | varchar | 80 |  | √ | ' ' | 用户名 |
-| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 13 | fpreset | 预置 | int8 | 64 |  | √ | 0 | 预置 |
-| 14 | fpushservice | 消息服务 | int8 | 64 |  | √ | 0 | MQ消息服务Old isc_mq |
+| 14 | fpushservice | 消息服务 | int8 | 64 |  | √ | 0 | [MQ消息服务Old isc_mq](../iscb_files/isc_mq.md) |
 | 15 | freferedstatus | freferedstatus | int8 | 64 |  | √ | 0 |  |
-| 16 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 16 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 17 | fparentid | fparentid | int8 | 64 |  | √ | 0 |  |
 | 18 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 19 | flongnumber | flongnumber | varchar | 200 |  | √ | ' ' |  |
 | 20 | fimplclass | 服务实现类 | varchar | 255 |  | √ | ' ' | 服务实现类 |
-| 21 | fsystementryid | 服务器 | int8 | 64 |  | √ | 0 | 对接系统查询 isc_othersys_query |
+| 21 | fsystementryid | 服务器 | int8 | 64 |  | √ | 0 | [对接系统查询 isc_othersys_query](../iscb_files/isc_othersys_query.md) |
 | 22 | flevel | flevel | int8 | 64 |  | √ | 0 |  |
 | 23 | ftype | 服务协议 | int8 | 64 |  | √ | 0 | 服务协议,枚举: 1 :HTTP 2 :RabbitMQ 3 :WebService |
 | 24 | fenable | 使用状态 | int8 | 64 |  | √ | 0 | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 25 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
-| 26 | fsystemid | 连接系统 | int8 | 64 |  | √ | 0 | 外部集成信息（废弃） isc_sysconn |
+| 26 | fsystemid | 连接系统 | int8 | 64 |  | √ | 0 | [外部集成信息（废弃） isc_sysconn](../iscb_files/isc_sysconn.md) |
 
 ### 列规则定义
 

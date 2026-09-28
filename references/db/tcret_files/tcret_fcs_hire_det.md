@@ -20,7 +20,7 @@
 | 9 | fbuildingcode | 房产编号 | varchar | 50 |  | √ | ' ' | 房产编号 |
 | 10 | fcurrental | 本期申报租金收入 | numeric | 23 | 10 | √ | 0.0000000000 | 本期申报租金收入 |
 | 11 | famount | 税额原值 | numeric | 23 | 10 | √ | 0.0000000000 | 税额原值 |
-| 12 | forg | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 12 | forg | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 13 | fisshowfcsbyhire | 是否展示从租计征房产税 | bpchar | 1 |  | √ | ' ' | 是否展示从租计征房产税 |
 | 14 | frowno | 序号 | int8 | 64 |  | √ | 0 | 序号 |
 

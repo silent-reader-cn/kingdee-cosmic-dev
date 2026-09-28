@@ -16,7 +16,7 @@
 | 5 | fpid | 父id | int8 | 64 |  | √ | 0 | 父id |
 | 6 | fstartdate | 开始日期 | timestamp | 0 |  |  | null | 开始日期 |
 | 7 | finvoiceamount | 金额 | numeric | 23 | 10 | √ | 0.0000000000 | 金额 |
-| 8 | fbaseinvoicetype | 发票类型 | int8 | 64 |  | √ | 0 | 发票类型 bd_invoicetype |
+| 8 | fbaseinvoicetype | 发票类型 | int8 | 64 |  | √ | 0 | [发票种类 bd_invoicetype](../basedata_files/bd_invoicetype.md) |
 | 9 | fcount | 份数 | int8 | 64 |  | √ | 0 | 份数 |
 
 ### 列规则定义

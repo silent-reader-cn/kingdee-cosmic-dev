@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fname | 名称 | varchar | 100 |  |  | ' ' | 名称 |
-| 3 | ftype | 资源类型 | varchar | 36 |  |  | ' ' | 业务对象 bos_objecttype |
+| 3 | ftype | 资源类型 | varchar | 36 |  |  | ' ' | [业务对象 bos_objecttype](../mdl_files/bos_objecttype.md) |
 | 4 | fsize | 大小（字节） | int8 | 64 |  | √ | 0 | 大小（字节） |
 | 5 | fcontent_tag | 内容_详情 | text | 0 |  |  | ' ' | 内容_详情 |
 | 6 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
@@ -47,10 +47,10 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fremark | 资源信息 | varchar | 500 |  |  | ' ' | 资源信息 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 4 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 4 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 6 | fpackages | 资源包 | int8 | 64 |  | √ | 0 | 集成资源包 isc_res_packages |
+| 6 | fpackages | 资源包 | int8 | 64 |  | √ | 0 | [集成资源包 isc_res_packages](../iscb_files/isc_res_packages.md) |
 | 7 | fbyte_count | 大小（字节） | int8 | 64 |  |  | null | 大小（字节） |
 | 8 | fres_count | 主资源数 | int8 | 64 |  | √ | 0 | 主资源数 |
 | 9 | fnumber | 批号 | varchar | 50 |  |  | ' ' | 批号 |
@@ -87,7 +87,7 @@
 | 4 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 5 | fres_pk | 资源ID | varchar | 50 |  |  | ' ' | 资源ID |
 | 6 | fmain_export_content | 实际导出内容(包含依赖) | varchar | 255 |  |  | ' ' | 实际导出内容(包含依赖) |
-| 7 | ftype | 资源类型 | varchar | 36 |  |  | ' ' | 业务对象 bos_objecttype |
+| 7 | ftype | 资源类型 | varchar | 36 |  |  | ' ' | [业务对象 bos_objecttype](../mdl_files/bos_objecttype.md) |
 | 8 | fsize | 大小（字节） | int8 | 64 |  | √ | 0 | 大小（字节） |
 | 9 | fcontent_tag | 内容_详情 | text | 0 |  |  | ' ' | 内容_详情 |
 | 10 | fnumber | 编码 | varchar | 100 |  |  | ' ' | 编码 |

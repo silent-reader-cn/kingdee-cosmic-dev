@@ -1,8 +1,8 @@
-# 发票云-编码映射-er_receipt_encodemapping
+# 发票云-编号映射-er_receipt_encodemapping
 
-## 发票云-编码映射-多语言表 t_receipt_encodemapping_l
+## 发票云-编号映射-多语言表 t_receipt_encodemapping_l
 
-- **表名称：** 发票云-编码映射-多语言表
+- **表名称：** 发票云-编号映射-多语言表
 - **表名：** t_receipt_encodemapping_l
 
 ### 表格列定义
@@ -22,9 +22,9 @@
 
 ---
 
-## 发票云-编码映射-主表 t_receipt_encodemapping
+## 发票云-编号映射-主表 t_receipt_encodemapping
 
-- **表名称：** 发票云-编码映射-主表
+- **表名称：** 发票云-编号映射-主表
 - **表名：** t_receipt_encodemapping
 
 ### 表格列定义

@@ -13,16 +13,16 @@
 | 2 | flog_tag | 日志_详情 | text | 0 |  |  | null | 日志_详情 |
 | 3 | fsettletype | 类型 | varchar | 10 |  | √ | ' ' | 类型,枚举: A :结账 B :反结账 C :关账 D :结账检查 |
 | 4 | foperationtime | 操作时间 | timestamp | 0 |  |  | null | 操作时间 |
-| 5 | fexpectperiodid | 期望期间 | int8 | 64 |  | √ | 0 | 会计日历 bd_period |
+| 5 | fexpectperiodid | 期望期间 | int8 | 64 |  | √ | 0 | [会计日历 bd_period](../fibd_files/bd_period.md) |
 | 6 | flog | 日志 | varchar | 255 |  | √ | ' ' | 日志 |
 | 7 | fsuccess | 是否成功 | bpchar | 1 |  | √ | '0' | 是否成功 |
 | 8 | fperiodmsg | 期间流转 | varchar | 80 |  | √ | ' ' | 期间流转 |
 | 9 | fcheckresult | 检查结果 | varchar | 255 |  | √ | ' ' | 检查结果 |
-| 10 | fqueryschemeid | 查询方案 | int8 | 64 |  | √ | 0 | 查询方案 cal_query_scheme |
-| 11 | foperationuserid | 操作用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 12 | fcostaccountid | 成本主体 | int8 | 64 |  | √ | 0 | 成本主体 cal_bd_costaccount |
+| 10 | fqueryschemeid | 查询方案 | int8 | 64 |  | √ | 0 | [查询方案 cal_query_scheme](../cal_files/cal_query_scheme.md) |
+| 11 | foperationuserid | 操作用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 12 | fcostaccountid | 成本主体 | int8 | 64 |  | √ | 0 | [成本主体 cal_bd_costaccount](../cal_files/cal_bd_costaccount.md) |
 | 13 | ftaskid | 后台任务id | int8 | 64 |  | √ | 0 | 后台任务id |
-| 14 | fcurrentperiodid | 当前期间 | int8 | 64 |  | √ | 0 | 会计日历 bd_period |
+| 14 | fcurrentperiodid | 当前期间 | int8 | 64 |  | √ | 0 | [会计日历 bd_period](../fibd_files/bd_period.md) |
 
 ### 列规则定义
 

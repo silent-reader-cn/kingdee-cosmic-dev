@@ -13,9 +13,9 @@
 | 2 | ftime | 集成时间 | timestamp | 0 |  |  | null | 集成时间 |
 | 3 | fjudgefields | 候选键值 | varchar | 100 |  | √ | ' ' | 候选键值 |
 | 4 | foid | 单据ID | varchar | 100 |  | √ | ' ' | 单据ID |
-| 5 | fsystem_id | 连接配置 | int8 | 64 |  | √ | 0 | 连接器配置 isc_database_link |
+| 5 | fsystem_id | 连接配置 | int8 | 64 |  | √ | 0 | [连接器配置 isc_database_link](../iscb_files/isc_database_link.md) |
 | 6 | frepository | 数据表 | varchar | 100 |  | √ | ' ' | 数据表 |
-| 7 | ftask_id | 集成任务 | int8 | 64 |  | √ | 0 | 执行结果 isc_data_copy_execution |
+| 7 | ftask_id | 集成任务 | int8 | 64 |  | √ | 0 | [执行结果 isc_data_copy_execution](../iscb_files/isc_data_copy_execution.md) |
 | 8 | ftimestamp | 修改标识 | varchar | 50 |  | √ | ' ' | 修改标识 |
 
 ### 列规则定义

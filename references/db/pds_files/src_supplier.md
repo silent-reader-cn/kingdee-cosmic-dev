@@ -19,7 +19,7 @@
 | 8 | fcfmdate | fcfmdate | timestamp | 0 |  |  | null |  |
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 10 | forigin | forigin | bpchar | 1 |  | √ | ' ' |  |
-| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fpushsupplier | fpushsupplier | int8 | 64 |  | √ | 0 |  |
 | 13 | fadvantage | fadvantage | varchar | 2000 |  | √ | ' ' |  |
 | 14 | fstaffnum | fstaffnum | int8 | 64 |  | √ | 0 |  |
@@ -27,7 +27,7 @@
 | 16 | fbizscope | fbizscope | varchar | 2000 |  | √ | ' ' |  |
 | 17 | fcreateorgid | fcreateorgid | int8 | 64 |  | √ | 0 |  |
 | 18 | fremark | fremark | varchar | 255 |  | √ | ' ' |  |
-| 19 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 19 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 20 | flisteddate | flisteddate | timestamp | 0 |  |  | null |  |
 | 21 | fname | fname | varchar | 255 |  | √ | ' ' |  |
 | 22 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
@@ -161,12 +161,12 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fgroupid | 供应商分组 | int8 | 64 |  | √ | 0 | 供应商分类 bd_suppliergroup |
+| 2 | fgroupid | 供应商分组 | int8 | 64 |  | √ | 0 | [供应商分类 bd_suppliergroup](../basedata_files/bd_suppliergroup.md) |
 | 3 | faddress | faddress | varchar | 255 |  | √ | ' ' |  |
 | 4 | forgfield | forgfield | int8 | 64 |  |  | null |  |
 | 5 | ftaxrate | ftaxrate | numeric | 19 | 6 | √ | 0.000000 |  |
-| 6 | forgid | 审批组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 7 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | forgid | 审批组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 7 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
 | 9 | fareacode | fareacode | varchar | 100 |  | √ | ' ' |  |
 | 10 | fphone | fphone | varchar | 50 |  | √ | ' ' |  |
@@ -174,7 +174,7 @@
 | 12 | femail | femail | varchar | 50 |  | √ | ' ' |  |
 | 13 | fpaycondid | fpaycondid | int8 | 64 |  | √ | 0 |  |
 | 14 | ftaxcode | ftaxcode | bpchar | 1 |  | √ | ' ' |  |
-| 15 | fsupplierid | 正式供应商 | int8 | 64 |  | √ | 0 | 供应商 bd_supplier |
+| 15 | fsupplierid | 正式供应商 | int8 | 64 |  | √ | 0 | [供应商 bd_supplier](../basedata_files/bd_supplier.md) |
 | 16 | ftelephone | ftelephone | varchar | 50 |  | √ | ' ' |  |
 | 17 | fisquitregister | fisquitregister | bpchar | 1 |  | √ | '0' |  |
 | 18 | finvoicetype | finvoicetype | bpchar | 1 |  | √ | ' ' |  |
@@ -192,38 +192,45 @@
 | 30 | forgcode | forgcode | varchar | 60 |  | √ | ' ' |  |
 | 31 | ftaxkind | ftaxkind | bpchar | 1 |  | √ | ' ' |  |
 | 32 | fsupplierstatus | fsupplierstatus | int8 | 64 |  | √ | 0 |  |
-| 33 | fauditstatus | 审批状态 | bpchar | 1 |  | √ | ' ' | 审批状态,枚举: C :注册通过 Z :正式供应商 |
-| 34 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 35 | fbiztype | fbiztype | bpchar | 1 |  | √ | ' ' |  |
-| 36 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 37 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
-| 38 | fpost | fpost | varchar | 10 |  | √ | ' ' |  |
-| 39 | ffax | ffax | varchar | 50 |  | √ | ' ' |  |
-| 40 | ftaxrateid | ftaxrateid | int8 | 64 |  | √ | 0 |  |
-| 41 | ftaxtype | ftaxtype | bpchar | 1 |  | √ | ' ' |  |
-| 42 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 43 | fremark | fremark | varchar | 255 |  | √ | ' ' |  |
-| 44 | fcurrid | fcurrid | int8 | 64 |  | √ | 0 |  |
-| 45 | finvoicetypeid | finvoicetypeid | int8 | 64 |  | √ | 0 |  |
-| 46 | ftaxclass | ftaxclass | bpchar | 1 |  | √ | ' ' |  |
-| 47 | fcountryid | fcountryid | int8 | 64 |  | √ | 0 |  |
-| 48 | fauditstatus1 | fauditstatus1 | bpchar | 1 |  | √ | ' ' |  |
-| 49 | flastupdateuserid | flastupdateuserid | int8 | 64 |  | √ | 0 |  |
-| 50 | fauditstatus2 | fauditstatus2 | bpchar | 1 |  | √ | ' ' |  |
-| 51 | fauditstatus3 | fauditstatus3 | bpchar | 1 |  | √ | ' ' |  |
-| 52 | fregcapital | fregcapital | numeric | 19 | 6 | √ | 0.000000 |  |
-| 53 | fbizpartnerid | 商务伙伴 | int8 | 64 |  | √ | 0 | 商务伙伴 bd_bizpartner |
-| 54 | fauditstatus4 | fauditstatus4 | bpchar | 1 |  | √ | ' ' |  |
-| 55 | fregdate | fregdate | timestamp | 0 |  |  | null |  |
-| 56 | flastupdatetime | flastupdatetime | timestamp | 0 |  |  | null |  |
-| 57 | fsettletypeid | fsettletypeid | int8 | 64 |  | √ | 0 |  |
-| 58 | fctrlstrategy | 控制策略 | bpchar | 1 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
-| 59 | ftype | ftype | bpchar | 1 |  | √ | ' ' |  |
-| 60 | findustryid | findustryid | int8 | 64 |  | √ | 0 |  |
-| 61 | fsimplename | fsimplename | varchar | 255 |  | √ | ' ' |  |
-| 62 | furl | furl | varchar | 100 |  | √ | ' ' |  |
-| 63 | fdeductible | fdeductible | bpchar | 1 |  | √ | ' ' |  |
-| 64 | ftxregisterno | ftxregisterno | varchar | 60 |  | √ | ' ' |  |
+| 33 | fnewemail | fnewemail | varchar | 50 |  | √ | ' ' |  |
+| 34 | fauditstatus | 审批状态 | bpchar | 1 |  | √ | ' ' | 审批状态,枚举: C :注册通过 Z :正式供应商 |
+| 35 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
+| 36 | fregtype | fregtype | bpchar | 1 |  | √ | ' ' |  |
+| 37 | fbiztype | fbiztype | bpchar | 1 |  | √ | ' ' |  |
+| 38 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
+| 39 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
+| 40 | fpost | fpost | varchar | 10 |  | √ | ' ' |  |
+| 41 | ffax | ffax | varchar | 50 |  | √ | ' ' |  |
+| 42 | ftaxrateid | ftaxrateid | int8 | 64 |  | √ | 0 |  |
+| 43 | fregsuptplid | fregsuptplid | int8 | 64 |  | √ | 0 |  |
+| 44 | ftaxtype | ftaxtype | bpchar | 1 |  | √ | ' ' |  |
+| 45 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 46 | fremark | fremark | varchar | 255 |  | √ | ' ' |  |
+| 47 | fcurrid | fcurrid | int8 | 64 |  | √ | 0 |  |
+| 48 | finvoicetypeid | finvoicetypeid | int8 | 64 |  | √ | 0 |  |
+| 49 | ftaxclass | ftaxclass | bpchar | 1 |  | √ | ' ' |  |
+| 50 | ftarsupplierstatus | ftarsupplierstatus | bpchar | 1 |  | √ | 'A' |  |
+| 51 | fcountryid | fcountryid | int8 | 64 |  | √ | 0 |  |
+| 52 | fauditstatus1 | fauditstatus1 | bpchar | 1 |  | √ | ' ' |  |
+| 53 | flastupdateuserid | flastupdateuserid | int8 | 64 |  | √ | 0 |  |
+| 54 | fauditstatus2 | fauditstatus2 | bpchar | 1 |  | √ | ' ' |  |
+| 55 | fauditstatus3 | fauditstatus3 | bpchar | 1 |  | √ | ' ' |  |
+| 56 | fregcapital | fregcapital | numeric | 19 | 6 | √ | 0.000000 |  |
+| 57 | fbizpartnerid | 商务伙伴 | int8 | 64 |  | √ | 0 | [商务伙伴 bd_bizpartner](../base_files/bd_bizpartner.md) |
+| 58 | fauditstatus4 | fauditstatus4 | bpchar | 1 |  | √ | ' ' |  |
+| 59 | fregdate | fregdate | timestamp | 0 |  |  | null |  |
+| 60 | flastupdatetime | flastupdatetime | timestamp | 0 |  |  | null |  |
+| 61 | fsettletypeid | fsettletypeid | int8 | 64 |  | √ | 0 |  |
+| 62 | fctrlstrategy | 控制策略 | bpchar | 1 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
+| 63 | fnewphone | fnewphone | varchar | 50 |  | √ | ' ' |  |
+| 64 | ftype | ftype | bpchar | 1 |  | √ | ' ' |  |
+| 65 | findustryid | findustryid | int8 | 64 |  | √ | 0 |  |
+| 66 | fsimplename | fsimplename | varchar | 255 |  | √ | ' ' |  |
+| 67 | furl | furl | varchar | 100 |  | √ | ' ' |  |
+| 68 | ftoexam | ftoexam | bpchar | 1 |  | √ | '1' |  |
+| 69 | fdeductible | fdeductible | bpchar | 1 |  | √ | ' ' |  |
+| 70 | ftxregisterno | ftxregisterno | varchar | 60 |  | √ | ' ' |  |
+| 71 | fenterprisespros | fenterprisespros | bpchar | 1 |  | √ | '0' |  |
 
 ### 列规则定义
 

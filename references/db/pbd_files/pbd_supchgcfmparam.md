@@ -1,5 +1,36 @@
 # 供应商变更生效字段配置-pbd_supchgcfmparam
 
+## 分录候选键配置-子表 t_pbd_supentrymappconfig
+
+- **表名称：** 分录候选键配置-子表
+- **表名：** t_pbd_supentrymappconfig
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | ffield | 源单候选键 | varchar | 30 |  | √ | ' ' | 源单候选键 |
+| 3 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
+| 4 | fentryname | 分录标识 | varchar | 30 |  | √ | ' ' | 分录标识,枚举: entry_link :联系人分录 entry_bank :银行分录 |
+| 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 6 | fbdfield | 目标候选键 | varchar | 30 |  | √ | ' ' | 目标候选键 |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fentryid | fentryid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_pbd_sup_fenrrtnam |  | fentryname |
+| 2 | pk_pbd_supentrymappconfig |  | fentryid |
+
+---
+
 ## 供应商变更生效字段配置-主表 t_pbd_supchgparam
 
 - **表名称：** 供应商变更生效字段配置-主表

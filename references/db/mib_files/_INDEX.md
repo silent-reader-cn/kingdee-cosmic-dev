@@ -10,5 +10,5 @@
 
 | 序号 | 数据库表名 | 中文名称 | 字段数 | 详细定义文件 |
 | :---: | :--- | :--- | :---: | :--- |
-| 1 | `t_pom_mftorderentry` | 生产工单分录F7-主表 | 64 | [mib_mftorder_f7.md](./mib_mftorder_f7.md) |
-| 2 | `t_pom_mftorderentry_e` | 生产工单分录F7-分表 | 85 | [mib_mftorder_f7.md](./mib_mftorder_f7.md) |
+| 1 | `t_pom_mftorderentry` | 生产工单分录F7-主表 | 74 | [mib_mftorder_f7.md](./mib_mftorder_f7.md) |
+| 2 | `t_pom_mftorderentry_e` | 生产工单分录F7-分表 | 91 | [mib_mftorder_f7.md](./mib_mftorder_f7.md) |

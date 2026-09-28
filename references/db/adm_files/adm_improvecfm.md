@@ -82,7 +82,7 @@
 | 13 | fauditdate | fauditdate | timestamp | 0 |  |  | null |  |
 | 14 | fcfmdate | 确认时间 | timestamp | 0 |  |  | null | 确认时间 |
 | 15 | fauditopinion | fauditopinion | varchar | 255 |  | √ | ' ' |  |
-| 16 | fcfmid | 确认人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 16 | fcfmid | 确认人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 17 | fmodifytime | fmodifytime | timestamp | 0 |  |  | null |  |
 | 18 | forigin | forigin | bpchar | 1 |  | √ | ' ' |  |
 | 19 | finvalidid | finvalidid | int8 | 64 |  | √ | 0 |  |

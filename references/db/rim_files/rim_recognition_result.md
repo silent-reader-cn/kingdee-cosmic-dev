@@ -16,7 +16,7 @@
 | 5 | ffile_name | 文件名 | varchar | 100 |  | √ | ' ' | 文件名 |
 | 6 | ftake_time | 识别耗时 | int8 | 64 |  | √ | 0 | 识别耗时 |
 | 7 | fcreate_time | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 8 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | flocal_url | 原文件 | varchar | 200 |  | √ | ' ' | 原文件 |
 | 10 | fpage_no | 页码 | int8 | 64 |  | √ | 0 | 页码 |
 | 11 | ffile_content_tag | 识别结果_详情 | text | 0 |  |  | null | 识别结果_详情 |

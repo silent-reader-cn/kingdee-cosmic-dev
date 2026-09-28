@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbillcreaterid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fbillcreaterid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fprogressinfo | 进度 | varchar | 200 |  |  | null | 进度 |
 | 4 | fbillvalid | 是否有效 | varchar | 50 |  | √ | ' ' | 是否有效,枚举: 1 :有效 0 :无效 |
 | 5 | fbillcomparedoc | 比较文档 | varchar | 255 |  |  | ' ' | 比较文档 |
@@ -22,7 +22,7 @@
 | 11 | foriginaldoc | 原文档 | varchar | 255 |  |  | ' ' | 原文档 |
 | 12 | fbilltdaresult | 差异分析结果 | text | 0 |  |  | ' ' | 差异分析结果 |
 | 13 | fbillno | 单据编号 | varchar | 255 |  | √ | ' ' | 单据编号 |
-| 14 | fbusinessobj | 业务对象 | varchar | 255 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 14 | fbusinessobj | 业务对象 | varchar | 255 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 15 | fbillstatus | 状态 | varchar | 255 |  |  | ' ' | 状态,枚举: running :比对中 success :比对完成 error :比对失败 cancel :取消任务 |
 | 16 | fbillcomparedocpath | 比较文档地址 | varchar | 255 |  |  | ' ' | 比较文档地址 |
 | 17 | fbillcompareimagespath | 比较文档转图片地址 | varchar | 255 |  |  | null | 比较文档转图片地址 |

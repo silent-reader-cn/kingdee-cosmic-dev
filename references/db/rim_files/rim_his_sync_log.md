@@ -18,13 +18,13 @@
 | 7 | fdeal_times | 处理次数 | int4 | 32 |  | √ | 0 | 处理次数 |
 | 8 | fmsg | 同步信息 | varchar | 1000 |  | √ | ' ' | 同步信息 |
 | 9 | fdata_date_start | 数据开始日期 | timestamp | 0 |  |  | null | 数据开始日期 |
-| 10 | forg | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 10 | forg | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 11 | fdata_date | 数据开始日期 | varchar | 20 |  | √ | ' ' | 数据开始日期 |
 | 12 | fdata_date_end | 数据结束日期 | timestamp | 0 |  |  | null | 数据结束日期 |
 | 13 | fappid | 类型 | varchar | 20 |  | √ | ' ' | 类型,枚举: sim :销项 rim :进项 |
 | 14 | fsuccess | 成功记录 | int4 | 32 |  | √ | 0 | 成功记录 |
 | 15 | fstatus | 同步结果 | varchar | 4 |  | √ | ' ' | 同步结果,枚举: 0 :失败 1 :成功 2 :待处理 3 :处理中 |
-| 16 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 16 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 17 | fpage_no | 请求次数 | int4 | 32 |  | √ | 0 | 请求次数 |
 | 18 | fcompany_name | 企业名称 | varchar | 150 |  | √ | ' ' | 企业名称 |
 

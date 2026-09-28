@@ -73,13 +73,13 @@
 | 3 | freceivenotice | 启用 | bpchar | 1 |  | √ | ' ' | 启用 |
 | 4 | fstatus | 状态 | bpchar | 1 |  | √ | '0' | 状态,枚举: 0 :禁用 1 :可用 |
 | 5 | fcreatedate | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 6 | fpredictrecord | 预测结果 | int8 | 64 |  | √ | 0 | 预测结果 ids_gpe_predict_record |
-| 7 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | fpredictrecord | 预测结果 | int8 | 64 |  | √ | 0 | [预测结果 ids_gpe_predict_record](../ids_files/ids_gpe_predict_record.md) |
+| 7 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 8 | fmodifydate | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 9 | feventnumber | 事件编码 | varchar | 50 |  | √ | ' ' | 事件编码 |
-| 10 | fscheme | 预测模型方案 | int8 | 64 |  | √ | 0 | 预测模型方案 ids_gpe_scheme |
+| 10 | fscheme | 预测模型方案 | int8 | 64 |  | √ | 0 | [预测模型方案 ids_gpe_scheme](../ids_files/ids_gpe_scheme.md) |
 | 11 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
-| 12 | fbizobj | 目标业务对象 | varchar | 50 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 12 | fbizobj | 目标业务对象 | varchar | 50 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 13 | ffiltercondition | 过滤条件 | varchar | 512 |  | √ | ' ' | 过滤条件 |
 | 14 | fcustomparams | 自定义参数 | varchar | 255 |  | √ | ' ' | 自定义参数 |
 

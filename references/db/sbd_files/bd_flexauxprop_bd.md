@@ -9,7 +9,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | 横表 | int8 | 64 |  | √ | 0 | 辅助属性值 bd_flexauxprop |
+| 1 | fid | 横表 | int8 | 64 |  | √ | 0 | [辅助属性值 bd_flexauxprop](../sbd_files/bd_flexauxprop.md) |
 | 2 | fvalue | 辅助属性值 | int8 | 64 |  | √ | 0 | 辅助属性值 |
 | 3 | fflexfield | 辅助属性类型 | varchar | 30 |  | √ | ' ' | 辅助属性类型 |
 | 4 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |

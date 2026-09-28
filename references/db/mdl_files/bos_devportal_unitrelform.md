@@ -12,7 +12,7 @@
 | 1 | fid | fid | varchar | 36 |  | √ | ' ' | id |
 | 2 | fbizunitid | 业务单元 | varchar | 36 |  | √ | ' ' | 业务单元 |
 | 3 | fformid | 业务页面 | varchar | 36 |  | √ | ' ' | 业务页面 |
-| 4 | fbizappid | 业务应用 | varchar | 36 |  | √ | ' ' | 业务应用实体 bos_devportal_bizapp |
+| 4 | fbizappid | 业务应用 | varchar | 36 |  | √ | ' ' | [业务应用实体 bos_devportal_bizapp](../mdl_files/bos_devportal_bizapp.md) |
 
 ### 列规则定义
 

@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fcomment | fcomment | varchar | 255 |  |  | null |  |
-| 3 | fcityid | 编码 | int8 | 64 |  | √ | 0 | 行政区划 bd_admindivision |
+| 3 | fcityid | 编码 | int8 | 64 |  | √ | 0 | [行政区划 bd_admindivision](../base_files/bd_admindivision.md) |
 | 4 | ftravelarea | ftravelarea | varchar | 255 |  |  | null |  |
 | 5 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 6 | fparentcityid | fparentcityid | int8 | 64 |  | √ | 0 |  |
@@ -32,6 +32,34 @@
 
 ---
 
+## 国家或地区-多选基础资料表 t_er_triparea_country
+
+- **表名称：** 国家或地区-多选基础资料表
+- **表名：** t_er_triparea_country
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [国家和地区 bd_country](../base_files/bd_country.md) |
+| 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fpkid | fpkid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | pk_er_area_country |  | fpkid |
+| 2 | idx_er_area_country |  | fid |
+
+---
+
 ## 出差地域-主表 t_er_triparea
 
 - **表名称：** 出差地域-主表
@@ -42,26 +70,29 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fgroupid | fgroupid | int8 | 64 |  | √ | 0 |  |
 | 5 | fname | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 7 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 7 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | fmulcombofield | 旺季 | varchar | 50 |  | √ | ' ' | 旺季,枚举: 1 :1月 2 :2月 3 :3月 4 :4月 5 :5月 6 :6月 7 :7月 8 :8月 9 :9月 10 :10月 11 :11月 12 :12月 |
 | 9 | fdisabledate | fdisabledate | timestamp | 0 |  |  | null |  |
-| 10 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 12 | fctrlstrategy | 控制策略 | varchar | 10 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
-| 13 | fstatus | 数据状态 | varchar | 36 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 15 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 16 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
-| 17 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
-| 18 | fenable | 使用状态 | bpchar | 1 |  | √ | '0' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 19 | fcitrystr | 城市字符串 | varchar | 255 |  | √ | ' ' | 城市字符串 |
-| 20 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
-| 21 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
+| 10 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 11 | fmigsrc | 来源系统 | int4 | 32 |  | √ | 0 | 来源系统 |
+| 12 | fisinternational | 全球差旅 | bpchar | 1 |  | √ | '0' | 全球差旅 |
+| 13 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 14 | fctrlstrategy | 控制策略 | varchar | 10 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
+| 15 | fstatus | 数据状态 | varchar | 36 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
+| 16 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 17 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
+| 18 | fisothercity | 其他/任意城市 | bpchar | 1 |  | √ | '0' | 其他/任意城市 |
+| 19 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
+| 20 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
+| 21 | fenable | 使用状态 | bpchar | 1 |  | √ | '0' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 22 | fcitrystr | 城市字符串(废弃) | varchar | 255 |  | √ | ' ' | 城市字符串(废弃) |
+| 23 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
+| 24 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
 
 ### 列规则定义
 
@@ -91,7 +122,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 行政区划 bd_admindivision |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [行政区划 bd_admindivision](../base_files/bd_admindivision.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 | 4 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 
@@ -139,6 +170,34 @@
 | :--- | :--- | :--- | :--- |
 | 1 | idx_fid_tripareadateentry |  | fid |
 | 2 | pk_t_er_tripareadateentry |  | fentryid |
+
+---
+
+## 城市F7-多选基础资料表 t_er_triparea_citys
+
+- **表名称：** 城市F7-多选基础资料表
+- **表名：** t_er_triparea_citys
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [行政区划 bd_admindivision](../base_files/bd_admindivision.md) |
+| 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fpkid | fpkid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | pk_t_er_triparea_citys |  | fpkid |
+| 2 | idx_tripareacitys_fid |  | fid |
 
 ---
 

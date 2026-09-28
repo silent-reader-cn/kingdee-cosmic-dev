@@ -22,5 +22,5 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | index_1 |  | fnumber |
+| 1 | idx_fbd_other_no |  | fnumber |
 | 2 | pk_t_fbd_other |  | fid |

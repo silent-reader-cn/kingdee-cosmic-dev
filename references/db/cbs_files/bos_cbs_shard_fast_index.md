@@ -12,7 +12,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fstatus | 配置状态 | bpchar | 1 |  | √ | ' ' | 配置状态,枚举: 0 :可配置 1 :启用中 |
 | 3 | flastfastindex | 上次快速索引 | varchar | 1000 |  | √ | ' ' | 上次快速索引 |
-| 4 | fconfigid | 分片配置 | int8 | 64 |  | √ | 0 | 分片配置 bos_cbs_shard_config |
+| 4 | fconfigid | 分片配置 | int8 | 64 |  | √ | 0 | [分片配置 bos_cbs_shard_config](../cbs_files/bos_cbs_shard_config.md) |
 | 5 | ffastindex | 快速索引 | varchar | 1000 |  | √ | ' ' | 快速索引 |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 7 | fentitynumber | 表单编码 | varchar | 50 |  | √ | ' ' | 表单编码 |

@@ -10,10 +10,10 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | forgid | 库存组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | forgid | 库存组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fclosedate | 关账日期 | timestamp | 0 |  |  | null | 关账日期 |
 | 4 | fisdelete | 是否删除 | bpchar | 1 |  | √ | ' ' | 是否删除 |
-| 5 | fwarehouseid | 仓库 | int8 | 64 |  | √ | 0 | 仓库 bd_warehouse |
+| 5 | fwarehouseid | 仓库 | int8 | 64 |  | √ | 0 | [仓库 bd_warehouse](../sbd_files/bd_warehouse.md) |
 
 ### 列规则定义
 

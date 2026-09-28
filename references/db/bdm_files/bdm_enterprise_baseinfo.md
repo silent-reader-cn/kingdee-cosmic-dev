@@ -17,7 +17,7 @@
 | 6 | fdevissuerid | fdevissuerid | int8 | 64 |  | √ | 0 |  |
 | 7 | fcertissuetime | 证书发行时间 | timestamp | 0 |  |  | null | 证书发行时间 |
 | 8 | fcurrenttime | 当前时钟 | timestamp | 0 |  |  | null | 当前时钟 |
-| 9 | forg | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 9 | forg | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 10 | fzcm | 托管平台注册码 | varchar | 100 |  | √ | ' ' | 托管平台注册码 |
 | 11 | fdevno | UKey编码 | varchar | 50 |  | √ | ' ' | UKey编码 |
 | 12 | fmodifytime | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |

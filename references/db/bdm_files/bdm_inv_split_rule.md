@@ -19,7 +19,7 @@
 | 8 | fdevlimitsplit | 不能超过金税盘限额 | bpchar | 1 |  | √ | ' ' | 不能超过金税盘限额 |
 | 9 | fdetailsplitrule | 商品行拆分规则 | varchar | 50 |  | √ | ' ' | 商品行拆分规则,枚举: 0 :不拆分 1 :按数量拆分 |
 | 10 | fitemsplitname | 拆分字段名称 | varchar | 600 |  | √ | ' ' | 拆分字段名称 |
-| 11 | forg | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 11 | forg | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 12 | flistlimitcommon | 普票清单行数 | int8 | 64 |  | √ | 0 | 普票清单行数 |
 | 13 | ftotaltaxamtcountrule | 税额计算规则 | varchar | 50 |  | √ | ' ' | 税额计算规则,枚举: 1 :以系统计算为准，系统将调整误差 2 :以实际输入税额为准 |
 | 14 | fquantitydecimallimit | 数量小数位限制 | int8 | 64 |  | √ | 0 | 数量小数位限制 |

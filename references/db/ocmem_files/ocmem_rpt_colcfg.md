@@ -10,10 +10,10 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fcreatedate | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
 | 4 | fmodifydate | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
-| 5 | fcreaterid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | fcreaterid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 
@@ -42,7 +42,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fdatatimecol | 过滤时间字段 | varchar | 80 |  | √ | ' ' | 过滤时间字段 |
 | 3 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 4 | fsrcentity | 来源实体 | varchar | 80 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 4 | fsrcentity | 来源实体 | varchar | 80 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 6 | frepocol | 原时间字段 | varchar | 80 |  | √ | ' ' | 原时间字段 |
 

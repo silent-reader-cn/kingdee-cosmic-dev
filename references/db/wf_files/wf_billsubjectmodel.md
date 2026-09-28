@@ -69,9 +69,9 @@
 | 6 | fbillsubjectmob | MOB单据主题 | text | 0 |  |  | null | MOB单据主题 |
 | 7 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
 | 8 | fbiztracenodesc | 业务跟踪号描述 | varchar | 100 |  | √ | ' ' | 业务跟踪号描述 |
-| 9 | fbillname | 单据名称 | varchar | 115 |  | √ | ' ' | 单据名称 |
-| 10 | fbillsubjectname | PC单据主题显示名称(废弃) | text | 0 |  |  | null | PC单据主题显示名称(废弃) |
-| 11 | fsubjectshowname | PC单据主题显示名称 | varchar | 3000 |  | √ | ' ' | PC单据主题显示名称 |
+| 9 | fbillsubjectname | PC单据主题显示名称(废弃) | text | 0 |  |  | null | PC单据主题显示名称(废弃) |
+| 10 | fsubjectshowname | PC单据主题显示名称 | varchar | 3000 |  | √ | ' ' | PC单据主题显示名称 |
+| 11 | fbillname | 单据名称 | varchar | 115 |  | √ | ' ' | 单据名称 |
 | 12 | fsample | PC样例 | varchar | 3000 |  |  | ' ' | PC样例 |
 | 13 | fmobileformkeyname | 移动端查看页面名称 | varchar | 255 |  | √ | ' ' | 移动端查看页面名称 |
 

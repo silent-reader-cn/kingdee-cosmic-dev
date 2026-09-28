@@ -10,12 +10,12 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fskills | 技能 | int8 | 64 |  | √ | 0 | 技能 mpdm_skills |
-| 3 | fprofessiona | 行业 | int8 | 64 |  | √ | 0 | 树形基础资料模板 mpdm_professiona |
+| 2 | fskills | 技能 | int8 | 64 |  | √ | 0 | [技能 mpdm_skills](../mpdm_files/mpdm_skills.md) |
+| 3 | fprofessiona | 行业 | int8 | 64 |  | √ | 0 | [树形基础资料模板 mpdm_professiona](../mpdm_files/mpdm_professiona.md) |
 | 4 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 6 | fmrtype | 检修设备类型 | int8 | 64 |  | √ | 0 | 检修设备类型 mpdm_mrtype |
-| 7 | fenginemodel | 发动机型号 | int8 | 64 |  | √ | 0 | 发动机型号 mpdm_enginetype |
+| 6 | fmrtype | 检修设备类型 | int8 | 64 |  | √ | 0 | [检修设备类型 mpdm_mrtype](../mpdm_files/mpdm_mrtype.md) |
+| 7 | fenginemodel | 发动机型号 | int8 | 64 |  | √ | 0 | [发动机型号 mpdm_enginetype](../mpdm_files/mpdm_enginetype.md) |
 
 ### 列规则定义
 
@@ -56,8 +56,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_t_mpdm_cardskills_u_uo |  | fuseorgid |
-| 2 | pk_t_mpdm_cardskills_u |  | fdataid,fuseorgid |
+| 1 | pk_t_mpdm_cardskills_u |  | fdataid,fuseorgid |
+| 2 | idx_t_mpdm_cardskills_u_uo |  | fuseorgid |
 
 ---
 
@@ -126,30 +126,30 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | faudittime | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
-| 4 | forg | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 4 | forg | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 6 | fdisabletime | 禁用日期 | timestamp | 0 |  |  | null | 禁用日期 |
 | 7 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 10 | fauditor | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fauditor | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fsourcedataid | fsourcedataid | int8 | 64 |  | √ | 0 |  |
 | 12 | fbitindex | fbitindex | int4 | 32 |  | √ | 0 |  |
-| 13 | fdisabler | 禁用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 14 | fmaterial | 物料 | int8 | 64 |  | √ | 0 | 物料 bd_material |
-| 15 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 16 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fdisabler | 禁用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 14 | fmaterial | 物料 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
+| 15 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 16 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 17 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
 | 18 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 19 | fenabler | 启用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 20 | fmaterialtype | 检修设备类型 | int8 | 64 |  | √ | 0 | 检修设备类型 mpdm_mrtype |
+| 19 | fenabler | 启用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 20 | fmaterialtype | 检修设备类型 | int8 | 64 |  | √ | 0 | [检修设备类型 mpdm_mrtype](../mpdm_files/mpdm_mrtype.md) |
 | 21 | fctrlstrategy | 控制策略 | varchar | 50 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
 | 22 | fenabletime | 启用日期 | timestamp | 0 |  |  | null | 启用日期 |
 | 23 | fenable | 使用状态 | varchar | 50 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 24 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
-| 25 | fcard | 工卡编码 | int8 | 64 |  | √ | 0 | 工卡 mpdm_mrocardroute |
+| 25 | fcard | 工卡编码 | int8 | 64 |  | √ | 0 | [工卡 mpdm_mrocardroute](../mpdm_files/mpdm_mrocardroute.md) |
 | 26 | fsourcebitindex | fsourcebitindex | int4 | 32 |  | √ | 0 |  |
 
 ### 列规则定义

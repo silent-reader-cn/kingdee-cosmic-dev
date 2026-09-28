@@ -43,10 +43,10 @@
 | 2 | fname | fname | varchar | 100 |  |  | ' ' |  |
 | 3 | fseq | fseq | int8 | 64 |  | √ | 0 |  |
 | 4 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
-| 5 | fdeprecurrency | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 5 | fdeprecurrency | 币别 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 | 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 7 | fassetpolicy | 资产政策 | int8 | 64 |  | √ | 0 | 折旧政策 fa_assetpolicy |
-| 8 | fdepreuseid | 折旧用途 | int8 | 64 |  | √ | 0 | 折旧用途 fa_depreuse |
+| 7 | fassetpolicy | 资产政策 | int8 | 64 |  | √ | 0 | [折旧政策 fa_assetpolicy](../fa_files/fa_assetpolicy.md) |
+| 8 | fdepreuseid | 折旧用途 | int8 | 64 |  | √ | 0 | [折旧用途 fa_depreuse](../fa_files/fa_depreuse.md) |
 
 ### 列规则定义
 

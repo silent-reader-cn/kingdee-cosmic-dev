@@ -1,5 +1,40 @@
 # 保证金批量收益处理-fbd_surety_stlint_batch
 
+## 保证金批量收益处理-反写记录表 t_fbd_intbill_batch_wb
+
+- **表名称：** 保证金批量收益处理-反写记录表
+- **表名：** t_fbd_intbill_batch_wb
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | null |  |
+| 2 | foperate | foperate | varchar | 50 |  | √ | ' ' |  |
+| 3 | fruleverid | fruleverid | int8 | 64 |  |  | null |  |
+| 4 | fsbillid | fsbillid | int8 | 64 |  |  | null |  |
+| 5 | fstableid | fstableid | int8 | 64 |  |  | null |  |
+| 6 | fsid | fsid | int8 | 64 |  |  | null |  |
+| 7 | fwritevalue | fwritevalue | numeric | 23 | 10 |  | null |  |
+| 8 | fseq | fseq | int4 | 32 |  | √ | 0 |  |
+| 9 | fentryid | fentryid | int8 | 64 |  | √ | null |  |
+| 10 | fruleitemid | fruleitemid | int8 | 64 |  |  | null |  |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fentryid | fentryid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | pk_fbd_intbill_batch_wb |  | fentryid |
+| 2 | idx_fbd_intbill_batch_wb_fk |  | fid |
+
+---
+
 ## 收益记录-子表 t_fbd_intbill_batch_entry
 
 - **表名称：** 收益记录-子表
@@ -16,21 +51,23 @@
 | 5 | fintdetail_tag | 利息明细_详情 | text | 0 |  |  | null | 利息明细_详情 |
 | 6 | fintdetail | 利息明细 | varchar | 255 |  | √ | ' ' | 利息明细 |
 | 7 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 8 | fintdays | 计息天数 | int8 | 64 |  | √ | 0 | 计息天数 |
+| 8 | fintdays | 本次收益天数 | int8 | 64 |  | √ | 0 | 本次收益天数 |
 | 9 | factualinstamt | 实际收益金额 | numeric | 23 | 10 | √ | 0 | 实际收益金额 |
 | 10 | fintdetailnum | 收益单编号 | varchar | 50 |  | √ | ' ' | 收益单编号 |
-| 11 | fenddate | 计息结束日期 | timestamp | 0 |  |  | null | 计息结束日期 |
+| 11 | fenddate | 收益计算结束日 | timestamp | 0 |  |  | null | 收益计算结束日 |
 | 12 | fstatus | 生成状态 | varchar | 50 |  | √ | ' ' | 生成状态,枚举: success :成功 fail :失败 |
 | 13 | frate | 计息利率 | numeric | 17 | 6 | √ | 0 | 计息利率 |
-| 14 | fstartdate | 计息开始日期 | timestamp | 0 |  |  | null | 计息开始日期 |
+| 14 | fstartdate | 收益计算开始日 | timestamp | 0 |  |  | null | 收益计算开始日 |
 | 15 | fintbillid | 结息记录id | int8 | 64 |  | √ | 0 | 结息记录id |
 | 16 | finttype | 利息类别 | varchar | 50 |  | √ | ' ' | 利息类别,枚举: lsbq :利随本清 jx :结息 |
 | 17 | fisreverse | fisreverse | bpchar | 1 |  | √ | '0' |  |
-| 18 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 19 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
-| 20 | finterestamt | 收益金额 | numeric | 23 | 10 | √ | 0 | 收益金额 |
-| 21 | fcompanyid | 存款组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 22 | ffinorginfoid | 存款机构 | int8 | 64 |  | √ | 0 | 金融机构 bd_finorginfo |
+| 18 | finvestorgtype | 存款机构类型 | varchar | 50 |  | √ | ' ' | 存款机构类型,枚举: bd_finorginfo :金融机构 bd_customer :客户 bd_supplier :供应商 fbd_other :其他 |
+| 19 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 20 | fcurrencyid | 币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
+| 21 | ffinorgother | 存款机构 | varchar | 255 |  | √ | ' ' | 存款机构 |
+| 22 | finterestamt | 收益金额 | numeric | 23 | 10 | √ | 0 | 收益金额 |
+| 23 | fcompanyid | 存款组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 24 | ffinorginfoid | 存款机构 | int8 | 64 |  | √ | 0 | 金融机构 bd_finorginfo |
 
 ### 列规则定义
 
@@ -44,6 +81,39 @@
 | :--- | :--- | :--- | :--- |
 | 1 | idx_t_fbd_intbillbatch_entry |  | fid |
 | 2 | pk_fbd_intbill_batch_entry |  | fentryid |
+
+---
+
+## 保证金批量收益处理-关联追踪表 t_fbd_intbill_batch_tc
+
+- **表名称：** 保证金批量收益处理-关联追踪表
+- **表名：** t_fbd_intbill_batch_tc
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | null |  |
+| 2 | ftbillid | ftbillid | int8 | 64 |  |  | null |  |
+| 3 | fttableid | fttableid | int8 | 64 |  |  | null |  |
+| 4 | fsbillid | fsbillid | int8 | 64 |  |  | null |  |
+| 5 | fstableid | fstableid | int8 | 64 |  |  | null |  |
+| 6 | fsid | fsid | int8 | 64 |  |  | null |  |
+| 7 | ftid | ftid | int8 | 64 |  |  | null |  |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fid | fid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_fbd_intbill_batch_tc_tid |  | ftid |
+| 2 | pk_fbd_intbill_batch_tc |  | fid |
+| 3 | idx_fbd_intbill_batch_tc_tbill |  | ftbillid |
 
 ---
 
@@ -87,21 +157,23 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fbillstatus | 单据状态 | varchar | 50 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 4 | fcomment | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 6 | frevenuetype | 收益单类别 | varchar | 50 |  | √ | ' ' | 收益单类别,枚举: revenue :收益 releaserev :存出收益 |
-| 7 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 8 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
-| 9 | fdescription | 结息摘要（共用） | varchar | 255 |  | √ | ' ' | 结息摘要（共用） |
-| 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 11 | fbiztype | 业务类型 | varchar | 50 |  | √ | ' ' | 业务类型,枚举: preint :预提利息 loan :贷款利息 currentint :存款结息 settleint :收益 |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 13 | foperatetype | foperatetype | varchar | 50 |  | √ | ' ' |  |
-| 14 | fbizdate | 收益日期 | timestamp | 0 |  |  | null | 收益日期 |
-| 15 | fbillno | 批次号 | varchar | 30 |  | √ | ' ' | 批次号 |
-| 16 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 7 | fpreintdate | fpreintdate | timestamp | 0 |  |  | null |  |
+| 8 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 9 | fauditdate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
+| 10 | fdescription | 结息摘要（共用） | varchar | 255 |  | √ | ' ' | 结息摘要（共用） |
+| 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 12 | fbiztype | 业务类型 | varchar | 50 |  | √ | ' ' | 业务类型,枚举: preint :预提利息 loan :贷款利息 currentint :存款结息 settleint :收益 |
+| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 14 | foperatetype | foperatetype | varchar | 50 |  | √ | ' ' |  |
+| 15 | fbizdate | 收益日期 | timestamp | 0 |  |  | null | 收益日期 |
+| 16 | fbusinessdate | 业务日期 | timestamp | 0 |  |  | null | 业务日期 |
+| 17 | fbillno | 批次号 | varchar | 30 |  | √ | ' ' | 批次号 |
+| 18 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 
@@ -115,3 +187,34 @@
 | :--- | :--- | :--- | :--- |
 | 1 | idx_fbd_intbillbatch_bnd |  | fbillno |
 | 2 | pk_fbd_intbill_batch |  | fid |
+
+---
+
+## 关联子实体-子表 t_fbd_intbill_batch_lk
+
+- **表名称：** 关联子实体-子表
+- **表名：** t_fbd_intbill_batch_lk
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | null |  |
+| 2 | fsbillid | 源单内码 | int8 | 64 |  |  | null | 源单内码 |
+| 3 | fstableid | 源单主实体编码 | int8 | 64 |  |  | null | 源单主实体编码 |
+| 4 | fsid | 源单主实体内码 | int8 | 64 |  |  | null | 源单主实体内码 |
+| 5 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
+| 6 | fpkid | fpkid | int8 | 64 |  | √ | null | id |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fpkid | fpkid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_fbd_intbill_batch_lk_fk |  | fid |
+| 2 | pk_fbd_intbill_batch_lk |  | fpkid |

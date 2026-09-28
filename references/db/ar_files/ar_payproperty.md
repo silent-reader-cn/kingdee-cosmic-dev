@@ -97,8 +97,8 @@
 | 1 | fid | fid | int8 | 64 |  | √ | null |  |
 | 2 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
 | 3 | fenddate | 失效日期 | timestamp | 0 |  |  | null | 失效日期 |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  |  | null | 人员 bos_user |
-| 5 | fcreatorid | 创建人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
+| 5 | fcreatorid | 创建人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | fstartdate | 生效日期 | timestamp | 0 |  |  | null | 生效日期 |
 | 7 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 8 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
@@ -131,19 +131,19 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fname | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 6 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fdescription | fdescription | varchar | 255 |  | √ | ' ' |  |
-| 8 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 8 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 10 | fctrlstrategy | 控制策略 | varchar | 30 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
 | 11 | fisbasedonamt | 是否金额基准 | bpchar | 1 |  | √ | ' ' | 是否金额基准 |
 | 12 | fstatus | 数据状态 | varchar | 5 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 13 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 16 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
 | 17 | fenable | 使用状态 | bpchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :启用 |
@@ -161,8 +161,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_t_ar_payproperty_master |  | fmasterid |
-| 2 | index_ar_paypropery |  | fstatus |
+| 1 | index_ar_paypropery |  | fstatus |
+| 2 | idx_t_ar_payproperty_master |  | fmasterid |
 | 3 | t_ar_payproperty_pkey |  | fid |
 | 4 | idx_ar_payproperty_fnumber |  | fnumber |
 | 5 | idx_t_ar_payproperty_createorg |  | fcreateorgid |

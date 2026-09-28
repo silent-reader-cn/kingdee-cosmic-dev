@@ -50,8 +50,8 @@
 | 12 | fprojectedqty26 |  | numeric | 23 | 10 | √ | 0 |  |
 | 13 | fsafetystock | 安全库存 | numeric | 23 | 10 | √ | 0 | 安全库存 |
 | 14 | fparententryid | fparententryid | int8 | 64 |  | √ | 0 | pid |
-| 15 | fmaterialversionid | 物料版本 | int8 | 64 |  | √ | 0 | 物料版本 bd_bomversion_new |
-| 16 | fbaseunitid | 基本单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 15 | fmaterialversionid | 物料版本 | int8 | 64 |  | √ | 0 | [物料版本 bd_bomversion_new](../basedata_files/bd_bomversion_new.md) |
+| 16 | fbaseunitid | 基本单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 17 | fprojectedqty14 |  | numeric | 23 | 10 | √ | 0 |  |
 | 18 | fprojectedqty58 |  | numeric | 23 | 10 | √ | 0 |  |
 | 19 | fprojectedqty13 |  | numeric | 23 | 10 | √ | 0 |  |
@@ -72,7 +72,7 @@
 | 34 | fprojectedqty16 |  | numeric | 23 | 10 | √ | 0 |  |
 | 35 | fprojectedqty15 |  | numeric | 23 | 10 | √ | 0 |  |
 | 36 | fprojectedqty59 |  | numeric | 23 | 10 | √ | 0 |  |
-| 37 | fmaterialcodeid | 物料编码 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 37 | fmaterialcodeid | 物料编码 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 38 | fprojectedqty60 |  | numeric | 23 | 10 | √ | 0 |  |
 | 39 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 40 | fprojectedqty9 |  | numeric | 23 | 10 | √ | 0 |  |

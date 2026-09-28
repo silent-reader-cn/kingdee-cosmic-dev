@@ -11,21 +11,21 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fisleaf | 是否叶子 | bpchar | 1 |  | √ | '0' | 是否叶子 |
-| 3 | fdutypersonid | 责任人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 4 | fdutydeptid | 责任部门 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 6 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | fdutypersonid | 责任人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 4 | fdutydeptid | 责任部门 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 6 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 8 | fstatus | 数据状态 | varchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 11 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 12 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
-| 13 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 13 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 14 | fremark | 备注 | varchar | 50 |  | √ | ' ' | 备注 |
 | 15 | fname | 节点名称 | varchar | 50 |  | √ | ' ' | 节点名称 |
-| 16 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 17 | fparentid | 上级 | int8 | 64 |  | √ | 0 | 企业项目结构 pmbd_orgpros |
+| 16 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 17 | fparentid | 上级 | int8 | 64 |  | √ | 0 | [企业项目结构 pmbd_orgpros](../fmm_files/pmbd_orgpros.md) |
 | 18 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 19 | flongnumber | 长编码 | varchar | 50 |  | √ | ' ' | 长编码 |
 | 20 | fctrlstrategy | 控制策略 | varchar | 5 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
@@ -33,7 +33,7 @@
 | 22 | fselfid | 列表传递过来的id | varchar | 50 |  | √ | ' ' | 列表传递过来的id |
 | 23 | fenable | 使用状态 | varchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 24 | fnumber | 节点编码 | varchar | 30 |  | √ | ' ' | 节点编码 |
-| 25 | fuseorgid | 业务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 25 | fuseorgid | 业务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 26 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
 
 ### 列规则定义
@@ -151,7 +151,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 3 | fpnumber | 工号 | int8 | 64 |  | √ | 0 | 企业人力资源池 pmbd_enterprise_hm_res_po |
+| 3 | fpnumber | 工号 | int8 | 64 |  | √ | 0 | [企业人力资源池 pmbd_enterprise_hm_res_po](../fmm_files/pmbd_enterprise_hm_res_po.md) |
 | 4 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 
 ### 列规则定义

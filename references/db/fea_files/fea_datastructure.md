@@ -46,7 +46,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fcreateorgid | fcreateorgid | int8 | 64 |  | √ | 0 |  |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fname | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 6 | forgid | forgid | int8 | 64 |  | √ | 0 |  |
@@ -55,10 +55,10 @@
 | 9 | fctrlstrategy | fctrlstrategy | bpchar | 1 |  | √ | '5' |  |
 | 10 | fentity | 业务对象标志 | varchar | 100 |  | √ | ' ' | 业务对象标志 |
 | 11 | fiscommon | 是否可被引用 | bpchar | 1 |  | √ | '1' | 是否可被引用 |
-| 12 | fstandardid | 文件标准 | int8 | 64 |  | √ | 0 | 文件标准 fea_standard |
+| 12 | fstandardid | 文件标准 | int8 | 64 |  | √ | 0 | [文件标准 fea_standard](../fea_files/fea_standard.md) |
 | 13 | fstatus | 数据状态 | bpchar | 1 |  | √ | '0' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 14 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 15 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 15 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 16 | fenable | 使用状态 | bpchar | 1 |  | √ | '0' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 17 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
 | 18 | fentitydesc | 业务对象 | varchar | 100 |  | √ | ' ' | 业务对象 |

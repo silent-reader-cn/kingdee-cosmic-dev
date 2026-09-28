@@ -46,37 +46,37 @@
 | 2 | fmodifyorgid | fmodifyorgid | int8 | 64 |  |  | null |  |
 | 3 | faddress | 地址 | varchar | 255 |  | √ | ' ' | 地址 |
 | 4 | froutingnum | Routing Number | varchar | 100 |  | √ | ' ' | Routing Number |
-| 5 | fcityid | 城市 | int8 | 64 |  | √ | 0 | 行政区划 bd_admindivision |
+| 5 | fcityid | 城市 | int8 | 64 |  | √ | 0 | [行政区划 bd_admindivision](../base_files/bd_admindivision.md) |
 | 6 | fdisabledate | 禁用时间 | timestamp | 0 |  |  | null | 禁用时间 |
 | 7 | fmunicipality | fmunicipality | varchar | 100 |  |  | null |  |
 | 8 | fcitycloud | 城市(云端) | varchar | 255 |  | √ | ' ' | 城市(云端) |
 | 9 | fcounty | fcounty | varchar | 100 |  |  | null |  |
 | 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 11 | fstatus | 数据状态 | varchar | 50 |  |  | null | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fmasterid | 主数据内码 | int8 | 64 |  |  | null | 主数据内码 |
-| 14 | fprovinceid | 省份 | int8 | 64 |  | √ | 0 | 行政区划 bd_admindivision |
+| 14 | fprovinceid | 省份 | int8 | 64 |  | √ | 0 | [行政区划 bd_admindivision](../base_files/bd_admindivision.md) |
 | 15 | fissystem | fissystem | bpchar | 1 |  |  | null |  |
 | 16 | fnameeng | 名称英文 | varchar | 255 |  | √ | ' ' | 名称英文 |
 | 17 | ffax | 传真 | varchar | 50 |  | √ | ' ' | 传真 |
 | 18 | fothercode | 其他代码 | varchar | 100 |  | √ | ' ' | 其他代码 |
 | 19 | fprovincetxt | 省份（银企） | varchar | 255 |  | √ | ' ' | 省份（银企） |
 | 20 | faddresseng | 地址(英文) | varchar | 255 |  | √ | ' ' | 地址(英文) |
-| 21 | fswiftcode | Swfit Code | varchar | 50 |  | √ | ' ' | Swfit Code |
+| 21 | fswiftcode | SWIFT Code | varchar | 50 |  | √ | ' ' | SWIFT Code |
 | 22 | fremark | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
-| 23 | fmodifierid | 修改人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 23 | fmodifierid | 修改人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 24 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
 | 25 | fiban | fiban | varchar | 100 |  | √ | ' ' |  |
 | 26 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 27 | ffintypeid | ffintypeid | int8 | 64 |  | √ | 0 |  |
-| 28 | fcountryid | 国家地区 | int8 | 64 |  |  | null | 国家和地区 bd_country |
+| 28 | fcountryid | 国家地区 | int8 | 64 |  |  | null | [国家和地区 bd_country](../base_files/bd_country.md) |
 | 29 | fbankcategory | fbankcategory | varchar | 50 |  | √ | ' ' |  |
-| 30 | fdisablerid | 禁用人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 30 | fdisablerid | 禁用人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 31 | fdescription | fdescription | varchar | 255 |  | √ | ' ' |  |
 | 32 | fisfromcloud | 云端数据 | bpchar | 1 |  | √ | '0' | 云端数据 |
 | 33 | ftelephone | 电话 | varchar | 50 |  | √ | ' ' | 电话 |
 | 34 | fendlifecycle | 过期操作日期 | timestamp | 0 |  |  | null | 过期操作日期 |
-| 35 | fbankcateid | 银行类别 | int8 | 64 |  | √ | 0 | 银行类别 bd_bankcgsetting |
+| 35 | fbankcateid | 银行类别 | int8 | 64 |  | √ | 0 | [银行类别 bd_bankcgsetting](../basedata_files/bd_bankcgsetting.md) |
 | 36 | fbankcatename | 银行类别名称 | varchar | 255 |  | √ | ' ' | 银行类别名称 |
 | 37 | fonlineupdatetime | 在线更新日期 | timestamp | 0 |  |  | null | 在线更新日期 |
 | 38 | fadmindivisionid | fadmindivisionid | int8 | 64 |  |  | null |  |

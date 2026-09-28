@@ -42,7 +42,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fusereadyhour | fusereadyhour | bpchar | 1 |  | √ | ' ' |  |
 | 3 | fremark | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fuseyield | 考虑成品率 | bpchar | 1 |  | √ | ' ' | 考虑成品率 |
 | 6 | flossformula | 损耗率计算公式 | varchar | 50 |  | √ | ' ' | 损耗率计算公式,枚举: 0 :不考虑 1 :子项标准用量 *（1 + 损耗率） 2 :子项标准用量 / (1 - 损耗率) |
 | 7 | fbillstatus | 单据状态 | bpchar | 1 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
@@ -51,16 +51,16 @@
 | 10 | frouterulefilter | 过滤规则 | varchar | 255 |  | √ | ' ' | 过滤规则 |
 | 11 | fauditdate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
 | 12 | frulefilter | 过滤规则 | varchar | 255 |  | √ | ' ' | 过滤规则 |
-| 13 | fcosttype | 标准成本方案 | int8 | 64 |  | √ | 0 | 标准成本方案 cad_costtype |
+| 13 | fcosttype | 标准成本方案 | int8 | 64 |  | √ | 0 | [标准成本方案 cad_costtype](../basedata_files/cad_costtype.md) |
 | 14 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 15 | fcostaccount | 关联成本主体 | int8 | 64 |  | √ | 0 | 成本主体 cal_bd_costaccount |
+| 15 | fcostaccount | 关联成本主体 | int8 | 64 |  | √ | 0 | [成本主体 cal_bd_costaccount](../cal_files/cal_bd_costaccount.md) |
 | 16 | froutesource | froutesource | varchar | 50 |  | √ | ' ' |  |
-| 17 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 18 | fcostpriceplan | 取价方案 | int8 | 64 |  | √ | 0 | 取价方案 scax_costpriceplan |
+| 17 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 18 | fcostpriceplan | 取价方案 | int8 | 64 |  | √ | 0 | [取价方案 scax_costpriceplan](../scax_files/scax_costpriceplan.md) |
 | 19 | foutsourcepricerule | foutsourcepricerule | int8 | 64 |  | √ | 0 |  |
 | 20 | fbomsource | BOM来源 | varchar | 50 |  | √ | ' ' | BOM来源,枚举: costbom :成本BOM |
 | 21 | fbillno | 单据编号 | varchar | 80 |  | √ | ' ' | 单据编号 |
-| 22 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 22 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 23 | fpurpricerule | fpurpricerule | int8 | 64 |  | √ | 0 |  |
 | 24 | frouterulefilter_tag | 过滤规则_详情 | text | 0 |  |  | null | 过滤规则_详情 |
 
@@ -74,8 +74,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | pk_scax_costcalcrule |  | fid |
-| 2 | idx_scax_costcalcrule |  | fcosttype |
+| 1 | idx_scax_costcalcrule |  | fcosttype |
+| 2 | pk_scax_costcalcrule |  | fid |
 | 3 | idx_scax_costcalcrule_number |  | fbillno |
 
 ---

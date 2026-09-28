@@ -11,9 +11,9 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fisincludesuborg | 所有下级受控 | bpchar | 1 |  | √ | '0' | 所有下级受控 |
-| 3 | forgid | 受控组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | forgid | 受控组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 5 | fappid | 应用 | varchar | 18 |  | √ | ' ' | 业务应用实体 bos_devportal_bizapp |
+| 5 | fappid | 应用 | varchar | 18 |  | √ | ' ' | [业务应用实体 bos_devportal_bizapp](../mdl_files/bos_devportal_bizapp.md) |
 
 ### 列规则定义
 

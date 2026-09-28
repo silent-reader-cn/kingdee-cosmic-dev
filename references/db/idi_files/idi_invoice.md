@@ -10,23 +10,26 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 3 | fbillstatus | 单据状态 | bpchar | 1 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 5 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
-| 6 | findexfield | 火车票飞机票重复键 | varchar | 255 |  | √ | ' ' | 火车票飞机票重复键 |
-| 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 8 | fimagenumber | 影像编码 | varchar | 100 |  | √ | ' ' | 影像编码 |
-| 9 | fimagepage | 影像页码 | varchar | 10 |  | √ | ' ' | 影像页码 |
-| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 11 | finvoicetype | 发票类型 | varchar | 100 |  | √ | ' ' | 发票类型 |
-| 12 | fbillid | 单据id | varchar | 50 |  | √ | ' ' | 单据id |
-| 13 | finvoicedate | 开票日期 | varchar | 50 |  | √ | ' ' | 开票日期 |
-| 14 | finvoicecode | 发票代码 | varchar | 100 |  | √ | ' ' | 发票代码 |
-| 15 | flocalurl | 原件预览url | varchar | 255 |  | √ | ' ' | 原件预览url |
-| 16 | finvoiceno | 发票号码 | varchar | 100 |  | √ | ' ' | 发票号码 |
-| 17 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 18 | fbillno | 单据编号 | varchar | 30 |  | √ | ' ' | 单据编号 |
+| 2 | fsecret | 客户加密 | varchar | 128 |  | √ | ' ' | 客户加密 |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 4 | fbillstatus | 单据状态 | bpchar | 1 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
+| 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 6 | fclientid | 客户标识 | varchar | 64 |  | √ | ' ' | 客户标识 |
+| 7 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
+| 8 | findexfield | 火车票飞机票重复键 | varchar | 255 |  | √ | ' ' | 火车票飞机票重复键 |
+| 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 10 | fimagenumber | 影像编号 | varchar | 100 |  | √ | ' ' | 影像编号 |
+| 11 | fimagepage | 影像页码 | varchar | 10 |  | √ | ' ' | 影像页码 |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 13 | finvoicetype | 发票类型 | varchar | 100 |  | √ | ' ' | 发票类型 |
+| 14 | fbillid | 单据id | varchar | 50 |  | √ | ' ' | 单据id |
+| 15 | finvoicedate | 开票日期 | varchar | 50 |  | √ | ' ' | 开票日期 |
+| 16 | finvoicecode | 发票代码 | varchar | 100 |  | √ | ' ' | 发票代码 |
+| 17 | flocalurl | 原件预览url | varchar | 255 |  | √ | ' ' | 原件预览url |
+| 18 | finvoiceno | 发票号码 | varchar | 100 |  | √ | ' ' | 发票号码 |
+| 19 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 20 | fbillno | 单据编号 | varchar | 30 |  | √ | ' ' | 单据编号 |
+| 21 | fbilltype | 单据类型 | varchar | 36 |  | √ | ' ' | 单据类型 |
 
 ### 列规则定义
 

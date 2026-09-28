@@ -12,9 +12,9 @@
 | 1 | fid | fid | int8 | 64 |  | √ | '0' | id |
 | 2 | fstatus | 使用状态 | bpchar | 1 |  | √ | '0' | 使用状态,枚举: 0 :禁用 1 :启用 |
 | 3 | fmodifydate | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 4 | fschedule | 调度计划 | varchar | 36 |  | √ | ' ' | 调度计划 sch_schedule |
-| 5 | fbal | 余额表 | varchar | 36 |  | √ | ' ' | 余额表 bal_balanceinfo |
-| 6 | fmodifier | 修改人 | int8 | 64 |  | √ | '0' | 人员 bos_user |
+| 4 | fschedule | 调度计划 | varchar | 36 |  | √ | ' ' | [调度计划 sch_schedule](../sys_files/sch_schedule.md) |
+| 5 | fbal | 余额表 | varchar | 36 |  | √ | ' ' | [余额表 bal_balanceinfo](../bal_files/bal_balanceinfo.md) |
+| 6 | fmodifier | 修改人 | int8 | 64 |  | √ | '0' | [人员 bos_user](../base_files/bos_user.md) |
 | 7 | fcheckitem | 检查修复项 | varchar | 80 |  | √ | ' ' | 检查修复项,枚举: A :单据生成快照 B :快照合计余额 C :单据删除 D :KEYCOL |
 
 ### 列规则定义

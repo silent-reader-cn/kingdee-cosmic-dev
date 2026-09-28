@@ -16,7 +16,7 @@
 | 5 | fcreatetime | 消息发送日期 | timestamp | 0 |  |  | null | 消息发送日期 |
 | 6 | fmsg | 消息内容 | varchar | 1000 |  | √ | ' ' | 消息内容 |
 | 7 | falarmconfig | 预警规则模板 | int8 | 64 |  | √ | 0 | 预警规则模板 |
-| 8 | fmsgtype | 消息渠道 | int8 | 64 |  | √ | 0 | 消息渠道 msg_channel |
+| 8 | fmsgtype | 消息渠道 | int8 | 64 |  | √ | 0 | [消息渠道 msg_channel](../wftask_files/msg_channel.md) |
 | 9 | fchannelmsgid | 渠道消息日志关联ID | int8 | 64 |  | √ | 0 | 渠道消息日志关联ID |
 | 10 | falarmtype | 预警类型 | bpchar | 1 |  | √ | '0' | 预警类型,枚举: 0 :慢接口 1 :API配额 2 :API熔断 3 :API安全 |
 | 11 | frecevers | 接收人 | varchar | 100 |  | √ | ' ' | 接收人 |

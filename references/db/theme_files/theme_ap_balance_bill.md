@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fapbookbalancerate | 应付账款增长率(%) | numeric | 23 | 10 |  | null | 应付账款增长率(%) |
 | 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 5 | finventorybookbalarate | 存货增长率(%) | numeric | 23 | 10 |  | null | 存货增长率(%) |
@@ -19,8 +19,8 @@
 | 8 | fapbookbalance | 应付账款账面余额 | numeric | 23 | 10 |  | null | 应付账款账面余额 |
 | 9 | foriginbuybalance | 原材料采购金额 | numeric | 23 | 10 |  | null | 原材料采购金额 |
 | 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 11 | fipoorgld | IPO主体 | int8 | 64 |  | √ | 0 | IPO编制组织 ipo_org |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fipoorgld | IPO主体 | int8 | 64 |  | √ | 0 | [IPO编制组织 ipo_org](../ipobase_files/ipo_org.md) |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | foriginbuybalancerate | 应付账款占原材料当期采购金额比(%) | numeric | 23 | 10 |  | null | 应付账款占原材料当期采购金额比(%) |
 
 ### 列规则定义

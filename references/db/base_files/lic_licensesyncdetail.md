@@ -30,5 +30,5 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | ix_licsyncdetaillog_task |  | ftaskid |
-| 2 | pk_t_lic_licsyncdetaillog |  | fid |
+| 1 | pk_t_lic_licsyncdetaillog |  | fid |
+| 2 | ix_licsyncdetaillog_task |  | ftaskid |

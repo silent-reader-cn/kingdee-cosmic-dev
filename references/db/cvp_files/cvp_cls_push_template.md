@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fincludedtemplate | 模版名称 | int8 | 64 |  | √ | 0 | 模板基础资料 cvp_template_base |
+| 2 | fincludedtemplate | 模版名称 | int8 | 64 |  | √ | 0 | [模板基础资料 cvp_template_base](../cvp_files/cvp_template_base.md) |
 | 3 | fkeyoword | 分类关键字 | varchar | 1000 |  |  | ' ' | 分类关键字 |
 | 4 | fclassifyid | 组合识别器ID | int8 | 64 |  | √ | 0 | 组合识别器ID |
 

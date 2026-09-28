@@ -13,11 +13,11 @@
 | 2 | fprocessrouteid | fprocessrouteid | int8 | 64 |  | √ | 0 |  |
 | 3 | fproductionworkshopid | fproductionworkshopid | int8 | 64 |  | √ | 0 |  |
 | 4 | fbomversion | fbomversion | varchar | 50 |  | √ | ' ' |  |
-| 5 | fmaterialid | 产品编码 | int8 | 64 |  | √ | 0 | 物料 bd_material |
-| 6 | forgid | 生产组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | fmaterialid | 产品编码 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
+| 6 | forgid | 生产组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fauxptyunit | fauxptyunit | int8 | 64 |  | √ | 0 |  |
 | 8 | fconfiguredcodeid | fconfiguredcodeid | int8 | 64 |  | √ | 0 |  |
-| 9 | fbaseunit | 基本单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 9 | fbaseunit | 基本单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 10 | fmodifytime | fmodifytime | timestamp | 0 |  |  | null |  |
 | 11 | fparentplanid | fparentplanid | varchar | 50 |  | √ | ' ' |  |
 | 12 | fcreatorid | fcreatorid | int8 | 64 |  | √ | 0 |  |
@@ -25,7 +25,7 @@
 | 14 | fmanufactureorder | fmanufactureorder | varchar | 50 |  | √ | ' ' |  |
 | 15 | fbillno | 工序计划编号 | varchar | 30 |  | √ | ' ' | 工序计划编号 |
 | 16 | ftransactiontypeid | ftransactiontypeid | int8 | 64 |  | √ | 0 |  |
-| 17 | fmftentryseq | 生产工单行号 | int8 | 64 |  | √ | 0 | 生产工单分录F7 sfc_mftorder_f7 |
+| 17 | fmftentryseq | 生产工单行号 | int8 | 64 |  | √ | 0 | [生产工单分录F7 sfc_mftorder_f7](../sfc_files/sfc_mftorder_f7.md) |
 | 18 | fqty | fqty | numeric | 23 | 10 | √ | 0.0000000000 |  |
 | 19 | fmodifierid | fmodifierid | int8 | 64 |  | √ | 0 |  |
 | 20 | fbillstatus | 单据状态 | varchar | 30 |  | √ | ' ' | 单据状态,枚举: |
@@ -84,18 +84,18 @@
 | 9 | foprrepairedqty | foprrepairedqty | numeric | 23 | 10 | √ | 0.0000000000 |  |
 | 10 | foprnonum | foprnonum | int8 | 64 |  | √ | 0 |  |
 | 11 | fbasebatchqty | fbasebatchqty | numeric | 23 | 10 | √ | 0.0000000000 |  |
-| 12 | foprworkcenterid | 工作中心 | int8 | 64 |  | √ | 0 | 工作中心定义(废弃) mpdm_workcentre |
+| 12 | foprworkcenterid | 工作中心 | int8 | 64 |  | √ | 0 | [工作中心定义(废弃) mpdm_workcentre](../mpdm_files/mpdm_workcentre.md) |
 | 13 | foprworkshopid | foprworkshopid | int8 | 64 |  | √ | 0 |  |
 | 14 | foprtimeunit | foprtimeunit | varchar | 30 |  | √ | ' ' |  |
 | 15 | foprparentnum | foprparentnum | int8 | 64 |  | √ | 0 |  |
-| 16 | foproperationid | 工序编码 | int8 | 64 |  | √ | 0 | 标准工序定义(废弃) mpdm_workprocedure |
+| 16 | foproperationid | 工序编码 | int8 | 64 |  | √ | 0 | [标准工序定义(废弃) mpdm_workprocedure](../mpdm_files/mpdm_workprocedure.md) |
 | 17 | foprtotalmaterialqty | foprtotalmaterialqty | numeric | 23 | 10 | √ | 0.0000000000 |  |
 | 18 | foprsuggestsplitqty | foprsuggestsplitqty | numeric | 23 | 10 | √ | 0.0000000000 |  |
 | 19 | fecostcenterid | fecostcenterid | int8 | 64 |  | √ | 0 |  |
 | 20 | foprissplit | foprissplit | bpchar | 1 |  | √ | '0' |  |
 | 21 | foprsourcetype | foprsourcetype | varchar | 30 |  | √ | ' ' |  |
-| 22 | foprorgid | 生产组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 23 | foprunitid | 工序单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 22 | foprorgid | 生产组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 23 | foprunitid | 工序单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 24 | foprtotalsplitbaseqty | foprtotalsplitbaseqty | numeric | 23 | 10 | √ | 0 |  |
 | 25 | ftotalsplitqty | ftotalsplitqty | numeric | 23 | 10 | √ | 0.0000000000 |  |
 | 26 | foprtotalreportqty | 累计汇报数量 | numeric | 23 | 10 | √ | 0.0000000000 | 累计汇报数量 |

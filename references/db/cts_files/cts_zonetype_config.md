@@ -10,16 +10,18 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fstatus | fstatus | bpchar | 32 |  | √ | 'C' |  |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 4 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 5 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 7 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 8 | fdisabledate | 删除时间 | timestamp | 0 |  |  | null | 删除时间 |
-| 9 | fdisablerid | 删除人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 10 | fnumber | 编码 | varchar | 32 |  | √ | ' ' | 编码 |
-| 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 3 | fname | 名称 | varchar | 64 |  | √ | ' ' | 名称 |
+| 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 5 | fdisabledate | 删除时间 | timestamp | 0 |  |  | null | 删除时间 |
+| 6 | fdisablerid | 删除人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 8 | fusage | 用途 | varchar | 256 |  | √ | ' ' | 用途 |
+| 9 | fstatus | fstatus | bpchar | 32 |  | √ | 'C' |  |
+| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 11 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
+| 12 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 13 | fnumber | 编码 | varchar | 32 |  | √ | ' ' | 编码 |
 
 ### 列规则定义
 

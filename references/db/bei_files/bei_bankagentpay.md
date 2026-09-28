@@ -1,117 +1,5 @@
 # 银行代发单-bei_bankagentpay
 
-## 银行代发单-主表 t_bei_bankagentpaybill
-
-- **表名称：** 银行代发单-主表
-- **表名：** t_bei_bankagentpaybill
-
-### 表格列定义
-
-| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | forgid | forgid | int8 | 64 |  | √ | 0 |  |
-| 3 | fproxybankadds | 代理行地址 | varchar | 255 |  | √ | ' ' | 代理行地址 |
-| 4 | fissalary | 是否代发 | bpchar | 1 |  | √ | '0' | 是否代发 |
-| 5 | fservicelevel | 付款服务类别 | varchar | 60 |  | √ | ' ' | 付款服务类别 |
-| 6 | fproxyswiftcode | 代理行SWIFT码 | varchar | 60 |  | √ | ' ' | 代理行SWIFT码 |
-| 7 | fmobile | 收款人电话 | varchar | 50 |  | √ | ' ' | 收款人电话 |
-| 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 9 | fexchangerate | 汇率 | numeric | 23 | 10 | √ | 0.0000000000 | 汇率 |
-| 10 | fisupdatingstatus | 是否正在修改付款状态 | bpchar | 1 |  | √ | '0' | 是否正在修改付款状态 |
-| 11 | fissingleca | fissingleca | bpchar | 1 |  | √ | ' ' |  |
-| 12 | fpayerfeeaccno | 手续费账号 | varchar | 60 |  | √ | ' ' | 手续费账号 |
-| 13 | factamount | 确认金额 | numeric | 19 | 6 | √ | 0.000000 | 确认金额 |
-| 14 | factcount | 确认笔数 | int8 | 64 |  | √ | 0 | 确认笔数 |
-| 15 | fbillno | 单据编号 | varchar | 60 |  | √ | ' ' | 单据编号 |
-| 16 | fbillstatus | 单据状态 | varchar | 30 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 F :已失败重付 T :已打回 E :银企处理中 |
-| 17 | fsubmittime | 提交银企时间 | timestamp | 0 |  |  | null | 提交银企时间 |
-| 18 | fagentpaybillno | 代发单号 | varchar | 100 |  | √ | ' ' | 代发单号 |
-| 19 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
-| 20 | fdescription | fdescription | varchar | 255 |  | √ | ' ' |  |
-| 21 | fproxybankcountry | 代理行国家或地区 | varchar | 60 |  | √ | ' ' | 代理行国家或地区 |
-| 22 | fproxyaccname | 代理账号名 | varchar | 60 |  | √ | ' ' | 代理账号名 |
-| 23 | fisencryption | 是否加密 | bpchar | 1 |  | √ | '0' | 是否加密 |
-| 24 | fusecn | 交易类型 | varchar | 30 |  | √ | ' ' | 交易类型 |
-| 25 | fbankid | 开户银行 | int8 | 64 |  | √ | 0 | 金融机构 bd_finorginfo |
-| 26 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 27 | faccountbankid | 付款账户 | int8 | 64 |  | √ | 0 | 银行账户 bd_accountbanks |
-| 28 | fcompanyid | 收付组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 29 | flocamt | 折本位币金额 | numeric | 19 | 6 | √ | 0.000000 | 折本位币金额 |
-| 30 | fisbitback | 打回标识 | bpchar | 1 |  | √ | '0' | 打回标识 |
-| 31 | flastsourcebillid | 失败重付源单 | int8 | 64 |  | √ | 0 | 失败重付源单 |
-| 32 | fistranspay | 是否跨境支付 | bpchar | 1 |  | √ | '0' | 是否跨境支付 |
-| 33 | fapplyname | 申请人 | varchar | 80 |  | √ | ' ' | 申请人 |
-| 34 | fpaystate | 付款状态 | varchar | 30 |  | √ | ' ' | 付款状态,枚举: BP :银行处理中 TS :交易成功 TF :交易失败 NC :交易未确认 OP :准备提交 PS :部分成功 OS :银企处理中 OF :银企异常 OZ :银企处理中止 |
-| 35 | fexcontract | 兑换合约号 | varchar | 60 |  | √ | ' ' | 兑换合约号 |
-| 36 | famount | 总金额 | numeric | 19 | 6 | √ | 0.000000 | 总金额 |
-| 37 | fpayerfeecurrencyid | 手续费币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
-| 38 | fispersonpay | 对私付款 | bpchar | 1 |  | √ | '0' | 对私付款 |
-| 39 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 40 | fexpectdealtime | 期望交易时间 | timestamp | 0 |  |  | null | 期望交易时间 |
-| 41 | fpayerfeetype | 手续费方式 | varchar | 60 |  | √ | ' ' | 手续费方式,枚举: 01 :付款方承担 02 :收款方承担 03 :共同承担 |
-| 42 | fcount | 总笔数 | int8 | 64 |  | √ | 0 | 总笔数 |
-| 43 | fsettlementmethod | 清算方式 | varchar | 50 |  | √ | ' ' | 清算方式 |
-| 44 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 45 | ftempstatus | 中间状态 | varchar | 30 |  | √ | ' ' | 中间状态,枚举: 0 :正常 1 :待签名 2 :待提交银企 |
-| 46 | fproxybankarea | 代理行地区 | varchar | 60 |  | √ | ' ' | 代理行地区 |
-| 47 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 48 | fserialnumber | 批次号 | varchar | 100 |  | √ | ' ' | 批次号 |
-| 49 | fpayunique | 付款防重字段 | int8 | 64 |  | √ | 0 | 付款防重字段 |
-| 50 | ftolexchangerate | 协定汇率 | numeric | 23 | 10 | √ | 0.0000000000 | 协定汇率 |
-| 51 | fbasecurrencyid | fbasecurrencyid | int8 | 64 |  | √ | 0 |  |
-| 52 | fproxyaccno | 代理账号 | varchar | 60 |  | √ | ' ' | 代理账号 |
-| 53 | fbizdate | 业务日期 | timestamp | 0 |  |  | null | 业务日期 |
-| 54 | fsourcebillid | 源单id | int8 | 64 |  | √ | 0 | 源单id |
-| 55 | fproxybankname | 代理行名 | varchar | 255 |  | √ | ' ' | 代理行名 |
-| 56 | fapplyphone | 申请人电话 | varchar | 50 |  | √ | ' ' | 申请人电话 |
-| 57 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
-
-### 列规则定义
-
-| 序号 | 键编码 | 列字段 |
-| :--- | :--- | :--- |
-| 1 | fid | fid |
-
-### 索引定义
-
-| 序号 | 索引名 | 唯一 | 列字段 |
-| :--- | :--- | :--- | :--- |
-| 1 | idx_bei_bankagentunique |  | fsourcebillid,fpayunique |
-| 2 | idx_bei_bankagentpaybill |  | fbillno,fbillstatus |
-| 3 | t_bei_bankagentpaybill_pkey |  | fid |
-
----
-
-## 银行代发单-多语言表 t_bei_bankagentpaybill_l
-
-- **表名称：** 银行代发单-多语言表
-- **表名：** t_bei_bankagentpaybill_l
-
-### 表格列定义
-
-| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fdescription | 描述 | varchar | 255 |  | √ | ' ' | 描述 |
-| 3 | flocaleid | flocaleid | varchar | 100 |  | √ | ' ' | localeid |
-| 4 | fpkid | fpkid | varchar | 18 |  | √ | ' ' | pkid |
-
-### 列规则定义
-
-| 序号 | 键编码 | 列字段 |
-| :--- | :--- | :--- |
-| 1 | fpkid | fpkid |
-
-### 索引定义
-
-| 序号 | 索引名 | 唯一 | 列字段 |
-| :--- | :--- | :--- | :--- |
-| 1 | idx_bei_bankagentpaybill_l |  | fid,flocaleid,fdescription |
-| 2 | t_bei_bankagentpaybill_l_pkey |  | fpkid |
-
----
-
 ## 分录-子表 t_bei_bankagentpay_entry
 
 - **表名称：** 分录-子表
@@ -167,3 +55,116 @@
 | :--- | :--- | :--- | :--- |
 | 1 | t_bei_bankagentpay_entry_pkey |  | fentryid |
 | 2 | idx_bei_bankagentpayentry |  | fid,fsourceentryid |
+
+---
+
+## 银行代发单-主表 t_bei_bankagentpaybill
+
+- **表名称：** 银行代发单-主表
+- **表名：** t_bei_bankagentpaybill
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
+| 2 | forgid | forgid | int8 | 64 |  | √ | 0 |  |
+| 3 | fproxybankadds | 代理行地址 | varchar | 255 |  | √ | ' ' | 代理行地址 |
+| 4 | fissalary | 是否代发 | bpchar | 1 |  | √ | '0' | 是否代发 |
+| 5 | fservicelevel | 付款服务类别 | varchar | 60 |  | √ | ' ' | 付款服务类别 |
+| 6 | fproxyswiftcode | 代理行SWIFT码 | varchar | 60 |  | √ | ' ' | 代理行SWIFT码 |
+| 7 | fmobile | 收款人电话 | varchar | 50 |  | √ | ' ' | 收款人电话 |
+| 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 9 | fexchangerate | 汇率 | numeric | 23 | 10 | √ | 0.0000000000 | 汇率 |
+| 10 | fisupdatingstatus | 是否正在修改付款状态 | bpchar | 1 |  | √ | '0' | 是否正在修改付款状态 |
+| 11 | fissingleca | fissingleca | bpchar | 1 |  | √ | ' ' |  |
+| 12 | fpayerfeeaccno | 手续费账号 | varchar | 60 |  | √ | ' ' | 手续费账号 |
+| 13 | fthirdpaystatus | 支付平台支付状态 | varchar | 255 |  | √ | ' ' | 支付平台支付状态 |
+| 14 | factamount | 确认金额 | numeric | 19 | 6 | √ | 0.000000 | 确认金额 |
+| 15 | factcount | 确认笔数 | int8 | 64 |  | √ | 0 | 确认笔数 |
+| 16 | fbillno | 单据编号 | varchar | 60 |  | √ | ' ' | 单据编号 |
+| 17 | fbillstatus | 单据状态 | varchar | 30 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 F :已失败重付 T :已打回 E :银企处理中 |
+| 18 | fsubmittime | 提交银企时间 | timestamp | 0 |  |  | null | 提交银企时间 |
+| 19 | fagentpaybillno | 代发单号 | varchar | 100 |  | √ | ' ' | 代发单号 |
+| 20 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
+| 21 | fdescription | fdescription | varchar | 255 |  | √ | ' ' |  |
+| 22 | fproxybankcountry | 代理行国家或地区 | varchar | 60 |  | √ | ' ' | 代理行国家或地区 |
+| 23 | fproxyaccname | 代理账号名 | varchar | 60 |  | √ | ' ' | 代理账号名 |
+| 24 | fisencryption | 是否加密 | bpchar | 1 |  | √ | '0' | 是否加密 |
+| 25 | fusecn | 交易类型 | varchar | 30 |  | √ | ' ' | 交易类型 |
+| 26 | fbankid | 开户银行 | int8 | 64 |  | √ | 0 | [金融机构 bd_finorginfo](../basedata_files/bd_finorginfo.md) |
+| 27 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 28 | faccountbankid | 付款账户 | int8 | 64 |  | √ | 0 | [银行账户 bd_accountbanks](../basedata_files/bd_accountbanks.md) |
+| 29 | fcompanyid | 收付组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 30 | flocamt | 折本位币金额 | numeric | 19 | 6 | √ | 0.000000 | 折本位币金额 |
+| 31 | fisbitback | 打回标识 | bpchar | 1 |  | √ | '0' | 打回标识 |
+| 32 | flastsourcebillid | 失败重付源单 | int8 | 64 |  | √ | 0 | 失败重付源单 |
+| 33 | fistranspay | 是否跨境支付 | bpchar | 1 |  | √ | '0' | 是否跨境支付 |
+| 34 | fapplyname | 申请人 | varchar | 80 |  | √ | ' ' | 申请人 |
+| 35 | fpaystate | 付款状态 | varchar | 30 |  | √ | ' ' | 付款状态,枚举: BP :银行处理中 TS :交易成功 TF :交易失败 NC :交易未确认 OP :准备提交 PS :部分成功 OS :银企处理中 OF :银企异常 OZ :银企处理中止 |
+| 36 | fexcontract | 兑换合约号 | varchar | 60 |  | √ | ' ' | 兑换合约号 |
+| 37 | famount | 总金额 | numeric | 19 | 6 | √ | 0.000000 | 总金额 |
+| 38 | fpayerfeecurrencyid | 手续费币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
+| 39 | fispersonpay | 对私付款 | bpchar | 1 |  | √ | '0' | 对私付款 |
+| 40 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 41 | fexpectdealtime | 期望交易时间 | timestamp | 0 |  |  | null | 期望交易时间 |
+| 42 | fpayerfeetype | 手续费方式 | varchar | 60 |  | √ | ' ' | 手续费方式,枚举: 01 :付款方承担 02 :收款方承担 03 :共同承担 |
+| 43 | fcount | 总笔数 | int8 | 64 |  | √ | 0 | 总笔数 |
+| 44 | fsettlementmethod | 清算方式 | varchar | 50 |  | √ | ' ' | 清算方式 |
+| 45 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 46 | ftempstatus | 中间状态 | varchar | 30 |  | √ | ' ' | 中间状态,枚举: 0 :正常 1 :待签名 2 :待提交银企 |
+| 47 | fproxybankarea | 代理行地区 | varchar | 60 |  | √ | ' ' | 代理行地区 |
+| 48 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 49 | fserialnumber | 批次号 | varchar | 100 |  | √ | ' ' | 批次号 |
+| 50 | fpayunique | 付款防重字段 | int8 | 64 |  | √ | 0 | 付款防重字段 |
+| 51 | ftolexchangerate | 协定汇率 | numeric | 23 | 10 | √ | 0.0000000000 | 协定汇率 |
+| 52 | fbasecurrencyid | fbasecurrencyid | int8 | 64 |  | √ | 0 |  |
+| 53 | fproxyaccno | 代理账号 | varchar | 60 |  | √ | ' ' | 代理账号 |
+| 54 | fbizdate | 业务日期 | timestamp | 0 |  |  | null | 业务日期 |
+| 55 | fsourcebillid | 源单id | int8 | 64 |  | √ | 0 | 源单id |
+| 56 | fproxybankname | 代理行名 | varchar | 255 |  | √ | ' ' | 代理行名 |
+| 57 | fapplyphone | 申请人电话 | varchar | 50 |  | √ | ' ' | 申请人电话 |
+| 58 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fid | fid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_bei_bankagentunique |  | fsourcebillid,fpayunique |
+| 2 | idx_bei_bankagentpaybill |  | fbillno,fbillstatus |
+| 3 | t_bei_bankagentpaybill_pkey |  | fid |
+
+---
+
+## 银行代发单-多语言表 t_bei_bankagentpaybill_l
+
+- **表名称：** 银行代发单-多语言表
+- **表名：** t_bei_bankagentpaybill_l
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fdescription | 描述 | varchar | 255 |  | √ | ' ' | 描述 |
+| 3 | flocaleid | flocaleid | varchar | 100 |  | √ | ' ' | localeid |
+| 4 | fpkid | fpkid | varchar | 18 |  | √ | ' ' | pkid |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fpkid | fpkid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_bei_bankagentpaybill_l |  | fid,flocaleid,fdescription |
+| 2 | t_bei_bankagentpaybill_l_pkey |  | fpkid |

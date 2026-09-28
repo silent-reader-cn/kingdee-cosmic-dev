@@ -39,18 +39,18 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 4 | fisinitial | fisinitial | bpchar | 1 |  | √ | ' ' |  |
+| 4 | fisinitial | 期初入库单（废弃） | bpchar | 1 |  | √ | ' ' | 期初入库单（废弃） |
 | 5 | fauditdate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
 | 6 | fcfmdate | 处理时间 | timestamp | 0 |  |  | null | 处理时间 |
 | 7 | fchkbillno | 对账单号 | varchar | 80 |  | √ | ' ' | 对账单号 |
-| 8 | fcfmid | 处理人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | fcfmid | 处理人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fiscentersettle | 集中结算 | bpchar | 1 |  | √ | ' ' | 集中结算 |
 | 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 11 | forigin | 发起方 | bpchar | 1 |  | √ | ' ' | 发起方,枚举: 1 :供应商 2 :采购方 |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 13 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 13 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | fischeck | 已对账 | bpchar | 1 |  | √ | ' ' | 已对账 |
 | 15 | fisvirtual | fisvirtual | bpchar | 1 |  | √ | ' ' |  |
 
@@ -79,43 +79,46 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | freqorgid | 需求方 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 3 | floccurrid | 本位币 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
-| 4 | foperatorid | 联系人 | int8 | 64 |  | √ | 0 | 供应链业务员 bd_operator |
+| 2 | freqorgid | 需求方 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 3 | floccurrid | 本位币 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
+| 4 | foperatorid | 采购员 | int8 | 64 |  | √ | 0 | [供应链业务员 bd_operator](../sbd_files/bd_operator.md) |
 | 5 | fwriteoffflag | 已被冲销 | bpchar | 1 |  | √ | '0' | 已被冲销 |
-| 6 | forgid | 收货方 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | forgid | 收货方 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fbilldate | 业务日期 | timestamp | 0 |  |  | null | 业务日期 |
-| 8 | fexchtypeid | 汇率表 | int8 | 64 |  | √ | 0 | 汇率表 bd_exratetable |
-| 9 | fpayeesupid | 收款方 | int8 | 64 |  | √ | 0 | 供应商 bd_supplier |
-| 10 | fbiztype | 业务类型(作废) | bpchar | 1 |  | √ | ' ' | 业务类型(作废),枚举: 1 :标准采购 2 :协议采购 3 :VMI采购 4 :JIT采购 5 :委外采购 6 :直运采购 7 :资产采购 8 :费用采购 9 :项目采购 10 :样品采购 |
-| 11 | fsumamount | 金额 | numeric | 19 | 6 | √ | 0.000000 | 金额 |
-| 12 | fbusinessdirect | 业务方向 | varchar | 50 |  | √ | 'normal' | 业务方向,枚举: normal :普通 return :退货 |
-| 13 | ftaxtype | 计税类型 | bpchar | 1 |  | √ | ' ' | 计税类型,枚举: 1 :价外税(含税) 2 :价外税(不含税) 3 :价内税(含税) |
-| 14 | fbillno | 单据编号 | varchar | 80 |  | √ | ' ' | 单据编号 |
-| 15 | fremark | 备注 | varchar | 512 |  | √ | ' ' | 备注 |
-| 16 | fpurorgid | 采购方 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 17 | fcurrid | 结算币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
-| 18 | fbillstatus | 单据状态 | bpchar | 1 |  | √ | ' ' | 单据状态,枚举: A :保存 B :已提交 C :已审核 D :已关闭 Z :已作废 |
-| 19 | finvoicesupid | 开票方 | int8 | 64 |  | √ | 0 | 供应商 bd_supplier |
-| 20 | fpaycondid | 付款条件 | int8 | 64 |  | √ | 0 | 付款条件 bd_paycondition |
-| 21 | fvmisettle | VMI结算 | bpchar | 1 |  | √ | '0' | VMI结算 |
-| 22 | flastupdateuserid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 23 | fdelisupid | 送货方 | int8 | 64 |  | √ | 0 | 供应商 bd_supplier |
-| 24 | fpayorgid | 付款方 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 25 | fsumqty | 数量 | numeric | 19 | 6 | √ | 0.000000 | 数量 |
-| 26 | fbizpartnerid | 商务伙伴 | int8 | 64 |  | √ | 0 | 商务伙伴 bd_bizpartner |
-| 27 | fsupplierid | 供应商 | int8 | 64 |  | √ | 0 | 供应商 bd_supplier |
-| 28 | flastupdatetime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 29 | fsettletypeid | 结算方式 | int8 | 64 |  | √ | 0 | 结算方式 bd_settlementtype |
-| 30 | fcfmstatus | 确认状态 | bpchar | 1 |  | √ | ' ' | 确认状态,枚举: A :待确认 B :已确认 C :已打回 D :变更中 |
-| 31 | fpersonid | 联系人（废弃） | int8 | 64 |  | √ | 0 | 业务员 pur_bizperson |
-| 32 | fsumtaxamount | 价税合计 | numeric | 19 | 6 | √ | 0.000000 | 价税合计 |
-| 33 | fsettleorgid | 核算方 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 34 | fsumtax | 税额 | numeric | 19 | 6 | √ | 0.000000 | 税额 |
-| 35 | fbusinesstypeid | 业务类型 | int8 | 64 |  | √ | 0 | 业务类型 bd_biztype |
-| 36 | fexchrate | 汇率 | numeric | 19 | 6 | √ | 1.000000 | 汇率 |
-| 37 | fcontacterid | 销售员 | int8 | 64 |  | √ | 0 | 协同业务员 scp_bizperson |
-| 38 | fbilltypeid | fbilltypeid | int8 | 64 |  | √ | 0 |  |
+| 8 | fexchtypeid | 汇率表 | int8 | 64 |  | √ | 0 | [汇率表 bd_exratetable](../base_files/bd_exratetable.md) |
+| 9 | freplenishtype | 退货类型 | bpchar | 1 |  | √ | ' ' | 退货类型,枚举: 1 :退货需补 2 :新补货订单 3 :退货不补 |
+| 10 | fpayeesupid | 收款方 | int8 | 64 |  | √ | 0 | [供应商 bd_supplier](../basedata_files/bd_supplier.md) |
+| 11 | fbiztype | 业务类型(作废) | bpchar | 1 |  | √ | ' ' | 业务类型(作废),枚举: 1 :标准采购 2 :协议采购 3 :VMI采购 4 :JIT采购 5 :委外采购 6 :直运采购 7 :资产采购 8 :费用采购 9 :项目采购 10 :样品采购 |
+| 12 | fsumamount | 金额 | numeric | 23 | 10 | √ | 0.000000 | 金额 |
+| 13 | fbusinessdirect | 业务方向 | varchar | 50 |  | √ | 'normal' | 业务方向,枚举: normal :普通 return :退货 |
+| 14 | ftaxtype | 计税类型 | bpchar | 1 |  | √ | ' ' | 计税类型,枚举: 1 :价外税(含税) 2 :价外税(不含税) 3 :价内税(含税) |
+| 15 | fbillno | 单据编号 | varchar | 80 |  | √ | ' ' | 单据编号 |
+| 16 | fremark | 备注 | varchar | 512 |  | √ | ' ' | 备注 |
+| 17 | fpurorgid | 采购方 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 18 | fcurrid | 结算币 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
+| 19 | fdeptid | 采购部门 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 20 | fbillstatus | 单据状态 | bpchar | 1 |  | √ | ' ' | 单据状态,枚举: A :保存 B :已提交 C :已审核 D :已关闭 Z :已作废 |
+| 21 | foperatorgroupid | 采购组 | int8 | 64 |  | √ | 0 | [供应链业务组 bd_operatorgroup](../sbd_files/bd_operatorgroup.md) |
+| 22 | finvoicesupid | 开票方 | int8 | 64 |  | √ | 0 | [供应商 bd_supplier](../basedata_files/bd_supplier.md) |
+| 23 | fpaycondid | 付款条件 | int8 | 64 |  | √ | 0 | [付款条件 bd_paycondition](../sbd_files/bd_paycondition.md) |
+| 24 | fvmisettle | VMI结算 | bpchar | 1 |  | √ | '0' | VMI结算 |
+| 25 | flastupdateuserid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 26 | fdelisupid | 送货方 | int8 | 64 |  | √ | 0 | [供应商 bd_supplier](../basedata_files/bd_supplier.md) |
+| 27 | fpayorgid | 付款方 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 28 | fsumqty | 数量 | numeric | 23 | 10 | √ | 0.000000 | 数量 |
+| 29 | fbizpartnerid | 商务伙伴 | int8 | 64 |  | √ | 0 | [商务伙伴 bd_bizpartner](../base_files/bd_bizpartner.md) |
+| 30 | fsupplierid | 供应商 | int8 | 64 |  | √ | 0 | [供应商 bd_supplier](../basedata_files/bd_supplier.md) |
+| 31 | flastupdatetime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 32 | fsettletypeid | 结算方式 | int8 | 64 |  | √ | 0 | [结算方式 bd_settlementtype](../basedata_files/bd_settlementtype.md) |
+| 33 | fcfmstatus | 确认状态 | bpchar | 1 |  | √ | ' ' | 确认状态,枚举: A :待确认 B :已确认 C :已打回 D :变更中 |
+| 34 | fpersonid | 联系人（废弃） | int8 | 64 |  | √ | 0 | [业务员 pur_bizperson](../pbd_files/pur_bizperson.md) |
+| 35 | fsumtaxamount | 价税合计 | numeric | 23 | 10 | √ | 0.000000 | 价税合计 |
+| 36 | fsettleorgid | 核算方 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 37 | fsumtax | 税额 | numeric | 23 | 10 | √ | 0.000000 | 税额 |
+| 38 | fbusinesstypeid | 业务类型 | int8 | 64 |  | √ | 0 | [业务类型 bd_biztype](../sbd_files/bd_biztype.md) |
+| 39 | fexchrate | 汇率 | numeric | 23 | 10 | √ | 1.000000 | 汇率 |
+| 40 | fcontacterid | 销售员 | int8 | 64 |  | √ | 0 | [协同业务员 scp_bizperson](../scp_files/scp_bizperson.md) |
+| 41 | fbilltypeid | fbilltypeid | int8 | 64 |  | √ | 0 |  |
 
 ### 列规则定义
 
@@ -134,6 +137,49 @@
 
 ---
 
+## 入库查询分录-分表 t_pur_instockentry_o
+
+- **表名称：** 入库查询分录-分表
+- **表名：** t_pur_instockentry_o
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | foproperation | 工序编码 | varchar | 80 |  | √ | ' ' | 工序编码 |
+| 3 | fmftorderid | 委外工单ID | varchar | 50 |  | √ | ' ' | 委外工单ID |
+| 4 | fmftorderentryid | 委外工单行ID | varchar | 50 |  | √ | ' ' | 委外工单行ID |
+| 5 | foprdescription | 工序说明 | varchar | 255 |  | √ | ' ' | 工序说明 |
+| 6 | fconfiguredcodeid | 配置号 | int8 | 64 |  | √ | 0 | [配置号（废弃） bd_configuredcode](../sbd_files/bd_configuredcode.md) |
+| 7 | fpayentrychangetype | fpayentrychangetype | bpchar | 1 |  | √ | ' ' |  |
+| 8 | fproducttype | 产品类型 | bpchar | 1 |  | √ | ' ' | 产品类型,枚举: C :主产品 A :联产品 B :副产品 |
+| 9 | foproperationname | 工序名称 | varchar | 100 |  | √ | ' ' | 工序名称 |
+| 10 | foprentryid | 工序计划工序号ID | varchar | 50 |  | √ | ' ' | 工序计划工序号ID |
+| 11 | ftechno | 工序计划编码 | varchar | 80 |  | √ | ' ' | 工序计划编码 |
+| 12 | foproperationid | 工序ID | varchar | 50 |  | √ | ' ' | 工序ID |
+| 13 | foprentryseq | 工序计划工序号 | varchar | 20 |  | √ | ' ' | 工序计划工序号 |
+| 14 | fmftorderentryseq | 委外工单分录序号 | varchar | 20 |  | √ | ' ' | 委外工单分录序号 |
+| 15 | ftechid | 工序计划ID | varchar | 50 |  | √ | ' ' | 工序计划ID |
+| 16 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
+| 17 | fmftordernumber | 委外工单编号 | varchar | 80 |  | √ | ' ' | 委外工单编号 |
+| 18 | fprocessseq | 工序计划序列号 | varchar | 50 |  | √ | ' ' | 工序计划序列号 |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fentryid | fentryid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_t_pur_instockentry_o_fid |  | fid |
+| 2 | pk_pur_instockentry_o |  | fentryid |
+
+---
+
 ## 入库查询分录-分表 t_pur_instockentry_a
 
 - **表名称：** 入库查询分录-分表
@@ -144,44 +190,46 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | floctax | 税额(本位币) | numeric | 19 | 6 | √ | 0.000000 | 税额(本位币) |
-| 3 | fsumcheckqty | 关联对账数量 | numeric | 19 | 6 | √ | 0.000000 | 关联对账数量 |
-| 4 | fmatchqty | fmatchqty | numeric | 19 | 6 | √ | 0.000000 |  |
+| 2 | floctax | 税额(本位币) | numeric | 23 | 10 | √ | 0.000000 | 税额(本位币) |
+| 3 | fsumcheckqty | 关联对账数量 | numeric | 23 | 10 | √ | 0.000000 | 关联对账数量 |
+| 4 | fmatchqty | fmatchqty | numeric | 23 | 10 | √ | 0.000000 |  |
 | 5 | fsrcentryid | 来源单据行ID | varchar | 50 |  | √ | ' ' | 来源单据行ID |
-| 6 | fgoodsid | 商品编码 | int8 | 64 |  | √ | 0 | 商品档案 pbd_goods |
+| 6 | fgoodsid | 商品编码 | int8 | 64 |  | √ | 0 | [商品档案 pbd_goods](../pbd_files/pbd_goods.md) |
 | 7 | fsrcinsentryid | 来源单据入库行ID | varchar | 50 |  | √ | ' ' | 来源单据入库行ID |
 | 8 | fbasicqty | 基本数量 | numeric | 23 | 10 | √ | 0.0000000000 | 基本数量 |
-| 9 | fasstunitid | 辅助单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 10 | fpurtypeid | 采购类型 | int8 | 64 |  | √ | 0 | 协同辅助资料 pbd_mallextdata |
-| 11 | fsettlesupid | 结算供应商 | int8 | 64 |  | √ | 0 | 供应商 bd_supplier |
-| 12 | fbasicunitid | 基本单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 9 | fasstunitid | 辅助单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 10 | fpurtypeid | 采购类型 | int8 | 64 |  | √ | 0 | [协同辅助资料 pbd_mallextdata](../pbd_files/pbd_mallextdata.md) |
+| 11 | fsettlesupid | 结算供应商 | int8 | 64 |  | √ | 0 | [供应商 bd_supplier](../basedata_files/bd_supplier.md) |
+| 12 | fbasicunitid | 基本单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 13 | fpobillid | 订单ID | varchar | 50 |  | √ | ' ' | 订单ID |
-| 14 | floctaxamount | 价税合计(本位币) | numeric | 19 | 6 | √ | 0.000000 | 价税合计(本位币) |
+| 14 | floctaxamount | 价税合计(本位币) | numeric | 23 | 10 | √ | 0.000000 | 价税合计(本位币) |
 | 15 | funmatchbaseqty | 未核销基本数量 | numeric | 23 | 10 | √ | 0 | 未核销基本数量 |
-| 16 | funmatchqty | 未核销数量 | numeric | 19 | 6 | √ | 0.000000 | 未核销数量 |
+| 16 | funmatchqty | 未核销数量 | numeric | 23 | 10 | √ | 0.000000 | 未核销数量 |
 | 17 | finvoiceqty | 已开票数量 | numeric | 23 | 10 | √ | 0.0000000000 | 已开票数量 |
 | 18 | fsuminvoiceamt | fsuminvoiceamt | numeric | 23 | 10 | √ | 0.0000000000 |  |
-| 19 | fasstqty | 辅助数量 | numeric | 19 | 6 | √ | 0.000000 | 辅助数量 |
-| 20 | fsrcbillid | 来源单据ID | varchar | 50 |  | √ | ' ' | 来源单据ID |
-| 21 | fsrcinsbillid | 来源单据入库ID | varchar | 50 |  | √ | ' ' | 来源单据入库ID |
-| 22 | fischeckorinvoice | 对账/开票 | bpchar | 1 |  | √ | '0' | 对账/开票 |
-| 23 | facttaxprice | 实际含税单价 | numeric | 23 | 10 | √ | 0.0000000000 | 实际含税单价 |
-| 24 | funmatchamt | funmatchamt | numeric | 19 | 6 | √ | 0.000000 |  |
-| 25 | fgoodsdesc | 商品描述 | varchar | 255 |  | √ | ' ' | 商品描述 |
-| 26 | factprice | 实际单价 | numeric | 23 | 10 | √ | 0.0000000000 | 实际单价 |
-| 27 | fpoentryid | 订单行ID | varchar | 50 |  | √ | ' ' | 订单行ID |
-| 28 | fsuminvoiceqty | 关联数量 | numeric | 23 | 10 | √ | 0.0000000000 | 关联数量 |
-| 29 | flocamount | 金额(本位币) | numeric | 19 | 6 | √ | 0.000000 | 金额(本位币) |
-| 30 | finvoiceamt | 已开票金额 | numeric | 23 | 10 | √ | 0.0000000000 | 已开票金额 |
-| 31 | fsaloutnum | fsaloutnum | varchar | 80 |  | √ | ' ' |  |
-| 32 | fsumcheckamt | 关联对账金额 | numeric | 19 | 6 | √ | 0.000000 | 关联对账金额 |
-| 33 | fsaloutid | fsaloutid | int8 | 64 |  | √ | 0 |  |
-| 34 | fsaloutentryid | fsaloutentryid | int8 | 64 |  | √ | 0 |  |
-| 35 | fsrcbilltype | 来源单据类型 | varchar | 50 |  | √ | ' ' | 来源单据类型 |
-| 36 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
-| 37 | fpcbillid | 合同ID | varchar | 50 |  | √ | ' ' | 合同ID |
-| 38 | fpcentryid | 合同行ID | varchar | 50 |  | √ | ' ' | 合同行ID |
-| 39 | fmatchamt | fmatchamt | numeric | 19 | 6 | √ | 0.000000 |  |
+| 19 | fasstqty | 辅助数量 | numeric | 23 | 10 | √ | 0.000000 | 辅助数量 |
+| 20 | frelateinvoiceamt | 关联开票金额 | numeric | 23 | 10 | √ | 0 | 关联开票金额 |
+| 21 | fsrcbillid | 来源单据ID | varchar | 50 |  | √ | ' ' | 来源单据ID |
+| 22 | fsrcinsbillid | 来源单据入库ID | varchar | 50 |  | √ | ' ' | 来源单据入库ID |
+| 23 | fischeckorinvoice | 对账/开票 | bpchar | 1 |  | √ | '0' | 对账/开票 |
+| 24 | facttaxprice | 实际含税单价 | numeric | 23 | 10 | √ | 0.0000000000 | 实际含税单价 |
+| 25 | funmatchamt | 未核销金额 | numeric | 23 | 10 | √ | 0.000000 | 未核销金额 |
+| 26 | fgoodsdesc | 商品描述 | varchar | 255 |  | √ | ' ' | 商品描述 |
+| 27 | factprice | 实际单价 | numeric | 23 | 10 | √ | 0.0000000000 | 实际单价 |
+| 28 | fpoentryid | 订单行ID | varchar | 50 |  | √ | ' ' | 订单行ID |
+| 29 | fsuminvoiceqty | 关联数量 | numeric | 23 | 10 | √ | 0.0000000000 | 关联数量 |
+| 30 | frelateinvoiceqty | 关联开票数量 | numeric | 23 | 10 | √ | 0 | 关联开票数量 |
+| 31 | flocamount | 金额(本位币) | numeric | 23 | 10 | √ | 0.000000 | 金额(本位币) |
+| 32 | finvoiceamt | 已开票金额 | numeric | 23 | 10 | √ | 0.0000000000 | 已开票金额 |
+| 33 | fsaloutnum | 销售发货单编码 | varchar | 80 |  | √ | ' ' | 销售发货单编码 |
+| 34 | fsumcheckamt | 关联对账金额 | numeric | 23 | 10 | √ | 0.000000 | 关联对账金额 |
+| 35 | fsaloutid | 销售发货单id | int8 | 64 |  | √ | 0 | 销售发货单id |
+| 36 | fsaloutentryid | 销售发货单行id | int8 | 64 |  | √ | 0 | 销售发货单行id |
+| 37 | fsrcbilltype | 来源单据类型 | varchar | 50 |  | √ | ' ' | 来源单据类型 |
+| 38 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
+| 39 | fpcbillid | 合同ID | varchar | 50 |  | √ | ' ' | 合同ID |
+| 40 | fpcentryid | 合同行ID | varchar | 50 |  | √ | ' ' | 合同行ID |
+| 41 | fmatchamt | fmatchamt | numeric | 23 | 10 | √ | 0.000000 |  |
 
 ### 列规则定义
 
@@ -195,8 +243,10 @@
 | :--- | :--- | :--- | :--- |
 | 1 | idx_pur_instockentry_a_fid |  | fid |
 | 2 | t_pur_instockentry_a_pkey |  | fentryid |
-| 3 | idx_t_pur_instockentry_a_srcinsentryid |  | fsrcinsentryid |
-| 4 | idx_pur_instockentry_a_fpoid |  | fpoentryid |
+| 3 | idx_pur_isentry_a_fsrcentryid |  | fsrcentryid |
+| 4 | idx_pur_instockentry_a_fpobiid |  | fpobillid |
+| 5 | idx_t_pur_instockentry_a_srcinsentryid |  | fsrcinsentryid |
+| 6 | idx_pur_instockentry_a_fpoid |  | fpoentryid |
 
 ---
 
@@ -210,45 +260,48 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | freqorgid | 需求方 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | freqorgid | 需求方 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fproddate | 生产日期 | timestamp | 0 |  |  | null | 生产日期 |
-| 4 | ftaxrate | 税率(%) | numeric | 19 | 6 | √ | 0.000000 | 税率(%) |
+| 4 | ftaxrate | 税率(%) | numeric | 23 | 10 | √ | 0.000000 | 税率(%) |
 | 5 | flotnumber | 批号 | varchar | 80 |  | √ | ' ' | 批号 |
-| 6 | fmaterialid | 物料编码 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 6 | fmaterialid | 物料编码 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 7 | fentrystatus | 行状态 | bpchar | 1 |  | √ | ' ' | 行状态,枚举: A :正常 B :已关闭 C :已冻结 D :已终止 |
 | 8 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 9 | fnote | 备注 | varchar | 512 |  | √ | ' ' | 备注 |
 | 10 | ftaxprice | 含税单价 | numeric | 23 | 10 | √ | 0.0000000000 | 含税单价 |
-| 11 | famount | 金额 | numeric | 19 | 6 | √ | 0.000000 | 金额 |
+| 11 | famount | 金额 | numeric | 23 | 10 | √ | 0.000000 | 金额 |
 | 12 | fprice | 单价 | numeric | 23 | 10 | √ | 0.0000000000 | 单价 |
-| 13 | fdctamount | 折扣额 | numeric | 19 | 6 | √ | 0.000000 | 折扣额 |
-| 14 | ftaxrateid | 税率 | int8 | 64 |  | √ | 0 | 税率 bd_taxrate |
-| 15 | fqty | 入库数量 | numeric | 19 | 6 | √ | 0.000000 | 入库数量 |
-| 16 | ftaxamount | 价税合计 | numeric | 19 | 6 | √ | 0.000000 | 价税合计 |
-| 17 | frcvorgid | 收货方 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 18 | fdctrate | 单位折扣(率) | numeric | 19 | 6 | √ | 0.000000 | 单位折扣(率) |
-| 19 | fpurorgid | 采购方 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 20 | ftraceid | 跟踪号 | int8 | 64 |  | √ | 0 | 跟踪号 pur_trace |
-| 21 | fprojectid | 项目号 | int8 | 64 |  | √ | 0 | 项目 bd_project |
-| 22 | fdiscounttype | 折扣方式 | varchar | 5 |  | √ | 'NULL' | 折扣方式,枚举: A :折扣率(%) B :单位折扣额 NULL :无 |
-| 23 | funitid | 计量单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 24 | fpcbillno | 合同号 | varchar | 80 |  | √ | ' ' | 合同号 |
-| 25 | fispresent | 赠品 | bpchar | 1 |  | √ | ' ' | 赠品 |
-| 26 | fwarehouseid | 仓库 | int8 | 64 |  | √ | 0 | 仓库 bd_warehouse |
-| 27 | fpayorgid | 付款方 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 28 | fduedate | 到期日期 | timestamp | 0 |  |  | null | 到期日期 |
-| 29 | fjointdatachannelid | 对接渠道主键 | varchar | 80 |  | √ | ' ' | 对接渠道主键 |
-| 30 | flotid | 批号（废弃） | int8 | 64 |  | √ | 0 | 批号 pur_lot |
-| 31 | flocationid | 库位 | int8 | 64 |  | √ | 0 | 仓位 bd_location |
-| 32 | ftax | 税额 | numeric | 19 | 6 | √ | 0.000000 | 税额 |
-| 33 | fsuplot | 供应商批号 | varchar | 80 |  | √ | ' ' | 供应商批号 |
-| 34 | fmaterialnametext | 品类物料名称 | varchar | 255 |  | √ | ' ' | 品类物料名称 |
-| 35 | fasstproid | fasstproid | varchar | 50 |  | √ | ' ' |  |
-| 36 | fsettleorgid | 核算方 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 37 | fmaterialdesc | 物料描述 | varchar | 255 |  | √ | ' ' | 物料描述 |
-| 38 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 39 | fpobillno | 订单号 | varchar | 80 |  | √ | ' ' | 订单号 |
-| 40 | flinetypeid | 行类型 | int8 | 64 |  | √ | 0 | 行类型 bd_linetype |
+| 13 | fpurchaser | 采购员 | int8 | 64 |  | √ | 0 | [业务员 pur_bizperson](../pbd_files/pur_bizperson.md) |
+| 14 | fdctamount | 折扣额 | numeric | 23 | 10 | √ | 0.000000 | 折扣额 |
+| 15 | ftaxrateid | 税率 | int8 | 64 |  | √ | 0 | [税率 bd_taxrate](../basedata_files/bd_taxrate.md) |
+| 16 | fcheckfreeze | 对账冻结 | bpchar | 1 |  | √ | '0' | 对账冻结 |
+| 17 | fqty | 入库数量 | numeric | 23 | 10 | √ | 0.000000 | 入库数量 |
+| 18 | ftaxamount | 价税合计 | numeric | 23 | 10 | √ | 0.000000 | 价税合计 |
+| 19 | frcvorgid | 收货方 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 20 | fdctrate | 单位折扣(率) | numeric | 23 | 10 | √ | 0.000000 | 单位折扣(率) |
+| 21 | fpurorgid | 采购方 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 22 | ftraceid | 跟踪号（废弃） | int8 | 64 |  | √ | 0 | [跟踪号 pur_trace](../pbd_files/pur_trace.md) |
+| 23 | fprojectid | 项目号 | int8 | 64 |  | √ | 0 | [项目 bd_project](../basedata_files/bd_project.md) |
+| 24 | fdiscounttype | 折扣方式 | varchar | 5 |  | √ | 'NULL' | 折扣方式,枚举: A :折扣率(%) B :单位折扣额 NULL :无 C :折扣额 |
+| 25 | funitid | 计量单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 26 | fpcbillno | 合同号 | varchar | 80 |  | √ | ' ' | 合同号 |
+| 27 | fispresent | 赠品 | bpchar | 1 |  | √ | ' ' | 赠品 |
+| 28 | fwarehouseid | 仓库 | int8 | 64 |  | √ | 0 | [仓库 bd_warehouse](../sbd_files/bd_warehouse.md) |
+| 29 | fpayorgid | 付款方 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 30 | fduedate | 到期日期 | timestamp | 0 |  |  | null | 到期日期 |
+| 31 | fjointdatachannelid | 对接渠道主键 | varchar | 80 |  | √ | ' ' | 对接渠道主键 |
+| 32 | flotid | 批号（废弃） | int8 | 64 |  | √ | 0 | [批号 pur_lot](../pbd_files/pur_lot.md) |
+| 33 | flocationid | 库位 | int8 | 64 |  | √ | 0 | [仓位 bd_location](../sbd_files/bd_location.md) |
+| 34 | ftax | 税额 | numeric | 23 | 10 | √ | 0.000000 | 税额 |
+| 35 | fsuplot | 供应商批号 | varchar | 80 |  | √ | ' ' | 供应商批号 |
+| 36 | fmaterialnametext | 品类物料名称 | varchar | 255 |  | √ | ' ' | 品类物料名称 |
+| 37 | ftraceno | 跟踪号 | int8 | 64 |  | √ | 0 | [跟踪号 bd_tracknumber](../sbd_files/bd_tracknumber.md) |
+| 38 | fasstproid | fasstproid | varchar | 50 |  | √ | ' ' |  |
+| 39 | fsettleorgid | 核算方 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 40 | fmaterialdesc | 物料描述 | varchar | 255 |  | √ | ' ' | 物料描述 |
+| 41 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 42 | fpobillno | 订单号 | varchar | 80 |  | √ | ' ' | 订单号 |
+| 43 | flinetypeid | 行类型 | int8 | 64 |  | √ | 0 | [行类型 bd_linetype](../sbd_files/bd_linetype.md) |
 
 ### 列规则定义
 
@@ -263,3 +316,4 @@
 | 1 | t_pur_instockentry_pkey |  | fentryid |
 | 2 | idx_pur_instockentry_fmatid |  | fmaterialid |
 | 3 | idx_pur_instockentry_fid_fseq |  | fid,fseq |
+| 4 | idx_pur_instockentry_fpurorgid |  | fpurorgid |

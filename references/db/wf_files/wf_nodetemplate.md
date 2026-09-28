@@ -11,20 +11,20 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fishidden | 是否隐藏 | bpchar | 1 |  | √ | '0' | 是否隐藏 |
-| 3 | fgroupid | 所属分组 | int8 | 64 |  | √ | 0 | 节点模板分组 wf_nodetemplategroup |
-| 4 | forg | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | fgroupid | 所属分组 | int8 | 64 |  | √ | 0 | [节点模板分组 wf_nodetemplategroup](../wf_files/wf_nodetemplategroup.md) |
+| 4 | forg | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | fappid | 应用至 | varchar | 36 |  | √ | ' ' | 应用至 |
 | 6 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 7 | fstatus | 数据状态 | varchar | 50 |  | √ | 'A' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 8 | fbizidentification | 业务标识 | varchar | 50 |  | √ | ' ' | 业务标识 |
 | 9 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fdevelopmenttype | 开发类型 | varchar | 50 |  | √ | ' ' | 开发类型,枚举: B :扩展 C :继承 D :复制 |
 | 12 | fentityid | 单据 | varchar | 50 |  | √ | ' ' | 单据 |
 | 13 | fisextend | 可扩展 | bpchar | 1 |  | √ | '0' | 可扩展 |
 | 14 | fversion | 版本 | varchar | 30 |  | √ | 'Premium' | 版本,枚举: Premium :高级版 Standard :标准版 |
 | 15 | fname | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
-| 16 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 16 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 17 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 18 | fissystemnode | 系统节点 | bpchar | 1 |  | √ | '0' | 系统节点 |
 | 19 | fprocesstype | 流程类型 | varchar | 30 |  | √ | 'AuditFlow' | 流程类型,枚举: AuditFlow :审批流 BizFlow :业务流 |
@@ -32,7 +32,7 @@
 | 21 | fproperties | 节点属性 | text | 0 |  |  | null | 节点属性 |
 | 22 | fcloudid | 云ID | varchar | 36 |  | √ | ' ' | 云ID |
 | 23 | fenable | 使用状态 | varchar | 30 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :启用 |
-| 24 | fstenciltype | 继承自 | varchar | 50 |  | √ | ' ' | 继承自 |
+| 24 | fstenciltype | 源节点 | varchar | 50 |  | √ | ' ' | 源节点 |
 | 25 | fnumber | 编码 | varchar | 50 |  | √ | ' ' | 编码 |
 | 26 | fisinitialization | 系统预置 | bpchar | 1 |  | √ | '0' | 系统预置 |
 

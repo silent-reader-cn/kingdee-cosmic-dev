@@ -11,15 +11,15 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fqty | 数量 | numeric | 23 | 10 | √ | 0.0000000000 | 数量 |
-| 3 | fpurorgid | 采购组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 4 | fsettlecurrency | 结算币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
-| 5 | fmaterialid | 物料 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 3 | fpurorgid | 采购组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 4 | fsettlecurrency | 结算币别 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
+| 5 | fmaterialid | 物料 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 6 | fauxptyid | 物料辅助属性 | int8 | 64 |  | √ | 0 | null 001 |
-| 7 | funitid | 基本单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 7 | funitid | 基本单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 8 | famount | 金额 | numeric | 23 | 10 | √ | 0.0000000000 | 金额 |
 | 9 | fprice | 单价 | numeric | 23 | 10 | √ | 0.0000000000 | 单价 |
 | 10 | fsupplierid | 供应商 | int8 | 64 |  | √ | 0 | 供应商 bd_supplier |
-| 11 | fmatversionid | 物料版本 | int8 | 64 |  | √ | 0 | 物料版本（作废） bd_materialversion |
+| 11 | fmatversionid | 物料版本 | int8 | 64 |  | √ | 0 | [物料版本（作废） bd_materialversion](../basedata_files/bd_materialversion.md) |
 | 12 | fbillsource | 单据来源 | varchar | 60 |  | √ | ' ' | 单据来源,枚举: contract :采购合同 order :采购订单 |
 | 13 | fbillno | 单据编号 | varchar | 60 |  | √ | ' ' | 单据编号 |
 

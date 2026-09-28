@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 模板名称 | varchar | 500 |  | √ | ' ' | 模板名称 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | foldvalue_tag | 修改前_详情 | text | 0 |  |  | null | 修改前_详情 |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 6 | foldvalue | 修改前 | varchar | 255 |  | √ | ' ' | 修改前 |
@@ -19,8 +19,8 @@
 | 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 9 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 10 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 12 | fgroup | 模板分组 | int8 | 64 |  | √ | 0 | 节点模板分组 wf_nodetemplategroup |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 12 | fgroup | 模板分组 | int8 | 64 |  | √ | 0 | [节点模板分组 wf_nodetemplategroup](../wf_files/wf_nodetemplategroup.md) |
 | 13 | fenable | 使用状态 | varchar | 50 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 14 | fnumber | 模板编码 | varchar | 30 |  | √ | ' ' | 模板编码 |
 | 15 | fnewvalue_tag | 修改后_详情 | text | 0 |  |  | null | 修改后_详情 |

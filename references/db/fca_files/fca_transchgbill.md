@@ -16,9 +16,9 @@
 | 5 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 6 | ftransamt | 划拨金额 | numeric | 19 | 6 | √ | 0.000000 | 划拨金额 |
 | 7 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 8 | fsubacctid | 子账户银行账号 | int8 | 64 |  | √ | 0 | 银行账户 bd_accountbanks |
+| 8 | fsubacctid | 子账户银行账号 | int8 | 64 |  | √ | 0 | [银行账户 bd_accountbanks](../basedata_files/bd_accountbanks.md) |
 | 9 | fsubpaychan | 支付渠道 | varchar | 30 |  | √ | ' ' | 支付渠道,枚举: bei :银企互联 online :网上银行 counter :柜台 |
-| 10 | fsubacctcompid | 子账户资金组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 10 | fsubacctcompid | 子账户资金组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 
 ### 列规则定义
 
@@ -115,12 +115,12 @@
 | 3 | famount | 金额 | numeric | 19 | 6 | √ | 0.000000 | 金额 |
 | 4 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 5 | fexchangerate | 汇率 | numeric | 23 | 10 | √ | 0.0000000000 | 汇率 |
-| 6 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 7 | fpaychan | 新支付渠道 | varchar | 30 |  | √ | ' ' | 新支付渠道,枚举: |
 | 8 | fsourcebillno | 划拨单号 | varchar | 60 |  | √ | ' ' | 划拨单号 |
 | 9 | fbillno | 单据编号 | varchar | 30 |  | √ | ' ' | 单据编号 |
 | 10 | fischanging | 变更中 | bpchar | 1 |  | √ | '1' | 变更中 |
-| 11 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fsourcebilltype | 源单据类型 | varchar | 30 |  | √ | ' ' | 源单据类型 |
 | 13 | fbillstatus | 单据状态 | varchar | 30 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 D :审核拒绝 |
 | 14 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
@@ -130,11 +130,11 @@
 | 18 | fbizdate | 业务日期 | timestamp | 0 |  |  | null | 业务日期 |
 | 19 | fsourcebillid | 源单id | int8 | 64 |  | √ | 0 | 源单id |
 | 20 | fbankid | fbankid | int8 | 64 |  | √ | 0 |  |
-| 21 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
-| 22 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 23 | faccountbankid | 母账户银行账号 | int8 | 64 |  | √ | 0 | 银行账户 bd_accountbanks |
+| 21 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
+| 22 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 23 | faccountbankid | 母账户银行账号 | int8 | 64 |  | √ | 0 | [银行账户 bd_accountbanks](../basedata_files/bd_accountbanks.md) |
 | 24 | flocamt | 金额折本位币 | numeric | 19 | 6 | √ | 0.000000 | 金额折本位币 |
-| 25 | fcompanyid | 资金组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 25 | fcompanyid | 资金组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 
 ### 列规则定义
 

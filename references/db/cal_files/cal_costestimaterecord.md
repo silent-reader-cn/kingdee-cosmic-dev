@@ -19,7 +19,7 @@
 | 8 | fsharedetailasstactid | 往来户 | int8 | 64 |  | √ | 0 | 供应商 bd_supplier |
 | 9 | fsharedetailtaxamt | 分摊含税金额 | numeric | 23 | 10 | √ | 0.0000000000 | 分摊含税金额 |
 | 10 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
-| 11 | fsharedetailexitemid | 费用项目 | int8 | 64 |  | √ | 0 | 费用项目 er_expenseitemedit |
+| 11 | fsharedetailexitemid | 费用项目 | int8 | 64 |  | √ | 0 | [费用项目 er_expenseitemedit](../basedata_files/er_expenseitemedit.md) |
 
 ### 列规则定义
 
@@ -48,7 +48,7 @@
 | 1 | fid | 费用暂估单id | int8 | 64 |  | √ | 0 | 费用暂估单id |
 | 2 | fshareamt | 金额 | numeric | 23 | 10 | √ | 0.0000000000 | 金额 |
 | 3 | fseq | fseq | int8 | 64 |  | √ | 0 |  |
-| 4 | fcostdetailid | 成本记录明细 | int8 | 64 |  | √ | 0 | 核算成本记录明细 cal_costdetail |
+| 4 | fcostdetailid | 成本记录明细 | int8 | 64 |  | √ | 0 | [核算成本记录明细 cal_costdetail](../cal_files/cal_costdetail.md) |
 | 5 | fsharetaxamount | fsharetaxamount | numeric | 23 | 10 | √ | 0.0000000000 |  |
 | 6 | fshareamount | fshareamount | numeric | 23 | 10 | √ | 0.0000000000 |  |
 | 7 | festimatebillno | 暂估单编码 | varchar | 80 |  | √ | ' ' | 暂估单编码 |
@@ -57,7 +57,7 @@
 | 10 | fsharetaxamt | 含税金额 | numeric | 23 | 10 | √ | 0.0000000000 | 含税金额 |
 | 11 | fisdirect | 是否直接生成 | bpchar | 1 |  | √ | '1' | 是否直接生成 |
 | 12 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 13 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 13 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 
 ### 列规则定义
 

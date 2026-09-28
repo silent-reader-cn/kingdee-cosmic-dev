@@ -14,113 +14,156 @@
 | 3 | fcreditno | creditno | varchar | 32 |  |  | '' | creditno |
 | 4 | fdraweeaddress | draweeaddress | varchar | 200 |  |  | '' | draweeaddress |
 | 5 | faddclause_tag | addclause_详情 | text | 0 |  |  | null | addclause_详情 |
-| 6 | fforwardcnapscode | forwardcnapscode | varchar | 15 |  |  | '' | forwardcnapscode |
-| 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 8 | ftermini | termini | varchar | 250 |  |  | '' | termini |
-| 9 | fcredittype | credittype1 | varchar | 2 |  |  | '' | credittype1 |
-| 10 | facceptorcnapscode | acceptorcnapscode | varchar | 15 |  |  | '' | acceptorcnapscode |
-| 11 | ffilename | filename | varchar | 50 |  |  | '' | filename |
-| 12 | fpaydays | paydays | varchar | 8 |  |  | '' | paydays |
-| 13 | fmrgnaccno | mrgnaccno | varchar | 50 |  |  | '' | mrgnaccno |
-| 14 | fdraftcustflg | draftcustflg | varchar | 6 |  |  | '' | draftcustflg |
-| 15 | fmixtenordays | mixtenordays | varchar | 8 |  |  | '' | mixtenordays |
-| 16 | fmrgnproportion | mrgnproportion | varchar | 8 |  |  | '' | mrgnproportion |
-| 17 | fversion | version | int8 | 64 |  |  | null | version |
-| 18 | fbankbatchseqid | bankbatchseqid | varchar | 30 |  | √ | '' | bankbatchseqid |
-| 19 | fname | 名称 | varchar | 50 |  |  | '' | 名称 |
-| 20 | favwtbank | avwtbank | varchar | 1 |  |  | '' | avwtbank |
-| 21 | facceptoraddress | acceptoraddress | varchar | 200 |  |  | '' | acceptoraddress |
-| 22 | fterminiair | terminiair | varchar | 250 |  |  | '' | terminiair |
-| 23 | finserttime | inserttime | timestamp | 0 |  |  | null | inserttime |
-| 24 | fpayfinishtime | payfinishtime | timestamp | 0 |  |  | null | payfinishtime |
-| 25 | fshipdate | shipdate | varchar | 10 |  |  | '' | shipdate |
-| 26 | fmrgncurrency | mrgncurrency | varchar | 5 |  |  | '' | mrgncurrency |
-| 27 | foprtel | oprtel | varchar | 20 |  |  | '' | oprtel |
-| 28 | fenable | 使用状态 | varchar | 50 |  |  | '' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 29 | fgasdescription | gasdescription | varchar | 250 |  |  | '' | gasdescription |
-| 30 | fnumber | 编码 | varchar | 30 |  |  | '' | 编码 |
-| 31 | fmixtenortype | mixtenortype | varchar | 1 |  |  | '' | mixtenortype |
-| 32 | fdeliveryport | deliveryport | varchar | 250 |  |  | '' | deliveryport |
-| 33 | fbankmsg | bankmsg | varchar | 200 |  |  | '' | bankmsg |
-| 34 | fadvicnapscode | advicnapscode | varchar | 15 |  |  | '' | advicnapscode |
-| 35 | frqstserialno | rqstserialno | varchar | 30 |  |  | '' | rqstserialno |
-| 36 | fdetailseqid | detailseqid | varchar | 32 |  |  | '' | detailseqid |
-| 37 | fmoreproportion | moreproportion | varchar | 10 |  |  | '' | moreproportion |
-| 38 | famount | 金额 | numeric | 23 | 10 |  | null | 金额 |
-| 39 | favwtbanknmadd | avwtbanknmadd | varchar | 200 |  |  | '' | avwtbanknmadd |
-| 40 | fstatus | 数据状态 | varchar | 50 |  |  | '' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 41 | fdraftproportion | draftproportion | varchar | 4 |  |  | '' | draftproportion |
-| 42 | fbiztype | biztype | varchar | 20 |  | √ | '' | biztype |
-| 43 | fcreatorid | 创建人 | int8 | 64 |  |  | null | 人员 bos_user |
-| 44 | fmasterid | 主数据内码 | int8 | 64 |  |  | null | 主数据内码 |
-| 45 | fsynccount | synccount | int8 | 64 |  |  | null | synccount |
-| 46 | fremark | remark | varchar | 250 |  |  | '' | remark |
-| 47 | fbankrefkey | bankrefkey | varchar | 100 |  |  | '' | bankrefkey |
-| 48 | fmodifierid | 修改人 | int8 | 64 |  |  | null | 人员 bos_user |
-| 49 | fcreditstatus | creditstatus | varchar | 20 |  |  | '' | creditstatus |
-| 50 | fispartship | ispartship | varchar | 3 |  |  | '' | ispartship |
-| 51 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 52 | fadviaddress | adviaddress | varchar | 140 |  |  | '' | adviaddress |
-| 53 | fopendate | 长日期 | timestamp | 0 |  |  | null | 长日期 |
-| 54 | fpresentperiod | presentperiod | varchar | 100 |  |  | '' | presentperiod |
-| 55 | fcontractamount | 金额1 | numeric | 23 | 10 |  | null | 金额1 |
-| 56 | fpaytype | paytype | varchar | 1 |  |  | '' | paytype |
-| 57 | fcontractno | contractno | varchar | 30 |  |  | '' | contractno |
-| 58 | fduedate | 长日期1 | timestamp | 0 |  |  | null | 长日期1 |
-| 59 | fmixdraftinvamt | mixdraftinvamt | numeric | 23 | 10 |  | null | mixdraftinvamt |
-| 60 | fupdatetime | updatetime | timestamp | 0 |  |  | null | updatetime |
-| 61 | fbankloginid | bankloginid | varchar | 20 |  | √ | '' | bankloginid |
-| 62 | fstatusmsg | statusmsg | varchar | 200 |  |  | '' | statusmsg |
-| 63 | fcashway | cashway | varchar | 1 |  |  | '' | cashway |
-| 64 | fpresentday | presentday | varchar | 10 |  |  | '' | presentday |
-| 65 | fimplclassname | implclassname | varchar | 120 |  | √ | '' | implclassname |
-| 66 | fexplain | explain | varchar | 250 |  |  | '' | explain |
-| 67 | fbankversionid | bankversionid | varchar | 20 |  | √ | '' | bankversionid |
-| 68 | fapplicantcreditnum | applicantcreditnum | varchar | 50 |  |  | '' | applicantcreditnum |
-| 69 | fcreditmode | creditmode | varchar | 3 |  |  | '' | creditmode |
-| 70 | fdetailbizno | detailbizno | varchar | 32 |  |  | '' | detailbizno |
-| 71 | fbankrefdate | bankrefdate | varchar | 10 |  |  | '' | bankrefdate |
-| 72 | ffileurl | fileurl | varchar | 100 |  |  | '' | fileurl |
-| 73 | faddclause | addclause | varchar | 50 |  |  | '' | addclause |
-| 74 | fstatusname | statusname | varchar | 20 |  |  | '' | statusname |
-| 75 | fdocclause_tag | docclause_详情 | text | 0 |  |  | null | docclause_详情 |
-| 76 | febgid | ebgid | varchar | 50 |  |  | '' | ebgid |
-| 77 | fconinstructions | coninstructions | varchar | 1 |  |  | '' | coninstructions |
-| 78 | fcostbear | costbear | varchar | 2 |  |  | '' | costbear |
-| 79 | fbatchseqid | batchseqid | varchar | 50 |  | √ | '' | batchseqid |
-| 80 | fistranship | istranship | varchar | 3 |  |  | '' | istranship |
-| 81 | fcharcurrency | charcurrency | varchar | 5 |  |  | '' | charcurrency |
-| 82 | ferrormsg | errormsg | varchar | 200 |  |  | '' | errormsg |
-| 83 | fcreditform | creditform | varchar | 3 |  |  | '' | creditform |
-| 84 | fdraweecnapscode | draweecnapscode | varchar | 15 |  |  | '' | draweecnapscode |
-| 85 | fsubbiztype | subbiztype | varchar | 20 |  | √ | '' | subbiztype |
-| 86 | fforwardaddress | forwardaddress | varchar | 200 |  |  | '' | forwardaddress |
-| 87 | fsubmitsuccesstime | submitsuccesstime | timestamp | 0 |  |  | null | submitsuccesstime |
-| 88 | freserved2 | reserved2 | varchar | 20 |  |  | '' | reserved2 |
-| 89 | fbankdetailseqid | bankdetailseqid | varchar | 30 |  | √ | '' | bankdetailseqid |
-| 90 | fmrgnacctype | mrgnacctype | varchar | 2 |  |  | '' | mrgnacctype |
-| 91 | freserved1 | reserved1 | varchar | 20 |  |  | '' | reserved1 |
-| 92 | fcharaccno | characcno | varchar | 50 |  |  | '' | characcno |
-| 93 | fdocclause | docclause | varchar | 50 |  |  | '' | docclause |
-| 94 | fapplicantaddressen | applicantaddressen | varchar | 250 |  |  | '' | applicantaddressen |
-| 95 | flastsynctime | lastsynctime | timestamp | 0 |  |  | null | lastsynctime |
-| 96 | fcounteraddress | counteraddress | varchar | 200 |  |  | '' | counteraddress |
-| 97 | fstartair | startair | varchar | 250 |  |  | '' | startair |
-| 98 | flessproportion | lessproportion | varchar | 10 |  |  | '' | lessproportion |
-| 99 | faccno | accno | varchar | 30 |  | √ | '' | accno |
-| 100 | fflowserialno | flowserialno | varchar | 30 |  |  | '' | flowserialno |
-| 101 | fmixdraftinvproportion | mixdraftinvproportion | varchar | 4 |  |  | '' | mixdraftinvproportion |
-| 102 | foprnm | oprnm | varchar | 50 |  |  | '' | oprnm |
-| 103 | frequesttime | requesttime | timestamp | 0 |  |  | null | requesttime |
-| 104 | fbankserialno | bankserialno | varchar | 50 |  |  | '' | bankserialno |
-| 105 | fcustomid | customid | varchar | 50 |  | √ | '' | customid |
-| 106 | fbankstatus | bankstatus | varchar | 20 |  |  | '' | bankstatus |
-| 107 | fpackagekey | packagekey | varchar | 100 |  |  | '' | packagekey |
-| 108 | fdueaddress | dueaddress | varchar | 200 |  |  | '' | dueaddress |
-| 109 | fqueryimplclassname | queryimplclassname | varchar | 120 |  | √ | '' | queryimplclassname |
-| 110 | fcurrency | currency | varchar | 5 |  |  | '' | currency |
-| 111 | fpackagetime | packagetime | timestamp | 0 |  |  | null | packagetime |
-| 112 | fdraftamt | draftamt | numeric | 23 | 10 |  | null | draftamt |
+| 6 | fpayaccno2 | payaccno | varchar | 80 |  |  | '' | payaccno |
+| 7 | fforwardcnapscode | forwardcnapscode | varchar | 15 |  |  | '' | forwardcnapscode |
+| 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 9 | ftermini | termini | varchar | 250 |  |  | '' | termini |
+| 10 | fpayacccurrency2 | payacccurrency | varchar | 5 |  |  | '' | payacccurrency |
+| 11 | fcredittype | credittype1 | varchar | 2 |  |  | '' | credittype1 |
+| 12 | facceptorcnapscode | acceptorcnapscode | varchar | 15 |  |  | '' | acceptorcnapscode |
+| 13 | ffilename | filename | varchar | 50 |  |  | '' | filename |
+| 14 | fpaydays | paydays | varchar | 8 |  |  | '' | paydays |
+| 15 | fmrgnaccno | mrgnaccno | varchar | 50 |  |  | '' | mrgnaccno |
+| 16 | fdraftcustflg | draftcustflg | varchar | 6 |  |  | '' | draftcustflg |
+| 17 | fmixtenordays | mixtenordays | varchar | 8 |  |  | '' | mixtenordays |
+| 18 | fcountercountry | counterCountry | varchar | 100 |  |  | null | counterCountry |
+| 19 | fmrgnproportion | mrgnproportion | varchar | 8 |  |  | '' | mrgnproportion |
+| 20 | fversion | version | int8 | 64 |  |  | null | version |
+| 21 | fbankbatchseqid | bankbatchseqid | varchar | 30 |  | √ | '' | bankbatchseqid |
+| 22 | fname | 名称 | varchar | 50 |  |  | '' | 名称 |
+| 23 | favwtbank | avwtbank | varchar | 1 |  |  | '' | avwtbank |
+| 24 | fpayamt2 | payamt | numeric | 23 | 10 |  | null | payamt |
+| 25 | facceptoraddress | acceptoraddress | varchar | 200 |  |  | '' | acceptoraddress |
+| 26 | fterminiair | terminiair | varchar | 250 |  |  | '' | terminiair |
+| 27 | finserttime | inserttime | timestamp | 0 |  |  | null | inserttime |
+| 28 | fpayfinishtime | payfinishtime | timestamp | 0 |  |  | null | payfinishtime |
+| 29 | fshipdate | shipdate | varchar | 10 |  |  | '' | shipdate |
+| 30 | fmrgncurrency | mrgncurrency | varchar | 5 |  |  | '' | mrgncurrency |
+| 31 | fpayacccurrency | payacccurrency | varchar | 5 |  |  | '' | payacccurrency |
+| 32 | fpaynature | paynature | varchar | 5 |  |  | '' | paynature |
+| 33 | foprtel | oprtel | varchar | 20 |  |  | '' | oprtel |
+| 34 | freduceamt | reduceAmt | numeric | 23 | 10 |  | null | reduceAmt |
+| 35 | fenable | 使用状态 | varchar | 50 |  |  | '' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 36 | fgasdescription | gasdescription | varchar | 250 |  |  | '' | gasdescription |
+| 37 | fnumber | 编码 | varchar | 30 |  |  | '' | 编码 |
+| 38 | fmixtenortype | mixtenortype | varchar | 1 |  |  | '' | mixtenortype |
+| 39 | fdeliveryport | deliveryport | varchar | 250 |  |  | '' | deliveryport |
+| 40 | frefusepoint | refusepoint | varchar | 50 |  |  | null | refusepoint |
+| 41 | fbankmsg | bankmsg | varchar | 200 |  |  | '' | bankmsg |
+| 42 | fadvicnapscode | advicnapscode | varchar | 15 |  |  | '' | advicnapscode |
+| 43 | frqstserialno | rqstserialno | varchar | 30 |  |  | '' | rqstserialno |
+| 44 | fdetailseqid | detailseqid | varchar | 32 |  |  | '' | detailseqid |
+| 45 | fmoreproportion | moreproportion | varchar | 10 |  |  | '' | moreproportion |
+| 46 | famount | 金额 | numeric | 23 | 10 |  | null | 金额 |
+| 47 | favwtbanknmadd | avwtbanknmadd | varchar | 200 |  |  | '' | avwtbanknmadd |
+| 48 | ftxnpscpt | txnpscpt | varchar | 500 |  |  | '' | txnpscpt |
+| 49 | fstatus | 数据状态 | varchar | 50 |  |  | '' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
+| 50 | fdraftproportion | draftproportion | varchar | 4 |  |  | '' | draftproportion |
+| 51 | fbiztype | biztype | varchar | 20 |  | √ | '' | biztype |
+| 52 | fcreatorid | 创建人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
+| 53 | fmasterid | 主数据内码 | int8 | 64 |  |  | null | 主数据内码 |
+| 54 | fsynccount | synccount | int8 | 64 |  |  | null | synccount |
+| 55 | fcountername | 文本102 | varchar | 200 |  |  | '' | 文本102 |
+| 56 | fcharfeeinfo_tag | charfeeinfo_详情 | text | 0 |  |  | null | charfeeinfo_详情 |
+| 57 | fremark | remark | varchar | 250 |  |  | '' | remark |
+| 58 | fbankrefkey | bankrefkey | varchar | 100 |  |  | '' | bankrefkey |
+| 59 | freceiptplace | 接管地/发送地/接货地 | varchar | 70 |  |  | null | 接管地/发送地/接货地 |
+| 60 | fmodifierid | 修改人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
+| 61 | fcreditstatus | creditstatus | varchar | 20 |  |  | '' | creditstatus |
+| 62 | fispartship | ispartship | varchar | 3 |  |  | '' | ispartship |
+| 63 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 64 | fadviaddress | adviaddress | varchar | 140 |  |  | '' | adviaddress |
+| 65 | fibppaytype | ibppaytype | varchar | 5 |  |  | '' | ibppaytype |
+| 66 | fopendate | 长日期 | timestamp | 0 |  |  | null | 长日期 |
+| 67 | fpresentperiod | presentperiod | varchar | 100 |  |  | '' | presentperiod |
+| 68 | fcontractamount | 金额1 | numeric | 23 | 10 |  | null | 金额1 |
+| 69 | fpaytype | paytype | varchar | 1 |  |  | '' | paytype |
+| 70 | ftrancode | trancode | varchar | 10 |  |  | '' | trancode |
+| 71 | fcontractno | contractno | varchar | 30 |  |  | '' | contractno |
+| 72 | fdocs | docs | varchar | 5 |  |  | null | docs |
+| 73 | ftransflag | transflag | varchar | 2 |  |  | null | transflag |
+| 74 | fpayamt | payamt | numeric | 23 | 10 |  | null | payamt |
+| 75 | fduedate | 长日期1 | timestamp | 0 |  |  | null | 长日期1 |
+| 76 | fmixdraftinvamt | mixdraftinvamt | numeric | 23 | 10 |  | null | mixdraftinvamt |
+| 77 | fupdatetime | updatetime | timestamp | 0 |  |  | null | updatetime |
+| 78 | fbankloginid | bankloginid | varchar | 20 |  | √ | '' | bankloginid |
+| 79 | fstatusmsg | statusmsg | varchar | 200 |  |  | '' | statusmsg |
+| 80 | fcashway | cashway | varchar | 1 |  |  | '' | cashway |
+| 81 | fpresentday | presentday | varchar | 10 |  |  | '' | presentday |
+| 82 | fimplclassname | implclassname | varchar | 120 |  | √ | '' | implclassname |
+| 83 | freturndesc | returndesc | varchar | 20 |  |  | '' | returndesc |
+| 84 | fexplain | explain | varchar | 250 |  |  | '' | explain |
+| 85 | fbankversionid | bankversionid | varchar | 20 |  | √ | '' | bankversionid |
+| 86 | freject | reject | varchar | 500 |  |  | null | reject |
+| 87 | fapplicantcreditnum | applicantcreditnum | varchar | 50 |  |  | '' | applicantcreditnum |
+| 88 | fcreditmode | creditmode | varchar | 3 |  |  | '' | creditmode |
+| 89 | fbuscurrency | buscurrency | varchar | 5 |  |  | '' | buscurrency |
+| 90 | fmodfrequency | 文本114 | varchar | 5 |  |  | null | 文本114 |
+| 91 | fdetailbizno | detailbizno | varchar | 32 |  |  | '' | detailbizno |
+| 92 | fbankrefdate | bankrefdate | varchar | 10 |  |  | '' | bankrefdate |
+| 93 | ffileurl | fileurl | varchar | 100 |  |  | '' | fileurl |
+| 94 | ffeemode | 文本86 | varchar | 5 |  |  | '' | 文本86 |
+| 95 | fpayeecountry | payeecountry | varchar | 5 |  |  | '' | payeecountry |
+| 96 | faddclause | addclause | varchar | 50 |  |  | '' | addclause |
+| 97 | fstatusname | statusname | varchar | 20 |  |  | '' | statusname |
+| 98 | fdocclause_tag | docclause_详情 | text | 0 |  |  | null | docclause_详情 |
+| 99 | febgid | ebgid | varchar | 50 |  |  | '' | ebgid |
+| 100 | fapplicantname | applicantname | varchar | 200 |  |  | '' | applicantname |
+| 101 | fconinstructions | coninstructions | varchar | 1 |  |  | '' | coninstructions |
+| 102 | faddamt | addAmt | numeric | 23 | 10 |  | null | addAmt |
+| 103 | fcostbear | costbear | varchar | 2 |  |  | '' | costbear |
+| 104 | fbatchseqid | batchseqid | varchar | 50 |  | √ | '' | batchseqid |
+| 105 | fmixtenor | 远期/混合付款期限 | varchar | 100 |  |  | '' | 远期/混合付款期限 |
+| 106 | fistranship | istranship | varchar | 3 |  |  | '' | istranship |
+| 107 | fcharcurrency | charcurrency | varchar | 5 |  |  | '' | charcurrency |
+| 108 | ferrormsg | errormsg | varchar | 200 |  |  | '' | errormsg |
+| 109 | fibpisref | ibpisref | varchar | 5 |  |  | '' | ibpisref |
+| 110 | fcreditform | creditform | varchar | 3 |  |  | '' | creditform |
+| 111 | fdraweecnapscode | draweecnapscode | varchar | 15 |  |  | '' | draweecnapscode |
+| 112 | fsubbiztype | subbiztype | varchar | 20 |  | √ | '' | subbiztype |
+| 113 | freturndesc_tag | returndesc_详情 | text | 0 |  |  | null | returndesc_详情 |
+| 114 | fforwardaddress | forwardaddress | varchar | 200 |  |  | '' | forwardaddress |
+| 115 | fsubmitsuccesstime | submitsuccesstime | timestamp | 0 |  |  | null | submitsuccesstime |
+| 116 | freserved2 | reserved2 | varchar | 20 |  |  | '' | reserved2 |
+| 117 | fbankdetailseqid | bankdetailseqid | varchar | 30 |  | √ | '' | bankdetailseqid |
+| 118 | fbusamt | 金额4 | numeric | 23 | 10 |  | null | 金额4 |
+| 119 | fmrgnacctype | mrgnacctype | varchar | 2 |  |  | '' | mrgnacctype |
+| 120 | freserved1 | reserved1 | varchar | 20 |  |  | '' | reserved1 |
+| 121 | fcharaccno | characcno | varchar | 50 |  |  | '' | characcno |
+| 122 | fdocclause | docclause | varchar | 50 |  |  | '' | docclause |
+| 123 | fapplicantaddressen | applicantaddressen | varchar | 250 |  |  | '' | applicantaddressen |
+| 124 | flastsynctime | lastsynctime | timestamp | 0 |  |  | null | lastsynctime |
+| 125 | fpayaccno | payaccno | varchar | 80 |  |  | '' | payaccno |
+| 126 | fcounteraddress | counteraddress | varchar | 200 |  |  | '' | counteraddress |
+| 127 | flastmoddate | 文本115 | varchar | 8 |  |  | null | 文本115 |
+| 128 | fstartair | startair | varchar | 250 |  |  | '' | startair |
+| 129 | flessproportion | lessproportion | varchar | 10 |  |  | '' | lessproportion |
+| 130 | faccno | accno | varchar | 30 |  | √ | '' | accno |
+| 131 | fflowserialno | flowserialno | varchar | 30 |  |  | '' | flowserialno |
+| 132 | freceivedno | 文本84 | varchar | 40 |  |  | '' | 文本84 |
+| 133 | fcorramt | corramt | numeric | 23 | 10 |  | null | corramt |
+| 134 | fmixdraftinvproportion | mixdraftinvproportion | varchar | 4 |  |  | '' | mixdraftinvproportion |
+| 135 | foprnm | oprnm | varchar | 50 |  |  | '' | oprnm |
+| 136 | frequesttime | requesttime | timestamp | 0 |  |  | null | requesttime |
+| 137 | fbankserialno | bankserialno | varchar | 50 |  |  | '' | bankserialno |
+| 138 | fcustomid | customid | varchar | 50 |  | √ | '' | customid |
+| 139 | fcontractcurrency | contractcurrency | varchar | 10 |  |  | null | contractcurrency |
+| 140 | fcharges | 费用条款 | varchar | 20 |  |  | null | 费用条款 |
+| 141 | fdrawon | 文本109 | varchar | 2 |  |  | null | 文本109 |
+| 142 | fbankstatus | bankstatus | varchar | 20 |  |  | '' | bankstatus |
+| 143 | fcharfeeinfo | charfeeinfo | varchar | 30 |  |  | '' | charfeeinfo |
+| 144 | fpackagekey | packagekey | varchar | 100 |  |  | '' | packagekey |
+| 145 | fdueaddress | dueaddress | varchar | 200 |  |  | '' | dueaddress |
+| 146 | fqueryimplclassname | queryimplclassname | varchar | 120 |  | √ | '' | queryimplclassname |
+| 147 | fcostbearparty | 文本85 | varchar | 5 |  |  | '' | 文本85 |
+| 148 | flastshipdate | 最迟装运期 | varchar | 8 |  |  | '' | 最迟装运期 |
+| 149 | fcurrency | currency | varchar | 5 |  |  | '' | currency |
+| 150 | fafterfrom | afterFrom | varchar | 2 |  |  | null | afterFrom |
+| 151 | fpackagetime | packagetime | timestamp | 0 |  |  | null | packagetime |
+| 152 | fdocpcsmode | docpcsmode | varchar | 5 |  |  | '' | docpcsmode |
+| 153 | fibpregno | ibpregno | varchar | 30 |  |  | '' | ibpregno |
+| 154 | fdraftamt | draftamt | numeric | 23 | 10 |  | null | draftamt |
+| 155 | facptdate | 长日期9 | timestamp | 0 |  |  | null | 长日期9 |
 
 ### 列规则定义
 

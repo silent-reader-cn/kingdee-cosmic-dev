@@ -14,8 +14,8 @@
 | 3 | fmodifydate | 修改日期 | timestamp | 0 |  | √ | LOCALTIMESTAMP | 修改日期 |
 | 4 | fcredentials | 供需集市登录凭证 | varchar | 50 |  | √ | ' ' | 供需集市登录凭证 |
 | 5 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 6 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 7 | fuserid | 用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 7 | fuserid | 用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 8 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 9 | fsdmusername | 供需集市用户名 | varchar | 50 |  | √ | ' ' | 供需集市用户名 |
 

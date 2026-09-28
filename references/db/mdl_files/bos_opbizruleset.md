@@ -12,7 +12,8 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fopbizrule | 服务 | varchar | 30 |  | √ | ' ' | 服务,枚举: |
 | 3 | fenabled | 启用状态 | bpchar | 1 |  | √ | '0' | 启用状态,枚举: 0 :禁用 1 :启用 |
-| 4 | fobjecttypeid | 启用服务的单据 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 4 | fobjecttypeid | 启用服务的单据 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
+| 5 | fisallop | 启用实体所有操作 | bpchar | 1 |  | √ | '0' | 启用实体所有操作 |
 
 ### 列规则定义
 

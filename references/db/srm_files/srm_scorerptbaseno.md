@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | 单据ID | int8 | 64 |  | √ | 0 | 单据ID |
 | 2 | fmaterialid | fmaterialid | int8 | 64 |  | √ | 0 |  |
-| 3 | forgid | 评估组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | forgid | 评估组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | fschemeid | fschemeid | int8 | 64 |  | √ | 0 |  |
 | 5 | fbizstatus | fbizstatus | bpchar | 1 |  | √ | ' ' |  |
 | 6 | fbilldate | 业务日期 | timestamp | 0 |  |  | null | 业务日期 |
@@ -21,7 +21,7 @@
 | 10 | fplandate | fplandate | timestamp | 0 |  |  | null |  |
 | 11 | ftaskbillno | ftaskbillno | varchar | 80 |  | √ | ' ' |  |
 | 12 | fdatefrom | fdatefrom | timestamp | 0 |  |  | null |  |
-| 13 | fauditgradeid | 核准等级 | int8 | 64 |  | √ | 0 | 评估等级 bd_evagrade |
+| 13 | fauditgradeid | 核准等级 | int8 | 64 |  | √ | 0 | [评估等级 bd_evagrade](../basedata_files/bd_evagrade.md) |
 | 14 | fcategoryid | fcategoryid | int8 | 64 |  | √ | 0 |  |
 | 15 | fsupgradeid | fsupgradeid | int8 | 64 |  | √ | 0 |  |
 | 16 | fbillno | 单据编号 | varchar | 80 |  | √ | ' ' | 单据编号 |
@@ -34,7 +34,7 @@
 | 23 | fauditresult | fauditresult | bpchar | 1 |  | √ | ' ' |  |
 | 24 | ftaskbillid | ftaskbillid | int8 | 64 |  | √ | 0 |  |
 | 25 | fevatypeid | fevatypeid | int8 | 64 |  | √ | 0 |  |
-| 26 | fcalgradeid | 评估等级 | int8 | 64 |  | √ | 0 | 评估等级 bd_evagrade |
+| 26 | fcalgradeid | 评估等级 | int8 | 64 |  | √ | 0 | [评估等级 bd_evagrade](../basedata_files/bd_evagrade.md) |
 | 27 | fsumscore | 评估得分 | numeric | 19 | 6 | √ | 0.000000 | 评估得分 |
 | 28 | flastupdateuserid | flastupdateuserid | int8 | 64 |  | √ | 0 |  |
 | 29 | fbizpartnerid | fbizpartnerid | int8 | 64 |  | √ | 0 |  |

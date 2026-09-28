@@ -23,7 +23,7 @@
 | 12 | fdatefrom | fdatefrom | timestamp | 0 |  |  | null |  |
 | 13 | fauditgradeid | fauditgradeid | int8 | 64 |  | √ | 0 |  |
 | 14 | fcategoryid | fcategoryid | int8 | 64 |  | √ | 0 |  |
-| 15 | fsupgradeid | 初审等级 | int8 | 64 |  | √ | 0 | 评估等级 srm_evagrade |
+| 15 | fsupgradeid | 初审等级 | int8 | 64 |  | √ | 0 | [评估等级 srm_evagrade](../srm_files/srm_evagrade.md) |
 | 16 | fbillno | 评估单号 | varchar | 80 |  | √ | ' ' | 评估单号 |
 | 17 | fremark | fremark | varchar | 2000 |  | √ | ' ' |  |
 | 18 | fname | fname | varchar | 100 |  | √ | ' ' |  |
@@ -84,7 +84,7 @@
 | 9 | fcfmdate | 确认时间 | timestamp | 0 |  |  | null | 确认时间 |
 | 10 | fauditopinion | fauditopinion | varchar | 510 |  | √ | ' ' |  |
 | 11 | freviewdate | freviewdate | timestamp | 0 |  |  | null |  |
-| 12 | fcfmid | 确认人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fcfmid | 确认人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fmodifytime | fmodifytime | timestamp | 0 |  |  | null |  |
 | 14 | forigin | forigin | bpchar | 1 |  | √ | ' ' |  |
 | 15 | ffeedback | 反馈意见 | varchar | 510 |  | √ | ' ' | 反馈意见 |
@@ -104,5 +104,5 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | t_pur_score_a_pkey |  | fid |
-| 2 | idx_pur_score_a_fcreatetime |  | fcreatetime |
+| 1 | idx_pur_score_a_fcreatetime |  | fcreatetime |
+| 2 | t_pur_score_a_pkey |  | fid |

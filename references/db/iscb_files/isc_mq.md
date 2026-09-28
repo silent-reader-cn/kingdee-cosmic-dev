@@ -40,11 +40,11 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fconnection | MQ服务器 | int8 | 64 |  | √ | 0 | 外部集成信息（废弃） isc_sysconn |
+| 2 | fconnection | MQ服务器 | int8 | 64 |  | √ | 0 | [外部集成信息（废弃） isc_sysconn](../iscb_files/isc_sysconn.md) |
 | 3 | fnumber | 编码 | varchar | 100 |  | √ | ' ' | 编码 |
 | 4 | fenablemq | 单据状态 | int8 | 64 |  | √ | 1 | 单据状态,枚举: 0 :禁用 1 :启用 |
 | 5 | fmqtype | 类型 | varchar | 30 |  | √ | ' ' | 类型,枚举: rabbitmq :RabbitMQ |
-| 6 | fdocksystem | 对接系统 | int8 | 64 |  | √ | 0 | 外部集成信息（废弃） isc_sysconn |
+| 6 | fdocksystem | 对接系统 | int8 | 64 |  | √ | 0 | [外部集成信息（废弃） isc_sysconn](../iscb_files/isc_sysconn.md) |
 
 ### 列规则定义
 

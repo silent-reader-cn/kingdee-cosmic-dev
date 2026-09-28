@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 附件字段实体 bd_attachment |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [附件字段实体 bd_attachment](../frame_files/bd_attachment.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | FPKID |
 
 ### 列规则定义
@@ -38,7 +38,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | finventorygoodld | 实名编码 | int8 | 64 |  | √ | 0 | 库存实物管理 am_inventorygoodmanager |
+| 2 | finventorygoodld | 实名编码 | int8 | 64 |  | √ | 0 | [库存实物管理 am_inventorygoodmanager](../am_files/am_inventorygoodmanager.md) |
 | 3 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 4 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 
@@ -67,7 +67,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 附件字段实体 bd_attachment |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [附件字段实体 bd_attachment](../frame_files/bd_attachment.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | FPKID |
 
 ### 列规则定义
@@ -95,37 +95,37 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | forgfield | 收付组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 3 | fpostkeeper | 保管人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 4 | forgid | 收付组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | forgfield | 收付组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 3 | fpostkeeper | 保管人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 4 | forgid | 收付组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | fstakeholderid | fstakeholderid | int8 | 64 |  | √ | 0 |  |
 | 6 | fbusinesstype | 业务分类 | varchar | 50 |  | √ | ' ' | 业务分类,枚举: change :变更 logout :注销 loss :挂失 invalid :作废 |
-| 7 | fprekeeper | 保管人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 7 | fprekeeper | 保管人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 8 | fpredictdate | 预计归还日期 | timestamp | 0 |  |  | null | 预计归还日期 |
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 10 | fstatus | 单据状态 | varchar | 30 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 11 | fpoststartdate | 生效日期 | timestamp | 0 |  |  | null | 生效日期 |
 | 12 | fpregoodsno | 实物编号 | varchar | 50 |  | √ | ' ' | 实物编号 |
-| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 15 | fpreauthority | 权限 | varchar | 50 |  | √ | ' ' | 权限,枚举: A :查询 B :制单 C :复核 D :管理员 |
 | 16 | fpostdescribe | 说明 | varchar | 50 |  | √ | ' ' | 说明 |
-| 17 | fprecompany | 收付组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 17 | fprecompany | 收付组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 18 | fpostgoodsno | 实物编号 | varchar | 50 |  | √ | ' ' | 实物编号 |
 | 19 | fstakenholderid | fstakenholderid | varchar | 36 |  | √ | ' ' |  |
-| 20 | fpregoodstype | 实物类型 | int8 | 64 |  | √ | 0 | 实物类型设置 am_objecttype |
+| 20 | fpregoodstype | 实物类型 | int8 | 64 |  | √ | 0 | [实物类型设置 am_objecttype](../am_files/am_objecttype.md) |
 | 21 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 22 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 22 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 23 | forgfieid | forgfieid | int8 | 64 |  | √ | 0 |  |
 | 24 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 25 | fstakeholderld | 业务干系人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 25 | fstakeholderld | 业务干系人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 26 | fpreenddate | 到期日期 | timestamp | 0 |  |  | null | 到期日期 |
 | 27 | fmulcombofield | 权限 | varchar | 50 |  | √ | ' ' | 权限,枚举: A :查询 B :制单 C :复核 D :管理员 |
 | 28 | fprestartdate | 生效日期 | timestamp | 0 |  |  | null | 生效日期 |
 | 29 | freason | 事由 | varchar | 50 |  | √ | ' ' | 事由 |
 | 30 | fpostenddate | 失效日期 | timestamp | 0 |  |  | null | 失效日期 |
 | 31 | fpregoodsname | 实物名称 | varchar | 50 |  | √ | ' ' | 实物名称 |
-| 32 | fbasedatafield1 | 实物类型 | int8 | 64 |  | √ | 0 | 实物类型设置 am_objecttype |
+| 32 | fbasedatafield1 | 实物类型 | int8 | 64 |  | √ | 0 | [实物类型设置 am_objecttype](../am_files/am_objecttype.md) |
 | 33 | fpredescribe | 说明 | varchar | 50 |  | √ | ' ' | 说明 |
 | 34 | fpregoodstatus | 状态 | varchar | 50 |  | √ | ' ' | 状态,枚举: A :已生效 B :业务处理中 C :已作废 D :已挂失 E :已注销 |
 | 35 | fbusinessdate | 业务日期 | timestamp | 0 |  |  | null | 业务日期 |

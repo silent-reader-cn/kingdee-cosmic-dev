@@ -39,8 +39,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_wf_hiuseract_curinstid |  | fcurrentactinstid |
-| 2 | t_wf_hiuseractinst_pkey |  | fid |
+| 1 | t_wf_hiuseractinst_pkey |  | fid |
+| 2 | idx_wf_hiuseract_curinstid |  | fcurrentactinstid |
 | 3 | idx_wf_hiuseractinst_procid |  | fproinstid |
 | 4 | idx_wf_hiuseractinst_buskey |  | fbusinesskey |
 | 5 | idx_wf_hiuseractinst_execid |  | fcurrentexecutionid |
@@ -73,5 +73,5 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | t_wf_hiuseractinst_l_pkey |  | fpkid |
-| 2 | idx_wf_hiuseract_l_id_locid |  | fid,flocaleid |
+| 1 | idx_wf_hiuseract_l_id_locid |  | fid,flocaleid |
+| 2 | t_wf_hiuseractinst_l_pkey |  | fpkid |

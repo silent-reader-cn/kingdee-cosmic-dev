@@ -11,9 +11,9 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fcreatedate | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
-| 3 | ftype | 查询类型 | bpchar | 1 |  | √ | ' ' | 查询类型,枚举: A :报表页面查询 B :报表引出查询 C :代码调用查询 |
-| 4 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 5 | frepconf | 报表数据源配置 | int8 | 64 |  | √ | 0 | 报表数据源配置 scmc_report_conf |
+| 3 | ftype | 查询类型 | bpchar | 1 |  | √ | ' ' | 查询类型,枚举: A :报表页面查询 B :报表导出查询 C :代码调用查询 |
+| 4 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 5 | frepconf | 报表数据源配置 | int8 | 64 |  | √ | 0 | [报表数据源配置 scmc_report_conf](../mscommon_files/scmc_report_conf.md) |
 | 6 | ftimeout | 超时时间点 | timestamp | 0 |  |  | null | 超时时间点 |
 
 ### 列规则定义

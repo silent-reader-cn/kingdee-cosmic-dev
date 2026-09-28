@@ -12,7 +12,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | ftaskexp | 任务异常信息 | varchar | 512 |  |  | null | 任务异常信息 |
 | 3 | ftaskexp_tag | 任务异常信息_详情 | text | 0 |  |  | null | 任务异常信息_详情 |
-| 4 | fuserid | 用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fuserid | 用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fconditionjson_tag | 查询条件_详情 | text | 0 |  |  | null | 查询条件_详情 |
 | 6 | fconditionjson | 查询条件 | varchar | 512 |  |  | null | 查询条件 |
 | 7 | fconditiontext_tag | 查询条件文字_详情 | text | 0 |  |  | null | 查询条件文字_详情 |
@@ -24,7 +24,7 @@
 | 13 | fendtime | 任务结束时间 | timestamp | 0 |  |  | null | 任务结束时间 |
 | 14 | freport | 报表页面编码 | varchar | 80 |  | √ | ' ' | 报表页面编码 |
 | 15 | fbillno | 任务编号 | varchar | 80 |  | √ | ' ' | 任务编号 |
-| 16 | fmiddlereport | 报表中间实体 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 16 | fmiddlereport | 报表中间实体 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 17 | fconditiontext | 查询条件文字 | varchar | 512 |  |  | null | 查询条件文字 |
 
 ### 列规则定义
@@ -37,5 +37,5 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | pk_t_sm_reporttask |  | fid |
-| 2 | idx_sm_rt_fbillno |  | fbillno |
+| 1 | idx_sm_rt_fbillno |  | fbillno |
+| 2 | pk_t_sm_reporttask |  | fid |

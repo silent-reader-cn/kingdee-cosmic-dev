@@ -191,14 +191,14 @@
 | 2 | fqty | 数量 | numeric | 23 | 10 | √ | 0.0000000000 | 数量 |
 | 3 | finvaliddate | 失效日期 | timestamp | 0 |  |  | null | 失效日期 |
 | 4 | ftype | 产品类型 | varchar | 30 |  | √ | ' ' | 产品类型,枚举: 10720 :联产品 10730 :副产品 |
-| 5 | fmaterialid | 物料编码 | int8 | 64 |  | √ | 0 | 物料 bd_material |
-| 6 | funitid | 计量单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 5 | fmaterialid | 物料编码 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
+| 6 | funitid | 计量单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 7 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 8 | fversionid | 版本号 | int8 | 64 |  | √ | 0 | BOM版本 bd_bomversion |
+| 8 | fversionid | 版本号 | int8 | 64 |  | √ | 0 | [BOM版本 bd_bomversion](../basedata_files/bd_bomversion.md) |
 | 9 | fvaliddate | 生效日期 | timestamp | 0 |  |  | null | 生效日期 |
 | 10 | fauxpropertyid | 辅助属性 | int8 | 64 |  | √ | 0 | null 001 |
 | 11 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 12 | foperationid | 产出工序 | int8 | 64 |  | √ | 0 | 标准工序定义(废弃) mpdm_workprocedure |
+| 12 | foperationid | 产出工序 | int8 | 64 |  | √ | 0 | [标准工序定义(废弃) mpdm_workprocedure](../mpdm_files/mpdm_workprocedure.md) |
 
 ### 列规则定义
 
@@ -225,35 +225,35 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fgroupid | BOM分组 | int8 | 64 |  | √ | 0 | BOM分组 mpdm_bomgroup |
-| 3 | fdisableuserid | 禁用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 4 | fmaterialid | 产品编码 | int8 | 64 |  | √ | 0 | 物料 bd_material |
-| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fgroupid | BOM分组 | int8 | 64 |  | √ | 0 | [BOM分组 mpdm_bomgroup](../mpdm_files/mpdm_bomgroup.md) |
+| 3 | fdisableuserid | 禁用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 4 | fmaterialid | 产品编码 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
+| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | fyieldrate | 成品率 | numeric | 23 | 10 | √ | 0.0000000000 | 成品率 |
 | 7 | fiscoproduct | 联副产品 | bpchar | 1 |  | √ | '0' | 联副产品 |
 | 8 | fdisabledate | 禁用日期 | timestamp | 0 |  |  | null | 禁用日期 |
-| 9 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 9 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 11 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 14 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 15 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
-| 16 | fenableuserid | 启用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 17 | freplacenoid | 替代号 | int8 | 64 |  | √ | 0 | BOM替代号 mpdm_replaceno |
-| 18 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 19 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 16 | fenableuserid | 启用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 17 | freplacenoid | 替代号 | int8 | 64 |  | √ | 0 | [BOM替代号 mpdm_replaceno](../mpdm_files/mpdm_replaceno.md) |
+| 18 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 19 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 20 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 21 | fversionid | 版本号 | int8 | 64 |  | √ | 0 | 物料版本 bd_bomversion_new |
+| 21 | fversionid | 版本号 | int8 | 64 |  | √ | 0 | [物料版本 bd_bomversion_new](../basedata_files/bd_bomversion_new.md) |
 | 22 | fenabledate | 启用日期 | timestamp | 0 |  |  | null | 启用日期 |
 | 23 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
 | 24 | fctrlstrategy | 控制策略 | varchar | 30 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
-| 25 | ftypeid | BOM类型 | int8 | 64 |  | √ | 0 | BOM类型 mpdm_bomtype |
+| 25 | ftypeid | BOM类型 | int8 | 64 |  | √ | 0 | [BOM类型 mpdm_bomtype](../mpdm_files/mpdm_bomtype.md) |
 | 26 | fenable | 使用状态 | varchar | 30 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 27 | fnumber | BOM编码 | varchar | 30 |  | √ | ' ' | BOM编码 |
 | 28 | fauxpropertyid | 辅助属性 | int8 | 64 |  | √ | 0 | null 001 |
 | 29 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
-| 30 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 30 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 
@@ -286,11 +286,11 @@
 | 3 | finvaliddate | 失效日期 | timestamp | 0 |  |  | null | 失效日期 |
 | 4 | fqtytype | 用量类型 | varchar | 30 |  | √ | ' ' | 用量类型,枚举: A :变动 B :固定 C :阶梯 |
 | 5 | fqtydenominator | 用量：分母 | numeric | 23 | 10 | √ | 0.0000000000 | 用量：分母 |
-| 6 | fmaterialid | 组件编码 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 6 | fmaterialid | 组件编码 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 7 | fqtynumerator | 用量：分子 | numeric | 23 | 10 | √ | 0.0000000000 | 用量：分子 |
-| 8 | funitid | 计量单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 8 | funitid | 计量单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 9 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 10 | fversionid | 版本号 | int8 | 64 |  | √ | 0 | 物料版本 bd_bomversion_new |
+| 10 | fversionid | 版本号 | int8 | 64 |  | √ | 0 | [物料版本 bd_bomversion_new](../basedata_files/bd_bomversion_new.md) |
 | 11 | fscraprate | 变动损耗率 | numeric | 23 | 10 | √ | 0.0000000000 | 变动损耗率 |
 | 12 | ffixscrap | 固定损耗 | numeric | 23 | 10 | √ | 0.0000000000 | 固定损耗 |
 | 13 | ftype | 组件类型 | varchar | 30 |  | √ | ' ' | 组件类型,枚举: A :库存 |

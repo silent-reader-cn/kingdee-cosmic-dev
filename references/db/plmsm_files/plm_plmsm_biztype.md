@@ -1,9 +1,9 @@
 # 业务类型-plm_plmsm_biztype
 
-## 业务类型-主表 t_plmsm_biztype
+## 业务类型-多语言表 t_plmsm_biztype_l
 
-- **表名称：** 业务类型-主表
-- **表名：** t_plmsm_biztype
+- **表名称：** 业务类型-多语言表
+- **表名：** t_plmsm_biztype_l
 
 ### 表格列定义
 
@@ -22,10 +22,10 @@
 
 ---
 
-## 业务类型-多语言表 t_plmsm_biztype_l
+## 业务类型-主表 t_plmsm_biztype
 
-- **表名称：** 业务类型-多语言表
-- **表名：** t_plmsm_biztype_l
+- **表名称：** 业务类型-主表
+- **表名：** t_plmsm_biztype
 
 ### 表格列定义
 

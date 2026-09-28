@@ -24,8 +24,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | pk_t_tk_taskbill4impt_l |  | fpkid |
-| 2 | idx_taskbill4impt_l_fid |  | fid,flocaleid |
+| 1 | idx_taskbill4impt_l_fid |  | fid,flocaleid |
+| 2 | pk_t_tk_taskbill4impt_l |  | fpkid |
 
 ---
 
@@ -44,17 +44,17 @@
 | 4 | fisneedvoucher | 共享生成凭证 | bpchar | 1 |  | √ | '0' | 共享生成凭证 |
 | 5 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 6 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 7 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 7 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 8 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 9 | fisstoredindb | 单据数据是否存表 | bpchar | 1 |  | √ | '0' | 单据数据是否存表 |
-| 10 | fexternalerpid | 所属系统 | int8 | 64 |  | √ | 0 | 业务系统 bas_extenderp |
+| 10 | fexternalerpid | 所属系统 | int8 | 64 |  | √ | 0 | [业务系统 bas_extenderp](../sys_files/bas_extenderp.md) |
 | 11 | fautosynorg | 自动同步适用组织 | bpchar | 1 |  | √ | '0' | 自动同步适用组织,枚举: 0 :否 1 :是 |
-| 12 | fsscid | 共享中心 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 13 | fbindbill | 来源单据 | varchar | 50 |  | √ | ' ' | 表单元数据 bos_formmeta |
-| 14 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fsscid | 共享中心 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 13 | fbindbill | 来源单据 | varchar | 50 |  | √ | ' ' | [表单元数据 bos_formmeta](../mdl_files/bos_formmeta.md) |
+| 14 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 16 | fdescription | 描述 | varchar | 255 |  | √ | ' ' | 描述 |
-| 17 | fbindform | 绑定展示界面 | varchar | 50 |  | √ | ' ' | 表单元数据 bos_formmeta |
+| 17 | fbindform | 绑定展示界面 | varchar | 50 |  | √ | ' ' | [表单元数据 bos_formmeta](../mdl_files/bos_formmeta.md) |
 | 18 | fisembed | 是否为嵌入单据 | bpchar | 1 |  | √ | '0' | 是否为嵌入单据 |
 | 19 | fisomertasktype | fisomertasktype | int8 | 64 |  | √ | 0 |  |
 | 20 | fispartask | 是否为多级任务 | bpchar | 1 |  | √ | '0' | 是否为多级任务 |

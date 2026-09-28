@@ -12,10 +12,10 @@
 | 1 | fid | fid | varchar | 36 |  | √ | ' ' | id |
 | 2 | fsubsysid | fsubsysid | int8 | 64 |  | √ | 0 |  |
 | 3 | fmodeltype | 模型类型 | varchar | 50 |  | √ | ' ' | 模型类型,枚举: |
-| 4 | fparentid | 父对象 | varchar | 36 |  | √ | ' ' | 实体元数据 bos_entitymeta |
+| 4 | fparentid | 父对象 | varchar | 36 |  | √ | ' ' | [实体元数据 bos_entitymeta](../mdl_files/bos_entitymeta.md) |
 | 5 | fisv | fisv | varchar | 50 |  | √ | ' ' |  |
 | 6 | finheritpath | 继承路径 | varchar | 300 |  | √ | ' ' | 继承路径 |
-| 7 | fbizappid | 应用 | varchar | 36 |  | √ | ' ' | 业务应用实体 bos_devportal_bizapp |
+| 7 | fbizappid | 应用 | varchar | 36 |  | √ | ' ' | [业务应用实体 bos_devportal_bizapp](../mdl_files/bos_devportal_bizapp.md) |
 | 8 | fcreatedate | fcreatedate | timestamp | 0 |  |  | LOCALTIMESTAMP |  |
 | 9 | fmasterid | fmasterid | varchar | 36 |  | √ | ' ' |  |
 | 10 | ftype | ftype | bpchar | 1 |  | √ | '0' |  |
@@ -23,7 +23,7 @@
 | 12 | fnumber | 编码 | varchar | 36 |  | √ | ' ' | 编码 |
 | 13 | ftimestamp | ftimestamp | int8 | 64 |  | √ | 0 |  |
 | 14 | fdata | fdata | text | 0 |  |  | null |  |
-| 15 | findustry | 行业 | int8 | 64 |  | √ | 0 | 行业信息 bos_devp_industry |
+| 15 | findustry | 行业 | int8 | 64 |  | √ | 0 | [行业信息 bos_devp_industry](../devportal_files/bos_devp_industry.md) |
 | 16 | fenabled | 是否启用 | bpchar | 1 |  | √ | '1' | 是否启用 |
 | 17 | fistemplate | fistemplate | bpchar | 1 |  | √ | '0' |  |
 | 18 | fversion | fversion | int8 | 64 |  | √ | 0 |  |

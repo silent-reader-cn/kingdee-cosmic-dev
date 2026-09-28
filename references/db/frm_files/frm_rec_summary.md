@@ -10,15 +10,15 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fbooktypeid | 账簿类型 | int8 | 64 |  | √ | 0 | 账簿类型 bd_accountbookstype |
-| 3 | fexecplanid | 对账方案 | int8 | 64 |  | √ | 0 | 业财对账方案 frm_reconciliation_scheme |
-| 4 | fbasecurrencyid | 本位币 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
-| 5 | fperiodid | 期间 | int8 | 64 |  | √ | 0 | 会计日历 bd_period |
+| 2 | fbooktypeid | 账簿类型 | int8 | 64 |  | √ | 0 | [账簿类型 bd_accountbookstype](../fibd_files/bd_accountbookstype.md) |
+| 3 | fexecplanid | 对账方案 | int8 | 64 |  | √ | 0 | [业财对账方案 frm_reconciliation_scheme](../frm_files/frm_reconciliation_scheme.md) |
+| 4 | fbasecurrencyid | 本位币 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
+| 5 | fperiodid | 期间 | int8 | 64 |  | √ | 0 | [会计日历 bd_period](../fibd_files/bd_period.md) |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 7 | forgid | 核算组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 8 | fdataruleid | 取数规则 | int8 | 64 |  | √ | 0 | 业务取数规则 frm_recdatarule |
-| 9 | faccounttableid | 科目表 | int8 | 64 |  | √ | 0 | 科目表 bd_accounttable |
-| 10 | fbizappid | 业务系统 | varchar | 36 |  | √ | ' ' | 业务应用实体 bos_devportal_bizapp |
+| 7 | forgid | 核算组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 8 | fdataruleid | 取数规则 | int8 | 64 |  | √ | 0 | [业务取数规则 frm_recdatarule](../frm_files/frm_recdatarule.md) |
+| 9 | faccounttableid | 科目表 | int8 | 64 |  | √ | 0 | [科目表 bd_accounttable](../fibd_files/bd_accounttable.md) |
+| 10 | fbizappid | 业务系统 | varchar | 36 |  | √ | ' ' | [业务应用实体 bos_devportal_bizapp](../mdl_files/bos_devportal_bizapp.md) |
 | 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 
 ### 列规则定义
@@ -45,7 +45,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 会计科目 bd_accountview |
+| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [会计科目 bd_accountview](../gl_files/bd_accountview.md) |
 | 2 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 | 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 
@@ -99,7 +99,7 @@
 | 24 | fbeginapp | 业务系统 | numeric | 23 | 10 | √ | 0 | 业务系统 |
 | 25 | fbegingl | 总账 | numeric | 23 | 10 | √ | 0 | 总账 |
 | 26 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 27 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 27 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 | 28 | fdebitgl | 总账 | numeric | 23 | 10 | √ | 0 | 总账 |
 | 29 | fdebitdiff | 差异 | numeric | 23 | 10 | √ | 0 | 差异 |
 

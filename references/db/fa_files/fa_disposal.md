@@ -11,14 +11,14 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | ftaxamount | 税额 | numeric | 19 | 4 | √ | 0.0000 | 税额 |
 | 2 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 3 | finvoicetype | 发票类型 | int8 | 64 |  | √ | 0 | 发票类型 bd_invoicetype |
+| 3 | finvoicetype | 发票类型 | int8 | 64 |  | √ | 0 | [发票种类 bd_invoicetype](../basedata_files/bd_invoicetype.md) |
 | 4 | fpayee | fpayee | int8 | 64 |  | √ | 0 |  |
 | 5 | ftotalamount | 价税合计 | numeric | 19 | 4 | √ | 0.0000 | 价税合计 |
 | 6 | finvoicenumber | 发票号码 | varchar | 50 |  | √ | ' ' | 发票号码 |
 | 7 | finvoicedate | 开票日期 | timestamp | 0 |  |  | null | 开票日期 |
 | 8 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 9 | fpayeetype | fpayeetype | varchar | 50 |  | √ | ' ' |  |
-| 10 | falltaxrate | 税率（%） | numeric | 19 | 4 | √ | 0.0000 | 税率 bd_taxrate |
+| 10 | falltaxrate | 税率（%） | numeric | 19 | 4 | √ | 0.0000 | [税率 bd_taxrate](../basedata_files/bd_taxrate.md) |
 | 11 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 12 | finvoiceno | 发票代码 | varchar | 50 |  | √ | ' ' | 发票代码 |
 
@@ -84,9 +84,9 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fdetailremark | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
 | 3 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 4 | fclearbillid | 清理单号 | int8 | 64 |  | √ | 0 | 清理单详情基础资料 fa_cleardetail_base |
+| 4 | fclearbillid | 清理单号 | int8 | 64 |  | √ | 0 | [清理单详情基础资料 fa_cleardetail_base](../fa_files/fa_cleardetail_base.md) |
 | 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 6 | frealcardid | 实物卡片 | int8 | 64 |  | √ | 0 | 资产卡片基础资料 fa_card_real_base |
+| 6 | frealcardid | 实物卡片 | int8 | 64 |  | √ | 0 | [资产卡片基础资料 fa_card_real_base](../fa_files/fa_card_real_base.md) |
 
 ### 列规则定义
 
@@ -150,11 +150,11 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fremark | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fbillstatus | 单据状态 | varchar | 50 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 5 | fpayee | 收款人名称 | int8 | 64 |  | √ | 0 | 供应商 bd_supplier |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 7 | forgid | 货主组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 7 | forgid | 货主组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | fbuyertypeid | 购买方类型 | varchar | 50 |  | √ | ' ' | 购买方类型,枚举: bd_supplier :供应商 bd_customer :客户 bos_user :职员 |
 | 9 | fpayeetype | 收款人类型 | varchar | 30 |  | √ | ' ' | 收款人类型,枚举: bd_supplier :供应商 bd_customer :客户 |
 | 10 | fauditdate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
@@ -162,13 +162,13 @@
 | 12 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 13 | fpayqtycreate | 可生成付款单数量 | int4 | 32 |  | √ | 1 | 可生成付款单数量 |
 | 14 | fbuyerid | 购买方名称 | int8 | 64 |  | √ | 0 | 供应商 bd_supplier |
-| 15 | fbasecurrencyid | 本位币 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
-| 16 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 15 | fbasecurrencyid | 本位币 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
+| 16 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 17 | fbizdate | 业务日期 | timestamp | 0 |  |  | null | 业务日期 |
 | 18 | fdisposalincome | 处置收入 | numeric | 23 | 10 | √ | 0.0000000000 | 处置收入 |
 | 19 | finvoiceqtycreate | 可生成开票申请单数量 | int4 | 32 |  | √ | 1 | 可生成开票申请单数量 |
 | 20 | fbillno | 处置单号 | varchar | 30 |  | √ | ' ' | 处置单号 |
-| 21 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 21 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

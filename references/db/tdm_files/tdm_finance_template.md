@@ -10,19 +10,19 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fname | 名称 | varchar | 500 |  | √ | ' ' | 名称 |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 6 | fuseorg | 使用组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 7 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 8 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 9 | ftemplatetype | 报表类型 | varchar | 36 |  | √ | ' ' | 模板类型 tctb_template_type |
+| 6 | fuseorg | 使用组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 7 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 8 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 9 | ftemplatetype | 报表类型 | varchar | 36 |  | √ | ' ' | [模板类型 tctb_template_type](../tctb_files/tctb_template_type.md) |
 | 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 11 | fctrlstrategy | 控制策略 | varchar | 50 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
 | 12 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 13 | fenddate | 失效日期 | timestamp | 0 |  |  | null | 失效日期 |
-| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 16 | fstartdate | 生效日期 | timestamp | 0 |  |  | null | 生效日期 |
 | 17 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
@@ -65,7 +65,7 @@
 | 5 | famount1 | 金额1 | numeric | 23 | 10 | √ | 0 | 金额1 |
 | 6 | fitem | 项目 | int8 | 64 |  | √ | 0 | 利润表项目 tdm_item_lrb |
 | 7 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 8 | freportitem | 项目1 | int8 | 64 |  | √ | 0 | 利润表项目 tdm_item_lrb |
+| 8 | freportitem | 项目1 | int8 | 64 |  | √ | 0 | [利润表项目 tdm_item_lrb](../tdm_files/tdm_item_lrb.md) |
 | 9 | frownum | 行次 | int8 | 64 |  | √ | 0 | 行次 |
 | 10 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 

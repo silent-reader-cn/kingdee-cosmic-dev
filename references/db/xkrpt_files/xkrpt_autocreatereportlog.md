@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | frptcount | 报表总数 | int4 | 32 |  | √ | 0 | 报表总数 |
 | 4 | fbillstatus | 单据状态 | bpchar | 1 |  | √ | 'C' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
@@ -18,14 +18,14 @@
 | 7 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
 | 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 9 | fbegindatetime | 开始时间 | timestamp | 0 |  |  | null | 开始时间 |
-| 10 | fcreatorid | 执行人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 11 | fautocreaterptscheme | 方案名称 | int8 | 64 |  | √ | 0 | 报表自动生成方案 xkrpt_rptautocrt |
+| 10 | fcreatorid | 执行人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 11 | fautocreaterptscheme | 方案名称 | int8 | 64 |  | √ | 0 | [报表自动生成方案 xkrpt_rptautocrt](../xkrpt_files/xkrpt_rptautocrt.md) |
 | 12 | fcreatetype | 执行方式 | bpchar | 1 |  | √ | '0' | 执行方式,枚举: 0 :自动 1 :手动 |
 | 13 | fsucesscount | 成功个数 | int4 | 32 |  | √ | 0 | 成功个数 |
 | 14 | ferrorcount | 失败个数 | int4 | 32 |  | √ | 0 | 失败个数 |
 | 15 | fskipcount | 未执行个数 | int4 | 32 |  | √ | 0 | 未执行个数 |
 | 16 | fbillno | 方案编号 | varchar | 30 |  | √ | ' ' | 方案编号 |
-| 17 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 17 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

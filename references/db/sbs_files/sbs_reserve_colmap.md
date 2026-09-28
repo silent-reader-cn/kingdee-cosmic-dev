@@ -10,15 +10,15 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | freservebill | 预留单据 | varchar | 50 |  | √ | ' ' | 主实体对象 bos_entityobject |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | freservebill | 预留单据 | varchar | 50 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fcreatedate | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 5 | fmodifydate | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 6 | fcreaterid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | fcreaterid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 7 | fcolmap | 字段对应关系 | varchar | 2000 |  | √ | ' ' | 字段对应关系 |
 | 8 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 1 :启用 0 :禁用 |
 | 9 | fnumber | 编码 | varchar | 50 |  | √ | ' ' | 编码 |
-| 10 | frequirebill | 需求单据 | varchar | 50 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 10 | frequirebill | 需求单据 | varchar | 50 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 
 ### 列规则定义
 

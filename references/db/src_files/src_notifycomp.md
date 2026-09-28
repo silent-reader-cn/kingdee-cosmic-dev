@@ -62,6 +62,35 @@
 
 ---
 
+## 供应商回复附件-附件表 t_pds_noticesup_sup_fj2
+
+- **表名称：** 供应商回复附件-附件表
+- **表名：** t_pds_noticesup_sup_fj2
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [附件字段实体 bd_attachment](../frame_files/bd_attachment.md) |
+| 2 | fpkid | fpkid | int8 | 64 |  | √ | 0 | FPKID |
+| 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fpkid | fpkid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_pds_noticesup_sup_fj2_bid |  | fbasedataid |
+| 2 | pk_pds_noticesup_sup_fj2 |  | fpkid |
+| 3 | idx_pds_noticesup_sup_fj2_fid |  | fentryid |
+
+---
+
 ## 内部抄送人员-多选基础资料表 t_pds_letterpeople
 
 - **表名称：** 内部抄送人员-多选基础资料表
@@ -72,7 +101,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -103,20 +132,20 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | faddress | 联系地址 | varchar | 50 |  | √ | ' ' | 联系地址 |
 | 3 | freplydate | 要求回复时间 | timestamp | 0 |  |  | null | 要求回复时间 |
-| 4 | forgid | 采购组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 4 | forgid | 采购组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | fentrystatus | 发布状态 | bpchar | 1 |  | √ | ' ' | 发布状态,枚举: A :待发布 B :已提交 C :已发布 |
 | 6 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 7 | fcfmdate | fcfmdate | timestamp | 0 |  |  | null |  |
 | 8 | fsupletterstype | 函件类型 | bpchar | 1 |  | √ | ' ' | 函件类型,枚举: 1 :中标 2 :备选 3 :未中标 4 :邀请函 5 :培养 6 :不推荐 9 :预中标 7 :资审不合格 0 :流标 |
 | 9 | ffsstatus | 云之家发送状态 | bpchar | 1 |  | √ | ' ' | 云之家发送状态,枚举: A :待发送 B :已发送 C :发送失败 |
 | 10 | femailstatus | 邮件发送状态 | varchar | 30 |  | √ | ' ' | 邮件发送状态,枚举: A :待发送 B :已发送 C :发送失败 |
-| 11 | fentryprojectid | 寻源项目 | int8 | 64 |  | √ | 0 | 寻源项目 pds_projectf7 |
-| 12 | fpurpublisher | 发布人员 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fentryprojectid | 寻源项目 | int8 | 64 |  | √ | 0 | [寻源项目 pds_projectf7](../pds_files/pds_projectf7.md) |
+| 12 | fpurpublisher | 发布人员 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fphone | 联系电话 | varchar | 50 |  | √ | ' ' | 联系电话 |
 | 14 | femail | 电子邮件 | varchar | 50 |  | √ | ' ' | 电子邮件 |
 | 15 | frefusenote | 拒绝原因 | varchar | 255 |  | √ | ' ' | 拒绝原因 |
 | 16 | fissend | 是否发送 | bpchar | 1 |  | √ | '0' | 是否发送 |
-| 17 | fuserid | 供应商用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 17 | fuserid | 供应商用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 18 | fbizpartnerid | fbizpartnerid | int8 | 64 |  | √ | 0 |  |
 | 19 | fsupplierid | 供应商 | int8 | 64 |  | √ | 0 | 注册供应商 src_supplier |
 | 20 | fduty | 职位 | varchar | 50 |  | √ | ' ' | 职位 |
@@ -158,58 +187,60 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fwinemailtplid | 邮件模板 | int8 | 64 |  | √ | 0 | 函件模板 pds_doctpl |
+| 2 | fwinemailtplid | 邮件模板 | int8 | 64 |  | √ | 0 | [函件模板 pds_doctpl](../pds_files/pds_doctpl.md) |
 | 3 | freplydate | 要求供应商回复时间 | timestamp | 0 |  |  | null | 要求供应商回复时间 |
 | 4 | finvitetitle | 邀请函标题 | varchar | 350 |  | √ | ' ' | 邀请函标题 |
-| 5 | fprewinemailtpl | 邮件模板 | int8 | 64 |  | √ | 0 | 函件模板 pds_doctpl |
-| 6 | fcultivateweixintpl | 企业微信模板 | int8 | 64 |  | √ | 0 | 函件模板 pds_doctpl |
+| 5 | fprewinemailtpl | 邮件模板 | int8 | 64 |  | √ | 0 | [函件模板 pds_doctpl](../pds_files/pds_doctpl.md) |
+| 6 | fcultivateweixintpl | 企业微信模板 | int8 | 64 |  | √ | 0 | [函件模板 pds_doctpl](../pds_files/pds_doctpl.md) |
 | 7 | fpentitykey | 父单据标识 | varchar | 50 |  | √ | ' ' | 父单据标识 |
 | 8 | forigin | 发起方 | bpchar | 1 |  | √ | ' ' | 发起方,枚举: 1 :采购方端 2 :供应商端 3 :两端公用 |
 | 9 | fprewintitle | 预中标标题 | varchar | 350 |  | √ | ' ' | 预中标标题 |
 | 10 | fbackuptitle | 备选标题 | varchar | 350 |  | √ | ' ' | 备选标题 |
 | 11 | finvitesendtype | 发送方式 | varchar | 100 |  | √ | ' ' | 发送方式,枚举: portal :门户 email :邮件 message :短信 yzj :云之家 weixin :企业微信 |
-| 12 | fwinweixintpl | 企业微信模板 | int8 | 64 |  | √ | 0 | 函件模板 pds_doctpl |
+| 12 | fwinweixintpl | 企业微信模板 | int8 | 64 |  | √ | 0 | [函件模板 pds_doctpl](../pds_files/pds_doctpl.md) |
 | 13 | fprewinsendtype | 发送方式 | varchar | 30 |  | √ | ' ' | 发送方式,枚举: portal :门户 email :邮件 message :短信 yzj :云之家 weixin :企业微信 |
-| 14 | fprojectid | 寻源项目 | int8 | 64 |  | √ | 0 | 寻源项目 pds_projectf7 |
-| 15 | fcultivatesoundtplid | 云之家模板 | int8 | 64 |  | √ | 0 | 函件模板 pds_doctpl |
+| 14 | fprojectid | 寻源项目 | int8 | 64 |  | √ | 0 | [寻源项目 pds_projectf7](../pds_files/pds_projectf7.md) |
+| 15 | fcultivatesoundtplid | 云之家模板 | int8 | 64 |  | √ | 0 | [函件模板 pds_doctpl](../pds_files/pds_doctpl.md) |
 | 16 | fbillstatus | 单据状态 | bpchar | 1 |  | √ | ' ' | 单据状态,枚举: A :保存 B :已提交 C :已审核 |
-| 17 | finviteweixintpl | 企业微信模板 | int8 | 64 |  | √ | 0 | 函件模板 pds_doctpl |
-| 18 | finviteemailtplid | 邮件模板 | int8 | 64 |  | √ | 0 | 函件模板 pds_doctpl |
+| 17 | finviteweixintpl | 企业微信模板 | int8 | 64 |  | √ | 0 | [函件模板 pds_doctpl](../pds_files/pds_doctpl.md) |
+| 18 | finviteemailtplid | 邮件模板 | int8 | 64 |  | √ | 0 | [函件模板 pds_doctpl](../pds_files/pds_doctpl.md) |
 | 19 | fsrcbillid | 源单id | varchar | 50 |  | √ | ' ' | 源单id |
-| 20 | ffaildoctplid | 门户模板 | int8 | 64 |  | √ | 0 | 函件模板 pds_doctpl |
-| 21 | fbackupsoundtplid | 云之家模板 | int8 | 64 |  | √ | 0 | 函件模板 pds_doctpl |
-| 22 | fbackupweixintpl | 企业微信模板 | int8 | 64 |  | √ | 0 | 函件模板 pds_doctpl |
-| 23 | fcultivateemailtplid | 邮件模板 | int8 | 64 |  | √ | 0 | 函件模板 pds_doctpl |
-| 24 | finvitedoctplid | 门户模板 | int8 | 64 |  | √ | 0 | 函件模板 pds_doctpl |
-| 25 | fwinsoundtplid | 云之家模板 | int8 | 64 |  | √ | 0 | 函件模板 pds_doctpl |
-| 26 | fbackupemailtplid | 邮件模板 | int8 | 64 |  | √ | 0 | 函件模板 pds_doctpl |
-| 27 | fprewinweixintpl | 企业微信模板 | int8 | 64 |  | √ | 0 | 函件模板 pds_doctpl |
+| 20 | ffaildoctplid | 门户模板 | int8 | 64 |  | √ | 0 | [函件模板 pds_doctpl](../pds_files/pds_doctpl.md) |
+| 21 | fbackupsoundtplid | 云之家模板 | int8 | 64 |  | √ | 0 | [函件模板 pds_doctpl](../pds_files/pds_doctpl.md) |
+| 22 | fbackupweixintpl | 企业微信模板 | int8 | 64 |  | √ | 0 | [函件模板 pds_doctpl](../pds_files/pds_doctpl.md) |
+| 23 | fcultivateemailtplid | 邮件模板 | int8 | 64 |  | √ | 0 | [函件模板 pds_doctpl](../pds_files/pds_doctpl.md) |
+| 24 | finvitedoctplid | 门户模板 | int8 | 64 |  | √ | 0 | [函件模板 pds_doctpl](../pds_files/pds_doctpl.md) |
+| 25 | fwinsoundtplid | 云之家模板 | int8 | 64 |  | √ | 0 | [函件模板 pds_doctpl](../pds_files/pds_doctpl.md) |
+| 26 | fbackupemailtplid | 邮件模板 | int8 | 64 |  | √ | 0 | [函件模板 pds_doctpl](../pds_files/pds_doctpl.md) |
+| 27 | fprewinweixintpl | 企业微信模板 | int8 | 64 |  | √ | 0 | [函件模板 pds_doctpl](../pds_files/pds_doctpl.md) |
 | 28 | fsrcbilltype | 源单标识 | varchar | 50 |  | √ | ' ' | 源单标识 |
-| 29 | ffailmessagetplid | 短信模板 | int8 | 64 |  | √ | 0 | 函件模板 pds_doctpl |
-| 30 | fwinmessagetplid | 短信模板 | int8 | 64 |  | √ | 0 | 函件模板 pds_doctpl |
+| 29 | ffailmessagetplid | 短信模板 | int8 | 64 |  | √ | 0 | [函件模板 pds_doctpl](../pds_files/pds_doctpl.md) |
+| 30 | fwinmessagetplid | 短信模板 | int8 | 64 |  | √ | 0 | [函件模板 pds_doctpl](../pds_files/pds_doctpl.md) |
 | 31 | fwintitle | 中标标题 | varchar | 350 |  | √ | ' ' | 中标标题 |
 | 32 | fbackupsendtype | 发送方式 | varchar | 100 |  | √ | ' ' | 发送方式,枚举: portal :门户 email :邮件 message :短信 yzj :云之家 weixin :企业微信 |
-| 33 | ffailweixintpl | 企业微信模板 | int8 | 64 |  | √ | 0 | 函件模板 pds_doctpl |
-| 34 | finvitemessagetplid | 短信模板 | int8 | 64 |  | √ | 0 | 函件模板 pds_doctpl |
+| 33 | ffailweixintpl | 企业微信模板 | int8 | 64 |  | √ | 0 | [函件模板 pds_doctpl](../pds_files/pds_doctpl.md) |
+| 34 | finvitemessagetplid | 短信模板 | int8 | 64 |  | √ | 0 | [函件模板 pds_doctpl](../pds_files/pds_doctpl.md) |
 | 35 | ffailsendtype | 发送方式 | varchar | 100 |  | √ | ' ' | 发送方式,枚举: portal :门户 email :邮件 message :短信 yzj :云之家 weixin :企业微信 |
-| 36 | fcultivatedoctplid | 门户模板 | int8 | 64 |  | √ | 0 | 函件模板 pds_doctpl |
-| 37 | fcultivatemessagetplid | 短信模板 | int8 | 64 |  | √ | 0 | 函件模板 pds_doctpl |
-| 38 | fprewinsoundtpl | 云之家模板 | int8 | 64 |  | √ | 0 | 函件模板 pds_doctpl |
-| 39 | fpublisherid | 发布人员 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 40 | fcultivatesendtypeid | 发送方式 | varchar | 100 |  | √ | ' ' | 发送方式,枚举: portal :门户 email :邮件 message :短信 yzj :云之家 weixin :企业微信 |
-| 41 | fparentid | 父单据ID | varchar | 50 |  | √ | ' ' | 父单据ID |
-| 42 | ffailsoundtplid | 云之家模板 | int8 | 64 |  | √ | 0 | 函件模板 pds_doctpl |
-| 43 | fwindoctplid | 门户模板 | int8 | 64 |  | √ | 0 | 函件模板 pds_doctpl |
-| 44 | fbackupmessagetplid | 短信模板 | int8 | 64 |  | √ | 0 | 函件模板 pds_doctpl |
-| 45 | fentitykey | 组件标识 | varchar | 50 |  | √ | ' ' | 组件标识 |
-| 46 | fbackupdoctplid | 门户模板 | int8 | 64 |  | √ | 0 | 函件模板 pds_doctpl |
-| 47 | fcultivatetitle | 培养标题 | varchar | 350 |  | √ | ' ' | 培养标题 |
-| 48 | fprewinmessagetpl | 短信模板 | int8 | 64 |  | √ | 0 | 函件模板 pds_doctpl |
-| 49 | fprewindoctpl | 门户模板 | int8 | 64 |  | √ | 0 | 函件模板 pds_doctpl |
-| 50 | ffailtitle | 未中标标题 | varchar | 350 |  | √ | ' ' | 未中标标题 |
-| 51 | finvitesoundtpl | 云之家模板 | int8 | 64 |  | √ | 0 | 函件模板 pds_doctpl |
-| 52 | ffailemailtplid | 邮件模板 | int8 | 64 |  | √ | 0 | 函件模板 pds_doctpl |
-| 53 | fwinsendtype | 发送方式 | varchar | 100 |  | √ | ' ' | 发送方式,枚举: portal :门户 email :邮件 message :短信 yzj :云之家 weixin :企业微信 |
+| 36 | fonlyshowwindetail | 仅显示中标标的数据 | bpchar | 1 |  | √ | '0' | 仅显示中标标的数据 |
+| 37 | fcultivatedoctplid | 门户模板 | int8 | 64 |  | √ | 0 | [函件模板 pds_doctpl](../pds_files/pds_doctpl.md) |
+| 38 | fcultivatemessagetplid | 短信模板 | int8 | 64 |  | √ | 0 | [函件模板 pds_doctpl](../pds_files/pds_doctpl.md) |
+| 39 | fprewinsoundtpl | 云之家模板 | int8 | 64 |  | √ | 0 | [函件模板 pds_doctpl](../pds_files/pds_doctpl.md) |
+| 40 | fpublisherid | 发布人员 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 41 | fcultivatesendtypeid | 发送方式 | varchar | 100 |  | √ | ' ' | 发送方式,枚举: portal :门户 email :邮件 message :短信 yzj :云之家 weixin :企业微信 |
+| 42 | fparentid | 父单据ID | varchar | 50 |  | √ | ' ' | 父单据ID |
+| 43 | ffailsoundtplid | 云之家模板 | int8 | 64 |  | √ | 0 | [函件模板 pds_doctpl](../pds_files/pds_doctpl.md) |
+| 44 | fwindoctplid | 门户模板 | int8 | 64 |  | √ | 0 | [函件模板 pds_doctpl](../pds_files/pds_doctpl.md) |
+| 45 | fbackupmessagetplid | 短信模板 | int8 | 64 |  | √ | 0 | [函件模板 pds_doctpl](../pds_files/pds_doctpl.md) |
+| 46 | fentitykey | 组件标识 | varchar | 50 |  | √ | ' ' | 组件标识 |
+| 47 | fbackupdoctplid | 门户模板 | int8 | 64 |  | √ | 0 | [函件模板 pds_doctpl](../pds_files/pds_doctpl.md) |
+| 48 | fcultivatetitle | 培养标题 | varchar | 350 |  | √ | ' ' | 培养标题 |
+| 49 | fprewinmessagetpl | 短信模板 | int8 | 64 |  | √ | 0 | [函件模板 pds_doctpl](../pds_files/pds_doctpl.md) |
+| 50 | fprewindoctpl | 门户模板 | int8 | 64 |  | √ | 0 | [函件模板 pds_doctpl](../pds_files/pds_doctpl.md) |
+| 51 | ffailtitle | 未中标标题 | varchar | 350 |  | √ | ' ' | 未中标标题 |
+| 52 | finvitesoundtpl | 云之家模板 | int8 | 64 |  | √ | 0 | [函件模板 pds_doctpl](../pds_files/pds_doctpl.md) |
+| 53 | fpreonlyshowwindetail | fpreonlyshowwindetail | bpchar | 1 |  | √ | '0' |  |
+| 54 | ffailemailtplid | 邮件模板 | int8 | 64 |  | √ | 0 | [函件模板 pds_doctpl](../pds_files/pds_doctpl.md) |
+| 55 | fwinsendtype | 发送方式 | varchar | 100 |  | √ | ' ' | 发送方式,枚举: portal :门户 email :邮件 message :短信 yzj :云之家 weixin :企业微信 |
 
 ### 列规则定义
 
@@ -223,3 +254,32 @@
 | :--- | :--- | :--- | :--- |
 | 1 | idx_pds_noticesup_fpid |  | fprojectid |
 | 2 | pk_pds_noticesup |  | fid |
+
+---
+
+## 附件-附件表 t_pds_noticesup_sup_fj
+
+- **表名称：** 附件-附件表
+- **表名：** t_pds_noticesup_sup_fj
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [附件字段实体 bd_attachment](../frame_files/bd_attachment.md) |
+| 2 | fpkid | fpkid | int8 | 64 |  | √ | 0 | FPKID |
+| 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fpkid | fpkid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_pds_noticesup_sup_fj_bid |  | fbasedataid |
+| 2 | pk_pds_noticesup_sup_fj |  | fpkid |
+| 3 | idx_pds_noticesup_sup_fj_eid |  | fentryid |

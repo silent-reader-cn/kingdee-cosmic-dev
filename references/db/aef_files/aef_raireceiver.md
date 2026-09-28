@@ -16,7 +16,7 @@
 | 5 | flargejson | 接收端json | varchar | 500 |  | √ | ' ' | 接收端json |
 | 6 | fdateofissue | 开票日期 | timestamp | 0 |  |  | null | 开票日期 |
 | 7 | ftaxrate | 税率 | numeric | 23 | 10 | √ | 0 | 税率 |
-| 8 | forgid | 归档组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 8 | forgid | 归档组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 9 | fdirectvoucherid | 凭证ID | int8 | 64 |  | √ | 0 | 凭证ID |
 | 10 | fdeductiontaxperiod | 抵扣税期 | varchar | 50 |  | √ | ' ' | 抵扣税期 |
 | 11 | fhasbeendeducted | 是否已抵扣 | bpchar | 1 |  | √ | ' ' | 是否已抵扣 |
@@ -28,7 +28,7 @@
 | 17 | fhasbeenbooked | 是否已入账 | bpchar | 1 |  | √ | ' ' | 是否已入账 |
 | 18 | fsourcebillno | 源单号码 | varchar | 30 |  | √ | ' ' | 源单号码 |
 | 19 | ftotalamountexcludingtax | 金额（不含税） | numeric | 23 | 10 | √ | 0 | 金额（不含税） |
-| 20 | fbilltype | 单据类型 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 20 | fbilltype | 单据类型 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 21 | flargejson_tag | 接收端json_详情 | text | 0 |  |  | null | 接收端json_详情 |
 
 ### 列规则定义
@@ -41,8 +41,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | pk_t_aef_raireceiver |  | fid |
-| 2 | idx_aef_rai |  | farchivedate,forgid |
+| 1 | idx_aef_rai |  | farchivedate,forgid |
+| 2 | pk_t_aef_raireceiver |  | fid |
 
 ---
 

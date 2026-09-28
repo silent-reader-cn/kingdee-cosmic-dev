@@ -39,17 +39,17 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 6 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 7 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 7 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | fispreset | 系统预设 | bpchar | 1 |  | √ | '0' | 系统预设 |
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 10 | fctrlstrategy | 控制策略 | varchar | 50 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
 | 11 | fstatus | 数据状态 | bpchar | 1 |  | √ | 'C' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 14 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 15 | fbitindex | 位图 | int8 | 64 |  | √ | 0 | 位图 |
@@ -69,8 +69,8 @@
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
 | 1 | pk_invp_calrulecfg |  | fid |
-| 2 | idx_invp_calrulecfg_fnum |  | fnumber |
-| 3 | idx_t_invp_calrulecfg_createorg |  | fcreateorgid |
+| 2 | idx_t_invp_calrulecfg_createorg |  | fcreateorgid |
+| 3 | idx_invp_calrulecfg_fnum |  | fnumber |
 | 4 | idx_t_invp_calrulecfg_master |  | fmasterid |
 
 ---
@@ -120,7 +120,7 @@
 | 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 6 | fcalcdesc | 说明 | varchar | 512 |  | √ | ' ' | 说明 |
 | 7 | fcalcrule | 计算公式 | varchar | 512 |  | √ | ' ' | 计算公式 |
-| 8 | flevelfactor | 水位因子 | int8 | 64 |  | √ | 0 | 库存水位因子 invp_levelfactor |
+| 8 | flevelfactor | 水位因子 | int8 | 64 |  | √ | 0 | [库存水位因子 invp_levelfactor](../invp_files/invp_levelfactor.md) |
 
 ### 列规则定义
 
@@ -146,7 +146,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 库存水位因子 invp_levelfactor |
+| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [库存水位因子 invp_levelfactor](../invp_files/invp_levelfactor.md) |
 | 2 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 | 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 

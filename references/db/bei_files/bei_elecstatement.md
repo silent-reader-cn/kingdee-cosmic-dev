@@ -63,8 +63,8 @@
 | 22 | fbookdate | 记账日期 | timestamp | 0 |  |  | null | 记账日期 |
 | 23 | foppositeacct | 对方账号 | varchar | 50 |  | √ | ' ' | 对方账号 |
 | 24 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 25 | fcurrencyid | 分录币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
-| 26 | faccountbankid | 银行账户 | int8 | 64 |  | √ | 0 | 银行账户 bd_accountbanks |
+| 25 | fcurrencyid | 分录币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
+| 26 | faccountbankid | 银行账户 | int8 | 64 |  | √ | 0 | [银行账户 bd_accountbanks](../basedata_files/bd_accountbanks.md) |
 | 27 | felecreceiptno | 电子回单号 | varchar | 50 |  | √ | ' ' | 电子回单号 |
 | 28 | fischeck | 已勾对标志 | bpchar | 1 |  | √ | '0' | 已勾对标志 |
 
@@ -105,35 +105,36 @@
 | 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 12 | fbankbranchnumber | 营业网点编号 | varchar | 80 |  | √ | ' ' | 营业网点编号 |
 | 13 | fexchangerate | 汇率 | numeric | 19 | 6 | √ | 0 | 汇率 |
-| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 15 | ffilesuffix | 文件格式（废弃） | varchar | 50 |  | √ | ' ' | 文件格式（废弃） |
-| 16 | fendavailableamount | 期末可用余额 | numeric | 19 | 6 |  | null | 期末可用余额 |
-| 17 | fisarchive | 是否归档 | bpchar | 1 |  | √ | '0' | 是否归档 |
-| 18 | fidentificationissuer | 签发机构 | varchar | 80 |  | √ | ' ' | 签发机构 |
-| 19 | faccountcompanyid | 核算组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 20 | fjointime | 接入时间 | timestamp | 0 |  |  | null | 接入时间 |
-| 21 | fprintdate | 打印日期 | timestamp | 0 |  |  | null | 打印日期 |
-| 22 | fbillno | 单据编号 | varchar | 30 |  | √ | ' ' | 单据编号 |
-| 23 | fisfile | 是否文件 | bpchar | 1 |  | √ | '0' | 是否文件 |
-| 24 | fbankstatus | 银行接收状态 | varchar | 50 |  | √ | ' ' | 银行接收状态,枚举: OP :未提交 OS :银企处理中 OJ :银企接收 TS :对账成功 TF :对账失败 OT :其他途径反馈 |
-| 25 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 26 | fbillstatus | 单据状态 | varchar | 30 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 27 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 28 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
-| 29 | fendretainamount | 期末保留余额 | numeric | 19 | 6 |  | null | 期末保留余额 |
-| 30 | fprintcount | 打印次数 | int8 | 64 |  | √ | 0 | 打印次数 |
-| 31 | fbizdate | 业务日期 | timestamp | 0 |  |  | null | 业务日期 |
-| 32 | fsourcebillid | 源单id | int8 | 64 |  | √ | 0 | 源单id |
-| 33 | fperiod | 所属期间 | timestamp | 0 |  |  | null | 所属期间 |
-| 34 | fdatasource | 数据来源 | varchar | 30 |  | √ | ' ' | 数据来源,枚举: frombank :银企接口 fileimport :识别引入 import :模版引入 |
-| 35 | fbankid | 开户银行 | int8 | 64 |  | √ | 0 | 金融机构 bd_finorginfo |
-| 36 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
-| 37 | faccountbankid | 银行账户 | int8 | 64 |  | √ | 0 | 银行账户 bd_accountbanks |
-| 38 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 39 | fbilltype | 单据类型 | varchar | 50 |  | √ | ' ' | 单据类型,枚举: bei_elecstatement :电子对账单 bei_elecbalancestate :电子余额对账（按协议） bei_elecbalancestate_acc :电子余额对账（按账号） |
-| 40 | fcompanyid | 收付组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 41 | flocamt | 金额折本位币 | numeric | 19 | 6 | √ | 0 | 金额折本位币 |
-| 42 | farchivecontent | 归档内容 | varchar | 30 |  | √ | ' ' | 归档内容,枚举: file :版式文件 instance :实例文档 |
+| 14 | fisextracted | 是否已抽取 | bpchar | 1 |  | √ | '0' | 是否已抽取 |
+| 15 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 16 | ffilesuffix | 文件格式（废弃） | varchar | 50 |  | √ | ' ' | 文件格式（废弃） |
+| 17 | fendavailableamount | 期末可用余额 | numeric | 19 | 6 |  | null | 期末可用余额 |
+| 18 | fisarchive | 是否归档 | bpchar | 1 |  | √ | '0' | 是否归档 |
+| 19 | fidentificationissuer | 签发机构 | varchar | 80 |  | √ | ' ' | 签发机构 |
+| 20 | faccountcompanyid | 核算组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 21 | fjointime | 接入时间 | timestamp | 0 |  |  | null | 接入时间 |
+| 22 | fprintdate | 打印日期 | timestamp | 0 |  |  | null | 打印日期 |
+| 23 | fbillno | 单据编号 | varchar | 30 |  | √ | ' ' | 单据编号 |
+| 24 | fisfile | 是否文件 | bpchar | 1 |  | √ | '0' | 是否文件 |
+| 25 | fbankstatus | 银行接收状态 | varchar | 50 |  | √ | ' ' | 银行接收状态,枚举: OP :未提交 OS :银企处理中 OJ :银企接收 TS :对账成功 TF :对账失败 OT :其他途径反馈 |
+| 26 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 27 | fbillstatus | 单据状态 | varchar | 30 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
+| 28 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 29 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
+| 30 | fendretainamount | 期末保留余额 | numeric | 19 | 6 |  | null | 期末保留余额 |
+| 31 | fprintcount | 打印次数 | int8 | 64 |  | √ | 0 | 打印次数 |
+| 32 | fbizdate | 业务日期 | timestamp | 0 |  |  | null | 业务日期 |
+| 33 | fsourcebillid | 源单id | int8 | 64 |  | √ | 0 | 源单id |
+| 34 | fperiod | 所属期间 | timestamp | 0 |  |  | null | 所属期间 |
+| 35 | fdatasource | 数据来源 | varchar | 30 |  | √ | ' ' | 数据来源,枚举: frombank :银企接口 fileimport :识别引入 import :模版引入 |
+| 36 | fbankid | 开户银行 | int8 | 64 |  | √ | 0 | [金融机构 bd_finorginfo](../basedata_files/bd_finorginfo.md) |
+| 37 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
+| 38 | faccountbankid | 银行账户 | int8 | 64 |  | √ | 0 | [银行账户 bd_accountbanks](../basedata_files/bd_accountbanks.md) |
+| 39 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 40 | fbilltype | 单据类型 | varchar | 50 |  | √ | ' ' | 单据类型,枚举: bei_elecstatement :电子对账单 bei_elecbalancestate :电子余额对账（按协议） bei_elecbalancestate_acc :电子余额对账（按账号） |
+| 41 | fcompanyid | 收付组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 42 | flocamt | 金额折本位币 | numeric | 19 | 6 | √ | 0 | 金额折本位币 |
+| 43 | farchivecontent | 归档内容 | varchar | 30 |  | √ | ' ' | 归档内容,枚举: file :版式文件 instance :实例文档 |
 
 ### 列规则定义
 

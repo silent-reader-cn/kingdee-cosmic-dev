@@ -10,15 +10,15 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreator | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fcreator | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fbackground | 背景图 | varchar | 255 |  | √ | ' ' | 背景图 |
-| 4 | fcreatetime | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
+| 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 5 | fpreview3 | 预览图3 | varchar | 255 |  | √ | ' ' | 预览图3 |
 | 6 | fpreview2 | 预览图2 | varchar | 255 |  | √ | ' ' | 预览图2 |
 | 7 | fcolor | 颜色 | varchar | 100 |  |  | '1' | 颜色 |
-| 8 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fispreset | 系统预设 | bpchar | 1 |  | √ | '0' | 系统预设 |
-| 10 | fmodifytime | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
+| 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 11 | fcontent_tag | 主题内容_详情 | varchar | 255 |  | √ | ' ' | 主题内容_详情 |
 | 12 | fthumbnail | 缩略图 | varchar | 255 |  | √ | ' ' | 缩略图 |
 | 13 | fpreview1 | 预览图1 | varchar | 255 |  | √ | ' ' | 预览图1 |
@@ -69,5 +69,5 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | t_bas_uitheme_l_pkey |  | fpkid |
-| 2 | idx_t_bas_uitheme_l_fid |  | fid |
+| 1 | idx_t_bas_uitheme_l_fid |  | fid |
+| 2 | t_bas_uitheme_l_pkey |  | fpkid |

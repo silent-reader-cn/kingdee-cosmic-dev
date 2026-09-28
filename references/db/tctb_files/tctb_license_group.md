@@ -10,9 +10,9 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
+| 2 | fname | 名称 | varchar | 200 |  | √ | ' ' | 名称 |
 | 3 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
-| 4 | fdescription | 描述 | varchar | 50 |  | √ | ' ' | 描述 |
+| 4 | fdescription | 描述 | varchar | 200 |  | √ | ' ' | 描述 |
 | 5 | fpkid | fpkid | varchar | 18 |  | √ | ' ' | pkid |
 
 ### 列规则定义

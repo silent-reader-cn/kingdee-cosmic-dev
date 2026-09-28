@@ -10,12 +10,12 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fmaterialid | 物料 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 2 | fmaterialid | 物料 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 3 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 4 | fislastentry | 是否结转完成 | bpchar | 1 |  | √ | '0' | 是否结转完成 |
 | 5 | foccupiedqty | 占用数量 | numeric | 23 | 10 | √ | 0.0000000000 | 占用数量 |
 | 6 | fgroupno | 分组号 | int8 | 64 |  | √ | 0 | 分组号 |
-| 7 | fownerid | 货主 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 7 | fownerid | 货主 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | fbizbillid | 业务单据ID | int8 | 64 |  | √ | 0 | 业务单据ID |
 | 9 | fweight | 权重 | numeric | 23 | 10 | √ | 0.0000000000 | 权重 |
 | 10 | ftype | 类型 | bpchar | 1 |  | √ | '0' | 类型,枚举: 0 :源单 1 :目标单 |

@@ -9,7 +9,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | 编码规则id | varchar | 36 |  | √ | ' ' | 编码规则 bos_coderule |
+| 1 | fid | 编码规则id | varchar | 36 |  | √ | ' ' | [编码规则 bos_coderule](../base_files/bos_coderule.md) |
 | 2 | fisvisable | 是否显示 | bpchar | 1 |  | √ | ' ' | 是否显示 |
 | 3 | fstep | 步长 | int8 | 64 |  | √ | 0 | 步长 |
 | 4 | faddstyle | 补位 | bpchar | 1 |  | √ | ' ' | 补位 |

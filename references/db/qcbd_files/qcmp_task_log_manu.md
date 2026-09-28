@@ -43,11 +43,11 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fsrcentryid | 来源分录id | int8 | 64 |  | √ | 0 | 来源分录id |
 | 3 | ftype | 操作类型 | bpchar | 1 |  | √ | '1' | 操作类型,枚举: 1 :认领 2 :指派 3 :委托 4 :完成 5 :撤销认领 6 :委托接受 7 :委托拒绝 8 :撤销委托 9 :撤销指派 A :已关闭 B :反审核 C :已修改 D :重新指派 |
-| 4 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 6 | fbiztypeid | 任务类型 | int8 | 64 |  | √ | 0 | 业务类型 bd_biztype |
+| 6 | fbiztypeid | 任务类型 | int8 | 64 |  | √ | 0 | [业务类型 bd_biztype](../sbd_files/bd_biztype.md) |
 | 7 | freason | 委托事由 | varchar | 600 |  | √ | ' ' | 委托事由 |
-| 8 | ftouserid | 接受人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | ftouserid | 接受人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | freceivetime | 接受时间 | timestamp | 0 |  |  | null | 接受时间 |
 
 ### 列规则定义

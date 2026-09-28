@@ -58,5 +58,5 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_t_lic_isvprod_l_fid |  | fid,flocaleid |
-| 2 | pk_t_lic_isvprod_l |  | fpkid |
+| 1 | pk_t_lic_isvprod_l |  | fpkid |
+| 2 | idx_t_lic_isvprod_l_fid |  | fid,flocaleid |

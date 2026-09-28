@@ -1,0 +1,169 @@
+# 人员工种-mpdm_personjob
+
+## 人员工种-多语言表 t_mpdm_persjob_l
+
+- **表名称：** 人员工种-多语言表
+- **表名：** t_mpdm_persjob_l
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fname | 名称 | varchar | 500 |  | √ | ' ' | 名称 |
+| 3 | flocaleid | flocaleid | varchar | 10 |  | √ | 'zh_CN' | localeid |
+| 4 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fpkid | fpkid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_mpdm_persjob_lid |  | fid,flocaleid |
+| 2 | pk_mpdm_persjob_l |  | fpkid |
+
+---
+
+## 人员工种-使用范围表 t_mpdm_persjob_u
+
+- **表名称：** 人员工种-使用范围表
+- **表名：** t_mpdm_persjob_u
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fcreateorgid | fcreateorgid | int8 | 64 |  |  | null |  |
+| 2 | fdataid | fdataid | int8 | 64 |  | √ | null |  |
+| 3 | fuseorgid | fuseorgid | int8 | 64 |  | √ | null |  |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fdataid | fdataid,fuseorgid |
+| 2 | fuseorgid | fdataid,fuseorgid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_t_mpdm_persjob_u_uo |  | fuseorgid |
+| 2 | pk_t_mpdm_persjob_u |  | fdataid,fuseorgid |
+
+---
+
+## 人员工种-主表 t_mpdm_persjob
+
+- **表名称：** 人员工种-主表
+- **表名：** t_mpdm_persjob
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
+| 2 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 3 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 4 | fdisableuser | 禁用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 5 | faudittime | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
+| 6 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 7 | fdisabletime | 禁用时间 | timestamp | 0 |  |  | null | 禁用时间 |
+| 8 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
+| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 10 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
+| 11 | fauditor | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 12 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
+| 13 | fbitindex | 位图 | int8 | 64 |  | √ | 0 | 位图 |
+| 14 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 15 | fname | 名称 | varchar | 500 |  | √ | ' ' | 名称 |
+| 16 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 17 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 18 | fuserid | 人员 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 19 | fctrlstrategy | 控制策略 | varchar | 5 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
+| 20 | fenabletime | 启用时间 | timestamp | 0 |  |  | null | 启用时间 |
+| 21 | fenableuser | 启用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 22 | fenable | 使用状态 | bpchar | 1 |  | √ | '0' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 23 | fnumber | 编号 | varchar | 100 |  | √ | ' ' | 编号 |
+| 24 | fuseorgid | 业务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 25 | fsourcebitindex | 原资料位图 | int8 | 64 |  | √ | 0 | 原资料位图 |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fid | fid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_mpdm_fuserid |  | fuserid |
+| 2 | idx_t_mpdm_persjob_master |  | fmasterid |
+| 3 | pk_mpdm_persjob |  | fid |
+| 4 | idx_t_mpdm_persjob_createorg |  | fcreateorgid |
+
+---
+
+## 工种信息-子表 t_mpdm_persjobentry
+
+- **表名称：** 工种信息-子表
+- **表名：** t_mpdm_persjobentry
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fpjdefault | 默认 | bpchar | 1 |  | √ | '0' | 默认 |
+| 3 | fjopid | 工种 | int8 | 64 |  | √ | 0 | [工种 mpdm_jobtype](../mpdm_files/mpdm_jobtype.md) |
+| 4 | fjoblevelid | 工种等级 | int8 | 64 |  | √ | 0 | [工种等级 mpdm_joblevel](../mpdm_files/mpdm_joblevel.md) |
+| 5 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
+| 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fentryid | fentryid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | pk_mpdm_persjobentry |  | fentryid |
+| 2 | idx_mpdm_persjobentry_id |  | fid |
+
+---
+
+## 附件-附件表 t_mpdm_persjob_mudyn
+
+- **表名称：** 附件-附件表
+- **表名：** t_mpdm_persjob_mudyn
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [附件字段实体 bd_attachment](../frame_files/bd_attachment.md) |
+| 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | FPKID |
+| 4 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fpkid | fpkid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_mpdm_persjob_mudynid |  | fbasedataid,fentryid |
+| 2 | pk_mpdm_persjob_mudyn |  | fpkid |

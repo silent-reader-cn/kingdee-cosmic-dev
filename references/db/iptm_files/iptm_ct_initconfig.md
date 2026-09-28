@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 3 | fuserid | 用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fuserid | 用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fexceptionperm | 例外权限 | varchar | 50 |  | √ | ' ' | 例外权限,枚举: 1 :允许新增和修改 2 :允许修改 |
 | 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 
@@ -104,5 +104,5 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_iptm_ct_initconfig |  | fstoragepath |
-| 2 | pk_iptm_ct_initconfig |  | fid |
+| 1 | pk_iptm_ct_initconfig |  | fid |
+| 2 | idx_iptm_ct_initconfig |  | fstoragepath |

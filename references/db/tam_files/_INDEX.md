@@ -28,6 +28,6 @@
 | 16 | `t_tam_declare_entry` | 申报表分录单据-主表 | 7 | [tam_declare_entry.md](./tam_declare_entry.md) |
 | 17 | `t_tam_tax_archives` | 税务档案-主表 | 14 | [tam_tax_archives.md](./tam_tax_archives.md) |
 | 18 | `t_tam_tax_archives_l` | 税务档案-多语言表 | 4 | [tam_tax_archives.md](./tam_tax_archives.md) |
-| 19 | `t_tctb_declare_main` | 申报表单据列表-主表 | 66 | [tam_declare_bill.md](./tam_declare_bill.md) |
-| 20 | `t_tctb_draft_main` | 底稿列表-主表 | 24 | [tam_draft_bill.md](./tam_draft_bill.md) |
-| 21 | `t_tpo_declare_main_tsd` | 计提底稿任务-主表 | 45 | [tam_declare_main_tsd.md](./tam_declare_main_tsd.md) |
+| 19 | `t_tctb_declare_main` | 申报表单据列表-主表 | 80 | [tam_declare_bill.md](./tam_declare_bill.md) |
+| 20 | `t_tctb_draft_main` | 底稿列表-主表 | 32 | [tam_draft_bill.md](./tam_draft_bill.md) |
+| 21 | `t_tpo_declare_main_tsd` | 计提底稿任务-主表 | 59 | [tam_declare_main_tsd.md](./tam_declare_main_tsd.md) |

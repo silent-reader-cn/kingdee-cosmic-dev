@@ -10,8 +10,8 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | froleid | 角色 | varchar | 250 |  | √ | ' ' | 通用角色 perm_role |
-| 3 | fschemeid | 方案 | int8 | 64 |  | √ | 0 | 首页方案 portal_scheme |
+| 2 | froleid | 角色 | varchar | 250 |  | √ | ' ' | [通用角色 perm_role](../base_files/perm_role.md) |
+| 3 | fschemeid | 方案 | int8 | 64 |  | √ | 0 | [首页方案 portal_scheme](../portal_files/portal_scheme.md) |
 
 ### 列规则定义
 

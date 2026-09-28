@@ -10,8 +10,8 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | forgid | 核算组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 3 | faccountbookid | 账簿 | int8 | 64 |  | √ | 0 | 账簿 gl_accountbook |
+| 2 | forgid | 核算组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 3 | faccountbookid | 账簿 | int8 | 64 |  | √ | 0 | [账簿 gl_accountbook](../gl_files/gl_accountbook.md) |
 
 ### 列规则定义
 
@@ -46,7 +46,7 @@
 | 7 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 8 | faccoutid | 会计科目 | int8 | 64 |  | √ | 0 | 会计科目 bd_accountview |
 | 9 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 10 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 10 | fcurrencyid | 币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 | 11 | fdefval | 固定值 | numeric | 23 | 10 | √ | 0.0000000000 | 固定值 |
 
 ### 列规则定义

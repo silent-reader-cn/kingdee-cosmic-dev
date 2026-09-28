@@ -25,8 +25,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_interface_c_l_1 |  | fid |
-| 2 | pk_t_isc_interface_cat_l |  | fpkid |
+| 1 | pk_t_isc_interface_cat_l |  | fpkid |
+| 2 | idx_interface_c_l_1 |  | fid |
 
 ---
 
@@ -40,16 +40,16 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fisleaf | 是否叶子 | bpchar | 1 |  | √ | '1' | 是否叶子 |
-| 4 | fparentid | 上级 | int8 | 64 |  | √ | 0 | API分类 isc_interface_category |
+| 4 | fparentid | 上级 | int8 | 64 |  | √ | 0 | [API分类 isc_interface_category](../iscb_files/isc_interface_category.md) |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 6 | fdescribe | 备注 | varchar | 100 |  | √ | ' ' | 备注 |
 | 7 | flongnumber | 长编码 | varchar | 150 |  | √ | ' ' | 长编码 |
 | 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 9 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 10 | flevel | 级次 | int8 | 64 |  | √ | 0 | 级次 |
-| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 13 | fpreset | 是否预置 | bpchar | 1 |  | √ | '1' | 是否预置 |
 | 14 | fenable | 使用状态 | varchar | 30 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |

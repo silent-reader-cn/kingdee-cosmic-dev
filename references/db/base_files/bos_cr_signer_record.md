@@ -27,4 +27,5 @@
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
 | 1 | pk_t_signer_record |  | fentryid |
-| 2 | idx_signer_record_fk |  | fid |
+| 2 | idx_t_signer_record_fkey_fversion |  | fkey,fversion |
+| 3 | idx_signer_record_fk |  | fid |

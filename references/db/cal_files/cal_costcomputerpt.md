@@ -17,11 +17,11 @@
 | 6 | fincome | 收入 | varchar | 255 |  | √ | ' ' | 收入 |
 | 7 | fsettle | 结存 | varchar | 255 |  | √ | ' ' | 结存 |
 | 8 | fbillnumber | 单据编号 | varchar | 100 |  | √ | ' ' | 单据编号 |
-| 9 | flocationid | 仓位 | int8 | 64 |  | √ | 0 | 仓位 bd_location |
+| 9 | flocationid | 仓位 | int8 | 64 |  | √ | 0 | [仓位 bd_location](../sbd_files/bd_location.md) |
 | 10 | faccounttype | 计价方法 | varchar | 100 |  | √ | ' ' | 计价方法,枚举: A :加权平均法 B :移动平均法 G :先进先出法 |
 | 11 | fcaldimension | 核算维度 | varchar | 200 |  | √ | ' ' | 核算维度 |
-| 12 | fstorageorgid | 库存组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 13 | fwarehsid | 仓库 | int8 | 64 |  | √ | 0 | 仓库 bd_warehouse |
+| 12 | fstorageorgid | 库存组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 13 | fwarehsid | 仓库 | int8 | 64 |  | √ | 0 | [仓库 bd_warehouse](../sbd_files/bd_warehouse.md) |
 | 14 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 15 | fbilltype | 单据类型 | varchar | 100 |  | √ | ' ' | 单据类型 |
 
@@ -50,13 +50,13 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcostaccount | 成本主体 | int8 | 64 |  | √ | 0 | 成本主体 cal_bd_costaccount |
+| 2 | fcostaccount | 成本主体 | int8 | 64 |  | √ | 0 | [成本主体 cal_bd_costaccount](../cal_files/cal_bd_costaccount.md) |
 | 3 | fcalstatus | 结转状态 | varchar | 5 |  | √ | 'A' | 结转状态,枚举: A :结转成功 B :结转失败 C :警告 |
-| 4 | fperiodid | 会计期间 | int8 | 64 |  | √ | 0 | 会计日历 bd_period |
-| 5 | fcalorgid | 核算组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 6 | fcalsystemid | 核算体系 | int8 | 64 |  | √ | 0 | 核算体系（已作废） bd_accountingsys |
+| 4 | fperiodid | 会计期间 | int8 | 64 |  | √ | 0 | [会计日历 bd_period](../fibd_files/bd_period.md) |
+| 5 | fcalorgid | 核算组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 6 | fcalsystemid | 核算体系 | int8 | 64 |  | √ | 0 | [核算体系（已作废） bd_accountingsys](../fibd_files/bd_accountingsys.md) |
 | 7 | fnextseq | 分录下个序号 | int8 | 64 |  | √ | 0 | 分录下个序号 |
-| 8 | fmaterial | 物料 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 8 | fmaterial | 物料 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 9 | fcaltime | 计算时间 | timestamp | 0 |  |  | null | 计算时间 |
 | 10 | fisvalid | 是否有效 | bpchar | 1 |  | √ | '0' | 是否有效 |
 

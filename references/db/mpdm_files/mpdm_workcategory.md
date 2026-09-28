@@ -13,9 +13,9 @@
 | 2 | fname | 名称(弃用) | varchar | 50 |  | √ | ' ' | 名称(弃用) |
 | 3 | fstatus | 生效状态(弃用) | varchar | 50 |  | √ | ' ' | 生效状态(弃用),枚举: A :生效 B :失效 |
 | 4 | fstate | 说明(弃用) | varchar | 255 |  | √ | ' ' | 说明(弃用) |
-| 5 | fworkdetailid | 名称 | int8 | 64 |  | √ | 0 | 工作内容明细 mpdm_workscopedetail |
+| 5 | fworkdetailid | 名称 | int8 | 64 |  | √ | 0 | [工作内容明细 mpdm_workscopedetail](../mpdm_files/mpdm_workscopedetail.md) |
 | 6 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 7 | fchecktypeid | 检修级别编码(弃用) | int8 | 64 |  | √ | 0 | 检修级别 mpdm_checktype |
+| 7 | fchecktypeid | 检修级别编码(弃用) | int8 | 64 |  | √ | 0 | [检修级别 mpdm_checktype](../mpdm_files/mpdm_checktype.md) |
 | 8 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 
 ### 列规则定义
@@ -43,22 +43,22 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fremark | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
 | 4 | fname | 类别名称 | varchar | 50 |  | √ | ' ' | 类别名称 |
-| 5 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | faduittime | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
 | 7 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 8 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 9 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 8 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 9 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 11 | fctrlstrategy | 控制策略 | varchar | 50 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
 | 12 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 13 | fischecktype | 从检修级别引入(弃用) | bpchar | 1 |  | √ | '0' | 从检修级别引入(弃用) |
 | 14 | fstate | 类别说明 | varchar | 255 |  | √ | ' ' | 类别说明 |
-| 15 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 15 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 16 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 17 | fauditor | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 17 | fauditor | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 18 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 19 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
 | 20 | fenable | 使用状态 | varchar | 50 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |

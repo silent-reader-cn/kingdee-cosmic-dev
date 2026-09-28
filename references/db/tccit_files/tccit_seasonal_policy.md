@@ -58,7 +58,7 @@
 | 5 | fsospersonnum | 季初从业人数 | int8 | 64 |  | √ | 0 | 季初从业人数 |
 | 6 | feosassets | 季末资产总额（万元） | numeric | 23 | 10 | √ | 0.0000000000 | 季末资产总额（万元） |
 | 7 | fzjgftbl | 总机构分摊比例 | numeric | 23 | 10 | √ | 0 | 总机构分摊比例 |
-| 8 | forgid | 组织名称： | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 8 | forgid | 组织名称： | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 9 | fsuittype | 软件集成电路企业优惠政策适用类型： | varchar | 50 |  | √ | ' ' | 软件集成电路企业优惠政策适用类型：,枚举: 1 :新政策 2 :原政策 |
 | 10 | flevytype | 征收方式 | varchar | 50 |  | √ | ' ' | 征收方式,枚举: hdzs :核定征收 czzs :查账征收 3 :单选按钮2 4 :单选按钮3 |
 | 11 | fqbfzjgftbl | 全部分支机构分摊比例 | numeric | 23 | 10 | √ | 0 | 全部分支机构分摊比例 |
@@ -75,7 +75,8 @@
 | 22 | fprepaytype | 预缴方式： | varchar | 30 |  | √ | ' ' | 预缴方式：,枚举: 1 :按照实际利润额预缴 2 :按照上一纳税年度应纳税所得额平均额预缴 3 :按照税务机关确定的其他方法预缴 |
 | 23 | fyear | 所属税期： | varchar | 30 |  | √ | ' ' | 所属税期：,枚举: 2019 :2019年 : |
 | 24 | fjidu | 季度 | varchar | 30 |  | √ | ' ' | 季度,枚举: 1 :一季度 2 :二季度 3 :三季度 4 :四季度 |
-| 25 | fregistertype | 登记注册类型： | int8 | 64 |  | √ | 0 | 注册登记类型 tax_info_registertype |
+| 25 | fyjprofitslogic | 预缴底稿会计利润取数逻辑 | varchar | 50 |  | √ | ' ' | 预缴底稿会计利润取数逻辑,枚举: bqfse :本期发生额 bnlje :本年累计额 |
+| 26 | fregistertype | 登记注册类型： | int8 | 64 |  | √ | 0 | [注册登记类型 tax_info_registertype](../tctb_files/tax_info_registertype.md) |
 
 ### 列规则定义
 
@@ -110,7 +111,7 @@
 | 7 | fbranceprofitmyear | 开始计算优惠年度： | varchar | 50 |  | √ | ' ' | 开始计算优惠年度： |
 | 8 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 9 | fbranchprofittype | 优惠类型： | varchar | 50 |  | √ | ' ' | 优惠类型： |
-| 10 | fbranchorgid | 分支机构: | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 10 | fbranchorgid | 分支机构: | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 
 ### 列规则定义
 
@@ -167,7 +168,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | forgid | 组织 | int8 | 64 |  | √ | 0 | 税务组织信息 bastax_taxorg |
+| 2 | forgid | 组织 | int8 | 64 |  | √ | 0 | [税务组织信息 bastax_taxorg](../bastax_files/bastax_taxorg.md) |
 | 3 | fkdqjyqylx | 跨地区经营企业类型 | varchar | 50 |  | √ | ' ' | 跨地区经营企业类型,枚举: 100 :非跨地区经营企业 210 :总机构（跨省）——适用《跨地区经营汇总纳税企业所得税征收管理办法》 220 :总机构（跨省）——不适用《跨地区经营汇总纳税企业所得税征收管理办法》 230 :总机构（省内） 311 :分支机构（须进行完整年度申报并按比例纳税） 312 :分支机构（须进行完整年度申报但不就地缴纳） : |
 | 4 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 5 | fparententryid | fparententryid | int8 | 64 |  | √ | 0 | pid |

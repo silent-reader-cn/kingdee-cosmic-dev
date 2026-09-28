@@ -10,12 +10,12 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | '0' | id |
-| 2 | fentity | 实体对象 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 2 | fentity | 实体对象 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 3 | fstoretb | 存储表 | varchar | 30 |  | √ | ' ' | 存储表 |
 | 4 | fmodifydate | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 5 | fdbkey | 库标识 | varchar | 20 |  | √ | ' ' | 库标识 |
 | 6 | fsparsecol | 稀疏字段 | varchar | 20 |  | √ | ' ' | 稀疏字段 |
-| 7 | fmodifier | 修改人 | int8 | 64 |  | √ | '0' | 人员 bos_user |
+| 7 | fmodifier | 修改人 | int8 | 64 |  | √ | '0' | [人员 bos_user](../base_files/bos_user.md) |
 | 8 | factualtb | 实际物理表 | varchar | 30 |  | √ | ' ' | 实际物理表 |
 | 9 | fentitytb | 物理表 | varchar | 30 |  | √ | ' ' | 物理表 |
 | 10 | fsparsesize | 稀疏大小 | int4 | 32 |  | √ | 10000 | 稀疏大小 |

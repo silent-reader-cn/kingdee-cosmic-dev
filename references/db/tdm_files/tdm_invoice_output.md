@@ -16,14 +16,14 @@
 | 5 | fcheckcode | 校验码 | varchar | 100 |  | √ | ' ' | 校验码 |
 | 6 | finvoicestatus | 发票状态 | varchar | 30 |  | √ | ' ' | 发票状态,枚举: 0 :正常 1 :失控 2 :作废 3 :红冲 4 :异常 |
 | 7 | ftotalamount | 价税合计 | numeric | 23 | 10 | √ | 0.0000000000 | 价税合计 |
-| 8 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 8 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 9 | fbuyeraccount | 购方银行帐号 | varchar | 100 |  | √ | ' ' | 购方银行帐号 |
 | 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fsaleraddressphone | 销方地址电话 | varchar | 200 |  | √ | ' ' | 销方地址电话 |
 | 13 | fsaleraccount | 销方银行帐号 | varchar | 200 |  | √ | ' ' | 销方银行帐号 |
 | 14 | fmachineno | 机器编号 | varchar | 100 |  | √ | ' ' | 机器编号 |
-| 15 | fbaseinvoicetype | 发票类型 | int8 | 64 |  | √ | 0 | 发票类型 bd_invoicetype |
+| 15 | fbaseinvoicetype | 发票类型 | int8 | 64 |  | √ | 0 | [发票种类 bd_invoicetype](../basedata_files/bd_invoicetype.md) |
 | 16 | fsgfp | 收购发票标志 | varchar | 30 |  | √ | ' ' | 收购发票标志,枚举: 0 :其他增值税普通发票 1 :农产品销售发票 2 :农产品收购发票 |
 | 17 | finvoicedate | 开票日期 | timestamp | 0 |  |  | null | 开票日期 |
 | 18 | finvoicecode | 发票代码 | varchar | 100 |  | √ | ' ' | 发票代码 |
@@ -35,8 +35,8 @@
 | 24 | fbuyertaxno | 购方税号 | varchar | 100 |  | √ | ' ' | 购方税号 |
 | 25 | ftaxamount | 合计税额 | numeric | 23 | 10 | √ | 0.0000000000 | 合计税额 |
 | 26 | fremark | 备注 | varchar | 400 |  | √ | ' ' | 备注 |
-| 27 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 28 | fprojectid | 项目名称 | int8 | 64 |  | √ | 0 | 预缴项目信息 tcvat_prepay_project_info |
+| 27 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 28 | fprojectid | 项目名称 | int8 | 64 |  | √ | 0 | [预缴项目信息 tcvat_prepay_project_info](../tcvat_files/tcvat_prepay_project_info.md) |
 | 29 | fbillstatus | 单据状态 | varchar | 30 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 30 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 31 | foriginalinvoiceno | 原发票号码 | varchar | 100 |  | √ | ' ' | 原发票号码 |
@@ -50,7 +50,7 @@
 | 39 | fsalername | 销方名称 | varchar | 100 |  | √ | ' ' | 销方名称 |
 | 40 | fdatasource | 数据来源 | varchar | 50 |  | √ | ' ' | 数据来源 |
 | 41 | fproxymark | 代开标识 | varchar | 30 |  | √ | ' ' | 代开标识,枚举: 0 :默认 1 :代开 |
-| 42 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 42 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

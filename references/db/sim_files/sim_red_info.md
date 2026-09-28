@@ -12,10 +12,10 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fbuyeraddr | 购方地址电话 | varchar | 100 |  | √ | ' ' | 购方地址电话 |
 | 3 | fdrawer | 开票人： | varchar | 50 |  | √ | ' ' | 开票人： |
-| 4 | ftaxorg | 税务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 4 | ftaxorg | 税务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | ftaxbureauaudittime | 税局审核日期： | timestamp | 0 |  |  | null | 税局审核日期： |
 | 6 | ftotalamount | 价税合计 | numeric | 23 | 10 | √ | 0.0000000000 | 价税合计 |
-| 7 | forg | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 7 | forg | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | fmodifytime | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
 | 9 | fbatchbelong | 申请批次号 | varchar | 50 |  | √ | ' ' | 申请批次号 |
 | 10 | fsalerbankacc | fsalerbankacc | varchar | 50 |  | √ | ' ' |  |
@@ -30,9 +30,9 @@
 | 19 | finfotype | 信息表类型 | varchar | 30 |  | √ | '0' | 信息表类型,枚举: 0 :非特殊票种 2 :机动车（涉及退货和开具错误等，合格证退回） 3 :机动车（仅涉及销售折让，合格证不退回）） |
 | 20 | finfodate | 填开日期 | timestamp | 0 |  |  | null | 填开日期 |
 | 21 | fbillstatus | 单据状态 | varchar | 10 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 D :无需审批 |
-| 22 | fsubmitterid | 申请人： | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 22 | fsubmitterid | 申请人： | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 23 | foriginalinvoiceno | 原发票号码 | varchar | 15 |  | √ | ' ' | 原发票号码 |
-| 24 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 24 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 25 | fauditdate | 审核日期： | timestamp | 0 |  |  | null | 审核日期： |
 | 26 | freason | 申请事由： | varchar | 200 |  | √ | ' ' | 申请事由： |
 | 27 | fdeduction | 扣除额 | numeric | 23 | 10 | √ | 0 | 扣除额 |
@@ -46,7 +46,7 @@
 | 35 | fbuyerbank | 购方开户行及账号 | varchar | 100 |  | √ | ' ' | 购方开户行及账号 |
 | 36 | fsalername | 销方名称 | varchar | 100 |  | √ | ' ' | 销方名称 |
 | 37 | fbuyerbankacc | fbuyerbankacc | varchar | 50 |  | √ | ' ' |  |
-| 38 | fauditorid | 审核人： | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 38 | fauditorid | 审核人： | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 39 | fterminalno | 终端号 | varchar | 50 |  | √ | ' ' | 终端号 |
 | 40 | fpayee | 收款人： | varchar | 50 |  | √ | ' ' | 收款人： |
 | 41 | fhsbz | 是否含税 | varchar | 30 |  | √ | ' ' | 是否含税,枚举: 0 :不含税 1 :含税 |
@@ -54,7 +54,7 @@
 | 43 | fbuyertelno | fbuyertelno | varchar | 50 |  | √ | ' ' |  |
 | 44 | ftotaltax | 合计税额 | numeric | 23 | 10 | √ | 0.0000000000 | 合计税额 |
 | 45 | fstatus | 信息表状态 | varchar | 30 |  | √ | ' ' | 信息表状态,枚举: 1 :未上传 2 :审核失败 3 :审核成功 4 :已开票 |
-| 46 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 46 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 47 | freviewer | 复核人： | varchar | 50 |  | √ | ' ' | 复核人： |
 | 48 | fbuyertaxno | 购方纳税人识别号 | varchar | 50 |  | √ | ' ' | 购方纳税人识别号 |
 | 49 | fsalerbank | 销方开户行及账号 | varchar | 100 |  | √ | ' ' | 销方开户行及账号 |

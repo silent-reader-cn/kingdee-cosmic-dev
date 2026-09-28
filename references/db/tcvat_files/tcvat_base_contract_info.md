@@ -19,7 +19,7 @@
 | 8 | famount | 合同签订金额（元） | numeric | 23 | 10 | √ | 0.0000000000 | 合同签订金额（元） |
 | 9 | fplanend | 计划完成时间 | timestamp | 0 |  |  | null | 计划完成时间 |
 | 10 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 11 | fcontractno | 合同编码 | varchar | 50 |  | √ | ' ' | 合同编码 |
+| 11 | fcontractno | 合同编号 | varchar | 50 |  | √ | ' ' | 合同编号 |
 | 12 | fplanstart | 计划开始时间 | timestamp | 0 |  |  | null | 计划开始时间 |
 
 ### 列规则定义

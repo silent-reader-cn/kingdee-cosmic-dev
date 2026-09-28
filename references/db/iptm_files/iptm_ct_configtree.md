@@ -41,16 +41,16 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | forderfield | 实施排序码 | varchar | 50 |  | √ | ' ' | 实施排序码 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fisleaf | 是否叶子 | bpchar | 1 |  | √ | ' ' | 是否叶子 |
-| 5 | fparentid | 上级 | int8 | 64 |  | √ | 0 | 传输对象左树 iptm_ct_configtree |
+| 5 | fparentid | 上级 | int8 | 64 |  | √ | 0 | [传输对象左树 iptm_ct_configtree](../iptm_files/iptm_ct_configtree.md) |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 7 | flongnumber | 长编码 | varchar | 50 |  | √ | ' ' | 长编码 |
 | 8 | fispreset | 是否系统预置 | bpchar | 1 |  | √ | ' ' | 是否系统预置 |
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 10 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 11 | flevel | 级次 | int8 | 64 |  | √ | 0 | 级次 |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 14 | fenable | 使用状态 | varchar | 50 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 15 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |

@@ -12,18 +12,18 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | findicatorscenario | 所属指标场景 | varchar | 50 |  | √ | ' ' | 所属指标场景,枚举: |
 | 3 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fisleaf | 是否叶子 | bpchar | 1 |  | √ | '1' | 是否叶子 |
 | 6 | fterm | 释义条款 | varchar | 259 |  | √ | ' ' | 释义条款 |
 | 7 | fshowrows | 显示顺序 | int8 | 64 |  | √ | 0 | 显示顺序 |
-| 8 | fparentid | 上级分类 | int8 | 64 |  | √ | 0 | 指标分类目录 ipo_quota_type |
+| 8 | fparentid | 上级分类 | int8 | 64 |  | √ | 0 | [指标分类目录 ipo_quota_type](../ipobase_files/ipo_quota_type.md) |
 | 9 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 10 | fdescribe | 描述 | varchar | 250 |  | √ | ' ' | 描述 |
 | 11 | flongnumber | 长编码 | varchar | 50 |  | √ | ' ' | 长编码 |
 | 12 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 13 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 14 | flevel | 级次 | int8 | 64 |  | √ | 0 | 级次 |
-| 15 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 15 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 16 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 17 | fenable | 使用状态 | varchar | 50 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 18 | fterm_tag | 释义条款_详情 | text | 0 |  |  | null | 释义条款_详情 |

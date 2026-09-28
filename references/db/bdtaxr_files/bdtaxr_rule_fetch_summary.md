@@ -10,13 +10,13 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fcreator | 调整人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fcreator | 调整人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fadjustamount | 调整数值 | numeric | 23 | 10 | √ | 0 | 调整数值 |
 | 4 | fpreadjust | 调整前数值 | numeric | 23 | 10 | √ | 0 | 调整前数值 |
 | 5 | fpostadjust | 调整后数值 | numeric | 23 | 10 | √ | 0 | 调整后数值 |
 | 6 | fcreatetime | 调整时间 | timestamp | 0 |  |  | null | 调整时间 |
 | 7 | fadjusttype | 调整类型 | varchar | 50 |  | √ | ' ' | 调整类型,枚举: 1 :数据源调整 2 :手工录入调整 |
-| 8 | ffetchorg | 取数组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 8 | ffetchorg | 取数组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 9 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 10 | fadjustexplain | 调整说明 | varchar | 2000 |  | √ | ' ' | 调整说明 |
 | 11 | frulename | 规则名称 | varchar | 50 |  | √ | ' ' | 规则名称 |
@@ -50,7 +50,7 @@
 | 2 | fadjustamount | 调整数值 | numeric | 23 | 10 | √ | 0 | 调整数值 |
 | 3 | fcardname | 卡片名称 | varchar | 300 |  | √ | ' ' | 卡片名称 |
 | 4 | ftotalamount | 总数 | numeric | 23 | 10 | √ | 0 | 总数 |
-| 5 | ffetchorg | 取数组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | ffetchorg | 取数组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 7 | fruleid | 规则id | int8 | 64 |  | √ | 0 | 规则id |
 | 8 | famount | 取数金额 | numeric | 23 | 10 | √ | 0 | 取数金额 |
@@ -82,23 +82,25 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | famountfield | 金额字段 | int8 | 64 |  | √ | 0 | 数据源字段配置 tctb_datasource_entry |
-| 2 | fadvancedconfjson | 高级配置JSON | text | 0 |  |  | null | 高级配置JSON |
-| 3 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 4 | ffetchdirection | 取数方向 | varchar | 50 |  | √ | ' ' | 取数方向 |
-| 5 | fbizname | 业务名称 | varchar | 50 |  | √ | ' ' | 业务名称 |
-| 6 | fconditionjson | 过滤条件JSON | text | 0 |  |  | null | 过滤条件JSON |
-| 7 | fenddate | 所属税期.结束 | timestamp | 0 |  |  | null | 所属税期.结束 |
-| 8 | fstartdate | 所属税期.开始 | timestamp | 0 |  |  | null | 所属税期.开始 |
-| 9 | ffetchamount | 取数金额 | numeric | 23 | 10 | √ | 0 | 取数金额 |
-| 10 | fabsolute | 绝对值 | varchar | 50 |  | √ | ' ' | 绝对值 |
-| 11 | famounttype | 金额字段基础资料类型 | varchar | 50 |  | √ | ' ' | 金额字段基础资料类型,枚举: tctb_datasource_entry :数据源字段配置 tpo_col_member :列维成员管理 |
-| 12 | fdatasource | 数据源 | int8 | 64 |  | √ | 0 | 数据源配置 tctb_custom_datasource |
-| 13 | foriginamount | 源金额 | numeric | 23 | 10 | √ | 0 | 源金额 |
-| 14 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 | id |
-| 15 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
-| 16 | ffiltercondition | 过滤条件 | varchar | 2000 |  | √ | ' ' | 过滤条件 |
-| 17 | ffetchtype | 取数方式 | varchar | 50 |  | √ | ' ' | 取数方式 |
+| 1 | faccountorg | 多维取数核算组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 2 | famountfield | 金额字段 | int8 | 64 |  | √ | 0 | 数据源字段配置 tctb_datasource_entry |
+| 3 | fadvancedconfjson | 高级配置JSON | text | 0 |  |  | null | 高级配置JSON |
+| 4 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
+| 5 | ffetchdirection | 取数方向 | varchar | 50 |  | √ | ' ' | 取数方向 |
+| 6 | fbizname | 业务名称 | varchar | 50 |  | √ | ' ' | 业务名称 |
+| 7 | fconditionjson | 过滤条件JSON | text | 0 |  |  | null | 过滤条件JSON |
+| 8 | fenddate | 所属税期.结束 | timestamp | 0 |  |  | null | 所属税期.结束 |
+| 9 | fbizdimensionfilter | 维度过滤条件JSON | text | 0 |  |  | null | 维度过滤条件JSON |
+| 10 | fstartdate | 所属税期.开始 | timestamp | 0 |  |  | null | 所属税期.开始 |
+| 11 | ffetchamount | 取数金额 | numeric | 23 | 10 | √ | 0 | 取数金额 |
+| 12 | fabsolute | 绝对值 | varchar | 50 |  | √ | ' ' | 绝对值 |
+| 13 | famounttype | 金额字段基础资料类型 | varchar | 50 |  | √ | ' ' | 金额字段基础资料类型,枚举: tctb_datasource_entry :数据源字段配置 tpo_col_member :列维成员管理 |
+| 14 | fdatasource | 数据源 | int8 | 64 |  | √ | 0 | [数据源配置 tctb_custom_datasource](../tctb_files/tctb_custom_datasource.md) |
+| 15 | foriginamount | 源金额 | numeric | 23 | 10 | √ | 0 | 源金额 |
+| 16 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 | id |
+| 17 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
+| 18 | ffiltercondition | 过滤条件 | varchar | 2000 |  | √ | ' ' | 过滤条件 |
+| 19 | ffetchtype | 取数方式 | varchar | 50 |  | √ | ' ' | 取数方式 |
 
 ### 列规则定义
 
@@ -126,19 +128,20 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | frulefetchmainid | 规则取数主表id | int8 | 64 |  | √ | 0 | 规则取数主表id |
-| 3 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 4 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 5 | flastamount | 结果值 | numeric | 23 | 10 | √ | 0 | 结果值 |
-| 6 | freportitem | 报表项 | varchar | 100 |  | √ | ' ' | 报表项 |
-| 7 | famount | 金额 | numeric | 23 | 10 | √ | 0 | 金额 |
-| 8 | fskssqq | 所属税期.开始 | timestamp | 0 |  |  | null | 所属税期.开始 |
-| 9 | fadjustamount | 调整值 | numeric | 23 | 10 | √ | 0 | 调整值 |
-| 10 | fskssqz | 所属税期.结束 | timestamp | 0 |  |  | null | 所属税期.结束 |
-| 11 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 12 | fruleid | 规则id | varchar | 500 |  | √ | ' ' | 规则id |
-| 13 | fruleitem | 规则项目类型 | varchar | 200 |  | √ | ' ' | 规则项目类型 |
-| 14 | foriginamount | 原数值 | numeric | 23 | 10 | √ | 0 | 原数值 |
-| 15 | fruletable | 规则表 | varchar | 100 |  | √ | ' ' | 规则表 |
+| 3 | fdynamicuniquevalue | 动态行唯一字段值 | varchar | 2000 |  | √ | ' ' | 动态行唯一字段值 |
+| 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 6 | flastamount | 结果值 | numeric | 23 | 10 | √ | 0 | 结果值 |
+| 7 | freportitem | 报表项 | varchar | 100 |  | √ | ' ' | 报表项 |
+| 8 | famount | 金额 | numeric | 23 | 10 | √ | 0 | 金额 |
+| 9 | fskssqq | 所属税期.开始 | timestamp | 0 |  |  | null | 所属税期.开始 |
+| 10 | fadjustamount | 调整值 | numeric | 23 | 10 | √ | 0 | 调整值 |
+| 11 | fskssqz | 所属税期.结束 | timestamp | 0 |  |  | null | 所属税期.结束 |
+| 12 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 13 | fruleid | 规则id | varchar | 500 |  | √ | ' ' | 规则id |
+| 14 | fruleitem | 规则项目类型 | varchar | 200 |  | √ | ' ' | 规则项目类型 |
+| 15 | foriginamount | 原数值 | numeric | 23 | 10 | √ | 0 | 原数值 |
+| 16 | fruletable | 规则表 | varchar | 100 |  | √ | ' ' | 规则表 |
 
 ### 列规则定义
 

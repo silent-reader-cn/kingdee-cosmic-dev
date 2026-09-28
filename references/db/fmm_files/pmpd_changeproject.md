@@ -130,7 +130,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fpsourcetypeid | 来源单据类型 | varchar | 50 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 2 | fpsourcetypeid | 来源单据类型 | varchar | 50 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 3 | fsourcenumber | 来源单据编码 | varchar | 30 |  | √ | ' ' | 来源单据编码 |
 | 4 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
@@ -198,20 +198,20 @@
 | 4 | frealstartdate | 实际开始日期 | timestamp | 0 |  |  | null | 实际开始日期 |
 | 5 | festperiod | 预计工期 | int8 | 64 |  | √ | 0 | 预计工期 |
 | 6 | fplanmode | 计划模式 | varchar | 5 |  | √ | ' ' | 计划模式,枚举: 1 :标准 2 :敏捷 |
-| 7 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 8 | fpjcaleid | 项目日历 | int8 | 64 |  | √ | 0 | 项目日历 pmbd_calendar |
+| 7 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 8 | fpjcaleid | 项目日历 | int8 | 64 |  | √ | 0 | [项目日历 pmbd_calendar](../fmm_files/pmbd_calendar.md) |
 | 9 | fpreschedate | 最近排程日期 | timestamp | 0 |  |  | null | 最近排程日期 |
 | 10 | fsumcost | 累计成本/投资 | numeric | 23 | 10 | √ | 0 | 累计成本/投资 |
-| 11 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 11 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 12 | fscheattr | 任务排程属性（废弃） | varchar | 5 |  | √ | ' ' | 任务排程属性（废弃）,枚举: 1 :标准 2 :WSB汇总 3 :开始里程碑 4 :完成里程碑 |
 | 13 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 14 | fplanfinshdate | 计划完成日期 | timestamp | 0 |  |  | null | 计划完成日期 |
 | 15 | fplanstartdate | 计划开始日期 | timestamp | 0 |  |  | null | 计划开始日期 |
 | 16 | fpjmglevel | 项目管理等级 | varchar | 5 |  | √ | ' ' | 项目管理等级,枚举: 100 :A 99 :B 98 :C 97 :D 96 :E |
-| 17 | fhrorgid | HR组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 18 | fqualityorgid | 质检组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 17 | fhrorgid | HR组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 18 | fqualityorgid | 质检组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 19 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
-| 20 | fsharecenterid | 共享中心 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 20 | fsharecenterid | 共享中心 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 21 | fpjstatu | 项目状态（旧） | varchar | 5 |  | √ | ' ' | 项目状态（旧）,枚举: |
 | 22 | fname | 项目名称 | varchar | 255 |  | √ | ' ' | 项目名称 |
 | 23 | fsrcsys | 来源系统 | varchar | 50 |  | √ | ' ' | 来源系统 |
@@ -221,55 +221,55 @@
 | 27 | ffullname | 长名称 | varchar | 255 |  | √ | ' ' | 长名称 |
 | 28 | fsrcbillid | 来源单据ID | varchar | 50 |  | √ | ' ' | 来源单据ID |
 | 29 | flongnumber | 长编码 | varchar | 255 |  | √ | ' ' | 长编码 |
-| 30 | fpjmanagerid | 项目经理 | int8 | 64 |  | √ | 0 | 项目经理名册 pmpd_asspjmginfo |
+| 30 | fpjmanagerid | 项目经理 | int8 | 64 |  | √ | 0 | [项目经理名册 pmpd_asspjmginfo](../fmm_files/pmpd_asspjmginfo.md) |
 | 31 | fauditdate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
 | 32 | freason | 变更原因 | varchar | 255 |  | √ | ' ' | 变更原因 |
-| 33 | fpurchaseorgid | 采购组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 33 | fpurchaseorgid | 采购组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 34 | fjobcodeprefix | 任务编码前缀（废弃） | varchar | 50 |  | √ | ' ' | 任务编码前缀（废弃） |
-| 35 | ftimeunit | 工期单位 | int8 | 64 |  | √ | 0 | 工期单位 pmpd_timeunit |
+| 35 | ftimeunit | 工期单位 | int8 | 64 |  | √ | 0 | [工期单位 pmpd_timeunit](../fmm_files/pmpd_timeunit.md) |
 | 36 | fispsync | 同步成功 | bpchar | 1 |  | √ | ' ' | 同步成功 |
 | 37 | fenable | 使用状态 | bpchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 38 | fpsourcetype | 来源类型 | varchar | 30 |  | √ | ' ' | 来源类型,枚举: 1 :手工新增 0 :系统生成 |
-| 39 | ftaxorgid | 税务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 39 | ftaxorgid | 税务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 40 | fnumber | 单据编号 | varchar | 30 |  | √ | ' ' | 单据编号 |
 | 41 | fsyncdate | 同步日期 | timestamp | 0 |  |  | null | 同步日期 |
 | 42 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
-| 43 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 43 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 44 | fcustomerid | 客户 | int8 | 64 |  | √ | 0 | 客户 bd_customer |
 | 45 | fexpstartdate | 预计开始日期 | timestamp | 0 |  |  | null | 预计开始日期 |
 | 46 | fisbdproject | 系统云引入 | bpchar | 1 |  | √ | ' ' | 系统云引入 |
 | 47 | fpdunit | 工期单位 | varchar | 30 |  | √ | ' ' | 工期单位,枚举: 1 :天 |
 | 48 | fpertimeunit | 任务工期时间单位（废弃） | varchar | 5 |  | √ | ' ' | 任务工期时间单位（废弃）,枚举: hour :时 day :天 week :周 month :月 quarter :季 year :年 |
-| 49 | fepsid | 企业项目结构 | int8 | 64 |  | √ | 0 | 企业项目结构 pmbd_orgpros |
+| 49 | fepsid | 企业项目结构 | int8 | 64 |  | √ | 0 | [企业项目结构 pmbd_orgpros](../fmm_files/pmbd_orgpros.md) |
 | 50 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 51 | fplanperiod | 计划工期 | int8 | 64 |  | √ | 0 | 计划工期 |
-| 52 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 52 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 53 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 54 | fassetsorgid | 资产组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 54 | fassetsorgid | 资产组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 55 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
-| 56 | fproductorgid | 生产组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 57 | fpjtypeid | 项目分类 | int8 | 64 |  | √ | 0 | 项目分类 bd_projectkind |
-| 58 | fcapitalorgid | 资金组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 56 | fproductorgid | 生产组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 57 | fpjtypeid | 项目分类 | int8 | 64 |  | √ | 0 | [项目分类 bd_projectkind](../basedata_files/bd_projectkind.md) |
+| 58 | fcapitalorgid | 资金组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 59 | fpnumber | 项目编码 | varchar | 30 |  | √ | ' ' | 项目编码 |
 | 60 | fsrcbillentity | 来源单据实体 | varchar | 50 |  | √ | ' ' | 来源单据实体 |
-| 61 | fcreateorgid | 项目组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 61 | fcreateorgid | 项目组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 62 | fremark | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
-| 63 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 63 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 64 | fjobcomppertype | 任务完成百分比类型（废弃） | varchar | 5 |  | √ | ' ' | 任务完成百分比类型（废弃）,枚举: 1 :实际 2 :工期 3 :数量 |
 | 65 | fexpfinshdate | 预计完成日期 | timestamp | 0 |  |  | null | 预计完成日期 |
-| 66 | fparentid | 上级 | int8 | 64 |  | √ | 0 | 项目变更单 pmpd_changeproject |
+| 66 | fparentid | 上级 | int8 | 64 |  | √ | 0 | [项目变更单 pmpd_changeproject](../fmm_files/pmpd_changeproject.md) |
 | 67 | fjobcodepreincre | 任务编码增量（废弃） | numeric | 23 | 10 | √ | 0 | 任务编码增量（废弃） |
 | 68 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 69 | frealfinshdate | 实际完成日期 | timestamp | 0 |  |  | null | 实际完成日期 |
-| 70 | fsaleorgid | 销售组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 70 | fsaleorgid | 销售组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 71 | frealperiod | 实际工期 | int8 | 64 |  | √ | 0 | 实际工期 |
 | 72 | fctrlstrategy | 控制策略 | varchar | 5 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
-| 73 | fpjstageid | 项目阶段 | int8 | 64 |  | √ | 0 | 项目阶段 pmbd_projectstage |
+| 73 | fpjstageid | 项目阶段 | int8 | 64 |  | √ | 0 | [项目阶段 pmbd_projectstage](../fmm_files/pmbd_projectstage.md) |
 | 74 | flevel | 级次 | int4 | 32 |  | √ | 0 | 级次 |
-| 75 | fprjstate | 项目状态 | int8 | 64 |  | √ | 0 | 项目状态 bd_projectstatus |
-| 76 | faccountorgid | 核算组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 75 | fprjstate | 项目状态 | int8 | 64 |  | √ | 0 | [项目状态 bd_projectstatus](../basedata_files/bd_projectstatus.md) |
+| 76 | faccountorgid | 核算组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 77 | fprojecttype | 项目类型 | varchar | 50 |  | √ | ' ' | 项目类型,枚举: A :标准项目 B :检修项目 |
-| 78 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 78 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 | 79 | fplanstarttime | 计划迭代开始日期 | timestamp | 0 |  |  | null | 计划迭代开始日期 |
 
 ### 列规则定义
@@ -299,7 +299,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fsourcebilltype | 来源单据类型 | varchar | 50 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 2 | fsourcebilltype | 来源单据类型 | varchar | 50 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 3 | fsourcebillid | 来源单据ID | varchar | 50 |  | √ | ' ' | 来源单据ID |
 | 4 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |

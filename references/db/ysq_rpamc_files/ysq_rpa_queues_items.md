@@ -12,7 +12,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | null | id |
 | 2 | fk_ysq_custom_field_tag | 自定义字段_详情 | text | 0 |  |  | null | 自定义字段_详情 |
 | 3 | fk_ysq_sourceid | 数据空间编号 | int8 | 64 |  |  | null | 数据空间编号 |
-| 4 | forgid | 组织 | int8 | 64 |  |  | null | 业务单元 bos_org |
+| 4 | forgid | 组织 | int8 | 64 |  |  | null | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | fk_ysq_item_no | 数据项编号 | varchar | 64 |  |  | NULL | 数据项编号 |
 | 6 | fk_ysq_fail_try_times | 重试次数 | int8 | 64 |  |  | null | 重试次数 |
 | 7 | fk_ysq_agent_no | 终端编号 | varchar | 64 |  |  | NULL | 终端编号 |
@@ -22,13 +22,13 @@
 | 11 | fk_ysq_queue_name | 数据空间名称 | varchar | 254 |  |  | NULL | 数据空间名称 |
 | 12 | fk_ysq_end_time | 队列项执行结束时间 | timestamp | 0 |  |  | null | 队列项执行结束时间 |
 | 13 | fk_ysq_org_code | org_code | int8 | 64 |  |  | null | org_code |
-| 14 | fcreatorid | 创建人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 14 | fcreatorid | 创建人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | fk_ysq_faildesc | 失败描述 | varchar | 255 |  |  | NULL | 失败描述 |
 | 16 | fk_ysq_queue_max_items | 队列最大值 | int8 | 64 |  |  | null | 队列最大值 |
 | 17 | fk_ysq_agent_type | 终端类型 | varchar | 50 |  |  | NULL | 终端类型,枚举: robot :无人值守机器人 studio :设计器 assistant :有人值守机器人 standardRobot :应用机器人 |
 | 18 | fbillno | 单据编号 | varchar | 30 |  | √ | ' ' | 单据编号 |
 | 19 | fk_ysq_proc_code | 流程编号 | varchar | 64 |  |  | NULL | 流程编号 |
-| 20 | fmodifierid | 修改人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 20 | fmodifierid | 修改人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 21 | fk_ysq_run_times | 运行次数 | int8 | 64 |  |  | null | 运行次数 |
 | 22 | fbillstatus | 单据状态 | varchar | 50 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 23 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
@@ -42,7 +42,7 @@
 | 31 | fk_ysq_agent_alias | 终端别名 | varchar | 254 |  |  | NULL | 终端别名 |
 | 32 | fk_ysq_deadline | 超时时间 | timestamp | 0 |  |  | null | 超时时间 |
 | 33 | fk_ysq_status | 状态 | varchar | 50 |  |  | NULL | 状态,枚举: pending :等待运行 waittimeout :等待超时 running :正在运行 success :运行成功 failed :运行失败 retry :重新运行 deleted :已删除 |
-| 34 | fauditorid | 审核人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 34 | fauditorid | 审核人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

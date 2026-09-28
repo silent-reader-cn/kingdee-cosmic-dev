@@ -76,41 +76,44 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fbusdenominator | 分母 | numeric | 23 | 10 | √ | 0 | 分母 |
 | 3 | fbasenumerator | 基本单位分子 | numeric | 23 | 10 | √ | 0 | 基本单位分子 |
-| 4 | fentrybaseunitid | 子项基本单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 4 | fentrybaseunitid | 子项基本单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 5 | freceiveqty | 已收料数量 | numeric | 23 | 10 | √ | 0 | 已收料数量 |
 | 6 | fbaseinvqty | 已入库基本数量 | numeric | 23 | 10 | √ | 0 | 已入库基本数量 |
 | 7 | fbomlevel | BOM级次 | int4 | 32 |  | √ | 0 | BOM级次 |
-| 8 | fentrymaterialversionid | 物料版本 | int8 | 64 |  | √ | 0 | 物料版本 bd_bomversion_new |
+| 8 | fentrymaterialversionid | 物料版本 | int8 | 64 |  | √ | 0 | [物料版本 bd_bomversion_new](../basedata_files/bd_bomversion_new.md) |
 | 9 | fissuemode | 领送料方式 | varchar | 50 |  | √ | ' ' | 领送料方式,枚举: 11010 :生产领料 11050 :直送 11040 :不领料 |
 | 10 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 11 | fscraprate | 变动损耗率(%) | numeric | 23 | 10 | √ | 0 | 变动损耗率(%) |
-| 12 | fbasereceiveqty | 已收料基本数量 | numeric | 23 | 10 | √ | 0 | 已收料基本数量 |
-| 13 | freplacegroup | 替代组号 | int4 | 32 |  | √ | 0 | 替代组号 |
-| 14 | fentrymaterialid | 物料编码 | int8 | 64 |  | √ | 0 | 物料库存信息 bd_materialinventoryinfo |
-| 15 | fentryprojectid | 项目编码 | int8 | 64 |  | √ | 0 | 项目 bd_project |
-| 16 | fownertype | 货主类型 | varchar | 50 |  | √ | ' ' | 货主类型,枚举: bos_org :业务单元 bd_customer :客户 bd_supplier :供应商 |
-| 17 | fparententryid | fparententryid | int8 | 64 |  | √ | 0 | pid |
-| 18 | fbusstandqty | 标准数量 | numeric | 23 | 10 | √ | 0 | 标准数量 |
-| 19 | fbaseassociatedqty | 关联基本数量 | numeric | 23 | 10 | √ | 0 | 关联基本数量 |
-| 20 | fentryauxptyid | 辅助属性 | int8 | 64 |  | √ | 0 | null 001 |
-| 21 | fisreplace | 替代件 | bpchar | 1 |  | √ | '0' | 替代件 |
-| 22 | fisjumplevel | 跳层 | bpchar | 1 |  | √ | '0' | 跳层 |
-| 23 | fbasebusdemandqty | 需求基本数量 | numeric | 23 | 10 | √ | 0 | 需求基本数量 |
-| 24 | fentrytracknumberid | 跟踪号 | int8 | 64 |  | √ | 0 | 跟踪号 bd_tracknumber |
-| 25 | fremark | 备注 | varchar | 512 |  | √ | ' ' | 备注 |
-| 26 | fuseratio | 使用比例(%) | numeric | 23 | 10 | √ | 0 | 使用比例(%) |
-| 27 | fqtytype | 用量类型 | varchar | 50 |  | √ | ' ' | 用量类型,枚举: A :变动 B :固定 C :阶梯 |
-| 28 | finvqty | 已入库数量 | numeric | 23 | 10 | √ | 0 | 已入库数量 |
-| 29 | fbusdemandqty | 需求数量 | numeric | 23 | 10 | √ | 0 | 需求数量 |
-| 30 | fbasedenominator | 基本单位分母 | numeric | 23 | 10 | √ | 0 | 基本单位分母 |
-| 31 | fassociatedqty | 关联数量 | numeric | 23 | 10 | √ | 0 | 关联数量 |
-| 32 | fisstep | 是否阶梯用量 | bpchar | 1 |  | √ | '0' | 是否阶梯用量 |
-| 33 | fbusnumerator | 分子 | numeric | 23 | 10 | √ | 0 | 分子 |
-| 34 | fownerid | 货主 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 35 | fbasebusstandqty | 标准基本数量 | numeric | 23 | 10 | √ | 0 | 标准基本数量 |
-| 36 | fentryunitid | 子项单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 37 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 38 | fisexpanditem | 是否展开子项 | bpchar | 1 |  | √ | '0' | 是否展开子项 |
+| 12 | fbonded | 保税 | bpchar | 1 |  | √ | '0' | 保税 |
+| 13 | fbasereceiveqty | 已收料基本数量 | numeric | 23 | 10 | √ | 0 | 已收料基本数量 |
+| 14 | freplacegroup | 替代组号 | int4 | 32 |  | √ | 0 | 替代组号 |
+| 15 | fentrymaterialid | 物料编码 | int8 | 64 |  | √ | 0 | [物料库存信息 bd_materialinventoryinfo](../sbd_files/bd_materialinventoryinfo.md) |
+| 16 | fentryprojectid | 项目编码 | int8 | 64 |  | √ | 0 | [项目 bd_project](../basedata_files/bd_project.md) |
+| 17 | fownertype | 货主类型 | varchar | 50 |  | √ | ' ' | 货主类型,枚举: bos_org :业务单元 bd_customer :客户 bd_supplier :供应商 |
+| 18 | fparententryid | fparententryid | int8 | 64 |  | √ | 0 | pid |
+| 19 | fbusstandqty | 标准数量 | numeric | 23 | 10 | √ | 0 | 标准数量 |
+| 20 | fbaseassociatedqty | 关联基本数量 | numeric | 23 | 10 | √ | 0 | 关联基本数量 |
+| 21 | fentryauxptyid | 辅助属性 | int8 | 64 |  | √ | 0 | null 001 |
+| 22 | fisreplace | 替代件 | bpchar | 1 |  | √ | '0' | 替代件 |
+| 23 | fisjumplevel | 跳层 | bpchar | 1 |  | √ | '0' | 跳层 |
+| 24 | fbasebusdemandqty | 需求基本数量 | numeric | 23 | 10 | √ | 0 | 需求基本数量 |
+| 25 | fentrytracknumberid | 跟踪号 | int8 | 64 |  | √ | 0 | [跟踪号 bd_tracknumber](../sbd_files/bd_tracknumber.md) |
+| 26 | fremark | 备注 | varchar | 512 |  | √ | ' ' | 备注 |
+| 27 | fuseratio | 使用比例(%) | numeric | 23 | 10 | √ | 0 | 使用比例(%) |
+| 28 | fqtytype | 用量类型 | varchar | 50 |  | √ | ' ' | 用量类型,枚举: A :变动 B :固定 C :阶梯 |
+| 29 | finvqty | 已入库数量 | numeric | 23 | 10 | √ | 0 | 已入库数量 |
+| 30 | fbusdemandqty | 需求数量 | numeric | 23 | 10 | √ | 0 | 需求数量 |
+| 31 | fdeliverydate | 预计到货日期 | timestamp | 0 |  |  | null | 预计到货日期 |
+| 32 | fbasedenominator | 基本单位分母 | numeric | 23 | 10 | √ | 0 | 基本单位分母 |
+| 33 | fassociatedqty | 关联数量 | numeric | 23 | 10 | √ | 0 | 关联数量 |
+| 34 | fisstep | 是否阶梯用量 | bpchar | 1 |  | √ | '0' | 是否阶梯用量 |
+| 35 | fbusnumerator | 分子 | numeric | 23 | 10 | √ | 0 | 分子 |
+| 36 | fownerid | 货主 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 37 | fbasebusstandqty | 标准基本数量 | numeric | 23 | 10 | √ | 0 | 标准基本数量 |
+| 38 | fentryunitid | 子项单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 39 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 40 | fisexpanditem | 是否展开子项 | bpchar | 1 |  | √ | '0' | 是否展开子项 |
+| 41 | flicenseno | 许可证编号 | int8 | 64 |  | √ | 0 | [许可证 bd_licence](../sbd_files/bd_licence.md) |
 
 ### 列规则定义
 
@@ -227,33 +230,34 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fbillauxqty | 辅助数量 | numeric | 23 | 10 | √ | 0 | 辅助数量 |
-| 3 | fmaterialid | 产品编码 | int8 | 64 |  | √ | 0 | 物料库存信息 bd_materialinventoryinfo |
-| 4 | forgid | 库存组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | fmaterialid | 产品编码 | int8 | 64 |  | √ | 0 | [物料库存信息 bd_materialinventoryinfo](../sbd_files/bd_materialinventoryinfo.md) |
+| 4 | forgid | 库存组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | fauxptyid | 辅助属性 | int8 | 64 |  | √ | 0 | null 001 |
-| 6 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 7 | fbomid | BOM编码 | int8 | 64 |  | √ | 0 | BOM维护 pdm_mftbom |
-| 8 | fbillauxunitid | 辅助单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 10 | ftracknumberid | 跟踪号 | int8 | 64 |  | √ | 0 | 跟踪号 bd_tracknumber |
-| 11 | fmaterialversionid | 物料版本 | int8 | 64 |  | √ | 0 | 物料版本 bd_bomversion_new |
-| 12 | fbaseunitid | 基本单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 13 | fbillno | 单据编号 | varchar | 50 |  | √ | ' ' | 单据编号 |
-| 14 | fqty | 数量 | numeric | 23 | 10 | √ | 0 | 数量 |
-| 15 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 16 | fprojectid | 项目编码 | int8 | 64 |  | √ | 0 | 项目 bd_project |
-| 17 | fbillstatus | 单据状态 | varchar | 50 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 18 | fcomment | 备注 | varchar | 512 |  | √ | ' ' | 备注 |
-| 19 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 20 | fsalorderid | 销售订单内码 | int8 | 64 |  | √ | 0 | 销售订单内码 |
-| 21 | funitid | 库存单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 22 | fsalbillno | 销售订单编号 | varchar | 50 |  | √ | ' ' | 销售订单编号 |
-| 23 | fauditdate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
-| 24 | fsalentryid | 销售订单分录内码 | int8 | 64 |  | √ | 0 | 销售订单分录内码 |
-| 25 | fbaseqty | 基本数量 | numeric | 23 | 10 | √ | 0 | 基本数量 |
-| 26 | fbilltype | 单据类型 | int8 | 64 |  | √ | 0 | 单据类型 bos_billtype |
-| 27 | fsalbillseq | 销售订单行号 | int4 | 32 |  | √ | 0 | 销售订单行号 |
-| 28 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 29 | fcustomerid | 订货客户 | int8 | 64 |  | √ | 0 | 客户 bd_customer |
+| 6 | fyieldrate | 成品率(%) | numeric | 23 | 10 | √ | 0 | 成品率(%) |
+| 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 8 | fbomid | BOM编码 | int8 | 64 |  | √ | 0 | [BOM维护 pdm_mftbom](../fmm_files/pdm_mftbom.md) |
+| 9 | fbillauxunitid | 辅助单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 11 | ftracknumberid | 跟踪号 | int8 | 64 |  | √ | 0 | [跟踪号 bd_tracknumber](../sbd_files/bd_tracknumber.md) |
+| 12 | fmaterialversionid | 物料版本 | int8 | 64 |  | √ | 0 | [物料版本 bd_bomversion_new](../basedata_files/bd_bomversion_new.md) |
+| 13 | fbaseunitid | 基本单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 14 | fbillno | 单据编号 | varchar | 50 |  | √ | ' ' | 单据编号 |
+| 15 | fqty | 数量 | numeric | 23 | 10 | √ | 0 | 数量 |
+| 16 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 17 | fprojectid | 项目编码 | int8 | 64 |  | √ | 0 | [项目 bd_project](../basedata_files/bd_project.md) |
+| 18 | fbillstatus | 单据状态 | varchar | 50 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
+| 19 | fcomment | 备注 | varchar | 512 |  | √ | ' ' | 备注 |
+| 20 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 21 | fsalorderid | 销售订单内码 | int8 | 64 |  | √ | 0 | 销售订单内码 |
+| 22 | funitid | 库存单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 23 | fsalbillno | 销售订单编号 | varchar | 50 |  | √ | ' ' | 销售订单编号 |
+| 24 | fauditdate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
+| 25 | fsalentryid | 销售订单分录内码 | int8 | 64 |  | √ | 0 | 销售订单分录内码 |
+| 26 | fbaseqty | 基本数量 | numeric | 23 | 10 | √ | 0 | 基本数量 |
+| 27 | fbilltype | 单据类型 | int8 | 64 |  | √ | 0 | 单据类型 bos_billtype |
+| 28 | fsalbillseq | 销售订单行号 | int4 | 32 |  | √ | 0 | 销售订单行号 |
+| 29 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 30 | fcustomerid | 订货客户 | int8 | 64 |  | √ | 0 | [客户 bd_customer](../basedata_files/bd_customer.md) |
 
 ### 列规则定义
 

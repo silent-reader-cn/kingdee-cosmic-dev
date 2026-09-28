@@ -11,23 +11,26 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fremark | 备注 | varchar | 255 |  |  | ' ' | 备注 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fbillstatus | 单据状态 | varchar | 50 |  | √ | 'A' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 6 | forgid | 核算组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 7 | fsourceid | fsourceid | int8 | 64 |  | √ | 0 |  |
-| 8 | fhasvoucher | fhasvoucher | bpchar | 1 |  | √ | '0' |  |
-| 9 | fnewchangetype | fnewchangetype | int8 | 64 |  | √ | 0 |  |
-| 10 | fvoucherflag | fvoucherflag | bpchar | 1 |  | √ | 'A' |  |
-| 11 | fchangetype | 变更类型 | varchar | 50 |  | √ | 'ASSETVALUE' | 变更类型 |
-| 12 | fauditdate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
-| 13 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 15 | fappliantid | 变更申请人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 16 | fsourcetype | 来源方式 | bpchar | 1 |  | √ | '1' | 来源方式,枚举: 1 :移动端移交或领用 2 :手工新增 |
-| 17 | fchangedate | 变更日期 | timestamp | 0 |  |  | null | 变更日期 |
-| 18 | fbillno | 变更单号 | varchar | 30 |  | √ | ' ' | 变更单号 |
-| 19 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | fapbasecurrencyid | fapbasecurrencyid | int8 | 64 |  | √ | 0 |  |
+| 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 7 | forgid | 核算组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 8 | fsourceid | fsourceid | int8 | 64 |  | √ | 0 |  |
+| 9 | fhasvoucher | fhasvoucher | bpchar | 1 |  | √ | '0' |  |
+| 10 | fnewchangetype | fnewchangetype | int8 | 64 |  | √ | 0 |  |
+| 11 | fvoucherflag | fvoucherflag | bpchar | 1 |  | √ | 'A' |  |
+| 12 | fapbaseamount | fapbaseamount | numeric | 19 | 6 | √ | 0 |  |
+| 13 | fchangetype | 变更类型 | varchar | 50 |  | √ | 'ASSETVALUE' | 变更类型 |
+| 14 | fauditdate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
+| 15 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 16 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 17 | fappliantid | 变更申请人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 18 | fsourcetype | 来源方式 | bpchar | 1 |  | √ | '1' | 来源方式,枚举: 1 :移动端移交或领用 2 :手工新增 |
+| 19 | fchangedate | 变更日期 | timestamp | 0 |  |  | null | 变更日期 |
+| 20 | fapbillno | fapbillno | varchar | 80 |  |  | ' ' |  |
+| 21 | fbillno | 变更单号 | varchar | 30 |  | √ | ' ' | 变更单号 |
+| 22 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 
@@ -60,17 +63,17 @@
 | 4 | fbfrchgdesc | 变更前摘要 | varchar | 100 |  |  | ' ' | 变更前摘要 |
 | 5 | freason | 变更理由 | varchar | 255 |  |  | ' ' | 变更理由 |
 | 6 | faftchg | 变更后 | varchar | 500 |  |  | ' ' | 变更后 |
-| 7 | frealcardid | 卡片编号 | int8 | 64 |  | √ | 0 | 资产卡片基础资料 fa_card_real_base |
+| 7 | frealcardid | 卡片编号 | int8 | 64 |  | √ | 0 | [资产卡片基础资料 fa_card_real_base](../fa_files/fa_card_real_base.md) |
 | 8 | faftchgdesc | 变更后摘要 | varchar | 100 |  |  | ' ' | 变更后摘要 |
 | 9 | fbfrchg | 变更前 | varchar | 500 |  |  | ' ' | 变更前 |
-| 10 | fbeforefininfo | 变更前财务信息 | int8 | 64 |  | √ | 0 | 财务卡片变更备份 fa_changebak_fin |
+| 10 | fbeforefininfo | 变更前财务信息 | int8 | 64 |  | √ | 0 | [财务卡片变更备份 fa_changebak_fin](../fa_files/fa_changebak_fin.md) |
 | 11 | fbfrorginval | fbfrorginval | numeric | 19 | 6 | √ | 0.000000 |  |
 | 12 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 | id |
-| 13 | fafterfininfo | 变更后财务信息 | int8 | 64 |  | √ | 0 | 财务卡片变更备份 fa_changebak_fin |
-| 14 | ffincardid | 财务卡片 | int8 | 64 |  | √ | 0 | 财务卡片基础资料 fa_card_fin_base |
+| 13 | fafterfininfo | 变更后财务信息 | int8 | 64 |  | √ | 0 | [财务卡片变更备份 fa_changebak_fin](../fa_files/fa_changebak_fin.md) |
+| 14 | ffincardid | 财务卡片 | int8 | 64 |  | √ | 0 | [财务卡片基础资料 fa_card_fin_base](../fa_files/fa_card_fin_base.md) |
 | 15 | fentryid | 分录 | int8 | 64 |  | √ | 0 | 分录 |
 | 16 | faftorginval | faftorginval | numeric | 19 | 6 | √ | 0.000000 |  |
-| 17 | faftrealcardid | 变更后实物卡片 | int8 | 64 |  | √ | 0 | 资产卡片基础资料 fa_card_real_base |
+| 17 | faftrealcardid | 变更后实物卡片 | int8 | 64 |  | √ | 0 | [资产卡片基础资料 fa_card_real_base](../fa_files/fa_card_real_base.md) |
 | 18 | fbeforerealinfo | fbeforerealinfo | int8 | 64 |  | √ | 0 |  |
 | 19 | fdepreuseid | fdepreuseid | int8 | 64 |  | √ | 0 |  |
 

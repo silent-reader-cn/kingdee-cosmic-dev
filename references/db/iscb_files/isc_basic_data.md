@@ -10,14 +10,14 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 4 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 5 | fbaseschema | 参照数据方案 | int8 | 64 |  | √ | 0 | 参照数据方案 isc_base_schema |
+| 5 | fbaseschema | 参照数据方案 | int8 | 64 |  | √ | 0 | [参照数据方案 isc_base_schema](../iscb_files/isc_base_schema.md) |
 | 6 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 7 | fdataschema | 集成对象 | int8 | 64 |  | √ | 0 | 集成对象 isc_metadata_schema |
+| 7 | fdataschema | 集成对象 | int8 | 64 |  | √ | 0 | [集成对象 isc_metadata_schema](../iscb_files/isc_metadata_schema.md) |
 | 8 | fcus_field1 | 自定义字段1 | varchar | 100 |  | √ | ' ' | 自定义字段1 |
-| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 11 | foid | 单据ID | varchar | 100 |  | √ | ' ' | 单据ID |
 | 12 | fcus_field3 | 自定义字段3 | varchar | 100 |  | √ | ' ' | 自定义字段3 |

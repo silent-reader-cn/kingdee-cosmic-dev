@@ -39,27 +39,28 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 3 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 4 | fresourceupdate_status | 资源更新计划 | varchar | 10 |  | √ | ' ' | 资源更新计划 |
-| 5 | fapinum_status | API数目扫描状态 | varchar | 10 |  | √ | ' ' | API数目扫描状态 |
-| 6 | fapisyn_status | API同步状态 | varchar | 10 |  | √ | ' ' | API同步状态 |
-| 7 | fstart_status | 启动增量计划状态 | varchar | 10 |  | √ | ' ' | 启动增量计划状态 |
-| 8 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 9 | fapp_num | 预置应用数量 | int8 | 64 |  | √ | 0 | 预置应用数量 |
-| 10 | flog_printing | 日志打印 | varchar | 2000 |  | √ | ' ' | 日志打印 |
-| 11 | fhomepage_box | 首页弹框是否关闭 | varchar | 10 |  | √ | ' ' | 首页弹框是否关闭 |
-| 12 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 13 | fpageplay_status | 当前页面展示。 | varchar | 10 |  | √ | ' ' | 当前页面展示。 |
-| 14 | fsecretkey_status | 秘钥申请状态 | varchar | 10 |  | √ | ' ' | 秘钥申请状态 |
-| 15 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 16 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 17 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 18 | fenable | 使用状态 | varchar | 50 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 19 | fresourceupdate_time | 初始化完成时间 | varchar | 50 |  | √ | ' ' | 初始化完成时间 |
-| 20 | fappsyn_status | 预置应用同步状态 | varchar | 10 |  | √ | ' ' | 预置应用同步状态 |
-| 21 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
-| 22 | fapi_num | API数量 | int8 | 64 |  | √ | 0 | API数量 |
+| 2 | fpreapp_status | 预置应用同步启用状态 | varchar | 10 |  | √ | ' ' | 预置应用同步启用状态 |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 4 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
+| 5 | fresourceupdate_status | 资源更新计划 | varchar | 10 |  | √ | ' ' | 资源更新计划 |
+| 6 | fapinum_status | API数目扫描状态 | varchar | 10 |  | √ | ' ' | API数目扫描状态 |
+| 7 | fapisyn_status | API同步状态 | varchar | 10 |  | √ | ' ' | API同步状态 |
+| 8 | fstart_status | 启动增量计划状态 | varchar | 10 |  | √ | ' ' | 启动增量计划状态 |
+| 9 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 10 | fapp_num | 预置应用数量 | int8 | 64 |  | √ | 0 | 预置应用数量 |
+| 11 | flog_printing | 日志打印 | varchar | 2000 |  | √ | ' ' | 日志打印 |
+| 12 | fhomepage_box | 首页弹框是否关闭 | varchar | 10 |  | √ | ' ' | 首页弹框是否关闭 |
+| 13 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 14 | fpageplay_status | 当前页面展示。 | varchar | 10 |  | √ | ' ' | 当前页面展示。 |
+| 15 | fsecretkey_status | 秘钥申请状态 | varchar | 10 |  | √ | ' ' | 秘钥申请状态 |
+| 16 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
+| 17 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 18 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
+| 19 | fenable | 使用状态 | varchar | 50 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 20 | fresourceupdate_time | 初始化完成时间 | varchar | 50 |  | √ | ' ' | 初始化完成时间 |
+| 21 | fappsyn_status | 预置应用同步状态 | varchar | 10 |  | √ | ' ' | 预置应用同步状态 |
+| 22 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
+| 23 | fapi_num | API数量 | int8 | 64 |  | √ | 0 | API数量 |
 
 ### 列规则定义
 

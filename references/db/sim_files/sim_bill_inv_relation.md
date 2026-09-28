@@ -14,7 +14,7 @@
 | 3 | famount | 金额 | numeric | 23 | 10 | √ | 0.0000000000 | 金额 |
 | 4 | fsbillno | 源单单据编号 | varchar | 50 |  | √ | ' ' | 源单单据编号 |
 | 5 | fprice | 单价 | numeric | 23 | 10 | √ | 0.0000000000 | 单价 |
-| 6 | forg | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | forg | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | ftbillid | 发票id | int8 | 64 |  | √ | 0 | 发票id |
 | 8 | ftdetailid | 发票明细id | int8 | 64 |  | √ | 0 | 发票明细id |
 | 9 | fnum | 数量 | numeric | 23 | 10 | √ | 0.0000000000 | 数量 |

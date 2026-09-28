@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | forgid | 收付组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | forgid | 收付组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 4 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 
@@ -76,15 +76,15 @@
 | 6 | fmodifytime | 最后更新时间 | timestamp | 0 |  |  | null | 最后更新时间 |
 | 7 | fstatus | 数据状态 | varchar | 30 |  | √ | 'C' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 8 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 10 | fenablerid | 启用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 11 | fmodifierid | 最后更新人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 10 | fenablerid | 启用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 11 | fmodifierid | 最后更新人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fname | fname | varchar | 100 |  | √ | ' ' |  |
 | 13 | fcomment | fcomment | varchar | 255 |  | √ | ' ' |  |
 | 14 | fpledge | 质押待签收 | bpchar | 1 |  | √ | '0' | 质押待签收 |
 | 15 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 16 | fenabledate | 启用日期 | timestamp | 0 |  |  | null | 启用日期 |
-| 17 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 17 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 18 | fdatafilter_tag | 数据过滤条件_详情 | text | 0 |  |  | null | 数据过滤条件_详情 |
 | 19 | fconsentpayoff | 同意清偿待签收 | bpchar | 1 |  | √ | '0' | 同意清偿待签收 |
 | 20 | frecite | 背书待签收 | bpchar | 1 |  | √ | '0' | 背书待签收 |

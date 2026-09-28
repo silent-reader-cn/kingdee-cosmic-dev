@@ -24,7 +24,7 @@
 | 13 | fopentype | fopentype | varchar | 30 |  | √ | ' ' |  |
 | 14 | foriginalinvoicecode | foriginalinvoicecode | varchar | 100 |  | √ | ' ' |  |
 | 15 | fauthdate | fauthdate | timestamp | 0 |  |  | null |  |
-| 16 | fbaseinvoicetype | 发票类型 | int8 | 64 |  | √ | 0 | 发票类型 bd_invoicetype |
+| 16 | fbaseinvoicetype | 发票类型 | int8 | 64 |  | √ | 0 | [发票种类 bd_invoicetype](../basedata_files/bd_invoicetype.md) |
 | 17 | fsignstatus | fsignstatus | varchar | 50 |  | √ | ' ' |  |
 | 18 | fselectstatus | fselectstatus | varchar | 50 |  | √ | ' ' |  |
 | 19 | fdatasource | fdatasource | varchar | 50 |  | √ | ' ' |  |
@@ -60,7 +60,7 @@
 | 2 | finvaliddate | finvaliddate | timestamp | 0 |  |  | null |  |
 | 3 | fdrawer | fdrawer | varchar | 100 |  | √ | ' ' |  |
 | 4 | ftotalamount | 价税合计 | numeric | 23 | 2 | √ | 0.00 | 价税合计 |
-| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | finputstatus | finputstatus | varchar | 30 |  | √ | ' ' |  |
 | 7 | fbuyeraccount | fbuyeraccount | varchar | 100 |  | √ | ' ' |  |
 | 8 | fbuyeraddressphone | fbuyeraddressphone | varchar | 300 |  | √ | ' ' |  |
@@ -79,7 +79,7 @@
 | 21 | fbillstatus | fbillstatus | varchar | 30 |  | √ | ' ' |  |
 | 22 | fauditdate | fauditdate | timestamp | 0 |  |  | null |  |
 | 23 | fusedjzjtse | 已登记即征即退税额 | numeric | 23 | 2 | √ | 0.00 | 已登记即征即退税额 |
-| 24 | flastrolloutuser | 最后转出人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 24 | flastrolloutuser | 最后转出人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 25 | flastrollouttime | 最后转出时间 | timestamp | 0 |  |  | null | 最后转出时间 |
 | 26 | fjzjtamount | 即征即退税额 | numeric | 23 | 2 | √ | 0.00 | 即征即退税额 |
 | 27 | fsalername | 销方名称 | varchar | 200 |  | √ | ' ' | 销方名称 |

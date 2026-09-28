@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fgrpname | 分组名称 | varchar | 50 |  | √ | ' ' | 分组名称 |
+| 2 | fgrpname | 分组名称 | varchar | 255 |  | √ | ' ' | 分组名称 |
 | 3 | fthresholdtype | 阈值类型 | varchar | 50 |  | √ | 'percent' | 阈值类型,枚举: percent :百分比 modulus :绝对值 |
 | 4 | fwarning | 预警 | varchar | 1 |  | √ | '1' | 预警 |
 | 5 | fgrpnumber | 分组编码 | varchar | 50 |  | √ | ' ' | 分组编码 |

@@ -15,7 +15,7 @@
 | 4 | fchangebilltype | fchangebilltype | varchar | 25 |  | √ | ' ' |  |
 | 5 | fchangebillid | fchangebillid | int8 | 64 |  | √ | 0 |  |
 | 6 | ffincardid | ffincardid | int8 | 64 |  | √ | 0 |  |
-| 7 | fassetbookid | 资产账簿 | int8 | 64 |  | √ | 0 | 启用期间设置 fa_assetbook |
+| 7 | fassetbookid | 资产账簿 | int8 | 64 |  | √ | 0 | [启用期间设置 fa_assetbook](../fa_files/fa_assetbook.md) |
 | 8 | fdepreuseid | fdepreuseid | int8 | 64 |  | √ | 0 |  |
 
 ### 列规则定义

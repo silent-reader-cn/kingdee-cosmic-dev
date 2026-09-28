@@ -13,7 +13,7 @@
 | 2 | fyjxmid | 预缴项目id | int8 | 64 |  | √ | 0 | 预缴项目id |
 | 3 | fserialno | 台账流水号 | varchar | 50 |  | √ | ' ' | 台账流水号 |
 | 4 | ftaxitem | 税目名称 | varchar | 50 |  | √ | ' ' | 税目名称 |
-| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | ftotalamount | 总额 | numeric | 23 | 10 | √ | 0 | 总额 |
 | 7 | famount | 金额 | numeric | 23 | 10 | √ | 0 | 金额 |
 | 8 | fadjustexplain | 调整说明 | varchar | 1000 |  | √ | ' ' | 调整说明 |

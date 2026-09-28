@@ -10,11 +10,11 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreator | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fcreator | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fmenuentitynumber | 菜单实体编码 | varchar | 50 |  | √ | ' ' | 菜单实体编码 |
 | 4 | fappnumber | 应用编码 | varchar | 50 |  | √ | ' ' | 应用编码 |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 6 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 7 | fuserid | 用户id | int8 | 64 |  | √ | 0 | 用户id |
 | 8 | fmenuid | 菜单id | varchar | 36 |  | √ | ' ' | 菜单id |
 | 9 | fappid | 应用id | varchar | 36 |  | √ | ' ' | 应用id |

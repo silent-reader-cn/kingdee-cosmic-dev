@@ -106,27 +106,27 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fuseorg | 业务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 4 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fuseorg | 业务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 4 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 6 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 7 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 7 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 8 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 9 | fpreset | 系统预置 | bpchar | 1 |  | √ | '0' | 系统预置 |
 | 10 | fsourcedataid | 原资料id | int4 | 32 |  | √ | 0 | 原资料id |
 | 11 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
 | 12 | fexample | 文本示例 | varchar | 255 |  | √ | ' ' | 文本示例 |
-| 13 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 13 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 14 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
-| 15 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 15 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 16 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 17 | fstart | 启用状态 | bpchar | 1 |  | √ | '0' | 启用状态 |
 | 18 | fleftmargin | 左边距 | int4 | 32 |  | √ | 0 | 左边距 |
 | 19 | fdescription | 描述 | varchar | 255 |  | √ | ' ' | 描述 |
 | 20 | fmarginbottom | 下边距 | int4 | 32 |  | √ | 0 | 下边距 |
 | 21 | fctrlstrategy | 控制策略 | varchar | 50 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
-| 22 | fbizobjectid | 业务模型 | int8 | 64 |  | √ | 0 | PDM模型 plm_plmsm_modeltreedata |
+| 22 | fbizobjectid | 业务模型 | int8 | 64 |  | √ | 0 | [PDM模型 plm_plmsm_modeltreedata](../plmsm_files/plm_plmsm_modeltreedata.md) |
 | 23 | fsize | 二维码大小（PX） | int4 | 32 |  | √ | 0 | 二维码大小（PX） |
 | 24 | fqrcodetype | 二维码类型 | varchar | 50 |  | √ | ' ' | 二维码类型,枚举: txt :文本二维码 |
 | 25 | fenable | 使用状态 | varchar | 50 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
@@ -146,5 +146,5 @@
 | :--- | :--- | :--- | :--- |
 | 1 | idx_t_plmdc_qrcodeswitch_createorg |  | fcreateorgid |
 | 2 | idx_t_plmdc_qrcodeswitch_master |  | fmasterid |
-| 3 | idx_plmdc_qrcodeswitch_num |  | fnumber |
-| 4 | pk_t_plmdc_qrcodeswitch |  | fid |
+| 3 | pk_t_plmdc_qrcodeswitch |  | fid |
+| 4 | idx_plmdc_qrcodeswitch_num |  | fnumber |

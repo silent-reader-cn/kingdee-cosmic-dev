@@ -10,9 +10,9 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fsscid | 共享中心 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fsscid | 共享中心 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fusergroup | 用户组 | int8 | 64 |  | √ | 0 | 用户组 |
-| 4 | fuser | 用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fuser | 用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fmonthofyear | 月份 | int8 | 64 |  | √ | 0 | 月份 |
 | 6 | fmonthlyworkperiod_tag | 每月工作时段_详情 | text | 0 |  |  | null | 每月工作时段_详情 |
 | 7 | fmonthlyworkperiod | 每月工作时段 | varchar | 255 |  | √ | ' ' | 每月工作时段 |

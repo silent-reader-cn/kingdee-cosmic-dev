@@ -23,5 +23,5 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_gl_autotrans_transid |  | fautotransid |
-| 2 | t_gl_autotrans_voucher_pkey |  | fid |
+| 1 | t_gl_autotrans_voucher_pkey |  | fid |
+| 2 | idx_gl_autotrans_transid |  | fautotransid |

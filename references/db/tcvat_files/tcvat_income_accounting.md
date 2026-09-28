@@ -13,7 +13,7 @@
 | 2 | ftaxperiod | 所属月份 | varchar | 100 |  | √ | ' ' | 所属月份 |
 | 3 | ftaxaccountid | ftaxaccountid | int8 | 64 |  | √ | 0 |  |
 | 4 | fmodifierid | fmodifierid | int8 | 64 |  | √ | 0 |  |
-| 5 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | fcreaterid | fcreaterid | int8 | 64 |  | √ | 0 |  |
 | 7 | ftabletype | ftabletype | varchar | 30 |  | √ | ' ' |  |
 | 8 | famount | 不含税金额 | numeric | 23 | 10 | √ | 0.0000000000 | 不含税金额 |

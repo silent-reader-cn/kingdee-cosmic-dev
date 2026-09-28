@@ -11,26 +11,40 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fbusdenominator | 分母 | numeric | 23 | 10 | √ | 1 | 分母 |
 | 2 | fbusbadincomerejectedqty | 来料不良退料数量 | numeric | 23 | 10 | √ | 0 | 来料不良退料数量 |
-| 3 | fbusunissueqty | 未领数量 | numeric | 23 | 10 | √ | 0 | 未领数量 |
-| 4 | fbusgoodrejectedqty | 良品退料数量 | numeric | 23 | 10 | √ | 0 | 良品退料数量 |
-| 5 | fbusdemandqty | 需求数量 | numeric | 23 | 10 | √ | 0 | 需求数量 |
-| 6 | fbadtaskrejectedqty | 作业不良退料基本数量 | numeric | 23 | 10 | √ | 0 | 作业不良退料基本数量 |
-| 7 | fgoodrejectedqty | 良品退料基本数量 | numeric | 23 | 10 | √ | 0 | 良品退料基本数量 |
-| 8 | fchildmatunitid | 子项单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 9 | finvmatunitid | 库存单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 10 | fbusactissueqty | 已领数量 | numeric | 23 | 10 | √ | 0 | 已领数量 |
-| 11 | fsrctype | 子项来源类型 | bpchar | 1 |  | √ | 'A' | 子项来源类型,枚举: A :普通 B :补料单反写 C :退料单反写 |
-| 12 | fbusnumerator | 分子 | numeric | 23 | 10 | √ | 0 | 分子 |
-| 13 | fbadincomerejectedqty | 来料不良退料基本数量 | numeric | 23 | 10 | √ | 0 | 来料不良退料基本数量 |
-| 14 | fbusbadtaskrejectedqty | 作业不良退料数量 | numeric | 23 | 10 | √ | 0 | 作业不良退料数量 |
-| 15 | fparententryid | fparententryid | int8 | 64 |  | √ | 0 |  |
-| 16 | fbusstandqty | 标准数量 | numeric | 23 | 10 | √ | 0 | 标准数量 |
-| 17 | fmpmtaskno | 项目任务号 | int8 | 64 |  | √ | 0 | 项目任务F7 mpm_task_f7 |
-| 18 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 |  |
-| 19 | fisjumplevel | 跳层 | bpchar | 1 |  | √ | '0' | 跳层 |
-| 20 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
-| 21 | fbusoutqty | 关联领料数量 | numeric | 23 | 10 | √ | 0 | 关联领料数量 |
-| 22 | fbususeqty | 已消耗数量 | numeric | 23 | 10 | √ | 0 | 已消耗数量 |
+| 3 | fretoverdrawnbaseqty | 多领退回基本数量 | numeric | 23 | 10 | √ | 0 | 多领退回基本数量 |
+| 4 | fretoverdrawnqty | 多领退回数量 | numeric | 23 | 10 | √ | 0 | 多领退回数量 |
+| 5 | fbusgoodrejectedqty | 良品退料数量 | numeric | 23 | 10 | √ | 0 | 良品退料数量 |
+| 6 | fneedqty | 需求数量 | numeric | 23 | 10 | √ | 0 | 需求数量 |
+| 7 | fbadtaskrejectedqty | 作业不良退料基本数量 | numeric | 23 | 10 | √ | 0 | 作业不良退料基本数量 |
+| 8 | fgoodrejectedqty | 良品退料基本数量 | numeric | 23 | 10 | √ | 0 | 良品退料基本数量 |
+| 9 | fisentryexpand | 来源于展开行 | varchar | 5 |  | √ | '0' | 来源于展开行 |
+| 10 | finvmatunitid | 库存单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 11 | fbusactissueqty | 已领数量 | numeric | 23 | 10 | √ | 0 | 已领数量 |
+| 12 | factreceivebaseqty | 实领基本数量 | numeric | 23 | 10 | √ | 0 | 实领基本数量 |
+| 13 | fbonded | 保税 | bpchar | 1 |  | √ | '0' | 保税 |
+| 14 | fparentmaterialid | 父项物料编码 | int8 | 64 |  | √ | 0 | [物料生产信息 bd_materialmftinfo](../sbd_files/bd_materialmftinfo.md) |
+| 15 | factreceiveqty | 实领数量 | numeric | 23 | 10 | √ | 0 | 实领数量 |
+| 16 | ftopmaterialid | 顶层物料编码 | int8 | 64 |  | √ | 0 | [物料生产信息 bd_materialmftinfo](../sbd_files/bd_materialmftinfo.md) |
+| 17 | fbadincomerejectedqty | 来料不良退料基本数量 | numeric | 23 | 10 | √ | 0 | 来料不良退料基本数量 |
+| 18 | fbusbadtaskrejectedqty | 作业不良退料数量 | numeric | 23 | 10 | √ | 0 | 作业不良退料数量 |
+| 19 | fparententryid | fparententryid | int8 | 64 |  | √ | 0 |  |
+| 20 | fbusstandqty | 标准数量 | numeric | 23 | 10 | √ | 0 | 标准数量 |
+| 21 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 |  |
+| 22 | fisjumplevel | 跳层 | bpchar | 1 |  | √ | '0' | 跳层 |
+| 23 | favbinvqty | 可用库存数量 | numeric | 23 | 10 | √ | 0 | 可用库存数量 |
+| 24 | fisentryexpandone | 已展开行 | varchar | 5 |  | √ | '0' | 已展开行 |
+| 25 | fbusoutqty | 关联领料数量 | numeric | 23 | 10 | √ | 0 | 关联领料数量 |
+| 26 | fbususeqty | 已消耗数量 | numeric | 23 | 10 | √ | 0 | 已消耗数量 |
+| 27 | fbusunissueqty | 未领数量 | numeric | 23 | 10 | √ | 0 | 未领数量 |
+| 28 | fneedbaseqty | 需求基本数量 | numeric | 23 | 10 | √ | 0 | 需求基本数量 |
+| 29 | fbusdemandqty | 应发数量 | numeric | 23 | 10 | √ | 0 | 应发数量 |
+| 30 | fchildmatunitid | 子项单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 31 | favbinvbaseqty | 可用库存基本数量 | numeric | 23 | 10 | √ | 0 | 可用库存基本数量 |
+| 32 | fsrctype | 子项来源类型 | bpchar | 1 |  | √ | 'A' | 子项来源类型,枚举: A :普通 B :补料单反写 C :退料单反写 |
+| 33 | fbusnumerator | 分子 | numeric | 23 | 10 | √ | 0 | 分子 |
+| 34 | fmpmtaskno | 项目任务号 | int8 | 64 |  | √ | 0 | [项目任务 bd_projecttask](../basedata_files/bd_projecttask.md) |
+| 35 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
+| 36 | flicenseno | 许可证编号 | int8 | 64 |  | √ | 0 | [许可证 bd_licence](../sbd_files/bd_licence.md) |
 
 ### 列规则定义
 
@@ -61,63 +75,72 @@
 | 3 | fdemanddate | 需求时间 | timestamp | 0 |  |  | null | 需求时间 |
 | 4 | fqcppbaseqty | 退料请检基本数量 | numeric | 23 | 10 | √ | 0 | 退料请检基本数量 |
 | 5 | freplacegroup | 替代组号 | int8 | 64 |  | √ | 0 | 替代组号 |
-| 6 | fsupplier | 委外供应商 | int8 | 64 |  | √ | 0 | 供应商 bd_supplier |
+| 6 | fsupplier | 委外供应商 | int8 | 64 |  | √ | 0 | [供应商 bd_supplier](../basedata_files/bd_supplier.md) |
 | 7 | fqcppbasejoinqty | 退料请检关联基本数量 | numeric | 23 | 10 | √ | 0 | 退料请检关联基本数量 |
-| 8 | fbasetransapplyqty | 基本单位.调拨申请数量 | numeric | 23 | 10 | √ | 0 | 基本单位.调拨申请数量 |
-| 9 | fqcppqty | 退料请检数量 | numeric | 23 | 10 | √ | 0 | 退料请检数量 |
-| 10 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 |  |
-| 11 | fqcppjoinqty | 退料请检关联数量 | numeric | 23 | 10 | √ | 0 | 退料请检关联数量 |
-| 12 | fissinlowlimit | 领料下限允差(%) | numeric | 23 | 10 | √ | 0.0000000000 | 领料下限允差(%) |
-| 13 | fisreplace | 替代件 | bpchar | 1 |  | √ | '0' | 替代件 |
-| 14 | fscrapqty | 报废基本数量 | numeric | 23 | 10 | √ | 0.0000000000 | 报废基本数量 |
-| 15 | ftransapplyqty | 子项单位.调拨申请数量 | numeric | 23 | 10 | √ | 0 | 子项单位.调拨申请数量 |
-| 16 | fbuswipqty | 在制数量 | numeric | 23 | 10 | √ | 0 | 在制数量 |
-| 17 | frejectedqty | 退料基本数量 | numeric | 23 | 10 | √ | 0.0000000000 | 退料基本数量 |
-| 18 | finvtransdictqty | 库存单位.已调拨数量 | numeric | 23 | 10 | √ | 0 | 库存单位.已调拨数量 |
-| 19 | fiskeypart | 关键件 | bpchar | 1 |  | √ | '0' | 关键件 |
-| 20 | foprworkcenter | 工作中心 | int8 | 64 |  | √ | 0 | 工作中心定义(废弃) mpdm_workcentre |
-| 21 | fbasetransapplyrelqty | 基本单位.调拨申请关联数量 | numeric | 23 | 10 | √ | 0 | 基本单位.调拨申请关联数量 |
-| 22 | ftransdictnonqty | 子项单位.未调拨数量 | numeric | 23 | 10 | √ | 0 | 子项单位.未调拨数量 |
-| 23 | foperationdesc | 工序说明 | varchar | 50 |  | √ | ' ' | 工序说明 |
-| 24 | fbuscansendqty | 可领数量 | numeric | 23 | 10 | √ | 0 | 可领数量 |
-| 25 | fwipqty | 在制基本数量 | numeric | 23 | 10 | √ | 0.0000000000 | 在制基本数量 |
-| 26 | fbusallotqty | 调拨数量 | numeric | 23 | 10 | √ | 0 | 调拨数量 |
-| 27 | fextraratioqty | 领料上限基本数量 | numeric | 23 | 10 | √ | 0.0000000000 | 领料上限基本数量 |
-| 28 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
-| 29 | fentrychangetype | 变更方式 | varchar | 30 |  | √ | ' ' | 变更方式,枚举: A :新增 B :修改 C :取消 |
-| 30 | fleadtimeunit | fleadtimeunit | varchar | 30 |  | √ | ' ' |  |
-| 31 | fprocessseq | 序列号 | varchar | 50 |  | √ | ' ' | 序列号 |
-| 32 | fallotqty | 基本单位.已调拨数量 | numeric | 23 | 10 | √ | 0.0000000000 | 基本单位.已调拨数量 |
-| 33 | fpriority | 替代优先级 | int8 | 64 |  | √ | 0 | 替代优先级 |
-| 34 | fpromaterentryid | 工序物料分配分录ID | int8 | 64 |  | √ | 0 | 工序物料分配分录ID |
-| 35 | ftransdictrelqty | 子项单位.调拨关联数量 | numeric | 23 | 10 | √ | 0 | 子项单位.调拨关联数量 |
-| 36 | ftransdictqty | 子项单位.已调拨数量 | numeric | 23 | 10 | √ | 0 | 子项单位.已调拨数量 |
-| 37 | fmachiningtype | 加工类型 | varchar | 30 |  | √ | ' ' | 加工类型,枚举: 1001 :厂内加工 1002 :委外加工 1003 :内协加工 1004 :不限制 |
-| 38 | freplaceplan | 物料替代方案 | int8 | 64 |  | √ | 0 | 物料替代方案 mpdm_replaceplan |
-| 39 | foprno | 工序号 | varchar | 50 |  | √ | ' ' | 工序号 |
-| 40 | fisbomextend | 来源于BOM展开 | bpchar | 1 |  | √ | '0' | 来源于BOM展开 |
-| 41 | fworkprocedureid | 工序编码 | int8 | 64 |  | √ | 0 | 标准工序定义(废弃) mpdm_workprocedure |
-| 42 | fbomentryid | BOM分录ID | int8 | 64 |  | √ | 0 | BOM分录ID |
-| 43 | fleadtime | 提前期偏置(天) | numeric | 23 | 10 | √ | 0.0000000000 | 提前期偏置(天) |
-| 44 | foverissuecontrl | 超发控制 | varchar | 30 |  | √ | ' ' | 超发控制,枚举: A :可超发 B :不可超发 C :最小包装量 |
-| 45 | ftransapplyrelqty | 子项单位.调拨申请关联数量 | numeric | 23 | 10 | √ | 0 | 子项单位.调拨申请关联数量 |
-| 46 | fissinhighlimit | 领料上限允差(%) | numeric | 23 | 10 | √ | 0.0000000000 | 领料上限允差(%) |
-| 47 | fparentid | 父ID | int8 | 64 |  | √ | 0 | 父ID |
-| 48 | fbusrejectedqty | 退料数量 | numeric | 23 | 10 | √ | 0 | 退料数量 |
-| 49 | fismainreplace | 替代主料 | bpchar | 1 |  | √ | '0' | 替代主料 |
-| 50 | fisbackflush | fisbackflush | bpchar | 1 |  | √ | '0' |  |
-| 51 | fbusfeedingqty | 补料数量 | numeric | 23 | 10 | √ | 0 | 补料数量 |
-| 52 | flackraitioqty | 领料下限基本数量 | numeric | 23 | 10 | √ | 0.0000000000 | 领料下限基本数量 |
-| 53 | ftotalleadtime | 总提前期偏置(天) | numeric | 23 | 10 | √ | 0 | 总提前期偏置(天) |
-| 54 | fbasetransdictrelqty | 基本单位.调拨关联数量 | numeric | 23 | 10 | √ | 0 | 基本单位.调拨关联数量 |
-| 55 | fisbulkmaterial | 散装物料 | bpchar | 1 |  | √ | '0' | 散装物料 |
-| 56 | fbusscrapqty | 报废数量 | numeric | 23 | 10 | √ | 0 | 报废数量 |
-| 57 | fbasetransdictnonqty | 基本单位.未调拨数量 | numeric | 23 | 10 | √ | 0 | 基本单位.未调拨数量 |
-| 58 | finvtransdictnonqty | 库存单位.未调拨数量 | numeric | 23 | 10 | √ | 0 | 库存单位.未调拨数量 |
-| 59 | fcansendqty | 可领基本数量 | numeric | 23 | 10 | √ | 0.0000000000 | 可领基本数量 |
-| 60 | fisbackflushnew | 倒冲 | varchar | 30 |  | √ | ' ' | 倒冲,枚举: A :不倒冲 B :始终倒冲 C :工作中心决定是否倒冲 |
-| 61 | finvtransdictrelqty | 库存单位.调拨关联数量 | numeric | 23 | 10 | √ | 0 | 库存单位.调拨关联数量 |
-| 62 | fbomexpandpath | BOM展开路径 | varchar | 500 |  | √ | ' ' | BOM展开路径 |
+| 8 | fprocessplan | 工序计划 | varchar | 50 |  | √ | ' ' | 工序计划 |
+| 9 | fbasetransapplyqty | 基本单位.调拨申请数量 | numeric | 23 | 10 | √ | 0 | 基本单位.调拨申请数量 |
+| 10 | fqcppqty | 退料请检数量 | numeric | 23 | 10 | √ | 0 | 退料请检数量 |
+| 11 | fparententryid | fparententryid | int8 | 64 |  | √ | 0 |  |
+| 12 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 |  |
+| 13 | fqcppjoinqty | 退料请检关联数量 | numeric | 23 | 10 | √ | 0 | 退料请检关联数量 |
+| 14 | fprocessnumber | 工序号 | int4 | 32 |  | √ | 0 | 工序号 |
+| 15 | fissinlowlimit | 领料下限允差(%) | numeric | 23 | 10 | √ | 0.0000000000 | 领料下限允差(%) |
+| 16 | fisreplace | 替代件 | bpchar | 1 |  | √ | '0' | 替代件 |
+| 17 | fscrapqty | 报废基本数量 | numeric | 23 | 10 | √ | 0.0000000000 | 报废基本数量 |
+| 18 | ftagnum | 位号 | varchar | 255 |  | √ | ' ' | 位号 |
+| 19 | ftransapplyqty | 子项单位.调拨申请数量 | numeric | 23 | 10 | √ | 0 | 子项单位.调拨申请数量 |
+| 20 | fbuswipqty | 在制数量 | numeric | 23 | 10 | √ | 0 | 在制数量 |
+| 21 | frejectedqty | 退料基本数量 | numeric | 23 | 10 | √ | 0.0000000000 | 退料基本数量 |
+| 22 | finvtransdictqty | 库存单位.已调拨数量 | numeric | 23 | 10 | √ | 0 | 库存单位.已调拨数量 |
+| 23 | fiskeypart | 关键件 | bpchar | 1 |  | √ | '0' | 关键件 |
+| 24 | foprworkcenter | 工作中心 | int8 | 64 |  | √ | 0 | [工作中心定义(废弃) mpdm_workcentre](../mpdm_files/mpdm_workcentre.md) |
+| 25 | fbasetransapplyrelqty | 基本单位.调拨申请关联数量 | numeric | 23 | 10 | √ | 0 | 基本单位.调拨申请关联数量 |
+| 26 | ftransdictnonqty | 子项单位.未调拨数量 | numeric | 23 | 10 | √ | 0 | 子项单位.未调拨数量 |
+| 27 | foperationdesc | 工序说明 | varchar | 50 |  | √ | ' ' | 工序说明 |
+| 28 | fbuscansendqty | 可领数量 | numeric | 23 | 10 | √ | 0 | 可领数量 |
+| 29 | fwipqty | 在制基本数量 | numeric | 23 | 10 | √ | 0.0000000000 | 在制基本数量 |
+| 30 | freplacestrategy | 替代策略 | varchar | 5 |  | √ | ' ' | 替代策略,枚举: 1001 :整批替代 1002 :混用替代 1003 :整批+混用 1004 :手工替代 |
+| 31 | fbusallotqty | 调拨数量 | numeric | 23 | 10 | √ | 0 | 调拨数量 |
+| 32 | fextraratioqty | 领料上限基本数量 | numeric | 23 | 10 | √ | 0.0000000000 | 领料上限基本数量 |
+| 33 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
+| 34 | fentrychangetype | 变更方式 | varchar | 30 |  | √ | ' ' | 变更方式,枚举: A :新增 B :修改 C :取消 |
+| 35 | fleadtimeunit | fleadtimeunit | varchar | 30 |  | √ | ' ' |  |
+| 36 | fprocessseq | 工序序列（废弃） | varchar | 50 |  | √ | ' ' | 工序序列（废弃） |
+| 37 | fprocesssequence | 工序序列 | int4 | 32 |  | √ | 0 | 工序序列 |
+| 38 | fallotqty | 基本单位.已调拨数量 | numeric | 23 | 10 | √ | 0.0000000000 | 基本单位.已调拨数量 |
+| 39 | fisoutmachining | 是否委外加工 | bpchar | 1 |  | √ | '0' | 是否委外加工 |
+| 40 | ftagnum_tag | 位号_详情 | text | 0 |  |  | null | 位号_详情 |
+| 41 | fpriority | 替代优先级 | int8 | 64 |  | √ | 0 | 替代优先级 |
+| 42 | freplacemode | 替代方式 | varchar | 5 |  | √ | ' ' | 替代方式,枚举: A :替代 B :取代 C :按比例 |
+| 43 | fpromaterentryid | 工序物料分配分录ID | int8 | 64 |  | √ | 0 | 工序物料分配分录ID |
+| 44 | ftransdictrelqty | 子项单位.调拨关联数量 | numeric | 23 | 10 | √ | 0 | 子项单位.调拨关联数量 |
+| 45 | ftransdictqty | 子项单位.已调拨数量 | numeric | 23 | 10 | √ | 0 | 子项单位.已调拨数量 |
+| 46 | fmachiningtype | 加工类型 | varchar | 30 |  | √ | ' ' | 加工类型,枚举: 1 :厂内加工 2 :内协加工 3 :委外加工 |
+| 47 | freplaceplan | 物料替代方案 | int8 | 64 |  | √ | 0 | [物料替代方案 mpdm_replaceplan](../basedata_files/mpdm_replaceplan.md) |
+| 48 | foprno | 工序号（废弃） | varchar | 50 |  | √ | ' ' | 工序号（废弃） |
+| 49 | fisbomextend | 来源于BOM展开 | bpchar | 1 |  | √ | '0' | 来源于BOM展开 |
+| 50 | fworkprocedureid | 工序编码 | int8 | 64 |  | √ | 0 | [标准工序定义(废弃) mpdm_workprocedure](../mpdm_files/mpdm_workprocedure.md) |
+| 51 | fbomentryid | BOM分录ID | int8 | 64 |  | √ | 0 | BOM分录ID |
+| 52 | fleadtime | 提前期偏置(天) | numeric | 23 | 10 | √ | 0.0000000000 | 提前期偏置(天) |
+| 53 | foverissuecontrl | 超发控制 | varchar | 30 |  | √ | ' ' | 超发控制,枚举: A :可超发 B :不可超发 C :最小包装量 |
+| 54 | ftransapplyrelqty | 子项单位.调拨申请关联数量 | numeric | 23 | 10 | √ | 0 | 子项单位.调拨申请关联数量 |
+| 55 | fissinhighlimit | 领料上限允差(%) | numeric | 23 | 10 | √ | 0.0000000000 | 领料上限允差(%) |
+| 56 | fparentid | 父ID | int8 | 64 |  | √ | 0 | 父ID |
+| 57 | fbusrejectedqty | 退料数量 | numeric | 23 | 10 | √ | 0 | 退料数量 |
+| 58 | fismainreplace | 替代主料 | bpchar | 1 |  | √ | '0' | 替代主料 |
+| 59 | fisbackflush | fisbackflush | bpchar | 1 |  | √ | '0' |  |
+| 60 | fbusfeedingqty | 补料数量 | numeric | 23 | 10 | √ | 0 | 补料数量 |
+| 61 | flackraitioqty | 领料下限基本数量 | numeric | 23 | 10 | √ | 0.0000000000 | 领料下限基本数量 |
+| 62 | ftotalleadtime | 总提前期偏置(天) | numeric | 23 | 10 | √ | 0 | 总提前期偏置(天) |
+| 63 | fbasetransdictrelqty | 基本单位.调拨关联数量 | numeric | 23 | 10 | √ | 0 | 基本单位.调拨关联数量 |
+| 64 | fisbulkmaterial | 散装物料 | bpchar | 1 |  | √ | '0' | 散装物料 |
+| 65 | fbusscrapqty | 报废数量 | numeric | 23 | 10 | √ | 0 | 报废数量 |
+| 66 | fbasetransdictnonqty | 基本单位.未调拨数量 | numeric | 23 | 10 | √ | 0 | 基本单位.未调拨数量 |
+| 67 | finvtransdictnonqty | 库存单位.未调拨数量 | numeric | 23 | 10 | √ | 0 | 库存单位.未调拨数量 |
+| 68 | fcansendqty | 可领基本数量 | numeric | 23 | 10 | √ | 0.0000000000 | 可领基本数量 |
+| 69 | fisbackflushnew | 倒冲 | varchar | 30 |  | √ | ' ' | 倒冲,枚举: A :不倒冲 B :始终倒冲 C :工作中心决定是否倒冲 |
+| 70 | finvtransdictrelqty | 库存单位.调拨关联数量 | numeric | 23 | 10 | √ | 0 | 库存单位.调拨关联数量 |
+| 71 | fbomexpandpath | BOM展开路径 | varchar | 500 |  | √ | ' ' | BOM展开路径 |
 
 ### 列规则定义
 
@@ -286,8 +309,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_pom_moesl_fentryid |  | fentryid,flocaleid |
-| 2 | t_pom_mftorderentry_s_l_pkey |  | fpkid |
+| 1 | t_pom_mftorderentry_s_l_pkey |  | fpkid |
+| 2 | idx_pom_moesl_fentryid |  | fentryid,flocaleid |
 
 ---
 
@@ -333,43 +356,46 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | 生产工单主id | int8 | 64 |  | √ | 0 | 生产工单主id |
 | 2 | fbillauxqty | 辅助数量 | numeric | 23 | 10 | √ | 0.0000000000 | 辅助数量 |
-| 3 | fmaterialid | 产品编码 | int8 | 64 |  | √ | 0 | 物料生产信息 bd_materialmftinfo |
-| 4 | fauxpropertynew | 辅助属性 | int8 | 64 |  | √ | 0 | null 001 |
-| 5 | forgid | 生产组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 6 | forderid | 生产工单ID | varchar | 50 |  | √ | ' ' | 生产工单ID |
-| 7 | fremarks | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
-| 8 | fconfiguredcodeid | 产品配置号(废弃) | int8 | 64 |  | √ | 0 | 配置号 bd_configuredcode |
-| 9 | forderentryid | 生产工单行号 | int8 | 64 |  | √ | 0 | 生产工单分录f7 pom_mftorder_f7 |
-| 10 | fisinit | 初始化单据 | bpchar | 1 |  | √ | '0' | 初始化单据 |
-| 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 12 | fomversion | BOM版本 | varchar | 50 |  | √ | ' ' | BOM版本 |
-| 13 | fauxproperty | fauxproperty | varchar | 50 |  | √ | ' ' |  |
-| 14 | fbomid | BOM编码 | int8 | 64 |  | √ | 0 | BOM维护 pdm_mftbom |
-| 15 | freplaceno | 替代号 | varchar | 50 |  | √ | ' ' | 替代号 |
-| 16 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 17 | ftracknumberid | 跟踪号 | int8 | 64 |  | √ | 0 | 跟踪号 bd_tracknumber |
-| 18 | fmaterialversionid | 物料版本 | int8 | 64 |  | √ | 0 | 物料版本 bd_bomversion_new |
-| 19 | fbaseunitid | 基本单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 20 | fbillno | 单据编号 | varchar | 30 |  | √ | ' ' | 单据编号 |
-| 21 | ftransactiontypeid | ftransactiontypeid | int8 | 64 |  | √ | 0 |  |
-| 22 | fqty | 数量 | numeric | 23 | 10 | √ | 0.0000000000 | 数量 |
-| 23 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 24 | fischanged | 是否存在未审核变更单 | bpchar | 1 |  | √ | '0' | 是否存在未审核变更单 |
-| 25 | fbillstatus | 单据状态 | varchar | 30 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 26 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 27 | funitid | 生产单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 28 | fproductmasterid | 产品(主数据) | int8 | 64 |  | √ | 0 | 物料 bd_material |
-| 29 | fauditdate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
-| 30 | fmftdeptorgid | 生产部门 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 31 | forderno | 生产工单编号 | varchar | 50 |  | √ | ' ' | 生产工单编号 |
-| 32 | fprocessroute | 工艺路线 | int8 | 64 |  | √ | 0 | 工艺路线 mpdm_sfcprocessroute |
-| 33 | fmftinqty | 最新完工入库数量 | numeric | 23 | 10 | √ | 0.0000000000 | 最新完工入库数量 |
-| 34 | fsourcebillid | 来源单据id | int8 | 64 |  | √ | 0 | 来源单据id |
-| 35 | fbaseqty | 基本数量 | numeric | 23 | 10 | √ | 0.0000000000 | 基本数量 |
-| 36 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 37 | fbillauxunit | 辅助单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 38 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 39 | fbilltype | 单据类型 | int8 | 64 |  | √ | 0 | 单据类型 bos_billtype |
+| 3 | fk_bj73_basedatafield | 工单单据类型 | int8 | 64 |  | √ | 0 | [单据类型 bos_billtype](../cts_files/bos_billtype.md) |
+| 4 | fmaterialid | 产品编码 | int8 | 64 |  | √ | 0 | [物料生产信息 bd_materialmftinfo](../sbd_files/bd_materialmftinfo.md) |
+| 5 | fauxpropertynew | 辅助属性 | int8 | 64 |  | √ | 0 | null 001 |
+| 6 | forgid | 生产组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 7 | forderid | 生产工单ID | varchar | 50 |  | √ | ' ' | 生产工单ID |
+| 8 | fk_bj73_qtyfield | fk_bj73_qtyfield | numeric | 23 | 10 |  | null |  |
+| 9 | fremarks | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
+| 10 | fmftorderid | 生产工单单据头F7 | int8 | 64 |  | √ | 0 | [生产工单单据头F7 pom_mftorder_headf7](../pom_files/pom_mftorder_headf7.md) |
+| 11 | fconfiguredcodeid | 产品配置号(废弃) | int8 | 64 |  | √ | 0 | [配置号（废弃） bd_configuredcode](../sbd_files/bd_configuredcode.md) |
+| 12 | forderentryid | 生产工单行号 | int8 | 64 |  | √ | 0 | [生产工单分录f7 pom_mftorder_f7](../pom_files/pom_mftorder_f7.md) |
+| 13 | fisinit | 初始化单据 | bpchar | 1 |  | √ | '0' | 初始化单据 |
+| 14 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 15 | fomversion | BOM版本 | varchar | 50 |  | √ | ' ' | BOM版本 |
+| 16 | fauxproperty | fauxproperty | varchar | 50 |  | √ | ' ' |  |
+| 17 | fbomid | BOM编码 | int8 | 64 |  | √ | 0 | [BOM维护 pdm_mftbom](../fmm_files/pdm_mftbom.md) |
+| 18 | freplaceno | 替代号 | varchar | 50 |  | √ | ' ' | 替代号 |
+| 19 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 20 | ftracknumberid | 跟踪号 | int8 | 64 |  | √ | 0 | [跟踪号 bd_tracknumber](../sbd_files/bd_tracknumber.md) |
+| 21 | fmaterialversionid | 物料版本 | int8 | 64 |  | √ | 0 | [物料版本 bd_bomversion_new](../basedata_files/bd_bomversion_new.md) |
+| 22 | fbaseunitid | 基本单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 23 | fbillno | 单据编号 | varchar | 30 |  | √ | ' ' | 单据编号 |
+| 24 | ftransactiontypeid | ftransactiontypeid | int8 | 64 |  | √ | 0 |  |
+| 25 | fqty | 数量 | numeric | 23 | 10 | √ | 0.0000000000 | 数量 |
+| 26 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 27 | fischanged | 是否存在未审核变更单 | bpchar | 1 |  | √ | '0' | 是否存在未审核变更单 |
+| 28 | fbillstatus | 单据状态 | varchar | 30 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 D :作废 |
+| 29 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 30 | funitid | 生产单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 31 | fproductmasterid | 产品(主数据) | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
+| 32 | fauditdate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
+| 33 | fmftdeptorgid | 生产部门 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 34 | forderno | 生产工单编号 | varchar | 50 |  | √ | ' ' | 生产工单编号 |
+| 35 | fprocessroute | 工艺路线 | int8 | 64 |  | √ | 0 | [工艺路线 mpdm_sfcprocessroute](../sbd_files/mpdm_sfcprocessroute.md) |
+| 36 | fmftinqty | 最新完工入库数量 | numeric | 23 | 10 | √ | 0.0000000000 | 最新完工入库数量 |
+| 37 | fsourcebillid | 来源单据id | int8 | 64 |  | √ | 0 | 来源单据id |
+| 38 | fbaseqty | 基本数量 | numeric | 23 | 10 | √ | 0.0000000000 | 基本数量 |
+| 39 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 40 | fbillauxunit | 辅助单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 41 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 42 | fbilltype | 单据类型 | int8 | 64 |  | √ | 0 | 单据类型 bos_billtype |
 
 ### 列规则定义
 
@@ -402,61 +428,65 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | funissueqty | 未领基本数量 | numeric | 23 | 10 | √ | 0.0000000000 | 未领基本数量 |
-| 2 | fbomreversion | 物料版本 | int8 | 64 |  | √ | 0 | 物料版本 bd_bomversion_new |
-| 3 | fmaterielinv | 物料库存信息 | int8 | 64 |  | √ | 0 | 物料库存信息 bd_materialinventoryinfo |
+| 2 | fbomreversion | 物料版本 | int8 | 64 |  | √ | 0 | [物料版本 bd_bomversion_new](../basedata_files/bd_bomversion_new.md) |
+| 3 | fmaterielinv | 物料库存信息 | int8 | 64 |  | √ | 0 | [物料库存信息 bd_materialinventoryinfo](../sbd_files/bd_materialinventoryinfo.md) |
 | 4 | fwastagerateformula | 损耗计算公式 | varchar | 30 |  | √ | ' ' | 损耗计算公式,枚举: A :标准用量/（1-损耗率） B :标准用量*（1+损耗率） C : |
 | 5 | fstandqty | 标准基本数量 | numeric | 23 | 10 | √ | 0.0000000000 | 标准基本数量 |
 | 6 | fissuemode | 领送料方式 | varchar | 30 |  | √ | ' ' | 领送料方式,枚举: A :生产领料 B :直送 C :不领料 |
 | 7 | fiscannegative | 退料 | bpchar | 1 |  | √ | '0' | 退料 |
-| 8 | flocation | 发料仓位 | int8 | 64 |  | √ | 0 | 仓位 bd_location |
+| 8 | flocation | 发料仓位 | int8 | 64 |  | √ | 0 | [仓位 bd_location](../sbd_files/bd_location.md) |
 | 9 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 10 | foutlocation | 调出仓位 | int8 | 64 |  | √ | 0 | 仓位 bd_location |
+| 10 | foutlocation | 调出仓位 | int8 | 64 |  | √ | 0 | [仓位 bd_location](../sbd_files/bd_location.md) |
 | 11 | fscraprate | 变动损耗率% | numeric | 23 | 10 | √ | 0.0000000000 | 变动损耗率% |
 | 12 | fchildauxpropertyid | 辅助属性 | int8 | 64 |  | √ | 0 | null 001 |
-| 13 | fisreturninspect | 生产退料检验 | bpchar | 1 |  | √ | 0 | 生产退料检验 |
-| 14 | fworkplanid | 工序计划分录ID | int8 | 64 |  | √ | 0 | 工序计划分录ID |
-| 15 | fownertype | 产品货主类型 | varchar | 30 |  | √ | ' ' | 产品货主类型,枚举: bd_customer :客户 bd_supplier :供应商 bos_org :业务单元 |
-| 16 | fisstockallot | 备料调拨 | bpchar | 1 |  | √ | '0' | 备料调拨 |
-| 17 | fparententryid | fparententryid | int8 | 64 |  | √ | 0 | pid |
-| 18 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 | id |
-| 19 | frework | 返工 | bpchar | 1 |  | √ | '0' | 返工 |
-| 20 | fecostcenterid | 成本中心 | int8 | 64 |  | √ | 0 | 成本中心 bos_costcenter |
-| 21 | fuseratio | 使用比例(%) | numeric | 23 | 10 | √ | 0.0000000000 | 使用比例(%) |
-| 22 | fprojectid | 项目编码 | int8 | 64 |  | √ | 0 | 项目 bd_project |
-| 23 | fqtydenominator | 基本单位分母 | numeric | 23 | 10 | √ | 0.0000000000 | 基本单位分母 |
-| 24 | fbatchno | 批号 | varchar | 50 |  | √ | ' ' | 批号 |
-| 25 | fsrcbillid | 来源单据ID | int8 | 64 |  | √ | 0 | 来源单据ID |
-| 26 | fchildbomid | BOM编码 | int8 | 64 |  | √ | 0 | BOM维护 pdm_mftbom |
-| 27 | fwarehouseid | 发料仓库 | int8 | 64 |  | √ | 0 | 仓库 bd_warehouse |
-| 28 | fsupplierid | 货主 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 29 | fworkstation | 工位 | int8 | 64 |  | √ | 0 | 工位 mpdm_workstation |
-| 30 | fisstep | 是否阶梯用量 | bpchar | 1 |  | √ | '0' | 是否阶梯用量 |
-| 31 | fsupplymode | 货主类型 | varchar | 30 |  | √ | ' ' | 货主类型,枚举: bos_org :业务单元 bd_customer :客户 bd_supplier :供应商 |
-| 32 | fownerid | 产品货主 | int8 | 64 |  | √ | 0 | 客户 bd_customer |
-| 33 | flotid | 批号主档 | int8 | 64 |  | √ | 0 | 批号主档 bd_lot |
-| 34 | fmaterialunitid | 基本单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 35 | fchildbomversion | 子项BOM版本 | varchar | 50 |  | √ | ' ' | 子项BOM版本 |
-| 36 | fsupplyorgid | 发料组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 37 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
-| 38 | foutsqty | foutsqty | numeric | 23 | 10 | √ | 0.0000000000 |  |
-| 39 | foutqty | 关联领料基本数量 | numeric | 23 | 10 | √ | 0.0000000000 | 关联领料基本数量 |
-| 40 | fsupplytype | fsupplytype | varchar | 30 |  | √ | ' ' |  |
-| 41 | freservebaseqty | 库存预留基本数量 | numeric | 23 | 10 | √ | 0 | 库存预留基本数量 |
-| 42 | fmaterialid | 物料编码 | int8 | 64 |  | √ | 0 | 物料生产信息 bd_materialmftinfo |
-| 43 | fentryconfiguredcodeid | 子项配置号(废弃) | int8 | 64 |  | √ | 0 | 配置号 bd_configuredcode |
-| 44 | fmaterielmasterid | 物料(主数据) | int8 | 64 |  | √ | 0 | 物料 bd_material |
-| 45 | fuseqty | 已消耗基本数量 | numeric | 23 | 10 | √ | 0.0000000000 | 已消耗基本数量 |
-| 46 | factissueqty | 已领基本数量 | numeric | 23 | 10 | √ | 0.0000000000 | 已领基本数量 |
-| 47 | ftracknumberid | 跟踪号 | int8 | 64 |  | √ | 0 | 跟踪号 bd_tracknumber |
-| 48 | foutorgunitid | 调出库存组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 49 | favbbaseqty | 库存可用基本数量 | numeric | 23 | 10 | √ | 0 | 库存可用基本数量 |
-| 50 | fqtytype | 用量类型 | varchar | 30 |  | √ | ' ' | 用量类型,枚举: A :变动 B :固定 C :阶梯 |
-| 51 | fqtynumerator | 基本单位分子 | numeric | 23 | 10 | √ | 0.0000000000 | 基本单位分子 |
-| 52 | fsrcbillentryid | 来源单据分录ID | int8 | 64 |  | √ | 0 | 来源单据分录ID |
-| 53 | ffixscrap | 固定损耗 | numeric | 23 | 10 | √ | 0.0000000000 | 固定损耗 |
-| 54 | foutwarehouseid | 调出仓库 | int8 | 64 |  | √ | 0 | 仓库 bd_warehouse |
-| 55 | fprovideorgid | 供应组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 56 | fdemandqty | 需求基本数量 | numeric | 23 | 10 | √ | 0.0000000000 | 需求基本数量 |
+| 13 | foperatemrp | MRP计算 | bpchar | 1 |  | √ | '0' | MRP计算 |
+| 14 | fisreturninspect | 生产退料检验 | bpchar | 1 |  | √ | 0 | 生产退料检验 |
+| 15 | fworkplanid | 工序计划分录ID | int8 | 64 |  | √ | 0 | 工序计划分录ID |
+| 16 | fownertype | 产品货主类型（废弃） | varchar | 30 |  | √ | ' ' | 产品货主类型（废弃）,枚举: bd_customer :客户 bd_supplier :供应商 bos_org :业务单元 |
+| 17 | fisstockallot | 备料调拨 | bpchar | 1 |  | √ | '0' | 备料调拨 |
+| 18 | fparententryid | fparententryid | int8 | 64 |  | √ | 0 | pid |
+| 19 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 | id |
+| 20 | frework | 返工 | bpchar | 1 |  | √ | '0' | 返工 |
+| 21 | fecostcenterid | 成本中心 | int8 | 64 |  | √ | 0 | 成本中心 bos_costcenter |
+| 22 | fuseratio | 使用比例(%) | numeric | 23 | 10 | √ | 0.0000000000 | 使用比例(%) |
+| 23 | fprojectid | 需求项目号 | int8 | 64 |  | √ | 0 | [项目 bd_project](../basedata_files/bd_project.md) |
+| 24 | fqtydenominator | 基本单位分母 | numeric | 23 | 10 | √ | 0.0000000000 | 基本单位分母 |
+| 25 | fbatchno | 批号 | varchar | 50 |  | √ | ' ' | 批号 |
+| 26 | fsrcbillid | 来源单据ID | int8 | 64 |  | √ | 0 | 来源单据ID |
+| 27 | fchildbomid | BOM编码 | int8 | 64 |  | √ | 0 | [BOM维护 pdm_mftbom](../fmm_files/pdm_mftbom.md) |
+| 28 | fwarehouseid | 发料仓库 | int8 | 64 |  | √ | 0 | [仓库 bd_warehouse](../sbd_files/bd_warehouse.md) |
+| 29 | fsupplierid | 货主 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 30 | fworkstation | 工位 | int8 | 64 |  | √ | 0 | [工位 mpdm_workstation](../mpdm_files/mpdm_workstation.md) |
+| 31 | fisstep | 是否阶梯用量 | bpchar | 1 |  | √ | '0' | 是否阶梯用量 |
+| 32 | fk_bj73_ylbillid | 用料清单ID | varchar | 50 |  | √ | ' ' | 用料清单ID |
+| 33 | fsupplymode | 货主类型 | varchar | 30 |  | √ | ' ' | 货主类型,枚举: bos_org :业务单元 bd_customer :客户 bd_supplier :供应商 |
+| 34 | fownerid | 产品货主（废弃） | int8 | 64 |  | √ | 0 | 客户 bd_customer |
+| 35 | flotid | 批号主档 | int8 | 64 |  | √ | 0 | [批号主档 bd_lot](../sbd_files/bd_lot.md) |
+| 36 | fmaterialunitid | 基本单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 37 | fchildbomversion | 子项BOM版本 | varchar | 50 |  | √ | ' ' | 子项BOM版本 |
+| 38 | fsupplyorgid | 发料组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 39 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
+| 40 | foutsqty | foutsqty | numeric | 23 | 10 | √ | 0.0000000000 |  |
+| 41 | foutqty | 关联领料基本数量 | numeric | 23 | 10 | √ | 0.0000000000 | 关联领料基本数量 |
+| 42 | fsupplytype | 供应类型 | varchar | 30 |  | √ | ' ' | 供应类型,枚举: 10040 :外购 10030 :自制 10050 :委外 |
+| 43 | freservebaseqty | 库存预留基本数量 | numeric | 23 | 10 | √ | 0 | 库存预留基本数量 |
+| 44 | fmaterialid | 物料编码 | int8 | 64 |  | √ | 0 | [物料生产信息 bd_materialmftinfo](../sbd_files/bd_materialmftinfo.md) |
+| 45 | fk_bj73_qtyfield | 涨发率 | numeric | 23 | 10 |  | null | 涨发率 |
+| 46 | fentryconfiguredcodeid | 子项配置号(废弃) | int8 | 64 |  | √ | 0 | [配置号（废弃） bd_configuredcode](../sbd_files/bd_configuredcode.md) |
+| 47 | fk_bj73_zfl | fk_bj73_zfl | numeric | 23 | 10 |  | null |  |
+| 48 | fmaterielmasterid | 物料(主数据) | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
+| 49 | fuseqty | 已消耗基本数量 | numeric | 23 | 10 | √ | 0.0000000000 | 已消耗基本数量 |
+| 50 | factissueqty | 已领基本数量 | numeric | 23 | 10 | √ | 0.0000000000 | 已领基本数量 |
+| 51 | ftracknumberid | 跟踪号 | int8 | 64 |  | √ | 0 | [跟踪号 bd_tracknumber](../sbd_files/bd_tracknumber.md) |
+| 52 | foutorgunitid | 调出库存组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 53 | favbbaseqty | 库存可用基本数量 | numeric | 23 | 10 | √ | 0 | 库存可用基本数量 |
+| 54 | fqtytype | 用量类型 | varchar | 30 |  | √ | ' ' | 用量类型,枚举: A :变动 B :固定 C :阶梯 |
+| 55 | fqtynumerator | 基本单位分子 | numeric | 23 | 10 | √ | 0.0000000000 | 基本单位分子 |
+| 56 | fsrcbillentryid | 来源单据分录ID | int8 | 64 |  | √ | 0 | 来源单据分录ID |
+| 57 | ffixscrap | 固定损耗 | numeric | 23 | 10 | √ | 0.0000000000 | 固定损耗 |
+| 58 | foutwarehouseid | 调出仓库 | int8 | 64 |  | √ | 0 | [仓库 bd_warehouse](../sbd_files/bd_warehouse.md) |
+| 59 | fprovideorgid | 供应组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 60 | fdemandqty | 应发基本数量 | numeric | 23 | 10 | √ | 0.0000000000 | 应发基本数量 |
 
 ### 列规则定义
 
@@ -472,6 +502,6 @@
 | 2 | idx_stocken_mftid |  | fmaterialid |
 | 3 | t_pom_manustockentry_pkey |  | fdetailid |
 | 4 | idx_stocken_fsrcbillentryid |  | fsrcbillentryid |
-| 5 | idx_pom_mse_fentryid |  | fentryid |
-| 6 | idx_stocken_feconfiguredcode |  | fentryconfiguredcodeid |
+| 5 | idx_stocken_feconfiguredcode |  | fentryconfiguredcodeid |
+| 6 | idx_pom_mse_fentryid |  | fentryid |
 | 7 | idx_stocken_mid |  | fmaterielmasterid |

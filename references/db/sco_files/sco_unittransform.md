@@ -14,7 +14,7 @@
 | 3 | fenumname | 枚举字段 | varchar | 255 |  | √ | ' ' | 枚举字段 |
 | 4 | ftransrate | 转换率 | numeric | 23 | 10 | √ | 0 | 转换率 |
 | 5 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 6 | fbdunitid | 计量单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 6 | fbdunitid | 计量单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 7 | ftargetrate | 目标比例 | int8 | 64 |  | √ | 0 | 目标比例 |
 | 8 | fsourcerate | 源比例 | int8 | 64 |  | √ | 0 | 源比例 |
 | 9 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
@@ -76,13 +76,13 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 5 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 6 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 7 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 7 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 8 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 9 | fenumform | 枚举表单 | varchar | 255 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 9 | fenumform | 枚举表单 | varchar | 255 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 10 | fpreset | 系统预设 | bpchar | 1 |  | √ | '0' | 系统预设 |
 | 11 | ftransformtype | 转换类型 | varchar | 255 |  | √ | ' ' | 转换类型,枚举: bdunit :计量单位 enum :枚举 |
 | 12 | fenable | 使用状态 | varchar | 30 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |

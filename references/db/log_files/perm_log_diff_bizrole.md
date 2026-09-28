@@ -16,9 +16,9 @@
 | 5 | fdatachange_type | 数据变更类型 | int4 | 32 |  | √ | 0 | 数据变更类型 |
 | 6 | frole_number | 角色编码 | varchar | 36 |  | √ | ' ' | 角色编码 |
 | 7 | frole_name | 角色名称 | varchar | 255 |  | √ | ' ' | 角色名称 |
-| 8 | fendtime | 失效日期 | timestamp | 0 |  |  | null | 失效日期 |
+| 8 | fendtime | 失效时间 | timestamp | 0 |  |  | null | 失效时间 |
 | 9 | fop_desc | 操作描述 | varchar | 300 |  | √ | ' ' | 操作描述 |
-| 10 | fstarttime | 生效日期 | timestamp | 0 |  |  | null | 生效日期 |
+| 10 | fstarttime | 生效时间 | timestamp | 0 |  |  | null | 生效时间 |
 
 ### 列规则定义
 

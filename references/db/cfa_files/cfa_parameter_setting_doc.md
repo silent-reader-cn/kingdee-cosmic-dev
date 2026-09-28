@@ -14,8 +14,8 @@
 | 3 | fparamvalue | value | varchar | 255 |  | √ | ' ' | value |
 | 4 | fmodifydate | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
 | 5 | fparamvalue_tag | value_详情 | text | 0 |  |  | null | value_详情 |
-| 6 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 7 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 7 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

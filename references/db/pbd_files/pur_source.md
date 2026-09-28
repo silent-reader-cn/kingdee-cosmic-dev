@@ -10,22 +10,22 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | forgid | 业务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | forgid | 业务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fbiztypescope | 适用业务类型 | varchar | 50 |  | √ | ' ' | 适用业务类型,枚举: 1 :标准采购 2 :协议采购 3 :VMI采购 4 :JIT采购 5 :委外采购 6 :直运采购 7 :资产采购 8 :费用采购 9 :项目采购 10 :样品采购 |
 | 4 | fdisabledate | fdisabledate | timestamp | 0 |  |  | null |  |
 | 5 | fbilldate | 业务日期 | timestamp | 0 |  |  | null | 业务日期 |
-| 6 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fcompareno | 比价单号 | varchar | 80 |  | √ | ' ' | 比价单号 |
 | 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 9 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :保存 B :已提交 C :已审核 |
-| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 12 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 13 | fpurorgscope | 适用采购组织 | bpchar | 1 |  | √ | ' ' | 适用采购组织,枚举: 1 :所有采购组织 2 :限定采购组织 |
 | 14 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
-| 15 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 15 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 16 | fremark | fremark | varchar | 255 |  | √ | ' ' |  |
-| 17 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 17 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 18 | fname | fname | varchar | 100 |  | √ | ' ' |  |
 | 19 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 20 | fdisablerid | fdisablerid | int8 | 64 |  | √ | 0 |  |
@@ -33,9 +33,9 @@
 | 22 | fctrlstrategy | 控制策略 | bpchar | 1 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
 | 23 | fenable | 可用状态 | bpchar | 1 |  | √ | ' ' | 可用状态,枚举: 0 :禁用 1 :可用 |
 | 24 | fnumber | 方案编码 | varchar | 50 |  | √ | ' ' | 方案编码 |
-| 25 | fuseorgid | 业务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 25 | fuseorgid | 业务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 26 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
-| 27 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 27 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 
@@ -65,7 +65,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
 
 ### 列规则定义
@@ -93,10 +93,10 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fgoodsid | 供方商品编码 | int8 | 64 |  | √ | 0 | 商品档案 pbd_goods |
+| 2 | fgoodsid | 供方商品编码 | int8 | 64 |  | √ | 0 | [商品档案 pbd_goods](../pbd_files/pbd_goods.md) |
 | 3 | fmaxorderqty | 最大订货量 | numeric | 19 | 6 | √ | 0.000000 | 最大订货量 |
 | 4 | ftaxrate | 税率(%) | numeric | 19 | 6 | √ | 0.000000 | 税率(%) |
-| 5 | fmaterialid | 物料编码 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 5 | fmaterialid | 物料编码 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 6 | ftotalordqty | 累计订货量 | numeric | 19 | 6 | √ | 0.000000 | 累计订货量 |
 | 7 | fentrystatus | 行状态 | bpchar | 1 |  | √ | ' ' | 行状态,枚举: A :正常 B :已禁用 |
 | 8 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
@@ -107,12 +107,12 @@
 | 13 | fdatefrom | 有效期从 | timestamp | 0 |  |  | null | 有效期从 |
 | 14 | fquotaorder | 配额顺序 | int8 | 64 |  | √ | 0 | 配额顺序 |
 | 15 | fdateto | 有效期至 | timestamp | 0 |  |  | null | 有效期至 |
-| 16 | fmatclassid | 物料分类 | int8 | 64 |  | √ | 0 | 物料 bd_material |
-| 17 | funitid | 计量单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 18 | fpaycondid | 付款条件 | int8 | 64 |  | √ | 0 | 付款条件 pur_paycond |
+| 16 | fmatclassid | 物料分类 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
+| 17 | funitid | 计量单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 18 | fpaycondid | 付款条件 | int8 | 64 |  | √ | 0 | [付款条件 pur_paycond](../basedata_files/pur_paycond.md) |
 | 19 | fgoodsdesc | 供方物料描述 | varchar | 255 |  | √ | ' ' | 供方物料描述 |
-| 20 | fsupplierid | 供应商 | int8 | 64 |  | √ | 0 | 供应商 bd_supplier |
-| 21 | fsettletypeid | 结算方式 | int8 | 64 |  | √ | 0 | 结算方式 bd_settlementtype |
+| 20 | fsupplierid | 供应商 | int8 | 64 |  | √ | 0 | [供应商 bd_supplier](../basedata_files/bd_supplier.md) |
+| 21 | fsettletypeid | 结算方式 | int8 | 64 |  | √ | 0 | [结算方式 bd_settlementtype](../basedata_files/bd_settlementtype.md) |
 | 22 | fpurleadday | 采购提前期 | int8 | 64 |  | √ | 0 | 采购提前期 |
 | 23 | fasstproid | fasstproid | varchar | 50 |  | √ | ' ' |  |
 | 24 | fquotaratio | 配额比例(%) | numeric | 19 | 6 | √ | 0.000000 | 配额比例(%) |

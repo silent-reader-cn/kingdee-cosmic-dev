@@ -16,20 +16,21 @@
 | 5 | fexchangemethod | fexchangemethod | varchar | 8 |  | √ | ' ' |  |
 | 6 | fexchangerate | fexchangerate | numeric | 23 | 10 | √ | 0 |  |
 | 7 | fsettlementmethodid | fsettlementmethodid | int8 | 64 |  | √ | 0 |  |
-| 8 | fsoldtoid | 订货客户 | int8 | 64 |  | √ | 0 | 客户 bd_customer |
+| 8 | fsoldtoid | 订货客户 | int8 | 64 |  | √ | 0 | [客户 bd_customer](../basedata_files/bd_customer.md) |
 | 9 | fcollectiontermid | fcollectiontermid | int8 | 64 |  | √ | 0 |  |
-| 10 | fcontactid | fcontactid | int8 | 64 |  | √ | 0 |  |
-| 11 | fshiptoid | fshiptoid | int8 | 64 |  | √ | 0 |  |
-| 12 | fexratedate | fexratedate | timestamp | 0 |  |  | null |  |
-| 13 | fpaymentmethod | fpaymentmethod | varchar | 8 |  | √ | ' ' |  |
-| 14 | fconsigneeid | fconsigneeid | int8 | 64 |  | √ | 0 |  |
-| 15 | fbilltoid | fbilltoid | int8 | 64 |  | √ | 0 |  |
-| 16 | fexratetableid | fexratetableid | int8 | 64 |  | √ | 0 |  |
-| 17 | fincludetax | fincludetax | bpchar | 1 |  | √ | ' ' |  |
-| 18 | fcontactaddress | fcontactaddress | varchar | 300 |  |  | null |  |
-| 19 | fdeliverytype | fdeliverytype | int8 | 64 |  | √ | 0 |  |
-| 20 | fsettlecurrencyid | fsettlecurrencyid | int8 | 64 |  | √ | 0 |  |
-| 21 | fcurrencyid | fcurrencyid | int8 | 64 |  | √ | 0 |  |
+| 10 | fpricelistid | fpricelistid | int8 | 64 |  | √ | 0 |  |
+| 11 | fcontactid | fcontactid | int8 | 64 |  | √ | 0 |  |
+| 12 | fshiptoid | fshiptoid | int8 | 64 |  | √ | 0 |  |
+| 13 | fexratedate | fexratedate | timestamp | 0 |  |  | null |  |
+| 14 | fpaymentmethod | fpaymentmethod | varchar | 8 |  | √ | ' ' |  |
+| 15 | fconsigneeid | fconsigneeid | int8 | 64 |  | √ | 0 |  |
+| 16 | fbilltoid | fbilltoid | int8 | 64 |  | √ | 0 |  |
+| 17 | fexratetableid | fexratetableid | int8 | 64 |  | √ | 0 |  |
+| 18 | fincludetax | fincludetax | bpchar | 1 |  | √ | ' ' |  |
+| 19 | fcontactaddress | fcontactaddress | varchar | 300 |  |  | null |  |
+| 20 | fdeliverytype | fdeliverytype | int8 | 64 |  | √ | 0 |  |
+| 21 | fsettlecurrencyid | fsettlecurrencyid | int8 | 64 |  | √ | 0 |  |
+| 22 | fcurrencyid | fcurrencyid | int8 | 64 |  | √ | 0 |  |
 
 ### 列规则定义
 
@@ -56,8 +57,8 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fsalesmanid | 销售员 | int8 | 64 |  | √ | 0 | 供应链业务员 bd_operator |
-| 3 | forgid | 销售组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fsalesmanid | 销售员 | int8 | 64 |  | √ | 0 | [供应链业务员 bd_operator](../sbd_files/bd_operator.md) |
+| 3 | forgid | 销售组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | fclosedate | 关闭日期 | timestamp | 0 |  |  | null | 关闭日期 |
 | 5 | fdeliverycalendar | fdeliverycalendar | varchar | 8 |  | √ | ' ' |  |
 | 6 | fmodifytime | fmodifytime | timestamp | 0 |  |  | null |  |
@@ -66,14 +67,14 @@
 | 9 | fcreatorid | fcreatorid | int8 | 64 |  | √ | 0 |  |
 | 10 | fsdpedigroup | fsdpedigroup | varchar | 8 |  | √ | ' ' |  |
 | 11 | fchangedate | fchangedate | timestamp | 0 |  |  | null |  |
-| 12 | fbiztypeid | 业务类型 | int8 | 64 |  | √ | 0 | 业务类型 bd_biztype |
+| 12 | fbiztypeid | 业务类型 | int8 | 64 |  | √ | 0 | [业务类型 bd_biztype](../sbd_files/bd_biztype.md) |
 | 13 | fdefaultqtymethod | fdefaultqtymethod | varchar | 8 |  | √ | ' ' |  |
 | 14 | fcloserid | fcloserid | int8 | 64 |  | √ | 0 |  |
 | 15 | fbillno | 单据编号 | varchar | 50 |  | √ | ' ' | 单据编号 |
 | 16 | fversion | fversion | varchar | 50 |  | √ | ' ' |  |
 | 17 | fremark | fremark | varchar | 510 |  |  | null |  |
 | 18 | fmodifierid | fmodifierid | int8 | 64 |  | √ | 0 |  |
-| 19 | fsalesdeptid | 销售部门 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 19 | fsalesdeptid | 销售部门 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 20 | fbillstatus | 单据状态 | bpchar | 1 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 21 | fcreatetime | fcreatetime | timestamp | 0 |  |  | null |  |
 | 22 | fisinitbill | fisinitbill | bpchar | 1 |  | √ | ' ' |  |
@@ -81,12 +82,13 @@
 | 24 | fclosestatus | 关闭状态 | bpchar | 1 |  | √ | ' ' | 关闭状态,枚举: A :正常 B :已关闭 |
 | 25 | fsubversion | fsubversion | varchar | 50 |  | √ | ' ' |  |
 | 26 | fstartdate | 订单起始日期 | timestamp | 0 |  |  | null | 订单起始日期 |
-| 27 | fchangerid | fchangerid | int8 | 64 |  | √ | 0 |  |
-| 28 | fplandatetype | fplandatetype | varchar | 8 |  | √ | ' ' |  |
-| 29 | fdaysdelivery | fdaysdelivery | int4 | 32 |  | √ | 0 |  |
-| 30 | fsalesgroupid | 销售组 | int8 | 64 |  | √ | 0 | 供应链业务组 bd_operatorgroup |
-| 31 | fauditorid | fauditorid | int8 | 64 |  | √ | 0 |  |
-| 32 | fbilltypeid | 单据类型 | int8 | 64 |  | √ | 0 | 单据类型 bos_billtype |
+| 27 | fisaccumulation | fisaccumulation | bpchar | 1 |  | √ | '0' |  |
+| 28 | fchangerid | fchangerid | int8 | 64 |  | √ | 0 |  |
+| 29 | fplandatetype | fplandatetype | varchar | 8 |  | √ | ' ' |  |
+| 30 | fdaysdelivery | fdaysdelivery | int4 | 32 |  | √ | 0 |  |
+| 31 | fsalesgroupid | 销售组 | int8 | 64 |  | √ | 0 | [供应链业务组 bd_operatorgroup](../sbd_files/bd_operatorgroup.md) |
+| 32 | fauditorid | fauditorid | int8 | 64 |  | √ | 0 |  |
+| 33 | fbilltypeid | 单据类型 | int8 | 64 |  | √ | 0 | 单据类型 bos_billtype |
 
 ### 列规则定义
 

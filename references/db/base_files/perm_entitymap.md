@@ -11,11 +11,11 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 3 | ftarentity | 目标对象 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
-| 4 | ftarapp | 目标应用 | varchar | 36 |  | √ | ' ' | 业务应用实体 bos_devportal_bizapp |
+| 3 | ftarentity | 目标对象 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
+| 4 | ftarapp | 目标应用 | varchar | 36 |  | √ | ' ' | [业务应用实体 bos_devportal_bizapp](../mdl_files/bos_devportal_bizapp.md) |
 | 5 | fdescription | 描述 | varchar | 500 |  | √ | ' ' | 描述 |
-| 6 | fsrcentity | 源对象 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
-| 7 | fsrcapp | 源应用 | varchar | 36 |  | √ | ' ' | 业务应用实体 bos_devportal_bizapp |
+| 6 | fsrcentity | 源对象 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
+| 7 | fsrcapp | 源应用 | varchar | 36 |  | √ | ' ' | [业务应用实体 bos_devportal_bizapp](../mdl_files/bos_devportal_bizapp.md) |
 
 ### 列规则定义
 

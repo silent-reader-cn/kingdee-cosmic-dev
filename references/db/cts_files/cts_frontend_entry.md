@@ -10,14 +10,14 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreator | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fcreator | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fname | 原名称 | varchar | 1024 |  | √ | ' ' | 原名称 |
 | 4 | ftype | 词条类型 | varchar | 50 |  | √ | ' ' | 词条类型 |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 6 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 7 | fnewname | 新名称 | varchar | 1024 |  | √ | ' ' | 新名称 |
 | 8 | fnumber | 编码 | varchar | 64 |  | √ | ' ' | 编码 |
-| 9 | flangid | 语言 | int8 | 64 |  | √ | 0 | 语言种类 inte_language |
+| 9 | flangid | 语言 | int8 | 64 |  | √ | 0 | [语言种类 inte_language](../base_files/inte_language.md) |
 | 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 
 ### 列规则定义

@@ -50,10 +50,10 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fapplydate | 申请日期 | timestamp | 0 |  |  | null | 申请日期 |
 | 3 | fbillstatus | 单据状态 | varchar | 50 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 4 | fapplyer | 申请人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fapplyer | 申请人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | falltotalpriceandtax | 价税合计 | numeric | 23 | 10 | √ | 0.0000000000 | 价税合计 |
 | 6 | fapplynum | 份数 | int8 | 64 |  | √ | 0 | 份数 |
-| 7 | forg | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 7 | forg | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | frebackreason | 理由 | varchar | 50 |  | √ | ' ' | 理由 |
 | 9 | fapplyreason | 事由 | varchar | 50 |  | √ | ' ' | 事由 |
 | 10 | falltotaltaxamount | 合计税额 | numeric | 23 | 10 | √ | 0.0000000000 | 合计税额 |

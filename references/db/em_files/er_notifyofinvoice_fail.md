@@ -14,7 +14,7 @@
 | 3 | flastruntime | 上次执行时间 | timestamp | 0 |  |  | null | 上次执行时间 |
 | 4 | ferrorcount | 已失败次数 | int8 | 64 |  | √ | 0 | 已失败次数 |
 | 5 | fbillid | 单据id | varchar | 30 |  | √ | ' ' | 单据id |
-| 6 | fbillno | 单据编码 | varchar | 80 |  | √ | ' ' | 单据编码 |
+| 6 | fbillno | 单据编号 | varchar | 80 |  | √ | ' ' | 单据编号 |
 | 7 | fbilltype | 单据类型 | varchar | 30 |  | √ | ' ' | 单据类型,枚举: er_tripreimbursebill :差旅报销单 er_dailyreimbursebill :费用报销单 er_publicreimbursebill :对公报销单 |
 
 ### 列规则定义

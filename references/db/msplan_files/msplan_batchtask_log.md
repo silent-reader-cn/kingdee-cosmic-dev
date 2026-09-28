@@ -43,9 +43,9 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fbillstatus | 单据状态 | varchar | 5 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 4 | foperator | 操作人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | foperator | 操作人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 6 | fjobid | 任务ID | varchar | 50 |  | √ | ' ' | 任务ID |
 | 7 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
@@ -57,11 +57,11 @@
 | 13 | fstatus | 任务运行状态 | varchar | 5 |  | √ | ' ' | 任务运行状态,枚举: A :成功 B :失败 C :手工终止 D :运行中 E :定时任务清理 |
 | 14 | fbizclass | 处理类名称 | varchar | 255 |  | √ | ' ' | 处理类名称 |
 | 15 | fduration | 执行时长(ms) | int8 | 64 |  | √ | 0 | 执行时长(ms) |
-| 16 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 16 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 17 | fqueuename | 消费队列名称 | varchar | 255 |  | √ | ' ' | 消费队列名称 |
 | 18 | fendtime | 任务结束时间 | timestamp | 0 |  |  | null | 任务结束时间 |
 | 19 | fbillno | 单据编号 | varchar | 80 |  | √ | ' ' | 单据编号 |
-| 20 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 20 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

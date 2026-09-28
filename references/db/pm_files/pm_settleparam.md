@@ -41,10 +41,10 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
 | 3 | fstatus | 数据状态 | varchar | 5 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fsettletype | 结算方式 | varchar | 5 |  | √ | ' ' | 结算方式,枚举: A :实时结算 B :手工汇总结算 C :手工明细结算 D :周期汇总结算 E :周期明细结算 |
 | 6 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 7 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 7 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 8 | fbotpid | 汇总转换规则 | varchar | 30 |  | √ | ' ' | 汇总转换规则,枚举: |
 | 9 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 10 | fenable | 使用状态 | varchar | 5 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |

@@ -11,22 +11,22 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fqty | 原单据数量 | numeric | 23 | 10 | √ | 0.0000000000 | 原单据数量 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | forderseq | 行号 | int8 | 64 |  | √ | 0 | 行号 |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 6 | fmaterialid | 物料 | int8 | 64 |  | √ | 0 | 物料 bd_material |
-| 7 | forgid | 销售组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 8 | fsiteschemedef | 供应组织分配方案 | int8 | 64 |  | √ | 0 | 供应组织分配方案定义 mds_siteschemedef |
+| 6 | fmaterialid | 物料 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
+| 7 | forgid | 销售组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 8 | fsiteschemedef | 供应组织分配方案 | int8 | 64 |  | √ | 0 | [供应组织分配方案定义 mds_siteschemedef](../mds_files/mds_siteschemedef.md) |
 | 9 | faccoutstockqty | 累计出库数量 | numeric | 23 | 10 | √ | 0.0000000000 | 累计出库数量 |
 | 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 11 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 12 | fenddate | 结束时间 | timestamp | 0 |  |  | null | 结束时间 |
-| 13 | forgsiteid | 供应组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | forgsiteid | 供应组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 16 | fenable | 使用状态 | varchar | 50 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 17 | fnumber | 单据编号 | varchar | 30 |  | √ | ' ' | 单据编号 |
-| 18 | fbaseunitid | 计量单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 18 | fbaseunitid | 计量单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 19 | fresidueqty | 数量 | numeric | 23 | 10 | √ | 0.0000000000 | 数量 |
 | 20 | fmateqty | 匹配数量汇总 | numeric | 23 | 10 | √ | 0.0000000000 | 匹配数量汇总 |
 | 21 | fbilltypefield | fbilltypefield | int8 | 64 |  | √ | 0 |  |

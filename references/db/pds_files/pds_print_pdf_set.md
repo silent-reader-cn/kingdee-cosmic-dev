@@ -14,7 +14,7 @@
 | 3 | fcompkey | 组件标识 | varchar | 50 |  | √ | ' ' | 组件标识 |
 | 4 | fentryattach | 分录附件 | varchar | 50 |  | √ | ' ' | 分录附件 |
 | 5 | fbillattach | 单据附件 | varchar | 50 |  | √ | ' ' | 单据附件 |
-| 6 | ftemplate | 打印模板 | varchar | 50 |  | √ | ' ' | 打印元数据 bos_print_meta |
+| 6 | ftemplate | 打印模板 | varchar | 50 |  | √ | ' ' | [打印元数据 bos_print_meta](../cts_files/bos_print_meta.md) |
 
 ### 列规则定义
 

@@ -1,8 +1,8 @@
-# 新评估计划终止-srm_evaplanbatch_end
+# 绩效评估计划终止-srm_evaplanbatch_end
 
-## 新评估计划终止-分表 t_srm_evaplan_a
+## 绩效评估计划终止-分表 t_srm_evaplan_a
 
-- **表名称：** 新评估计划终止-分表
+- **表名称：** 绩效评估计划终止-分表
 - **表名：** t_srm_evaplan_a
 
 ### 表格列定义
@@ -23,7 +23,7 @@
 | 12 | forigin | forigin | bpchar | 1 |  | √ | ' ' |  |
 | 13 | ftermination | 终止意见 | varchar | 255 |  | √ | ' ' | 终止意见 |
 | 14 | fcreatorid | fcreatorid | int8 | 64 |  | √ | 0 |  |
-| 15 | fterminaterid | 终止人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 15 | fterminaterid | 终止人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 16 | fpushscore | fpushscore | bpchar | 1 |  | √ | '0' |  |
 | 17 | fsrcbilltype | fsrcbilltype | varchar | 50 |  | √ | ' ' |  |
 | 18 | fauditorid | fauditorid | int8 | 64 |  | √ | 0 |  |
@@ -38,14 +38,14 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_srm_evaplan_a_ftime |  | fcreatetime |
-| 2 | pk_srm_evaplan_a |  | fid |
+| 1 | pk_srm_evaplan_a |  | fid |
+| 2 | idx_srm_evaplan_a_ftime |  | fcreatetime |
 
 ---
 
-## 新评估计划终止-主表 t_srm_evaplan
+## 绩效评估计划终止-主表 t_srm_evaplan
 
-- **表名称：** 新评估计划终止-主表
+- **表名称：** 绩效评估计划终止-主表
 - **表名：** t_srm_evaplan
 
 ### 表格列定义
@@ -96,9 +96,9 @@
 
 ---
 
-## 新评估计划终止-多语言表 t_srm_evaplan_l
+## 绩效评估计划终止-多语言表 t_srm_evaplan_l
 
-- **表名称：** 新评估计划终止-多语言表
+- **表名称：** 绩效评估计划终止-多语言表
 - **表名：** t_srm_evaplan_l
 
 ### 表格列定义

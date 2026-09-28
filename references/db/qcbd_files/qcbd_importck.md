@@ -1,8 +1,8 @@
-# 实测值引入中间单据-qcbd_importck
+# 实测值导入中间单据-qcbd_importck
 
-## 实测值引入中间单据-主表 t_qcbd_importck
+## 实测值导入中间单据-主表 t_qcbd_importck
 
-- **表名称：** 实测值引入中间单据-主表
+- **表名称：** 实测值导入中间单据-主表
 - **表名：** t_qcbd_importck
 
 ### 表格列定义

@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | foptime | 操作时间 | timestamp | 0 |  |  | null | 操作时间 |
-| 3 | fopuser | 操作人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fopuser | 操作人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fop | 操作 | varchar | 30 |  | √ | ' ' | 操作 |
 | 5 | fopdesc | 操作描述 | varchar | 30 |  | √ | ' ' | 操作描述 |
 | 6 | fparams | 关键参数 | varchar | 2000 |  | √ | ' ' | 关键参数 |

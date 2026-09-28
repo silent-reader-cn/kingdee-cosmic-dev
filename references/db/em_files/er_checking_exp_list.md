@@ -80,11 +80,11 @@
 | 6 | fcityname | 用车城市 | varchar | 50 |  | √ | ' ' | 用车城市 |
 | 7 | fdistance | 公里数 | varchar | 50 |  | √ | ' ' | 公里数 |
 | 8 | fvehicletype | 用车类型 | varchar | 100 |  | √ | ' ' | 用车类型 |
-| 9 | fsourcebookedid | 预订人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fsourcebookedid | 预订人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | fvendorname | 供应商名称 | varchar | 50 |  | √ | ' ' | 供应商名称 |
 | 11 | farriveaddress | 下车地点 | varchar | 255 |  | √ | ' ' | 下车地点 |
-| 12 | fhappenddate | 结算发生日期 | timestamp | 0 |  |  | null | 结算发生日期 |
-| 13 | fisconfirm | 是否确认 | varchar | 10 |  | √ | ' ' | 是否确认 |
+| 12 | fhappenddate | 结算发生时间 | timestamp | 0 |  |  | null | 结算发生时间 |
+| 13 | fisconfirm | 已确认 | varchar | 10 |  | √ | ' ' | 已确认 |
 | 14 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 15 | fusetime | 用车时间 | timestamp | 0 |  |  | null | 用车时间 |
 
@@ -146,22 +146,22 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fconfirmamount | 确认金额 | numeric | 23 | 10 | √ | 0 | 确认金额 |
 | 4 | fbillstatus | 单据状态 | varchar | 50 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :审核通过 D :审核未通过 |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 6 | fcostdeptid | 部门 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 7 | fcurrency | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
-| 8 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
+| 6 | fcostdeptid | 部门 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 7 | fcurrency | 币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
+| 8 | fauditdate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 10 | fmsgcount | 消息通知次数 | int8 | 64 |  | √ | 0 | 消息通知次数 |
-| 11 | fneedsend | 是否需要推送 | bpchar | 1 |  | √ | '0' | 是否需要推送 |
+| 11 | fneedsend | 需要推送 | bpchar | 1 |  | √ | '0' | 需要推送 |
 | 12 | fcheckingtotalamount | 总金额 | numeric | 23 | 10 | √ | 0 | 总金额 |
-| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | fperiod | 期间 | timestamp | 0 |  |  | null | 期间 |
-| 15 | fcostcompanyid | 公司 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 15 | fcostcompanyid | 公司 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 16 | fbillno | 单据编号 | varchar | 80 |  | √ | ' ' | 单据编号 |
-| 17 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 17 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 18 | fformid | 类型 | varchar | 50 |  | √ | ' ' | 类型,枚举: er_planecheckingbill :机票 er_hotelcheckingbill :酒店 er_traincheckingbill :火车 er_vehiclecheckingbill :用车 |
 
 ### 列规则定义
@@ -219,7 +219,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义

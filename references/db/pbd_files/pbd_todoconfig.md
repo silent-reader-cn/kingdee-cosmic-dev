@@ -39,10 +39,10 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | ftabstatusid | 页签状态 | int8 | 64 |  | √ | 0 | 工作台待办页签状态 pbd_todostatus |
+| 2 | ftabstatusid | 页签状态 | int8 | 64 |  | √ | 0 | [工作台待办页签状态 pbd_todostatus](../pbd_files/pbd_todostatus.md) |
 | 3 | fclassname | 取数插件 | varchar | 255 |  | √ | ' ' | 取数插件 |
 | 4 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 5 | fentityid | 业务对象 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 5 | fentityid | 业务对象 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 
 ### 列规则定义
@@ -71,15 +71,15 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 卡片名称 | varchar | 20 |  | √ | ' ' | 卡片名称 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 4 | fgroupid | 所属应用 | varchar | 36 |  | √ | ' ' | 业务应用列表 bos_devp_bizapplist |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 4 | fgroupid | 所属应用 | varchar | 36 |  | √ | ' ' | [业务应用列表 bos_devp_bizapplist](../devnew_files/bos_devp_bizapplist.md) |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 6 | ficon_selected | 卡片选中图标 | varchar | 255 |  | √ | ' ' | 卡片选中图标 |
 | 7 | fispreset | 是否预置 | bpchar | 1 |  | √ | '0' | 是否预置 |
 | 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 9 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 10 | ficon | 卡片默认图标 | varchar | 255 |  | √ | ' ' | 卡片默认图标 |
-| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 13 | fcardseq | 卡片序号 | int4 | 32 |  | √ | 0 | 卡片序号 |
 | 14 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |

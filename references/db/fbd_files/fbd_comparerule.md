@@ -40,7 +40,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | forgid | 组织名称 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | forgid | 组织名称 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 4 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 
@@ -101,23 +101,23 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 最后更新人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 最后更新人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fforentireorg | 不限定组织 | bpchar | 1 |  | √ | '1' | 不限定组织 |
 | 4 | fname | fname | varchar | 80 |  | √ | ' ' |  |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 6 | fenabledate | 启用日期 | timestamp | 0 |  |  | null | 启用日期 |
 | 7 | fdisabledate | 禁用日期 | timestamp | 0 |  |  | null | 禁用日期 |
-| 8 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fstrategy | 匹配策略 | varchar | 50 |  | √ | ' ' | 匹配策略,枚举: 1 :一对一匹配（多余舍弃） 2 :一对一匹配（多余继续匹配） |
 | 10 | fmodifytime | 最后更新时间 | timestamp | 0 |  |  | null | 最后更新时间 |
 | 11 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 14 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 15 | fenablerid | 启用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 15 | fenablerid | 启用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 16 | fnumber | 编码 | varchar | 50 |  | √ | ' ' | 编码 |
-| 17 | fentitytypesrc | 源单类型 | varchar | 50 |  | √ | ' ' | 主实体对象 bos_entityobject |
-| 18 | fentitytypetar | 目标单类型 | varchar | 50 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 17 | fentitytypesrc | 源单类型 | varchar | 50 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
+| 18 | fentitytypetar | 目标单类型 | varchar | 50 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 
 ### 列规则定义
 
@@ -129,5 +129,5 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_t_fbd_comparerule_number |  | fnumber |
-| 2 | pk_t_fbd_comparerule |  | fid |
+| 1 | pk_t_fbd_comparerule |  | fid |
+| 2 | idx_t_fbd_comparerule_number |  | fnumber |

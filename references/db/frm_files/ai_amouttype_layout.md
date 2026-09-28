@@ -38,14 +38,14 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | 金额类别 | int8 | 64 |  | √ | 0 | 对账类型 frm_amount_type |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 1 | fid | 金额类别 | int8 | 64 |  | √ | 0 | [对账类型 frm_amount_type](../frm_files/frm_amount_type.md) |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fname | fname | varchar | 100 |  |  | ' ' |  |
 | 4 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 5 | fbizapp | fbizapp | varchar | 36 |  | √ | ' ' |  |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 7 | fpreset | 预置 | bpchar | 1 |  | √ | '0' | 预置 |
-| 8 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 8 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 9 | fseq | fseq | int8 | 64 |  | √ | 0 |  |
 | 10 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
 | 11 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |

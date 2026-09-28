@@ -11,21 +11,21 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fremark | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 4 | fprojectid | 寻源项目 | int8 | 64 |  | √ | 0 | 招标项目F7 src_projectf7 |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 4 | fprojectid | 寻源项目 | int8 | 64 |  | √ | 0 | [招标项目F7 src_projectf7](../src_files/src_projectf7.md) |
 | 5 | fbillstatus | 单据状态 | bpchar | 1 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 7 | forgid | 采购组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 7 | forgid | 采购组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | fbilldate | 申请时间 | timestamp | 0 |  |  | null | 申请时间 |
 | 9 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
 | 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fopentype | 开标方式 | varchar | 30 |  | √ | ' ' | 开标方式,枚举: allopen :全部开标 tecopen :开技术标 bizopen :开商务标 aptopen :开资审标 |
 | 13 | fstopbiddate | 投标/报价截止时间 | timestamp | 0 |  |  | null | 投标/报价截止时间 |
 | 14 | fsrcbilltype | 待开标单据 | varchar | 30 |  | √ | ' ' | 待开标单据,枚举: src_aptitudeaudit :资质预审 src_aptitudeaudit2 :资审后审 src_bidassess :开技术标 src_compare :开商务标 src_scorertask :开标与评标 src_predecision :预定标 src_decision :定标 |
 | 15 | fisconfirm | 是否从源单发起 | bpchar | 1 |  | √ | '0' | 是否从源单发起 |
 | 16 | fbillno | 申请单号 | varchar | 30 |  | √ | ' ' | 申请单号 |
-| 17 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 17 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 
@@ -58,15 +58,15 @@
 | 5 | fnote | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
 | 6 | fisnotify | fisnotify | bpchar | 1 |  | √ | '0' |  |
 | 7 | fclarifytime | fclarifytime | timestamp | 0 |  |  | null |  |
-| 8 | fbidderid | 姓名 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | fbidderid | 姓名 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fisclarify | fisclarify | bpchar | 1 |  | √ | '0' |  |
 | 10 | fcreatedate | fcreatedate | timestamp | 0 |  |  | null |  |
 | 11 | fcreatorid | fcreatorid | int8 | 64 |  | √ | 0 |  |
-| 12 | fbizroleid | 业务角色 | int8 | 64 |  | √ | 0 | 业务角色 pds_bizrole |
+| 12 | fbizroleid | 业务角色 | int8 | 64 |  | √ | 0 | [业务角色 pds_bizrole](../pds_files/pds_bizrole.md) |
 | 13 | fremark | fremark | varchar | 255 |  | √ | ' ' |  |
 | 14 | fbidder1 | fbidder1 | int8 | 64 |  | √ | 0 |  |
 | 15 | fphone | 联系电话 | varchar | 20 |  | √ | ' ' | 联系电话 |
-| 16 | fdeptid | 部门 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 16 | fdeptid | 部门 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 17 | fprojectid | fprojectid | int8 | 64 |  | √ | 0 |  |
 | 18 | fparentid | fparentid | varchar | 50 |  | √ | ' ' |  |
 | 19 | fcreatetime | fcreatetime | timestamp | 0 |  |  | null |  |
@@ -116,7 +116,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 招标辅助资料 pds_extdata |
+| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [招标辅助资料 pds_extdata](../pds_files/pds_extdata.md) |
 | 2 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 | 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 
@@ -150,15 +150,15 @@
 | 3 | fistecopen | 技术标已开标 | bpchar | 1 |  | √ | '0' | 技术标已开标 |
 | 4 | fpackfeeitemid | fpackfeeitemid | int8 | 64 |  | √ | 0 |  |
 | 5 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 6 | fbizopenuser | 商务开标人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | fbizopenuser | 商务开标人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 7 | fisbizassess | 商务标已评标 | bpchar | 1 |  | √ | '0' | 商务标已评标 |
 | 8 | fbizassessdate | 商务标评标时间 | timestamp | 0 |  |  | null | 商务标评标时间 |
 | 9 | fisaptassess | 资质预审已评标 | bpchar | 1 |  | √ | '0' | 资质预审已评标 |
-| 10 | ftecopenuser | 技术开标人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | ftecopenuser | 技术开标人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | ffeeamount | ffeeamount | numeric | 19 | 6 | √ | 0 |  |
-| 12 | fpackageid | 标段名称 | int8 | 64 |  | √ | 0 | 标段名称 src_packagef7 |
+| 12 | fpackageid | 标段名称 | int8 | 64 |  | √ | 0 | [标段名称 src_packagef7](../src_files/src_packagef7.md) |
 | 13 | fturns | 当前轮次 | varchar | 2 |  | √ | ' ' | 当前轮次,枚举: 1 :第一轮 2 :第二轮 3 :第三轮 4 :第四轮 5 :第五轮 |
-| 14 | faptopenuser | 资质预审开标人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | faptopenuser | 资质预审开标人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | faptassessdate2 | 资审后审评标时间 | timestamp | 0 |  |  | null | 资审后审评标时间 |
 | 16 | fisnegotiate | 是否议标 | bpchar | 1 |  | √ | '0' | 是否议标 |
 | 17 | fistecassess | 技术标已评标 | bpchar | 1 |  | √ | '0' | 技术标已评标 |
@@ -170,7 +170,7 @@
 | 23 | faptopendate | 资质预审开标时间 | timestamp | 0 |  |  | null | 资质预审开标时间 |
 | 24 | fisaptopen | 资质预审已开标 | bpchar | 1 |  | √ | '0' | 资质预审已开标 |
 | 25 | fpackdocamount | fpackdocamount | numeric | 23 | 10 | √ | 0 |  |
-| 26 | fnegopenuser | 议标开标人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 26 | fnegopenuser | 议标开标人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 27 | fisbizopen | 商务标已开标 | bpchar | 1 |  | √ | '0' | 商务标已开标 |
 | 28 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 29 | fpackage | fpackage | varchar | 50 |  | √ | ' ' |  |
@@ -213,7 +213,7 @@
 | 10 | fmodifytime | fmodifytime | timestamp | 0 |  |  | null |  |
 | 11 | fisdownload | 是否下载标书 | bpchar | 1 |  | √ | '0' | 是否下载标书 |
 | 12 | fisdiscard | 是否废标 | bpchar | 1 |  | √ | '0' | 是否废标 |
-| 13 | fpackageid | 标段名称 | int8 | 64 |  | √ | 0 | 标段名称 src_packagef7 |
+| 13 | fpackageid | 标段名称 | int8 | 64 |  | √ | 0 | [标段名称 src_packagef7](../src_files/src_packagef7.md) |
 | 14 | fcount2 | 标的附件 | int4 | 32 |  | √ | 0 | 标的附件 |
 | 15 | fisabandon | 是否拒标 | bpchar | 1 |  | √ | '0' | 是否拒标 |
 | 16 | faptopenuser | faptopenuser | int8 | 64 |  | √ | 0 |  |
@@ -243,7 +243,7 @@
 | 40 | fsuppliercode | 供应商代码 | varchar | 50 |  | √ | ' ' | 供应商代码 |
 | 41 | fsource | 来源 | bpchar | 1 |  | √ | ' ' | 来源,枚举: 1 :来源采委会 2 :立项新增 9 :补充供应商 |
 | 42 | fisaptitude | 资审/评标结果 | bpchar | 1 |  | √ | '0' | 资审/评标结果,枚举: 0 :未资审/评标 1 :资审/评标合格 2 :资审/评标不合格 |
-| 43 | fbidderid | 投标人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 43 | fbidderid | 投标人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 44 | fispayfee | 已缴纳保证金 | bpchar | 1 |  | √ | '0' | 已缴纳保证金 |
 | 45 | fcurrentrank | 当前排名 | int4 | 32 |  | √ | 0 | 当前排名 |
 | 46 | ffeeamount | 投标保证金 | numeric | 23 | 10 | √ | 0 | 投标保证金 |

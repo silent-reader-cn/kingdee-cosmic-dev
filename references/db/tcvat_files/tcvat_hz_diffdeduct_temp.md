@@ -12,19 +12,23 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fdifftypeid | 差额扣除类型 | int8 | 64 |  | √ | 0 | 业务定义分录 tpo_tcvat_bizdef_entity |
 | 3 | fserialno | 流水号 | varchar | 50 |  | √ | ' ' | 流水号 |
-| 4 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 4 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | fdeclaretype | 申报方式 | varchar | 30 |  | √ | ' ' | 申报方式,枚举: 1 :被汇总 2 :汇总 |
-| 6 | fdeductamount | 本期实际扣除额 | numeric | 23 | 10 | √ | 0 | 本期实际扣除额 |
-| 7 | fjzjt | 即征即退业务 | varchar | 50 |  | √ | ' ' | 即征即退业务,枚举: 0 :否 1 :是 |
-| 8 | fenddate | 税款所属期止 | timestamp | 0 |  |  | null | 税款所属期止 |
-| 9 | fstartdate | 税款所属期起 | timestamp | 0 |  |  | null | 税款所属期起 |
-| 10 | ftaxpayertype | 纳税人类型 | varchar | 50 |  | √ | ' ' | 纳税人类型 |
-| 11 | fproject | 项目 | varchar | 50 |  | √ | ' ' | 项目 |
-| 12 | frowno | 行号 | varchar | 50 |  | √ | ' ' | 行号 |
-| 13 | fdeductiontype | 免税性质代码及名称 | int8 | 64 |  | √ | 0 | 减免政策代码 tpo_taxdeduction |
-| 14 | fsuborg | 组织编码 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 15 | fcurrentamount | 本期发生额 | numeric | 23 | 10 | √ | 0.0000000000 | 本期发生额 |
-| 16 | flevelname | 层级 | varchar | 50 |  | √ | ' ' | 层级,枚举: 1 :1级 2 :2级 3 :3级 4 :4级 |
+| 6 | fdeductproject | 扣除项目 | varchar | 200 |  | √ | ' ' | 扣除项目,枚举: bqfse :本期发生额 bqsjkce :本期实际扣除额 fseandkce :本期发生额和实际扣除额 |
+| 7 | fjzjtdeductamount | 即征即退实际扣除额 | numeric | 23 | 10 | √ | 0 | 即征即退实际扣除额 |
+| 8 | fdeductamount | 本期实际扣除额 | numeric | 23 | 10 | √ | 0 | 本期实际扣除额 |
+| 9 | fjzjt | 即征即退业务 | varchar | 50 |  | √ | ' ' | 即征即退业务,枚举: 0 :否 1 :是 |
+| 10 | fenddate | 税款所属期止 | timestamp | 0 |  |  | null | 税款所属期止 |
+| 11 | fstartdate | 税款所属期起 | timestamp | 0 |  |  | null | 税款所属期起 |
+| 12 | fdeadline | 缴纳期限 | varchar | 50 |  | √ | ' ' | 缴纳期限,枚举: aysb :按月申报 ajsb :按季申报 |
+| 13 | ftaxpayertype | 纳税人类型 | varchar | 50 |  | √ | ' ' | 纳税人类型 |
+| 14 | fruleid | 规则id | int8 | 64 |  | √ | 0 | 规则id |
+| 15 | fproject | 项目 | varchar | 50 |  | √ | ' ' | 项目 |
+| 16 | frowno | 行号 | varchar | 50 |  | √ | ' ' | 行号 |
+| 17 | fdeductiontype | 免税性质代码及名称 | int8 | 64 |  | √ | 0 | 减免政策代码 tpo_taxdeduction |
+| 18 | fsuborg | 组织编码 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 19 | fcurrentamount | 本期发生额 | numeric | 23 | 10 | √ | 0.0000000000 | 本期发生额 |
+| 20 | flevelname | 层级 | varchar | 50 |  | √ | ' ' | 层级,枚举: 1 :1级 2 :2级 3 :3级 4 :4级 |
 
 ### 列规则定义
 

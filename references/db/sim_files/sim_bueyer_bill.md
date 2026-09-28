@@ -17,7 +17,7 @@
 | 6 | fdate | 日期 | timestamp | 0 |  |  | null | 日期 |
 | 7 | finvoicenum | 发票数量 | int8 | 64 |  | √ | 0 | 发票数量 |
 | 8 | fbuyername | 购方名称 | varchar | 50 |  | √ | ' ' | 购方名称 |
-| 9 | forg | 组织 | int8 | 64 |  | √ | 0 | 企业管理 bdm_org |
+| 9 | forg | 组织 | int8 | 64 |  | √ | 0 | [企业管理 bdm_org](../bdm_files/bdm_org.md) |
 
 ### 列规则定义
 

@@ -1,8 +1,8 @@
-# 参数管理列表-bos_devp_paramlist_bak
+# 参数管理列表（废弃）-bos_devp_paramlist_bak
 
-## 参数管理列表-主表 t_meta_formdesign1
+## 参数管理列表（废弃）-主表 t_meta_formdesign1
 
-- **表名称：** 参数管理列表-主表
+- **表名称：** 参数管理列表（废弃）-主表
 - **表名：** t_meta_formdesign1
 
 ### 表格列定义

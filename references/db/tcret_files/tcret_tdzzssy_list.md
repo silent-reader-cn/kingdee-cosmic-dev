@@ -12,69 +12,83 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fgroupid | fgroupid | int8 | 64 |  | √ | 0 |  |
 | 3 | fewblxh | 二维表序号 | varchar | 50 |  | √ | ' ' | 二维表序号,枚举: 1 :1 |
-| 4 | fversiontype | fversiontype | varchar | 50 |  | √ | ' ' |  |
-| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 6 | fnsrsbh | 纳税人识别号 | varchar | 50 |  | √ | ' ' | 纳税人识别号 |
-| 7 | fyssr | 应税收入 | numeric | 23 | 10 | √ | 0.0000000000 | 应税收入 |
-| 8 | ftaxsourcetype | ftaxsourcetype | varchar | 50 |  | √ | ' ' |  |
-| 9 | fbqybtse | 本期应补（退）税额 | numeric | 23 | 10 | √ | 0.0000000000 | 本期应补（退）税额 |
-| 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 11 | fattachmentcount | fattachmentcount | int8 | 64 |  | √ | 0 |  |
-| 12 | fismodified | 是否修改 | varchar | 50 |  | √ | '0' | 是否修改,枚举: 1 :是 0 :否 |
-| 13 | ftaxsourceid | 项目名称 | int8 | 64 |  | √ | 0 | 土地增值税项目 tdm_tdzzs_clearing_unit |
-| 14 | fbillno | 单据编号 | varchar | 30 |  | √ | ' ' | 单据编号 |
-| 15 | fapanage | fapanage | varchar | 50 |  | √ | ' ' |  |
-| 16 | ftemplateid | 申报表模板 | varchar | 50 |  | √ | ' ' | 申报表模板 |
-| 17 | fbillstatus | 单据状态 | varchar | 50 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 18 | fserialno | fserialno | varchar | 50 |  | √ | ' ' |  |
-| 19 | ftaxlimit | 纳税期限 | varchar | 50 |  | √ | ' ' | 纳税期限,枚举: month :按月申报 season :按季申报 halfyear :半年申报 year :按年申报 false :—— |
-| 20 | fqjje | fqjje | numeric | 23 | 10 | √ | 0 |  |
-| 21 | foperatorno | foperatorno | varchar | 50 |  | √ | ' ' |  |
-| 22 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
-| 23 | fskssqq | 税款所属期起 | timestamp | 0 |  |  | null | 税款所属期起 |
-| 24 | fnsrmc | 纳税人名称 | varchar | 100 |  | √ | ' ' | 纳税人名称 |
-| 25 | fdeclarer | 申报人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 26 | ftaxrefundstatus | ftaxrefundstatus | varchar | 50 |  | √ | ' ' |  |
-| 27 | fzcdz | 注册地址 | varchar | 300 |  | √ | ' ' | 注册地址 |
-| 28 | ftcrettype | ftcrettype | varchar | 50 |  | √ | ' ' |  |
-| 29 | fyhzh | 银行账号 | varchar | 50 |  | √ | ' ' | 银行账号 |
-| 30 | fsbbid | 申报表ID | int8 | 64 |  | √ | 0 | 纳税申报表基础资料 bdtaxr_nsrxx |
-| 31 | fregistertype | 注册登记类型 | varchar | 50 |  | √ | ' ' | 注册登记类型 |
-| 32 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 33 | fnsrtype | 申报表类型 | varchar | 36 |  | √ | ' ' | 申报表类型,枚举: latyj :土地增值税预缴税源 latqs :土地增值税清算税源 latwp :土地增值税尾盘税源 |
-| 34 | fdatatype | 数据来源 | varchar | 50 |  | √ | ' ' | 数据来源,枚举: 1 :系统生成 2 :数据引入 |
-| 35 | ffddbrxm | 法定代表人姓名 | varchar | 50 |  | √ | ' ' | 法定代表人姓名 |
-| 36 | fscjydz | 生产经营地址 | varchar | 300 |  | √ | ' ' | 生产经营地址 |
-| 37 | fphonenum | 电话号码 | varchar | 50 |  | √ | ' ' | 电话号码 |
-| 38 | fpayer | 缴款人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 39 | farchivetime | 归档时间 | timestamp | 0 |  |  | null | 归档时间 |
-| 40 | fdeclarestatus | 申报状态 | varchar | 50 |  | √ | ' ' | 申报状态,枚举: editing :● 未申报 submitted :● 已提交待申报 declaring :● 申报中 declared :● 申报成功 declarefailed :● 申报失败 importing :● 已申报未导入 |
-| 41 | fpaystatus | 缴款状态 | varchar | 50 |  | √ | ' ' | 缴款状态,枚举: unpaid :● 未缴款 submitted :● 已提交待缴款 paying :● 缴款中 paid :● 缴款成功 payfailed :● 缴款失败 nopay :● 无需缴款 yypaid :● 预约成功 yypayfailed :● 预约失败 |
-| 42 | fsblx | fsblx | varchar | 50 |  | √ | ' ' |  |
-| 43 | fjbrysfzjlx | fjbrysfzjlx | varchar | 50 |  | √ | ' ' |  |
-| 44 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 45 | fsshymc | 所属行业 | varchar | 50 |  | √ | ' ' | 所属行业 |
-| 46 | fzerodeclare | fzerodeclare | bpchar | 1 |  | √ | '0' |  |
-| 47 | fskssqz | 税款所属期止 | timestamp | 0 |  |  | null | 税款所属期止 |
-| 48 | fkhyh | 开户银行 | varchar | 120 |  | √ | ' ' | 开户银行 |
-| 49 | fjbrphone | fjbrphone | varchar | 200 |  | √ | ' ' |  |
-| 50 | fremark | fremark | varchar | 100 |  | √ | ' ' |  |
-| 51 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 52 | ftaxauthority | 税务机关 | int8 | 64 |  | √ | 0 | 税务机关 bastax_taxorgan |
-| 53 | fdeclaredate | 申报日期 | timestamp | 0 |  |  | null | 申报日期 |
-| 54 | foperator | foperator | varchar | 50 |  | √ | ' ' |  |
-| 55 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 56 | fsbrq | 申报日期 | timestamp | 0 |  |  | null | 申报日期 |
-| 57 | fdeclaretype | 申报方式 | varchar | 50 |  | √ | ' ' | 申报方式,枚举: 0 :手工申报 1 :直连申报 |
-| 58 | fmaindataid | 主数据ID | int8 | 64 |  | √ | 0 | 主数据ID |
-| 59 | fdeferpayapply | fdeferpayapply | bpchar | 1 |  | √ | '0' |  |
-| 60 | fpaytype | 缴款方式 | varchar | 50 |  | √ | ' ' | 缴款方式,枚举: 0 :手工缴款 1 :直连缴款 |
-| 61 | fsjje | fsjje | numeric | 23 | 10 | √ | 0 |  |
-| 62 | farchivestatus | 归档状态 | varchar | 50 |  | √ | 'unfiled' | 归档状态,枚举: unfiled :未归档 filed :已归档 |
-| 63 | friskstatus | friskstatus | varchar | 50 |  | √ | ' ' |  |
-| 64 | fbusinessno | fbusinessno | varchar | 50 |  | √ | ' ' |  |
-| 65 | friskcontent | 风险提示 | varchar | 50 |  | √ | ' ' | 风险提示,枚举: normal :正常 abnormal :异常 |
-| 66 | fpaydate | 缴款日期 | timestamp | 0 |  |  | null | 缴款日期 |
+| 4 | fclearstatus | 清算状态 | varchar | 50 |  | √ | ' ' | 清算状态,枚举: unsubmit :未提交 clearing :清算中 cleared :已清算 |
+| 5 | fversiontype | fversiontype | varchar | 50 |  | √ | ' ' |  |
+| 6 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 7 | fnsrsbh | 纳税人识别号 | varchar | 50 |  | √ | ' ' | 纳税人识别号 |
+| 8 | fyssr | 应税收入 | numeric | 23 | 10 | √ | 0.0000000000 | 应税收入 |
+| 9 | ftaxsourcetype | ftaxsourcetype | varchar | 50 |  | √ | ' ' |  |
+| 10 | fbqybtse | 本期应补（退）税额 | numeric | 23 | 10 | √ | 0.0000000000 | 本期应补（退）税额 |
+| 11 | fsteplevel | fsteplevel | varchar | 50 |  | √ | ' ' |  |
+| 12 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 13 | fattachmentcount | fattachmentcount | int8 | 64 |  | √ | 0 |  |
+| 14 | fismodified | 是否修改 | varchar | 50 |  | √ | '0' | 是否修改,枚举: 1 :是 0 :否 |
+| 15 | fflexbizdims | fflexbizdims | int8 | 64 |  | √ | 0 |  |
+| 16 | ftaxsourceid | 项目名称 | int8 | 64 |  | √ | 0 | [土地增值税项目 tdm_tdzzs_clearing_unit](../tdm_files/tdm_tdzzs_clearing_unit.md) |
+| 17 | fbillno | 单据编号 | varchar | 30 |  | √ | ' ' | 单据编号 |
+| 18 | fapanage | fapanage | varchar | 50 |  | √ | ' ' |  |
+| 19 | fstepsummary | fstepsummary | bpchar | 1 |  | √ | '0' |  |
+| 20 | ftemplateid | 申报表模板 | varchar | 50 |  | √ | ' ' | 申报表模板 |
+| 21 | fbillstatus | 单据状态 | varchar | 50 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
+| 22 | fserialno | fserialno | varchar | 50 |  | √ | ' ' |  |
+| 23 | ftaxlimit | 纳税期限 | varchar | 50 |  | √ | ' ' | 纳税期限,枚举: month :按月申报 season :按季申报 halfyear :半年申报 year :按年申报 false :—— |
+| 24 | fqjje | fqjje | numeric | 23 | 10 | √ | 0 |  |
+| 25 | foperatorno | foperatorno | varchar | 50 |  | √ | ' ' |  |
+| 26 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
+| 27 | fskssqq | 税款所属期起 | timestamp | 0 |  |  | null | 税款所属期起 |
+| 28 | fdraftpurpose | fdraftpurpose | varchar | 50 |  | √ | ' ' |  |
+| 29 | fnsrmc | 纳税人名称 | varchar | 100 |  | √ | ' ' | 纳税人名称 |
+| 30 | fdeclarer | 申报人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 31 | ftaxrefundstatus | ftaxrefundstatus | varchar | 50 |  | √ | ' ' |  |
+| 32 | fzcdz | 注册地址 | varchar | 300 |  | √ | ' ' | 注册地址 |
+| 33 | ftcrettype | ftcrettype | varchar | 50 |  | √ | ' ' |  |
+| 34 | fyhzh | 银行账号 | varchar | 50 |  | √ | ' ' | 银行账号 |
+| 35 | fsbbid | 申报表ID | int8 | 64 |  | √ | 0 | [纳税申报表基础资料 bdtaxr_nsrxx](../bdtaxr_files/bdtaxr_nsrxx.md) |
+| 36 | fregistertype | 注册登记类型 | varchar | 50 |  | √ | ' ' | 注册登记类型 |
+| 37 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 38 | fnsrtype | 申报表类型 | varchar | 36 |  | √ | ' ' | 申报表类型,枚举: latyj :土地增值税预缴税源 latqs :土地增值税清算税源 latwp :土地增值税尾盘税源 latzrjf :土地增值税转让旧房税源 |
+| 39 | fdatatype | 数据来源 | varchar | 50 |  | √ | ' ' | 数据来源,枚举: 1 :系统生成 2 :数据引入 |
+| 40 | faccountorg | faccountorg | int8 | 64 |  | √ | 0 |  |
+| 41 | ffddbrxm | 法定代表人姓名 | varchar | 50 |  | √ | ' ' | 法定代表人姓名 |
+| 42 | fscjydz | 生产经营地址 | varchar | 300 |  | √ | ' ' | 生产经营地址 |
+| 43 | fphonenum | 电话号码 | varchar | 50 |  | √ | ' ' | 电话号码 |
+| 44 | fpayer | 缴款人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 45 | fbusinesstype | fbusinesstype | varchar | 50 |  | √ | ' ' |  |
+| 46 | faccrualplan | faccrualplan | int8 | 64 |  | √ | 0 |  |
+| 47 | fhistoryversion | fhistoryversion | varchar | 50 |  | √ | ' ' |  |
+| 48 | farchivetime | 归档时间 | timestamp | 0 |  |  | null | 归档时间 |
+| 49 | fclearedtime | 已清算时间 | timestamp | 0 |  |  | null | 已清算时间 |
+| 50 | fdeclarestatus | 申报状态 | varchar | 50 |  | √ | ' ' | 申报状态,枚举: editing :● 未申报 submitted :● 已提交待申报 declaring :● 申报中 declared :● 申报成功 declarefailed :● 申报失败 importing :● 已申报未导入 |
+| 51 | fpaystatus | 缴款状态 | varchar | 50 |  | √ | ' ' | 缴款状态,枚举: unpaid :● 未缴款 submitted :● 已提交待缴款 paying :● 缴款中 paid :● 缴款成功 payfailed :● 缴款失败 nopay :● 无需缴款 yypaid :● 预约成功 yypayfailed :● 预约失败 |
+| 52 | fsblx | fsblx | varchar | 50 |  | √ | ' ' |  |
+| 53 | fjbrysfzjlx | fjbrysfzjlx | varchar | 50 |  | √ | ' ' |  |
+| 54 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 55 | fsshymc | 所属行业 | varchar | 50 |  | √ | ' ' | 所属行业 |
+| 56 | fzerodeclare | fzerodeclare | bpchar | 1 |  | √ | '0' |  |
+| 57 | fskssqz | 税款所属期止 | timestamp | 0 |  |  | null | 税款所属期止 |
+| 58 | fkhyh | 开户银行 | varchar | 120 |  | √ | ' ' | 开户银行 |
+| 59 | fjbrphone | fjbrphone | varchar | 200 |  | √ | ' ' |  |
+| 60 | fremark | fremark | varchar | 100 |  | √ | ' ' |  |
+| 61 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 62 | ftaxauthority | 税务机关 | int8 | 64 |  | √ | 0 | [税务机关 bastax_taxorgan](../bastax_files/bastax_taxorgan.md) |
+| 63 | fdeclaredate | 申报日期 | timestamp | 0 |  |  | null | 申报日期 |
+| 64 | foperator | foperator | varchar | 50 |  | √ | ' ' |  |
+| 65 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 66 | fcleartime | 清算中时间 | timestamp | 0 |  |  | null | 清算中时间 |
+| 67 | fsbrq | 申报日期 | timestamp | 0 |  |  | null | 申报日期 |
+| 68 | fdeclaretype | 申报方式 | varchar | 50 |  | √ | ' ' | 申报方式,枚举: 0 :手工申报 1 :直连申报 |
+| 69 | fmaindataid | 主数据ID | int8 | 64 |  | √ | 0 | 主数据ID |
+| 70 | fdeferpayapply | fdeferpayapply | bpchar | 1 |  | √ | '0' |  |
+| 71 | fisxxwlqy | fisxxwlqy | varchar | 10 |  | √ | ' ' |  |
+| 72 | fpaytype | 缴款方式 | varchar | 50 |  | √ | ' ' | 缴款方式,枚举: 0 :手工缴款 1 :直连缴款 |
+| 73 | fsjje | fsjje | numeric | 23 | 10 | √ | 0 |  |
+| 74 | farchivestatus | 归档状态 | varchar | 50 |  | √ | 'unfiled' | 归档状态,枚举: unfiled :未归档 filed :已归档 |
+| 75 | flogsummary | flogsummary | varchar | 255 |  | √ | ' ' |  |
+| 76 | fstepparentid | fstepparentid | int8 | 64 |  | √ | 0 |  |
+| 77 | friskstatus | friskstatus | varchar | 50 |  | √ | ' ' |  |
+| 78 | fbusinessno | fbusinessno | varchar | 50 |  | √ | ' ' |  |
+| 79 | friskcontent | 风险提示 | varchar | 50 |  | √ | ' ' | 风险提示,枚举: normal :正常 abnormal :异常 |
+| 80 | fpaydate | 缴款日期 | timestamp | 0 |  |  | null | 缴款日期 |
 
 ### 列规则定义
 

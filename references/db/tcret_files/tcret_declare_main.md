@@ -12,34 +12,35 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fewblxh | 二维表序号 | varchar | 50 |  | √ | ' ' | 二维表序号,枚举: 1 :1 |
 | 3 | fdetaildeclare | 明细申报 | varchar | 50 |  | √ | ' ' | 明细申报,枚举: true :是 false :否 |
-| 4 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 5 | fpayer | 缴款人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 6 | fyjsehj | 已缴税额合计 | numeric | 23 | 10 | √ | 0.0000000000 | 已缴税额合计 |
-| 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 8 | fstatus | 状态 | varchar | 50 |  | √ | ' ' | 状态 |
-| 9 | fpaystatus | 缴款状态 | varchar | 50 |  | √ | ' ' | 缴款状态,枚举: unpaid :● 未缴款 paying :● 缴款中 paid :● 缴款成功 payfailed :● 缴款失败 nopay :● 无需缴款 |
-| 10 | fdeclarestatus | 申报状态 | varchar | 50 |  | √ | ' ' | 申报状态,枚举: editing :● 未申报 declaring :● 申报中 declared :● 申报成功 undeclare :● 未编制 declarefailed :● 申报失败 |
-| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 12 | ftaxauthorityid | 税务机关 | int8 | 64 |  | √ | 0 | 税务机关 bastax_taxorgan |
-| 13 | fbillno | 单据编号 | varchar | 30 |  | √ | ' ' | 单据编号 |
-| 14 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 15 | fdeclaredate | 申报日期 | timestamp | 0 |  |  | null | 申报日期 |
-| 16 | fbillstatus | 单据状态 | varchar | 50 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 17 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 18 | fsbrq | 申报时间 | timestamp | 0 |  |  | null | 申报时间 |
-| 19 | fdeclaretype | 申报方式 | varchar | 50 |  | √ | ' ' | 申报方式,枚举: 0 :手工申报 1 :直连申报 |
-| 20 | fisxxwlqy | 小型微利企业 | varchar | 50 |  | √ | ' ' | 小型微利企业,枚举: true :是 false :否 |
-| 21 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
-| 22 | fpaytype | 缴款方式 | varchar | 50 |  | √ | ' ' | 缴款方式,枚举: 0 :手工缴款 1 :直连缴款 |
-| 23 | fewblname | 二维表名称 | varchar | 50 |  | √ | ' ' | 二维表名称 |
-| 24 | fjmsehj | 减免税额合计 | numeric | 23 | 10 | √ | 0.0000000000 | 减免税额合计 |
-| 25 | fdeclarer | 申报人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 26 | fbqybtsehj | 应（补）退税额合计 | numeric | 23 | 10 | √ | 0.0000000000 | 应（补）退税额合计 |
-| 27 | fynsehj | 应纳税额合计 | numeric | 23 | 10 | √ | 0.0000000000 | 应纳税额合计 |
-| 28 | fsbbid | 申报表ID | int8 | 64 |  | √ | 0 | 申报表ID |
-| 29 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 30 | fdatatype | 数据来源 | varchar | 50 |  | √ | ' ' | 数据来源,枚举: 1 :系统生成 2 :数据引入 : |
-| 31 | fpaydate | 缴款日期 | timestamp | 0 |  |  | null | 缴款日期 |
+| 4 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 5 | ftransregional | 跨区域申报 | varchar | 50 |  | √ | ' ' | 跨区域申报,枚举: true :是 false :否 |
+| 6 | fpayer | 缴款人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 7 | fyjsehj | 已缴税额合计 | numeric | 23 | 10 | √ | 0.0000000000 | 已缴税额合计 |
+| 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 9 | fstatus | 状态 | varchar | 50 |  | √ | ' ' | 状态 |
+| 10 | fpaystatus | 缴款状态 | varchar | 50 |  | √ | ' ' | 缴款状态,枚举: unpaid :● 未缴款 paying :● 缴款中 paid :● 缴款成功 payfailed :● 缴款失败 nopay :● 无需缴款 |
+| 11 | fdeclarestatus | 申报状态 | varchar | 50 |  | √ | ' ' | 申报状态,枚举: editing :● 未申报 declaring :● 申报中 declared :● 申报成功 undeclare :● 未编制 declarefailed :● 申报失败 |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 13 | ftaxauthorityid | 税务机关 | int8 | 64 |  | √ | 0 | [税务机关 bastax_taxorgan](../bastax_files/bastax_taxorgan.md) |
+| 14 | fbillno | 单据编号 | varchar | 30 |  | √ | ' ' | 单据编号 |
+| 15 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 16 | fdeclaredate | 申报日期 | timestamp | 0 |  |  | null | 申报日期 |
+| 17 | fbillstatus | 单据状态 | varchar | 50 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
+| 18 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 19 | fsbrq | 申报时间 | timestamp | 0 |  |  | null | 申报时间 |
+| 20 | fdeclaretype | 申报方式 | varchar | 50 |  | √ | ' ' | 申报方式,枚举: 0 :手工申报 1 :直连申报 |
+| 21 | fisxxwlqy | 小型微利企业 | varchar | 50 |  | √ | ' ' | 小型微利企业,枚举: true :是 false :否 |
+| 22 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
+| 23 | fpaytype | 缴款方式 | varchar | 50 |  | √ | ' ' | 缴款方式,枚举: 0 :手工缴款 1 :直连缴款 |
+| 24 | fewblname | 二维表名称 | varchar | 50 |  | √ | ' ' | 二维表名称 |
+| 25 | fjmsehj | 减免税额合计 | numeric | 23 | 10 | √ | 0.0000000000 | 减免税额合计 |
+| 26 | fdeclarer | 申报人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 27 | fbqybtsehj | 应（补）退税额合计 | numeric | 23 | 10 | √ | 0.0000000000 | 应（补）退税额合计 |
+| 28 | fynsehj | 应纳税额合计 | numeric | 23 | 10 | √ | 0.0000000000 | 应纳税额合计 |
+| 29 | fsbbid | 申报表ID | int8 | 64 |  | √ | 0 | 申报表ID |
+| 30 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 31 | fdatatype | 数据来源 | varchar | 50 |  | √ | ' ' | 数据来源,枚举: 1 :系统生成 2 :数据引入 : |
+| 32 | fpaydate | 缴款日期 | timestamp | 0 |  |  | null | 缴款日期 |
 
 ### 列规则定义
 
@@ -78,7 +79,7 @@
 | 11 | fyjse | 已缴税额 | numeric | 23 | 10 | √ | 0.0000000000 | 已缴税额 |
 | 12 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 13 | ftaxtype | 税种 | varchar | 50 |  | √ | ' ' | 税种,枚举: yhsaq :印花税（按期） yhsac :印花税（按次） fcscj :房产税（从价） fcscz :房产税（从租） cztdsys :城镇土地使用税 hbsaq :环保税（按期） tdzzs :土地增值税（尾盘） tdzzsyj :土地增值税（预征） tdzzsqs :土地增值税（清算） |
-| 14 | ftaxtypebrief | 税种简写 | varchar | 50 |  | √ | ' ' | 税种简写,枚举: yhs :印花税 fcs :房产税 cztdsys :城镇土地使用税 hbs :环保税 ccs :车船税 qs :契税 tdzzs :土地增值税 tdzzsyj :土地增值税 tdzzsqs :土地增值税 tdz :土地增值税 |
+| 14 | ftaxtypebrief | 税种简写 | varchar | 50 |  | √ | ' ' | 税种简写,枚举: yhs :印花税 fcs :房产税 cztdsys :城镇土地使用税 hbs :环保税 ccs :车船税 qs :契税 tdzzs :土地增值税 tdzzsyj :土地增值税 tdzzsqs :土地增值税 tdz :土地增值税 zys :资源税 szys :水资源税 tdzzszrjf :土地增值税 |
 
 ### 列规则定义
 

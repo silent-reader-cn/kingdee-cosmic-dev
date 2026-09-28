@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | foutconversionruleid | 转换规则 | varchar | 36 |  | √ | ' ' | 转换规则 botp_crlist |
+| 2 | foutconversionruleid | 转换规则 | varchar | 36 |  | √ | ' ' | [转换规则 botp_crlist](../botp_files/botp_crlist.md) |
 | 3 | fxkinvsource | 入库来源 | varchar | 50 |  | √ | 'MO' | 入库来源,枚举: MO :生产工单 MORPT :生产汇报 |
 | 4 | fgenfollowpurbill | 生成后续采购单据 | varchar | 30 |  | √ | ' ' | 生成后续采购单据,枚举: T :是 F :否 |
 | 5 | fisautocreat | 自动生成 | bpchar | 1 |  | √ | '0' | 自动生成 |
@@ -18,7 +18,7 @@
 | 7 | fbackflusherr | 倒冲失败中止审核 | bpchar | 1 |  | √ | '0' | 倒冲失败中止审核 |
 | 8 | fmaterialsource | 用料清单库存发料信息来源 | varchar | 30 |  | √ | ' ' | 用料清单库存发料信息来源,枚举: A :BOM B :物料生产信息 |
 | 9 | ftransapplytype | 调拨方式 | varchar | 2 |  | √ | 'RE' | 调拨方式,枚举: RE :调拨申请 DI :直接调拨 |
-| 10 | fconversionrule | 转换规则 | varchar | 36 |  | √ | ' ' | 转换规则 botp_crlist |
+| 10 | fconversionrule | 转换规则 | varchar | 36 |  | √ | ' ' | [转换规则 botp_crlist](../botp_files/botp_crlist.md) |
 | 11 | fpickstatus | 手工关闭时领料状态控制 | varchar | 50 |  | √ | 'C' | 手工关闭时领料状态控制,枚举: A :未领料 B :部分领料 C :全部领料 D :超额领料 |
 | 12 | ftaskstatus | 手工关闭时任务状态控制 | varchar | 50 |  | √ | 'C' | 手工关闭时任务状态控制,枚举: A :未开工 B :开工 C :完工 D :部分完工 |
 | 13 | freturnbackflush | 退库倒冲 | bpchar | 1 |  | √ | ' ' | 退库倒冲 |
@@ -49,7 +49,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | BOM类型 mpdm_bomtype |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [BOM类型 mpdm_bomtype](../mpdm_files/mpdm_bomtype.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -79,13 +79,13 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fshutdowncontrol | 停产控制 | varchar | 30 |  | √ | ' ' | 停产控制,枚举: 1 :不控制 2 :仅支持停产 3 :不支持停产 |
 | 3 | fiswarehousquality | 允许入库后质检 | bpchar | 1 |  | √ | '0' | 允许入库后质检 |
-| 4 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 4 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | fbackflushtime | 倒冲时机 | varchar | 30 |  | √ | ' ' | 倒冲时机,枚举: A :入库倒冲 B :汇报倒冲 |
-| 6 | ftransactiontype | 业务类型 | int8 | 64 |  | √ | 0 | 业务类型 bd_biztype |
+| 6 | ftransactiontype | 业务类型 | int8 | 64 |  | √ | 0 | [业务类型 bd_biztype](../sbd_files/bd_biztype.md) |
 | 7 | fisprocedure | 启用工序管理 | bpchar | 1 |  | √ | '0' | 启用工序管理 |
 | 8 | freportcontrolrang | 汇报领料控制范围 | varchar | 30 |  | √ | ' ' | 汇报领料控制范围,枚举: A :非倒冲物料 B :关键物料 C :全部物料 |
 | 9 | fisstockchange | 启用用料清单变更 | bpchar | 1 |  | √ | '0' | 启用用料清单变更 |
-| 10 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 10 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 11 | fstockmaterials | 用料清单展开方式 | varchar | 30 |  | √ | ' ' | 用料清单展开方式,枚举: A :按BOM展开 B :仅主产品 C :不展开BOM |
 | 12 | fbackflushmore | 倒冲数量允许大于需求数量 | bpchar | 1 |  | √ | '0' | 倒冲数量允许大于需求数量 |
 | 13 | fallowvaluetype | 允差类型 | varchar | 30 |  | √ | ' ' | 允差类型,枚举: A :数值 B :百分比 |
@@ -104,7 +104,7 @@
 | 26 | fiswarehousingpick | 入库完全领料 | bpchar | 1 |  | √ | '0' | 入库完全领料 |
 | 27 | fisinnerprocess | 内协加工 | bpchar | 1 |  | √ | '0' | 内协加工 |
 | 28 | fdeduction | 在制材料扣减 | varchar | 30 |  | √ | ' ' | 在制材料扣减,枚举: A :入库扣减 B :汇报扣减 |
-| 29 | fbomtype | BOM类型（废弃） | int8 | 64 |  | √ | 0 | BOM类型 mpdm_bomtype |
+| 29 | fbomtype | BOM类型（废弃） | int8 | 64 |  | √ | 0 | [BOM类型 mpdm_bomtype](../mpdm_files/mpdm_bomtype.md) |
 | 30 | fisaudittechnis | 自动审核工序计划 | bpchar | 1 |  | √ | '0' | 自动审核工序计划 |
 | 31 | fenable | 使用状态 | varchar | 30 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 32 | fnumber | 编码 | varchar | 60 |  | √ | ' ' | 编码 |
@@ -118,7 +118,7 @@
 | 40 | fispreset | 系统预设 | bpchar | 1 |  | √ | '0' | 系统预设 |
 | 41 | fallowvalue | 允差判断 | varchar | 30 |  | √ | ' ' | 允差判断,枚举: A :下限 B :上下限 |
 | 42 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 43 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 43 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 44 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 45 | fwarehousrang | 入库领料控制范围 | varchar | 30 |  | √ | ' ' | 入库领料控制范围,枚举: A :非倒冲物料 B :关键物料 C :全部物料 |
 | 46 | fisautoclose | 工单自动关闭 | bpchar | 1 |  | √ | '1' | 工单自动关闭 |
@@ -127,8 +127,8 @@
 | 49 | fexpandstock | 用料清单展开 | varchar | 30 |  | √ | 'A' | 用料清单展开,枚举: A :工卡 B :手工维护 |
 | 50 | fpickbeginwork | 领料即开工 | bpchar | 1 |  | √ | '0' | 领料即开工 |
 | 51 | ftechnisrptdim | 汇报维度 | varchar | 30 |  | √ | 'A' | 汇报维度,枚举: A :工时 B :数量 |
-| 52 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 53 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 52 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 53 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 54 | fisauditstock | 自动审核用料清单 | bpchar | 1 |  | √ | '0' | 自动审核用料清单 |
 | 55 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 56 | fisautomake | 自动生成 | varchar | 30 |  | √ | ' ' | 自动生成,枚举: T :是 F :否 |

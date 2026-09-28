@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | forgid | 运行组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | forgid | 运行组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | ftotalassets | 资产总额 | numeric | 23 | 10 | √ | 0 | 资产总额 |
 | 4 | fincome | 营业收入 | numeric | 23 | 10 | √ | 0 | 营业收入 |
 | 5 | fskssqq | 日期范围.开始 | timestamp | 0 |  |  | null | 日期范围.开始 |
@@ -20,7 +20,7 @@
 | 9 | fskssqz | 日期范围.结束 | timestamp | 0 |  |  | null | 日期范围.结束 |
 | 10 | ftaxorgname | 分支机构名称 | varchar | 50 |  | √ | ' ' | 分支机构名称 |
 | 11 | fyear | 年(年度申报分支机构专用) | int8 | 64 |  | √ | 0 | 年(年度申报分支机构专用) |
-| 12 | ftaxorgid | 分支机构 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 12 | ftaxorgid | 分支机构 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 13 | funifiedsocialcode1 | 分支机构社会统一信用代码（申报表取数用） | varchar | 50 |  | √ | ' ' | 分支机构社会统一信用代码（申报表取数用） |
 | 14 | frowno | 序号 | int8 | 64 |  | √ | 0 | 序号 |
 | 15 | ftaxorgname1 | 分支机构名称（申报表取数用） | varchar | 50 |  | √ | ' ' | 分支机构名称（申报表取数用） |
@@ -35,5 +35,5 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | pk_tccit_apportion_sjjt |  | fid |
-| 2 | idx_app_org_qq_qz |  | forgid,fskssqq,fskssqz |
+| 1 | idx_app_org_qq_qz |  | forgid,fskssqq,fskssqz |
+| 2 | pk_tccit_apportion_sjjt |  | fid |

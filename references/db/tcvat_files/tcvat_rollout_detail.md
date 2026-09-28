@@ -15,9 +15,9 @@
 | 4 | fgroupid | 组id | varchar | 100 |  | √ | ' ' | 组id |
 | 5 | fregisterule | 登记规则 | varchar | 100 |  | √ | ' ' | 登记规则 |
 | 6 | fcreatetime | 登记时间 | timestamp | 0 |  |  | null | 登记时间 |
-| 7 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 7 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | fexportamount | 出口税额 | numeric | 23 | 10 | √ | 0.0000000000 | 出口税额 |
-| 9 | fcreaterfield | 登记人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fcreaterfield | 登记人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | frolloutype | 进项转出类型 | varchar | 30 |  | √ | ' ' | 进项转出类型,枚举: 1 :免税项目用 2 :集体福利、个人消费 3 :非正常损失 4 :简易计税方法征税项目用 5 :免抵退税办法不得抵扣的进项税额 6 :按比例转出 8 :红字专用发票信息表注明的进项税额 7 :其它 |
 | 11 | frolloutamount | 转出金额 | numeric | 23 | 10 | √ | 0.0000000000 | 转出金额 |
 | 12 | fjzjtamount | 即征即退税额 | numeric | 23 | 10 | √ | 0.0000000000 | 即征即退税额 |

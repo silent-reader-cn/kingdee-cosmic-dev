@@ -10,8 +10,8 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 3 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 3 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 5 | findex | 排序号 | int8 | 64 |  | √ | 0 | 排序号 |
 | 6 | fappname | 应用名称 | varchar | 255 |  | √ | ' ' | 应用名称 |
@@ -20,7 +20,7 @@
 | 9 | fissyspreset | 是否系统预置 | bpchar | 1 |  | √ | '0' | 是否系统预置 |
 | 10 | finitbatch | 初始化批次 | int8 | 64 |  | √ | 0 | 初始化批次 |
 | 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 12 | fappid | 应用 | varchar | 36 |  | √ | ' ' | 业务应用实体（规则引擎） plm_rengine_bizapp |
+| 12 | fappid | 应用 | varchar | 36 |  | √ | ' ' | [业务应用实体（规则引擎） plm_rengine_bizapp](../plmsm_files/plm_rengine_bizapp.md) |
 
 ### 列规则定义
 

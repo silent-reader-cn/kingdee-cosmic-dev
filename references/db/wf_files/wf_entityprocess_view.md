@@ -12,7 +12,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 修改人 |
 | 3 | fname | 方案名称 | varchar | 500 |  | √ | ' ' | 方案名称 |
-| 4 | fprocdefid | 流程定义 | int8 | 64 |  | √ | 0 | 流程管理 wf_processdefinition |
+| 4 | fprocdefid | 流程定义 | int8 | 64 |  | √ | 0 | [流程管理 wf_processdefinition](../wf_files/wf_processdefinition.md) |
 | 5 | fgraphxml | XML资源ID | int8 | 64 |  | √ | 0 | XML资源ID |
 | 6 | fparentscheme | 扩展的方案id | int8 | 64 |  | √ | 0 | 扩展的方案id |
 | 7 | fdescription | 方案描述 | varchar | 500 |  | √ | ' ' | 方案描述 |

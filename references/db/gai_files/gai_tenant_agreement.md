@@ -13,7 +13,7 @@
 | 2 | fisagree | 是否签署 | bpchar | 1 |  |  | '0' | 是否签署 |
 | 3 | fagreetimestamp | 签署时间戳 | int8 | 64 |  | √ | 0 | 签署时间戳 |
 | 4 | ftenantid | 租户id | varchar | 50 |  |  | ' ' | 租户id |
-| 5 | fuserid | 用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | fuserid | 用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | fagreetime | 签署时间 | timestamp | 0 |  |  | null | 签署时间 |
 | 7 | fversion | 版本 | varchar | 255 |  |  | null | 版本 |
 

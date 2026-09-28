@@ -71,7 +71,7 @@
 | 2 | fshopwindowseq | 橱窗序号 | int4 | 32 |  | √ | 0 | 橱窗序号 |
 | 3 | fmoduledata | 组件配置数据 | varchar | 255 |  | √ | ' ' | 组件配置数据 |
 | 4 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 5 | fmoduletypeid | 组件类型 | int8 | 64 |  | √ | 0 | 商城组件类型 ocrpos_moduletype |
+| 5 | fmoduletypeid | 组件类型 | int8 | 64 |  | √ | 0 | [商城组件类型 ocrpos_moduletype](../ocrpos_files/ocrpos_moduletype.md) |
 | 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 7 | fshopwindow | 橱窗名称 | varchar | 100 |  | √ | ' ' | 橱窗名称 |
 | 8 | fmoduledata_tag | 组件配置数据_详情 | text | 0 |  |  | ' ' | 组件配置数据_详情 |
@@ -132,8 +132,8 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 微页面名称 | varchar | 80 |  | √ | ' ' | 微页面名称 |
 | 3 | fstatus | 数据状态 | bpchar | 1 |  | √ | 'A' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 5 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 5 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 7 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 8 | fenable | 使用状态 | bpchar | 1 |  | √ | '0' | 使用状态,枚举: 0 :禁用 1 :可用 |
@@ -168,7 +168,7 @@
 | 2 | fisenable | 是否启用 | bpchar | 1 |  | √ | '0' | 是否启用 |
 | 3 | fmoduledata | 组件配置数据 | varchar | 255 |  | √ | ' ' | 组件配置数据 |
 | 4 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 5 | fmoduletypeid | 组件类型 | int8 | 64 |  | √ | 0 | 商城组件类型 ocrpos_moduletype |
+| 5 | fmoduletypeid | 组件类型 | int8 | 64 |  | √ | 0 | [商城组件类型 ocrpos_moduletype](../ocrpos_files/ocrpos_moduletype.md) |
 | 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 7 | fshopwindow | 橱窗名称 | varchar | 100 |  | √ | ' ' | 橱窗名称 |
 | 8 | fmoduledata_tag | 组件配置数据_详情 | text | 0 |  |  | ' ' | 组件配置数据_详情 |

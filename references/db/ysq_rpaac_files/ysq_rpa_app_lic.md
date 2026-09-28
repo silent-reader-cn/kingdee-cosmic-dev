@@ -94,20 +94,20 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | null | id |
-| 2 | fcreateorgid | 创建组织 | int8 | 64 |  |  | null | 业务单元 bos_org |
+| 2 | fcreateorgid | 创建组织 | int8 | 64 |  |  | null | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fk_ysq_lic_count | fk_ysq_lic_count | int8 | 64 |  |  | null |  |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 7 | forgid | 组织 | int8 | 64 |  |  | null | 业务单元 bos_org |
+| 7 | forgid | 组织 | int8 | 64 |  |  | null | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | fk_ysq_start_time | 开始时间 | timestamp | 0 |  |  | null | 开始时间 |
 | 9 | fk_ysq_lic_sn | 许可简码 | varchar | 254 |  | √ | ' ' | 许可简码 |
-| 10 | fsrccreateorgid | 原创建组织 | int8 | 64 |  |  | null | 业务单元 bos_org |
+| 10 | fsrccreateorgid | 原创建组织 | int8 | 64 |  |  | null | [业务单元 bos_org](../base_files/bos_org.md) |
 | 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 12 | fctrlstrategy | 控制策略 | varchar | 254 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
 | 13 | fk_ysq_end_time | 结束时间 | timestamp | 0 |  |  | null | 结束时间 |
 | 14 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 15 | fcreatorid | 创建人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 15 | fcreatorid | 创建人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 16 | fmasterid | 主数据内码 | int8 | 64 |  |  | null | 主数据内码 |
 | 17 | fsourcedataid | 原资料id | int8 | 64 |  |  | null | 原资料id |
 | 18 | fk_ysq_app_useable | 是否可用 | bpchar | 1 |  | √ | '0' | 是否可用 |

@@ -14,7 +14,7 @@
 | 3 | fusername | 用户名 | varchar | 50 |  | √ | ' ' | 用户名 |
 | 4 | fdbtype | 数据库类型 | varchar | 10 |  | √ | ' ' | 数据库类型,枚举: 0 :SQLServer 1 :DB2 2 :Oracle |
 | 5 | fport | 端口 | varchar | 10 |  | √ | ' ' | 端口 |
-| 6 | fexternalsysid | 外部系统 | int8 | 64 |  | √ | 0 | 外部系统 bas_externalsys |
+| 6 | fexternalsysid | 外部系统 | int8 | 64 |  | √ | 0 | [外部系统 bas_externalsys](../base_files/bas_externalsys.md) |
 | 7 | flanguage | 语言 | varchar | 10 |  | √ | ' ' | 语言 |
 | 8 | fip | IP地址 | varchar | 50 |  | √ | ' ' | IP地址 |
 | 9 | fpassword | 密码 | varchar | 50 |  | √ | ' ' | 密码 |

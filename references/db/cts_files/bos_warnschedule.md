@@ -14,7 +14,7 @@
 | 3 | fbyentry | 按条件发送分录 | bpchar | 1 |  | √ | '0' | 按条件发送分录 |
 | 4 | fmodeltype | fmodeltype | varchar | 30 |  | √ | 'WarnScheduleModel' |  |
 | 5 | fisv | fisv | varchar | 10 |  | √ | ' ' |  |
-| 6 | fbizappid | 应用 | varchar | 36 |  | √ | ' ' | 业务应用实体 bos_devportal_bizapp |
+| 6 | fbizappid | 应用 | varchar | 36 |  | √ | ' ' | [业务应用实体 bos_devportal_bizapp](../mdl_files/bos_devportal_bizapp.md) |
 | 7 | fmonitorfrequency | 监控频率 | varchar | 200 |  | √ | ' ' | 监控频率 |
 | 8 | fplanid | 调度计划id | varchar | 36 |  | √ | ' ' | 调度计划id |
 | 9 | fenddate | fenddate | timestamp | 0 |  |  | null |  |
@@ -25,7 +25,7 @@
 | 14 | fdata | fdata | text | 0 |  |  | null |  |
 | 15 | fversion | fversion | int8 | 64 |  | √ | 0 |  |
 | 16 | fmodifierid | fmodifierid | int8 | 64 |  | √ | 0 |  |
-| 17 | fearlywarnid | 预警对象 | varchar | 36 |  | √ | ' ' | 业务预警对象 warn_earlywarn |
+| 17 | fearlywarnid | 预警对象 | varchar | 36 |  | √ | ' ' | [业务预警对象 warn_earlywarn](../mdl_files/warn_earlywarn.md) |
 | 18 | fparentid | fparentid | varchar | 36 |  | √ | ' ' |  |
 | 19 | fjobid | 调度作业id | varchar | 36 |  | √ | ' ' | 调度作业id |
 | 20 | finheritpath | finheritpath | varchar | 300 |  | √ | ' ' |  |
@@ -62,7 +62,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | varchar | 36 |  | √ | ' ' |  |
-| 2 | fname | 方案名称 | varchar | 100 |  | √ | ' ' | 方案名称 |
+| 2 | fname | 方案名称 | varchar | 300 |  | √ | ' ' | 方案名称 |
 | 3 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
 | 4 | fdata | fdata | text | 0 |  |  | null |  |
 | 5 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |

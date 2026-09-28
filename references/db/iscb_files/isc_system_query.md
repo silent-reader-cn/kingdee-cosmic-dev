@@ -64,7 +64,7 @@
 | 23 | ftype | 服务协议 | int8 | 64 |  | √ | 0 | 服务协议,枚举: 1 :HTTP 2 :RabbitMQ |
 | 24 | fenable | fenable | int8 | 64 |  | √ | 0 |  |
 | 25 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
-| 26 | fsystemid | 连接系统 | int8 | 64 |  | √ | 0 | 外部集成信息（废弃） isc_sysconn |
+| 26 | fsystemid | 连接系统 | int8 | 64 |  | √ | 0 | [外部集成信息（废弃） isc_sysconn](../iscb_files/isc_sysconn.md) |
 
 ### 列规则定义
 

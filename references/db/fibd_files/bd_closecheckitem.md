@@ -44,8 +44,8 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcompany | 公司 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 3 | fperiod | 会计期间 | int8 | 64 |  | √ | 0 | 会计日历 bd_period |
+| 2 | fcompany | 公司 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 3 | fperiod | 会计期间 | int8 | 64 |  | √ | 0 | [会计日历 bd_period](../fibd_files/bd_period.md) |
 | 4 | faccountbooks | 子系统账簿 | varchar | 50 |  | √ | ' ' | 子系统账簿 |
 | 5 | fsubsysformnum | 子系统表单标识 | varchar | 50 |  | √ | ' ' | 子系统表单标识 |
 
@@ -59,5 +59,5 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | pk_t_bd_closecheckitem |  | fid |
-| 2 | idx_bd_closecheckitem |  | fcompany,faccountbooks,fperiod |
+| 1 | idx_bd_closecheckitem |  | fcompany,faccountbooks,fperiod |
+| 2 | pk_t_bd_closecheckitem |  | fid |

@@ -47,12 +47,12 @@
 | 7 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 8 | fmechanism_protocol | 协议机制 | varchar | 50 |  | √ | ' ' | 协议机制,枚举: PLAIN :PLAIN SCRAM-SHA-256 :SCRAM-SHA-256 SCRAM-SHA-512 :SCRAM-SHA-512 OAUTHBEARER :OAUTHBEARER GSSAPI :GSSAPI |
 | 9 | fencrypt_transport | 加密传输 | bpchar | 1 |  | √ | '0' | 加密传输 |
-| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 12 | fcustom_config | 自定义参数配置 | varchar | 1000 |  | √ | ' ' | 自定义参数配置 |
 | 13 | fserver_port | 服务器端口 | int8 | 64 |  | √ | 0 | 服务器端口 |
 | 14 | flicense_info | 许可状态 | varchar | 20 |  | √ | ' ' | 许可状态,枚举: free :默认免费 yes :正常 no :许可不足 expired :许可失效 |
-| 15 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 15 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 16 | fpull_interval | 消息拉取频率 | int4 | 32 |  |  | null | 消息拉取频率 |
 | 17 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 18 | fuser | 用户 | varchar | 100 |  | √ | ' ' | 用户 |

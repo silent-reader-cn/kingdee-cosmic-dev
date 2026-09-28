@@ -12,7 +12,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fhashcode | 值集数据的HashCode | int8 | 64 |  | √ | 0 | 值集数据的HashCode |
 | 3 | fgroupid | 组织分组id | int8 | 64 |  | √ | 0 | 组织分组id |
-| 4 | fmaptypeid | 通用数据映射类型id | int8 | 64 |  | √ | 0 | 业财数据映射 fah_valmap_typenew |
+| 4 | fmaptypeid | 通用数据映射类型id | int8 | 64 |  | √ | 0 | [业财数据映射 fah_valmap_typenew](../edah_files/fah_valmap_typenew.md) |
 | 5 | feffectdate | 生效日期 | timestamp | 0 |  |  | null | 生效日期 |
 | 6 | forgtype | 适用组织类型 | varchar | 2 |  | √ | ' ' | 适用组织类型,枚举: 10 :核算组织 |
 | 7 | fmodifytime | fmodifytime | timestamp | 0 |  |  | null |  |

@@ -74,10 +74,10 @@
 | 3 | fhandlestate | 处理状态 | varchar | 30 |  | √ | ' ' | 处理状态,枚举: 1 :生成中 2 :处理完成 3 :处理失败 |
 | 4 | fdelstate | 删除状态 | varchar | 30 |  | √ | ' ' | 删除状态,枚举: 1 :正常 2 :已删除 |
 | 5 | fapplytime | 申请时间 | timestamp | 0 |  |  | null | 申请时间 |
-| 6 | fapplicant | 申请人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | fapplicant | 申请人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 7 | ffileurl | 文件地址 | varchar | 200 |  | √ | ' ' | 文件地址 |
 | 8 | fsource | 功能页面 | varchar | 50 |  | √ | ' ' | 功能页面 |
-| 9 | forg | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 9 | forg | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 10 | fstarttime | 开票日期始 | timestamp | 0 |  |  | null | 开票日期始 |
 | 11 | fappid | 数据来源 | varchar | 40 |  | √ | ' ' | 数据来源,枚举: sim :开票管理 rim :收票管理 |
 | 12 | fqfilter_tag | fqfilter_tag | text | 0 |  |  | null |  |

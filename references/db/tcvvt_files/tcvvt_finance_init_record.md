@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fskssqz | 税款所属期止 | timestamp | 0 |  |  | null | 税款所属期止 |
-| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | fsbbid | 申报表id | varchar | 50 |  | √ | ' ' | 申报表id |
 | 5 | fskssqq | 税款所属期起 | timestamp | 0 |  |  | null | 税款所属期起 |
 | 6 | fnsrtype | 申报表类型 | varchar | 50 |  | √ | ' ' | 申报表类型,枚举: FR0001 :一般企业会计准则（未执行） FR0002 :一般企业会计准则（已执行） FR0003 :小企业会计准则 FR0004 :企业会计制度 FR0011 :金融企业会计准则 |

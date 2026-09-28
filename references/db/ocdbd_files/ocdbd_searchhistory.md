@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fhistory | 历史搜索 | varchar | 255 |  | √ | ' ' | 历史搜索 |
-| 3 | fuserid | 用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fuserid | 用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fformid | 所属表单 | varchar | 50 |  | √ | ' ' | 所属表单 |
 
 ### 列规则定义

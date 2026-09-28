@@ -26,5 +26,5 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_t_tcvat_ybnsr_xxfpsjb_sb |  | fsbbid,fewblxh |
-| 2 | pk_tcvat_ybnsr_xxfpsjb |  | fid |
+| 1 | pk_tcvat_ybnsr_xxfpsjb |  | fid |
+| 2 | idx_t_tcvat_ybnsr_xxfpsjb_sb |  | fsbbid,fewblxh |

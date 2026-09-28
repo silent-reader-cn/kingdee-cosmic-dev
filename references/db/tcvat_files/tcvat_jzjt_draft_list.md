@@ -1,5 +1,37 @@
 # 退税计算底稿资料-tcvat_jzjt_draft_list
 
+## 单据体-子表 t_tcvat_jzjt_draft
+
+- **表名称：** 单据体-子表
+- **表名：** t_tcvat_jzjt_draft
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fsbbid | 申报表id | int8 | 64 |  | √ | 0 | 申报表id |
+| 3 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
+| 4 | ftssqb | 退税申请表 | int8 | 64 |  | √ | 0 | [退税申请资料 tcvat_jzjt_tssqb_list](../tcvat_files/tcvat_jzjt_tssqb_list.md) |
+| 5 | fjzjtybtse | 即征即退应补（退）税额 | numeric | 23 | 10 | √ | 0 | 即征即退应补（退）税额 |
+| 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 7 | fjzjtytsje | 即征即退应退税金额 | numeric | 23 | 10 | √ | 0 | 即征即退应退税金额 |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fentryid | fentryid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | pk_tcvat_jzjt_draft |  | fentryid |
+| 2 | idx_tcvat_jzjt_draft_fk |  | fid |
+
+---
+
 ## 即征即退类型-多选基础资料表 t_tcvat_jzjtdraft_type
 
 - **表名称：** 即征即退类型-多选基础资料表
@@ -38,50 +70,64 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | faccountorg | faccountorg | int8 | 64 |  | √ | 0 |  |
-| 3 | faccrualdate | faccrualdate | timestamp | 0 |  |  | null |  |
-| 4 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 5 | fnsrsbh | fnsrsbh | varchar | 50 |  | √ | ' ' |  |
-| 6 | fremarks | fremarks | varchar | 2000 |  | √ | ' ' |  |
-| 7 | fcurrentperiodamount | fcurrentperiodamount | numeric | 23 | 10 | √ | 0 |  |
-| 8 | faccrualplan | faccrualplan | int8 | 64 |  | √ | 0 |  |
-| 9 | ftemplatetype | 模板类型 | varchar | 36 |  | √ | ' ' | 模板类型 tpo_template_type |
-| 10 | fcurrentyearamount | fcurrentyearamount | numeric | 23 | 10 | √ | 0 |  |
-| 11 | fhyncpmcid | fhyncpmcid | int8 | 64 |  | √ | 0 |  |
-| 12 | fmodifytime | fmodifytime | timestamp | 0 |  |  | null |  |
-| 13 | fstatus | fstatus | varchar | 50 |  | √ | ' ' |  |
-| 14 | fadjustperiod | fadjustperiod | varchar | 50 |  | √ | ' ' |  |
-| 15 | fisadjustperiod | fisadjustperiod | bpchar | 1 |  | √ | '0' |  |
-| 16 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 17 | fskssqz | 所属期止 | timestamp | 0 |  |  | null | 所属期止 |
-| 18 | fismodified | fismodified | varchar | 50 |  | √ | '0' |  |
-| 19 | ftaxareagroup | ftaxareagroup | int8 | 64 |  | √ | 0 |  |
-| 20 | ftotalsbse | ftotalsbse | numeric | 23 | 10 | √ | 0 |  |
-| 21 | ftaxtype | ftaxtype | int8 | 64 |  | √ | 0 |  |
-| 22 | fbillno | 单据编码 | varchar | 100 |  | √ | ' ' | 单据编码 |
-| 23 | ftotaljtse | ftotaljtse | numeric | 23 | 10 | √ | 0 |  |
-| 24 | fcomparisontype | fcomparisontype | varchar | 50 |  | √ | 'sdhjbd' |  |
-| 25 | ffrequency | ffrequency | varchar | 50 |  | √ | ' ' |  |
-| 26 | fmodifierid | fmodifierid | int8 | 64 |  | √ | 0 |  |
-| 27 | fgeneratebusinessdoc | fgeneratebusinessdoc | bpchar | 1 |  | √ | '0' |  |
-| 28 | ftotalbtse | ftotalbtse | numeric | 23 | 10 | √ | 0 |  |
-| 29 | ftemplateid | ftemplateid | int8 | 64 |  | √ | 0 |  |
-| 30 | fbusinessdocno | fbusinessdocno | varchar | 50 |  | √ | ' ' |  |
-| 31 | fbillstatus | 单据状态 | varchar | 50 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 32 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 33 | faccountsettype | faccountsettype | varchar | 50 |  | √ | ' ' |  |
-| 34 | fisxxwlqy | fisxxwlqy | varchar | 50 |  | √ | ' ' |  |
-| 35 | fauditdate | fauditdate | timestamp | 0 |  |  | null |  |
-| 36 | ftaxsystem | ftaxsystem | int8 | 64 |  | √ | 0 |  |
-| 37 | fskssqq | 所属期起 | timestamp | 0 |  |  | null | 所属期起 |
-| 38 | fdraftpurpose | fdraftpurpose | varchar | 50 |  | √ | ' ' |  |
-| 39 | fnsrmc | fnsrmc | varchar | 50 |  | √ | ' ' |  |
-| 40 | ftype | ftype | varchar | 50 |  | √ | ' ' |  |
-| 41 | fdraftstatus | fdraftstatus | varchar | 50 |  | √ | ' ' |  |
-| 42 | fjtynsesum | fjtynsesum | numeric | 23 | 10 | √ | 0 |  |
-| 43 | fpzhc | fpzhc | varchar | 50 |  | √ | ' ' |  |
-| 44 | fauditorid | fauditorid | int8 | 64 |  | √ | 0 |  |
-| 45 | fdatatype | fdatatype | varchar | 50 |  | √ | ' ' |  |
+| 2 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 3 | fnsrsbh | fnsrsbh | varchar | 50 |  | √ | ' ' |  |
+| 4 | fremarks | fremarks | varchar | 2000 |  | √ | ' ' |  |
+| 5 | ftemplatetype | 模板类型 | varchar | 36 |  | √ | ' ' | 模板类型 tpo_template_type |
+| 6 | fcurrentyearamount | fcurrentyearamount | numeric | 23 | 10 | √ | 0 |  |
+| 7 | fhyncpmcid | fhyncpmcid | int8 | 64 |  | √ | 0 |  |
+| 8 | fsteplevel | fsteplevel | varchar | 50 |  | √ | ' ' |  |
+| 9 | fmodifytime | fmodifytime | timestamp | 0 |  |  | null |  |
+| 10 | fadjustperiod | fadjustperiod | varchar | 50 |  | √ | ' ' |  |
+| 11 | fismodified | fismodified | varchar | 50 |  | √ | '0' |  |
+| 12 | ftaxareagroup | ftaxareagroup | int8 | 64 |  | √ | 0 |  |
+| 13 | ftotalsbse | ftotalsbse | numeric | 23 | 10 | √ | 0 |  |
+| 14 | fflexbizdims | fflexbizdims | int8 | 64 |  | √ | 0 |  |
+| 15 | fdrafttype | fdrafttype | varchar | 50 |  | √ | ' ' |  |
+| 16 | fbillno | 单据编号 | varchar | 100 |  | √ | ' ' | 单据编号 |
+| 17 | ffrequency | ffrequency | varchar | 50 |  | √ | ' ' |  |
+| 18 | fstepsummary | fstepsummary | bpchar | 1 |  | √ | '0' |  |
+| 19 | ftotalbtse | ftotalbtse | numeric | 23 | 10 | √ | 0 |  |
+| 20 | ftemplateid | ftemplateid | int8 | 64 |  | √ | 0 |  |
+| 21 | fbusinessdocno | fbusinessdocno | varchar | 50 |  | √ | ' ' |  |
+| 22 | fbillstatus | 单据状态 | varchar | 50 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
+| 23 | fauditdate | fauditdate | timestamp | 0 |  |  | null |  |
+| 24 | fskssqq | 所属期起 | timestamp | 0 |  |  | null | 所属期起 |
+| 25 | fdraftpurpose | fdraftpurpose | varchar | 50 |  | √ | ' ' |  |
+| 26 | fnsrmc | fnsrmc | varchar | 100 |  | √ | ' ' |  |
+| 27 | fisdeclare | fisdeclare | bpchar | 1 |  | √ | '0' |  |
+| 28 | fdraftstatus | fdraftstatus | varchar | 50 |  | √ | ' ' |  |
+| 29 | fjtynsesum | fjtynsesum | numeric | 23 | 10 | √ | 0 |  |
+| 30 | fsbbid | fsbbid | int8 | 64 |  | √ | 0 |  |
+| 31 | fpzhc | fpzhc | varchar | 50 |  | √ | ' ' |  |
+| 32 | fauditorid | fauditorid | int8 | 64 |  | √ | 0 |  |
+| 33 | fdatatype | fdatatype | varchar | 50 |  | √ | ' ' |  |
+| 34 | faccountorg | faccountorg | int8 | 64 |  | √ | 0 |  |
+| 35 | faccrualdate | faccrualdate | timestamp | 0 |  |  | null |  |
+| 36 | fcurrentperiodamount | fcurrentperiodamount | numeric | 23 | 10 | √ | 0 |  |
+| 37 | faccrualplan | faccrualplan | int8 | 64 |  | √ | 0 |  |
+| 38 | fhjybtse | fhjybtse | numeric | 23 | 10 | √ | 0 |  |
+| 39 | fstatus | fstatus | varchar | 50 |  | √ | ' ' |  |
+| 40 | fisadjustperiod | fisadjustperiod | bpchar | 1 |  | √ | '0' |  |
+| 41 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 42 | fskssqz | 所属期止 | timestamp | 0 |  |  | null | 所属期止 |
+| 43 | fjtnumber | fjtnumber | varchar | 100 |  | √ | ' ' |  |
+| 44 | fmultitemplateid | fmultitemplateid | int8 | 64 |  | √ | 0 |  |
+| 45 | ftaxtype | ftaxtype | int8 | 64 |  | √ | 0 |  |
+| 46 | ftotaljtse | ftotaljtse | numeric | 23 | 10 | √ | 0 |  |
+| 47 | fsbbno | fsbbno | varchar | 100 |  | √ | ' ' |  |
+| 48 | fcomparisontype | fcomparisontype | varchar | 50 |  | √ | 'sdhjbd' |  |
+| 49 | fmodifierid | fmodifierid | int8 | 64 |  | √ | 0 |  |
+| 50 | fgeneratebusinessdoc | fgeneratebusinessdoc | bpchar | 1 |  | √ | '0' |  |
+| 51 | ftaxauthority | ftaxauthority | int8 | 64 |  | √ | 0 |  |
+| 52 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 53 | faccountsettype | faccountsettype | varchar | 50 |  | √ | ' ' |  |
+| 54 | fisxxwlqy | fisxxwlqy | varchar | 50 |  | √ | ' ' |  |
+| 55 | ftaxsystem | ftaxsystem | int8 | 64 |  | √ | 0 |  |
+| 56 | fstepparentid | fstepparentid | int8 | 64 |  | √ | 0 |  |
+| 57 | ftype | ftype | varchar | 50 |  | √ | ' ' |  |
+| 58 | friskcontent | friskcontent | varchar | 50 |  | √ | ' ' |  |
+| 59 | fdeadline | fdeadline | varchar | 50 |  | √ | ' ' |  |
 
 ### 列规则定义
 
@@ -96,35 +142,3 @@
 | 1 | pk_tpo_declare_main_tsd |  | fid |
 | 2 | idx_declare_main_tsd_fbillno |  | fbillno |
 | 3 | idx_decl_main_tsd_orgid_qzme |  | forgid,fskssqq,fskssqz,ftaxsystem,faccountsettype |
-
----
-
-## 单据体-子表 t_tcvat_jzjt_draft
-
-- **表名称：** 单据体-子表
-- **表名：** t_tcvat_jzjt_draft
-
-### 表格列定义
-
-| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fsbbid | 申报表id | int8 | 64 |  | √ | 0 | 申报表id |
-| 3 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 4 | ftssqb | 退税申请表 | int8 | 64 |  | √ | 0 | 退税申请资料 tcvat_jzjt_tssqb_list |
-| 5 | fjzjtybtse | 即征即退应补（退）税额 | numeric | 23 | 10 | √ | 0 | 即征即退应补（退）税额 |
-| 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 7 | fjzjtytsje | 即征即退应退税金额 | numeric | 23 | 10 | √ | 0 | 即征即退应退税金额 |
-
-### 列规则定义
-
-| 序号 | 键编码 | 列字段 |
-| :--- | :--- | :--- |
-| 1 | fentryid | fentryid |
-
-### 索引定义
-
-| 序号 | 索引名 | 唯一 | 列字段 |
-| :--- | :--- | :--- | :--- |
-| 1 | pk_tcvat_jzjt_draft |  | fentryid |
-| 2 | idx_tcvat_jzjt_draft_fk |  | fid |

@@ -117,19 +117,19 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fsummarytpl | 单据模板编码 | varchar | 100 |  | √ | ' ' | 单据模板编码 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fname | fname | varchar | 230 |  | √ | ' ' |  |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 6 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 7 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 8 | fdefaultdatarows | 分录数据默认显示行数 | int8 | 64 |  | √ | 0 | 分录数据默认显示行数 |
 | 9 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fscene | 使用场景 | varchar | 50 |  | √ | ' ' | 使用场景,枚举: mobileSummary :移动单据摘要 flowchartSummary :业务流程图侧边栏单据摘要 floatlayerSummary :业务流程图浮动层单据摘要 billRelationCardSummary :单据关系图卡片摘要 billRelationStackedCardSummary :单据关系图堆叠卡片摘要 |
 | 12 | fenable | 使用状态 | varchar | 30 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :启用 |
 | 13 | fnumber | 编码 | varchar | 60 |  | √ | ' ' | 编码 |
 | 14 | ftplname | 摘要模板 | varchar | 100 |  | √ | ' ' | 摘要模板 |
-| 15 | fbilltype | 单据 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 15 | fbilltype | 单据 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 16 | fdefaultrows | 默认显示行数 | int8 | 64 |  | √ | 0 | 默认显示行数 |
 
 ### 列规则定义

@@ -11,15 +11,15 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fhfbl | 划分比例 | numeric | 23 | 10 | √ | 0 | 划分比例 |
-| 3 | famountfield | 金额字段 | int8 | 64 |  | √ | 0 | 数据源字段配置 tctb_datasource_entry |
+| 3 | famountfield | 金额字段 | int8 | 64 |  | √ | 0 | [数据源字段配置 tctb_datasource_entry](../tctb_files/tctb_datasource_entry.md) |
 | 4 | fjzjtrolloutamount | 即征即退进项税额 | numeric | 23 | 10 | √ | 0 | 即征即退进项税额 |
-| 5 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | famount | 不含税金额 | numeric | 23 | 10 | √ | 0 | 不含税金额 |
 | 7 | fskssqq | 税款所属期起 | timestamp | 0 |  |  | null | 税款所属期起 |
 | 8 | fjzjtxse | 即征即退销售额 | numeric | 23 | 10 | √ | 0 | 即征即退销售额 |
 | 9 | fskssqz | 税款所属期止 | timestamp | 0 |  |  | null | 税款所属期止 |
 | 10 | ffetchamount | 取数金额 | numeric | 23 | 10 | √ | 0 | 取数金额 |
-| 11 | ftable | 数据源 | int8 | 64 |  | √ | 0 | 数据源配置 tctb_custom_datasource |
+| 11 | ftable | 数据源 | int8 | 64 |  | √ | 0 | [数据源配置 tctb_custom_datasource](../tctb_files/tctb_custom_datasource.md) |
 | 12 | ftaxaccountserialno | 台账流水号 | varchar | 50 |  | √ | ' ' | 台账流水号 |
 | 13 | fabsolute | 绝对值 | bpchar | 1 |  | √ | '0' | 绝对值 |
 | 14 | ffiltercondition | 过滤条件设置 | varchar | 1000 |  | √ | ' ' | 过滤条件设置 |

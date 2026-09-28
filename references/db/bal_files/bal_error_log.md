@@ -14,7 +14,7 @@
 | 3 | ferrormsg | 异常信息 | varchar | 200 |  | √ | ' ' | 异常信息 |
 | 4 | fparams_tag | 参数信息_详情 | text | 0 |  |  | null | 参数信息_详情 |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 6 | fcreaterid | 创建人 | int8 | 64 |  | √ | '0' | 人员 bos_user |
+| 6 | fcreaterid | 创建人 | int8 | 64 |  | √ | '0' | [人员 bos_user](../base_files/bos_user.md) |
 | 7 | fclassinfo | 类信息 | varchar | 200 |  | √ | ' ' | 类信息 |
 | 8 | fparams | 参数信息 | varchar | 200 |  | √ | ' ' | 参数信息 |
 | 9 | ftips | 提示信息 | varchar | 50 |  | √ | ' ' | 提示信息 |

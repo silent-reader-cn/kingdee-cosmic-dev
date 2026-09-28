@@ -9,8 +9,8 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | 异构数据对接模型 | int8 | 64 |  | √ | 0 | 异构数据对接模型 fah_ext_datamodel |
-| 2 | fpreeventclass | 前置异构数据对接模型 | int8 | 64 |  | √ | 0 | 异构数据对接模型 fah_ext_datamodel |
+| 1 | fid | 异构数据对接模型 | int8 | 64 |  | √ | 0 | [异构数据对接模型 fah_ext_datamodel](../edah_files/fah_ext_datamodel.md) |
+| 2 | fpreeventclass | 前置异构数据对接模型 | int8 | 64 |  | √ | 0 | [异构数据对接模型 fah_ext_datamodel](../edah_files/fah_ext_datamodel.md) |
 | 3 | fprestatus | 前置异构数据状态 | bpchar | 1 |  | √ | ' ' | 前置异构数据状态,枚举: v :生成凭证 g :产生外部数据 |
 | 4 | fpreevtfield | 前置外部数据字段 | varchar | 80 |  | √ | ' ' | 前置外部数据字段 |
 | 5 | fevtfield | 外部数据字段 | varchar | 80 |  | √ | ' ' | 外部数据字段 |

@@ -13,7 +13,7 @@
 | 2 | ftbillid | 目标单id | int8 | 64 |  | √ | 0 | 目标单id |
 | 3 | frelationtype | 关系类型 | varchar | 30 |  | √ | ' ' | 关系类型,枚举: 0 :普通 1 :重开 |
 | 4 | fsbillid | 源单id | int8 | 64 |  | √ | 0 | 源单id |
-| 5 | forg | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | forg | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 
 ### 列规则定义
 

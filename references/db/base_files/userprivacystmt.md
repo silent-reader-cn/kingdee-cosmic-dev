@@ -11,9 +11,10 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fisagree | 是否同意 | bpchar | 1 |  | √ | '0' | 是否同意,枚举: 0 :未同意 1 :同意 2 :已撤销 |
-| 3 | fuserid | 用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 4 | fprivacystmtid | 隐私声明 | int8 | 64 |  | √ | 0 | 隐私声明 privacystatement |
-| 5 | fmodifytime | 最后修改时间 | timestamp | 0 |  |  | null | 最后修改时间 |
+| 3 | forgid | 行政组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 4 | fuserid | 用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 5 | fprivacystmtid | 隐私声明 | int8 | 64 |  | √ | 0 | [隐私声明 privacystatement](../base_files/privacystatement.md) |
+| 6 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 
 ### 列规则定义
 

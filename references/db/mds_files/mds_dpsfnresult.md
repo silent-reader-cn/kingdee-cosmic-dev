@@ -40,22 +40,22 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fmatchqty | 日生产计划匹配数量 | numeric | 23 | 10 | √ | 0.0000000000 | 日生产计划匹配数量 |
-| 3 | fbillformid | 单据标识ID | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
-| 4 | fmaterielid | 物料编码 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 3 | fbillformid | 单据标识ID | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
+| 4 | fmaterielid | 物料编码 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 5 | fdemandsourcetype | 来源需求类型 | varchar | 36 |  | √ | ' ' | 来源需求类型,枚举: ORDER :ORDER SOP :SOP ID :ID |
 | 6 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 7 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 10 | fisqtysetoff | 是否进行过冲减 | bpchar | 1 |  | √ | '0' | 是否进行过冲减 |
 | 11 | ffnqty | 冲减数量 | numeric | 23 | 10 | √ | 0.0000000000 | 冲减数量 |
-| 12 | ffndefineid | 预测冲减定义 | int8 | 64 |  | √ | 0 | 预测冲减定义 mds_setoffsetting |
-| 13 | fbaseunitid | 计量单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 14 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | ffndefineid | 预测冲减定义 | int8 | 64 |  | √ | 0 | [预测冲减定义 mds_setoffsetting](../mds_files/mds_setoffsetting.md) |
+| 13 | fbaseunitid | 计量单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 14 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | forderseq | 行号 | int8 | 64 |  | √ | 0 | 行号 |
 | 16 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 17 | fdpsschemeid | 供应组织分配方案 | int8 | 64 |  | √ | 0 | 供应组织分配方案定义 mds_siteschemedef |
-| 18 | forgsiteid | 供应组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 17 | fdpsschemeid | 供应组织分配方案 | int8 | 64 |  | √ | 0 | [供应组织分配方案定义 mds_siteschemedef](../mds_files/mds_siteschemedef.md) |
+| 18 | forgsiteid | 供应组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 19 | fbillentryid | 单据分录ID | varchar | 36 |  | √ | ' ' | 单据分录ID |
 | 20 | ffntime | 冲减日期 | timestamp | 0 |  |  | null | 冲减日期 |
 | 21 | fissalremainqty | 是否订单剩余数量 | bpchar | 1 |  | √ | '0' | 是否订单剩余数量 |

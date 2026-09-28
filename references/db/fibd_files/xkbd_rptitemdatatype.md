@@ -10,19 +10,19 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fproportionbase | 占比基数 | int8 | 64 |  | √ | 0 | 报表项目 xkbd_rptitem |
+| 2 | fproportionbase | 占比基数 | int8 | 64 |  | √ | 0 | [报表项目 xkbd_rptitem](../fibd_files/xkbd_rptitem.md) |
 | 3 | fcustomformula | 计算公式 | varchar | 2000 |  | √ | ' ' | 计算公式 |
 | 4 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 5 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 6 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 7 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 7 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 8 | fviewcount | fviewcount | bpchar | 1 |  | √ | '0' |  |
-| 9 | fdatakind | 数据类型 | bpchar | 1 |  | √ | ' ' | 数据类型,枚举: 0 :期末数 1 :年初数 2 :本期发生数 3 :本年累计数 4 :期初数 |
-| 10 | fassociateditemdatatype | 来源项目数据类型 | int8 | 64 |  | √ | 0 | 项目数据类型 xkbd_rptitemdatatype |
+| 9 | fdatakind | 数据类型 | bpchar | 1 |  | √ | ' ' | 数据类型,枚举: 0 :期末数 1 :年初数 2 :本期发生数 3 :本年累计数 4 :期初数 5 :本期增加 6 :本期减少 |
+| 10 | fassociateditemdatatype | 来源项目数据类型 | int8 | 64 |  | √ | 0 | [项目数据类型 xkbd_rptitemdatatype](../fibd_files/xkbd_rptitemdatatype.md) |
 | 11 | fissyspreset | 系统预置 | bpchar | 1 |  | √ | '0' | 系统预置 |
-| 12 | fforbidderid | 禁用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fforbidderid | 禁用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
-| 14 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | fcategory | 数据来源 | bpchar | 1 |  | √ | ' ' | 数据来源,枚举: 1 :默认 2 :外部数据 3 :自动计算 |
 | 16 | fproportiontype | 占比取数方式 | bpchar | 1 |  | √ | ' ' | 占比取数方式,枚举: 1 :父级 2 :占比基数 |
 | 17 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
@@ -33,7 +33,7 @@
 | 22 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 23 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
 | 24 | fforbiddate | 禁用日期 | timestamp | 0 |  |  | null | 禁用日期 |
-| 25 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 25 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 26 | fdatatype | 数据属性 | bpchar | 1 |  | √ | ' ' | 数据属性,枚举: 0 :金额 1 :数量 2 :单价 3 :比率 4 :日期 5 :文本 6 :计数 |
 
 ### 列规则定义
@@ -61,7 +61,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 项目数据类型 xkbd_rptitemdatatype |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [项目数据类型 xkbd_rptitemdatatype](../fibd_files/xkbd_rptitemdatatype.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义

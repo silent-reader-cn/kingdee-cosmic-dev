@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | varchar | 36 |  | √ | ' ' | id |
-| 2 | fbizobjectid | 业务对象 | varchar | 36 |  | √ | ' ' | 业务对象 bos_objecttype |
+| 2 | fbizobjectid | 业务对象 | varchar | 36 |  | √ | ' ' | [业务对象 bos_objecttype](../mdl_files/bos_objecttype.md) |
 | 3 | fnumber | 编码 | varchar | 36 |  | √ | ' ' | 编码 |
 
 ### 列规则定义

@@ -447,15 +447,180 @@ def check_db():
         warn("B4 有 %d 个表块在源文档里就没有字段定义（字段数=0）" % zero_field)
 
 
+def _split_md_row(ln):
+    s = ln.strip()
+    if s.startswith("|"):
+        s = s[1:]
+    if s.endswith("|"):
+        s = s[:-1]
+    return [p.strip().replace("\\|", "|") for p in re.split(r"(?<!\\)\|", s)]
+
+
+def parse_db_md(text):
+    """把表结构 Markdown 解析回结构，用于与源 HTML 对账。"""
+    out = []
+    for blk in re.split(r"(?m)^##\s+", text)[1:]:
+        lines = blk.split("\n")
+        heading = lines[0].strip()
+        body = "\n".join(lines[1:])
+        mc = re.search(r"(?m)^-\s*\*\*表名称[：:]?\*\*[：:]*\s*(.*)$", body)
+        mn = re.search(r"(?m)^-\s*\*\*表名[：:]?\*\*[：:]*\s*(.*)$", body)
+        secs = {}
+        parts = re.split(r"(?m)^###\s+(.*)$", body)
+        for i in range(1, len(parts), 2):
+            sec = parts[i].strip()
+            content = parts[i + 1] if i + 1 < len(parts) else ""
+            head, rows = None, []
+            for ln in content.split("\n"):
+                if not ln.lstrip().startswith("|"):
+                    continue
+                cells = _split_md_row(ln)
+                if head is None:
+                    head = cells
+                    continue
+                if all(set(c) <= set(":- ") for c in cells):
+                    continue
+                rows.append(cells)
+            secs[sec] = (head or [], rows)
+        out.append({"heading": heading,
+                    "cn": mc.group(1).strip() if mc else "",
+                    "name": mn.group(1).strip() if mn else "",
+                    "sections": secs})
+    return out
+
+
+def check_dict(source, quick=False, samples=25):
+    """A5/A6：数据字典 HTML → Markdown 的保真度。
+
+    A5 全量（轻量）：每个 .html 的表数 / 小节数 / 表格数必须与 .md 完全一致
+       —— 能抓住「整张表或整节丢失」。
+    A6 抽样（深度）：完整重新解析 HTML，与 .md **逐单元格**比对
+       —— 能抓住「某几行或某个单元格丢失」。
+    """
+    print("\n[A5/A6] 块一 数据字典 HTML → Markdown 保真")
+    import zipfile
+    sys.path.insert(0, SCRIPT_DIR)
+    from build_db_from_dict import parse_html  # noqa: E402
+
+    if os.path.isdir(source):
+        pairs = []
+        for dirpath, _, files in os.walk(source):
+            for f in files:
+                if f.endswith(".html"):
+                    full = os.path.join(dirpath, f)
+                    rel = os.path.relpath(full, source).replace("\\", "/")
+                    pairs.append((rel, full))
+        reader = lambda p: open(p, encoding="utf-8", errors="replace").read()  # noqa: E731
+    else:
+        z = zipfile.ZipFile(source)
+        names = [n for n in z.namelist() if n.lower().endswith(".html") and "/" in n.rstrip("/")]
+        roots = {n.split("/")[0] for n in names}
+        root = (roots.pop() + "/") if len(roots) == 1 else ""
+        names = [n for n in names if n.startswith(root)]
+        pairs = sorted(((n[len(root):], n) for n in names))
+        reader = lambda n: z.read(n).decode("utf-8", "replace")  # noqa: E731
+
+    pairs = [(rel, key) for rel, key in pairs
+             if rel.count("/") == 1 and rel.split("/")[0].endswith("_files")]
+    if not pairs:
+        bad("A5 数据源里没找到 <模块>_files/*.html")
+        return
+
+    # ---- A5 全量轻量 ----
+    mismatch = []
+    checked = 0
+    for rel, key in pairs:
+        md_path = os.path.join(DB_DIR, rel[:-5] + ".md")
+        if not os.path.exists(md_path):
+            mismatch.append((rel, "缺少 .md"))
+            continue
+        h = reader(key)
+        md = open(md_path, encoding="utf-8").read()
+        h_tbl = len(re.findall(r'<div class="tbl ', h))
+        h_sec = len(re.findall(r'<h3 class="tbl-c-h"', h))
+        h_tab = len(re.findall(r"<table", h))
+        m_blk = len(re.findall(r"(?m)^##\s+", md))
+        m_sec = len(re.findall(r"(?m)^###\s+", md))
+        m_tab = len(re.findall(r"(?m)^\|\s*:?-{2,}", md))
+        checked += 1
+        if (h_tbl, h_sec, h_tab) != (m_blk, m_sec, m_tab):
+            mismatch.append((rel, "html(表%d/节%d/表%d) vs md(%d/%d/%d)"
+                             % (h_tbl, h_sec, h_tab, m_blk, m_sec, m_tab)))
+    if mismatch:
+        bad("A5 %d/%d 个文件的表/节/表格数不一致，例：%s"
+            % (len(mismatch), checked, mismatch[:3]))
+    else:
+        ok("A5 全量 %d 个文件：表数/小节数/表格数与源 HTML 完全一致" % checked)
+
+    if quick:
+        return
+
+    # ---- A6 抽样深度 ----
+    import random
+    rnd = random.Random(20260928)
+    if samples <= 0:
+        pick = list(pairs)                 # 0 = 全量（约 1.5 分钟）
+    else:
+        pick = rnd.sample(pairs, min(samples, len(pairs)))
+    cell_bad = []
+    cell_total = 0
+    for rel, key in pick:
+        md_path = os.path.join(DB_DIR, rel[:-5] + ".md")
+        p = parse_html(reader(key))
+        md_tables = parse_db_md(open(md_path, encoding="utf-8").read())
+        if len(p.tables) != len(md_tables):
+            cell_bad.append((rel, "表数 %d vs %d" % (len(p.tables), len(md_tables))))
+            continue
+        for t, mt in zip(p.tables, md_tables):
+            if t.name != mt["name"]:
+                cell_bad.append((rel, "表名 %r vs %r" % (t.name, mt["name"])))
+                continue
+            for sec, (hhead, hrows) in t.sections.items():
+                mhead, mrows = mt["sections"].get(sec, ([], []))
+                if len(hrows) != len(mrows):
+                    cell_bad.append((rel, "%s %s 行数 %d vs %d"
+                                     % (t.name, sec, len(hrows), len(mrows))))
+                    continue
+                for r_i, (hr, mr) in enumerate(zip(hrows, mrows)):
+                    if len(hr) != len(mr):
+                        cell_bad.append((rel, "%s %s 第%d行列数 %d vs %d"
+                                         % (t.name, sec, r_i + 1, len(hr), len(mr))))
+                        continue
+                    for c_i, (hc, mcc) in enumerate(zip(hr, mr)):
+                        cell_total += 1
+                        # 两侧都可能把跨表引用写成链接（HTML 侧由解析器转换），
+                        # 比对时统一只取链接文字，否则会把「一致」误判成「不一致」。
+                        a = re.sub(r"\[([^\]]*)\]\([^)]*\)", r"\1", hc)
+                        b = re.sub(r"\[([^\]]*)\]\([^)]*\)", r"\1", mcc)
+                        if norm(a) != norm(b):
+                            cell_bad.append((rel, "%s %s r%d c%d: %r != %r"
+                                             % (t.name, sec, r_i + 1, c_i + 1,
+                                                hc[:40], mcc[:40])))
+    if cell_bad:
+        bad("A6 深度抽检 %d 个文件发现 %d 处不一致，例：%s"
+            % (len(pick), len(cell_bad), cell_bad[:3]))
+    else:
+        ok("A6 深度抽检 %d 个文件 / %d 个单元格，与源 HTML 逐格一致"
+           % (len(pick), cell_total))
+
+
 def main(argv):
     ap = argparse.ArgumentParser()
     ap.add_argument("--quick", action="store_true", help="跳过逐篇文本比对")
+    ap.add_argument("--dict-zip", metavar="PATH",
+                    help="数据字典导出包（.zip 或目录），提供后额外做块一 HTML→Markdown 保真校验")
+    ap.add_argument("--dict-samples", type=int, default=25,
+                    help="块一深度抽检的文件数（默认 25；传 0 表示全量，约 1.5 分钟）")
     args = ap.parse_args(argv)
 
     print("kingdee-cosmic-dev 自检")
     print("=" * 60)
     check_fetch(quick=args.quick)
     check_search()
+    if args.dict_zip:
+        check_dict(args.dict_zip, quick=args.quick, samples=args.dict_samples)
+    else:
+        warn("A5/A6 跳过块一保真校验：加 --dict-zip <导出包> 可启用")
 
     print("\n" + "=" * 60)
     print("通过 %d 项 / 警告 %d 项 / 失败 %d 项" % (len(PASS), len(WARN), len(FAIL)))

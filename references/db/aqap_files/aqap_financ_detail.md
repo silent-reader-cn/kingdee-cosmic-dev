@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fredeem_max | 赎回上限 | varchar | 50 |  | √ | ' ' | 赎回上限 |
 | 4 | fbillstatus | 单据状态 | varchar | 50 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
@@ -25,13 +25,13 @@
 | 14 | fredeem_min | 赎回下限 | varchar | 50 |  | √ | ' ' | 赎回下限 |
 | 15 | freserved5 | 备用字段5 | varchar | 50 |  | √ | ' ' | 备用字段5 |
 | 16 | freserved2 | 备用字段2 | varchar | 50 |  | √ | ' ' | 备用字段2 |
-| 17 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 17 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 18 | fpublish_end_date | 发行结束日期 | timestamp | 0 |  |  | null | 发行结束日期 |
 | 19 | freserved3 | 备用字段3 | varchar | 50 |  | √ | ' ' | 备用字段3 |
 | 20 | frisk_lev | 风险等级 | varchar | 50 |  | √ | ' ' | 风险等级 |
 | 21 | freserved1 | 备用字段1 | varchar | 50 |  | √ | ' ' | 备用字段1 |
 | 22 | fbillno | 理财编号 | varchar | 30 |  | √ | ' ' | 理财编号 |
-| 23 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 23 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

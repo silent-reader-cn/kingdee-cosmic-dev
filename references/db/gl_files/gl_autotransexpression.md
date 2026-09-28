@@ -13,11 +13,11 @@
 | 2 | fqty | 数量 | numeric | 23 | 10 | √ | 0.0000000000 | 数量 |
 | 3 | fautorowid | 行ID | varchar | 50 |  | √ | ' ' | 行ID |
 | 4 | fassgrpid | 核算维度 | int8 | 64 |  | √ | 0 | null 002 |
-| 5 | forgid | 核算主体 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 6 | funitid | 计量单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 5 | forgid | 核算主体 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 6 | funitid | 计量单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 7 | fperiodrange | 期间范围 | bpchar | 1 |  | √ | '0' | 期间范围,枚举: 1 :本期 2 :本季 3 :半年 4 :本年 |
 | 8 | famounttype | 金额类型 | bpchar | 1 |  | √ | ' ' | 金额类型,枚举: 1 :余额 2 :借方发生额 3 :贷方发生额 |
-| 9 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 9 | fcurrencyid | 币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 | 10 | faccountid | 会计科目 | int8 | 64 |  | √ | 0 | 会计科目 bd_accountview |
 
 ### 列规则定义

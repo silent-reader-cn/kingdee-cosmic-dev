@@ -11,18 +11,18 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fbooktype | 账簿类型 | varchar | 50 |  | √ | ' ' | 账簿类型,枚举: 0 :本地账簿 1 :集团账簿 |
-| 3 | fcurrency | 计提币种 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 3 | fcurrency | 计提币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 | 4 | fmetadataid | 元数据标识 | varchar | 200 |  | √ | ' ' | 元数据标识 |
 | 5 | fskssqq | 计提期间起 | timestamp | 0 |  |  | null | 计提期间起 |
-| 6 | fhsorg | 核算组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 7 | forg | 税务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 8 | ftaxationsys | 税收制度 | int8 | 64 |  | √ | 0 | 税收制度 bd_taxationsys |
+| 6 | fhsorg | 核算组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 7 | forg | 税务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 8 | ftaxationsys | 税收制度 | int8 | 64 |  | √ | 0 | [税收制度 bd_taxationsys](../basedata_files/bd_taxationsys.md) |
 | 9 | fskssqz | 计提期间止 | timestamp | 0 |  |  | null | 计提期间止 |
-| 10 | ftaxareagroup | 税收辖区 | int8 | 64 |  | √ | 0 | 税收辖区 bastax_taxareagroup |
+| 10 | ftaxareagroup | 税收辖区 | int8 | 64 |  | √ | 0 | [税收辖区 bastax_taxareagroup](../basedata_files/bastax_taxareagroup.md) |
 | 11 | fsbbid | 关联id | varchar | 50 |  | √ | ' ' | 关联id |
 | 12 | fsjtotal | 税金合计 | numeric | 23 | 10 | √ | 0 | 税金合计 |
-| 13 | fprovisionmatter | 计提事项 | int8 | 64 |  | √ | 0 | 计提事项 itp_proviston_item |
-| 14 | ftaxtype | 税种 | int8 | 64 |  | √ | 0 | 税种 bd_taxcategory |
+| 13 | fprovisionmatter | 计提事项 | int8 | 64 |  | √ | 0 | [计提事项 itp_proviston_item](../tctb_files/itp_proviston_item.md) |
+| 14 | ftaxtype | 税种 | int8 | 64 |  | √ | 0 | [税种 bd_taxcategory](../basedata_files/bd_taxcategory.md) |
 
 ### 列规则定义
 
@@ -50,7 +50,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fsm | 税目 | varchar | 50 |  | √ | ' ' | 税目 |
-| 3 | fbizdimensiontype | 业务维度 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 3 | fbizdimensiontype | 业务维度 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 4 | fbizdimensionname | 业务维度值 | varchar | 200 |  | √ | ' ' | 业务维度值 |
 | 5 | fjtsj | 计提税金 | numeric | 23 | 10 | √ | 0 | 计提税金 |
 | 6 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |

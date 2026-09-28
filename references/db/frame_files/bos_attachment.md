@@ -41,29 +41,30 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | ftemppageid | 临时PageID | varchar | 255 |  |  | null | 临时PageID |
 | 3 | flocalid | 云之家文件存储地址 | varchar | 500 |  |  | ' ' | 云之家文件存储地址 |
-| 4 | fmodifymen | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmodifymen | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | faudittime | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
-| 6 | fmodifytime | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
+| 6 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 7 | fsort | 排序字段 | int4 | 32 |  |  | null | 排序字段 |
-| 8 | fcreatemen | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | fcreatemen | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fbillno | 单据编号 | varchar | 255 |  |  | null | 单据编号 |
 | 10 | fentryinterid | 单据体内码 | varchar | 50 |  |  | null | 单据体内码 |
 | 11 | fbillstatus | 单据状态 | bpchar | 1 |  | √ | ' ' | 单据状态,枚举: |
-| 12 | fcreatetime | 创建日期 | timestamp | 0 |  | √ | LOCALTIMESTAMP | 创建日期 |
+| 12 | fcreatetime | 创建时间 | timestamp | 0 |  | √ | LOCALTIMESTAMP | 创建时间 |
 | 13 | ffilesource | 文件来源 | int4 | 32 |  |  | 0 | 文件来源 |
 | 14 | fentrykey | 单据体标识 | varchar | 50 |  |  | null | 单据体标识 |
 | 15 | fdescription | 备注 | varchar | 255 |  |  | null | 备注 |
 | 16 | fextname | 文件类型 | varchar | 30 |  |  | null | 文件类型 |
-| 17 | fauditmen | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 17 | fauditmen | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 18 | fattachmentpanel | 附件面板key | varchar | 80 |  |  | null | 附件面板key |
-| 19 | ffilestorage | ffilestorage | bpchar | 1 |  | √ | '0' |  |
-| 20 | fattachmentsize | 大小（kb） | varchar | 50 |  |  | null | 大小（kb） |
-| 21 | ffileid | url | varchar | 500 |  | √ | ' ' | url |
-| 22 | faliasfilename | 别名 | varchar | 255 |  |  | null | 别名 |
-| 23 | fnumber | 编码 | varchar | 50 |  |  | null | 编码 |
-| 24 | fattachmentname | 文件名 | varchar | 255 |  |  | null | 文件名 |
-| 25 | finterid | 单据内码 | varchar | 50 |  |  | null | 单据内码 |
-| 26 | fbilltype | 单据类型 | varchar | 50 |  |  | null | 单据类型 |
+| 19 | fdragseq | 拖拽排序 | int8 | 64 |  | √ | 0 | 拖拽排序 |
+| 20 | ffilestorage | ffilestorage | bpchar | 1 |  | √ | '0' |  |
+| 21 | fattachmentsize | 大小（kb） | varchar | 50 |  |  | null | 大小（kb） |
+| 22 | ffileid | url | varchar | 500 |  | √ | ' ' | url |
+| 23 | faliasfilename | 别名 | varchar | 255 |  |  | null | 别名 |
+| 24 | fnumber | 编码 | varchar | 50 |  |  | null | 编码 |
+| 25 | fattachmentname | 文件名 | varchar | 255 |  |  | null | 文件名 |
+| 26 | finterid | 单据内码 | varchar | 50 |  |  | null | 单据内码 |
+| 27 | fbilltype | 单据类型 | varchar | 50 |  |  | null | 单据类型 |
 
 ### 列规则定义
 

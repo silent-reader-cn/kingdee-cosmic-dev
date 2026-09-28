@@ -16,7 +16,7 @@
 | 5 | fnewprocdefid | 新流程定义ID | int8 | 64 |  | √ | 0 | 新流程定义ID |
 | 6 | fflowchart | fflowchart | varchar | 500 |  | √ | ' ' |  |
 | 7 | fprocdefid | 流程定义ID | int8 | 64 |  | √ | 0 | 流程定义ID |
-| 8 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fresult | fresult | bpchar | 1 |  |  | null |  |
 | 10 | fmainpoint | 流程设置要点 | text | 0 |  |  | null | 流程设置要点 |
 | 11 | fschememapjson | 新旧方案ID映射 | text | 0 |  |  | null | 新旧方案ID映射 |
@@ -25,7 +25,7 @@
 | 14 | fprocessresource | 流程资源 | text | 0 |  |  | null | 流程资源 |
 | 15 | fmodifydate | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 16 | ffilename | ffilename | varchar | 200 |  | √ | ' ' |  |
-| 17 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 17 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 18 | fscene | 场景描述 | text | 0 |  |  | null | 场景描述 |
 | 19 | fmainclass | fmainclass | varchar | 200 |  | √ | ' ' |  |
 | 20 | fprocesstrend | fprocesstrend | text | 0 |  |  | null |  |

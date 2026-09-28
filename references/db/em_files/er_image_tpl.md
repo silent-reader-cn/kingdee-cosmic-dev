@@ -10,16 +10,16 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 6 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 6 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 8 | fctrlstrategy | 控制策略 | varchar | 30 |  | √ | '5' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
-| 9 | fbizappid | 业务应用 | varchar | 50 |  | √ | ' ' | 业务应用实体 bos_devportal_bizapp |
+| 9 | fbizappid | 业务应用 | varchar | 50 |  | √ | ' ' | [业务应用实体 bos_devportal_bizapp](../mdl_files/bos_devportal_bizapp.md) |
 | 10 | fstatus | 数据状态 | bpchar | 1 |  | √ | 'A' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 13 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 14 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
@@ -57,11 +57,11 @@
 | 2 | fcondition_tag | 条件_详情 | text | 0 |  |  | null | 条件_详情 |
 | 3 | fconditionjs | 条件 | text | 0 |  |  | null | 条件 |
 | 4 | fconditionjs_tag | 条件_详情 | text | 0 |  |  | null | 条件_详情 |
-| 5 | fprinttpl | 套打模板 | varchar | 50 |  | √ | ' ' | 打印元数据 bos_print_meta |
+| 5 | fprinttpl | 套打模板 | varchar | 50 |  | √ | ' ' | [打印元数据 bos_print_meta](../cts_files/bos_print_meta.md) |
 | 6 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 7 | fconditionname | 条件 | varchar | 50 |  | √ | ' ' | 条件 |
 | 8 | fcondition | 条件 | varchar | 50 |  | √ | ' ' | 条件 |
-| 9 | fentitymeta | 单据 | varchar | 50 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 9 | fentitymeta | 单据 | varchar | 50 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 10 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 
 ### 列规则定义

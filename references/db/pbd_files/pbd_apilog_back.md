@@ -12,10 +12,10 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fresult_tag | 结果_详情 | text | 0 |  |  | null | 结果_详情 |
 | 3 | fstatus | 执行状态 | bpchar | 1 |  | √ | ' ' | 执行状态,枚举: S :成功 F :失败 R :执行中 |
-| 4 | fcreatorid | 调用者 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fcreatorid | 调用者 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fcreatetime | 调用时间 | timestamp | 0 |  |  | null | 调用时间 |
 | 6 | fparams_tag | 参数_详情 | text | 0 |  |  | null | 参数_详情 |
-| 7 | fextsysapi | 接口配置 | int8 | 64 |  | √ | 0 | 外部系统API pbd_extsys_api |
+| 7 | fextsysapi | 接口配置 | int8 | 64 |  | √ | 0 | [外部系统API pbd_extsys_api](../pbd_files/pbd_extsys_api.md) |
 | 8 | fend_time | 状态更新/结束时间 | timestamp | 0 |  |  | null | 状态更新/结束时间 |
 | 9 | fparams | 参数 | text | 0 |  |  | null | 参数 |
 | 10 | fresult | 结果 | text | 0 |  |  | null | 结果 |

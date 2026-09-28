@@ -36,8 +36,8 @@
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
 | 1 | t_iscb_apic_log_pkey |  | fid |
-| 2 | idx_iscb_apic_log_s |  | fserver |
-| 3 | idx_iscb_apic_log_c |  | fcaller |
+| 2 | idx_iscb_apic_log_c |  | fcaller |
+| 3 | idx_iscb_apic_log_s |  | fserver |
 | 4 | idx_apic_log_param |  | fparams |
 | 5 | idx_iscb_apic_log_st |  | fstate |
 | 6 | idx_apic_log_out_digest |  | fout_digest |

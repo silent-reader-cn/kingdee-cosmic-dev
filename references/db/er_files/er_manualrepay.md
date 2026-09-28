@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fstatusbeforerepay | 手动付款前状态 | varchar | 5 |  | √ | ' ' | 手动付款前状态 |
-| 3 | fbillno | 单据编码 | varchar | 80 |  | √ | ' ' | 单据编码 |
+| 3 | fbillno | 单据编号 | varchar | 80 |  | √ | ' ' | 单据编号 |
 | 4 | fformid | 表单ID | varchar | 30 |  | √ | ' ' | 表单ID |
 
 ### 列规则定义

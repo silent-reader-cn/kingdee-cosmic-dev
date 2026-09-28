@@ -10,14 +10,14 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
 | 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 5 | fislegal | 法人核算体系 | bpchar | 1 |  | √ | '0' | 法人核算体系 |
 | 6 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 7 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 8 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 11 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
 | 12 | fdesc | 描述 | varchar | 255 |  | √ | ' ' | 描述 |
@@ -50,13 +50,13 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fbizacctorgidb | fbizacctorgidb | int8 | 64 |  | √ | 0 |  |
-| 3 | fbizorgid | 核算组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | fbizorgid | 核算组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 5 | fbizorgidb | fbizorgidb | int8 | 64 |  | √ | 0 |  |
 | 6 | fxkdefaultpolicyid | fxkdefaultpolicyid | int8 | 64 |  | √ | 0 |  |
 | 7 | fdescription | fdescription | varchar | 100 |  | √ | ' ' |  |
 | 8 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 9 | fbizacctorgid | 记账范围 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 9 | fbizacctorgid | 记账范围 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 10 | fdefaultpolicyid | fdefaultpolicyid | int8 | 64 |  | √ | 0 |  |
 
 ### 列规则定义

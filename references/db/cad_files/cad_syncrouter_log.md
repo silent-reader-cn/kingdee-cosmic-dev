@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fsynctime | 同步时间 | timestamp | 0 |  |  | null | 同步时间 |
-| 3 | fcreaterid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fcreaterid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fproductrouterid | 制造工艺路线 | int8 | 64 |  | √ | 0 | 工艺路线维护（废弃） pdm_route |
 | 5 | fmsg | 失败原因 | varchar | 2000 |  | √ | ' ' | 失败原因 |
 

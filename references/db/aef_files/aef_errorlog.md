@@ -13,11 +13,11 @@
 | 2 | ferrorinfo | 错误信息 | varchar | 500 |  | √ | ' ' | 错误信息 |
 | 3 | ftraceid | traceId | varchar | 50 |  | √ | ' ' | traceId |
 | 4 | ftype | 类型 | bpchar | 1 |  | √ | ' ' | 类型,枚举: 1 :归档 2 :反归档 |
-| 5 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | fcreattime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 7 | fschemeid | 归档方案 | int8 | 64 |  | √ | 0 | 归档方案 aef_archivescheme |
+| 7 | fschemeid | 归档方案 | int8 | 64 |  | √ | 0 | [归档方案 aef_archivescheme](../aef_files/aef_archivescheme.md) |
 | 8 | fbillid | 单据id | int8 | 64 |  | √ | 0 | 单据id |
-| 9 | fbilltype | 单据类型 | varchar | 50 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 9 | fbilltype | 单据类型 | varchar | 50 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 
 ### 列规则定义
 

@@ -48,23 +48,23 @@
 | 8 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 9 | fauth_required | 需要授权 | bpchar | 1 |  | √ | '0' | 需要授权 |
 | 10 | fnot_publish | 不发布到开放平台 | bpchar | 1 |  | √ | '0' | 不发布到开放平台 |
-| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 13 | fnamespace | 命名空间 | varchar | 255 |  | √ | ' ' | 命名空间 |
 | 14 | fsource_trace | 来源追溯 | varchar | 600 |  | √ | ' ' | 来源追溯 |
-| 15 | fschema_category | 分类 | int8 | 64 |  | √ | 0 | 自定义分类 isc_schema_category |
+| 15 | fschema_category | 分类 | int8 | 64 |  | √ | 0 | [自定义分类 isc_schema_category](../iscb_files/isc_schema_category.md) |
 | 16 | fwsinputparam | 输入参数名 | varchar | 150 |  | √ | ' ' | 输入参数名 |
-| 17 | ftrigger | 启动方案 | int8 | 64 |  | √ | 0 | 启动方案 isc_data_copy_trigger |
+| 17 | ftrigger | 启动方案 | int8 | 64 |  | √ | 0 | [启动方案 isc_data_copy_trigger](../iscb_files/isc_data_copy_trigger.md) |
 | 18 | fin_digest | API参数摘要模板 | varchar | 150 |  | √ | ' ' | API参数摘要模板 |
-| 19 | fschema | 集成方案 | int8 | 64 |  | √ | 0 | 数据集成方案 isc_data_copy |
-| 20 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 19 | fschema | 集成方案 | int8 | 64 |  | √ | 0 | [数据集成方案 isc_data_copy](../iscb_files/isc_data_copy.md) |
+| 20 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 21 | fcheck_param_type | 校验参数格式 | bpchar | 1 |  | √ | '0' | 校验参数格式 |
 | 22 | fpub_status | fpub_status | varchar | 30 |  | √ | ' ' |  |
 | 23 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 24 | fmax_count | 结果行数限制 | int8 | 64 |  | √ | 1000 | 结果行数限制 |
 | 25 | fout_digest | API结果摘要模板 | varchar | 150 |  | √ | ' ' | API结果摘要模板 |
 | 26 | fdescription | 备注 | varchar | 500 |  | √ | ' ' | 备注 |
-| 27 | fdata_source | 数据源 | int8 | 64 |  | √ | 0 | 数据源管理 isc_data_source |
+| 27 | fdata_source | 数据源 | int8 | 64 |  | √ | 0 | [数据源管理 isc_data_source](../iscb_files/isc_data_source.md) |
 | 28 | fopenapi_version | 开放平台版本 | varchar | 10 |  | √ | ' ' | 开放平台版本,枚举: 2 :2.0 1 :1.0 |
 | 29 | ftype | 类型 | varchar | 30 |  | √ | ' ' | 类型,枚举: EXECUTE :从来源系统"取数推送"到目标系统 PULL :从来源系统"取数并转换"为目标单数据 PUSH :将源单数据"转换后推送"到目标系统 TRANSFER :将源单数据"转换"为目标单数据 |
 | 30 | fenable | 使用状态 | varchar | 30 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |

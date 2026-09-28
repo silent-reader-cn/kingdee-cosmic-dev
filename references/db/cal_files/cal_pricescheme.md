@@ -78,7 +78,7 @@
 | 3 | fname | 名称 | varchar | 80 |  | √ | ' ' | 名称 |
 | 4 | fpriceobject | 取价用途 | bpchar | 1 |  | √ | ' ' | 取价用途,枚举: A :成本汇总维护取价 B :成本维护取价 C :单据同步取价 D :循环入库单取价 E :出库核算零成本取价 G :组织间交易取价 H :结存负单价取价 I :无源单出库退回取价 J :外部单据取成本价 K :返工领料取价 L :初始化数据录入取价 M :其他存货核算取价 O :套件权重维护取价 |
 | 5 | fbillfilterdesc | 过滤条件 | varchar | 255 |  | √ | ' ' | 过滤条件 |
-| 6 | fentityobject | 适用对象 | varchar | 80 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 6 | fentityobject | 适用对象 | varchar | 80 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 7 | fispreset | 系统预设 | bpchar | 1 |  | √ | '0' | 系统预设 |
 | 8 | fbillfilter_tag | 过滤条件（隐藏）_详情 | text | 0 |  |  | null | 过滤条件（隐藏）_详情 |
 | 9 | fbillfilter | 过滤条件（隐藏） | varchar | 255 |  | √ | ' ' | 过滤条件（隐藏） |

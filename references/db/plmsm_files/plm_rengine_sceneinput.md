@@ -15,22 +15,22 @@
 | 4 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 5 | fstatus | 数据状态 | varchar | 2 |  | √ | 'C' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 6 | fdynprop | 属性字段 | varchar | 50 |  | √ | ' ' | 属性字段 |
-| 7 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 7 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 8 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 9 | fparamstype | 参数类型 | varchar | 20 |  | √ | ' ' | 参数类型,枚举: dynamicObject :业务对象字段 basedata :基础资料 string :字符串 number :数字 boolean :布尔 date :日期 enum :枚举 |
 | 10 | fissyspreset | 是否系统预置 | bpchar | 1 |  | √ | '0' | 是否系统预置 |
-| 11 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fname | 参数名称 | varchar | 100 |  | √ | ' ' | 参数名称 |
 | 13 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 14 | findex | 排序号 | int4 | 32 |  | √ | 0 | 排序号 |
-| 15 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 15 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 16 | fdescription | 描述 | varchar | 255 |  | √ | ' ' | 描述 |
 | 17 | ftreelv | 属性字段层级 | int8 | 64 |  | √ | 0 | 属性字段层级 |
-| 18 | fparamsobject | 业务对象 | varchar | 100 |  | √ | ' ' | 主实体对象（规则引擎） plm_rengine_entityobject |
+| 18 | fparamsobject | 业务对象 | varchar | 100 |  | √ | ' ' | [主实体对象（规则引擎） plm_rengine_entityobject](../plmsm_files/plm_rengine_entityobject.md) |
 | 19 | fpresetisedit | 预置是否已更新 | bpchar | 1 |  | √ | '0' | 预置是否已更新 |
 | 20 | fdateformat | 掩码 | varchar | 30 |  | √ | ' ' | 掩码,枚举: yyyy-MM-dd :YYYY-MM-DD yyyy/MM/dd :YYYY/MM/DD yy-MM/dd :YY-MM/DD yyyy-MM :YYYY-MM yyyy/MM :YYYY/MM yyyy :YYYY |
 | 21 | fsimplename | 简称 | varchar | 100 |  | √ | ' ' | 简称 |
-| 22 | fbasedatafield | 基础资料 | varchar | 36 |  | √ | ' ' | 主实体对象（规则引擎） plm_rengine_entityobject |
+| 22 | fbasedatafield | 基础资料 | varchar | 36 |  | √ | ' ' | [主实体对象（规则引擎） plm_rengine_entityobject](../plmsm_files/plm_rengine_entityobject.md) |
 | 23 | fenable | 使用状态 | varchar | 2 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 10 :待启用 |
 | 24 | fnumber | 参数标识 | varchar | 100 |  | √ | ' ' | 参数标识 |
 | 25 | fcombofield | 下拉项 | varchar | 2000 |  | √ | ' ' | 下拉项 |

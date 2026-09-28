@@ -9,9 +9,9 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | 签名方案 | int8 | 64 |  | √ | 0 | 签名方案 sign_scheme |
+| 1 | fid | 签名方案 | int8 | 64 |  | √ | 0 | [签名方案 sign_scheme](../cts_files/sign_scheme.md) |
 | 2 | fisincludesuborg | 包含下级 | bpchar | 1 |  | √ | '0' | 包含下级 |
-| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 5 | fentryid | fentryid | varchar | 20 |  | √ | ' ' | id |
 
@@ -73,7 +73,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fsignoperate | 签名操作 | varchar | 500 |  | √ | ' ' | 签名操作 |
-| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | fsignfield | 签名字段 | varchar | 2000 |  | √ | ' ' | 签名字段 |
 | 5 | fformnumber | 业务对象 | varchar | 36 |  | √ | ' ' | 业务对象 |
 | 6 | fverifyoperate | 验签操作 | varchar | 100 |  | √ | ' ' | 验签操作 |

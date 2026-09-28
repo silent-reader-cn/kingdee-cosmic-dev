@@ -39,7 +39,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | null | id |
-| 2 | fgroupid | 银行 | int8 | 64 |  |  | null | 银行启用管理 aqap_bank |
+| 2 | fgroupid | 银行 | int8 | 64 |  |  | null | [银行启用管理 aqap_bank](../aqap_files/aqap_bank.md) |
 | 3 | fbank_version_id | bank_version_id | varchar | 50 |  | √ | ' ' | bank_version_id |
 | 4 | fbranch_name | 运营机构名称 | varchar | 255 |  |  | ' ' | 运营机构名称 |
 | 5 | fbranch_no | 运营机构编码 | varchar | 30 |  |  | ' ' | 运营机构编码 |
@@ -49,26 +49,30 @@
 | 9 | facnt_has_receipt | facnt_has_receipt | varchar | 50 |  | √ | ' ' |  |
 | 10 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 11 | fcustom_id | 租户编号 | varchar | 50 |  | √ | ' ' | 租户编号 |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fmasterid | 主数据内码 | int8 | 64 |  |  | null | 主数据内码 |
 | 14 | fcity | city | varchar | 50 |  | √ | ' ' | city |
 | 15 | faddr | 开户地区 | varchar | 50 |  | √ | ' ' | 开户地区 |
-| 16 | fmodifierid | 修改人 | int8 | 64 |  |  | null | 人员 bos_user |
-| 17 | fsel_bal_time | 最后查询时间时间 | timestamp | 0 |  |  | null | 最后查询时间时间 |
-| 18 | fbank_login | 编号 | int8 | 64 |  |  | null | 银企连接通道配置 aqap_bank_login |
-| 19 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 20 | fcurrency | 币种 | int8 | 64 |  |  | null | 银行币种映射 aqap_bank_currency |
-| 21 | fiso_currency | iso_currency | varchar | 50 |  | √ | ' ' | iso_currency |
-| 22 | fbank_login_id | bank_login_id | varchar | 50 |  | √ | ' ' | bank_login_id |
-| 23 | fbank_name | bank_name | varchar | 50 |  | √ | ' ' | bank_name |
-| 24 | fbalance | 当前余额 | numeric | 23 | 10 |  | null | 当前余额 |
-| 25 | fenable | 使用状态 | varchar | 50 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 26 | fhas_receipt | 是否电子回单账号 | varchar | 50 |  | √ | ' ' | 是否电子回单账号,枚举: 0 :否 1 :是 |
-| 27 | fbank_address | bank_address | varchar | 50 |  | √ | ' ' | bank_address |
-| 28 | fnumber | 账号 | varchar | 30 |  | √ | ' ' | 账号 |
-| 29 | fhas_note | 是否电票账号 | varchar | 50 |  |  | ' ' | 是否电票账号,枚举: 0 :否 1 :是 |
-| 30 | fprovince | province | varchar | 50 |  | √ | ' ' | province |
-| 31 | fcountry | country | varchar | 50 |  | √ | ' ' | country |
+| 16 | fswift_code | SWIFT Code | varchar | 255 |  |  | null | SWIFT Code |
+| 17 | fmodifierid | 修改人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
+| 18 | fcnapname | 开户行名称 | varchar | 200 |  |  | ' ' | 开户行名称 |
+| 19 | fsel_bal_time | 最后查询时间时间 | timestamp | 0 |  |  | null | 最后查询时间时间 |
+| 20 | fbank_login | 编号 | int8 | 64 |  |  | null | [银企连接通道配置 aqap_bank_login](../aqap_files/aqap_bank_login.md) |
+| 21 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 22 | fcurrency | 币种 | int8 | 64 |  |  | null | [银行币种映射 aqap_bank_currency](../aqap_files/aqap_bank_currency.md) |
+| 23 | fiso_currency | iso_currency | varchar | 50 |  | √ | ' ' | iso_currency |
+| 24 | fbank_login_id | bank_login_id | varchar | 50 |  | √ | ' ' | bank_login_id |
+| 25 | fbank_name | 开户行名称 | varchar | 255 |  | √ | ' ' | 开户行名称 |
+| 26 | fdeposit_balance | 上存余额 | varchar | 50 |  |  | ' ' | 上存余额 |
+| 27 | fbalance | 当前余额 | numeric | 23 | 10 |  | null | 当前余额 |
+| 28 | fenable | 使用状态 | varchar | 50 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 29 | fhas_receipt | 是否电子回单账号 | varchar | 50 |  | √ | ' ' | 是否电子回单账号,枚举: 0 :否 1 :是 |
+| 30 | fbank_address | bank_address | varchar | 255 |  | √ | ' ' | bank_address |
+| 31 | fnumber | 账号 | varchar | 30 |  | √ | ' ' | 账号 |
+| 32 | fhas_note | 是否电票账号 | varchar | 50 |  |  | ' ' | 是否电票账号,枚举: 0 :否 1 :是 |
+| 33 | fprovince | province | varchar | 50 |  | √ | ' ' | province |
+| 34 | fen_accname | 账户英文名 | varchar | 100 |  |  | null | 账户英文名 |
+| 35 | fcountry | country | varchar | 50 |  | √ | ' ' | country |
 
 ### 列规则定义
 

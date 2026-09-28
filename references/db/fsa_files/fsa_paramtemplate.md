@@ -23,7 +23,7 @@
 | 12 | fdefaultvalue | 默认值 | varchar | 50 |  | √ | ' ' | 默认值 |
 | 13 | ffilter | 过滤标识 | varchar | 50 |  | √ | ' ' | 过滤标识 |
 | 14 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 15 | fobjecttypeid | 实体对象 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 15 | fobjecttypeid | 实体对象 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 16 | fformid | 预览表单 | varchar | 50 |  | √ | ' ' | 预览表单 |
 | 17 | fdatatype | 数据类型 | bpchar | 1 |  | √ | ' ' | 数据类型,枚举: 0 :日期 1 :基础资料 2 :浮点数 3 :整数 4 :布尔型 5 :字符串 6 :文件上传 |
 
@@ -53,9 +53,9 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fstatus | 数据状态 | bpchar | 1 |  | √ | 'C' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 4 | fgroupid | 分组 | int8 | 64 |  | √ | 0 | 参数分组 fsa_paramgroup |
-| 5 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 4 | fgroupid | 分组 | int8 | 64 |  | √ | 0 | [参数分组 fsa_paramgroup](../fsa_files/fsa_paramgroup.md) |
+| 5 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 7 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 8 | fenable | 使用状态 | bpchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |

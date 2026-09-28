@@ -17,7 +17,7 @@
 | 6 | fsrcmatchfieldkey | 来源实体字段（标识） | varchar | 255 |  | √ | ' ' | 来源实体字段（标识） |
 | 7 | fldmatchfield | 库存水位维度字段 | varchar | 100 |  | √ | ' ' | 库存水位维度字段 |
 | 8 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 9 | fmatchgroup | 分组关系 | int8 | 64 |  | √ | 0 | 数据分组关系 msmod_datagrouprelation |
+| 9 | fmatchgroup | 分组关系 | int8 | 64 |  | √ | 0 | [数据分组关系 msmod_datagrouprelation](../mscommon_files/msmod_datagrouprelation.md) |
 | 10 | flogic | 逻辑 | varchar | 50 |  | √ | ' ' | 逻辑,枚举: and :并且 or :或者 |
 | 11 | fldmatchfieldkey | 库存水位维度字段（标识） | varchar | 255 |  | √ | ' ' | 库存水位维度字段（标识） |
 | 12 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
@@ -48,16 +48,16 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fsrcfilterjson | 来源实体过滤条件（json） | varchar | 255 |  | √ | ' ' | 来源实体过滤条件（json） |
 | 5 | fsrcfilterformula_tag | 来源实体过滤条件（表达式）_详情 | text | 0 |  |  | null | 来源实体过滤条件（表达式）_详情 |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 7 | fleveldimension | 库存水位维度 | int8 | 64 |  | √ | 0 | 库存水位维度 msplan_plan_dimension |
-| 8 | fsrcentity | 来源实体 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 7 | fleveldimension | 库存水位维度 | int8 | 64 |  | √ | 0 | [库存水位维度 msplan_plan_dimension](../msplan_files/msplan_plan_dimension.md) |
+| 8 | fsrcentity | 来源实体 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 9 | fsrcfield | 来源字段 | varchar | 50 |  | √ | ' ' | 来源字段 |
 | 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 11 | fstatus | 数据状态 | bpchar | 1 |  | √ | 'C' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 14 | fsrcfieldkey | 来源字段（标识） | varchar | 50 |  | √ | ' ' | 来源字段（标识） |
 | 15 | fsrcfilterjson_tag | 来源实体过滤条件（json）_详情 | text | 0 |  |  | null | 来源实体过滤条件（json）_详情 |

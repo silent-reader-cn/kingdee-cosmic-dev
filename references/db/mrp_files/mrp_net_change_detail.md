@@ -16,20 +16,20 @@
 | 5 | f_billentry_id | 需求单据分录ID | int8 | 64 |  | √ | 0 | 需求单据分录ID |
 | 6 | frunlog | 计划运算号 | varchar | 50 |  | √ | ' ' | 计划运算号 |
 | 7 | frecord_id | 预留记录id | int8 | 64 |  | √ | 0 | 预留记录id |
-| 8 | f_bill_obj_id | 需求单据 | varchar | 50 |  | √ | ' ' | 单据主实体 bos_billmainentity |
+| 8 | f_bill_obj_id | 需求单据 | varchar | 50 |  | √ | ' ' | [单据主实体 bos_billmainentity](../mdl_files/bos_billmainentity.md) |
 | 9 | f_s_billnum | 供应单据编码 | varchar | 100 |  | √ | ' ' | 供应单据编码 |
 | 10 | f_ori_qty | 原始预留数量 | numeric | 23 | 10 | √ | 0 | 原始预留数量 |
 | 11 | f_req_qty | 需求数量 | numeric | 23 | 10 | √ | 0 | 需求数量 |
 | 12 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 13 | f_s_baseunit | 基本单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 14 | f_s_org | 供应组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 13 | f_s_baseunit | 基本单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 14 | f_s_org | 供应组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 15 | f_bill_no | 需求单据编码 | varchar | 100 |  | √ | ' ' | 需求单据编码 |
 | 16 | f_bal_id | 供应ID | int8 | 64 |  | √ | 0 | 供应ID |
-| 17 | f_bal_obj_id | 供应对象 | varchar | 50 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 17 | f_bal_obj_id | 供应对象 | varchar | 50 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 18 | fs_biz_date | 供应日期 | timestamp | 0 |  |  | null | 供应日期 |
 | 19 | ftype | 产生类型 | varchar | 50 |  | √ | ' ' | 产生类型,枚举: 1 :创建 0 :释放 |
-| 20 | f_s_materiel | 物料编码 | int8 | 64 |  | √ | 0 | 物料 bd_material |
-| 21 | f_r_sale_org | 需求组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 20 | f_s_materiel | 物料编码 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
+| 21 | f_r_sale_org | 需求组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 22 | f_r_biz_date | 需求日期 | timestamp | 0 |  |  | null | 需求日期 |
 | 23 | f_billentry_seq | 需求单据分录行号 | int8 | 64 |  | √ | 0 | 需求单据分录行号 |
 | 24 | fisweak | 弱预留 | bpchar | 1 |  | √ | '0' | 弱预留 |

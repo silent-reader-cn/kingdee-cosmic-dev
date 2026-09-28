@@ -17,7 +17,7 @@
 | 6 | frpttype | 标准报表类型 | varchar | 30 |  | √ | ' ' | 标准报表类型 |
 | 7 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 8 | fidxfactconfig_tag | 指标配置内容_详情 | text | 0 |  |  | null | 指标配置内容_详情 |
-| 9 | ftablepattern | 数据集合 | int8 | 64 |  | √ | 0 | 标准报表 fsa_stdrpts |
+| 9 | ftablepattern | 数据集合 | int8 | 64 |  | √ | 0 | [标准报表 fsa_stdrpts](../fsa_files/fsa_stdrpts.md) |
 | 10 | fauthcontent | 权限内容 | varchar | 30 |  | √ | ' ' | 权限内容 |
 
 ### 列规则定义
@@ -74,18 +74,18 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 4 | fauthswitch | 是否启用数据权限 | bpchar | 1 |  | √ | ' ' | 是否启用数据权限 |
 | 5 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 6 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 7 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 7 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 8 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 9 | fendperiodid | 过滤数据终止期间 | int8 | 64 |  | √ | 0 | 会计日历 bd_period |
-| 10 | facctperiodtype | 期间类型 | int8 | 64 |  | √ | 0 | 会计日历类型 bd_period_type |
+| 9 | fendperiodid | 过滤数据终止期间 | int8 | 64 |  | √ | 0 | [会计日历 bd_period](../fibd_files/bd_period.md) |
+| 10 | facctperiodtype | 期间类型 | int8 | 64 |  | √ | 0 | [会计日历类型 bd_period_type](../fibd_files/bd_period_type.md) |
 | 11 | fenable | 使用状态 | bpchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 12 | flinetorowswitch | 是否启用列转行功能 | bpchar | 1 |  | √ | ' ' | 是否启用列转行功能 |
-| 13 | fbeginperiodid | 过渡期间起始期间 | int8 | 64 |  | √ | 0 | 会计日历 bd_period |
+| 13 | fbeginperiodid | 过渡期间起始期间 | int8 | 64 |  | √ | 0 | [会计日历 bd_period](../fibd_files/bd_period.md) |
 | 14 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
 
 ### 列规则定义

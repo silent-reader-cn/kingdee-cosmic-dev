@@ -15,7 +15,7 @@
 | 4 | fappsecret | 应用秘钥 | varchar | 500 |  | √ | ' ' | 应用秘钥 |
 | 5 | fdomain | 服务器域名 | varchar | 500 |  | √ | ' ' | 服务器域名 |
 | 6 | fsmscode | 短信模板 | varchar | 100 |  | √ | ' ' | 短信模板 |
-| 7 | fpassword | 密码 | varchar | 200 |  | √ | ' ' | 密码 |
+| 7 | fpassword | 密码/授权码 | varchar | 200 |  | √ | ' ' | 密码/授权码 |
 | 8 | fusername | 用户名 | varchar | 100 |  | √ | ' ' | 用户名 |
 | 9 | fcreatedate | 创建时间 | timestamp | 0 |  | √ | LOCALTIMESTAMP | 创建时间 |
 | 10 | fconfig | 参数配置 | varchar | 3000 |  | √ | ' ' | 参数配置 |

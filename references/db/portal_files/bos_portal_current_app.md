@@ -12,7 +12,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fcreatetime | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
 | 3 | fcurrentapp | 最近使用应用 | varchar | 1024 |  | √ | ' ' | 最近使用应用 |
-| 4 | fuserid | 用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fuserid | 用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fisnewportal | 是否新版 | varchar | 10 |  | √ | ' ' | 是否新版,枚举: 0 :否 1 :是 |
 | 6 | fcurrentmenu | 最近使用菜单 | text | 0 |  |  | ' ' | 最近使用菜单 |
 | 7 | fmenuid | 菜单ID | varchar | 100 |  | √ | ' ' | 菜单ID |
@@ -28,5 +28,5 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | pk_t_bas_portal_current_app |  | fid |
-| 2 | t_bas_portal_current_app_index |  | fuserid |
+| 1 | t_bas_portal_current_app_index |  | fuserid |
+| 2 | pk_t_bas_portal_current_app |  | fid |

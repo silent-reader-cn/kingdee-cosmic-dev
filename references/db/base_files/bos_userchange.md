@@ -12,8 +12,8 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fphone | 手机 | varchar | 36 |  | √ | ' ' | 手机 |
 | 3 | ftype | 变更类型 | varchar | 10 |  | √ | ' ' | 变更类型,枚举: 1 :新增 2 :修改 3 :删除 4 :禁用 5 :启用 |
-| 4 | fchangetime | 时间 | timestamp | 0 |  |  | null | 时间 |
-| 5 | fuserid | 用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fchangetime | 变动时间 | timestamp | 0 |  |  | null | 变动时间 |
+| 5 | fuserid | 用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | fnumber | 工号 | varchar | 36 |  | √ | ' ' | 工号 |
 
 ### 列规则定义

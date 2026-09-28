@@ -107,21 +107,21 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fgroupid | 分类 | int8 | 64 |  | √ | 0 | 抽样方案分类 qcbd_sampplangroup |
-| 3 | fuseorg | 业务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 4 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 5 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fgroupid | 分类 | int8 | 64 |  | √ | 0 | [抽样方案分类 qcbd_sampplangroup](../qcbd_files/qcbd_sampplangroup.md) |
+| 3 | fuseorg | 业务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 4 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 5 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | finspectionlevel | 检验水平 | varchar | 30 |  | √ | ' ' | 检验水平,枚举: 1 :一般(Ⅰ) 2 :一般(Ⅱ) 3 :一般(Ⅲ) 4 :特殊(S-1) 5 :特殊(S-2) 6 :特殊(S-3) 7 :特殊(S-4) |
 | 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 8 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 11 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 12 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
 | 13 | fxkallocationtype | 分配类型 | varchar | 30 |  | √ | ' ' | 分配类型,枚举: 1 :个性化 2 :共享型 |
 | 14 | fstrictness | 严格度 | varchar | 30 |  | √ | ' ' | 严格度,枚举: 1 :正常检验 2 :加严检验 3 :放宽检验 |
-| 15 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 16 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 15 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 16 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 17 | fname | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
 | 18 | fsamplingtype | 抽样类型 | varchar | 30 |  | √ | ' ' | 抽样类型,枚举: 1 :百分比抽检 2 :固定数抽检 3 :按国标抽检 4 :公式定义抽检 5 :全检 6 :免检 7 :自定义抽检 |
 | 19 | fcomment | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
@@ -133,7 +133,7 @@
 | 25 | fenable | 使用状态 | varchar | 30 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 26 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
 | 27 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
-| 28 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 28 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

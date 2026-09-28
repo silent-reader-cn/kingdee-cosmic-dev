@@ -30,8 +30,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_msmod_lotcfgre_id |  | fid |
-| 2 | pk_t_msmod_lotcfgretentry |  | fentryid |
+| 1 | pk_t_msmod_lotcfgretentry |  | fentryid |
+| 2 | idx_msmod_lotcfgre_id |  | fid |
 
 ---
 
@@ -45,21 +45,21 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
 | 4 | flotnumberfield | 单据批号字段 | varchar | 100 |  | √ | ' ' | 单据批号字段 |
 | 5 | flotidfield | 单据批号主档字段 | varchar | 100 |  | √ | ' ' | 单据批号主档字段 |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 7 | fgenlot | 允许生成批号主档 | bpchar | 1 |  | √ | '1' | 允许生成批号主档 |
 | 8 | fdescription | fdescription | varchar | 50 |  | √ | ' ' |  |
-| 9 | fsrcbillobj | 单据 | varchar | 36 |  | √ | ' ' | 单据主实体 bos_billmainentity |
-| 10 | fmasterfiletypeid | 类型 | int8 | 64 |  | √ | '1401417099242528768' | 批号/序列号类型 bd_masterfile_type |
+| 9 | fsrcbillobj | 单据 | varchar | 36 |  | √ | ' ' | [单据主实体 bos_billmainentity](../mdl_files/bos_billmainentity.md) |
+| 10 | fmasterfiletypeid | 类型 | int8 | 64 |  | √ | '1401417099242528768' | [批号/序列号类型 bd_masterfile_type](../sbd_files/bd_masterfile_type.md) |
 | 11 | fispreset | 系统预设 | bpchar | 1 |  | √ | '0' | 系统预设 |
 | 12 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 13 | fsrcbillentry | 单据体标识 | varchar | 50 |  | √ | ' ' | 单据体标识 |
 | 14 | fstatus | 数据状态 | varchar | 50 |  | √ | 'A' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 15 | flotid | 批号主档标识 | varchar | 100 |  | √ | ' ' | 批号主档标识 |
-| 16 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 16 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 17 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 18 | fbillfilter | 单据过滤条件 | varchar | 2000 |  | √ | ' ' | 单据过滤条件 |
 | 19 | fenable | 使用状态 | varchar | 50 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |

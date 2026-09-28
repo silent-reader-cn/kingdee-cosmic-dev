@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fname | 方案名称 | varchar | 30 |  | √ | ' ' | 方案名称 |
 | 4 | fdxqmid | 短信签名模板ID | varchar | 50 |  | √ | ' ' | 短信签名模板ID |
 | 5 | fbillstatus | 审核状态 | varchar | 10 |  | √ | ' ' | 审核状态,枚举: 1 :未提交 2 :审核中 3 :审核成功 4 :审核失败 |
@@ -25,11 +25,11 @@
 | 14 | fapply_reason | 申请原因 | varchar | 210 |  | √ | ' ' | 申请原因 |
 | 15 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 16 | fstatus | 模板状态 | varchar | 10 |  | √ | ' ' | 模板状态,枚举: 1 :启用 2 :禁用 |
-| 17 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 17 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 18 | fdxnrid | 短信内容模板ID | varchar | 50 |  | √ | ' ' | 短信内容模板ID |
 | 19 | fdatasource | 数据来源 | varchar | 10 |  | √ | ' ' | 数据来源,枚举: 1 :发票数据 |
 | 20 | fbillno | 编号 | varchar | 50 |  | √ | ' ' | 编号 |
-| 21 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 21 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 22 | ffail_reason | 审核失败原因 | varchar | 200 |  | √ | ' ' | 审核失败原因 |
 
 ### 列规则定义

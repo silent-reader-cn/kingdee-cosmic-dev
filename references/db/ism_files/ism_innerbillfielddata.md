@@ -15,7 +15,7 @@
 | 4 | fbillentry | 分录标识 | varchar | 50 |  | √ | ' ' | 分录标识 |
 | 5 | fisvirtualbill | 是否虚单 | varchar | 50 |  | √ | ' ' | 是否虚单 |
 | 6 | finowner | 调入货主 | varchar | 50 |  | √ | ' ' | 调入货主 |
-| 7 | fentitykey | 内部单据业务实体 | varchar | 50 |  | √ | ' ' | 业务对象 bos_objecttype |
+| 7 | fentitykey | 内部单据业务实体 | varchar | 50 |  | √ | ' ' | [业务对象 bos_objecttype](../mdl_files/bos_objecttype.md) |
 | 8 | fbillentry_lk | 关联实体标识 | varchar | 50 |  | √ | ' ' | 关联实体标识 |
 | 9 | fbilldate | 单据日期 | varchar | 50 |  | √ | ' ' | 单据日期 |
 | 10 | foutowner | 调出货主 | varchar | 50 |  | √ | ' ' | 调出货主 |

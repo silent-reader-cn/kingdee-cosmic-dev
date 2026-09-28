@@ -42,7 +42,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 码解析服务名称 | varchar | 50 |  | √ | ' ' | 码解析服务名称 |
 | 3 | fmethodname | 调用服务方法 | varchar | 50 |  | √ | ' ' | 调用服务方法 |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 6 | fpriority | 码解析服务优先级 | numeric | 23 | 10 | √ | 0 | 码解析服务优先级 |
 | 7 | fispreset | 系统预置 | bpchar | 1 |  | √ | ' ' | 系统预置 |
@@ -51,7 +51,7 @@
 | 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 11 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 12 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | fcloudid | 云Id | varchar | 50 |  | √ | ' ' | 云Id |
 | 15 | fservicename | 注册服务名称 | varchar | 50 |  | √ | ' ' | 注册服务名称 |
 | 16 | fcondition | 码解析条件 | varchar | 512 |  | √ | ' ' | 码解析条件 |

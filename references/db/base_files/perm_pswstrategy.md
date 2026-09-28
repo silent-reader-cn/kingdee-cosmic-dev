@@ -48,7 +48,7 @@
 | 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 8 | fdefault | fdefault | varchar | 36 |  | √ | ' ' |  |
 | 9 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 12 | fvalidity | 密码有效期(天) | int8 | 64 |  | √ | 0 | 密码有效期(天) |
 | 13 | flockcount | 账号锁定次数 | int8 | 64 |  | √ | 0 | 账号锁定次数 |
@@ -56,11 +56,11 @@
 | 15 | fenablelock | 是否启用锁定 | bpchar | 1 |  | √ | '1' | 是否启用锁定 |
 | 16 | flockterm | 帐号锁定(分钟) | int8 | 64 |  | √ | 0 | 帐号锁定(分钟) |
 | 17 | fforewarnday | 失效预警期(天) | int8 | 64 |  | √ | 0 | 失效预警期(天) |
-| 18 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 18 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 19 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 20 | fvercodectrl | 图形验证码控制次数 | int8 | 64 |  | √ | 0 | 图形验证码控制次数 |
 | 21 | fneedverifycode | 修改密码校验验证码 | bpchar | 1 |  | √ | '1' | 修改密码校验验证码 |
-| 22 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 22 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 23 | fisletter | 字母 | bpchar | 1 |  | √ | ' ' | 字母 |
 | 24 | fsmscount | 短信验证码阀值 | int4 | 32 |  | √ | 0 | 短信验证码阀值 |
 | 25 | fisspecial | 特殊符号 | bpchar | 1 |  | √ | ' ' | 特殊符号 |
@@ -69,9 +69,10 @@
 | 28 | fenablesmscode | 是否启用短信验证码 | bpchar | 1 |  | √ | '0' | 是否启用短信验证码 |
 | 29 | fenablegraphiccode | 是否启用图形验证码 | bpchar | 1 |  | √ | '1' | 是否启用图形验证码 |
 | 30 | fenable | 启用 | bpchar | 1 |  | √ | ' ' | 启用,枚举: 0 :禁用 1 :可用 |
-| 31 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
-| 32 | fisnumber | 数字 | bpchar | 1 |  | √ | ' ' | 数字 |
-| 33 | fisdefault | 系统预设 | bpchar | 1 |  | √ | '0' | 系统预设 |
+| 31 | fcustompswstrategy | 密码规则插件 | varchar | 256 |  | √ | ' ' | 密码规则插件 |
+| 32 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
+| 33 | fisnumber | 数字 | bpchar | 1 |  | √ | ' ' | 数字 |
+| 34 | fisdefault | 系统预设 | bpchar | 1 |  | √ | '0' | 系统预设 |
 
 ### 列规则定义
 

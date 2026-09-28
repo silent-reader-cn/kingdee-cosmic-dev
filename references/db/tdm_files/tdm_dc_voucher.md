@@ -13,7 +13,7 @@
 | 2 | fdebitbegin_dest | 期初借方金额（目标单据） | numeric | 23 | 10 | √ | 0 | 期初借方金额（目标单据） |
 | 3 | fdebitbegin_src | 期初借方金额（源单据） | numeric | 23 | 10 | √ | 0 | 期初借方金额（源单据） |
 | 4 | faccountnumber | 科目编码 | varchar | 100 |  | √ | ' ' | 科目编码 |
-| 5 | forgid | 核算组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | forgid | 核算组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | fvoucherrow | 记账凭证行号 | varchar | 50 |  | √ | ' ' | 记账凭证行号 |
 | 7 | faccountname | 科目名称 | varchar | 255 |  | √ | ' ' | 科目名称 |
 | 8 | fperiodnumber | 会计期间 | int8 | 64 |  | √ | 0 | 会计期间 |

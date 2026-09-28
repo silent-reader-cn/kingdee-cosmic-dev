@@ -192,29 +192,29 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fsearchdeepmax | 探测度最大值 | numeric | 23 | 10 | √ | 0 | 探测度最大值 |
 | 4 | fname | 方案名称 | varchar | 50 |  | √ | ' ' | 方案名称 |
-| 5 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | fhappenratemax | 发生频率最大值 | numeric | 23 | 10 | √ | 0 | 发生频率最大值 |
 | 7 | fcomment | 描述 | varchar | 512 |  | √ | ' ' | 描述 |
 | 8 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 9 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 9 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 10 | fseriousmax | 严重性最大值 | numeric | 23 | 10 | √ | 0 | 严重性最大值 |
 | 11 | fauditdate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
-| 12 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 12 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 13 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 14 | fctrlstrategy | 控制策略 | varchar | 5 |  | √ | ' ' | 控制策略,枚举: 5 :全局共享 |
 | 15 | fstatus | 数据状态 | varchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 16 | fseriouslevelmax | 严重程度最大值 | numeric | 23 | 10 | √ | 0 | 严重程度最大值 |
-| 17 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 17 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 18 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 19 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 20 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
 | 21 | fenable | 使用状态 | varchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 22 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
 | 23 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
-| 24 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 24 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 
@@ -246,9 +246,9 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | flevelstart | 起始值 | numeric | 23 | 10 | √ | 0 | 起始值 |
 | 3 | fcomment | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
-| 4 | fseriouslevelid | 严重程度等级 | int8 | 64 |  | √ | 0 | 严重程度等级 qcbd_seriouslevel |
+| 4 | fseriouslevelid | 严重程度等级 | int8 | 64 |  | √ | 0 | [严重程度等级 qcbd_seriouslevel](../qcbd_files/qcbd_seriouslevel.md) |
 | 5 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 6 | fimprovewayid | 改善对策 | int8 | 64 |  | √ | 0 | 改善对策 qcbd_improveway |
+| 6 | fimprovewayid | 改善对策 | int8 | 64 |  | √ | 0 | [改善对策 qcbd_improveway](../qcbd_files/qcbd_improveway.md) |
 | 7 | flevelend | 截止值（含） | numeric | 23 | 10 | √ | 0 | 截止值（含） |
 | 8 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 
@@ -262,6 +262,6 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | pk_qcbd_eavscheme |  | fentryid |
-| 2 | idx_qcbd_eavsme_fid |  | fid |
+| 1 | idx_qcbd_eavsme_fid |  | fid |
+| 2 | pk_qcbd_eavscheme |  | fentryid |
 | 3 | idx_qcbd_eavsme_fseq |  | fseq |

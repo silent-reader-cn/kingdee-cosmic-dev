@@ -10,10 +10,10 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fbusinessitemparamid | 参数 | int8 | 64 |  | √ | 0 | 业务类型参数 bd_businessitemparam |
+| 2 | fbusinessitemparamid | 参数 | int8 | 64 |  | √ | 0 | [业务类型参数 bd_businessitemparam](../fibd_files/bd_businessitemparam.md) |
 | 3 | fvalue | 参数值 | varchar | 500 |  | √ | ' ' | 参数值 |
-| 4 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 5 | fbusinessitemid | 业务类型 | int8 | 64 |  | √ | 0 | 报账业务类型 bd_businessitem |
+| 4 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 5 | fbusinessitemid | 业务类型 | int8 | 64 |  | √ | 0 | [报账业务类型 bd_businessitem](../fibd_files/bd_businessitem.md) |
 | 6 | fcreatetime | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
 
 ### 列规则定义

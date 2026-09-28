@@ -11,13 +11,13 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fexecuteresult | 执行结果 | bpchar | 1 |  | √ | '1' | 执行结果,枚举: 1 :成功 2 :失败 |
-| 3 | fschemeid | 方案 | int8 | 64 |  | √ | 0 | 自动执行方案 sco_autoexecsheme |
+| 3 | fschemeid | 方案 | int8 | 64 |  | √ | 0 | [自动执行方案 sco_autoexecsheme](../sco_files/sco_autoexecsheme.md) |
 | 4 | fexecutetime | 执行时长 | varchar | 30 |  | √ | ' ' | 执行时长 |
 | 5 | fendtime | 结束时间 | timestamp | 0 |  |  | null | 结束时间 |
 | 6 | fappnum | 所属应用 | varchar | 10 |  | √ | ' ' | 所属应用 |
 | 7 | fexecutetype | 执行类型 | varchar | 80 |  | √ | ' ' | 执行类型,枚举: task :调度触发 manual :手工执行 |
 | 8 | fstarttime | 开始时间 | timestamp | 0 |  |  | null | 开始时间 |
-| 9 | fexecutorid | 执行人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fexecutorid | 执行人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 
@@ -43,9 +43,9 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fcostcenterid | 成本中心 | int8 | 64 |  | √ | 0 | 成本中心 bos_costcenter |
-| 2 | forgid | 核算组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 3 | fcostaccountid | 成本主体 | int8 | 64 |  | √ | 0 | 成本主体 cal_bd_costaccount |
+| 1 | fcostcenterid | 成本中心 | int8 | 64 |  | √ | 0 | [成本中心 bos_costcenter](../basedata_files/bos_costcenter.md) |
+| 2 | forgid | 核算组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 3 | fcostaccountid | 成本主体 | int8 | 64 |  | √ | 0 | [成本主体 cal_bd_costaccount](../cal_files/cal_bd_costaccount.md) |
 | 4 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 5 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 | id |
 | 6 | fsuccessqty | 成功单据数量 | int4 | 32 |  | √ | 0 | 成功单据数量 |

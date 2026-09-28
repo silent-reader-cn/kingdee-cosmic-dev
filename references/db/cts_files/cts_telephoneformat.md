@@ -10,14 +10,14 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 4 | fdigit | 位数 | varchar | 64 |  | √ | ' ' | 位数 |
 | 5 | fseq | 分录行号 | int2 | 16 |  | √ | 0 | 分录行号 |
-| 6 | fcountryid | 国家或地区 | int8 | 64 |  | √ | 0 | 国家和地区 bd_country |
+| 6 | fcountryid | 国家或地区 | int8 | 64 |  | √ | 0 | [国家和地区 bd_country](../base_files/bd_country.md) |
 | 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 8 | fsegment | 起始号段 | varchar | 1024 |  | √ | ' ' | 起始号段 |
-| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | fissystem | 是否系统预置 | bpchar | 1 |  | √ | '0' | 是否系统预置 |
 | 11 | fnumber | 编码 | varchar | 50 |  | √ | ' ' | 编码 |
 | 12 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
@@ -49,8 +49,8 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fstatus | fstatus | varchar | 10 |  | √ | ' ' |  |
-| 3 | fmodifierid | 单据修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 4 | fcreatorid | 单据创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 单据修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 4 | fcreatorid | 单据创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fcreatetime | 单据创建时间 | timestamp | 0 |  |  | null | 单据创建时间 |
 | 6 | fmodifytime | 单据修改时间 | timestamp | 0 |  |  | null | 单据修改时间 |
 

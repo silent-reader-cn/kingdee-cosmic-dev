@@ -14,7 +14,7 @@
 | 3 | floginaddr | 苍穹登陆地址 | varchar | 100 |  | √ | ' ' | 苍穹登陆地址 |
 | 4 | floginname | 登陆用户名/手机号 | varchar | 30 |  | √ | ' ' | 登陆用户名/手机号 |
 | 5 | fmessage_tag | 结果文本_详情 | text | 0 |  |  | null | 结果文本_详情 |
-| 6 | fappid | 第三方应用 | int8 | 64 |  | √ | 0 | 第三方应用（废弃） open_3rdapps |
+| 6 | fappid | 第三方应用 | int8 | 64 |  | √ | 0 | [第三方应用（废弃） open_3rdapps](../open_files/open_3rdapps.md) |
 
 ### 列规则定义
 
@@ -41,7 +41,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fconfigid | 发票云配置 | int8 | 64 |  | √ | 0 | 发票云配置 er_bd_kdinvoicecloudcfg |
+| 2 | fconfigid | 发票云配置 | int8 | 64 |  | √ | 0 | [发票云配置 er_bd_kdinvoicecloudcfg](../basedata_files/er_bd_kdinvoicecloudcfg.md) |
 | 3 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 4 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 5 | frevenuenumber | 企业税号 | varchar | 50 |  | √ | ' ' | 企业税号 |

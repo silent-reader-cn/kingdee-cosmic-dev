@@ -13,11 +13,11 @@
 | 2 | fsuppliernumber | 供应商编码 | varchar | 100 |  | √ | ' ' | 供应商编码 |
 | 3 | fpurproportion | 采购比例 | numeric | 23 | 10 | √ | 0 | 采购比例 |
 | 4 | fgroup | ABC分类 | bpchar | 1 |  | √ | ' ' | ABC分类 |
-| 5 | forgid | 采购组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | forgid | 采购组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | fsuppliername | 供应商名称 | varchar | 100 |  | √ | ' ' | 供应商名称 |
 | 7 | fcurrency | fcurrency | int8 | 64 |  | √ | 0 |  |
-| 8 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
-| 9 | fsupplierid | 供应商 | int8 | 64 |  | √ | 0 | 供应商 bd_supplier |
+| 8 | fcurrencyid | 币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
+| 9 | fsupplierid | 供应商 | int8 | 64 |  | √ | 0 | [供应商 bd_supplier](../basedata_files/bd_supplier.md) |
 
 ### 列规则定义
 

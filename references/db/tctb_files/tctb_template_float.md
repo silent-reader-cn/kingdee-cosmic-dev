@@ -10,13 +10,13 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fcreatedatefield | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
 | 4 | fskssqq | 税款所属期起 | timestamp | 0 |  |  | null | 税款所属期起 |
-| 5 | fmodifierfield | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 6 | fcreaterfield | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | fmodifierfield | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 6 | fcreaterfield | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 7 | fmodifydatefield | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
-| 8 | ftype | 模板类型 | varchar | 36 |  | √ | ' ' | 模板类型 tctb_template_type |
+| 8 | ftype | 模板类型 | varchar | 36 |  | √ | ' ' | [模板类型 tctb_template_type](../tctb_files/tctb_template_type.md) |
 | 9 | fcontent_tag | 模板内容_详情 | text | 0 |  |  | null | 模板内容_详情 |
 | 10 | fskssqz | 税款所属期止 | timestamp | 0 |  |  | null | 税款所属期止 |
 | 11 | fbasetemplateid | 基础模板主键id | int8 | 64 |  | √ | 0 | 基础模板主键id |

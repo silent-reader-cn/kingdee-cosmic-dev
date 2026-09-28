@@ -10,8 +10,8 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fexpenseitemid | 业务项目 | int8 | 64 |  | √ | 0 | 费用项目 er_expenseitemedit |
-| 3 | fbusinessitemid | 业务类型 | int8 | 64 |  | √ | 0 | 报账业务类型 bd_businessitem |
+| 2 | fexpenseitemid | 业务项目 | int8 | 64 |  | √ | 0 | [费用项目 er_expenseitemedit](../basedata_files/er_expenseitemedit.md) |
+| 3 | fbusinessitemid | 业务类型 | int8 | 64 |  | √ | 0 | [报账业务类型 bd_businessitem](../fibd_files/bd_businessitem.md) |
 | 4 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
 
 ### 列规则定义

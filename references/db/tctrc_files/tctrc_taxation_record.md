@@ -22,8 +22,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_trtrc_taxr_sbbid |  | fsbbid |
-| 2 | pk_tctrc_taxation_record |  | fid |
+| 1 | pk_tctrc_taxation_record |  | fid |
+| 2 | idx_trtrc_taxr_sbbid |  | fsbbid |
 
 ---
 

@@ -49,26 +49,26 @@
 | 5 | fcitynumber | 电话区号 | varchar | 80 |  | √ | ' ' | 电话区号 |
 | 6 | fiscity | 城市 | bpchar | 1 |  | √ | ' ' | 城市 |
 | 7 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 10 | fissystem | 是否系统预置 | bpchar | 1 |  | √ | '0' | 是否系统预置 |
 | 11 | fareacode | 参考码 | varchar | 10 |  | √ | ' ' | 参考码 |
-| 12 | ftimezone | 时区 | int8 | 64 |  | √ | 0 | 时区 inte_timezone |
+| 12 | ftimezone | 时区 | int8 | 64 |  | √ | 0 | [时区 inte_timezone](../base_files/inte_timezone.md) |
 | 13 | fsimplespell | 英文简称 | varchar | 255 |  | √ | ' ' | 英文简称 |
-| 14 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
-| 16 | fparentid | 上级行政区划 | int8 | 64 |  | √ | 0 | 行政区划 bd_admindivision |
+| 16 | fparentid | 上级行政区划 | int8 | 64 |  | √ | 0 | [行政区划 bd_admindivision](../base_files/bd_admindivision.md) |
 | 17 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 18 | ffullname | 长名称 | varchar | 1024 |  | √ | ' ' | 长名称 |
 | 19 | flongnumber | 长编码 | varchar | 255 |  | √ | ' ' | 长编码 |
-| 20 | fcountryid | 所属国家或地区 | int8 | 64 |  | √ | 0 | 国家和地区 bd_country |
-| 21 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 20 | fcountryid | 所属国家或地区 | int8 | 64 |  | √ | 0 | [国家和地区 bd_country](../base_files/bd_country.md) |
+| 21 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 22 | fdescription | 描述 | varchar | 255 |  | √ | ' ' | 描述 |
 | 23 | flevel | 级次 | int8 | 64 |  | √ | 0 | 级次 |
 | 24 | ffullspell | 英文全称 | varchar | 255 |  | √ | ' ' | 英文全称 |
 | 25 | fenable | 使用状态 | bpchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 26 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
-| 27 | fadmindivisionlvid | 行政级次 | int8 | 64 |  | √ | 0 | 行政级次 bd_admindivisionlevel |
+| 27 | fadmindivisionlvid | 行政级次 | int8 | 64 |  | √ | 0 | [行政级次 bd_admindivisionlevel](../base_files/bd_admindivisionlevel.md) |
 
 ### 列规则定义
 

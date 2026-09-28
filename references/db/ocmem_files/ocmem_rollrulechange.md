@@ -10,22 +10,22 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fbillstatus | 单据状态 | bpchar | 1 |  | √ | 'A' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 5 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
-| 6 | feffectiveuser | 生效人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | feffectiveuser | 生效人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 7 | fchangestatus | 生效状态 | bpchar | 1 |  | √ | 'A' | 生效状态,枚举: A :草案 B :已生效 C :已完成 |
 | 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 9 | fneedsyn | 需要同步变更已发生的费用 | bpchar | 1 |  | √ | '0' | 需要同步变更已发生的费用 |
 | 10 | fendrolldate | 已发生费用时间范围.结束 | timestamp | 0 |  |  | null | 已发生费用时间范围.结束 |
 | 11 | fissyn | 已同步变更已发生的费用 | bpchar | 1 |  | √ | '0' | 已同步变更已发生的费用 |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fchangedate | 变更日期 | timestamp | 0 |  |  | null | 变更日期 |
 | 14 | feffectivedate | 生效日期 | timestamp | 0 |  |  | null | 生效日期 |
 | 15 | fstartrolldate | 已发生费用时间范围.开始 | timestamp | 0 |  |  | null | 已发生费用时间范围.开始 |
 | 16 | fbillno | 单据编号 | varchar | 80 |  | √ | ' ' | 单据编号 |
-| 17 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 17 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 
@@ -52,7 +52,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 变动费率规则 ocmem_rollraterule |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [变动费率规则 ocmem_rollraterule](../ocmem_files/ocmem_rollraterule.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -84,13 +84,13 @@
 | 3 | fnewtotalsalerate | 新费率值 | numeric | 23 | 10 | √ | 0 | 新费率值 |
 | 4 | foldtotalsalerate | 原费率值 | numeric | 23 | 10 | √ | 0 | 原费率值 |
 | 5 | fuserange | 方案适用范围 | bpchar | 1 |  | √ | ' ' | 方案适用范围,枚举: A :全组织适用 B :指定适用组织 |
-| 6 | fitemclassid | 商品分类 | int8 | 64 |  | √ | 0 | 商品分类 mdr_item_class |
+| 6 | fitemclassid | 商品分类 | int8 | 64 |  | √ | 0 | [商品分类 mdr_item_class](../gmc_files/mdr_item_class.md) |
 | 7 | fruletype | 费率规则 | bpchar | 1 |  | √ | ' ' | 费率规则,枚举: A :金额比例 B :单位费用金额 |
 | 8 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 9 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 10 | fitemid | 商品 | int8 | 64 |  | √ | 0 | 商品信息 ocdbd_iteminfo |
+| 10 | fitemid | 商品 | int8 | 64 |  | √ | 0 | [商品信息 ocdbd_iteminfo](../ocdbd_files/ocdbd_iteminfo.md) |
 | 11 | fversion | 原版本号 | int4 | 32 |  | √ | 0 | 原版本号 |
-| 12 | fraterule | 规则编码 | int8 | 64 |  | √ | 0 | 变动费率规则 ocmem_rollraterule |
+| 12 | fraterule | 规则编码 | int8 | 64 |  | √ | 0 | [变动费率规则 ocmem_rollraterule](../ocmem_files/ocmem_rollraterule.md) |
 
 ### 列规则定义
 
@@ -116,7 +116,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fexpensetypeid | 费用类型 | int8 | 64 |  | √ | 0 | 营销费用类型 ocdbd_expensetype |
+| 1 | fexpensetypeid | 费用类型 | int8 | 64 |  | √ | 0 | [营销费用类型 ocdbd_expensetype](../ocmem_files/ocdbd_expensetype.md) |
 | 2 | fnewallocationrate | 新分配比例% | numeric | 23 | 10 | √ | 0 | 新分配比例% |
 | 3 | flinkentryid | 关联分录id | int8 | 64 |  | √ | 0 | 关联分录id |
 | 4 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
@@ -135,5 +135,5 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | pk_ocmem_changechilentry |  | fdetailid |
-| 2 | idx_ocmem_changechilentry_eid |  | fentryid |
+| 1 | idx_ocmem_changechilentry_eid |  | fentryid |
+| 2 | pk_ocmem_changechilentry |  | fdetailid |

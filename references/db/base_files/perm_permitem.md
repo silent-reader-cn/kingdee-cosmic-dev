@@ -12,7 +12,8 @@
 | 1 | fid | fid | varchar | 18 |  | √ | ' ' |  |
 | 2 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
 | 3 | flocaleid | flocaleid | varchar | 36 |  | √ | ' ' | localeid |
-| 4 | fpkid | fpkid | varchar | 18 |  | √ | ' ' | pkid |
+| 4 | fdescription | 描述 | varchar | 255 |  | √ | ' ' | 描述 |
+| 5 | fpkid | fpkid | varchar | 18 |  | √ | ' ' | pkid |
 
 ### 列规则定义
 
@@ -44,10 +45,10 @@
 | 4 | forder | forder | int8 | 64 |  | √ | 0 |  |
 | 5 | finheritmode | 角色权限继承策略 | varchar | 10 |  | √ | ' ' | 角色权限继承策略,枚举: 10 :公有 20 :私有 |
 | 6 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
-| 7 | fdescription | 描述 | varchar | 100 |  | √ | ' ' | 描述 |
+| 7 | fdescription | 描述 | varchar | 255 |  | √ | ' ' | 描述 |
 | 8 | fbizdomainid | fbizdomainid | int8 | 64 |  | √ | 0 |  |
-| 9 | fprepermitemid | 前置权限项 | varchar | 18 |  | √ | ' ' | 权限项 perm_permitem |
-| 10 | fbizappid | 适用应用 | varchar | 18 |  | √ | ' ' | 业务应用实体 bos_devportal_bizapp |
+| 9 | fprepermitemid | 前置权限项 | varchar | 18 |  | √ | ' ' | [权限项 perm_permitem](../base_files/perm_permitem.md) |
+| 10 | fbizappid | 适用应用 | varchar | 18 |  | √ | ' ' | [业务应用实体 bos_devportal_bizapp](../mdl_files/bos_devportal_bizapp.md) |
 
 ### 列规则定义
 

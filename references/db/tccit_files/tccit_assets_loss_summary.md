@@ -14,20 +14,23 @@
 | 3 | fname | 项目名称 | varchar | 50 |  | √ | ' ' | 项目名称 |
 | 4 | fdamagesincome | 资产赔偿收入 | numeric | 23 | 10 | √ | 0.0000000000 | 资产赔偿收入 |
 | 5 | foriginal | 资产原值 | numeric | 23 | 10 | √ | 0.0000000000 | 资产原值 |
-| 6 | fincomesum | 收入总额 | numeric | 23 | 10 | √ | 0.0000000000 | 收入总额 |
-| 7 | forgid | 组织 | int8 | 64 |  | √ | 0 | 组织 |
-| 8 | fabnormalincome | 非正常损失进项转出 | numeric | 23 | 10 | √ | 0.0000000000 | 非正常损失进项转出 |
-| 9 | fskssqq | 开始时间 | timestamp | 0 |  |  | null | 开始时间 |
-| 10 | fassetslossamount | 资产损失税收金额 | numeric | 23 | 10 | √ | 0.0000000000 | 资产损失税收金额 |
-| 11 | fsumdepreciate | 税务累计折旧摊销 | numeric | 23 | 10 | √ | 0.0000000000 | 税务累计折旧摊销 |
-| 12 | fitemtype | 资产损失类型 | varchar | 50 |  | √ | ' ' | 资产损失类型 |
-| 13 | freserveverify | 资产损失准备金核销金额 | numeric | 23 | 10 | √ | 0.0000000000 | 资产损失准备金核销金额 |
-| 14 | fskssqz | 结束日期 | timestamp | 0 |  |  | null | 结束日期 |
-| 15 | fzzje | 资产损失账载金额 | numeric | 23 | 10 | √ | 0.0000000000 | 资产损失账载金额 |
-| 16 | fnstzje | 纳税调整金额 | numeric | 23 | 10 | √ | 0.0000000000 | 纳税调整金额 |
-| 17 | fassetsbase | 资产计税基础 | numeric | 23 | 10 | √ | 0.0000000000 | 资产计税基础 |
-| 18 | fruleid | 规则id | int8 | 64 |  | √ | 0 | 规则id |
-| 19 | fdisposalincome | 资产处置收入 | numeric | 23 | 10 | √ | 0.0000000000 | 资产处置收入 |
+| 6 | fewblxh | 二维表序号 | varchar | 50 |  | √ | ' ' | 二维表序号,枚举: 1 :行号 count :合计 |
+| 7 | fincomesum | 收入总额 | numeric | 23 | 10 | √ | 0.0000000000 | 收入总额 |
+| 8 | forgid | 组织 | int8 | 64 |  | √ | 0 | 组织 |
+| 9 | fabnormalincome | 非正常损失进项转出 | numeric | 23 | 10 | √ | 0.0000000000 | 非正常损失进项转出 |
+| 10 | fskssqq | 开始时间 | timestamp | 0 |  |  | null | 开始时间 |
+| 11 | fassetslossamount | 资产损失税收金额 | numeric | 23 | 10 | √ | 0.0000000000 | 资产损失税收金额 |
+| 12 | fsumdepreciate | 税务累计折旧摊销 | numeric | 23 | 10 | √ | 0.0000000000 | 税务累计折旧摊销 |
+| 13 | fewblname | 二维表名称 | varchar | 500 |  | √ | ' ' | 二维表名称 |
+| 14 | fitemtype | 资产损失类型 | varchar | 50 |  | √ | ' ' | 资产损失类型 |
+| 15 | freserveverify | 资产损失准备金核销金额 | numeric | 23 | 10 | √ | 0.0000000000 | 资产损失准备金核销金额 |
+| 16 | fskssqz | 结束日期 | timestamp | 0 |  |  | null | 结束日期 |
+| 17 | fzzje | 资产损失账载金额 | numeric | 23 | 10 | √ | 0.0000000000 | 资产损失账载金额 |
+| 18 | fnstzje | 纳税调整金额 | numeric | 23 | 10 | √ | 0.0000000000 | 纳税调整金额 |
+| 19 | fassetsbase | 资产计税基础 | numeric | 23 | 10 | √ | 0.0000000000 | 资产计税基础 |
+| 20 | fsbbid | 申报表id | varchar | 50 |  | √ | ' ' | 申报表id |
+| 21 | fruleid | 规则id | int8 | 64 |  | √ | 0 | 规则id |
+| 22 | fdisposalincome | 资产处置收入 | numeric | 23 | 10 | √ | 0.0000000000 | 资产处置收入 |
 
 ### 列规则定义
 

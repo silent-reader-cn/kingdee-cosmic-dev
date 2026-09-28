@@ -10,16 +10,16 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | forgid | 收付组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 3 | fprojectld | 项目 | int8 | 64 |  | √ | 0 | 项目 bd_project |
+| 2 | forgid | 收付组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 3 | fprojectld | 项目 | int8 | 64 |  | √ | 0 | [项目 bd_project](../basedata_files/bd_project.md) |
 | 4 | famount | 保证金金额 | numeric | 23 | 10 | √ | 0 | 保证金金额 |
 | 5 | freceivedamt | 已收款金额 | numeric | 23 | 10 | √ | 0 | 已收款金额 |
 | 6 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 7 | fenddate | 保证结束日期 | timestamp | 0 |  |  | null | 保证结束日期 |
-| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fbillno | 单据编号 | varchar | 50 |  | √ | ' ' | 单据编号 |
 | 10 | fremark | 备注 | varchar | 500 |  | √ | ' ' | 备注 |
-| 11 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fsourcebilltype | 源单类型 | varchar | 50 |  | √ | ' ' | 源单类型,枚举: |
 | 13 | fbillstatus | 单据状态 | varchar | 50 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 14 | fcontactunittype | 往来单位类型 | varchar | 50 |  | √ | ' ' | 往来单位类型,枚举: bd_customer :客户 |
@@ -32,8 +32,8 @@
 | 21 | fsourcebillid | 源单ID | int8 | 64 |  | √ | 0 | 源单ID |
 | 22 | fcontactunit | 客户 | int8 | 64 |  | √ | 0 | 客户 bd_customer |
 | 23 | fisvoucher | 已生成凭证 | bpchar | 1 |  | √ | '0' | 已生成凭证 |
-| 24 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
-| 25 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 24 | fcurrencyid | 币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
+| 25 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 26 | fbilltype | 单据类型 | varchar | 50 |  | √ | ' ' | 单据类型,枚举: 0 :质保金 |
 
 ### 列规则定义
@@ -112,8 +112,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_pac_prosuretybill_lk_fid |  | fid |
-| 2 | pk_pac_prosuretybill_lk |  | fpkid |
+| 1 | pk_pac_prosuretybill_lk |  | fpkid |
+| 2 | idx_pac_prosuretybill_lk_fid |  | fid |
 
 ---
 

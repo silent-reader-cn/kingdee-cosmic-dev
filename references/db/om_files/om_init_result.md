@@ -11,18 +11,18 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fendinitdate | 结束初始化日期 | timestamp | 0 |  |  | null | 结束初始化日期 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fbillstatus | 单据状态 | varchar | 50 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 5 | fstartinitdate | 启用初始化日期 | timestamp | 0 |  |  | null | 启用初始化日期 |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 7 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 7 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | fendinitstatus | 结束初始化状态 | varchar | 50 |  | √ | ' ' | 结束初始化状态,枚举: A :未初始化 B :已初始化 |
 | 9 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
 | 10 | fstartinitstatus | 启用初始化状态 | varchar | 50 |  | √ | ' ' | 启用初始化状态,枚举: A :未启用 B :已启用 |
 | 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fbillno | 单据编号 | varchar | 255 |  | √ | ' ' | 单据编号 |
-| 14 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

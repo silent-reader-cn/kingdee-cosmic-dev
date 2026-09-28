@@ -11,18 +11,18 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | 客户内码 | int8 | 64 |  |  | null | 客户内码 |
 | 2 | fphone | 固定电话 | varchar | 255 |  | √ | ' ' | 固定电话 |
-| 3 | faddress | 地址 | varchar | 100 |  |  | null | 地址 |
+| 3 | faddress | 地址(已废弃) | varchar | 100 |  |  | null | 地址(已废弃) |
 | 4 | fgivenname | fgivenname | varchar | 150 |  | √ | ' ' |  |
-| 5 | fgender | 性别 | varchar | 50 |  |  | null | 性别 |
+| 5 | fgender | 性别(已废弃) | varchar | 50 |  |  | null | 性别(已废弃) |
 | 6 | femail | 邮箱 | varchar | 255 |  | √ | ' ' | 邮箱 |
 | 7 | fdept | fdept | varchar | 80 |  | √ | ' ' |  |
 | 8 | fseq | fseq | int8 | 64 |  |  | null |  |
-| 9 | fassociatedaddress | fassociatedaddress | int8 | 64 |  | √ | 0 |  |
+| 9 | fassociatedaddress | 联系人关联地址f7 | int8 | 64 |  | √ | 0 | [地址 bd_address](../basedata_files/bd_address.md) |
 | 10 | faddresspurpose | faddresspurpose | int8 | 64 |  | √ | 0 |  |
-| 11 | fmobile | 手机 | varchar | 40 |  |  | null | 手机 |
+| 11 | fmobile | 手机(已废弃) | varchar | 40 |  |  | null | 手机(已废弃) |
 | 12 | frole | frole | varchar | 30 |  | √ | ' ' |  |
 | 13 | fmiddlename | fmiddlename | varchar | 150 |  | √ | ' ' |  |
-| 14 | fpostalcode | 邮政编码 | varchar | 10 |  |  | null | 邮政编码 |
+| 14 | fpostalcode | 邮政编码(已废弃) | varchar | 10 |  |  | null | 邮政编码(已废弃) |
 | 15 | ffamilyname | ffamilyname | varchar | 150 |  | √ | ' ' |  |
 | 16 | finvalid | 失效 | bpchar | 1 |  | √ | '0' | 失效 |
 | 17 | ffax | 传真 | varchar | 40 |  |  | null | 传真 |

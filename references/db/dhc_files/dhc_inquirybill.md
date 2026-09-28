@@ -39,22 +39,22 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fbillstatus | 单据状态 | bpchar | 1 |  | √ | 'A' | 单据状态,枚举: A :暂存 B :已提交 C :已完成 |
 | 4 | fapplydate | 申请日期 | timestamp | 0 |  |  | null | 申请日期 |
 | 5 | fquestiondesc | 问题描述 | varchar | 255 |  | √ | ' ' | 问题描述 |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 7 | fdept | 部门 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 7 | fdept | 部门 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | fquestionreply | 问题回复 | varchar | 255 |  | √ | ' ' | 问题回复 |
 | 9 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
-| 10 | fquestionsubtypeid | 问题细类 | int8 | 64 |  | √ | 0 | 辅助资料 bos_assistantdata_detail |
+| 10 | fquestionsubtypeid | 问题细类 | int8 | 64 |  | √ | 0 | [辅助资料 bos_assistantdata_detail](../base_files/bos_assistantdata_detail.md) |
 | 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fposition | fposition | varchar | 80 |  | √ | ' ' |  |
 | 14 | fbillno | 单据编号 | varchar | 80 |  | √ | ' ' | 单据编号 |
-| 15 | fquestiontypeid | 问题类型 | int8 | 64 |  | √ | 0 | 辅助资料 bos_assistantdata_detail |
-| 16 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 17 | fcompanyid | 申请人公司 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 15 | fquestiontypeid | 问题类型 | int8 | 64 |  | √ | 0 | [辅助资料 bos_assistantdata_detail](../base_files/bos_assistantdata_detail.md) |
+| 16 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 17 | fcompanyid | 申请人公司 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 
 ### 列规则定义
 

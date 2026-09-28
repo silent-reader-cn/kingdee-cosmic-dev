@@ -43,7 +43,7 @@
 | 32 | fextendmulstr1 | 多语言字符串1 | varchar | 255 |  | √ | ' ' | 多语言字符串1 |
 | 33 | fprocdefid | 流程定义ID | int8 | 64 |  | √ | 0 | 流程定义ID |
 | 34 | fentitynumber | 实体编码 | varchar | 50 |  | √ | ' ' | 实体编码,枚举: |
-| 35 | fgroupnumber | 待办分组 | int8 | 64 |  | √ | 0 | 待办分组 wf_tohandlegroup |
+| 35 | fgroupnumber | 待办分组 | int8 | 64 |  | √ | 0 | [待办分组 wf_tohandlegroup](../wf_files/wf_tohandlegroup.md) |
 | 36 | ftaskdisplay | 是否显示 | bpchar | 1 |  | √ | '1' | 是否显示 |
 | 37 | fprocinstid | 流程实例ID | int8 | 64 |  | √ | 0 | 流程实例ID |
 | 38 | fsource | 来源 | varchar | 100 |  | √ | ' ' | 来源 |
@@ -59,12 +59,13 @@
 | 48 | fstartnameformat | 发起人显示设置 | varchar | 300 |  | √ | ' ' | 发起人显示设置 |
 | 49 | fprocessingmobilepage | 移动处理页面 | varchar | 50 |  | √ | ' ' | 移动处理页面 |
 | 50 | fcurrentsubject | 当前任务主题 | varchar | 3000 |  | √ | ' ' | 当前任务主题 |
-| 51 | fuserid | 用户id | int8 | 64 |  | √ | 0 | 用户id |
-| 52 | ftransferopinion | 转交意见 | varchar | 2000 |  | √ | ' ' | 转交意见 |
-| 53 | fprocesstype | 流程类型 | varchar | 50 |  | √ | ' ' | 流程类型,枚举: AuditFlow :审批流 BizFlow :业务流 |
-| 54 | ftype | 类型 | varchar | 30 |  | √ | ' ' | 类型 |
-| 55 | ftaskid | 任务id | int8 | 64 |  | √ | 0 | 任务id |
-| 56 | fbilltype | 业务单据类型 | varchar | 50 |  | √ | ' ' | 业务单据类型 |
+| 51 | fsourcename | 来源系统名称 | varchar | 100 |  | √ | ' ' | 来源系统名称 |
+| 52 | fuserid | 用户id | int8 | 64 |  | √ | 0 | 用户id |
+| 53 | ftransferopinion | 转交意见 | varchar | 2000 |  | √ | ' ' | 转交意见 |
+| 54 | fprocesstype | 流程类型 | varchar | 50 |  | √ | ' ' | 流程类型,枚举: AuditFlow :审批流 BizFlow :业务流 |
+| 55 | ftype | 类型 | varchar | 30 |  | √ | ' ' | 类型 |
+| 56 | ftaskid | 任务id | int8 | 64 |  | √ | 0 | 任务id |
+| 57 | fbilltype | 业务单据类型 | varchar | 50 |  | √ | ' ' | 业务单据类型 |
 
 ### 列规则定义
 
@@ -106,15 +107,16 @@
 | 7 | fsendername | 发送人名称 | varchar | 500 |  | √ | ' ' | 发送人名称 |
 | 8 | fextendmulstr2 | 多语言字符串2 | varchar | 255 |  | √ | ' ' | 多语言字符串2 |
 | 9 | fextendmulstr1 | 多语言字符串1 | varchar | 255 |  | √ | ' ' | 多语言字符串1 |
-| 10 | ftransferopinion | 转交意见 | varchar | 2000 |  | √ | ' ' | 转交意见 |
-| 11 | ftrustname | 受托人名称 | varchar | 255 |  | √ | ' ' | 受托人名称 |
-| 12 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
-| 13 | fpkid | fpkid | varchar | 18 |  | √ | ' ' | pkid |
-| 14 | fusername | 用户名称 | varchar | 255 |  | √ | ' ' | 用户名称 |
-| 15 | fentityname | 单据类型 | varchar | 115 |  | √ | ' ' | 单据类型 |
-| 16 | fparticipantname | 当前参与人 | varchar | 300 |  | √ | ' ' | 当前参与人 |
-| 17 | fsendernameformat | 上一步处理人显示设置 | varchar | 500 |  | √ | ' ' | 上一步处理人显示设置 |
-| 18 | fstartnameformat | 发起人显示设置 | varchar | 300 |  | √ | ' ' | 发起人显示设置 |
+| 10 | fsourcename | 来源系统名称 | varchar | 100 |  | √ | ' ' | 来源系统名称 |
+| 11 | ftransferopinion | 转交意见 | varchar | 2000 |  | √ | ' ' | 转交意见 |
+| 12 | ftrustname | 受托人名称 | varchar | 255 |  | √ | ' ' | 受托人名称 |
+| 13 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
+| 14 | fpkid | fpkid | varchar | 18 |  | √ | ' ' | pkid |
+| 15 | fusername | 用户名称 | varchar | 255 |  | √ | ' ' | 用户名称 |
+| 16 | fentityname | 单据类型 | varchar | 115 |  | √ | ' ' | 单据类型 |
+| 17 | fparticipantname | 当前参与人 | varchar | 300 |  | √ | ' ' | 当前参与人 |
+| 18 | fsendernameformat | 上一步处理人显示设置 | varchar | 500 |  | √ | ' ' | 上一步处理人显示设置 |
+| 19 | fstartnameformat | 发起人显示设置 | varchar | 300 |  | √ | ' ' | 发起人显示设置 |
 
 ### 列规则定义
 

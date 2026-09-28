@@ -13,7 +13,7 @@
 | 2 | fname | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
 | 3 | ffullname | 长名称 | varchar | 255 |  | √ | ' ' | 长名称 |
 | 4 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
-| 5 | fdescription | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
+| 5 | fdescription | 备注 | varchar | 512 |  | √ | ' ' | 备注 |
 | 6 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
 
 ### 列规则定义
@@ -42,20 +42,20 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fisleaf | 是否叶子 | bpchar | 1 |  | √ | ' ' | 是否叶子 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fname | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
-| 5 | fparentid | 上级分类 | int8 | 64 |  | √ | 0 | 指标分类 srm_indexclass |
+| 5 | fparentid | 上级分类 | int8 | 64 |  | √ | 0 | [指标分类 srm_indexclass](../srm_files/srm_indexclass.md) |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 7 | ffullname | ffullname | varchar | 255 |  | √ | ' ' |  |
 | 8 | flongnumber | 长编码 | varchar | 80 |  | √ | ' ' | 长编码 |
 | 9 | fdisabledate | 禁用时间 | timestamp | 0 |  |  | null | 禁用时间 |
-| 10 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fdescription | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
 | 12 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 13 | flevel | 级次 | int8 | 64 |  | √ | 0 | 级次 |
 | 14 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :保存 B :已提交 C :已审核 |
 | 15 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 16 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 16 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 17 | fenable | 使用状态 | bpchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 18 | flowestscore | 最低得分限制 | bpchar | 1 |  | √ | '1' | 最低得分限制,枚举: 1 :不限制 2 :0分 |
 | 19 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |

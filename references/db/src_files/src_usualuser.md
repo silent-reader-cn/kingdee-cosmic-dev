@@ -12,13 +12,13 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fduty | 职位 | varchar | 50 |  | √ | ' ' | 职位 |
 | 3 | fphone | 联系电话 | varchar | 50 |  | √ | ' ' | 联系电话 |
-| 4 | fdeptid | 部门 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 4 | fdeptid | 部门 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | femail | 电子邮箱 | varchar | 50 |  | √ | ' ' | 电子邮箱 |
 | 6 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 7 | fnote | 备注 | varchar | 50 |  | √ | ' ' | 备注 |
 | 8 | fnumber | 工号 | varchar | 36 |  | √ | ' ' | 工号 |
 | 9 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 10 | fbidderid | 姓名 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fbidderid | 姓名 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 
@@ -45,7 +45,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fcompkey | 组件标识 | varchar | 50 |  | √ | ' ' | 组件标识 |
 
 ### 列规则定义

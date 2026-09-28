@@ -10,8 +10,8 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | 商品id | int8 | 64 |  | √ | 0 | 商品id |
-| 2 | fgoodsclassid | 商品分类 | int8 | 64 |  | √ | 0 | 商品分类 mdr_item_class |
-| 3 | fclassstandardid | 商品分类标准 | int8 | 64 |  | √ | 0 | 商品分类标准 bd_goodsclassstandard |
+| 2 | fgoodsclassid | 商品分类 | int8 | 64 |  | √ | 0 | [商品分类 mdr_item_class](../gmc_files/mdr_item_class.md) |
+| 3 | fclassstandardid | 商品分类标准 | int8 | 64 |  | √ | 0 | [商品分类标准 bd_goodsclassstandard](../gmc_files/bd_goodsclassstandard.md) |
 | 4 | fseq | fseq | int4 | 32 |  | √ | 0 |  |
 | 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 

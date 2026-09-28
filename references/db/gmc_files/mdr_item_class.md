@@ -47,22 +47,22 @@
 | 5 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 6 | fpicture | 商品分类图片 | varchar | 255 |  | √ | ' ' | 商品分类图片 |
 | 7 | fstatus | 数据状态 | bpchar | 1 |  | √ | 'C' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 10 | fcommenttempid | fcommenttempid | int8 | 64 |  | √ | 0 |  |
-| 11 | foffering | 关联offering | int8 | 64 |  | √ | 0 | 产品目录 bd_productsummary |
+| 11 | foffering | 关联offering | int8 | 64 |  | √ | 0 | [产品目录 bd_productsummary](../basedata_files/bd_productsummary.md) |
 | 12 | fgrade | 分类等级 | bpchar | 1 |  | √ | ' ' | 分类等级,枚举: A :LV0 品牌 B :LV1 分类 C :LV2 系列 D :LV3 SPU E :LV4 Offering |
 | 13 | feasnumber | EAS编码 | varchar | 30 |  | √ | ' ' | EAS编码 |
-| 14 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | fname | 分类名称 | varchar | 255 |  | √ | ' ' | 分类名称 |
-| 16 | fparentid | 上级分类 | int8 | 64 |  | √ | 0 | 商品分类 mdr_item_class |
+| 16 | fparentid | 上级分类 | int8 | 64 |  | √ | 0 | [商品分类 mdr_item_class](../gmc_files/mdr_item_class.md) |
 | 17 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 18 | ffullname | ffullname | varchar | 2000 |  | √ | ' ' |  |
 | 19 | flongnumber | 长编码 | varchar | 2000 |  | √ | ' ' | 长编码 |
 | 20 | fmaterialclassid | 物料分类Id | int8 | 64 |  | √ | 0 | 物料分类Id |
-| 21 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 21 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 22 | flevel | 级次 | int8 | 64 |  | √ | 0 | 级次 |
-| 23 | fstandardid | 商品分类标准 | int8 | 64 |  | √ | 0 | 商品分类标准 bd_goodsclassstandard |
+| 23 | fstandardid | 商品分类标准 | int8 | 64 |  | √ | 0 | [商品分类标准 bd_goodsclassstandard](../gmc_files/bd_goodsclassstandard.md) |
 | 24 | fclasstype | 分类类型 | varchar | 10 |  | √ | '0' | 分类类型,枚举: 0 :公有分类 1 :渠道私有分类 2 :供应商私有分类 |
 | 25 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 26 | fnumber | 分类编码 | varchar | 255 |  | √ | ' ' | 分类编码 |

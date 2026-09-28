@@ -19,23 +19,23 @@
 | 8 | fauth_required | 需要授权 | bpchar | 1 |  | √ | '0' | 需要授权 |
 | 9 | fnot_publish | 不发布到开放平台 | bpchar | 1 |  | √ | '0' | 不发布到开放平台 |
 | 10 | fsyn | 是否同步执行 | bpchar | 1 |  | √ | '0' | 是否同步执行 |
-| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 13 | fnamespace | 命名空间 | varchar | 255 |  | √ | ' ' | 命名空间 |
 | 14 | fsource_trace | 来源追溯 | varchar | 600 |  | √ | ' ' | 来源追溯 |
-| 15 | fdata_copy | 数据集成方案 | int8 | 64 |  | √ | 0 | 数据集成方案 isc_data_copy |
-| 16 | fschema_category | 分类 | int8 | 64 |  | √ | 0 | 自定义分类 isc_schema_category |
+| 15 | fdata_copy | 数据集成方案 | int8 | 64 |  | √ | 0 | [数据集成方案 isc_data_copy](../iscb_files/isc_data_copy.md) |
+| 16 | fschema_category | 分类 | int8 | 64 |  | √ | 0 | [自定义分类 isc_schema_category](../iscb_files/isc_schema_category.md) |
 | 17 | fwsinputparam | 输入参数名 | varchar | 150 |  | √ | ' ' | 输入参数名 |
-| 18 | ftrigger | 启动方案 | int8 | 64 |  | √ | 0 | 启动方案 isc_data_copy_trigger |
+| 18 | ftrigger | 启动方案 | int8 | 64 |  | √ | 0 | [启动方案 isc_data_copy_trigger](../iscb_files/isc_data_copy_trigger.md) |
 | 19 | fin_digest | API参数摘要模板 | varchar | 150 |  | √ | ' ' | API参数摘要模板 |
 | 20 | fexecution_type | 执行方式 | varchar | 30 |  | √ | ' ' | 执行方式,枚举: EXECUTE :从源系统查询数据同步到目标系统 PUSH :将推送的源单数据同步到目标系统 |
-| 21 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 21 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 22 | fcheck_param_type | 校验参数格式 | bpchar | 1 |  | √ | '0' | 校验参数格式 |
 | 23 | fpub_status | fpub_status | varchar | 30 |  | √ | ' ' |  |
 | 24 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 25 | fout_digest | API结果摘要模板 | varchar | 150 |  | √ | ' ' | API结果摘要模板 |
 | 26 | fdescription | 备注 | varchar | 500 |  | √ | ' ' | 备注 |
-| 27 | fdata_source | 数据源 | int8 | 64 |  | √ | 0 | 数据源管理 isc_data_source |
+| 27 | fdata_source | 数据源 | int8 | 64 |  | √ | 0 | [数据源管理 isc_data_source](../iscb_files/isc_data_source.md) |
 | 28 | fopenapi_version | 开放平台版本 | varchar | 10 |  | √ | ' ' | 开放平台版本,枚举: 2 :2.0 1 :1.0 |
 | 29 | fenable | 使用状态 | varchar | 30 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 30 | fnumber | 编码 | varchar | 100 |  | √ | ' ' | 编码 |
@@ -52,8 +52,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | t_iscb_apic_by_dc_trigger_pkey |  | fid |
-| 2 | idx_iscb_api_dc_triggrt_cg |  | fschema_category |
+| 1 | idx_iscb_api_dc_triggrt_cg |  | fschema_category |
+| 2 | t_iscb_apic_by_dc_trigger_pkey |  | fid |
 | 3 | idx_iscb_api_dc_triggrt_num |  | fnumber |
 
 ---

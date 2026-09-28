@@ -10,21 +10,24 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 3 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 4 | fanalysismode | 分析方式 | varchar | 30 |  | √ | ' ' | 分析方式,枚举: score :评分 noscore :无评分 |
-| 5 | fispreset | 是否预置 | bpchar | 1 |  | √ | '0' | 是否预置 |
-| 6 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 7 | frule | 规则脚本 | varchar | 510 |  |  | null | 规则脚本 |
-| 8 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 10 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 11 | frule_tag | 规则脚本_详情 | text | 0 |  |  | null | 规则脚本_详情 |
-| 12 | forder | 执行顺序 | int8 | 64 |  | √ | 1 | 执行顺序 |
-| 13 | fenable | 使用状态 | varchar | 30 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 14 | fnumber | 编码 | varchar | 60 |  | √ | ' ' | 编码 |
-| 15 | fdesc | 描述 | varchar | 255 |  |  | ' ' | 描述 |
-| 16 | fsourceentitynumber | 源单 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 3 | fname | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
+| 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 5 | fhighlight | 是否高亮检查结果 | bpchar | 1 |  | √ | '0' | 是否高亮检查结果 |
+| 6 | fanalysismode | 分析方式 | varchar | 30 |  | √ | ' ' | 分析方式,枚举: score :评分 noscore :无评分 |
+| 7 | fispreset | 预置 | bpchar | 1 |  | √ | '0' | 预置 |
+| 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 9 | frule | 规则脚本 | varchar | 510 |  |  | null | 规则脚本 |
+| 10 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 12 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
+| 13 | frule_tag | 规则脚本_详情 | text | 0 |  |  | null | 规则脚本_详情 |
+| 14 | forder | 执行顺序 | int8 | 64 |  | √ | 1 | 执行顺序 |
+| 15 | fenable | 使用状态 | varchar | 30 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 16 | fnumber | 编号 | varchar | 60 |  | √ | ' ' | 编号 |
+| 17 | fdesc | 描述 | varchar | 255 |  |  | ' ' | 描述 |
+| 18 | fsourceentitynumber | 源单 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
+| 19 | fmultidesc | 描述多语言 | varchar | 255 |  | √ | ' ' | 描述多语言 |
 
 ### 列规则定义
 
@@ -57,6 +60,7 @@
 | 2 | fname | 名称 | varchar | 500 |  | √ | ' ' | 名称 |
 | 3 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
 | 4 | fpkid | fpkid | varchar | 18 |  | √ | ' ' | pkid |
+| 5 | fmultidesc | 描述多语言 | varchar | 1020 |  | √ | ' ' | 描述多语言 |
 
 ### 列规则定义
 

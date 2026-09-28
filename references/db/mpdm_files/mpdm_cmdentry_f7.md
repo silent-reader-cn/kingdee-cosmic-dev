@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | parentid | int8 | 64 |  | √ | 0 | parentid |
-| 2 | fentrybaseunitid | 基本单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 2 | fentrybaseunitid | 基本单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 3 | finvaliddate | 失效日期 | timestamp | 0 |  |  | null | 失效日期 |
 | 4 | fsupplyorg | fsupplyorg | int8 | 64 |  | √ | 0 |  |
 | 5 | fentryownertype | fentryownertype | varchar | 50 |  | √ | ' ' |  |
@@ -19,9 +19,9 @@
 | 8 | foutlocation | foutlocation | int8 | 64 |  | √ | 0 |  |
 | 9 | fisrequireqtyset | fisrequireqtyset | bpchar | 1 |  | √ | '0' |  |
 | 10 | ffissuemode | ffissuemode | varchar | 50 |  | √ | ' ' |  |
-| 11 | fentryprofessionaid | 行业 | int8 | 64 |  | √ | 0 | 树形基础资料模板 mpdm_professiona |
+| 11 | fentryprofessionaid | 行业 | int8 | 64 |  | √ | 0 | [树形基础资料模板 mpdm_professiona](../mpdm_files/mpdm_professiona.md) |
 | 12 | fentryqty | fentryqty | numeric | 23 | 10 | √ | 0 |  |
-| 13 | fentrymaterial | 物料编码(隐藏) | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 13 | fentrymaterial | 物料编码(隐藏) | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 14 | fisreplacement | fisreplacement | bpchar | 1 |  | √ | '0' |  |
 | 15 | fvaliddate | 生效时间 | timestamp | 0 |  |  | null | 生效时间 |
 | 16 | fentryresptype | fentryresptype | varchar | 50 |  | √ | ' ' |  |
@@ -35,13 +35,13 @@
 | 24 | fwarehouse | fwarehouse | int8 | 64 |  | √ | 0 |  |
 | 25 | foutorg | foutorg | int8 | 64 |  | √ | 0 |  |
 | 26 | fisstockalloc | fisstockalloc | bpchar | 1 |  | √ | '0' |  |
-| 27 | fmaterialmftid | 组件编码 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 27 | fmaterialmftid | 组件编码 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 28 | fcabinconfigsen | fcabinconfigsen | bpchar | 1 |  | √ | '0' |  |
 | 29 | fentrylimittop | fentrylimittop | numeric | 23 | 10 | √ | 0 |  |
 | 30 | fcardoperationnoid | fcardoperationnoid | int8 | 64 |  | √ | 0 |  |
 | 31 | fentrytype | 组件类型 | varchar | 50 |  | √ | ' ' | 组件类型,枚举: |
 | 32 | fmaterielmtc | fmaterielmtc | int8 | 64 |  | √ | 0 |  |
-| 33 | fentryunitid | 计量单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 33 | fentryunitid | 计量单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 34 | fentryowner | fentryowner | int8 | 64 |  | √ | 0 |  |
 | 35 | fentryremark | fentryremark | varchar | 255 |  | √ | ' ' |  |
 | 36 | fbaseqty | fbaseqty | numeric | 23 | 10 | √ | 0 |  |

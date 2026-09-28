@@ -18,7 +18,7 @@
 | 7 | fpayid | 付款单ID | int8 | 64 |  | √ | 0 | 付款单ID |
 | 8 | fpayamount | 付款金额 | numeric | 19 | 6 | √ | 0 | 付款金额 |
 | 9 | famountbefore | 操作前付款分录金额 | numeric | 19 | 6 | √ | 0 | 操作前付款分录金额 |
-| 10 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 10 | fcurrencyid | 币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 | 11 | famountafter | 操作后付款分录金额 | numeric | 19 | 6 | √ | 0 | 操作后付款分录金额 |
 
 ### 列规则定义

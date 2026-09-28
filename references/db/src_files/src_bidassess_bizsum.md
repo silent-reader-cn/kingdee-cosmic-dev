@@ -55,39 +55,40 @@
 | 44 | fwinruleid | fwinruleid | int8 | 64 |  | √ | 0 |  |
 | 45 | fpurdeptid | fpurdeptid | int8 | 64 |  | √ | 0 |  |
 | 46 | famount | famount | numeric | 23 | 10 | √ | 0 |  |
-| 47 | fisaptitude | fisaptitude | bpchar | 1 |  | √ | '0' |  |
-| 48 | fsurplusamount | fsurplusamount | numeric | 23 | 10 | √ | 0 |  |
-| 49 | fsupopentype | fsupopentype | bpchar | 1 |  | √ | '1' |  |
-| 50 | fopentype | fopentype | bpchar | 1 |  | √ | ' ' |  |
-| 51 | fclosetask | fclosetask | varchar | 255 |  | √ | ' ' |  |
-| 52 | fpurgroupid | fpurgroupid | int8 | 64 |  | √ | 0 |  |
-| 53 | fbiztypeid | fbiztypeid | int8 | 64 |  | √ | 0 |  |
-| 54 | fismultipackage | fismultipackage | bpchar | 1 |  | √ | '0' |  |
-| 55 | fishidesupplier | fishidesupplier | bpchar | 1 |  | √ | '0' |  |
-| 56 | fsourceclassid | fsourceclassid | int8 | 64 |  | √ | 0 |  |
-| 57 | fopenstatus | fopenstatus | bpchar | 1 |  | √ | '1' |  |
-| 58 | fmanagetype | fmanagetype | bpchar | 1 |  | √ | ' ' |  |
-| 59 | ftaxtype | ftaxtype | varchar | 30 |  | √ | ' ' |  |
-| 60 | fbidname | fbidname | varchar | 300 |  | √ | ' ' |  |
-| 61 | fterminalnode | fterminalnode | int8 | 64 |  | √ | 0 |  |
-| 62 | fparentid | 父单据ID | varchar | 50 |  | √ | ' ' | 父单据ID |
-| 63 | fdonetask | fdonetask | varchar | 255 |  | √ | ' ' |  |
-| 64 | fisbypackage | fisbypackage | bpchar | 1 |  | √ | '0' |  |
-| 65 | fisbidpublish | fisbidpublish | bpchar | 1 |  | √ | '0' |  |
-| 66 | fentitykey | 组件标识 | varchar | 50 |  | √ | ' ' | 组件标识 |
-| 67 | fopendate | fopendate | timestamp | 0 |  |  | null |  |
-| 68 | fdecisiontype | fdecisiontype | bpchar | 1 |  | √ | ' ' |  |
-| 69 | fratio_biz | 商务标占比(%) | numeric | 23 | 10 | √ | 0 | 商务标占比(%) |
-| 70 | fratio_tec | 技术标占比(%) | numeric | 23 | 10 | √ | 0 | 技术标占比(%) |
-| 71 | fisopencontrol | fisopencontrol | bpchar | 1 |  | √ | '0' |  |
-| 72 | fisbypackage_apt | fisbypackage_apt | bpchar | 1 |  | √ | '0' |  |
-| 73 | fsourcetypeid | 寻源方式 | int8 | 64 |  | √ | 0 | 招标辅助资料 pds_extdata |
-| 74 | fsumtaxamount | fsumtaxamount | numeric | 23 | 10 | √ | 0 |  |
-| 75 | fextfilterid | fextfilterid | int8 | 64 |  | √ | 0 |  |
-| 76 | fcurrentnode | fcurrentnode | int8 | 64 |  | √ | 0 |  |
-| 77 | fisquickpur | fisquickpur | bpchar | 1 |  | √ | '0' |  |
-| 78 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
-| 79 | fratiotype | fratiotype | bpchar | 1 |  | √ | '1' |  |
+| 47 | fsystype | fsystype | bpchar | 1 |  | √ | '1' |  |
+| 48 | fisaptitude | fisaptitude | bpchar | 1 |  | √ | '0' |  |
+| 49 | fsurplusamount | fsurplusamount | numeric | 23 | 10 | √ | 0 |  |
+| 50 | fsupopentype | fsupopentype | bpchar | 1 |  | √ | '1' |  |
+| 51 | fopentype | fopentype | bpchar | 1 |  | √ | ' ' |  |
+| 52 | fclosetask | fclosetask | varchar | 255 |  | √ | ' ' |  |
+| 53 | fpurgroupid | fpurgroupid | int8 | 64 |  | √ | 0 |  |
+| 54 | fbiztypeid | fbiztypeid | int8 | 64 |  | √ | 0 |  |
+| 55 | fismultipackage | fismultipackage | bpchar | 1 |  | √ | '0' |  |
+| 56 | fishidesupplier | fishidesupplier | bpchar | 1 |  | √ | '0' |  |
+| 57 | fsourceclassid | fsourceclassid | int8 | 64 |  | √ | 0 |  |
+| 58 | fopenstatus | fopenstatus | bpchar | 1 |  | √ | '1' |  |
+| 59 | fmanagetype | fmanagetype | bpchar | 1 |  | √ | ' ' |  |
+| 60 | ftaxtype | ftaxtype | varchar | 30 |  | √ | ' ' |  |
+| 61 | fbidname | fbidname | varchar | 300 |  | √ | ' ' |  |
+| 62 | fterminalnode | fterminalnode | int8 | 64 |  | √ | 0 |  |
+| 63 | fparentid | 父单据ID | varchar | 50 |  | √ | ' ' | 父单据ID |
+| 64 | fdonetask | fdonetask | varchar | 255 |  | √ | ' ' |  |
+| 65 | fisbypackage | fisbypackage | bpchar | 1 |  | √ | '0' |  |
+| 66 | fisbidpublish | fisbidpublish | bpchar | 1 |  | √ | '0' |  |
+| 67 | fentitykey | 组件标识 | varchar | 50 |  | √ | ' ' | 组件标识 |
+| 68 | fopendate | fopendate | timestamp | 0 |  |  | null |  |
+| 69 | fdecisiontype | fdecisiontype | bpchar | 1 |  | √ | ' ' |  |
+| 70 | fratio_biz | 商务标占比(%) | numeric | 23 | 10 | √ | 0 | 商务标占比(%) |
+| 71 | fratio_tec | 技术标占比(%) | numeric | 23 | 10 | √ | 0 | 技术标占比(%) |
+| 72 | fisopencontrol | fisopencontrol | bpchar | 1 |  | √ | '0' |  |
+| 73 | fisbypackage_apt | fisbypackage_apt | bpchar | 1 |  | √ | '0' |  |
+| 74 | fsourcetypeid | 寻源方式 | int8 | 64 |  | √ | 0 | [招标辅助资料 pds_extdata](../pds_files/pds_extdata.md) |
+| 75 | fsumtaxamount | fsumtaxamount | numeric | 23 | 10 | √ | 0 |  |
+| 76 | fextfilterid | fextfilterid | int8 | 64 |  | √ | 0 |  |
+| 77 | fcurrentnode | fcurrentnode | int8 | 64 |  | √ | 0 |  |
+| 78 | fisquickpur | fisquickpur | bpchar | 1 |  | √ | '0' |  |
+| 79 | fcurrencyid | 币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
+| 80 | fratiotype | fratiotype | bpchar | 1 |  | √ | '1' |  |
 
 ### 列规则定义
 
@@ -102,9 +103,9 @@
 | 1 | idx_src_project_sourceid |  | fsourceid |
 | 2 | idx_src_project_parentid |  | fparentid |
 | 3 | pk_src_project |  | fid |
-| 4 | idx_src_project_type |  | fsrctypeid |
-| 5 | idx_src_project_sourceclassid |  | fsourceclassid |
-| 6 | idx_src_project_status |  | fopenstatus |
+| 4 | idx_src_project_sourceclassid |  | fsourceclassid |
+| 5 | idx_src_project_status |  | fopenstatus |
+| 6 | idx_src_project_type |  | fsrctypeid |
 
 ---
 
@@ -121,7 +122,7 @@
 | 2 | fispkgscheme | fispkgscheme | bpchar | 1 |  | √ | '0' |  |
 | 3 | fismanualscore | fismanualscore | bpchar | 1 |  | √ | '0' |  |
 | 4 | fbizstatus | fbizstatus | bpchar | 1 |  | √ | ' ' |  |
-| 5 | fschemeid | 推荐方案 | int8 | 64 |  | √ | 0 | 推荐方案 src_pattern |
+| 5 | fschemeid | 推荐方案 | int8 | 64 |  | √ | 0 | [推荐方案 src_pattern](../src_files/src_pattern.md) |
 | 6 | fseq | fseq | int8 | 64 |  | √ | 0 |  |
 | 7 | funauditdate | funauditdate | timestamp | 0 |  |  | null |  |
 | 8 | fmodifytime | fmodifytime | timestamp | 0 |  |  | null |  |

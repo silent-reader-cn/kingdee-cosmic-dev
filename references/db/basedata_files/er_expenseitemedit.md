@@ -100,16 +100,16 @@
 | 2 | fisleaf | 是否叶子 | bpchar | 1 |  | √ | '0' | 是否叶子 |
 | 3 | ftaxrate | 税率(%) | numeric | 23 | 10 | √ | 0.0000000000 | 税率(%) |
 | 4 | fnoinvoice | 无票 | bpchar | 1 |  | √ | '0' | 无票 |
-| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | fdisabledate | fdisabledate | timestamp | 0 |  |  | null |  |
 | 7 | foffset | 可抵扣 | bpchar | 1 |  | √ | '0' | 可抵扣 |
-| 8 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 8 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 9 | fpiccoclor | fpiccoclor | varchar | 100 |  | √ | ' ' |  |
 | 10 | fisvactax | 价税分离 | bpchar | 1 |  | √ | '0' | 价税分离 |
 | 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 12 | freimbdisc | 报销事由 | varchar | 255 |  |  | null | 报销事由 |
 | 13 | fstatus | 数据状态 | varchar | 25 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 16 | fpic | fpic | varchar | 100 |  | √ | ' ' |  |
 | 17 | freimburseamountctlmethod | 额度控制方法 | bpchar | 1 |  | √ | 'A' | 额度控制方法,枚举: A :累计控制 B :按月控制 E :按季控制 C :按年控制 |
@@ -117,30 +117,32 @@
 | 19 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 20 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
 | 21 | fpicurl | fpicurl | varchar | 255 |  | √ | ' ' |  |
-| 22 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 22 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 23 | fremark | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
-| 24 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 24 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 25 | fname | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
 | 26 | fcomment | 备注(废弃) | varchar | 255 |  | √ | ' ' | 备注(废弃) |
-| 27 | fparentid | 上级 | int8 | 64 |  | √ | 0 | 费用项目 er_expenseitemedit |
+| 27 | fparentid | 上级 | int8 | 64 |  | √ | 0 | [费用项目 er_expenseitemedit](../basedata_files/er_expenseitemedit.md) |
 | 28 | fisshowinmob | 移动端显示 | bpchar | 1 |  | √ | '0' | 移动端显示 |
 | 29 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 30 | ffullname | 长名称 | varchar | 255 |  | √ | ' ' | 长名称 |
 | 31 | flongnumber | 长编码 | varchar | 100 |  | √ | ' ' | 长编码 |
 | 32 | freimburseamountctlcount | 额度控制次数 | int4 | 32 |  | √ | 0 | 额度控制次数 |
 | 33 | fdisablerid | fdisablerid | int8 | 64 |  | √ | 0 |  |
-| 34 | fctrlstrategy | 控制策略 | varchar | 10 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
-| 35 | fiscommon | 常用 | bpchar | 1 |  | √ | '0' | 常用 |
-| 36 | flevel | 级次 | int8 | 64 |  | √ | 0 | 级次 |
-| 37 | fisrelatedvehicle | 是否关联交通工具 | bpchar | 1 |  | √ | '0' | 是否关联交通工具 |
-| 38 | fexpenseitemicon | 选择图标 | varchar | 255 |  | √ | ' ' | 选择图标 |
-| 39 | fenable | 使用状态 | bpchar | 1 |  | √ | '0' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 40 | fisreimburseamountctl | 额度控制 | bpchar | 1 |  | √ | '0' | 额度控制,枚举: 0 :无控制 1 :员工额度控制 2 :部门额度控制 3 :费用标准控制 |
-| 41 | frelbilltype | 关联单据 | varchar | 620 |  | √ | ' ' | 关联单据 |
-| 42 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
-| 43 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
-| 44 | fisdefault | 默认预置（新增单据时） | bpchar | 1 |  | √ | '0' | 默认预置（新增单据时） |
-| 45 | fcompanyid | fcompanyid | int8 | 64 |  | √ | 0 |  |
+| 34 | fmigsrc | fmigsrc | int4 | 32 |  | √ | 0 |  |
+| 35 | fctrlstrategy | 控制策略 | varchar | 10 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
+| 36 | fiscommon | 常用 | bpchar | 1 |  | √ | '0' | 常用 |
+| 37 | flevel | 级次 | int8 | 64 |  | √ | 0 | 级次 |
+| 38 | fisrelatedvehicle | 关联交通工具 | bpchar | 1 |  | √ | '0' | 关联交通工具 |
+| 39 | fexpenseitemicon | 选择图标 | varchar | 255 |  | √ | ' ' | 选择图标 |
+| 40 | fhaverelorg | 是否关联部门 | bpchar | 1 |  | √ | '0' | 是否关联部门 |
+| 41 | fenable | 使用状态 | bpchar | 1 |  | √ | '0' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 42 | fisreimburseamountctl | 额度控制 | bpchar | 1 |  | √ | '0' | 额度控制,枚举: 0 :无控制 1 :员工额度控制 2 :部门额度控制 3 :费用标准控制 |
+| 43 | frelbilltype | 关联单据 | varchar | 620 |  | √ | ' ' | 关联单据 |
+| 44 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
+| 45 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
+| 46 | fisdefault | 默认预置（新增单据时） | bpchar | 1 |  | √ | '0' | 默认预置（新增单据时） |
+| 47 | fcompanyid | fcompanyid | int8 | 64 |  | √ | 0 |  |
 
 ### 列规则定义
 

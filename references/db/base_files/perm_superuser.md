@@ -12,7 +12,7 @@
 | 1 | fid | fid | varchar | 18 |  | √ | ' ' | id |
 | 2 | fnumber1 | fnumber1 | varchar | 50 |  | √ | ' ' |  |
 | 3 | fseq | fseq | int4 | 32 |  | √ | 0 |  |
-| 4 | fuserid | 用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fuserid | 用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fadminid | fadminid | varchar | 18 |  | √ | ' ' |  |
 
 ### 列规则定义

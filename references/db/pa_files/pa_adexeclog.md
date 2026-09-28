@@ -28,6 +28,6 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | pk_t_pa_adexeclog |  | fid |
-| 2 | idx_pa_adexeclog_1 |  | fexecution_logid |
+| 1 | idx_pa_adexeclog_1 |  | fexecution_logid |
+| 2 | pk_t_pa_adexeclog |  | fid |
 | 3 | idx_pa_adexeclog_2 |  | fad_id |

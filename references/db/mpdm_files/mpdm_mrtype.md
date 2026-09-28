@@ -10,30 +10,30 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmanufacturerid | 制造商 | int8 | 64 |  | √ | 0 | 制造商 mpdm_manufacturer |
+| 2 | fmanufacturerid | 制造商 | int8 | 64 |  | √ | 0 | [制造商 mpdm_manufacturer](../mpdm_files/mpdm_manufacturer.md) |
 | 3 | fmaxweight | 最大启动重量 | numeric | 23 | 10 | √ | 0 | 最大启动重量 |
 | 4 | flength | 长 | numeric | 23 | 10 | √ | 0 | 长 |
-| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 6 | fwtunitid | 重量单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 7 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 6 | fwtunitid | 重量单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 7 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | faudittime | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
 | 9 | fsource | 来源依据 | varchar | 255 |  | √ | ' ' | 来源依据 |
 | 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 11 | fstatus | 数据状态 | varchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 12 | fattachmentcount | fattachmentcount | int4 | 32 |  | √ | 0 |  |
-| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 15 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 16 | fiswinlet | 翼尖小翼 | varchar | 5 |  | √ | ' ' | 翼尖小翼,枚举: 0 :N 1 :Y |
 | 17 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
 | 18 | fmodelone | 型号L1 | varchar | 255 |  | √ | ' ' | 型号L1 |
 | 19 | fmodeltrd | 型号L3 | varchar | 255 |  | √ | ' ' | 型号L3 |
-| 20 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 20 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 21 | fremark | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
-| 22 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 22 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 23 | flightweight | 空载重量 | numeric | 23 | 10 | √ | 0 | 空载重量 |
 | 24 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 25 | fbodytypeid | 机体分类 | int8 | 64 |  | √ | 0 | 机体类型 mpdm_bodytype |
+| 25 | fbodytypeid | 机体分类 | int8 | 64 |  | √ | 0 | [机体类型 mpdm_bodytype](../mpdm_files/mpdm_bodytype.md) |
 | 26 | fmodelmpdone | 型号L1-MPD | varchar | 255 |  | √ | ' ' | 型号L1-MPD |
 | 27 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 28 | fwide | 宽 | numeric | 23 | 10 | √ | 0 | 宽 |
@@ -42,10 +42,10 @@
 | 31 | fenable | 使用状态 | varchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 32 | fheight | 高 | numeric | 23 | 10 | √ | 0 | 高 |
 | 33 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
-| 34 | fuseorgid | 业务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 34 | fuseorgid | 业务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 35 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
-| 36 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 37 | fsizeunitid | 尺寸单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 36 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 37 | fsizeunitid | 尺寸单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 
 ### 列规则定义
 

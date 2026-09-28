@@ -15,7 +15,7 @@
 | 4 | ftemplatenum | 编号 | varchar | 80 |  | √ | ' ' | 编号 |
 | 5 | ffilename | 附件名称 | varchar | 255 |  |  | null | 附件名称 |
 | 6 | fseq | fseq | int8 | 64 |  | √ | 0 |  |
-| 7 | ffilemodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 7 | ffilemodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 8 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 9 | fversion | 版本号 | varchar | 80 |  | √ | ' ' | 版本号 |
 

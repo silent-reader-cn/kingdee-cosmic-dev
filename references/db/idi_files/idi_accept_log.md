@@ -12,8 +12,8 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | faccepttime | 接受时间 | timestamp | 0 |  |  | null | 接受时间 |
 | 3 | faccepttype | 接受类型 | varchar | 4 |  | √ | ' ' | 接受类型,枚举: 1 :免责声明 |
-| 4 | facceptor_id | 接受用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 5 | fnumber | 编码 | varchar | 60 |  | √ | ' ' | 编码 |
+| 4 | facceptor_id | 接受用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 5 | fnumber | 编号 | varchar | 60 |  | √ | ' ' | 编号 |
 | 6 | fcontent | 内容 | varchar | 255 |  | √ | ' ' | 内容 |
 
 ### 列规则定义

@@ -10,29 +10,29 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fstorageorgunitid | 库存组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 3 | fprojectid | 项目号 | int8 | 64 |  | √ | 0 | 项目 bd_project |
-| 4 | fperiodid | 期间 | int8 | 64 |  | √ | 0 | 会计日历 bd_period |
+| 2 | fstorageorgunitid | 库存组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 3 | fprojectid | 项目号 | int8 | 64 |  | √ | 0 | [项目 bd_project](../basedata_files/bd_project.md) |
+| 4 | fperiodid | 期间 | int8 | 64 |  | √ | 0 | [会计日历 bd_period](../fibd_files/bd_period.md) |
 | 5 | fbillstatus | fbillstatus | bpchar | 1 |  | √ | ' ' |  |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 7 | fmaterialid | 物料 | int8 | 64 |  | √ | 0 | 物料 bd_material |
-| 8 | fcalorgid | 核算组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 9 | fcaldimensionid | 核算维度 | int8 | 64 |  | √ | 0 | 核算维度 cal_bd_caldimension |
+| 7 | fmaterialid | 物料 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
+| 8 | fcalorgid | 核算组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 9 | fcaldimensionid | 核算维度 | int8 | 64 |  | √ | 0 | [核算维度 cal_bd_caldimension](../cal_files/cal_bd_caldimension.md) |
 | 10 | fallocrecordid | 分摊记录ID | int8 | 64 |  | √ | 0 | 分摊记录ID |
 | 11 | fcarryrule | 差异结转规则 | varchar | 30 |  | √ | ' ' | 差异结转规则,枚举: A :按数量比例结转 B :按金额比例结转 |
-| 12 | fmversionid | 物料版本 | int8 | 64 |  | √ | 0 | 物料版本（作废） bd_materialversion |
-| 13 | fwarehouseid | 仓库 | int8 | 64 |  | √ | 0 | 仓库 bd_warehouse |
-| 14 | fcalrangeid | 核算范围 | int8 | 64 |  | √ | 0 | 核算范围 cal_bd_calrange |
+| 12 | fmversionid | 物料版本 | int8 | 64 |  | √ | 0 | [物料版本（作废） bd_materialversion](../basedata_files/bd_materialversion.md) |
+| 13 | fwarehouseid | 仓库 | int8 | 64 |  | √ | 0 | [仓库 bd_warehouse](../sbd_files/bd_warehouse.md) |
+| 14 | fcalrangeid | 核算范围 | int8 | 64 |  | √ | 0 | [核算范围 cal_bd_calrange](../cal_files/cal_bd_calrange.md) |
 | 15 | fcaldimensionvalue | 核算维度值 | varchar | 255 |  | √ | ' ' | 核算维度值 |
 | 16 | fallocmodel | 分摊方式 | varchar | 30 |  | √ | ' ' | 分摊方式,枚举: A :按单据编号 B :按单据类型 |
-| 17 | fcreatorid | 分摊人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 18 | flocationid | 仓位 | int8 | 64 |  | √ | 0 | 仓位 bd_location |
+| 17 | fcreatorid | 分摊人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 18 | flocationid | 仓位 | int8 | 64 |  | √ | 0 | [仓位 bd_location](../sbd_files/bd_location.md) |
 | 19 | faccounttype | 计价方法 | bpchar | 1 |  | √ | ' ' | 计价方法,枚举: A :加权平均法 B :移动平均法 F :个别计价法 G :先进先出法 |
 | 20 | falloctime | 分摊时间 | timestamp | 0 |  |  | null | 分摊时间 |
-| 21 | fcostaccountid | 成本主体 | int8 | 64 |  | √ | 0 | 成本主体 cal_bd_costaccount |
+| 21 | fcostaccountid | 成本主体 | int8 | 64 |  | √ | 0 | [成本主体 cal_bd_costaccount](../cal_files/cal_bd_costaccount.md) |
 | 22 | fdividebasisvalue | 划分依据值 | varchar | 255 |  | √ | ' ' | 划分依据值 |
 | 23 | flot | 批号 | varchar | 80 |  | √ | ' ' | 批号 |
-| 24 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 24 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 
@@ -60,11 +60,11 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fsubelementid | 成本子要素 | int8 | 64 |  | √ | 0 | 成本子要素 cad_subelement |
+| 2 | fsubelementid | 成本子要素 | int8 | 64 |  | √ | 0 | [成本子要素 cad_subelement](../basedata_files/cad_subelement.md) |
 | 3 | foutstr | 发出 | varchar | 255 |  | √ | ' ' | 发出 |
 | 4 | fbalancestr | 结存 | varchar | 255 |  | √ | ' ' | 结存 |
 | 5 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 6 | felementid | 成本要素 | int8 | 64 |  | √ | 0 | 成本要素 cad_element |
+| 6 | felementid | 成本要素 | int8 | 64 |  | √ | 0 | [成本要素 cad_element](../basedata_files/cad_element.md) |
 | 7 | foutamt | 发出金额 | numeric | 23 | 10 | √ | 0.0000000000 | 发出金额 |
 | 8 | finstr | 收入 | varchar | 255 |  | √ | ' ' | 收入 |
 | 9 | fsortseq | 排序序号 | int8 | 64 |  | √ | 0 | 排序序号 |

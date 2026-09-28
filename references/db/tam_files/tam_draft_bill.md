@@ -11,28 +11,36 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | faccountorg | faccountorg | int8 | 64 |  | √ | 0 |  |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 4 | fbillstatus | 单据状态 | varchar | 50 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 6 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 7 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
-| 8 | ffetchstatus | ffetchstatus | varchar | 50 |  | √ | ' ' |  |
-| 9 | ftemplatetype | 纳税人类型 | varchar | 36 |  | √ | ' ' | 纳税人类型,枚举: draft_qysdsjb :企业所得税预缴 draft_qysdsnb :企业所得税年报 draft_zzsybnsr :一般纳税人增值税 draft_zzsxgmnsr :小规模纳税人增值税 draft_zzsybnsr_ybhz :汇总一般企业增值税 draft_zzsybnsr_yz_zjg :一般企业汇总申报预征方式总机构 draft_zzsybnsr_hz_zjg :一般企业汇总申报仅汇总 |
-| 10 | fdraftpurpose | 底稿用途 | varchar | 50 |  | √ | ' ' | 底稿用途,枚举: nssb :纳税申报 sjjt :税金计提 |
-| 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 12 | fisdeclare | 是否生成申报表 | bpchar | 1 |  | √ | '0' | 是否生成申报表 |
-| 13 | fstatus | fstatus | varchar | 50 |  | √ | ' ' |  |
-| 14 | fenddate | 所属期止 | timestamp | 0 |  |  | null | 所属期止 |
-| 15 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 16 | ftype | ftype | varchar | 36 |  | √ | ' ' |  |
-| 17 | fstartdate | 所属期起 | timestamp | 0 |  |  | null | 所属期起 |
-| 18 | fjtnumber | fjtnumber | varchar | 50 |  | √ | ' ' |  |
-| 19 | fismodified | 是否修改 | varchar | 50 |  | √ | '0' | 是否修改,枚举: 1 :是 0 :否 |
-| 20 | fdatasource | 数据来源 | varchar | 50 |  | √ | ' ' | 数据来源,枚举: hand :手工新增 auto :自动新增 |
-| 21 | fdrafttype | 底稿类别 | varchar | 50 |  | √ | ' ' | 底稿类别,枚举: qysdsjb :企业所得税预缴底稿 qysdsnb :企业所得税年报底稿 zzs :增值税底稿 |
-| 22 | fbillno | 底稿编号 | varchar | 30 |  | √ | ' ' | 底稿编号 |
-| 23 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 24 | fsbbno | 申报表编号 | varchar | 50 |  | √ | ' ' | 申报表编号 |
+| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 4 | faccrualplan | faccrualplan | int8 | 64 |  | √ | 0 |  |
+| 5 | ffetchstatus | ffetchstatus | varchar | 50 |  | √ | ' ' |  |
+| 6 | ftemplatetype | 纳税人类型 | varchar | 36 |  | √ | ' ' | 纳税人类型,枚举: draft_qysdsjb :企业所得税预缴 draft_qysdsnb :企业所得税年报 draft_zzsybnsr :一般纳税人增值税 draft_zzsxgmnsr :小规模纳税人增值税 draft_zzsybnsr_ybhz :汇总一般企业增值税 draft_zzsybnsr_yz_zjg :一般企业汇总申报预征方式总机构 draft_zzsybnsr_hz_zjg :一般企业汇总申报仅汇总 |
+| 7 | fsteplevel | fsteplevel | varchar | 50 |  | √ | ' ' |  |
+| 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 9 | fstatus | fstatus | varchar | 50 |  | √ | ' ' |  |
+| 10 | fenddate | 所属期止 | timestamp | 0 |  |  | null | 所属期止 |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 12 | fjtnumber | fjtnumber | varchar | 50 |  | √ | ' ' |  |
+| 13 | fismodified | 是否修改 | varchar | 50 |  | √ | '0' | 是否修改,枚举: 1 :是 0 :否 |
+| 14 | fflexbizdims | fflexbizdims | int8 | 64 |  | √ | 0 |  |
+| 15 | fdrafttype | 底稿类别 | varchar | 50 |  | √ | ' ' | 底稿类别,枚举: qysdsjb :企业所得税预缴底稿 qysdsnb :企业所得税年报底稿 zzs :增值税底稿 |
+| 16 | fbillno | 底稿编号 | varchar | 30 |  | √ | ' ' | 底稿编号 |
+| 17 | fsbbno | 申报表编号 | varchar | 50 |  | √ | ' ' | 申报表编号 |
+| 18 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 19 | fstepsummary | fstepsummary | bpchar | 1 |  | √ | '0' |  |
+| 20 | fbillstatus | 单据状态 | varchar | 50 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
+| 21 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 22 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
+| 23 | fdraftpurpose | 底稿用途 | varchar | 50 |  | √ | ' ' | 底稿用途,枚举: nssb :纳税申报 sjjt :税金计提 |
+| 24 | fstepparentid | fstepparentid | int8 | 64 |  | √ | 0 |  |
+| 25 | fisdeclare | 是否生成申报表 | bpchar | 1 |  | √ | '0' | 是否生成申报表 |
+| 26 | fdataversion | fdataversion | varchar | 50 |  | √ | ' ' |  |
+| 27 | ftype | ftype | varchar | 36 |  | √ | ' ' |  |
+| 28 | fstartdate | 所属期起 | timestamp | 0 |  |  | null | 所属期起 |
+| 29 | friskcontent | friskcontent | varchar | 50 |  | √ | ' ' |  |
+| 30 | fdeadline | fdeadline | varchar | 50 |  | √ | ' ' |  |
+| 31 | fdatasource | 数据来源 | varchar | 50 |  | √ | ' ' | 数据来源,枚举: hand :手工新增 auto :自动新增 |
+| 32 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | varchar | 20 |  | √ | ' ' | id |
 | 2 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
-| 3 | fssid | 来源系统 | int8 | 64 |  | √ | '606937535704276992' | 来源系统 ds_srcsys |
+| 3 | fssid | 来源系统 | int8 | 64 |  | √ | '606937535704276992' | [来源系统 ds_srcsys](../ds_files/ds_srcsys.md) |
 | 4 | fisunion | 是否合并单元 | varchar | 30 |  | √ | ' ' | 是否合并单元,枚举: 1 :是 0 :否 |
 | 5 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
 | 6 | fsoid | 来源对象ID | varchar | 100 |  | √ | ' ' | 来源对象ID |

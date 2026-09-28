@@ -14,10 +14,10 @@
 | 3 | fexetime | 执行时间 | timestamp | 0 |  |  | null | 执行时间 |
 | 4 | flog_tag | 日志_详情 | text | 0 |  |  | null | 日志_详情 |
 | 5 | foperator | 操作类型 | varchar | 36 |  | √ | ' ' | 操作类型 |
-| 6 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 7 | fuserid | 操作用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 7 | fuserid | 操作用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 8 | flog | 日志 | varchar | 255 |  | √ | ' ' | 日志 |
-| 9 | fentity | 业务对象 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 9 | fentity | 业务对象 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 10 | fsuccess | 是否成功 | bpchar | 1 |  | √ | '0' | 是否成功 |
 | 11 | fbillid | 业务单据ID | varchar | 36 |  | √ | ' ' | 业务单据ID |
 | 12 | fconsume | 是否执行完成 | bpchar | 1 |  | √ | '0' | 是否执行完成 |

@@ -13,7 +13,7 @@
 | 2 | fmatfilter | 物料主数据信息 | varchar | 2000 |  | √ | ' ' | 物料主数据信息 |
 | 3 | fmatfilter_tag | 物料主数据信息_详情 | text | 0 |  |  | null | 物料主数据信息_详情 |
 | 4 | fisstdcostmat | 计算使用标准成本计价法的物料 | bpchar | 1 |  | √ | '1' | 计算使用标准成本计价法的物料 |
-| 5 | fuserid | 用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | fuserid | 用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

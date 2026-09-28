@@ -40,14 +40,16 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 名称 | varchar | 70 |  | √ | ' ' | 名称 |
-| 3 | fcreatedate | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 4 | ftype | 类型 | varchar | 50 |  | √ | ' ' | 类型 |
-| 5 | factinstid | 活动实例ID | int8 | 64 |  | √ | 0 | 活动实例ID |
-| 6 | fmodifydate | 最后修改时间 | timestamp | 0 |  |  | null | 最后修改时间 |
-| 7 | fprocdefid | 流程定义ID | int8 | 64 |  | √ | 0 | 流程定义ID |
-| 8 | factivityid | 活动节点ID | varchar | 255 |  | √ | ' ' | 活动节点ID |
-| 9 | fprocinstid | 流程实例ID | int8 | 64 |  | √ | 0 | 流程实例ID |
-| 10 | fcontent | fcontent | text | 0 |  |  | null |  |
+| 3 | fownerid | 添加人 | int8 | 64 |  | √ | 0 | 添加人 |
+| 4 | fcreatedate | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 5 | ftype | 类型 | varchar | 50 |  | √ | ' ' | 类型 |
+| 6 | factinstid | 活动实例ID | int8 | 64 |  | √ | 0 | 活动实例ID |
+| 7 | fmodifydate | 最后修改时间 | timestamp | 0 |  |  | null | 最后修改时间 |
+| 8 | fprocdefid | 流程定义ID | int8 | 64 |  | √ | 0 | 流程定义ID |
+| 9 | factivityid | 活动节点ID | varchar | 255 |  | √ | ' ' | 活动节点ID |
+| 10 | fprocinstid | 流程实例ID | int8 | 64 |  | √ | 0 | 流程实例ID |
+| 11 | fcontent | fcontent | text | 0 |  |  | null |  |
+| 12 | ftaskid | 任务id | int8 | 64 |  | √ | 0 | 任务id |
 
 ### 列规则定义
 

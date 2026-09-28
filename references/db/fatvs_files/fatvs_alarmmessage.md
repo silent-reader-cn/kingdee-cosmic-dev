@@ -15,7 +15,7 @@
 | 4 | falarmstatus | 预警状态 | varchar | 2 |  | √ | ' ' | 预警状态,枚举: 0 :正常 1 :异常 |
 | 5 | fwarndetailid | 技能预警 | int8 | 64 |  | √ | 0 | 技能预警 |
 | 6 | fnumber | 预警编码 | varchar | 50 |  | √ | ' ' | 预警编码 |
-| 7 | fruntimedate | 技能运行数据 | int8 | 64 |  | √ | 0 | 技能运行数据 fatvs_skill_runtimedata |
+| 7 | fruntimedate | 技能运行数据 | int8 | 64 |  | √ | 0 | [技能运行数据 fatvs_skill_runtimedata](../fatvs_files/fatvs_skill_runtimedata.md) |
 
 ### 列规则定义
 

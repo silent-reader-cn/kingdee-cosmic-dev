@@ -80,14 +80,14 @@
 | 5 | ftransratedown | 数量短缺比率(%) | numeric | 23 | 10 | √ | 0.0000000000 | 数量短缺比率(%) |
 | 6 | frowbillstatus | 行关闭状态 | bpchar | 1 |  | √ | 'A' | 行关闭状态,枚举: A :正常 D :已关闭 |
 | 7 | fsrcbillid | 来源单据ID | int8 | 64 |  | √ | 0 | 来源单据ID |
-| 8 | fmversion | 物料版本 | int8 | 64 |  | √ | 0 | 物料版本 bd_bomversion_new |
+| 8 | fmversion | 物料版本 | int8 | 64 |  | √ | 0 | [物料版本 bd_bomversion_new](../basedata_files/bd_bomversion_new.md) |
 | 9 | fremtrsinbaseqty | 未调入基本数量 | numeric | 23 | 10 | √ | 0.0000000000 | 未调入基本数量 |
 | 10 | fsrcbillentryid | 来源单据行ID | int8 | 64 |  | √ | 0 | 来源单据行ID |
 | 11 | fsrcbillentryseq | 来源单据分录序号 | int8 | 64 |  | √ | 0 | 来源单据分录序号 |
 | 12 | fsrcsysbillentryid | 来源系统单据分录ID | varchar | 100 |  | √ | ' ' | 来源系统单据分录ID |
 | 13 | ftransrateup | 数量超出比率(%) | numeric | 23 | 10 | √ | 0.0000000000 | 数量超出比率(%) |
 | 14 | fremtrsinqty | 未调入数量 | numeric | 23 | 10 | √ | 0.0000000000 | 未调入数量 |
-| 15 | finlocation | 调入仓位 | int8 | 64 |  | √ | 0 | 仓位 bd_location |
+| 15 | finlocation | 调入仓位 | int8 | 64 |  | √ | 0 | [仓位 bd_location](../sbd_files/bd_location.md) |
 | 16 | fsrcbillentity | 来源单据实体 | varchar | 80 |  | √ | ' ' | 来源单据实体 |
 | 17 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 | 18 | fsrcsysbillid | 来源系统单据ID | varchar | 100 |  | √ | ' ' | 来源系统单据ID |
@@ -134,8 +134,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_im_transapply_tc_ftbidtid |  | ftbillid,ftid |
-| 2 | idx_im_transapply_tc_tid |  | ftid |
+| 1 | idx_im_transapply_tc_tid |  | ftid |
+| 2 | idx_im_transapply_tc_ftbidtid |  | ftbillid,ftid |
 | 3 | t_im_transapply_tc_pkey |  | fid |
 | 4 | idx_im_transapply_tc_tbill |  | ftbillid |
 
@@ -151,65 +151,68 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | finprojectid | 调入项目编码 | int8 | 64 |  | √ | 0 | 项目 bd_project |
+| 2 | finprojectid | 调入项目编码 | int8 | 64 |  | √ | 0 | [项目 bd_project](../basedata_files/bd_project.md) |
 | 3 | fnoupdateinvfields | 不更新库存字段 | varchar | 100 |  | √ | ' ' | 不更新库存字段 |
 | 4 | fauxptyid | 辅助属性 | int8 | 64 |  | √ | 0 | null 001 |
 | 5 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 6 | finvstatusid | 调出库存状态 | int8 | 64 |  | √ | 0 | 库存状态 bd_invstatus |
+| 6 | finvstatusid | 调出库存状态 | int8 | 64 |  | √ | 0 | [库存状态 bd_invstatus](../sbd_files/bd_invstatus.md) |
 | 7 | freltransbaseqty | 关联调拨基本数量 | numeric | 23 | 10 | √ | 0 | 关联调拨基本数量 |
 | 8 | fauditqty | 核准数量 | numeric | 23 | 10 | √ | 0.0000000000 | 核准数量 |
-| 9 | funitrate | funitrate | numeric | 23 | 10 | √ | 0.0000000000 |  |
-| 10 | fownertype | 出库货主类型 | varchar | 36 |  | √ | ' ' | 出库货主类型,枚举: bos_org :业务组织 bd_supplier :供应商 bd_customer :客户 |
-| 11 | finkeepertype | 入库保管者类型 | varchar | 36 |  | √ | ' ' | 入库保管者类型,枚举: bos_org :库存组织 bd_supplier :供应商 bd_customer :客户 |
-| 12 | fkeeperid | 出库保管者 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 13 | fbaseunitid | 基本单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 14 | finownerid | 调入货主 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 15 | fininvstatus | 调入库存状态 | int8 | 64 |  | √ | 0 | 库存状态 bd_invstatus |
-| 16 | fqty | 数量 | numeric | 23 | 10 | √ | 0.0000000000 | 数量 |
-| 17 | fecostcenterid | 成本中心 | int8 | 64 |  | √ | 0 | 成本中心 bos_costcenter |
-| 18 | fprojectid | 调出项目编码 | int8 | 64 |  | √ | 0 | 项目 bd_project |
-| 19 | funitid | 库存单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 20 | fkeepertype | 出库保管者类型 | varchar | 36 |  | √ | ' ' | 出库保管者类型,枚举: bos_org :库存组织 bd_supplier :供应商 bd_customer :客户 |
-| 21 | fwarehouseid | 调出仓库 | int8 | 64 |  | √ | 0 | 仓库 bd_warehouse |
-| 22 | fininvtype | 调入库存类型 | int8 | 64 |  | √ | 0 | 库存类型 bd_invtype |
-| 23 | fmaterialmasterid | 物料业务策略主内码 | int8 | 64 |  | √ | 0 | 物料业务策略主内码 |
-| 24 | fownerid | 调出货主 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 25 | fqtyunit2nd | 辅助数量 | numeric | 23 | 10 | √ | 0.0000000000 | 辅助数量 |
-| 26 | flotid | 批号主档 | int8 | 64 |  | √ | 0 | 批号主档 bd_lot |
-| 27 | foutorgid | 调出组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 28 | fexpirydate | 有效期至 | timestamp | 0 |  |  | null | 有效期至 |
-| 29 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 30 | flinetypeid | 行类型 | int8 | 64 |  | √ | 0 | 行类型 bd_linetype |
-| 31 | fmaterialname | 物料名称(历史) | varchar | 255 |  | √ | ' ' | 物料名称(历史) |
-| 32 | flotnumber | 批号 | varchar | 80 |  | √ | ' ' | 批号 |
-| 33 | fmaterialid | 物料编码 | int8 | 64 |  | √ | 0 | 物料库存信息 bd_materialinventoryinfo |
-| 34 | funit2ndid | 辅助单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 35 | funit2ndrate | funit2ndrate | numeric | 23 | 10 | √ | 0.0000000000 |  |
-| 36 | funit3rdrate | funit3rdrate | numeric | 23 | 10 | √ | 0.0000000000 |  |
-| 37 | fconfiguredcodeid | 配置号 | int8 | 64 |  | √ | 0 | 配置号 bd_configuredcode |
-| 38 | finwarehouseid | 调入仓库 | int8 | 64 |  | √ | 0 | 仓库 bd_warehouse |
-| 39 | freltransqty | 关联调拨数量 | numeric | 23 | 10 | √ | 0 | 关联调拨数量 |
-| 40 | finkeeperid | 入库保管者 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 41 | finmpmtaskno | 调入项目任务号 | int8 | 64 |  | √ | 0 | 项目任务F7 mpm_task_f7 |
-| 42 | ftracknumberid | 跟踪号 | int8 | 64 |  | √ | 0 | 跟踪号 bd_tracknumber |
-| 43 | ftransoutqty | 已调出数量 | numeric | 23 | 10 | √ | 0.0000000000 | 已调出数量 |
-| 44 | ftransoutbaseqty | 已调出基本数量 | numeric | 23 | 10 | √ | 0.0000000000 | 已调出基本数量 |
-| 45 | fremaintransoutqty | 未调出数量 | numeric | 23 | 10 | √ | 0.0000000000 | 未调出数量 |
-| 46 | finvtypeid | 调出库存类型 | int8 | 64 |  | √ | 0 | 库存类型 bd_invtype |
-| 47 | ftransinbaseqty | 已调入基本数量 | numeric | 23 | 10 | √ | 0.0000000000 | 已调入基本数量 |
-| 48 | fremaintransoutbaseqty | 未调出基本数量 | numeric | 23 | 10 | √ | 0.0000000000 | 未调出基本数量 |
-| 49 | frowterminatestatus | 行终止状态 | bpchar | 1 |  | √ | ' ' | 行终止状态,枚举: A :正常 B :已终止 |
-| 50 | flocationid | 调出仓位 | int8 | 64 |  | √ | 0 | 仓位 bd_location |
-| 51 | fqtyunit3rd | 辅助数量(2) | numeric | 23 | 10 | √ | 0.0000000000 | 辅助数量(2) |
-| 52 | fentrycomment | 备注 | varchar | 512 |  |  | ' ' | 备注 |
-| 53 | ftransinqty | 已调入数量 | numeric | 23 | 10 | √ | 0.0000000000 | 已调入数量 |
-| 54 | finorgid | 调入组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 55 | funit3rdid | 辅助单位(2) | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 56 | fmpmtaskno | 调出项目任务号 | int8 | 64 |  | √ | 0 | 项目任务F7 mpm_task_f7 |
-| 57 | fbaseqty | 基本数量 | numeric | 23 | 10 | √ | 0.0000000000 | 基本数量 |
-| 58 | fproducedate | 生产日期 | timestamp | 0 |  |  | null | 生产日期 |
-| 59 | finownertype | 入库货主类型 | varchar | 36 |  | √ | ' ' | 入库货主类型,枚举: bos_org :业务组织 bd_supplier :供应商 bd_customer :客户 |
-| 60 | fisfreegift | 赠品 | bpchar | 1 |  | √ | '0' | 赠品 |
+| 9 | finlicenseno | 调入许可证编号 | int8 | 64 |  | √ | 0 | [许可证 bd_licence](../sbd_files/bd_licence.md) |
+| 10 | funitrate | funitrate | numeric | 23 | 10 | √ | 0.0000000000 |  |
+| 11 | fownertype | 出库货主类型 | varchar | 36 |  | √ | ' ' | 出库货主类型,枚举: bos_org :业务组织 bd_supplier :供应商 bd_customer :客户 |
+| 12 | finkeepertype | 入库保管者类型 | varchar | 36 |  | √ | ' ' | 入库保管者类型,枚举: bos_org :库存组织 bd_supplier :供应商 bd_customer :客户 |
+| 13 | fkeeperid | 出库保管者 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 14 | fbaseunitid | 基本单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 15 | finownerid | 调入货主 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 16 | fininvstatus | 调入库存状态 | int8 | 64 |  | √ | 0 | [库存状态 bd_invstatus](../sbd_files/bd_invstatus.md) |
+| 17 | fqty | 数量 | numeric | 23 | 10 | √ | 0.0000000000 | 数量 |
+| 18 | fecostcenterid | 成本中心 | int8 | 64 |  | √ | 0 | 成本中心 bos_costcenter |
+| 19 | fprojectid | 调出项目编码 | int8 | 64 |  | √ | 0 | [项目 bd_project](../basedata_files/bd_project.md) |
+| 20 | funitid | 库存单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 21 | fkeepertype | 出库保管者类型 | varchar | 36 |  | √ | ' ' | 出库保管者类型,枚举: bos_org :库存组织 bd_supplier :供应商 bd_customer :客户 |
+| 22 | fwarehouseid | 调出仓库 | int8 | 64 |  | √ | 0 | [仓库 bd_warehouse](../sbd_files/bd_warehouse.md) |
+| 23 | fininvtype | 调入库存类型 | int8 | 64 |  | √ | 0 | [库存类型 bd_invtype](../sbd_files/bd_invtype.md) |
+| 24 | fmaterialmasterid | 物料业务策略主内码 | int8 | 64 |  | √ | 0 | 物料业务策略主内码 |
+| 25 | fownerid | 调出货主 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 26 | fqtyunit2nd | 辅助数量 | numeric | 23 | 10 | √ | 0.0000000000 | 辅助数量 |
+| 27 | flotid | 批号主档 | int8 | 64 |  | √ | 0 | [批号主档 bd_lot](../sbd_files/bd_lot.md) |
+| 28 | foutorgid | 调出组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 29 | fexpirydate | 有效期至 | timestamp | 0 |  |  | null | 有效期至 |
+| 30 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 31 | flinetypeid | 行类型 | int8 | 64 |  | √ | 0 | [行类型 bd_linetype](../sbd_files/bd_linetype.md) |
+| 32 | fmaterialname | 物料名称(历史) | varchar | 255 |  | √ | ' ' | 物料名称(历史) |
+| 33 | flicenseno | 调出许可证编号 | int8 | 64 |  | √ | 0 | [许可证 bd_licence](../sbd_files/bd_licence.md) |
+| 34 | flotnumber | 批号 | varchar | 80 |  | √ | ' ' | 批号 |
+| 35 | fmaterialid | 物料编码 | int8 | 64 |  | √ | 0 | [物料库存信息 bd_materialinventoryinfo](../sbd_files/bd_materialinventoryinfo.md) |
+| 36 | funit2ndid | 辅助单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 37 | funit2ndrate | funit2ndrate | numeric | 23 | 10 | √ | 0.0000000000 |  |
+| 38 | funit3rdrate | funit3rdrate | numeric | 23 | 10 | √ | 0.0000000000 |  |
+| 39 | fconfiguredcodeid | 配置号 | int8 | 64 |  | √ | 0 | [配置号（废弃） bd_configuredcode](../sbd_files/bd_configuredcode.md) |
+| 40 | fbonded | 保税 | bpchar | 1 |  | √ | '0' | 保税 |
+| 41 | finwarehouseid | 调入仓库 | int8 | 64 |  | √ | 0 | [仓库 bd_warehouse](../sbd_files/bd_warehouse.md) |
+| 42 | freltransqty | 关联调拨数量 | numeric | 23 | 10 | √ | 0 | 关联调拨数量 |
+| 43 | finkeeperid | 入库保管者 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 44 | finmpmtaskno | 调入项目任务号 | int8 | 64 |  | √ | 0 | [项目任务 bd_projecttask](../basedata_files/bd_projecttask.md) |
+| 45 | ftracknumberid | 跟踪号 | int8 | 64 |  | √ | 0 | [跟踪号 bd_tracknumber](../sbd_files/bd_tracknumber.md) |
+| 46 | ftransoutqty | 已调出数量 | numeric | 23 | 10 | √ | 0.0000000000 | 已调出数量 |
+| 47 | ftransoutbaseqty | 已调出基本数量 | numeric | 23 | 10 | √ | 0.0000000000 | 已调出基本数量 |
+| 48 | fremaintransoutqty | 未调出数量 | numeric | 23 | 10 | √ | 0.0000000000 | 未调出数量 |
+| 49 | finvtypeid | 调出库存类型 | int8 | 64 |  | √ | 0 | [库存类型 bd_invtype](../sbd_files/bd_invtype.md) |
+| 50 | ftransinbaseqty | 已调入基本数量 | numeric | 23 | 10 | √ | 0.0000000000 | 已调入基本数量 |
+| 51 | fremaintransoutbaseqty | 未调出基本数量 | numeric | 23 | 10 | √ | 0.0000000000 | 未调出基本数量 |
+| 52 | frowterminatestatus | 行终止状态 | bpchar | 1 |  | √ | ' ' | 行终止状态,枚举: A :正常 B :已终止 |
+| 53 | flocationid | 调出仓位 | int8 | 64 |  | √ | 0 | [仓位 bd_location](../sbd_files/bd_location.md) |
+| 54 | fqtyunit3rd | 辅助数量(2) | numeric | 23 | 10 | √ | 0.0000000000 | 辅助数量(2) |
+| 55 | fentrycomment | 备注 | varchar | 512 |  |  | ' ' | 备注 |
+| 56 | ftransinqty | 已调入数量 | numeric | 23 | 10 | √ | 0.0000000000 | 已调入数量 |
+| 57 | finorgid | 调入组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 58 | funit3rdid | 辅助单位(2) | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 59 | fmpmtaskno | 调出项目任务号 | int8 | 64 |  | √ | 0 | [项目任务 bd_projecttask](../basedata_files/bd_projecttask.md) |
+| 60 | fbaseqty | 基本数量 | numeric | 23 | 10 | √ | 0.0000000000 | 基本数量 |
+| 61 | fproducedate | 生产日期 | timestamp | 0 |  |  | null | 生产日期 |
+| 62 | finownertype | 入库货主类型 | varchar | 36 |  | √ | ' ' | 入库货主类型,枚举: bos_org :业务组织 bd_supplier :供应商 bd_customer :客户 |
+| 63 | fisfreegift | 赠品 | bpchar | 1 |  | √ | '0' | 赠品 |
 
 ### 列规则定义
 
@@ -306,30 +309,30 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | forgid | 申请组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | forgid | 申请组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fclosedate | 关闭日期 | timestamp | 0 |  |  | null | 关闭日期 |
 | 4 | fhandcloseflag | 手工关闭 | bpchar | 1 |  | √ | ' ' | 手工关闭 |
 | 5 | fbiztime | 业务日期 | timestamp | 0 |  |  | null | 业务日期 |
 | 6 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 7 | fapplyuserid | 申请人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 9 | fbiztypeid | 业务类型 | int8 | 64 |  | √ | 0 | 业务类型 bd_biztype |
-| 10 | fcloserid | 关闭人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 7 | fapplyuserid | 申请人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 9 | fbiztypeid | 业务类型 | int8 | 64 |  | √ | 0 | [业务类型 bd_biztype](../sbd_files/bd_biztype.md) |
+| 10 | fcloserid | 关闭人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fbillno | 单据编号 | varchar | 80 |  | √ | ' ' | 单据编号 |
 | 12 | funitsrctype | 计量单位来源 | varchar | 30 |  | √ | 'NULL' | 计量单位来源,枚举: MAINBILLUNIT :核心单据计量单位 BIZUNIT :默认业务单位 |
-| 13 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 14 | fdeptid | 申请部门 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 13 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 14 | fdeptid | 申请部门 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 15 | fbillstatus | 单据状态 | varchar | 5 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 16 | fsettlecurrency | 本位币 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 16 | fsettlecurrency | 本位币 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 | 17 | fcomment | 备注 | varchar | 512 |  | √ | ' ' | 备注 |
 | 18 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 19 | flastupdateuserid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 19 | flastupdateuserid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 20 | fauditdate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
-| 21 | fbillcretype | 单据生成类型 | bpchar | 1 |  | √ | '0' | 单据生成类型,枚举: 0 :手工生成 1 :导入生成 2 :后台生成 3 :webApi生成 |
+| 21 | fbillcretype | 单据生成类型 | bpchar | 1 |  | √ | '0' | 单据生成类型,枚举: 0 :手工生成 1 :导入生成 2 :后台生成 3 :webApi生成 9 :迁移生成 |
 | 22 | flastupdatetime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 23 | fclosestatus | 关闭状态 | bpchar | 1 |  | √ | ' ' | 关闭状态,枚举: A :正常 B :已关闭 |
 | 24 | ftranstype | 调拨类型 | varchar | 5 |  | √ | ' ' | 调拨类型,枚举: A :组织内调拨 B :跨组织调拨 |
-| 25 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 25 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 26 | fbilltypeid | 单据类型 | int8 | 64 |  | √ | 0 | 单据类型 bos_billtype |
 
 ### 列规则定义

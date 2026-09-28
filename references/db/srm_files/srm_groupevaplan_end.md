@@ -79,7 +79,7 @@
 | 10 | fmodifytime | fmodifytime | timestamp | 0 |  |  | null |  |
 | 11 | ftermination | 终止意见 | varchar | 255 |  | √ | ' ' | 终止意见 |
 | 12 | fcreatorid | fcreatorid | int8 | 64 |  | √ | 0 |  |
-| 13 | fterminaterid | 终止人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fterminaterid | 终止人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | fauditorid | fauditorid | int8 | 64 |  | √ | 0 |  |
 
 ### 列规则定义

@@ -69,7 +69,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 操作人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 操作人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | farchivesid | 税务档案主键 | varchar | 100 |  | √ | ' ' | 税务档案主键 |
 | 4 | fenable | 使用状态 | varchar | 30 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 5 | fmodifytime | 操作时间 | timestamp | 0 |  |  | null | 操作时间 |

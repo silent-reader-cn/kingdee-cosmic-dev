@@ -19,8 +19,8 @@
 | 8 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | 创建人 |
 | 9 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | 修改人 |
 | 10 | fnumber | 编码 | varchar | 50 |  | √ | ' ' | 编码 |
-| 11 | fdescription | 描述 | varchar | 1024 |  | √ | ' ' | 描述 |
-| 12 | fprocesstype | 流程类型 | varchar | 30 |  | √ | ' ' | 流程类型,枚举: |
+| 11 | fprocesstype | 流程类型 | varchar | 30 |  | √ | ' ' | 流程类型,枚举: |
+| 12 | fdescription | 描述 | varchar | 1024 |  | √ | ' ' | 描述 |
 
 ### 列规则定义
 

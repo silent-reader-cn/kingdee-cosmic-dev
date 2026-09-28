@@ -43,7 +43,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | flocaleid | flocaleid | varchar | 8 |  | √ | ' ' | localeid |
-| 3 | fschemaname | 方案名称 | varchar | 100 |  | √ | ' ' | 方案名称 |
+| 3 | fschemaname | 方案名称 | varchar | 200 |  | √ | ' ' | 方案名称 |
 | 4 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
 
 ### 列规则定义

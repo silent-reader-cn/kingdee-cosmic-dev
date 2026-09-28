@@ -43,13 +43,13 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fapproverid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fapproverid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fitemorgstatus | 组织上架状态 | bpchar | 1 |  | √ | '0' | 组织上架状态,枚举: 0 :上架 1 :下架 |
 | 4 | fitemchannelstatus | 渠道上架状态 | bpchar | 1 |  | √ | '0' | 渠道上架状态,枚举: 0 :上架 1 :下架 |
-| 5 | fcreatechannelid | 创建渠道 | int8 | 64 |  | √ | 0 | 渠道 ocdbd_channel |
+| 5 | fcreatechannelid | 创建渠道 | int8 | 64 |  | √ | 0 | [渠道 ocdbd_channel](../ocdbd_files/ocdbd_channel.md) |
 | 6 | fretailprice | 参考零售价 | numeric | 23 | 10 | √ | 0 | 参考零售价 |
 | 7 | fbarcodenumber | 条形码 | varchar | 80 |  | √ | ' ' | 条形码 |
-| 8 | fsupplerid | 供应商 | int8 | 64 |  | √ | 0 | 供应商 bd_supplier |
+| 8 | fsupplerid | 供应商 | int8 | 64 |  | √ | 0 | [供应商 bd_supplier](../basedata_files/bd_supplier.md) |
 | 9 | fdisabledate | 禁用时间 | timestamp | 0 |  |  | null | 禁用时间 |
 | 10 | fiskneadprice | 要货订单到销售订单揉价处理 | bpchar | 1 |  | √ | '0' | 要货订单到销售订单揉价处理 |
 | 11 | foperationmodel | 经营模式 | bpchar | 1 |  | √ | '1' | 经营模式,枚举: 0 :联营 1 :普通 |
@@ -64,22 +64,22 @@
 | 20 | fsaletype | 售卖方式 | bpchar | 1 |  | √ | ' ' | 售卖方式,枚举: 1 :计重 2 :计个 |
 | 21 | fisspecifykneadprice | 指定价格揉价 | bpchar | 1 |  | √ | '0' | 指定价格揉价 |
 | 22 | fapprovedate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
-| 23 | fstockunitid | 库存单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 24 | fserialunitid | 序列号单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 23 | fstockunitid | 库存单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 24 | fserialunitid | 序列号单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 25 | fisinstall | 是否安装 | bpchar | 1 |  | √ | '0' | 是否安装 |
 | 26 | fpicture5 | 图册 | varchar | 500 |  | √ | ' ' | 图册 |
 | 27 | fonlyoutandinrequest | 序列号仅出入库控制 | bpchar | 1 |  | √ | '0' | 序列号仅出入库控制 |
-| 28 | forderunitid | 分销订货单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 28 | forderunitid | 分销订货单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 29 | fpicture4 | 图册 | varchar | 500 |  | √ | ' ' | 图册 |
 | 30 | fpicture3 | 图册 | varchar | 500 |  | √ | ' ' | 图册 |
 | 31 | fpicture2 | 图册 | varchar | 500 |  | √ | ' ' | 图册 |
 | 32 | fpicture1 | 图册 | varchar | 500 |  | √ | ' ' | 图册 |
-| 33 | fcurrency | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
-| 34 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 35 | fretailunitid | 零售单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 33 | fcurrency | 币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
+| 34 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 35 | fretailunitid | 零售单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 36 | fdescription | 商品信息 | varchar | 255 |  | √ | ' ' | 商品信息 |
 | 37 | fenableserial | 启用序列号管理 | bpchar | 1 |  | √ | '0' | 启用序列号管理 |
-| 38 | fitembrandid | 商品品牌 | int8 | 64 |  | √ | 0 | 商品品牌 mdr_item_brand |
+| 38 | fitembrandid | 商品品牌 | int8 | 64 |  | √ | 0 | [商品品牌 mdr_item_brand](../gmc_files/mdr_item_brand.md) |
 | 39 | forderbatchqty | 订货批量 | numeric | 23 | 10 | √ | 0 | 订货批量 |
 | 40 | fmemberprice | 参考会员价 | numeric | 23 | 10 | √ | 0 | 参考会员价 |
 | 41 | fbarcodeid | 条形码ID | int8 | 64 |  | √ | 0 | 条形码ID |
@@ -138,55 +138,56 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fgroupid | 分组 | int8 | 64 |  | √ | 0 | 商品分类 mdr_item_class |
-| 3 | flengthunitid | 长度单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 2 | fgroupid | 分组 | int8 | 64 |  | √ | 0 | [商品分类 mdr_item_class](../gmc_files/mdr_item_class.md) |
+| 3 | flengthunitid | 长度单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 4 | flength | 长度 | numeric | 23 | 10 | √ | 0 | 长度 |
-| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | fgrossweight | 毛重 | numeric | 23 | 10 | √ | 0 | 毛重 |
 | 7 | fnetweight | 净重 | numeric | 23 | 10 | √ | 0 | 净重 |
-| 8 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 8 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 10 | fconversionfor | 辅助单位换算 | varchar | 30 |  | √ | ' ' | 辅助单位换算,枚举: A :互相换算 B :仅计量单位换算辅助单位 C :仅辅助单位换算计量单位 D :互不换算 |
 | 11 | feasnum | 第三方系统编码 | varchar | 80 |  | √ | ' ' | 第三方系统编码 |
 | 12 | fbitindex | 位图 | int8 | 64 |  | √ | 0 | 位图 |
-| 13 | fmaterial | 对应物料 | int8 | 64 |  | √ | 0 | 物料 bd_material |
-| 14 | fbaseunitid | 基本单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 15 | ftaxclasscodeid | 税收分类编码 | int8 | 64 |  | √ | 0 | 税收分类编码 er_taxclasscode |
-| 16 | fassistunitid | 辅助单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 13 | fmaterial | 对应物料 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
+| 14 | fbaseunitid | 基本单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 15 | ftaxclasscodeid | 税收分类编码 | int8 | 64 |  | √ | 0 | [税收分类编码 er_taxclasscode](../basedata_files/er_taxclasscode.md) |
+| 16 | fassistunitid | 辅助单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 17 | fname | 商品名称 | varchar | 255 |  | √ | ' ' | 商品名称 |
-| 18 | fweightunitid | 重量单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 19 | fmaterialmasterid | 物料Fmasterid | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 18 | fweightunitid | 重量单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 19 | fmaterialmasterid | 物料Fmasterid | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 20 | fenable | 使用状态 | bpchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 21 | fnumber | 商品编码 | varchar | 80 |  | √ | ' ' | 商品编码 |
 | 22 | fminpacknum | 最小包装数 | numeric | 23 | 10 | √ | 0 | 最小包装数 |
 | 23 | fsourcebitindex | 原资料位图 | int8 | 64 |  | √ | 0 | 原资料位图 |
 | 24 | fgoodsbelong | 商品归属 | bpchar | 1 |  | √ | '0' | 商品归属,枚举: 0 :内部 1 :外部 |
-| 25 | fitemspuid | 商品SPU | int8 | 64 |  | √ | 0 | 商品SPU ocdbd_spu |
+| 25 | fitemspuid | 商品SPU | int8 | 64 |  | √ | 0 | [商品SPU ocdbd_spu](../ocdbd_files/ocdbd_spu.md) |
 | 26 | fitemstatus | 商品状态 | bpchar | 1 |  | √ | '0' | 商品状态,枚举: 0 :上架 1 :下架 |
-| 27 | fsaleunitid | 销售单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 28 | fsearchkey | 搜索关键字 | varchar | 255 |  | √ | ' ' | 搜索关键字 |
-| 29 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 30 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 31 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 32 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
-| 33 | fcreatetype | 商品来源 | bpchar | 1 |  | √ | 'A' | 商品来源,枚举: A :手工新增 B :物料下推 D :导入新增 E :WebAPI新增 |
-| 34 | fshorttitle | 商品简介 | varchar | 510 |  | √ | ' ' | 商品简介 |
-| 35 | fvolumnunitid | 体积单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 36 | freferenceprice | 参考价格 | numeric | 23 | 10 | √ | 0 | 参考价格 |
-| 37 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 38 | fremark | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
-| 39 | fitemtypeid | 商品类型 | int8 | 64 |  | √ | 0 | 商品类型 bd_itemtype |
-| 40 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 41 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 42 | fproductmanagerid | 产品经理 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 43 | fvolume | 体积 | numeric | 23 | 10 | √ | 0 | 体积 |
-| 44 | fitemattributeid | 商品属性 | int8 | 64 |  | √ | 0 | 商品属性 ocdbd_itemattribute |
-| 45 | fwidth | 宽度 | numeric | 23 | 10 | √ | 0 | 宽度 |
-| 46 | fcostprice | 成本单价 | numeric | 23 | 10 | √ | 0 | 成本单价 |
-| 47 | fctrlstrategy | 控制策略 | varchar | 30 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
-| 48 | fsortnumber | 排序号 | int8 | 64 |  | √ | 0 | 排序号 |
-| 49 | fheight | 高度 | numeric | 23 | 10 | √ | 0 | 高度 |
-| 50 | fmodelnum | 规格型号 | varchar | 255 |  | √ | ' ' | 规格型号 |
+| 27 | fsaleunitid | 销售单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 28 | fattachmentnum | 附件数 | int8 | 64 |  | √ | 0 | 附件数 |
+| 29 | fsearchkey | 搜索关键字 | varchar | 255 |  | √ | ' ' | 搜索关键字 |
+| 30 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
+| 31 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
+| 32 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 33 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
+| 34 | fcreatetype | 商品来源 | bpchar | 1 |  | √ | 'A' | 商品来源,枚举: A :手工新增 B :物料下推 D :导入新增 E :WebAPI新增 |
+| 35 | fshorttitle | 商品简介 | varchar | 510 |  | √ | ' ' | 商品简介 |
+| 36 | fvolumnunitid | 体积单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 37 | freferenceprice | 参考价格 | numeric | 23 | 10 | √ | 0 | 参考价格 |
+| 38 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 39 | fremark | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
+| 40 | fitemtypeid | 商品类型 | int8 | 64 |  | √ | 0 | [商品类型 bd_itemtype](../gmc_files/bd_itemtype.md) |
+| 41 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 42 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 43 | fproductmanagerid | 产品经理 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 44 | fvolume | 体积 | numeric | 23 | 10 | √ | 0 | 体积 |
+| 45 | fitemattributeid | 商品属性 | int8 | 64 |  | √ | 0 | [商品属性 ocdbd_itemattribute](../ocdbd_files/ocdbd_itemattribute.md) |
+| 46 | fwidth | 宽度 | numeric | 23 | 10 | √ | 0 | 宽度 |
+| 47 | fcostprice | 成本单价 | numeric | 23 | 10 | √ | 0 | 成本单价 |
+| 48 | fctrlstrategy | 控制策略 | varchar | 30 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
+| 49 | fsortnumber | 排序号 | int8 | 64 |  | √ | 0 | 排序号 |
+| 50 | fheight | 高度 | numeric | 23 | 10 | √ | 0 | 高度 |
+| 51 | fmodelnum | 规格型号 | varchar | 255 |  | √ | ' ' | 规格型号 |
 
 ### 列规则定义
 
@@ -217,8 +218,8 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fgoodsclassid | 分类编码 | int8 | 64 |  | √ | 0 | 商品分类 mdr_item_class |
-| 3 | fclassstandardid | 分类标准编码 | int8 | 64 |  | √ | 0 | 商品分类标准 bd_goodsclassstandard |
+| 2 | fgoodsclassid | 分类编码 | int8 | 64 |  | √ | 0 | [商品分类 mdr_item_class](../gmc_files/mdr_item_class.md) |
+| 3 | fclassstandardid | 分类标准编码 | int8 | 64 |  | √ | 0 | [商品分类标准 bd_goodsclassstandard](../gmc_files/bd_goodsclassstandard.md) |
 | 4 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 
@@ -279,9 +280,9 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 3 | fspuspecid | SPU规格 | int8 | 64 |  | √ | 0 | SPU规格 ocdbd_spu_spec |
+| 3 | fspuspecid | SPU规格 | int8 | 64 |  | √ | 0 | [SPU规格 ocdbd_spu_spec](../ocdbd_files/ocdbd_spu_spec.md) |
 | 4 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 5 | fspuspecvalueid | SPU规格值 | int8 | 64 |  | √ | 0 | SPU规格值 ocdbd_spu_specvalue |
+| 5 | fspuspecvalueid | SPU规格值 | int8 | 64 |  | √ | 0 | [SPU规格值 ocdbd_spu_specvalue](../ocdbd_files/ocdbd_spu_specvalue.md) |
 
 ### 列规则定义
 
@@ -309,7 +310,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fmodelkey | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
-| 3 | fitemmodel | 商品参数 | int8 | 64 |  | √ | 0 | 辅助资料 bos_assistantdata_detail |
+| 3 | fitemmodel | 商品参数 | int8 | 64 |  | √ | 0 | [辅助资料 bos_assistantdata_detail](../base_files/bos_assistantdata_detail.md) |
 | 4 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 6 | fmodelvalue | 属性 | varchar | 100 |  | √ | ' ' | 属性 |

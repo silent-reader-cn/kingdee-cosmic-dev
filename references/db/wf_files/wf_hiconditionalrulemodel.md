@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人： | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人： | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fexpression | 条件表达式： | text | 0 |  |  | null | 条件表达式： |
 | 4 | fvalidtime | 生效时间： | timestamp | 0 |  |  | null | 生效时间： |
 | 5 | fprocdefid | 流程定义ID： | int8 | 64 |  | √ | 0 | 流程定义ID： |

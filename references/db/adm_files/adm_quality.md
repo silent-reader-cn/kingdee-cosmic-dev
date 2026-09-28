@@ -70,15 +70,15 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fremark | fremark | varchar | 255 |  | √ | ' ' |  |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | forigin | forigin | bpchar | 1 |  | √ | ' ' |  |
-| 5 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 7 | fcfmopinion | 审批意见 | varchar | 255 |  | √ | ' ' | 审批意见 |
 | 8 | fauditdate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
 | 9 | fcfmdate | 审批时间 | timestamp | 0 |  |  | null | 审批时间 |
-| 10 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 11 | fcfmid | 审批人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 11 | fcfmid | 审批人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 
 ### 列规则定义
@@ -106,7 +106,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | ftypeid | 体系类型 | int8 | 64 |  | √ | 0 | 供应商辅助资料 srm_extdata |
+| 2 | ftypeid | 体系类型 | int8 | 64 |  | √ | 0 | [供应商辅助资料 srm_extdata](../pbd_files/srm_extdata.md) |
 | 3 | fname | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
 | 4 | fdateto | 有效日期至 | timestamp | 0 |  |  | null | 有效日期至 |
 | 5 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
@@ -125,8 +125,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | t_pur_quality_manage_pkey |  | fentryid |
-| 2 | idx_pur_quality_manage_fid |  | fid,fseq |
+| 1 | idx_pur_quality_manage_fid |  | fid,fseq |
+| 2 | t_pur_quality_manage_pkey |  | fentryid |
 
 ---
 
@@ -179,17 +179,17 @@
 | 2 | fremark | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
 | 3 | fsubject | 变更主题 | varchar | 255 |  | √ | ' ' | 变更主题 |
 | 4 | fbillstatus | 单据状态 | bpchar | 1 |  | √ | ' ' | 单据状态,枚举: A :保存 B :已提交 C :已审核 |
-| 5 | fmaterialid | 物料名称 | int8 | 64 |  | √ | 0 | 物料 bd_material |
-| 6 | forgid | 采购组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | fmaterialid | 物料名称 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
+| 6 | forgid | 采购组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fbilldate | 业务日期 | timestamp | 0 |  |  | null | 业务日期 |
-| 8 | flastupdateuserid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 9 | fbizpartnerid | 商务伙伴 | int8 | 64 |  | √ | 0 | 商务伙伴 bd_bizpartner |
-| 10 | fsupplierid | 供应商 | int8 | 64 |  | √ | 0 | 供应商 bd_supplier |
+| 8 | flastupdateuserid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 9 | fbizpartnerid | 商务伙伴 | int8 | 64 |  | √ | 0 | [商务伙伴 bd_bizpartner](../base_files/bd_bizpartner.md) |
+| 10 | fsupplierid | 供应商 | int8 | 64 |  | √ | 0 | [供应商 bd_supplier](../basedata_files/bd_supplier.md) |
 | 11 | flastupdatetime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 12 | fcfmstatus | 审批状态 | bpchar | 1 |  | √ | ' ' | 审批状态,枚举: A :待审批 B :审批通过 C :审批驳回 |
 | 13 | fbiztype | 业务类型 | bpchar | 1 |  | √ | ' ' | 业务类型,枚举: 1 :标准采购 2 :协议采购 3 :VMI采购 4 :JIT采购 5 :委外采购 6 :直运采购 7 :资产采购 8 :费用采购 9 :内部采购 |
-| 14 | fchgtypeid | 变更类型 | int8 | 64 |  | √ | 0 | 供应商辅助资料 srm_extdata |
-| 15 | fcategoryid | 品类 | int8 | 64 |  | √ | 0 | 物料分类 bd_materialgroup |
+| 14 | fchgtypeid | 变更类型 | int8 | 64 |  | √ | 0 | [供应商辅助资料 srm_extdata](../pbd_files/srm_extdata.md) |
+| 15 | fcategoryid | 品类 | int8 | 64 |  | √ | 0 | [物料分类 bd_materialgroup](../basedata_files/bd_materialgroup.md) |
 | 16 | fbillno | 单据编号 | varchar | 80 |  | √ | ' ' | 单据编号 |
 | 17 | fbilltypeid | fbilltypeid | int8 | 64 |  | √ | 0 |  |
 
@@ -203,8 +203,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_pur_quality_fbilldate |  | fbilldate |
-| 2 | t_pur_quality_pkey |  | fid |
+| 1 | t_pur_quality_pkey |  | fid |
+| 2 | idx_pur_quality_fbilldate |  | fbilldate |
 | 3 | idx_pur_quality_fbillno |  | fbillno |
 
 ---

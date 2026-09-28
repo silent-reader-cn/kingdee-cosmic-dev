@@ -10,10 +10,10 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fentitynum | 业务对象 | varchar | 36 |  | √ | ' ' | 业务对象 bos_objecttype |
-| 3 | fviewscheme | 视图方案 | int8 | 64 |  | √ | 0 | 组织视图方案 bos_org_viewschema |
-| 4 | forgfunc | 组织职能 | int8 | 64 |  | √ | 0 | 组织职能类型 bos_org_biz |
-| 5 | fappid | 应用 | varchar | 18 |  | √ | ' ' | 业务应用实体 bos_devportal_bizapp |
+| 2 | fentitynum | 业务对象 | varchar | 36 |  | √ | ' ' | [业务对象 bos_objecttype](../mdl_files/bos_objecttype.md) |
+| 3 | fviewscheme | 视图方案 | int8 | 64 |  | √ | 0 | [组织视图方案 bos_org_viewschema](../base_files/bos_org_viewschema.md) |
+| 4 | forgfunc | 组织职能 | int8 | 64 |  | √ | 0 | [组织职能类型 bos_org_biz](../base_files/bos_org_biz.md) |
+| 5 | fappid | 应用 | varchar | 18 |  | √ | ' ' | [业务应用实体 bos_devportal_bizapp](../mdl_files/bos_devportal_bizapp.md) |
 
 ### 列规则定义
 

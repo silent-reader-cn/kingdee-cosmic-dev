@@ -10,9 +10,10 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fname | 名称 | varchar | 300 |  | √ | ' ' | 名称 |
-| 3 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
-| 4 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
+| 2 | fremark | 方案描述 | varchar | 500 |  | √ | ' ' | 方案描述 |
+| 3 | fname | 名称 | varchar | 300 |  | √ | ' ' | 名称 |
+| 4 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
+| 5 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
 
 ### 列规则定义
 
@@ -50,12 +51,12 @@
 | 10 | fbiztype | 开标类型 | varchar | 30 |  | √ | ' ' | 开标类型,枚举: 1 :开资审标 2 :开标/开技术标 3 :开商务标 |
 | 11 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 12 | fisencryptbypkg | 是否需要按标段进行加解密控制 | bpchar | 1 |  | √ | '0' | 是否需要按标段进行加解密控制 |
-| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | fissyspreset | 系统预置 | bpchar | 1 |  | √ | '0' | 系统预置 |
 | 15 | fremark | 方案描述 | varchar | 255 |  | √ | ' ' | 方案描述 |
 | 16 | fisv_id | 开发商标识 | varchar | 50 |  | √ | ' ' | 开发商标识 |
 | 17 | fname | 名称 | varchar | 300 |  | √ | ' ' | 名称 |
-| 18 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 18 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 19 | fdecryptpass | 解密通过需要达到的条件 | bpchar | 1 |  | √ | '3' | 解密通过需要达到的条件,枚举: 1 :至少有一个参与者解密 2 :一半以上参与者解密 3 :全部参与者均已解密 |
 | 20 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 21 | fsupencryptnum | 参与加密最低供应商数要求 | int4 | 32 |  | √ | 0 | 参与加密最低供应商数要求 |
@@ -91,7 +92,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 流程配置 pds_flowconfig |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [流程配置 pds_flowconfig](../pds_files/pds_flowconfig.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -120,7 +121,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 业务角色 pds_bizrole |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [业务角色 pds_bizrole](../pds_files/pds_bizrole.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -149,7 +150,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 业务角色 pds_bizrole |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [业务角色 pds_bizrole](../pds_files/pds_bizrole.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -178,7 +179,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 招标辅助资料 pds_extdata |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [招标辅助资料 pds_extdata](../pds_files/pds_extdata.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义

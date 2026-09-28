@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fskssqq | 日期范围.开始 | timestamp | 0 |  |  | null | 日期范围.开始 |
 | 4 | fljs1 | 一季度累计数 | numeric | 23 | 10 | √ | 0.0000000000 | 一季度累计数 |
 | 5 | ftype | 类型 | varchar | 30 |  | √ | ' ' | 类型,枚举: income :收入 cost :成本 profit :利润总额 prepay :已预交税额 |
@@ -33,5 +33,5 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_tccit_taxpay_summary |  | forgid,fskssqq,fskssqz |
-| 2 | t_tccit_taxpay_summary_pkey |  | fid |
+| 1 | t_tccit_taxpay_summary_pkey |  | fid |
+| 2 | idx_tccit_taxpay_summary |  | forgid,fskssqq,fskssqz |

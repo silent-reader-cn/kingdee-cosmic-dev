@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | varchar | 36 |  | √ | ' ' | id |
 | 2 | fstatus | 任务状态 | varchar | 50 |  | √ | ' ' | 任务状态,枚举: 1 :已提交 2 :已完成 3 :已取消 4 :出错 |
-| 3 | fcreaterfield | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fcreaterfield | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fcreatedatefield | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
 | 5 | fendtime | 结束时间 | timestamp | 0 |  |  | null | 结束时间 |
 | 6 | fstarttime | 开始时间 | timestamp | 0 |  |  | null | 开始时间 |

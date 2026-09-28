@@ -15,7 +15,7 @@
 | 4 | fcustom_declaration_no | 缴款书号码 | varchar | 50 |  | √ | ' ' | 缴款书号码 |
 | 5 | finvoice_date | 日期 | timestamp | 0 |  |  | null | 日期 |
 | 6 | funit_price | 完税价格 | numeric | 23 | 10 | √ | 0 | 完税价格 |
-| 7 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 7 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | ftotal_tax_amount | 税款金额合计 | numeric | 23 | 10 | √ | 0 | 税款金额合计 |
 | 9 | ftaxaccountserialno | 台账流水号 | varchar | 50 |  | √ | ' ' | 台账流水号 |
 | 10 | ftax_period | 所属账期 | timestamp | 0 |  |  | null | 所属账期 |

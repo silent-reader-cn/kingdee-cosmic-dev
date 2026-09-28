@@ -40,12 +40,12 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 4 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 4 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fcreatetime | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
 | 6 | fpreset | 是否预设 | bpchar | 1 |  | √ | '0' | 是否预设 |
-| 7 | fbillset | 归档单据 | int8 | 64 |  | √ | 0 | 可归档单据范围 bos_cbs_archi_billset |
-| 8 | fentitynumber | 单据编码 | varchar | 50 |  | √ | ' ' | 单据编码 |
+| 7 | fbillset | 归档实体 | int8 | 64 |  | √ | 0 | [可归档单据范围 bos_cbs_archi_billset](../cbs_files/bos_cbs_archi_billset.md) |
+| 8 | fentitynumber | 实体编码 | varchar | 50 |  | √ | ' ' | 实体编码 |
 | 9 | fnumber | 编码 | varchar | 50 |  | √ | ' ' | 编码 |
 | 10 | findicesfields | 归档索引 | varchar | 100 |  | √ | ' ' | 归档索引 |
 | 11 | fmodifytime | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |

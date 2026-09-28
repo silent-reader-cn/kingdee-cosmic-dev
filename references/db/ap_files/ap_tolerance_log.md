@@ -20,7 +20,7 @@
 | 9 | fupperlimit | 上限 | varchar | 50 |  | √ | ' ' | 上限 |
 | 10 | fcontrolobject | 管控对象 | varchar | 50 |  | √ | ' ' | 管控对象 |
 | 11 | fsource | 容差方案来源 | varchar | 50 |  | √ | ' ' | 容差方案来源 |
-| 12 | forg | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 12 | forg | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 
 ### 列规则定义
 

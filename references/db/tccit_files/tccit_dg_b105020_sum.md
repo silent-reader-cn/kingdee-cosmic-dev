@@ -13,14 +13,17 @@
 | 2 | fitemno | 行号 | int8 | 64 |  | √ | 0 | 行号 |
 | 3 | fnstz | 纳税调整金额 | numeric | 23 | 10 | √ | 0.0000000000 | 纳税调整金额 |
 | 4 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 5 | fssje | 税收金额 | numeric | 23 | 10 | √ | 0.0000000000 | 税收金额 |
-| 6 | fskssqz | 结束日期 | timestamp | 0 |  |  | null | 结束日期 |
-| 7 | fitemnumber | 项目编码 | varchar | 50 |  | √ | ' ' | 项目编码 |
-| 8 | forgid | 组织 | int8 | 64 |  | √ | 0 | 组织 |
-| 9 | fzzje | 账载金额 | numeric | 23 | 10 | √ | 0.0000000000 | 账载金额 |
-| 10 | fruleid | 规则id | int8 | 64 |  | √ | 0 | 规则id |
-| 11 | fitemname | 项目名称 | varchar | 50 |  | √ | ' ' | 项目名称 |
-| 12 | fskssqq | 开始时间 | timestamp | 0 |  |  | null | 开始时间 |
+| 5 | fewblxh | 二维表序号 | varchar | 50 |  | √ | ' ' | 二维表序号,枚举: 1 :行号 count :合计 |
+| 6 | forgid | 组织 | int8 | 64 |  | √ | 0 | 组织 |
+| 7 | fskssqq | 开始时间 | timestamp | 0 |  |  | null | 开始时间 |
+| 8 | fewblname | 二维表名称 | varchar | 500 |  | √ | ' ' | 二维表名称 |
+| 9 | fssje | 税收金额 | numeric | 23 | 10 | √ | 0.0000000000 | 税收金额 |
+| 10 | fskssqz | 结束日期 | timestamp | 0 |  |  | null | 结束日期 |
+| 11 | fitemnumber | 项目编码 | varchar | 50 |  | √ | ' ' | 项目编码 |
+| 12 | fzzje | 账载金额 | numeric | 23 | 10 | √ | 0.0000000000 | 账载金额 |
+| 13 | fsbbid | 申报表id | varchar | 50 |  | √ | ' ' | 申报表id |
+| 14 | fruleid | 规则id | int8 | 64 |  | √ | 0 | 规则id |
+| 15 | fitemname | 项目名称 | varchar | 50 |  | √ | ' ' | 项目名称 |
 
 ### 列规则定义
 

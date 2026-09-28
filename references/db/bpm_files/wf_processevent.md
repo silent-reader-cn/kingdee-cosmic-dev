@@ -13,7 +13,7 @@
 | 2 | fentrynumber | 参数编码 | varchar | 50 |  | √ | ' ' | 参数编码 |
 | 3 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 4 | fentrydesc | 参数描述 | varchar | 500 |  | √ | ' ' | 参数描述 |
-| 5 | fentryname | 参数名称 | varchar | 50 |  | √ | ' ' | 参数名称 |
+| 5 | fentryname | 参数名称 | varchar | 500 |  | √ | ' ' | 参数名称 |
 | 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 
 ### 列规则定义
@@ -41,7 +41,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | feventname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
+| 2 | feventname | 名称 | varchar | 500 |  | √ | ' ' | 名称 |
 | 3 | feventnumber | 编码 | varchar | 50 |  | √ | ' ' | 编码 |
 | 4 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :启用 |
 | 5 | fnumber | 唯一性编码 | int4 | 32 |  | √ | 0 | 唯一性编码 |

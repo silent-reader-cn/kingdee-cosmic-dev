@@ -14,7 +14,7 @@
 | 3 | fdataid | fdataid | int8 | 64 |  | √ | 0 | id |
 | 4 | fcontext | 操作说明 | varchar | 255 |  | √ | ' ' | 操作说明 |
 | 5 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 6 | fareacode | 行政区域编码 | varchar | 30 |  | √ | ' ' | 行政区域编码 |
+| 6 | fareacode | 行政区域编号 | varchar | 30 |  | √ | ' ' | 行政区域编号 |
 | 7 | fftime | 操作时间 | varchar | 30 |  | √ | ' ' | 操作时间 |
 | 8 | fareaname | 行政区域名称 | varchar | 30 |  | √ | ' ' | 行政区域名称 |
 
@@ -28,8 +28,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | pk_t_idi_logistics_data |  | fdataid |
-| 2 | idx_idi_logistics_data_fid |  | fid |
+| 1 | idx_idi_logistics_data_fid |  | fid |
+| 2 | pk_t_idi_logistics_data |  | fdataid |
 
 ---
 
@@ -44,7 +44,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fstate | 物流状态 | varchar | 50 |  | √ | ' ' | 物流状态 |
-| 3 | fcompanycode | 快递公司编码 | varchar | 30 |  | √ | ' ' | 快递公司编码 |
+| 3 | fcompanycode | 快递公司编号 | varchar | 30 |  | √ | ' ' | 快递公司编号 |
 | 4 | fsendtime | 发件时间 | varchar | 50 |  | √ | ' ' | 发件时间 |
 | 5 | fkuaidinum | 快递单号 | varchar | 30 |  | √ | ' ' | 快递单号 |
 | 6 | fkuadicomname | 快递公司名称 | varchar | 30 |  | √ | ' ' | 快递公司名称 |

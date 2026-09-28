@@ -81,15 +81,15 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fbd_interface | 付款接口代码 | int8 | 64 |  | √ | 0 | 银行接口维护 aqap_pay_interface |
-| 3 | fgroupid | 银行版本 | int8 | 64 |  | √ | 0 | 银行启用管理 aqap_bank |
+| 2 | fbd_interface | 付款接口名称 | int8 | 64 |  | √ | 0 | [银行接口维护 aqap_pay_interface](../aqap_files/aqap_pay_interface.md) |
+| 3 | fgroupid | 银行版本 | int8 | 64 |  | √ | 0 | [银行启用管理 aqap_bank](../aqap_files/aqap_bank.md) |
 | 4 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
-| 5 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 7 | fnote | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
 | 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 9 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 12 | fenable | 使用状态 | varchar | 50 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 13 | fnumber | 编码 | varchar | 255 |  | √ | ' ' | 编码 |

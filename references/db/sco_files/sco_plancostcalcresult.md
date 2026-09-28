@@ -10,33 +10,33 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmanuorgid | 生产组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fmanuorgid | 生产组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fprocessrouteid | 工艺路线 | int8 | 64 |  | √ | 0 | 工艺路线维护（废弃） pdm_route |
 | 4 | fplanqty | 工单计划数量 | numeric | 23 | 10 | √ | 0 | 工单计划数量 |
 | 5 | foutqty | 产品委外数量 | numeric | 23 | 10 | √ | 0 | 产品委外数量 |
-| 6 | fmaterialid | 物料 | int8 | 64 |  | √ | 0 | 物料 bd_material |
-| 7 | forgid | 核算组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | fmaterialid | 物料 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
+| 7 | forgid | 核算组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | fexpdate | 失效日期 | timestamp | 0 |  |  | null | 失效日期 |
-| 9 | fconfiguredcodeid | 配置号 | int8 | 64 |  | √ | 0 | 配置号 bd_configuredcode |
+| 9 | fconfiguredcodeid | 配置号 | int8 | 64 |  | √ | 0 | [配置号（废弃） bd_configuredcode](../sbd_files/bd_configuredcode.md) |
 | 10 | feffectdate | 生效日期 | timestamp | 0 |  |  | null | 生效日期 |
 | 11 | forderentryid | 工单分录id | int8 | 64 |  | √ | 0 | 工单分录id |
 | 12 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 14 | ftracknumberid | 跟踪号 | int8 | 64 |  | √ | 0 | 跟踪号 bd_tracknumber |
-| 15 | fkeycolid | 卷算维度数据 | int8 | 64 |  | √ | 0 | 卷算维度数据表 cad_keycol |
+| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 14 | ftracknumberid | 跟踪号 | int8 | 64 |  | √ | 0 | [跟踪号 bd_tracknumber](../sbd_files/bd_tracknumber.md) |
+| 15 | fkeycolid | 卷算维度数据 | int8 | 64 |  | √ | 0 | [卷算维度数据表 cad_keycol](../cad_files/cad_keycol.md) |
 | 16 | forderentryseq | 工单行号 | int8 | 64 |  | √ | 0 | 工单行号 |
 | 17 | fbillno | 单据编号 | varchar | 255 |  | √ | ' ' | 单据编号 |
-| 18 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 18 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 19 | fbillstatus | 状态 | varchar | 30 |  | √ | ' ' | 状态,枚举: A :失败 B :成功 |
 | 20 | foutamount | 产品委外金额 | numeric | 23 | 10 | √ | 0 | 产品委外金额 |
 | 21 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 22 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
 | 23 | fcalcdate | 计算日期 | timestamp | 0 |  |  | null | 计算日期 |
 | 24 | forderno | 工单编号 | varchar | 50 |  | √ | ' ' | 工单编号 |
-| 25 | fcosttypeid | 标准成本方案 | int8 | 64 |  | √ | 0 | 标准成本方案 cad_costtype |
+| 25 | fcosttypeid | 标准成本方案 | int8 | 64 |  | √ | 0 | [标准成本方案 cad_costtype](../basedata_files/cad_costtype.md) |
 | 26 | fbilltype | 单据类型 | varchar | 30 |  | √ | ' ' | 单据类型,枚举: pom_mftorder :生产工单 om_mftorder :委外工单 |
-| 27 | funit | 计量单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 28 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 27 | funit | 计量单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 28 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 29 | fkeycol | 维度字段 | varchar | 50 |  | √ | ' ' | 维度字段 |
 
 ### 列规则定义
@@ -67,8 +67,8 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fsubelementid | 成本子要素 | int8 | 64 |  | √ | 0 | 成本子要素 cad_subelement |
-| 3 | fresourceid | 资源 | int8 | 64 |  | √ | 0 | 资源维护(废弃) mpdm_resources |
+| 2 | fsubelementid | 成本子要素 | int8 | 64 |  | √ | 0 | [成本子要素 cad_subelement](../basedata_files/cad_subelement.md) |
+| 3 | fresourceid | 资源 | int8 | 64 |  | √ | 0 | [资源维护(废弃) mpdm_resources](../mpdm_files/mpdm_resources.md) |
 | 4 | fneedqty | 数量 | numeric | 23 | 10 | √ | 0 | 数量 |
 | 5 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 6 | fcalcbasis | 数据类别 | varchar | 30 |  | √ | ' ' | 数据类别,枚举: 0 :本层成本 1 :下级成本 |
@@ -76,7 +76,7 @@
 | 8 | fprice | 单价 | numeric | 23 | 10 | √ | 0 | 单价 |
 | 9 | fsrcqty | 资源基本数量 | numeric | 23 | 10 | √ | 0 | 资源基本数量 |
 | 10 | fneedamount | 金额 | numeric | 23 | 10 | √ | 0 | 金额 |
-| 11 | fsubmaterialid | 组件物料编码 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 11 | fsubmaterialid | 组件物料编码 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 12 | fsrcamount | 资源成本 | numeric | 23 | 10 | √ | 0 | 资源成本 |
 | 13 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 

@@ -1,1 +1,1 @@
-# 促销方案商品清单引入模板-ocdpm_promote_template
+# 促销方案商品清单导入模板-ocdpm_promote_template

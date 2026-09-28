@@ -11,9 +11,9 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fcleantime | 清除时间 | timestamp | 0 |  |  | null | 清除时间 |
-| 3 | fcleanerid | 清除人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 4 | fuserid | 人员 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 5 | fuserinfocleanschemeid | 人员信息清理方案 | int8 | 64 |  | √ | 0 | 人员个人信息清除方案 bos_user_infocleanscheme |
+| 3 | fcleanerid | 清除人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 4 | fuserid | 人员 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 5 | fuserinfocleanschemeid | 人员信息清理方案 | int8 | 64 |  | √ | 0 | [人员个人信息清除方案 bos_user_infocleanscheme](../secm_files/bos_user_infocleanscheme.md) |
 
 ### 列规则定义
 

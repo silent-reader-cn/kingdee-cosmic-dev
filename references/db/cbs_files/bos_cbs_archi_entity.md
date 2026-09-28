@@ -11,10 +11,10 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | farchiveroute | 归档库 | varchar | 50 |  | √ | ' ' | 归档库 |
-| 3 | fcreatetime | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
+| 3 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 4 | fdatabase_type | 归档库类型 | varchar | 50 |  | √ | ' ' | 归档库类型,枚举: db :数据库 es :Elasticsearch |
 | 5 | farchivecount | 已归档总数 | int8 | 64 |  | √ | 0 | 已归档总数 |
-| 6 | fentitynumber | 表单 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 6 | fentitynumber | 表单 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 7 | freversecount | 反归档总数 | int8 | 64 |  | √ | 0 | 反归档总数 |
 
 ### 列规则定义

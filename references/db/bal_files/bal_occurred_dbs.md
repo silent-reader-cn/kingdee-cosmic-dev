@@ -13,8 +13,8 @@
 | 2 | ftype | 类型 | bpchar | 1 |  | √ | ' ' | 类型,枚举: 1 :完全异步更新 2 :部分异步更新 |
 | 3 | fdb | 数据库标识 | varchar | 20 |  | √ | ' ' | 数据库标识 |
 | 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 5 | fcreaterid | 创建人 | int8 | 64 |  | √ | '0' | 人员 bos_user |
-| 6 | fbal | 余额表 | varchar | 36 |  | √ | ' ' | 余额表 bal_balanceinfo |
+| 5 | fcreaterid | 创建人 | int8 | 64 |  | √ | '0' | [人员 bos_user](../base_files/bos_user.md) |
+| 6 | fbal | 余额表 | varchar | 36 |  | √ | ' ' | [余额表 bal_balanceinfo](../bal_files/bal_balanceinfo.md) |
 | 7 | fappid | 应用标识 | varchar | 36 |  | √ | ' ' | 应用标识 |
 
 ### 列规则定义

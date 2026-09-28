@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fbizapp | 业务应用 | varchar | 36 |  | √ | ' ' | 业务应用实体 bos_devportal_bizapp |
+| 2 | fbizapp | 业务应用 | varchar | 36 |  | √ | ' ' | [业务应用实体 bos_devportal_bizapp](../mdl_files/bos_devportal_bizapp.md) |
 | 3 | fbussiness | 业务类型 | varchar | 36 |  | √ | ' ' | 业务类型,枚举: |
 | 4 | foper | 执行操作 | varchar | 36 |  | √ | ' ' | 执行操作,枚举: |
 | 5 | ffilter | 过滤条件 | varchar | 36 |  | √ | ' ' | 过滤条件 |

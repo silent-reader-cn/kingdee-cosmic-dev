@@ -10,9 +10,9 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fsuporg | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 3 | fmaterielweek | 物料 | int8 | 64 |  | √ | 0 | 物料 bd_material |
-| 4 | fmbommaterial | mbom物料 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 2 | fsuporg | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 3 | fmaterielweek | 物料 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
+| 4 | fmbommaterial | mbom物料 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 5 | fweekplan | P_DPS周计划 | numeric | 23 | 10 | √ | 0 | P_DPS周计划 |
 | 6 | fweekresult | P_DPS周结果 | numeric | 23 | 10 | √ | 0 | P_DPS周结果 |
 | 7 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
@@ -45,7 +45,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -73,7 +73,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -101,7 +101,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -133,36 +133,36 @@
 | 3 | fsummaryfamily | 产品族 | varchar | 50 |  | √ | ' ' | 产品族 |
 | 4 | fsummarycolor | 颜色 | varchar | 50 |  | √ | ' ' | 颜色 |
 | 5 | fsummaryline | 产品线 | varchar | 50 |  | √ | ' ' | 产品线 |
-| 6 | fbaseunit | 基本单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 7 | fmaterielmf | MF(MF组件) | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 6 | fbaseunit | 基本单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 7 | fmaterielmf | MF(MF组件) | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 9 | fstatus | 数据状态 | varchar | 5 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 10 | forgdpssite | DPS Site | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | forgdpssite | DPS Site | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 13 | fdpssitename | Site名称 | varchar | 50 |  | √ | ' ' | Site名称 |
-| 14 | fdpsarrangeset | DPS待排产定义 | int8 | 64 |  | √ | 0 | 日生产计划待排表定义 mds_dpsarrangeset |
+| 14 | fdpsarrangeset | DPS待排产定义 | int8 | 64 |  | √ | 0 | [日生产计划待排表定义 mds_dpsarrangeset](../mds_files/mds_dpsarrangeset.md) |
 | 15 | fmanumode | 制造模式 | varchar | 50 |  | √ | ' ' | 制造模式 |
 | 16 | fisno | 是否服务编码 | bpchar | 1 |  | √ | '0' | 是否服务编码 |
 | 17 | fsummarymodel | 产品型号 | varchar | 50 |  | √ | ' ' | 产品型号 |
 | 18 | fdpssiteno | Site编码 | varchar | 50 |  | √ | ' ' | Site编码 |
 | 19 | fname | fname | varchar | 80 |  | √ | ' ' |  |
-| 20 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 20 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 21 | fppartm | Ppart(M) | varchar | 50 |  | √ | ' ' | Ppart(M) |
 | 22 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 23 | fuser | 生产计划 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 24 | fmitem | ITEM | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 23 | fuser | 生产计划 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 24 | fmitem | ITEM | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 25 | fopenproductfamily | 是否开启产品族 | bpchar | 1 |  | √ | '0' | 是否开启产品族 |
-| 26 | fpbom | PBOM | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 26 | fpbom | PBOM | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 27 | fsummaryfield | 产品域 | varchar | 50 |  | √ | ' ' | 产品域 |
 | 28 | flastupdatetime | 最后更新时间 | timestamp | 0 |  |  | null | 最后更新时间 |
 | 29 | fsummaryseries | 产品系列 | varchar | 50 |  | √ | ' ' | 产品系列 |
 | 30 | fpsparttype | PSpart(S)类型 | varchar | 50 |  | √ | ' ' | PSpart(S)类型 |
 | 31 | fsupportmode | 供应模式 | varchar | 50 |  | √ | ' ' | 供应模式 |
-| 32 | fmaterieldps | P_DPS对象 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 32 | fmaterieldps | P_DPS对象 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 33 | fenable | 使用状态 | varchar | 5 |  | √ | '0' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 34 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
-| 35 | fpspart | PSpart(S) | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 35 | fpspart | PSpart(S) | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 
 ### 列规则定义
 

@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fskillid | 编码 | int8 | 64 |  | √ | 0 | 技能管理 bos_skillcorpus |
+| 2 | fskillid | 编码 | int8 | 64 |  | √ | 0 | [技能管理 bos_skillcorpus](../devgptas_files/bos_skillcorpus.md) |
 | 3 | fskillenable | 启用 | bpchar | 1 |  | √ | '1' | 启用 |
 | 4 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
@@ -27,34 +27,6 @@
 | :--- | :--- | :--- | :--- |
 | 1 | idx_corpus_skillconf |  | fid,fskillid |
 | 2 | pk_corpus_skillconf |  | fentryid |
-
----
-
-## 知识库-多选基础资料表 t_corpus_assistant_libs
-
-- **表名称：** 知识库-多选基础资料表
-- **表名：** t_corpus_assistant_libs
-
-### 表格列定义
-
-| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 知识管理 corpus_libs |
-| 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
-
-### 列规则定义
-
-| 序号 | 键编码 | 列字段 |
-| :--- | :--- | :--- |
-| 1 | fpkid | fpkid |
-
-### 索引定义
-
-| 序号 | 索引名 | 唯一 | 列字段 |
-| :--- | :--- | :--- | :--- |
-| 1 | pk_corpus_assistant_libs |  | fpkid |
-| 2 | idx_corpus_assistant_libs |  | fid |
 
 ---
 
@@ -131,13 +103,13 @@
 | 2 | fintention | 意图匹配 | varchar | 50 |  | √ | ' ' | 意图匹配 |
 | 3 | fdeploytohome | 发布到应用首页 | bpchar | 1 |  | √ | '1' | 发布到应用首页 |
 | 4 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 5 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | fdes | 描述 | varchar | 255 |  | √ | ' ' | 描述 |
 | 7 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 9 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 10 | ficon | 图片字段 | varchar | 255 |  | √ | ' ' | 图片字段 |
-| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fmasterid | 主数据内码 | int8 | 64 |  |  | null | 主数据内码 |
 | 13 | fstarttips | 开场白文案 | varchar | 255 |  | √ | ' ' | 开场白文案 |
 | 14 | fllm | 语言模型 | varchar | 50 |  | √ | ' ' | 语言模型,枚举: |
@@ -157,3 +129,31 @@
 | :--- | :--- | :--- | :--- |
 | 1 | pk_t_corpus_assistant |  | fid |
 | 2 | idx_t_corpus_assistant |  | fnumber |
+
+---
+
+## 知识库-多选基础资料表 t_corpus_assistant_libs
+
+- **表名称：** 知识库-多选基础资料表
+- **表名：** t_corpus_assistant_libs
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [知识管理 corpus_libs](../devgptas_files/corpus_libs.md) |
+| 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fpkid | fpkid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | pk_corpus_assistant_libs |  | fpkid |
+| 2 | idx_corpus_assistant_libs |  | fid |

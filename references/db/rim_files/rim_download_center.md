@@ -14,7 +14,7 @@
 | 3 | fservice_url | fservice_url | varchar | 400 |  | √ | ' ' |  |
 | 4 | ffile_type | 文件类型 | varchar | 150 |  | √ | ' ' | 文件类型 |
 | 5 | fapplytime | 申请日期 | timestamp | 0 |  |  | null | 申请日期 |
-| 6 | fapplicant | 申请人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | fapplicant | 申请人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 7 | fsource | 下载类型 | varchar | 4 |  | √ | ' ' | 下载类型,枚举: 0 :导出发票Excel 1 :发票文件下载 |
 | 8 | fbillno | 文件名称 | varchar | 40 |  | √ | ' ' | 文件名称 |
 

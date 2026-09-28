@@ -13,11 +13,11 @@
 | 2 | foptime | 操作时间 | timestamp | 0 |  |  | null | 操作时间 |
 | 3 | feffectivedate | 生效日期 | timestamp | 0 |  |  | null | 生效日期 |
 | 4 | foptype | 操作类型 | bpchar | 1 |  | √ | '0' | 操作类型,枚举: 0 :修改 1 :删除 2 :新增 |
-| 5 | fsourcecur | 原币 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 5 | fsourcecur | 原币 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 | 6 | fisindirect | 使用间接汇率 | varchar | 32 |  | √ | ' ' | 使用间接汇率 |
 | 7 | foldvalue | 原值 | bpchar | 1 |  | √ | '0' | 原值,枚举: 0 :关闭 1 :打开 |
-| 8 | fuserid | 操作者 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 9 | ftargetcur | 目标币 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 8 | fuserid | 操作者 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 9 | ftargetcur | 目标币 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 | 10 | fnewvalue | 新值 | bpchar | 1 |  | √ | '0' | 新值,枚举: 0 :关闭 1 :打开 |
 
 ### 列规则定义

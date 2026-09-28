@@ -60,40 +60,44 @@
 | 20 | foracle_service | Oracle服务 | varchar | 100 |  | √ | ' ' | Oracle服务 |
 | 21 | fattr_e1 | fattr_e1 | varchar | 100 |  | √ | ' ' |  |
 | 22 | fattr_e2 | fattr_e2 | varchar | 100 |  | √ | ' ' |  |
-| 23 | flicense_sn | 许可序号（该属性在运行期禁止访问） | int8 | 64 |  | √ | 0 | 许可序号（该属性在运行期禁止访问） |
-| 24 | fnewpwd | fnewpwd | varchar | 100 |  | √ | ' ' |  |
-| 25 | fweb_app | fweb_app | varchar | 100 |  | √ | ' ' |  |
-| 26 | fenable | 使用状态 | varchar | 30 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 27 | fnumber | 编码 | varchar | 60 |  | √ | ' ' | 编码 |
-| 28 | fcurrent_account_id | fcurrent_account_id | varchar | 100 |  | √ | ' ' |  |
-| 29 | feas_service | feas_service | varchar | 100 |  | √ | ' ' |  |
-| 30 | fappsecret_new_enp | fappsecret_new_enp | text | 0 |  |  | null |  |
-| 31 | fattr_e2_enp | fattr_e2_enp | text | 0 |  |  | null |  |
-| 32 | fisv | fisv | varchar | 100 |  | √ | ' ' |  |
-| 33 | fpassword | fpassword | varchar | 100 |  | √ | ' ' |  |
-| 34 | fsql_database | 数据库名 | varchar | 100 |  | √ | ' ' | 数据库名 |
-| 35 | fappid | fappid | varchar | 100 |  | √ | ' ' |  |
-| 36 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 37 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 38 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 39 | fdatabase_type | 类型 | varchar | 30 |  | √ | ' ' | 类型,枚举: mysql :MySQL PostgreSQL_New :PostgreSQL（新版） PostgreSQL :PostgreSQL sqlserver :SQL Server oracle :Oracle db_proxy :数据库代理 DM :达梦数据库 CurrentDB :当前数据库 UserDefineDbDriver :自定义数据库类型 |
-| 40 | ficid | ficid | varchar | 100 |  | √ | ' ' |  |
-| 41 | fserver_port | 服务器端口 | varchar | 100 |  | √ | ' ' | 服务器端口 |
-| 42 | fattr_e1_enp | fattr_e1_enp | text | 0 |  |  | null |  |
-| 43 | fdb_route | fdb_route | varchar | 30 |  | √ | ' ' |  |
-| 44 | fhttp_protocal | fhttp_protocal | varchar | 30 |  | √ | ' ' |  |
-| 45 | ftenant | ftenant | varchar | 100 |  | √ | ' ' |  |
-| 46 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 47 | fcharset | fcharset | varchar | 100 |  | √ | ' ' |  |
-| 48 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 49 | fuser | 登录用户 | varchar | 100 |  | √ | ' ' | 登录用户 |
-| 50 | fdeploy_state | fdeploy_state | bpchar | 1 |  | √ | ' ' |  |
-| 51 | fstate | 连接状态 | varchar | 30 |  | √ | ' ' | 连接状态,枚举: F :异常 S :活跃 |
-| 52 | fsource_system | fsource_system | int8 | 64 |  | √ | 0 |  |
-| 53 | fierp_proxy_user | fierp_proxy_user | int8 | 64 |  | √ | 0 |  |
-| 54 | fnewpwd_enp | fnewpwd_enp | text | 0 |  |  | null |  |
-| 55 | fmax_tps | fmax_tps | int8 | 64 |  | √ | 0 |  |
-| 56 | fcombofield | fcombofield | varchar | 30 |  | √ | ' ' |  |
+| 23 | fprivacy_domains | fprivacy_domains | int8 | 64 |  | √ | 0 |  |
+| 24 | flicense_sn | 许可序号（该属性在运行期禁止访问） | int8 | 64 |  | √ | 0 | 许可序号（该属性在运行期禁止访问） |
+| 25 | fnewpwd | fnewpwd | varchar | 100 |  | √ | ' ' |  |
+| 26 | fweb_app | fweb_app | varchar | 100 |  | √ | ' ' |  |
+| 27 | fenable | 使用状态 | varchar | 30 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 28 | fnumber | 编码 | varchar | 60 |  | √ | ' ' | 编码 |
+| 29 | fcurrent_account_id | fcurrent_account_id | varchar | 100 |  | √ | ' ' |  |
+| 30 | feas_service | feas_service | varchar | 100 |  | √ | ' ' |  |
+| 31 | fappsecret_new_enp | fappsecret_new_enp | text | 0 |  |  | null |  |
+| 32 | fattr_e2_enp | fattr_e2_enp | text | 0 |  |  | null |  |
+| 33 | fisv | fisv | varchar | 100 |  | √ | ' ' |  |
+| 34 | fcircuit_break_rule | fcircuit_break_rule | int8 | 64 |  | √ | 0 |  |
+| 35 | fpassword | fpassword | varchar | 100 |  | √ | ' ' |  |
+| 36 | fsql_database | 数据库名 | varchar | 100 |  | √ | ' ' | 数据库名 |
+| 37 | fappid | fappid | varchar | 100 |  | √ | ' ' |  |
+| 38 | ftoken_cache_strategy | ftoken_cache_strategy | varchar | 10 |  | √ | ' ' |  |
+| 39 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
+| 40 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 41 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
+| 42 | fdatabase_type | 类型 | varchar | 30 |  | √ | ' ' | 类型,枚举: mysql :MySQL PostgreSQL_New :PostgreSQL（新版） PostgreSQL :PostgreSQL sqlserver :SQL Server oracle :Oracle db_proxy :数据库代理 DM :达梦数据库 CurrentDB :当前数据库 UserDefineDbDriver :自定义数据库类型 |
+| 43 | ficid | ficid | varchar | 100 |  | √ | ' ' |  |
+| 44 | fserver_port | 服务器端口 | varchar | 100 |  | √ | ' ' | 服务器端口 |
+| 45 | fattr_e1_enp | fattr_e1_enp | text | 0 |  |  | null |  |
+| 46 | fdb_route | fdb_route | varchar | 30 |  | √ | ' ' |  |
+| 47 | fhttp_protocal | fhttp_protocal | varchar | 30 |  | √ | ' ' |  |
+| 48 | ftenant | ftenant | varchar | 100 |  | √ | ' ' |  |
+| 49 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 50 | fcharset | fcharset | varchar | 100 |  | √ | ' ' |  |
+| 51 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 52 | fuser | 登录用户 | varchar | 100 |  | √ | ' ' | 登录用户 |
+| 53 | fhas_assign_perm | fhas_assign_perm | bpchar | 1 |  | √ | '0' |  |
+| 54 | fdeploy_state | fdeploy_state | bpchar | 1 |  | √ | ' ' |  |
+| 55 | fstate | 连接状态 | varchar | 30 |  | √ | ' ' | 连接状态,枚举: F :异常 S :活跃 |
+| 56 | fsource_system | fsource_system | int8 | 64 |  | √ | 0 |  |
+| 57 | fierp_proxy_user | fierp_proxy_user | int8 | 64 |  | √ | 0 |  |
+| 58 | fnewpwd_enp | fnewpwd_enp | text | 0 |  |  | null |  |
+| 59 | fmax_tps | fmax_tps | int8 | 64 |  | √ | 0 |  |
+| 60 | fcombofield | fcombofield | varchar | 30 |  | √ | ' ' |  |
 
 ### 列规则定义
 

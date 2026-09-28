@@ -106,7 +106,7 @@
 | 3 | fcondition_val | 值 | varchar | 500 |  | √ | ' ' | 值 |
 | 4 | fcondition_logic | 逻辑 | varchar | 10 |  | √ | ' ' | 逻辑,枚举: and :并且 |
 | 5 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 6 | fquery_condition | 条件 | varchar | 20 |  | √ | ' ' | 查询条件 irew_query_condition |
+| 6 | fquery_condition | 条件 | varchar | 20 |  | √ | ' ' | [查询条件 irew_query_condition](../irew_files/irew_query_condition.md) |
 | 7 | fcondition_val_hide | 隐藏值 | varchar | 1000 |  | √ | ' ' | 隐藏值 |
 | 8 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 9 | fentity_filed | 实体字段 | varchar | 150 |  | √ | ' ' | 实体字段 |
@@ -224,27 +224,27 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fexpense_term | 报销期限(天) | varchar | 10 |  | √ | ' ' | 报销期限(天),枚举: 30 :30天 60 :60天 90 :90天 120 :120天 180 :180天 240 :240天 300 :300天 365 :365天 |
-| 3 | fuseorg | 业务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 4 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 5 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | fuseorg | 业务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 4 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 5 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | fsource | 引擎来源 | varchar | 8 |  | √ | ' ' | 引擎来源,枚举: 1 :系统预设 2 :自定义 |
 | 7 | fcheck_type | 发票校验业务类型 | varchar | 8 |  | √ | ' ' | 发票校验业务类型,枚举: 1 :销项发票信息 2 :进项发票信息 3 :销项发票与其他数据源 4 :进项发票与其他数据源 |
 | 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 9 | fstatus | 数据状态 | varchar | 4 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 12 | fcheckresult | 风险等级 | varchar | 30 |  | √ | ' ' | 风险等级,枚举: 0 :暂无风险 1 :低风险 2 :中风险 3 :高风险 4 :高危风险 |
 | 13 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 14 | fbitindex | 位图 | int8 | 64 |  | √ | 0 | 位图 |
-| 15 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 15 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 16 | fremark | 校验描述 | varchar | 500 |  | √ | ' ' | 校验描述 |
 | 17 | fname | 校验引擎名称 | varchar | 50 |  | √ | ' ' | 校验引擎名称 |
-| 18 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 18 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 19 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 20 | fover_year | 是否允许跨年 | varchar | 10 |  | √ | ' ' | 是否允许跨年,枚举: 1 :是 0 :否 |
 | 21 | fctrlstrategy | 控制策略 | varchar | 8 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
 | 22 | fcustom_tips | 异常自定义提示语，在发生该异常时帮助客户更好业务处理 | varchar | 100 |  | √ | ' ' | 异常自定义提示语，在发生该异常时帮助客户更好业务处理 |
-| 23 | fbasedatafield | 主实体 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 23 | fbasedatafield | 主实体 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 24 | fenable | 使用状态 | varchar | 4 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 25 | fnumber | 校验引擎编码 | varchar | 30 |  | √ | ' ' | 校验引擎编码 |
 | 26 | fcheck_according | 校验依据 | varchar | 50 |  | √ | ' ' | 校验依据,枚举: 1 :税法政策要求 2 :企业内部风控 |
@@ -346,7 +346,7 @@
 | 3 | ffinal_value | 固定值 | varchar | 36 |  | √ | ' ' | 固定值 |
 | 4 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 5 | finvoice_type | 发票类型 | varchar | 50 |  | √ | ' ' | 发票类型 |
-| 6 | fcondition | 条件 | varchar | 20 |  | √ | ' ' | 查询条件 irew_query_condition |
+| 6 | fcondition | 条件 | varchar | 20 |  | √ | ' ' | [查询条件 irew_query_condition](../irew_files/irew_query_condition.md) |
 | 7 | finvoice_field | 发票字段 | varchar | 150 |  | √ | ' ' | 发票字段 |
 | 8 | fdata_source | 数据源 | varchar | 50 |  | √ | ' ' | 数据源,枚举: |
 | 9 | flogic | 逻辑 | varchar | 10 |  | √ | ' ' | 逻辑,枚举: && :并且 |

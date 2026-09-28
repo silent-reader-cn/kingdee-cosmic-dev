@@ -12,7 +12,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fisagree | 是否签署 | bpchar | 1 |  |  | '0' | 是否签署 |
 | 3 | fagreetimestamp | 签署时间戳 | int8 | 64 |  | √ | 0 | 签署时间戳 |
-| 4 | fuserid | 用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fuserid | 用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fagreetime | 签署时间 | timestamp | 0 |  |  | null | 签署时间 |
 | 6 | fversion | 版本 | varchar | 255 |  |  | null | 版本 |
 

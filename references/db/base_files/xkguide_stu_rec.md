@@ -11,10 +11,10 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fstudystatus | 学习状态 | varchar | 5 |  | √ | '0' | 学习状态,枚举: |
-| 3 | fguidestepid | 指引步骤 | int8 | 64 |  | √ | 0 | 指引步骤 xkguide_step |
+| 3 | fguidestepid | 指引步骤 | int8 | 64 |  | √ | 0 | [指引步骤 xkguide_step](../xkbase_files/xkguide_step.md) |
 | 4 | fcreatetime | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
-| 5 | forgid | 业务单元 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 6 | fuserid | 用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | forgid | 业务单元 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 6 | fuserid | 用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

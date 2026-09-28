@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fcurrentliabilities | 流动负债 | numeric | 23 | 10 |  | null | 流动负债 |
 | 4 | fnoncurrentliabilities | 非流动负债 | numeric | 23 | 10 |  | null | 非流动负债 |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
@@ -18,8 +18,8 @@
 | 7 | freportdate | 报告期 | timestamp | 0 |  |  | null | 报告期 |
 | 8 | flonggrowthratio | 长期借款占非流动负债比例 | numeric | 23 | 10 |  | null | 长期借款占非流动负债比例 |
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 10 | fipoorgld | IPO主体 | int8 | 64 |  | √ | 0 | IPO编制组织 ipo_org |
-| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fipoorgld | IPO主体 | int8 | 64 |  | √ | 0 | [IPO编制组织 ipo_org](../ipobase_files/ipo_org.md) |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fshortgrowthrate | 短期借款余额增长率 | numeric | 23 | 10 |  | null | 短期借款余额增长率 |
 | 13 | flonggrowthrate | 长期借款余额增长率 | numeric | 23 | 10 |  | null | 长期借款余额增长率 |
 

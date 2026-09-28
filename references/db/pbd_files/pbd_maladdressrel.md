@@ -10,15 +10,15 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 3 | femaladdressid | 电商地址 | int8 | 64 |  | √ | 0 | 电商地址 pbd_emaladdress |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 3 | femaladdressid | 电商地址 | int8 | 64 |  | √ | 0 | [电商地址 pbd_emaladdress](../pbd_files/pbd_emaladdress.md) |
 | 4 | femaltype | 电商类型 | bpchar | 1 |  | √ | ' ' | 电商类型,枚举: |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 6 | flongnumber | 长编码 | varchar | 80 |  | √ | ' ' | 长编码 |
-| 7 | faddressid | 苍穹地址 | int8 | 64 |  | √ | 0 | 行政区划 bd_admindivision |
+| 7 | faddressid | 苍穹地址 | int8 | 64 |  | √ | 0 | [行政区划 bd_admindivision](../base_files/bd_admindivision.md) |
 | 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 9 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 12 | fenable | 使用状态 | bpchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 13 | fmatchstatus | 匹配结果 | bpchar | 1 |  | √ | '1' | 匹配结果,枚举: 1 :未匹配 2 :匹配成功 3 :匹配失败 |

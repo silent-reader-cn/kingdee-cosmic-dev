@@ -11,13 +11,13 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fauxproperty | 辅助属性 | int8 | 64 |  | √ | 0 | null 001 |
-| 3 | fprojectid | 项目号 | int8 | 64 |  | √ | 0 | 项目 bd_project |
-| 4 | fmatvers | 版本 | int8 | 64 |  | √ | 0 | 物料版本（作废） bd_materialversion |
+| 3 | fprojectid | 项目号 | int8 | 64 |  | √ | 0 | [项目 bd_project](../basedata_files/bd_project.md) |
+| 4 | fmatvers | 版本 | int8 | 64 |  | √ | 0 | [物料版本（作废） bd_materialversion](../basedata_files/bd_materialversion.md) |
 | 5 | fcreatetime | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
-| 6 | ftracknumberid | 跟踪号 | int8 | 64 |  | √ | 0 | 跟踪号 bd_tracknumber |
-| 7 | fmaterielid | 物料 | int8 | 64 |  | √ | 0 | 物料 bd_material |
-| 8 | flot | 批号 | varchar | 80 |  | √ | ' ' | 批号 |
-| 9 | fconfiguredcodeid | 配置号 | int8 | 64 |  | √ | 0 | 配置号 bd_configuredcode |
+| 6 | ftracknumberid | 跟踪号 | int8 | 64 |  | √ | 0 | [跟踪号 bd_tracknumber](../sbd_files/bd_tracknumber.md) |
+| 7 | fmaterielid | 物料 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
+| 8 | flot | 批号 | varchar | 255 |  | √ | ' ' | 批号 |
+| 9 | fconfiguredcodeid | 配置号 | int8 | 64 |  | √ | 0 | [配置号（废弃） bd_configuredcode](../sbd_files/bd_configuredcode.md) |
 | 10 | fkeycol | 维度字段 | varchar | 50 |  | √ | ' ' | 维度字段 |
 
 ### 列规则定义

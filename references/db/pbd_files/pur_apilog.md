@@ -11,14 +11,14 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fentityname | 单据名称 | varchar | 50 |  | √ | ' ' | 单据名称 |
-| 3 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | finputdata_tag | 传入数据_详情 | text | 0 |  |  | null | 传入数据_详情 |
 | 5 | fcreatetime | 日志时间 | timestamp | 0 |  |  | null | 日志时间 |
 | 6 | finputdata | 传入数据 | text | 0 |  |  | null | 传入数据 |
 | 7 | foutputdata | 传出数据 | text | 0 |  |  | null | 传出数据 |
 | 8 | finterface | 接口名称 | varchar | 50 |  | √ | ' ' | 接口名称 |
 | 9 | foutputdata_tag | 传出数据_详情 | text | 0 |  |  | null | 传出数据_详情 |
-| 10 | fapiconfigid | 系统集成方案 | int8 | 64 |  | √ | 0 | 系统集成配置 pur_apiconfig |
+| 10 | fapiconfigid | 系统集成方案 | int8 | 64 |  | √ | 0 | [系统集成配置 pur_apiconfig](../pbd_files/pur_apiconfig.md) |
 
 ### 列规则定义
 

@@ -11,19 +11,20 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fremark | 备注 | varchar | 255 |  |  | null | 备注 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fname | 名称 | varchar | 80 |  | √ | ' ' | 名称 |
 | 5 | fdisplayname | 核算维度 | varchar | 255 |  | √ | ' ' | 核算维度 |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 7 | fremark_tag | 备注_详情 | text | 0 |  |  | null | 备注_详情 |
-| 8 | fispreset | 系统预设 | bpchar | 1 |  | √ | '0' | 系统预设 |
-| 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 10 | fstatus | 数据状态 | varchar | 5 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 12 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 13 | fcaldimension | 核算维度 | varchar | 255 |  | √ | ' ' | 核算维度,枚举: |
-| 14 | fenable | 使用状态 | varchar | 5 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 15 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
+| 8 | fismigrate | 是否（企业版）迁移 | bpchar | 1 |  | √ | '0' | 是否（企业版）迁移 |
+| 9 | fispreset | 系统预设 | bpchar | 1 |  | √ | '0' | 系统预设 |
+| 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 11 | fstatus | 数据状态 | varchar | 5 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 13 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
+| 14 | fcaldimension | 核算维度 | varchar | 255 |  | √ | ' ' | 核算维度,枚举: |
+| 15 | fenable | 使用状态 | varchar | 5 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 16 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
 
 ### 列规则定义
 

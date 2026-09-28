@@ -13,7 +13,7 @@
 | 2 | flog_type | 操作类型 | varchar | 50 |  | √ | ' ' | 操作类型 |
 | 3 | ftraceid | traceid | varchar | 50 |  | √ | ' ' | traceid |
 | 4 | fcontent_tag | 请求内容_详情 | text | 0 |  |  | null | 请求内容_详情 |
-| 5 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | fcreate_time | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
 | 7 | fbillid | 单据id | varchar | 50 |  | √ | ' ' | 单据id |
 | 8 | fcontent | 请求内容 | varchar | 255 |  | √ | ' ' | 请求内容 |

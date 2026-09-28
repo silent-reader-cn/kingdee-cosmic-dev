@@ -10,25 +10,25 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fgroupid | 指标分组 | int8 | 64 |  | √ | 0 | 指标分组 pa_fasindexgroup |
+| 2 | fgroupid | 指标分组 | int8 | 64 |  | √ | 0 | [指标分组 pa_fasindexgroup](../pa_files/pa_fasindexgroup.md) |
 | 3 | fdimensioncondition | 维度过滤条件 | varchar | 255 |  | √ | ' ' | 维度过滤条件 |
 | 4 | fdimensioncondition_tag | 维度过滤条件_详情 | text | 0 |  |  | null | 维度过滤条件_详情 |
-| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 6 | fmodelid | 分析模型 | int8 | 64 |  | √ | 0 | 分析模型 pa_analysismodel |
+| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 6 | fmodelid | 分析模型 | int8 | 64 |  | √ | 0 | [分析模型 pa_analysismodel](../pa_files/pa_analysismodel.md) |
 | 7 | findexformula | 计算公式 | varchar | 500 |  | √ | ' ' | 计算公式 |
-| 8 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 8 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 10 | faggmeasureid | 度量 | int8 | 64 |  | √ | 0 | 度量 pa_measure |
+| 10 | faggmeasureid | 度量 | int8 | 64 |  | √ | 0 | [度量 pa_measure](../pa_files/pa_measure.md) |
 | 11 | fstatus | 数据状态 | bpchar | 1 |  | √ | 'C' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 12 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | funitbasedata | 单位基础资料类型 | varchar | 50 |  | √ | ' ' | 单位基础资料类型,枚举: bd_currency :币别 bd_measureunits :计量单位 |
 | 15 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 16 | fissystem | 是否系统预置 | bpchar | 1 |  | √ | '0' | 是否系统预置 |
 | 17 | fbitindex | 位图 | int8 | 64 |  | √ | 0 | 位图 |
-| 18 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 18 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 19 | fname | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
-| 20 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 20 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 21 | fcategory | 指标类型 | bpchar | 1 |  | √ | '0' | 指标类型,枚举: 0 :基础指标 1 :复合指标 |
 | 22 | fprecision | 计算精度 | int4 | 32 |  | √ | 20 | 计算精度 |
 | 23 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
@@ -41,7 +41,7 @@
 | 30 | fparent | fparent | int8 | 64 |  | √ | 0 |  |
 | 31 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 32 | fnumber | 编码 | varchar | 50 |  | √ | ' ' | 编码 |
-| 33 | fsystemid | 分析体系 | int8 | 64 |  | √ | 0 | 分析体系 pa_anasystemsetting |
+| 33 | fsystemid | 分析体系 | int8 | 64 |  | √ | 0 | [分析体系 pa_anasystemsetting](../pa_files/pa_anasystemsetting.md) |
 | 34 | fsourcebitindex | 原资料位图 | int8 | 64 |  | √ | 0 | 原资料位图 |
 
 ### 列规则定义
@@ -72,7 +72,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 维度 pa_dimension |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [维度 pa_dimension](../pa_files/pa_dimension.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -100,7 +100,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 指标 pa_fasindex |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [指标 pa_fasindex](../pa_files/pa_fasindex.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -113,8 +113,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_t_pa_fasindex_formulaargs |  | fid |
-| 2 | pk_t_pa_fasindex_formulaargs |  | fpkid |
+| 1 | pk_t_pa_fasindex_formulaargs |  | fpkid |
+| 2 | idx_t_pa_fasindex_formulaargs |  | fid |
 
 ---
 

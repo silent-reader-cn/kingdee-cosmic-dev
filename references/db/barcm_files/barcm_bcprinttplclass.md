@@ -72,20 +72,20 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fapproverid | fapproverid | int8 | 64 |  | √ | 0 |  |
 | 3 | fisleaf | 是否叶子 | bpchar | 1 |  | √ | '1' | 是否叶子 |
-| 4 | forgid | 管理组织 | int8 | 64 |  |  | 0 | 业务单元 bos_org |
-| 5 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 4 | forgid | 管理组织 | int8 | 64 |  |  | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 5 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | fispreset | 系统预置 | bpchar | 1 |  | √ | '0' | 系统预置 |
 | 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 8 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 11 | fsourcedataid | fsourcedataid | int8 | 64 |  | √ | 0 |  |
 | 12 | fbitindex | fbitindex | int4 | 32 |  | √ | 0 |  |
-| 13 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 13 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 14 | fapprovedate | fapprovedate | timestamp | 0 |  |  | null |  |
 | 15 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
-| 16 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 17 | fparentid | 上级分类 | int8 | 64 |  | √ | 0 | 条码打印模板分类 barcm_bcprinttplclass |
+| 16 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 17 | fparentid | 上级分类 | int8 | 64 |  | √ | 0 | [条码打印模板分类 barcm_bcprinttplclass](../barcm_files/barcm_bcprinttplclass.md) |
 | 18 | ffullname | ffullname | varchar | 512 |  | √ | ' ' |  |
 | 19 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 20 | ffieldname | ffieldname | varchar | 80 |  | √ | ' ' |  |
@@ -109,7 +109,7 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_t_barcm_bcprinttplclass_master |  | fmasterid |
-| 2 | idx_barcm_bcptc_number |  | fnumber |
+| 1 | idx_barcm_bcptc_number |  | fnumber |
+| 2 | idx_t_barcm_bcprinttplclass_master |  | fmasterid |
 | 3 | idx_t_barcm_bcprinttplclass_createorg |  | fcreateorgid |
 | 4 | pk_t_barcm_bcprinttplclass |  | fid |

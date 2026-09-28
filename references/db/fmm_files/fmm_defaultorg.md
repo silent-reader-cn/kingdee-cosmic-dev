@@ -94,25 +94,25 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcallinwarehouseid | 调入仓库 | int8 | 64 |  | √ | 0 | 仓库 bd_warehouse |
-| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 4 | fcalendar | 默认生产日历 | int8 | 64 |  | √ | 0 | 生产日历 mpdm_calendar |
-| 5 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fcallinwarehouseid | 调入仓库 | int8 | 64 |  | √ | 0 | [仓库 bd_warehouse](../sbd_files/bd_warehouse.md) |
+| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 4 | fcalendar | 默认生产日历 | int8 | 64 |  | √ | 0 | [生产日历 mpdm_calendar](../mpdm_files/mpdm_calendar.md) |
+| 5 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | fmodifytime | 最后修改时间 | timestamp | 0 |  |  | null | 最后修改时间 |
 | 7 | fissueplan | 配送计划 | bpchar | 1 |  | √ | '0' | 配送计划 |
 | 8 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 9 | fsupplier | 供应商 | int8 | 64 |  | √ | 0 | 供应商 bd_supplier |
-| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fsupplier | 供应商 | int8 | 64 |  | √ | 0 | [供应商 bd_supplier](../basedata_files/bd_supplier.md) |
+| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 12 | fclasssysteam | 默认班制 | int8 | 64 |  | √ | 0 | 班制 mpdm_classsystem |
+| 12 | fclasssysteam | 默认班制 | int8 | 64 |  | √ | 0 | [班制 mpdm_classsystem](../mpdm_files/mpdm_classsystem.md) |
 | 13 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 14 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
 | 15 | fallocplan | 调拨计划 | bpchar | 1 |  | √ | '0' | 调拨计划 |
-| 16 | fcreateorgid | 生产组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 17 | fmodifierid | 最后修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 18 | fcallinlocationid | 调入仓位 | int8 | 64 |  | √ | 0 | 仓位 bd_location |
+| 16 | fcreateorgid | 生产组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 17 | fmodifierid | 最后修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 18 | fcallinlocationid | 调入仓位 | int8 | 64 |  | √ | 0 | [仓位 bd_location](../sbd_files/bd_location.md) |
 | 19 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 20 | fcallinorgid | 调入库存组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 20 | fcallinorgid | 调入库存组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 21 | fctrlstrategy | 控制策略 | varchar | 30 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
 | 22 | fisoutsrcmft | 外协厂商 | bpchar | 1 |  | √ | '0' | 外协厂商 |
 | 23 | fenable | 使用状态 | varchar | 30 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
@@ -129,7 +129,7 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_t_fmm_defaultorg_master |  | fmasterid |
-| 2 | idx_t_fmm_defaultorg_createorg |  | fcreateorgid |
+| 1 | idx_t_fmm_defaultorg_createorg |  | fcreateorgid |
+| 2 | idx_t_fmm_defaultorg_master |  | fmasterid |
 | 3 | t_fmm_defaultorg_pkey |  | fid |
 | 4 | idx_fmm_defaultorg |  | fnumber |

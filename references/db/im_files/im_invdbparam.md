@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fvalue | 值 | varchar | 30 |  | √ | ' ' | 值 |
+| 2 | fvalue | 值 | varchar | 500 |  | √ | ' ' | 值 |
 | 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | 组织 |
 | 4 | fkey | key标识 | varchar | 30 |  | √ | ' ' | key标识 |
 
@@ -24,5 +24,5 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_im_invparam_foid |  | forgid |
-| 2 | t_im_invdbparam_pkey |  | fid |
+| 1 | t_im_invdbparam_pkey |  | fid |
+| 2 | idx_im_invparam_keyorgid |  | fkey,forgid |

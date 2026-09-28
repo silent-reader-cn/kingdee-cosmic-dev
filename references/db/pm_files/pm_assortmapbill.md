@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreator | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fcreator | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fcreatedate | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
 | 4 | fsourcebillid | 源单单据id | int8 | 64 |  | √ | 0 | 源单单据id |
 | 5 | ftargetbillno | 目标单单据编号 | varchar | 50 |  | √ | ' ' | 目标单单据编号 |

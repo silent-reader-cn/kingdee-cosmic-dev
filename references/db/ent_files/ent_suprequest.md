@@ -1,71 +1,5 @@
 # 入驻申请-ent_suprequest
 
-## 入驻申请-分表 t_mal_supenter_a
-
-- **表名称：** 入驻申请-分表
-- **表名：** t_mal_supenter_a
-
-### 表格列定义
-
-| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 3 | forigin | 发起方 | bpchar | 1 |  | √ | ' ' | 发起方,枚举: 1 :供应商 2 :采购方 |
-| 4 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 6 | fauditdate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
-| 7 | fcfmdate | 审批时间 | timestamp | 0 |  |  | null | 审批时间 |
-| 8 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 9 | fcfmid | 审批人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-
-### 列规则定义
-
-| 序号 | 键编码 | 列字段 |
-| :--- | :--- | :--- |
-| 1 | fid | fid |
-
-### 索引定义
-
-| 序号 | 索引名 | 唯一 | 列字段 |
-| :--- | :--- | :--- | :--- |
-| 1 | t_mal_supenter_a_pkey |  | fid |
-| 2 | idx_mal_supenter_a_fcreatetime |  | fcreatetime |
-
----
-
-## 入驻申请-多语言表 t_mal_supenter_l
-
-- **表名称：** 入驻申请-多语言表
-- **表名：** t_mal_supenter_l
-
-### 表格列定义
-
-| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fremark | 备注 | varchar | 100 |  | √ | ' ' | 备注 |
-| 3 | faddress | 联系地址 | varchar | 255 |  | √ | ' ' | 联系地址 |
-| 4 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
-| 5 | flinkman | 联系人 | varchar | 50 |  | √ | ' ' | 联系人 |
-| 6 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
-
-### 列规则定义
-
-| 序号 | 键编码 | 列字段 |
-| :--- | :--- | :--- |
-| 1 | fpkid | fpkid |
-
-### 索引定义
-
-| 序号 | 索引名 | 唯一 | 列字段 |
-| :--- | :--- | :--- | :--- |
-| 1 | idx_mal_supenter_l_fid |  | fid,flocaleid |
-| 2 | t_mal_supenter_l_pkey |  | fpkid |
-
----
-
 ## 入驻申请-主表 t_mal_supenter
 
 - **表名称：** 入驻申请-主表
@@ -77,11 +11,11 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fcentralpurtype | 集采类型 | bpchar | 1 |  | √ | ' ' | 集采类型,枚举: 1 :集采 2 :自由 3 :集采&自由 |
-| 3 | fgroupid | 商家分组 | int8 | 64 |  | √ | 0 | 供应商分类 bd_suppliergroup |
+| 3 | fgroupid | 商家分组 | int8 | 64 |  | √ | 0 | [供应商分类 bd_suppliergroup](../basedata_files/bd_suppliergroup.md) |
 | 4 | faddress | faddress | varchar | 255 |  | √ | ' ' |  |
 | 5 | fsocietycreditcode | 统一社会信用代码 | varchar | 50 |  | √ | ' ' | 统一社会信用代码 |
 | 6 | forgcode | 组织机构代码 | varchar | 50 |  | √ | ' ' | 组织机构代码 |
-| 7 | forgid | 审批单位 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 7 | forgid | 审批单位 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | fbilldate | 申请日期 | timestamp | 0 |  |  | null | 申请日期 |
 | 9 | faccount | 银行账号 | varchar | 100 |  | √ | ' ' | 银行账号 |
 | 10 | fbiztype | 业务类型 | bpchar | 1 |  | √ | ' ' | 业务类型,枚举: 1 :入驻 2 :冻结 3 :取消冻结 4 :终止 |
@@ -94,12 +28,12 @@
 | 17 | fbank | 开户行名称 | varchar | 100 |  | √ | ' ' | 开户行名称 |
 | 18 | freason | 申请入驻理由 | varchar | 510 |  | √ | ' ' | 申请入驻理由 |
 | 19 | faccname | 银行账户名称 | varchar | 100 |  | √ | ' ' | 银行账户名称 |
-| 20 | fbizpartnerid | 商务伙伴 | int8 | 64 |  | √ | 0 | 商务伙伴 bd_bizpartner |
-| 21 | fsupplierid | 申请商家 | int8 | 64 |  | √ | 0 | 供应商 bd_supplier |
+| 20 | fbizpartnerid | 商务伙伴 | int8 | 64 |  | √ | 0 | [商务伙伴 bd_bizpartner](../base_files/bd_bizpartner.md) |
+| 21 | fsupplierid | 申请商家 | int8 | 64 |  | √ | 0 | [供应商 bd_supplier](../basedata_files/bd_supplier.md) |
 | 22 | fcfmstatus | 审批状态 | bpchar | 1 |  | √ | ' ' | 审批状态,枚举: A :待审批 B :同意 D :不同意 |
 | 23 | finvoicetype | 出具发票类型 | bpchar | 1 |  | √ | ' ' | 出具发票类型,枚举: 1 :普通电子发票 2 :电子发票专票 3 :普通纸质发票 4 :专用纸质发票 5 :普通纸质卷票 6 :电子普票&专票 7 :纸质普票&专票 |
-| 24 | finvoiceid | 出具发票类型 | int8 | 64 |  | √ | 0 | 发票类型 bd_invoicetype |
-| 25 | fpersonid | 申请人 | int8 | 64 |  | √ | 0 | 供应商业务员 pbd_supbizperson |
+| 24 | finvoiceid | 出具发票类型 | int8 | 64 |  | √ | 0 | [发票种类 bd_invoicetype](../basedata_files/bd_invoicetype.md) |
+| 25 | fpersonid | 申请人 | int8 | 64 |  | √ | 0 | [供应商业务员 pbd_supbizperson](../pbd_files/pbd_supbizperson.md) |
 | 26 | ftxregisterno | 纳税人识别号 | varchar | 50 |  | √ | ' ' | 纳税人识别号 |
 | 27 | flinkman | flinkman | varchar | 50 |  | √ | ' ' |  |
 | 28 | fbilltypeid | fbilltypeid | int8 | 64 |  | √ | 0 |  |
@@ -131,7 +65,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 商品分类 pbd_goodsclass |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [商品分类 pbd_goodsclass](../pbd_files/pbd_goodsclass.md) |
 | 3 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
 
 ### 列规则定义
@@ -183,3 +117,69 @@
 | :--- | :--- | :--- | :--- |
 | 1 | idx_mal_supaptitude_fid |  | fid,fseq |
 | 2 | t_mal_supaptitude_pkey |  | fentryid |
+
+---
+
+## 入驻申请-分表 t_mal_supenter_a
+
+- **表名称：** 入驻申请-分表
+- **表名：** t_mal_supenter_a
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 3 | forigin | 发起方 | bpchar | 1 |  | √ | ' ' | 发起方,枚举: 1 :供应商 2 :采购方 3 :协议生成 |
+| 4 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 6 | fauditdate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
+| 7 | fcfmdate | 审批时间 | timestamp | 0 |  |  | null | 审批时间 |
+| 8 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 9 | fcfmid | 审批人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fid | fid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | t_mal_supenter_a_pkey |  | fid |
+| 2 | idx_mal_supenter_a_fcreatetime |  | fcreatetime |
+
+---
+
+## 入驻申请-多语言表 t_mal_supenter_l
+
+- **表名称：** 入驻申请-多语言表
+- **表名：** t_mal_supenter_l
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fremark | 备注 | varchar | 100 |  | √ | ' ' | 备注 |
+| 3 | faddress | 联系地址 | varchar | 255 |  | √ | ' ' | 联系地址 |
+| 4 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
+| 5 | flinkman | 联系人 | varchar | 50 |  | √ | ' ' | 联系人 |
+| 6 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fpkid | fpkid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_mal_supenter_l_fid |  | fid,flocaleid |
+| 2 | t_mal_supenter_l_pkey |  | fpkid |

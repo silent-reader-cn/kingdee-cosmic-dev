@@ -1,4 +1,4 @@
-# 字段控制设置-er_bill_setting
+# 字段规则设置-er_bill_setting
 
 ## 单据体-多语言表 t_er_bill_setting_entry_l
 
@@ -29,9 +29,9 @@
 
 ---
 
-## 字段控制设置-主表 t_er_bill_setting
+## 字段规则设置-主表 t_er_bill_setting
 
-- **表名称：** 字段控制设置-主表
+- **表名称：** 字段规则设置-主表
 - **表名：** t_er_bill_setting
 
 ### 表格列定义
@@ -39,27 +39,27 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fgroupid | 单据类型 | int8 | 64 |  | √ | 0 | 单据设置 er_setting_group |
-| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 4 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fgroupid | 单据类型 | int8 | 64 |  | √ | 0 | [单据设置 er_setting_group](../em_files/er_setting_group.md) |
+| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 4 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | fispreset | 系统预置 | bpchar | 1 |  | √ | '0' | 系统预置 |
 | 6 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 7 | fstatus | 数据状态 | varchar | 25 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 8 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 11 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
 | 12 | ffastreimburse | 向导式发起 | bpchar | 1 |  | √ | '0' | 向导式发起 |
 | 13 | fpicturefield | 图标url | varchar | 255 |  | √ | ' ' | 图标url |
-| 14 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 14 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 15 | fname | 名称 | varchar | 255 |  |  | ' ' | 名称 |
-| 16 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 16 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 17 | fcomment | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
 | 18 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 19 | fformtitle | 表单标题 | varchar | 50 |  | √ | ' ' | 表单标题 |
+| 19 | fformtitle | 表单标题 | varchar | 255 |  | √ | ' ' | 表单标题 |
 | 20 | freimbursetype | 报账类型 | varchar | 50 |  | √ | ' ' | 报账类型,枚举: |
 | 21 | fctrlstrategy | 控制策略 | varchar | 10 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
-| 22 | fbizitem | 业务事项 | int8 | 64 |  | √ | 0 | 业务事项 er_standard_type |
+| 22 | fbizitem | 业务事项 | int8 | 64 |  | √ | 0 | [业务事项 er_standard_type](../em_files/er_standard_type.md) |
 | 23 | fenable | 使用状态 | bpchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 24 | fnumber | 编码 | varchar | 100 |  | √ | ' ' | 编码 |
 | 25 | fuseorgid | fuseorgid | int8 | 64 |  | √ | 0 |  |
@@ -96,7 +96,7 @@
 | 3 | flockconditionjson_tag | 锁定条件json_详情 | text | 0 |  |  | ' ' | 锁定条件json_详情 |
 | 4 | ffieldname | 字段 | varchar | 50 |  |  | ' ' | 字段 |
 | 5 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 6 | fdiyname | 显示名称 | varchar | 50 |  |  | ' ' | 显示名称 |
+| 6 | fdiyname | 显示名称 | varchar | 255 |  | √ | ' ' | 显示名称 |
 | 7 | flockconditionexpr_tag | 锁定条件解析式_详情 | text | 0 |  |  | ' ' | 锁定条件解析式_详情 |
 | 8 | ffieldnumber | 字段标识 | varchar | 50 |  |  | ' ' | 字段标识 |
 | 9 | flockcondition | 锁定条件 | varchar | 1024 |  |  | ' ' | 锁定条件 |
@@ -122,9 +122,9 @@
 
 ---
 
-## 字段控制设置-多语言表 t_er_bill_setting_l
+## 字段规则设置-多语言表 t_er_bill_setting_l
 
-- **表名称：** 字段控制设置-多语言表
+- **表名称：** 字段规则设置-多语言表
 - **表名：** t_er_bill_setting_l
 
 ### 表格列定义
@@ -132,8 +132,8 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fname | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
-| 3 | fformtitle | 表单标题 | varchar | 100 |  | √ | ' ' | 表单标题 |
+| 2 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
+| 3 | fformtitle | 表单标题 | varchar | 255 |  | √ | ' ' | 表单标题 |
 | 4 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
 | 5 | fpkid | fpkid | varchar | 30 |  | √ | ' ' | pkid |
 
@@ -152,9 +152,9 @@
 
 ---
 
-## 字段控制设置-使用范围表 t_er_bill_setting_u
+## 字段规则设置-使用范围表 t_er_bill_setting_u
 
-- **表名称：** 字段控制设置-使用范围表
+- **表名称：** 字段规则设置-使用范围表
 - **表名：** t_er_bill_setting_u
 
 ### 表格列定义

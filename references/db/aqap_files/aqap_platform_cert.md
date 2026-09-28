@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | null | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | ffile_name | 文件名称 | varchar | 50 |  | √ | ' ' | 文件名称 |
 | 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 5 | fbank_version_id | 银行版本编号 | varchar | 50 |  | √ | ' ' | 银行版本编号 |
@@ -23,7 +23,7 @@
 | 12 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 13 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 14 | fcustom_id | 租户编号 | varchar | 50 |  | √ | ' ' | 租户编号 |
-| 15 | fcreatorid | 创建人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 15 | fcreatorid | 创建人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 16 | fmasterid | 主数据内码 | int8 | 64 |  |  | null | 主数据内码 |
 | 17 | ftype | 类型 | varchar | 50 |  | √ | ' ' | 类型 |
 | 18 | fenable | 使用状态 | varchar | 50 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |

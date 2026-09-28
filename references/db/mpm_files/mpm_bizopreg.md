@@ -1,67 +1,5 @@
 # 商机登记-mpm_bizopreg
 
-## 竞争对手-多语言表 t_mpm_competentry_l
-
-- **表名称：** 竞争对手-多语言表
-- **表名：** t_mpm_competentry_l
-
-### 表格列定义
-
-| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fcompetition | 竞品 | varchar | 80 |  | √ | ' ' | 竞品 |
-| 2 | fcompetstrategy | 竞争策略 | varchar | 200 |  | √ | ' ' | 竞争策略 |
-| 3 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
-| 4 | fcompetitor | 竞争对手 | varchar | 80 |  | √ | ' ' | 竞争对手 |
-| 5 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
-| 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
-
-### 列规则定义
-
-| 序号 | 键编码 | 列字段 |
-| :--- | :--- | :--- |
-| 1 | fpkid | fpkid |
-
-### 索引定义
-
-| 序号 | 索引名 | 唯一 | 列字段 |
-| :--- | :--- | :--- | :--- |
-| 1 | idx_mpm_competel_fidflid |  | fentryid,flocaleid |
-| 2 | pk_mpm_competentry_l |  | fpkid |
-
----
-
-## 竞争对手-子表 t_mpm_competentry
-
-- **表名称：** 竞争对手-子表
-- **表名：** t_mpm_competentry
-
-### 表格列定义
-
-| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fcompetition | 竞品 | varchar | 80 |  | √ | ' ' | 竞品 |
-| 3 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 4 | fcompetstrategy | 竞争策略 | varchar | 200 |  | √ | ' ' | 竞争策略 |
-| 5 | fcompetitor | 竞争对手 | varchar | 80 |  | √ | ' ' | 竞争对手 |
-| 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-
-### 列规则定义
-
-| 序号 | 键编码 | 列字段 |
-| :--- | :--- | :--- |
-| 1 | fentryid | fentryid |
-
-### 索引定义
-
-| 序号 | 索引名 | 唯一 | 列字段 |
-| :--- | :--- | :--- | :--- |
-| 1 | pk_mpm_competentry |  | fentryid |
-| 2 | idx_mpm_competentry_fid |  | fid |
-
----
-
 ## 商机登记-多语言表 t_mpm_bizopreg_l
 
 - **表名称：** 商机登记-多语言表
@@ -130,27 +68,27 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fisprojectap | 已立项 | bpchar | 1 |  | √ | '0' | 已立项 |
-| 3 | forgid | 业务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 4 | fundertakedeptid | 负责部门 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | forgid | 业务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 4 | fundertakedeptid | 负责部门 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | fclosedate | 关闭时间 | timestamp | 0 |  |  | null | 关闭时间 |
 | 6 | fbizopname | 商机名称 | varchar | 80 |  | √ | ' ' | 商机名称 |
 | 7 | fconnecter | 联系人 | varchar | 50 |  | √ | ' ' | 联系人 |
 | 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 9 | fdirectorid | 负责人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fdirectorid | 负责人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | fchangestatus | 变更状态 | bpchar | 1 |  | √ | ' ' | 变更状态,枚举: A :正常 B :变更中 C :已变更 |
 | 11 | fexchangerate | 汇率 | numeric | 23 | 10 | √ | 0 | 汇率 |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fsignamount | 预计签单金额 | numeric | 23 | 10 | √ | 0 | 预计签单金额 |
 | 14 | fchangedate | 变更日期 | timestamp | 0 |  |  | null | 变更日期 |
-| 15 | fbiztypeid | 商机类型 | int8 | 64 |  | √ | 0 | 商机类型 mpm_bizoptype |
+| 15 | fbiztypeid | 商机类型 | int8 | 64 |  | √ | 0 | [商机类型 mpm_bizoptype](../mpm_files/mpm_bizoptype.md) |
 | 16 | fbizoptrack | 商机跟踪 | varchar | 80 |  | √ | ' ' | 商机跟踪 |
-| 17 | fexratetableid | 汇率表 | int8 | 64 |  | √ | 0 | 汇率表 bd_exratetable |
+| 17 | fexratetableid | 汇率表 | int8 | 64 |  | √ | 0 | [汇率表 bd_exratetable](../base_files/bd_exratetable.md) |
 | 18 | fcustomertext | 客户 | varchar | 50 |  | √ | ' ' | 客户 |
-| 19 | fcloserid | 关闭人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 19 | fcloserid | 关闭人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 20 | fcusadress | 地址 | varchar | 255 |  | √ | ' ' | 地址 |
 | 21 | fbillno | 单据编号 | varchar | 80 |  | √ | ' ' | 单据编号 |
 | 22 | fversion | 版本号 | varchar | 50 |  | √ | ' ' | 版本号 |
-| 23 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 23 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 24 | fexpectsigndate | 预计签单日期 | timestamp | 0 |  |  | null | 预计签单日期 |
 | 25 | fbillstatus | 单据状态 | bpchar | 1 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 26 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
@@ -160,13 +98,13 @@
 | 30 | ftelephone | 联系电话 | varchar | 50 |  | √ | ' ' | 联系电话 |
 | 31 | fclosestatus | 关闭状态 | bpchar | 1 |  | √ | ' ' | 关闭状态,枚举: A :正常 B :已关闭 |
 | 32 | fbizopdate | 商机日期 | timestamp | 0 |  |  | null | 商机日期 |
-| 33 | fchangerid | 变更人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 33 | fchangerid | 变更人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 34 | fexratedate | 汇率日期 | timestamp | 0 |  |  | null | 汇率日期 |
 | 35 | fexchangetype | 换算方式 | varchar | 5 |  | √ | ' ' | 换算方式,枚举: 0 :直接汇率 1 :间接汇率 |
-| 36 | fassocprojectid | 关联项目 | int8 | 64 |  | √ | 0 | 项目 bd_project |
-| 37 | fsettlecurrencyid | 结算币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
-| 38 | fcurrencyid | 本位币 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
-| 39 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 36 | fassocprojectid | 关联项目 | int8 | 64 |  | √ | 0 | [项目 bd_project](../basedata_files/bd_project.md) |
+| 37 | fsettlecurrencyid | 结算币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
+| 38 | fcurrencyid | 本位币 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
+| 39 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 40 | fbilltypeid | 单据类型 | int8 | 64 |  | √ | 0 | 单据类型 bos_billtype |
 | 41 | fcustomerid | 客户（隐藏） | int8 | 64 |  | √ | 0 | 客户 bd_customer |
 
@@ -185,6 +123,68 @@
 
 ---
 
+## 竞争对手-多语言表 t_mpm_competentry_l
+
+- **表名称：** 竞争对手-多语言表
+- **表名：** t_mpm_competentry_l
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fcompetition | 竞品 | varchar | 80 |  | √ | ' ' | 竞品 |
+| 2 | fcompetstrategy | 竞争策略 | varchar | 200 |  | √ | ' ' | 竞争策略 |
+| 3 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
+| 4 | fcompetitor | 竞争对手 | varchar | 80 |  | √ | ' ' | 竞争对手 |
+| 5 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
+| 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fpkid | fpkid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_mpm_competel_fidflid |  | fentryid,flocaleid |
+| 2 | pk_mpm_competentry_l |  | fpkid |
+
+---
+
+## 竞争对手-子表 t_mpm_competentry
+
+- **表名称：** 竞争对手-子表
+- **表名：** t_mpm_competentry
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fcompetition | 竞品 | varchar | 80 |  | √ | ' ' | 竞品 |
+| 3 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
+| 4 | fcompetstrategy | 竞争策略 | varchar | 200 |  | √ | ' ' | 竞争策略 |
+| 5 | fcompetitor | 竞争对手 | varchar | 80 |  | √ | ' ' | 竞争对手 |
+| 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fentryid | fentryid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | pk_mpm_competentry |  | fentryid |
+| 2 | idx_mpm_competentry_fid |  | fid |
+
+---
+
 ## 产品和服务-子表 t_mpm_prdserventry
 
 - **表名称：** 产品和服务-子表
@@ -196,12 +196,12 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fqty | 数量 | numeric | 23 | 10 | √ | 0 | 数量 |
-| 3 | funitid | 单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 3 | funitid | 单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 4 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 5 | famount | 金额 | numeric | 23 | 10 | √ | 0 | 金额 |
-| 6 | fmaterielid | 物料编码 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 6 | fmaterielid | 物料编码 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 7 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 8 | flinetypeid | 行类型 | int8 | 64 |  | √ | 0 | 行类型 bd_linetype |
+| 8 | flinetypeid | 行类型 | int8 | 64 |  | √ | 0 | [行类型 bd_linetype](../sbd_files/bd_linetype.md) |
 | 9 | fprice | 单价 | numeric | 23 | 10 | √ | 0 | 单价 |
 | 10 | fbizopitem | 商机项 | varchar | 255 |  | √ | ' ' | 商机项 |
 

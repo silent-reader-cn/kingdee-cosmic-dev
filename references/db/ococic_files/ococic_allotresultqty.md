@@ -13,8 +13,8 @@
 | 2 | favbbaseqty | 可用量(基本单位) | numeric | 23 | 10 | √ | 0 | 可用量(基本单位) |
 | 3 | freservebaseqty | 占用量(基本单位) | numeric | 23 | 10 | √ | 0 | 占用量(基本单位) |
 | 4 | fresultqtykey | 可销量唯一标识 | varchar | 80 |  | √ | ' ' | 可销量唯一标识 |
-| 5 | fmaterialid | 物料 | int8 | 64 |  | √ | 0 | 物料 bd_material |
-| 6 | fbaseunitid | 基本计量单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 5 | fmaterialid | 物料 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
+| 6 | fbaseunitid | 基本计量单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 7 | fbaseqty | 数量(基本单位) | numeric | 23 | 10 | √ | 0 | 数量(基本单位) |
 
 ### 列规则定义

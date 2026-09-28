@@ -26,5 +26,5 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_cbs_shard_name_map |  | ftable_name |
-| 2 | pk_cbs_shard_name_map |  | fid |
+| 1 | pk_cbs_shard_name_map |  | fid |
+| 2 | idx_cbs_shard_name_map |  | ftable_name |

@@ -10,8 +10,8 @@
 
 | 序号 | 数据库表名 | 中文名称 | 字段数 | 详细定义文件 |
 | :---: | :--- | :--- | :---: | :--- |
-| 1 | `t_gl_bookscheme` | 账簿合并方案-主表 | 11 | [gl_bookscheme.md](./gl_bookscheme.md) |
+| 1 | `t_gl_bookscheme` | 账簿合并方案-主表 | 12 | [gl_bookscheme.md](./gl_bookscheme.md) |
 | 2 | `t_gl_bookscheme_l` | 账簿合并方案-多语言表 | 4 | [gl_bookscheme.md](./gl_bookscheme.md) |
 | 3 | `t_gl_bookschemeentry` | 单据体-子表 | 7 | [gl_bookscheme.md](./gl_bookscheme.md) |
-| 4 | `t_gl_virualacctbook` | 合并方案虚拟账簿-主表 | 9 | [gl_virualacctbook.md](./gl_virualacctbook.md) |
+| 4 | `t_gl_virualacctbook` | 合并方案虚拟账簿-主表 | 10 | [gl_virualacctbook.md](./gl_virualacctbook.md) |
 | 5 | `t_gl_virualacctbook_l` | 合并方案虚拟账簿-多语言表 | 4 | [gl_virualacctbook.md](./gl_virualacctbook.md) |

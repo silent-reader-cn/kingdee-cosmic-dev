@@ -12,7 +12,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | ftimes | 重试次数 | int4 | 32 |  | √ | 0 | 重试次数 |
 | 3 | ffailcostdomainkey | 失败成本域 | varchar | 50 |  | √ | ' ' | 失败成本域 |
-| 4 | fmaterialid | 物料 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 4 | fmaterialid | 物料 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 5 | fcaltime | 计算时间 | timestamp | 0 |  |  | null | 计算时间 |
 
 ### 列规则定义

@@ -12,13 +12,16 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fitemno | 行次 | int8 | 64 |  | √ | 0 | 行次 |
 | 3 | ftaxamount | 金额 | numeric | 23 | 10 | √ | 0.0000000000 | 金额 |
-| 4 | fitemtype | 取数项目类型 | varchar | 50 |  | √ | ' ' | 取数项目类型 |
-| 5 | fname | 项目名称 | varchar | 50 |  | √ | ' ' | 项目名称 |
-| 6 | fskssqz | 结束日期 | timestamp | 0 |  |  | null | 结束日期 |
-| 7 | forgid | 组织id | int8 | 64 |  | √ | 0 | 组织id |
-| 8 | fruleid | 规则id | int8 | 64 |  | √ | 0 | 规则id |
-| 9 | fitemname | 取数项目名称 | varchar | 50 |  | √ | ' ' | 取数项目名称 |
-| 10 | fskssqq | 开始时间 | timestamp | 0 |  |  | null | 开始时间 |
+| 4 | fname | 项目名称 | varchar | 50 |  | √ | ' ' | 项目名称 |
+| 5 | fewblxh | 二维表序号 | varchar | 50 |  | √ | ' ' | 二维表序号,枚举: 901 :环境保护专用设备投资额 902 :节能节水专用设备 903 :安全生产专用设备 hj :合计 |
+| 6 | forgid | 组织id | int8 | 64 |  | √ | 0 | 组织id |
+| 7 | fskssqq | 开始时间 | timestamp | 0 |  |  | null | 开始时间 |
+| 8 | fewblname | 二维表名称 | varchar | 500 |  | √ | ' ' | 二维表名称 |
+| 9 | fitemtype | 取数项目类型 | varchar | 50 |  | √ | ' ' | 取数项目类型 |
+| 10 | fskssqz | 结束日期 | timestamp | 0 |  |  | null | 结束日期 |
+| 11 | fsbbid | 申报表id | varchar | 50 |  | √ | ' ' | 申报表id |
+| 12 | fruleid | 规则id | int8 | 64 |  | √ | 0 | 规则id |
+| 13 | fitemname | 取数项目名称 | varchar | 50 |  | √ | ' ' | 取数项目名称 |
 
 ### 列规则定义
 

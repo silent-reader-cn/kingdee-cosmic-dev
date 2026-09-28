@@ -41,7 +41,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fsuspduration | 挂起时长 | int8 | 64 |  | √ | 0 | 挂起时长 |
 | 4 | factinstid | 当前节点实例ID | int8 | 64 |  | √ | 0 | 当前节点实例ID |
 | 5 | fsuspendreason | 挂起原因 | text | 0 |  |  | null | 挂起原因 |
@@ -53,7 +53,7 @@
 | 11 | fundosusptime | 撤销挂起时间 | timestamp | 0 |  |  | null | 撤销挂起时间 |
 | 12 | fcreatedate | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 13 | ftype | 类型 | varchar | 30 |  | √ | ' ' | 类型,枚举: 1 :异常挂起 2 :手动挂起 |
-| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | factid | 当前活动节点ID | varchar | 255 |  | √ | ' ' | 当前活动节点ID |
 | 16 | fmodifydate | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 17 | factivityname | 当前活动节点名称 | varchar | 500 |  | √ | ' ' | 当前活动节点名称 |

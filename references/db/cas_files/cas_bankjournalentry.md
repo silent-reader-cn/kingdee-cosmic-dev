@@ -13,14 +13,14 @@
 | 2 | famount_enp | famount_enp | text | 0 |  |  | null |  |
 | 3 | flocalamount | 折本位币金额 | numeric | 19 | 6 | √ | 0.000000 | 折本位币金额 |
 | 4 | flocalamount_enp | flocalamount_enp | text | 0 |  |  | null |  |
-| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | foppunit | 对方单位 | varchar | 255 |  |  | null | 对方单位 |
-| 7 | ffundflowitemid | 资金用途 | int8 | 64 |  | √ | 0 | 资金用途 cas_fundflowitem |
+| 7 | ffundflowitemid | 资金用途 | int8 | 64 |  | √ | 0 | [资金用途 cas_fundflowitem](../cas_files/cas_fundflowitem.md) |
 | 8 | fseq | 序号 | int8 | 64 |  | √ | 0 | 序号 |
 | 9 | famount | 金额 | numeric | 19 | 6 | √ | 0.000000 | 金额 |
 | 10 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 11 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
-| 12 | faccountbankid | 银行账户 | int8 | 64 |  | √ | 0 | 银行账户 bd_accountbanks |
+| 11 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
+| 12 | faccountbankid | 银行账户 | int8 | 64 |  | √ | 0 | [银行账户 bd_accountbanks](../basedata_files/bd_accountbanks.md) |
 
 ### 列规则定义
 

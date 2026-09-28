@@ -174,23 +174,23 @@
 | 22 | fissueticketdate | 出票日期 | timestamp | 0 |  |  | null | 出票日期 |
 | 23 | fcollectionbank | 开户银行 | varchar | 50 |  | √ | ' ' | 开户银行 |
 | 24 | fpromisebankno | 承兑人行号 | varchar | 50 |  | √ | ' ' | 承兑人行号 |
-| 25 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 25 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 26 | fexchangebillexpiredate | 汇票到期日 | timestamp | 0 |  |  | null | 汇票到期日 |
 | 27 | flocamt | 金额折本位币 | numeric | 19 | 6 | √ | 0.000000 | 金额折本位币 |
-| 28 | fcompanyid | 资金组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 28 | fcompanyid | 资金组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 29 | fissueticketer | 全称 | varchar | 50 |  | √ | ' ' | 全称 |
 | 30 | fcollectionbankno | 收款人行号 | varchar | 50 |  | √ | ' ' | 收款人行号 |
 | 31 | fdetailseqid | 明细号 | varchar | 100 |  | √ | ' ' | 明细号 |
 | 32 | famount | 金额 | numeric | 19 | 6 | √ | 0.000000 | 金额 |
 | 33 | fpromisebank | 承兑人开户行 | varchar | 50 |  | √ | ' ' | 承兑人开户行 |
-| 34 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 34 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 35 | fapplicantbankno | 申请人行号 | varchar | 50 |  | √ | ' ' | 申请人行号 |
 | 36 | fissueticketcreditlevel | 信用等级 | varchar | 255 |  | √ | ' ' | 信用等级 |
 | 37 | ftradecontractno | 交易合同号 | varchar | 50 |  | √ | ' ' | 交易合同号 |
-| 38 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 38 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 39 | fapplicantacc | 申请人账号 | varchar | 50 |  | √ | ' ' | 申请人账号 |
 | 40 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 41 | fcurrency | 币别 | varchar | 50 |  | √ | ' ' | 币别 |
+| 41 | fcurrency | 币种 | varchar | 50 |  | √ | ' ' | 币种 |
 | 42 | fpromiseensureinfo | 承兑保证信息 | varchar | 255 |  | √ | ' ' | 承兑保证信息 |
 | 43 | fissueticketacc | 账号 | varchar | 50 |  | √ | ' ' | 账号 |
 | 44 | fissueticketpromise | 出票保证 | varchar | 255 |  | √ | ' ' | 出票保证 |
@@ -199,7 +199,7 @@
 | 47 | fapplicantbank | 申请人开户行 | varchar | 50 |  | √ | ' ' | 申请人开户行 |
 | 48 | fsourcebillid | 源单id | int8 | 64 |  | √ | 0 | 源单id |
 | 49 | fpromiseacc | 承兑人账户 | varchar | 50 |  | √ | ' ' | 承兑人账户 |
-| 50 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 50 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 
 ### 列规则定义
 
@@ -256,7 +256,7 @@
 | 29 | fremark | 备注信息 | varchar | 50 |  | √ | ' ' | 备注信息 |
 | 30 | fdiscounttype | 贴现种类 | varchar | 50 |  | √ | ' ' | 贴现种类 |
 | 31 | fopponentbankcnaps | 对手方账号 | varchar | 50 |  | √ | ' ' | 对手方账号 |
-| 32 | fcurrency | 币别 | varchar | 50 |  | √ | ' ' | 币别 |
+| 32 | fcurrency | 币种 | varchar | 50 |  | √ | ' ' | 币种 |
 | 33 | fendorsedate | 背书日期 | timestamp | 0 |  |  | null | 背书日期 |
 | 34 | finitiatororg | 发起方组织机构编码 | varchar | 50 |  | √ | ' ' | 发起方组织机构编码 |
 | 35 | finitiatorbankcnaps | 发起方行号 | varchar | 50 |  | √ | ' ' | 发起方行号 |

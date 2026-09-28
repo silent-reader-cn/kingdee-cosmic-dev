@@ -24,8 +24,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_isc_custom_fc_l |  | fid,flocaleid |
-| 2 | t_isc_custom_function_l_pkey |  | fpkid |
+| 1 | t_isc_custom_function_l_pkey |  | fpkid |
+| 2 | idx_isc_custom_fc_l |  | fid,flocaleid |
 
 ---
 
@@ -104,7 +104,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fremark | 说明 | varchar | 255 |  | √ | ' ' | 说明 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fname | 函数描述 | varchar | 50 |  | √ | ' ' | 函数描述 |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 6 | fsource_tenant | 来源 | varchar | 100 |  | √ | ' ' | 来源 |
@@ -113,10 +113,10 @@
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 10 | fscript | 函数脚本 | varchar | 2000 |  | √ | ' ' | 函数脚本 |
 | 11 | fstatus | 数据状态 | varchar | 20 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 14 | fsource_trace | 来源追溯 | varchar | 600 |  | √ | ' ' | 来源追溯 |
-| 15 | fgroup | 分组 | int8 | 64 |  | √ | 0 | 自定义函数分组 isc_custom_function_group |
+| 15 | fgroup | 分组 | int8 | 64 |  | √ | 0 | [自定义函数分组 isc_custom_function_group](../iscb_files/isc_custom_function_group.md) |
 | 16 | fenable | 使用状态 | varchar | 30 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 17 | fscript_tag | 函数脚本_详情 | text | 0 |  |  | null | 函数脚本_详情 |
 | 18 | fnumber | 函数名称 | varchar | 30 |  | √ | ' ' | 函数名称 |

@@ -1,8 +1,8 @@
 # 盘点方案-fa_inventscheme_new
 
-## 拆分规则详情(弃用)-子表 t_fa_invent_taskrule
+## 拆分规则详情-子表 t_fa_invent_taskrule
 
-- **表名称：** 拆分规则详情(弃用)-子表
+- **表名称：** 拆分规则详情-子表
 - **表名：** t_fa_invent_taskrule
 
 ### 表格列定义
@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fsplitfieldvalue | 拆分依据字段值 | varchar | 2000 |  |  | ' ' | 拆分依据字段值 |
-| 2 | finventperson | 盘点负责人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | finventperson | 盘点负责人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fentrystatus | 任务状态 | bpchar | 1 |  | √ | 'A' | 任务状态,枚举: A :未下达 B :已下达 C :已生成 Z :未保存 |
 | 4 | finventschemeid | 盘点方案ID | int8 | 64 |  | √ | 0 | 盘点方案ID |
 | 5 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
@@ -76,22 +76,23 @@
 | 2 | fmodifierid | fmodifierid | int8 | 64 |  | √ | 0 |  |
 | 3 | fname | 任务名称 | varchar | 100 |  | √ | ' ' | 任务名称 |
 | 4 | fqtytypevalue | 盘点数量默认值 | varchar | 10 |  | √ | '0' | 盘点数量默认值,枚举: 0 :0 1 :账存数量 |
-| 5 | fchargepersonid | 组织负责人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 6 | fcreatetime | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
-| 7 | ffiltercondition_tag | 盘点范围过滤条件_详情 | text | 0 |  |  | ' ' | 盘点范围过滤条件_详情 |
-| 8 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 9 | fmodifytime | fmodifytime | timestamp | 0 |  |  | null |  |
-| 10 | fstatus | 任务状态 | bpchar | 1 |  | √ | 'A' | 任务状态,枚举: A :未下达 B :已下达 C :已生成 Z :未保存 |
-| 11 | finventschemeentryid | finventschemeentryid | int8 | 64 |  | √ | 0 |  |
-| 12 | fassetunitid | 资产组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 13 | ffinaccountdate | 截止日期 | timestamp | 0 |  |  | null | 截止日期 |
-| 14 | fcreatorid | fcreatorid | int8 | 64 |  | √ | 0 |  |
-| 15 | fmasterid | fmasterid | int8 | 64 |  | √ | 0 |  |
-| 16 | ftaskrule | 任务拆分规则 | varchar | 50 |  | √ | ' ' | 任务拆分规则 |
-| 17 | fenable | fenable | bpchar | 1 |  | √ | '1' |  |
-| 18 | fnumber | 任务编码 | varchar | 50 |  | √ | ' ' | 任务编码 |
-| 19 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 20 | ffiltercondition | 盘点范围过滤条件 | varchar | 512 |  | √ | ' ' | 盘点范围过滤条件 |
+| 5 | fchargepersonid | 盘点负责人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 6 | finventorymode | 盘点模式 | varchar | 200 |  | √ | ' ' | 盘点模式,枚举: assetamount :资产数量 headuseperson :使用人 headusedept :使用部门 storeplace :存放地点 |
+| 7 | fcreatetime | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
+| 8 | ffiltercondition_tag | 盘点范围过滤条件_详情 | text | 0 |  |  | ' ' | 盘点范围过滤条件_详情 |
+| 9 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
+| 10 | fmodifytime | fmodifytime | timestamp | 0 |  |  | null |  |
+| 11 | fstatus | 任务状态 | bpchar | 1 |  | √ | 'A' | 任务状态,枚举: A :未下达 B :已下达 C :已生成 Z :未保存 |
+| 12 | finventschemeentryid | finventschemeentryid | int8 | 64 |  | √ | 0 |  |
+| 13 | fassetunitid | 资产组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 14 | ffinaccountdate | 截止日期 | timestamp | 0 |  |  | null | 截止日期 |
+| 15 | fcreatorid | fcreatorid | int8 | 64 |  | √ | 0 |  |
+| 16 | fmasterid | fmasterid | int8 | 64 |  | √ | 0 |  |
+| 17 | ftaskrule | 任务拆分规则 | varchar | 50 |  | √ | ' ' | 任务拆分规则 |
+| 18 | fenable | fenable | bpchar | 1 |  | √ | '1' |  |
+| 19 | fnumber | 任务编码 | varchar | 50 |  | √ | ' ' | 任务编码 |
+| 20 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 21 | ffiltercondition | 盘点范围过滤条件 | varchar | 512 |  | √ | ' ' | 盘点范围过滤条件 |
 
 ### 列规则定义
 
@@ -118,26 +119,27 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fname | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 6 | forgid | 核算组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | forgid | 核算组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fauditdate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
-| 8 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 9 | fbillstate | 单据状态(弃用) | bpchar | 1 |  | √ | '0' | 单据状态(弃用),枚举: A :进行中 C :已关闭 |
-| 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 11 | fctrlstrategy | 控制策略 | bpchar | 1 |  | √ | '1' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 1 :逐级分配 6 :管控范围内共享 |
-| 12 | fstatus | 单据状态 | bpchar | 1 |  | √ | 'A' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 14 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 15 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
-| 16 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
-| 17 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 18 | fnumber | 单据编号 | varchar | 60 |  | √ | ' ' | 单据编号 |
-| 19 | fuseorgid | 业务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 20 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
-| 21 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 9 | fmigsrc | 是否迁移 | int4 | 32 |  | √ | 0 | 是否迁移 |
+| 10 | fbillstate | 单据状态(弃用) | bpchar | 1 |  | √ | '0' | 单据状态(弃用),枚举: A :进行中 C :已关闭 |
+| 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 12 | fctrlstrategy | 控制策略 | bpchar | 1 |  | √ | '1' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 1 :逐级分配 6 :管控范围内共享 |
+| 13 | fstatus | 单据状态 | bpchar | 1 |  | √ | 'A' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
+| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 15 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
+| 16 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
+| 17 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
+| 18 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 19 | fnumber | 单据编号 | varchar | 60 |  | √ | ' ' | 单据编号 |
+| 20 | fuseorgid | 业务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 21 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
+| 22 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 
@@ -240,9 +242,9 @@
 
 ---
 
-## 拆分依据(弃用)-子表 t_fa_invent_splitfield
+## 拆分依据-子表 t_fa_invent_splitfield
 
-- **表名称：** 拆分依据(弃用)-子表
+- **表名称：** 拆分依据-子表
 - **表名：** t_fa_invent_splitfield
 
 ### 表格列定义

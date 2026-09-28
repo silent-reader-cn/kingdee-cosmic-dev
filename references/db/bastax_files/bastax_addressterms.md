@@ -10,17 +10,17 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 5 | fuseorg | 使用组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 6 | faddtype | 地址类型 | int8 | 64 |  | √ | 0 | 地址类型 bastax_addresstype |
-| 7 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 8 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | fuseorg | 使用组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 6 | faddtype | 地址类型 | int8 | 64 |  | √ | 0 | [地址类型 bastax_addresstype](../bastax_files/bastax_addresstype.md) |
+| 7 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 8 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 10 | fctrlstrategy | 控制策略 | varchar | 50 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
 | 11 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 14 | faddresstype | 地址类型 | varchar | 50 |  | √ | ' ' | 地址类型,枚举: fhd :发货地 shd :收货地 kpd :开票地 spd :收票地 |
 | 15 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
@@ -28,7 +28,7 @@
 | 17 | fenable | 使用状态 | varchar | 50 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 18 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
 | 19 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
-| 20 | fcountry | 国家或地区 | int8 | 64 |  | √ | 0 | 国家和地区 bd_country |
+| 20 | fcountry | 国家或地区 | int8 | 64 |  | √ | 0 | [国家和地区 bd_country](../base_files/bd_country.md) |
 
 ### 列规则定义
 
@@ -44,6 +44,39 @@
 | 2 | idx_t_bastax_addressterms_master |  | fmasterid |
 | 3 | idx_t_bastax_addressterms_createorg |  | fcreateorgid |
 | 4 | pk_bastax_addressterms |  | fid |
+
+---
+
+## 地址条件-子表 t_bastax_terms_detail
+
+- **表名称：** 地址条件-子表
+- **表名：** t_bastax_terms_detail
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fvalue | 值 | varchar | 300 |  | √ | ' ' | 值 |
+| 3 | fvalueid | 值主键id | int8 | 64 |  | √ | 0 | 值主键id |
+| 4 | fvaluenumber | 值编码 | varchar | 100 |  | √ | ' ' | 值编码 |
+| 5 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
+| 6 | fcondition | 条件 | varchar | 50 |  | √ | ' ' | 条件,枚举: = :等于 <> :不等于 |
+| 7 | fadministrativelevel | 行政级次 | varchar | 50 |  | √ | ' ' | 行政级次,枚举: taxarea :税收区域 country :国家或地区 province :省 city :市 county :区县 |
+| 8 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fentryid | fentryid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_bastax_terms_detail_fk |  | fid |
+| 2 | pk_bastax_terms_detail |  | fentryid |
 
 ---
 
@@ -126,38 +159,5 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | pk_t_bastax_addressterms_u |  | fdataid,fuseorgid |
-| 2 | idx_t_bastax_addressterms_u_uo |  | fuseorgid |
-
----
-
-## 地址条件-子表 t_bastax_terms_detail
-
-- **表名称：** 地址条件-子表
-- **表名：** t_bastax_terms_detail
-
-### 表格列定义
-
-| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fvalue | 值 | varchar | 300 |  | √ | ' ' | 值 |
-| 3 | fvalueid | 值主键id | int8 | 64 |  | √ | 0 | 值主键id |
-| 4 | fvaluenumber | 值编码 | varchar | 100 |  | √ | ' ' | 值编码 |
-| 5 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 6 | fcondition | 条件 | varchar | 50 |  | √ | ' ' | 条件,枚举: = :等于 <> :不等于 |
-| 7 | fadministrativelevel | 行政级次 | varchar | 50 |  | √ | ' ' | 行政级次,枚举: taxarea :税收区域 country :国家或地区 province :省 city :市 county :区县 |
-| 8 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-
-### 列规则定义
-
-| 序号 | 键编码 | 列字段 |
-| :--- | :--- | :--- |
-| 1 | fentryid | fentryid |
-
-### 索引定义
-
-| 序号 | 索引名 | 唯一 | 列字段 |
-| :--- | :--- | :--- | :--- |
-| 1 | idx_bastax_terms_detail_fk |  | fid |
-| 2 | pk_bastax_terms_detail |  | fentryid |
+| 1 | idx_t_bastax_addressterms_u_uo |  | fuseorgid |
+| 2 | pk_t_bastax_addressterms_u |  | fdataid,fuseorgid |

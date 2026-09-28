@@ -13,7 +13,7 @@
 | 2 | ftaxamount | 税额 | numeric | 23 | 10 | √ | 0 | 税额 |
 | 3 | ftaxperiod | 所属月份 | varchar | 50 |  | √ | ' ' | 所属月份 |
 | 4 | fhfbl | 划分比例 | numeric | 23 | 10 | √ | 0 | 划分比例 |
-| 5 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | fcurrentsigntaxamount | 本次标识税额 | numeric | 23 | 10 | √ | 0 | 本次标识税额 |
 | 7 | fvoucherno | 发票号码 | varchar | 50 |  | √ | ' ' | 发票号码 |
 | 8 | famount | 不含税金额 | numeric | 23 | 10 | √ | 0 | 不含税金额 |
@@ -21,7 +21,7 @@
 | 10 | fjzjtxse | 即征即退销售额 | numeric | 23 | 10 | √ | 0 | 即征即退销售额 |
 | 11 | fconsumertype | 用途标识 | varchar | 50 |  | √ | ' ' | 用途标识,枚举: 5 :无法划分标识 4 :即征即退标识 |
 | 12 | ftype | 发票类型 | varchar | 50 |  | √ | ' ' | 发票类型,枚举: 15 :通行费电子发票 2 :电子专票 4 :纸质专票 |
-| 13 | fbaseinvoicetype | 发票类型 | int8 | 64 |  | √ | 0 | 发票类型 bd_invoicetype |
+| 13 | fbaseinvoicetype | 发票类型 | int8 | 64 |  | √ | 0 | [发票种类 bd_invoicetype](../basedata_files/bd_invoicetype.md) |
 | 14 | ftaxaccountserialno | 台账流水号 | varchar | 50 |  | √ | ' ' | 台账流水号 |
 | 15 | finvoicecode | 发票代码 | varchar | 32 |  | √ | ' ' | 发票代码 |
 | 16 | ftaxdeductionid | 抵扣台账ID | int8 | 64 |  | √ | 0 | 抵扣台账ID |

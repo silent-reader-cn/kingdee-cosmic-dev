@@ -12,8 +12,8 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fadmintag | 超级管理员身份 | varchar | 20 |  | √ | ' ' | 超级管理员身份,枚举: 1 :administrator 2 :auditor 3 :security 10 :cosmic |
 | 3 | ftransfertime | 移交时间 | timestamp | 0 |  |  | null | 移交时间 |
-| 4 | ftransferorid | 移交人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 5 | fuserid | 用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | ftransferorid | 移交人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 5 | fuserid | 用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

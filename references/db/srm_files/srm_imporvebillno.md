@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | 单据ID | int8 | 64 |  | √ | 0 | 单据ID |
 | 2 | freplydate | 要求回复时间 | timestamp | 0 |  |  | null | 要求回复时间 |
-| 3 | forgid | 采购方 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | forgid | 采购方 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | fconfirmstatus | 确认状态 | bpchar | 1 |  | √ | ' ' | 确认状态,枚举: A :待处理 B :打回 C :改善中 D :改善提交 E :改善通过 F :改善驳回 |
 | 5 | fbilldate | 业务日期 | timestamp | 0 |  |  | null | 业务日期 |
 | 6 | fother | fother | varchar | 510 |  |  | ' ' |  |
@@ -30,14 +30,14 @@
 | 19 | flastupdateuserid | flastupdateuserid | int8 | 64 |  | √ | 0 |  |
 | 20 | fdescription | fdescription | varchar | 510 |  |  | ' ' |  |
 | 21 | fbizpartnerid | fbizpartnerid | int8 | 64 |  | √ | 0 |  |
-| 22 | fsupplierid | 供应商 | int8 | 64 |  | √ | 0 | 供应商 bd_supplier |
+| 22 | fsupplierid | 供应商 | int8 | 64 |  | √ | 0 | [供应商 bd_supplier](../basedata_files/bd_supplier.md) |
 | 23 | ffinishdate | ffinishdate | timestamp | 0 |  |  | null |  |
 | 24 | flastupdatetime | flastupdatetime | timestamp | 0 |  |  | null |  |
 | 25 | fsupquality | fsupquality | varchar | 510 |  |  | ' ' |  |
 | 26 | fcfmstatus | fcfmstatus | bpchar | 1 |  | √ | ' ' |  |
 | 27 | fservice | fservice | varchar | 510 |  |  | ' ' |  |
 | 28 | flinkmanid | flinkmanid | int8 | 64 |  | √ | 0 |  |
-| 29 | fimprovetypeid | 改善类型 | int8 | 64 |  | √ | 0 | 供应商辅助资料 srm_extdata |
+| 29 | fimprovetypeid | 改善类型 | int8 | 64 |  | √ | 0 | [供应商辅助资料 srm_extdata](../pbd_files/srm_extdata.md) |
 | 30 | fsupreply | fsupreply | varchar | 510 |  |  | ' ' |  |
 | 31 | fsupother | fsupother | varchar | 510 |  |  | ' ' |  |
 | 32 | fbilltypeid | fbilltypeid | int8 | 64 |  | √ | 0 |  |
@@ -53,5 +53,5 @@
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
 | 1 | idx_pur_improve_fbillno |  | fbillno |
-| 2 | idx_pur_improve_fbilldate |  | fbilldate |
-| 3 | t_pur_improve_pkey |  | fid |
+| 2 | t_pur_improve_pkey |  | fid |
+| 3 | idx_pur_improve_fbilldate |  | fbilldate |

@@ -12,7 +12,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 单据类型名称 | varchar | 100 |  | √ | ' ' | 单据类型名称 |
 | 3 | foperate_scanner | 扫描仪 | varchar | 10 |  | √ | ' ' | 扫描仪,枚举: 0 :不展示 2 :按权限 1 :展示 |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | foperate_san_gun | 扫码枪 | varchar | 10 |  | √ | ' ' | 扫码枪,枚举: 0 :不展示 2 :按权限 1 :展示 |
 | 6 | foperate_excel_import | EXCEL导入 | varchar | 10 |  | √ | '1' | EXCEL导入,枚举: 0 :不支持 1 :支持 |
 | 7 | fcreatetime | 添加时间 | timestamp | 0 |  |  | null | 添加时间 |
@@ -24,7 +24,7 @@
 | 13 | foperate_attach_scanner | 扫描仪录入 | varchar | 10 |  | √ | ' ' | 扫描仪录入,枚举: 0 :不展示 2 :按权限 1 :展示 |
 | 14 | fstatus | 数据状态 | varchar | 10 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 15 | foperate_qrcode | 手机上传 | varchar | 10 |  | √ | ' ' | 手机上传,枚举: 0 :不展示 2 :按权限 1 :展示 |
-| 16 | fcreatorid | 添加人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 16 | fcreatorid | 添加人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 17 | foperate_person_invoice | 个人收票 | varchar | 10 |  | √ | ' ' | 个人收票,枚举: 0 :不展示 2 :按权限 1 :展示 |
 | 18 | foperate_enter | 手工录入 | varchar | 10 |  | √ | ' ' | 手工录入,枚举: 0 :不展示 2 :按权限 1 :展示 |
 | 19 | foperate_upload | 发票上传 | varchar | 10 |  | √ | ' ' | 发票上传,枚举: 0 :不展示 2 :按权限 1 :展示 |

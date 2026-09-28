@@ -11,18 +11,18 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fcreator | fcreator | int8 | 64 |  | √ | 0 |  |
-| 3 | fname | fname | bpchar | 100 |  | √ | ' ' |  |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 4 | fname | fname | varchar | 100 |  | √ | ' ' |  |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 6 | fmodifier | fmodifier | int8 | 64 |  | √ | 0 |  |
 | 7 | ffmasterid | ffmasterid | int8 | 64 |  | √ | 0 |  |
 | 8 | fispreset | 系统预设 | bpchar | 1 |  | √ | '0' | 系统预设 |
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 10 | fstatus | 数据状态 | bpchar | 1 |  | √ | 'C' | 数据状态,枚举: A :暂存 B :已保存 C :已提交 |
-| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 13 | fenable | 使用状态 | bpchar | 1 |  | √ | '0' | 使用状态,枚举: 1 :可用 0 :禁用 |
-| 14 | fbusinesstypeid | 业务类型 | int8 | 64 |  | √ | 0 | 业务类型 ocdbd_biztype |
+| 14 | fbusinesstypeid | 业务类型 | int8 | 64 |  | √ | 0 | [业务类型 ocdbd_biztype](../ocdbd_files/ocdbd_biztype.md) |
 | 15 | fnumber | 经营方式编码 | varchar | 80 |  | √ | ' ' | 经营方式编码 |
 | 16 | fcommoditymode | 经营方式类型 | bpchar | 1 |  | √ | '0' | 经营方式类型,枚举: 0 :经销 1 :代销 2 :流水倒扣 3 :寄售 |
 

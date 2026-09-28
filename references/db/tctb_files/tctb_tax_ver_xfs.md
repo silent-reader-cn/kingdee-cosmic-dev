@@ -16,7 +16,8 @@
 | 5 | fxfstaxitemrate | 税目 | int8 | 64 |  | √ | 0 | 消费税税收分类编码表 tpo_tcct_taxrateentry |
 | 6 | fperiod | 缴纳期限 | varchar | 50 |  | √ | ' ' | 缴纳期限,枚举: aysb :按月申报 ajsb :按季申报 |
 | 7 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 8 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 8 | fdatasource | 数据来源 | varchar | 50 |  | √ | ' ' | 数据来源,枚举: 1 :系统生成 2 :手工录入 |
+| 9 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 
 ### 列规则定义
 
@@ -42,7 +43,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 征收环节 tctb_taxpoint |
+| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [征收环节 tctb_taxpoint](../tctb_files/tctb_taxpoint.md) |
 | 2 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 | 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 
@@ -72,11 +73,11 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fmodifydate | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
-| 3 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fenable | 启用状态 | varchar | 50 |  | √ | ' ' | 启用状态,枚举: 1 :启用 0 :禁用 |
 | 5 | ftaxtype | 税种 | varchar | 50 |  | √ | ' ' | 税种,枚举: zzs :增值税 qysds :企业所得税 yhs :印花税 fjsf :附加税费 fcscztdsys :房产税和城镇土地使用税 xfs :消费税 |
 | 6 | fver | 版本 | int8 | 64 |  | √ | 0 | 版本 |
-| 7 | forg | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 7 | forg | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 
 ### 列规则定义
 

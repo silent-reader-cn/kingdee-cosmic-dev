@@ -46,7 +46,7 @@
 | 6 | frownum | 行号 | varchar | 50 |  | √ | ' ' | 行号 |
 | 7 | fsupplier | 供应商 | varchar | 50 |  | √ | ' ' | 供应商 |
 | 8 | fexpiredate | 有效期至 | varchar | 50 |  | √ | ' ' | 有效期至 |
-| 9 | fretracebill | 追溯单据 | int8 | 64 |  | √ | 0 | 追溯业务对象设置 pqt_entityobject |
+| 9 | fretracebill | 追溯单据 | int8 | 64 |  | √ | 0 | [追溯业务对象设置 pqt_entityobject](../pqt_files/pqt_entityobject.md) |
 | 10 | fdate | 日期 | varchar | 50 |  | √ | ' ' | 日期 |
 | 11 | fprocessnumber | 工序号 | varchar | 50 |  | √ | ' ' | 工序号 |
 | 12 | fmftdate | 生产日期 | varchar | 50 |  | √ | ' ' | 生产日期 |
@@ -93,29 +93,29 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fname | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 6 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fdisabledate | 禁用时间 | timestamp | 0 |  |  | null | 禁用时间 |
 | 8 | fenabledate | 启用时间 | timestamp | 0 |  |  | null | 启用时间 |
-| 9 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | fauditdate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
-| 11 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 11 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 12 | fctrlstrategy | 控制策略 | varchar | 30 |  | √ | ' ' | 控制策略,枚举: 5 :全局共享 |
 | 13 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 14 | fstatus | 数据状态 | varchar | 5 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 15 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 15 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 16 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 17 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 18 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
 | 19 | fenable | 使用状态 | varchar | 5 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 20 | fsystempreset | 系统预设 | bpchar | 1 |  | √ | '0' | 系统预设 |
-| 21 | fenablerid | 启用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 21 | fenablerid | 启用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 22 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
 | 23 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
-| 24 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 24 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 
@@ -147,13 +147,13 @@
 | 2 | fmatchmode | 匹配方式 | varchar | 20 |  | √ | ' ' | 匹配方式,枚举: MATCH_DIRECT :直接匹配 MATCH_TARGET :通过目标单匹配 MATCH_TARGET_SOURCE :通过目标单&源单匹配 MATCH_SOURCE :通过源单匹配 MATCH_CUSTOM :自定义匹配 MATCH_LINK_FIELD :通过关联字段匹配 MATCH_OP_REPORT :通过工序汇报匹配 |
 | 3 | flinkfield | 关联字段标识 | varchar | 50 |  | √ | ' ' | 关联字段标识 |
 | 4 | fserial | 序列号 | varchar | 50 |  | √ | ' ' | 序列号 |
-| 5 | ftargetbill | 目标单据 | int8 | 64 |  | √ | 0 | 追溯业务对象设置 pqt_entityobject |
+| 5 | ftargetbill | 目标单据 | int8 | 64 |  | √ | 0 | [追溯业务对象设置 pqt_entityobject](../pqt_files/pqt_entityobject.md) |
 | 6 | fmaterialnum | 物料编码 | varchar | 50 |  | √ | ' ' | 物料编码 |
 | 7 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 8 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 | id |
 | 9 | flot | 批号 | varchar | 50 |  | √ | ' ' | 批号 |
 | 10 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
-| 11 | fsourcebill | 来源单据 | int8 | 64 |  | √ | 0 | 追溯业务对象设置 pqt_entityobject |
+| 11 | fsourcebill | 来源单据 | int8 | 64 |  | √ | 0 | [追溯业务对象设置 pqt_entityobject](../pqt_files/pqt_entityobject.md) |
 | 12 | fsourceentry | 源单分录内码标识 | varchar | 50 |  | √ | ' ' | 源单分录内码标识 |
 
 ### 列规则定义

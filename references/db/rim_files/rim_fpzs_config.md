@@ -20,7 +20,7 @@
 | 9 | fcreatedate | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
 | 10 | fmodifydate | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
 | 11 | fpc_config_tag | pc端配置_详情 | text | 0 |  |  | ' ' | pc端配置_详情 |
-| 12 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fpc_config | pc端配置 | varchar | 255 |  | √ | ' ' | pc端配置 |
 
 ### 列规则定义

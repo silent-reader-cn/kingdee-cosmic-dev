@@ -42,7 +42,7 @@
 | 31 | fcxfzsdjasl | fcxfzsdjasl | numeric | 23 | 10 | √ | 0.0000000000 |  |
 | 32 | fwhsydwzzqy | fwhsydwzzqy | numeric | 23 | 10 | √ | 0.0000000000 |  |
 | 33 | fncxylddqmzsds | fncxylddqmzsds | numeric | 23 | 10 | √ | 0.0000000000 |  |
-| 34 | fewblname | 二维表名称 | varchar | 100 |  | √ | ' ' | 二维表名称 |
+| 34 | fewblname | 二维表名称 | varchar | 200 |  | √ | ' ' | 二维表名称 |
 | 35 | fjcdljaslzsqysds | fjcdljaslzsqysds | numeric | 23 | 10 | √ | 0.0000000000 |  |
 | 36 | fdazwhmz | fdazwhmz | numeric | 23 | 10 | √ | 0.0000000000 |  |
 | 37 | fsbbid | 申报表id | varchar | 100 |  | √ | ' ' | 申报表id |

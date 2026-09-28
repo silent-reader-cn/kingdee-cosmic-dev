@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fdelnumber | 删除对象编码 | varchar | 100 |  | √ | ' ' | 删除对象编码 |
-| 3 | fcreatedate | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
+| 3 | fcreatedate | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 4 | ftype | 垃圾类型 | varchar | 50 |  | √ | ' ' | 垃圾类型 |
 | 5 | foperator | 创建人 | varchar | 50 |  | √ | ' ' | 创建人 |
 | 6 | fdata_tag | 删除数据_详情 | text | 0 |  |  | null | 删除数据_详情 |

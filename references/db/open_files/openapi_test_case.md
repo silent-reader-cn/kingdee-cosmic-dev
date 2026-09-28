@@ -29,37 +29,6 @@
 
 ---
 
-## HTTP状态码-子表 t_openapi_test_hc_entry
-
-- **表名称：** HTTP状态码-子表
-- **表名：** t_openapi_test_hc_entry
-
-### 表格列定义
-
-| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fishttpcodecheck | 是否校验 | bpchar | 1 |  | √ | '0' | 是否校验 |
-| 3 | fhttpcode | HTTP状态码 | varchar | 50 |  | √ | ' ' | HTTP状态码 |
-| 4 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 6 | fhttpdes | 说明 | varchar | 255 |  | √ | ' ' | 说明 |
-
-### 列规则定义
-
-| 序号 | 键编码 | 列字段 |
-| :--- | :--- | :--- |
-| 1 | fentryid | fentryid |
-
-### 索引定义
-
-| 序号 | 索引名 | 唯一 | 列字段 |
-| :--- | :--- | :--- | :--- |
-| 1 | pk_t_openapi_test_hc_entry |  | fentryid |
-| 2 | idx_t_open_testhc_id |  | fid |
-
----
-
 ## Query参数单据体-子表 t_openapi_test_qp_entry
 
 - **表名称：** Query参数单据体-子表
@@ -200,7 +169,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fgroupid | 分类 | int8 | 64 |  | √ | 0 | 测试用例分组 openapi_test_case_group |
+| 2 | fgroupid | 分类 | int8 | 64 |  | √ | 0 | [测试用例分组 openapi_test_case_group](../open_files/openapi_test_case_group.md) |
 | 3 | fbd_type | 请求体类型 | varchar | 1 |  | √ | '2' | 请求体类型,枚举: 1 :form 2 :raw |
 | 4 | fpriority | 优先级 | varchar | 1 |  | √ | ' ' | 优先级,枚举: 0 :P0 1 :P1 2 :P2 3 :P3 |
 | 5 | fcreatestatus | 创建方式 | varchar | 1 |  | √ | '0' | 创建方式,枚举: 0 :手工创建 1 :API同步 |
@@ -208,16 +177,16 @@
 | 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 8 | fstatus | 数据状态 | varchar | 1 |  | √ | '0' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 9 | fposscript | 后置脚本 | varchar | 255 |  |  | ' ' | 后置脚本 |
-| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 12 | fbd_text | 请求体json | varchar | 255 |  |  | ' ' | 请求体json |
-| 13 | fapiid | API名称 | int8 | 64 |  | √ | 0 | API服务 openapi_apilist |
+| 13 | fapiid | API名称 | int8 | 64 |  | √ | 0 | [API服务 openapi_apilist](../open_files/openapi_apilist.md) |
 | 14 | ftimeoutcheck | 超时限制 | bpchar | 1 |  | √ | '0' | 超时限制 |
 | 15 | ftimelimit_basis | 限时依据 | varchar | 1 |  | √ | ' ' | 限时依据,枚举: 1 :请求总时间 2 :首字节返回时间 |
 | 16 | fposscript_tag | 后置脚本_详情 | text | 0 |  |  | null | 后置脚本_详情 |
 | 17 | fremark | 用例说明 | varchar | 900 |  | √ | ' ' | 用例说明 |
 | 18 | fname | 用例名称 | varchar | 50 |  | √ | ' ' | 用例名称 |
-| 19 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 19 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 20 | fbd_text_tag | 请求体json_详情 | text | 0 |  |  | null | 请求体json_详情 |
 | 21 | fcreatetime | 创建时间 | timestamp | 0 |  | √ | LOCALTIMESTAMP | 创建时间 |
 | 22 | ftestrecord | 最近测试结果 | varchar | 1 |  | √ | ' ' | 最近测试结果,枚举: 0 :通过 1 :未通过 2 :暂无 |
@@ -239,3 +208,34 @@
 | :--- | :--- | :--- | :--- |
 | 1 | idx_t_openapi_testcase_num |  | fnumber |
 | 2 | pk_t_openapi_test_case |  | fid |
+
+---
+
+## HTTP状态码-子表 t_openapi_test_hc_entry
+
+- **表名称：** HTTP状态码-子表
+- **表名：** t_openapi_test_hc_entry
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fishttpcodecheck | 是否校验 | bpchar | 1 |  | √ | '0' | 是否校验 |
+| 3 | fhttpcode | HTTP状态码 | varchar | 50 |  | √ | ' ' | HTTP状态码 |
+| 4 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
+| 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 6 | fhttpdes | 说明 | varchar | 255 |  | √ | ' ' | 说明 |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fentryid | fentryid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | pk_t_openapi_test_hc_entry |  | fentryid |
+| 2 | idx_t_open_testhc_id |  | fid |

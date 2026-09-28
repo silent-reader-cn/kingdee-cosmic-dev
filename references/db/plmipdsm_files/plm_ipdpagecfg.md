@@ -1,5 +1,70 @@
 # IPD页面配置-plm_ipdpagecfg
 
+## 单据体-多语言表 t_plm_ipdpagecfgentry_l
+
+- **表名称：** 单据体-多语言表
+- **表名：** t_plm_ipdpagecfgentry_l
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
+| 2 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
+| 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
+| 4 | flablename | 标签名称 | varchar | 399 |  |  | ' ' | 标签名称 |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fpkid | fpkid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | pk_plm_ipdpagecfgentry_l |  | fpkid |
+| 2 | idx_plm_ipdpagecfgentry_l_0 |  | fentryid,flocaleid |
+
+---
+
+## 单据体-子表 t_plm_ipdpagecfgentry
+
+- **表名称：** 单据体-子表
+- **表名：** t_plm_ipdpagecfgentry
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fcfgstate | 启用 | varchar | 50 |  | √ | ' ' | 启用,枚举: Q :启用 J :禁用 |
+| 3 | fpageid | 子页面 | varchar | 36 |  | √ | ' ' | [表单元数据 bos_formmeta](../mdl_files/bos_formmeta.md) |
+| 4 | fpermimp | 页面插件 | varchar | 255 |  | √ | ' ' | 页面插件 |
+| 5 | fpagetype | 页面类型 | varchar | 50 |  | √ | ' ' | 页面类型,枚举: form :表单 list :列表 |
+| 6 | fpagetpl | 页面模版 | varchar | 255 |  | √ | ' ' | 页面模版 |
+| 7 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
+| 8 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 9 | flable | 标签 | varchar | 255 |  |  | ' ' | 标签 |
+| 10 | ftarget | 容器标识 | varchar | 255 |  |  | ' ' | 容器标识 |
+| 11 | flablename | 标签名称 | varchar | 255 |  |  | ' ' | 标签名称 |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fentryid | fentryid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | pk_plm_ipdpagecfgentry |  | fentryid |
+| 2 | idx_plm_ipdpagecfgentry_fk |  | fid |
+
+---
+
 ## IPD页面配置-主表 t_plm_ipdpagecfg
 
 - **表名称：** IPD页面配置-主表
@@ -9,21 +74,21 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 1 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 2 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 3 | fdefaulttarget | 默认容器标识 | varchar | 50 |  | √ | ' ' | 默认容器标识 |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 6 | fuseorg | 业务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | fuseorg | 业务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 8 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 9 | ftarpageid | 主页面 | varchar | 36 |  | √ | ' ' | 表单元数据 bos_formmeta |
-| 10 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 8 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 9 | ftarpageid | 主页面 | varchar | 36 |  | √ | ' ' | [表单元数据 bos_formmeta](../mdl_files/bos_formmeta.md) |
+| 10 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 11 | fctrlstrategy | 控制策略 | varchar | 50 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
 | 12 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 13 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 14 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 15 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 15 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 16 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 17 | fbitindex | 位图 | int8 | 64 |  | √ | 0 | 位图 |
 | 18 | fenable | 使用状态 | varchar | 50 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
@@ -59,7 +124,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fname | 名称 | varchar | 80 |  | √ | ' ' | 名称 |
+| 2 | fname | 名称 | varchar | 80 |  |  | ' ' | 名称 |
 | 3 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
 | 4 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
 
@@ -107,71 +172,6 @@
 
 ---
 
-## 单据体-多语言表 t_plm_ipdpagecfgentry_l
-
-- **表名称：** 单据体-多语言表
-- **表名：** t_plm_ipdpagecfgentry_l
-
-### 表格列定义
-
-| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
-| 2 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
-| 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
-| 4 | flablename | 标签名称 | varchar | 80 |  | √ | ' ' | 标签名称 |
-
-### 列规则定义
-
-| 序号 | 键编码 | 列字段 |
-| :--- | :--- | :--- |
-| 1 | fpkid | fpkid |
-
-### 索引定义
-
-| 序号 | 索引名 | 唯一 | 列字段 |
-| :--- | :--- | :--- | :--- |
-| 1 | pk_plm_ipdpagecfgentry_l |  | fpkid |
-| 2 | idx_plm_ipdpagecfgentry_l_0 |  | fentryid,flocaleid |
-
----
-
-## 单据体-子表 t_plm_ipdpagecfgentry
-
-- **表名称：** 单据体-子表
-- **表名：** t_plm_ipdpagecfgentry
-
-### 表格列定义
-
-| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fcfgstate | 启用 | varchar | 50 |  | √ | ' ' | 启用,枚举: Q :启用 J :禁用 |
-| 3 | fpageid | 子页面 | varchar | 36 |  | √ | ' ' | 表单元数据 bos_formmeta |
-| 4 | fpermimp | 页面插件 | varchar | 255 |  | √ | ' ' | 页面插件 |
-| 5 | fpagetype | 页面类型 | varchar | 50 |  | √ | ' ' | 页面类型,枚举: form :表单 list :列表 |
-| 6 | fpagetpl | 页面模版 | varchar | 255 |  | √ | ' ' | 页面模版 |
-| 7 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 8 | flable | 标签 | varchar | 50 |  | √ | ' ' | 标签 |
-| 9 | ftarget | 容器标识 | varchar | 50 |  | √ | ' ' | 容器标识 |
-| 10 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 11 | flablename | 标签名称 | varchar | 50 |  | √ | ' ' | 标签名称 |
-
-### 列规则定义
-
-| 序号 | 键编码 | 列字段 |
-| :--- | :--- | :--- |
-| 1 | fentryid | fentryid |
-
-### 索引定义
-
-| 序号 | 索引名 | 唯一 | 列字段 |
-| :--- | :--- | :--- | :--- |
-| 1 | pk_plm_ipdpagecfgentry |  | fentryid |
-| 2 | idx_plm_ipdpagecfgentry_fk |  | fid |
-
----
-
 ## 子单据体-子表 t_plm_ipdpagecfgfield
 
 - **表名称：** 子单据体-子表
@@ -181,14 +181,14 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fsourcefield | 原字段 | varchar | 50 |  | √ | ' ' | 原字段 |
+| 1 | fsourcefield | 原字段 | varchar | 255 |  |  | ' ' | 原字段 |
 | 2 | ffieldtype | 字段来源 | varchar | 50 |  | √ | ' ' | 字段来源,枚举: parent :父页面 showParameter :页面显示参数 customParams :自定义参数 |
-| 3 | ftargetfield | 映射字段 | varchar | 50 |  | √ | ' ' | 映射字段 |
+| 3 | ftargetfield | 映射字段 | varchar | 255 |  |  | ' ' | 映射字段 |
 | 4 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 5 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 | id |
 | 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 | 7 | fcombofield | 映射字段处理方式 | varchar | 50 |  | √ | ' ' | 映射字段处理方式,枚举: showAndFilter :页面显示并过滤 show :仅仅做页面显示 showParameter :放到自定义参数 innerParameter :页面自带参数 |
-| 8 | ftextfield | 字段值 | varchar | 50 |  | √ | ' ' | 字段值 |
+| 8 | ftextfield | 字段值 | varchar | 255 |  |  | ' ' | 字段值 |
 
 ### 列规则定义
 

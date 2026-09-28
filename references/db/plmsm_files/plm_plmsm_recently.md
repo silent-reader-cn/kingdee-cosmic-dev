@@ -10,8 +10,10 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fuserid | 用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 3 | frecentlyused | 新建模型最近使用 | varchar | 200 |  | √ | ' ' | 新建模型最近使用 |
+| 2 | frecentlyusedclasssify | 最近使用分类 | varchar | 200 |  | √ | ' ' | 最近使用分类 |
+| 3 | fmodelid | 分类视图 | varchar | 200 |  | √ | ' ' | 分类视图 |
+| 4 | fuserid | 用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 5 | frecentlyused | 新建模型最近使用（废弃字段） | varchar | 200 |  | √ | ' ' | 新建模型最近使用（废弃字段） |
 
 ### 列规则定义
 

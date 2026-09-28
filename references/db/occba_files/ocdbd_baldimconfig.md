@@ -61,48 +61,6 @@
 
 ---
 
-## 余额模型配置-主表 t_ocdbd_baldimcfg
-
-- **表名称：** 余额模型配置-主表
-- **表名：** t_ocdbd_baldimcfg
-
-### 表格列定义
-
-| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fname | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 4 | fbalobjid | 余额对象表 | varchar | 36 |  | √ | ' ' | 业务对象 bos_objecttype |
-| 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 6 | fflowobjid | 流水对象表 | varchar | 36 |  | √ | ' ' | 业务对象 bos_objecttype |
-| 7 | favailablefield | 可用余额字段 | varchar | 50 |  | √ | ' ' | 可用余额字段 |
-| 8 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
-| 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 10 | fstatus | 数据状态 | bpchar | 1 |  | √ | 'A' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 12 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 13 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 14 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
-| 15 | fbalancefield | 余额字段 | varchar | 50 |  | √ | ' ' | 余额字段 |
-| 16 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 17 | foccupyfield | 占用金额字段 | varchar | 50 |  | √ | ' ' | 占用金额字段 |
-
-### 列规则定义
-
-| 序号 | 键编码 | 列字段 |
-| :--- | :--- | :--- |
-| 1 | fid | fid |
-
-### 索引定义
-
-| 序号 | 索引名 | 唯一 | 列字段 |
-| :--- | :--- | :--- | :--- |
-| 1 | idx_ocdbd_baldimcfg |  | fnumber |
-| 2 | pk_ocdbd_baldimcfg |  | fid |
-
----
-
 ## 流水明细-子表 t_ocdbd_baldimcfg_f
 
 - **表名称：** 流水明细-子表
@@ -132,3 +90,45 @@
 | :--- | :--- | :--- | :--- |
 | 1 | pk_ocdbd_baldimcfg_f |  | fentryid |
 | 2 | idx_ocdbd_baldimcfg_f |  | fid |
+
+---
+
+## 余额模型配置-主表 t_ocdbd_baldimcfg
+
+- **表名称：** 余额模型配置-主表
+- **表名：** t_ocdbd_baldimcfg
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
+| 2 | fname | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 4 | fbalobjid | 余额对象表 | varchar | 36 |  | √ | ' ' | [业务对象 bos_objecttype](../mdl_files/bos_objecttype.md) |
+| 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 6 | fflowobjid | 流水对象表 | varchar | 36 |  | √ | ' ' | [业务对象 bos_objecttype](../mdl_files/bos_objecttype.md) |
+| 7 | favailablefield | 可用余额字段 | varchar | 50 |  | √ | ' ' | 可用余额字段 |
+| 8 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
+| 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 10 | fstatus | 数据状态 | bpchar | 1 |  | √ | 'A' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 12 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
+| 13 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 14 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
+| 15 | fbalancefield | 余额字段 | varchar | 50 |  | √ | ' ' | 余额字段 |
+| 16 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 17 | foccupyfield | 占用金额字段 | varchar | 50 |  | √ | ' ' | 占用金额字段 |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fid | fid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_ocdbd_baldimcfg |  | fnumber |
+| 2 | pk_ocdbd_baldimcfg |  | fid |

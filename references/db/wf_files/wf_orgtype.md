@@ -10,13 +10,13 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fname | 名称 | varchar | 230 |  | √ | ' ' | 名称 |
-| 3 | fstatus | 使用状态 | varchar | 30 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 2 | fstatus | 使用状态 | varchar | 30 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 3 | fname | 名称 | varchar | 230 |  | √ | ' ' | 名称 |
 | 4 | fcreatedate | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 5 | fmodifydate | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 6 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 7 | fenable | 复选框2 | bpchar | 1 |  | √ | '1' | 复选框2 |
-| 8 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fnumber | 编码 | varchar | 100 |  | √ | ' ' | 编码 |
 | 10 | fdescription | 描述 | varchar | 500 |  | √ | ' ' | 描述 |
 
@@ -76,7 +76,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fincludesubordinate | 包含下级组织 | bpchar | 1 |  | √ | '1' | 包含下级组织 |
-| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | forgnumber | 组织编码 | varchar | 50 |  | √ | ' ' | 组织编码 |
 | 5 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |

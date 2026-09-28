@@ -10,17 +10,17 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 3 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 3 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fbillstatus | 单据状态 | bpchar | 1 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 6 | forgid | 评估组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | forgid | 评估组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fnote | 备注 | varchar | 2000 |  | √ | ' ' | 备注 |
 | 8 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
 | 9 | fbillno | 单据编号 | varchar | 80 |  | √ | ' ' | 单据编号 |
-| 10 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 12 | fbdsupplierid | 供应商 | int8 | 64 |  | √ | 0 | 供应商 bd_supplier |
+| 12 | fbdsupplierid | 供应商 | int8 | 64 |  | √ | 0 | [供应商 bd_supplier](../basedata_files/bd_supplier.md) |
 
 ### 列规则定义
 
@@ -48,13 +48,13 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fmodifydatefield | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
-| 3 | fcategory | 品类 | int8 | 64 |  | √ | 0 | 物料分类 bd_materialgroup |
+| 3 | fcategory | 品类 | int8 | 64 |  | √ | 0 | [物料分类 bd_materialgroup](../basedata_files/bd_materialgroup.md) |
 | 4 | ftimeto | 有效期至 | timestamp | 0 |  |  | null | 有效期至 |
 | 5 | ftimefrom | 有效期从 | timestamp | 0 |  |  | null | 有效期从 |
 | 6 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 7 | fevagrade | 核准等级 | int8 | 64 |  | √ | 0 | 评估等级 bd_evagrade |
+| 7 | fevagrade | 核准等级 | int8 | 64 |  | √ | 0 | [评估等级 bd_evagrade](../basedata_files/bd_evagrade.md) |
 | 8 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 9 | fmodifierfield | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fmodifierfield | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

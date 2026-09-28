@@ -16,7 +16,7 @@
 | 5 | fsrcfieldtag | 字段标志 | varchar | 50 |  | √ | ' ' | 字段标志 |
 | 6 | fsrcfieldtagname | 字段标志名称 | varchar | 50 |  | √ | ' ' | 字段标志名称 |
 | 7 | fismutilan | 多语言字段 | bpchar | 1 |  | √ | '0' | 多语言字段 |
-| 8 | freflexcfg | 表映射配置 | int8 | 64 |  | √ | 0 | 表映射配置_质量云 qcbd_tablereflexcfg |
+| 8 | freflexcfg | 表映射配置 | int8 | 64 |  | √ | 0 | [表映射配置_质量云 qcbd_tablereflexcfg](../qcbd_files/qcbd_tablereflexcfg.md) |
 | 9 | fdesfield | 目标字段名 | varchar | 50 |  | √ | ' ' | 目标字段名 |
 | 10 | fparentdestable | 上级目标表名 | varchar | 50 |  | √ | '' | 上级目标表名 |
 | 11 | fexpfix | 扩展表后缀 | varchar | 50 |  | √ | '' | 扩展表后缀 |
@@ -79,7 +79,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
 | 4 | fisexeinspec | 执行检验单逻辑 | bpchar | 1 |  | √ | '0' | 执行检验单逻辑 |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
@@ -89,12 +89,12 @@
 | 9 | ftestbillnos | 测试单据编号 | varchar | 255 |  | √ | ' ' | 测试单据编号 |
 | 10 | fstatus | 数据状态 | varchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 11 | fissuncess | 数据修复结果 | bpchar | 1 |  | √ | '0' | 数据修复结果 |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 14 | ferrdesc_tag | 错误描述_详情 | text | 0 |  |  | '' | 错误描述_详情 |
-| 15 | fbasedatafield | 单据类型 | int8 | 64 |  | √ | 0 | 单据类型 bos_billtype |
+| 15 | fbasedatafield | 单据类型 | int8 | 64 |  | √ | 0 | [单据类型 bos_billtype](../cts_files/bos_billtype.md) |
 | 16 | fenable | 使用状态 | varchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 17 | fentitynumberid | 修复主实体对象 | varchar | 255 |  | √ | '0' | 主实体对象 bos_entityobject |
+| 17 | fentitynumberid | 修复主实体对象 | varchar | 255 |  | √ | '0' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 18 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
 | 19 | ferrdesc | 错误描述 | varchar | 255 |  | √ | ' ' | 错误描述 |
 | 20 | fupgradestand | 升级标准数据 | bpchar | 1 |  | √ | '0' | 升级标准数据 |

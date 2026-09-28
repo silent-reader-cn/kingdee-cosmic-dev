@@ -15,7 +15,7 @@
 | 3 | `t_bal_balanceinfo_l` | 余额表-多语言表 | 5 | [bal_balanceinfo.md](./bal_balanceinfo.md) |
 | 4 | `t_bal_balancelog` | 余额更新日志-主表 | 12 | [bal_balance_log.md](./bal_balance_log.md) |
 | 5 | `t_bal_balancelogentry` | 日志详情-子表 | 12 | [bal_balance_log.md](./bal_balance_log.md) |
-| 6 | `t_bal_cfg` | 余额模型参数-主表 | 31 | [bal_config.md](./bal_config.md) |
+| 6 | `t_bal_cfg` | 余额模型参数-主表 | 34 | [bal_config.md](./bal_config.md) |
 | 7 | `t_bal_check_repair` | 余额巡检重算-主表 | 18 | [bal_check_repair.md](./bal_check_repair.md) |
 | 8 | `t_bal_check_repair_mark` | 余额巡检重算增量标记-主表 | 6 | [bal_check_repair_mark.md](./bal_check_repair_mark.md) |
 | 9 | `t_bal_check_repair_st` | 余额巡检重算条件-主表 | 5 | [bal_check_repair_setting.md](./bal_check_repair_setting.md) |

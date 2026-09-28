@@ -10,31 +10,31 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 3 | fworkcardid | 工卡编码 | int8 | 64 |  | √ | 0 | 工卡 mpdm_mrocardroute |
-| 4 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 5 | fdisableuser | 禁用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 3 | fworkcardid | 工卡编码 | int8 | 64 |  | √ | 0 | [工卡 mpdm_mrocardroute](../mpdm_files/mpdm_mrocardroute.md) |
+| 4 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 5 | fdisableuser | 禁用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | faudittime | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
 | 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 8 | fdisabletime | 禁用时间 | timestamp | 0 |  |  | null | 禁用时间 |
 | 9 | fstatus | 数据状态 | bpchar | 1 |  | √ | '0' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 10 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 12 | fauditor | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 12 | fauditor | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | frange | 历史时长统计范围(封存) | int8 | 64 |  | √ | 0 | 历史时长统计范围(封存) |
 | 14 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 15 | fbitindex | 位图 | int8 | 64 |  | √ | 0 | 位图 |
 | 16 | fisneedtool | 需要工具 | bpchar | 1 |  | √ | '0' | 需要工具 |
-| 17 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 17 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 18 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 19 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 19 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 20 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 21 | fmaterialtype | 检修设备类型 | int8 | 64 |  | √ | 0 | 检修设备类型 mpdm_mrtype |
+| 21 | fmaterialtype | 检修设备类型 | int8 | 64 |  | √ | 0 | [检修设备类型 mpdm_mrtype](../mpdm_files/mpdm_mrtype.md) |
 | 22 | fctrlstrategy | 控制策略 | bpchar | 1 |  | √ | '0' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
 | 23 | fenabletime | 启用时间 | timestamp | 0 |  |  | null | 启用时间 |
-| 24 | fenableuser | 启用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 25 | fmaterialunit | 基本单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 26 | fhourunit | 时长单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 24 | fenableuser | 启用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 25 | fmaterialunit | 基本单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 26 | fhourunit | 时长单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 27 | fenable | 使用状态 | bpchar | 1 |  | √ | '0' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 28 | fnumber | 编码 | varchar | 50 |  | √ | ' ' | 编码 |
 | 29 | fsourcebitindex | 原资料位图 | int8 | 64 |  | √ | 0 | 原资料位图 |
@@ -65,7 +65,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 附件字段实体 bd_attachment |
+| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [附件字段实体 bd_attachment](../frame_files/bd_attachment.md) |
 | 2 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 |  |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | FPKID |
 
@@ -94,28 +94,28 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fsupplyorg | 供货库存组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fsupplyorg | 供货库存组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fgroupversion | 替代组版本 | varchar | 80 |  | √ | ' ' | 替代组版本 |
 | 4 | fentryownertype | 供应方式 | varchar | 50 |  | √ | ' ' | 供应方式,枚举: bos_org :业务单元 bd_supplier :供应商 bd_customer :客户 |
-| 5 | fentrybaseunit | 基本单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 6 | flocation | 默认仓位 | int8 | 64 |  | √ | 0 | 仓位 bd_location |
+| 5 | fentrybaseunit | 基本单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 6 | flocation | 默认仓位 | int8 | 64 |  | √ | 0 | [仓位 bd_location](../sbd_files/bd_location.md) |
 | 7 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 8 | fentryhistoryusetime | 历史使用时长（小时） | numeric | 23 | 10 | √ | 0 | 历史使用时长（小时） |
 | 9 | fentryreplacegroup | 替代组(封存) | varchar | 255 |  | √ | ' ' | 替代组(封存) |
 | 10 | fentryrange | 统计范围（封存） | int8 | 64 |  | √ | 0 | 统计范围（封存） |
-| 11 | ftoolsubgroup | 替代组 | int8 | 64 |  | √ | 0 | 工具替代组 mpdm_toolsubgroup |
+| 11 | ftoolsubgroup | 替代组 | int8 | 64 |  | √ | 0 | [工具替代组 mpdm_toolsubgroup](../mpdm_files/mpdm_toolsubgroup.md) |
 | 12 | ftoollevel | 工具使用级别 | varchar | 5 |  | √ | ' ' | 工具使用级别,枚举: A :必选 B :可选 |
-| 13 | fentryunit | 计量单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 14 | fwarehouse | 默认仓库 | int8 | 64 |  | √ | 0 | 仓库 bd_warehouse |
+| 13 | fentryunit | 计量单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 14 | fwarehouse | 默认仓库 | int8 | 64 |  | √ | 0 | [仓库 bd_warehouse](../sbd_files/bd_warehouse.md) |
 | 15 | fentrybaseqty | 基本数量 | numeric | 23 | 10 | √ | 0 | 基本数量 |
 | 16 | fentryqty | 数量 | numeric | 23 | 10 | √ | 0 | 数量 |
 | 17 | fentrylevel | 优先级（封存） | int8 | 64 |  | √ | 0 | 优先级（封存） |
-| 18 | fentrymaterial | 工具件号 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 18 | fentrymaterial | 工具件号 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 19 | fentrymandatory | 必选（封存） | bpchar | 1 |  | √ | '0' | 必选（封存） |
 | 20 | frepgrpentryid | 替代组entryid | int8 | 64 |  | √ | 0 | 替代组entryid |
 | 21 | fentryowner | 供应方 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
 | 22 | fentryremark | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
-| 23 | fmeanstype | 工具分类(封存) | int8 | 64 |  | √ | 0 | 树形基础资料模板 mpdm_meanstype |
+| 23 | fmeanstype | 工具分类(封存) | int8 | 64 |  | √ | 0 | [树形基础资料模板 mpdm_meanstype](../mpdm_files/mpdm_meanstype.md) |
 | 24 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 
 ### 列规则定义
@@ -143,7 +143,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 检修设备类型 mpdm_mrtype |
+| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [检修设备类型 mpdm_mrtype](../mpdm_files/mpdm_mrtype.md) |
 | 2 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 | 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 
@@ -171,7 +171,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 附件字段实体 bd_attachment |
+| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [附件字段实体 bd_attachment](../frame_files/bd_attachment.md) |
 | 2 | fpkid | fpkid | int8 | 64 |  | √ | 0 | FPKID |
 | 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 
@@ -286,7 +286,7 @@
 | 1 | fentrypagenumber | 页码（封存） | varchar | 255 |  | √ | ' ' | 页码（封存） |
 | 2 | fentrysegment | 段（封存） | varchar | 255 |  | √ | ' ' | 段（封存） |
 | 3 | fentrydescribe | 描述（封存） | varchar | 255 |  | √ | ' ' | 描述（封存） |
-| 4 | fentrymanualtype | 参考手册类型（封存） | int8 | 64 |  | √ | 0 | 文件类型 mpdm_doctype |
+| 4 | fentrymanualtype | 参考手册类型（封存） | int8 | 64 |  | √ | 0 | [文件类型 mpdm_doctype](../mpdm_files/mpdm_doctype.md) |
 | 5 | fentrymanualnumber | 手册编码(封存) | varchar | 255 |  | √ | ' ' | 手册编码(封存) |
 | 6 | fentrymanualversion | 手册版本（封存） | varchar | 255 |  | √ | ' ' | 手册版本（封存） |
 | 7 | fentrysection | 节（封存） | varchar | 255 |  | √ | ' ' | 节（封存） |

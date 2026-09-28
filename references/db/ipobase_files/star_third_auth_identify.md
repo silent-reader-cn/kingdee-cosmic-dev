@@ -15,7 +15,7 @@
 | 4 | fappsec | 应用密钥 | varchar | 50 |  | √ | ' ' | 应用密钥 |
 | 5 | facctid | 数据中心ID | varchar | 50 |  | √ | ' ' | 数据中心ID |
 | 6 | flcid | 账套语系，默认2052 | int4 | 32 |  | √ | 2052 | 账套语系，默认2052 |
-| 7 | fipoorgid | IPO编制组织 | int8 | 64 |  | √ | 0 | IPO编制组织 ipo_org |
+| 7 | fipoorgid | IPO编制组织 | int8 | 64 |  | √ | 0 | [IPO编制组织 ipo_org](../ipobase_files/ipo_org.md) |
 | 8 | fserverurl | 请求地址 | varchar | 50 |  | √ | ' ' | 请求地址 |
 | 9 | fappid | 应用ID | varchar | 50 |  | √ | ' ' | 应用ID |
 | 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |

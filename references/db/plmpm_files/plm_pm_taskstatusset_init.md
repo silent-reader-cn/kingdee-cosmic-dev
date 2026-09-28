@@ -10,19 +10,19 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fuseorg | 业务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 4 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fuseorg | 业务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 4 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 6 | ffromstatus | 源状态 | int8 | 64 |  | √ | 0 | 任务状态 plm_pm_taskstatus |
+| 6 | ffromstatus | 源状态 | int8 | 64 |  | √ | 0 | [任务状态 plm_pm_taskstatus](../plmpm_files/plm_pm_taskstatus.md) |
 | 7 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 8 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 11 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
 | 12 | fstatusseq | 序号 | int8 | 64 |  | √ | 0 | 序号 |
-| 13 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 14 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 14 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | fname | 操作名称 | varchar | 50 |  | √ | ' ' | 操作名称 |
 | 16 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 17 | fctrlstrategy | 控制策略 | varchar | 50 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
@@ -31,7 +31,7 @@
 | 20 | foptmodel | 操作方式 | bpchar | 1 |  | √ | '0' | 操作方式 |
 | 21 | fismainline | 是否主线连接点 | bpchar | 1 |  | √ | '0' | 是否主线连接点 |
 | 22 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
-| 23 | ftostatus | 目标状态 | int8 | 64 |  | √ | 0 | 任务状态 plm_pm_taskstatus |
+| 23 | ftostatus | 目标状态 | int8 | 64 |  | √ | 0 | [任务状态 plm_pm_taskstatus](../plmpm_files/plm_pm_taskstatus.md) |
 | 24 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
 | 25 | fisshow | 是否初始显示 | bpchar | 1 |  | √ | '0' | 是否初始显示 |
 | 26 | fischeck | 是否勾选 | bpchar | 1 |  | √ | '0' | 是否勾选 |

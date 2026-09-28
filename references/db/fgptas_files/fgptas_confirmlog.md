@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fuserid | 用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fuserid | 用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fisnotice | 是否已通知 | bpchar | 1 |  | √ | '0' | 是否已通知 |
 | 4 | fnoticetime | 通知时间 | timestamp | 0 |  |  | null | 通知时间 |
 

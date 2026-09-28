@@ -56,7 +56,7 @@
 | 8 | fdefaultequipment | 默认开票设备 | varchar | 10 |  | √ | ' ' | 默认开票设备,枚举: 0 :否 1 :是 |
 | 9 | felectzticketquota | 电子专票限额 | numeric | 23 | 10 | √ | 0.0000000000 | 电子专票限额 |
 | 10 | forg | forg | int8 | 64 |  | √ | 0 |  |
-| 11 | fepinfo | 企业信息 | int8 | 64 |  | √ | 0 | 企业基础信息 bdm_enterprise_baseinfo |
+| 11 | fepinfo | 企业信息 | int8 | 64 |  | √ | 0 | [企业基础信息 bdm_enterprise_baseinfo](../bdm_files/bdm_enterprise_baseinfo.md) |
 | 12 | fdisen | 启用/禁用 | varchar | 30 |  | √ | ' ' | 启用/禁用,枚举: 1 :启用 0 :禁用 |
 | 13 | ffjh | 分机号 | varchar | 10 |  |  | ' ' | 分机号 |
 | 14 | fcreatedate | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |

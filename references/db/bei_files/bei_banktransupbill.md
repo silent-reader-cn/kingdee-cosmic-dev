@@ -19,10 +19,10 @@
 | 8 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 9 | fsonacctbankname | 子账户开户行名称 | varchar | 80 |  | √ | ' ' | 子账户开户行名称 |
 | 10 | fisupdatestate | 是否手动修改付款状态 | bpchar | 1 |  | √ | '0' | 是否手动修改付款状态 |
-| 11 | fserialnumber | 批次号 | varchar | 80 |  | √ | ' ' | 批次号 |
+| 11 | fserialnumber | null | varchar | 80 |  | √ | ' ' | null |
 | 12 | fsonacctname | 子账户银企账户名称 | varchar | 80 |  | √ | ' ' | 子账户银企账户名称 |
 | 13 | fstatus | 付款状态 | varchar | 30 |  | √ | ' ' | 付款状态,枚举: OP :准备提交 TS :交易成功 TF :交易失败 NC :交易未确认 OS :银企处理中 BP :银行处理中 |
-| 14 | fsubacct | 子账户银行账号 | int8 | 64 |  | √ | 0 | 银行账户 bd_accountbanks |
+| 14 | fsubacct | 子账户银行账号 | int8 | 64 |  | √ | 0 | [银行账户 bd_accountbanks](../basedata_files/bd_accountbanks.md) |
 | 15 | fsonacctcity | 子账户开户行城市名称 | varchar | 80 |  | √ | ' ' | 子账户开户行城市名称 |
 | 16 | fsonacctnumber | 子账户银行账号 | varchar | 80 |  | √ | ' ' | 子账户银行账号 |
 | 17 | ftransamt | 划拨金额 | numeric | 19 | 6 | √ | 0.000000 | 划拨金额 |
@@ -40,8 +40,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_t_bei_banktransup_entry |  | fid |
-| 2 | t_bei_banktransup_entry_pkey |  | fentryid |
+| 1 | t_bei_banktransup_entry_pkey |  | fentryid |
+| 2 | idx_t_bei_banktransup_entry |  | fid |
 
 ---
 
@@ -93,35 +93,36 @@
 | 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 9 | fexchangerate | 汇率 | numeric | 23 | 10 | √ | 0.0000000000 | 汇率 |
 | 10 | fisupdatingstatus | 是否正在修改付款状态 | bpchar | 1 |  | √ | '0' | 是否正在修改付款状态 |
-| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 12 | fexpectdealtime | 期望交易时间 | timestamp | 0 |  |  | null | 期望交易时间 |
-| 13 | fsourcetype | 源单类型 | varchar | 50 |  | √ | ' ' | 源单类型 |
-| 14 | factamount | 已划拨金额 | numeric | 19 | 6 | √ | 0.000000 | 已划拨金额 |
-| 15 | factcount | 已划拨笔数 | int8 | 64 |  | √ | 0 | 已划拨笔数 |
-| 16 | fcount | 划拨总笔数 | int8 | 64 |  | √ | 0 | 划拨总笔数 |
-| 17 | fbillno | 单据编号 | varchar | 80 |  | √ | ' ' | 单据编号 |
-| 18 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 19 | fbillstatus | 单据状态 | varchar | 30 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 F :已失败重付 T :已打回 |
-| 20 | ftransbillno | 划拨单号 | varchar | 80 |  | √ | ' ' | 划拨单号 |
-| 21 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 22 | fmonacctprovince | 母账户省名称 | varchar | 255 |  | √ | ' ' | 母账户省名称 |
-| 23 | fmonacctbankname | 母账户开户行名称 | varchar | 255 |  | √ | ' ' | 母账户开户行名称 |
-| 24 | fmonacctcity | 母账户城市名称 | varchar | 255 |  | √ | ' ' | 母账户城市名称 |
-| 25 | fsubmittime | 提交银企时间 | timestamp | 0 |  |  | null | 提交银企时间 |
-| 26 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
-| 27 | fdescription | 描述 | varchar | 255 |  | √ | ' ' | 描述 |
-| 28 | fmonacctorg | 母账户申请公司名称 | varchar | 255 |  | √ | ' ' | 母账户申请公司名称 |
-| 29 | fpayunique | 付款防重字段 | int8 | 64 |  | √ | 0 | 付款防重字段 |
-| 30 | fbizdate | 业务日期 | timestamp | 0 |  |  | null | 业务日期 |
-| 31 | fsourcebillid | 源单id | int8 | 64 |  | √ | 0 | 源单id |
-| 32 | fbankid | 母账户开户行 | int8 | 64 |  | √ | 0 | 金融机构 bd_finorginfo |
-| 33 | fmonacctnumber | 母账户银行账号 | varchar | 255 |  | √ | ' ' | 母账户银行账号 |
-| 34 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
-| 35 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 36 | faccountbankid | 母账户银行账号 | int8 | 64 |  | √ | 0 | 银行账户 bd_accountbanks |
-| 37 | flocamt | 金额折本位币 | numeric | 19 | 6 | √ | 0.000000 | 金额折本位币 |
-| 38 | fcompanyid | 母账户收付组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 39 | fisbitback | 打回标识 | bpchar | 1 |  | √ | '0' | 打回标识 |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 12 | fthirdpaystatus | 支付平台支付状态 | varchar | 255 |  | √ | ' ' | 支付平台支付状态 |
+| 13 | fexpectdealtime | 期望交易时间 | timestamp | 0 |  |  | null | 期望交易时间 |
+| 14 | fsourcetype | 源单类型 | varchar | 50 |  | √ | ' ' | 源单类型 |
+| 15 | factamount | 已划拨金额 | numeric | 19 | 6 | √ | 0.000000 | 已划拨金额 |
+| 16 | factcount | 已划拨笔数 | int8 | 64 |  | √ | 0 | 已划拨笔数 |
+| 17 | fcount | 划拨总笔数 | int8 | 64 |  | √ | 0 | 划拨总笔数 |
+| 18 | fbillno | 单据编号 | varchar | 80 |  | √ | ' ' | 单据编号 |
+| 19 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 20 | fbillstatus | 单据状态 | varchar | 30 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 F :已失败重付 T :已打回 |
+| 21 | ftransbillno | 划拨单号 | varchar | 80 |  | √ | ' ' | 划拨单号 |
+| 22 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 23 | fmonacctprovince | 母账户省名称 | varchar | 255 |  | √ | ' ' | 母账户省名称 |
+| 24 | fmonacctbankname | 母账户开户行名称 | varchar | 255 |  | √ | ' ' | 母账户开户行名称 |
+| 25 | fmonacctcity | 母账户城市名称 | varchar | 255 |  | √ | ' ' | 母账户城市名称 |
+| 26 | fsubmittime | 提交银企时间 | timestamp | 0 |  |  | null | 提交银企时间 |
+| 27 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
+| 28 | fdescription | 描述 | varchar | 255 |  | √ | ' ' | 描述 |
+| 29 | fmonacctorg | 母账户申请公司名称 | varchar | 255 |  | √ | ' ' | 母账户申请公司名称 |
+| 30 | fpayunique | 付款防重字段 | int8 | 64 |  | √ | 0 | 付款防重字段 |
+| 31 | fbizdate | 业务日期 | timestamp | 0 |  |  | null | 业务日期 |
+| 32 | fsourcebillid | 源单id | int8 | 64 |  | √ | 0 | 源单id |
+| 33 | fbankid | 母账户开户行 | int8 | 64 |  | √ | 0 | [金融机构 bd_finorginfo](../basedata_files/bd_finorginfo.md) |
+| 34 | fmonacctnumber | 母账户银行账号 | varchar | 255 |  | √ | ' ' | 母账户银行账号 |
+| 35 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
+| 36 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 37 | faccountbankid | 母账户银行账号 | int8 | 64 |  | √ | 0 | [银行账户 bd_accountbanks](../basedata_files/bd_accountbanks.md) |
+| 38 | flocamt | 金额折本位币 | numeric | 19 | 6 | √ | 0.000000 | 金额折本位币 |
+| 39 | fcompanyid | 母账户收付组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 40 | fisbitback | 打回标识 | bpchar | 1 |  | √ | '0' | 打回标识 |
 
 ### 列规则定义
 

@@ -40,11 +40,11 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 名称 | varchar | 500 |  | √ | ' ' | 名称 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fcreatedate | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 5 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | fapplicationid | 应用ID | varchar | 36 |  | √ | ' ' | 应用ID |
-| 7 | fparentid | 上级分类 | int8 | 64 |  | √ | 0 | 流程模板分类 wf_proctemplatecategory |
+| 7 | fparentid | 上级分类 | int8 | 64 |  | √ | 0 | [流程模板分类 wf_proctemplatecategory](../wf_files/wf_proctemplatecategory.md) |
 | 8 | fmodifydate | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 9 | fnumber | 编码 | varchar | 50 |  | √ | ' ' | 编码 |
 | 10 | fprocesstype | 流程类型 | varchar | 30 |  | √ | ' ' | 流程类型,枚举: AuditFlow :审批流 BizFlow :业务流 NoCodeFlow :无代码流程 |

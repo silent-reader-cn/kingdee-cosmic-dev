@@ -41,17 +41,33 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fattachname | 附件名称 | varchar | 255 |  |  | null | 附件名称 |
-| 3 | fattachurl | 附件 url | varchar | 512 |  |  | null | 附件 url |
+| 2 | fattstarttime | fattstarttime | timestamp | 0 |  |  | null |  |
+| 3 | fattlargetxt | fattlargetxt | varchar | 255 |  |  | null |  |
 | 4 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 5 | fattachremark | 备注 | varchar | 1024 |  |  | null | 备注 |
-| 6 | fattachno | 附件序列号 | varchar | 80 |  | √ | ' ' | 附件序列号 |
-| 7 | frotationangle | 旋转角度 | varchar | 30 |  |  | null | 旋转角度 |
-| 8 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 9 | foriginalname | 源文件名称 | varchar | 255 |  |  | null | 源文件名称 |
-| 10 | fgathertime | 采集时间 | timestamp | 0 |  |  | null | 采集时间 |
-| 11 | fsnapshoturl | 快照 url | varchar | 512 |  |  | null | 快照 url |
-| 12 | fattachtype | 文件类型 | varchar | 30 |  |  | null | 文件类型,枚举: |
+| 5 | fattachserialno | fattachserialno | varchar | 255 |  | √ | ' ' |  |
+| 6 | fattsource | fattsource | varchar | 30 |  | √ | ' ' |  |
+| 7 | fattachno | 附件序列号 | varchar | 80 |  | √ | ' ' | 附件序列号 |
+| 8 | frotationangle | 旋转角度 | varchar | 30 |  |  | null | 旋转角度 |
+| 9 | fattaffairdiscription | fattaffairdiscription | varchar | 1024 |  |  | null |  |
+| 10 | fattheadcount | fattheadcount | int8 | 64 |  | √ | 0 |  |
+| 11 | fattcity | fattcity | varchar | 255 |  |  | null |  |
+| 12 | fattachurl | 附件 url | varchar | 512 |  |  | null | 附件 url |
+| 13 | fattenddate | fattenddate | timestamp | 0 |  |  | null |  |
+| 14 | fattinvoiceentyid | fattinvoiceentyid | int8 | 64 |  | √ | 0 |  |
+| 15 | fattfrom | fattfrom | varchar | 255 |  |  | null |  |
+| 16 | fattlargetxt_tag | fattlargetxt_tag | text | 0 |  |  | null |  |
+| 17 | fattachname | 附件名称 | varchar | 255 |  |  | null | 附件名称 |
+| 18 | fattachremark | 备注 | varchar | 1024 |  |  | null | 备注 |
+| 19 | foriginalname | 源文件名称 | varchar | 255 |  |  | null | 源文件名称 |
+| 20 | fattto | fattto | varchar | 255 |  |  | null |  |
+| 21 | fgathertime | 采集时间 | timestamp | 0 |  |  | null | 采集时间 |
+| 22 | fattendtime | fattendtime | timestamp | 0 |  |  | null |  |
+| 23 | fattapplydate | fattapplydate | timestamp | 0 |  |  | null |  |
+| 24 | fattstartdate | fattstartdate | timestamp | 0 |  |  | null |  |
+| 25 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 26 | fatttotalamount | fatttotalamount | numeric | 23 | 10 | √ | 0 |  |
+| 27 | fsnapshoturl | 快照 url | varchar | 512 |  |  | null | 快照 url |
+| 28 | fattachtype | 文件类型 | varchar | 30 |  |  | null | 文件类型,枚举: |
 
 ### 列规则定义
 
@@ -110,21 +126,21 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fentrympmbizopregid | 商机号 | int8 | 64 |  |  | null | 商机登记F7 mpm_bizopregf7 |
-| 3 | fstdentrycostcenterid | 成本中心 | int8 | 64 |  | √ | 0 | 成本中心 bos_costcenter |
-| 4 | fprojectid | 项目 | int8 | 64 |  | √ | 0 | 项目 bd_project |
-| 5 | fsharecurrency | 分摊币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 2 | fentrympmbizopregid | 商机号 | int8 | 64 |  |  | null | [商机登记F7 mpm_bizopregf7](../mpm_files/mpm_bizopregf7.md) |
+| 3 | fstdentrycostcenterid | 成本中心 | int8 | 64 |  | √ | 0 | [成本中心 bos_costcenter](../basedata_files/bos_costcenter.md) |
+| 4 | fprojectid | 项目 | int8 | 64 |  | √ | 0 | [项目 bd_project](../basedata_files/bd_project.md) |
+| 5 | fsharecurrency | 分摊币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 | 6 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 7 | fentrymonth | 月份 | timestamp | 0 |  |  | null | 月份 |
 | 8 | fsharewaitseq | 待摊行号 | int4 | 32 |  | √ | 0 | 待摊行号 |
 | 9 | fshareamount | 分摊金额 | numeric | 23 | 10 | √ | 0 | 分摊金额 |
-| 10 | fentrympmtaskid | 任务号 | int8 | 64 |  |  | null | 项目任务F7 mpm_task_f7 |
-| 11 | fentrycostcompanyid | 费用承担公司 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 10 | fentrympmtaskid | 任务号 | int8 | 64 |  |  | null | [项目任务 bd_projecttask](../basedata_files/bd_projecttask.md) |
+| 11 | fentrycostcompanyid | 费用承担公司 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 12 | fshareappamount | 核定金额 | numeric | 23 | 10 | √ | 0 | 核定金额 |
-| 13 | fentryexpenseitem | 费用项目 | int8 | 64 |  | √ | 0 | 费用项目 er_expenseitemedit |
+| 13 | fentryexpenseitem | 费用项目 | int8 | 64 |  | √ | 0 | [费用项目 er_expenseitemedit](../basedata_files/er_expenseitemedit.md) |
 | 14 | fsharewaitid | 待摊明细id | int8 | 64 |  | √ | 0 | 待摊明细id |
 | 15 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 | id |
-| 16 | fentrycostdeptid | 费用承担部门 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 16 | fentrycostdeptid | 费用承担部门 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 17 | fsharerate | 本次分摊比例（%） | numeric | 23 | 10 | √ | 0.0000000000 | 本次分摊比例（%） |
 
 ### 列规则定义
@@ -181,45 +197,46 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fentrympmbizopregid | 商机号 | int8 | 64 |  |  | null | 商机登记F7 mpm_bizopregf7 |
+| 2 | fentrympmbizopregid | 商机号 | int8 | 64 |  |  | null | [商机登记F7 mpm_bizopregf7](../mpm_files/mpm_bizopregf7.md) |
 | 3 | fhappendate | 费用发生日期 | timestamp | 0 |  |  | null | 费用发生日期 |
-| 4 | fentrycurrency | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 4 | fentrycurrency | 币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 | 5 | fdeductibletax | 抵扣税额 | numeric | 23 | 10 | √ | 0.0000000000 | 抵扣税额 |
 | 6 | ftaxrate | 税率（%） | numeric | 23 | 10 | √ | 0.0000000000 | 税率（%） |
 | 7 | foriamount | 不含税金额 | numeric | 23 | 10 | √ | 0.0000000000 | 不含税金额 |
 | 8 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 9 | fentrymonth | 月份 | timestamp | 0 |  |  | null | 月份 |
-| 10 | foffset | 是否抵扣 | bpchar | 1 |  | √ | '1' | 是否抵扣 |
+| 10 | foffset | 可抵扣 | bpchar | 1 |  | √ | '1' | 可抵扣 |
 | 11 | fprice | 核定不含税金额 | numeric | 23 | 10 | √ | 0.0000000000 | 核定不含税金额 |
-| 12 | fentrympmtaskid | 任务号 | int8 | 64 |  |  | null | 项目任务F7 mpm_task_f7 |
+| 12 | fentrympmtaskid | 任务号 | int8 | 64 |  |  | null | [项目任务 bd_projecttask](../basedata_files/bd_projecttask.md) |
 | 13 | freimburseamount | 报销金额 | numeric | 23 | 10 | √ | 0.0000000000 | 报销金额 |
-| 14 | fentrycostcompanyid | 费用承担公司 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 14 | fentrycostcompanyid | 费用承担公司 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 15 | fexchangerate | 汇率 | numeric | 23 | 10 | √ | 0.0000000000 | 汇率 |
 | 16 | fcurrreimburseamount | 报销金额(本位币) | numeric | 23 | 10 | √ | 0.0000000000 | 报销金额(本位币) |
 | 17 | fisspecialinvoice | 专票 | bpchar | 1 |  | √ | '1' | 专票 |
 | 18 | fgoodsname | 商品名称 | varchar | 255 |  | √ | ' ' | 商品名称 |
 | 19 | fcurprice | 核定不含税金额（本位币） | numeric | 23 | 10 | √ | 0.0000000000 | 核定不含税金额（本位币） |
-| 20 | finvoicetypeitem | 发票类型 | varchar | 50 |  | √ | '0' | 发票类型,枚举: 0 :空 1 :普通电子发票 2 :电子发票专票 3 :普通纸质发票 4 :专用纸质发票 5 :普通纸质卷票 7 :通用机打 8 :的士票 9 :火车票 10 :飞机票 11 :其他 12 :机动车 13 :二手车 14 :定额发票 15 :通行费 16 :客运票 17 :过路过桥费 18 :车船税发票（专票） 19 :完税证明 20 :轮船票 21 :海关缴款书 23 :通用机打电子发票 24 :火车退票 25 :财政电子票据 |
+| 20 | finvoicetypeitem | 发票类型 | varchar | 50 |  | √ | '0' | 发票类型,枚举: 0 :空 1 :普通电子发票 2 :电子发票专票 3 :普通纸质发票 4 :专用纸质发票 5 :普通纸质卷票 7 :通用机打 8 :的士票 9 :火车票 10 :飞机票 11 :其他 12 :机动车销售发票 13 :二手车销售发票 14 :定额发票 15 :通行费 16 :客运票 17 :过路过桥费 18 :车船税发票（专票） 19 :完税证明 20 :轮船票 21 :海关缴款书 23 :通用机打电子发票 24 :火车退票 25 :财政电子票据 26 :数电发票（普通发票） 27 :数电发票（增值税专用发票） 28 :数电票（航空运输电子客票行程单） 29 :数电票（铁路电子客票） 30 :形式发票 |
 | 21 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 | id |
-| 22 | ftaxclasscodeid | 税收分类编码基础资料 | int8 | 64 |  | √ | 0 | 税收分类编码 er_taxclasscode |
+| 22 | ftaxclasscodeid | 税收分类编码基础资料 | int8 | 64 |  | √ | 0 | [税收分类编码 er_taxclasscode](../basedata_files/er_taxclasscode.md) |
 | 23 | finvoiceno | 发票号码 | varchar | 255 |  | √ | ' ' | 发票号码 |
 | 24 | fsharerate | 分摊比例（%） | numeric | 23 | 10 | √ | 0.0000000000 | 分摊比例（%） |
 | 25 | fitemfrom | 来源 | varchar | 2 |  | √ | '0' | 来源,枚举: 0 :手动添加 1 :发票云 2 :OCR识别 3 :商旅 4 :分录导入 |
-| 26 | fexpenseitemid | 费用项目 | int8 | 64 |  | √ | 0 | 费用项目 er_expenseitemedit |
+| 26 | fexpenseitemid | 费用项目 | int8 | 64 |  | √ | 0 | [费用项目 er_expenseitemedit](../basedata_files/er_expenseitemedit.md) |
 | 27 | ftaxamount | 税额 | numeric | 23 | 10 | √ | 0.0000000000 | 税额 |
 | 28 | fremark | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
-| 29 | fstdentrycostcenterid | 成本中心 | int8 | 64 |  | √ | 0 | 成本中心 bos_costcenter |
+| 29 | fstdentrycostcenterid | 成本中心 | int8 | 64 |  | √ | 0 | [成本中心 bos_costcenter](../basedata_files/bos_costcenter.md) |
 | 30 | fapprovetax | 核定税额 | numeric | 23 | 10 | √ | 0 | 核定税额 |
-| 31 | fprojectid | 项目 | int8 | 64 |  | √ | 0 | 项目 bd_project |
+| 31 | fprojectid | 项目 | int8 | 64 |  | √ | 0 | [项目 bd_project](../basedata_files/bd_project.md) |
 | 32 | fserialno | 发票序列号 | varchar | 80 |  | √ | ' ' | 发票序列号 |
-| 33 | fexpeapprovecurramount | 核定金额（本位币） | numeric | 23 | 10 | √ | 0.0000000000 | 核定金额（本位币） |
-| 34 | finvoicelink | 发票代码 | varchar | 129 |  | √ | ' ' | 发票代码 |
-| 35 | fairportconstructionfee | 机场建设费及其他 | numeric | 23 | 10 | √ | 0.0000000000 | 机场建设费及其他 |
-| 36 | flkwaitentryid | 待摊明细id | varchar | 200 |  | √ | ' ' | 待摊明细id |
-| 37 | fiteminoutamount | 转出金额 | numeric | 23 | 10 | √ | 0 | 转出金额 |
-| 38 | fexpeapproveamount | 核定金额 | numeric | 23 | 10 | √ | 0.0000000000 | 核定金额 |
-| 39 | fentrycostdeptid | 费用承担部门 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 40 | fquotetype | 换算方式 | bpchar | 1 |  | √ | '0' | 换算方式,枚举: 0 :直接汇率 1 :间接汇率 |
+| 33 | finvoicetypeiditem | 发票类型 | int8 | 64 |  | √ | 0 | [发票类型(发票云) er_invoicetype](../basedata_files/er_invoicetype.md) |
+| 34 | fexpeapprovecurramount | 核定金额（本位币） | numeric | 23 | 10 | √ | 0.0000000000 | 核定金额（本位币） |
+| 35 | finvoicelink | 发票代码 | varchar | 129 |  | √ | ' ' | 发票代码 |
+| 36 | fairportconstructionfee | 民航发展基金及其他 | numeric | 23 | 10 | √ | 0.0000000000 | 民航发展基金及其他 |
+| 37 | flkwaitentryid | 待摊明细id | varchar | 200 |  | √ | ' ' | 待摊明细id |
+| 38 | fiteminoutamount | 转出金额 | numeric | 23 | 10 | √ | 0 | 转出金额 |
+| 39 | fexpeapproveamount | 核定金额 | numeric | 23 | 10 | √ | 0.0000000000 | 核定金额 |
+| 40 | fentrycostdeptid | 费用承担部门 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 41 | fquotetype | 换算方式 | bpchar | 1 |  | √ | '0' | 换算方式,枚举: 0 :直接汇率 1 :间接汇率 |
 
 ### 列规则定义
 
@@ -247,47 +264,50 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | funauditmsg | 反审核意见 | varchar | 1000 |  |  | null | 反审核意见 |
-| 3 | fisoverbudget | 是否超预算 | bpchar | 1 |  | √ | '0' | 是否超预算 |
-| 4 | finvokeinvoicecloud | 是否与发票云交互 | bpchar | 1 |  | √ | '0' | 是否与发票云交互 |
+| 3 | fisoverbudget | 超预算 | bpchar | 1 |  | √ | '0' | 超预算 |
+| 4 | finvokeinvoicecloud | 与发票云交互 | bpchar | 1 |  | √ | '0' | 与发票云交互 |
 | 5 | ftel | 联系方式 | varchar | 100 |  | √ | ' ' | 联系方式 |
-| 6 | forgid | 部门 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 7 | fcostdeptid | 费用承担部门 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 8 | fhasvoucher | 是否生成凭证 | bpchar | 1 |  | √ | '0' | 是否生成凭证 |
-| 9 | fsharecompanyid | 费用承担公司(分摊后) | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 10 | freimburseamount | 报销金额 | numeric | 23 | 10 | √ | 0.0000000000 | 报销金额 |
-| 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 12 | fstdcostcenterid | 成本中心 | int8 | 64 |  | √ | 0 | 成本中心 bos_costcenter |
-| 13 | fattachmentcount | 附件数 | int4 | 32 |  | √ | 0 | 附件数 |
-| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 15 | fapplierpositionstr | fapplierpositionstr | varchar | 100 |  | √ | ' ' |  |
-| 16 | fbookeddate | 记账日期 | timestamp | 0 |  |  | null | 记账日期 |
-| 17 | fsharestatus | 分摊状态 | varchar | 30 |  | √ | ' ' | 分摊状态,枚举: A :分摊前 B :分摊中 C :分摊后 D :重新分摊 |
-| 18 | fcostcompanyid | 费用承担公司 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 19 | fshareruleenddate | 结束月份 | timestamp | 0 |  |  | null | 结束月份 |
-| 20 | fbillno | 单据编号 | varchar | 80 |  | √ | ' ' | 单据编号 |
-| 21 | fformid | 表单ID | varchar | 30 |  | √ | ' ' | 表单ID,枚举: er_expensesharebill :费用分摊单 |
-| 22 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 23 | fbillstatus | 单据状态 | varchar | 30 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :审核中 D :审核未通过 E :审核通过 F :等待付款 G :已付款 H :废弃 I :关闭 |
-| 24 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 25 | fiscurrency | 多币别 | bpchar | 1 |  | √ | '0' | 多币别 |
-| 26 | fwaitamount | 待分摊总金额 | numeric | 23 | 10 | √ | 0.0000000000 | 待分摊总金额 |
-| 27 | fwaitapproveamount | 待分摊核定总金额 | numeric | 23 | 10 | √ | 0.0000000000 | 待分摊核定总金额 |
-| 28 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
-| 29 | fdescription | 事由 | varchar | 1000 |  | √ | ' ' | 事由 |
-| 30 | fisenableinvoice | 是否启用发票云 | bpchar | 1 |  | √ | '0' | 是否启用发票云 |
-| 31 | fapplierid | 申请人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 32 | fimagenumber | 影像编号 | varchar | 255 |  | √ | ' ' | 影像编号 |
-| 33 | fsharerule | 分摊规则 | varchar | 30 |  | √ | ' ' | 分摊规则,枚举: orgrule :按部门分摊 monthrule :按月分摊 yearrule :按年分摊 expenseitemrule :按费用项目分摊 |
-| 34 | fsharemethod | 分摊方法 | varchar | 30 |  | √ | ' ' | 分摊方法,枚举: rate :比例分摊 avg :金额平均 amount :金额分摊 |
-| 35 | fsumsharerate | 本次分摊比例合计 | numeric | 23 | 10 | √ | 0.0000000000 | 本次分摊比例合计 |
-| 36 | fbizdate | 申请日期 | timestamp | 0 |  |  | null | 申请日期 |
-| 37 | fsharerulestartdate | 开始月份 | timestamp | 0 |  |  | null | 开始月份 |
-| 38 | fshareway | 分摊方式 | bpchar | 1 |  | √ | 'B' | 分摊方式,枚举: A :事前分摊 B :事后分摊 |
-| 39 | fapproveamount | 核定金额 | numeric | 23 | 10 | √ | 0.0000000000 | 核定金额 |
-| 40 | fcurrencyid | 本位币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
-| 41 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 42 | fneedimagescan | 需要影像扫描 | bpchar | 1 |  | √ | '0' | 需要影像扫描,枚举: 1 :是 2 :否 |
-| 43 | fcompanyid | 公司 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | forgid | 部门 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 7 | fcostdeptid | 费用承担部门 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 8 | fhasvoucher | 生成凭证 | bpchar | 1 |  | √ | '0' | 生成凭证 |
+| 9 | ftaxshareway | 税额分摊方式 | bpchar | 1 |  | √ | '1' | 税额分摊方式,枚举: 1 :按分摊金额与税率计算 2 :按分摊金额比例计算 |
+| 10 | fsharecompanyid | 费用承担公司(分摊后) | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 11 | freimburseamount | 报销金额 | numeric | 23 | 10 | √ | 0.0000000000 | 报销金额 |
+| 12 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 13 | fstdcostcenterid | 成本中心 | int8 | 64 |  | √ | 0 | [成本中心 bos_costcenter](../basedata_files/bos_costcenter.md) |
+| 14 | fattachmentcount | 附件数 | int4 | 32 |  | √ | 0 | 附件数 |
+| 15 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 16 | fapplierpositionstr | fapplierpositionstr | varchar | 100 |  | √ | ' ' |  |
+| 17 | fbookeddate | 记账日期 | timestamp | 0 |  |  | null | 记账日期 |
+| 18 | fsharestatus | 分摊状态 | varchar | 30 |  | √ | ' ' | 分摊状态,枚举: A :分摊前 B :分摊中 C :分摊后 D :重新分摊 |
+| 19 | ftrdbizno | 第三方业务编号 | varchar | 160 |  | √ | ' ' | 第三方业务编号 |
+| 20 | fcostcompanyid | 费用承担公司 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 21 | fshareruleenddate | 结束月份 | timestamp | 0 |  |  | null | 结束月份 |
+| 22 | fbillno | 单据编号 | varchar | 80 |  | √ | ' ' | 单据编号 |
+| 23 | fformid | 表单ID | varchar | 30 |  | √ | ' ' | 表单ID,枚举: er_expensesharebill :费用分摊单 |
+| 24 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 25 | fbillstatus | 单据状态 | varchar | 30 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :审核中 D :审核未通过 E :审核通过 F :等待付款 G :已付款 H :废弃 I :关闭 |
+| 26 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 27 | fiscurrency | 多币种 | bpchar | 1 |  | √ | '0' | 多币种 |
+| 28 | fwaitamount | 待分摊总金额 | numeric | 23 | 10 | √ | 0.0000000000 | 待分摊总金额 |
+| 29 | fwaitapproveamount | 待分摊核定总金额 | numeric | 23 | 10 | √ | 0.0000000000 | 待分摊核定总金额 |
+| 30 | fauditdate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
+| 31 | fdescription | 事由 | varchar | 1000 |  | √ | ' ' | 事由 |
+| 32 | fmigsrc | 来源系统 | int4 | 32 |  | √ | 0 | 来源系统 |
+| 33 | fisenableinvoice | 启用发票云 | bpchar | 1 |  | √ | '0' | 启用发票云 |
+| 34 | fapplierid | 申请人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 35 | fimagenumber | 影像编号 | varchar | 255 |  | √ | ' ' | 影像编号 |
+| 36 | fsharerule | 分摊规则 | varchar | 30 |  | √ | ' ' | 分摊规则,枚举: orgrule :按部门分摊 monthrule :按月分摊 yearrule :按年分摊 expenseitemrule :按费用项目分摊 |
+| 37 | fsharemethod | 分摊方法 | varchar | 30 |  | √ | ' ' | 分摊方法,枚举: rate :比例分摊 avg :金额平均 amount :金额分摊 |
+| 38 | fsumsharerate | 本次分摊比例合计 | numeric | 23 | 10 | √ | 0.0000000000 | 本次分摊比例合计 |
+| 39 | fbizdate | 申请日期 | timestamp | 0 |  |  | null | 申请日期 |
+| 40 | fsharerulestartdate | 开始月份 | timestamp | 0 |  |  | null | 开始月份 |
+| 41 | fshareway | 分摊方式 | bpchar | 1 |  | √ | 'B' | 分摊方式,枚举: A :事前分摊 B :事后分摊 |
+| 42 | fapproveamount | 核定金额 | numeric | 23 | 10 | √ | 0.0000000000 | 核定金额 |
+| 43 | fcurrencyid | 本位币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
+| 44 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 45 | fneedimagescan | 需要影像扫描 | bpchar | 1 |  | √ | '0' | 需要影像扫描,枚举: 1 :是 2 :否 |
+| 46 | fcompanyid | 公司 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 
 ### 列规则定义
 
@@ -353,34 +373,34 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fentrympmbizopregid | 商机号 | int8 | 64 |  |  | null | 商机登记F7 mpm_bizopregf7 |
+| 2 | fentrympmbizopregid | 商机号 | int8 | 64 |  |  | null | [商机登记F7 mpm_bizopregf7](../mpm_files/mpm_bizopregf7.md) |
 | 3 | fhappendate | 费用发生日期 | timestamp | 0 |  |  | null | 费用发生日期 |
-| 4 | fentrycurrency | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 4 | fentrycurrency | 币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 | 5 | fdeductibletax | 抵扣税额 | numeric | 23 | 10 | √ | 0.0000000000 | 抵扣税额 |
 | 6 | ftaxrate | 税率（%） | numeric | 23 | 10 | √ | 0.0000000000 | 税率（%） |
 | 7 | fsourceentryid | 源单分录ID | varchar | 100 |  | √ | ' ' | 源单分录ID |
 | 8 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 9 | foffset | 是否抵扣 | bpchar | 1 |  | √ | '1' | 是否抵扣 |
+| 9 | foffset | 可抵扣 | bpchar | 1 |  | √ | '1' | 可抵扣 |
 | 10 | freimburseamount | 报销金额 | numeric | 23 | 10 | √ | 0.0000000000 | 报销金额 |
 | 11 | fexchangerate | 汇率 | numeric | 23 | 10 | √ | 0.0000000000 | 汇率 |
 | 12 | fcurrreimburseamount | 报销金额(本位币) | numeric | 23 | 10 | √ | 0.0000000000 | 报销金额(本位币) |
 | 13 | fisspecialinvoice | 专票 | bpchar | 1 |  | √ | '1' | 专票 |
 | 14 | fcurprice | 核定不含税金额（本位币） | numeric | 23 | 10 | √ | 0.0000000000 | 核定不含税金额（本位币） |
-| 15 | finvoicetypeitem | 发票类型 | varchar | 50 |  | √ | '0' | 发票类型,枚举: 0 :空 1 :普通电子发票 2 :电子发票专票 3 :普通纸质发票 4 :专用纸质发票 5 :普通纸质卷票 7 :通用机打 8 :的士票 9 :火车票 10 :飞机票 11 :其他 12 :机动车 13 :二手车 14 :定额发票 15 :通行费 16 :客运票 17 :过路过桥费 18 :车船税发票（专票） 19 :完税证明 20 :轮船票 21 :海关缴款书 23 :通用机打电子发票 24 :火车退票 25 :财政电子票据 |
+| 15 | finvoicetypeitem | 发票类型 | varchar | 50 |  | √ | '0' | 发票类型,枚举: 0 :空 1 :普通电子发票 2 :电子发票专票 3 :普通纸质发票 4 :专用纸质发票 5 :普通纸质卷票 7 :通用机打 8 :的士票 9 :火车票 10 :飞机票 11 :其他 12 :机动车销售发票 13 :二手车销售发票 14 :定额发票 15 :通行费 16 :客运票 17 :过路过桥费 18 :车船税发票（专票） 19 :完税证明 20 :轮船票 21 :海关缴款书 23 :通用机打电子发票 24 :火车退票 25 :财政电子票据 26 :数电发票（普通发票） 27 :数电发票（增值税专用发票） 28 :数电票（航空运输电子客票行程单） 29 :数电票（铁路电子客票） 30 :形式发票 |
 | 16 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 | id |
-| 17 | ftaxclasscodeid | 税收分类编码基础资料 | int8 | 64 |  | √ | 0 | 税收分类编码 er_taxclasscode |
+| 17 | ftaxclasscodeid | 税收分类编码基础资料 | int8 | 64 |  | √ | 0 | [税收分类编码 er_taxclasscode](../basedata_files/er_taxclasscode.md) |
 | 18 | finvoiceno | 发票号码 | varchar | 255 |  | √ | ' ' | 发票号码 |
 | 19 | fsourcebillno | 源单编号 | varchar | 100 |  | √ | ' ' | 源单编号 |
-| 20 | fexpenseitemid | 费用项目 | int8 | 64 |  | √ | 0 | 费用项目 er_expenseitemedit |
+| 20 | fexpenseitemid | 费用项目 | int8 | 64 |  | √ | 0 | [费用项目 er_expenseitemedit](../basedata_files/er_expenseitemedit.md) |
 | 21 | ftaxamount | 税额 | numeric | 23 | 10 | √ | 0.0000000000 | 税额 |
-| 22 | fstdentrycostcenterid | 成本中心 | int8 | 64 |  | √ | 0 | 成本中心 bos_costcenter |
+| 22 | fstdentrycostcenterid | 成本中心 | int8 | 64 |  | √ | 0 | [成本中心 bos_costcenter](../basedata_files/bos_costcenter.md) |
 | 23 | fapprovetax | 核定税额 | numeric | 23 | 10 | √ | 0 | 核定税额 |
-| 24 | fprojectid | 项目 | int8 | 64 |  | √ | 0 | 项目 bd_project |
+| 24 | fprojectid | 项目 | int8 | 64 |  | √ | 0 | [项目 bd_project](../basedata_files/bd_project.md) |
 | 25 | fthiscurprice | 本次待摊核定不含税金额（本位币） | numeric | 23 | 10 | √ | 0.0000000000 | 本次待摊核定不含税金额（本位币） |
 | 26 | fserialno | 发票序列号 | varchar | 80 |  | √ | ' ' | 发票序列号 |
 | 27 | fthistax | fthistax | numeric | 23 | 10 | √ | 0.0000000000 |  |
 | 28 | fexpeapprovecurramount | 核定金额（本位币） | numeric | 23 | 10 | √ | 0.0000000000 | 核定金额（本位币） |
-| 29 | fairportconstructionfee | 机场建设费及其他 | numeric | 23 | 10 | √ | 0.0000000000 | 机场建设费及其他 |
+| 29 | fairportconstructionfee | 民航发展基金及其他 | numeric | 23 | 10 | √ | 0.0000000000 | 民航发展基金及其他 |
 | 30 | fthisapprovenotax | 本次待摊核定不含税金额 | numeric | 23 | 10 | √ | 0.0000000000 | 本次待摊核定不含税金额 |
 | 31 | fthisapplyamount | 本次待摊申请金额 | numeric | 23 | 10 | √ | 0.0000000000 | 本次待摊申请金额 |
 | 32 | fentrysharedamount | 已摊销金额（用于计算可摊比例） | numeric | 23 | 10 | √ | 0.0000000000 | 已摊销金额（用于计算可摊比例） |
@@ -390,22 +410,23 @@
 | 36 | foriamount | 不含税金额 | numeric | 23 | 10 | √ | 0.0000000000 | 不含税金额 |
 | 37 | fthiscurrapplyamount | 本次待摊申请金额(本位币) | numeric | 23 | 10 | √ | 0.0000000000 | 本次待摊申请金额(本位币) |
 | 38 | fprice | 核定不含税金额 | numeric | 23 | 10 | √ | 0.0000000000 | 核定不含税金额 |
-| 39 | fentrympmtaskid | 任务号 | int8 | 64 |  |  | null | 项目任务F7 mpm_task_f7 |
+| 39 | fentrympmtaskid | 任务号 | int8 | 64 |  |  | null | [项目任务 bd_projecttask](../basedata_files/bd_projecttask.md) |
 | 40 | fthisapporvetax | 本次待摊抵扣税额 | numeric | 23 | 10 | √ | 0.0000000000 | 本次待摊抵扣税额 |
-| 41 | fentrycostcompanyid | 费用承担公司 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 41 | fentrycostcompanyid | 费用承担公司 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 42 | fentrythisshareamount | fentrythisshareamount | numeric | 23 | 10 | √ | 0.0000000000 |  |
 | 43 | fgoodsname | 商品名称 | varchar | 255 |  | √ | ' ' | 商品名称 |
 | 44 | fthisiteminoutamount | 本次待摊转出金额 | numeric | 23 | 10 | √ | 0 | 本次待摊转出金额 |
 | 45 | fitemfrom | 来源 | varchar | 2 |  | √ | '0' | 来源,枚举: 0 :手动添加 1 :发票云 2 :OCR识别 3 :商旅 4 :分录导入 |
 | 46 | fremark | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
 | 47 | fthisapprovetax | 本次待摊核定税额 | numeric | 23 | 10 | √ | 0 | 本次待摊核定税额 |
-| 48 | fthisnotax | 本次待摊不含税金额 | numeric | 23 | 10 | √ | 0.0000000000 | 本次待摊不含税金额 |
-| 49 | finvoicelink | 发票代码 | varchar | 129 |  | √ | ' ' | 发票代码 |
-| 50 | fsourcebillid | 源单id | varchar | 100 |  | √ | ' ' | 源单id |
-| 51 | fiteminoutamount | 转出金额 | numeric | 23 | 10 | √ | 0 | 转出金额 |
-| 52 | fexpeapproveamount | 核定金额 | numeric | 23 | 10 | √ | 0.0000000000 | 核定金额 |
-| 53 | fentrycostdeptid | 费用承担部门 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 54 | fquotetype | 换算方式 | bpchar | 1 |  | √ | '0' | 换算方式,枚举: 0 :直接汇率 1 :间接汇率 |
+| 48 | finvoicetypeiditem | 发票类型 | int8 | 64 |  | √ | 0 | [发票类型(发票云) er_invoicetype](../basedata_files/er_invoicetype.md) |
+| 49 | fthisnotax | 本次待摊不含税金额 | numeric | 23 | 10 | √ | 0.0000000000 | 本次待摊不含税金额 |
+| 50 | finvoicelink | 发票代码 | varchar | 129 |  | √ | ' ' | 发票代码 |
+| 51 | fsourcebillid | 源单id | varchar | 100 |  | √ | ' ' | 源单id |
+| 52 | fiteminoutamount | 转出金额 | numeric | 23 | 10 | √ | 0 | 转出金额 |
+| 53 | fexpeapproveamount | 核定金额 | numeric | 23 | 10 | √ | 0.0000000000 | 核定金额 |
+| 54 | fentrycostdeptid | 费用承担部门 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 55 | fquotetype | 换算方式 | bpchar | 1 |  | √ | '0' | 换算方式,枚举: 0 :直接汇率 1 :间接汇率 |
 
 ### 列规则定义
 

@@ -1,9 +1,9 @@
-# 社区用户-community_user
+# （废弃）社区用户-community_user
 
-## 社区用户-主表 community_user
+## （废弃）社区用户-主表 t_community_user
 
-- **表名称：** 社区用户-主表
-- **表名：** community_user
+- **表名称：** （废弃）社区用户-主表
+- **表名：** t_community_user
 
 ### 表格列定义
 
@@ -22,10 +22,10 @@
 
 ---
 
-## 社区用户-多语言表 community_user_l
+## （废弃）社区用户-多语言表 t_community_user_l
 
-- **表名称：** 社区用户-多语言表
-- **表名：** community_user_l
+- **表名称：** （废弃）社区用户-多语言表
+- **表名：** t_community_user_l
 
 ### 表格列定义
 

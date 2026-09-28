@@ -13,7 +13,7 @@
 | 2 | ftimingsequence | 时序字段 | varchar | 255 |  | √ | ' ' | 时序字段,枚举: |
 | 3 | ftargetroute | 目标业务库 | varchar | 255 |  | √ | ' ' | 目标业务库,枚举: |
 | 4 | frelationtableinfo | 关联表信息 | varchar | 50 |  | √ | ' ' | 关联表信息 |
-| 5 | fentitynumber | 实体名称 | varchar | 255 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 5 | fentitynumber | 实体名称 | varchar | 255 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 6 | fenable | 是否启用 | bpchar | 1 |  | √ | ' ' | 是否启用 |
 | 7 | fsyncstatus | 同步状态 | varchar | 50 |  | √ | ' ' | 同步状态,枚举: FINISHED :已同步 RUNNING :同步中 FAILED :同步失败 UNCONFIG :未配置 |
 

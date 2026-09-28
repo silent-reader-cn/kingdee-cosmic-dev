@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fperiodid | 会计期间 | int8 | 64 |  | √ | 0 | 会计期间 |
-| 3 | fcreatorid | 执行用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fcreatorid | 执行用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fexecuteresult | 执行状态 | bpchar | 1 |  | √ | '0' | 执行状态,枚举: 0 :默认 1 :成功 2 :失败 |
 | 5 | fcreatetime | 执行开始日期 | timestamp | 0 |  |  | null | 执行开始日期 |
 | 6 | fschemeid | 期末方案 | int8 | 64 |  | √ | 0 | 期末方案 |

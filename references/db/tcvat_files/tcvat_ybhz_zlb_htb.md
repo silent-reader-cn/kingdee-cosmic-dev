@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | ftaxamount | 销项税额 | numeric | 23 | 10 | √ | 0 | 销项税额 |
-| 3 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | fsuborgname | fsuborgname | varchar | 50 |  | √ | ' ' |  |
 | 5 | fjzse | 减征税额 | numeric | 23 | 10 | √ | 0 | 减征税额 |
 | 6 | fseq | 序号 | int8 | 64 |  | √ | 0 | 序号 |
@@ -21,7 +21,7 @@
 | 10 | fenddate | 税款所属期止 | timestamp | 0 |  |  | null | 税款所属期止 |
 | 11 | fybtse | 应补退税额 | numeric | 23 | 10 | √ | 0 | 应补退税额 |
 | 12 | ftype | 类别 | varchar | 50 |  | √ | ' ' | 类别,枚举: 1 :一般货物及劳务 2 :应税服务 |
-| 13 | fsuborgid | 组织编码 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 13 | fsuborgid | 组织编码 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 14 | fstartdate | 税款所属期起 | timestamp | 0 |  |  | null | 税款所属期起 |
 | 15 | ftaxmethodtype | 征收方式编码 | varchar | 20 |  | √ | ' ' | 征收方式编码 |
 | 16 | fynse | 应纳税额 | numeric | 23 | 10 | √ | 0 | 应纳税额 |

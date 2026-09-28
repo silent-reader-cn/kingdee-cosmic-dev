@@ -12,11 +12,11 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fswjsdqzjtxe | 税务实际当期折旧摊销额 | numeric | 23 | 10 | √ | 0.0000000000 | 税务实际当期折旧摊销额 |
 | 3 | fcleaningdate | 清理日期 | timestamp | 0 |  |  | null | 清理日期 |
-| 4 | forgid | 核算组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 4 | forgid | 核算组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | fjszjtxlx | 加速折旧摊销类型 | int8 | 64 |  | √ | 0 | 项目取数（树） tpo_yearitems_tree |
 | 6 | fremarks | fremarks | varchar | 255 |  | √ | ' ' |  |
 | 7 | fseq | fseq | int4 | 32 |  | √ | 0 |  |
-| 8 | fassetdataid | 资产编码 | int8 | 64 |  | √ | 0 | 资产清单 tdm_asset_data |
+| 8 | fassetdataid | 资产编码 | int8 | 64 |  | √ | 0 | [资产清单 tdm_asset_data](../tdm_files/tdm_asset_data.md) |
 | 9 | faccountingperiod | 会计期间 | timestamp | 0 |  |  | null | 会计期间 |
 | 10 | fkjljzjtxe | 会计累计折旧摊销额 | numeric | 23 | 10 | √ | 0.0000000000 | 会计累计折旧摊销额 |
 | 11 | fdeclarethisperiod | 本期是否应申报 | bpchar | 1 |  | √ | ' ' | 本期是否应申报 |
@@ -44,22 +44,22 @@
 | 33 | fpostingdate | 起始日期 | timestamp | 0 |  |  | null | 起始日期 |
 | 34 | fentryid | 父级单据标识 | int8 | 64 |  | √ | 0 | 父级单据标识 |
 | 35 | fswybzjtxff | 税务一般折旧摊销方法 | varchar | 50 |  | √ | ' ' | 税务一般折旧摊销方法 |
-| 36 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 36 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 37 | fdqjszjyswzjcy | 本期税务实际与税务一般折旧差异 | numeric | 23 | 10 | √ | 0.0000000000 | 本期税务实际与税务一般折旧差异 |
 | 38 | fbnjszjyswzjcy | 本年税务实际与税务一般折旧差异 | numeric | 23 | 10 | √ | 0.0000000000 | 本年税务实际与税务一般折旧差异 |
 | 39 | fcalctaxbase | 计税基础 | numeric | 23 | 10 | √ | 0.0000000000 | 计税基础 |
 | 40 | fswybbnzjtxe | 税务一般本年折旧摊销额 | numeric | 23 | 10 | √ | 0.0000000000 | 税务一般本年折旧摊销额 |
-| 41 | fsource | 数据来源 | varchar | 50 |  | √ | ' ' | 数据来源,枚举: handadd :手工新增 system :系统生成 import :数据引入 |
+| 41 | fsource | 数据来源 | varchar | 50 |  | √ | ' ' | 数据来源,枚举: handadd :手工新增 system :系统生成 import :数据导入 |
 | 42 | fswybdqzjtxe | 税务一般当期折旧摊销额 | numeric | 23 | 10 | √ | 0.0000000000 | 税务一般当期折旧摊销额 |
 | 43 | ftaxassetstype | 税务资产类别 | int8 | 64 |  | √ | 0 | 项目取数（树） tpo_yearitems_tree |
 | 44 | fswybzjtxqs | 税务一般折旧摊销期数 | int8 | 64 |  | √ | 0 | 税务一般折旧摊销期数 |
 | 45 | fassetsname | 资产名称 | varchar | 200 |  | √ | ' ' | 资产名称 |
-| 46 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 46 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 47 | fzjtxmethod | 会计折旧摊销方法 | varchar | 50 |  | √ | ' ' | 会计折旧摊销方法 |
 | 48 | fkjbnzjtxe | 会计本年折旧摊销额 | numeric | 23 | 10 | √ | 0.0000000000 | 会计本年折旧摊销额 |
 | 49 | fzctype | 资产类别 | varchar | 50 |  | √ | ' ' | 资产类别 |
 | 50 | fswybljzjtxe | 税务一般累计折旧摊销额 | numeric | 23 | 10 | √ | 0.0000000000 | 税务一般累计折旧摊销额 |
-| 51 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 51 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 52 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 53 | fdqjszjykjzjcy | 当期实际折旧与会计一般折旧差异 | numeric | 23 | 10 | √ | 0.0000000000 | 当期实际折旧与会计一般折旧差异 |
 | 54 | frdaddition | 是否研发形成 | varchar | 50 |  | √ | ' ' | 是否研发形成,枚举: 1 :是 0 :否 |

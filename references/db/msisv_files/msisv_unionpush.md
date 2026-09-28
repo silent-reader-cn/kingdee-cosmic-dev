@@ -10,28 +10,28 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmonitorobj | 监听对象 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 2 | fmonitorobj | 监听对象 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 3 | fsrcbillfilterjson_tag | 来源单据过滤条件json_详情 | text | 0 |  |  | null | 来源单据过滤条件json_详情 |
-| 4 | ftarbill | 目标单据 | varchar | 50 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 4 | ftarbill | 目标单据 | varchar | 50 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 5 | frelateobjfilterjson | 过滤条件json | varchar | 255 |  | √ | ' ' | 过滤条件json |
 | 6 | fdisabledate | 禁用时间 | timestamp | 0 |  |  | null | 禁用时间 |
 | 7 | ftarbillmainfield | 目标单据字段 | varchar | 50 |  | √ | ' ' | 目标单据字段 |
-| 8 | fsrcbill | 来源单据 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 8 | fsrcbill | 来源单据 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 9 | fisinvorelateobj | 是否涉及关联对象 | bpchar | 1 |  | √ | '0' | 是否涉及关联对象 |
 | 10 | frelateobjfilterjson_tag | 过滤条件json_详情 | text | 0 |  |  | null | 过滤条件json_详情 |
 | 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 12 | fbotpruleid | BOTP转换规则 | varchar | 50 |  | √ | ' ' | 转换规则 botp_crlist |
+| 12 | fbotpruleid | BOTP转换规则 | varchar | 50 |  | √ | ' ' | [转换规则 botp_crlist](../botp_files/botp_crlist.md) |
 | 13 | fstatus | 数据状态 | bpchar | 1 |  | √ | 'C' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 14 | frelateobjfilter | 过滤条件 | varchar | 255 |  | √ | ' ' | 过滤条件 |
 | 15 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 16 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 17 | frelateobj | 关联对象 | varchar | 50 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 16 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 17 | frelateobj | 关联对象 | varchar | 50 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 18 | frelateobjmainfield | 关联对象字段 | varchar | 50 |  | √ | ' ' | 关联对象字段 |
-| 19 | fdisabler | 禁用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 19 | fdisabler | 禁用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 20 | frelateobjmainfieldkey | 关联对象字段标识 | varchar | 50 |  | √ | ' ' | 关联对象字段标识 |
 | 21 | ftarbillmainfieldkey | 目标单据字段标识 | varchar | 50 |  | √ | ' ' | 目标单据字段标识 |
 | 22 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 23 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 23 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 24 | fsrcbillfilterjson | 来源单据过滤条件json | varchar | 255 |  | √ | ' ' | 来源单据过滤条件json |
 | 25 | fsrcbillfilter | 来源单据过滤条件 | varchar | 255 |  | √ | ' ' | 来源单据过滤条件 |
 | 26 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |

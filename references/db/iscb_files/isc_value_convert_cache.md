@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fconvert_rule | 值转换规则 | int8 | 64 |  | √ | 0 | 值转换规则 isc_value_conver_rule |
+| 2 | fconvert_rule | 值转换规则 | int8 | 64 |  | √ | 0 | [值转换规则 isc_value_conver_rule](../iscb_files/isc_value_conver_rule.md) |
 | 3 | fsrc | 源单值 | varchar | 200 |  | √ | ' ' | 源单值 |
 | 4 | ftar | 目标值 | varchar | 200 |  | √ | ' ' | 目标值 |
 

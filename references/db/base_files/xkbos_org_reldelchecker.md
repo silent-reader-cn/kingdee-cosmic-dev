@@ -40,19 +40,19 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 5 | frefbillnumber | 引用单据编码 | varchar | 100 |  | √ | ' ' | 引用单据编码 |
-| 6 | fxkorgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | fxkorgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 8 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 11 | frefbilltypename | 单据类型名称 | varchar | 255 |  | √ | ' ' | 单据类型名称 |
 | 12 | frefbilltypenumber | 单据类型编码 | varchar | 100 |  | √ | ' ' | 单据类型编码 |
 | 13 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 14 | fnumber | 编码 | varchar | 50 |  | √ | ' ' | 编码 |
-| 15 | fxkadminorgid | 部门 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 15 | fxkadminorgid | 部门 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 16 | forgrelationid | 业务单元分配部门ID | varchar | 100 |  | √ | ' ' | 业务单元分配部门ID |
 
 ### 列规则定义

@@ -46,7 +46,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fiscreatedtransdown | fiscreatedtransdown | bpchar | 1 |  | √ | ' ' |  |
 | 3 | fbankcheckflag | 对账标识码 | varchar | 255 |  |  | null | 对账标识码 |
-| 4 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 4 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | foppunit | 对方单位 | varchar | 255 |  | √ | ' ' | 对方单位 |
 | 6 | ftranpackageid | ftranpackageid | varchar | 100 |  | √ | ' ' |  |
 | 7 | fagentaccname | fagentaccname | varchar | 100 |  | √ | ' ' |  |
@@ -74,14 +74,14 @@
 | 29 | fagentaccno | fagentaccno | varchar | 80 |  | √ | ' ' |  |
 | 30 | fagentaccbkname | fagentaccbkname | varchar | 100 |  | √ | ' ' |  |
 | 31 | fsrcbilltype | fsrcbilltype | int8 | 64 |  | √ | 0 |  |
-| 32 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 32 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 33 | frecedbilltype | 接收单据类型 | varchar | 30 |  | √ | ' ' | 接收单据类型,枚举: 6E41E17C :结算单 cas_paybill :付款单 recbill :收款单 5E920865 :下拨单 D125C4DE :上划单 other :其它单据 |
 | 34 | fbanklog | fbanklog | int8 | 64 |  | √ | 0 |  |
 | 35 | fisreced | 是否被接收 | bpchar | 1 |  | √ | ' ' | 是否被接收 |
 | 36 | foppbank | 对方银行 | varchar | 255 |  | √ | ' ' | 对方银行 |
 | 37 | fisdebit | 是否付款 | bpchar | 1 |  | √ | ' ' | 是否付款 |
 | 38 | fhasrefundpay | fhasrefundpay | bpchar | 1 |  | √ | ' ' |  |
-| 39 | fbankaccount | 银行账户 | int8 | 64 |  | √ | 0 | 银行账户 bd_accountbanks |
+| 39 | fbankaccount | 银行账户 | int8 | 64 |  | √ | 0 | [银行账户 bd_accountbanks](../basedata_files/bd_accountbanks.md) |
 | 40 | frecedbillnumber | 接收单据编号 | varchar | 80 |  | √ | ' ' | 接收单据编号 |
 | 41 | fisdataimport | 是否导入 | bpchar | 1 |  | √ | ' ' | 是否导入 |
 | 42 | fbizrefno | 银行流水号 | varchar | 255 |  |  | null | 银行流水号 |
@@ -91,15 +91,15 @@
 | 46 | fbiztype | 业务类型 | varchar | 30 |  | √ | ' ' | 业务类型,枚举: 1 :普通 2 :上划 3 :下拨 |
 | 47 | fistransup | 银行上划 | bpchar | 1 |  | √ | ' ' | 银行上划 |
 | 48 | fcreatedate | fcreatedate | timestamp | 0 |  |  | null |  |
-| 49 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 49 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 50 | frawtranstime | frawtranstime | timestamp | 0 |  |  | null |  |
 | 51 | fisnoreceipt | 是否确认无回单 | bpchar | 1 |  | √ | ' ' | 是否确认无回单 |
 | 52 | foppcompanyid | foppcompanyid | int8 | 64 |  | √ | 0 |  |
 | 53 | fisrefund | 是否退票 | bpchar | 1 |  | √ | ' ' | 是否退票 |
-| 54 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 54 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 55 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 56 | foriginalbankcheckflag | 对账标识码（银行返回） | varchar | 255 |  |  | null | 对账标识码（银行返回） |
-| 57 | fcurrency | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 57 | fcurrency | 币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 | 58 | fistransdown | 银行下拨 | bpchar | 1 |  | √ | ' ' | 银行下拨 |
 | 59 | fismatchereceipt | 是否跟电子回单匹配 | bpchar | 1 |  | √ | ' ' | 是否跟电子回单匹配 |
 | 60 | fstate | fstate | int8 | 64 |  | √ | 0 |  |

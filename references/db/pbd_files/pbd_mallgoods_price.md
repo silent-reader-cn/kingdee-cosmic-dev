@@ -12,7 +12,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fdiscountrate | 折扣率 | numeric | 19 | 6 | √ | 0.000000 | 折扣率 |
 | 3 | ftaxrate | 税率 | numeric | 19 | 6 | √ | 0.000000 | 税率 |
-| 4 | fmallgoodsid | 电商商品 | int8 | 64 |  | √ | 0 | 电商商品 pbd_mallgoods |
+| 4 | fmallgoodsid | 电商商品 | int8 | 64 |  | √ | 0 | [电商商品 pbd_mallgoods](../pbd_files/pbd_mallgoods.md) |
 | 5 | ftaxprice | 税额 | numeric | 23 | 10 | √ | 0.0000000000 | 税额 |
 | 6 | fmallprice | 电商价 | numeric | 23 | 10 | √ | 0.0000000000 | 电商价 |
 | 7 | fnakedprice | 不含税价 | numeric | 23 | 10 | √ | 0.0000000000 | 不含税价 |

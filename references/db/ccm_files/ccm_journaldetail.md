@@ -13,10 +13,10 @@
 | 2 | farchiveid | 关联档案ID | int8 | 64 |  | √ | 0 | 关联档案ID |
 | 3 | fsrcentryid | 上游单据分录ID | int8 | 64 |  | √ | 0 | 上游单据分录ID |
 | 4 | fsrcbillno | 源单编号 | varchar | 80 |  | √ | ' ' | 源单编号 |
-| 5 | fdimensionid | 维度 | int8 | 64 |  | √ | 0 | 信控维度 ccm_dimension |
-| 6 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | fdimensionid | 维度 | int8 | 64 |  | √ | 0 | [信控维度 ccm_dimension](../ccm_files/ccm_dimension.md) |
+| 6 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fop | 单据操作 | varchar | 30 |  | √ | ' ' | 单据操作 |
-| 8 | fschemeid | 信控方案 | int8 | 64 |  | √ | 0 | 信用控制方案 ccm_schemes |
+| 8 | fschemeid | 信控方案 | int8 | 64 |  | √ | 0 | [信用控制方案 ccm_schemes](../ccm_files/ccm_schemes.md) |
 | 9 | fbilldate | 单据日期 | timestamp | 0 |  |  | null | 单据日期 |
 | 10 | foriginalamount | 原始数额 | numeric | 23 | 10 | √ | 0 | 原始数额 |
 | 11 | famount | 数额 | numeric | 23 | 10 | √ | 0 | 数额 |
@@ -26,9 +26,9 @@
 | 15 | fmainbillid | 主业务单据ID | int8 | 64 |  | √ | 0 | 主业务单据ID |
 | 16 | froleid2 | 维度成员值2 | int8 | 64 |  | √ | 0 | 维度成员值2 |
 | 17 | froleid1 | 维度成员值1 | int8 | 64 |  | √ | 0 | 维度成员值1 |
-| 18 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 18 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 19 | froleid3 | 维度成员值3 | int8 | 64 |  | √ | 0 | 维度成员值3 |
-| 20 | fchecktypeid | 控制范围 | int8 | 64 |  | √ | 0 | （废弃）信用控制形式 ccm_checktype |
+| 20 | fchecktypeid | 控制范围 | int8 | 64 |  | √ | 0 | [（废弃）信用控制形式 ccm_checktype](../ccm_files/ccm_checktype.md) |
 | 21 | fbillno | 单据编码 | varchar | 80 |  | √ | ' ' | 单据编码 |
 | 22 | fmainbaseunitid | 基本单位 | int8 | 64 |  | √ | 0 | 基本单位 |
 | 23 | fsrcjournalid | 反向更新对应的更新的流水id | int8 | 64 |  | √ | 0 | 反向更新对应的更新的流水id |

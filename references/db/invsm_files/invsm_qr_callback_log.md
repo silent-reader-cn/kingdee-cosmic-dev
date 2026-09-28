@@ -31,5 +31,5 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | pk_invsm_qr_callback_log |  | fid |
-| 2 | idx_invsm_qr_callback_log |  | fvatinvoiceid |
+| 1 | idx_invsm_qr_callback_log |  | fvatinvoiceid |
+| 2 | pk_invsm_qr_callback_log |  | fid |

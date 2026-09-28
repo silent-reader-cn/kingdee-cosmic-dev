@@ -10,13 +10,13 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fsplitfieldvalue | 拆分依据字段 | varchar | 2000 |  |  | ' ' | 拆分依据字段 |
-| 2 | finventperson | 盘点负责人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | finventperson | 盘点负责人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fentrystatus | 状态 | bpchar | 1 |  | √ | 'A' | 状态,枚举: A :未下达 B :已下达 C :已生成 |
-| 4 | finventschemeid | 盘点方案id | int8 | 64 |  | √ | 0 | 盘点方案 fa_inventscheme_new |
+| 4 | finventschemeid | 盘点方案id | int8 | 64 |  | √ | 0 | [盘点方案 fa_inventscheme_new](../fa_files/fa_inventscheme_new.md) |
 | 5 | fseq | fseq | int8 | 64 |  | √ | 0 |  |
 | 6 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 | id |
 | 7 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
-| 8 | fentryid | 盘点范围id | int8 | 64 |  | √ | 0 | 盘点范围(原我的盘点任务) fa_inventory_sope |
+| 8 | fentryid | 盘点范围id | int8 | 64 |  | √ | 0 | [盘点范围(原我的盘点任务) fa_inventory_sope](../fa_files/fa_inventory_sope.md) |
 
 ### 列规则定义
 
@@ -42,7 +42,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 2 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 |  |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 

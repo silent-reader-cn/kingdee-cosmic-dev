@@ -11,10 +11,10 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fstatinfo | 列表统计项 | text | 0 |  |  | null | 列表统计项 |
-| 3 | fcreator | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fcreator | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fcreatedate | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
 | 5 | fmodifydate | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
-| 6 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 7 | fuserid | 用户id | int8 | 64 |  | √ | 0 | 用户id |
 | 8 | fformid | 表单id | varchar | 50 |  | √ | ' ' | 表单id |
 | 9 | fappid | 应用id | varchar | 50 |  | √ | ' ' | 应用id |

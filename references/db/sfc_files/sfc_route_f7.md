@@ -10,17 +10,17 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | factscheduling | 排程 | bpchar | 1 |  | √ | '0' | 排程 |
-| 2 | fstandardformula1id | 标准公式 | int8 | 64 |  | √ | 0 | 工序活动公式(废弃) mpdm_processformula |
+| 2 | fstandardformula1id | 标准公式 | int8 | 64 |  | √ | 0 | [工序活动公式(废弃) mpdm_processformula](../mpdm_files/mpdm_processformula.md) |
 | 3 | fprocessno | 工序号 | varchar | 50 |  | √ | ' ' | 工序号 |
 | 4 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 5 | factivityid | 活动编码 | int8 | 64 |  | √ | 0 | 工序活动定义(废弃) mpdm_processactivity |
+| 5 | factivityid | 活动编码 | int8 | 64 |  | √ | 0 | [工序活动定义(废弃) mpdm_processactivity](../mpdm_files/mpdm_processactivity.md) |
 | 6 | foperationnumber | 工序名称 | varchar | 50 |  | √ | ' ' | 工序名称 |
 | 7 | fprocessstage | 工序阶段 | bpchar | 1 |  | √ | ' ' | 工序阶段,枚举: A :排队阶段 B :准备阶段 C :加工阶段 D :拆卸阶段 E :等待阶段 F :转移阶段 |
-| 8 | fminformulaid | 最小值公式 | int8 | 64 |  | √ | 0 | 工序活动公式(废弃) mpdm_processformula |
+| 8 | fminformulaid | 最小值公式 | int8 | 64 |  | √ | 0 | [工序活动公式(废弃) mpdm_processformula](../mpdm_files/mpdm_processformula.md) |
 | 9 | fbiztype | 业务类型 | bpchar | 1 |  | √ | ' ' | 业务类型,枚举: A :生产 B :成本 C :工资 |
-| 10 | fstandardformulaid | 标准公式 | int8 | 64 |  | √ | 0 | 工序活动公式(废弃) mpdm_processformula |
-| 11 | factresourceid | 资源 | int8 | 64 |  | √ | 0 | 资源维护(废弃) mpdm_resources |
-| 12 | fminformula1id | 最小值公式 | int8 | 64 |  | √ | 0 | 工序活动公式(废弃) mpdm_processformula |
+| 10 | fstandardformulaid | 标准公式 | int8 | 64 |  | √ | 0 | [工序活动公式(废弃) mpdm_processformula](../mpdm_files/mpdm_processformula.md) |
+| 11 | factresourceid | 资源 | int8 | 64 |  | √ | 0 | [资源维护(废弃) mpdm_resources](../mpdm_files/mpdm_resources.md) |
+| 12 | fminformula1id | 最小值公式 | int8 | 64 |  | √ | 0 | [工序活动公式(废弃) mpdm_processformula](../mpdm_files/mpdm_processformula.md) |
 | 13 | fbaseqty | 基本数量 | numeric | 23 | 10 | √ | 0.0000000000 | 基本数量 |
 | 14 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 | id |
 | 15 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
@@ -50,28 +50,28 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fgroupid | 工艺路线分组 | int8 | 64 |  | √ | 0 | 树形基础资料模板 mpdm_processgroup |
-| 3 | fmaterialid | 物料编码 | int8 | 64 |  | √ | 0 | 物料 bd_material |
-| 4 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 5 | fmaterialgroupid | 物料控制组 | int8 | 64 |  | √ | 0 | 物料控制组 bd_materialcontrolgroup |
-| 6 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fgroupid | 工艺路线分组 | int8 | 64 |  | √ | 0 | [树形基础资料模板 mpdm_processgroup](../mpdm_files/mpdm_processgroup.md) |
+| 3 | fmaterialid | 物料编码 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
+| 4 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 5 | fmaterialgroupid | 物料控制组 | int8 | 64 |  | √ | 0 | [物料控制组 bd_materialcontrolgroup](../basedata_files/bd_materialcontrolgroup.md) |
+| 6 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | faudittime | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
 | 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 9 | fcancelerid | 禁用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 10 | froutereplace | 替代号 | int8 | 64 |  | √ | 0 | 基础资料带组织模板 mpdm_routereplace |
+| 9 | fcancelerid | 禁用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 10 | froutereplace | 替代号 | int8 | 64 |  | √ | 0 | [基础资料带组织模板 mpdm_routereplace](../mpdm_files/mpdm_routereplace.md) |
 | 11 | fstatus | 数据状态 | bpchar | 1 |  | √ | 'A' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 12 | fcanceltime | 禁用时间 | timestamp | 0 |  |  | null | 禁用时间 |
-| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 15 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 16 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
-| 17 | fbomversionid | BOM | int8 | 64 |  | √ | 0 | 制造BOMf7(废弃) sfc_mftbomf7 |
-| 18 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 17 | fbomversionid | BOM | int8 | 64 |  | √ | 0 | [制造BOMf7(废弃) sfc_mftbomf7](../sfc_files/sfc_mftbomf7.md) |
+| 18 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 19 | fremark | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
-| 20 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 20 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 21 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 22 | funitid | 计量单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 23 | fversionid | 版本 | int8 | 64 |  | √ | 0 | 基础资料带组织模板 mpdm_processversion |
+| 22 | funitid | 计量单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 23 | fversionid | 版本 | int8 | 64 |  | √ | 0 | [基础资料带组织模板 mpdm_processversion](../mpdm_files/mpdm_processversion.md) |
 | 24 | fprocesstype | 工艺类型 | bpchar | 1 |  | √ | ' ' | 工艺类型,枚举: A :物料 B :物料组 C :通用 |
 | 25 | fctrlstrategy | 控制策略 | varchar | 100 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
 | 26 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
@@ -79,7 +79,7 @@
 | 28 | fauxpropertyid | 辅助属性 | int8 | 64 |  | √ | 0 | null 001 |
 | 29 | fismainprocess | 主工艺路线 | bpchar | 1 |  | √ | '1' | 主工艺路线 |
 | 30 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
-| 31 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 31 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 
@@ -191,7 +191,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fresourceid | 资源编码 | int8 | 64 |  | √ | 0 | 资源维护(废弃) mpdm_resources |
+| 1 | fresourceid | 资源编码 | int8 | 64 |  | √ | 0 | [资源维护(废弃) mpdm_resources](../mpdm_files/mpdm_resources.md) |
 | 2 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 3 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 | id |
 | 4 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
@@ -222,34 +222,34 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | foperationno | 工序号 | varchar | 100 |  | √ | ' ' | 工序号 |
-| 3 | fproductionworkshopid | 生产车间 | int8 | 64 |  | √ | 0 | 车间设置 mpdm_workshopsetup |
+| 3 | fproductionworkshopid | 生产车间 | int8 | 64 |  | √ | 0 | [车间设置 mpdm_workshopsetup](../mpdm_files/mpdm_workshopsetup.md) |
 | 4 | ffirstcheck | 首检 | bpchar | 1 |  | √ | '0' | 首检 |
 | 5 | foverlapqty | 重叠批量 | numeric | 23 | 10 | √ | 0.0000000000 | 重叠批量 |
 | 6 | fstoragepoint | fstoragepoint | bpchar | 1 |  | √ | '0' |  |
 | 7 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 8 | foperationqty | 工序数量 | numeric | 23 | 10 | √ | 0.0000000000 | 工序数量 |
 | 9 | fchecktype | 检验方式 | varchar | 50 |  | √ | ' ' | 检验方式,枚举: 1011 :免检 1012 :车间检验 1013 :质量检验 |
-| 10 | foverlapunitid | 计量单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 10 | foverlapunitid | 计量单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 11 | ffloorratio | 汇报下限比例(%) | numeric | 23 | 10 | √ | 0.0000000000 | 汇报下限比例(%) |
 | 12 | fbasebatchqty | 基本批量 | numeric | 23 | 10 | √ | 0.0000000000 | 基本批量 |
-| 13 | fworkcenterid | 工作中心 | int8 | 64 |  | √ | 0 | 工作中心定义(废弃) mpdm_workcentre |
+| 13 | fworkcenterid | 工作中心 | int8 | 64 |  | √ | 0 | [工作中心定义(废弃) mpdm_workcentre](../mpdm_files/mpdm_workcentre.md) |
 | 14 | fminoverlaptime | 重叠最小时间 | numeric | 23 | 10 | √ | 0.0000000000 | 重叠最小时间 |
 | 15 | fminworktime | 最小加工时间 | numeric | 23 | 10 | √ | 0.0000000000 | 最小加工时间 |
-| 16 | foperationid | 工序编码 | int8 | 64 |  | √ | 0 | 标准工序定义(废弃) mpdm_workprocedure |
+| 16 | foperationid | 工序编码 | int8 | 64 |  | √ | 0 | [标准工序定义(废弃) mpdm_workprocedure](../mpdm_files/mpdm_workprocedure.md) |
 | 17 | fremark | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
 | 18 | fparentid | 工序序列 | varchar | 100 |  | √ | ' ' | 工序序列 |
 | 19 | fissplit | 是否拆分排程 | bpchar | 1 |  | √ | '0' | 是否拆分排程 |
 | 20 | fsplitqty | 建议拆分数 | numeric | 23 | 10 | √ | 0.0000000000 | 建议拆分数 |
-| 21 | foperationunitid | 工序单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 21 | foperationunitid | 工序单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 22 | fheadqty | 表头数量 | numeric | 23 | 10 | √ | 0.0000000000 | 表头数量 |
-| 23 | foprctrlstrategy | 工序控制策略 | varchar | 100 |  | √ | ' ' | 工序控制策略(废弃) mpdm_proctrlstrategy |
+| 23 | foprctrlstrategy | 工序控制策略 | varchar | 100 |  | √ | ' ' | [工序控制策略(废弃) mpdm_proctrlstrategy](../mpdm_files/mpdm_proctrlstrategy.md) |
 | 24 | foperationdesc | 工序说明 | varchar | 50 |  | √ | ' ' | 工序说明 |
 | 25 | foverlaptimeunit | 重叠时间单位 | bpchar | 1 |  | √ | ' ' | 重叠时间单位,枚举: A :分钟 B :秒 |
 | 26 | fbottleprocedure | fbottleprocedure | bpchar | 1 |  | √ | '0' |  |
 | 27 | ftimeunit | 加工时间单位 | bpchar | 1 |  | √ | ' ' | 加工时间单位,枚举: A :分钟 B :秒 |
 | 28 | fisprocessoverlap | 是否工序重叠 | bpchar | 1 |  | √ | '0' | 是否工序重叠 |
-| 29 | fproductionorgid | 加工组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 30 | fheadunitid | 表头单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 29 | fproductionorgid | 加工组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 30 | fheadunitid | 表头单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 31 | fupperratio | 汇报上限比例(%) | numeric | 23 | 10 | √ | 0.0000000000 | 汇报上限比例(%) |
 | 32 | fismilestoneprocess | fismilestoneprocess | bpchar | 1 |  | √ | '0' |  |
 | 33 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
@@ -282,23 +282,23 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fpurchaserid | fpurchaserid | int8 | 64 |  | √ | 0 |  |
-| 3 | ftaxrate | 税率 | int8 | 64 |  | √ | 0 | 税率 bd_taxrate |
+| 3 | ftaxrate | 税率 | int8 | 64 |  | √ | 0 | [税率 bd_taxrate](../basedata_files/bd_taxrate.md) |
 | 4 | ftaxpricea | ftaxpricea | numeric | 23 | 10 | √ | 0.0000000000 |  |
 | 5 | fsettlementcoefficient | 结算系数 | numeric | 23 | 10 | √ | 0.0000000000 | 结算系数 |
-| 6 | fpurchasepersonid | 采购员 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 7 | fpurchasegroupid | 采购组 | int8 | 64 |  | √ | 0 | 采购业务组(封存) bd_pmoperatorgroup |
+| 6 | fpurchasepersonid | 采购员 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 7 | fpurchasegroupid | 采购组 | int8 | 64 |  | √ | 0 | [采购业务组(封存) bd_pmoperatorgroup](../sbd_files/bd_pmoperatorgroup.md) |
 | 8 | ftaxpriceb | ftaxpriceb | numeric | 23 | 10 | √ | 0.0000000000 |  |
 | 9 | ftaxprice | 含税单价 | numeric | 23 | 10 | √ | 0.0000000000 | 含税单价 |
 | 10 | fpricea | fpricea | numeric | 23 | 10 | √ | 0.0000000000 |  |
 | 11 | fprice | 单价 | numeric | 23 | 10 | √ | 0.0000000000 | 单价 |
 | 12 | fpriceb | fpriceb | numeric | 23 | 10 | √ | 0.0000000000 |  |
-| 13 | fsupplierid | 供应商 | int8 | 64 |  | √ | 0 | 供应商 bd_supplier |
-| 14 | fpurchaseorgid | 采购组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 13 | fsupplierid | 供应商 | int8 | 64 |  | √ | 0 | [供应商 bd_supplier](../basedata_files/bd_supplier.md) |
+| 14 | fpurchaseorgid | 采购组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 15 | fmachiningtype | 加工类型 | bpchar | 4 |  | √ | ' ' | 加工类型,枚举: 1001 :厂内加工 1002 :委外加工 1003 :内协加工 1004 :不限制 |
-| 16 | fentrymaterialid | 物料 | int8 | 64 |  | √ | 0 | 物料 bd_material |
-| 17 | fcurrencyfield | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 16 | fentrymaterialid | 物料 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
+| 17 | fcurrencyfield | 币别 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 | 18 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
-| 19 | fsettlementunitid | 结算单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 19 | fsettlementunitid | 结算单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 
 ### 列规则定义
 

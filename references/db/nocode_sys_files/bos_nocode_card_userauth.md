@@ -23,6 +23,6 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_nc_cu_cid |  | fcardid |
-| 2 | pk_nocode_card_userauth |  | fid |
+| 1 | pk_nocode_card_userauth |  | fid |
+| 2 | idx_nc_cu_cid |  | fcardid |
 | 3 | idx_nc_cu_uid |  | fuserid |

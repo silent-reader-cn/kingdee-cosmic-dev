@@ -17,8 +17,8 @@
 | 6 | fopdesc_tag | 操作描述_详情 | text | 0 |  |  | null | 操作描述_详情 |
 | 7 | fopdesc | 操作描述 | varchar | 255 |  | √ | ' ' | 操作描述 |
 | 8 | fbillinfo_tag | 单据信息_详情 | text | 0 |  |  | null | 单据信息_详情 |
-| 9 | fuserid | 操作用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 10 | fbizobjid | 操作对象 | varchar | 50 |  | √ | ' ' | 业务对象 bos_objecttype |
+| 9 | fuserid | 操作用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 10 | fbizobjid | 操作对象 | varchar | 50 |  | √ | ' ' | [业务对象 bos_objecttype](../mdl_files/bos_objecttype.md) |
 | 11 | fbillno | 单据编号 | varchar | 80 |  | √ | ' ' | 单据编号 |
 | 12 | fbillinfo | 单据信息 | varchar | 255 |  | √ | ' ' | 单据信息 |
 

@@ -10,12 +10,12 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fname | fname | varchar | 50 |  | √ | ' ' |  |
-| 3 | fdatatypeid | 数据类型 | int8 | 64 |  | √ | 0 | 数据类型定义 bas_datatype |
+| 2 | fname | fname | varchar | 255 |  |  | ' ' |  |
+| 3 | fdatatypeid | 数据类型 | int8 | 64 |  | √ | 0 | [数据类型定义 bas_datatype](../base_files/bas_datatype.md) |
 | 4 | fextdataid | 外部数据ID | varchar | 45 |  | √ | ' ' | 外部数据ID |
 | 5 | fdataid | 内部数据ID | int8 | 64 |  | √ | 0 | 内部数据ID |
 | 6 | fnumber | 内部数据编码 | varchar | 50 |  | √ | ' ' | 内部数据编码 |
-| 7 | fextname | fextname | varchar | 50 |  | √ | ' ' |  |
+| 7 | fextname | fextname | varchar | 255 |  |  | ' ' |  |
 | 8 | fextnumber | 外部数据编码 | varchar | 50 |  | √ | ' ' | 外部数据编码 |
 
 ### 列规则定义
@@ -43,10 +43,10 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fname | 内部数据名称 | varchar | 255 |  | √ | ' ' | 内部数据名称 |
+| 2 | fname | 内部数据名称 | varchar | 255 |  |  | ' ' | 内部数据名称 |
 | 3 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
 | 4 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
-| 5 | fextname | 外部数据名称 | varchar | 255 |  | √ | ' ' | 外部数据名称 |
+| 5 | fextname | 外部数据名称 | varchar | 255 |  |  | ' ' | 外部数据名称 |
 
 ### 列规则定义
 

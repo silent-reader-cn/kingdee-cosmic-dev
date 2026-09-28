@@ -11,11 +11,11 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fresultcode | 认证结果 | varchar | 10 |  | √ | ' ' | 认证结果,枚举: 0 :认证失败 1 :认证成功 2 :待认证 3 :已提交待审核 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fphone | 手机号 | varchar | 36 |  | √ | ' ' | 手机号 |
 | 5 | fresultdesc | 认证描述 | varchar | 255 |  | √ | ' ' | 认证描述 |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 7 | ffiorgid | 合同主体 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 7 | ffiorgid | 合同主体 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | fdisabledate | fdisabledate | timestamp | 0 |  |  | null |  |
 | 9 | fdisablerid | fdisablerid | int8 | 64 |  | √ | 0 |  |
 | 10 | fisauthed | 注册状态 | bpchar | 1 |  | √ | ' ' | 注册状态,枚举: 0 :注册失败 1 :注册成功 2 :待注册 |
@@ -26,7 +26,7 @@
 | 15 | fstatus | 数据状态 | varchar | 15 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 16 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 17 | fsignprovider | 签章服务商 | varchar | 10 |  | √ | ' ' | 签章服务商,枚举: 1 :法大大 2 :上上签 |
-| 18 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 18 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 19 | fuuid | uuid | varchar | 100 |  | √ | ' ' | uuid |
 | 20 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 21 | fnumber | 编码 | varchar | 36 |  | √ | ' ' | 编码 |
@@ -44,8 +44,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_ec_contractsubject_orgid |  | ffiorgid |
-| 2 | pk_t_ec_contractsubject |  | fid |
+| 1 | pk_t_ec_contractsubject |  | fid |
+| 2 | idx_ec_contractsubject_orgid |  | ffiorgid |
 
 ---
 

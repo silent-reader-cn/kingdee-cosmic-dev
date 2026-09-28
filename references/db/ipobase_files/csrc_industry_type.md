@@ -9,18 +9,18 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fremark | 说明 | varchar | 300 |  | √ | ' ' | 说明 |
-| 2 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 3 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 4 | fisleaf | 是否叶子 | bpchar | 1 |  | √ | ' ' | 是否叶子 |
-| 5 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 6 | fparentid | 上级 | int8 | 64 |  | √ | 0 | 证监会行业分类 csrc_industry_type |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
+| 2 | fremark | 说明 | varchar | 300 |  | √ | ' ' | 说明 |
+| 3 | fisleaf | 是否叶子 | bpchar | 1 |  | √ | ' ' | 是否叶子 |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 5 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
+| 6 | fparentid | 上级 | int8 | 64 |  | √ | 0 | [证监会行业分类 csrc_industry_type](../ipobase_files/csrc_industry_type.md) |
 | 7 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 8 | flongnumber | 长编码 | varchar | 50 |  | √ | ' ' | 长编码 |
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 10 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 11 | flevel | 级次 | int8 | 64 |  | √ | 0 | 级次 |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 14 | fenable | 使用状态 | varchar | 50 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 15 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
@@ -49,8 +49,8 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fremark | 说明 | varchar | 300 |  | √ | ' ' | 说明 |
-| 2 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fremark | 说明 | varchar | 300 |  | √ | ' ' | 说明 |
 | 3 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
 | 4 | ffullname | 长名称 | varchar | 50 |  | √ | ' ' | 长名称 |
 | 5 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |

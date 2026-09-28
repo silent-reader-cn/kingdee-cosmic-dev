@@ -16,7 +16,7 @@
 | 5 | freadstate | 阅读状态 | varchar | 5 |  | √ | ' ' | 阅读状态,枚举: 0 :未读 1 :已读 |
 | 6 | ftitle | 标题 | varchar | 100 |  | √ | ' ' | 标题 |
 | 7 | ftype | 消息类型 | varchar | 5 |  | √ | ' ' | 消息类型,枚举: 0 :页面处理 1 :url处理 |
-| 8 | fsenduser | 发送人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | fsenduser | 发送人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | freadtime | 阅读时间 | timestamp | 0 |  |  | null | 阅读时间 |
 | 10 | fsendtime | 发送日期 | timestamp | 0 |  |  | null | 发送日期 |
 | 11 | fcontenturl | 详细信息URL | varchar | 300 |  |  | ' ' | 详细信息URL |

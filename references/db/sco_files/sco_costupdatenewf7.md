@@ -14,28 +14,29 @@
 | 3 | fresmatbyuseauxpt_tag | fresmatbyuseauxpt_tag | text | 0 |  |  | null |  |
 | 4 | fcreatorid | fcreatorid | int8 | 64 |  | √ | 0 |  |
 | 5 | fupdatebillno | 更新编码 | varchar | 80 |  | √ | ' ' | 更新编码 |
-| 6 | ftargetcosttype | 目标标准成本方案 | int8 | 64 |  | √ | 0 | 标准成本方案 cad_costtype |
+| 6 | ftargetcosttype | 目标标准成本方案 | int8 | 64 |  | √ | 0 | [标准成本方案 cad_costtype](../basedata_files/cad_costtype.md) |
 | 7 | fresbynoref | fresbynoref | varchar | 2000 |  | √ | ' ' |  |
 | 8 | fupdatestatus | 更新状态 | varchar | 30 |  | √ | ' ' | 更新状态,枚举: N :未完成 Y :已完成 |
 | 9 | fresmatbyuseauxpt | fresmatbyuseauxpt | varchar | 2000 |  | √ | ' ' |  |
 | 10 | fbillno | 编码 | varchar | 255 |  | √ | ' ' | 编码 |
-| 11 | fmodifierid | fmodifierid | int8 | 64 |  | √ | 0 |  |
-| 12 | fperiodid | fperiodid | int8 | 64 |  | √ | 0 |  |
-| 13 | fbillstatus | fbillstatus | varchar | 30 |  | √ | ' ' |  |
-| 14 | fcreatetime | fcreatetime | timestamp | 0 |  |  | null |  |
-| 15 | fauditdate | fauditdate | timestamp | 0 |  |  | null |  |
-| 16 | fsrccosttype | 源标准成本方案 | int8 | 64 |  | √ | 0 | 标准成本方案 cad_costtype |
-| 17 | fisquickupdate | fisquickupdate | bpchar | 1 |  | √ | '0' |  |
-| 18 | fiscalccurlevel | fiscalccurlevel | bpchar | 1 |  | √ | '0' |  |
-| 19 | fisspecifymaterial | fisspecifymaterial | bpchar | 1 |  | √ | '0' |  |
-| 20 | fmatgrpstdid | fmatgrpstdid | int8 | 64 |  | √ | 0 |  |
-| 21 | fupdatebillid | fupdatebillid | int8 | 64 |  | √ | 0 |  |
-| 22 | fupdatetime | 生效时间 | timestamp | 0 |  |  | null | 生效时间 |
-| 23 | feffecttime | feffecttime | timestamp | 0 |  |  | null |  |
-| 24 | fresbynoref_tag | fresbynoref_tag | text | 0 |  |  | null |  |
-| 25 | fisallupdate | fisallupdate | bpchar | 1 |  | √ | '0' |  |
-| 26 | fsourcepage | fsourcepage | varchar | 50 |  | √ | ' ' |  |
-| 27 | fauditorid | fauditorid | int8 | 64 |  | √ | 0 |  |
+| 11 | fupdatecheckpass | fupdatecheckpass | bpchar | 1 |  | √ | '0' |  |
+| 12 | fmodifierid | fmodifierid | int8 | 64 |  | √ | 0 |  |
+| 13 | fperiodid | fperiodid | int8 | 64 |  | √ | 0 |  |
+| 14 | fbillstatus | fbillstatus | varchar | 30 |  | √ | ' ' |  |
+| 15 | fcreatetime | fcreatetime | timestamp | 0 |  |  | null |  |
+| 16 | fauditdate | fauditdate | timestamp | 0 |  |  | null |  |
+| 17 | fsrccosttype | 源标准成本方案 | int8 | 64 |  | √ | 0 | [标准成本方案 cad_costtype](../basedata_files/cad_costtype.md) |
+| 18 | fisquickupdate | fisquickupdate | bpchar | 1 |  | √ | '0' |  |
+| 19 | fiscalccurlevel | fiscalccurlevel | bpchar | 1 |  | √ | '0' |  |
+| 20 | fisspecifymaterial | fisspecifymaterial | bpchar | 1 |  | √ | '0' |  |
+| 21 | fmatgrpstdid | fmatgrpstdid | int8 | 64 |  | √ | 0 |  |
+| 22 | fupdatebillid | fupdatebillid | int8 | 64 |  | √ | 0 |  |
+| 23 | fupdatetime | 生效时间 | timestamp | 0 |  |  | null | 生效时间 |
+| 24 | feffecttime | feffecttime | timestamp | 0 |  |  | null |  |
+| 25 | fresbynoref_tag | fresbynoref_tag | text | 0 |  |  | null |  |
+| 26 | fisallupdate | fisallupdate | bpchar | 1 |  | √ | '0' |  |
+| 27 | fsourcepage | fsourcepage | varchar | 50 |  | √ | ' ' |  |
+| 28 | fauditorid | fauditorid | int8 | 64 |  | √ | 0 |  |
 
 ### 列规则定义
 

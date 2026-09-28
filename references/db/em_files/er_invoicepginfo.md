@@ -39,19 +39,19 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fpluginpath | 插件路径 | varchar | 255 |  | √ | ' ' | 插件路径 |
 | 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 5 | fclienttype | 客户端类型 | varchar | 50 |  | √ | ' ' | 客户端类型,枚举: 0 :移动端 1 :PC端 |
-| 6 | fbillgroup | 单据类型 | int8 | 64 |  | √ | 0 | 单据设置 er_setting_group |
+| 6 | fbillgroup | 单据类型 | int8 | 64 |  | √ | 0 | [单据设置 er_setting_group](../em_files/er_setting_group.md) |
 | 7 | fbillname | fbillname | varchar | 50 |  | √ | ' ' |  |
 | 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 9 | fclicksign | 控件标识 | varchar | 255 |  | √ | ' ' | 控件标识 |
-| 10 | fbizitem | 业务事项 | int8 | 64 |  | √ | 0 | 业务事项 er_standard_type |
+| 10 | fbizitem | 业务事项 | int8 | 64 |  | √ | 0 | [业务事项 er_standard_type](../em_files/er_standard_type.md) |
 | 11 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 14 | fenable | 是否启用 | varchar | 50 |  | √ | '0' | 是否启用,枚举: 0 :禁用 1 :可用 |
+| 14 | fenable | 启用 | varchar | 50 |  | √ | '0' | 启用,枚举: 0 :禁用 1 :可用 |
 | 15 | fnumber | 编码 | varchar | 255 |  | √ | ' ' | 编码 |
 | 16 | fbilltype | 单据类型(废弃) | varchar | 50 |  | √ | ' ' | 单据类型(废弃),枚举: er_tripreimbursebill :差旅报销单(卡片式) er_tripreimbill_grid :差旅报销单(表格式) er_dailyreimbursebill :费用报销单 er_publicreimbursebill :对公报销单 er_dailyreimbursebill_B :移动话费报销单 er_dailyreimbursebill_A :额度报销单 er_checkingpaybill :商旅付款申请单 er_expense_recordbill :记费用 er_trip_recordbill :记差旅 er_publicreimbursebill_asset :资产报账单 |
 | 17 | fisdefault | 默认 | bpchar | 1 |  | √ | '0' | 默认 |

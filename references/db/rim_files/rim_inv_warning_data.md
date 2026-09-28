@@ -14,7 +14,7 @@
 | 3 | fcreate_time | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 4 | fdata_period | 数据期限 | varchar | 10 |  | √ | ' ' | 数据期限 |
 | 5 | fdata_value | 计算值 | numeric | 23 | 10 | √ | 0 | 计算值 |
-| 6 | forg | 所属组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | forg | 所属组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 
 ### 列规则定义
 

@@ -29,5 +29,5 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | pk_perm_log_diff_busiunit |  | fid |
-| 2 | idx_logid_busiunit |  | fperm_logid |
+| 1 | idx_logid_busiunit |  | fperm_logid |
+| 2 | pk_perm_log_diff_busiunit |  | fid |

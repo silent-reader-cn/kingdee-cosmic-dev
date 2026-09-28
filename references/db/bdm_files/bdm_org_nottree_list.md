@@ -47,14 +47,14 @@
 | 5 | fdefaultdev | fdefaultdev | varchar | 50 |  | √ | ' ' |  |
 | 6 | fparentname | 上级组织名称 | varchar | 200 |  | √ | ' ' | 上级组织名称 |
 | 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 8 | fepinfo | 企业信息 | int8 | 64 |  | √ | 0 | 企业基础信息 bdm_enterprise_baseinfo |
+| 8 | fepinfo | 企业信息 | int8 | 64 |  | √ | 0 | [企业基础信息 bdm_enterprise_baseinfo](../bdm_files/bdm_enterprise_baseinfo.md) |
 | 9 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 12 | falleaccount | falleaccount | int8 | 64 |  | √ | 0 |  |
 | 13 | fviewtype | fviewtype | varchar | 50 |  | √ | ' ' |  |
 | 14 | fname | 名称 | varchar | 200 |  | √ | ' ' | 名称 |
-| 15 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 15 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 16 | fdefaultterminal | fdefaultterminal | varchar | 50 |  | √ | ' ' |  |
 | 17 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 18 | flongnumber | flongnumber | varchar | 200 |  | √ | ' ' |  |

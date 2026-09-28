@@ -15,8 +15,8 @@
 | 4 | fcreatetime | 操作时间 | timestamp | 0 |  |  | null | 操作时间 |
 | 5 | fsessionid | 线程ID | varchar | 100 |  | √ | ' ' | 线程ID |
 | 6 | fctrltype | 控制类型 | varchar | 30 |  | √ | ' ' | 控制类型,枚举: update :信用更新 recal :信用重算 |
-| 7 | fentitykey | 操作业务对象 | varchar | 50 |  | √ | ' ' | 业务对象 bos_objecttype |
-| 8 | fuserid | 操作用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 7 | fentitykey | 操作业务对象 | varchar | 50 |  | √ | ' ' | [业务对象 bos_objecttype](../mdl_files/bos_objecttype.md) |
+| 8 | fuserid | 操作用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

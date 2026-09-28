@@ -12,7 +12,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
 | 3 | flocaleid | flocaleid | varchar | 30 |  | √ | ' ' | localeid |
-| 4 | fdescription | 描述 | varchar | 255 |  | √ | ' ' | 描述 |
+| 4 | fdescription | 描述 | varchar | 342 |  | √ | ' ' | 描述 |
 | 5 | fpkid | fpkid | varchar | 30 |  | √ | ' ' | pkid |
 | 6 | ftips | 提示语 | varchar | 255 |  | √ | ' ' | 提示语 |
 

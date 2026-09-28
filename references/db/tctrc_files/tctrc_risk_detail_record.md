@@ -43,7 +43,7 @@
 | 5 | friskresult | 指标结果 | varchar | 2000 |  | √ | ' ' | 指标结果 |
 | 6 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 7 | fnumber | 序号 | varchar | 50 |  | √ | ' ' | 序号 |
-| 8 | fskssqq | 所属期 | varchar | 50 |  | √ | ' ' | 所属期 |
+| 8 | fskssqq | 所属期间 | varchar | 50 |  | √ | ' ' | 所属期间 |
 | 9 | friskdes | 指标描述 | varchar | 2000 |  | √ | ' ' | 指标描述 |
 | 10 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 11 | friskname | 指标名称 | varchar | 2000 |  | √ | ' ' | 指标名称 |

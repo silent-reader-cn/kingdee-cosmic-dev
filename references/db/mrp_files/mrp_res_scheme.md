@@ -96,9 +96,9 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | flistinrun | 参与运算 | bpchar | 1 |  | √ | '0' | 参与运算 |
 | 3 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 4 | flistfieldtran | 实体字段映射 | int8 | 64 |  | √ | 0 | 实体字段映射 mrp_billfieldtransfer |
+| 4 | flistfieldtran | 实体字段映射 | int8 | 64 |  | √ | 0 | [实体字段映射 mrp_billfieldtransfer](../msplan_files/mrp_billfieldtransfer.md) |
 | 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 6 | flistresource | 数据源配置 | int8 | 64 |  | √ | 0 | 数据源配置 mrp_resource_dataconfig |
+| 6 | flistresource | 数据源配置 | int8 | 64 |  | √ | 0 | [数据源配置 mrp_resource_dataconfig](../msplan_files/mrp_resource_dataconfig.md) |
 
 ### 列规则定义
 
@@ -126,10 +126,10 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | freqinrun | 参与运算 | bpchar | 1 |  | √ | '0' | 参与运算 |
-| 3 | freqfieldtran | 实体字段映射 | int8 | 64 |  | √ | 0 | 实体字段映射 mrp_billfieldtransfer |
+| 3 | freqfieldtran | 实体字段映射 | int8 | 64 |  | √ | 0 | [实体字段映射 mrp_billfieldtransfer](../msplan_files/mrp_billfieldtransfer.md) |
 | 4 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 6 | freqresource | 数据源配置 | int8 | 64 |  | √ | 0 | 数据源配置 mrp_resource_dataconfig |
+| 6 | freqresource | 数据源配置 | int8 | 64 |  | √ | 0 | [数据源配置 mrp_resource_dataconfig](../msplan_files/mrp_resource_dataconfig.md) |
 
 ### 列规则定义
 
@@ -157,31 +157,31 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fchkgroupplan | 资源计划：拖期期间 | varchar | 5 |  | √ | ' ' | 资源计划：拖期期间,枚举: 1 :所有拖期期间 2 :指定拖期期间 |
-| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | flistday | 资源清单拖期期间 | int8 | 64 |  | √ | 0 | 资源清单拖期期间 |
 | 5 | fsupplyday | 供应拖期期间 | int8 | 64 |  | √ | 0 | 供应拖期期间 |
-| 6 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 8 | fstatus | 数据状态 | varchar | 5 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 11 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
-| 12 | freqmodel | 需求模型 | int8 | 64 |  | √ | 0 | 资源注册模型 mrp_resourceregister_cf |
+| 12 | freqmodel | 需求模型 | int8 | 64 |  | √ | 0 | [资源注册模型 mrp_resourceregister_cf](../msplan_files/mrp_resourceregister_cf.md) |
 | 13 | fbitindex | 位图 | int8 | 64 |  | √ | 0 | 位图 |
 | 14 | fisadjust | 考虑调整 | bpchar | 1 |  | √ | '0' | 考虑调整 |
 | 15 | fisreplace | 考虑替代 | bpchar | 1 |  | √ | '0' | 考虑替代 |
-| 16 | fcreateorgid | 计划组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 16 | fcreateorgid | 计划组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 17 | fname | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
-| 18 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 19 | fplanmodel | 资源计划模型 | int8 | 64 |  | √ | 0 | 资源注册模型 mrp_resourceregister_cf |
+| 18 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 19 | fplanmodel | 资源计划模型 | int8 | 64 |  | √ | 0 | [资源注册模型 mrp_resourceregister_cf](../msplan_files/mrp_resourceregister_cf.md) |
 | 20 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 21 | fchkgroupreq | 需求：拖期期间 | varchar | 5 |  | √ | ' ' | 需求：拖期期间,枚举: 1 :所有拖期期间 2 :指定拖期期间 |
 | 22 | fplanday | 资源计划拖期期间 | int8 | 64 |  | √ | 0 | 资源计划拖期期间 |
 | 23 | freqday | 需求拖期期间 | int8 | 64 |  | √ | 0 | 需求拖期期间 |
-| 24 | fsupplymodel | 供应模型 | int8 | 64 |  | √ | 0 | 资源注册模型 mrp_resourceregister_cf |
+| 24 | fsupplymodel | 供应模型 | int8 | 64 |  | √ | 0 | [资源注册模型 mrp_resourceregister_cf](../msplan_files/mrp_resourceregister_cf.md) |
 | 25 | fctrlstrategy | 控制策略 | varchar | 30 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
 | 26 | fplanoutlook | 计划展望期 | int8 | 64 |  | √ | 0 | 计划展望期 |
-| 27 | flistmodel | 资源清单模型 | int8 | 64 |  | √ | 0 | 资源注册模型 mrp_resourceregister_cf |
+| 27 | flistmodel | 资源清单模型 | int8 | 64 |  | √ | 0 | [资源注册模型 mrp_resourceregister_cf](../msplan_files/mrp_resourceregister_cf.md) |
 | 28 | fchkgrouplist | 资源清单：拖期期间 | varchar | 5 |  | √ | ' ' | 资源清单：拖期期间,枚举: 1 :所有拖期期间 2 :指定拖期期间 |
 | 29 | fchkgroupsupply | 供应：拖期期间 | varchar | 5 |  | √ | ' ' | 供应：拖期期间,枚举: 1 :所有拖期期间 2 :指定拖期期间 |
 | 30 | fenable | 使用状态 | varchar | 5 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
@@ -216,7 +216,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fentrysupplyorg | 供应组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fentrysupplyorg | 供应组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 4 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 
@@ -245,8 +245,8 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fsupplyfieldtran | 实体字段映射 | int8 | 64 |  | √ | 0 | 实体字段映射 mrp_billfieldtransfer |
-| 3 | fsupplyresource | 数据源配置 | int8 | 64 |  | √ | 0 | 数据源配置 mrp_resource_dataconfig |
+| 2 | fsupplyfieldtran | 实体字段映射 | int8 | 64 |  | √ | 0 | [实体字段映射 mrp_billfieldtransfer](../msplan_files/mrp_billfieldtransfer.md) |
+| 3 | fsupplyresource | 数据源配置 | int8 | 64 |  | √ | 0 | [数据源配置 mrp_resource_dataconfig](../msplan_files/mrp_resource_dataconfig.md) |
 | 4 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 6 | fsupplyinrun | 参与运算 | bpchar | 1 |  | √ | '0' | 参与运算 |
@@ -276,8 +276,8 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fplanresource | 数据源配置 | int8 | 64 |  | √ | 0 | 数据源配置 msplan_resource_dataconf |
-| 3 | fplanfieldtran | 实体字段映射 | int8 | 64 |  | √ | 0 | 实体字段映射 mrp_billfieldtransfer |
+| 2 | fplanresource | 数据源配置 | int8 | 64 |  | √ | 0 | [数据源配置 msplan_resource_dataconf](../msplan_files/msplan_resource_dataconf.md) |
+| 3 | fplanfieldtran | 实体字段映射 | int8 | 64 |  | √ | 0 | [实体字段映射 mrp_billfieldtransfer](../msplan_files/mrp_billfieldtransfer.md) |
 | 4 | fplaninrun | 参与运算 | bpchar | 1 |  | √ | '0' | 参与运算 |
 | 5 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |

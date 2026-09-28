@@ -19,11 +19,11 @@
 | 8 | fislocale | 是否多语言 | varchar | 50 |  |  | ' ' | 是否多语言,枚举: TRUE :是 FALSE :否 |
 | 9 | ftask_status | 任务状态 | varchar | 50 |  | √ | ' ' | 任务状态,枚举: 0 :未开始 1 :等待 2 :进行中 3 :完成 4 :失败 |
 | 10 | forderby_value | forderby_value | varchar | 255 |  |  | null |  |
-| 11 | fentityname | 实体名称 | varchar | 50 |  |  | null | 实体名称 |
+| 11 | fentityname | fentityname | varchar | 50 |  |  | null |  |
 | 12 | foldencrypt_type | 旧的加密算法 | varchar | 50 |  |  | ' ' | 旧的加密算法 |
 | 13 | fdbrouter | DBRouter | varchar | 50 |  |  | ' ' | DBRouter |
 | 14 | ffielddesc | 字段名称 | varchar | 50 |  |  | null | 字段名称 |
-| 15 | fcreater | 创建人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 15 | fcreater | 创建人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 16 | ffieldident | 字段标识 | varchar | 50 |  |  | null | 字段标识 |
 | 17 | fiscommonlang | 是否通用语言 | varchar | 50 |  | √ | ' ' | 是否通用语言,枚举: FALSE :否 TRUE :是 |
 | 18 | fpytable_name | fpytable_name | varchar | 50 |  | √ | ' ' |  |
@@ -53,3 +53,33 @@
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
 | 1 | t_privacy_task_pkey |  | fid |
+
+---
+
+## 数据处理-多语言表 t_privacy_task_l
+
+- **表名称：** 数据处理-多语言表
+- **表名：** t_privacy_task_l
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fentityname | fentityname | varchar | 200 |  | √ | ' ' |  |
+| 3 | ffielddesc | 字段名称 | varchar | 100 |  | √ | ' ' | 字段名称 |
+| 4 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
+| 5 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fpkid | fpkid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | pk_privacy_task_l |  | fpkid |
+| 2 | idx_privacy_task_l_fid |  | fid,flocaleid |

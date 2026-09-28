@@ -11,22 +11,22 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fremark | fremark | varchar | 2000 |  | √ | ' ' |  |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 5 | fsrcbillid | 源单ID | varchar | 50 |  | √ | ' ' | 源单ID |
 | 6 | fterminatedate | 终止时间 | timestamp | 0 |  |  | null | 终止时间 |
 | 7 | fpushnotice | 是否下推公告 | bpchar | 1 |  | √ | '0' | 是否下推公告,枚举: 0 :否 1 :是 |
 | 8 | fauditdate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
 | 9 | fcfmdate | 确认时间 | timestamp | 0 |  |  | null | 确认时间 |
-| 10 | fcfmid | 确认人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fcfmid | 确认人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 12 | forigin | 发起方 | bpchar | 1 |  | √ | ' ' | 发起方,枚举: 1 :供应商 2 :采购方 |
 | 13 | ftermination | 终止意见 | varchar | 255 |  | √ | ' ' | 终止意见 |
-| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 15 | fterminaterid | 终止人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 15 | fterminaterid | 终止人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 16 | fpushscore | 是否下达评估任务 | bpchar | 1 |  | √ | '0' | 是否下达评估任务,枚举: 0 :否 1 :是 |
 | 17 | fsrcbilltype | 源单标识 | varchar | 50 |  | √ | ' ' | 源单标识 |
-| 18 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 18 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 
@@ -38,39 +38,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_srm_evaplan_a_ftime |  | fcreatetime |
-| 2 | pk_srm_evaplan_a |  | fid |
-
----
-
-## 关联子实体-子表 t_srm_evaplan_lk
-
-- **表名称：** 关联子实体-子表
-- **表名：** t_srm_evaplan_lk
-
-### 表格列定义
-
-| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | fid | int8 | 64 |  | √ | null |  |
-| 2 | fsbillid | 源单内码 | int8 | 64 |  |  | null | 源单内码 |
-| 3 | fstableid | 源单主实体编码 | int8 | 64 |  |  | null | 源单主实体编码 |
-| 4 | fsid | 源单主实体内码 | int8 | 64 |  |  | null | 源单主实体内码 |
-| 5 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 6 | fpkid | fpkid | int8 | 64 |  | √ | null | id |
-
-### 列规则定义
-
-| 序号 | 键编码 | 列字段 |
-| :--- | :--- | :--- |
-| 1 | fpkid | fpkid |
-
-### 索引定义
-
-| 序号 | 索引名 | 唯一 | 列字段 |
-| :--- | :--- | :--- | :--- |
-| 1 | idx_srm_evaplan_lk_fk |  | fid |
-| 2 | pk_srm_evaplan_lk |  | fpkid |
+| 1 | pk_srm_evaplan_a |  | fid |
+| 2 | idx_srm_evaplan_a_ftime |  | fcreatetime |
 
 ---
 
@@ -83,8 +52,8 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | findexclassid | 指标分类 | int8 | 64 |  | √ | 0 | 指标分类 srm_indexclass |
-| 2 | fscorerid | 评委 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 1 | findexclassid | 指标分类 | int8 | 64 |  | √ | 0 | [指标分类 srm_indexclass](../srm_files/srm_indexclass.md) |
+| 2 | fscorerid | 评委 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fscorernote | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
 | 4 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 5 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 | id |
@@ -116,16 +85,16 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fgradeid | 分级方案 | int8 | 64 |  | √ | 0 | 分级方案 srm_grade |
-| 3 | fmaterialid | 评估物料 | int8 | 64 |  | √ | 0 | 物料 bd_material |
-| 4 | fbizbilltypeid | 业务单据 | varchar | 80 |  | √ | ' ' | 主实体对象 bos_entityobject |
-| 5 | fschemeid | 评估方案 | int8 | 64 |  | √ | 0 | 评估方案 srm_scheme |
+| 2 | fgradeid | 分级方案 | int8 | 64 |  | √ | 0 | [分级方案 srm_grade](../srm_files/srm_grade.md) |
+| 3 | fmaterialid | 评估物料 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
+| 4 | fbizbilltypeid | 业务单据 | varchar | 80 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
+| 5 | fschemeid | 评估方案 | int8 | 64 |  | √ | 0 | [评估方案 srm_scheme](../srm_files/srm_scheme.md) |
 | 6 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 7 | fnote | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
-| 8 | fcategoryid | 评估品类 | int8 | 64 |  | √ | 0 | 物料分类 bd_materialgroup |
+| 8 | fcategoryid | 评估品类 | int8 | 64 |  | √ | 0 | [物料分类 bd_materialgroup](../basedata_files/bd_materialgroup.md) |
 | 9 | fbizbillno | 业务单据号 | varchar | 80 |  | √ | ' ' | 业务单据号 |
 | 10 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 11 | fsupplierid | 供应商 | int8 | 64 |  | √ | 0 | 供应商 bd_supplier |
+| 11 | fsupplierid | 供应商 | int8 | 64 |  | √ | 0 | [供应商 bd_supplier](../basedata_files/bd_supplier.md) |
 | 12 | fweightstrategy | 评委权重策略 | varchar | 2 |  | √ | ' ' | 评委权重策略,枚举: A :平均权重 B :自定义权重 |
 
 ### 列规则定义
@@ -156,7 +125,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fistypescorer | 按一级指标类型设置评委 | bpchar | 1 |  | √ | '0' | 按一级指标类型设置评委 |
 | 3 | fevamethod | 评估方式 | bpchar | 1 |  | √ | 'A' | 评估方式,枚举: A :供应商 B :物料+供应商 D :品类+供应商 C :一单一评 |
-| 4 | forgid | 评估组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 4 | forgid | 评估组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | fschemeid | fschemeid | int8 | 64 |  | √ | 0 |  |
 | 6 | fbizstatus | 计划状态 | bpchar | 1 |  | √ | ' ' | 计划状态,枚举: A :未启动 B :待下达 C :待评分 D :已评分 E :已初审 F :已核准 Z :已终止 |
 | 7 | fbilldate | 评估日期 | timestamp | 0 |  |  | null | 评估日期 |
@@ -164,16 +133,16 @@
 | 9 | fdatetimeto | 分级有效日期至 | timestamp | 0 |  |  | null | 分级有效日期至 |
 | 10 | fcategoryid | fcategoryid | int8 | 64 |  | √ | 0 |  |
 | 11 | fdatefrom | 评估期间从 | timestamp | 0 |  |  | null | 评估期间从 |
-| 12 | fgroupevaplannoid | 集团评估计划单号 | int8 | 64 |  | √ | 0 | 集团评估计划单号 srm_groupevaplanno |
+| 12 | fgroupevaplannoid | 集团评估计划单号 | int8 | 64 |  | √ | 0 | [集团评估计划单号 srm_groupevaplanno](../srm_files/srm_groupevaplanno.md) |
 | 13 | fbillno | 单据编号 | varchar | 80 |  | √ | ' ' | 单据编号 |
 | 14 | fremark | fremark | varchar | 2000 |  | √ | ' ' |  |
 | 15 | fname | 计划名称 | varchar | 100 |  | √ | ' ' | 计划名称 |
 | 16 | fdateto | 评估期间至 | timestamp | 0 |  |  | null | 评估期间至 |
 | 17 | fgradeid | fgradeid | int8 | 64 |  | √ | 0 |  |
 | 18 | fbillstatus | 单据状态 | bpchar | 1 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 D :已关闭 Z :已作废 |
-| 19 | fevatypeid | 评估类型 | int8 | 64 |  | √ | 0 | 辅助资料 bos_assistantdata_detail |
+| 19 | fevatypeid | 评估类型 | int8 | 64 |  | √ | 0 | [辅助资料 bos_assistantdata_detail](../base_files/bos_assistantdata_detail.md) |
 | 20 | flastupdateuserid | flastupdateuserid | int8 | 64 |  | √ | 0 |  |
-| 21 | fbizpartnerid | 商务伙伴 | int8 | 64 |  | √ | 0 | 商务伙伴 bd_bizpartner |
+| 21 | fbizpartnerid | 商务伙伴 | int8 | 64 |  | √ | 0 | [商务伙伴 bd_bizpartner](../base_files/bd_bizpartner.md) |
 | 22 | ffinishdate | 预计完成日期 | timestamp | 0 |  |  | null | 预计完成日期 |
 | 23 | flastupdatetime | flastupdatetime | timestamp | 0 |  |  | null |  |
 | 24 | fcfmstatus | 确认状态 | bpchar | 1 |  | √ | ' ' | 确认状态,枚举: A :待确认 B :已确认 C :已打回 |
@@ -194,6 +163,67 @@
 | 1 | idx_srm_evaplan_fbillno |  | fbillno |
 | 2 | pk_srm_evaplan |  | fid |
 | 3 | idx_srm_evaplan_fbilldate |  | fbilldate |
+
+---
+
+## 绩效评估计划-多语言表 t_srm_evaplan_l
+
+- **表名称：** 绩效评估计划-多语言表
+- **表名：** t_srm_evaplan_l
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fremark | 备注 | varchar | 2000 |  | √ | ' ' | 备注 |
+| 3 | fname | 计划名称 | varchar | 100 |  | √ | ' ' | 计划名称 |
+| 4 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
+| 5 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fpkid | fpkid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | pk_srm_evaplan_l |  | fpkid |
+| 2 | idx_srm_evaplan_l_fid |  | flocaleid |
+
+---
+
+## 关联子实体-子表 t_srm_evaplan_lk
+
+- **表名称：** 关联子实体-子表
+- **表名：** t_srm_evaplan_lk
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | null |  |
+| 2 | fsbillid | 源单内码 | int8 | 64 |  |  | null | 源单内码 |
+| 3 | fstableid | 源单主实体编码 | int8 | 64 |  |  | null | 源单主实体编码 |
+| 4 | fsid | 源单主实体内码 | int8 | 64 |  |  | null | 源单主实体内码 |
+| 5 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
+| 6 | fpkid | fpkid | int8 | 64 |  | √ | null | id |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fpkid | fpkid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_srm_evaplan_lk_fk |  | fid |
+| 2 | pk_srm_evaplan_lk |  | fpkid |
 
 ---
 
@@ -229,36 +259,6 @@
 | :--- | :--- | :--- | :--- |
 | 1 | pk_srm_evaplan_wb |  | fentryid |
 | 2 | idx_srm_evaplan_wb_fk |  | fid |
-
----
-
-## 绩效评估计划-多语言表 t_srm_evaplan_l
-
-- **表名称：** 绩效评估计划-多语言表
-- **表名：** t_srm_evaplan_l
-
-### 表格列定义
-
-| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fremark | 备注 | varchar | 2000 |  | √ | ' ' | 备注 |
-| 3 | fname | 计划名称 | varchar | 100 |  | √ | ' ' | 计划名称 |
-| 4 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
-| 5 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
-
-### 列规则定义
-
-| 序号 | 键编码 | 列字段 |
-| :--- | :--- | :--- |
-| 1 | fpkid | fpkid |
-
-### 索引定义
-
-| 序号 | 索引名 | 唯一 | 列字段 |
-| :--- | :--- | :--- | :--- |
-| 1 | pk_srm_evaplan_l |  | fpkid |
-| 2 | idx_srm_evaplan_l_fid |  | flocaleid |
 
 ---
 

@@ -10,12 +10,12 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fcomment | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
 | 4 | foldval | 修改前 | varchar | 2000 |  | √ | ' ' | 修改前 |
 | 5 | felementtypename | 节点类型名称 | varchar | 50 |  | √ | ' ' | 节点类型名称 |
-| 6 | fschemeid | 方案ID | int8 | 64 |  | √ | 0 | 流程动态方案配置 wf_processdynamicconfig |
-| 7 | fprocdefid | 流程定义 | int8 | 64 |  | √ | 0 | 流程管理 wf_processdefinition |
+| 6 | fschemeid | 方案ID | int8 | 64 |  | √ | 0 | [流程动态方案配置 wf_processdynamicconfig](../wf_files/wf_processdynamicconfig.md) |
+| 7 | fprocdefid | 流程定义 | int8 | 64 |  | √ | 0 | [流程管理 wf_processdefinition](../wf_files/wf_processdefinition.md) |
 | 8 | fproperty | 属性编码 | varchar | 50 |  | √ | ' ' | 属性编码 |
 | 9 | felementid | 节点ID | varchar | 255 |  | √ | ' ' | 节点ID |
 | 10 | felement | 节点名称 | varchar | 500 |  | √ | ' ' | 节点名称 |

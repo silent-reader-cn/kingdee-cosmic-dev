@@ -53,29 +53,30 @@
 | 8 | fissignuploadimg | 签收必须上传图片 | bpchar | 1 |  | √ | '0' | 签收必须上传图片 |
 | 9 | fcppallowzerocontrol | 渠道价格政策单价和折扣非空控制 | bpchar | 1 |  | √ | '1' | 渠道价格政策单价和折扣非空控制,枚举: 0 :不控制 2 :警告 1 :强控制 |
 | 10 | fisbyocbmall | 经销商门户（PC+移动）端控制 | bpchar | 1 |  | √ | '0' | 经销商门户（PC+移动）端控制 |
-| 11 | fisallot | 启用可销量控制 | bpchar | 1 |  | √ | '0' | 启用可销量控制 |
-| 12 | fsignovertime | 超时时间（小时） | int4 | 32 |  | √ | 24 | 超时时间（小时） |
-| 13 | fenableenough |  | bpchar | 1 |  | √ | '1' |  |
-| 14 | ftensionbeginqty | 当可用库存量 > | int4 | 32 |  | √ | 0 | 当可用库存量 > |
-| 15 | fenoughshowvalue |  | varchar | 50 |  | √ | ' ' |  |
-| 16 | finventorymatchtype | 即时库存控制强度 | bpchar | 1 |  | √ | 'A' | 即时库存控制强度,枚举: A :不控制 B :警告 C :强控制 |
-| 17 | fsubsaleoverscope | 负卖到货冲减范围 | varchar | 50 |  | √ | ' ' | 负卖到货冲减范围,枚举: A :采购入库单 B :其他入库单 C :调拨入库单 D :生产入库单 E :销售退货单 |
-| 18 | fisactivesign | 启用电子签章 | bpchar | 1 |  | √ | '0' | 启用电子签章 |
-| 19 | ftensionendqty | ，<= | int4 | 32 |  | √ | 100 | ，<= |
-| 20 | fsaleorgid | 销售组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 21 | fisbyocbsoc | 订单中心后台控制 | bpchar | 1 |  | √ | '0' | 订单中心后台控制 |
-| 22 | ftensionshowtype | 时，库存模糊显示为 | bpchar | 1 |  | √ | '1' | 时，库存模糊显示为,枚举: 1 :固定文字 2 :精确数字 |
-| 23 | fisinventorymatch | 使用共享库存规则 | bpchar | 1 |  | √ | '0' | 使用共享库存规则 |
-| 24 | fenoughshowtype | 时，库存模糊显示为 | bpchar | 1 |  | √ | '1' | 时，库存模糊显示为,枚举: 1 :固定文字 2 :精确数字 |
-| 25 | frecusetype | 订单收款抵扣行抵扣方式 | bpchar | 1 |  | √ | '1' | 订单收款抵扣行抵扣方式,枚举: 0 :自动抵扣 1 :手工抵扣 |
-| 26 | fstartdatetime | 下单开始时间 | timestamp | 0 |  |  | null | 下单开始时间 |
-| 27 | ftensionshowvalue |  | varchar | 50 |  | √ | ' ' |  |
-| 28 | fisautosign | 超时自动签收 | bpchar | 1 |  | √ | '0' | 超时自动签收 |
-| 29 | fisinvreserve | 启用即时库存控制 | bpchar | 1 |  | √ | '0' | 启用即时库存控制 |
-| 30 | fstockoutshowvalue |  | varchar | 50 |  | √ | ' ' |  |
-| 31 | fenoughqty | 当可用库存量 > | int4 | 32 |  | √ | 100 | 当可用库存量 > |
-| 32 | fenablestockout |  | bpchar | 1 |  | √ | '1' |  |
-| 33 | fisupdatestore | fisupdatestore | bpchar | 1 |  | √ | '1' |  |
+| 11 | fstandardpricetype | 标准价取数逻辑 | bpchar | 1 |  | √ | '0' | 标准价取数逻辑,枚举: 0 :按标准价格接口 1 :按商品价格 |
+| 12 | fisallot | 启用可销量控制 | bpchar | 1 |  | √ | '0' | 启用可销量控制 |
+| 13 | fsignovertime | 超时时间（小时） | int4 | 32 |  | √ | 24 | 超时时间（小时） |
+| 14 | fenableenough |  | bpchar | 1 |  | √ | '1' |  |
+| 15 | ftensionbeginqty | 当可用库存量 > | int4 | 32 |  | √ | 0 | 当可用库存量 > |
+| 16 | fenoughshowvalue |  | varchar | 50 |  | √ | ' ' |  |
+| 17 | finventorymatchtype | 即时库存控制强度 | bpchar | 1 |  | √ | 'A' | 即时库存控制强度,枚举: A :不控制 B :警告 C :强控制 |
+| 18 | fsubsaleoverscope | 负卖到货冲减范围 | varchar | 50 |  | √ | ' ' | 负卖到货冲减范围,枚举: A :采购入库单 B :其他入库单 C :调拨入库单 D :生产入库单 E :销售退货单 |
+| 19 | fisactivesign | 启用电子签章 | bpchar | 1 |  | √ | '0' | 启用电子签章 |
+| 20 | ftensionendqty | ，<= | int4 | 32 |  | √ | 100 | ，<= |
+| 21 | fsaleorgid | 销售组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 22 | fisbyocbsoc | 订单中心后台控制 | bpchar | 1 |  | √ | '0' | 订单中心后台控制 |
+| 23 | ftensionshowtype | 时，库存模糊显示为 | bpchar | 1 |  | √ | '1' | 时，库存模糊显示为,枚举: 1 :固定文字 2 :精确数字 |
+| 24 | fisinventorymatch | 使用共享库存规则 | bpchar | 1 |  | √ | '0' | 使用共享库存规则 |
+| 25 | fenoughshowtype | 时，库存模糊显示为 | bpchar | 1 |  | √ | '1' | 时，库存模糊显示为,枚举: 1 :固定文字 2 :精确数字 |
+| 26 | frecusetype | 订单收款抵扣行抵扣方式 | bpchar | 1 |  | √ | '1' | 订单收款抵扣行抵扣方式,枚举: 0 :自动抵扣 1 :手工抵扣 |
+| 27 | fstartdatetime | 下单开始时间 | timestamp | 0 |  |  | null | 下单开始时间 |
+| 28 | ftensionshowvalue |  | varchar | 50 |  | √ | ' ' |  |
+| 29 | fisautosign | 超时自动签收 | bpchar | 1 |  | √ | '0' | 超时自动签收 |
+| 30 | fisinvreserve | 启用即时库存控制 | bpchar | 1 |  | √ | '0' | 启用即时库存控制 |
+| 31 | fstockoutshowvalue |  | varchar | 50 |  | √ | ' ' |  |
+| 32 | fenoughqty | 当可用库存量 > | int4 | 32 |  | √ | 100 | 当可用库存量 > |
+| 33 | fenablestockout |  | bpchar | 1 |  | √ | '1' |  |
+| 34 | fisupdatestore | fisupdatestore | bpchar | 1 |  | √ | '1' |  |
 
 ### 列规则定义
 

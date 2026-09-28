@@ -16,11 +16,11 @@
 | 5 | fheadmsg | 错误日志 | varchar | 2000 |  | √ | ' ' | 错误日志 |
 | 6 | fstart | 服务开始时间 | timestamp | 0 |  |  | null | 服务开始时间 |
 | 7 | fop | 操作 | varchar | 20 |  | √ | ' ' | 操作 |
-| 8 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fbillids | 更新的单据ID | varchar | 2000 |  | √ | ' ' | 更新的单据ID |
 | 10 | fresult | 服务执行结果 | bpchar | 1 |  | √ | ' ' | 服务执行结果,枚举: 1 :成功 0 :失败 |
 | 11 | fusetime | 服务耗时/ms | int8 | 64 |  | √ | 0 | 服务耗时/ms |
-| 12 | fbillname | 实体对象 | varchar | 50 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 12 | fbillname | 实体对象 | varchar | 50 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 
 ### 列规则定义
 
@@ -53,7 +53,7 @@
 | 4 | fruleusetime | 规则耗时/ms | int8 | 64 |  | √ | 0 | 规则耗时/ms |
 | 5 | fruleresult | 规则执行结果 | bpchar | 1 |  | √ | ' ' | 规则执行结果,枚举: 1 :成功 0 :失败 2 :未更新 3 :重试成功 4 :重试失败 5 :未重试 |
 | 6 | fupdatetype | 更新方式 | bpchar | 1 |  | √ | ' ' | 更新方式,枚举: A :同步 B :部分异步 C :完全异步 |
-| 7 | fruleno | 规则编码 | varchar | 30 |  | √ | ' ' | 余额更新规则列表 bal_balanceupdaterule |
+| 7 | fruleno | 规则编码 | varchar | 30 |  | √ | ' ' | [余额更新规则列表 bal_balanceupdaterule](../bal_files/bal_balanceupdaterule.md) |
 | 8 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 9 | frulemsg | 错误日志 | varchar | 2000 |  | √ | ' ' | 错误日志 |
 | 10 | fruleplugintime | 业务插件耗时/ms | int4 | 32 |  | √ | 0 | 业务插件耗时/ms |
@@ -70,6 +70,6 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | pk_bal_balancelogentry |  | fentryid |
-| 2 | idx_bal_log_e_fbno |  | fruleno |
+| 1 | idx_bal_log_e_fbno |  | fruleno |
+| 2 | pk_bal_balancelogentry |  | fentryid |
 | 3 | idx_bal_log_e_fid |  | fid |

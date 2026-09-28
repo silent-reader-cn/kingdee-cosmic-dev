@@ -16,11 +16,11 @@
 | 5 | fstart_time | 开始时间 | timestamp | 0 |  |  | null | 开始时间 |
 | 6 | fapi_type | API类型 | varchar | 30 |  | √ | ' ' | API类型,枚举: isc_apic_by_meta_schema :集成对象转API isc_apic_by_dc_schema :数据集成方案转API isc_apic_by_dc_trigger :启动方案转API |
 | 7 | fserver_id | 执行服务器 | varchar | 50 |  | √ | ' ' | 执行服务器 |
-| 8 | fdata_trigger | 启动方案转API | int8 | 64 |  | √ | 0 | 启动方案转API isc_apic_by_dc_trigger |
-| 9 | fmeta_schema | 集成对象转API | int8 | 64 |  | √ | 0 | 集成对象转API isc_apic_by_meta_schema |
+| 8 | fdata_trigger | 启动方案转API | int8 | 64 |  | √ | 0 | [启动方案转API isc_apic_by_dc_trigger](../iscb_files/isc_apic_by_dc_trigger.md) |
+| 9 | fmeta_schema | 集成对象转API | int8 | 64 |  | √ | 0 | [集成对象转API isc_apic_by_meta_schema](../iscb_files/isc_apic_by_meta_schema.md) |
 | 10 | fstate | 执行状态 | varchar | 30 |  | √ | ' ' | 执行状态,枚举: S :成功 F :失败 E :执行中 |
 | 11 | fduration | 持续时间(ms) | int8 | 64 |  | √ | 0 | 持续时间(ms) |
-| 12 | fdata_copy | 数据集成方案转API | int8 | 64 |  | √ | 0 | 数据集成方案转API isc_apic_by_dc_schema |
+| 12 | fdata_copy | 数据集成方案转API | int8 | 64 |  | √ | 0 | [数据集成方案转API isc_apic_by_dc_schema](../iscb_files/isc_apic_by_dc_schema.md) |
 | 13 | fnumber | 执行对象编码 | varchar | 50 |  | √ | ' ' | 执行对象编码 |
 | 14 | fmessage_tag | 日志内容_详情 | text | 0 |  |  | null | 日志内容_详情 |
 

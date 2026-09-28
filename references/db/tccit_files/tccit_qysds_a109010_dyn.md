@@ -15,22 +15,23 @@
 | 4 | fqnljfpje | 全年累计分配金额 | numeric | 23 | 10 | √ | 0 | 全年累计分配金额 |
 | 5 | fewblxh | 二维表序号 | varchar | 50 |  | √ | ' ' | 二维表序号,枚举: 1 :1 2 :2 3 :3 4 :4 5 :5 6 :6 7 :7 8 :8 9 :9 10 :10 11 :11 12 :12 13 :13 14 :14 99 :合计 |
 | 6 | fsjfpsdse | 实际分配所得税额 | numeric | 23 | 10 | √ | 0 | 实际分配所得税额 |
-| 7 | ffzjggzze | 4.职工薪酬 | numeric | 23 | 10 | √ | 0 | 4.职工薪酬 |
-| 8 | fxsmzdfyhje | 应享受民族地方优惠金额 | numeric | 23 | 10 | √ | 0 | 应享受民族地方优惠金额 |
-| 9 | fewblname | 二维表名称 | varchar | 50 |  | √ | ' ' | 二维表名称 |
-| 10 | ffzjglxlb | 分支机构类型类别 | varchar | 50 |  | √ | ' ' | 分支机构类型类别 |
-| 11 | fymzdfyhtzfpje | 因民族地方优惠调整分配金额 | numeric | 23 | 10 | √ | 0 | 因民族地方优惠调整分配金额 |
-| 12 | ffpse | 7.分配所得税额 | numeric | 23 | 10 | √ | 0 | 7.分配所得税额 |
-| 13 | ffzjgzcze | 5.资产总额 | numeric | 23 | 10 | √ | 0 | 5.资产总额 |
-| 14 | fstatus | 状态 | varchar | 50 |  | √ | ' ' | 状态,枚举: 1 :正常 0 :注销 |
-| 15 | ffzjgzgswjdm | 分支机构税务机关代码 | varchar | 50 |  | √ | ' ' | 分支机构税务机关代码 |
-| 16 | ffzjgsrze | 3.营业收入 | numeric | 23 | 10 | √ | 0 | 3.营业收入 |
-| 17 | ffpbl | 6.分配比例 | numeric | 23 | 10 | √ | 0 | 6.分配比例 |
-| 18 | fsbbid | 申报表id | varchar | 50 |  | √ | ' ' | 申报表id |
-| 19 | fqnljyxsmzdfyhje | 全年累计已享受民族地方优惠金额 | numeric | 23 | 10 | √ | 0 | 全年累计已享受民族地方优惠金额 |
-| 20 | ffzjgyhbasedata | 分支机构享受区域性优惠情况 | int8 | 64 |  | √ | 0 | 业务定义分录 tpo_tccit_bizdef_entry |
-| 21 | ffzjgnsrsbh | 1.分支机构纳税人识别号 | varchar | 50 |  | √ | ' ' | 1.分支机构纳税人识别号 |
-| 22 | ffzjgmc | 2.分支机构名称 | varchar | 300 |  | √ | ' ' | 2.分支机构名称 |
+| 7 | fftybsdse | 分摊应补(退)所得税额 | numeric | 23 | 10 | √ | 0 | 分摊应补(退)所得税额 |
+| 8 | ffzjggzze | 4.职工薪酬 | numeric | 23 | 10 | √ | 0 | 4.职工薪酬 |
+| 9 | fxsmzdfyhje | 应享受民族地方优惠金额 | numeric | 23 | 10 | √ | 0 | 应享受民族地方优惠金额 |
+| 10 | fewblname | 二维表名称 | varchar | 50 |  | √ | ' ' | 二维表名称 |
+| 11 | ffzjglxlb | 分支机构类型类别 | varchar | 50 |  | √ | ' ' | 分支机构类型类别 |
+| 12 | fymzdfyhtzfpje | 因民族地方优惠调整分配金额 | numeric | 23 | 10 | √ | 0 | 因民族地方优惠调整分配金额 |
+| 13 | ffpse | 7.分配所得税额 | numeric | 23 | 10 | √ | 0 | 7.分配所得税额 |
+| 14 | ffzjgzcze | 5.资产总额 | numeric | 23 | 10 | √ | 0 | 5.资产总额 |
+| 15 | fstatus | 状态 | varchar | 50 |  | √ | ' ' | 状态,枚举: 1 :正常 0 :注销 |
+| 16 | ffzjgzgswjdm | 分支机构税务机关代码 | varchar | 50 |  | √ | ' ' | 分支机构税务机关代码 |
+| 17 | ffzjgsrze | 3.营业收入 | numeric | 23 | 10 | √ | 0 | 3.营业收入 |
+| 18 | ffpbl | 6.分配比例 | numeric | 23 | 10 | √ | 0 | 6.分配比例 |
+| 19 | fsbbid | 申报表id | varchar | 50 |  | √ | ' ' | 申报表id |
+| 20 | fqnljyxsmzdfyhje | 全年累计已享受民族地方优惠金额 | numeric | 23 | 10 | √ | 0 | 全年累计已享受民族地方优惠金额 |
+| 21 | ffzjgyhbasedata | 分支机构享受区域性优惠情况 | int8 | 64 |  | √ | 0 | 业务定义分录 tpo_tccit_bizdef_entry |
+| 22 | ffzjgnsrsbh | 1.分支机构纳税人识别号 | varchar | 50 |  | √ | ' ' | 1.分支机构纳税人识别号 |
+| 23 | ffzjgmc | 2.分支机构名称 | varchar | 300 |  | √ | ' ' | 2.分支机构名称 |
 
 ### 列规则定义
 

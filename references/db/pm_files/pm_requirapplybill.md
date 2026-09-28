@@ -43,29 +43,30 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | funitsrctype | 计量单位来源 | varchar | 30 |  | √ | ' ' | 计量单位来源,枚举: MAINBILLUNIT :核心单据计量单位 BIZUNIT :默认业务单位 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 4 | fdeptid | 需求部门 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 5 | fbillstatus | 单据状态 | varchar | 5 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 6 | fcomment | 备注 | varchar | 512 |  |  | null | 备注 |
-| 7 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 8 | forgid | 需求组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 9 | fbizuserid | 申请人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 10 | fclosedate | 关闭日期 | timestamp | 0 |  |  | null | 关闭日期 |
-| 11 | flastupdateuserid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 12 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
-| 13 | fbillcretype | 单据生成类型 | varchar | 5 |  | √ | '0' | 单据生成类型,枚举: 0 :手工生成 1 :导入生成 2 :后台生成 |
-| 14 | fbiztime | 申请日期 | timestamp | 0 |  |  | null | 申请日期 |
-| 15 | flastupdatetime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 16 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 17 | fclosestatus | 关闭状态 | varchar | 5 |  | √ | ' ' | 关闭状态,枚举: A :正常 B :已关闭 |
-| 18 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 19 | fbizorgid | 采购组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 20 | fbiztypeid | 业务类型 | int8 | 64 |  | √ | 0 | 业务类型 bd_biztype |
-| 21 | fcloserid | 关闭人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 22 | fbillno | 单据编号 | varchar | 80 |  | √ | ' ' | 单据编号 |
-| 23 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 24 | fbilltypeid | 单据类型 | int8 | 64 |  | √ | 0 | 单据类型 bos_billtype |
+| 2 | forgid | 需求组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 3 | fclosedate | 关闭日期 | timestamp | 0 |  |  | null | 关闭日期 |
+| 4 | fbiztime | 申请日期 | timestamp | 0 |  |  | null | 申请日期 |
+| 5 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 6 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 7 | fbizorgid | 采购组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 8 | fbiztypeid | 业务类型 | int8 | 64 |  | √ | 0 | [业务类型 bd_biztype](../sbd_files/bd_biztype.md) |
+| 9 | fcloserid | 关闭人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 10 | fbillno | 单据编号 | varchar | 80 |  | √ | ' ' | 单据编号 |
+| 11 | funitsrctype | 计量单位来源 | varchar | 30 |  | √ | ' ' | 计量单位来源,枚举: MAINBILLUNIT :核心单据计量单位 BIZUNIT :默认业务单位 |
+| 12 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 13 | fdeptid | 需求部门 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 14 | fbillstatus | 单据状态 | varchar | 5 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
+| 15 | fcomment | 备注 | varchar | 512 |  |  | null | 备注 |
+| 16 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 17 | fbizuserid | 申请人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 18 | ftrdbillno | 第三方业务编码 | varchar | 50 |  | √ | ' ' | 第三方业务编码 |
+| 19 | flastupdateuserid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 20 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
+| 21 | fbillcretype | 单据生成类型 | varchar | 5 |  | √ | '0' | 单据生成类型,枚举: 0 :手工生成 1 :导入生成 2 :后台生成 |
+| 22 | flastupdatetime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 23 | fclosestatus | 关闭状态 | varchar | 5 |  | √ | ' ' | 关闭状态,枚举: A :正常 B :已关闭 |
+| 24 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 25 | fbilltypeid | 单据类型 | int8 | 64 |  | √ | 0 | 单据类型 bos_billtype |
 
 ### 列规则定义
 
@@ -191,44 +192,46 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | frowclosestatus | 行关闭状态 | varchar | 5 |  | √ | ' ' | 行关闭状态,枚举: A :正常 B :已关闭 |
 | 3 | fentrymodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 4 | fmaterialid | 物料策略(封存) | int8 | 64 |  | √ | 0 | 物料采购信息 bd_materialpurchaseinfo |
+| 4 | fmaterialid | 物料策略(封存) | int8 | 64 |  | √ | 0 | [物料采购信息 bd_materialpurchaseinfo](../sbd_files/bd_materialpurchaseinfo.md) |
 | 5 | fauxptyid | 辅助属性 | int8 | 64 |  | √ | 0 | null 001 |
 | 6 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 7 | fentrycreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 8 | fapplybaseqty | 已请购基本数量 | numeric | 23 | 10 | √ | 0.0000000000 | 已请购基本数量 |
-| 9 | fauxunitid | 辅助单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 10 | fmatapplyqty | 已出库申请数量 | numeric | 23 | 10 | √ | 0.0000000000 | 已出库申请数量 |
-| 11 | freqdes | 需求原因 | varchar | 512 |  |  | ' ' | 需求原因 |
-| 12 | funitrate | funitrate | numeric | 23 | 10 | √ | 0.0000000000 |  |
-| 13 | fentrymodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 14 | freqdate | 需求日期 | timestamp | 0 |  |  | null | 需求日期 |
-| 15 | fmaterialversionid | 物料版本 | int8 | 64 |  | √ | 0 | 物料版本 bd_bomversion_new |
-| 16 | fbaseunitid | 基本单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 17 | fmatoutbaseqty | 已出库基本数量 | numeric | 23 | 10 | √ | 0.0000000000 | 已出库基本数量 |
-| 18 | fqty | 数量 | numeric | 23 | 10 | √ | 0.0000000000 | 数量 |
-| 19 | fprojectid | 项目编码 | int8 | 64 |  | √ | 0 | 项目 bd_project |
-| 20 | fbizunitid | fbizunitid | int8 | 64 |  | √ | 0 |  |
-| 21 | funmatapplybaseqty | 未出库申请基本数量 | numeric | 23 | 10 | √ | 0 | 未出库申请基本数量 |
-| 22 | funitid | 计量单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 23 | fauxunitid2 | 辅助单位(2) | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 24 | fentryorgid | 分录需求组织(封存) | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 25 | funmatapplyqty | 未出库申请数量 | numeric | 23 | 10 | √ | 0 | 未出库申请数量 |
-| 26 | fsupplierid | 建议供应商 | int8 | 64 |  | √ | 0 | 供应商 bd_supplier |
-| 27 | fmaterialmasterid | 物料编码 | int8 | 64 |  | √ | 0 | 物料 bd_material |
-| 28 | fentrycreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 29 | fauxqty2 | 辅助数量(2) | numeric | 23 | 10 | √ | 0 | 辅助数量(2) |
-| 30 | frowterminatestatus | 行终止状态 | varchar | 5 |  | √ | ' ' | 行终止状态,枚举: A :正常 B :已终止 |
-| 31 | fauxqty | 辅助数量 | numeric | 23 | 10 | √ | 0.0000000000 | 辅助数量 |
-| 32 | fentrycomment | 备注 | varchar | 512 |  |  | ' ' | 备注 |
-| 33 | fapplyqty | 已请购数量 | numeric | 23 | 10 | √ | 0.0000000000 | 已请购数量 |
-| 34 | fbaseqty | 基本数量 | numeric | 23 | 10 | √ | 0.0000000000 | 基本数量 |
-| 35 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 36 | fbizunitrate | fbizunitrate | numeric | 23 | 10 | √ | 0.0000000000 |  |
-| 37 | fmatapplybaseqty | 已出库申请基本数量 | numeric | 23 | 10 | √ | 0.0000000000 | 已出库申请基本数量 |
-| 38 | flinetypeid | 行类型 | int8 | 64 |  | √ | 0 | 行类型 bd_linetype |
-| 39 | fmaterialname | 物料名称(历史) | varchar | 255 |  |  | ' ' | 物料名称(历史) |
-| 40 | fmatoutqty | 已出库数量 | numeric | 23 | 10 | √ | 0.0000000000 | 已出库数量 |
-| 41 | fqtybizunit | fqtybizunit | numeric | 23 | 10 | √ | 0.0000000000 |  |
+| 7 | fentrycreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 8 | fbonded | 保税 | bpchar | 1 |  | √ | '0' | 保税 |
+| 9 | fapplybaseqty | 已请购基本数量 | numeric | 23 | 10 | √ | 0.0000000000 | 已请购基本数量 |
+| 10 | fauxunitid | 辅助单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 11 | fmatapplyqty | 已出库申请数量 | numeric | 23 | 10 | √ | 0.0000000000 | 已出库申请数量 |
+| 12 | freqdes | 需求原因 | varchar | 512 |  |  | ' ' | 需求原因 |
+| 13 | funitrate | funitrate | numeric | 23 | 10 | √ | 0.0000000000 |  |
+| 14 | fentrymodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 15 | freqdate | 需求日期 | timestamp | 0 |  |  | null | 需求日期 |
+| 16 | fmaterialversionid | 物料版本 | int8 | 64 |  | √ | 0 | [物料版本 bd_bomversion_new](../basedata_files/bd_bomversion_new.md) |
+| 17 | fbaseunitid | 基本单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 18 | fmatoutbaseqty | 已出库基本数量 | numeric | 23 | 10 | √ | 0.0000000000 | 已出库基本数量 |
+| 19 | fqty | 数量 | numeric | 23 | 10 | √ | 0.0000000000 | 数量 |
+| 20 | fprojectid | 项目编码 | int8 | 64 |  | √ | 0 | [项目 bd_project](../basedata_files/bd_project.md) |
+| 21 | fbizunitid | fbizunitid | int8 | 64 |  | √ | 0 |  |
+| 22 | funmatapplybaseqty | 未出库申请基本数量 | numeric | 23 | 10 | √ | 0 | 未出库申请基本数量 |
+| 23 | funitid | 计量单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 24 | fauxunitid2 | 辅助单位(2) | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 25 | fentryorgid | 分录需求组织(封存) | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 26 | funmatapplyqty | 未出库申请数量 | numeric | 23 | 10 | √ | 0 | 未出库申请数量 |
+| 27 | fsupplierid | 建议供应商 | int8 | 64 |  | √ | 0 | [供应商 bd_supplier](../basedata_files/bd_supplier.md) |
+| 28 | fmaterialmasterid | 物料编码 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
+| 29 | fentrycreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 30 | fauxqty2 | 辅助数量(2) | numeric | 23 | 10 | √ | 0 | 辅助数量(2) |
+| 31 | frowterminatestatus | 行终止状态 | varchar | 5 |  | √ | ' ' | 行终止状态,枚举: A :正常 B :已终止 |
+| 32 | fauxqty | 辅助数量 | numeric | 23 | 10 | √ | 0.0000000000 | 辅助数量 |
+| 33 | fentrycomment | 备注 | varchar | 512 |  |  | ' ' | 备注 |
+| 34 | fapplyqty | 已请购数量 | numeric | 23 | 10 | √ | 0.0000000000 | 已请购数量 |
+| 35 | fbaseqty | 基本数量 | numeric | 23 | 10 | √ | 0.0000000000 | 基本数量 |
+| 36 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 37 | fbizunitrate | fbizunitrate | numeric | 23 | 10 | √ | 0.0000000000 |  |
+| 38 | fmatapplybaseqty | 已出库申请基本数量 | numeric | 23 | 10 | √ | 0.0000000000 | 已出库申请基本数量 |
+| 39 | flinetypeid | 行类型 | int8 | 64 |  | √ | 0 | [行类型 bd_linetype](../sbd_files/bd_linetype.md) |
+| 40 | fmaterialname | 物料名称(历史) | varchar | 255 |  |  | ' ' | 物料名称(历史) |
+| 41 | fmatoutqty | 已出库数量 | numeric | 23 | 10 | √ | 0.0000000000 | 已出库数量 |
+| 42 | fqtybizunit | fqtybizunit | numeric | 23 | 10 | √ | 0.0000000000 |  |
+| 43 | flicenseno | 许可证编号 | int8 | 64 |  | √ | 0 | [许可证 bd_licence](../sbd_files/bd_licence.md) |
 
 ### 列规则定义
 

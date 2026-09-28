@@ -14,7 +14,7 @@
 | 3 | ffielddisplayname | 字段显示名 | varchar | 80 |  | √ | ' ' | 字段显示名 |
 | 4 | fseq | fseq | int4 | 32 |  | √ | 0 |  |
 | 5 | fismust | 必录 | bpchar | 1 |  | √ | '0' | 必录 |
-| 6 | fentrybillobjectid | 业务对象 | varchar | 255 |  | √ | ' ' | 业务对象 bos_objecttype |
+| 6 | fentrybillobjectid | 业务对象 | varchar | 255 |  | √ | ' ' | [业务对象 bos_objecttype](../mdl_files/bos_objecttype.md) |
 | 7 | ffieldtype | 字段类型 | bpchar | 1 |  | √ | ' ' | 字段类型,枚举: A :文本 B :数字 C :日期 D :复选框 |
 | 8 | fsrclibfield | fsrclibfield | int8 | 64 |  | √ | 0 |  |
 | 9 | fscale | fscale | int4 | 32 |  | √ | 0 |  |
@@ -33,8 +33,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_mpm_billfldsetentry_id |  | fid |
-| 2 | pk_mpm_billfieldsetentry |  | fentryid |
+| 1 | pk_mpm_billfieldsetentry |  | fentryid |
+| 2 | idx_mpm_billfldsetentry_id |  | fid |
 
 ---
 

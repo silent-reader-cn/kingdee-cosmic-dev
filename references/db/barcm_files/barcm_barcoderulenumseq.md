@@ -11,10 +11,10 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fsortitemvalue | 流水号依据字段值 | varchar | 500 |  | √ | ' ' | 流水号依据字段值 |
-| 3 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fmaxflowno | 最大流水号 | int8 | 64 |  | √ | 0 | 最大流水号 |
 | 5 | fcreatetime | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
-| 6 | fbarcoderuleid | 条码规则ID | int8 | 64 |  | √ | 0 | 条码规则 barcm_barcoderule |
+| 6 | fbarcoderuleid | 条码规则ID | int8 | 64 |  | √ | 0 | [条码规则 barcm_barcoderule](../barcm_files/barcm_barcoderule.md) |
 | 7 | finitserial | 初始值 | int8 | 64 |  | √ | 0 | 初始值 |
 
 ### 列规则定义

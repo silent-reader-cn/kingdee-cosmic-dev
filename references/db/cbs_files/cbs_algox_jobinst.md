@@ -19,7 +19,7 @@
 | 8 | fjobname | 任务名称 | varchar | 40 |  | √ | ' ' | 任务名称 |
 | 9 | fstarttime | 任务开始时间 | timestamp | 0 |  |  | null | 任务开始时间 |
 | 10 | fstatus | 任务运行状态 | int8 | 64 |  | √ | 0 | 任务运行状态,枚举: 0 :成功 1 :失败 2 :运行中 |
-| 11 | fduration | 执行时间 | int8 | 64 |  | √ | 0 | 执行时间 |
+| 11 | fduration | 执行时长 | int8 | 64 |  | √ | 0 | 执行时长 |
 | 12 | fstatisticalanalyze | 统计分析 | varchar | 256 |  |  | ' ' | 统计分析 |
 | 13 | fendtime | 任务结束时间 | timestamp | 0 |  |  | null | 任务结束时间 |
 | 14 | fbillno | 单据编号 | varchar | 40 |  |  | ' ' | 单据编号 |

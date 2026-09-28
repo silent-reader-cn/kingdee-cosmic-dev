@@ -18,13 +18,13 @@
 | 7 | finvoicestatus | 发票状态 | varchar | 50 |  | √ | ' ' | 发票状态,枚举: 0 :正常 3 :红冲 6 :作废 7 :作废中 |
 | 8 | fassbillid | 单据ID-辅 | int8 | 64 |  | √ | 0 | 单据ID-辅 |
 | 9 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 10 | fgoodsname | 商品名称 | varchar | 50 |  | √ | ' ' | 商品名称 |
+| 10 | fgoodsname | 商品名称 | varchar | 300 |  | √ | ' ' | 商品名称 |
 | 11 | fassbillqty | 数量-辅 | numeric | 23 | 10 | √ | 0 | 数量-辅 |
 | 12 | finvoicedate | 开票日期 | timestamp | 0 |  |  | null | 开票日期 |
 | 13 | fassbillno | 单据编号-辅 | varchar | 50 |  | √ | ' ' | 单据编号-辅 |
 | 14 | finvoicecode | 发票代码 | varchar | 50 |  | √ | ' ' | 发票代码 |
-| 15 | fassbilltype | 单据类型-辅 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
-| 16 | fbuyername | 购方名称 | varchar | 50 |  | √ | ' ' | 购方名称 |
+| 15 | fassbilltype | 单据类型-辅 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
+| 16 | fbuyername | 购方名称 | varchar | 150 |  | √ | ' ' | 购方名称 |
 | 17 | fmainwfinfo_tag | 核销详情-主_详情 | text | 0 |  |  | null | 核销详情-主_详情 |
 | 18 | fkjpzh | 会计凭证号 | varchar | 50 |  | √ | ' ' | 会计凭证号 |
 | 19 | finvoiceno | 发票号码 | varchar | 50 |  | √ | ' ' | 发票号码 |
@@ -33,7 +33,7 @@
 | 22 | fassbillentryid | 单据分录ID-辅 | int8 | 64 |  | √ | 0 | 单据分录ID-辅 |
 | 23 | fje | 金额 | numeric | 23 | 10 | √ | 0 | 金额 |
 | 24 | ftaxamount | 税额 | numeric | 23 | 10 | √ | 0 | 税额 |
-| 25 | fassunit | 计量单位-辅 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 25 | fassunit | 计量单位-辅 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 26 | fpzhh | 凭证行号 | varchar | 50 |  | √ | ' ' | 凭证行号 |
 | 27 | fverifymatch | 核销匹配 | varchar | 150 |  | √ | ' ' | 核销匹配 |
 | 28 | fmainwfinfo | 核销详情-主 | varchar | 255 |  | √ | ' ' | 核销详情-主 |
@@ -46,11 +46,11 @@
 | 35 | finvoiceamount | 金额 | numeric | 23 | 10 | √ | 0 | 金额 |
 | 36 | fassqty | 核销数量-辅 | numeric | 23 | 10 | √ | 0 | 核销数量-辅 |
 | 37 | fbillid | 单据ID-主 | int8 | 64 |  | √ | 0 | 单据ID-主 |
-| 38 | fbalanceid | 科目名称 | varchar | 36 |  | √ | ' ' | 科目 tdm_account |
+| 38 | fbalanceid | 科目名称 | varchar | 36 |  | √ | ' ' | [科目 tdm_account](../tdm_files/tdm_account.md) |
 | 39 | fasswfinfo | 核销详情-辅 | varchar | 255 |  | √ | ' ' | 核销详情-辅 |
 | 40 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 41 | fbilltype | 单据类型-主 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
-| 42 | funit | 计量单位-主 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 41 | fbilltype | 单据类型-主 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
+| 42 | funit | 计量单位-主 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 43 | fsummary | 摘要 | varchar | 2000 |  | √ | ' ' | 摘要 |
 
 ### 列规则定义
@@ -80,14 +80,14 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fwfseq | 核销批号 | varchar | 50 |  | √ | ' ' | 核销批号 |
 | 3 | fcreatedate | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
-| 4 | fcreatorid | 核销人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 5 | ftaxorg | 税务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 4 | fcreatorid | 核销人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 5 | ftaxorg | 税务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | fbillstatus | 单据状态 | varchar | 50 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 7 | fcreatetime | 核销日期 | timestamp | 0 |  |  | null | 核销日期 |
 | 8 | fheadwfinfo | 核销详情 | varchar | 255 |  | √ | ' ' | 核销详情 |
 | 9 | fwfnumber | 核销编码 | varchar | 30 |  | √ | ' ' | 核销编码 |
 | 10 | fheadwfinfo_tag | 核销详情_详情 | text | 0 |  |  | null | 核销详情_详情 |
-| 11 | fwriteofftypeid | 核销类别 | int8 | 64 |  | √ | 0 | 核销类别 msmod_writeofftype |
+| 11 | fwriteofftypeid | 核销类别 | int8 | 64 |  | √ | 0 | [核销类别 msmod_writeofftype](../mscommon_files/msmod_writeofftype.md) |
 
 ### 列规则定义
 

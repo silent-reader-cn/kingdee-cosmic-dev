@@ -42,7 +42,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fcreateorgid | fcreateorgid | int8 | 64 |  | √ | 0 |  |
 | 3 | fremark | fremark | varchar | 255 |  | √ | ' ' |  |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fname | fname | varchar | 100 |  | √ | ' ' |  |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 7 | forgid | forgid | int8 | 64 |  | √ | 0 |  |
@@ -56,7 +56,7 @@
 | 15 | fapiname | 接口名称 | varchar | 100 |  | √ | ' ' | 接口名称 |
 | 16 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 17 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 18 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 18 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 19 | fenable | 可用状态 | bpchar | 1 |  | √ | ' ' | 可用状态,枚举: 0 :禁用 1 :可用 |
 | 20 | fplugin | 插件 | varchar | 100 |  | √ | ' ' | 插件 |
 | 21 | fnumber | 编码 | varchar | 50 |  | √ | ' ' | 编码 |

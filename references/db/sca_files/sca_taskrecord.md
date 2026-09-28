@@ -57,7 +57,7 @@
 | 8 | ftaskname | 任务名称 | varchar | 255 |  | √ | ' ' | 任务名称 |
 | 9 | fprogress | 进度（%） | int8 | 64 |  | √ | 0 | 进度（%） |
 | 10 | fstarttime | 开始时间 | timestamp | 0 |  |  | null | 开始时间 |
-| 11 | fexecutorid | 执行人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fexecutorid | 执行人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fnextpage | 结束页面 | varchar | 50 |  | √ | ' ' | 结束页面 |
 
 ### 列规则定义

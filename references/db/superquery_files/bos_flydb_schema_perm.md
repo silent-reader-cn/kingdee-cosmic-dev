@@ -10,8 +10,8 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fuserid | 用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 3 | fschemaid | 模式 | int8 | 64 |  | √ | 0 | Schema管理 bos_flydb_schema |
+| 2 | fuserid | 用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 3 | fschemaid | 模式 | int8 | 64 |  | √ | 0 | [Schema管理 bos_flydb_schema](../superquery_files/bos_flydb_schema.md) |
 | 4 | fauthitem | 权限项 | int8 | 64 |  | √ | 0 | 权限项 |
 
 ### 列规则定义

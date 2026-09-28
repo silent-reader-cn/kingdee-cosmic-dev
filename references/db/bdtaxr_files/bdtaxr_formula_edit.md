@@ -26,7 +26,7 @@
 | 15 | fformula | 公式 | varchar | 4000 |  | √ | ' ' | 公式 |
 | 16 | fcontent | 提示语 | varchar | 2000 |  | √ | ' ' | 提示语 |
 | 17 | fformulakey | 标示 | varchar | 200 |  | √ | ' ' | 标示 |
-| 18 | ftaxtype | 模板类型 | varchar | 30 |  | √ | ' ' | 模板分组 bdtaxr_template_group |
+| 18 | ftaxtype | 模板类型 | varchar | 30 |  | √ | ' ' | [模板分组 bdtaxr_template_group](../bdtaxr_files/bdtaxr_template_group.md) |
 
 ### 列规则定义
 

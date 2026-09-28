@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fchartindex | 图表数 | int8 | 64 |  | √ | 0 | 图表数 |
 | 4 | fformkey | 表单标识 | varchar | 80 |  | √ | ' ' | 表单标识 |
 | 5 | fsettingstr | 设置项详情 | varchar | 255 |  | √ | ' ' | 设置项详情 |
@@ -19,7 +19,7 @@
 | 8 | fsettingdetail | 设置详情 | varchar | 255 |  | √ | ' ' | 设置详情 |
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 10 | fstatus | 数据状态 | varchar | 5 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 13 | fsettingstr_tag | 设置项详情_详情 | text | 0 |  |  | ' ' | 设置项详情_详情 |
 | 14 | fchecked | 选择 | bpchar | 1 |  | √ | '0' | 选择 |

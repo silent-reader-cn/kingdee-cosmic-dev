@@ -38,7 +38,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | 单据 | int8 | 64 |  | √ | 0 | 可发量单据配置 sm_expectqtybillsetting |
+| 1 | fid | 单据 | int8 | 64 |  | √ | 0 | [可发量单据配置 sm_expectqtybillsetting](../sm_files/sm_expectqtybillsetting.md) |
 | 2 | fseq | fseq | int4 | 32 |  | √ | 0 |  |
 | 3 | foperationname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
 | 4 | fenable | 是否启用 | bpchar | 1 |  | √ | '0' | 是否启用 |

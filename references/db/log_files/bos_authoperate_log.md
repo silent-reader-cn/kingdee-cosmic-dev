@@ -11,11 +11,11 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fbizobjname | fbizobjname | varchar | 100 |  | √ | ' ' |  |
-| 3 | foperateuser | 操作人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 4 | foperateresult | 认证结果 | varchar | 250 |  | √ | ' ' | 认证结果 |
+| 3 | foperateuser | 操作人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 4 | foperateresult | 认证结果 | varchar | 250 |  | √ | ' ' | 认证结果,枚举: 1 :认证成功 0 :认证失败 2 :验证码错误，认证失败 3 :密码错误，认证失败 |
 | 5 | foperatedate | 操作时间 | timestamp | 0 |  | √ | LOCALTIMESTAMP | 操作时间 |
 | 6 | fverifymode | 认证方式 | bpchar | 1 |  | √ | ' ' | 认证方式,枚举: 0 :密码验证 1 :短信验证 2 :邮箱验证 |
-| 7 | fbizobj | 业务对象编码 | varchar | 80 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 7 | fbizobj | 业务对象编码 | varchar | 80 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 8 | fverifyoperate | 认证操作 | varchar | 250 |  | √ | ' ' | 认证操作 |
 
 ### 列规则定义

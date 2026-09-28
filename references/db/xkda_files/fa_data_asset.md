@@ -109,14 +109,14 @@
 | 2 | finvaliddate | 失效时间 | timestamp | 0 |  |  | null | 失效时间 |
 | 3 | feffectuatedate | 生效时间 | timestamp | 0 |  |  | null | 生效时间 |
 | 4 | fstatus | 状态 | varchar | 10 |  | √ | ' ' | 状态,枚举: 1 :生效 2 :失效 |
-| 5 | fentrymodifier | 更新人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | fentrymodifier | 更新人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | fentryscale | 数据规模 | numeric | 23 | 10 | √ | 0 | 数据规模 |
-| 7 | fentrysupplier | 供应商 | int8 | 64 |  | √ | 0 | 供应商 bd_supplier |
+| 7 | fentrysupplier | 供应商 | int8 | 64 |  | √ | 0 | [供应商 bd_supplier](../basedata_files/bd_supplier.md) |
 | 8 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 9 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 10 | finvalidtype | 失效类型 | bpchar | 1 |  | √ | '1' | 失效类型,枚举: 1 :手动 2 :完全清理 |
 | 11 | fdetailsbillno | 编号 | varchar | 50 |  | √ | ' ' | 编号 |
-| 12 | fentryunit | 计量单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 12 | fentryunit | 计量单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 
 ### 列规则定义
 
@@ -176,30 +176,30 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | forgid | 货主组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | forgid | 货主组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fregisterdate | 登记日期 | timestamp | 0 |  |  | null | 登记日期 |
-| 4 | fmanager | 管理人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmanager | 管理人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fregisternumber | 登记编号 | varchar | 50 |  | √ | ' ' | 登记编号 |
 | 6 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 7 | fsaveformat | 数据存储格式 | varchar | 10 |  | √ | ' ' | 数据存储格式,枚举: 1 :文本 2 :图像 3 :语音 4 :视频 5 :网页 6 :数据库 7 :传感信号 |
-| 8 | fassetunitid | 资产组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 9 | fstoreplaceid | 存放地点 | int8 | 64 |  | √ | 0 | 存放地点 fa_storeplace |
-| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 11 | fheadusedeptid | 管理部门 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 8 | fassetunitid | 资产组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 9 | fstoreplaceid | 存放地点 | int8 | 64 |  | √ | 0 | [存放地点 fa_storeplace](../fa_files/fa_storeplace.md) |
+| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 11 | fheadusedeptid | 管理部门 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 12 | fbusstatus | 业务状态 | varchar | 50 |  | √ | ' ' | 业务状态,枚举: READY :就绪 DELETE :已作废 ADD :新增中 |
 | 13 | fupdatefrequency | 更新频率 | varchar | 10 |  | √ | ' ' | 更新频率,枚举: 1 :每天 2 :每周 3 :每月 4 :每季度 5 :每半年 6 :每年 |
 | 14 | fbillno | 编号 | varchar | 30 |  | √ | ' ' | 编号 |
-| 15 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 15 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 16 | fbillstatus | 单据状态 | varchar | 30 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 17 | foriginmethodid | 数据来源 | int8 | 64 |  | √ | 0 | 增减方式 fa_changemode |
+| 17 | foriginmethodid | 数据来源 | int8 | 64 |  | √ | 0 | [增减方式 fa_changemode](../fa_files/fa_changemode.md) |
 | 18 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 19 | fassetcatid | 资产类别 | int8 | 64 |  | √ | 0 | 资产类别 fa_assetcategory |
-| 20 | funitid | 规模单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 19 | fassetcatid | 资产类别 | int8 | 64 |  | √ | 0 | [资产类别 fa_assetcategory](../fa_files/fa_assetcategory.md) |
+| 20 | funitid | 规模单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 21 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
-| 22 | fsupplierid | 供应商 | int8 | 64 |  | √ | 0 | 供应商 bd_supplier |
+| 22 | fsupplierid | 供应商 | int8 | 64 |  | √ | 0 | [供应商 bd_supplier](../basedata_files/bd_supplier.md) |
 | 23 | ftype | 数据类型 | varchar | 10 |  | √ | ' ' | 数据类型,枚举: 1 :结构化数据 2 :非结构化数据 3 :半结构化数据 |
 | 24 | fscale | 数据规模 | numeric | 23 | 10 | √ | 0 | 数据规模 |
-| 25 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 25 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 
@@ -211,8 +211,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_fa_data_asset_no |  | fbillno |
-| 2 | pk_fa_data_asset |  | fid |
+| 1 | pk_fa_data_asset |  | fid |
+| 2 | idx_fa_data_asset_no |  | fbillno |
 
 ---
 

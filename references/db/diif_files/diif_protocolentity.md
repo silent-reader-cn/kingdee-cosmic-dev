@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fsignerid | 签署人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fsignerid | 签署人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 4 | fagreeprotocol | 同意协议 | bpchar | 1 |  | √ | '0' | 同意协议 |
 | 5 | fsigndate | 签署日期 | timestamp | 0 |  |  | null | 签署日期 |

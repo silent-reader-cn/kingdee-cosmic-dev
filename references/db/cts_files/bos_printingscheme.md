@@ -75,12 +75,12 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fapprovedate | fapprovedate | timestamp | 0 |  |  | null |  |
 | 3 | fapproverid | fapproverid | int8 | 64 |  | √ | 0 |  |
-| 4 | fbillformid | 业务实体 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 4 | fbillformid | 业务实体 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 5 | fispreference | 首选方案 | bpchar | 1 |  | √ | '0' | 首选方案 |
-| 6 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 7 | fdefaulttemplate | 默认模板 | varchar | 36 |  |  | ' ' | 默认模板,枚举: |
 | 8 | fapproveline | 审批线路 | varchar | 36 |  | √ | ' ' | 审批线路,枚举: all :所有审批记录 allConsent :所有审批同意记录 lastedConsent :当前节点之前最新审批同意记录 |
-| 9 | fdefaultcloudprinter | 默认打印机 | int8 | 64 |  | √ | 0 | 云打印机 bos_cloudprinter |
+| 9 | fdefaultcloudprinter | 默认打印机 | int8 | 64 |  | √ | 0 | [云打印机 bos_cloudprinter](../frame_files/bos_cloudprinter.md) |
 | 10 | fcreatetime | 创建时间 | timestamp | 0 |  | √ | LOCALTIMESTAMP | 创建时间 |
 | 11 | fforbidstatus | fforbidstatus | bpchar | 1 |  | √ | ' ' |  |
 | 12 | fmodifytime | 修改时间 | timestamp | 0 |  |  | LOCALTIMESTAMP | 修改时间 |
@@ -89,7 +89,7 @@
 | 15 | fincludesubmit | 打印时包含人工节点 | bpchar | 1 |  | √ | ' ' | 打印时包含人工节点 |
 | 16 | fincludeimage | 打印时包含影像上传节点 | bpchar | 1 |  | √ | ' ' | 打印时包含影像上传节点 |
 | 17 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 18 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 18 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 19 | fforbiderid | fforbiderid | int8 | 64 |  | √ | 0 |  |
 | 20 | fordertype | 审批线路排序方式 | varchar | 255 |  | √ | ' ' | 审批线路排序方式,枚举: default :空 asc :顺序 desc :倒序 |
 | 21 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |

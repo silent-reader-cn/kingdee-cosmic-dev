@@ -9,7 +9,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 税种 bd_taxcategory |
+| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [税种 bd_taxcategory](../basedata_files/bd_taxcategory.md) |
 | 2 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 | 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 
@@ -37,7 +37,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 税收辖区 bastax_taxareagroup |
+| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [税收辖区 bastax_taxareagroup](../basedata_files/bastax_taxareagroup.md) |
 | 2 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 | 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 
@@ -65,14 +65,14 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | 税务组织 | int8 | 64 |  | √ | 0 | 税务组织信息 bastax_taxorg |
+| 1 | fid | 税务组织 | int8 | 64 |  | √ | 0 | [税务组织信息 bastax_taxorg](../bastax_files/bastax_taxorg.md) |
 | 2 | fstatus | 使用状态 | varchar | 50 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 3 | fistaxpayer | 纳税主体 | bpchar | 1 |  | √ | '0' | 纳税主体 |
 | 4 | ftaxpayer | 纳税人名称 | varchar | 255 |  | √ | ' ' | 纳税人名称 |
 | 5 | fseq | fseq | int4 | 32 |  | √ | 0 |  |
 | 6 | ftaxpayerdetail | 纳税主体信息 | varchar | 50 |  | √ | ' ' | 纳税主体信息 |
 | 7 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 8 | ftaxationsys | 税收制度 | int8 | 64 |  | √ | 0 | 税收制度 bd_taxationsys |
+| 8 | ftaxationsys | 税收制度 | int8 | 64 |  | √ | 0 | [税收制度 bd_taxationsys](../basedata_files/bd_taxationsys.md) |
 | 9 | funifiedsocialcode | 税号 | varchar | 100 |  | √ | ' ' | 税号 |
 
 ### 列规则定义

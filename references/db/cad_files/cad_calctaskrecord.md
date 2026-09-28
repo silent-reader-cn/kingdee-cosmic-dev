@@ -14,13 +14,13 @@
 | 3 | fremark | fremark | int8 | 64 |  | √ | 0 |  |
 | 4 | fname | 任务名称 | varchar | 100 |  | √ | ' ' | 任务名称 |
 | 5 | ftotalsteps | 总步数 | int8 | 64 |  | √ | 0 | 总步数 |
-| 6 | fmainorg | 主业务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | fmainorg | 主业务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fprogress | 进度(%) | int8 | 64 |  | √ | 0 | 进度(%) |
 | 8 | fstarttime | 计算日期 | timestamp | 0 |  |  | null | 计算日期 |
 | 9 | fstatus | 状态 | varchar | 30 |  | √ | ' ' | 状态,枚举: 1 :执行中 2 :失败 3 :成功 4 :警告 |
 | 10 | fnextpagepara | 页面携带参数 | varchar | 1000 |  | √ | ' ' | 页面携带参数 |
-| 11 | fexecutor | 执行人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 12 | fcosttypeid | 标准成本方案 | int8 | 64 |  | √ | 0 | 标准成本方案 cad_costtype |
+| 11 | fexecutor | 执行人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 12 | fcosttypeid | 标准成本方案 | int8 | 64 |  | √ | 0 | [标准成本方案 cad_costtype](../basedata_files/cad_costtype.md) |
 | 13 | fcacheid | 数据缓存ID | varchar | 60 |  | √ | ' ' | 数据缓存ID |
 | 14 | ffinishedsteps | 已完成步骤 | int8 | 64 |  | √ | 0 | 已完成步骤 |
 

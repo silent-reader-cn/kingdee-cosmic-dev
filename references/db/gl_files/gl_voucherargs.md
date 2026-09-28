@@ -11,11 +11,11 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fisautomovedown | 审核后自动下移 | bpchar | 1 |  | √ | '0' | 审核后自动下移 |
-| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | fqtypricerecalrule | 数量单价反算规则 | bpchar | 1 |  | √ | ' ' | 数量单价反算规则,枚举: 0 :不反算 1 :反算数量 2 :反算单价 |
 | 5 | fupdaterate | 更新凭证汇率及本位币金额 | bpchar | 1 |  | √ | '0' | 更新凭证汇率及本位币金额 |
 | 6 | fisusesystime | 新增凭证取系统日期 | bpchar | 1 |  | √ | '0' | 新增凭证取系统日期 |
-| 7 | fuserid | 用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 7 | fuserid | 用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 8 | ffocuskey | 光标默认位置 | varchar | 36 |  | √ | ' ' | 光标默认位置,枚举: book :账簿 attachment :附件 bizdate :业务日期 bookeddate :记账日期 edescription :摘要 account :科目 |
 | 9 | fshowfullname | 显示科目全名 | bpchar | 1 |  | √ | '0' | 显示科目全名 |
 | 10 | fisautobalance | 自动平衡 | bpchar | 1 |  | √ | '0' | 自动平衡 |

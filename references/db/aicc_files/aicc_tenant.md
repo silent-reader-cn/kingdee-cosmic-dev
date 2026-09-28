@@ -11,14 +11,14 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 租户名称 | varchar | 200 |  | √ | ' ' | 租户名称 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fcqtenantid | 苍穹租户ID | varchar | 200 |  | √ | ' ' | 苍穹租户ID |
 | 5 | fprodinstid | 苍穹产品实例码 | varchar | 200 |  | √ | ' ' | 苍穹产品实例码 |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 7 | fbuyqps | 购买的QPS | int8 | 64 |  | √ | 0 | 购买的QPS |
 | 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 9 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 12 | ftenanttype | 租户类型 | varchar | 50 |  | √ | ' ' | 租户类型,枚举: public :公有云 private :私有云 mix :混合云 |
 | 13 | fenable | 使用状态 | varchar | 50 |  | √ | ' ' | 使用状态,枚举: 0 :暂停服务 1 :服务中 |
@@ -49,7 +49,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fname | 租户名称 | varchar | 50 |  | √ | ' ' | 租户名称 |
+| 2 | fname | 租户名称 | varchar | 200 |  | √ | ' ' | 租户名称 |
 | 3 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
 | 4 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
 

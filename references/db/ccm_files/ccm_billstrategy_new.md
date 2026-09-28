@@ -21,17 +21,17 @@
 | 10 | fplugintype | 插件类型 | varchar | 10 |  | √ | ' ' | 插件类型,枚举: java :java ks :ks |
 | 11 | fcheckops | 信用检查操作 | varchar | 2000 |  | √ | ' ' | 信用检查操作,枚举: submit :提交 audit :审核 cancelrec :取消收款 |
 | 12 | fstatus | 数据状态 | varchar | 10 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 15 | frecalclosefilter | 重算关闭条件 | varchar | 510 |  | √ | ' ' | 重算关闭条件 |
-| 16 | fchecktypeid | 信用控制形式 | int8 | 64 |  | √ | 0 | （废弃）信用控制形式 ccm_checktype |
+| 16 | fchecktypeid | 信用控制形式 | int8 | 64 |  | √ | 0 | [（废弃）信用控制形式 ccm_checktype](../ccm_files/ccm_checktype.md) |
 | 17 | fplugin | 插件 | varchar | 255 |  | √ | ' ' | 插件 |
-| 18 | fentityid | 业务单据 | varchar | 80 |  | √ | ' ' | 单据主实体 bos_billmainentity |
-| 19 | fassingentityid | 逾期单据 | varchar | 80 |  | √ | ' ' | 单据主实体 bos_billmainentity |
+| 18 | fentityid | 业务单据 | varchar | 80 |  | √ | ' ' | [单据主实体 bos_billmainentity](../mdl_files/bos_billmainentity.md) |
+| 19 | fassingentityid | 逾期单据 | varchar | 80 |  | √ | ' ' | [单据主实体 bos_billmainentity](../mdl_files/bos_billmainentity.md) |
 | 20 | fnewrecalbillfilter_tag | 重算占用条件（后台）_详情 | text | 0 |  |  | null | 重算占用条件（后台）_详情 |
 | 21 | fnewdatafilter | 过滤条件(后台) | varchar | 255 |  | √ | ' ' | 过滤条件(后台) |
-| 22 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 23 | fname | 名称 | varchar | 80 |  | √ | ' ' | 名称 |
+| 22 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 23 | fname | 名称 | varchar | 130 |  | √ | ' ' | 名称 |
 | 24 | frecalculateplugin | 插件 | varchar | 255 |  | √ | ' ' | 插件 |
 | 25 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 26 | fnewrecalbillfilter | 重算占用条件（后台） | varchar | 255 |  | √ | ' ' | 重算占用条件（后台） |
@@ -112,7 +112,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fname | 名称 | varchar | 80 |  | √ | ' ' | 名称 |
+| 2 | fname | 名称 | varchar | 130 |  | √ | ' ' | 名称 |
 | 3 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
 | 4 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
 

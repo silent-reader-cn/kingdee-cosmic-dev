@@ -39,21 +39,21 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 4 | fsrcstdrptid | 报表类型 | int8 | 64 |  | √ | 0 | 标准报表 fsa_stdrpts |
-| 5 | facctorg | 核算组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 6 | faccounttable | 科目表 | int8 | 64 |  | √ | 0 | 科目表 bd_accounttable |
+| 4 | fsrcstdrptid | 报表类型 | int8 | 64 |  | √ | 0 | [标准报表 fsa_stdrpts](../fsa_files/fsa_stdrpts.md) |
+| 5 | facctorg | 核算组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 6 | faccounttable | 科目表 | int8 | 64 |  | √ | 0 | [科目表 bd_accounttable](../fibd_files/bd_accounttable.md) |
 | 7 | fmappingrpttype | 源报表类型 | bpchar | 1 |  | √ | ' ' | 源报表类型,枚举: 0 :资产负债表 1 :利润表 2 :现金流量表 |
 | 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 9 | fmappingsrctype | 取数来源 | bpchar | 1 |  | √ | ' ' | 取数来源,枚举: 0 :苍穹总账 1 :苍穹合并报表 |
 | 10 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 13 | facctperiodtype | 期间类型 | int8 | 64 |  | √ | 0 | 会计日历类型 bd_period_type |
+| 13 | facctperiodtype | 期间类型 | int8 | 64 |  | √ | 0 | [会计日历类型 bd_period_type](../fibd_files/bd_period_type.md) |
 | 14 | fenable | 使用状态 | bpchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 15 | fnumber | 映射报表编码 | varchar | 30 |  | √ | ' ' | 映射报表编码 |
-| 16 | facctbooktypeid | 账簿类型 | int8 | 64 |  | √ | 0 | 账簿类型 bd_accountbookstype |
+| 16 | facctbooktypeid | 账簿类型 | int8 | 64 |  | √ | 0 | [账簿类型 bd_accountbookstype](../fibd_files/bd_accountbookstype.md) |
 
 ### 列规则定义
 
@@ -86,7 +86,7 @@
 | 4 | fdisplayformular_tag | 指标展示公式_详情 | text | 0 |  |  | null | 指标展示公式_详情 |
 | 5 | fdescription_tag | 描述_详情 | text | 0 |  |  | null | 描述_详情 |
 | 6 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 7 | fsrcrptitemid | 源报表项ID | int8 | 64 |  | √ | 0 | 标准报表项目 fsa_rptitems |
+| 7 | fsrcrptitemid | 源报表项ID | int8 | 64 |  | √ | 0 | [标准报表项目 fsa_rptitems](../fsa_files/fsa_rptitems.md) |
 | 8 | fdisplayformular | 指标展示公式 | varchar | 510 |  | √ | ' ' | 指标展示公式 |
 | 9 | fcalcformular | 指标计算公式 | varchar | 510 |  | √ | ' ' | 指标计算公式 |
 | 10 | fdescription | 描述 | varchar | 510 |  |  | null | 描述 |

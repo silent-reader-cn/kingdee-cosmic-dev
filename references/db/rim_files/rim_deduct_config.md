@@ -11,12 +11,12 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fbus_company_employee | 是否本企业员工 | varchar | 4 |  | √ | ' ' | 是否本企业员工,枚举: 1 :是 0 :否 |
-| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 4 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 4 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 6 | fair_begin_date | 乘机起始日期 | timestamp | 0 |  |  | null | 乘机起始日期 |
 | 7 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 10 | fcustom_config | 个性化配置 | varchar | 255 |  | √ | ' ' | 个性化配置 |
 | 11 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
@@ -24,9 +24,9 @@
 | 13 | fair_person_identity | 注明旅客身份信息 | varchar | 4 |  | √ | ' ' | 注明旅客身份信息,枚举: 1 :姓名或身份证 2 :姓名和身份证 |
 | 14 | ftrain_person_identity | 注明旅客身份信息 | varchar | 4 |  | √ | ' ' | 注明旅客身份信息,枚举: 1 :姓名或身份证 2 :姓名和身份证 |
 | 15 | fboat_person_identity | 注明旅客身份信息 | varchar | 4 |  | √ | ' ' | 注明旅客身份信息,枚举: 1 :姓名或身份证 2 :姓名和身份证 |
-| 16 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 16 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 17 | fname | 方案名称 | varchar | 50 |  | √ | ' ' | 方案名称 |
-| 18 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 18 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 19 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 20 | ftrain_company_employee | 是否本企业员工 | varchar | 4 |  | √ | ' ' | 是否本企业员工,枚举: 1 :是 0 :否 |
 | 21 | fair_company_employee | 是否本企业员工 | varchar | 4 |  | √ | ' ' | 是否本企业员工,枚举: 1 :是 0 :否 |
@@ -37,7 +37,7 @@
 | 26 | ftrain_begin_date | 乘车起始日期 | timestamp | 0 |  |  | null | 乘车起始日期 |
 | 27 | fenable | 使用状态 | varchar | 50 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 28 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
-| 29 | fuseorgid | 业务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 29 | fuseorgid | 业务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 30 | fboat_company_employee | 是否本企业员工 | varchar | 4 |  | √ | ' ' | 是否本企业员工,枚举: 1 :是 0 :否 |
 | 31 | fsourcebitindex | 原资料位图 | int8 | 64 |  | √ | 0 | 原资料位图 |
 | 32 | fbus_person_identity | 注明旅客身份信息 | varchar | 4 |  | √ | ' ' | 注明旅客身份信息,枚举: 1 :姓名或身份证 2 :姓名和身份证 |
@@ -53,8 +53,8 @@
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
 | 1 | idx_rim_deduct_config2 |  | fmasterid |
-| 2 | pk_rim_deduct_config |  | fid |
-| 3 | idx_rim_deduct_config1 |  | fcreateorgid |
+| 2 | idx_rim_deduct_config1 |  | fcreateorgid |
+| 3 | pk_rim_deduct_config |  | fid |
 | 4 | idx_t_rim_deduct_config_createorg |  | fcreateorgid |
 | 5 | idx_t_rim_deduct_config_master |  | fmasterid |
 

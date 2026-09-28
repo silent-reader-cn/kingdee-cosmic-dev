@@ -16,13 +16,13 @@
 | 5 | finvoice_json | json数据 | varchar | 255 |  | √ | ' ' | json数据 |
 | 6 | finout | 进销项 | varchar | 2 |  | √ | ' ' | 进销项,枚举: 1 :进项 2 :销项 |
 | 7 | fhandle_num | 处理次数 | int4 | 32 |  | √ | 0 | 处理次数 |
-| 8 | forg | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 8 | forg | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 10 | fserial_no | 流水号 | varchar | 36 |  | √ | ' ' | 流水号 |
 | 11 | fdata_type | 数据类型 | varchar | 2 |  | √ | ' ' | 数据类型,枚举: 1 :进项表头数据 2 :缺抵扣信息的进项数据 3 :进项完整数据 |
 | 12 | finvoice_json_tag | json数据_详情 | text | 0 |  |  | null | json数据_详情 |
 | 13 | ferror_code | 错误代码 | varchar | 10 |  | √ | ' ' | 错误代码 |
-| 14 | finvoice_type | 发票类型 | int8 | 64 |  | √ | 0 | 发票类型 bd_invoicetype |
+| 14 | finvoice_type | 发票类型 | int8 | 64 |  | √ | 0 | [发票种类 bd_invoicetype](../basedata_files/bd_invoicetype.md) |
 
 ### 列规则定义
 

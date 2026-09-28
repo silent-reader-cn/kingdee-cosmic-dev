@@ -341,11 +341,11 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fillegalinfototal | 严重违法总数 | int4 | 32 |  | √ | 0 | 严重违法总数 |
 | 3 | fexecuteetotal | 被执行人总数 | int4 | 32 |  | √ | 0 | 被执行人总数 |
-| 4 | forgid | 审批组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 4 | forgid | 审批组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | fcompanychecktotal | 抽查检查总数 | int4 | 32 |  | √ | 0 | 抽查检查总数 |
 | 6 | fpunishtotal | 行政处罚总数(工商局) | int4 | 32 |  | √ | 0 | 行政处罚总数(工商局) |
 | 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fcompanygid | 供应商ID | int8 | 64 |  | √ | 0 | 供应商ID |
 | 10 | fdishonesttotal | 失信人总数 | int4 | 32 |  | √ | 0 | 失信人总数 |
 | 11 | fmonitoraftertime | 监控结束时间 | timestamp | 0 |  |  | null | 监控结束时间 |
@@ -354,7 +354,7 @@
 | 14 | fcourtregistertotal | 立案总数 | int4 | 32 |  | √ | 0 | 立案总数 |
 | 15 | fbillno | 单据编号 | varchar | 80 |  | √ | ' ' | 单据编号 |
 | 16 | fremark | 备注 | varchar | 2000 |  | √ | ' ' | 备注 |
-| 17 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 17 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 18 | fholdertotal | 股权变更总数 | int4 | 32 |  | √ | 0 | 股权变更总数 |
 | 19 | fbillstatus | 单据状态 | bpchar | 1 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 20 | fbigsharetotal | 大股东变更总数 | int4 | 32 |  | √ | 0 | 大股东变更总数 |
@@ -368,7 +368,7 @@
 | 28 | fbranchtotal | 分支机构总数 | int4 | 32 |  | √ | 0 | 分支机构总数 |
 | 29 | fktannouncementtotal | 开庭总数 | int4 | 32 |  | √ | 0 | 开庭总数 |
 | 30 | feid | 公司Id | varchar | 100 |  | √ | ' ' | 公司Id |
-| 31 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 31 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 32 | fopunishtotal | 行政处罚总数(其他) | int4 | 32 |  | √ | 0 | 行政处罚总数(其他) |
 | 33 | fcourtannototal | 法院公告总数 | int4 | 32 |  | √ | 0 | 法院公告总数 |
 
@@ -610,8 +610,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_pbd_smoni_data_wb_fk |  | fid |
-| 2 | pk_pbd_smoni_data_wb |  | fentryid |
+| 1 | pk_pbd_smoni_data_wb |  | fentryid |
+| 2 | idx_pbd_smoni_data_wb_fk |  | fid |
 
 ---
 

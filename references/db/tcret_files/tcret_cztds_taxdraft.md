@@ -10,12 +10,12 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fsourceid | 土地编号 | int8 | 64 |  | √ | 0 | 土地税源信息 tdm_tds_basic_info |
-| 3 | fcurrency | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 2 | fsourceid | 土地编号 | int8 | 64 |  | √ | 0 | [土地税源信息 tdm_tds_basic_info](../tdm_files/tdm_tds_basic_info.md) |
+| 3 | fcurrency | 币别 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 | 4 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 5 | fcurrentpayable | 本期应纳税额 | numeric | 23 | 10 | √ | 0 | 本期应纳税额 |
 | 6 | fskssqq | 税款所属期起 | timestamp | 0 |  |  | null | 税款所属期起 |
-| 7 | fmodifierfield | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 7 | fmodifierfield | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 8 | fpaidtaxes | 已缴税额 | numeric | 23 | 10 | √ | 0 | 已缴税额 |
 | 9 | ftaxstandard | 税额标准 | numeric | 23 | 10 | √ | 0 | 税额标准 |
 | 10 | flevel | 土地等级 | varchar | 50 |  | √ | ' ' | 土地等级 |
@@ -23,9 +23,11 @@
 | 12 | fybtse | 应补（退）税额 | numeric | 23 | 10 | √ | 0 | 应补（退）税额 |
 | 13 | fskssqz | 税款所属期止 | timestamp | 0 |  |  | null | 税款所属期止 |
 | 14 | ftaxbasis | 计税依据 | numeric | 23 | 10 | √ | 0 | 计税依据 |
-| 15 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 16 | flandarea | 占用土地面积 | numeric | 23 | 10 | √ | 0 | 占用土地面积 |
-| 17 | fcurrentjmamount | 本期减免税额 | numeric | 23 | 10 | √ | 0 | 本期减免税额 |
+| 15 | fsourcedetailid | 税源明细id | int8 | 64 |  | √ | 0 | 税源明细id |
+| 16 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 17 | flandarea | 占用土地面积 | numeric | 23 | 10 | √ | 0 | 占用土地面积 |
+| 18 | fcurrentjmamount | 本期减免税额 | numeric | 23 | 10 | √ | 0 | 本期减免税额 |
+| 19 | fxgmsourcedetailid | 小规模税源明细id | int8 | 64 |  | √ | 0 | 小规模税源明细id |
 
 ### 列规则定义
 
@@ -52,23 +54,23 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | faccountorg | 核算组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | faccountorg | 核算组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fbillstatus | 单据状态 | varchar | 50 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 5 | fsumybtse | 合计应补（退）税额 | numeric | 23 | 10 | √ | 0 | 合计应补（退）税额 |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 7 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 7 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | fisxxwlqy | 小型微利企业 | varchar | 50 |  | √ | ' ' | 小型微利企业,枚举: 1 :是 0 :否 |
 | 9 | fdeclareid | 申报表id | int8 | 64 |  | √ | 0 | 申报表id |
 | 10 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
 | 11 | fcollectiondate | 采集日期 | timestamp | 0 |  |  | null | 采集日期 |
 | 12 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 13 | fdeclarestatus | 申报表申报状态 | varchar | 50 |  | √ | ' ' | 申报表申报状态,枚举: editing :● 未申报 declaring :● 申报中 declared :● 申报成功 undeclare :● 未编制 declarefailed :● 申报失败 |
-| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | fdeclarebillstatus | 申报表单据状态 | varchar | 50 |  | √ | ' ' | 申报表单据状态,枚举: A :暂存 B :已提交 C :已审核 D :重新审核 |
-| 16 | ftaxoffice | 税务机关 | int8 | 64 |  | √ | 0 | 税务机关 bastax_taxorgan |
+| 16 | ftaxoffice | 税务机关 | int8 | 64 |  | √ | 0 | [税务机关 bastax_taxorgan](../bastax_files/bastax_taxorgan.md) |
 | 17 | fbillno | 底稿编号 | varchar | 30 |  | √ | ' ' | 底稿编号 |
-| 18 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 18 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 19 | fdeclarenumber | 申报表编号 | varchar | 50 |  | √ | ' ' | 申报表编号 |
 
 ### 列规则定义

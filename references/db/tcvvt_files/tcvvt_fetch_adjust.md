@@ -12,12 +12,13 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fadjustamount | 调整额 | numeric | 23 | 10 | √ | 0 | 调整额 |
 | 3 | fskssqz | 税款所属期.结束 | timestamp | 0 |  |  | null | 税款所属期.结束 |
-| 4 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 5 | fskssqq | 税款所属期.开始 | timestamp | 0 |  |  | null | 税款所属期.开始 |
-| 6 | ftitlename | 调整项目 | varchar | 50 |  | √ | ' ' | 调整项目 |
-| 7 | ftemplatetype | 模板类型 | varchar | 100 |  | √ | ' ' | 模板类型 |
-| 8 | fcellid | 单元格行列维 | varchar | 50 |  | √ | ' ' | 单元格行列维 |
-| 9 | foldamount | 原始总额 | numeric | 23 | 10 | √ | 0 | 原始总额 |
+| 4 | fserialno | 规则取数明细流水号 | varchar | 50 |  | √ | ' ' | 规则取数明细流水号 |
+| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 6 | fskssqq | 税款所属期.开始 | timestamp | 0 |  |  | null | 税款所属期.开始 |
+| 7 | ftitlename | 调整项目 | varchar | 50 |  | √ | ' ' | 调整项目 |
+| 8 | ftemplatetype | 模板类型 | varchar | 100 |  | √ | ' ' | 模板类型 |
+| 9 | fcellid | 单元格行列维 | varchar | 50 |  | √ | ' ' | 单元格行列维 |
+| 10 | foldamount | 原始总额 | numeric | 23 | 10 | √ | 0 | 原始总额 |
 
 ### 列规则定义
 

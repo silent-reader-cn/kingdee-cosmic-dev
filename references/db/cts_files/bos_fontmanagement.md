@@ -12,7 +12,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fapprovedate | fapprovedate | timestamp | 0 |  |  | null |  |
 | 3 | fapproverid | fapproverid | int8 | 64 |  | √ | 0 |  |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  | √ | LOCALTIMESTAMP | 创建时间 |
 | 6 | fisv | 开发商标识 | varchar | 8 |  | √ | ' ' | 开发商标识 |
 | 7 | fforbidstatus | fforbidstatus | bpchar | 1 |  | √ | ' ' |  |
@@ -20,7 +20,7 @@
 | 9 | fsource | 来源 | bpchar | 1 |  | √ | '1' | 来源,枚举: 1 :系统预置 2 :自定义 |
 | 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | LOCALTIMESTAMP | 修改时间 |
 | 11 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 14 | fforbiderid | fforbiderid | int8 | 64 |  | √ | 0 |  |
 | 15 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |

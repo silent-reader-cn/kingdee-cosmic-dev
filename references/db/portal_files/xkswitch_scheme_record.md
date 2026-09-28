@@ -12,7 +12,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fswitchstatus | 切换状态 | varchar | 50 |  | √ | ' ' | 切换状态,枚举: 0 :不切换 1 :切换 |
 | 3 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 4 | fuserid | 人员 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fuserid | 人员 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

@@ -14,9 +14,9 @@
 | 3 | ftype | 收入类型 | varchar | 50 |  | √ | ' ' | 收入类型,枚举: specialfund :专项用途财政性资金 other :其他 |
 | 4 | fzeroratingamount | 其中：不征税收入 | numeric | 23 | 10 | √ | 0.0000000000 | 其中：不征税收入 |
 | 5 | fincomedateyear | 取得日期年份 | int8 | 64 |  | √ | 0 | 取得日期年份 |
-| 6 | fparentorgid | 汇总组织id | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | fparentorgid | 汇总组织id | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fskssqz | 结束日期 | timestamp | 0 |  |  | null | 结束日期 |
-| 8 | forgid | 组织id | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 8 | forgid | 组织id | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 9 | ffiscalamount | 财政性资金 | numeric | 23 | 10 | √ | 0.0000000000 | 财政性资金 |
 | 10 | fskssqq | 开始时间 | timestamp | 0 |  |  | null | 开始时间 |
 

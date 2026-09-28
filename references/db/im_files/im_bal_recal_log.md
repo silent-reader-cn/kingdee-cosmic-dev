@@ -16,7 +16,7 @@
 | 5 | fmsgusertime | 耗时/ms | int4 | 32 |  | √ | 0 | 耗时/ms |
 | 6 | fbillfs | 单据过条件（序列化） | varchar | 2000 |  | √ | ' ' | 单据过条件（序列化） |
 | 7 | fbillname | 单据实体 | varchar | 50 |  | √ | ' ' | 单据实体 |
-| 8 | forg | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 8 | forg | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 9 | fstatus | 状态 | bpchar | 1 |  | √ | 'C' | 状态,枚举: A :成功 B :失败 C :已创建 D :异常 E :重试中 |
 | 10 | fmsgid | 消息ID | varchar | 50 |  | √ | ' ' | 消息ID |
 | 11 | fstartid | 起始单据ID | int8 | 64 |  | √ | 0 | 起始单据ID |

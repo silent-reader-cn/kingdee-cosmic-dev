@@ -10,18 +10,18 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fname | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 4 | fisleaf | 是否叶子 | bpchar | 1 |  | √ | ' ' | 是否叶子 |
-| 5 | fparentid | 上级 | int8 | 64 |  | √ | 0 | 事项任务类型 ipm_basetask_type |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 3 | fisleaf | 是否叶子 | bpchar | 1 |  | √ | ' ' | 是否叶子 |
+| 4 | fname | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
+| 5 | fparentid | 上级 | int8 | 64 |  | √ | 0 | [事项任务类型 ipm_basetask_type](../ipm_files/ipm_basetask_type.md) |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 7 | forgid | forgid | int8 | 64 |  | √ | 0 |  |
 | 8 | flongnumber | 长编码 | varchar | 1024 |  | √ | ' ' | 长编码 |
-| 9 | fipoorgid | IPO主体 | int8 | 64 |  |  | null | IPO编制组织 ipo_org |
+| 9 | fipoorgid | IPO主体 | int8 | 64 |  |  | null | [IPO编制组织 ipo_org](../ipobase_files/ipo_org.md) |
 | 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 11 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 12 | flevel | 级次 | int8 | 64 |  | √ | 0 | 级次 |
-| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 15 | fenable | 使用状态 | bpchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 16 | fnumber | 编码 | varchar | 100 |  | √ | ' ' | 编码 |

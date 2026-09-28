@@ -42,25 +42,27 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fformdatas | 款项方案表格数据 | text | 0 |  |  | null | 款项方案表格数据 |
 | 3 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fformdatas_tag | 款项方案表格数据_详情 | text | 0 |  |  | null | 款项方案表格数据_详情 |
 | 6 | fcomment | 备注 | varchar | 512 |  |  | null | 备注 |
 | 7 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 8 | ftextdatas_tag | 款项方案数据_详情 | text | 0 |  |  | null | 款项方案数据_详情 |
 | 9 | fdisabledate | 禁用时间 | timestamp | 0 |  |  | null | 禁用时间 |
-| 10 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fnotes | fnotes | varchar | 50 |  | √ | ' ' |  |
 | 12 | faudittime | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
-| 13 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 14 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 15 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 16 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 17 | fauditor | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 18 | fenable | 使用状态 | varchar | 50 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 19 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
-| 20 | fisallowedchange | fisallowedchange | bpchar | 1 |  | √ | '0' |  |
-| 21 | ftextdatas | 款项方案数据 | text | 0 |  |  | null | 款项方案数据 |
-| 22 | fcontracttype | 适用合同类型 | int8 | 64 |  | √ | 0 | 合同类型 conm_type |
+| 13 | fispreset | 预置 | bpchar | 1 |  | √ | '0' | 预置 |
+| 14 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 15 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
+| 16 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 17 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
+| 18 | fcontentcombtype | 款项内容组合形式 | varchar | 50 |  | √ | ' ' | 款项内容组合形式,枚举: newline :下个节点另起一行 all :所有节点连续 |
+| 19 | fauditor | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 20 | fenable | 使用状态 | varchar | 50 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 21 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
+| 22 | fisallowedchange | fisallowedchange | bpchar | 1 |  | √ | '0' |  |
+| 23 | ftextdatas | 款项方案数据 | text | 0 |  |  | null | 款项方案数据 |
+| 24 | fcontracttype | 适用合同类型 | int8 | 64 |  | √ | 0 | [合同类型 conm_type](../conm_files/conm_type.md) |
 
 ### 列规则定义
 
@@ -87,7 +89,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fpaymentnode | 款项节点 | int8 | 64 |  | √ | 0 | 合同款项节点 clm_contract_payment_node |
+| 2 | fpaymentnode | 款项节点 | int8 | 64 |  | √ | 0 | [合同款项节点 clm_contract_payment_node](../clmcd_files/clm_contract_payment_node.md) |
 | 3 | fisprepayment | 是否预付 | bpchar | 1 |  | √ | '0' | 是否预付 |
 | 4 | fmoneyinwords | 款项金额（中文） | varchar | 50 |  | √ | ' ' | 款项金额（中文） |
 | 5 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |

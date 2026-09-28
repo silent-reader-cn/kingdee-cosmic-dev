@@ -27,6 +27,6 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | pk_tcvvt_check_report |  | fid |
-| 2 | idx_tcvvt_check_report |  | ffitid |
+| 1 | idx_tcvvt_check_report |  | ffitid |
+| 2 | pk_tcvvt_check_report |  | fid |
 | 3 | idx_tcvvt_check_report_1 |  | ftype |

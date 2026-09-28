@@ -10,14 +10,14 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 3 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 3 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 5 | faccounttype | 科目类型 | varchar | 50 |  | √ | ' ' | 科目类型,枚举: 0 :合并报表 1 :报表 |
-| 6 | frptitemid | 报表项目 | int8 | 64 |  | √ | 0 | 报表项目 xkbd_rptitem |
-| 7 | fbusinessitem | 企业版项目 | int8 | 64 |  | √ | 0 | 企业版项目 ipo_business_item |
-| 8 | ffinreportitemld | IPO财务报表项目 | int8 | 64 |  | √ | 0 | 财务报表项目 ipo_fin_report_item |
-| 9 | fipoorgld | IPO主体 | int8 | 64 |  | √ | 0 | IPO编制组织 ipo_org |
+| 6 | frptitemid | 报表项目 | int8 | 64 |  | √ | 0 | [报表项目 xkbd_rptitem](../fibd_files/xkbd_rptitem.md) |
+| 7 | fbusinessitem | 企业版项目 | int8 | 64 |  | √ | 0 | [企业版项目 ipo_business_item](../ipobase_files/ipo_business_item.md) |
+| 8 | ffinreportitemld | IPO财务报表项目 | int8 | 64 |  | √ | 0 | [财务报表项目 ipo_fin_report_item](../ipobase_files/ipo_fin_report_item.md) |
+| 9 | fipoorgld | IPO主体 | int8 | 64 |  | √ | 0 | [IPO编制组织 ipo_org](../ipobase_files/ipo_org.md) |
 | 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 
 ### 列规则定义

@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcustomerstatus | 客户状态 | int8 | 64 |  | √ | 0 | 客户状态 bd_customerstatus |
+| 2 | fcustomerstatus | 客户状态 | int8 | 64 |  | √ | 0 | [客户状态 bd_customerstatus](../basedata_files/bd_customerstatus.md) |
 
 ### 列规则定义
 
@@ -22,5 +22,5 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | pk_t_bd_customerstatusexclud |  | fid |
-| 2 | idx_bd_customerstatusexclud |  | fcustomerstatus |
+| 1 | idx_bd_customerstatusexclud |  | fcustomerstatus |
+| 2 | pk_t_bd_customerstatusexclud |  | fid |

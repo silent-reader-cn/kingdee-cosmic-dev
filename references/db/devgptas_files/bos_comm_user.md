@@ -17,7 +17,7 @@
 | 6 | fusedcredit | 已用额度 | int4 | 32 |  | √ | 0 | 已用额度 |
 | 7 | femail | 邮箱 | varchar | 100 |  | √ | ' ' | 邮箱 |
 | 8 | favailablecredit | 可用额度 | int4 | 32 |  | √ | 0 | 可用额度 |
-| 9 | fgender | 性别 | int4 | 32 |  | √ | 0 | 性别,枚举: 0 :女 1 :男 99 :未知 |
+| 9 | fgender | 性别 | int4 | 32 |  | √ | 0 | 性别,枚举: 0 :男 1 :女 2 :保密 |
 | 10 | fcompany | 公司 | varchar | 50 |  | √ | ' ' | 公司 |
 | 11 | fnickname | 昵称 | varchar | 50 |  | √ | ' ' | 昵称 |
 | 12 | fstatus | 数据状态 | int4 | 32 |  | √ | 0 | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |

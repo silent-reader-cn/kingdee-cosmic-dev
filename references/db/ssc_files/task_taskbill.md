@@ -43,7 +43,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | ftasktype | 任务类型 | int8 | 64 |  | √ | 0 | 任务类型 task_tasktype |
+| 2 | ftasktype | 任务类型 | int8 | 64 |  | √ | 0 | [任务类型 task_tasktype](../ssc_files/task_tasktype.md) |
 | 3 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 4 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 5 | fchildpkid | 长整数 | int8 | 64 |  | √ | 0 | 长整数 |
@@ -73,25 +73,25 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fsscid | 共享中心 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 3 | fbindbill | 来源单据 | varchar | 50 |  | √ | ' ' | 表单元数据 bos_formmeta |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fsscid | 共享中心 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 3 | fbindbill | 来源单据 | varchar | 50 |  | √ | ' ' | [表单元数据 bos_formmeta](../mdl_files/bos_formmeta.md) |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 6 | frelationtype | 委托关系类型 | varchar | 8 |  | √ | ' ' | 委托关系类型,枚举: 1 :核算组织委托共享中心 |
 | 7 | fdescription | 描述 | varchar | 255 |  |  | null | 描述 |
-| 8 | fbindform | 绑定展示界面 | varchar | 50 |  | √ | ' ' | 表单元数据 bos_formmeta |
+| 8 | fbindform | 绑定展示界面 | varchar | 50 |  | √ | ' ' | [表单元数据 bos_formmeta](../mdl_files/bos_formmeta.md) |
 | 9 | fisembed | 是否为嵌入单据 | bpchar | 1 |  | √ | '0' | 是否为嵌入单据 |
 | 10 | fisneedvoucher | 共享生成凭证 | bpchar | 1 |  | √ | '0' | 共享生成凭证 |
 | 11 | fispartask | 是否为多级任务 | bpchar | 1 |  | √ | '0' | 是否为多级任务 |
 | 12 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 13 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 16 | fisneedimage | 需要影像上传 | bpchar | 1 |  | √ | '0' | 需要影像上传 |
 | 17 | fisstoredindb | 单据数据是否存表 | bpchar | 1 |  | √ | '0' | 单据数据是否存表 |
 | 18 | feffective | 生效状态 | bpchar | 1 |  | √ | '1' | 生效状态,枚举: 0 :失效 1 :生效 |
 | 19 | fenable | 使用状态 | bpchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 20 | fexternalerpid | 所属系统 | int8 | 64 |  | √ | 0 | 业务系统 bas_extenderp |
+| 20 | fexternalerpid | 所属系统 | int8 | 64 |  | √ | 0 | [业务系统 bas_extenderp](../sys_files/bas_extenderp.md) |
 | 21 | fbilloperationconfig | 审批调用操作配置 | varchar | 50 |  | √ | ' ' | 审批调用操作配置 |
 | 22 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
 | 23 | fautosynorg | 自动同步适用组织 | bpchar | 1 |  | √ | '0' | 自动同步适用组织,枚举: 0 :否 1 :是 |
@@ -122,7 +122,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义

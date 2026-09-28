@@ -1,0 +1,111 @@
+# dfa 模块表清单
+
+> 本模块共收录 **99** 张表定义，来自 `dfa_files/`。
+
+> 索引由 `scripts/build_index.py` 从 Markdown 自动生成，请勿手工编辑。
+> 检索本模块表结构请用统一检索脚本（比翻本文件更快）：
+> ```bash
+> python scripts/search.py <关键词> --scope db --category dfa
+> ```
+
+| 序号 | 数据库表名 | 中文名称 | 字段数 | 详细定义文件 |
+| :---: | :--- | :--- | :---: | :--- |
+| 1 | `t_dfa_agreementlog` | 协议签署记录-主表 | 6 | [dfa_agreement_log.md](./dfa_agreement_log.md) |
+| 2 | `t_dfa_bm_aicontents` | 指标对比AI解读内容-主表 | 6 | [dfa_bm_ai_contents.md](./dfa_bm_ai_contents.md) |
+| 3 | `t_dfa_bm_searchplan` | 对标分析查询方案-主表 | 8 | [dfa_bm_search_plan.md](./dfa_bm_search_plan.md) |
+| 4 | `t_dfa_chatentry` | 对话-子表 | 14 | [dfa_chatsession.md](./dfa_chatsession.md) |
+| 5 | `t_dfa_chatmessage` | 消息-子表 | 11 | [dfa_chatsession.md](./dfa_chatsession.md) |
+| 6 | `t_dfa_chatsession` | 会话-主表 | 12 | [dfa_chatsession.md](./dfa_chatsession.md) |
+| 7 | `t_dfa_chatsession_l` | 会话-多语言表 | 4 | [dfa_chatsession.md](./dfa_chatsession.md) |
+| 8 | `t_dfa_condition` | 筛选条件-主表 | 0 | [dfa_condition.md](./dfa_condition.md) |
+| 9 | `t_dfa_condition_l` | 筛选条件-多语言表 | 0 | [dfa_condition.md](./dfa_condition.md) |
+| 10 | `t_dfa_condition_scheme` | 场景筛选条件方案-主表 | 0 | [dfa_condition_scheme.md](./dfa_condition_scheme.md) |
+| 11 | `t_dfa_condition_scheme_l` | 场景筛选条件方案-多语言表 | 0 | [dfa_condition_scheme.md](./dfa_condition_scheme.md) |
+| 12 | `t_dfa_conditiongroup` | 筛选条件-多选基础资料表 | 0 | [dfa_condition_scheme.md](./dfa_condition_scheme.md) |
+| 13 | `t_dfa_cpdatainfo_entry` | 本公司数据信息单据体-子表 | 6 | [dfa_datasource.md](./dfa_datasource.md) |
+| 14 | `t_dfa_custom_metrics` | 常用指标信息-主表 | 13 | [dfa_custom_metrics.md](./dfa_custom_metrics.md) |
+| 15 | `t_dfa_datasource` | 数据源-主表 | 17 | [dfa_datasource.md](./dfa_datasource.md) |
+| 16 | `t_dfa_datasource_env` | 取数环境-主表 | 15 | [dfa_datasource_env.md](./dfa_datasource_env.md) |
+| 17 | `t_dfa_datasource_env_l` | 取数环境-多语言表 | 4 | [dfa_datasource_env.md](./dfa_datasource_env.md) |
+| 18 | `t_dfa_datasource_l` | 数据源-多语言表 | 4 | [dfa_datasource.md](./dfa_datasource.md) |
+| 19 | `t_dfa_defaultparamentry` | 默认查询参数单据体-子表 | 9 | [dfa_datasource.md](./dfa_datasource.md) |
+| 20 | `t_dfa_dsenv_item` | 取数环境报表项目-主表 | 13 | [dfa_dsenv_item.md](./dfa_dsenv_item.md) |
+| 21 | `t_dfa_dsenv_item_l` | 取数环境报表项目-多语言表 | 4 | [dfa_dsenv_item.md](./dfa_dsenv_item.md) |
+| 22 | `t_dfa_dsenv_rigroup` | 取数环境报表项目分组映射-主表 | 5 | [dfa_dsenv_rigroup.md](./dfa_dsenv_rigroup.md) |
+| 23 | `t_dfa_dsinfo_entry` | 数据源信息单据体-子表 | 4 | [dfa_datasource.md](./dfa_datasource.md) |
+| 24 | `t_dfa_dupont_quota` | 上级指标(归因)-多选基础资料表 | 3 | [dfa_quota_info.md](./dfa_quota_info.md) |
+| 25 | `t_dfa_event_info` | 财务分析Event信息-主表 | 0 | [dfa_event_info.md](./dfa_event_info.md) |
+| 26 | `t_dfa_event_info_l` | 财务分析Event信息-多语言表 | 0 | [dfa_event_info.md](./dfa_event_info.md) |
+| 27 | `t_dfa_event_type` | 财务分析Event类型-主表 | 0 | [dfa_event_type.md](./dfa_event_type.md) |
+| 28 | `t_dfa_event_type_l` | 财务分析Event类型-多语言表 | 0 | [dfa_event_type.md](./dfa_event_type.md) |
+| 29 | `t_dfa_fi_repo_item_conf` | 标准报表项目配置-主表 | 4 | [dfa_fi_repo_item_conf.md](./dfa_fi_repo_item_conf.md) |
+| 30 | `t_dfa_fin_report` | 财务报表-主表 | 24 | [dfa_fin_report.md](./dfa_fin_report.md) |
+| 31 | `t_dfa_frfgenhtmlrecord` | 报告互动网页生成记录-主表 | 6 | [dfa_frfgenhtmlrecord.md](./dfa_frfgenhtmlrecord.md) |
+| 32 | `t_dfa_frfreport` | 报告撰写-主表 | 20 | [dfa_frfreport.md](./dfa_frfreport.md) |
+| 33 | `t_dfa_frfreport_l` | 报告撰写-多语言表 | 4 | [dfa_frfreport.md](./dfa_frfreport.md) |
+| 34 | `t_dfa_global_finradarrule` | 全球财务雷达图方案规则-主表 | 10 | [dfa_global_fin_radar_rule.md](./dfa_global_fin_radar_rule.md) |
+| 35 | `t_dfa_global_stock_metric` | 全球股票指标-主表 | 28 | [global_stock_metric.md](./global_stock_metric.md) |
+| 36 | `t_dfa_global_stock_metric_l` | 全球股票指标-多语言表 | 5 | [global_stock_metric.md](./global_stock_metric.md) |
+| 37 | `t_dfa_gstock_metric_grou` | 全球股票指标分组-主表 | 15 | [global_stock_metric_group.md](./global_stock_metric_group.md) |
+| 38 | `t_dfa_gstock_metric_grou_l` | 全球股票指标分组-多语言表 | 5 | [global_stock_metric_group.md](./global_stock_metric_group.md) |
+| 39 | `t_dfa_health_evaluate_cap` | 能力项权重信息-子表 | 5 | [dfa_health_evaluate_type.md](./dfa_health_evaluate_type.md) |
+| 40 | `t_dfa_health_evaluate_quo` | 财务健康度评价模型指标-主表 | 8 | [dfa_health_evaluate_quota.md](./dfa_health_evaluate_quota.md) |
+| 41 | `t_dfa_health_evaluaterule` | 评分规则-子表 | 6 | [dfa_health_evaluate_quota.md](./dfa_health_evaluate_quota.md) |
+| 42 | `t_dfa_health_evaluatetype` | 财务健康度评价模型类型-主表 | 12 | [dfa_health_evaluate_type.md](./dfa_health_evaluate_type.md) |
+| 43 | `t_dfa_health_evaluatetype_l` | 财务健康度评价模型类型-多语言表 | 4 | [dfa_health_evaluate_type.md](./dfa_health_evaluate_type.md) |
+| 44 | `t_dfa_health_ind_score` | 财务健康度_行业评价-主表 | 9 | [dfa_health_industry_score.md](./dfa_health_industry_score.md) |
+| 45 | `t_dfa_hissession` | 智能财务分析历史会话-主表 | 0 | [dfa_hissession.md](./dfa_hissession.md) |
+| 46 | `t_dfa_hissession_l` | 智能财务分析历史会话-多语言表 | 0 | [dfa_hissession.md](./dfa_hissession.md) |
+| 47 | `t_dfa_idx_params_details` | 单据体-子表 | 6 | [dfa_indicator_params.md](./dfa_indicator_params.md) |
+| 48 | `t_dfa_indicator_params` | 指标参数-主表 | 14 | [dfa_indicator_params.md](./dfa_indicator_params.md) |
+| 49 | `t_dfa_indicator_params_l` | 指标参数-多语言表 | 4 | [dfa_indicator_params.md](./dfa_indicator_params.md) |
+| 50 | `t_dfa_industry` | 申万行业（废弃）-主表 | 0 | [dfa_industry.md](./dfa_industry.md) |
+| 51 | `t_dfa_industry_his` | 行业洞察历史纪录-主表 | 8 | [dfa_industry_insight_his.md](./dfa_industry_insight_his.md) |
+| 52 | `t_dfa_industry_info` | 申万行业-主表 | 15 | [dfa_industry_info.md](./dfa_industry_info.md) |
+| 53 | `t_dfa_industry_info_l` | 申万行业-多语言表 | 5 | [dfa_industry_info.md](./dfa_industry_info.md) |
+| 54 | `t_dfa_io_cache` | IO缓存-主表 | 15 | [dfa_io_cache.md](./dfa_io_cache.md) |
+| 55 | `t_dfa_item_mapping` | 报表项目映射-主表 | 19 | [dfa_item_mapping.md](./dfa_item_mapping.md) |
+| 56 | `t_dfa_item_mapping_l` | 报表项目映射-多语言表 | 4 | [dfa_item_mapping.md](./dfa_item_mapping.md) |
+| 57 | `t_dfa_itemsgroup` | 报表项目分组-主表 | 15 | [dfa_itemsgroup.md](./dfa_itemsgroup.md) |
+| 58 | `t_dfa_itemsgroup_l` | 报表项目分组-多语言表 | 4 | [dfa_itemsgroup.md](./dfa_itemsgroup.md) |
+| 59 | `t_dfa_listed_company_all` | 上市公司_全量(包含港股/美股等境外公司)-主表 | 13 | [dfa_listed_company_all.md](./dfa_listed_company_all.md) |
+| 60 | `t_dfa_listed_company_all_l` | 上市公司_全量(包含港股/美股等境外公司)-多语言表 | 6 | [dfa_listed_company_all.md](./dfa_listed_company_all.md) |
+| 61 | `t_dfa_llm_demo_data` | 财务LLM演示数据-主表 | 10 | [dfa_llm_demo_data.md](./dfa_llm_demo_data.md) |
+| 62 | `t_dfa_marketcompany_pdate` | 上市公司财报披露日期-主表 | 9 | [dfa_market_company_pdate.md](./dfa_market_company_pdate.md) |
+| 63 | `t_dfa_metricsinfo` | 指标信息-子表 | 7 | [dfa_custom_metrics.md](./dfa_custom_metrics.md) |
+| 64 | `t_dfa_metricsinfo` | 指标信息-子表 | 7 | [dfa_tenant_user_conf.md](./dfa_tenant_user_conf.md) |
+| 65 | `t_dfa_quota_info` | 财报指标库-主表 | 67 | [dfa_quota_info.md](./dfa_quota_info.md) |
+| 66 | `t_dfa_quota_info_l` | 财报指标库-多语言表 | 4 | [dfa_quota_info.md](./dfa_quota_info.md) |
+| 67 | `t_dfa_quota_type` | 财报指标分类目录-主表 | 20 | [dfa_quota_type.md](./dfa_quota_type.md) |
+| 68 | `t_dfa_quota_type_l` | 财报指标分类目录-多语言表 | 5 | [dfa_quota_type.md](./dfa_quota_type.md) |
+| 69 | `t_dfa_reportdatasource` | 报告数据来源-主表 | 8 | [dfa_reportdatasource.md](./dfa_reportdatasource.md) |
+| 70 | `t_dfa_risk_scan_favorites` | 风险扫描收藏夹-主表 | 3 | [dfa_risk_scan_favorites.md](./dfa_risk_scan_favorites.md) |
+| 71 | `t_dfa_risk_scan_result` | 风险扫描结果-主表 | 0 | [dfa_risk_scanning_result.md](./dfa_risk_scanning_result.md) |
+| 72 | `t_dfa_risk_scan_settting` | 风险扫描设置-主表 | 23 | [dfa_risk_scanning_setting.md](./dfa_risk_scanning_setting.md) |
+| 73 | `t_dfa_rpt_dimension` | 报表维度发生数据-主表 | 22 | [dfa_rpt_dimension.md](./dfa_rpt_dimension.md) |
+| 74 | `t_dfa_rptanalysis_history` | 财务报表分析历史记录-主表 | 15 | [dfa_rpt_analysis_history.md](./dfa_rpt_analysis_history.md) |
+| 75 | `t_dfa_rptframework` | 分析框架-主表 | 13 | [dfa_rptframework.md](./dfa_rptframework.md) |
+| 76 | `t_dfa_rsprocess` | 推理过程-主表 | 12 | [dfa_rsprocess.md](./dfa_rsprocess.md) |
+| 77 | `t_dfa_scan_abnormalentry` | 风险清单-子表 | 13 | [dfa_scanresult.md](./dfa_scanresult.md) |
+| 78 | `t_dfa_scanresult` | 扫描结果-主表 | 7 | [dfa_scanresult.md](./dfa_scanresult.md) |
+| 79 | `t_dfa_scenario_hot_record` | 场景-热门记录-主表 | 18 | [dfa_scenario_hot_record.md](./dfa_scenario_hot_record.md) |
+| 80 | `t_dfa_scenario_user_recor` | 场景-用户历史-主表 | 17 | [dfa_scenario_user_record.md](./dfa_scenario_user_record.md) |
+| 81 | `t_dfa_scheme` | 场景-主表 | 0 | [dfa_scheme.md](./dfa_scheme.md) |
+| 82 | `t_dfa_scheme_l` | 场景-多语言表 | 0 | [dfa_scheme.md](./dfa_scheme.md) |
+| 83 | `t_dfa_sys_env_var` | （弃用）系统环境变量-主表 | 11 | [dfa_sys_env_var.md](./dfa_sys_env_var.md) |
+| 84 | `t_dfa_sys_user_conf` | 系统用户配置-主表 | 4 | [dfa_sys_user_conf.md](./dfa_sys_user_conf.md) |
+| 85 | `t_dfa_sysconfig` | 系统配置-主表 | 13 | [dfa_sysconfig.md](./dfa_sysconfig.md) |
+| 86 | `t_dfa_tenant_datacenter` | 租户数据中心-主表 | 21 | [dfa_tenant_datacenter.md](./dfa_tenant_datacenter.md) |
+| 87 | `t_dfa_tenant_datacenter_l` | 租户数据中心-多语言表 | 4 | [dfa_tenant_datacenter.md](./dfa_tenant_datacenter.md) |
+| 88 | `t_dfa_tenant_info` | 租户信息-主表 | 11 | [dfa_tenant_info.md](./dfa_tenant_info.md) |
+| 89 | `t_dfa_tenant_info_l` | 租户信息-多语言表 | 4 | [dfa_tenant_info.md](./dfa_tenant_info.md) |
+| 90 | `t_dfa_tenant_params_data` | 数据中心集成配置数据-主表 | 11 | [dfa_tenant_params_data.md](./dfa_tenant_params_data.md) |
+| 91 | `t_dfa_tenant_user` | 租户用户-主表 | 12 | [dfa_tenant_user.md](./dfa_tenant_user.md) |
+| 92 | `t_dfa_tenant_user_conf` | 租户用户配置-主表 | 21 | [dfa_tenant_user_conf.md](./dfa_tenant_user_conf.md) |
+| 93 | `t_dfa_tenant_user_l` | 租户用户-多语言表 | 4 | [dfa_tenant_user.md](./dfa_tenant_user.md) |
+| 94 | `t_dfa_three_fin_report` | 财务报表项目数据-主表 | 23 | [dfa_fin_report_item_data.md](./dfa_fin_report_item_data.md) |
+| 95 | `t_dfa_trial_config` | 试用配置-主表 | 4 | [dfa_trial_config.md](./dfa_trial_config.md) |
+| 96 | `t_dfa_xh_config_data` | 星瀚取数配置存储-主表 | 3 | [dfa_xh_config_data.md](./dfa_xh_config_data.md) |
+| 97 | `t_dfa_xh_org` | 星瀚组织-主表 | 14 | [dfa_xh_org.md](./dfa_xh_org.md) |
+| 98 | `t_dfa_xh_org_l` | 星瀚组织-多语言表 | 5 | [dfa_xh_org.md](./dfa_xh_org.md) |
+| 99 | `t_rpt_anal_res` | 最近一次三表分析结果-主表 | 0 | [last_rpt_anal_res.md](./last_rpt_anal_res.md) |

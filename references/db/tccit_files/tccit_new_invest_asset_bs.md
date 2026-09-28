@@ -14,7 +14,7 @@
 | 3 | fname | 投资标的名称 | varchar | 50 |  | √ | ' ' | 投资标的名称 |
 | 4 | fbillstatus | fbillstatus | varchar | 50 |  | √ | ' ' |  |
 | 5 | fcreatetime | fcreatetime | timestamp | 0 |  |  | null |  |
-| 6 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fljjysf | fljjysf | numeric | 23 | 10 | √ | 0.0000000000 |  |
 | 8 | fljjsjc | fljjsjc | numeric | 23 | 10 | √ | 0.0000000000 |  |
 | 9 | finvesttype | 投资性质 | int8 | 64 |  | √ | 0 | 业务定义分录 tpo_tccit_bizdef_entry |

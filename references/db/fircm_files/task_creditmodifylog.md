@@ -41,26 +41,26 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | forgid | forgid | int8 | 64 |  | √ | 0 |  |
 | 3 | fnewlevel | 变更后等级 | varchar | 50 |  | √ | ' ' | 变更后等级 |
-| 4 | fcompany | 公司 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 4 | fcompany | 公司 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | ftaskid_link | 历史任务id_超链接 | int8 | 64 |  | √ | 0 | 历史任务id_超链接 |
 | 6 | fiscancel | 是否已撤回 | bpchar | 1 |  | √ | '0' | 是否已撤回 |
 | 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 8 | fnewgrade | 变更后分数 | numeric | 19 | 6 | √ | 0.000000 | 变更后分数 |
 | 9 | fstatus | 数据状态 | bpchar | 1 |  | √ | 'C' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 12 | fmodifydate | 变更时间 | timestamp | 0 |  |  | null | 变更时间 |
 | 13 | fsourcedataid | fsourcedataid | int8 | 64 |  | √ | 0 |  |
 | 14 | fbitindex | fbitindex | int4 | 32 |  | √ | 0 |  |
 | 15 | fbillentity | 单据标识 | varchar | 30 |  | √ | ' ' | 单据标识 |
 | 16 | fbillno | 单据编号 | varchar | 30 |  | √ | ' ' | 单据编号 |
-| 17 | fraiser | 用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 18 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 19 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 17 | fraiser | 用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 18 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 19 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 20 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 21 | fmodifysource | 变更来源 | bpchar | 1 |  | √ | ' ' | 变更来源,枚举: 0 :初始化 1 :手动修改 2 :审核 3 :影像超期 4 :共享质检任务 5 :信用申诉 |
 | 22 | fchangedscore | 分数变化 | numeric | 19 | 6 | √ | 0.000000 | 分数变化 |
-| 23 | fdept | 部门 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 23 | fdept | 部门 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 24 | fdescription | 描述 | varchar | 255 |  | √ | ' ' | 描述 |
 | 25 | foldlevel | 原等级 | varchar | 50 |  | √ | ' ' | 原等级 |
 | 26 | fctrlstrategy | fctrlstrategy | varchar | 30 |  | √ | ' ' |  |
@@ -86,9 +86,9 @@
 | 1 | index_tk_cretmodlog_fmoddate |  | fmodifydate |
 | 2 | t_tk_creditmodifylog_pkey |  | fid |
 | 3 | index_tk_cretmodlog_fraiser |  | fraiser |
-| 4 | idx_t_tk_creditmodifylog_createorg |  | fcreateorgid |
-| 5 | idx_t_tk_creditmodifylog_master |  | fmasterid |
-| 6 | index_cretmodlog_fcrateorgid |  | fcreateorgid |
+| 4 | index_cretmodlog_fcrateorgid |  | fcreateorgid |
+| 5 | idx_t_tk_creditmodifylog_createorg |  | fcreateorgid |
+| 6 | idx_t_tk_creditmodifylog_master |  | fmasterid |
 | 7 | index_tk_cretmodlog_fdept |  | fdept |
 | 8 | index_tk_cretmodlog_taskid |  | ftaskid |
 | 9 | index_tk_cretmodlog_fmodtype |  | fmodifytype |

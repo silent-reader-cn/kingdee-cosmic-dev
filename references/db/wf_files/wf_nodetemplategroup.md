@@ -11,14 +11,14 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 名称 | varchar | 500 |  | √ | ' ' | 名称 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 5 | fseq | 顺序 | int4 | 32 |  | √ | 0 | 顺序 |
 | 6 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 7 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: C :已审核 B :已提交 A :暂存 |
-| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 10 | fparent | 上级分组 | int8 | 64 |  | √ | 0 | 节点模板分组 wf_nodetemplategroup |
+| 10 | fparent | 上级分组 | int8 | 64 |  | √ | 0 | [节点模板分组 wf_nodetemplategroup](../wf_files/wf_nodetemplategroup.md) |
 | 11 | fenable | 使用状态 | varchar | 50 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 12 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
 | 13 | fisinitialization | 是否是系统预置 | varchar | 50 |  | √ | ' ' | 是否是系统预置,枚举: A :系统预置 B :非系统预置 |

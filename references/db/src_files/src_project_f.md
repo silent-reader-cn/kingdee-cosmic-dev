@@ -55,39 +55,40 @@
 | 44 | fwinruleid | fwinruleid | int8 | 64 |  | √ | 0 |  |
 | 45 | fpurdeptid | fpurdeptid | int8 | 64 |  | √ | 0 |  |
 | 46 | famount | famount | numeric | 23 | 10 | √ | 0 |  |
-| 47 | fisaptitude | fisaptitude | bpchar | 1 |  | √ | '0' |  |
-| 48 | fsurplusamount | fsurplusamount | numeric | 23 | 10 | √ | 0 |  |
-| 49 | fsupopentype | fsupopentype | bpchar | 1 |  | √ | '1' |  |
-| 50 | fopentype | fopentype | bpchar | 1 |  | √ | ' ' |  |
-| 51 | fclosetask | fclosetask | varchar | 255 |  | √ | ' ' |  |
-| 52 | fpurgroupid | fpurgroupid | int8 | 64 |  | √ | 0 |  |
-| 53 | fbiztypeid | fbiztypeid | int8 | 64 |  | √ | 0 |  |
-| 54 | fismultipackage | fismultipackage | bpchar | 1 |  | √ | '0' |  |
-| 55 | fishidesupplier | fishidesupplier | bpchar | 1 |  | √ | '0' |  |
-| 56 | fsourceclassid | fsourceclassid | int8 | 64 |  | √ | 0 |  |
-| 57 | fopenstatus | fopenstatus | bpchar | 1 |  | √ | '1' |  |
-| 58 | fmanagetype | fmanagetype | bpchar | 1 |  | √ | ' ' |  |
-| 59 | ftaxtype | ftaxtype | varchar | 30 |  | √ | ' ' |  |
-| 60 | fbidname | fbidname | varchar | 300 |  | √ | ' ' |  |
-| 61 | fterminalnode | fterminalnode | int8 | 64 |  | √ | 0 |  |
-| 62 | fparentid | fparentid | varchar | 50 |  | √ | ' ' |  |
-| 63 | fdonetask | fdonetask | varchar | 255 |  | √ | ' ' |  |
-| 64 | fisbypackage | fisbypackage | bpchar | 1 |  | √ | '0' |  |
-| 65 | fisbidpublish | fisbidpublish | bpchar | 1 |  | √ | '0' |  |
-| 66 | fentitykey | fentitykey | varchar | 50 |  | √ | ' ' |  |
-| 67 | fopendate | fopendate | timestamp | 0 |  |  | null |  |
-| 68 | fdecisiontype | fdecisiontype | bpchar | 1 |  | √ | ' ' |  |
-| 69 | fratio_biz | fratio_biz | numeric | 23 | 10 | √ | 0 |  |
-| 70 | fratio_tec | fratio_tec | numeric | 23 | 10 | √ | 0 |  |
-| 71 | fisopencontrol | fisopencontrol | bpchar | 1 |  | √ | '0' |  |
-| 72 | fisbypackage_apt | fisbypackage_apt | bpchar | 1 |  | √ | '0' |  |
-| 73 | fsourcetypeid | fsourcetypeid | int8 | 64 |  | √ | 0 |  |
-| 74 | fsumtaxamount | fsumtaxamount | numeric | 23 | 10 | √ | 0 |  |
-| 75 | fextfilterid | fextfilterid | int8 | 64 |  | √ | 0 |  |
-| 76 | fcurrentnode | fcurrentnode | int8 | 64 |  | √ | 0 |  |
-| 77 | fisquickpur | fisquickpur | bpchar | 1 |  | √ | '0' |  |
-| 78 | fcurrencyid | fcurrencyid | int8 | 64 |  | √ | 0 |  |
-| 79 | fratiotype | fratiotype | bpchar | 1 |  | √ | '1' |  |
+| 47 | fsystype | fsystype | bpchar | 1 |  | √ | '1' |  |
+| 48 | fisaptitude | fisaptitude | bpchar | 1 |  | √ | '0' |  |
+| 49 | fsurplusamount | fsurplusamount | numeric | 23 | 10 | √ | 0 |  |
+| 50 | fsupopentype | fsupopentype | bpchar | 1 |  | √ | '1' |  |
+| 51 | fopentype | fopentype | bpchar | 1 |  | √ | ' ' |  |
+| 52 | fclosetask | fclosetask | varchar | 255 |  | √ | ' ' |  |
+| 53 | fpurgroupid | fpurgroupid | int8 | 64 |  | √ | 0 |  |
+| 54 | fbiztypeid | fbiztypeid | int8 | 64 |  | √ | 0 |  |
+| 55 | fismultipackage | fismultipackage | bpchar | 1 |  | √ | '0' |  |
+| 56 | fishidesupplier | fishidesupplier | bpchar | 1 |  | √ | '0' |  |
+| 57 | fsourceclassid | fsourceclassid | int8 | 64 |  | √ | 0 |  |
+| 58 | fopenstatus | fopenstatus | bpchar | 1 |  | √ | '1' |  |
+| 59 | fmanagetype | fmanagetype | bpchar | 1 |  | √ | ' ' |  |
+| 60 | ftaxtype | ftaxtype | varchar | 30 |  | √ | ' ' |  |
+| 61 | fbidname | fbidname | varchar | 300 |  | √ | ' ' |  |
+| 62 | fterminalnode | fterminalnode | int8 | 64 |  | √ | 0 |  |
+| 63 | fparentid | fparentid | varchar | 50 |  | √ | ' ' |  |
+| 64 | fdonetask | fdonetask | varchar | 255 |  | √ | ' ' |  |
+| 65 | fisbypackage | fisbypackage | bpchar | 1 |  | √ | '0' |  |
+| 66 | fisbidpublish | fisbidpublish | bpchar | 1 |  | √ | '0' |  |
+| 67 | fentitykey | fentitykey | varchar | 50 |  | √ | ' ' |  |
+| 68 | fopendate | fopendate | timestamp | 0 |  |  | null |  |
+| 69 | fdecisiontype | fdecisiontype | bpchar | 1 |  | √ | ' ' |  |
+| 70 | fratio_biz | fratio_biz | numeric | 23 | 10 | √ | 0 |  |
+| 71 | fratio_tec | fratio_tec | numeric | 23 | 10 | √ | 0 |  |
+| 72 | fisopencontrol | fisopencontrol | bpchar | 1 |  | √ | '0' |  |
+| 73 | fisbypackage_apt | fisbypackage_apt | bpchar | 1 |  | √ | '0' |  |
+| 74 | fsourcetypeid | fsourcetypeid | int8 | 64 |  | √ | 0 |  |
+| 75 | fsumtaxamount | fsumtaxamount | numeric | 23 | 10 | √ | 0 |  |
+| 76 | fextfilterid | fextfilterid | int8 | 64 |  | √ | 0 |  |
+| 77 | fcurrentnode | fcurrentnode | int8 | 64 |  | √ | 0 |  |
+| 78 | fisquickpur | fisquickpur | bpchar | 1 |  | √ | '0' |  |
+| 79 | fcurrencyid | fcurrencyid | int8 | 64 |  | √ | 0 |  |
+| 80 | fratiotype | fratiotype | bpchar | 1 |  | √ | '1' |  |
 
 ### 列规则定义
 
@@ -102,9 +103,9 @@
 | 1 | idx_src_project_sourceid |  | fsourceid |
 | 2 | idx_src_project_parentid |  | fparentid |
 | 3 | pk_src_project |  | fid |
-| 4 | idx_src_project_type |  | fsrctypeid |
-| 5 | idx_src_project_sourceclassid |  | fsourceclassid |
-| 6 | idx_src_project_status |  | fopenstatus |
+| 4 | idx_src_project_sourceclassid |  | fsourceclassid |
+| 5 | idx_src_project_status |  | fopenstatus |
+| 6 | idx_src_project_type |  | fsrctypeid |
 
 ---
 
@@ -118,30 +119,34 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | forgid | forgid | int8 | 64 |  | √ | 0 |  |
-| 3 | fbizstatus | 业务状态 | bpchar | 1 |  | √ | ' ' | 业务状态,枚举: A :未开始 B :处理中 C :已处理 D :已终止 Z :无需处理 |
-| 4 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 5 | funauditdate | funauditdate | timestamp | 0 |  |  | null |  |
-| 6 | fmodifytime | fmodifytime | timestamp | 0 |  |  | null |  |
-| 7 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 8 | fchgsrcbillid | fchgsrcbillid | int8 | 64 |  | √ | 0 |  |
-| 9 | fcondition | fcondition | varchar | 2000 |  | √ | ' ' |  |
-| 10 | funauditorid | funauditorid | int8 | 64 |  | √ | 0 |  |
-| 11 | fmodifierid | fmodifierid | int8 | 64 |  | √ | 0 |  |
-| 12 | funsubmitterid | funsubmitterid | int8 | 64 |  | √ | 0 |  |
-| 13 | funsubmitdate | funsubmitdate | timestamp | 0 |  |  | null |  |
-| 14 | ftemplateid | 组件模板 | int8 | 64 |  | √ | 0 | 组件模板配置 pds_tplconfig |
-| 15 | fbillstatus | 单据状态 | bpchar | 1 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 16 | fsubmitterid | fsubmitterid | int8 | 64 |  | √ | 0 |  |
-| 17 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 18 | flastupdateuserid | flastupdateuserid | int8 | 64 |  | √ | 0 |  |
-| 19 | fauditdate | fauditdate | timestamp | 0 |  |  | null |  |
-| 20 | flastupdatetime | flastupdatetime | timestamp | 0 |  |  | null |  |
-| 21 | fsubmitdate | fsubmitdate | timestamp | 0 |  |  | null |  |
-| 22 | fbidchangeid | fbidchangeid | int8 | 64 |  | √ | 0 |  |
-| 23 | fcompbillno | fcompbillno | varchar | 30 |  | √ | ' ' |  |
-| 24 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 25 | fauditorid | fauditorid | int8 | 64 |  | √ | 0 |  |
+| 2 | fpickschemeld | fpickschemeld | int8 | 64 |  | √ | 0 |  |
+| 3 | forgid | forgid | int8 | 64 |  | √ | 0 |  |
+| 4 | fisselect | fisselect | bpchar | 1 |  | √ | '0' |  |
+| 5 | fbizstatus | 业务状态 | bpchar | 1 |  | √ | ' ' | 业务状态,枚举: A :未开始 B :处理中 C :已处理 D :已终止 Z :无需处理 |
+| 6 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
+| 7 | funauditdate | funauditdate | timestamp | 0 |  |  | null |  |
+| 8 | fmodifytime | fmodifytime | timestamp | 0 |  |  | null |  |
+| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 10 | fchgsrcbillid | fchgsrcbillid | int8 | 64 |  | √ | 0 |  |
+| 11 | fpurlistnote | fpurlistnote | varchar | 50 |  | √ | ' ' |  |
+| 12 | fcondition | fcondition | varchar | 2000 |  | √ | ' ' |  |
+| 13 | funauditorid | funauditorid | int8 | 64 |  | √ | 0 |  |
+| 14 | fmodifierid | fmodifierid | int8 | 64 |  | √ | 0 |  |
+| 15 | funsubmitterid | funsubmitterid | int8 | 64 |  | √ | 0 |  |
+| 16 | funsubmitdate | funsubmitdate | timestamp | 0 |  |  | null |  |
+| 17 | ftemplateid | 组件模板 | int8 | 64 |  | √ | 0 | [组件模板配置 pds_tplconfig](../pds_files/pds_tplconfig.md) |
+| 18 | fbillstatus | 单据状态 | bpchar | 1 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
+| 19 | fsubmitterid | fsubmitterid | int8 | 64 |  | √ | 0 |  |
+| 20 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 21 | fexpertcount | fexpertcount | int8 | 64 |  | √ | 0 |  |
+| 22 | flastupdateuserid | flastupdateuserid | int8 | 64 |  | √ | 0 |  |
+| 23 | fauditdate | fauditdate | timestamp | 0 |  |  | null |  |
+| 24 | flastupdatetime | flastupdatetime | timestamp | 0 |  |  | null |  |
+| 25 | fsubmitdate | fsubmitdate | timestamp | 0 |  |  | null |  |
+| 26 | fbidchangeid | fbidchangeid | int8 | 64 |  | √ | 0 |  |
+| 27 | fcompbillno | fcompbillno | varchar | 30 |  | √ | ' ' |  |
+| 28 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 29 | fauditorid | fauditorid | int8 | 64 |  | √ | 0 |  |
 
 ### 列规则定义
 

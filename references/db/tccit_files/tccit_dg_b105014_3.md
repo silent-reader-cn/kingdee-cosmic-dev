@@ -33,5 +33,5 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_tccit_dg_b105014_3 |  | fsbbid |
-| 2 | t_tccit_dg_b105014_3_pkey |  | fid |
+| 1 | t_tccit_dg_b105014_3_pkey |  | fid |
+| 2 | idx_tccit_dg_b105014_3 |  | fsbbid |

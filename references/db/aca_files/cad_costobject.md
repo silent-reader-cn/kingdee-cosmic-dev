@@ -10,45 +10,59 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | foriginype | 来源类型 | varchar | 30 |  | √ | ' ' | 来源类型,枚举: MANUAL :手工录入 API :API EXCEL :列表引入 RULE :规则引入 CONFIG :按配置方案生成 |
-| 3 | fcostobjectruleid | 成本核算对象规则 | int8 | 64 |  | √ | 0 | 成本核算对象规则 cad_costobjectrule |
-| 4 | fmanuorgid | 生产组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 5 | fmaterialid | 产品编码 | int8 | 64 |  | √ | 0 | 物料 bd_material |
-| 6 | forgid | 核算组织(废弃-230629多核算体系改造) | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 7 | fproductgroupid | 产品组 | int8 | 64 |  | √ | 0 | 产品组 cad_productintogroup |
-| 8 | fauxptyid | 辅助属性 | int8 | 64 |  | √ | 0 | null 001 |
-| 9 | fbizstatus | 业务状态 | varchar | 30 |  | √ | ' ' | 业务状态,枚举: A :未结算 B :已结算 |
-| 10 | fconfiguredcodeid | 配置号（废弃） | int8 | 64 |  | √ | 0 | 配置号 bd_configuredcode |
-| 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 12 | fisrework | 返工 | bpchar | 1 |  | √ | '0' | 返工 |
-| 13 | fbiztype | 成本计算方法 | varchar | 30 |  | √ | ' ' | 成本计算方法,枚举: RO :工单成本 PZ :品种法 CU :生产线成本 |
-| 14 | fweight | 分配权重 | numeric | 23 | 10 | √ | 0.0000000000 | 分配权重 |
-| 15 | fisoutsource | 委外 | bpchar | 1 |  | √ | '0' | 委外 |
-| 16 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 17 | ftracknumberid | 跟踪号 | int8 | 64 |  | √ | 0 | 跟踪号 bd_tracknumber |
-| 18 | fproducenum | 生产编号 | varchar | 50 |  | √ | ' ' | 生产编号 |
-| 19 | fsettleaccounttime | 结算时间 | timestamp | 0 |  |  | null | 结算时间 |
-| 20 | fbomversionid | 物料版本 | int8 | 64 |  | √ | 0 | BOM版本 bd_bomversion |
-| 21 | fbillno | 编码 | varchar | 510 |  | √ | ' ' | 编码 |
-| 22 | fprdline | 生产线 | int8 | 64 |  | √ | 0 | 生产线 arm_linecapacity |
-| 23 | fsrcbillnumber | 源单单号 | varchar | 255 |  | √ | ' ' | 源单单号 |
-| 24 | fcostcenterid | 成本中心 | int8 | 64 |  | √ | 0 | 成本中心 bos_costcenter |
-| 25 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 26 | fmainproobjid | 主产品成本核算对象 | int8 | 64 |  | √ | 0 | 主产品成本核算对象 |
-| 27 | fbillstatus | 单据状态 | varchar | 30 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 28 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 29 | fprojectnumberid | 项目号 | int8 | 64 |  | √ | 0 | 项目 bd_project |
-| 30 | fsrcbillrow | 源单行号 | int8 | 64 |  | √ | 0 | 源单行号 |
-| 31 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
-| 32 | fprobillid | 源单分录ID | int8 | 64 |  | √ | 0 | 源单分录ID |
-| 33 | fproducttype | 产品类型 | varchar | 30 |  | √ | ' ' | 产品类型,枚举: C :主产品 A :联产品 B :副产品 |
-| 34 | frule | 核算规则 | varchar | 30 |  | √ | ' ' | 核算规则,枚举: SN :源单单号+源单行号 PN :产品+生产编号 CP :产品 RULE_SW :源单单号+源单行号+项目号 RULE_SP :项目号 RULE_CU :产品+生产线 |
-| 35 | fsotype | 源单类型 | varchar | 30 |  | √ | ' ' | 源单类型,枚举: PB :工单/委外工单 SB :生产编号 SOTYPE_SW :检修工单 SOTYPE_SP :项目 SOTYPE_ARMIN :重复生产完工入库单 |
-| 36 | fcollconfigid | 配置单 | int8 | 64 |  | √ | 0 | 成本归集配置单 cad_costcollectconfig |
-| 37 | fbookdate | 记账日期 | timestamp | 0 |  |  | null | 记账日期 |
-| 38 | fpno | 系统生产流水号 | int8 | 64 |  | √ | 0 | 系统生产流水号 |
-| 39 | fsrcbilltype | 源单类型 | varchar | 50 |  | √ | ' ' | 主实体对象 bos_entityobject |
-| 40 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fcostobjectruleid | 成本核算对象规则 | int8 | 64 |  | √ | 0 | [成本核算对象规则 cad_costobjectrule](../aca_files/cad_costobjectrule.md) |
+| 3 | forgid | 核算组织(废弃-230629多核算体系改造) | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 4 | fauxptyid | 辅助属性 | int8 | 64 |  | √ | 0 | null 001 |
+| 5 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 6 | fisrework | 返工 | bpchar | 1 |  | √ | '0' | 返工 |
+| 7 | fproducenum | 生产编号 | varchar | 50 |  | √ | ' ' | 生产编号 |
+| 8 | fprocessnumber | 工序号 | int8 | 64 |  | √ | 0 | 工序号 |
+| 9 | fbillno | 编码 | varchar | 510 |  | √ | ' ' | 编码 |
+| 10 | fsrcbillnumber | 源单单号 | varchar | 255 |  | √ | ' ' | 源单单号 |
+| 11 | fcostcenterid | 成本中心 | int8 | 64 |  | √ | 0 | [成本中心 bos_costcenter](../basedata_files/bos_costcenter.md) |
+| 12 | fmainproobjid | 主产品成本核算对象 | int8 | 64 |  | √ | 0 | 主产品成本核算对象 |
+| 13 | fname | 名称 | varchar | 510 |  | √ | ' ' | 名称 |
+| 14 | fbillstatus | 单据状态 | varchar | 30 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
+| 15 | fbatchno | 批号 | varchar | 255 |  | √ | ' ' | 批号 |
+| 16 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
+| 17 | fprobillid | 源单分录ID | int8 | 64 |  | √ | 0 | 源单分录ID |
+| 18 | fsupplierid | 供应商 | int8 | 64 |  | √ | 0 | [供应商 bd_supplier](../basedata_files/bd_supplier.md) |
+| 19 | frule | 核算规则 | varchar | 30 |  | √ | ' ' | 核算规则,枚举: SN :源单单号+源单行号 PN :产品+生产编号 CP :产品 RULE_SW :源单单号+源单行号+项目号 RULE_SP :项目号 RULE_CU :产品+生产线 |
+| 20 | fisenabledsfc | 是否工序 | bpchar | 1 |  | √ | '0' | 是否工序 |
+| 21 | fsotype | 源单类型 | varchar | 30 |  | √ | ' ' | 源单类型,枚举: PB :工单/委外工单 SB :生产编号 SOTYPE_SW :检修工单 SOTYPE_SP :项目 SOTYPE_ARMIN :重复生产完工入库单 |
+| 22 | fbookdate | 记账日期 | timestamp | 0 |  |  | null | 记账日期 |
+| 23 | fpno | 系统生产流水号 | int8 | 64 |  | √ | 0 | 系统生产流水号 |
+| 24 | fsrcbilltype | 源单类型 | varchar | 50 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
+| 25 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 26 | fbilltypeid | 单据类型 | int8 | 64 |  | √ | 0 | [单据类型 bos_billtype](../cts_files/bos_billtype.md) |
+| 27 | foriginype | 来源类型 | varchar | 30 |  | √ | ' ' | 来源类型,枚举: MANUAL :手工录入 API :API EXCEL :列表引入 RULE :规则引入 CONFIG :按配置方案生成 |
+| 28 | fmanuorgid | 生产组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 29 | fproplanid | 工序计划号 | int8 | 64 |  | √ | 0 | [工序计划F7 sfc_processplan_f7](../sfc_files/sfc_processplan_f7.md) |
+| 30 | fprocesssequence | 工序序列 | int8 | 64 |  | √ | 0 | 工序序列 |
+| 31 | fmaterialid | 产品编码 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
+| 32 | fproductgroupid | 产品组 | int8 | 64 |  | √ | 0 | [产品组 cad_productintogroup](../aca_files/cad_productintogroup.md) |
+| 33 | fbizstatus | 业务状态 | varchar | 30 |  | √ | ' ' | 业务状态,枚举: A :未结算 B :已结算 |
+| 34 | fconfiguredcodeid | 配置号（废弃） | int8 | 64 |  | √ | 0 | [配置号（废弃） bd_configuredcode](../sbd_files/bd_configuredcode.md) |
+| 35 | fbiztype | 成本计算方法 | varchar | 30 |  | √ | ' ' | 成本计算方法,枚举: RO :工单成本 PZ :品种法 CU :生产线成本 DIY :自定义 |
+| 36 | fweight | 分配权重 | numeric | 23 | 10 | √ | 0.0000000000 | 分配权重 |
+| 37 | fisoutsource | 委外 | bpchar | 1 |  | √ | '0' | 委外 |
+| 38 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 39 | fprocesscode | 工序 | int8 | 64 |  | √ | 0 | [标准工序 mpdm_normprocess](../mpdm_files/mpdm_normprocess.md) |
+| 40 | ftracknumberid | 跟踪号 | int8 | 64 |  | √ | 0 | [跟踪号 bd_tracknumber](../sbd_files/bd_tracknumber.md) |
+| 41 | fsettleaccounttime | 结算时间 | timestamp | 0 |  |  | null | 结算时间 |
+| 42 | fbomversionid | 物料版本 | int8 | 64 |  | √ | 0 | [BOM版本 bd_bomversion](../basedata_files/bd_bomversion.md) |
+| 43 | fprdline | 生产线 | int8 | 64 |  | √ | 0 | [生产线 arm_linecapacity](../arm_files/arm_linecapacity.md) |
+| 44 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 45 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 46 | fprojectnumberid | 项目编码 | int8 | 64 |  | √ | 0 | [项目 bd_project](../basedata_files/bd_project.md) |
+| 47 | fcostcalcdimension | 核算维度 | int8 | 64 |  | √ | 0 | [成本核算维度 cad_costcalcdimension](../aca_files/cad_costcalcdimension.md) |
+| 48 | fsrcbillrow | 源单行号 | int8 | 64 |  | √ | 0 | 源单行号 |
+| 49 | fproducttype | 产品类型 | varchar | 30 |  | √ | ' ' | 产品类型,枚举: C :主产品 A :联产品 B :副产品 |
+| 50 | fproplanentryid | 工序计划分录 | int8 | 64 |  | √ | 0 | [工序计划分录F7 sfc_processplanentry_f7](../sfc_files/sfc_processplanentry_f7.md) |
+| 51 | fisdevproduce | 研发试制 | bpchar | 1 |  | √ | '0' | 研发试制 |
+| 52 | fcollconfigid | 配置单 | int8 | 64 |  | √ | 0 | [成本归集配置单 cad_costcollectconfig](../aca_files/cad_costcollectconfig.md) |
+| 53 | fmodelnum | 规格型号 | varchar | 510 |  | √ | ' ' | 规格型号 |
+| 54 | fbilltype | 单据类型 | int8 | 64 |  | √ | 0 | 单据类型 |
 
 ### 列规则定义
 
@@ -85,6 +99,7 @@
 | 3 | fname | 名称 | varchar | 510 |  | √ | ' ' | 名称 |
 | 4 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
 | 5 | fpkid | fpkid | varchar | 20 |  | √ | ' ' | pkid |
+| 6 | fmodelnum | 规格型号 | varchar | 510 |  | √ | ' ' | 规格型号 |
 
 ### 列规则定义
 
@@ -111,7 +126,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 成本中心 bos_costcenter |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [成本中心 bos_costcenter](../basedata_files/bos_costcenter.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义

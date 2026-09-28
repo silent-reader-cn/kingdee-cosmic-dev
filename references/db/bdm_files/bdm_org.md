@@ -16,14 +16,14 @@
 | 5 | fdefaultdev | 默认设备 | varchar | 50 |  | √ | ' ' | 默认设备 |
 | 6 | fparentname | 上级组织名称 | varchar | 200 |  | √ | ' ' | 上级组织名称 |
 | 7 | fmodifytime | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
-| 8 | fepinfo | 企业信息 | int8 | 64 |  | √ | 0 | 企业基础信息 bdm_enterprise_baseinfo |
+| 8 | fepinfo | 企业信息 | int8 | 64 |  | √ | 0 | [企业基础信息 bdm_enterprise_baseinfo](../bdm_files/bdm_enterprise_baseinfo.md) |
 | 9 | fstatus | 启用状态 | varchar | 30 |  | √ | ' ' | 启用状态,枚举: A :暂存 B :提交 C :审核 |
-| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fmasterid | fmasterid | int8 | 64 |  | √ | 0 |  |
-| 12 | falleaccount | 电子发票服务平台账号 | int8 | 64 |  | √ | 0 | 电子发票服务平台信息 bdm_einvoice_account |
+| 12 | falleaccount | 电子发票服务平台账号 | int8 | 64 |  | √ | 0 | [电子发票服务平台信息 bdm_einvoice_account](../bdm_files/bdm_einvoice_account.md) |
 | 13 | fviewtype | 视图类型 | varchar | 50 |  | √ | ' ' | 视图类型 |
 | 14 | fname | 组织名称 | varchar | 200 |  | √ | ' ' | 组织名称 |
-| 15 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 15 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 16 | fdefaultterminal | 默认终端 | varchar | 50 |  | √ | ' ' | 默认终端 |
 | 17 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 18 | flongnumber | 长编码 | varchar | 200 |  | √ | ' ' | 长编码 |

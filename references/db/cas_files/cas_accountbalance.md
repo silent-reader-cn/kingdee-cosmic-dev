@@ -10,10 +10,10 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fbankaccountid | 银行账户 | int8 | 64 |  | √ | 0 | 银行账户 bd_accountbanks |
+| 2 | fbankaccountid | 银行账户 | int8 | 64 |  | √ | 0 | [银行账户 bd_accountbanks](../basedata_files/bd_accountbanks.md) |
 | 3 | fopenorgid | fopenorgid | int8 | 64 |  | √ | 0 |  |
 | 4 | fdebitamountloc | 借方金额本位币 | numeric | 23 | 10 | √ | 0 | 借方金额本位币 |
-| 5 | forgid | 收付组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | forgid | 收付组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | fdaybalanceloc | 期初余额本位币 | numeric | 23 | 10 | √ | 0 | 期初余额本位币 |
 | 7 | fcreditamount | 贷方金额 | numeric | 23 | 10 | √ | 0.0000000000 | 贷方金额 |
 | 8 | famount | 余额 | numeric | 23 | 10 | √ | 0.0000000000 | 余额 |
@@ -25,7 +25,7 @@
 | 14 | fmodifydate | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
 | 15 | fdaytradenum | 当天交易笔数 | int8 | 64 |  | √ | 0 | 当天交易笔数 |
 | 16 | fbookdate | 记账日期 | timestamp | 0 |  |  | null | 记账日期 |
-| 17 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 17 | fcurrencyid | 币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 | 18 | fcreditamountloc | 贷方金额本位币 | numeric | 23 | 10 | √ | 0 | 贷方金额本位币 |
 
 ### 列规则定义

@@ -10,14 +10,14 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fveto | 一票否决 | bpchar | 1 |  | √ | ' ' | 一票否决,枚举: 1 :一级指标0分 2 :二级指标0分 3 :三级指标0分 9 :非否决项 |
-| 2 | fabstain | fabstain | bpchar | 1 |  | √ | '0' |  |
+| 2 | fabstain | 放弃评分 | bpchar | 1 |  | √ | '0' | 放弃评分 |
 | 3 | fseq | fseq | int8 | 64 |  | √ | 0 |  |
 | 4 | fnote | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
 | 5 | fvalue | 评估结果 | numeric | 19 | 6 | √ | 0.000000 | 评估结果 |
 | 6 | fscorersave | 评委已评分 | bpchar | 1 |  | √ | '0' | 评委已评分 |
 | 7 | fweight | 评委权重% | numeric | 19 | 6 | √ | 0.000000 | 评委权重% |
 | 8 | fscorerscore | 权重得分 | numeric | 19 | 6 | √ | 0.000000 | 权重得分 |
-| 9 | fscorerid | 评委 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fscorerid | 评委 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | fscored | 评委已评分 | bpchar | 1 |  | √ | ' ' | 评委已评分 |
 | 11 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 | id |
 | 12 | faccordance | 符合项判断 | varchar | 50 |  | √ | ' ' | 符合项判断 |
@@ -49,7 +49,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 附件字段实体 bd_attachment |
+| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [附件字段实体 bd_attachment](../frame_files/bd_attachment.md) |
 | 2 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 |  |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | FPKID |
 

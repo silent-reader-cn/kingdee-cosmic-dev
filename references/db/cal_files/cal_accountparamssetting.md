@@ -12,7 +12,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fcheckornot | fcheckornot | bpchar | 1 |  | √ | '0' |  |
 | 3 | fendinitcheck | 结束初始化对账是否提示 | bpchar | 1 |  | √ | '0' | 结束初始化对账是否提示,枚举: A :校验-提示 B :不校验 C :校验-强制 |
-| 4 | fcostaccountid | 成本主体 | int8 | 64 |  | √ | 0 | 成本主体 cal_bd_costaccount |
+| 4 | fcostaccountid | 成本主体 | int8 | 64 |  | √ | 0 | [成本主体 cal_bd_costaccount](../cal_files/cal_bd_costaccount.md) |
 | 5 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 6 | fendaccountcheck | 结账对账是否提示 | bpchar | 1 |  | √ | '0' | 结账对账是否提示,枚举: A :校验-提示 B :不校验 C :校验-强制 |
 | 7 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |

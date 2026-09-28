@@ -57,14 +57,14 @@
 | 15 | fstatus | fstatus | bpchar | 1 |  | √ | '0' |  |
 | 16 | fcreatedate | fcreatedate | timestamp | 0 |  |  | null |  |
 | 17 | fbizcloud | fbizcloud | varchar | 80 |  | √ | ' ' |  |
-| 18 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 18 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 19 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 20 | fmodifydate | fmodifydate | timestamp | 0 |  |  | null |  |
-| 21 | flocalsystem | 目标系统 | int8 | 64 |  | √ | 0 | 外部集成信息（废弃） isc_sysconn |
+| 21 | flocalsystem | 目标系统 | int8 | 64 |  | √ | 0 | [外部集成信息（废弃） isc_sysconn](../iscb_files/isc_sysconn.md) |
 | 22 | fcreater | fcreater | int8 | 64 |  | √ | 0 |  |
 | 23 | fmqlinkscheme | fmqlinkscheme | int8 | 64 |  | √ | 0 |  |
 | 24 | fcustomeassolution | 通用接口服务名称 | varchar | 100 |  | √ | ' ' | 通用接口服务名称 |
-| 25 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 25 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 26 | fbizapp | fbizapp | varchar | 80 |  | √ | ' ' |  |
 | 27 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 28 | frepushdata | frepushdata | bpchar | 1 |  | √ | '0' |  |

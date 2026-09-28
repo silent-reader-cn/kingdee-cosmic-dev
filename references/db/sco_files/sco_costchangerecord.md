@@ -11,18 +11,18 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fchangecontext_tag | 变更内容_详情 | text | 0 |  |  | null | 变更内容_详情 |
-| 3 | fcostcenterid | 成本中心 | int8 | 64 |  | √ | 0 | 成本中心 bos_costcenter |
-| 4 | fperiodid | 会计期间 | int8 | 64 |  | √ | 0 | 会计日历 bd_period |
+| 3 | fcostcenterid | 成本中心 | int8 | 64 |  | √ | 0 | [成本中心 bos_costcenter](../basedata_files/bos_costcenter.md) |
+| 4 | fperiodid | 会计期间 | int8 | 64 |  | √ | 0 | [会计日历 bd_period](../fibd_files/bd_period.md) |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 6 | forgid | 核算组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | forgid | 核算组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fbizstatus | 业务状态 | varchar | 30 |  | √ | 'A' | 业务状态,枚举: A :未结算 B :已结算 |
 | 8 | fbusinessbill | 业务单据 | varchar | 255 |  | √ | ' ' | 业务单据,枚举: cad_costobject :成本核算对象 cad_plannedoutputbill :计划生产数量归集 cad_factnedoutputbill :完工入库数量归集 sco_matusecollect :材料耗用归集 sco_resourceuse :资源耗用量归集 sco_absorbadjust :吸收成本调整 sco_matalloc :材料耗用分配 |
-| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | fsourcebillid | 源单ID | int8 | 64 |  | √ | 0 | 源单ID |
-| 11 | fcostaccountid | 成本主体 | int8 | 64 |  | √ | 0 | 成本主体 cal_bd_costaccount |
+| 11 | fcostaccountid | 成本主体 | int8 | 64 |  | √ | 0 | [成本主体 cal_bd_costaccount](../cal_files/cal_bd_costaccount.md) |
 | 12 | fchangecontext | 变更内容 | varchar | 1000 |  | √ | ' ' | 变更内容 |
 | 13 | fsourcebiztime | 源单业务日期 | timestamp | 0 |  |  | null | 源单业务日期 |
-| 14 | fcostobjectid | 成本核算对象 | int8 | 64 |  | √ | 0 | 成本核算对象 sco_costobjectf7 |
+| 14 | fcostobjectid | 成本核算对象 | int8 | 64 |  | √ | 0 | [成本核算对象f7 sco_costobjectf7](../sco_files/sco_costobjectf7.md) |
 
 ### 列规则定义
 

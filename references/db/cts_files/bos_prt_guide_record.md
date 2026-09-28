@@ -13,7 +13,7 @@
 | 2 | ftype | 类型 | bpchar | 1 |  | √ | ' ' | 类型,枚举: 0 :新手向导 1 :表格向导 |
 | 3 | fcreatetime | 创建时间 | timestamp | 0 |  | √ | LOCALTIMESTAMP | 创建时间 |
 | 4 | frnum | 引导次数 | int4 | 32 |  | √ | 0 | 引导次数 |
-| 5 | fuserid | 用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | fuserid | 用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 
 ### 列规则定义

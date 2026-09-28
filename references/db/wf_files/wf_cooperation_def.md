@@ -1,8 +1,8 @@
-# 工作流协作关系-wf_cooperation_def
+# 基础资料模板-wf_cooperation_def
 
-## 工作流协作关系-主表 t_wf_cooperationdef
+## 基础资料模板-主表 t_wf_cooperationdef
 
-- **表名称：** 工作流协作关系-主表
+- **表名称：** 基础资料模板-主表
 - **表名：** t_wf_cooperationdef
 
 ### 表格列定义
@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fname | 名称 | varchar | 230 |  | √ | ' ' | 名称 |
 | 4 | fispreinsdata | 是否预置数据 | bpchar | 1 |  | √ | '0' | 是否预置数据 |
 | 5 | fappkey | 服务提供者应用编码 | varchar | 36 |  | √ | ' ' | 服务提供者应用编码 |
@@ -18,10 +18,10 @@
 | 7 | ffactorypackage | ServiceFactory包路径 | varchar | 100 |  | √ | ' ' | ServiceFactory包路径 |
 | 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 9 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 10 | fbizcloud | 业务云 | varchar | 36 |  | √ | ' ' | 业务云 bos_devportal_bizcloud |
+| 10 | fbizcloud | 业务云 | varchar | 36 |  | √ | ' ' | [业务云 bos_devportal_bizcloud](../mdl_files/bos_devportal_bizcloud.md) |
 | 11 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 12 | fcloudkey | 服务提供者云编码 | varchar | 36 |  | √ | ' ' | 服务提供者云编码 |
-| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | fservicename | 微服务接口名 | varchar | 100 |  | √ | ' ' | 微服务接口名 |
 | 15 | fenable | 使用状态 | varchar | 30 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 16 | fnumber | 编码 | varchar | 60 |  | √ | ' ' | 编码 |
@@ -75,9 +75,9 @@
 
 ---
 
-## 工作流协作关系-多语言表 t_wf_cooperationdef_l
+## 基础资料模板-多语言表 t_wf_cooperationdef_l
 
-- **表名称：** 工作流协作关系-多语言表
+- **表名称：** 基础资料模板-多语言表
 - **表名：** t_wf_cooperationdef_l
 
 ### 表格列定义
@@ -178,7 +178,7 @@
 | 4 | fparamtype | 参数类型 | varchar | 36 |  | √ | ' ' | 参数类型,枚举: decimal :数值型 text :文本型 boolean :布尔型 datetime :日期型 entityobject :对象型 |
 | 5 | fparamdesc | 参数描述 | varchar | 230 |  | √ | ' ' | 参数描述 |
 | 6 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 | id |
-| 7 | fentityobject | 实体对象 | varchar | 100 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 7 | fentityobject | 实体对象 | varchar | 100 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 8 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 
 ### 列规则定义
@@ -206,7 +206,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | varchar | 18 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 2 | fbasedataid | fbasedataid | varchar | 18 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义

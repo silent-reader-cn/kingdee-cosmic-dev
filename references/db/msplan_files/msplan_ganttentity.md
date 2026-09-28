@@ -18,7 +18,7 @@
 | 7 | fgroupfielddesc | fgroupfielddesc | varchar | 50 |  | √ | ' ' |  |
 | 8 | ffiltertext | ffiltertext | varchar | 50 |  | √ | ' ' |  |
 | 9 | ffilter | ffilter | varchar | 255 |  | √ | ' ' |  |
-| 10 | fentityid | 实体 | varchar | 255 |  | √ | 0 | 主实体对象 bos_entityobject |
+| 10 | fentityid | 实体 | varchar | 255 |  | √ | 0 | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 11 | ftimefielddesc | ftimefielddesc | varchar | 50 |  | √ | ' ' |  |
 | 12 | fupgroupfield | fupgroupfield | varchar | 50 |  | √ | ' ' |  |
 | 13 | fupupgroupfield | fupupgroupfield | varchar | 50 |  | √ | ' ' |  |

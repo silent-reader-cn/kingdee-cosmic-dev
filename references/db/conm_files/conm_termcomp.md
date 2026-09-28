@@ -68,11 +68,11 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | ftermgroupid | 分组 | int8 | 64 |  | √ | 0 | 合同条款分组 conm_termgroup |
+| 2 | ftermgroupid | 分组 | int8 | 64 |  | √ | 0 | [合同条款分组 conm_termgroup](../conm_files/conm_termgroup.md) |
 | 3 | ftermentrychangetype | ftermentrychangetype | varchar | 5 |  | √ | ' ' |  |
 | 4 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 6 | ftermid | 合同条款 | int8 | 64 |  | √ | 0 | 合同条款 conm_term |
+| 6 | ftermid | 合同条款 | int8 | 64 |  | √ | 0 | [合同条款 conm_term](../conm_files/conm_term.md) |
 
 ### 列规则定义
 

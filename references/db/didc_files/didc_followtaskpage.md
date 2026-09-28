@@ -15,10 +15,10 @@
 | 4 | fprogress | 当前进度 | varchar | 50 |  | √ | ' ' | 当前进度 |
 | 5 | fbigrequirement_tag | 过滤条件大文本_详情 | text | 0 |  | √ | ' ' | 过滤条件大文本_详情 |
 | 6 | fmodifytime | 修改时间 | timestamp | 0 |  |  | LOCALTIMESTAMP | 修改时间 |
-| 7 | fcatalogueid | 关联指标 | int8 | 64 |  | √ | 0 | 数智指标 didc_indexcatalogue |
+| 7 | fcatalogueid | 关联指标 | int8 | 64 |  | √ | 0 | [数智指标 didc_indexcatalogue](../didc_files/didc_indexcatalogue.md) |
 | 8 | fplanid | 风险项Id | varchar | 50 |  | √ | ' ' | 风险项Id |
 | 9 | ftaskdetailmessage_tag | 任务描述_详情 | text | 0 |  |  | ' ' | 任务描述_详情 |
-| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fprogresscolor | 目标颜色 | varchar | 50 |  | √ | ' ' | 目标颜色 |
 | 12 | ftaskstatus | 任务状态 | varchar | 50 |  | √ | ' ' | 任务状态,枚举: RUNNING :进行中 FINISH :已达成 CANCLE :已取消 |
 | 13 | fbigrequirement | 过滤条件大文本 | varchar | 255 |  | √ | ' ' | 过滤条件大文本 |
@@ -28,7 +28,7 @@
 | 17 | fplan | 风险项 | varchar | 255 |  | √ | ' ' | 风险项 |
 | 18 | fsourceindexvalue | 指标值 | varchar | 500 |  | √ | ' ' | 指标值 |
 | 19 | fdatetype | 时间类型 | varchar | 50 |  | √ | ' ' | 时间类型 |
-| 20 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 20 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 21 | fname | 任务名称 | varchar | 50 |  | √ | ' ' | 任务名称 |
 | 22 | fbigrequirementname | 过滤条件大文本显示 | varchar | 255 |  | √ | ' ' | 过滤条件大文本显示 |
 | 23 | fbillstatus | 单据状态 | varchar | 50 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
@@ -36,16 +36,16 @@
 | 25 | frisk | 是否跟进风险项 | varchar | 50 |  | √ | ' ' | 是否跟进风险项 |
 | 26 | fsourcetargetvalue | 目标值 | varchar | 500 |  | √ | ' ' | 目标值 |
 | 27 | fauditdate | 审核日期 | timestamp | 0 |  |  | LOCALTIMESTAMP | 审核日期 |
-| 28 | fleader | 任务负责人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 28 | fleader | 任务负责人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 29 | ftimetype | 目标时间类型 | varchar | 50 |  | √ | ' ' | 目标时间类型 |
 | 30 | frequirement | 过滤条件弃用 | varchar | 4000 |  | √ | ' ' | 过滤条件弃用 |
 | 31 | ffinishdate | 完成日期 | timestamp | 0 |  |  | LOCALTIMESTAMP | 完成日期 |
 | 32 | fbigrequirementname_tag | 过滤条件大文本显示_详情 | text | 0 |  | √ | ' ' | 过滤条件大文本显示_详情 |
 | 33 | fsourcetargrtprogress | 进度 | varchar | 500 |  | √ | ' ' | 进度 |
-| 34 | fcurrent_user | 当前处理人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 34 | fcurrent_user | 当前处理人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 35 | frequirementname | 过滤条件弃用 | varchar | 4000 |  | √ | ' ' | 过滤条件弃用 |
 | 36 | fdeadline | 要求完成日期 | timestamp | 0 |  |  | LOCALTIMESTAMP | 要求完成日期 |
-| 37 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 37 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

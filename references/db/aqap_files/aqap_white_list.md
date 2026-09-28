@@ -1,8 +1,8 @@
-# 安全访问白名单-aqap_white_list
+# 银行服务地址管理-aqap_white_list
 
-## 安全访问白名单-多语言表 t_aqap_white_list_l
+## 银行服务地址管理-多语言表 t_aqap_white_list_l
 
-- **表名称：** 安全访问白名单-多语言表
+- **表名称：** 银行服务地址管理-多语言表
 - **表名：** t_aqap_white_list_l
 
 ### 表格列定义
@@ -29,9 +29,9 @@
 
 ---
 
-## 安全访问白名单-主表 t_aqap_white_list
+## 银行服务地址管理-主表 t_aqap_white_list
 
-- **表名称：** 安全访问白名单-主表
+- **表名称：** 银行服务地址管理-主表
 - **表名：** t_aqap_white_list
 
 ### 表格列定义
@@ -41,13 +41,13 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
 | 3 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 5 | faddress | ip地址 | varchar | 255 |  | √ | ' ' | ip地址 |
-| 6 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 5 | faddress | 前置机IP地址/服务网关地址 | varchar | 255 |  | √ | ' ' | 前置机IP地址/服务网关地址 |
+| 6 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 7 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 8 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 9 | fenable | 使用状态 | varchar | 50 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 10 | fnumber | IP地址 | varchar | 255 |  | √ | ' ' | IP地址 |
+| 10 | fnumber | 前置机IP地址/服务网关地址 | varchar | 255 |  | √ | ' ' | 前置机IP地址/服务网关地址 |
 | 11 | fdesc | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
 | 12 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 

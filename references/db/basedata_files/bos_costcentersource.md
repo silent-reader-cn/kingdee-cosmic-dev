@@ -10,9 +10,9 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcostcenterid | 成本中心 | int8 | 64 |  | √ | 0 | 成本中心 bos_costcenter |
+| 2 | fcostcenterid | 成本中心 | int8 | 64 |  | √ | 0 | [成本中心 bos_costcenter](../basedata_files/bos_costcenter.md) |
 | 3 | fdataid | 来源数据 | int8 | 64 |  | √ | 0 | 来源数据 |
-| 4 | fsourcetypeid | 来源类型 | int8 | 64 |  | √ | 0 | 来源类型 bos_costcentersourcetype |
+| 4 | fsourcetypeid | 来源类型 | int8 | 64 |  | √ | 0 | [来源类型 bos_costcentersourcetype](../basedata_files/bos_costcentersourcetype.md) |
 | 5 | fseq | 整数 | int8 | 64 |  | √ | 0 | 整数 |
 
 ### 列规则定义

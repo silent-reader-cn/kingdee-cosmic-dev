@@ -11,16 +11,16 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fqty | 需求基本数量 | numeric | 23 | 10 | √ | 0 | 需求基本数量 |
-| 3 | fmaterialid | 物料 | int8 | 64 |  | √ | 0 | 物料 bd_material |
-| 4 | forgid | 需求组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 5 | fsrcbill | 需求单据 | varchar | 30 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 3 | fmaterialid | 物料 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
+| 4 | forgid | 需求组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 5 | fsrcbill | 需求单据 | varchar | 30 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 6 | fdemanddate | 需求日期 | timestamp | 0 |  |  | null | 需求日期 |
 | 7 | flinenum | 需求单据分录行号 | int4 | 32 |  | √ | 0 | 需求单据分录行号 |
 | 8 | fflexarea | 辅助属性 | int8 | 64 |  | √ | 0 | null 001 |
 | 9 | fbillentryid | 需求单据分录ID | int8 | 64 |  | √ | 0 | 需求单据分录ID |
-| 10 | fdemandwarehouseid | 需求仓库 | int8 | 64 |  | √ | 0 | 仓库 bd_warehouse |
+| 10 | fdemandwarehouseid | 需求仓库 | int8 | 64 |  | √ | 0 | [仓库 bd_warehouse](../sbd_files/bd_warehouse.md) |
 | 11 | fbillid | 需求单据ID | int8 | 64 |  | √ | 0 | 需求单据ID |
-| 12 | fbaseunitid | 基本单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 12 | fbaseunitid | 基本单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 13 | fsupplyorgid | fsupplyorgid | int8 | 64 |  | √ | 0 |  |
 | 14 | fbillno | 需求单据编号 | varchar | 50 |  | √ | ' ' | 需求单据编号 |
 | 15 | fplancalnum | 计划运算号 | varchar | 50 |  | √ | ' ' | 计划运算号 |

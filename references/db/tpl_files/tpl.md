@@ -1,1 +1,1 @@
-# 基对象模板-xktpl
+# 基对象模板-bj73_xktpl_ext

@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | forgid | 管辖组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | forgid | 管辖组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 4 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 5 | fincludesuborg | 接收其下级组织的异常消息 | bpchar | 1 |  | √ | '0' | 接收其下级组织的异常消息 |
@@ -46,9 +46,9 @@
 | 4 | ftype | 类型 | varchar | 50 |  | √ | ' ' | 类型,枚举: global :全局 application :应用 process :流程 |
 | 5 | fmodifydate | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 6 | forgid | forgid | int8 | 64 |  | √ | 0 |  |
-| 7 | fbusprocessid | 业务流程Id | int8 | 64 |  | √ | 0 | 流程管理 wf_processdefinition |
-| 8 | fuserid | 人员 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 9 | fbusappid | 业务应用范围 | int8 | 64 |  | √ | 0 | 流程分类 wf_processcagetory |
+| 7 | fbusprocessid | 业务流程Id | int8 | 64 |  | √ | 0 | [流程管理 wf_processdefinition](../wf_files/wf_processdefinition.md) |
+| 8 | fuserid | 人员 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 9 | fbusappid | 业务应用范围 | int8 | 64 |  | √ | 0 | [流程分类 wf_processcagetory](../wf_files/wf_processcagetory.md) |
 
 ### 列规则定义
 

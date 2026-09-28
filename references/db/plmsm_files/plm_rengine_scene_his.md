@@ -12,7 +12,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | foperate | 操作 | varchar | 20 |  | √ | ' ' | 操作,枚举: new :新增 modify :修改 delete :删除 disable :禁用 enable :启用 |
 | 3 | fname | 场景名称 | varchar | 100 |  | √ | ' ' | 场景名称 |
-| 4 | foperatorid | 操作人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | foperatorid | 操作人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fsceneid | 场景id | int8 | 64 |  | √ | 0 | 场景id |
 | 6 | foperatetime | 操作时间 | timestamp | 0 |  |  | null | 操作时间 |
 | 7 | fnumber | 场景编码 | varchar | 50 |  | √ | ' ' | 场景编码 |

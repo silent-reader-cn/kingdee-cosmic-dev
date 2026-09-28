@@ -23,5 +23,5 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_ipop_abc_item_name |  | fitemname |
-| 2 | pk_t_ipop_abc_item |  | fid |
+| 1 | pk_t_ipop_abc_item |  | fid |
+| 2 | idx_ipop_abc_item_name |  | fitemname |

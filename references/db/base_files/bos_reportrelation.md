@@ -11,9 +11,12 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 3 | fpositionid | 岗位 | int8 | 64 |  | √ | 0 | 岗位 bos_position |
-| 4 | fsuperiorpositionid | 上级岗位 | int8 | 64 |  | √ | 0 | 岗位 bos_position |
-| 5 | freporttypeid | 汇报类型 | int8 | 64 |  | √ | 0 | 汇报类型 bos_reporttype |
+| 3 | fxksource | 数据来源 | int8 | 64 |  |  | 0 | [数据来源 xkbos_data_sources](../xkbase_files/xkbos_data_sources.md) |
+| 4 | fpositionid | 岗位 | int8 | 64 |  | √ | 0 | [岗位 bos_position](../base_files/bos_position.md) |
+| 5 | fsuperiorpositionid | 上级岗位 | int8 | 64 |  | √ | 0 | [岗位 bos_position](../base_files/bos_position.md) |
+| 6 | fxkisshrpost | 是否存在s-HR同步映射关系 | bpchar | 1 |  |  | ' ' | 是否存在s-HR同步映射关系,枚举: 0 :否 1 :是 |
+| 7 | fxkidstr | 内码id | varchar | 50 |  |  | ' ' | 内码id |
+| 8 | freporttypeid | 汇报类型 | int8 | 64 |  | √ | 0 | [汇报类型 bos_reporttype](../base_files/bos_reporttype.md) |
 
 ### 列规则定义
 

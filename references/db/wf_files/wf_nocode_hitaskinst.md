@@ -47,7 +47,7 @@
 | 36 | fextendmulstr1 | 多语言字符串1 | varchar | 255 |  | √ | ' ' | 多语言字符串1 |
 | 37 | fprocdefid | 流程定义ID | int8 | 64 |  | √ | 0 | 流程定义ID |
 | 38 | fentitynumber | 实体编码 | varchar | 255 |  | √ | ' ' | 实体编码,枚举: |
-| 39 | fgroupnumber | 待办分组 | int8 | 64 |  | √ | 0 | 待办分组 wf_tohandlegroup |
+| 39 | fgroupnumber | 待办分组 | int8 | 64 |  | √ | 0 | [待办分组 wf_tohandlegroup](../wf_files/wf_tohandlegroup.md) |
 | 40 | fprocinstid | 流程实例ID | int8 | 64 |  | √ | 0 | 流程实例ID |
 | 41 | fsource | 来源 | varchar | 100 |  | √ | ' ' | 来源 |
 | 42 | fexecutiontype | 执行类型 | varchar | 50 |  | √ | ' ' | 执行类型 |
@@ -67,16 +67,18 @@
 | 56 | fprocessingmobilepage | 移动处理页面 | varchar | 50 |  | √ | ' ' | 移动处理页面 |
 | 57 | fsubactivityname | 节点子标题 | varchar | 200 |  | √ | ' ' | 节点子标题 |
 | 58 | fsubject | 主题 | varchar | 1000 |  | √ | ' ' | 主题 |
-| 59 | fdeletereason | 删除原因 | text | 0 |  |  | null | 删除原因 |
-| 60 | fprocesstype | 流程类型 | varchar | 100 |  | √ | ' ' | 流程类型,枚举: AuditFlow :审批流 BizFlow :业务流 |
-| 61 | fowner | 拥有人 | varchar | 100 |  | √ | ' ' | 拥有人 |
-| 62 | fduedate | 到期时间 | timestamp | 0 |  |  | null | 到期时间 |
-| 63 | fduration | 总办理时间 | int8 | 64 |  | √ | 0 | 总办理时间 |
-| 64 | fendtime | 结束时间 | timestamp | 0 |  |  | null | 结束时间 |
-| 65 | fpresentassignee | 当前处理人 | varchar | 2000 |  | √ | ' ' | 当前处理人 |
-| 66 | fdelegation | 委托类型 | varchar | 30 |  | √ | ' ' | 委托类型 |
-| 67 | fbilltype | 业务单据类型 | varchar | 50 |  | √ | ' ' | 业务单据类型 |
-| 68 | ftaskdefkey | 任务定义ID | varchar | 255 |  | √ | ' ' | 任务定义ID |
+| 59 | fresourceid | 外部资源ID | varchar | 100 |  | √ | ' ' | 外部资源ID |
+| 60 | fdeletereason | 删除原因 | text | 0 |  |  | null | 删除原因 |
+| 61 | fsourcename | 来源系统名称 | varchar | 100 |  | √ | ' ' | 来源系统名称 |
+| 62 | fprocesstype | 流程类型 | varchar | 100 |  | √ | ' ' | 流程类型,枚举: AuditFlow :审批流 BizFlow :业务流 |
+| 63 | fowner | 拥有人 | varchar | 100 |  | √ | ' ' | 拥有人 |
+| 64 | fduedate | 到期时间 | timestamp | 0 |  |  | null | 到期时间 |
+| 65 | fduration | 总办理时间 | int8 | 64 |  | √ | 0 | 总办理时间 |
+| 66 | fendtime | 结束时间 | timestamp | 0 |  |  | null | 结束时间 |
+| 67 | fpresentassignee | 当前处理人 | varchar | 2000 |  | √ | ' ' | 当前处理人 |
+| 68 | fdelegation | 委托类型 | varchar | 30 |  | √ | ' ' | 委托类型 |
+| 69 | fbilltype | 业务单据类型 | varchar | 50 |  | √ | ' ' | 业务单据类型 |
+| 70 | ftaskdefkey | 任务定义ID | varchar | 255 |  | √ | ' ' | 任务定义ID |
 
 ### 列规则定义
 
@@ -111,7 +113,9 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fextendnumber2 | 数字2(金额) | numeric | 23 | 10 | √ | 0 | 数字2(金额) |
-| 3 | fextenddate2 | 时间2 | timestamp | 0 |  |  | null | 时间2 |
+| 3 | furl | 任务链接 | text | 0 |  |  | null | 任务链接 |
+| 4 | fextenddate2 | 时间2 | timestamp | 0 |  |  | null | 时间2 |
+| 5 | fmobileurl | 任务移动端链接 | text | 0 |  |  | null | 任务移动端链接 |
 
 ### 列规则定义
 
@@ -147,15 +151,16 @@
 | 8 | fextendmulstr2 | 多语言字符串2 | varchar | 255 |  | √ | ' ' | 多语言字符串2 |
 | 9 | fextendmulstr1 | 多语言字符串1 | varchar | 255 |  | √ | ' ' | 多语言字符串1 |
 | 10 | fcaptionmob | 页面标题_mob | varchar | 300 |  | √ | ' ' | 页面标题_mob |
-| 11 | flocaleid | flocaleid | varchar | 8 |  | √ | ' ' | localeid |
-| 12 | fdescription | 节点描述 | varchar | 500 |  | √ | ' ' | 节点描述 |
-| 13 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
-| 14 | fassignee | 处理人 | varchar | 255 |  | √ | ' ' | 处理人 |
-| 15 | fentityname | 单据类型 | varchar | 115 |  | √ | ' ' | 单据类型 |
-| 16 | fparticipantname | 当前参与人 | varchar | 2000 |  | √ | ' ' | 当前参与人 |
-| 17 | fpresentassignee | 当前处理人 | varchar | 2000 |  | √ | ' ' | 当前处理人 |
-| 18 | fsendernameformat | 上一步处理人显示设置 | varchar | 500 |  | √ | ' ' | 上一步处理人显示设置 |
-| 19 | fstartnameformat | 发起人显示设置 | varchar | 500 |  | √ | ' ' | 发起人显示设置 |
+| 11 | fsourcename | 来源系统名称 | varchar | 100 |  | √ | ' ' | 来源系统名称 |
+| 12 | flocaleid | flocaleid | varchar | 8 |  | √ | ' ' | localeid |
+| 13 | fdescription | 节点描述 | varchar | 500 |  | √ | ' ' | 节点描述 |
+| 14 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
+| 15 | fassignee | 处理人 | varchar | 255 |  | √ | ' ' | 处理人 |
+| 16 | fentityname | 单据类型 | varchar | 115 |  | √ | ' ' | 单据类型 |
+| 17 | fparticipantname | 当前参与人 | varchar | 2000 |  | √ | ' ' | 当前参与人 |
+| 18 | fpresentassignee | 当前处理人 | varchar | 2000 |  | √ | ' ' | 当前处理人 |
+| 19 | fsendernameformat | 上一步处理人显示设置 | varchar | 500 |  | √ | ' ' | 上一步处理人显示设置 |
+| 20 | fstartnameformat | 发起人显示设置 | varchar | 500 |  | √ | ' ' | 发起人显示设置 |
 
 ### 列规则定义
 

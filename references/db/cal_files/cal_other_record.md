@@ -10,9 +10,9 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fbillformid | 单据类型ID | varchar | 36 |  | √ | ' ' | 单据类型ID |
-| 4 | fperiodid | 期间 | int8 | 64 |  | √ | 0 | 会计日历 bd_period |
+| 4 | fperiodid | 期间 | int8 | 64 |  | √ | 0 | [会计日历 bd_period](../fibd_files/bd_period.md) |
 | 5 | fcostrecordentryid | 核算成本记录单据分录ID | int8 | 64 |  | √ | 0 | 核算成本记录单据分录ID |
 | 6 | fbillstatus | 单据状态 | varchar | 50 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 7 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
@@ -23,12 +23,12 @@
 | 12 | fweightsource | 权重来源 | varchar | 10 |  | √ | ' ' | 权重来源,枚举: 1 :手工维护 2 :库存单据（默认） 3 :成本取价配置 |
 | 13 | fweight | 权重 | numeric | 23 | 10 | √ | 0 | 权重 |
 | 14 | fcostrecordid | 核算成本记录单据ID | int8 | 64 |  | √ | 0 | 核算成本记录单据ID |
-| 15 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 15 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 16 | fbillentryid | 单据分录ID | int8 | 64 |  | √ | 0 | 单据分录ID |
-| 17 | fcostaccountid | 成本主体 | int8 | 64 |  | √ | 0 | 成本主体 cal_bd_costaccount |
+| 17 | fcostaccountid | 成本主体 | int8 | 64 |  | √ | 0 | [成本主体 cal_bd_costaccount](../cal_files/cal_bd_costaccount.md) |
 | 18 | fbillid | 单据ID | int8 | 64 |  | √ | 0 | 单据ID |
 | 19 | fbillno | 单据编号 | varchar | 255 |  | √ | ' ' | 单据编号 |
-| 20 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 20 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 21 | funitfee | 单位费用 | numeric | 23 | 10 | √ | 0 | 单位费用 |
 
 ### 列规则定义
@@ -43,5 +43,7 @@
 | :--- | :--- | :--- | :--- |
 | 1 | pk_cal_otherrecord |  | fid |
 | 2 | idx_cal_otherrecord_calentryid |  | fcalentryid |
-| 3 | idx_cal_otherrecord_cost |  | fcostrecordentryid |
-| 4 | idx_cal_otherrecord_cp |  | fcostaccountid,fperiodid |
+| 3 | idx_cal_otherrecord_fbillid |  | fbillid |
+| 4 | idx_cal_otherrecord_faccid |  | fcostaccountid |
+| 5 | idx_cal_otherrecord_cost |  | fcostrecordentryid |
+| 6 | idx_cal_otherrecord_cp |  | fcostaccountid,fperiodid |

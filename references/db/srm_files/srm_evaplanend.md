@@ -76,7 +76,7 @@
 | 12 | forigin | forigin | bpchar | 1 |  | √ | ' ' |  |
 | 13 | ftermination | 终止意见 | varchar | 255 |  | √ | ' ' | 终止意见 |
 | 14 | fcreatorid | fcreatorid | int8 | 64 |  | √ | 0 |  |
-| 15 | fterminaterid | 终止人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 15 | fterminaterid | 终止人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 16 | fpushscore | fpushscore | bpchar | 1 |  | √ | '0' |  |
 | 17 | fsrcbilltype | fsrcbilltype | varchar | 50 |  | √ | ' ' |  |
 | 18 | fauditorid | fauditorid | int8 | 64 |  | √ | 0 |  |

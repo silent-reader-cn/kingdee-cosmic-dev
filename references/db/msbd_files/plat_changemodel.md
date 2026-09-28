@@ -47,11 +47,11 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fxbilltypeid | 变更单单据类型 | int8 | 64 |  | √ | 0 | 单据类型 bos_billtype |
+| 2 | fxbilltypeid | 变更单单据类型 | int8 | 64 |  | √ | 0 | [单据类型 bos_billtype](../cts_files/bos_billtype.md) |
 | 3 | fpushtype | 下推类型 | varchar | 5 |  | √ | 'A' | 下推类型,枚举: A :仅指定类型 |
 | 4 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 6 | fsrcbilltypeid | 源单单据类型 | int8 | 64 |  | √ | 0 | 单据类型 bos_billtype |
+| 6 | fsrcbilltypeid | 源单单据类型 | int8 | 64 |  | √ | 0 | [单据类型 bos_billtype](../cts_files/bos_billtype.md) |
 
 ### 列规则定义
 
@@ -140,24 +140,27 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fname | 方案名称 | varchar | 100 |  | √ | ' ' | 方案名称 |
 | 4 | fcustomparameter_tag | 详情 | text | 0 |  |  | null | 详情 |
-| 5 | fupdatetype | 生效时机 | varchar | 5 |  | √ | ' ' | 生效时机,枚举: auto :审核即生效 man :手工生效 |
-| 6 | fsrcbillid | 源单据 | varchar | 80 |  | √ | ' ' | 主实体对象 bos_entityobject |
-| 7 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 8 | fisnotupdateversion | 不更新版本号 | bpchar | 1 |  | √ | '0' | 不更新版本号 |
-| 9 | fxbilllogid | 变更日志实体 | varchar | 80 |  | √ | ' ' | 主实体对象 bos_entityobject |
-| 10 | fareaconditionjson_tag | 数据范围条件json_详情 | text | 0 |  |  | null | 数据范围条件json_详情 |
-| 11 | fvalidoptype | 校验时机 | varchar | 50 |  | √ | 'bizvalid' | 校验时机,枚举: submit :提交 audit :审核 bizvalid :生效 |
-| 12 | fxbillid | 变更单据 | varchar | 80 |  | √ | ' ' | 主实体对象 bos_entityobject |
-| 13 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 14 | fcustomparameter |  | varchar | 512 |  |  | null |  |
-| 15 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 16 | fareaconditionjson | 数据范围条件json | varchar | 512 |  |  | null | 数据范围条件json |
-| 17 | fissys | 系统预置 | bpchar | 1 |  | √ | '0' | 系统预置 |
-| 18 | fenable | 使用状态 | varchar | 5 |  | √ | ' ' | 使用状态,枚举: 1 :可用 0 :禁用 |
-| 19 | fareaconditiondesc | 条件描述 | varchar | 2000 |  |  | null | 条件描述 |
+| 5 | fhidepropkey | 字段标识 | varchar | 50 |  | √ | ' ' | 字段标识 |
+| 6 | fupdatetype | 生效时机 | varchar | 5 |  | √ | ' ' | 生效时机,枚举: auto :审核即生效 man :手工生效 |
+| 7 | fsrcbillid | 源单据 | varchar | 80 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
+| 8 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 9 | fisnotupdateversion | 不更新版本号 | bpchar | 1 |  | √ | '0' | 不更新版本号 |
+| 10 | fhideentrykey | 单据体标识 | varchar | 50 |  | √ | ' ' | 单据体标识 |
+| 11 | fxbilllogid | 变更日志实体 | varchar | 80 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
+| 12 | fareaconditionjson_tag | 数据范围条件json_详情 | text | 0 |  |  | null | 数据范围条件json_详情 |
+| 13 | fvalidoptype | 校验时机 | varchar | 50 |  | √ | 'bizvalid' | 校验时机,枚举: submit :提交 audit :审核 bizvalid :生效 |
+| 14 | fxbillid | 变更单据 | varchar | 80 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
+| 15 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 16 | fcustomparameter |  | varchar | 512 |  |  | null |  |
+| 17 | fhiderow | 默认不显示未变更的明细行 | bpchar | 1 |  | √ | '0' | 默认不显示未变更的明细行 |
+| 18 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 19 | fareaconditionjson | 数据范围条件json | varchar | 512 |  |  | null | 数据范围条件json |
+| 20 | fissys | 系统预置 | bpchar | 1 |  | √ | '0' | 系统预置 |
+| 21 | fenable | 使用状态 | varchar | 5 |  | √ | ' ' | 使用状态,枚举: 1 :可用 0 :禁用 |
+| 22 | fareaconditiondesc | 条件描述 | varchar | 2000 |  |  | null | 条件描述 |
 
 ### 列规则定义
 
@@ -169,8 +172,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | pk_t_plat_changemodel |  | fid |
-| 2 | idx_plat_changemodel_srcbill |  | fsrcbillid |
+| 1 | idx_plat_changemodel_srcbill |  | fsrcbillid |
+| 2 | pk_t_plat_changemodel |  | fid |
 | 3 | idx_plat_changemodel_xbill |  | fxbillid |
 
 ---

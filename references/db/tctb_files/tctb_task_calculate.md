@@ -15,7 +15,7 @@
 | 4 | fmodifydate | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
 | 5 | favgcosttime | 平均执行时间 | int8 | 64 |  | √ | 0 | 平均执行时间 |
 | 6 | fnumber | 应用number | varchar | 50 |  | √ | ' ' | 应用number |
-| 7 | fappid | 应用 | varchar | 36 |  | √ | ' ' | 业务应用实体 bos_devportal_bizapp |
+| 7 | fappid | 应用 | varchar | 36 |  | √ | ' ' | [业务应用实体 bos_devportal_bizapp](../mdl_files/bos_devportal_bizapp.md) |
 
 ### 列规则定义
 

@@ -10,22 +10,22 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fname | 项目名称 | varchar | 50 |  | √ | ' ' | 项目名称 |
 | 4 | fbillstatus | 单据状态 | varchar | 50 |  | √ | ' ' | 单据状态,枚举: 0 :禁用 1 :可用 |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 6 | fljtaxincome | 累计税收收入金额 | numeric | 23 | 10 | √ | 0.0000000000 | 累计税收收入金额 |
-| 7 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 7 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | fcontractstart | 合同期间.开始 | timestamp | 0 |  |  | null | 合同期间.开始 |
 | 9 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
 | 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 11 | fsyjzamount | 剩余结转金额 | numeric | 23 | 10 | √ | 0.0000000000 | 剩余结转金额 |
 | 12 | ftotalamt | 合同总金额 | numeric | 23 | 10 | √ | 0.0000000000 | 合同总金额 |
-| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | fcontractend | 合同期间.结束 | timestamp | 0 |  |  | null | 合同期间.结束 |
 | 15 | fincometype | 收入类型 | int8 | 64 |  | √ | 0 | 项目取数（树） tpo_yearitems_tree |
 | 16 | fbillno | 项目编号 | varchar | 30 |  | √ | ' ' | 项目编号 |
-| 17 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 17 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 18 | fljbookincome | 累计账载收入金额 | numeric | 23 | 10 | √ | 0.0000000000 | 累计账载收入金额 |
 
 ### 列规则定义

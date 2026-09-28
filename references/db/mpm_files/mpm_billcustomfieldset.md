@@ -14,9 +14,9 @@
 | 3 | ffielddisplayname | 字段显示名 | varchar | 80 |  | √ | ' ' | 字段显示名 |
 | 4 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 5 | fismust | 必录 | bpchar | 1 |  | √ | '0' | 必录 |
-| 6 | fentrybillobjectid | 业务对象 | varchar | 255 |  | √ | ' ' | 业务对象 bos_objecttype |
+| 6 | fentrybillobjectid | 业务对象 | varchar | 255 |  | √ | ' ' | [业务对象 bos_objecttype](../mdl_files/bos_objecttype.md) |
 | 7 | ffieldtype | 字段类型 | bpchar | 1 |  | √ | ' ' | 字段类型,枚举: A :文本 B :数字 C :日期 D :复选框 |
-| 8 | fsrclibfield | 关联属性库字段 | int8 | 64 |  | √ | 0 | 自定义属性库 mpm_customproplib |
+| 8 | fsrclibfield | 关联属性库字段 | int8 | 64 |  | √ | 0 | [自定义属性库 mpm_customproplib](../mpm_files/mpm_customproplib.md) |
 | 9 | fscale | 小数精度 | int4 | 32 |  | √ | 0 | 小数精度 |
 | 10 | ffieldidenti | 字段标识 | varchar | 50 |  | √ | ' ' | 字段标识 |
 | 11 | fenabled | 启用 | bpchar | 1 |  | √ | '0' | 启用 |
@@ -33,8 +33,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_mpm_billfldsetentry_id |  | fid |
-| 2 | pk_mpm_billfieldsetentry |  | fentryid |
+| 1 | pk_mpm_billfieldsetentry |  | fentryid |
+| 2 | idx_mpm_billfldsetentry_id |  | fid |
 
 ---
 
@@ -107,17 +107,17 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fpublishstatus | 发布状态 | bpchar | 1 |  | √ | ' ' | 发布状态,枚举: A :未发布 B :已发布 |
-| 5 | fbillobjectid | 业务对象 | varchar | 255 |  | √ | ' ' | 业务对象 bos_objecttype |
+| 5 | fbillobjectid | 业务对象 | varchar | 255 |  | √ | ' ' | [业务对象 bos_objecttype](../mdl_files/bos_objecttype.md) |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 8 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 11 | fenable | 使用状态 | bpchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 12 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
-| 13 | flastpublisher | 最近发布人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | flastpublisher | 最近发布人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | flastpublishtime | 最近发布时间 | timestamp | 0 |  |  | null | 最近发布时间 |
 
 ### 列规则定义

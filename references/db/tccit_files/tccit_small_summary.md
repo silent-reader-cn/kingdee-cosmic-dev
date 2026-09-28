@@ -11,10 +11,13 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fsmalldeductamount | 小型微利企业优惠减免税额 | numeric | 23 | 10 | √ | 0.0000000000 | 小型微利企业优惠减免税额 |
-| 3 | fskssqz | 结束日期 | timestamp | 0 |  |  | null | 结束日期 |
-| 4 | forgid | 组织id | int8 | 64 |  | √ | 0 | 组织id |
-| 5 | fsmalltype | 小型微利企业资质判断 | varchar | 50 |  | √ | ' ' | 小型微利企业资质判断,枚举: |
-| 6 | fskssqq | 开始时间 | timestamp | 0 |  |  | null | 开始时间 |
+| 3 | fewblxh | 二维表序号 | varchar | 50 |  | √ | ' ' | 二维表序号,枚举: 1 :1 |
+| 4 | fskssqz | 结束日期 | timestamp | 0 |  |  | null | 结束日期 |
+| 5 | forgid | 组织id | int8 | 64 |  | √ | 0 | 组织id |
+| 6 | fsbbid | 申报表id | varchar | 50 |  | √ | ' ' | 申报表id |
+| 7 | fsmalltype | 小型微利企业资质判断 | varchar | 50 |  | √ | ' ' | 小型微利企业资质判断,枚举: |
+| 8 | fskssqq | 开始时间 | timestamp | 0 |  |  | null | 开始时间 |
+| 9 | fewblname | 二维表名称 | varchar | 500 |  | √ | ' ' | 二维表名称 |
 
 ### 列规则定义
 

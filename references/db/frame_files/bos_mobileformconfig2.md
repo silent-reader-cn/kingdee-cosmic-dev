@@ -13,14 +13,14 @@
 | 2 | fstatus | fstatus | bpchar | 1 |  |  | null |  |
 | 3 | fname | fname | varchar | 30 |  | √ | ' ' |  |
 | 4 | fentrymarkid | 单据体 | varchar | 255 |  |  | null | 单据体,枚举: |
-| 5 | fbilldetailform | 待办任务自定义详情 | varchar | 255 |  |  | null | 业务对象 bos_objecttype |
+| 5 | fbilldetailform | 待办任务自定义详情 | varchar | 255 |  |  | null | [业务对象 bos_objecttype](../mdl_files/bos_objecttype.md) |
 | 6 | fmasterid | fmasterid | int8 | 64 |  | √ | 0 |  |
 | 7 | fcreatorid | fcreatorid | int8 | 64 |  | √ | 0 |  |
 | 8 | fisusemobile | 启用移动审批 | bpchar | 1 |  |  | null | 启用移动审批 |
 | 9 | fenable | fenable | bpchar | 1 |  | √ | '0' |  |
 | 10 | fshowcount | 审批项 | varchar | 255 |  |  | null | 审批项,枚举: |
 | 11 | fnumber | 单据编号 | varchar | 30 |  | √ | ' ' | 单据编号 |
-| 12 | fbilltype | 单据 | varchar | 255 |  |  | null | 业务对象 bos_objecttype |
+| 12 | fbilltype | 单据 | varchar | 255 |  |  | null | [业务对象 bos_objecttype](../mdl_files/bos_objecttype.md) |
 
 ### 列规则定义
 

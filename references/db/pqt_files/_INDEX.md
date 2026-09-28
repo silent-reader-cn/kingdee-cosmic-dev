@@ -1,6 +1,6 @@
 # pqt 模块表清单
 
-> 本模块共收录 **16** 张表定义，来自 `pqt_files/`。
+> 本模块共收录 **22** 张表定义，来自 `pqt_files/`。
 
 > 索引由 `scripts/build_index.py` 从 Markdown 自动生成，请勿手工编辑。
 > 检索本模块表结构请用统一检索脚本（比翻本文件更快）：
@@ -24,5 +24,11 @@
 | 12 | `t_pqt_retraceroute_l` | 产品树追溯路径-多语言表 | 4 | [pqt_retraceroute.md](./pqt_retraceroute.md) |
 | 13 | `t_pqt_retraceroute_u` | 产品树追溯路径-使用范围表 | 3 | [pqt_retraceroute.md](./pqt_retraceroute.md) |
 | 14 | `t_pqt_routeentry` | 追溯路径-子表 | 9 | [pqt_retraceroute.md](./pqt_retraceroute.md) |
-| 15 | `t_pqt_traceconfig` | 追溯查询方案设置-主表 | 20 | [pqt_traceconfig.md](./pqt_traceconfig.md) |
+| 15 | `t_pqt_traceconfig` | 追溯查询方案设置-主表 | 22 | [pqt_traceconfig.md](./pqt_traceconfig.md) |
 | 16 | `t_pqt_traceorg` | 查询组织-多选基础资料表 | 3 | [pqt_traceconfig.md](./pqt_traceconfig.md) |
+| 17 | `t_qpt_lotsnentry` | 成品页签-子表 | 11 | [pqt_lotsnrelationship.md](./pqt_lotsnrelationship.md) |
+| 18 | `t_qpt_lotsnentry_lk` | 关联子实体-子表 | 6 | [pqt_lotsnrelationship.md](./pqt_lotsnrelationship.md) |
+| 19 | `t_qpt_lotsnrs` | 批号序列号关系-主表 | 26 | [pqt_lotsnrelationship.md](./pqt_lotsnrelationship.md) |
+| 20 | `t_qpt_lotsnrs_tc` | 批号序列号关系-关联追踪表 | 7 | [pqt_lotsnrelationship.md](./pqt_lotsnrelationship.md) |
+| 21 | `t_qpt_lotsnrs_wb` | 批号序列号关系-反写记录表 | 10 | [pqt_lotsnrelationship.md](./pqt_lotsnrelationship.md) |
+| 22 | `t_qpt_lotsnsubentry` | 子项页签-子表 | 13 | [pqt_lotsnrelationship.md](./pqt_lotsnrelationship.md) |

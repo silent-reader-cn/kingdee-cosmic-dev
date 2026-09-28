@@ -141,37 +141,37 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fpluginclass | 插件 | varchar | 200 |  | √ | ' ' | 插件 |
-| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 4 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 4 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 6 | finvlevelfield | 日均消耗量字段 | varchar | 50 |  | √ | ' ' | 日均消耗量字段 |
 | 7 | fstatus | 数据状态 | bpchar | 1 |  | √ | 'C' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 10 | finvlevel | finvlevel | int8 | 64 |  | √ | 0 |  |
 | 11 | fadjustfactor | 调整系数 | numeric | 23 | 2 | √ | 0 | 调整系数 |
-| 12 | fplangroupid | 计划组 | int8 | 64 |  | √ | 0 | 供应链业务组 bd_operatorgroup |
+| 12 | fplangroupid | 计划组 | int8 | 64 |  | √ | 0 | [供应链业务组 bd_operatorgroup](../sbd_files/bd_operatorgroup.md) |
 | 13 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 14 | fbitindex | 位图 | int8 | 64 |  | √ | 0 | 位图 |
-| 15 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 15 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 16 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 17 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 17 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 18 | fupdatetype | 日均消耗记录更新方式 | varchar | 50 |  | √ | ' ' | 日均消耗记录更新方式,枚举: A :追加 B :覆盖 |
 | 19 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 20 | fmatchdimension | 匹配维度映射 | int8 | 64 |  | √ | 0 | 匹配映射配置 invp_matchmapping_config |
+| 20 | fmatchdimension | 匹配维度映射 | int8 | 64 |  | √ | 0 | [匹配映射配置 invp_matchmapping_config](../invp_files/invp_matchmapping_config.md) |
 | 21 | fselectrulejson | 取数条件（json） | varchar | 512 |  | √ | ' ' | 取数条件（json） |
-| 22 | fplannerid | 计划员 | int8 | 64 |  | √ | 0 | 供应链业务员 bd_operator |
+| 22 | fplannerid | 计划员 | int8 | 64 |  | √ | 0 | [供应链业务员 bd_operator](../sbd_files/bd_operator.md) |
 | 23 | fctrlstrategy | 控制策略 | varchar | 50 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
 | 24 | fmainplantype | 计划类型 | varchar | 10 |  | √ | ' ' | 计划类型,枚举: A :再订货点 B :最大最小 D :固定期间 |
 | 25 | fselectrulejson_tag | 取数条件（json）_详情 | text | 0 |  |  | null | 取数条件（json）_详情 |
 | 26 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 27 | fselectruleformula_tag | 取数条件（表达式）_详情 | text | 0 |  |  | null | 取数条件（表达式）_详情 |
 | 28 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
-| 29 | fconsumptionmodel | 日均消耗模型 | int8 | 64 |  | √ | 0 | 资源注册模型 invp_model_register |
+| 29 | fconsumptionmodel | 日均消耗模型 | int8 | 64 |  | √ | 0 | [资源注册模型 invp_model_register](../invp_files/invp_model_register.md) |
 | 30 | finvlevelfieldkey | 日均消耗量字段（标识） | varchar | 50 |  | √ | ' ' | 日均消耗量字段（标识） |
 | 31 | fselectruleformula | 取数条件（表达式） | varchar | 512 |  | √ | ' ' | 取数条件（表达式） |
 | 32 | fsourcebitindex | 原资料位图 | int8 | 64 |  | √ | 0 | 原资料位图 |
-| 33 | fdimension | 库存水位维度 | int8 | 64 |  | √ | 0 | 库存水位维度 msplan_plan_dimension |
+| 33 | fdimension | 库存水位维度 | int8 | 64 |  | √ | 0 | [库存水位维度 msplan_plan_dimension](../msplan_files/msplan_plan_dimension.md) |
 
 ### 列规则定义
 
@@ -200,7 +200,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义

@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fcheckcal | 盘点分配算法 | varchar | 30 |  | √ | 'inputout' | 盘点分配算法,枚举: inputout :按投入产量分配（有完工产品不承担） equivalent :按约当产量法下在产折算数量分配 |
-| 3 | forgid | 核算组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | forgid | 核算组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | fchecktype | 盘点方式 | varchar | 30 |  | √ | 'qty' | 盘点方式,枚举: qty :数量 amount :金额 |
 
 ### 列规则定义

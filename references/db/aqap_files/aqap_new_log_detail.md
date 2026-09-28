@@ -42,15 +42,15 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | flogger_detail_no | 银企日志明细号 | varchar | 50 |  | √ | ' ' | 银企日志明细号 |
 | 3 | flog_time | 请求时间 | varchar | 50 |  | √ | ' ' | 请求时间 |
-| 4 | fbd_biz_name | 基础资料_业务类型 | int8 | 64 |  | √ | 0 | 业务类型 aqap_business_type |
+| 4 | fbd_biz_name | 基础资料_业务类型 | int8 | 64 |  | √ | 0 | [业务类型 aqap_business_type](../aqap_files/aqap_business_type.md) |
 | 5 | faccount | 账号 | varchar | 50 |  | √ | ' ' | 账号 |
 | 6 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 7 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 10 | fbiz_name | 业务类型 | varchar | 50 |  | √ | ' ' | 业务类型 |
 | 11 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 12 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | flog_content_tag | 日志内容_详情 | text | 0 |  |  | null | 日志内容_详情 |
 | 14 | fbank_login | 银行前置机 | varchar | 50 |  | √ | ' ' | 银行前置机 |
 | 15 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
@@ -62,7 +62,7 @@
 | 21 | fbank_version | 银行版本 | varchar | 50 |  | √ | ' ' | 银行版本 |
 | 22 | flog_content | 日志内容 | varchar | 255 |  | √ | ' ' | 日志内容 |
 | 23 | fenable | 使用状态 | varchar | 50 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 24 | fbd_bank_version | 基础资料_银行版本 | int8 | 64 |  | √ | 0 | 银行启用管理 aqap_bank |
+| 24 | fbd_bank_version | 基础资料_银行版本 | int8 | 64 |  | √ | 0 | [银行启用管理 aqap_bank](../aqap_files/aqap_bank.md) |
 | 25 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
 
 ### 列规则定义

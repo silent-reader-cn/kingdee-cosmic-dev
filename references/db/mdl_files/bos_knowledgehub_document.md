@@ -11,14 +11,14 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | varchar | 36 |  | √ | ' ' | id |
 | 2 | fgoodcount | 点赞数 | int8 | 64 |  | √ | 0 | 点赞数 |
-| 3 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fcolumnid | 栏目 | varchar | 36 |  | √ | ' ' | 栏目 |
 | 5 | ftitle | 标题 | varchar | 100 |  | √ | ' ' | 标题 |
-| 6 | fcreatedate | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
+| 6 | fcreatedate | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 7 | fviewcount | 浏览数 | int8 | 64 |  | √ | 0 | 浏览数 |
-| 8 | fmodifydate | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
+| 8 | fmodifydate | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 9 | fcontent_tag | 内容_详情 | text | 0 |  |  | null | 内容_详情 |
-| 10 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | ftitleimage | 主题图片 | varchar | 100 |  | √ | ' ' | 主题图片 |
 | 12 | fcontent | 内容 | varchar | 500 |  |  | null | 内容 |
 | 13 | fsummary | 摘要 | varchar | 500 |  | √ | ' ' | 摘要 |

@@ -1,5 +1,143 @@
 # 质量变更管理-srm_quality
 
+## 供应商联系人-子表 t_pur_quality_link
+
+- **表名称：** 供应商联系人-子表
+- **表名：** t_pur_quality_link
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fname | 姓名 | varchar | 50 |  | √ | ' ' | 姓名 |
+| 3 | fphone | 电话 | varchar | 50 |  | √ | ' ' | 电话 |
+| 4 | faddress | 联系地址 | varchar | 100 |  | √ | ' ' | 联系地址 |
+| 5 | fgender | 性别 | bpchar | 1 |  | √ | ' ' | 性别,枚举: 1 :男 2 :女 |
+| 6 | femail | 邮箱 | varchar | 50 |  | √ | ' ' | 邮箱 |
+| 7 | fdept | 部门 | varchar | 50 |  | √ | ' ' | 部门 |
+| 8 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
+| 9 | fnote | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
+| 10 | fmobile | 手机号 | varchar | 50 |  | √ | ' ' | 手机号 |
+| 11 | fduty | 职务 | varchar | 50 |  | √ | ' ' | 职务 |
+| 12 | fpost | 邮编 | varchar | 10 |  | √ | ' ' | 邮编 |
+| 13 | ffax | 传真 | varchar | 50 |  | √ | ' ' | 传真 |
+| 14 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 15 | fisdefault | 默认 | bpchar | 1 |  | √ | ' ' | 默认 |
+| 16 | fbizscope | 负责业务 | varchar | 50 |  | √ | ' ' | 负责业务 |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fentryid | fentryid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_pur_quality_link_fid |  | fid,fseq |
+| 2 | t_pur_quality_link_pkey |  | fentryid |
+
+---
+
+## 质量变更管理-多语言表 t_pur_quality_l
+
+- **表名称：** 质量变更管理-多语言表
+- **表名：** t_pur_quality_l
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fremark | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
+| 3 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
+| 4 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fpkid | fpkid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | t_pur_quality_l_pkey |  | fpkid |
+| 2 | idx_pur_quality_l_fid |  | fid,flocaleid |
+
+---
+
+## 质量变更管理-分表 t_pur_quality_a
+
+- **表名称：** 质量变更管理-分表
+- **表名：** t_pur_quality_a
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fremark | fremark | varchar | 255 |  | √ | ' ' |  |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 4 | forigin | forigin | bpchar | 1 |  | √ | ' ' |  |
+| 5 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 7 | fcfmopinion | 审批意见 | varchar | 255 |  | √ | ' ' | 审批意见 |
+| 8 | fauditdate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
+| 9 | fcfmdate | 审批时间 | timestamp | 0 |  |  | null | 审批时间 |
+| 10 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 11 | fcfmid | 审批人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 12 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fid | fid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_pur_quality_a_ftime |  | fcreatetime |
+| 2 | t_pur_quality_a_pkey |  | fid |
+
+---
+
+## 生产工艺-子表 t_pur_quality_tech
+
+- **表名称：** 生产工艺-子表
+- **表名：** t_pur_quality_tech
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | ftype | 类别 | bpchar | 1 |  | √ | ' ' | 类别,枚举: 1 :变更前 2 :变更后 |
+| 3 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
+| 4 | fnote | 说明 | varchar | 255 |  | √ | ' ' | 说明 |
+| 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 6 | fprocess | 工序 | varchar | 50 |  | √ | ' ' | 工序 |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fentryid | fentryid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | t_pur_quality_tech_pkey |  | fentryid |
+| 2 | idx_pur_quality_tech_fid |  | fid,fseq |
+
+---
+
 ## 运输方式-子表 t_pur_quality_ship
 
 - **表名称：** 运输方式-子表
@@ -40,7 +178,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | ftypeid | 体系类型 | int8 | 64 |  | √ | 0 | 供应商辅助资料 srm_extdata |
+| 2 | ftypeid | 体系类型 | int8 | 64 |  | √ | 0 | [供应商辅助资料 srm_extdata](../pbd_files/srm_extdata.md) |
 | 3 | fname | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
 | 4 | fdateto | 有效日期至 | timestamp | 0 |  |  | null | 有效日期至 |
 | 5 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
@@ -59,8 +197,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_pur_quality_manage_fid |  | fid,fseq |
-| 2 | t_pur_quality_manage_pkey |  | fentryid |
+| 1 | t_pur_quality_manage_pkey |  | fentryid |
+| 2 | idx_pur_quality_manage_fid |  | fid,fseq |
 
 ---
 
@@ -97,47 +235,6 @@
 | :--- | :--- | :--- | :--- |
 | 1 | t_pur_quality_mat_pkey |  | fentryid |
 | 2 | idx_pur_quality_mat_fid |  | fid,fseq |
-
----
-
-## 供应商联系人-子表 t_pur_quality_link
-
-- **表名称：** 供应商联系人-子表
-- **表名：** t_pur_quality_link
-
-### 表格列定义
-
-| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fname | 姓名 | varchar | 50 |  | √ | ' ' | 姓名 |
-| 3 | fphone | 电话 | varchar | 50 |  | √ | ' ' | 电话 |
-| 4 | faddress | 联系地址 | varchar | 100 |  | √ | ' ' | 联系地址 |
-| 5 | fgender | 性别 | bpchar | 1 |  | √ | ' ' | 性别,枚举: 1 :男 2 :女 |
-| 6 | femail | 邮箱 | varchar | 50 |  | √ | ' ' | 邮箱 |
-| 7 | fdept | 部门 | varchar | 50 |  | √ | ' ' | 部门 |
-| 8 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 9 | fnote | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
-| 10 | fmobile | 手机号 | varchar | 50 |  | √ | ' ' | 手机号 |
-| 11 | fduty | 职务 | varchar | 50 |  | √ | ' ' | 职务 |
-| 12 | fpost | 邮编 | varchar | 10 |  | √ | ' ' | 邮编 |
-| 13 | ffax | 传真 | varchar | 50 |  | √ | ' ' | 传真 |
-| 14 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 15 | fisdefault | 默认 | bpchar | 1 |  | √ | ' ' | 默认 |
-| 16 | fbizscope | 负责业务 | varchar | 50 |  | √ | ' ' | 负责业务 |
-
-### 列规则定义
-
-| 序号 | 键编码 | 列字段 |
-| :--- | :--- | :--- |
-| 1 | fentryid | fentryid |
-
-### 索引定义
-
-| 序号 | 索引名 | 唯一 | 列字段 |
-| :--- | :--- | :--- | :--- |
-| 1 | idx_pur_quality_link_fid |  | fid,fseq |
-| 2 | t_pur_quality_link_pkey |  | fentryid |
 
 ---
 
@@ -211,72 +308,6 @@
 
 ---
 
-## 质量变更管理-多语言表 t_pur_quality_l
-
-- **表名称：** 质量变更管理-多语言表
-- **表名：** t_pur_quality_l
-
-### 表格列定义
-
-| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fremark | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
-| 3 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
-| 4 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
-
-### 列规则定义
-
-| 序号 | 键编码 | 列字段 |
-| :--- | :--- | :--- |
-| 1 | fpkid | fpkid |
-
-### 索引定义
-
-| 序号 | 索引名 | 唯一 | 列字段 |
-| :--- | :--- | :--- | :--- |
-| 1 | t_pur_quality_l_pkey |  | fpkid |
-| 2 | idx_pur_quality_l_fid |  | fid,flocaleid |
-
----
-
-## 质量变更管理-分表 t_pur_quality_a
-
-- **表名称：** 质量变更管理-分表
-- **表名：** t_pur_quality_a
-
-### 表格列定义
-
-| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fremark | fremark | varchar | 255 |  | √ | ' ' |  |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 4 | forigin | forigin | bpchar | 1 |  | √ | ' ' |  |
-| 5 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 7 | fcfmopinion | 审批意见 | varchar | 255 |  | √ | ' ' | 审批意见 |
-| 8 | fauditdate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
-| 9 | fcfmdate | 审批时间 | timestamp | 0 |  |  | null | 审批时间 |
-| 10 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 11 | fcfmid | 审批人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 12 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-
-### 列规则定义
-
-| 序号 | 键编码 | 列字段 |
-| :--- | :--- | :--- |
-| 1 | fid | fid |
-
-### 索引定义
-
-| 序号 | 索引名 | 唯一 | 列字段 |
-| :--- | :--- | :--- | :--- |
-| 1 | idx_pur_quality_a_ftime |  | fcreatetime |
-| 2 | t_pur_quality_a_pkey |  | fid |
-
----
-
 ## 质量变更管理-主表 t_pur_quality
 
 - **表名称：** 质量变更管理-主表
@@ -290,17 +321,17 @@
 | 2 | fremark | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
 | 3 | fsubject | 变更主题 | varchar | 255 |  | √ | ' ' | 变更主题 |
 | 4 | fbillstatus | 单据状态 | bpchar | 1 |  | √ | ' ' | 单据状态,枚举: C :已审核 |
-| 5 | fmaterialid | 物料名称 | int8 | 64 |  | √ | 0 | 物料 bd_material |
-| 6 | forgid | 采购组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | fmaterialid | 物料名称 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
+| 6 | forgid | 采购组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fbilldate | 业务日期 | timestamp | 0 |  |  | null | 业务日期 |
-| 8 | flastupdateuserid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 9 | fbizpartnerid | 商务伙伴 | int8 | 64 |  | √ | 0 | 商务伙伴 bd_bizpartner |
-| 10 | fsupplierid | 供应商 | int8 | 64 |  | √ | 0 | 供应商 bd_supplier |
+| 8 | flastupdateuserid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 9 | fbizpartnerid | 商务伙伴 | int8 | 64 |  | √ | 0 | [商务伙伴 bd_bizpartner](../base_files/bd_bizpartner.md) |
+| 10 | fsupplierid | 供应商 | int8 | 64 |  | √ | 0 | [供应商 bd_supplier](../basedata_files/bd_supplier.md) |
 | 11 | flastupdatetime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 12 | fcfmstatus | 审批状态 | bpchar | 1 |  | √ | ' ' | 审批状态,枚举: A :待审批 B :审批通过 C :审批驳回 |
 | 13 | fbiztype | 业务类型 | bpchar | 1 |  | √ | ' ' | 业务类型,枚举: 1 :标准采购 2 :协议采购 3 :VMI采购 4 :JIT采购 5 :委外采购 6 :直运采购 7 :资产采购 8 :费用采购 9 :内部采购 |
-| 14 | fchgtypeid | 变更类型 | int8 | 64 |  | √ | 0 | 供应商辅助资料 srm_extdata |
-| 15 | fcategoryid | 品类 | int8 | 64 |  | √ | 0 | 物料分类 bd_materialgroup |
+| 14 | fchgtypeid | 变更类型 | int8 | 64 |  | √ | 0 | [供应商辅助资料 srm_extdata](../pbd_files/srm_extdata.md) |
+| 15 | fcategoryid | 品类 | int8 | 64 |  | √ | 0 | [物料分类 bd_materialgroup](../basedata_files/bd_materialgroup.md) |
 | 16 | fbillno | 单据编号 | varchar | 80 |  | √ | ' ' | 单据编号 |
 | 17 | fbilltypeid | fbilltypeid | int8 | 64 |  | √ | 0 |  |
 
@@ -314,8 +345,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_pur_quality_fbilldate |  | fbilldate |
-| 2 | t_pur_quality_pkey |  | fid |
+| 1 | t_pur_quality_pkey |  | fid |
+| 2 | idx_pur_quality_fbilldate |  | fbilldate |
 | 3 | idx_pur_quality_fbillno |  | fbillno |
 
 ---
@@ -347,34 +378,3 @@
 | :--- | :--- | :--- | :--- |
 | 1 | idx_pur_quality_store_fid |  | fid,fseq |
 | 2 | t_pur_quality_store_pkey |  | fentryid |
-
----
-
-## 生产工艺-子表 t_pur_quality_tech
-
-- **表名称：** 生产工艺-子表
-- **表名：** t_pur_quality_tech
-
-### 表格列定义
-
-| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | ftype | 类别 | bpchar | 1 |  | √ | ' ' | 类别,枚举: 1 :变更前 2 :变更后 |
-| 3 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 4 | fnote | 说明 | varchar | 255 |  | √ | ' ' | 说明 |
-| 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 6 | fprocess | 工序 | varchar | 50 |  | √ | ' ' | 工序 |
-
-### 列规则定义
-
-| 序号 | 键编码 | 列字段 |
-| :--- | :--- | :--- |
-| 1 | fentryid | fentryid |
-
-### 索引定义
-
-| 序号 | 索引名 | 唯一 | 列字段 |
-| :--- | :--- | :--- | :--- |
-| 1 | t_pur_quality_tech_pkey |  | fentryid |
-| 2 | idx_pur_quality_tech_fid |  | fid,fseq |

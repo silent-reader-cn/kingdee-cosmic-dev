@@ -9,7 +9,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | 所属父记录ID | int8 | 64 |  | √ | 0 | 映射结构定义 fah_valmap_struc |
+| 1 | fid | 所属父记录ID | int8 | 64 |  | √ | 0 | [映射结构定义 fah_valmap_struc](../edah_files/fah_valmap_struc.md) |
 | 2 | freffieldnum | 下拉列表所在的字段 | varchar | 30 |  | √ | ' ' | 下拉列表所在的字段 |
 | 3 | fseq | 序号 | int4 | 32 |  | √ | 0 | 序号 |
 | 4 | fdescription | 描述 | varchar | 255 |  | √ | ' ' | 描述 |

@@ -12,14 +12,14 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | feasnumber | EAS编码 | varchar | 100 |  | √ | ' ' | EAS编码 |
 | 3 | fremark | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fname | fname | varchar | 100 |  | √ | ' ' |  |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 7 | fsalechannelid | 渠道 | int8 | 64 |  | √ | 0 | 渠道 ocdbd_channel |
+| 7 | fsalechannelid | 渠道 | int8 | 64 |  | √ | 0 | [渠道 ocdbd_channel](../ocdbd_files/ocdbd_channel.md) |
 | 8 | fispreset | 是否预设 | bpchar | 1 |  | √ | '0' | 是否预设 |
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 10 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 13 | fbizcategory | 业务分类 | bpchar | 5 |  | √ | '21' | 业务分类,枚举: 21 :普通销售 23 :委托代销 22 :直运销售 |
 | 14 | fenable | 使用状态 | bpchar | 1 |  | √ | '0' | 使用状态,枚举: 0 :禁用 1 :可用 |

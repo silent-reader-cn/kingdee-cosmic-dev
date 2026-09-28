@@ -40,7 +40,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | forgid | 组织编码 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | forgid | 组织编码 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 4 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 
@@ -77,20 +77,20 @@
 | 7 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 8 | fbizfilterconfig | 适用业务范围参数 | varchar | 255 |  | √ | ' ' | 适用业务范围参数 |
 | 9 | fisrevoperate | fisrevoperate | bpchar | 1 |  | √ | '0' |  |
-| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 12 | fisbackgroundstart | fisbackgroundstart | bpchar | 1 |  | √ | '0' |  |
-| 13 | fenablerid | 启用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fenablerid | 启用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | fqueryderiction | fqueryderiction | varchar | 50 |  | √ | ' ' |  |
 | 15 | fexecutorid | fexecutorid | int8 | 64 |  | √ | 0 |  |
 | 16 | fexceptionreceiverid | fexceptionreceiverid | int8 | 64 |  | √ | 0 |  |
 | 17 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
-| 18 | fmodifierid | 最后更新人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 18 | fmodifierid | 最后更新人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 19 | fcomment | fcomment | varchar | 255 |  | √ | ' ' |  |
 | 20 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 21 | fbeginoperate | 触发操作 | varchar | 50 |  | √ | ' ' | 触发操作,枚举: |
 | 22 | fenabledate | 启用日期 | timestamp | 0 |  |  | null | 启用日期 |
-| 23 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 23 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 24 | fbizentityid | fbizentityid | varchar | 50 |  | √ | ' ' |  |
 | 25 | fbizfilter | 适用业务范围 | varchar | 50 |  | √ | ' ' | 适用业务范围 |
 | 26 | fenable | 使用状态 | varchar | 30 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
@@ -129,7 +129,7 @@
 | 6 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 7 | fmserviceconfig | 微服务参数 | varchar | 255 |  | √ | ' ' | 微服务参数 |
 | 8 | ftaskname | 任务名称 | varchar | 50 |  | √ | ' ' | 任务名称 |
-| 9 | fappid | 业务应用 | varchar | 50 |  | √ | ' ' | 业务应用实体 bos_devportal_bizapp |
+| 9 | fappid | 业务应用 | varchar | 50 |  | √ | ' ' | [业务应用实体 bos_devportal_bizapp](../mdl_files/bos_devportal_bizapp.md) |
 | 10 | fiscycle | fiscycle | bpchar | 1 |  | √ | '0' |  |
 | 11 | foperatekey | 执行操作编码 | varchar | 50 |  | √ | ' ' | 执行操作编码 |
 | 12 | fmicroservice | 微服务 | varchar | 50 |  | √ | ' ' | 微服务 |

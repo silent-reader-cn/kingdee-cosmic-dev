@@ -16,10 +16,10 @@
 | 5 | fcallbackurlthr | 回调接口地址3 | varchar | 200 |  | √ | ' ' | 回调接口地址3 |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 7 | faespwds | AES密钥 | varchar | 16 |  | √ | ' ' | AES密钥 |
-| 8 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 10 | fencryptiontype | 数据加密策略 | varchar | 30 |  | √ | ' ' | 数据加密策略,枚举: 0 :AES+BASE64 1 :BASE64 |
-| 11 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fcallbackurltwo | 回调接口地址2 | varchar | 200 |  | √ | ' ' | 回调接口地址2 |
 | 13 | fcallbackurl | 回调接口地址1 | varchar | 200 |  | √ | ' ' | 回调接口地址1 |
 | 14 | fisvalid | 启用禁用标识 | varchar | 30 |  | √ | ' ' | 启用禁用标识,枚举: 0 :禁用 1 :启用 |

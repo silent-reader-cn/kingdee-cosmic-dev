@@ -10,13 +10,13 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreator | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fcreator | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fquotaweigh | 指标权重 | numeric | 23 | 10 |  | null | 指标权重 |
 | 4 | fcoremethod | 评分方式 | varchar | 50 |  | √ | ' ' | 评分方式,枚举: 0 :比例 1 :区间 |
 | 5 | fcreatetime | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
-| 6 | fquotatype | 能力项(冗余) | int8 | 64 |  | √ | 0 | 指标分类目录 ipo_quota_type |
-| 7 | fevaluatetype | 评价模型类型 | int8 | 64 |  | √ | 0 | 财务评价模型类型 iba_evaluate_type |
-| 8 | fquota | 指标 | int8 | 64 |  | √ | 0 | 指标库 ipo_quota_info |
+| 6 | fquotatype | 能力项(冗余) | int8 | 64 |  | √ | 0 | [指标分类目录 ipo_quota_type](../ipobase_files/ipo_quota_type.md) |
+| 7 | fevaluatetype | 评价模型类型 | int8 | 64 |  | √ | 0 | [财务评价模型类型 iba_evaluate_type](../iba_files/iba_evaluate_type.md) |
+| 8 | fquota | 指标 | int8 | 64 |  | √ | 0 | [指标库 ipo_quota_info](../ipobase_files/ipo_quota_info.md) |
 
 ### 列规则定义
 

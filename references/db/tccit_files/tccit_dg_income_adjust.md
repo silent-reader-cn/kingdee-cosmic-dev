@@ -12,10 +12,13 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fitemno | 行次 | varchar | 50 |  | √ | ' ' | 行次 |
 | 3 | fitemtype | 项目 | varchar | 50 |  | √ | ' ' | 项目 |
-| 4 | fskssqz | 结束日期 | timestamp | 0 |  |  | null | 结束日期 |
-| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 6 | famount | 调整金额 | numeric | 23 | 10 | √ | 0.0000000000 | 调整金额 |
-| 7 | fskssqq | 开始时间 | timestamp | 0 |  |  | null | 开始时间 |
+| 4 | fewblxh | 二维表序号 | varchar | 50 |  | √ | ' ' | 二维表序号,枚举: 1 :未按权责发生制确认收入 2 :不征税收入-计入当期损益调减 3 :不征税收入-计入支出费用化调增 4 :不征税收入-计入应税收入调增 5 :投资资产持有收益 6 :投资资产处置收益 7 :投资资产初始成本调整 8 :公允价值变动损益 9 :销售折扣、折让和退回 10 :其他调整 11 :合计 |
+| 5 | fskssqz | 结束日期 | timestamp | 0 |  |  | null | 结束日期 |
+| 6 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 7 | fsbbid | 申报表id | varchar | 50 |  | √ | ' ' | 申报表id |
+| 8 | famount | 调整金额 | numeric | 23 | 10 | √ | 0.0000000000 | 调整金额 |
+| 9 | fskssqq | 开始时间 | timestamp | 0 |  |  | null | 开始时间 |
+| 10 | fewblname | 二维表名称 | varchar | 500 |  | √ | ' ' | 二维表名称 |
 
 ### 列规则定义
 

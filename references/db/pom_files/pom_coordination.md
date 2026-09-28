@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 附件字段实体 bd_attachment |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [附件字段实体 bd_attachment](../frame_files/bd_attachment.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | FPKID |
 
 ### 列规则定义
@@ -69,11 +69,11 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | funitheat | 计量单位（热处理） | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 2 | funitheat | 计量单位（热处理） | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 3 | fqtyheat | 数量（热处理） | numeric | 23 | 10 | √ | 0 | 数量（热处理） |
 | 4 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 6 | fmaterialheat | 零件号（热处理） | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 6 | fmaterialheat | 零件号（热处理） | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 
 ### 列规则定义
 
@@ -100,10 +100,10 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fsurfacemunit | 计量单位（表面处理） | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 2 | fsurfacemunit | 计量单位（表面处理） | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 3 | fsurfacemqty | 数量（表面处理） | numeric | 23 | 10 | √ | 0 | 数量（表面处理） |
 | 4 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 5 | fsurfacemno | 零件号（表面处理） | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 5 | fsurfacemno | 零件号（表面处理） | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 6 | fsurfacetype | 表面处理类型 | varchar | 50 |  | √ | ' ' | 表面处理类型,枚举: A :Cadmium Plating 镉电镀 B :Passivation 钝化 C :Anodizing 阳极氧化 D :Stylus Cadmium Plating 刷镀镉 E :Bonderite M-CR 600 Aero F :Bonderite M-CR 1200S Aero G :Bonderite M-CR 1500 Aero |
 | 7 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 
@@ -132,8 +132,8 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | funitmac | 计量单位（机械加工） | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 3 | fmaterialmac | 零件号（机械加工） | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 2 | funitmac | 计量单位（机械加工） | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 3 | fmaterialmac | 零件号（机械加工） | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 4 | fqtymac | 数量（机械加工） | numeric | 23 | 10 | √ | 0 | 数量（机械加工） |
 | 5 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
@@ -234,80 +234,80 @@
 | 2 | fproviddate | 提供日期 | timestamp | 0 |  |  | null | 提供日期 |
 | 3 | frawmaterialname | 原材料名称（废弃） | varchar | 50 |  | √ | ' ' | 原材料名称（废弃） |
 | 4 | fspraypartdowntype1 | fspraypartdowntype1 | varchar | 50 |  | √ | ' ' |  |
-| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 6 | frecipitrade | 接收者行业 | int8 | 64 |  | √ | 0 | 树形基础资料模板 mpdm_professiona |
+| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 6 | frecipitrade | 接收者行业 | int8 | 64 |  | √ | 0 | [树形基础资料模板 mpdm_professiona](../mpdm_files/mpdm_professiona.md) |
 | 7 | fspraypartface | 面漆 | bpchar | 1 |  | √ | '0' | 面漆 |
-| 8 | fapplytrade | 申请者行业 | int8 | 64 |  | √ | 0 | 树形基础资料模板 mpdm_professiona |
+| 8 | fapplytrade | 申请者行业 | int8 | 64 |  | √ | 0 | [树形基础资料模板 mpdm_professiona](../mpdm_files/mpdm_professiona.md) |
 | 9 | fworkstartdate | 日期范围.开始 | timestamp | 0 |  |  | null | 日期范围.开始 |
 | 10 | fpickdate | 取走日期 | timestamp | 0 |  |  | null | 取走日期 |
 | 11 | fworkremark | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
 | 12 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 13 | fheatpartno | 零件号（封存） | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 13 | fheatpartno | 零件号（封存） | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 14 | fjobno | 检修工单号（废弃） | varchar | 50 |  | √ | ' ' | 检修工单号（废弃） |
 | 15 | fheatpartqty | 数量（封存） | numeric | 23 | 10 | √ | 0 | 数量（封存） |
 | 16 | fenddate | 期望完成时间 | timestamp | 0 |  |  | null | 期望完成时间 |
 | 17 | fisairproject | 是否飞机项目 | bpchar | 1 |  | √ | '0' | 是否飞机项目 |
-| 18 | fsparymaterial | 部件零件号 | int8 | 64 |  | √ | 0 | 物料 bd_material |
-| 19 | fprojectno | 项目号 | int8 | 64 |  | √ | 0 | 项目 pmpd_project |
+| 18 | fsparymaterial | 部件零件号 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
+| 19 | fprojectno | 项目号 | int8 | 64 |  | √ | 0 | [项目 pmpd_project](../fmm_files/pmpd_project.md) |
 | 20 | fworkpress | 紧急 | bpchar | 1 |  | √ | '0' | 紧急 |
 | 21 | fbillno | 单据编号 | varchar | 30 |  | √ | ' ' | 单据编号 |
 | 22 | frequirefinalstatus | 要求热处理到最终状态 | varchar | 255 |  | √ | ' ' | 要求热处理到最终状态 |
-| 23 | fheatpartunit | 计量单位（封存） | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 23 | fheatpartunit | 计量单位（封存） | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 24 | fdocument | 参考文件 | varchar | 50 |  | √ | ' ' | 参考文件 |
 | 25 | fspraypartqty | 数量 | numeric | 23 | 10 | √ | 0 | 数量 |
-| 26 | fmaterialno | 原材料编号 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 26 | fmaterialno | 原材料编号 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 27 | fspraypartdoc | 参考文件 | varchar | 50 |  | √ | ' ' | 参考文件 |
 | 28 | fbillstatus | 单据状态 | varchar | 50 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 29 | fpicker | 取走者 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 30 | fmratype | 检修设备类型 | int8 | 64 |  | √ | 0 | 检修设备类型 mpdm_mrtype |
-| 31 | fspraypartunit | 计量单位（零件喷漆） | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 29 | fpicker | 取走者 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 30 | fmratype | 检修设备类型 | int8 | 64 |  | √ | 0 | [检修设备类型 mpdm_mrtype](../mpdm_files/mpdm_mrtype.md) |
+| 31 | fspraypartunit | 计量单位（零件喷漆） | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 32 | fpreenddate | 预计完成时间 | timestamp | 0 |  |  | null | 预计完成时间 |
 | 33 | fissparymaterail | 是否喷零件号 | bpchar | 1 |  | √ | '0' | 是否喷零件号 |
 | 34 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
 | 35 | fworkteam | 工作组 | varchar | 50 |  | √ | ' ' | 工作组,枚举: A :木工组 |
-| 36 | fmachiningunit | 计量单位（封存） | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 37 | fmaterielmtc | 检修设备注册号 | int8 | 64 |  | √ | 0 | 物料检修信息 mpdm_materialmtcinfo |
+| 36 | fmachiningunit | 计量单位（封存） | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 37 | fmaterielmtc | 检修设备注册号 | int8 | 64 |  | √ | 0 | [物料检修信息 mpdm_materialmtcinfo](../mpdm_files/mpdm_materialmtcinfo.md) |
 | 38 | fmachiningdoc | 要求机械加工的文件 | varchar | 50 |  | √ | ' ' | 要求机械加工的文件,枚举: A :附件工卡SWS B :图纸 C :TAR D :其它 |
-| 39 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 39 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 40 | fmachiningqty | 数量（封存） | numeric | 23 | 10 | √ | 0 | 数量（封存） |
 | 41 | fairregistno | 检修设备注册号（废弃） | varchar | 50 |  | √ | ' ' | 检修设备注册号（废弃） |
-| 42 | fprovider | 提供者 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 43 | fmachnipartno | 零件号（封存） | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 42 | fprovider | 提供者 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 43 | fmachnipartno | 零件号（封存） | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 44 | fairtype | 机型L3（废弃） | varchar | 50 |  | √ | ' ' | 机型L3（废弃） |
 | 45 | fprovidpart | 提供旧零件 | bpchar | 1 |  | √ | '0' | 提供旧零件 |
-| 46 | fspraypartdownno | 底漆件号 | int8 | 64 |  | √ | 0 | 物料 bd_material |
-| 47 | fheatmaterialno | 原材料编号（热处理） | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 46 | fspraypartdownno | 底漆件号 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
+| 47 | fheatmaterialno | 原材料编号（热处理） | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 48 | fspraypartdown | 底漆 | bpchar | 1 |  | √ | '0' | 底漆 |
 | 49 | frawmaterialno | 原材料编号（废弃） | varchar | 50 |  | √ | ' ' | 原材料编号（废弃） |
-| 50 | fcertifier | 确认者 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 50 | fcertifier | 确认者 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 51 | fcomparedoc | 参考文件 | varchar | 50 |  | √ | ' ' | 参考文件 |
-| 52 | fapply | 申请者 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 52 | fapply | 申请者 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 53 | fannauncement |  | varchar | 255 |  | √ | ' ' |  |
-| 54 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 54 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 55 | fspraypartdownname1 | fspraypartdownname1 | varchar | 50 |  | √ | ' ' |  |
-| 56 | fspraypartno | 零件号（零件喷漆） | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 56 | fspraypartno | 零件号（零件喷漆） | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 57 | fspraypartdowngrn | 底漆GRN | varchar | 50 |  | √ | ' ' | 底漆GRN |
-| 58 | frecipient | 接收者 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 58 | frecipient | 接收者 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 59 | fworktype | 工作类型 | varchar | 50 |  | √ | ' ' | 工作类型,枚举: A :木作 |
 | 60 | fbusinessstatus | 业务状态 | varchar | 50 |  | √ | ' ' | 业务状态,枚举: Z :暂存 A :已申请 B :已接收 C :已完成 D :已取回 E :已关闭 F :已取消 |
 | 61 | frawmaterialtype | 原材料类型 | varchar | 50 |  | √ | ' ' | 原材料类型,枚举: A :Clad Sheet 包铝片 B :Bare Sheet 裸铝片 C :Extrusion 挤压型材 D :Plate 板材 E :Rivet 铆钉 F :Bar 条棒 G :Rod 圆棒 |
 | 62 | fworkrequire | 工作要求 | varchar | 255 |  | √ | ' ' | 工作要求 |
 | 63 | fworkplace | 工作地点 | varchar | 50 |  | √ | ' ' | 工作地点 |
 | 64 | fpaintgrn | 油漆GRN | varchar | 50 |  | √ | ' ' | 油漆GRN |
-| 65 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 65 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 66 | frequirefinalstatus_tag | 要求热处理到最终状态_详情 | text | 0 |  |  | null | 要求热处理到最终状态_详情 |
 | 67 | fworkremark_tag | 备注_详情 | text | 0 |  |  | null | 备注_详情 |
 | 68 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 69 | fjobnum | 检修工单号 | int8 | 64 |  | √ | 0 | 检修工单F7 pom_mroorderno_f7 |
+| 69 | fjobnum | 检修工单号 | int8 | 64 |  | √ | 0 | [检修工单F7 pom_mroorderno_f7](../pom_files/pom_mroorderno_f7.md) |
 | 70 | fheatgrn | GRN | varchar | 50 |  | √ | ' ' | GRN |
 | 71 | fworkrequire_tag | 工作要求_详情 | text | 0 |  |  | null | 工作要求_详情 |
-| 72 | fspraypartfaceno | 面漆件号 | int8 | 64 |  | √ | 0 | 物料 bd_material |
-| 73 | fpaintmaterial | 油漆件号 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 72 | fspraypartfaceno | 面漆件号 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
+| 73 | fpaintmaterial | 油漆件号 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 74 | fspraypartfacegrn | 面漆GRN | varchar | 50 |  | √ | ' ' | 面漆GRN |
 | 75 | fsurfacegrn | GRN | varchar | 50 |  | √ | ' ' | GRN |
 | 76 | fworkenddate | 日期范围.结束 | timestamp | 0 |  |  | null | 日期范围.结束 |
 | 77 | fannauncement_tag | 详情 | text | 0 |  |  | null | 详情 |
-| 78 | ffinisher | 完成者 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 78 | ffinisher | 完成者 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 79 | fbilltype | 单据类型 | int8 | 64 |  | √ | 0 | 单据类型 bos_billtype |
 
 ### 列规则定义
@@ -366,19 +366,19 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fcardno | 工卡号 | int8 | 64 |  | √ | 0 | 工卡 mpdm_mrocardroute |
+| 2 | fcardno | 工卡号 | int8 | 64 |  | √ | 0 | [工卡 mpdm_mrocardroute](../mpdm_files/mpdm_mrocardroute.md) |
 | 3 | fpreoutdate | 预计离场时间 | timestamp | 0 |  |  | null | 预计离场时间 |
 | 4 | fbatchno | 批号 | varchar | 50 |  | √ | ' ' | 批号 |
 | 5 | fworkobject | 工作对象 | varchar | 255 |  | √ | ' ' | 工作对象 |
 | 6 | flocation | 位置 | varchar | 255 |  | √ | ' ' | 位置 |
 | 7 | fphonedesc | 备注 | varchar | 50 |  | √ | ' ' | 备注 |
-| 8 | fairmaterial | 物料 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 8 | fairmaterial | 物料 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 9 | fworkobject_tag | 工作对象_详情 | text | 0 |  |  | null | 工作对象_详情 |
 | 10 | fworkreqdesc | 工作要求描述 | varchar | 255 |  | √ | ' ' | 工作要求描述 |
 | 11 | flocation_tag | 位置_详情 | text | 0 |  |  | null | 位置_详情 |
 | 12 | fworkreqdesc_tag | 工作要求描述_详情 | text | 0 |  |  | null | 工作要求描述_详情 |
-| 13 | frecipientdept | 接收部门 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 14 | fapplydept | 申请部门 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 13 | frecipientdept | 接收部门 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 14 | fapplydept | 申请部门 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 
 ### 列规则定义
 

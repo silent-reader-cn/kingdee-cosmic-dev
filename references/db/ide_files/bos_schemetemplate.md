@@ -10,15 +10,15 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 3 | fgroupid | 分组 | int8 | 64 |  | √ | 0 | 方案模板分组 bos_schemegroup |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 3 | fgroupid | 分组 | int8 | 64 |  | √ | 0 | [方案模板分组 bos_schemegroup](../ide_files/bos_schemegroup.md) |
 | 4 | fjson | json存储 | varchar | 256 |  | √ | ' ' | json存储 |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  | √ | LOCALTIMESTAMP | 创建时间 |
 | 6 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 7 | ftitle | 控件方案组名 | varchar | 100 |  | √ | ' ' | 控件方案组名 |
 | 8 | fstatus | 数据状态 | bpchar | 1 |  | √ | 'A' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 9 | fvalue | 分类 | int4 | 32 |  | √ | 0 | 分类 |
-| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 12 | fmulcolums | 多行纵列 | bpchar | 1 |  | √ | '0' | 多行纵列 |
 | 13 | forder | 顺序 | int4 | 32 |  | √ | 0 | 顺序 |
@@ -54,7 +54,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | ftitle | ftitle | varchar | 100 |  | √ | ' ' |  |
+| 2 | ftitle | 控件方案组名 | varchar | 100 |  | √ | ' ' | 控件方案组名 |
 | 3 | fname | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
 | 4 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
 | 5 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |

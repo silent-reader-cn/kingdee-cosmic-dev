@@ -13,7 +13,7 @@
 | 2 | fregistrationcode | 系统注册码 | varchar | 50 |  | √ | ' ' | 系统注册码 |
 | 3 | faccesstokenurl | 认证地址 | varchar | 50 |  | √ | ' ' | 认证地址 |
 | 4 | fauthorizationcode | 系统授权码 | varchar | 50 |  | √ | ' ' | 系统授权码 |
-| 5 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | fnsrsbh | 纳税人识别号 | varchar | 50 |  | √ | ' ' | 纳税人识别号 |
 | 7 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 8 | fsystemid | 系统编码 | varchar | 50 |  | √ | ' ' | 系统编码 |

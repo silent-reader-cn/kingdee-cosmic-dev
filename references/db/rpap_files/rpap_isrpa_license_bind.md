@@ -11,9 +11,9 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fterminaltype | 类型 | varchar | 30 |  | √ | ' ' | 类型,枚举: 0 :机器人 1 :设计器 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 5 | fuserid | 用户id | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | fuserid | 用户id | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | frpausername | 登录rpa机器人的rpa账号 | varchar | 50 |  | √ | ' ' | 登录rpa机器人的rpa账号 |
 | 7 | foperatesysuser | 操作系统用户名 | varchar | 50 |  | √ | ' ' | 操作系统用户名 |
 | 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
@@ -21,8 +21,8 @@
 | 10 | fuserorgname | 用户组织 | varchar | 255 |  | √ | ' ' | 用户组织 |
 | 11 | foperatesys | 操作系统 | varchar | 50 |  | √ | ' ' | 操作系统 |
 | 12 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 14 | flicense | 许可信息 | int8 | 64 |  | √ | 0 | 许可 rpap_isrpa_license |
+| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 14 | flicense | 许可信息 | int8 | 64 |  | √ | 0 | [许可 rpap_isrpa_license](../rpap_files/rpap_isrpa_license.md) |
 | 15 | fagentdcode | 机器码 | varchar | 50 |  | √ | ' ' | 机器码 |
 | 16 | fcustomid | 客户端id | varchar | 50 |  | √ | ' ' | 客户端id |
 | 17 | fenable | 使用状态 | varchar | 30 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |

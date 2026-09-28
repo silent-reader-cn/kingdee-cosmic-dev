@@ -18,8 +18,8 @@
 | 7 | fpayee | fpayee | varchar | 50 |  | √ | ' ' |  |
 | 8 | fdefaultequipment | fdefaultequipment | varchar | 10 |  | √ | ' ' |  |
 | 9 | felectzticketquota | felectzticketquota | numeric | 23 | 10 | √ | 0.0000000000 |  |
-| 10 | forg | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 11 | fepinfo | 企业信息 | int8 | 64 |  | √ | 0 | 企业基础信息 bdm_enterprise_baseinfo |
+| 10 | forg | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 11 | fepinfo | 企业信息 | int8 | 64 |  | √ | 0 | [企业基础信息 bdm_enterprise_baseinfo](../bdm_files/bdm_enterprise_baseinfo.md) |
 | 12 | fdisen | fdisen | varchar | 30 |  | √ | ' ' |  |
 | 13 | ffjh | ffjh | varchar | 10 |  |  | ' ' |  |
 | 14 | fcreatedate | fcreatedate | timestamp | 0 |  |  | null |  |

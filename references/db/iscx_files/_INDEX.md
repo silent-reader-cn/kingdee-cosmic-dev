@@ -1,6 +1,6 @@
 # iscx 模块表清单
 
-> 本模块共收录 **30** 张表定义，来自 `iscx_files/`。
+> 本模块共收录 **28** 张表定义，来自 `iscx_files/`。
 
 > 索引由 `scripts/build_index.py` 从 Markdown 自动生成，请勿手工编辑。
 > 检索本模块表结构请用统一检索脚本（比翻本文件更快）：
@@ -18,25 +18,23 @@
 | 6 | `t_iscx_data_stream_trace` | 数据流成功日志-主表 | 7 | [iscx_data_stream_trace.md](./iscx_data_stream_trace.md) |
 | 7 | `t_iscx_datax_connector` | 连接器绑定-子表 | 7 | [iscx_data_flow_trigger.md](./iscx_data_flow_trigger.md) |
 | 8 | `t_iscx_datax_param` | 参数绑定-子表 | 8 | [iscx_data_flow_trigger.md](./iscx_data_flow_trigger.md) |
-| 9 | `t_iscx_datax_stream` | 数据流实例-主表 | 17 | [iscx_data_stream.md](./iscx_data_stream.md) |
-| 10 | `t_iscx_datax_trigger` | 数据流启动方案-主表 | 27 | [iscx_data_flow_trigger.md](./iscx_data_flow_trigger.md) |
+| 9 | `t_iscx_datax_stream` | 数据流实例-主表 | 18 | [iscx_data_stream.md](./iscx_data_stream.md) |
+| 10 | `t_iscx_datax_trigger` | 数据流启动方案-主表 | 28 | [iscx_data_flow_trigger.md](./iscx_data_flow_trigger.md) |
 | 11 | `t_iscx_datax_trigger_l` | 数据流启动方案-多语言表 | 4 | [iscx_data_flow_trigger.md](./iscx_data_flow_trigger.md) |
 | 12 | `t_iscx_guide_res` | 数据流向导-主表 | 13 | [iscx_guide_resource.md](./iscx_guide_resource.md) |
 | 13 | `t_iscx_guide_res_l` | 数据流向导-多语言表 | 4 | [iscx_guide_resource.md](./iscx_guide_resource.md) |
-| 14 | `t_iscx_home_demo1` | 数据流demo1-主表 | 0 | [iscx_home_demo1.md](./iscx_home_demo1.md) |
-| 15 | `t_iscx_home_demo1_l` | 数据流demo1-多语言表 | 0 | [iscx_home_demo1.md](./iscx_home_demo1.md) |
-| 16 | `t_iscx_icon_repository` | 图标库-主表 | 4 | [iscx_icon_repository.md](./iscx_icon_repository.md) |
-| 17 | `t_iscx_res_catalog` | 资源目录-主表 | 16 | [iscx_catalog.md](./iscx_catalog.md) |
-| 18 | `t_iscx_res_catalog_l` | 资源目录-多语言表 | 4 | [iscx_catalog.md](./iscx_catalog.md) |
-| 19 | `t_iscx_res_ext_depends` | 依赖资源-多选基础资料表 | 3 | [iscx_resource_ext.md](./iscx_resource_ext.md) |
-| 20 | `t_iscx_res_main` | 数据流资源-主表 | 25 | [iscx_resource.md](./iscx_resource.md) |
-| 21 | `t_iscx_res_main` | 资源信息公共模板-主表 | 25 | [iscx_resource_base.md](./iscx_resource_base.md) |
-| 22 | `t_iscx_res_main` | 资源扩展-主表 | 25 | [iscx_resource_ext.md](./iscx_resource_ext.md) |
-| 23 | `t_iscx_res_main` | 资源配置（运行时）-主表 | 25 | [iscx_resource_rtm.md](./iscx_resource_rtm.md) |
-| 24 | `t_iscx_res_main_depends` | 依赖资源-多选基础资料表 | 3 | [iscx_resource.md](./iscx_resource.md) |
-| 25 | `t_iscx_res_main_l` | 数据流资源-多语言表 | 4 | [iscx_resource.md](./iscx_resource.md) |
-| 26 | `t_iscx_res_main_l` | 资源信息公共模板-多语言表 | 4 | [iscx_resource_base.md](./iscx_resource_base.md) |
-| 27 | `t_iscx_res_main_l` | 资源扩展-多语言表 | 4 | [iscx_resource_ext.md](./iscx_resource_ext.md) |
-| 28 | `t_iscx_res_main_l` | 资源配置（运行时）-多语言表 | 4 | [iscx_resource_rtm.md](./iscx_resource_rtm.md) |
-| 29 | `t_iscx_res_type` | 资源类型-主表 | 9 | [iscx_resource_type.md](./iscx_resource_type.md) |
-| 30 | `t_iscx_res_type_l` | 资源类型-多语言表 | 4 | [iscx_resource_type.md](./iscx_resource_type.md) |
+| 14 | `t_iscx_icon_repository` | 图标库-主表 | 4 | [iscx_icon_repository.md](./iscx_icon_repository.md) |
+| 15 | `t_iscx_res_catalog` | 资源目录-主表 | 16 | [iscx_catalog.md](./iscx_catalog.md) |
+| 16 | `t_iscx_res_catalog_l` | 资源目录-多语言表 | 4 | [iscx_catalog.md](./iscx_catalog.md) |
+| 17 | `t_iscx_res_ext_depends` | 依赖资源-多选基础资料表 | 3 | [iscx_resource_ext.md](./iscx_resource_ext.md) |
+| 18 | `t_iscx_res_main` | 数据流资源-主表 | 25 | [iscx_resource.md](./iscx_resource.md) |
+| 19 | `t_iscx_res_main` | 资源信息公共模板-主表 | 25 | [iscx_resource_base.md](./iscx_resource_base.md) |
+| 20 | `t_iscx_res_main` | 资源扩展-主表 | 25 | [iscx_resource_ext.md](./iscx_resource_ext.md) |
+| 21 | `t_iscx_res_main` | 资源配置（运行时）-主表 | 25 | [iscx_resource_rtm.md](./iscx_resource_rtm.md) |
+| 22 | `t_iscx_res_main_depends` | 依赖资源-多选基础资料表 | 3 | [iscx_resource.md](./iscx_resource.md) |
+| 23 | `t_iscx_res_main_l` | 数据流资源-多语言表 | 4 | [iscx_resource.md](./iscx_resource.md) |
+| 24 | `t_iscx_res_main_l` | 资源信息公共模板-多语言表 | 4 | [iscx_resource_base.md](./iscx_resource_base.md) |
+| 25 | `t_iscx_res_main_l` | 资源扩展-多语言表 | 4 | [iscx_resource_ext.md](./iscx_resource_ext.md) |
+| 26 | `t_iscx_res_main_l` | 资源配置（运行时）-多语言表 | 4 | [iscx_resource_rtm.md](./iscx_resource_rtm.md) |
+| 27 | `t_iscx_res_type` | 资源类型-主表 | 9 | [iscx_resource_type.md](./iscx_resource_type.md) |
+| 28 | `t_iscx_res_type_l` | 资源类型-多语言表 | 4 | [iscx_resource_type.md](./iscx_resource_type.md) |

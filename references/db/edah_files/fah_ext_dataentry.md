@@ -10,13 +10,13 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fgroupid | 分组 | int8 | 64 |  | √ | 0 | 数据字段分组定义 fah_ext_model_fldgrp |
+| 2 | fgroupid | 分组 | int8 | 64 |  | √ | 0 | [数据字段分组定义 fah_ext_model_fldgrp](../edah_files/fah_ext_model_fldgrp.md) |
 | 3 | fname | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
 | 4 | frequiredcondition | 必录条件 | text | 0 |  |  | null | 必录条件 |
-| 5 | fmodelid | 数据模型 | int8 | 64 |  | √ | 0 | 异构数据对接模型 fah_ext_datamodel |
+| 5 | fmodelid | 数据模型 | int8 | 64 |  | √ | 0 | [异构数据对接模型 fah_ext_datamodel](../edah_files/fah_ext_datamodel.md) |
 | 6 | fseq | 行号 | int4 | 32 |  | √ | 0 | 行号 |
-| 7 | fassistprop | 辅助资料 | int8 | 64 |  | √ | 0 | 辅助资料分类 bos_assistantdatagroup |
-| 8 | fbaseprop | 基础资料 | varchar | 36 |  | √ | ' ' | 业务对象 bos_objecttype |
+| 7 | fassistprop | 辅助资料 | int8 | 64 |  | √ | 0 | [辅助资料分类 bos_assistantdatagroup](../base_files/bos_assistantdatagroup.md) |
+| 8 | fbaseprop | 基础资料 | varchar | 36 |  | √ | ' ' | [业务对象 bos_objecttype](../mdl_files/bos_objecttype.md) |
 | 9 | frequired | 必录 | bpchar | 1 |  | √ | ' ' | 必录 |
 | 10 | fvisable | 显示 | bpchar | 1 |  | √ | ' ' | 显示 |
 | 11 | fproperties_tag | 字段属性 | text | 0 |  |  | null | 字段属性 |

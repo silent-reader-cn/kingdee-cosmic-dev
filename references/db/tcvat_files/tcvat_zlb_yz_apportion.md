@@ -14,10 +14,10 @@
 | 3 | fenddate | 税款所属期止 | timestamp | 0 |  |  | null | 税款所属期止 |
 | 4 | fsimpletaxamount | 简易计税税额 | numeric | 23 | 10 | √ | 0 | 简易计税税额 |
 | 5 | fstartdate | 税款所属期起 | timestamp | 0 |  |  | null | 税款所属期起 |
-| 6 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fdeclaretype | 申报方式 | varchar | 50 |  | √ | ' ' | 申报方式,枚举: |
 | 8 | fnormaltaxamount | 一般计税分配税额 | numeric | 23 | 10 | √ | 0 | 一般计税分配税额 |
-| 9 | fsuborg | 汇总方案组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 9 | fsuborg | 汇总方案组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 10 | ftotaltaxamount | 合计税额 | numeric | 23 | 10 | √ | 0 | 合计税额 |
 | 11 | flevelname | 层级 | varchar | 50 |  | √ | ' ' | 层级,枚举: 1 :1级 2 :2级 3 :3级 4 :4级 |
 

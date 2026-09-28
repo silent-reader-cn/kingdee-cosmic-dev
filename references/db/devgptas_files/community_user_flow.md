@@ -1,9 +1,9 @@
 # （废弃）用户流水-community_user_flow
 
-## 单据体-子表 communityflowlist
+## （废弃）用户流水-主表 communityflow
 
-- **表名称：** 单据体-子表
-- **表名：** communityflowlist
+- **表名称：** （废弃）用户流水-主表
+- **表名：** communityflow
 
 ### 表格列定义
 
@@ -22,10 +22,10 @@
 
 ---
 
-## （废弃）用户流水-主表 communityflow
+## 单据体-子表 communityflowlist
 
-- **表名称：** （废弃）用户流水-主表
-- **表名：** communityflow
+- **表名称：** 单据体-子表
+- **表名：** communityflowlist
 
 ### 表格列定义
 

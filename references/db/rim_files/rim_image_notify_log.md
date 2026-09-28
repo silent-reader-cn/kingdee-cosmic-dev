@@ -13,7 +13,7 @@
 | 2 | fjson | json | varchar | 500 |  | √ | ' ' | json |
 | 3 | fcreatedate | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
 | 4 | fmodifydate | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
-| 5 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | fexpense_id | 单据id | varchar | 100 |  | √ | ' ' | 单据id |
 | 7 | fscan_bill_no | 影像编码 | varchar | 100 |  | √ | ' ' | 影像编码 |
 | 8 | fexpense_type | 单据类型 | varchar | 100 |  | √ | ' ' | 单据类型 |
@@ -44,7 +44,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fparam | 请求参数 | varchar | 500 |  | √ | ' ' | 请求参数 |
-| 3 | fuser | 操作人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fuser | 操作人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 5 | furl | url | varchar | 100 |  | √ | ' ' | url |
 | 6 | fresult | 请求结果 | varchar | 100 |  | √ | ' ' | 请求结果 |

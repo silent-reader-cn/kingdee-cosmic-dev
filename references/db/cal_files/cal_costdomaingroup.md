@@ -10,19 +10,19 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fsdimensionid | 来源维度 | int8 | 64 |  | √ | 0 | 成本域维度 cal_costdomain |
-| 3 | ftmaterialid | 目标物料 | int8 | 64 |  | √ | 0 | 物料 bd_material |
-| 4 | ftperiodid | 目标期间 | int8 | 64 |  | √ | 0 | 会计日历 bd_period |
+| 2 | fsdimensionid | 来源维度 | int8 | 64 |  | √ | 0 | [成本域维度 cal_costdomain](../cal_files/cal_costdomain.md) |
+| 3 | ftmaterialid | 目标物料 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
+| 4 | ftperiodid | 目标期间 | int8 | 64 |  | √ | 0 | [会计日历 bd_period](../fibd_files/bd_period.md) |
 | 5 | fdimensionkey | 维度key | varchar | 50 |  | √ | ' ' | 维度key |
 | 6 | fisdiffdomain | 是否跨成本域 | bpchar | 1 |  | √ | '1' | 是否跨成本域 |
 | 7 | fissamematerial | 是否相同物料 | bpchar | 1 |  | √ | '1' | 是否相同物料 |
 | 8 | fsortid | 排序链ID | int8 | 64 |  | √ | 0 | 排序链ID |
-| 9 | fsperiodid | 来源期间 | int8 | 64 |  | √ | 0 | 会计日历 bd_period |
+| 9 | fsperiodid | 来源期间 | int8 | 64 |  | √ | 0 | [会计日历 bd_period](../fibd_files/bd_period.md) |
 | 10 | ftdimensionkey | 目标维度key | varchar | 50 |  | √ | ' ' | 目标维度key |
-| 11 | ftdimensionid | 目标维度 | int8 | 64 |  | √ | 0 | 成本域维度 cal_costdomain |
+| 11 | ftdimensionid | 目标维度 | int8 | 64 |  | √ | 0 | [成本域维度 cal_costdomain](../cal_files/cal_costdomain.md) |
 | 12 | fcount | 计数器 | int8 | 64 |  | √ | 0 | 计数器 |
 | 13 | fsdimensionkey | 来源维度key | varchar | 50 |  | √ | ' ' | 来源维度key |
-| 14 | fsmaterialid | 来源物料 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 14 | fsmaterialid | 来源物料 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 
 ### 列规则定义
 

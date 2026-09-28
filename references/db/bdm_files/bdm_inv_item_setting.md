@@ -12,15 +12,15 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | facceptuplevelshare | 接收上级共享商品 | bpchar | 1 |  | √ | ' ' | 接收上级共享商品 |
 | 3 | foriginalbillimport | 原始单据导入 | bpchar | 1 |  | √ | ' ' | 原始单据导入 |
-| 4 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fapiinvoice | API开票 | bpchar | 1 |  | √ | ' ' | API开票 |
 | 6 | forginalbillnew | 原始单据API新增 | bpchar | 1 |  | √ | ' ' | 原始单据API新增 |
 | 7 | fsavefrombill | 开票申请单保存 | bpchar | 1 |  | √ | '0' | 开票申请单保存 |
-| 8 | forg | 组织 | int8 | 64 |  | √ | 0 | 企业管理 bdm_org |
+| 8 | forg | 组织 | int8 | 64 |  | √ | 0 | [企业管理 bdm_org](../bdm_files/bdm_org.md) |
 | 9 | fcreatedate | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
 | 10 | fmodifydate | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
 | 11 | fbatchinvoice | 批量开票 | bpchar | 1 |  | √ | ' ' | 批量开票 |
-| 12 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fcompletion | 自动补全 | bpchar | 1 |  | √ | '0' | 自动补全 |
 
 ### 列规则定义

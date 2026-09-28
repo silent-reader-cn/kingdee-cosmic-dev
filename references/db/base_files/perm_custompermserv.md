@@ -17,7 +17,7 @@
 | 6 | fservname | 服务接口名 | varchar | 200 |  | √ | ' ' | 服务接口名 |
 | 7 | fisand | 执行结果和平台结果是否取交集 | bpchar | 1 |  | √ | '0' | 执行结果和平台结果是否取交集 |
 | 8 | fisskip | 是否跳过 | bpchar | 1 |  | √ | '0' | 是否跳过 |
-| 9 | fappid | 应用 | varchar | 60 |  | √ | ' ' | 业务应用实体 bos_devportal_bizapp |
+| 9 | fappid | 应用 | varchar | 60 |  | √ | ' ' | [业务应用实体 bos_devportal_bizapp](../mdl_files/bos_devportal_bizapp.md) |
 
 ### 列规则定义
 

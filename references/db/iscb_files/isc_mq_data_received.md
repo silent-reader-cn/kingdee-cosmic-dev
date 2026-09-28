@@ -17,11 +17,11 @@
 | 6 | fexecution | fexecution | int8 | 64 |  | √ | 0 |  |
 | 7 | fmsg_digest | 消息摘要 | varchar | 300 |  |  | ' ' | 消息摘要 |
 | 8 | fstate | 状态 | varchar | 30 |  | √ | ' ' | 状态,枚举: R :待处理 S :已处理 N :已忽略 F :失败 |
-| 9 | fmessage_queue | 消息订阅主题 | int8 | 64 |  | √ | 0 | 消息订阅主题 isc_mq_subscriber |
+| 9 | fmessage_queue | 消息订阅主题 | int8 | 64 |  | √ | 0 | [消息订阅主题 isc_mq_subscriber](../iscb_files/isc_mq_subscriber.md) |
 | 10 | fstack_trace | 详细信息 | varchar | 510 |  | √ | ' ' | 详细信息 |
 | 11 | freceiver_server | 接收者服务器 | varchar | 140 |  | √ | ' ' | 接收者服务器 |
 | 12 | freceived_time | 接收时间 | timestamp | 0 |  |  | null | 接收时间 |
-| 13 | fmessage_server | 消息队列服务器 | int8 | 64 |  | √ | 0 | 消息队列服务器 isc_mq_server |
+| 13 | fmessage_server | 消息队列服务器 | int8 | 64 |  | √ | 0 | [消息队列服务器 isc_mq_server](../iscb_files/isc_mq_server.md) |
 | 14 | fdata | 数据 | varchar | 510 |  | √ | ' ' | 数据 |
 
 ### 列规则定义

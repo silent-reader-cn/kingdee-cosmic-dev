@@ -13,9 +13,9 @@
 | 2 | frunnode | 执行节点信息 | varchar | 200 |  | √ | ' ' | 执行节点信息 |
 | 3 | fhost | 任务执行ip | varchar | 50 |  | √ | ' ' | 任务执行ip |
 | 4 | ftasktype | 任务类型 | varchar | 100 |  | √ | ' ' | 任务类型,枚举: archive :归档转储 unarchive :反归档 datasync :数据同步 dataclean :归档清除 archivesync :归档同步 |
-| 5 | fentitynumber | 表单编码 | varchar | 50 |  | √ | ' ' | 表单编码 |
+| 5 | fentitynumber | 实体编码 | varchar | 50 |  | √ | ' ' | 实体编码 |
 | 6 | fprogress | 迁移进度 | varchar | 2000 |  | √ | ' ' | 迁移进度 |
-| 7 | fmodifytime | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
+| 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 8 | fruninstance | 执行节点instance | varchar | 50 |  | √ | ' ' | 执行节点instance |
 | 9 | fprepk | 前任务同步记录pk | varchar | 50 |  | √ | ' ' | 前任务同步记录pk |
 | 10 | fprogresssign | 进度标记 | text | 0 |  |  | null | 进度标记 |
@@ -23,7 +23,7 @@
 | 12 | fpendingcount | 待迁移数据量 | int8 | 64 |  | √ | 0 | 待迁移数据量 |
 | 13 | fparentid | 父任务id | int8 | 64 |  | √ | 0 | 父任务id |
 | 14 | fprogressdesc | 进度描述 | varchar | 2000 |  | √ | ' ' | 进度描述 |
-| 15 | fcreatetime | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
+| 15 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 16 | findex | findex | int8 | 64 |  | √ | 0 |  |
 | 17 | frunhost | 执行节点ip | varchar | 50 |  | √ | ' ' | 执行节点ip |
 | 18 | fstarttime | 执行时间 | timestamp | 0 |  |  | null | 执行时间 |

@@ -11,12 +11,12 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | varchar | 18 |  | √ | ' ' |  |
 | 2 | ffieldname | 字段 | varchar | 255 |  | √ | ' ' | 字段 |
-| 3 | fpermitemid | 权限项 | varchar | 36 |  | √ | ' ' | 权限项 perm_permitem |
+| 3 | fpermitemid | 权限项 | varchar | 36 |  | √ | ' ' | [权限项 perm_permitem](../base_files/perm_permitem.md) |
 | 4 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 5 | fentitytypeid | 业务对象 | varchar | 36 |  | √ | ' ' | 业务对象 bos_objecttype |
+| 5 | fentitytypeid | 业务对象 | varchar | 36 |  | √ | ' ' | [业务对象 bos_objecttype](../mdl_files/bos_objecttype.md) |
 | 6 | fcontrolmode | 列权限条件 | varchar | 10 |  | √ | ' ' | 列权限条件 |
 | 7 | fentryid | fentryid | varchar | 18 |  | √ | ' ' | id |
-| 8 | fbizappid | 业务应用 | varchar | 36 |  | √ | ' ' | 业务应用实体 bos_devportal_bizapp |
+| 8 | fbizappid | 业务应用 | varchar | 36 |  | √ | ' ' | [业务应用实体 bos_devportal_bizapp](../mdl_files/bos_devportal_bizapp.md) |
 
 ### 列规则定义
 
@@ -28,8 +28,9 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | ix_perm_00000008 |  | fid |
-| 2 | t_perm_fieldpermdetail_pkey |  | fentryid |
+| 1 | ix_perm_fld_ent |  | fentitytypeid,ffieldname |
+| 2 | ix_perm_00000008 |  | fid |
+| 3 | t_perm_fieldpermdetail_pkey |  | fentryid |
 
 ---
 

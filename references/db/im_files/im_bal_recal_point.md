@@ -13,8 +13,8 @@
 | 2 | fendid | 单据截止ID | int8 | 64 |  | √ | 0 | 单据截止ID |
 | 3 | fstatus | 状态 | bpchar | 1 |  | √ | 'B' | 状态,枚举: A :已确认 B :待处理 |
 | 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 5 | fruleid | 余额规则 | varchar | 30 |  | √ | ' ' | 余额更新规则列表 bal_balanceupdaterule |
-| 6 | forg | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | fruleid | 余额规则 | varchar | 30 |  | √ | ' ' | [余额更新规则列表 bal_balanceupdaterule](../bal_files/bal_balanceupdaterule.md) |
+| 6 | forg | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 
 ### 列规则定义
 

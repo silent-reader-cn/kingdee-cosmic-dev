@@ -1,8 +1,8 @@
-# SQL&#x2f;脚本测试记录-isc_sql_exe_log
+# SQL/脚本测试记录-isc_sql_exe_log
 
-## SQL&#x2f;脚本测试记录-主表 t_isc_sql_exe_log
+## SQL/脚本测试记录-主表 t_isc_sql_exe_log
 
-- **表名称：** SQL&#x2f;脚本测试记录-主表
+- **表名称：** SQL/脚本测试记录-主表
 - **表名：** t_isc_sql_exe_log
 
 ### 表格列定义
@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreator | 执行人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fcreator | 执行人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fresources | 引用资源 | varchar | 2000 |  | √ | ' ' | 引用资源 |
 | 4 | fcreatetime | 执行时间 | timestamp | 0 |  |  | null | 执行时间 |
 | 5 | fsql | SQL/脚本 | varchar | 2000 |  | √ | ' ' | SQL/脚本 |

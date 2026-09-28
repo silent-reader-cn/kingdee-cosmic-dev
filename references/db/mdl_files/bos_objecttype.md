@@ -17,7 +17,7 @@
 | 6 | fparentid | fparentid | varchar | 36 |  | √ | ' ' |  |
 | 7 | fisv | fisv | varchar | 50 |  | √ | ' ' |  |
 | 8 | finheritpath | finheritpath | varchar | 300 |  | √ | ' ' |  |
-| 9 | fbizappid | 应用 | varchar | 36 |  | √ | ' ' | 业务应用实体 bos_devportal_bizapp |
+| 9 | fbizappid | 应用 | varchar | 36 |  | √ | ' ' | [业务应用实体 bos_devportal_bizapp](../mdl_files/bos_devportal_bizapp.md) |
 | 10 | fcreatedate | fcreatedate | timestamp | 0 |  |  | LOCALTIMESTAMP |  |
 | 11 | fmasterid | fmasterid | varchar | 36 |  | √ | ' ' |  |
 | 12 | ftype | ftype | bpchar | 1 |  | √ | '0' |  |

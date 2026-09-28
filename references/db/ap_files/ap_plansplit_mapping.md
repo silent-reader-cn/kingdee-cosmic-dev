@@ -1,32 +1,5 @@
 # 应付分组维度映射-ap_plansplit_mapping
 
-## 应付分组维度映射-主表 t_ap_plansplitmapping
-
-- **表名称：** 应付分组维度映射-主表
-- **表名：** t_ap_plansplitmapping
-
-### 表格列定义
-
-| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fnumber | fnumber | varchar | 80 |  | √ | ' ' |  |
-
-### 列规则定义
-
-| 序号 | 键编码 | 列字段 |
-| :--- | :--- | :--- |
-| 1 | fid | fid |
-
-### 索引定义
-
-| 序号 | 索引名 | 唯一 | 列字段 |
-| :--- | :--- | :--- | :--- |
-| 1 | idx_psm_fnumber |  | fnumber |
-| 2 | pk_ap_plansplitmapping |  | fid |
-
----
-
 ## 单据体-子表 t_ap_plansplitmapentry
 
 - **表名称：** 单据体-子表
@@ -64,3 +37,30 @@
 | :--- | :--- | :--- | :--- |
 | 1 | pk_ap_plansplitmapentry |  | fentryid |
 | 2 | idx_psme_fid |  | fid |
+
+---
+
+## 应付分组维度映射-主表 t_ap_plansplitmapping
+
+- **表名称：** 应付分组维度映射-主表
+- **表名：** t_ap_plansplitmapping
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
+| 2 | fnumber | fnumber | varchar | 80 |  | √ | ' ' |  |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fid | fid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_psm_fnumber |  | fnumber |
+| 2 | pk_ap_plansplitmapping |  | fid |

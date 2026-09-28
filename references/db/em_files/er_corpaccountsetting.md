@@ -1,8 +1,8 @@
-# 携程主&#x2f;子账户设置-er_corpaccountsetting
+# 携程主/子账户设置-er_corpaccountsetting
 
-## 携程主&#x2f;子账户设置-主表 t_er_corpaccountsetting
+## 携程主/子账户设置-主表 t_er_corpaccountsetting
 
-- **表名称：** 携程主&#x2f;子账户设置-主表
+- **表名称：** 携程主/子账户设置-主表
 - **表名：** t_er_corpaccountsetting
 
 ### 表格列定义
@@ -10,10 +10,10 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fstatus | 数据状态 | varchar | 5 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 4 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 5 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 7 | fenable | 使用状态 | bpchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 8 | fnumber | 公司编码（CorporationID） | varchar | 80 |  | √ | ' ' | 公司编码（CorporationID） |
@@ -34,9 +34,9 @@
 
 ---
 
-## 携程主&#x2f;子账户设置-多语言表 t_er_corpaccountsetting_l
+## 携程主/子账户设置-多语言表 t_er_corpaccountsetting_l
 
-- **表名称：** 携程主&#x2f;子账户设置-多语言表
+- **表名称：** 携程主/子账户设置-多语言表
 - **表名：** t_er_corpaccountsetting_l
 
 ### 表格列定义
@@ -75,10 +75,11 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fsubaccountname | 子账户 | varchar | 100 |  | √ | ' ' | 子账户 |
 | 3 | fgeneratetimestr | 生成员工子账户时间 | varchar | 50 |  | √ | ' ' | 生成员工子账户时间 |
-| 4 | faccountrelorg | 关联组织 | int8 | 64 |  | √ | 0 | 行政组织（部门） bos_adminorg |
+| 4 | faccountrelorg | 关联组织 | int8 | 64 |  | √ | 0 | [行政组织（部门） bos_adminorg](../base_files/bos_adminorg.md) |
 | 5 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 6 | fmainaccountname | 主账户 | varchar | 100 |  | √ | ' ' | 主账户 |
-| 7 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 6 | fgeneratetime | 生成员工子账户时间 | timestamp | 0 |  |  | null | 生成员工子账户时间 |
+| 7 | fmainaccountname | 主账户 | varchar | 100 |  | √ | ' ' | 主账户 |
+| 8 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 
 ### 列规则定义
 

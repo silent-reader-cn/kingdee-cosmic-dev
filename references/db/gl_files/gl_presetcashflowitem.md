@@ -10,16 +10,16 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 4 | fgroupid | 现金流量项目 | int8 | 64 |  | √ | 0 | 现金流量项目 gl_cashflowitem |
+| 2 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 4 | fgroupid | 现金流量项目 | int8 | 64 |  | √ | 0 | [现金流量项目 gl_cashflowitem](../gl_files/gl_cashflowitem.md) |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 6 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 7 | faccounttableid | 科目表 | int8 | 64 |  | √ | 0 | 科目表 bd_accounttable |
-| 8 | fcashitemtbid | 现金流量项目表 | int8 | 64 |  | √ | 0 | 现金流量项目表 gl_cashflowitemtb |
+| 6 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 7 | faccounttableid | 科目表 | int8 | 64 |  | √ | 0 | [科目表 bd_accounttable](../fibd_files/bd_accounttable.md) |
+| 8 | fcashitemtbid | 现金流量项目表 | int8 | 64 |  | √ | 0 | [现金流量项目表 gl_cashflowitemtb](../gl_files/gl_cashflowitemtb.md) |
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 10 | fstatus | fstatus | varchar | 30 |  | √ | ' ' |  |
-| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 13 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 14 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
@@ -137,7 +137,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 会计科目 bd_accountview |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [会计科目 bd_accountview](../gl_files/bd_accountview.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -150,8 +150,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_gl_itemcreditacct_fbid |  | fbasedataid |
-| 2 | t_gl_itemcreditacct_pkey |  | fpkid |
+| 1 | t_gl_itemcreditacct_pkey |  | fpkid |
+| 2 | idx_gl_itemcreditacct_fbid |  | fbasedataid |
 | 3 | idx_gl_itemcreditacct_fid |  | fid |
 
 ---
@@ -168,9 +168,10 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fassgrpid | 核算维度 | int8 | 64 |  | √ | 0 | null 002 |
 | 3 | fdc | 发生额方向 | varchar | 2 |  | √ | ' ' | 发生额方向,枚举: 1 :借方 -1 :贷方 |
-| 4 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 6 | faccountid | 科目 | int8 | 64 |  | √ | 0 | 会计科目 bd_accountview |
+| 4 | fk_bj73_textfield | 收支核算维度分类 | varchar | 50 |  | √ | ' ' | 收支核算维度分类 |
+| 5 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
+| 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 7 | faccountid | 科目 | int8 | 64 |  | √ | 0 | 会计科目 bd_accountview |
 
 ### 列规则定义
 
@@ -197,7 +198,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 会计科目 bd_accountview |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [会计科目 bd_accountview](../gl_files/bd_accountview.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义

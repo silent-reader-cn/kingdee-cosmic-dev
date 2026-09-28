@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fopen_name | open name | varchar | 150 |  | √ | ' ' | open name |
-| 3 | fuser | 苍穹用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fuser | 苍穹用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fclient_type | client type | varchar | 10 |  | √ | ' ' | client type |
 | 5 | fcreate_time | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 6 | fopen_id | open id | varchar | 50 |  | √ | ' ' | open id |

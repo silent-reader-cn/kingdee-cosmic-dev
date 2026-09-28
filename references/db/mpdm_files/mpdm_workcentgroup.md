@@ -97,18 +97,18 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fisleaf | 是否叶子 | bpchar | 1 |  | √ | '0' | 是否叶子 |
 | 3 | fremake | 备注 | varchar | 100 |  | √ | ' ' | 备注 |
-| 4 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 5 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 4 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 5 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 7 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 10 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 11 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
-| 12 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 13 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 14 | fabilitygroup | 能力类别 | int8 | 64 |  | √ | 0 | 基础资料模板 mpdm_abilitytype |
-| 15 | fparentid | 上级类别 | int8 | 64 |  | √ | 0 | 工作中心类别(废弃) mpdm_workcentgroup |
+| 12 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 13 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 14 | fabilitygroup | 能力类别 | int8 | 64 |  | √ | 0 | [基础资料模板 mpdm_abilitytype](../mpdm_files/mpdm_abilitytype.md) |
+| 15 | fparentid | 上级类别 | int8 | 64 |  | √ | 0 | [工作中心类别(废弃) mpdm_workcentgroup](../mpdm_files/mpdm_workcentgroup.md) |
 | 16 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 17 | flongnumber | 长编码 | varchar | 100 |  | √ | ' ' | 长编码 |
 | 18 | fproabilitymust | 生产能力/资源必录 | bpchar | 1 |  | √ | '0' | 生产能力/资源必录 |

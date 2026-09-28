@@ -11,28 +11,28 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fdescribe | fdescribe | varchar | 50 |  | √ | ' ' |  |
-| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 4 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 5 | fdisableuser | 禁用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 4 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 5 | fdisableuser | 禁用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | faudittime | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
 | 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 8 | fdisabletime | 禁用时间 | timestamp | 0 |  |  | null | 禁用时间 |
 | 9 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 12 | fauditor | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fauditor | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 14 | fbitindex | 位图 | int8 | 64 |  | √ | 0 | 位图 |
 | 15 | fmodelmpl | fmodelmpl | varchar | 50 |  | √ | ' ' |  |
 | 16 | fisneedairmt | 需要物料 | bpchar | 1 |  | √ | '0' | 需要物料 |
-| 17 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 17 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 18 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
-| 19 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 19 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 20 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 21 | frepairplancard | 维修计划工卡编码 | int8 | 64 |  | √ | 0 | 维修计划工卡 mpdm_maintenanceplan |
+| 21 | frepairplancard | 维修计划工卡编码 | int8 | 64 |  | √ | 0 | [维修计划工卡 mpdm_maintenanceplan](../mpdm_files/mpdm_maintenanceplan.md) |
 | 22 | fctrlstrategy | 控制策略 | varchar | 50 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
 | 23 | fenabletime | 启用时间 | timestamp | 0 |  |  | null | 启用时间 |
-| 24 | fenableuser | 启用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 24 | fenableuser | 启用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 25 | fenable | 使用状态 | varchar | 50 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 26 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
 | 27 | fsourcebitindex | 原资料位图 | int8 | 64 |  | √ | 0 | 原资料位图 |
@@ -66,14 +66,14 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fentrybaseqty | 基本数量 | numeric | 23 | 10 | √ | 0 | 基本数量 |
 | 3 | fentryqty | 数量 | numeric | 23 | 10 | √ | 0 | 数量 |
-| 4 | fentrybaseunit | 基本单位（封存） | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 4 | fentrybaseunit | 基本单位（封存） | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 5 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 6 | fordermaterial | 按需定料 | varchar | 255 |  | √ | ' ' | 按需定料 |
-| 7 | fmaterial | 物料编码 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 7 | fmaterial | 物料编码 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 8 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 9 | fbasedatapropfield | fbasedatapropfield | varchar | 50 |  | √ | ' ' |  |
 | 10 | fsupplyduty | 供货责任 | varchar | 50 |  | √ | ' ' | 供货责任,枚举: A :业务组织 B :客户 |
-| 11 | fentryunit | 计量单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 11 | fentryunit | 计量单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 
 ### 列规则定义
 

@@ -15,23 +15,23 @@
 | 4 | flargejson | 接收端json | varchar | 500 |  | √ | ' ' | 接收端json |
 | 5 | fdateofissue | 开票日期 | timestamp | 0 |  |  | null | 开票日期 |
 | 6 | fpayandrevamount | 应收/付款项金额 | numeric | 23 | 10 | √ | 0 | 应收/付款项金额 |
-| 7 | forgid | 归档组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 7 | forgid | 归档组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | fhasbeenclaimed | 是否已认领 | bpchar | 1 |  | √ | ' ' | 是否已认领 |
 | 9 | fcurrency | 币种 | varchar | 50 |  | √ | ' ' | 币种 |
 | 10 | fdirectvoucherid | 凭证ID | int8 | 64 |  | √ | 0 | 凭证ID |
-| 11 | fidentifyingcode | 回单校验码 | varchar | 50 |  | √ | ' ' | 回单校验码 |
+| 11 | fidentifyingcode | 回单校验码 | varchar | 200 |  | √ | ' ' | 回单校验码 |
 | 12 | ftransactionamountinfigur | 小写金额 | numeric | 23 | 10 | √ | 0 | 小写金额 |
 | 13 | fxbrlurl | xbrlurl | varchar | 200 |  | √ | ' ' | xbrlurl |
 | 14 | fsocialcreditcode | 会计主体统一社会信用代码 | varchar | 50 |  | √ | ' ' | 会计主体统一社会信用代码 |
 | 15 | fhasbeenreconciled | 是否已对账 | bpchar | 1 |  | √ | ' ' | 是否已对账 |
 | 16 | fhasbeentransfer | 是否已流转 | bpchar | 1 |  | √ | ' ' | 是否已流转 |
 | 17 | farchivedate | 归档日期 | timestamp | 0 |  |  | null | 归档日期 |
-| 18 | fcontractnumber | 合同编号 | varchar | 50 |  | √ | ' ' | 合同编号 |
+| 18 | fcontractnumber | 合同编号 | varchar | 200 |  | √ | ' ' | 合同编号 |
 | 19 | fbillid | 单据ID | int8 | 64 |  | √ | 0 | 单据ID |
 | 20 | fhasbeenbooked | 是否已入账 | bpchar | 1 |  | √ | ' ' | 是否已入账 |
-| 21 | funiquecode | 发票号 | varchar | 50 |  | √ | ' ' | 发票号 |
+| 21 | funiquecode | 票据唯一标识 | varchar | 200 |  | √ | ' ' | 票据唯一标识 |
 | 22 | fsourcebillno | 源单号码 | varchar | 30 |  | √ | ' ' | 源单号码 |
-| 23 | fbilltype | 单据类型 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 23 | fbilltype | 单据类型 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 24 | flargejson_tag | 接收端json_详情 | text | 0 |  |  | null | 接收端json_详情 |
 
 ### 列规则定义

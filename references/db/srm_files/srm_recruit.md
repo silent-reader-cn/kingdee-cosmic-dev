@@ -72,7 +72,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | forgid | 招募组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | forgid | 招募组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fbizstatus | 项目状态 | bpchar | 1 |  | √ | ' ' | 项目状态,枚举: A :待发布 B :招募中 C :已完成 Z :已终止 |
 | 4 | fbilldate | 发布时间 | timestamp | 0 |  |  | null | 发布时间 |
 | 5 | ftitle | 招募标题 | varchar | 255 |  | √ | ' ' | 招募标题 |
@@ -86,16 +86,16 @@
 | 13 | fremark | fremark | varchar | 255 |  | √ | ' ' |  |
 | 14 | fphone | 联系电话 | varchar | 50 |  | √ | ' ' | 联系电话 |
 | 15 | fname | fname | varchar | 100 |  | √ | ' ' |  |
-| 16 | fcurrid | 结算币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 16 | fcurrid | 结算币别 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 | 17 | fbillstatus | 单据状态 | bpchar | 1 |  | √ | ' ' | 单据状态,枚举: A :保存 B :已提交 C :已审核 D :已关闭 Z :已作废 |
-| 18 | fpaycondid | 付款条件 | int8 | 64 |  | √ | 0 | 付款条件 pur_paycond |
+| 18 | fpaycondid | 付款条件 | int8 | 64 |  | √ | 0 | [付款条件 pur_paycond](../basedata_files/pur_paycond.md) |
 | 19 | fregcapital | 注册资金(万) | numeric | 19 | 6 | √ | 0.000000 | 注册资金(万) |
-| 20 | fbizpartnerid | 商务伙伴 | int8 | 64 |  | √ | 0 | 商务伙伴 bd_bizpartner |
-| 21 | fsettletypeid | 结算方式 | int8 | 64 |  | √ | 0 | 结算方式 bd_settlementtype |
+| 20 | fbizpartnerid | 商务伙伴 | int8 | 64 |  | √ | 0 | [商务伙伴 bd_bizpartner](../base_files/bd_bizpartner.md) |
+| 21 | fsettletypeid | 结算方式 | int8 | 64 |  | √ | 0 | [结算方式 bd_settlementtype](../basedata_files/bd_settlementtype.md) |
 | 22 | fcfmstatus | 确认状态 | bpchar | 1 |  | √ | ' ' | 确认状态,枚举: A :待确认 B :已确认 C :已打回 |
 | 23 | fbizaddr | 经营地址 | varchar | 255 |  | √ | ' ' | 经营地址 |
 | 24 | fcontent_tag | 招募说明_详情 | text | 0 |  |  | null | 招募说明_详情 |
-| 25 | fpersonid | 联系人 | int8 | 64 |  | √ | 0 | 业务员 pur_bizperson |
+| 25 | fpersonid | 联系人 | int8 | 64 |  | √ | 0 | [业务员 pur_bizperson](../pbd_files/pur_bizperson.md) |
 | 26 | fcontent | 招募说明 | text | 0 |  |  | null | 招募说明 |
 | 27 | fbilltypeid | fbilltypeid | int8 | 64 |  | √ | 0 |  |
 
@@ -126,18 +126,18 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fremark | fremark | varchar | 255 |  | √ | ' ' |  |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 5 | fpushnotice | 发布公告否 | int8 | 64 |  | √ | 0 | 发布公告否,枚举: 0 :未发布 1 :已发布 |
 | 6 | fcfmopinion | 处理意见 | varchar | 255 |  | √ | ' ' | 处理意见 |
 | 7 | fauditdate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
 | 8 | fpush1688 | 发布1688否 | int8 | 64 |  | √ | 0 | 发布1688否,枚举: 0 :未发布 1 :已发布 |
 | 9 | fcfmdate | 处理时间 | timestamp | 0 |  |  | null | 处理时间 |
-| 10 | fcfmid | 处理人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fcfmid | 处理人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 12 | forigin | 发起方 | bpchar | 1 |  | √ | ' ' | 发起方,枚举: 1 :供应商 2 :采购方 |
-| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 14 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 14 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

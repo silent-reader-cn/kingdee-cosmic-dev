@@ -29,5 +29,5 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_plmdc_fileuploadlog_taskid |  | ftaskid |
-| 2 | pk_t_plmdc_fileuploadlog |  | fid |
+| 1 | pk_t_plmdc_fileuploadlog |  | fid |
+| 2 | idx_plmdc_fileuploadlog_taskid |  | ftaskid |

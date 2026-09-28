@@ -10,27 +10,27 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | fdisabledate | 禁用时间 | timestamp | 0 |  |  | null | 禁用时间 |
-| 7 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 7 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | faudittime | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 10 | fctrlstrategy | 控制策略 | varchar | 30 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
 | 11 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 14 | ftype | 类型 | varchar | 30 |  | √ | ' ' | 类型,枚举: A :MRP B :SCM |
 | 15 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 16 | fbitindex | 位图 | int8 | 64 |  | √ | 0 | 位图 |
 | 17 | fenable | 使用状态 | varchar | 30 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 18 | fdisabler | 禁用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 18 | fdisabler | 禁用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 19 | fnumber | 编码 | varchar | 255 |  | √ | ' ' | 编码 |
 | 20 | fsourcebitindex | 原资料位图 | int8 | 64 |  | √ | 0 | 原资料位图 |
-| 21 | fdimension | 库存水位维度 | int8 | 64 |  | √ | 0 | 库存水位维度 msplan_plan_dimension |
-| 22 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 21 | fdimension | 库存水位维度 | int8 | 64 |  | √ | 0 | [库存水位维度 msplan_plan_dimension](../msplan_files/msplan_plan_dimension.md) |
+| 22 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 
@@ -114,12 +114,12 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fmaterialgroup | 物料分类 | int8 | 64 |  | √ | 0 | 物料分类 bd_materialgroup |
+| 2 | fmaterialgroup | 物料分类 | int8 | 64 |  | √ | 0 | [物料分类 bd_materialgroup](../basedata_files/bd_materialgroup.md) |
 | 3 | fwastagerateformula | 损耗计算公式 | varchar | 30 |  | √ | ' ' | 损耗计算公式,枚举: A :标准用量/(1-损耗率) B :标准用量*(1+损耗率) |
 | 4 | finspectionleadtime | 检验提前期（天） | int8 | 64 |  | √ | 0 | 检验提前期（天） |
 | 5 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 6 | fdatestart | 生效日期 | timestamp | 0 |  |  | null | 生效日期 |
-| 7 | fentrymateriel | 物料 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 7 | fentrymateriel | 物料 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 8 | fdailyconsume | 日均消耗量 | numeric | 23 | 10 | √ | 0 | 日均消耗量 |
 | 9 | fmax | 最大值 | numeric | 23 | 10 | √ | 0 | 最大值 |
 | 10 | fecobatch | 经济批量 | numeric | 23 | 10 | √ | 0 | 经济批量 |
@@ -128,13 +128,13 @@
 | 13 | fwastagerate | 损耗率% | numeric | 23 | 10 | √ | 0 | 损耗率% |
 | 14 | fmin | 最小值 | numeric | 23 | 10 | √ | 0 | 最小值 |
 | 15 | fmaterialattr | 物料属性 | varchar | 30 |  | √ | ' ' | 物料属性,枚举: 10030 :自制件 10040 :外购件 10050 :外协件 |
-| 16 | fentrystock | 仓库 | int8 | 64 |  | √ | 0 | 仓库 bd_warehouse |
-| 17 | fentryorg | 业务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 18 | foperator | 计划员 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 16 | fentrystock | 仓库 | int8 | 64 |  | √ | 0 | [仓库 bd_warehouse](../sbd_files/bd_warehouse.md) |
+| 17 | fentryorg | 业务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 18 | foperator | 计划员 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 19 | fsafeinv | 安全库存 | numeric | 23 | 10 | √ | 0 | 安全库存 |
 | 20 | fpostprocessingtime | 后处理时间（天） | int8 | 64 |  | √ | 0 | 后处理时间（天） |
-| 21 | fmaterialgroupstandard | 物料分类标准 | int8 | 64 |  | √ | 0 | 物料分类标准 bd_materialgroupstandard |
-| 22 | fplantag | 计划标识 | int8 | 64 |  | √ | 0 | 计划标识 mpdm_plantag |
+| 21 | fmaterialgroupstandard | 物料分类标准 | int8 | 64 |  | √ | 0 | [物料分类标准 bd_materialgroupstandard](../basedata_files/bd_materialgroupstandard.md) |
+| 22 | fplantag | 计划标识 | int8 | 64 |  | √ | 0 | [计划标识 mpdm_plantag](../mpdm_files/mpdm_plantag.md) |
 | 23 | fpreprocessingtime | 前处理时间（天） | int8 | 64 |  | √ | 0 | 前处理时间（天） |
 | 24 | fvalue | 维度值 | varchar | 2000 |  | √ | ' ' | 维度值 |
 | 25 | freservedtype | 预留类型 | varchar | 30 |  | √ | ' ' | 预留类型,枚举: A :强预留 B :弱预留 C :不预留 |

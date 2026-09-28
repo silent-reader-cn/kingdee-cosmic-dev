@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | varchar | 36 |  | √ | ' ' |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 税务云税种分类 bdtaxr_tax_type |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [税务云税种分类 bdtaxr_tax_type](../bdtaxr_files/bdtaxr_tax_type.md) |
 | 3 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
 
 ### 列规则定义

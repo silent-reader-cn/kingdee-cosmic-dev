@@ -1,5 +1,43 @@
 # 移动端扩展配置-ocdbd_mobextend
 
+## 移动端扩展配置-主表 t_ocdbd_mobextend
+
+- **表名称：** 移动端扩展配置-主表
+- **表名：** t_ocdbd_mobextend
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
+| 2 | fname | 名称 | varchar | 80 |  | √ | ' ' | 名称 |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 5 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 6 | fstatus | 数据状态 | bpchar | 1 |  | √ | 'C' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
+| 7 | fpcentity | PC表单 | varchar | 80 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
+| 8 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
+| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 10 | fmobentity | 移动表单 | varchar | 80 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
+| 11 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 12 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
+| 13 | fissyspreset | 系统预设 | bpchar | 1 |  | √ | '0' | 系统预设 |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fid | fid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_ocdbd_mobextend_num |  | fnumber |
+| 2 | pk_ocdbd_mobextend |  | fid |
+
+---
+
 ## 移动端扩展配置-多语言表 t_ocdbd_mobextend_l
 
 - **表名称：** 移动端扩展配置-多语言表
@@ -26,44 +64,6 @@
 | :--- | :--- | :--- | :--- |
 | 1 | idx_ocdbd_mobextend |  | fid,flocaleid |
 | 2 | pk_ocdbd_mobextend_l |  | fpkid |
-
----
-
-## 移动端扩展配置-主表 t_ocdbd_mobextend
-
-- **表名称：** 移动端扩展配置-主表
-- **表名：** t_ocdbd_mobextend
-
-### 表格列定义
-
-| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fname | 名称 | varchar | 80 |  | √ | ' ' | 名称 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 5 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 6 | fstatus | 数据状态 | bpchar | 1 |  | √ | 'C' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 7 | fpcentity | PC表单 | varchar | 80 |  | √ | ' ' | 主实体对象 bos_entityobject |
-| 8 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 10 | fmobentity | 移动表单 | varchar | 80 |  | √ | ' ' | 主实体对象 bos_entityobject |
-| 11 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 12 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
-| 13 | fissyspreset | 系统预设 | bpchar | 1 |  | √ | '0' | 系统预设 |
-
-### 列规则定义
-
-| 序号 | 键编码 | 列字段 |
-| :--- | :--- | :--- |
-| 1 | fid | fid |
-
-### 索引定义
-
-| 序号 | 索引名 | 唯一 | 列字段 |
-| :--- | :--- | :--- | :--- |
-| 1 | idx_ocdbd_mobextend_num |  | fnumber |
-| 2 | pk_ocdbd_mobextend |  | fid |
 
 ---
 

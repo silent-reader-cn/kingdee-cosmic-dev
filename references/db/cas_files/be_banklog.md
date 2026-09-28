@@ -16,7 +16,7 @@
 | 5 | fsendexceptioninfo_tag | 发送异常信息_详情 | text | 0 |  |  | null | 发送异常信息_详情 |
 | 6 | fsourcebilltype | 业务单据 | varchar | 30 |  | √ | ' ' | 业务单据,枚举: be_bankagentpay :银行代发单 be_bankpaying :银行付款单 cas_betransdetail :交易明细 |
 | 7 | fbanklogtype | 执行操作 | varchar | 30 |  | √ | ' ' | 执行操作,枚举: balance :查询账户余额 detail :下载交易明细 pay :提交银企付款 receipt :下载电子回单 updatePayStatus :修改付款状态 syncAccount :同步银行账户 listBankLogin :查询登陆信息 batchBalance :批量查询余额 queryPay :同步单据状态 |
-| 8 | forgid | 业务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 8 | forgid | 业务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 9 | fsourceid | 单据ID（兼容保留） | varchar | 100 |  | √ | ' ' | 单据ID（兼容保留） |
 | 10 | fbankinterfaceid | 银行接口ID | varchar | 100 |  | √ | ' ' | 银行接口ID |
 | 11 | fsendinfo_tag | 发送日志_详情 | text | 0 |  |  | null | 发送日志_详情 |
@@ -32,7 +32,7 @@
 | 21 | fisexception | 执行结果 | bpchar | 1 |  | √ | ' ' | 执行结果,枚举: 0 :成功 1 :失败 |
 | 22 | fsourcebillno | 单据编码 | varchar | 50 |  | √ | ' ' | 单据编码 |
 | 23 | fpayeeacntid | 收款账户 | varchar | 100 |  | √ | ' ' | 收款账户 |
-| 24 | fexecutorid | 执行人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 24 | fexecutorid | 执行人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

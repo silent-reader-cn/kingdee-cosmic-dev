@@ -13,9 +13,9 @@
 | 2 | fdepreworkload | 本期工作量(弃用) | numeric | 23 | 10 | √ | 0.0000000000 | 本期工作量(弃用) |
 | 3 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 4 | fsumworkload | 累计工作量(弃用) | numeric | 23 | 10 | √ | 0.0000000000 | 累计工作量(弃用) |
-| 5 | ffincardid | 财务卡片(弃用) | int8 | 64 |  | √ | 0 | 财务卡片基础资料 fa_card_fin_base |
+| 5 | ffincardid | 财务卡片(弃用) | int8 | 64 |  | √ | 0 | [财务卡片基础资料 fa_card_fin_base](../fa_files/fa_card_fin_base.md) |
 | 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 7 | frealcardid | 卡片编号(弃用) | int8 | 64 |  | √ | 0 | 资产卡片基础资料 fa_card_real_base |
+| 7 | frealcardid | 卡片编号(弃用) | int8 | 64 |  | √ | 0 | [资产卡片基础资料 fa_card_real_base](../fa_files/fa_card_real_base.md) |
 
 ### 列规则定义
 
@@ -43,26 +43,27 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fcreateorgid | fcreateorgid | int8 | 64 |  | √ | 0 |  |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 4 | fperiodid | 期间 | int8 | 64 |  | √ | 0 | 会计日历 bd_period |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 4 | fperiodid | 期间 | int8 | 64 |  | √ | 0 | [会计日历 bd_period](../fibd_files/bd_period.md) |
 | 5 | fbillstatus | 单据状态 | bpchar | 1 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 7 | forgid | 货主组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 7 | forgid | 货主组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | fauditdate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
 | 9 | fsrccreateorgid | fsrccreateorgid | int8 | 64 |  | √ | 0 |  |
-| 10 | frealcardid | 资产编码 | int8 | 64 |  | √ | 0 | 资产卡片基础资料 fa_card_real_base |
-| 11 | fassetbookid | 资产账簿(弃用) | int8 | 64 |  | √ | 0 | 启用期间设置 fa_assetbook |
-| 12 | fpolicyid | 会计政策 | int8 | 64 |  | √ | 0 | 会计政策 xkbd_policy |
-| 13 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 14 | fcreatorid | 制单人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 15 | fsourcedataid | fsourcedataid | int8 | 64 |  | √ | 0 |  |
-| 16 | fdate | 业务日期 | timestamp | 0 |  |  | null | 业务日期 |
-| 17 | fbitindex | fbitindex | int4 | 32 |  | √ | 0 |  |
-| 18 | fsourcebitindex | fsourcebitindex | int4 | 32 |  | √ | 0 |  |
-| 19 | fbillno | 单据编号 | varchar | 30 |  | √ | ' ' | 单据编号 |
-| 20 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 21 | fdepreuseid | 折旧用途 | int8 | 64 |  | √ | 0 | 折旧用途 fa_depreuse |
-| 22 | fworkload | 本期工作量 | numeric | 19 | 6 | √ | 0.000000 | 本期工作量 |
+| 10 | fmigsrc | 是否迁移 | int4 | 32 |  | √ | 0 | 是否迁移 |
+| 11 | frealcardid | 资产编码 | int8 | 64 |  | √ | 0 | [资产卡片基础资料 fa_card_real_base](../fa_files/fa_card_real_base.md) |
+| 12 | fassetbookid | 资产账簿(弃用) | int8 | 64 |  | √ | 0 | [启用期间设置 fa_assetbook](../fa_files/fa_assetbook.md) |
+| 13 | fpolicyid | 会计政策 | int8 | 64 |  | √ | 0 | [会计政策 xkbd_policy](../fibd_files/xkbd_policy.md) |
+| 14 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 15 | fcreatorid | 制单人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 16 | fsourcedataid | fsourcedataid | int8 | 64 |  | √ | 0 |  |
+| 17 | fdate | 业务日期 | timestamp | 0 |  |  | null | 业务日期 |
+| 18 | fbitindex | fbitindex | int4 | 32 |  | √ | 0 |  |
+| 19 | fsourcebitindex | fsourcebitindex | int4 | 32 |  | √ | 0 |  |
+| 20 | fbillno | 单据编号 | varchar | 30 |  | √ | ' ' | 单据编号 |
+| 21 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 22 | fdepreuseid | 折旧用途 | int8 | 64 |  | √ | 0 | [折旧用途 fa_depreuse](../fa_files/fa_depreuse.md) |
+| 23 | fworkload | 本期工作量 | numeric | 19 | 6 | √ | 0.000000 | 本期工作量 |
 
 ### 列规则定义
 

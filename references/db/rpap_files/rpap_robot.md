@@ -95,29 +95,29 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fexternalid | 外部id | varchar | 255 |  |  | ' ' | 外部id |
-| 3 | fthirdtypeid | 第三方类型 | int8 | 64 |  | √ | 0 | 第三方类型 rpap_thirdtype |
-| 4 | forgid | 使用组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | fthirdtypeid | 第三方类型 | int8 | 64 |  | √ | 0 | [第三方类型 rpap_thirdtype](../rpap_files/rpap_thirdtype.md) |
+| 4 | forgid | 使用组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | fisdelete | 是否已经删除 | varchar | 10 |  | √ | '0' | 是否已经删除,枚举: 1 :已删除 0 :未删除 |
-| 6 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fip | IP地址 | varchar | 60 |  | √ | ' ' | IP地址 |
 | 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 9 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 10 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 13 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
 | 14 | fcomputername | 计算机名 | varchar | 50 |  | √ | ' ' | 计算机名 |
 | 15 | fonlinestatus | 在线状态 | varchar | 10 |  | √ | ' ' | 在线状态,枚举: 1 :在线 0 :离线 |
-| 16 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 16 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 17 | fremark | 备注 | varchar | 255 |  |  | ' ' | 备注 |
-| 18 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 18 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 19 | fname | fname | varchar | 255 |  |  | ' ' |  |
 | 20 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 21 | fidentificationcode | 识别码 | varchar | 50 |  | √ | ' ' | 识别码 |
 | 22 | fctrlstrategy | 控制策略 | varchar | 30 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
 | 23 | fenable | 使用状态 | varchar | 30 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 24 | fnumber | 编码 | varchar | 255 |  |  | ' ' | 编码 |
-| 25 | fuseorgid | 业务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 25 | fuseorgid | 业务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 26 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
 
 ### 列规则定义

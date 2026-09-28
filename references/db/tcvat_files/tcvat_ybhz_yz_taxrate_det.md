@@ -13,7 +13,7 @@
 | 2 | fenddate | 税款所属期止 | timestamp | 0 |  |  | null | 税款所属期止 |
 | 3 | fzjgsqqbljxse | 总机构上期全部累计销售额 | numeric | 23 | 10 | √ | 0 | 总机构上期全部累计销售额 |
 | 4 | fstartdate | 税款所属期起 | timestamp | 0 |  |  | null | 税款所属期起 |
-| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | fzjgdqqbljxse | 总机构当期全部累计销售额 | numeric | 23 | 10 | √ | 0 | 总机构当期全部累计销售额 |
 
 ### 列规则定义

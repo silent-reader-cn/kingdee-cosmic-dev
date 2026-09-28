@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fprojectid | 项目 | int8 | 64 |  | √ | 0 | 项目 bd_project |
+| 2 | fprojectid | 项目 | int8 | 64 |  | √ | 0 | [项目 bd_project](../basedata_files/bd_project.md) |
 | 3 | fcreatetime | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
 | 4 | fdeviationrate | 偏差率 | numeric | 23 | 10 | √ | 0 | 偏差率 |
 | 5 | fprocess | 完成率 | numeric | 23 | 10 | √ | 0 | 完成率 |

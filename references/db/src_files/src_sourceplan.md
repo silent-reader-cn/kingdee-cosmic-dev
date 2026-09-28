@@ -13,7 +13,7 @@
 | 2 | fremark | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
 | 3 | ftimediff | 耗时偏差(天) | numeric | 19 | 6 | √ | 0 | 耗时偏差(天) |
 | 4 | fdiffrate | 耗时偏差率(%) | numeric | 19 | 6 | √ | 0 | 耗时偏差率(%) |
-| 5 | fplanitemid | 寻源计划项 | int8 | 64 |  | √ | 0 | 寻源计划项 src_planitem |
+| 5 | fplanitemid | 寻源计划项 | int8 | 64 |  | √ | 0 | [寻源计划项 src_planitem](../src_files/src_planitem.md) |
 | 6 | fsrcbillid | 源单ID | int8 | 64 |  | √ | 0 | 源单ID |
 | 7 | fbegindate | 计划开始时间 | timestamp | 0 |  |  | null | 计划开始时间 |
 | 8 | fbegindate2 | 实际开始时间 | timestamp | 0 |  |  | null | 实际开始时间 |
@@ -51,7 +51,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fplanschemeid | 寻源计划方案 | int8 | 64 |  | √ | 0 | 寻源计划方案 src_planscheme |
+| 2 | fplanschemeid | 寻源计划方案 | int8 | 64 |  | √ | 0 | [寻源计划方案 src_planscheme](../src_files/src_planscheme.md) |
 | 3 | freplydate | freplydate | timestamp | 0 |  |  | null |  |
 | 4 | faptschemeid | faptschemeid | int8 | 64 |  | √ | 0 |  |
 | 5 | fanswerdate | fanswerdate | timestamp | 0 |  |  | null |  |
@@ -96,39 +96,40 @@
 | 44 | fwinruleid | fwinruleid | int8 | 64 |  | √ | 0 |  |
 | 45 | fpurdeptid | fpurdeptid | int8 | 64 |  | √ | 0 |  |
 | 46 | famount | famount | numeric | 23 | 10 | √ | 0 |  |
-| 47 | fisaptitude | fisaptitude | bpchar | 1 |  | √ | '0' |  |
-| 48 | fsurplusamount | fsurplusamount | numeric | 23 | 10 | √ | 0 |  |
-| 49 | fsupopentype | fsupopentype | bpchar | 1 |  | √ | '1' |  |
-| 50 | fopentype | fopentype | bpchar | 1 |  | √ | ' ' |  |
-| 51 | fclosetask | fclosetask | varchar | 255 |  | √ | ' ' |  |
-| 52 | fpurgroupid | fpurgroupid | int8 | 64 |  | √ | 0 |  |
-| 53 | fbiztypeid | fbiztypeid | int8 | 64 |  | √ | 0 |  |
-| 54 | fismultipackage | fismultipackage | bpchar | 1 |  | √ | '0' |  |
-| 55 | fishidesupplier | fishidesupplier | bpchar | 1 |  | √ | '0' |  |
-| 56 | fsourceclassid | fsourceclassid | int8 | 64 |  | √ | 0 |  |
-| 57 | fopenstatus | fopenstatus | bpchar | 1 |  | √ | '1' |  |
-| 58 | fmanagetype | fmanagetype | bpchar | 1 |  | √ | ' ' |  |
-| 59 | ftaxtype | ftaxtype | varchar | 30 |  | √ | ' ' |  |
-| 60 | fbidname | fbidname | varchar | 300 |  | √ | ' ' |  |
-| 61 | fterminalnode | fterminalnode | int8 | 64 |  | √ | 0 |  |
-| 62 | fparentid | 父单据ID | varchar | 50 |  | √ | ' ' | 父单据ID |
-| 63 | fdonetask | fdonetask | varchar | 255 |  | √ | ' ' |  |
-| 64 | fisbypackage | fisbypackage | bpchar | 1 |  | √ | '0' |  |
-| 65 | fisbidpublish | fisbidpublish | bpchar | 1 |  | √ | '0' |  |
-| 66 | fentitykey | 组件标识 | varchar | 50 |  | √ | ' ' | 组件标识 |
-| 67 | fopendate | fopendate | timestamp | 0 |  |  | null |  |
-| 68 | fdecisiontype | fdecisiontype | bpchar | 1 |  | √ | ' ' |  |
-| 69 | fratio_biz | fratio_biz | numeric | 23 | 10 | √ | 0 |  |
-| 70 | fratio_tec | fratio_tec | numeric | 23 | 10 | √ | 0 |  |
-| 71 | fisopencontrol | fisopencontrol | bpchar | 1 |  | √ | '0' |  |
-| 72 | fisbypackage_apt | fisbypackage_apt | bpchar | 1 |  | √ | '0' |  |
-| 73 | fsourcetypeid | fsourcetypeid | int8 | 64 |  | √ | 0 |  |
-| 74 | fsumtaxamount | fsumtaxamount | numeric | 23 | 10 | √ | 0 |  |
-| 75 | fextfilterid | fextfilterid | int8 | 64 |  | √ | 0 |  |
-| 76 | fcurrentnode | fcurrentnode | int8 | 64 |  | √ | 0 |  |
-| 77 | fisquickpur | fisquickpur | bpchar | 1 |  | √ | '0' |  |
-| 78 | fcurrencyid | fcurrencyid | int8 | 64 |  | √ | 0 |  |
-| 79 | fratiotype | fratiotype | bpchar | 1 |  | √ | '1' |  |
+| 47 | fsystype | fsystype | bpchar | 1 |  | √ | '1' |  |
+| 48 | fisaptitude | fisaptitude | bpchar | 1 |  | √ | '0' |  |
+| 49 | fsurplusamount | fsurplusamount | numeric | 23 | 10 | √ | 0 |  |
+| 50 | fsupopentype | fsupopentype | bpchar | 1 |  | √ | '1' |  |
+| 51 | fopentype | fopentype | bpchar | 1 |  | √ | ' ' |  |
+| 52 | fclosetask | fclosetask | varchar | 255 |  | √ | ' ' |  |
+| 53 | fpurgroupid | fpurgroupid | int8 | 64 |  | √ | 0 |  |
+| 54 | fbiztypeid | fbiztypeid | int8 | 64 |  | √ | 0 |  |
+| 55 | fismultipackage | fismultipackage | bpchar | 1 |  | √ | '0' |  |
+| 56 | fishidesupplier | fishidesupplier | bpchar | 1 |  | √ | '0' |  |
+| 57 | fsourceclassid | fsourceclassid | int8 | 64 |  | √ | 0 |  |
+| 58 | fopenstatus | fopenstatus | bpchar | 1 |  | √ | '1' |  |
+| 59 | fmanagetype | fmanagetype | bpchar | 1 |  | √ | ' ' |  |
+| 60 | ftaxtype | ftaxtype | varchar | 30 |  | √ | ' ' |  |
+| 61 | fbidname | fbidname | varchar | 300 |  | √ | ' ' |  |
+| 62 | fterminalnode | fterminalnode | int8 | 64 |  | √ | 0 |  |
+| 63 | fparentid | 父单据ID | varchar | 50 |  | √ | ' ' | 父单据ID |
+| 64 | fdonetask | fdonetask | varchar | 255 |  | √ | ' ' |  |
+| 65 | fisbypackage | fisbypackage | bpchar | 1 |  | √ | '0' |  |
+| 66 | fisbidpublish | fisbidpublish | bpchar | 1 |  | √ | '0' |  |
+| 67 | fentitykey | 组件标识 | varchar | 50 |  | √ | ' ' | 组件标识 |
+| 68 | fopendate | fopendate | timestamp | 0 |  |  | null |  |
+| 69 | fdecisiontype | fdecisiontype | bpchar | 1 |  | √ | ' ' |  |
+| 70 | fratio_biz | fratio_biz | numeric | 23 | 10 | √ | 0 |  |
+| 71 | fratio_tec | fratio_tec | numeric | 23 | 10 | √ | 0 |  |
+| 72 | fisopencontrol | fisopencontrol | bpchar | 1 |  | √ | '0' |  |
+| 73 | fisbypackage_apt | fisbypackage_apt | bpchar | 1 |  | √ | '0' |  |
+| 74 | fsourcetypeid | fsourcetypeid | int8 | 64 |  | √ | 0 |  |
+| 75 | fsumtaxamount | fsumtaxamount | numeric | 23 | 10 | √ | 0 |  |
+| 76 | fextfilterid | fextfilterid | int8 | 64 |  | √ | 0 |  |
+| 77 | fcurrentnode | fcurrentnode | int8 | 64 |  | √ | 0 |  |
+| 78 | fisquickpur | fisquickpur | bpchar | 1 |  | √ | '0' |  |
+| 79 | fcurrencyid | fcurrencyid | int8 | 64 |  | √ | 0 |  |
+| 80 | fratiotype | fratiotype | bpchar | 1 |  | √ | '1' |  |
 
 ### 列规则定义
 
@@ -143,6 +144,6 @@
 | 1 | idx_src_project_sourceid |  | fsourceid |
 | 2 | idx_src_project_parentid |  | fparentid |
 | 3 | pk_src_project |  | fid |
-| 4 | idx_src_project_type |  | fsrctypeid |
-| 5 | idx_src_project_sourceclassid |  | fsourceclassid |
-| 6 | idx_src_project_status |  | fopenstatus |
+| 4 | idx_src_project_sourceclassid |  | fsourceclassid |
+| 5 | idx_src_project_status |  | fopenstatus |
+| 6 | idx_src_project_type |  | fsrctypeid |

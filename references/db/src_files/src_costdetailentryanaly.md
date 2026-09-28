@@ -14,13 +14,13 @@
 | 3 | ftaxamount | 含税成本额 | numeric | 23 | 10 | √ | 0 | 含税成本额 |
 | 4 | fname | 名称 | varchar | 300 |  | √ | ' ' | 名称 |
 | 5 | fchildcount | fchildcount | int4 | 32 |  | √ | 0 |  |
-| 6 | fprojectid | 寻源项目 | int8 | 64 |  | √ | 0 | 招标项目F7 src_projectf7 |
+| 6 | fprojectid | 寻源项目 | int8 | 64 |  | √ | 0 | [招标项目F7 src_projectf7](../src_files/src_projectf7.md) |
 | 7 | fischanged | fischanged | bpchar | 1 |  | √ | '1' |  |
-| 8 | funitid | 计量单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 8 | funitid | 计量单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 9 | fratio | fratio | numeric | 19 | 6 | √ | 0 |  |
 | 10 | fseq | 序号 | int4 | 32 |  | √ | 0 | 序号 |
 | 11 | fnote | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
-| 12 | fcostitemid | 成本项目编号 | int8 | 64 |  | √ | 0 | 成本项目 pds_costitem |
+| 12 | fcostitemid | 成本项目编号 | int8 | 64 |  | √ | 0 | [成本项目 pds_costitem](../pds_files/pds_costitem.md) |
 | 13 | ftaxprice | 含税成本 | numeric | 23 | 10 | √ | 0 | 含税成本 |
 | 14 | fdescription | 成本项目名称 | varchar | 510 |  | √ | ' ' | 成本项目名称 |
 | 15 | famount | 未税成本额 | numeric | 23 | 10 | √ | 0 | 未税成本额 |
@@ -58,9 +58,11 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fname | 名称 | varchar | 300 |  | √ | ' ' | 名称 |
-| 2 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
-| 3 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
-| 4 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
+| 2 | fnote | fnote | varchar | 300 |  | √ | ' ' |  |
+| 3 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
+| 4 | fdescription | fdescription | varchar | 510 |  | √ | ' ' |  |
+| 5 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
+| 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 
 ### 列规则定义
 
@@ -90,11 +92,11 @@
 | 2 | ftaxamount | 明细含税成本额 | numeric | 23 | 10 | √ | 0 | 明细含税成本额 |
 | 3 | fprojectid | fprojectid | int8 | 64 |  | √ | 0 |  |
 | 4 | fischanged | fischanged | bpchar | 1 |  | √ | '1' |  |
-| 5 | funitid | 明细计量单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 5 | funitid | 明细计量单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 6 | fratio | 明细系数 | numeric | 19 | 6 | √ | 0 | 明细系数 |
 | 7 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 8 | fnote | 明细备注 | varchar | 255 |  | √ | ' ' | 明细备注 |
-| 9 | fcostitemid | 明细成本项目编码 | int8 | 64 |  | √ | 0 | 成本项目 pds_costitem |
+| 9 | fcostitemid | 明细成本项目编码 | int8 | 64 |  | √ | 0 | [成本项目 pds_costitem](../pds_files/pds_costitem.md) |
 | 10 | ftaxprice | 明细含税成本 | numeric | 23 | 10 | √ | 0 | 明细含税成本 |
 | 11 | fdescription | 明细成本项目名称 | varchar | 510 |  | √ | ' ' | 明细成本项目名称 |
 | 12 | famount | 明细未税成本额 | numeric | 23 | 10 | √ | 0 | 明细未税成本额 |

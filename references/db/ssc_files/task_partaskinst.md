@@ -10,8 +10,8 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fsscid | 共享中心 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 3 | fflowcode | 流程编码 | int8 | 64 |  | √ | 0 | 多级任务流程 task_partaskflowdef |
+| 2 | fsscid | 共享中心 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 3 | fflowcode | 流程编码 | int8 | 64 |  | √ | 0 | [多级任务流程 task_partaskflowdef](../ssc_files/task_partaskflowdef.md) |
 | 4 | fptendtime | 结束时间 | timestamp | 0 |  |  | null | 结束时间 |
 | 5 | fsubject | 主题 | varchar | 128 |  | √ | ' ' | 主题 |
 | 6 | fptstarttime | 开始时间 | timestamp | 0 |  |  | null | 开始时间 |
@@ -19,7 +19,7 @@
 | 8 | fworkflowid | 工作流任务id | int8 | 64 |  | √ | 0 | 工作流任务id |
 | 9 | fptretain | 保留字段 | varchar | 64 |  | √ | ' ' | 保留字段 |
 | 10 | fbillid | 单据编号 | int8 | 64 |  | √ | 0 | 单据编号 |
-| 11 | fbilltype | 业务单据类型 | int8 | 64 |  | √ | 0 | 业务单据 task_taskbill |
+| 11 | fbilltype | 业务单据类型 | int8 | 64 |  | √ | 0 | [业务单据 task_taskbill](../ssc_files/task_taskbill.md) |
 
 ### 列规则定义
 

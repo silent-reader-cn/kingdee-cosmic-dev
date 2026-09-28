@@ -11,14 +11,14 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 5 | fjobid | 作业号 | varchar | 50 |  | √ | ' ' | 作业号 |
 | 6 | fresult | 运算结果 | varchar | 5 |  | √ | ' ' | 运算结果,枚举: A :运算成功 B :运算失败 |
 | 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 8 | fplanid | 任务号 | varchar | 50 |  | √ | ' ' | 任务号 |
 | 9 | fstatus | 数据状态 | varchar | 5 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 12 | flastruntime | 最后一次运算时间 | timestamp | 0 |  |  | null | 最后一次运算时间 |
 | 13 | fenable | 使用状态 | varchar | 5 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
@@ -52,7 +52,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fuse | 启用 | bpchar | 1 |  | √ | '0' | 启用 |
 | 3 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 4 | fresource | 数据源编码 | int8 | 64 |  | √ | 0 | 数据源配置 mrp_resource_dataconf_rgt |
+| 4 | fresource | 数据源编码 | int8 | 64 |  | √ | 0 | [数据源配置 mrp_resource_dataconf_rgt](../msplan_files/mrp_resource_dataconf_rgt.md) |
 | 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 6 | fdeliverytype | 发货类型 | varchar | 5 |  | √ | ' ' | 发货类型,枚举: 0 :销售出库 1 :生产领料 2 :其他出库 3 :直接调拨 4 :分步调拨 |
 

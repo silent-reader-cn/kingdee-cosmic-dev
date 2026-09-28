@@ -41,17 +41,18 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | frebatefieldname | 返利对象 | varchar | 50 |  | √ | ' ' | 返利对象 |
 | 3 | fname | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 6 | frebatefield | 返利对象标识 | varchar | 50 |  | √ | ' ' | 返利对象标识 |
 | 7 | fispreset | 系统预设 | bpchar | 1 |  | √ | '0' | 系统预设 |
 | 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 9 | fstatus | 数据状态 | bpchar | 1 |  | √ | 'C' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 12 | frebateschemaid | 返利计算方案 | int8 | 64 |  | √ | 0 | 返利计算方案 msrcs_rebateschema |
-| 13 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 14 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
+| 12 | ftype | 返利标识 | bpchar | 1 |  | √ | 'A' | 返利标识,枚举: A :销售返利 B :采购返利 |
+| 13 | frebateschemaid | 返利计算方案 | int8 | 64 |  | √ | 0 | [返利计算方案 msrcs_rebateschema](../msrcs_files/msrcs_rebateschema.md) |
+| 14 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 15 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
 
 ### 列规则定义
 

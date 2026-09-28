@@ -21,9 +21,9 @@
 | 10 | ferror_tag | 错误信息_详情 | text | 0 |  |  | null | 错误信息_详情 |
 | 11 | fstate | 状态 | varchar | 30 |  | √ | ' ' | 状态,枚举: C :创建 R :同步中 S :成功 F :失败 I :忽略 K :中断 |
 | 12 | fupdated_time | 更新时间 | timestamp | 0 |  |  | null | 更新时间 |
-| 13 | ftask | 集成任务 | int8 | 64 |  | √ | 0 | 执行结果 isc_data_copy_execution |
-| 14 | ftrigger | 启动方案 | int8 | 64 |  | √ | 0 | 启动方案 isc_data_copy_trigger |
-| 15 | fschema | 集成方案 | int8 | 64 |  | √ | 0 | 数据集成方案 isc_data_copy |
+| 13 | ftask | 集成任务 | int8 | 64 |  | √ | 0 | [执行结果 isc_data_copy_execution](../iscb_files/isc_data_copy_execution.md) |
+| 14 | ftrigger | 启动方案 | int8 | 64 |  | √ | 0 | [启动方案 isc_data_copy_trigger](../iscb_files/isc_data_copy_trigger.md) |
+| 15 | fschema | 集成方案 | int8 | 64 |  | √ | 0 | [数据集成方案 isc_data_copy](../iscb_files/isc_data_copy.md) |
 
 ### 列规则定义
 

@@ -58,6 +58,99 @@
 
 ---
 
+## 自定义预算数为空提示语-子表 t_xkbm_noctrlmsgentry
+
+- **表名称：** 自定义预算数为空提示语-子表
+- **表名：** t_xkbm_noctrlmsgentry
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fsuitcondition | 适用条件 | bpchar | 1 |  | √ | ' ' | 适用条件,枚举: 0 :所有 1 :所有（不适用预算数为空） 2 :预算数为空 3 :超预算 4 :未超预算 5 :仅按期累计 6 :维度映射 |
+| 3 | fmessage | 提示语 | varchar | 255 |  | √ | ' ' | 提示语 |
+| 4 | fpreset | 系统预置 | bpchar | 1 |  | √ | ' ' | 系统预置,枚举: 0 :否 1 :是 |
+| 5 | fmessagestore | 提示语库 | int8 | 64 |  | √ | 0 | [预算控制提示语库 xkbm_ctrlmsgstore](../xkbm_files/xkbm_ctrlmsgstore.md) |
+| 6 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
+| 7 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fentryid | fentryid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_xkbm_noctrlmsgentry_fid |  | fid |
+| 2 | pk_xkbm_noctrlmsgentry |  | fentryid |
+
+---
+
+## 自定义预算内提示语-子表 t_xkbm_inctrlmsgentry
+
+- **表名称：** 自定义预算内提示语-子表
+- **表名：** t_xkbm_inctrlmsgentry
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fsuitcondition | 适用条件 | bpchar | 1 |  | √ | ' ' | 适用条件,枚举: 0 :所有 1 :所有（不适用预算数为空） 2 :预算数为空 3 :超预算 4 :未超预算 5 :按期累计 6 :维度映射 |
+| 3 | fmessage | 提示语 | varchar | 255 |  | √ | ' ' | 提示语 |
+| 4 | fpreset | 系统预置 | bpchar | 1 |  | √ | ' ' | 系统预置,枚举: 0 :否 1 :是 |
+| 5 | fmessagestore | 提示语库 | int8 | 64 |  | √ | 0 | [预算控制提示语库 xkbm_ctrlmsgstore](../xkbm_files/xkbm_ctrlmsgstore.md) |
+| 6 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
+| 7 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fentryid | fentryid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_xkbm_inctrlmsgentry_fid |  | fid |
+| 2 | pk_xkbm_inctrlmsgentry |  | fentryid |
+
+---
+
+## 适用用户范围-子表 t_xkbm_ctrlmsguser
+
+- **表名称：** 适用用户范围-子表
+- **表名：** t_xkbm_ctrlmsguser
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
+| 3 | fuserid | 工号 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 4 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fentryid | fentryid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_xkbm_ctrlmsguser_fid |  | fid |
+| 2 | pk_xkbm_ctrlmsguser |  | fentryid |
+
+---
+
 ## 自定义预算外提示语-子表 t_xkbm_outctrlmsgentry
 
 - **表名称：** 自定义预算外提示语-子表
@@ -68,10 +161,10 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fsuitcondition | 适用条件 | bpchar | 1 |  | √ | ' ' | 适用条件,枚举: 0 :所有 1 :所有（不适用预算数为空） 2 :预算数为空 3 :超预算 4 :未超预算 5 :按期累计 |
+| 2 | fsuitcondition | 适用条件 | bpchar | 1 |  | √ | ' ' | 适用条件,枚举: 0 :所有 1 :所有（不适用预算数为空） 2 :预算数为空 3 :超预算 4 :未超预算 5 :按期累计 6 :维度映射 |
 | 3 | fmessage | 提示语 | varchar | 255 |  | √ | ' ' | 提示语 |
 | 4 | fpreset | 系统预置 | bpchar | 1 |  | √ | ' ' | 系统预置,枚举: 0 :否 1 :是 |
-| 5 | fmessagestore | 提示语库 | int8 | 64 |  | √ | 0 | 预算控制提示语库 xkbm_ctrlmsgstore |
+| 5 | fmessagestore | 提示语库 | int8 | 64 |  | √ | 0 | [预算控制提示语库 xkbm_ctrlmsgstore](../xkbm_files/xkbm_ctrlmsgstore.md) |
 | 6 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 7 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 
@@ -123,38 +216,6 @@
 
 ---
 
-## 自定义预算数为空提示语-子表 t_xkbm_noctrlmsgentry
-
-- **表名称：** 自定义预算数为空提示语-子表
-- **表名：** t_xkbm_noctrlmsgentry
-
-### 表格列定义
-
-| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fsuitcondition | 适用条件 | bpchar | 1 |  | √ | ' ' | 适用条件,枚举: 0 :所有 1 :所有（不适用预算数为空） 2 :预算数为空 3 :超预算 4 :未超预算 5 :仅按期累计 |
-| 3 | fmessage | 提示语 | varchar | 255 |  | √ | ' ' | 提示语 |
-| 4 | fpreset | 系统预置 | bpchar | 1 |  | √ | ' ' | 系统预置,枚举: 0 :否 1 :是 |
-| 5 | fmessagestore | 提示语库 | int8 | 64 |  | √ | 0 | 预算控制提示语库 xkbm_ctrlmsgstore |
-| 6 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 7 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-
-### 列规则定义
-
-| 序号 | 键编码 | 列字段 |
-| :--- | :--- | :--- |
-| 1 | fentryid | fentryid |
-
-### 索引定义
-
-| 序号 | 索引名 | 唯一 | 列字段 |
-| :--- | :--- | :--- | :--- |
-| 1 | idx_xkbm_noctrlmsgentry_fid |  | fid |
-| 2 | pk_xkbm_noctrlmsgentry |  | fentryid |
-
----
-
 ## 预算控制提示语-主表 t_xkbm_ctrlmsg
 
 - **表名称：** 预算控制提示语-主表
@@ -165,9 +226,9 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fxkbmbusinessservice | 预算业务服务 | int8 | 64 |  | √ | 0 | 预算业务服务 xkbm_businessservice |
+| 2 | fxkbmbusinessservice | 所属应用 | int8 | 64 |  | √ | 0 | [预算业务服务 xkbm_businessservice](../xkbm_files/xkbm_businessservice.md) |
 | 3 | fname | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fnobudgetmodel | 提示语范例 | varchar | 1000 |  | √ | ' ' | 提示语范例 |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 7 | fpresetdata | 是否系统预置 | bpchar | 1 |  | √ | ' ' | 是否系统预置 |
@@ -177,14 +238,14 @@
 | 11 | fdescription | 描述 | varchar | 255 |  | √ | ' ' | 描述 |
 | 12 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 13 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 16 | foutbudgetmodel | 提示语范例 | varchar | 1000 |  | √ | ' ' | 提示语范例 |
 | 17 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 18 | fsuitallrole | 适用于所有角色 | bpchar | 1 |  | √ | ' ' | 适用于所有角色 |
 | 19 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
 | 20 | fforbiddate | 禁用时间 | timestamp | 0 |  |  | null | 禁用时间 |
-| 21 | fforbidderid | 禁用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 21 | fforbidderid | 禁用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 
@@ -201,22 +262,19 @@
 
 ---
 
-## 自定义预算内提示语-子表 t_xkbm_inctrlmsgentry
+## 适用工作流角色范围-子表 t_xkbm_ctrlmsgwfrole
 
-- **表名称：** 自定义预算内提示语-子表
-- **表名：** t_xkbm_inctrlmsgentry
+- **表名称：** 适用工作流角色范围-子表
+- **表名：** t_xkbm_ctrlmsgwfrole
 
 ### 表格列定义
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fsuitcondition | 适用条件 | bpchar | 1 |  | √ | ' ' | 适用条件,枚举: 0 :所有 1 :所有（不适用预算数为空） 2 :预算数为空 3 :超预算 4 :未超预算 5 :按期累计 |
-| 3 | fmessage | 提示语 | varchar | 255 |  | √ | ' ' | 提示语 |
-| 4 | fpreset | 系统预置 | bpchar | 1 |  | √ | ' ' | 系统预置,枚举: 0 :否 1 :是 |
-| 5 | fmessagestore | 提示语库 | int8 | 64 |  | √ | 0 | 预算控制提示语库 xkbm_ctrlmsgstore |
-| 6 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 7 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 2 | fwfroleid | 工作流角色编码 | int8 | 64 |  | √ | 0 | [工作流角色 wf_role](../wf_files/wf_role.md) |
+| 3 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
+| 4 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 
 ### 列规则定义
 
@@ -228,8 +286,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_xkbm_inctrlmsgentry_fid |  | fid |
-| 2 | pk_xkbm_inctrlmsgentry |  | fentryid |
+| 1 | pk_xkbm_ctrlmsgwfrole |  | fentryid |
+| 2 | idx_xkbm_ctrlmsgwfrole_id |  | fid |
 
 ---
 
@@ -272,7 +330,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | froleid | 角色编码 | varchar | 36 |  | √ | ' ' | 通用角色 perm_role |
+| 2 | froleid | 角色编码 | varchar | 36 |  | √ | ' ' | [通用角色 perm_role](../base_files/perm_role.md) |
 | 3 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 4 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 

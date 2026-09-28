@@ -1,8 +1,8 @@
-# 免抵(退)税项目规则-tcvat_rule_mdts
+# 退税规则-tcvat_rule_mdts
 
-## 免抵(退)税额取数配置-子表 t_tcvat_rule_mdts_ent
+## 退税取数配置-子表 t_tcvat_rule_mdts_ent
 
-- **表名称：** 免抵(退)税额取数配置-子表
+- **表名称：** 退税取数配置-子表
 - **表名：** t_tcvat_rule_mdts_ent
 
 ### 表格列定义
@@ -11,15 +11,16 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | ffconditionjson | 过滤条件 | text | 0 |  |  | null | 过滤条件 |
-| 3 | famountfield | 金额字段 | int8 | 64 |  | √ | 0 | 数据源字段配置 tctb_datasource_entry |
-| 4 | ftable | 数据源 | int8 | 64 |  | √ | 0 | 数据源配置 tctb_custom_datasource |
-| 5 | fabsolute | 绝对值 | bpchar | 1 |  | √ | '0' | 绝对值 |
-| 6 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 7 | fbizname | 业务名称 | varchar | 200 |  | √ | ' ' | 业务名称 |
-| 8 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 9 | ffiltercondition | 过滤条件 | text | 0 |  |  | null | 过滤条件 |
-| 10 | fdatadirection | 取数方向 | varchar | 50 |  | √ | ' ' | 取数方向,枚举: positive :正向 reverse :反向 |
-| 11 | fdatatype | 取数方式 | varchar | 50 |  | √ | ' ' | 取数方式,枚举: zjqs :直接取数 jsflqs :价税分离取数 cysldsqs :除以税率倒算取数 |
+| 3 | famountfield | 金额字段 | int8 | 64 |  | √ | 0 | [数据源字段配置 tctb_datasource_entry](../tctb_files/tctb_datasource_entry.md) |
+| 4 | ftable | 数据源 | int8 | 64 |  | √ | 0 | [数据源配置 tctb_custom_datasource](../tctb_files/tctb_custom_datasource.md) |
+| 5 | fvatrate | 增值税税率/征收率 | numeric | 23 | 10 | √ | 0 | 增值税税率/征收率 |
+| 6 | fabsolute | 绝对值 | bpchar | 1 |  | √ | '0' | 绝对值 |
+| 7 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
+| 8 | fbizname | 业务名称 | varchar | 200 |  | √ | ' ' | 业务名称 |
+| 9 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 10 | ffiltercondition | 过滤条件 | text | 0 |  |  | null | 过滤条件 |
+| 11 | fdatadirection | 取数方向 | varchar | 50 |  | √ | ' ' | 取数方向,枚举: positive :正向 reverse :反向 |
+| 12 | fdatatype | 取数方式 | varchar | 50 |  | √ | ' ' | 取数方式,枚举: zjqs :直接取数 jsflqs :含税价换算不含税价 cysldsqs :税额换算不含税价 hsjhsse :含税价换算税额 bhsjhsse :不含税价换算税额 bhsjhshsj :不含税价换算含税价 |
 
 ### 列规则定义
 
@@ -36,9 +37,9 @@
 
 ---
 
-## 免抵(退)税项目规则-多语言表 t_tcvat_rule_mdts_l
+## 退税规则-多语言表 t_tcvat_rule_mdts_l
 
-- **表名称：** 免抵(退)税项目规则-多语言表
+- **表名称：** 退税规则-多语言表
 - **表名：** t_tcvat_rule_mdts_l
 
 ### 表格列定义
@@ -65,9 +66,9 @@
 
 ---
 
-## 免抵(退)税项目规则-主表 t_tcvat_rule_mdts
+## 退税规则-主表 t_tcvat_rule_mdts
 
-- **表名称：** 免抵(退)税项目规则-主表
+- **表名称：** 退税规则-主表
 - **表名：** t_tcvat_rule_mdts
 
 ### 表格列定义
@@ -75,14 +76,14 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 3 | fmdtype | 免抵类型 | varchar | 50 |  | √ | ' ' | 免抵类型,枚举: mdt :免抵退 md :免抵 |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 3 | fmdtype | 退税类型 | varchar | 50 |  | √ | ' ' | 退税类型,枚举: mdt :免抵退应退税额 md :增值税免抵税额 jzjtsjtse :即征即退实际退税额 |
 | 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 5 | forgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | forgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | fruletype | 规则类型 | varchar | 50 |  | √ | ' ' | 规则类型,枚举: private :自用规则 public :可分配规则 |
 | 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 8 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 11 | fissystem | 系统预设 | varchar | 50 |  | √ | ' ' | 系统预设,枚举: 0 :否 1 :是 |
 | 12 | fenable | 使用状态 | varchar | 50 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |

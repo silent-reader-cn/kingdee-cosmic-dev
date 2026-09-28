@@ -11,22 +11,25 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 4 | forgfield | 生产组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 6 | finwarehouse | 调入仓库 | int8 | 64 |  | √ | 0 | 仓库 bd_warehouse |
-| 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 8 | finorg | 调入组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 9 | fcodingobj | fcodingobj | varchar | 50 |  | √ | ' ' |  |
-| 10 | ffilterruler | ffilterruler | varchar | 255 |  | √ | ' ' |  |
-| 11 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: C :已审核 |
-| 12 | fsupplier | 供应商 | int8 | 64 |  | √ | 0 | 供应商 bd_supplier |
-| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 14 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 15 | ffilterruler_tag | ffilterruler_tag | text | 0 |  |  | null |  |
-| 16 | finlocation | 调入仓位 | int8 | 64 |  | √ | 0 | 仓位 bd_location |
-| 17 | fenable | 使用状态 | varchar | 50 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 18 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 4 | forgfield | 生产组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 5 | fpurorgid | 采购组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 6 | fbondedinwarehouse | 保税仓库 | int8 | 64 |  | √ | 0 | [仓库 bd_warehouse](../sbd_files/bd_warehouse.md) |
+| 7 | fbondedinlocation | 保税仓位 | int8 | 64 |  | √ | 0 | [仓位 bd_location](../sbd_files/bd_location.md) |
+| 8 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 9 | finwarehouse | 仓库 | int8 | 64 |  | √ | 0 | [仓库 bd_warehouse](../sbd_files/bd_warehouse.md) |
+| 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 11 | finorg | 库存组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 12 | fcodingobj | fcodingobj | varchar | 50 |  | √ | ' ' |  |
+| 13 | ffilterruler | ffilterruler | varchar | 255 |  | √ | ' ' |  |
+| 14 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: C :已审核 |
+| 15 | fsupplier | 供应商 | int8 | 64 |  | √ | 0 | [供应商 bd_supplier](../basedata_files/bd_supplier.md) |
+| 16 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 17 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
+| 18 | ffilterruler_tag | ffilterruler_tag | text | 0 |  |  | null |  |
+| 19 | finlocation | 仓位 | int8 | 64 |  | √ | 0 | [仓位 bd_location](../sbd_files/bd_location.md) |
+| 20 | fenable | 使用状态 | varchar | 50 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 21 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
 
 ### 列规则定义
 

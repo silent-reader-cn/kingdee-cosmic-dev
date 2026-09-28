@@ -10,9 +10,9 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fbillnumber | 单据编码 | varchar | 80 |  | √ | ' ' | 单据编码 |
+| 2 | fbillnumber | 单据编号 | varchar | 80 |  | √ | ' ' | 单据编号 |
 | 3 | fresult_tag | 识别结果_详情 | text | 0 |  |  | null | 识别结果_详情 |
-| 4 | fcreaterfield_id | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fcreaterfield_id | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | frequestno | 请求编号 | varchar | 80 |  | √ | ' ' | 请求编号 |
 | 6 | fdatasource | 数据来源 | bpchar | 1 |  | √ | ' ' | 数据来源,枚举: 0 :AI 1 :令才 |
 | 7 | fcreatedatefield | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |

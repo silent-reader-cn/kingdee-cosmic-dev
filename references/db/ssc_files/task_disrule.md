@@ -9,7 +9,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 2 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 | 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 
@@ -53,8 +53,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | t_tk_disrule_new_l_pkey |  | fpkid |
-| 2 | idx_tk_disrulenewl_locale |  | fid,flocaleid |
+| 1 | idx_tk_disrulenewl_locale |  | fid,flocaleid |
+| 2 | t_tk_disrule_new_l_pkey |  | fpkid |
 
 ---
 
@@ -69,7 +69,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fremark |  | varchar | 100 |  | √ | ' ' |  |
-| 3 | fgroupid | 用户组 | int8 | 64 |  | √ | 0 | 用户组 task_usergroup |
+| 3 | fgroupid | 用户组 | int8 | 64 |  | √ | 0 | [用户组 task_usergroup](../ssc_files/task_usergroup.md) |
 | 4 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 6 | forgrangeid | forgrangeid | int8 | 64 |  | √ | 0 |  |
@@ -100,18 +100,18 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fremark | fremark | varchar | 100 |  | √ | ' ' |  |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | ffilterrule | ffilterrule | varchar | 100 |  | √ | ' ' |  |
 | 5 | fgroupid | fgroupid | int8 | 64 |  | √ | 0 |  |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 7 | ftasktypeid | 任务类型 | int8 | 64 |  | √ | 0 | 任务类型 task_tasktype |
+| 7 | ftasktypeid | 任务类型 | int8 | 64 |  | √ | 0 | [任务类型 task_tasktype](../ssc_files/task_tasktype.md) |
 | 8 | fpriority | 执行顺序 | int8 | 64 |  | √ | 0 | 执行顺序 |
-| 9 | fssccenterid | 共享中心 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 9 | fssccenterid | 共享中心 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 10 | fdisabledate | 禁用时间 | timestamp | 0 |  |  | null | 禁用时间 |
-| 11 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 13 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 16 | fenable | 使用状态 | bpchar | 1 |  | √ | '0' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 17 | fnumber | 编码 | varchar | 50 |  | √ | ' ' | 编码 |
@@ -127,8 +127,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | t_tk_disrule_new_pkey |  | fid |
-| 2 | index_ssc_disrule_new |  | fnumber |
+| 1 | index_ssc_disrule_new |  | fnumber |
+| 2 | t_tk_disrule_new_pkey |  | fid |
 
 ---
 
@@ -150,7 +150,7 @@
 | 7 | ffilterrulejson | 分配规则Json | text | 0 |  |  | null | 分配规则Json |
 | 8 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 9 | fapplycreditleveljoson | 提单人信用等级json | text | 0 |  |  | null | 提单人信用等级json |
-| 10 | fbilltypeid | 业务单据 | int8 | 64 |  | √ | 0 | 业务单据 task_taskbill |
+| 10 | fbilltypeid | 业务单据 | int8 | 64 |  | √ | 0 | [业务单据 task_taskbill](../ssc_files/task_taskbill.md) |
 
 ### 列规则定义
 

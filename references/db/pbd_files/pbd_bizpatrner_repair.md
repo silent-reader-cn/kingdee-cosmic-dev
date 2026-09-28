@@ -14,7 +14,7 @@
 | 3 | fbdsuppliername | 主数据供应商字段名 | varchar | 50 |  | √ | ' ' | 主数据供应商字段名 |
 | 4 | fbizpartnername | 商务伙伴字段名 | varchar | 50 |  | √ | ' ' | 商务伙伴字段名 |
 | 5 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 6 | fbillentityid | 单据对象 | varchar | 80 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 6 | fbillentityid | 单据对象 | varchar | 80 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 7 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 
 ### 列规则定义

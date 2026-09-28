@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | null | id |
-| 2 | forgid | 组织 | int8 | 64 |  |  | null | 业务单元 bos_org |
+| 2 | forgid | 组织 | int8 | 64 |  |  | null | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fk_ysq_fail_try_times | 失败重试次数 | int8 | 64 |  |  | null | 失败重试次数 |
 | 4 | fk_ysq_schedule_expre | 调度表达式 | varchar | 2000 |  | √ | ' ' | 调度表达式 |
 | 5 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
@@ -36,14 +36,14 @@
 | 25 | fk_ysq_sch_job_nums | 生成任务数 | int8 | 64 |  |  | null | 生成任务数 |
 | 26 | fk_ysq_owner_user_fid | 所有者ID | int8 | 64 |  |  | null | 所有者ID |
 | 27 | fk_ysq_status | 状态 | varchar | 50 |  | √ | ' ' | 状态,枚举: yes :启用 no :停用 |
-| 28 | fauditorid | 审核人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 28 | fauditorid | 审核人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 29 | fk_ysq_studio_ver | 设计器版本 | varchar | 64 |  | √ | ' ' | 设计器版本 |
 | 30 | fk_ysq_kd_planid | 调度计划ID | int8 | 64 |  |  | null | 调度计划ID |
 | 31 | fk_ysq_proc_ver | 流程版本 | varchar | 64 |  | √ | ' ' | 流程版本,枚举: |
 | 32 | fk_ysq_proc_name | 流程名称 | varchar | 64 |  | √ | ' ' | 流程名称 |
 | 33 | fk_ysq_priority | 优先级 | varchar | 50 |  | √ | ' ' | 优先级,枚举: high :紧急 middle :普通 low :低级 |
 | 34 | fk_ysq_pending_timeout | 等待超时时间 | int8 | 64 |  |  | null | 等待超时时间 |
-| 35 | fcreatorid | 创建人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 35 | fcreatorid | 创建人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 36 | fk_ysq_app_run_type | 启动运行方式 | varchar | 50 |  |  | '3' | 启动运行方式 |
 | 37 | fk_ysq_sch_param | 调度参数 | varchar | 255 |  | √ | ' ' | 调度参数 |
 | 38 | fk_ysq_exec_robots_names_tag | 候选机器人主机名_详情 | text | 0 |  |  | null | 候选机器人主机名_详情 |
@@ -51,7 +51,7 @@
 | 40 | fk_ysq_auto_stop_time | 自动停止时长（分钟） | int8 | 64 |  |  | null | 自动停止时长（分钟） |
 | 41 | fk_ysq_sch_param_tag | 调度参数_详情 | text | 0 |  |  | null | 调度参数_详情 |
 | 42 | fk_ysq_proc_code | 流程 | varchar | 50 |  | √ | ' ' | 流程,枚举: |
-| 43 | fmodifierid | 修改人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 43 | fmodifierid | 修改人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 44 | fk_ysq_kd_jobid | 调度作业ID | int8 | 64 |  |  | null | 调度作业ID |
 | 45 | fk_ysq_dev_user_alias | 开发者用户名 | varchar | 512 |  | √ | ' ' | 开发者用户名 |
 | 46 | fk_ysq_schedule_mode | 调度模式 | varchar | 50 |  | √ | ' ' | 调度模式,枚举: min :分钟 hour :小时 day :天 week :星期 month :月 cron :自定义 |

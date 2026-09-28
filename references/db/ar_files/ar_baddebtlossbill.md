@@ -11,18 +11,18 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fremark | 备注 | varchar | 512 |  | √ | ' ' | 备注 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fbaddebtcause | 坏账原因 | varchar | 30 |  | √ | ' ' | 坏账原因,枚举: overdue :逾期未还并明显超过规定账龄 bankrupt :债务人破产和死亡 other :其他原因 |
 | 5 | fbaddebtlocamt | 损失金额(本位币) | numeric | 23 | 10 | √ | 0.0000000000 | 损失金额(本位币) |
 | 6 | funlockamt | 未锁定金额 | numeric | 23 | 10 | √ | 0.0000000000 | 未锁定金额 |
 | 7 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 8 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 9 | funsettleamt | 未收回金额 | numeric | 23 | 10 | √ | 0.0000000000 | 未收回金额 |
-| 10 | fsettletypeid | 结算方式 | int8 | 64 |  | √ | 0 | 结算方式 bd_settlementtype |
+| 10 | fsettletypeid | 结算方式 | int8 | 64 |  | √ | 0 | [结算方式 bd_settlementtype](../basedata_files/bd_settlementtype.md) |
 | 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 12 | fduedate | 到期日 | timestamp | 0 |  |  | null | 到期日 |
 | 13 | fsrcplanentryid | 源单计划分录ID | int8 | 64 |  | √ | 0 | 源单计划分录ID |
-| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | fsettledamt | 已收回金额 | numeric | 23 | 10 | √ | 0.0000000000 | 已收回金额 |
 | 16 | fbaddebtamt | 损失金额 | numeric | 23 | 10 | √ | 0.0000000000 | 损失金额 |
 | 17 | flockedamt | 已锁定金额 | numeric | 23 | 10 | √ | 0.0000000000 | 已锁定金额 |
@@ -71,8 +71,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_ar_baddebtlossbill_tc_tid |  | ftid |
-| 2 | idx_ar_baddebtlossbill_tc_tbill |  | ftbillid |
+| 1 | idx_ar_baddebtlossbill_tc_tbill |  | ftbillid |
+| 2 | idx_ar_baddebtlossbill_tc_tid |  | ftid |
 | 3 | t_ar_baddebtlossbill_tc_pkey |  | fid |
 
 ---
@@ -185,46 +185,47 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fbaddebtlocamt | 损失金额(本位币) | numeric | 23 | 10 | √ | 0.0000000000 | 损失金额(本位币) |
-| 3 | facctsysid | 会计核算体系 | int8 | 64 |  | √ | 0 | 核算体系 xkbd_accountingsys |
-| 4 | fsalesmanid | 销售员 | int8 | 64 |  | √ | 0 | 供应链业务员 bd_operator |
-| 5 | forgid | 结算组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | facctsysid | 会计核算体系 | int8 | 64 |  | √ | 0 | [核算体系 xkbd_accountingsys](../fibd_files/xkbd_accountingsys.md) |
+| 4 | fsalesmanid | 销售员 | int8 | 64 |  | √ | 0 | [供应链业务员 bd_operator](../sbd_files/bd_operator.md) |
+| 5 | forgid | 结算组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | fsourcebilltypeid | 源单据类型ID | int8 | 64 |  | √ | 0 | 源单据类型ID |
 | 7 | fasstacttype | 往来类型 | varchar | 30 |  | √ | ' ' | 往来类型,枚举: bd_customer :客户 bd_supplier :供应商 bos_user :人员 cas_othercontactunit :其他往来单位 |
 | 8 | fsettlestatus | 核销状态 | varchar | 30 |  | √ | ' ' | 核销状态,枚举: unsettle :未核销 partsettle :部分核销 settled :全部核销 |
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 10 | fexchangerate | 汇率 | numeric | 23 | 10 | √ | 0.0000000000 | 汇率 |
-| 11 | fbiztype | 业务类型(预留字段) | int8 | 64 |  | √ | 0 | 业务类型 bd_biztype |
+| 11 | fbiztype | 业务类型(预留字段) | int8 | 64 |  | √ | 0 | [业务类型 bd_biztype](../sbd_files/bd_biztype.md) |
 | 12 | fquotation | 换算方式 | varchar | 30 |  | √ | '0' | 换算方式,枚举: 0 :直接汇率 1 :间接汇率 |
-| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | fbaddebtamt | 损失金额 | numeric | 23 | 10 | √ | 0.0000000000 | 损失金额 |
-| 15 | fbiztypeid | 业务类型 | int8 | 64 |  | √ | 0 | 业务类型 bd_biztype |
-| 16 | fexratetableid | 汇率表 | int8 | 64 |  | √ | 0 | 汇率表 bd_exratetable |
+| 15 | fbiztypeid | 业务类型 | int8 | 64 |  | √ | 0 | [业务类型 bd_biztype](../sbd_files/bd_biztype.md) |
+| 16 | fexratetableid | 汇率表 | int8 | 64 |  | √ | 0 | [汇率表 bd_exratetable](../base_files/bd_exratetable.md) |
 | 17 | fsourcebillno | 源单编号 | varchar | 255 |  | √ | ' ' | 源单编号 |
 | 18 | fbillno | 单据编号 | varchar | 80 |  | √ | ' ' | 单据编号 |
 | 19 | fsourcebizdate | 源单日期 | timestamp | 0 |  |  | null | 源单日期 |
 | 20 | frecamt | 应收金额 | numeric | 23 | 10 | √ | 0.0000000000 | 应收金额 |
 | 21 | fremark | 备注 | varchar | 512 |  | √ | ' ' | 备注 |
-| 22 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 22 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 23 | fbaddebtcause | 坏账原因 | varchar | 30 |  | √ | ' ' | 坏账原因,枚举: overdue :逾期未还并明显超过规定账龄 bankrupt :债务人破产和死亡 other :其他原因 |
 | 24 | fbillstatus | 单据状态 | varchar | 5 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 25 | fsalesdeptid | 销售部门 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 25 | fsalesdeptid | 销售部门 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 26 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 27 | fasstactid | 往来单位 | int8 | 64 |  | √ | 0 | 客户 bd_customer |
 | 28 | funsettleamt | 未收回金额 | numeric | 23 | 10 | √ | 0.0000000000 | 未收回金额 |
 | 29 | fauditdate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
-| 30 | fdepartmentid | 部门 | int8 | 64 |  | √ | 0 | 行政组织（部门） bos_adminorg |
-| 31 | fimagenumber | fimagenumber | varchar | 80 |  | √ | ' ' |  |
-| 32 | fbasecurrencyid | 本位币 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
-| 33 | fbizdate | 业务日期 | timestamp | 0 |  |  | null | 业务日期 |
-| 34 | fsourcebillid | 源单ID | int8 | 64 |  | √ | 0 | 源单ID |
-| 35 | fsalesorgid | 销售组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 36 | fexratedate | 汇率日期 | timestamp | 0 |  |  | null | 汇率日期 |
-| 37 | fisvoucher | 已生成凭证 | bpchar | 1 |  | √ | ' ' | 已生成凭证 |
-| 38 | fcurrencyid | 结算币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
-| 39 | fsalesgroupid | 销售组 | int8 | 64 |  | √ | 0 | 供应链业务组 bd_operatorgroup |
-| 40 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 41 | fisperiod | 是否初始化 | bpchar | 1 |  | √ | '0' | 是否初始化 |
-| 42 | fbilltypeid | 单据类型 | int8 | 64 |  | √ | 0 | 单据类型 bos_billtype |
+| 30 | fmigsrc | 来源系统 | int4 | 32 |  | √ | 0 | 来源系统 |
+| 31 | fdepartmentid | 部门 | int8 | 64 |  | √ | 0 | [行政组织（部门） bos_adminorg](../base_files/bos_adminorg.md) |
+| 32 | fimagenumber | fimagenumber | varchar | 80 |  | √ | ' ' |  |
+| 33 | fbasecurrencyid | 本位币 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
+| 34 | fbizdate | 业务日期 | timestamp | 0 |  |  | null | 业务日期 |
+| 35 | fsourcebillid | 源单ID | int8 | 64 |  | √ | 0 | 源单ID |
+| 36 | fsalesorgid | 销售组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 37 | fexratedate | 汇率日期 | timestamp | 0 |  |  | null | 汇率日期 |
+| 38 | fisvoucher | 已生成凭证 | bpchar | 1 |  | √ | ' ' | 已生成凭证 |
+| 39 | fcurrencyid | 结算币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
+| 40 | fsalesgroupid | 销售组 | int8 | 64 |  | √ | 0 | [供应链业务组 bd_operatorgroup](../sbd_files/bd_operatorgroup.md) |
+| 41 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 42 | fisperiod | 是否初始化 | bpchar | 1 |  | √ | '0' | 是否初始化 |
+| 43 | fbilltypeid | 单据类型 | int8 | 64 |  | √ | 0 | 单据类型 bos_billtype |
 
 ### 列规则定义
 
@@ -251,25 +252,25 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fexpenseitemid | 费用项目 | int8 | 64 |  | √ | 0 | 费用项目 er_expenseitemedit |
+| 2 | fexpenseitemid | 费用项目 | int8 | 64 |  | √ | 0 | [费用项目 er_expenseitemedit](../basedata_files/er_expenseitemedit.md) |
 | 3 | fremark | 备注 | varchar | 512 |  | √ | ' ' | 备注 |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fbaddebtcause | 坏账原因 | varchar | 30 |  | √ | ' ' | 坏账原因,枚举: overdue :逾期未还并明显超过规定账龄 bankrupt :债务人破产和死亡 other :其他原因 |
 | 6 | fbaddebtlocamt | 损失金额(本位币) | numeric | 23 | 10 | √ | 0.0000000000 | 损失金额(本位币) |
 | 7 | fsrcentryid | 源单分录ID | int8 | 64 |  | √ | 0 | 源单分录ID |
-| 8 | fprojectid | 项目 | int8 | 64 |  | √ | 0 | 项目 bd_project |
-| 9 | fmaterialid | 物料 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 8 | fprojectid | 项目 | int8 | 64 |  | √ | 0 | [项目 bd_project](../basedata_files/bd_project.md) |
+| 9 | fmaterialid | 物料 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 10 | funlockamt | 未锁定金额 | numeric | 23 | 10 | √ | 0.0000000000 | 未锁定金额 |
 | 11 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 12 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 13 | funsettleamt | 未收回金额 | numeric | 23 | 10 | √ | 0.0000000000 | 未收回金额 |
 | 14 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 15 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 15 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 16 | fsettledamt | 已收回金额 | numeric | 23 | 10 | √ | 0.0000000000 | 已收回金额 |
 | 17 | fbaddebtamt | 损失金额 | numeric | 23 | 10 | √ | 0.0000000000 | 损失金额 |
 | 18 | flockedamt | 已锁定金额 | numeric | 23 | 10 | √ | 0.0000000000 | 已锁定金额 |
 | 19 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 20 | flinetypeid | 行类型(预留字段) | int8 | 64 |  | √ | 0 | 行类型 bd_linetype |
+| 20 | flinetypeid | 行类型(预留字段) | int8 | 64 |  | √ | 0 | [行类型 bd_linetype](../sbd_files/bd_linetype.md) |
 | 21 | fmaterialname | fmaterialname | varchar | 255 |  | √ | ' ' |  |
 | 22 | frecamt | 应收金额 | numeric | 23 | 10 | √ | 0.0000000000 | 应收金额 |
 

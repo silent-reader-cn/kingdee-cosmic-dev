@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fbillstatus | 单据状态 | varchar | 50 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 4 | fcreatetime | 创建时间 | int8 | 64 |  |  | null | 创建时间 |
 | 5 | fseq | fseq | int8 | 64 |  | √ | 0 |  |
@@ -18,12 +18,12 @@
 | 7 | flogic | 逻辑 | varchar | 50 |  | √ | ' ' | 逻辑 |
 | 8 | fmodifytime | 修改时间 | int8 | 64 |  |  | null | 修改时间 |
 | 9 | fvalue | 值 | varchar | 255 |  | √ | ' ' | 值 |
-| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fkey | 匹配规则 | varchar | 50 |  | √ | ' ' | 匹配规则 |
 | 12 | fcondition | 条件 | varchar | 50 |  | √ | ' ' | 条件 |
 | 13 | fentryid | 分录id | int8 | 64 |  | √ | 0 | 分录id |
 | 14 | fbillno | 单据编号 | varchar | 30 |  | √ | ' ' | 单据编号 |
-| 15 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 15 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

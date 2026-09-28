@@ -23,7 +23,7 @@
 | 12 | fselectresult | 勾选结果 | varchar | 50 |  | √ | ' ' | 勾选结果,枚举: 0 :- 1 :抵扣 2 :不抵扣 |
 | 13 | ftaxauthorityname | 税务机关名称 | varchar | 100 |  | √ | ' ' | 税务机关名称 |
 | 14 | fauthdate | 认证日期 | timestamp | 0 |  |  | null | 认证日期 |
-| 15 | fbaseinvoicetype | 发票类型 | int8 | 64 |  | √ | 0 | 发票类型 bd_invoicetype |
+| 15 | fbaseinvoicetype | 发票类型 | int8 | 64 |  | √ | 0 | [发票种类 bd_invoicetype](../basedata_files/bd_invoicetype.md) |
 | 16 | fsignstatus | 签收状态 | varchar | 50 |  | √ | ' ' | 签收状态,枚举: 1 :已签收 0 :未签收 |
 | 17 | fselectstatus | 勾选状态 | varchar | 50 |  | √ | ' ' | 勾选状态,枚举: 1 :已勾选 0 :未勾选 |
 | 18 | fdatasource | 数据来源 | varchar | 50 |  | √ | ' ' | 数据来源 |
@@ -56,7 +56,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fdrawer | 开票人 | varchar | 16 |  | √ | ' ' | 开票人 |
 | 3 | ftaxrate | 税率 | numeric | 23 | 10 | √ | 0.0000000000 | 税率 |
-| 4 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 4 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | ftotalamount | 价税合计 | numeric | 23 | 10 | √ | 0.0000000000 | 价税合计 |
 | 6 | fbuyercardno | 买方身份证号/组织机构代码 | varchar | 200 |  | √ | ' ' | 买方身份证号/组织机构代码 |
 | 7 | fcertificatenum | 合格证号 | varchar | 64 |  | √ | ' ' | 合格证号 |
@@ -81,18 +81,18 @@
 | 26 | fcommodityinspectionnum | 商检单号 | varchar | 64 |  | √ | ' ' | 商检单号 |
 | 27 | foriginalinvoicecode | 原发票代码 | varchar | 64 |  | √ | ' ' | 原发票代码 |
 | 28 | fsalername | 销方名称 | varchar | 200 |  | √ | ' ' | 销方名称 |
-| 29 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 29 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 30 | finvoicestatus | 发票状态 | varchar | 30 |  | √ | ' ' | 发票状态,枚举: 0 :正常 1 :失控 2 :作废 3 :红冲 4 :异常 |
 | 31 | feffectivetaxamount | 有效税额 | numeric | 23 | 10 | √ | 0.0000000000 | 有效税额 |
 | 32 | fenginenum | 发动机编号 | varchar | 112 |  | √ | ' ' | 发动机编号 |
-| 33 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 33 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 34 | fopentype | 开票类型 | varchar | 30 |  | √ | ' ' | 开票类型,枚举: 0 :蓝字发票 1 :红字发票 |
 | 35 | fscanauthenticatetime | 扫描认证时间 | timestamp | 0 |  |  | null | 扫描认证时间 |
 | 36 | fselecttime | 勾选时间 | timestamp | 0 |  |  | null | 勾选时间 |
 | 37 | finvoicedata | 开票日期 | timestamp | 0 |  |  | null | 开票日期 |
 | 38 | fbuyertaxno | 购方税号 | varchar | 40 |  | √ | ' ' | 购方税号 |
 | 39 | fremark | 备注 | varchar | 480 |  | √ | ' ' | 备注 |
-| 40 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 40 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 41 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 42 | fsalerphone | 销方电话 | varchar | 60 |  | √ | ' ' | 销方电话 |
 | 43 | fimportcertificate | 进口证明书号 | varchar | 64 |  | √ | ' ' | 进口证明书号 |

@@ -13,11 +13,11 @@
 | 2 | fmodify_time | 更新时间 | timestamp | 0 |  |  | null | 更新时间 |
 | 3 | fstatus | 执行状态 | varchar | 30 |  | √ | ' ' | 执行状态,枚举: 0 :未执行 1 :执行中 2 :执行成功 3 :执行失败 |
 | 4 | fmessage | 日志内容 | varchar | 510 |  | √ | ' ' | 日志内容 |
-| 5 | fbase_schema | 基础资料模型 | int8 | 64 |  | √ | 0 | 参照数据方案 isc_base_schema |
+| 5 | fbase_schema | 基础资料模型 | int8 | 64 |  | √ | 0 | [参照数据方案 isc_base_schema](../iscb_files/isc_base_schema.md) |
 | 6 | fcreate_time | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 7 | ftotal_count | 总数 | varchar | 100 |  | √ | ' ' | 总数 |
 | 8 | fexec_count | 已执行数 | varchar | 100 |  | √ | ' ' | 已执行数 |
-| 9 | fmapping_rule | 值映射方案 | int8 | 64 |  | √ | 0 | 值转换规则 isc_value_conver_rule |
+| 9 | fmapping_rule | 值映射方案 | int8 | 64 |  | √ | 0 | [值转换规则 isc_value_conver_rule](../iscb_files/isc_value_conver_rule.md) |
 | 10 | fmessage_tag | 日志内容_详情 | text | 0 |  |  | null | 日志内容_详情 |
 
 ### 列规则定义

@@ -40,7 +40,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fdimnumber | 维度编码 | varchar | 50 |  | √ | ' ' | 维度编码 |
-| 3 | fcoldimension | 维度 | int8 | 64 |  | √ | 0 | 维度 pa_dimension |
+| 3 | fcoldimension | 维度 | int8 | 64 |  | √ | 0 | [维度 pa_dimension](../pa_files/pa_dimension.md) |
 | 4 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 5 | fdimname | 维度名称 | varchar | 100 |  | √ | ' ' | 维度名称 |
 | 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
@@ -71,18 +71,18 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 5 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 6 | fstatus | 数据状态 | bpchar | 1 |  | √ | 'C' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 7 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 7 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 8 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 9 | fanalysissystem | 体系 | int8 | 64 |  | √ | 0 | 分析体系 pa_anasystemsetting |
+| 9 | fanalysissystem | 体系 | int8 | 64 |  | √ | 0 | [分析体系 pa_anasystemsetting](../pa_files/pa_anasystemsetting.md) |
 | 10 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 11 | fnumber | 编码 | varchar | 50 |  | √ | ' ' | 编码 |
-| 12 | fanalysismodel | 模型 | int8 | 64 |  | √ | 0 | 分析模型 pa_analysismodel |
-| 13 | fmeasure | 度量 | int8 | 64 |  | √ | 0 | 度量 pa_measure |
-| 14 | fdimension | 维度 | int8 | 64 |  | √ | 0 | 维度 pa_dimension |
+| 12 | fanalysismodel | 模型 | int8 | 64 |  | √ | 0 | [分析模型 pa_analysismodel](../pa_files/pa_analysismodel.md) |
+| 13 | fmeasure | 度量 | int8 | 64 |  | √ | 0 | [度量 pa_measure](../pa_files/pa_measure.md) |
+| 14 | fdimension | 维度 | int8 | 64 |  | √ | 0 | [维度 pa_dimension](../pa_files/pa_dimension.md) |
 
 ### 列规则定义
 

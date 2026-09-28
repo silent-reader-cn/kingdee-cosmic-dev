@@ -13,8 +13,8 @@
 | 2 | fcreatedate | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
 | 3 | fsrcvoucherid | 来源凭证ID | int8 | 64 |  | √ | 0 | 来源凭证ID |
 | 4 | fdestvoucherid | 目标凭证ID | int8 | 64 |  | √ | 0 | 目标凭证ID |
-| 5 | fdestbookid | 目标账簿 | int8 | 64 |  | √ | 0 | 账簿 gl_accountbook |
-| 6 | fsrcbookid | 来源账簿 | int8 | 64 |  | √ | 0 | 账簿 gl_accountbook |
+| 5 | fdestbookid | 目标账簿 | int8 | 64 |  | √ | 0 | [账簿 gl_accountbook](../gl_files/gl_accountbook.md) |
+| 6 | fsrcbookid | 来源账簿 | int8 | 64 |  | √ | 0 | [账簿 gl_accountbook](../gl_files/gl_accountbook.md) |
 | 7 | fruleid | 凭证折算规则ID | int8 | 64 |  | √ | 0 | 凭证折算规则ID |
 
 ### 列规则定义
@@ -28,4 +28,5 @@
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
 | 1 | idx_gl_relation_fdestvch |  | fdestvoucherid |
-| 2 | pk_t_gl_relation |  | fid |
+| 2 | idx_gl_relation_fsrcvch |  | fsrcvoucherid |
+| 3 | pk_t_gl_relation |  | fid |

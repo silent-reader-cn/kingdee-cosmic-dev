@@ -39,24 +39,24 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fpwxkznum | 排污许可证编号 | int8 | 64 |  | √ | 0 | 环保税排污许可证 tctb_hjbhs_entry |
+| 2 | fpwxkznum | 排污许可证编号 | int8 | 64 |  | √ | 0 | [环保税排污许可证 tctb_hjbhs_entry](../tctb_files/tctb_hjbhs_entry.md) |
 | 3 | fzszm | 征收子目 | varchar | 50 |  | √ | ' ' | 征收子目 |
 | 4 | fsthjzgbm | 生态环境主管部门 | varchar | 50 |  | √ | ' ' | 生态环境主管部门 |
-| 5 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | fweidu | 纬度-度 | int8 | 64 |  | √ | 0 | 纬度-度 |
 | 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 8 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 9 | fenddate | 税源有效期止 | timestamp | 0 |  |  | null | 税源有效期止 |
-| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 12 | fwrwlb | 污染物类别 | int8 | 64 |  | √ | 0 | 业务定义分录 tpo_hbs_bizdef_entry |
 | 13 | fjingdufen | 经度-分 | int8 | 64 |  | √ | 0 | 经度-分 |
-| 14 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | fmark | 备注 | varchar | 50 |  | √ | ' ' | 备注 |
 | 16 | fweidufen | 纬度-分 | int8 | 64 |  | √ | 0 | 纬度-分 |
 | 17 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 18 | fqtgtfw | 其他固体废物 | varchar | 50 |  | √ | ' ' | 其他固体废物 |
-| 19 | fpfksszgswjg | 排放口所属主管税务机关 | int8 | 64 |  | √ | 0 | 税务机关 bastax_taxorgan |
+| 19 | fpfksszgswjg | 排放口所属主管税务机关 | int8 | 64 |  | √ | 0 | [税务机关 bastax_taxorgan](../bastax_files/bastax_taxorgan.md) |
 | 20 | fwrwname | 污染物名称 | varchar | 50 |  | √ | ' ' | 污染物名称 |
 | 21 | fhygcpfwrwmc | 海洋工程排放污染物名称 | varchar | 50 |  | √ | ' ' | 海洋工程排放污染物名称 |
 | 22 | fcpwxsdwrwmc | 产排污系数的污染物名称 | varchar | 50 |  | √ | ' ' | 产排污系数的污染物名称 |

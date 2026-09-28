@@ -14,9 +14,9 @@
 | 3 | fcalctaxbase | 计税基础 | numeric | 23 | 10 | √ | 0 | 计税基础 |
 | 4 | ftaxresidualvalue | 税务预计净残值 | numeric | 23 | 10 | √ | 0 | 税务预计净残值 |
 | 5 | ftaxassetcategory | 税务资产类别 | varchar | 100 |  | √ | ' ' | 税务资产类别 |
-| 6 | fmodifier | 操作人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | fmodifier | 操作人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 7 | faccountingperiod | 会计期间 | timestamp | 0 |  |  | null | 会计期间 |
-| 8 | forg | 核算组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 8 | forg | 核算组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 9 | fmodifytime | 操作时间 | timestamp | 0 |  |  | null | 操作时间 |
 | 10 | ftaxyearamount | 税务一般本年折旧摊销额 | numeric | 23 | 10 | √ | 0 | 税务一般本年折旧摊销额 |
 | 11 | ftaxcumulativeamount | 税务一般累计折旧摊销额 | numeric | 23 | 10 | √ | 0 | 税务一般累计折旧摊销额 |

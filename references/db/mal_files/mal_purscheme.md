@@ -1,41 +1,8 @@
-# 采购方案-mal_purscheme
+# 个人套餐-mal_purscheme
 
-## 商品分录-子表 t_mal_purschemeentry
+## 个人套餐-主表 t_mal_purscheme
 
-- **表名称：** 商品分录-子表
-- **表名：** t_mal_purschemeentry
-
-### 表格列定义
-
-| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fqty | 数量 | numeric | 19 | 6 | √ | 0.000000 | 数量 |
-| 3 | fgoodsid | 商品编码 | int8 | 64 |  | √ | 0 | 商品管理 pmm_prodmanage |
-| 4 | funitid | 计量单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 5 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 6 | fnote | 备注 | varchar | 50 |  | √ | ' ' | 备注 |
-| 7 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-
-### 列规则定义
-
-| 序号 | 键编码 | 列字段 |
-| :--- | :--- | :--- |
-| 1 | fentryid | fentryid |
-
-### 索引定义
-
-| 序号 | 索引名 | 唯一 | 列字段 |
-| :--- | :--- | :--- | :--- |
-| 1 | idx_mal_purscheme_fgoodsid |  | fgoodsid |
-| 2 | t_mal_purschemeentry_pkey |  | fentryid |
-| 3 | idx_mal_purscheme_fid_fseq |  | fid,fseq |
-
----
-
-## 采购方案-主表 t_mal_purscheme
-
-- **表名称：** 采购方案-主表
+- **表名称：** 个人套餐-主表
 - **表名：** t_mal_purscheme
 
 ### 表格列定义
@@ -44,11 +11,11 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fname | fname | varchar | 100 |  | √ | ' ' |  |
-| 5 | fcurrid | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 5 | fcurrid | 币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 | 6 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 7 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 7 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 8 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 9 | fenable | 使用状态 | bpchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 10 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
@@ -70,9 +37,42 @@
 
 ---
 
-## 采购方案-多语言表 t_mal_purscheme_l
+## 商品分录-子表 t_mal_purschemeentry
 
-- **表名称：** 采购方案-多语言表
+- **表名称：** 商品分录-子表
+- **表名：** t_mal_purschemeentry
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fqty | 数量 | numeric | 19 | 6 | √ | 0.000000 | 数量 |
+| 3 | fgoodsid | 商品编码 | int8 | 64 |  | √ | 0 | [自建商品池 pmm_prodmanage](../pmm_files/pmm_prodmanage.md) |
+| 4 | funitid | 计量单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 5 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
+| 6 | fnote | 备注 | varchar | 50 |  | √ | ' ' | 备注 |
+| 7 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fentryid | fentryid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_mal_purscheme_fgoodsid |  | fgoodsid |
+| 2 | t_mal_purschemeentry_pkey |  | fentryid |
+| 3 | idx_mal_purscheme_fid_fseq |  | fid,fseq |
+
+---
+
+## 个人套餐-多语言表 t_mal_purscheme_l
+
+- **表名称：** 个人套餐-多语言表
 - **表名：** t_mal_purscheme_l
 
 ### 表格列定义

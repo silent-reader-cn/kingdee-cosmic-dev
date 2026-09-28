@@ -12,8 +12,8 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fshow | 启用印章显示 | bpchar | 1 |  | √ | '1' | 启用印章显示 |
 | 3 | flevel | 对象级别 | varchar | 10 |  | √ | ' ' | 对象级别,枚举: root :根节点 cloud :云节点 app :应用节点 object :业务对象节点 |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 5 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 5 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | fpictures | 图片设置隐藏域 | text | 0 |  |  | null | 图片设置隐藏域 |
 | 7 | fcreatetime | 创建时间 | timestamp | 0 |  | √ | LOCALTIMESTAMP | 创建时间 |
 | 8 | fobjectid | 对象编码 | varchar | 36 |  | √ | ' ' | 对象编码 |

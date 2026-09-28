@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fprojectid | 项目编码 | int8 | 64 |  | √ | 0 | 项目 pmpd_project |
+| 2 | fprojectid | 项目编码 | int8 | 64 |  | √ | 0 | [项目 pmpd_project](../fmm_files/pmpd_project.md) |
 | 3 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 4 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 
@@ -70,11 +70,11 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fremark | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
 | 3 | fcstimes | 班制时间 | varchar | 255 |  | √ | ' ' | 班制时间 |
-| 4 | fshiftid | 班次 | int8 | 64 |  | √ | 0 | 班次 mpdm_workshifts |
-| 5 | fpersonid | 工号 | int8 | 64 |  | √ | 0 | 基础资料带组织模板 mpdm_manuperson |
+| 4 | fshiftid | 班次 | int8 | 64 |  | √ | 0 | [班次 mpdm_workshifts](../mpdm_files/mpdm_workshifts.md) |
+| 5 | fpersonid | 工号 | int8 | 64 |  | √ | 0 | [基础资料带组织模板 mpdm_manuperson](../mpdm_files/mpdm_manuperson.md) |
 | 6 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 7 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 8 | fcsid | 班制 | int8 | 64 |  | √ | 0 | 班制 mpdm_classsystem |
+| 8 | fcsid | 班制 | int8 | 64 |  | √ | 0 | [班制 mpdm_classsystem](../mpdm_files/mpdm_classsystem.md) |
 | 9 | fcstimes_tag | 班制时间_详情 | text | 0 |  |  | '' | 班制时间_详情 |
 | 10 | fshifttimes | 班次时间 | varchar | 255 |  | √ | ' ' | 班次时间 |
 | 11 | fshifttimes_tag | 班次时间_详情 | text | 0 |  |  | '' | 班次时间_详情 |
@@ -104,7 +104,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fisworklog | 是否有开工记录 | bpchar | 1 |  | √ | ' ' | 是否有开工记录 |
-| 2 | fovhlordentryid | 检修工单计划分录F7 | int8 | 64 |  | √ | 0 | 检修工单分录F7(废弃) sfc_mroorder_f7 |
+| 2 | fovhlordentryid | 检修工单计划分录F7 | int8 | 64 |  | √ | 0 | [检修工单分录F7(废弃) sfc_mroorder_f7](../sfc_files/sfc_mroorder_f7.md) |
 | 3 | fisengrck | 工程师检查与否 | bpchar | 1 |  | √ | ' ' | 工程师检查与否 |
 | 4 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 5 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 | id |
@@ -138,22 +138,22 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fhopersmobile | 交接人联系方式 | varchar | 50 |  | √ | ' ' | 交接人联系方式 |
 | 4 | fbillstatus | 单据状态 | varchar | 50 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 D :完成反馈 |
-| 5 | fhandoverpersonid | 交接人 | int8 | 64 |  | √ | 0 | 基础资料带组织模板 mpdm_manuperson |
+| 5 | fhandoverpersonid | 交接人 | int8 | 64 |  | √ | 0 | [基础资料带组织模板 mpdm_manuperson](../mpdm_files/mpdm_manuperson.md) |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 7 | forgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 7 | forgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | fperscount | 总共人数 | int8 | 64 |  | √ | 1 | 总共人数 |
 | 9 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
-| 10 | freceivedbyid | 接收人 | int8 | 64 |  | √ | 0 | 基础资料带组织模板 mpdm_manuperson |
+| 10 | freceivedbyid | 接收人 | int8 | 64 |  | √ | 0 | [基础资料带组织模板 mpdm_manuperson](../mpdm_files/mpdm_manuperson.md) |
 | 11 | fisspntcentryupd | 自动更新到常用库 | bpchar | 1 |  | √ | ' ' | 自动更新到常用库 |
 | 12 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 14 | findustryid | 行业 | int8 | 64 |  | √ | 0 | 树形基础资料模板 mpdm_professiona |
+| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 14 | findustryid | 行业 | int8 | 64 |  | √ | 0 | [树形基础资料模板 mpdm_professiona](../mpdm_files/mpdm_professiona.md) |
 | 15 | fiscontentryupd | 注意事项自动更新到常用库 | bpchar | 1 |  | √ | ' ' | 注意事项自动更新到常用库 |
 | 16 | fbillno | 单据编号 | varchar | 30 |  | √ | ' ' | 单据编号 |
-| 17 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 17 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 18 | fhandovertime | 交接日期 | timestamp | 0 |  |  | null | 交接日期 |
 | 19 | fhandoverstatus | 交接状态 | varchar | 30 |  | √ | ' ' | 交接状态,枚举: A :接收 B :退回 |
 

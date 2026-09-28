@@ -22,7 +22,7 @@
 | 11 | fsrcbilljson | 源单Json | varchar | 512 |  | √ | ' ' | 源单Json |
 | 12 | fbiztime | 变更日期 | timestamp | 0 |  |  | null | 变更日期 |
 | 13 | fxbillchangejson | 变更内容json | varchar | 512 |  | √ | ' ' | 变更内容json |
-| 14 | fcreatorid | 变更人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fcreatorid | 变更人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | fxbillentity | 变更单实体 | varchar | 80 |  | √ | ' ' | 变更单实体 |
 | 16 | fsrcbillentity | 源单实体 | varchar | 80 |  | √ | ' ' | 源单实体 |
 | 17 | fxbilljson_tag | 变更单Json_详情 | text | 0 |  |  | null | 变更单Json_详情 |

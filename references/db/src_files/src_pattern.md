@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fweight | 权重(%) | numeric | 23 | 10 | √ | 0 | 权重(%) |
-| 3 | fpackageid | 标段名称 | int8 | 64 |  | √ | 0 | 标段名称 src_packagef7 |
+| 3 | fpackageid | 标段名称 | int8 | 64 |  | √ | 0 | [标段名称 src_packagef7](../src_files/src_packagef7.md) |
 | 4 | fratio | 数量配比 | numeric | 23 | 10 | √ | 0 | 数量配比 |
 | 5 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 6 | fpurlistid | 标的名称 | int8 | 64 |  | √ | 0 | 采购清单F7 src_purlistf7 |
@@ -42,57 +42,60 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | forgid | 采购组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | forgid | 采购组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fislargezero | 商务价格为0时不参与排名(等同弃标的) | bpchar | 1 |  | √ | '1' | 商务价格为0时不参与排名(等同弃标的) |
 | 4 | fscorepara2 | 商务分计算方法β2值 | numeric | 23 | 10 | √ | 2 | 商务分计算方法β2值 |
-| 5 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 7 | fsuppliernum | 计算平均值时最多取几个供应商 | int4 | 32 |  | √ | 0 | 计算平均值时最多取几个供应商 |
 | 8 | fmatchfield | 匹配度 | int4 | 32 |  | √ | 0 | 匹配度 |
 | 9 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
 | 10 | fbasescoreratio2 | 评标基准价系数(%) | numeric | 19 | 6 | √ | 0 | 评标基准价系数(%) |
 | 11 | fissyspreset | 系统预置 | bpchar | 1 |  | √ | '0' | 系统预置 |
-| 12 | fcalcratio | 中标占比计算插件 | varchar | 100 |  | √ | ' ' | 中标占比计算插件 |
-| 13 | fcalcanaly | 自定义字段值计算插件 | varchar | 100 |  | √ | ' ' | 自定义字段值计算插件 |
-| 14 | fname | 名称 | varchar | 300 |  | √ | ' ' | 名称 |
-| 15 | fisnonnegative | 商务得分是否必须大于或等于零 | bpchar | 1 |  | √ | '0' | 商务得分是否必须大于或等于零 |
-| 16 | fbasescore | 基准得分(满分) | numeric | 19 | 6 | √ | 0 | 基准得分(满分) |
-| 17 | fisbydecision | 根据标的定标金额计算定标金额汇总 | bpchar | 1 |  | √ | '0' | 根据标的定标金额计算定标金额汇总 |
-| 18 | fenable | 可用状态 | bpchar | 1 |  | √ | ' ' | 可用状态,枚举: 0 :禁用 1 :可用 |
-| 19 | fruleassess | 商务报价计算规则(招标) | bpchar | 1 |  | √ | ' ' | 商务报价计算规则(招标),枚举: 1 :标的单价 2 :报价包的采购总金额 3 :报价包内所有产品的平均价 4 :其他 |
-| 20 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
-| 21 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
-| 22 | fisdefault | 是否默认 | bpchar | 1 |  | √ | '0' | 是否默认 |
-| 23 | fscoreformula | 商务分计算方法 | varchar | 1 |  | √ | ' ' | 商务分计算方法,枚举: 1 :基准价/投标价*100 或 投标价/基准价*100 2 :商务基准得分-[abs(投标价-基准价)/基准价]*β*100 |
-| 24 | fsuppliernum2 | 去掉最高值最低值的计算基数 | int4 | 32 |  | √ | 0 | 去掉最高值最低值的计算基数 |
-| 25 | fpriority | 优先级 | int4 | 32 |  | √ | 0 | 优先级 |
-| 26 | fvaluefield | 商务价格的取值来源 | varchar | 255 |  | √ | ' ' | 商务价格的取值来源,枚举: amount :未税金额 taxamount :含税金额 price :未税单价 taxprice :含税单价 discount :折扣率(%) rebate :返点(%) decrease :降幅(%) feerate :费率(%) vieamount :竞价金额 pkgtaxamount :标段含税金额 pkgamount :标段未税金额 calcvalue :自定义字段 locprice :本币未税单价 loctaxprice :本币含税单价 locamount :本币未税金额 loctaxamount :本币含税金额 |
-| 27 | fwinruleid | 中标原则 | int8 | 64 |  | √ | 0 | 招标辅助资料 pds_extdata |
-| 28 | fminscoreratio | 最低商务得分比率(%) | numeric | 23 | 10 | √ | 0 | 最低商务得分比率(%) |
-| 29 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 30 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 31 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 32 | favgtype | 平均值计算方式 | bpchar | 1 |  | √ | ' ' | 平均值计算方式,枚举: 1 :不取平均值 2 :按标的行数计算平均值 3 :按标的数量计算平均值 |
-| 33 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
-| 34 | franktype | 价格排名方式 | bpchar | 1 |  | √ | ' ' | 价格排名方式,枚举: 1 :最低值排名 2 :最高值排名 3 :平均值排名 4 :随机排名(随机抽取) 5 :基准值(起标价) 6 :基准值(平均价) |
-| 35 | fcalctotal | 金额汇总计算插件 | varchar | 100 |  | √ | ' ' | 金额汇总计算插件 |
-| 36 | fbasescoreratio | 基准商务得分比率(%) | numeric | 23 | 10 | √ | 0 | 基准商务得分比率(%) |
-| 37 | fmanagetype | 管理方式 | bpchar | 1 |  | √ | ' ' | 管理方式,枚举: 1 :按项目 2 :按标段 3 :按标的 |
-| 38 | fsumtype | 商务得分汇总维度 | bpchar | 1 |  | √ | ' ' | 商务得分汇总维度,枚举: 1 :按供应商汇总 2 :按供应商+标段汇总 3 :按供应商+标段+标的汇总 |
-| 39 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 40 | fremark | 方案描述 | varchar | 255 |  | √ | ' ' | 方案描述 |
-| 41 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 42 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 43 | flastupdateuserid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 44 | fprojectd | 招标项目 | int8 | 64 |  | √ | 0 | 招标项目F7 src_projectf7 |
-| 45 | flastupdatetime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 46 | fvietype | 竞价类型 | bpchar | 1 |  | √ | ' ' | 竞价类型,枚举: A :降价(反向拍卖) B :加价(正向拍卖) |
-| 47 | fctrlstrategy | 控制策略 | bpchar | 1 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
-| 48 | fcalcrank | 排名推荐计算插件 | varchar | 100 |  | √ | ' ' | 排名推荐计算插件 |
-| 49 | fsourcetypeid | fsourcetypeid | int8 | 64 |  | √ | 0 |  |
-| 50 | fscorepara | 商务分计算方法β1值 | numeric | 19 | 6 | √ | 1 | 商务分计算方法β1值 |
-| 51 | fuseorgid | 使用组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 52 | fratiotype | 配比与权重设置方式 | bpchar | 1 |  | √ | ' ' | 配比与权重设置方式,枚举: 1 :按项目设置 2 :按标段设置 3 :按标的设置 |
+| 12 | factualfield | 实际报价取值来源 | varchar | 20 |  | √ | ' ' | 实际报价取值来源,枚举: locprice :本币未税单价 loctaxprice :本币含税单价 locamount :本币未税金额 loctaxamount :本币价税合计 |
+| 13 | fcalcratio | 中标占比计算插件 | varchar | 100 |  | √ | ' ' | 中标占比计算插件 |
+| 14 | fcalcanaly | 自定义字段值计算插件 | varchar | 100 |  | √ | ' ' | 自定义字段值计算插件 |
+| 15 | fname | 名称 | varchar | 300 |  | √ | ' ' | 名称 |
+| 16 | fisnonnegative | 商务得分是否必须大于或等于零 | bpchar | 1 |  | √ | '0' | 商务得分是否必须大于或等于零 |
+| 17 | fbasescore | 基准得分(满分) | numeric | 19 | 6 | √ | 0 | 基准得分(满分) |
+| 18 | fisbydecision | 根据标的定标金额计算定标金额汇总 | bpchar | 1 |  | √ | '0' | 根据标的定标金额计算定标金额汇总 |
+| 19 | fenable | 可用状态 | bpchar | 1 |  | √ | ' ' | 可用状态,枚举: 0 :禁用 1 :可用 |
+| 20 | fruleassess | 商务报价计算规则(招标) | bpchar | 1 |  | √ | ' ' | 商务报价计算规则(招标),枚举: 1 :标的单价 2 :报价包的采购总金额 3 :报价包内所有产品的平均价 4 :其他 |
+| 21 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
+| 22 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
+| 23 | fisdefault | 是否默认 | bpchar | 1 |  | √ | '0' | 是否默认 |
+| 24 | fscoreformula | 商务分计算方法 | varchar | 1 |  | √ | ' ' | 商务分计算方法,枚举: 1 :基准价/投标价*100 或 投标价/基准价*100 2 :商务基准得分-[abs(投标价-基准价)/基准价]*β*100 |
+| 25 | fsuppliernum2 | 去掉最高值最低值的计算基数 | int4 | 32 |  | √ | 0 | 去掉最高值最低值的计算基数 |
+| 26 | fpriority | 优先级 | int4 | 32 |  | √ | 0 | 优先级 |
+| 27 | fvaluefield | 商务价格的取值来源 | varchar | 255 |  | √ | ' ' | 商务价格的取值来源,枚举: amount :未税金额 taxamount :含税金额 price :未税单价 taxprice :含税单价 discount :折扣率(%) rebate :返点(%) decrease :降幅(%) feerate :费率(%) vieamount :竞价金额 pkgtaxamount :标段含税金额 pkgamount :标段未税金额 calcvalue :自定义字段 locprice :本币未税单价 loctaxprice :本币含税单价 locamount :本币未税金额 loctaxamount :本币含税金额 |
+| 28 | fwinruleid | 中标原则 | int8 | 64 |  | √ | 0 | [招标辅助资料 pds_extdata](../pds_files/pds_extdata.md) |
+| 29 | fminscoreratio | 最低商务得分比率(%) | numeric | 23 | 10 | √ | 0 | 最低商务得分比率(%) |
+| 30 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
+| 31 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 32 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
+| 33 | favgtype | 平均值计算方式 | bpchar | 1 |  | √ | ' ' | 平均值计算方式,枚举: 1 :不取平均值 2 :按标的行数计算平均值 3 :按标的数量计算平均值 |
+| 34 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
+| 35 | franktype | 价格排名方式(商务得分计算方式) | bpchar | 1 |  | √ | ' ' | 价格排名方式(商务得分计算方式),枚举: 1 :最低值排名 2 :最高值排名 3 :平均值排名 4 :随机排名(随机抽取) 5 :基准值(起标价) 6 :基准值(平均价) |
+| 36 | fcalctotal | 金额汇总计算插件 | varchar | 100 |  | √ | ' ' | 金额汇总计算插件 |
+| 37 | fbasescoreratio | 基准商务得分比率(%) | numeric | 23 | 10 | √ | 0 | 基准商务得分比率(%) |
+| 38 | fmanagetype | 管理方式 | bpchar | 1 |  | √ | ' ' | 管理方式,枚举: 1 :按项目 2 :按标段 3 :按标的 |
+| 39 | fsumtype | 商务得分汇总维度 | bpchar | 1 |  | √ | ' ' | 商务得分汇总维度,枚举: 1 :按供应商汇总 2 :按供应商+标段汇总 3 :按供应商+标段+标的ID汇总 4 :按供应商+标段+标的名称汇总 |
+| 40 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 41 | fremark | 方案描述 | varchar | 255 |  | √ | ' ' | 方案描述 |
+| 42 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 43 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 44 | flastupdateuserid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 45 | fprojectd | 招标项目 | int8 | 64 |  | √ | 0 | [招标项目F7 src_projectf7](../src_files/src_projectf7.md) |
+| 46 | fresultranktype | 综合计算评标结果排名方式 | bpchar | 1 |  | √ | '1' | 综合计算评标结果排名方式,枚举: 1 :按总分排名(商务分+技术分+商务综合分) 2 :先商务(商务分)，后技术(技术分+商务综合分) 3 :先技术(技术分+商务综合分)，后商务(商务分) |
+| 47 | flastupdatetime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 48 | fvietype | 竞价类型 | bpchar | 1 |  | √ | ' ' | 竞价类型,枚举: A :降价(反向拍卖) B :加价(正向拍卖) |
+| 49 | fctrlstrategy | 控制策略 | bpchar | 1 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
+| 50 | fcalcrank | 排名推荐计算插件 | varchar | 100 |  | √ | ' ' | 排名推荐计算插件 |
+| 51 | fsourcetypeid | fsourcetypeid | int8 | 64 |  | √ | 0 |  |
+| 52 | fscorepara | 商务分计算方法β1值 | numeric | 19 | 6 | √ | 1 | 商务分计算方法β1值 |
+| 53 | fuseorgid | 使用组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 54 | fratiotype | 配比与权重设置方式 | bpchar | 1 |  | √ | ' ' | 配比与权重设置方式,枚举: 1 :按项目设置 2 :按标段设置 3 :按标的设置 |
+| 55 | fbasefield | 标杆价取值来源 | varchar | 20 |  | √ | ' ' | 标杆价取值来源,枚举: maxprice :未税起标单价 maxtaxprice :含税起标单价 maxamount :未税起标金额 maxtaxamount :含税起标金额 |
 
 ### 列规则定义
 
@@ -210,7 +213,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 招标辅助资料 pds_extdata |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [招标辅助资料 pds_extdata](../pds_files/pds_extdata.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -239,7 +242,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fparamvalue | 默认值 | varchar | 512 |  | √ | ' ' | 默认值 |
-| 3 | fparameterid | 参数编码 | int8 | 64 |  | √ | 0 | 招标辅助资料 pds_extdata |
+| 3 | fparameterid | 参数编码 | int8 | 64 |  | √ | 0 | [招标辅助资料 pds_extdata](../pds_files/pds_extdata.md) |
 | 4 | fparamname | fparamname | varchar | 50 |  | √ | ' ' |  |
 | 5 | fbasedatainfo | 参数说明 | varchar | 512 |  | √ | ' ' | 参数说明 |
 | 6 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |

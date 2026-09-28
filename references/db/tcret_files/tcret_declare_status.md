@@ -15,7 +15,7 @@
 | 4 | fiscreated | 是否生成申报表 | int8 | 64 |  | √ | 0 | 是否生成申报表 |
 | 5 | fdeclaremonth | 申报月份 | varchar | 50 |  | √ | ' ' | 申报月份 |
 | 6 | fstartdate | 开始时间 | timestamp | 0 |  |  | null | 开始时间 |
-| 7 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 7 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | fcount | 生成申报表总数 | int8 | 64 |  | √ | 0 | 生成申报表总数 |
 
 ### 列规则定义

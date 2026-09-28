@@ -14,10 +14,10 @@
 | 3 | fdiff | 核对差异值 | varchar | 50 |  | √ | ' ' | 核对差异值 |
 | 4 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 5 | fenddata | 计算时间止 | timestamp | 0 |  |  | null | 计算时间止 |
-| 6 | forg | 运行组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | forg | 运行组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | ferrorreport | 错误报告 | varchar | 255 |  | √ | ' ' | 错误报告 |
 | 8 | fcurval | 元素结果值 | varchar | 50 |  | √ | ' ' | 元素结果值 |
-| 9 | fele | 元素 | int8 | 64 |  | √ | 0 | 元素设置 tdm_element_group |
+| 9 | fele | 元素 | int8 | 64 |  | √ | 0 | [元素设置 tdm_element_group](../tdm_files/tdm_element_group.md) |
 | 10 | fformula | 复核元素表达式 | varchar | 2000 |  | √ | ' ' | 复核元素表达式 |
 | 11 | fparententryid | fparententryid | int8 | 64 |  | √ | 0 | pid |
 | 12 | fstartdata | 计算时间起 | timestamp | 0 |  |  | null | 计算时间起 |

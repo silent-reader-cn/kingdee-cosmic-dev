@@ -30,5 +30,5 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | t_dhc_billstatusdetail_pkey |  | fid |
-| 2 | idx_dhc_blstadetail_blid |  | fbillid |
+| 1 | idx_dhc_blstadetail_blid |  | fbillid |
+| 2 | t_dhc_billstatusdetail_pkey |  | fid |

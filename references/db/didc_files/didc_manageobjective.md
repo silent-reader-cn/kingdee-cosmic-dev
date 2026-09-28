@@ -60,13 +60,13 @@
 | 3 | fquarter2 | 第二季度 | numeric | 23 | 10 | √ | 0 | 第二季度 |
 | 4 | fquarter3 | 第三季度 | numeric | 23 | 10 | √ | 0 | 第三季度 |
 | 5 | fquarter4 | 第四季度 | numeric | 23 | 10 | √ | 0 | 第四季度 |
-| 6 | findexid | 所属指标 | int8 | 64 |  | √ | 0 | 数智指标 didc_indexcatalogue |
+| 6 | findexid | 所属指标 | int8 | 64 |  | √ | 0 | [数智指标 didc_indexcatalogue](../didc_files/didc_indexcatalogue.md) |
 | 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | LOCALTIMESTAMP | 修改时间 |
 | 8 | fquarter1 | 第一季度 | numeric | 23 | 10 | √ | 0 | 第一季度 |
 | 9 | fmonth5 | 5月 | numeric | 23 | 10 | √ | 0 | 5月 |
 | 10 | fmonth4 | 4月 | numeric | 23 | 10 | √ | 0 | 4月 |
 | 11 | fmonth3 | 3月 | numeric | 23 | 10 | √ | 0 | 3月 |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fisquarter | 季 | bpchar | 1 |  | √ | ' ' | 季 |
 | 14 | fmonth2 | 2月 | numeric | 23 | 10 | √ | 0 | 2月 |
 | 15 | fmonth9 | 9月 | numeric | 23 | 10 | √ | 0 | 9月 |
@@ -81,7 +81,7 @@
 | 24 | fdisplayrule | 进度显示规则 | varchar | 255 |  | √ | ' ' | 进度显示规则 |
 | 25 | fmonth1 | 1月 | numeric | 23 | 10 | √ | 0 | 1月 |
 | 26 | fbillno | 目标编码 | varchar | 50 |  | √ | ' ' | 目标编码 |
-| 27 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 27 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 28 | fbillstatus | 目标状态 | varchar | 50 |  | √ | ' ' | 目标状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 29 | fcreatetime | 创建时间 | timestamp | 0 |  |  | LOCALTIMESTAMP | 创建时间 |
 | 30 | fcomparison | 对比条件 | varchar | 50 |  | √ | ' ' | 对比条件,枚举: schedule :按进度 numerical :按数值 |
@@ -89,7 +89,7 @@
 | 32 | fauditdate | 审核日期 | timestamp | 0 |  |  | LOCALTIMESTAMP | 审核日期 |
 | 33 | fyear | 目标年度 | timestamp | 0 |  | √ | LOCALTIMESTAMP | 目标年度 |
 | 34 | fisyear | 年 | bpchar | 1 |  | √ | ' ' | 年 |
-| 35 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 35 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 
@@ -121,7 +121,7 @@
 | 4 | fdimensionname | 维度名称 | varchar | 255 |  | √ | ' ' | 维度名称 |
 | 5 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 7 | fmodifierfield | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 7 | fmodifierfield | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

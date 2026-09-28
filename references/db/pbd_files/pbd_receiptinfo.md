@@ -98,25 +98,25 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | ftel | 固定电话 | varchar | 50 |  | √ | ' ' | 固定电话 |
-| 3 | forgid | 业务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | forgid | 业务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | fdisabledate | fdisabledate | timestamp | 0 |  |  | null |  |
 | 5 | faddressid | 省市区 | varchar | 50 |  | √ | ' ' | 省市区 |
-| 6 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fcontrolstatus | fcontrolstatus | bpchar | 1 |  | √ | ' ' |  |
 | 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 9 | fdefault | 默认交货地址 | bpchar | 1 |  | √ | ' ' | 默认交货地址 |
 | 10 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :保存 B :已提交 C :已审核 |
 | 11 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fpostalcode | 邮政编码 | varchar | 10 |  | √ | ' ' | 邮政编码 |
 | 14 | fmapaddress | fmapaddress | varchar | 255 |  | √ | ' ' |  |
 | 15 | fwholeaddress | fwholeaddress | varchar | 255 |  | √ | ' ' |  |
 | 16 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 17 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
-| 18 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 18 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 19 | fremark | fremark | varchar | 255 |  | √ | ' ' |  |
 | 20 | fphone | 联系方式 | varchar | 50 |  | √ | ' ' | 联系方式 |
-| 21 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 21 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 22 | fname | fname | varchar | 100 |  | √ | ' ' |  |
 | 23 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 24 | femail | 邮箱 | varchar | 50 |  | √ | ' ' | 邮箱 |
@@ -124,13 +124,14 @@
 | 26 | fdisablerid | fdisablerid | int8 | 64 |  | √ | 0 |  |
 | 27 | fauditdate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
 | 28 | fctrlstrategy | 控制策略 | bpchar | 1 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
-| 29 | fjdaddressnum | fjdaddressnum | varchar | 100 |  | √ | ' ' |  |
-| 30 | farea | farea | varchar | 50 |  | √ | ' ' |  |
-| 31 | fenable | 可用状态 | bpchar | 1 |  | √ | ' ' | 可用状态,枚举: 0 :禁用 1 :可用 |
-| 32 | fnumber | 编码 | varchar | 50 |  | √ | ' ' | 编码 |
-| 33 | fuseorgid | 业务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 34 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
-| 35 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 29 | ftype | ftype | bpchar | 1 |  | √ | ' ' |  |
+| 30 | fjdaddressnum | fjdaddressnum | varchar | 100 |  | √ | ' ' |  |
+| 31 | farea | farea | varchar | 50 |  | √ | ' ' |  |
+| 32 | fenable | 可用状态 | bpchar | 1 |  | √ | ' ' | 可用状态,枚举: 0 :禁用 1 :可用 |
+| 33 | fnumber | 编码 | varchar | 50 |  | √ | ' ' | 编码 |
+| 34 | fuseorgid | 业务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 35 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
+| 36 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

@@ -80,7 +80,7 @@
 | 2 | fincome1 | 视同销售业务 | bpchar | 1 |  | √ | ' ' | 视同销售业务 |
 | 3 | fincome2 | 未按权责发生制确认收入 | bpchar | 1 |  | √ | ' ' | 未按权责发生制确认收入 |
 | 4 | fillegal | 从事国家限制或禁止行业 | bpchar | 1 |  | √ | ' ' | 从事国家限制或禁止行业 |
-| 5 | forgid | 组织名称： | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | forgid | 组织名称： | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | fincome3 | 投资收益 | bpchar | 1 |  | √ | ' ' | 投资收益 |
 | 7 | fincome4 | 专项用途财政资金 | bpchar | 1 |  | √ | ' ' | 专项用途财政资金 |
 | 8 | fdeduct1 | 业务招待费 | bpchar | 1 |  | √ | ' ' | 业务招待费 |
@@ -109,7 +109,7 @@
 | 31 | fother7 | 销售未完工开发产品 | bpchar | 1 |  | √ | ' ' | 销售未完工开发产品 |
 | 32 | fother8 | 创业投资企业合伙人 | bpchar | 1 |  | √ | ' ' | 创业投资企业合伙人 |
 | 33 | femployeesnum | 从业人数（填写平均值） | numeric | 23 | 10 | √ | 0.0000000000 | 从业人数（填写平均值） |
-| 34 | fregistertype | 登记注册类型： | int8 | 64 |  | √ | 0 | 注册登记类型 tax_info_registertype |
+| 34 | fregistertype | 登记注册类型： | int8 | 64 |  | √ | 0 | [注册登记类型 tax_info_registertype](../tctb_files/tax_info_registertype.md) |
 | 35 | fother1 | 企业重组及递延纳税事项 | bpchar | 1 |  | √ | ' ' | 企业重组及递延纳税事项 |
 
 ### 列规则定义

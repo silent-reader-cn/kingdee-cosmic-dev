@@ -13,7 +13,7 @@
 | 2 | fshouldamount | 本期应提折旧额 | numeric | 19 | 6 | √ | 0.000000 | 本期应提折旧额 |
 | 3 | fdeprerate | 本期折旧率 | numeric | 19 | 6 | √ | 0.000000 | 本期折旧率 |
 | 4 | fleftworkload | 剩余工作量 | numeric | 19 | 6 | √ | 0.000000 | 剩余工作量 |
-| 5 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | fbgndepreamount | 期初折旧 | numeric | 19 | 6 | √ | 0.000000 | 期初折旧 |
 | 7 | ftotalworkload | 工作总量 | numeric | 19 | 6 | √ | 0.000000 | 工作总量 |
 | 8 | fbillstatus | 单据状态 | varchar | 30 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
@@ -23,16 +23,16 @@
 | 12 | fdepreamount | 本期折旧额 | numeric | 19 | 6 | √ | 0.000000 | 本期折旧额 |
 | 13 | fsumworkload | 累计工作量 | numeric | 19 | 6 | √ | 0.000000 | 累计工作量 |
 | 14 | fauditdate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
-| 15 | frealcardid | 实物卡片 | int8 | 64 |  | √ | 0 | 资产卡片基础资料 fa_card_real_base |
+| 15 | frealcardid | 实物卡片 | int8 | 64 |  | √ | 0 | [资产卡片基础资料 fa_card_real_base](../fa_files/fa_card_real_base.md) |
 | 16 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 17 | fusedeptid | fusedeptid | int8 | 64 |  | √ | 0 |  |
-| 18 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 18 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 19 | fenddepreamount | 期末折旧 | numeric | 19 | 6 | √ | 0.000000 | 期末折旧 |
 | 20 | fdepreworkload | 本期工作量 | numeric | 19 | 6 | √ | 0.000000 | 本期工作量 |
 | 21 | faddupyeardepre | 本年累计折旧 | numeric | 19 | 6 | √ | 0.000000 | 本年累计折旧 |
-| 22 | ffincardid | 财务卡片 | int8 | 64 |  | √ | 0 | 财务卡片基础资料 fa_card_fin_base |
+| 22 | ffincardid | 财务卡片 | int8 | 64 |  | √ | 0 | [财务卡片基础资料 fa_card_fin_base](../fa_files/fa_card_fin_base.md) |
 | 23 | fentryid | 单据编号 | int8 | 64 |  | √ | 0 | 单据编号 |
-| 24 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 24 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

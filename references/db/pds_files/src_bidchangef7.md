@@ -10,11 +10,11 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | forgid | 采购组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | forgid | 采购组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fbilldate | 变更时间 | timestamp | 0 |  |  | null | 变更时间 |
 | 4 | fpurdeptid | fpurdeptid | int8 | 64 |  | √ | 0 |  |
 | 5 | fmodifytime | fmodifytime | timestamp | 0 |  |  | null |  |
-| 6 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 7 | fapplyid | fapplyid | int8 | 64 |  | √ | 0 |  |
 | 8 | fdemandid | fdemandid | int8 | 64 |  | √ | 0 |  |
 | 9 | fpurgroupid | fpurgroupid | int8 | 64 |  | √ | 0 |  |
@@ -23,8 +23,8 @@
 | 12 | fbillno | 变更单号 | varchar | 30 |  | √ | ' ' | 变更单号 |
 | 13 | fremark | 变更原因 | varchar | 255 |  | √ | ' ' | 变更原因 |
 | 14 | fmodifierid | fmodifierid | int8 | 64 |  | √ | 0 |  |
-| 15 | ftemplateid | 变更类型 | int8 | 64 |  | √ | 0 | 组件模板配置 pds_tplconfig |
-| 16 | fprojectid | 寻源项目 | int8 | 64 |  | √ | 0 | 寻源项目 pds_projectf7 |
+| 15 | ftemplateid | 变更类型 | int8 | 64 |  | √ | 0 | [组件模板配置 pds_tplconfig](../pds_files/pds_tplconfig.md) |
+| 16 | fprojectid | 寻源项目 | int8 | 64 |  | √ | 0 | [寻源项目 pds_projectf7](../pds_files/pds_projectf7.md) |
 | 17 | fbillstatus | 单据状态 | bpchar | 1 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 18 | fparentid | fparentid | varchar | 50 |  | √ | ' ' |  |
 | 19 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |

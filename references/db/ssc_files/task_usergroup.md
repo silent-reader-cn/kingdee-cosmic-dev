@@ -16,7 +16,7 @@
 | 5 | fdptname | fdptname | int8 | 64 |  | √ | 0 |  |
 | 6 | fusestatus | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态 |
 | 7 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 8 | fuserid | 用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | fuserid | 用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fteamleader | 组长 | bpchar | 1 |  | √ | '0' | 组长 |
 | 10 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 11 | fability | 能力值 | numeric | 19 | 10 | √ | 1.0000000000 | 能力值 |
@@ -31,9 +31,9 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_ssc_usergroup_e_fgrpid |  | fgroupid |
+| 1 | index_usergroupentry |  | fuserid |
 | 2 | t_tk_usergroupentry_pkey |  | fentryid |
-| 3 | index_usergroupentry |  | fuserid |
+| 3 | idx_ssc_usergroup_e_fgrpid |  | fgroupid |
 | 4 | idx_ssc_usergroup_e_fid |  | fid |
 
 ---
@@ -49,21 +49,21 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fisrobots | 智能机器人 | bpchar | 1 |  | √ | '0' | 智能机器人 |
-| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | fseq | fseq | int8 | 64 |  | √ | 0 |  |
-| 5 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | fadminid | fadminid | int8 | 64 |  | √ | 0 |  |
 | 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 8 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 9 | ftaskallnum | 处理任务总数上限 | int8 | 64 |  | √ | 10000 | 处理任务总数上限 |
-| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 12 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 13 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
-| 14 | fcreateorgid | 共享中心 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 15 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fcreateorgid | 共享中心 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 15 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 16 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 17 | fssccenterid | 共享中心-废弃 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 17 | fssccenterid | 共享中心-废弃 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 18 | fuserid | fuserid | int8 | 64 |  | √ | 0 |  |
 | 19 | fdescription | 描述 | varchar | 255 |  | √ | ' ' | 描述 |
 | 20 | fworkperiod | 工作期间 | bpchar | 1 |  | √ | '2' | 工作期间,枚举: 1 :每天 2 :每月 |
@@ -170,5 +170,5 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | index_ssc_usergroup_l |  | fid,flocaleid |
-| 2 | t_tk_usergroup_l_pkey |  | fpkid |
+| 1 | t_tk_usergroup_l_pkey |  | fpkid |
+| 2 | index_ssc_usergroup_l |  | fid,flocaleid |

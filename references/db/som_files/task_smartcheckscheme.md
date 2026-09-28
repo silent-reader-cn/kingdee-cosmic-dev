@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fcpnumber | 编码 | varchar | 50 |  | √ | ' ' | 编码 |
-| 3 | fcpname | 名称 | int8 | 64 |  | √ | 0 | 质检点 task_checkingpoint |
+| 3 | fcpname | 名称 | int8 | 64 |  | √ | 0 | [质检点 task_checkingpoint](../som_files/task_checkingpoint.md) |
 | 4 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 6 | fcpdescription | 描述 | varchar | 255 |  | √ | ' ' | 描述 |
@@ -50,12 +50,12 @@
 | 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 9 | fstatus | 数据状态 | bpchar | 1 |  | √ | 'A' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 10 | fenddate | 结束日期 | timestamp | 0 |  |  | null | 结束日期 |
-| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 13 | fmonth | 月 | varchar | 100 |  | √ | ' ' | 月,枚举: 1 :一月 2 :二月 3 :三月 4 :四月 5 :五月 6 :六月 7 :七月 8 :八月 9 :九月 10 :十月 11 :十一月 12 :十二月 |
 | 14 | fdate | 日 | varchar | 100 |  | √ | ' ' | 日,枚举: 1 :01 2 :02 3 :03 4 :04 5 :05 6 :06 7 :07 8 :08 9 :09 10 :10 11 :11 12 :12 13 :13 14 :14 15 :15 16 :16 17 :17 18 :18 19 :19 20 :20 21 :21 22 :22 23 :23 24 :24 25 :25 26 :26 27 :27 28 :28 29 :29 30 :30 31 :31 |
-| 15 | fsscid | 共享中心 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 16 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 15 | fsscid | 共享中心 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 16 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 17 | freformrate | 整改率预警比例（%） | int8 | 64 |  | √ | 0 | 整改率预警比例（%） |
 | 18 | fsamplesize | 样本数（单） | int8 | 64 |  | √ | 0 | 样本数（单） |
 | 19 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
@@ -68,7 +68,7 @@
 | 26 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 27 | fdisrule | 任务分配规则 | bpchar | 1 |  | √ | ' ' | 任务分配规则,枚举: 0 :按质检任务类型分配 1 :按原审单任务类型分配 |
 | 28 | fnumber | 编码 | varchar | 50 |  | √ | ' ' | 编码 |
-| 29 | fqualitychecktasktype | 质检任务类型 | int8 | 64 |  | √ | 0 | 任务类型 task_tasktype |
+| 29 | fqualitychecktasktype | 质检任务类型 | int8 | 64 |  | √ | 0 | [任务类型 task_tasktype](../ssc_files/task_tasktype.md) |
 
 ### 列规则定义
 
@@ -95,7 +95,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -152,7 +152,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 业务单据 task_taskbill |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [业务单据 task_taskbill](../ssc_files/task_taskbill.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -180,7 +180,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 任务类型 task_tasktype |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [任务类型 task_tasktype](../ssc_files/task_tasktype.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义

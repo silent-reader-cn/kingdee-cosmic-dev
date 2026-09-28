@@ -19,7 +19,7 @@
 | 8 | ftaxreducecode | 减免性质代码 | varchar | 50 |  | √ | ' ' | 减免性质代码 |
 | 9 | famount | 减免税面积 | numeric | 23 | 10 | √ | 0.0000000000 | 减免税面积 |
 | 10 | fskssqq | 所属期起 | timestamp | 0 |  |  | null | 所属期起 |
-| 11 | forg | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 11 | forg | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 12 | ftaxstandard | 税额标准 | numeric | 23 | 10 | √ | 0.0000000000 | 税额标准 |
 | 13 | flandlevel | 土地等级 | varchar | 50 |  | √ | ' ' | 土地等级 |
 | 14 | fskssqz | 所属期止 | timestamp | 0 |  |  | null | 所属期止 |
@@ -36,5 +36,5 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_tcret_tds_det |  | forg,fdeclaremonth |
-| 2 | pk_tcret_tds_det |  | fid |
+| 1 | pk_tcret_tds_det |  | fid |
+| 2 | idx_tcret_tds_det |  | forg,fdeclaremonth |

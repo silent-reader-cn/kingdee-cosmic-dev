@@ -14,7 +14,7 @@
 | 3 | fsbbid | 申报表id | varchar | 100 |  | √ | ' ' | 申报表id |
 | 4 | fyfhdfyje | 研发活动费用金额 | numeric | 23 | 10 | √ | 0.0000000000 | 研发活动费用金额 |
 | 5 | fjjkcbljjsff | 加计扣除比例及计算方法 | int8 | 64 |  | √ | 0 | 业务定义分录 tpo_tccit_bizdef_entry |
-| 6 | fewblname | 二维表名称 | varchar | 100 |  | √ | ' ' | 二维表名称 |
+| 6 | fewblname | 二维表名称 | varchar | 200 |  | √ | ' ' | 二维表名称 |
 
 ### 列规则定义
 

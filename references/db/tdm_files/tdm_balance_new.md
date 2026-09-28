@@ -51,7 +51,7 @@
 | 5 | fsubaccount18 | 辅助项18编号 | varchar | 100 |  | √ | ' ' | 辅助项18编号 |
 | 6 | fdebitoriginalcurrency | 借方原币金额 | numeric | 23 | 10 | √ | 0.0000000000 | 借方原币金额 |
 | 7 | fsubaccount19 | 科目名称 | varchar | 500 |  | √ | ' ' | 科目名称 |
-| 8 | forgid | 核算组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 8 | forgid | 核算组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 9 | fsubaccount16 | 辅助项16编号 | varchar | 100 |  | √ | ' ' | 辅助项16编号 |
 | 10 | fsubaccount17 | 辅助项17编号 | varchar | 100 |  | √ | ' ' | 辅助项17编号 |
 | 11 | fsubaccount14 | 辅助项14编号 | varchar | 100 |  | √ | ' ' | 辅助项14编号 |
@@ -83,27 +83,27 @@
 | 37 | faccountperiod | 会计期间号 | varchar | 100 |  | √ | ' ' | 会计期间号,枚举: 01 :01 02 :02 03 :03 04 :04 05 :05 06 :06 07 :07 08 :08 09 :09 10 :10 11 :11 12 :12 |
 | 38 | fdatasource | 数据来源 | varchar | 100 |  | √ | ' ' | 数据来源 |
 | 39 | faccountyear | 会计年度 | varchar | 100 |  | √ | ' ' | 会计年度 |
-| 40 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 40 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 41 | fclosinglocalcurrency | 期末余额本位币 | numeric | 23 | 10 | √ | 0.0000000000 | 期末余额本位币 |
 | 42 | faccountcycle | 会计账期 | varchar | 100 |  | √ | ' ' | 会计账期 |
 | 43 | fopeninglocalcurrency | 期初余额本位币 | numeric | 23 | 10 | √ | 0.0000000000 | 期初余额本位币 |
 | 44 | fdebitoriginalcurrencyi | 借方原币金额（本年累计） | numeric | 23 | 10 | √ | 0 | 借方原币金额（本年累计） |
 | 45 | fadjperi | 调整期间 | varchar | 50 |  | √ | ' ' | 调整期间 |
 | 46 | fcreditoriginalcurrency | 贷方原币金额 | numeric | 23 | 10 | √ | 0.0000000000 | 贷方原币金额 |
-| 47 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 47 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 48 | fopeningamount | 期初数量 | numeric | 23 | 10 | √ | 0.0000000000 | 期初数量 |
 | 49 | faccountbookstype | 账簿类型 | varchar | 50 |  | √ | ' ' | 账簿类型 |
 | 50 | fsubaccount2 | 辅助项2编号 | varchar | 100 |  | √ | ' ' | 辅助项2编号 |
 | 51 | fisadjust | 调整期 | bpchar | 1 |  | √ | '0' | 调整期 |
 | 52 | fsubaccount1 | 辅助项1编号 | varchar | 100 |  | √ | ' ' | 辅助项1编号 |
-| 53 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 53 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 54 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 55 | fcreditamounti | 贷方数量（本年累计） | numeric | 23 | 10 | √ | 0 | 贷方数量（本年累计） |
 | 56 | fcreditlocalcurrency | 贷方本币金额 | numeric | 23 | 10 | √ | 0.0000000000 | 贷方本币金额 |
 | 57 | fcreditoriginalcurrencyi | 贷方原币金额（本年累计） | numeric | 23 | 10 | √ | 0 | 贷方原币金额（本年累计） |
 | 58 | fcreditlocalcurrencyi | 本年累计贷方本币金额 | numeric | 23 | 10 | √ | 0 | 本年累计贷方本币金额 |
 | 59 | fclosingamount | 期末数量 | numeric | 23 | 10 | √ | 0.0000000000 | 期末数量 |
-| 60 | fbalanceid | 科目 | varchar | 36 |  | √ | ' ' | 科目 tdm_account |
+| 60 | fbalanceid | 科目 | varchar | 36 |  | √ | ' ' | [科目 tdm_account](../tdm_files/tdm_account.md) |
 | 61 | fdebitlocalcurrencyi | 本年累计借方本币金额 | numeric | 23 | 10 | √ | 0 | 本年累计借方本币金额 |
 
 ### 列规则定义

@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | finvlevel | finvlevel | int8 | 64 |  | √ | 0 |  |
-| 3 | fcalcrulecfg | 因子计算规则 | int8 | 64 |  | √ | 0 | 因子计算规则 invp_calrulecfg |
+| 3 | fcalcrulecfg | 因子计算规则 | int8 | 64 |  | √ | 0 | [因子计算规则 invp_calrulecfg](../invp_files/invp_calrulecfg.md) |
 
 ### 列规则定义
 
@@ -38,7 +38,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 因子取数方案 invp_queryschema |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [因子取数方案 invp_queryschema](../invp_files/invp_queryschema.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -51,5 +51,5 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | pk_invp_smartcalccfg_query |  | fpkid |
-| 2 | idx_invp_smartcalccfg_query_fid |  | fid |
+| 1 | idx_invp_smartcalccfg_query_fid |  | fid |
+| 2 | pk_invp_smartcalccfg_query |  | fpkid |

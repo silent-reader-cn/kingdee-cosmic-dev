@@ -12,7 +12,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fvalues | 查询方案 | varchar | 255 |  | √ | ' ' | 查询方案 |
 | 3 | fvalues_tag | 查询方案_详情 | text | 0 |  |  | '' | 查询方案_详情 |
-| 4 | fuserid | 用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fuserid | 用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fentityid | 元数据标识 | varchar | 50 |  | √ | ' ' | 元数据标识 |
 
 ### 列规则定义

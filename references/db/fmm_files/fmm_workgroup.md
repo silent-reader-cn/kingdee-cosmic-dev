@@ -10,29 +10,29 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fdescribe | 描述 | varchar | 255 |  | √ | ' ' | 描述 |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 7 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 8 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 7 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 8 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 9 | faudittime | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
 | 10 | fctrlstrategy | 控制策略 | varchar | 5 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
-| 11 | fpersonmsgid | 人员清单 | int8 | 64 |  | √ | 0 | 人员清单 fmm_pershrpool |
+| 11 | fpersonmsgid | 人员清单 | int8 | 64 |  | √ | 0 | [人员清单 fmm_pershrpool](../fmm_files/fmm_pershrpool.md) |
 | 12 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 13 | fgrouptypeid | 类别 | int8 | 64 |  | √ | 0 | 工作组类别 fmm_workgrouptype |
+| 13 | fgrouptypeid | 类别 | int8 | 64 |  | √ | 0 | [工作组类别 fmm_workgrouptype](../fmm_files/fmm_workgrouptype.md) |
 | 14 | fstatus | 数据状态 | varchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 15 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 15 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 16 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 17 | findustryid | 行业 | int8 | 64 |  | √ | 0 | 树形基础资料模板 mpdm_professiona |
+| 17 | findustryid | 行业 | int8 | 64 |  | √ | 0 | [树形基础资料模板 mpdm_professiona](../mpdm_files/mpdm_professiona.md) |
 | 18 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 19 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
 | 20 | fenable | 使用状态 | varchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 21 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
-| 22 | fuseorgid | 业务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 22 | fuseorgid | 业务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 23 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
-| 24 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 24 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 
@@ -93,8 +93,8 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 3 | fprojectroleid | 角色 | int8 | 64 |  | √ | 0 | 项目角色 fmm_projectrole |
-| 4 | fgrantrequireid | 授权要求 | int8 | 64 |  | √ | 0 | 授权类型 fmm_authorizetype |
+| 3 | fprojectroleid | 角色 | int8 | 64 |  | √ | 0 | [项目角色 fmm_projectrole](../mpdm_files/fmm_projectrole.md) |
+| 4 | fgrantrequireid | 授权要求 | int8 | 64 |  | √ | 0 | [授权类型 fmm_authorizetype](../fmm_files/fmm_authorizetype.md) |
 | 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 
 ### 列规则定义
@@ -153,7 +153,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 4 | fdispatchareaid | 调度区域 | int8 | 64 |  | √ | 0 | 调度区域 fmm_dispatcharea |
+| 4 | fdispatchareaid | 调度区域 | int8 | 64 |  | √ | 0 | [调度区域 fmm_dispatcharea](../fmm_files/fmm_dispatcharea.md) |
 
 ### 列规则定义
 

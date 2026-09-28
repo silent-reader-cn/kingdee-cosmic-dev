@@ -42,23 +42,23 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fintamount | 本期存款利息 | numeric | 23 | 10 | √ | 0 | 本期存款利息 |
-| 3 | forgid | 资金组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | forgid | 资金组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | fisinterest | 是否结息 | bpchar | 1 |  | √ | '0' | 是否结息 |
 | 5 | funwriteoffamt | 未冲销金额 | numeric | 23 | 10 | √ | 0 | 未冲销金额 |
 | 6 | famount | 预提利息 | numeric | 23 | 10 | √ | 0 | 预提利息 |
 | 7 | factualinstamt | 实际结算利息 | numeric | 23 | 10 | √ | 0 | 实际结算利息 |
-| 8 | finneracctid | 内部账户 | int8 | 64 |  | √ | 0 | 银行账户 bd_accountbanks |
+| 8 | finneracctid | 内部账户 | int8 | 64 |  | √ | 0 | [银行账户 bd_accountbanks](../basedata_files/bd_accountbanks.md) |
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 10 | fenddate | 预提结束日 | timestamp | 0 |  |  | null | 预提结束日 |
 | 11 | fbiztype | 业务类型 | varchar | 50 |  | √ | ' ' | 业务类型,枚举: currentint :存款结息 preint :预提结息 reversepreint :冲销预提结息 |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fwriteoffedamt | 已冲销金额 | numeric | 23 | 10 | √ | 0 | 已冲销金额 |
 | 14 | fisreverse | 是否冲销 | bpchar | 1 |  | √ | '0' | 是否冲销 |
 | 15 | fintsource | 计息对象来源 | varchar | 50 |  | √ | ' ' | 计息对象来源,枚举: inneracct :内部账户 accountview :科目 |
 | 16 | fbillno | 预提记录编号 | varchar | 50 |  | √ | ' ' | 预提记录编号 |
-| 17 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 17 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 18 | foverintamt | 本期透支利息 | numeric | 23 | 10 | √ | 0 | 本期透支利息 |
-| 19 | fintinneracctid | 利息计入账户 | int8 | 64 |  | √ | 0 | 银行账户 bd_accountbanks |
+| 19 | fintinneracctid | 利息计入账户 | int8 | 64 |  | √ | 0 | [银行账户 bd_accountbanks](../basedata_files/bd_accountbanks.md) |
 | 20 | fbillstatus | 单据状态 | varchar | 50 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 21 | fcomment | 结息摘要 | varchar | 255 |  | √ | ' ' | 结息摘要 |
 | 22 | fbatchno | 预提批次号 | varchar | 50 |  | √ | ' ' | 预提批次号 |
@@ -66,16 +66,16 @@
 | 24 | fbegindate | 预提开始日 | timestamp | 0 |  |  | null | 预提开始日 |
 | 25 | fdeposit | 存款积数 | numeric | 23 | 10 | √ | 0 | 存款积数 |
 | 26 | foverdraft | 透支积数 | numeric | 23 | 10 | √ | 0 | 透支积数 |
-| 27 | fintobjectid | 计息对象 | int8 | 64 |  | √ | 0 | 计息对象 ifm_intobject |
+| 27 | fintobjectid | 计息对象 | int8 | 64 |  | √ | 0 | [计息对象 ifm_intobject](../ifm_files/ifm_intobject.md) |
 | 28 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
 | 29 | finterestday | 预提日 | timestamp | 0 |  |  | null | 预提日 |
-| 30 | fsettlecenterid | 结算中心 | int8 | 64 |  | √ | 0 | 金融机构 bd_finorginfo |
+| 30 | fsettlecenterid | 结算中心 | int8 | 64 |  | √ | 0 | [金融机构 bd_finorginfo](../basedata_files/bd_finorginfo.md) |
 | 31 | fdatasource | 数据来源 | varchar | 50 |  | √ | ' ' | 数据来源,枚举: hand :手工新增 cim :投资管理 ifm :内部金融 |
 | 32 | fbookdate | 记账日期 | timestamp | 0 |  |  | null | 记账日期 |
 | 33 | fisvoucher | 已生成凭证 | bpchar | 1 |  | √ | '0' | 已生成凭证 |
-| 34 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
-| 35 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 36 | fcompanyid | 成员单位 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 34 | fcurrencyid | 币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
+| 35 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 36 | fcompanyid | 成员单位 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 
 ### 列规则定义
 
@@ -121,8 +121,8 @@
 | :--- | :--- | :--- | :--- |
 | 1 | idx_ifm_preintbill_tc_tbill |  | ftbillid |
 | 2 | idx_ifm_preintbill_tc_tid |  | ftid |
-| 3 | idx_ifm_preintbill_tc_fid |  | ftbillid |
-| 4 | pk_t_ifm_preintbill_tc |  | fid |
+| 3 | pk_t_ifm_preintbill_tc |  | fid |
+| 4 | idx_ifm_preintbill_tc_fid |  | ftbillid |
 
 ---
 

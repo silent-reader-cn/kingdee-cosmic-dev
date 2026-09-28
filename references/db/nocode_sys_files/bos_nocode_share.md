@@ -12,7 +12,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | ftitle | 标题 | varchar | 50 |  | √ | ' ' | 标题 |
 | 3 | ficon | 应用图标 | varchar | 255 |  | √ | ' ' | 应用图标 |
-| 4 | fcreaterfield | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fcreaterfield | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | furl | 分享链接 | varchar | 255 |  | √ | ' ' | 分享链接 |
 | 6 | fcreatedatefield | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
 | 7 | fshareid | 分享id | varchar | 50 |  | √ | ' ' | 分享id |

@@ -23,7 +23,7 @@
 | 12 | fissuitableforsmall | 是否适用增值税小规模纳税人减征政策 | varchar | 30 |  | √ | ' ' | 是否适用增值税小规模纳税人减征政策,枚举: 1 :是 0 :否 |
 | 13 | fbuildingcode | 房产编号 | varchar | 50 |  | √ | ' ' | 房产编号 |
 | 14 | fskssqq | 所属期起 | timestamp | 0 |  |  | null | 所属期起 |
-| 15 | forg | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 15 | forg | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 16 | fskssqz | 所属期止 | timestamp | 0 |  |  | null | 所属期止 |
 | 17 | frentalvalue | 其中出租房产原值 | numeric | 23 | 10 | √ | 0.0000000000 | 其中出租房产原值 |
 | 18 | frowno | 数据编号 | int8 | 64 |  | √ | 0 | 数据编号 |

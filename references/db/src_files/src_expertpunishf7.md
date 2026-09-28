@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fexpertid | 专家 | int8 | 64 |  | √ | 0 | 专家资料 src_expert |
+| 2 | fexpertid | 专家 | int8 | 64 |  | √ | 0 | [专家资料 src_expert](../src_files/src_expert.md) |
 | 3 | forgid | forgid | int8 | 64 |  | √ | 0 |  |
 | 4 | fbilldate | fbilldate | timestamp | 0 |  |  | null |  |
 | 5 | funauditdate | funauditdate | timestamp | 0 |  |  | null |  |
@@ -19,7 +19,7 @@
 | 8 | fcreatorid | fcreatorid | int8 | 64 |  | √ | 0 |  |
 | 9 | funauditorid | funauditorid | int8 | 64 |  | √ | 0 |  |
 | 10 | fbillno | 处罚编号 | varchar | 30 |  | √ | ' ' | 处罚编号 |
-| 11 | fitemtypeid | 类型 | int8 | 64 |  | √ | 0 | 招标辅助资料 pds_extdata |
+| 11 | fitemtypeid | 类型 | int8 | 64 |  | √ | 0 | [招标辅助资料 pds_extdata](../pds_files/pds_extdata.md) |
 | 12 | fbizorg | fbizorg | varchar | 255 |  | √ | ' ' |  |
 | 13 | fremark | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
 | 14 | fmodifierid | fmodifierid | int8 | 64 |  | √ | 0 |  |

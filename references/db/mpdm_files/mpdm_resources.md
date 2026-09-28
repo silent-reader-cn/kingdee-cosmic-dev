@@ -12,7 +12,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fqty | 数量 | numeric | 23 | 10 | √ | 0.0000000000 | 数量 |
 | 3 | fitemtype | 资源明细类型 | varchar | 30 |  | √ | ' ' | 资源明细类型,枚举: mpdm_equipment :设备资源 mpdm_toolsresource :工具资源 mpdm_toolequip :工装资源 mpdm_mould :模具资源 mpdm_manuperson :制造人员 |
-| 4 | funitid | 计量单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 4 | funitid | 计量单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 5 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 6 | fitemresid | 资源明细编码 | int8 | 64 |  | √ | 0 | 分组基础资料带组织模板 mpdm_equipment |
 | 7 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
@@ -42,21 +42,21 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fname | fname | varchar | 100 |  | √ | ' ' |  |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 5 | fresourceunit | 计量单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 5 | fresourceunit | 计量单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 6 | fsharingtype | 配置类型 | varchar | 30 |  | √ | ' ' | 配置类型,枚举: 2 :独有 3 :共享 |
 | 7 | fresourcecount | 资源数量 | numeric | 23 | 10 | √ | 0.0000000000 | 资源数量 |
 | 8 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 9 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 9 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 10 | fremarks | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
-| 11 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 11 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 12 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 13 | fctrlstrategy | 控制策略 | varchar | 30 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
-| 14 | fgroupfield | 资源类别 | int8 | 64 |  | √ | 0 | 资源类别(废弃) mpdm_resourcesgroup |
+| 14 | fgroupfield | 资源类别 | int8 | 64 |  | √ | 0 | [资源类别(废弃) mpdm_resourcesgroup](../mpdm_files/mpdm_resourcesgroup.md) |
 | 15 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 16 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 16 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 17 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 18 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 19 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |

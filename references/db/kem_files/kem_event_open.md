@@ -40,31 +40,31 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fgroupid | 所属分类 | int8 | 64 |  | √ | 0 | 事件分类 kem_eventgroup |
+| 2 | fgroupid | 所属分类 | int8 | 64 |  | √ | 0 | [事件分类 kem_eventgroup](../kem_files/kem_eventgroup.md) |
 | 3 | frequestscript | frequestscript | varchar | 255 |  | √ | ' ' |  |
-| 4 | fdatasourceid | 数据源 | int8 | 64 |  | √ | 0 | 数据源管理 isc_data_source |
+| 4 | fdatasourceid | 数据源 | int8 | 64 |  | √ | 0 | [数据源管理 isc_data_source](../iscb_files/isc_data_source.md) |
 | 5 | fwebapiid | fwebapiid | int8 | 64 |  | √ | 0 |  |
 | 6 | fopenapiid | fopenapiid | int8 | 64 |  | √ | 0 |  |
 | 7 | fisvid | 开发商标识 | varchar | 20 |  | √ | ' ' | 开发商标识 |
 | 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 9 | fstatus | 事件状态 | bpchar | 1 |  | √ | ' ' | 事件状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 10 | fbiztype | fbiztype | bpchar | 1 |  | √ | ' ' |  |
-| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 13 | foperation | 操作 | varchar | 200 |  | √ | ' ' | 操作,枚举: |
 | 14 | feventuuid | feventuuid | varchar | 100 |  | √ | ' ' |  |
 | 15 | feventtype | 事件类型 | bpchar | 1 |  | √ | ' ' | 事件类型,枚举: 1 :自定义事件 2 :Webhook 3 :轮询事件 4 :MQ消息 0 :默认事件 5 :操作事件 |
-| 16 | fname | fname | varchar | 40 |  | √ | ' ' |  |
-| 17 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 16 | fname | 事件名称 | varchar | 40 |  | √ | ' ' | 事件名称 |
+| 17 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 18 | frequestconfig | frequestconfig | varchar | 255 |  | √ | ' ' |  |
 | 19 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 20 | frequestscript_tag | frequestscript_tag | text | 0 |  |  | null |  |
-| 21 | fbizobjectid | 业务对象 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 21 | fbizobjectid | 业务对象 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 22 | fbizobjectnumber | 元数据全名 | varchar | 100 |  | √ | ' ' | 元数据全名 |
 | 23 | fbizobjectname | 实体单据名称 | varchar | 100 |  | √ | ' ' | 实体单据名称 |
 | 24 | fenable | 使用状态 | bpchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 25 | fnumber | 事件编码 | varchar | 120 |  | √ | ' ' | 事件编码 |
-| 26 | fdesc | fdesc | varchar | 1000 |  | √ | ' ' |  |
+| 26 | fdesc | 事件描述 | varchar | 1000 |  | √ | ' ' | 事件描述 |
 | 27 | frequestconfig_tag | frequestconfig_tag | text | 0 |  |  | null |  |
 | 28 | feventsourceid | feventsourceid | int8 | 64 |  | √ | 0 |  |
 
@@ -96,16 +96,18 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fisrequired | 必填 | bpchar | 1 |  | √ | ' ' | 必填,枚举: 1 :是 0 :否 |
-| 3 | fparadesc | fparadesc | varchar | 255 |  | √ | ' ' |  |
-| 4 | fparanumber | fparanumber | varchar | 30 |  | √ | ' ' |  |
+| 3 | fparadesc | 参数说明 | varchar | 255 |  | √ | ' ' | 参数说明 |
+| 4 | fparanumber | 参数名称 | varchar | 250 |  | √ | ' ' | 参数名称 |
 | 5 | fparaname | 参数编码 | varchar | 30 |  | √ | ' ' | 参数编码 |
-| 6 | fexample | 示例 | varchar | 200 |  | √ | ' ' | 示例 |
+| 6 | fconfignumber | 编码 | varchar | 255 |  |  | ' ' | 编码 |
 | 7 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 8 | fparententryid | fparententryid | int8 | 64 |  | √ | 0 | pid |
-| 9 | fparatype | 参数类型 | varchar | 50 |  | √ | ' ' | 参数类型,枚举: string :字符串 int :整数 decimal :小数 datetime :日期/时间 long :长整数 boolean :布尔值 double :浮点数 ENUM :枚举 STRUCT :结构 mulilang :多语言字符串 unknown :任意值 |
-| 10 | fismultivalue | 多值 | bpchar | 1 |  | √ | ' ' | 多值,枚举: 1 :是 0 :否 |
-| 11 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 12 | fparalevel | 层级 | bpchar | 1 |  | √ | ' ' | 层级 |
+| 8 | fismultivalue | 多值 | bpchar | 1 |  | √ | ' ' | 多值,枚举: 1 :是 0 :否 |
+| 9 | fparalevel | 层级 | bpchar | 1 |  | √ | ' ' | 层级 |
+| 10 | fisauto | fisauto | bpchar | 1 |  | √ | '0' |  |
+| 11 | fexample | 示例 | varchar | 200 |  | √ | ' ' | 示例 |
+| 12 | fparententryid | fparententryid | int8 | 64 |  | √ | 0 | pid |
+| 13 | fparatype | 参数类型 | varchar | 50 |  | √ | ' ' | 参数类型,枚举: string :字符串 int :整数 decimal :小数 datetime :日期/时间 long :长整数 boolean :布尔值 double :浮点数 ENUM :枚举 STRUCT :结构 mulilang :多语言字符串 unknown :任意值 |
+| 14 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 
 ### 列规则定义
 
@@ -132,7 +134,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fparadesc | 参数说明 | varchar | 255 |  |  | ' ' | 参数说明 |
-| 2 | fparanumber | 参数名称 | varchar | 30 |  |  | ' ' | 参数名称 |
+| 2 | fparanumber | 参数名称 | varchar | 250 |  |  | ' ' | 参数名称 |
 | 3 | flocaleid | flocaleid | varchar | 10 |  |  | ' ' | localeid |
 | 4 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
 | 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |

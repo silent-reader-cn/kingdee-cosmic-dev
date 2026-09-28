@@ -14,7 +14,7 @@
 | 3 | fcolvalue | 枚举值 | varchar | 50 |  | √ | ' ' | 枚举值 |
 | 4 | fenumcolname | fenumcolname | varchar | 50 |  | √ | ' ' |  |
 | 5 | fenumcolflag | 枚举字段标识 | varchar | 128 |  | √ | ' ' | 枚举字段标识 |
-| 6 | fentityid | 实体 | varchar | 128 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 6 | fentityid | 实体 | varchar | 128 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 
 ### 列规则定义
 

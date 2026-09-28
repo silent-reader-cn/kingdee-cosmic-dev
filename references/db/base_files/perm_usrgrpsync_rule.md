@@ -10,16 +10,16 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fruleconftype | 规则配置方式 | varchar | 50 |  | √ | ' ' | 规则配置方式,枚举: 1 :按人员属性配置 2 :自定义配置 |
 | 4 | fuserfieldkey | 用户字段 | varchar | 50 |  | √ | ' ' | 用户字段 |
 | 5 | foper | 操作 | varchar | 50 |  | √ | ' ' | 操作 |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 7 | fsrcentity | 数据源实体 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 7 | fsrcentity | 数据源实体 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 9 | frule | 规则 | text | 0 |  |  | null | 规则 |
-| 10 | fusrgrpid | 用户组 | int8 | 64 |  | √ | 0 | 用户组 bos_usrgrp |
-| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fusrgrpid | 用户组 | int8 | 64 |  | √ | 0 | [用户组 bos_usrgrp](../base_files/bos_usrgrp.md) |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fgrprefbdtype | 分组基础资料类型 | varchar | 50 |  | √ | ' ' | 分组基础资料类型 |
 | 13 | fgrpreffieldkey | 分组字段 | varchar | 50 |  | √ | ' ' | 分组字段 |
 | 14 | frule_tag | 规则_详情 | text | 0 |  |  | null | 规则_详情 |

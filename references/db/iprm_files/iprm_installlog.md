@@ -18,9 +18,9 @@
 | 7 | fstarttime | 安装开始时间 | timestamp | 0 |  |  | null | 安装开始时间 |
 | 8 | fstatus | 执行状态 | bpchar | 1 |  | √ | ' ' | 执行状态,枚举: 1 :成功 2 :失败 3 :部分成功 |
 | 9 | fduration | 安装时长 | varchar | 50 |  | √ | ' ' | 安装时长 |
-| 10 | flogcreaterid | 操作人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | flogcreaterid | 操作人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fpid | 内容包编码 | varchar | 50 |  | √ | ' ' | 内容包编码 |
-| 12 | fpname | 内容包名称 | varchar | 50 |  | √ | ' ' | 内容包名称 |
+| 12 | fpname | 内容包名称 | varchar | 50 |  |  | ' ' | 内容包名称 |
 | 13 | fendtime | 安装结束时间 | timestamp | 0 |  |  | null | 安装结束时间 |
 
 ### 列规则定义

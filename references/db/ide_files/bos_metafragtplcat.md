@@ -41,16 +41,16 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | fname | varchar | 100 |  | √ | ' ' |  |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fisleaf | 是否叶子 | bpchar | 1 |  | √ | ' ' | 是否叶子 |
-| 5 | fparentid | 上级 | int8 | 64 |  | √ | 0 | 场景卡片模板分类 bos_metafragtplcat |
+| 5 | fparentid | 上级 | int8 | 64 |  | √ | 0 | [场景卡片模板分类 bos_metafragtplcat](../ide_files/bos_metafragtplcat.md) |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  | √ | LOCALTIMESTAMP | 创建时间 |
 | 7 | ffullname | ffullname | varchar | 256 |  | √ | ' ' |  |
 | 8 | flongnumber | 长编码 | varchar | 256 |  | √ | ' ' | 长编码 |
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 10 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 11 | flevel | 级次 | int4 | 32 |  | √ | 0 | 级次 |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 14 | ftype | 类型 | varchar | 50 |  | √ | ' ' | 类型 |
 | 15 | forder | 顺序 | int8 | 64 |  | √ | 0 | 顺序 |

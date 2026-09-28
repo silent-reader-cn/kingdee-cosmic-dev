@@ -9,7 +9,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 会计科目 bd_accountview |
+| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [会计科目 bd_accountview](../gl_files/bd_accountview.md) |
 | 2 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 | 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 
@@ -38,7 +38,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 账簿 gl_accountbook |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [账簿 gl_accountbook](../gl_files/gl_accountbook.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -66,7 +66,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | varchar | 36 |  | √ | '0' | 对账类型 frm_amouttype_layout |
+| 2 | fbasedataid | fbasedataid | varchar | 36 |  | √ | '0' | [对账类型 frm_amouttype_layout](../frm_files/frm_amouttype_layout.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 | 4 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 
@@ -134,7 +134,7 @@
 | 9 | fbizassist | 业务维度范围 | varchar | 2000 |  |  | ' ' | 业务维度范围 |
 | 10 | freportparam | 报表参数设置（存储） | varchar | 1000 |  |  | ' ' | 报表参数设置（存储） |
 | 11 | fentryamounttype | 对账取值类型 | bpchar | 1 |  | √ | '3' | 对账取值类型,枚举: 3 :本期增加+本期减少+余额 2 :本期增加+本期减少 0 :本期增加 1 :本期减少 |
-| 12 | fbizdatarule | 业务取数规则 | int8 | 64 |  | √ | 0 | 业务取数规则 frm_recdatarule |
+| 12 | fbizdatarule | 业务取数规则 | int8 | 64 |  | √ | 0 | [业务取数规则 frm_recdatarule](../frm_files/frm_recdatarule.md) |
 | 13 | fbizassistinfo_tag | 对账维度（存储）_详情 | text | 0 |  |  | ' ' | 对账维度（存储）_详情 |
 | 14 | fglassistbizinfodesc | 核算维度对应业务维度 | varchar | 500 |  | √ | ' ' | 核算维度对应业务维度 |
 | 15 | fignoreempty | 忽略维度空值 | bpchar | 1 |  | √ | '0' | 忽略维度空值 |
@@ -193,34 +193,35 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fuseorg | 核算组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 4 | faccounttable | 科目表 | int8 | 64 |  | √ | 0 | 科目表 bd_accounttable |
-| 5 | fbooktype | 账簿类型 | int8 | 64 |  | √ | 0 | 账簿类型 bd_accountbookstype |
-| 6 | fdataruleid | fdataruleid | int8 | 64 |  | √ | 0 |  |
-| 7 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 9 | fstatus | 数据状态 | varchar | 10 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 11 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 12 | fpreset | 预置 | bpchar | 1 |  | √ | '0' | 预置 |
-| 13 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
-| 14 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
-| 15 | fcloseparam | 对账平衡才允许结账 | bpchar | 1 |  | √ | '0' | 对账平衡才允许结账,枚举: 0 :不检查 1 :业务系统 2 :总账 3 :业务系统+总账 |
-| 16 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 17 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 18 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
-| 19 | fbizapp | 业务系统 | varchar | 36 |  | √ | ' ' | 业务应用实体 bos_devportal_bizapp |
-| 20 | freconciliactionconfig | freconciliactionconfig | int8 | 64 |  | √ | 0 |  |
-| 21 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 22 | fctrlstrategy | 控制策略 | varchar | 36 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
-| 23 | fpresetnumber | 预置对账方案编码 | varchar | 80 |  | √ | ' ' | 预置对账方案编码 |
-| 24 | fbalancebasis | 平衡依据 | bpchar | 1 |  | √ | 5 | 平衡依据,枚举: 0 :借方 1 :贷方 2 :借方+贷方 3 :期初余额 4 :期末余额 5 :全部 |
-| 25 | fisbak | 是否备份 | bpchar | 1 |  | √ | '0' | 是否备份 |
-| 26 | freconamounttype | 对账取值类型 | bpchar | 1 |  | √ | 3 | 对账取值类型,枚举: 3 :本期增加+本期减少+余额 2 :本期增加+本期减少 0 :本期增加 1 :本期减少 |
-| 27 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 28 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
-| 29 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
+| 2 | fmulcurrencytype | 对账币别 | varchar | 100 |  | √ | ',1,' | 对账币别,枚举: 1 :原币 2 :本位币 |
+| 3 | fuseorg | 核算组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 4 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 5 | faccounttable | 科目表 | int8 | 64 |  | √ | 0 | [科目表 bd_accounttable](../fibd_files/bd_accounttable.md) |
+| 6 | fbooktype | 账簿类型 | int8 | 64 |  | √ | 0 | [账簿类型 bd_accountbookstype](../fibd_files/bd_accountbookstype.md) |
+| 7 | fdataruleid | fdataruleid | int8 | 64 |  | √ | 0 |  |
+| 8 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 10 | fstatus | 数据状态 | varchar | 10 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 12 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
+| 13 | fpreset | 预置 | bpchar | 1 |  | √ | '0' | 预置 |
+| 14 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
+| 15 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
+| 16 | fcloseparam | 对账平衡才允许结账 | bpchar | 1 |  | √ | '0' | 对账平衡才允许结账,枚举: 0 :不检查 1 :业务系统 2 :总账 3 :业务系统+总账 |
+| 17 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 18 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 19 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
+| 20 | fbizapp | 业务系统 | varchar | 36 |  | √ | ' ' | [业务应用实体 bos_devportal_bizapp](../mdl_files/bos_devportal_bizapp.md) |
+| 21 | freconciliactionconfig | freconciliactionconfig | int8 | 64 |  | √ | 0 |  |
+| 22 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 23 | fctrlstrategy | 控制策略 | varchar | 36 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
+| 24 | fpresetnumber | 预置对账方案编码 | varchar | 80 |  | √ | ' ' | 预置对账方案编码 |
+| 25 | fbalancebasis | 平衡依据 | bpchar | 1 |  | √ | 5 | 平衡依据,枚举: 0 :借方 1 :贷方 2 :借方+贷方 3 :期初余额 4 :期末余额 5 :全部 |
+| 26 | fisbak | 是否备份 | bpchar | 1 |  | √ | '0' | 是否备份 |
+| 27 | freconamounttype | 对账取值类型 | bpchar | 1 |  | √ | 3 | 对账取值类型,枚举: 3 :本期增加+本期减少+余额 2 :本期增加+本期减少 0 :本期增加 1 :本期减少 |
+| 28 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 29 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
+| 30 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
 
 ### 列规则定义
 

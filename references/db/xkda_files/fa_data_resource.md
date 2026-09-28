@@ -75,24 +75,24 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fbillstatus | 单据状态 | varchar | 30 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 4 | foriginmethodid | 数据来源 | int8 | 64 |  | √ | 0 | 增减方式 fa_changemode |
+| 4 | foriginmethodid | 数据来源 | int8 | 64 |  | √ | 0 | [增减方式 fa_changemode](../fa_files/fa_changemode.md) |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 6 | forgid | 货主组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 7 | fmanager | 管理人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | forgid | 货主组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 7 | fmanager | 管理人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 8 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
-| 9 | fsupplierid | 供应商 | int8 | 64 |  | √ | 0 | 供应商 bd_supplier |
+| 9 | fsupplierid | 供应商 | int8 | 64 |  | √ | 0 | [供应商 bd_supplier](../basedata_files/bd_supplier.md) |
 | 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 11 | fisdataasset | 数据资产 | bpchar | 1 |  | √ | '0' | 数据资产 |
 | 12 | fsaveformat | 数据存储格式 | varchar | 10 |  | √ | ' ' | 数据存储格式,枚举: 1 :文本 2 :图像 3 :语音 4 :视频 5 :网页 6 :数据库 7 :传感信号 |
-| 13 | fassetunitid | 资产组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 14 | fstoreplaceid | 存放地点 | int8 | 64 |  | √ | 0 | 存放地点 fa_storeplace |
+| 13 | fassetunitid | 资产组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 14 | fstoreplaceid | 存放地点 | int8 | 64 |  | √ | 0 | [存放地点 fa_storeplace](../fa_files/fa_storeplace.md) |
 | 15 | ftype | 数据类型 | varchar | 10 |  | √ | ' ' | 数据类型,枚举: 1 :结构化数据 2 :非结构化数据 3 :半结构化数据 |
-| 16 | fheadusedeptid | 管理部门 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 17 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 16 | fheadusedeptid | 管理部门 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 17 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 18 | fbillno | 编号 | varchar | 30 |  | √ | ' ' | 编号 |
-| 19 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 19 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

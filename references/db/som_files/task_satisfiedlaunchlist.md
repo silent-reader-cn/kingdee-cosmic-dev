@@ -9,9 +9,9 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | 满意度问卷 | int8 | 64 |  | √ | 0 | 满意度设置 task_satisfiedquestion |
-| 2 | fuser | 用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 3 | fdept | 部门 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 1 | fid | 满意度问卷 | int8 | 64 |  | √ | 0 | [满意度设置 task_satisfiedquestion](../som_files/task_satisfiedquestion.md) |
+| 2 | fuser | 用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 3 | fdept | 部门 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | fseq | fseq | int4 | 32 |  | √ | 0 |  |
 | 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 6 | fdeliverurl | 问卷链接 | varchar | 500 |  | √ | ' ' | 问卷链接 |

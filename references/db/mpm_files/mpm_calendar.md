@@ -71,33 +71,34 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fissunrest | 周日 | bpchar | 1 |  | √ | '1' | 周日 |
-| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 4 | fiswedrest | 周三 | bpchar | 1 |  | √ | '0' | 周三 |
-| 5 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 6 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 7 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 9 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 10 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
-| 11 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
-| 12 | fexpirenddate | 日期范围.结束 | timestamp | 0 |  |  | null | 日期范围.结束 |
-| 13 | fisfrirest | 周五 | bpchar | 1 |  | √ | '0' | 周五 |
-| 14 | fexpirstartdate | 日期范围.开始 | timestamp | 0 |  |  | null | 日期范围.开始 |
-| 15 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 16 | fismonrest | 周一 | bpchar | 1 |  | √ | '0' | 周一 |
-| 17 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 18 | fprojectid | 所属项目 | int8 | 64 |  | √ | 0 | 项目 bd_project |
-| 19 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 20 | fisthurest | 周四 | bpchar | 1 |  | √ | '0' | 周四 |
-| 21 | fissatrest | 周六 | bpchar | 1 |  | √ | '1' | 周六 |
-| 22 | fctrlstrategy | 控制策略 | varchar | 30 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
-| 23 | fexpirendtime | 时间范围.结束 | int4 | 32 |  | √ | 0 | 时间范围.结束 |
-| 24 | fistuerest | 周二 | bpchar | 1 |  | √ | '0' | 周二 |
-| 25 | fenable | 使用状态 | bpchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 26 | fexpirstarttime | 时间范围.开始 | int4 | 32 |  | √ | 0 | 时间范围.开始 |
-| 27 | fnumber | 日历编码 | varchar | 80 |  | √ | ' ' | 日历编码 |
-| 28 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
-| 29 | fisdefault | 默认日历 | bpchar | 1 |  | √ | '0' | 默认日历 |
+| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 4 | fstandardworkload | 标准工时 | numeric | 23 |  | √ | 8 | 标准工时 |
+| 5 | fiswedrest | 周三 | bpchar | 1 |  | √ | '0' | 周三 |
+| 6 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 8 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
+| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 10 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
+| 11 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
+| 12 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
+| 13 | fexpirenddate | 日期范围.结束 | timestamp | 0 |  |  | null | 日期范围.结束 |
+| 14 | fisfrirest | 周五 | bpchar | 1 |  | √ | '0' | 周五 |
+| 15 | fexpirstartdate | 日期范围.开始 | timestamp | 0 |  |  | null | 日期范围.开始 |
+| 16 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 17 | fismonrest | 周一 | bpchar | 1 |  | √ | '0' | 周一 |
+| 18 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 19 | fprojectid | 所属项目 | int8 | 64 |  | √ | 0 | [项目 bd_project](../basedata_files/bd_project.md) |
+| 20 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 21 | fisthurest | 周四 | bpchar | 1 |  | √ | '0' | 周四 |
+| 22 | fissatrest | 周六 | bpchar | 1 |  | √ | '1' | 周六 |
+| 23 | fctrlstrategy | 控制策略 | varchar | 30 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
+| 24 | fexpirendtime | 时间范围.结束 | int4 | 32 |  | √ | 0 | 时间范围.结束 |
+| 25 | fistuerest | 周二 | bpchar | 1 |  | √ | '0' | 周二 |
+| 26 | fenable | 使用状态 | bpchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 27 | fexpirstarttime | 时间范围.开始 | int4 | 32 |  | √ | 0 | 时间范围.开始 |
+| 28 | fnumber | 日历编码 | varchar | 80 |  | √ | ' ' | 日历编码 |
+| 29 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
+| 30 | fisdefault | 默认日历 | bpchar | 1 |  | √ | '0' | 默认日历 |
 
 ### 列规则定义
 

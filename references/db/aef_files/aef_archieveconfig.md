@@ -11,10 +11,11 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fbatchcode | 批次号 | varchar | 50 |  | √ | ' ' | 批次号 |
-| 3 | fisneedattachfile | 是否归档附件 | bpchar | 1 |  | √ | '0' | 是否归档附件,枚举: 1 :是 0 :否 |
-| 4 | farchiverange | 归档范围 | varchar | 500 |  | √ | ' ' | 归档范围 |
-| 5 | farchiverange_tag | 归档范围_详情 | text | 0 |  |  | null | 归档范围_详情 |
-| 6 | fbilltype | 单据类型 | varchar | 50 |  | √ | ' ' | 单据类型 |
+| 3 | fisneedprocessattachfile | 是否归档工作流附件 | bpchar | 1 |  | √ | '0' | 是否归档工作流附件,枚举: 1 :是 0 :否 |
+| 4 | fisneedattachfile | 是否归档附件 | bpchar | 1 |  | √ | '0' | 是否归档附件,枚举: 1 :是 0 :否 |
+| 5 | farchiverange | 归档范围 | varchar | 500 |  | √ | ' ' | 归档范围 |
+| 6 | farchiverange_tag | 归档范围_详情 | text | 0 |  |  | null | 归档范围_详情 |
+| 7 | fbilltype | 单据类型 | varchar | 50 |  | √ | ' ' | 单据类型 |
 
 ### 列规则定义
 

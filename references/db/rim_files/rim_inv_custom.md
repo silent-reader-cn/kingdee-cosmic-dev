@@ -32,8 +32,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_rim_inv_custom_item_fk |  | fid |
-| 2 | pk_rim_inv_custom_item |  | fentryid |
+| 1 | pk_rim_inv_custom_item |  | fentryid |
+| 2 | idx_rim_inv_custom_item_fk |  | fid |
 
 ---
 
@@ -59,7 +59,7 @@
 | 11 | fresource | 发票来源 | varchar | 50 |  | √ | ' ' | 发票来源 |
 | 12 | fdeclare_no | 报关单编号 | varchar | 50 |  | √ | ' ' | 报关单编号 |
 | 13 | fbillno | 单据编号 | varchar | 36 |  | √ | ' ' | 单据编号 |
-| 14 | forg_id | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 14 | forg_id | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 15 | fmode_trade | 贸易方式 | varchar | 50 |  | √ | ' ' | 贸易方式 |
 | 16 | fcode_collection_treasury | 收款国库代码 | varchar | 50 |  | √ | ' ' | 收款国库代码 |
 | 17 | fdeduction_purpose | 抵扣用途 | varchar | 2 |  | √ | ' ' | 抵扣用途,枚举: 1 :抵扣 2 :不抵扣 3 :退税 |
@@ -74,19 +74,19 @@
 | 26 | fexpense_status | 报销状态 | varchar | 2 |  | √ | ' ' | 报销状态,枚举: 1 :未报销 30 :审核中 60 :已报销 65 :已入账 |
 | 27 | fsecond_dept_tax_no | 缴款单位二税号 | varchar | 50 |  | √ | ' ' | 缴款单位二税号 |
 | 28 | fdept_bank | 缴款单位开户银行 | varchar | 58 |  | √ | ' ' | 缴款单位开户银行 |
-| 29 | fproject | 项目 | int8 | 64 |  | √ | 0 | 项目 bd_project |
-| 30 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 29 | fproject | 项目 | int8 | 64 |  | √ | 0 | [项目 bd_project](../basedata_files/bd_project.md) |
+| 30 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 31 | fdept_account | 缴款单位账号 | varchar | 50 |  | √ | ' ' | 缴款单位账号 |
 | 32 | fmanage_status | 管理状态 | varchar | 2 |  | √ | ' ' | 管理状态,枚举: 0 :正常 1 :非正常 |
 | 33 | fpurchase_ticket | 农产品发票类型 | varchar | 2 |  | √ | '0' | 农产品发票类型,枚举: 0 :空 1 :收购票 2 :销售票 |
 | 34 | fserial_no | 发票流水号 | varchar | 36 |  | √ | ' ' | 发票流水号 |
-| 35 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 35 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 36 | fapply_dept_no | 申请单位编号 | varchar | 50 |  | √ | ' ' | 申请单位编号 |
 | 37 | fsecond_dept_name | 缴款单位二名称 | varchar | 80 |  | √ | ' ' | 缴款单位二名称 |
 | 38 | faccount_date | 会计属期 | timestamp | 0 |  |  | null | 会计属期 |
 | 39 | fcontract_no | 合同批文号 | varchar | 50 |  | √ | ' ' | 合同批文号 |
 | 40 | fremark | 备注 | varchar | 300 |  | √ | ' ' | 备注 |
-| 41 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 41 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 42 | faws_serial_no | AWS发票流水号 | varchar | 36 |  | √ | ' ' | AWS发票流水号 |
 | 43 | ftrans_tool_no | 运输工具号 | varchar | 50 |  | √ | ' ' | 运输工具号 |
 | 44 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
@@ -97,9 +97,9 @@
 | 49 | fdept_name | 缴款单位一名称 | varchar | 80 |  | √ | ' ' | 缴款单位一名称 |
 | 50 | fget_office | 收入机关 | varchar | 50 |  | √ | ' ' | 收入机关 |
 | 51 | fbudget_account_code | 预算科目代码 | varchar | 50 |  | √ | ' ' | 预算科目代码 |
-| 52 | ftax_org | 纳税主体 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 52 | ftax_org | 纳税主体 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 53 | foriginal_state | 原件签收状态 | varchar | 2 |  | √ | ' ' | 原件签收状态,枚举: 0 :未签收 1 :已签收 |
-| 54 | finvoice_type | 发票类型 | int8 | 64 |  | √ | 0 | 发票类型 bd_invoicetype |
+| 54 | finvoice_type | 发票类型 | int8 | 64 |  | √ | 0 | [发票种类 bd_invoicetype](../basedata_files/bd_invoicetype.md) |
 | 55 | fport_code | 进口口岸代码 | varchar | 30 |  | √ | ' ' | 进口口岸代码 |
 
 ### 列规则定义

@@ -1,6 +1,6 @@
 # aicc 模块表清单
 
-> 本模块共收录 **17** 张表定义，来自 `aicc_files/`。
+> 本模块共收录 **24** 张表定义，来自 `aicc_files/`。
 
 > 索引由 `scripts/build_index.py` 从 Markdown 自动生成，请勿手工编辑。
 > 检索本模块表结构请用统一检索脚本（比翻本文件更快）：
@@ -15,15 +15,22 @@
 | 3 | `t_aicc_agent_service_u` | Agent服务-使用范围表 | 3 | [aicc_agent_service.md](./aicc_agent_service.md) |
 | 4 | `t_aicc_config` | 配置信息-主表 | 14 | [aicc_config.md](./aicc_config.md) |
 | 5 | `t_aicc_config_l` | 配置信息-多语言表 | 4 | [aicc_config.md](./aicc_config.md) |
-| 6 | `t_aicc_instance` | 算法部署实例-主表 | 20 | [aicc_instance.md](./aicc_instance.md) |
-| 7 | `t_aicc_instance_l` | 算法部署实例-多语言表 | 4 | [aicc_instance.md](./aicc_instance.md) |
-| 8 | `t_aicc_llm` | 基础大模型-主表 | 22 | [aicc_llm.md](./aicc_llm.md) |
-| 9 | `t_aicc_llm_l` | 基础大模型-多语言表 | 4 | [aicc_llm.md](./aicc_llm.md) |
-| 10 | `t_aicc_service` | 算法服务-主表 | 20 | [aicc_service.md](./aicc_service.md) |
-| 11 | `t_aicc_service_l` | 算法服务-多语言表 | 4 | [aicc_service.md](./aicc_service.md) |
-| 12 | `t_aicc_servicetype` | 算法服务—类型-主表 | 10 | [aicc_servicetype.md](./aicc_servicetype.md) |
-| 13 | `t_aicc_servicetype_l` | 算法服务—类型-多语言表 | 4 | [aicc_servicetype.md](./aicc_servicetype.md) |
-| 14 | `t_aicc_task` | 算法任务-主表 | 16 | [aicc_task.md](./aicc_task.md) |
-| 15 | `t_aicc_task_history` | 任务执行历史-主表 | 5 | [aicc_task_history.md](./aicc_task_history.md) |
-| 16 | `t_aicc_tenant` | 服务租户-主表 | 14 | [aicc_tenant.md](./aicc_tenant.md) |
-| 17 | `t_aicc_tenant_l` | 服务租户-多语言表 | 4 | [aicc_tenant.md](./aicc_tenant.md) |
+| 6 | `t_aicc_docservice_config` | 文档解析配置-主表 | 18 | [aicc_docparse_config.md](./aicc_docparse_config.md) |
+| 7 | `t_aicc_docservice_config_l` | 文档解析配置-多语言表 | 4 | [aicc_docparse_config.md](./aicc_docparse_config.md) |
+| 8 | `t_aicc_docservice_config_u` | 文档解析配置-使用范围表 | 3 | [aicc_docparse_config.md](./aicc_docparse_config.md) |
+| 9 | `t_aicc_embedding_config` | embedding配置-主表 | 16 | [aicc_embedding_config.md](./aicc_embedding_config.md) |
+| 10 | `t_aicc_embedding_config_l` | embedding配置-多语言表 | 4 | [aicc_embedding_config.md](./aicc_embedding_config.md) |
+| 11 | `t_aicc_instance` | 算法部署实例-主表 | 28 | [aicc_instance.md](./aicc_instance.md) |
+| 12 | `t_aicc_instance` | 单据体1-子表 | 28 | [aicc_service.md](./aicc_service.md) |
+| 13 | `t_aicc_instance_l` | 算法部署实例-多语言表 | 5 | [aicc_instance.md](./aicc_instance.md) |
+| 14 | `t_aicc_llm` | API出入参样式-主表 | 25 | [aicc_llm.md](./aicc_llm.md) |
+| 15 | `t_aicc_llm_l` | API出入参样式-多语言表 | 4 | [aicc_llm.md](./aicc_llm.md) |
+| 16 | `t_aicc_service` | 模型服务-主表 | 38 | [aicc_service.md](./aicc_service.md) |
+| 17 | `t_aicc_service_l` | 模型服务-多语言表 | 4 | [aicc_service.md](./aicc_service.md) |
+| 18 | `t_aicc_service_template` | 模型服务模版-主表 | 26 | [aicc_service_template.md](./aicc_service_template.md) |
+| 19 | `t_aicc_servicetype` | 算法服务—类型-主表 | 10 | [aicc_servicetype.md](./aicc_servicetype.md) |
+| 20 | `t_aicc_servicetype_l` | 算法服务—类型-多语言表 | 4 | [aicc_servicetype.md](./aicc_servicetype.md) |
+| 21 | `t_aicc_task` | 调用日志-主表 | 23 | [aicc_task.md](./aicc_task.md) |
+| 22 | `t_aicc_task_history` | 任务执行历史-主表 | 5 | [aicc_task_history.md](./aicc_task_history.md) |
+| 23 | `t_aicc_tenant` | 服务租户-主表 | 14 | [aicc_tenant.md](./aicc_tenant.md) |
+| 24 | `t_aicc_tenant_l` | 服务租户-多语言表 | 4 | [aicc_tenant.md](./aicc_tenant.md) |

@@ -42,7 +42,7 @@
 | 2 | fdefaultenabled | 默认使用 | bpchar | 1 |  | √ | '0' | 默认使用 |
 | 3 | fskilldescription | fskilldescription | varchar | 255 |  | √ | ' ' |  |
 | 4 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 5 | fskillname | 技能名称 | int8 | 64 |  | √ | 0 | 技能 msmob_skill |
+| 5 | fskillname | 技能名称 | int8 | 64 |  | √ | 0 | [技能 msmob_skill](../msmob_files/msmob_skill.md) |
 | 6 | fissyspreset | fissyspreset | bpchar | 1 |  | √ | '0' |  |
 | 7 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 8 | fispreset | 是否启用 | bpchar | 1 |  | √ | '0' | 是否启用 |
@@ -73,14 +73,14 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 配置名称 | varchar | 50 |  | √ | ' ' | 配置名称 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 4 | fresultpage | 结果页 | varchar | 50 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 4 | fresultpage | 结果页 | varchar | 50 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 6 | fskill_family | 技能族 | int8 | 64 |  | √ | 0 | 技能族 msmob_skill_family |
+| 6 | fskill_family | 技能族 | int8 | 64 |  | √ | 0 | [技能族 msmob_skill_family](../msmob_files/msmob_skill_family.md) |
 | 7 | fcomments | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
 | 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 9 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 12 | fenable | 使用状态 | bpchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 13 | fnumber | 配置编码 | varchar | 50 |  | √ | ' ' | 配置编码 |

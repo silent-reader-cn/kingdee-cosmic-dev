@@ -40,7 +40,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | findividual | 是否对私付款 | varchar | 50 |  | √ | ' ' | 是否对私付款 |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 6 | fsub_biz_type | 子业务类型 | varchar | 50 |  | √ | ' ' | 子业务类型 |
@@ -52,7 +52,7 @@
 | 12 | fuse_cn | 付款用途 | varchar | 50 |  | √ | ' ' | 付款用途 |
 | 13 | fbank_version | 银行版本 | varchar | 50 |  | √ | ' ' | 银行版本 |
 | 14 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 15 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 15 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 16 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 17 | fsame_bank | 是否同行付款 | varchar | 50 |  | √ | ' ' | 是否同行付款 |
 | 18 | faccprop | 账号属性 | varchar | 1000 |  | √ | ' ' | 账号属性 |
@@ -73,5 +73,5 @@
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
 | 1 | idx_pay_route |  | fbank_version,fsub_biz_type |
-| 2 | idx_impl |  | fimpl |
-| 3 | pk_t_aqap_pay_route_rec |  | fid |
+| 2 | pk_t_aqap_pay_route_rec |  | fid |
+| 3 | idx_impl |  | fimpl |

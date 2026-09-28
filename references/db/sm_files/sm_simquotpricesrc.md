@@ -15,7 +15,7 @@
 | 4 | fissys | 是否系统预置 | bpchar | 1 |  | √ | ' ' | 是否系统预置 |
 | 5 | fsort | 排序 | int4 | 32 |  | √ | 0 | 排序 |
 | 6 | fenable | 是否启用 | bpchar | 1 |  | √ | ' ' | 是否启用 |
-| 7 | fpricesrctype | 取价来源类型 | int8 | 64 |  | √ | 0 | 模拟报价取价来源类型 sm_simquotpricesrctype |
+| 7 | fpricesrctype | 取价来源类型 | int8 | 64 |  | √ | 0 | [模拟报价取价来源类型 sm_simquotpricesrctype](../sm_files/sm_simquotpricesrctype.md) |
 
 ### 列规则定义
 

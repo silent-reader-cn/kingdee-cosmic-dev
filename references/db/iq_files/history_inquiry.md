@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fstock_code | 股票代码 | varchar | 50 |  | √ | ' ' | 股票代码 |
-| 3 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fmodifytime | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
 
 ### 列规则定义

@@ -41,24 +41,26 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | frejectremark | 拒收备注 | varchar | 255 |  | √ | ' ' | 拒收备注 |
-| 3 | fmodifierid | 最后更新人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 最后更新人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fname | fname | varchar | 255 |  | √ | ' ' |  |
 | 5 | ftransfercotr | 回填票据转让控制 | varchar | 30 |  | √ | ' ' | 回填票据转让控制,枚举: no :不控制 man :人工控制 transfer :控制转让 |
 | 6 | fcomment | fcomment | varchar | 255 |  | √ | ' ' |  |
 | 7 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 8 | fenabledate | 启用日期 | timestamp | 0 |  |  | null | 启用日期 |
 | 9 | fdisabledate | 禁用日期 | timestamp | 0 |  |  | null | 禁用日期 |
-| 10 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fsignincotr | 回头票据签收逻辑 | varchar | 30 |  | √ | ' ' | 回头票据签收逻辑,枚举: no :不控制 man :人工控制 reject :拒绝签收 |
 | 12 | fmodifytime | 最后更新时间 | timestamp | 0 |  |  | null | 最后更新时间 |
 | 13 | fstatus | 数据状态 | varchar | 30 |  | √ | 'C' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 15 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 16 | fexcependoriscop | 被背书人类型为公司时例外 | bpchar | 1 |  | √ | '0' | 被背书人类型为公司时例外 |
-| 17 | fexcependorsereqendor | 被背书人与背书人相同时例外 | bpchar | 1 |  | √ | '0' | 被背书人与背书人相同时例外 |
-| 18 | fenable | 使用状态 | varchar | 30 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 19 | fenablerid | 启用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 20 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
+| 14 | fisrepeatreturn | 重复的票据前手视为回头票据 | bpchar | 1 |  | √ | '0' | 重复的票据前手视为回头票据 |
+| 15 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 16 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
+| 17 | fexcependoriscop | 被背书人类型为公司时例外 | bpchar | 1 |  | √ | '0' | 被背书人类型为公司时例外 |
+| 18 | fexcependorsereqendor | 被背书人与背书人相同时例外 | bpchar | 1 |  | √ | '0' | 被背书人与背书人相同时例外 |
+| 19 | fexcepcompany | 重复的票据前手为资金组织时例外 | bpchar | 1 |  | √ | '0' | 重复的票据前手为资金组织时例外 |
+| 20 | fenable | 使用状态 | varchar | 30 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 21 | fenablerid | 启用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 22 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
 
 ### 列规则定义
 

@@ -10,20 +10,20 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | varchar | 18 |  | √ | ' ' | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fisleaf | 是否叶子 | bpchar | 1 |  | √ | '1' | 是否叶子 |
-| 4 | fparentid | 上级 | varchar | 36 |  | √ | ' ' | 管理员(废弃) perm_administrator |
+| 4 | fparentid | 上级 | varchar | 36 |  | √ | ' ' | [管理员(废弃) perm_administrator](../base_files/perm_administrator.md) |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 6 | flongnumber | 长编码 | varchar | 255 |  | √ | ' ' | 长编码 |
 | 7 | fdisabledate | 禁用时间 | timestamp | 0 |  |  | null | 禁用时间 |
-| 8 | fuserid | 用户名 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 9 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | fuserid | 用户名 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 9 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | fupdatorid | fupdatorid | int8 | 64 |  | √ | 0 |  |
 | 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 12 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 13 | flevel | 级次 | int8 | 64 |  | √ | 0 | 级次 |
 | 14 | ftype | 类型 | varchar | 36 |  | √ | ' ' | 类型,枚举: 10 :超级管理员 20 :管理组织管理员 |
-| 15 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 15 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 16 | fmasterid | 主数据内码 | varchar | 18 |  | √ | ' ' | 主数据内码 |
 | 17 | fisupdate | fisupdate | bpchar | 1 |  | √ | '0' |  |
 | 18 | fupdatetime | fupdatetime | timestamp | 0 |  |  | null |  |
@@ -58,7 +58,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | varchar | 36 |  | √ | ' ' |  |
-| 2 | fbizorgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fbizorgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 4 | fentryid | fentryid | varchar | 36 |  | √ | ' ' | id |
 
@@ -119,7 +119,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | varchar | 36 |  | √ | ' ' |  |
 | 2 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 3 | fuserid | 人员 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fuserid | 人员 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fentryid | fentryid | varchar | 36 |  | √ | ' ' | id |
 
 ### 列规则定义

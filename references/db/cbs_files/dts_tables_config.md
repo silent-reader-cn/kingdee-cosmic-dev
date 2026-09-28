@@ -47,7 +47,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fcloudid | fcloudid | varchar | 50 |  | √ | ' ' |  |
-| 3 | fentitynumber | 实体名称 | varchar | 255 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 3 | fentitynumber | 实体名称 | varchar | 255 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 4 | fappid | fappid | varchar | 50 |  | √ | ' ' |  |
 
 ### 列规则定义

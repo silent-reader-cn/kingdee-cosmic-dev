@@ -14,7 +14,7 @@
 | 3 | fobjecttypenumber | 业务单据编码 | varchar | 50 |  | √ | ' ' | 业务单据编码 |
 | 4 | fdataid | 数据主键 | varchar | 50 |  | √ | ' ' | 数据主键 |
 | 5 | fentrykey | 分录标识 | varchar | 50 |  | √ | ' ' | 分录标识 |
-| 6 | fobjecttype | 业务单据 | varchar | 50 |  | √ | ' ' | 业务对象 bos_objecttype |
+| 6 | fobjecttype | 业务单据 | varchar | 50 |  | √ | ' ' | [业务对象 bos_objecttype](../mdl_files/bos_objecttype.md) |
 | 7 | fdetailid | 子分录主键 | varchar | 50 |  | √ | ' ' | 子分录主键 |
 | 8 | fdata | 业务自定义数据 | varchar | 2000 |  | √ | ' ' | 业务自定义数据 |
 | 9 | fentryid | 分录主键 | varchar | 50 |  | √ | ' ' | 分录主键 |

@@ -12,7 +12,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fdecidelink | fdecidelink | varchar | 100 |  | √ | ' ' |  |
 | 3 | fdecstatus | 关联采委会状态 | bpchar | 1 |  | √ | ' ' | 关联采委会状态,枚举: A :未上报 B :已上报 C :已关联 |
-| 4 | fdecisionid | 采委会决策单号 | int8 | 64 |  | √ | 0 | 采委会决策单号 src_decisionbillnotwo |
+| 4 | fdecisionid | 采委会决策单号 | int8 | 64 |  | √ | 0 | [采委会决策单号 src_decisionbillnotwo](../src_files/src_decisionbillnotwo.md) |
 | 5 | fistemppush | fistemppush | bpchar | 1 |  | √ | '0' |  |
 | 6 | fdecidenumber | fdecidenumber | varchar | 50 |  | √ | ' ' |  |
 | 7 | fresultstatus | fresultstatus | bpchar | 1 |  | √ | ' ' |  |
@@ -74,7 +74,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -88,8 +88,8 @@
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
 | 1 | idx_src_demandpurorg_fid |  | fid |
-| 2 | pk_src_demandpurorg |  | fpkid |
-| 3 | idx_src_demandpurorg_bid |  | fbasedataid |
+| 2 | idx_src_demandpurorg_bid |  | fbasedataid |
+| 3 | pk_src_demandpurorg |  | fpkid |
 
 ---
 
@@ -103,7 +103,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 招标辅助资料 pds_extdata |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [招标辅助资料 pds_extdata](../pds_files/pds_extdata.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -133,9 +133,9 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | 单据ID | int8 | 64 |  | √ | 0 | 单据ID |
 | 2 | fisproject | fisproject | bpchar | 1 |  | √ | '0' |  |
-| 3 | forgid | 采购组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | forgid | 采购组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | fplace | fplace | int8 | 64 |  | √ | 0 |  |
-| 5 | fsrctypeid | 寻源流程 | int8 | 64 |  | √ | 0 | 流程配置 pds_flowconfig |
+| 5 | fsrctypeid | 寻源流程 | int8 | 64 |  | √ | 0 | [流程配置 pds_flowconfig](../pds_files/pds_flowconfig.md) |
 | 6 | fpentitykey | fpentitykey | varchar | 50 |  | √ | ' ' |  |
 | 7 | fmodifytime | fmodifytime | timestamp | 0 |  |  | null |  |
 | 8 | fsrcemotion | 寻源情形 | varchar | 30 |  | √ | ' ' | 寻源情形,枚举: A :新增品项首次评审 B :合同外新增物资 C :已有合同价格下调 D :产品重新选型 E :已有合同价格上浮 F :年度合同重新寻源 G :其他 |
@@ -164,13 +164,13 @@
 | 31 | fbilltypeid | fbilltypeid | int8 | 64 |  | √ | 0 |  |
 | 32 | fdemandaffiliateid | fdemandaffiliateid | int8 | 64 |  | √ | 0 |  |
 | 33 | famount | 预估未税金额 | numeric | 23 | 10 | √ | 0 | 预估未税金额 |
-| 34 | fpurdeptid | 采购部门 | int8 | 64 |  | √ | 0 | 采购部门 pds_purdepart |
+| 34 | fpurdeptid | 采购部门 | int8 | 64 |  | √ | 0 | [采购部门 pds_purdepart](../pds_files/pds_purdepart.md) |
 | 35 | fsurplusamount | 预估价税合计 | numeric | 23 | 10 | √ | 0 | 预估价税合计 |
-| 36 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 36 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 37 | fnotreason | fnotreason | varchar | 100 |  | √ | ' ' |  |
 | 38 | fismultiscene | 是否拆分多个寻源场景 | bpchar | 1 |  | √ | '1' | 是否拆分多个寻源场景 |
-| 39 | fpurgroupid | 采购组 | int8 | 64 |  | √ | 0 | 采购业务组(封存) bd_pmoperatorgroup |
-| 40 | fbiztypeid | 业务类型 | int8 | 64 |  | √ | 0 | 业务类型 bd_biztype |
+| 39 | fpurgroupid | 采购组 | int8 | 64 |  | √ | 0 | [采购业务组(封存) bd_pmoperatorgroup](../sbd_files/bd_pmoperatorgroup.md) |
+| 40 | fbiztypeid | 业务类型 | int8 | 64 |  | √ | 0 | [业务类型 bd_biztype](../sbd_files/bd_biztype.md) |
 | 41 | fpurdecision | 采购决策 | bpchar | 1 |  | √ | ' ' | 采购决策 |
 | 42 | ftaxtype | 价格录入方式 | bpchar | 1 |  | √ | '1' | 价格录入方式,枚举: 1 :录入含税价 2 :录入未税价 3 :价内税(含税) |
 | 43 | fmodifierid | fmodifierid | int8 | 64 |  | √ | 0 |  |
@@ -182,7 +182,7 @@
 | 49 | fcostattribution | fcostattribution | int8 | 64 |  | √ | 0 |  |
 | 50 | fentitykey | fentitykey | varchar | 50 |  | √ | ' ' |  |
 | 51 | flastupdateuserid | flastupdateuserid | int8 | 64 |  | √ | 0 |  |
-| 52 | fregionid | 所属区域 | int8 | 64 |  | √ | 0 | 区域分组 pds_regiongroup |
+| 52 | fregionid | 所属区域 | int8 | 64 |  | √ | 0 | [区域分组 pds_regiongroup](../pds_files/pds_regiongroup.md) |
 | 53 | fisspecial | 特殊采购 | bpchar | 1 |  | √ | '0' | 特殊采购 |
 | 54 | fsumqty | fsumqty | numeric | 23 | 10 | √ | 0 |  |
 | 55 | flastupdatetime | flastupdatetime | timestamp | 0 |  |  | null |  |
@@ -191,7 +191,7 @@
 | 58 | fsourcetypeid | fsourcetypeid | int8 | 64 |  | √ | 0 |  |
 | 59 | fsumtaxamount | fsumtaxamount | numeric | 23 | 10 | √ | 0 |  |
 | 60 | fsumtax | fsumtax | numeric | 23 | 10 | √ | 0 |  |
-| 61 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 61 | fcurrencyid | 币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 
 ### 列规则定义
 

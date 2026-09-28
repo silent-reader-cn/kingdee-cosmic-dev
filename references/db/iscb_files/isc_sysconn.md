@@ -157,7 +157,7 @@
 | 7 | ftag | 队列Tag | varchar | 32 |  | √ | ' ' | 队列Tag |
 | 8 | fusesubserver | 项目名 | bpchar | 1 |  | √ | '0' | 项目名 |
 | 9 | fvhost | 虚拟主机 | varchar | 32 |  | √ | ' ' | 虚拟主机 |
-| 10 | fsystype | 连接系统类型 | int8 | 64 |  | √ | 0 | 连接类型（废弃） isc_conntype |
+| 10 | fsystype | 连接系统类型 | int8 | 64 |  | √ | 0 | [连接类型（废弃） isc_conntype](../iscb_files/isc_conntype.md) |
 | 11 | fconnectiontype | 连接类型 | varchar | 30 |  | √ | ' ' | 连接类型,枚举: EAS :EAS 金蝶云 :金蝶云苍穹 Rabbit :Rabbit MQ other :其它 |
 | 12 | furlpreview | 访问地址预览 | varchar | 200 |  | √ | ' ' | 访问地址预览 |
 | 13 | fprotocol | 协议类型 | varchar | 30 |  | √ | ' ' | 协议类型,枚举: http:// :http https:// :https |

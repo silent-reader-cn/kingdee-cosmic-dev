@@ -11,11 +11,11 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fentryqty | 替代数量 | numeric | 23 | 10 | √ | 0 | 替代数量 |
-| 3 | fentrymaterial | 替代物料 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 3 | fentrymaterial | 替代物料 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 4 | fentryauxpty | 替代物料辅助属性 | int8 | 64 |  | √ | 0 | null 001 |
 | 5 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 7 | fentryunit | 替代计量单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 7 | fentryunit | 替代计量单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 
 ### 列规则定义
 
@@ -43,11 +43,11 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fentryqty | 需求数量 | numeric | 23 | 10 | √ | 0 | 需求数量 |
-| 3 | fentrymaterial | 主物料 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 3 | fentrymaterial | 主物料 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 4 | fentryauxpty | 主物料辅助属性 | int8 | 64 |  | √ | 0 | null 001 |
 | 5 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 7 | fentryunit | 计量单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 7 | fentryunit | 计量单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 
 ### 列规则定义
 
@@ -75,23 +75,23 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | frequireqty | 需求数量 | numeric | 23 | 10 | √ | 0 | 需求数量 |
-| 3 | frepmaterial | 替代物料 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 3 | frepmaterial | 替代物料 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 4 | freplacestra | 替代策略 | varchar | 30 |  | √ | ' ' | 替代策略,枚举: 1001 :整批替代 1002 :混用替代 1003 :整批+混用 1004 :手工替代 |
 | 5 | freplacegroup | 替代组号 | int4 | 32 |  | √ | 0 | 替代组号 |
 | 6 | frepauxpty | 替代物料辅助属性 | int8 | 64 |  | √ | 0 | null 001 |
 | 7 | fbillentryid | 需求分录ID | varchar | 50 |  | √ | ' ' | 需求分录ID |
-| 8 | frunlog | 计划运算号 | int8 | 64 |  | √ | 0 | 运算日志 mrp_caculate_log |
+| 8 | frunlog | 计划运算号 | int8 | 64 |  | √ | 0 | [运算日志 mrp_caculate_log](../msplan_files/mrp_caculate_log.md) |
 | 9 | frepqty | 替代数量 | numeric | 23 | 10 | √ | 0 | 替代数量 |
 | 10 | fbillid | 需求单据ID | varchar | 50 |  | √ | ' ' | 需求单据ID |
 | 11 | fsourceno | 需求来源号 | varchar | 512 |  | √ | ' ' | 需求来源号 |
-| 12 | fmaterial | 物料 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 12 | fmaterial | 物料 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 13 | freplacemethod | 替代方式 | varchar | 30 |  | √ | ' ' | 替代方式,枚举: A :替代 B :取代 |
-| 14 | frequnit | 替代计量单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 15 | freplace | 替代方案 | int8 | 64 |  | √ | 0 | 物料替代方案 mpdm_replaceplan |
+| 14 | frequnit | 替代计量单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 15 | freplace | 替代方案 | int8 | 64 |  | √ | 0 | [物料替代方案 mpdm_replaceplan](../basedata_files/mpdm_replaceplan.md) |
 | 16 | fbomnumber | BOM编码 | varchar | 100 |  | √ | ' ' | BOM编码 |
 | 17 | fauxpty | 辅助属性 | int8 | 64 |  | √ | 0 | null 001 |
 | 18 | frunlogno | 运算日志编码 | varchar | 100 |  | √ | ' ' | 运算日志编码 |
-| 19 | funit | 计量单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 19 | funit | 计量单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 
 ### 列规则定义
 

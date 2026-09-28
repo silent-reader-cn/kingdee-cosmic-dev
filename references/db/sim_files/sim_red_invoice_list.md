@@ -95,7 +95,7 @@
 | 2 | fbuyeraddr | 购方地址电话 | varchar | 150 |  | √ | ' ' | 购方地址电话 |
 | 3 | fdrawer | 开票人 | varchar | 50 |  | √ | ' ' | 开票人 |
 | 4 | ftotalamount | 价税合计 | numeric | 23 | 10 | √ | 0.0000000000 | 价税合计 |
-| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | ftaxedtype | 征税方式 | varchar | 8 |  | √ | ' ' | 征税方式,枚举: 0 :普通征税 |
 | 7 | fmodifytime | fmodifytime | timestamp | 0 |  |  | null |  |
 | 8 | finvoicecopy | 联次发票 | varchar | 30 |  | √ | ' ' | 联次发票,枚举: -1 :无 二联 :二联 三联 :三联 五联 :五联 |
@@ -109,7 +109,7 @@
 | 16 | finvoiceno | 发票号码 | varchar | 50 |  | √ | ' ' | 发票号码 |
 | 17 | fbillno | 单据编号 | varchar | 50 |  | √ | ' ' | 单据编号 |
 | 18 | fsalertaxno | 销方纳税人识别号 | varchar | 50 |  | √ | ' ' | 销方纳税人识别号 |
-| 19 | fmaintaxorg | 税务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 19 | fmaintaxorg | 税务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 20 | foriginalinvoiceno | foriginalinvoiceno | varchar | 50 |  | √ | ' ' |  |
 | 21 | fdeduction | 扣除额 | numeric | 23 | 10 | √ | 0.0000000000 | 扣除额 |
 | 22 | fbuyerphone | fbuyerphone | varchar | 50 |  | √ | ' ' |  |

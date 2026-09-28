@@ -11,10 +11,10 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fyjstand | 标准值-夜间 | int8 | 64 |  | √ | 0 | 标准值-夜间 |
-| 3 | forg | 税务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | forg | 税务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 5 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 6 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 7 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 8 | ffbmonitor | 监测分贝数 | int8 | 64 |  | √ | 0 | 监测分贝数 |
 | 9 | fmulti | 两处以上噪声超标 | varchar | 50 |  | √ | ' ' | 两处以上噪声超标,枚举: 1 :是 0 :否 |
@@ -22,18 +22,18 @@
 | 11 | ftaxdepend | 计税依据 | varchar | 50 |  | √ | ' ' | 计税依据 |
 | 12 | fzjstand | 标准值-昼间 | int8 | 64 |  | √ | 0 | 标准值-昼间 |
 | 13 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 14 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 15 | ftaxauthority | 排放口所属主管税务机关 | int8 | 64 |  | √ | 0 | 税务机关 bastax_taxorgan |
+| 14 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 15 | ftaxauthority | 排放口所属主管税务机关 | int8 | 64 |  | √ | 0 | [税务机关 bastax_taxorgan](../bastax_files/bastax_taxorgan.md) |
 | 16 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 17 | funittax | 单位税额 | numeric | 23 | 10 | √ | 0 | 单位税额 |
 | 18 | fzyproduction | 昼夜产生 | varchar | 50 |  | √ | ' ' | 昼夜产生,枚举: 1 :是 0 :否 |
 | 19 | fdayratio | 超标不足15天系数 | numeric | 23 | 10 | √ | 0 | 超标不足15天系数 |
-| 20 | fsourcenumber | 税源编号 | int8 | 64 |  | √ | 0 | 排污口基础信息 tcret_pollution_basedata |
+| 20 | fsourcenumber | 税源编号 | int8 | 64 |  | √ | 0 | [排污口基础信息 tcret_pollution_basedata](../tcret_files/tcret_pollution_basedata.md) |
 | 21 | ffbexc | 超标分贝数 | int8 | 64 |  | √ | 0 | 超标分贝数 |
 | 22 | fnoiseratio | 两处以上噪声超标系数 | numeric | 23 | 10 | √ | 0 | 两处以上噪声超标系数 |
-| 23 | fsbbid | 申报表ID | int8 | 64 |  | √ | 0 | 纳税申报表基础资料 bdtaxr_nsrxx |
+| 23 | fsbbid | 申报表ID | int8 | 64 |  | √ | 0 | [纳税申报表基础资料 bdtaxr_nsrxx](../bdtaxr_files/bdtaxr_nsrxx.md) |
 | 24 | fenable | 使用状态 | varchar | 50 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 25 | fdatasource | 数据来源 | varchar | 50 |  | √ | ' ' | 数据来源,枚举: 1 :手工新增 2 :模板引入 |
+| 25 | fdatasource | 数据来源 | varchar | 50 |  | √ | ' ' | 数据来源,枚举: 1 :手工新增 2 :模板导入 |
 | 26 | foverlimit | 超标不足15天 | varchar | 50 |  | √ | ' ' | 超标不足15天,枚举: 1 :是 0 :否 |
 | 27 | fnumber | 单据编号 | varchar | 30 |  | √ | ' ' | 单据编号 |
 | 28 | fnoisetime | 噪声时段 | varchar | 50 |  | √ | ' ' | 噪声时段,枚举: day :昼间 night :夜间 |

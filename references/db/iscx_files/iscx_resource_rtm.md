@@ -21,17 +21,17 @@
 | 10 | fextendor | fextendor | int8 | 64 |  |  | null |  |
 | 11 | fversion | 版本号 | int8 | 64 |  |  | null | 版本号 |
 | 12 | fremark | 备注 | varchar | 500 |  |  | null | 备注 |
-| 13 | fname | 名称 | varchar | 250 |  |  | null | 名称 |
-| 14 | fcatalog | 目录 | int8 | 64 |  |  | null | 资源目录 iscx_catalog |
+| 13 | fname | 名称 | varchar | 500 |  |  | null | 名称 |
+| 14 | fcatalog | 目录 | int8 | 64 |  |  | null | [资源目录 iscx_catalog](../iscx_files/iscx_catalog.md) |
 | 15 | fcreatetime | fcreatetime | timestamp | 0 |  |  | null |  |
 | 16 | fis_extended | 是否已扩展 | bpchar | 1 |  |  | null | 是否已扩展 |
 | 17 | fmodifier | fmodifier | int8 | 64 |  |  | null |  |
 | 18 | fextendedtime | fextendedtime | timestamp | 0 |  |  | null |  |
 | 19 | foutput_data_model_id | 输出数据模型ID | int8 | 64 |  | √ | 0 | 输出数据模型ID |
-| 20 | ftype | 类型 | varchar | 36 |  |  | null | 资源类型 iscx_resource_type |
+| 20 | ftype | 类型 | varchar | 36 |  |  | null | [资源类型 iscx_resource_type](../iscx_files/iscx_resource_type.md) |
 | 21 | fext_tenant | fext_tenant | varchar | 50 |  |  | null |  |
 | 22 | fnumber | 编码 | varchar | 150 |  |  | null | 编码 |
-| 23 | fscope | 作用域 | int8 | 64 |  |  | null | 资源目录 iscx_catalog |
+| 23 | fscope | 作用域 | int8 | 64 |  |  | null | [资源目录 iscx_catalog](../iscx_files/iscx_catalog.md) |
 | 24 | fextensions | 扩展配置 | varchar | 255 |  |  | null | 扩展配置 |
 | 25 | finput_data_model_id | 输入数据模型ID | int8 | 64 |  | √ | 0 | 输入数据模型ID |
 

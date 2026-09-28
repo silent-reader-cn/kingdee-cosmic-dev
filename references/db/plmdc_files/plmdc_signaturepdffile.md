@@ -11,8 +11,9 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | ffilestatus | 文件状态 | varchar | 50 |  | √ | ' ' | 文件状态,枚举: occupy :占用 idle :空闲 |
-| 3 | flatestpdffileid | 最新pdf文件 | int8 | 64 |  | √ | 0 | 物理文件属性 plm_plmdc_physical_file |
-| 4 | fpdffileid | PDF文件 | int8 | 64 |  | √ | 0 | 物理文件属性 plm_plmdc_physical_file |
+| 3 | flatestpdffileid | 最新pdf文件 | int8 | 64 |  | √ | 0 | [物理文件属性 plm_plmdc_physical_file](../plmdc_files/plm_plmdc_physical_file.md) |
+| 4 | fdocversionid | 文档版本 | int8 | 64 |  | √ | 0 | [文档版本 plm_pdm_document_revision](../plmsm_files/plm_pdm_document_revision.md) |
+| 5 | fpdffileid | PDF文件 | int8 | 64 |  | √ | 0 | [物理文件属性 plm_plmdc_physical_file](../plmdc_files/plm_plmdc_physical_file.md) |
 
 ### 列规则定义
 

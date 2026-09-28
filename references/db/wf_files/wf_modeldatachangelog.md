@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fmodifydate | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 4 | fresourceid | 资源ID | int8 | 64 |  | √ | 0 | 资源ID |
 | 5 | fschemeid | 方案ID | int8 | 64 |  | √ | 0 | 方案ID |

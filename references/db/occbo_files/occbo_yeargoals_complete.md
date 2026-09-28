@@ -9,7 +9,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | 渠道目标 | int8 | 64 |  | √ | 0 | 渠道目标 occbo_channelgoals |
+| 1 | fid | 渠道目标 | int8 | 64 |  | √ | 0 | [渠道目标 occbo_channelgoals](../occbo_files/occbo_channelgoals.md) |
 | 2 | fgoalsnum12 | fgoalsnum12 | numeric | 23 | 10 | √ | 0 |  |
 | 3 | fgoalsnum11 | fgoalsnum11 | numeric | 23 | 10 | √ | 0 |  |
 | 4 | fgoalsnum14 | fgoalsnum14 | numeric | 23 | 10 | √ | 0 |  |
@@ -18,7 +18,7 @@
 | 7 | factualnum1 | 实际值1 | numeric | 23 | 10 | √ | 0 | 实际值1 |
 | 8 | fseq | fseq | int4 | 32 |  | √ | 0 |  |
 | 9 | fmodifydate | fmodifydate | timestamp | 0 |  |  | null |  |
-| 10 | fchannelid | 经销商 | int8 | 64 |  | √ | 0 | 渠道 ocdbd_channel |
+| 10 | fchannelid | 经销商 | int8 | 64 |  | √ | 0 | [渠道 ocdbd_channel](../ocdbd_files/ocdbd_channel.md) |
 | 11 | fgoalsnum16 | fgoalsnum16 | numeric | 23 | 10 | √ | 0 |  |
 | 12 | fgoalsnum15 | fgoalsnum15 | numeric | 23 | 10 | √ | 0 |  |
 | 13 | fmodifierid | fmodifierid | int8 | 64 |  | √ | 0 |  |

@@ -39,6 +39,6 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_tcvat_ybqyhzsb_fpb |  | fsbbid |
-| 2 | pk_tcvat_ybqyhzsb_fpb |  | fid |
+| 1 | pk_tcvat_ybqyhzsb_fpb |  | fid |
+| 2 | idx_tcvat_ybqyhzsb_fpb |  | fsbbid |
 | 3 | idx_tcvat_ybqyhzsb_fpb_1 |  | fewblxh,fsbbid |

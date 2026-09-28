@@ -1,5 +1,34 @@
 # PDM数据实例框架页-plm_plmsm_instanceframe
 
+## PDM数据实例框架页-多语言表 t_plmsm_instancepage_l
+
+- **表名称：** PDM数据实例框架页-多语言表
+- **表名：** t_plmsm_instancepage_l
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
+| 3 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
+| 4 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fpkid | fpkid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | pk_t_plmsm_instancepage_l |  | fpkid |
+| 2 | idx_plmsm_instancepage_l_0 |  | fname |
+
+---
+
 ## 打开单据参数-子表 t_plmsm_instancepage_para
 
 - **表名称：** 打开单据参数-子表
@@ -27,35 +56,6 @@
 | :--- | :--- | :--- | :--- |
 | 1 | pk_t_plmsm_instancepage_para |  | fentryid |
 | 2 | idx_plmsm_instancepage_para |  | fid |
-
----
-
-## PDM数据实例框架页-多语言表 t_plmsm_instancepage_l
-
-- **表名称：** PDM数据实例框架页-多语言表
-- **表名：** t_plmsm_instancepage_l
-
-### 表格列定义
-
-| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 3 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
-| 4 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
-
-### 列规则定义
-
-| 序号 | 键编码 | 列字段 |
-| :--- | :--- | :--- |
-| 1 | fpkid | fpkid |
-
-### 索引定义
-
-| 序号 | 索引名 | 唯一 | 列字段 |
-| :--- | :--- | :--- | :--- |
-| 1 | pk_t_plmsm_instancepage_l |  | fpkid |
-| 2 | idx_plmsm_instancepage_l_0 |  | fname |
 
 ---
 

@@ -14,20 +14,20 @@
 | 3 | fgetoffice | 收入机关 | varchar | 50 |  | √ | ' ' | 收入机关 |
 | 4 | fdeclarenum | 报关单编号 | varchar | 50 |  | √ | ' ' | 报关单编号 |
 | 5 | fyxdkskje | 有效抵扣税款金额 | numeric | 23 | 10 | √ | 0.0000000000 | 有效抵扣税款金额 |
-| 6 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fsigndate | 填发日期 | timestamp | 0 |  |  | null | 填发日期 |
 | 8 | fcometermstatus | 进项状态 | varchar | 30 |  | √ | ' ' | 进项状态,枚举: not :未勾选 yes :勾选不抵扣 yesverify :勾选认证 |
 | 9 | fsourcesystem | 来源系统 | varchar | 50 |  | √ | ' ' | 来源系统 |
 | 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 11 | fcertstatus | fcertstatus | varchar | 50 |  | √ | ' ' |  |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fselectresult | fselectresult | varchar | 50 |  | √ | ' ' |  |
 | 14 | fpaylimittime | 缴款期限 | timestamp | 0 |  |  | null | 缴款期限 |
 | 15 | ftranstoolnum | 运输工具号 | varchar | 50 |  | √ | ' ' | 运输工具号 |
 | 16 | fdealgoodsnum | 提/装货单号 | varchar | 50 |  | √ | ' ' | 提/装货单号 |
 | 17 | fapplyunitnum | 申请单位编号 | varchar | 50 |  | √ | ' ' | 申请单位编号 |
 | 18 | fbillno | 单据编号 | varchar | 30 |  | √ | ' ' | 单据编号 |
-| 19 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 19 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 20 | fbillstatus | 单据状态 | varchar | 30 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 21 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 22 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
@@ -37,10 +37,10 @@
 | 26 | fperiod | 所属税期 | timestamp | 0 |  |  | null | 所属税期 |
 | 27 | fselectstatus | fselectstatus | varchar | 50 |  | √ | ' ' |  |
 | 28 | fcontractnum | 合同批文号 | varchar | 50 |  | √ | ' ' | 合同批文号 |
-| 29 | fdatasource | 数据来源 | varchar | 30 |  | √ | ' ' | 数据来源,枚举: income :模板引入 synchro :系统同步 |
+| 29 | fdatasource | 数据来源 | varchar | 30 |  | √ | ' ' | 数据来源,枚举: income :模板导入 synchro :系统同步 |
 | 30 | ftaxtotal | 税款金额合计 | numeric | 23 | 10 | √ | 0.0000000000 | 税款金额合计 |
 | 31 | fisvoucher | 生成凭证 | bpchar | 1 |  | √ | ' ' | 生成凭证 |
-| 32 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 32 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 33 | funitbank | 缴款单位开户银行 | varchar | 58 |  | √ | ' ' | 缴款单位开户银行 |
 | 34 | fverifystatus | 稽核结果 | varchar | 30 |  | √ | ' ' | 稽核结果,枚举: ing :稽核中 true :相符 false :不符 lack :缺联 repeat :重号 |
 

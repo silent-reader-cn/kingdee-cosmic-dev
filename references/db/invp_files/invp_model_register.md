@@ -12,8 +12,8 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | ffilterdescds | 取数条件 | varchar | 2000 |  | √ | ' ' | 取数条件 |
 | 3 | ffiltervalueds | 取数条件值 | varchar | 2000 |  | √ | ' ' | 取数条件值 |
-| 4 | fbillfieldmapid | 实体字段映射编码 | int8 | 64 |  | √ | 0 | 通用映射配置 sbs_billfieldmapping |
-| 5 | fsrcbilld | 源实体 | varchar | 50 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 4 | fbillfieldmapid | 实体字段映射编码 | int8 | 64 |  | √ | 0 | [通用映射配置 sbs_billfieldmapping](../mscommon_files/sbs_billfieldmapping.md) |
+| 5 | fsrcbilld | 源实体 | varchar | 50 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 6 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 7 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 
@@ -131,30 +131,30 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fapproverid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fapproverid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fmodeltype | 模型类型 | varchar | 50 |  | √ | ' ' | 模型类型,枚举: 1 :供应 2 :需求 3 :水位因子 |
-| 4 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 5 | foutputresult | 输出结果映射 | int8 | 64 |  | √ | 0 | 通用映射配置 sbs_billfieldmapping |
-| 6 | fapptype | 所属应用 | varchar | 50 |  | √ | ' ' | 业务应用列表 bos_devp_bizapplist |
+| 4 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 5 | foutputresult | 输出结果映射 | int8 | 64 |  | √ | 0 | [通用映射配置 sbs_billfieldmapping](../mscommon_files/sbs_billfieldmapping.md) |
+| 6 | fapptype | 所属应用 | varchar | 50 |  | √ | ' ' | [业务应用列表 bos_devp_bizapplist](../devnew_files/bos_devp_bizapplist.md) |
 | 7 | fdisabledate | 禁用时间 | timestamp | 0 |  |  | null | 禁用时间 |
-| 8 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 8 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 9 | fispreset | 系统预设 | bpchar | 1 |  | √ | '0' | 系统预设 |
 | 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 11 | fbusinessentityid | 目标实体 | varchar | 50 |  | √ | ' ' | 主实体对象 bos_entityobject |
-| 12 | foutputmappingsupply | 输出转供应映射 | int8 | 64 |  | √ | 0 | 通用映射配置 sbs_billfieldmapping |
+| 11 | fbusinessentityid | 目标实体 | varchar | 50 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
+| 12 | foutputmappingsupply | 输出转供应映射 | int8 | 64 |  | √ | 0 | [通用映射配置 sbs_billfieldmapping](../mscommon_files/sbs_billfieldmapping.md) |
 | 13 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 16 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 17 | fbitindex | 位图 | int8 | 64 |  | √ | 0 | 位图 |
-| 18 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 18 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 19 | fapprovedate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
 | 20 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
-| 21 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 21 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 22 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 23 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 23 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 24 | fctrlstrategy | 控制策略 | varchar | 50 |  | √ | ' ' | 控制策略,枚举: 5 :全局共享 |
-| 25 | foutputtypeid | 输出结果类型 | varchar | 50 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 25 | foutputtypeid | 输出结果类型 | varchar | 50 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 26 | fenable | 使用状态 | varchar | 50 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 27 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
 | 28 | fsourcebitindex | 原资料位图 | int8 | 64 |  | √ | 0 | 原资料位图 |

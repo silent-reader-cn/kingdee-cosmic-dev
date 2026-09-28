@@ -12,10 +12,10 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 3 | fyear | 年度 | timestamp | 0 |  |  | null | 年度 |
-| 4 | fcreaterid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fcreaterid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fdatasource | 数据来源 | varchar | 50 |  | √ | ' ' | 数据来源,枚举: A :手工新增 B :模版引入 C :数据同步 |
-| 6 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 7 | ftaxorgid | 税务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 7 | ftaxorgid | 税务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | fproductgroup | 产品组 | varchar | 1000 |  | √ | ' ' | 产品组 |
 | 9 | famount | 金额 | numeric | 23 | 10 | √ | 0 | 金额 |
 | 10 | fincometype | 收入类型 | varchar | 50 |  | √ | ' ' | 收入类型,枚举: A :产品（服务）收入 B :技术性收入 |

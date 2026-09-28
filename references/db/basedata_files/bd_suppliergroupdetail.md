@@ -10,10 +10,10 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreateorgid | 分类创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 3 | fstandardid | 分类标准 | int8 | 64 |  | √ | 0 | 供应商分类标准 bd_suppliergroupstandard |
-| 4 | fgroupid | 分类 | int8 | 64 |  | √ | 0 | 供应商分类 bd_suppliergroup |
-| 5 | fsupplierid | 供应商 | int8 | 64 |  | √ | 0 | 供应商 bd_supplier |
+| 2 | fcreateorgid | 分类创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 3 | fstandardid | 分类标准 | int8 | 64 |  | √ | 0 | [供应商分类标准 bd_suppliergroupstandard](../basedata_files/bd_suppliergroupstandard.md) |
+| 4 | fgroupid | 分类 | int8 | 64 |  | √ | 0 | [供应商分类 bd_suppliergroup](../basedata_files/bd_suppliergroup.md) |
+| 5 | fsupplierid | 供应商 | int8 | 64 |  | √ | 0 | [供应商 bd_supplier](../basedata_files/bd_supplier.md) |
 
 ### 列规则定义
 

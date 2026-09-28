@@ -14,7 +14,7 @@
 | 3 | fcreatedate | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 4 | fispreinsdata | 是否预置场景 | bpchar | 1 |  | √ | '1' | 是否预置场景 |
 | 5 | fmodifydate | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 6 | fentitynumber | 业务对象 | varchar | 200 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 6 | fentitynumber | 业务对象 | varchar | 200 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 7 | fnumber | 编码 | varchar | 200 |  | √ | ' ' | 编码 |
 
 ### 列规则定义

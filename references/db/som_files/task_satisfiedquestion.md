@@ -40,7 +40,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreateorgid | 共享中心 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fcreateorgid | 共享中心 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fbestcempreviewlink | 倍市得问卷预览链接 | varchar | 200 |  | √ | ' ' | 倍市得问卷预览链接 |
 | 4 | fquestionstatus | 问卷状态 | varchar | 4 |  | √ | ' ' | 问卷状态,枚举: 8 :未开始 4 :未投放 5 :已投放 6 :已结束 7 :已删除 |
 | 5 | fbestcemqid | 倍市得问卷id | varchar | 50 |  | √ | ' ' | 倍市得问卷id |
@@ -87,8 +87,8 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fuser | 用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 3 | fdept | 部门 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fuser | 用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 3 | fdept | 部门 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 6 | fdeliverurl | 用户答卷链接 | varchar | 500 |  | √ | ' ' | 用户答卷链接 |

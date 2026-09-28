@@ -11,13 +11,14 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
-| 3 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 4 | fenabledmultilang | 多语言字段 | bpchar | 1 |  | √ | '1' | 多语言字段 |
-| 5 | fenabledlang | 启用语言 | bpchar | 1 |  | √ | '1' | 启用语言 |
-| 6 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
-| 7 | fdescription | 描述 | varchar | 255 |  | √ | ' ' | 描述 |
-| 8 | fabbrcode | 简码 | varchar | 10 |  | √ | ' ' | 简码 |
-| 9 | fisdefault | 是否默认 | bpchar | 1 |  | √ | '0' | 是否默认 |
+| 3 | fisdefaultsend | 默认消息发送语言 | bpchar | 1 |  | √ | '0' | 默认消息发送语言 |
+| 4 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
+| 5 | fenabledmultilang | 多语言字段 | bpchar | 1 |  | √ | '1' | 多语言字段 |
+| 6 | fenabledlang | 启用语言 | bpchar | 1 |  | √ | '1' | 启用语言 |
+| 7 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
+| 8 | fdescription | 描述 | varchar | 255 |  | √ | ' ' | 描述 |
+| 9 | fabbrcode | 简码 | varchar | 10 |  | √ | ' ' | 简码 |
+| 10 | fisdefault | 默认登录语言 | bpchar | 1 |  | √ | '0' | 默认登录语言 |
 
 ### 列规则定义
 

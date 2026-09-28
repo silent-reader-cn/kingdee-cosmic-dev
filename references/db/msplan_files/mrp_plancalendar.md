@@ -19,15 +19,15 @@
 | 8 | fishalftuerest | 周二 | bpchar | 1 |  | √ | '0' | 周二 |
 | 9 | fishalfsatrest | 周六 | bpchar | 1 |  | √ | '0' | 周六 |
 | 10 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 13 | fmpdmcalendarid | 生产日历 | int8 | 64 |  | √ | 0 | 生产日历 mpdm_calendar |
+| 13 | fmpdmcalendarid | 生产日历 | int8 | 64 |  | √ | 0 | [生产日历 mpdm_calendar](../mpdm_files/mpdm_calendar.md) |
 | 14 | fishalfwedrest | 周三 | bpchar | 1 |  | √ | '0' | 周三 |
 | 15 | fisfrirest | 周五 | bpchar | 1 |  | √ | '0' | 周五 |
 | 16 | fishalfthurest | 周四 | bpchar | 1 |  | √ | '0' | 周四 |
-| 17 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 17 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 18 | fismonrest | 周一 | bpchar | 1 |  | √ | '0' | 周一 |
-| 19 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 19 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 20 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 21 | fisthurest | 周四 | bpchar | 1 |  | √ | '0' | 周四 |
 | 22 | fissatrest | 周六 | bpchar | 1 |  | √ | '1' | 周六 |

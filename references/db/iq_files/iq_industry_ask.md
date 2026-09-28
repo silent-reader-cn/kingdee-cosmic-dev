@@ -12,7 +12,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fistraden | 是否所属行业 | bpchar | 1 |  | √ | '0' | 是否所属行业 |
 | 3 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 4 | findustryrequirements | 行业要求 | int8 | 64 |  | √ | 0 | 行业要求映射 iq_industry_requirements |
+| 4 | findustryrequirements | 行业要求 | int8 | 64 |  | √ | 0 | [行业要求映射 iq_industry_requirements](../iq_files/iq_industry_requirements.md) |
 | 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 
 ### 列规则定义

@@ -14,7 +14,7 @@
 | 3 | fsrcsys | 来源系统 | varchar | 30 |  | √ | ' ' | 来源系统,枚举: taxc :税务云 |
 | 4 | fnodetype | 所属系统 | varchar | 30 |  | √ | ' ' | 所属系统,枚举: 1 :税局申报 |
 | 5 | freqcontent_tag | 提交内容_详情 | text | 0 |  |  | null | 提交内容_详情 |
-| 6 | fcreaterld | 操作人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | fcreaterld | 操作人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 7 | fcreatetime | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
 | 8 | fmsgtype | 日志类型 | varchar | 30 |  | √ | ' ' | 日志类型,枚举: 1 :增值税申报 2 :企业所得税申报 |
 | 9 | freqcontent | 提交内容 | varchar | 510 |  | √ | ' ' | 提交内容 |

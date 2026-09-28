@@ -17,12 +17,12 @@
 | 6 | fdatasrctype | 数据集合的目标数据来源类型 | varchar | 50 |  | √ | ' ' | 数据集合的目标数据来源类型,枚举: 0 :自定义 bcmParamSource :星瀚合并报表 2 :星瀚预算 3 :星瀚总账 fileParamSource :导入离线数据 |
 | 7 | fmsg | 日志信息 | varchar | 510 |  |  | null | 日志信息 |
 | 8 | ftaskoperatetoken | 任务操作所使用的Token | int8 | 64 |  | √ | 0 | 任务操作所使用的Token |
-| 9 | fdatasyncparam | 数据同步参数 | int8 | 64 |  | √ | 0 | 同步参数设置 fsa_syncparam |
+| 9 | fdatasyncparam | 数据同步参数 | int8 | 64 |  | √ | 0 | [同步参数设置 fsa_syncparam](../fsa_files/fsa_syncparam.md) |
 | 10 | fstatus | 同步状态： | varchar | 2 |  | √ | '0' | 同步状态：,枚举: 0 :未开始 1 :进行中 2 :成功完成 9 :失败 10 :手动终止 |
 | 11 | fupdatetime | 日志更新时间 | timestamp | 0 |  |  | null | 日志更新时间 |
 | 12 | fparamdetail_tag | 数据同步参数自定义明细_详情 | text | 0 |  |  | null | 数据同步参数自定义明细_详情 |
 | 13 | fdatasynctask | 所属的同步任务ID | int8 | 64 |  | √ | 0 | 所属的同步任务ID |
-| 14 | fdatacollection | 数据集合 | int8 | 64 |  | √ | 0 | 数据集合 fsa_data_collection |
+| 14 | fdatacollection | 数据集合 | int8 | 64 |  | √ | 0 | [数据集合 fsa_data_collection](../fsa_files/fsa_data_collection.md) |
 | 15 | fparamdetail | 数据同步参数自定义明细 | varchar | 510 |  |  | null | 数据同步参数自定义明细 |
 
 ### 列规则定义

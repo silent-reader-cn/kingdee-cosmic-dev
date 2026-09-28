@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fbegincreditfor | fbegincreditfor | numeric | 19 | 6 | √ | 0.000000 |  |
-| 3 | forgid | 核算组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | forgid | 核算组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | fyearprofitdebitfor | fyearprofitdebitfor | numeric | 19 | 6 | √ | 0.000000 |  |
 | 5 | fyearprofitdebitlocal | fyearprofitdebitlocal | numeric | 19 | 6 | √ | 0.000000 |  |
 | 6 | fbegindebitfor | fbegindebitfor | numeric | 19 | 6 | √ | 0.000000 |  |

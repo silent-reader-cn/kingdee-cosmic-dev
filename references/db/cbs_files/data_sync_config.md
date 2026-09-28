@@ -12,7 +12,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fmodifierid | fmodifierid | int8 | 64 |  | √ | 0 |  |
 | 3 | fcreatetime | fcreatetime | timestamp | 0 |  |  | null |  |
-| 4 | fentitynumber | 实体对象 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 4 | fentitynumber | 实体对象 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 5 | fentityfields | 同步字段 | varchar | 1000 |  | √ | ' ' | 同步字段,枚举: |
 | 6 | fbusinesstype | 场景类型 | varchar | 100 |  | √ | ' ' | 场景类型,枚举: |
 | 7 | fen | fen | varchar | 30 |  | √ | ' ' |  |

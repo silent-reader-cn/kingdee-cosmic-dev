@@ -12,7 +12,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | foperationname | 操作名称(后台) | varchar | 2000 |  | √ | ' ' | 操作名称(后台) |
 | 3 | fservicetype | 服务类型 | varchar | 50 |  | √ | ' ' | 服务类型,枚举: |
-| 4 | fbilltype | 注册服务单据 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 4 | fbilltype | 注册服务单据 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 5 | foperationcode | 操作名称 | varchar | 50 |  | √ | ' ' | 操作名称,枚举: |
 | 6 | fservicetypename | 服务类型名称 | varchar | 50 |  | √ | ' ' | 服务类型名称 |
 

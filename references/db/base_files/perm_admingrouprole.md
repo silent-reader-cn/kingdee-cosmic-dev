@@ -11,8 +11,8 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fismodifiable | 是否可修改 | bpchar | 1 |  | √ | '0' | 是否可修改 |
-| 3 | froleid | 通用角色 | varchar | 19 |  | √ | ' ' | 通用角色 perm_role |
-| 4 | fadmingroupid | 管理员分组 | int8 | 64 |  | √ | 0 | 管理员分组 perm_admingroup |
+| 3 | froleid | 通用角色 | varchar | 19 |  | √ | ' ' | [通用角色 perm_role](../base_files/perm_role.md) |
+| 4 | fadmingroupid | 管理员分组 | int8 | 64 |  | √ | 0 | [管理员分组 perm_admingroup](../base_files/perm_admingroup.md) |
 
 ### 列规则定义
 

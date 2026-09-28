@@ -40,22 +40,22 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fbillstatus | 单据状态 | varchar | 30 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 4 | fcreatetime | 变更时间 | timestamp | 0 |  |  | null | 变更时间 |
-| 5 | forgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | forgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | fafterfilter_tag | 变更后数据范围_详情 | text | 0 |  |  | null | 变更后数据范围_详情 |
 | 7 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
 | 8 | fappnum | 所属应用 | varchar | 10 |  | √ | ' ' | 所属应用,枚举: sca :标准成本 aca :实际成本 |
-| 9 | fsourcebill | 源单 | varchar | 80 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 9 | fsourcebill | 源单 | varchar | 80 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 11 | fcreatorid | 变更人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 12 | fcostbillid | 成本单据 | varchar | 80 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 11 | fcreatorid | 变更人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 12 | fcostbillid | 成本单据 | varchar | 80 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 13 | fafterfilter | 变更后数据范围 | varchar | 2000 |  | √ | ' ' | 变更后数据范围 |
 | 14 | fbeforefilter_tag | 变更前数据范围_详情 | text | 0 |  |  | null | 变更前数据范围_详情 |
 | 15 | fcount | 变更次数 | int8 | 64 |  | √ | 0 | 变更次数 |
 | 16 | fbillno | 配置单编号 | varchar | 255 |  | √ | ' ' | 配置单编号 |
-| 17 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 17 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 18 | fbeforefilter | 变更前数据范围 | varchar | 2000 |  | √ | ' ' | 变更前数据范围 |
 
 ### 列规则定义

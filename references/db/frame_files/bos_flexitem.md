@@ -18,7 +18,7 @@
 | 7 | fassistanttype | fassistanttype | int8 | 64 |  |  | null |  |
 | 8 | fdatamaxlen | fdatamaxlen | int8 | 64 |  | √ | 20 |  |
 | 9 | fstatus | fstatus | bpchar | 1 |  | √ | ' ' |  |
-| 10 | fvaluesource | 值来源 | varchar | 36 |  | √ | ' ' | 业务对象 bos_objecttype |
+| 10 | fvaluesource | 值来源 | varchar | 36 |  | √ | ' ' | [业务对象 bos_objecttype](../mdl_files/bos_objecttype.md) |
 | 11 | fcreatorid | fcreatorid | int8 | 64 |  | √ | 0 |  |
 | 12 | fmasterid | fmasterid | int8 | 64 |  | √ | 0 |  |
 | 13 | fflexfield | 弹性域字段 | varchar | 30 |  | √ | ' ' | 弹性域字段 |
@@ -27,7 +27,7 @@
 | 16 | ffiltercondition | ffiltercondition | varchar | 512 |  | √ | ' ' |  |
 | 17 | fcreateorgid | fcreateorgid | int8 | 64 |  | √ | 0 |  |
 | 18 | fmodifierid | fmodifierid | int8 | 64 |  | √ | 0 |  |
-| 19 | fname | fname | varchar | 30 |  | √ | ' ' |  |
+| 19 | fname | fname | varchar | 100 |  | √ | ' ' |  |
 | 20 | fcreatetime | fcreatetime | timestamp | 0 |  | √ | LOCALTIMESTAMP |  |
 | 21 | findex | 序号 | int8 | 64 |  | √ | 0 | 序号 |
 | 22 | fvaluetype | 值类型 | bpchar | 1 |  | √ | ' ' | 值类型,枚举: |
@@ -130,7 +130,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fname | 名称 | varchar | 60 |  | √ | ' ' | 名称 |
+| 1 | fname | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
 | 2 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
 | 3 | fdescription | fdescription | varchar | 200 |  | √ | ' ' |  |
 | 4 | fpkid | fpkid | varchar | 18 |  | √ | ' ' | pkid |

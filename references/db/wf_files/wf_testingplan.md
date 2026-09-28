@@ -51,13 +51,13 @@
 | 7 | fstartername | fstartername | varchar | 100 |  | √ | ' ' |  |
 | 8 | fentityname | fentityname | varchar | 255 |  | √ | ' ' |  |
 | 9 | fcreatedate | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fmodifydate | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 12 | fpath | 路径 | text | 0 |  |  | null | 路径 |
 | 13 | fbillno | 单据编号 | varchar | 100 |  | √ | ' ' | 单据编号 |
-| 14 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 15 | fname | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
-| 16 | ferrorinfo | 错误信息 | text | 0 |  |  | null | 错误信息 |
+| 14 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 15 | ferrorinfo | 错误信息 | text | 0 |  |  | null | 错误信息 |
+| 16 | fname | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
 | 17 | fresultinfo | 结果信息 | text | 0 |  |  | null | 结果信息 |
 | 18 | fnewbusinesskey | 新单据ID | varchar | 100 |  | √ | ' ' | 新单据ID |
 | 19 | fstarterid | 发起人ID | int8 | 64 |  | √ | 0 | 发起人ID |

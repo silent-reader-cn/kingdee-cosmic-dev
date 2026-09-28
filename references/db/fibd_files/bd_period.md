@@ -14,12 +14,12 @@
 | 3 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 4 | fbegindate | 开始日期 | timestamp | 0 |  |  | null | 开始日期 |
 | 5 | fperiodnumber | 会计期间 | int8 | 64 |  | √ | 0 | 会计期间 |
-| 6 | fperiodoutlineid | 会计期间 | int8 | 64 |  | √ | 0 | 会计日历 bd_periodoutline_tree |
-| 7 | ftypeid | 会计日历类型 | int8 | 64 |  | √ | 0 | 会计日历类型 bd_period_type |
+| 6 | fperiodoutlineid | 会计期间 | int8 | 64 |  | √ | 0 | [会计日历 bd_periodoutline_tree](../fibd_files/bd_periodoutline_tree.md) |
+| 7 | ftypeid | 会计日历类型 | int8 | 64 |  | √ | 0 | [会计日历类型 bd_period_type](../fibd_files/bd_period_type.md) |
 | 8 | fenddate | 结束日期 | timestamp | 0 |  |  | null | 结束日期 |
 | 9 | fstatus | 单据状态 | bpchar | 1 |  | √ | 'Z' | 单据状态,枚举: Z :暂存 A :创建 B :已提交 C :已审核 |
 | 10 | fisadjustperiod | 调整期 | bpchar | 1 |  | √ | '0' | 调整期 |
-| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fperiodquarter | 会计季度 | int8 | 64 |  | √ | 0 | 会计季度 |
 | 13 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
 | 14 | fperiodyear | 会计年度 | int4 | 32 |  | √ | 0 | 会计年度 |

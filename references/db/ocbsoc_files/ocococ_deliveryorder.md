@@ -10,52 +10,52 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fstockstatusid | 库存状态 | int8 | 64 |  | √ | 0 | 库存状态 bd_invstatus |
+| 2 | fstockstatusid | 库存状态 | int8 | 64 |  | √ | 0 | [库存状态 bd_invstatus](../sbd_files/bd_invstatus.md) |
 | 3 | fremake | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
 | 4 | freceivedate | 签收日期 | timestamp | 0 |  |  | null | 签收日期 |
-| 5 | fmaterialid | 物料编码 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 5 | fmaterialid | 物料编码 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 6 | ffrozentime | 冻结日期 | timestamp | 0 |  |  | null | 冻结日期 |
 | 7 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 8 | fsalerid | 销售员 | int8 | 64 |  | √ | 0 | 渠道用户(已废弃) ocdbd_channeluser |
+| 8 | fsalerid | 销售员 | int8 | 64 |  | √ | 0 | [渠道用户(已废弃) ocdbd_channeluser](../ocdbd_files/ocdbd_channeluser.md) |
 | 9 | fclosetime | 关闭时间 | timestamp | 0 |  |  | null | 关闭时间 |
-| 10 | fbusinesswayid | 经营方式 | int8 | 64 |  | √ | 0 | 商品经营方式 ocdbd_item_businesstype |
-| 11 | fstocktypeid | 库存类型 | int8 | 64 |  | √ | 0 | 库存类型 bd_invtype |
+| 10 | fbusinesswayid | 经营方式 | int8 | 64 |  | √ | 0 | [商品经营方式 ocdbd_item_businesstype](../ocdpm_files/ocdbd_item_businesstype.md) |
+| 11 | fstocktypeid | 库存类型 | int8 | 64 |  | √ | 0 | [库存类型 bd_invtype](../sbd_files/bd_invtype.md) |
 | 12 | fmaterialassid | 辅助属性 | int8 | 64 |  | √ | 0 | null 001 |
-| 13 | fitemsaleattrid | 销售属性 | int8 | 64 |  | √ | 0 | 商品销售属性 ocdbd_item_saleattr |
+| 13 | fitemsaleattrid | 销售属性 | int8 | 64 |  | √ | 0 | [商品销售属性 ocdbd_item_saleattr](../ocdbd_files/ocdbd_item_saleattr.md) |
 | 14 | fsignstatus | 签收状态 | bpchar | 1 |  | √ | 'A' | 签收状态,枚举: A :未开始 B :待签收 C :部分签收 D :已签收 |
-| 15 | fpayingcustomerid | 付款方 | int8 | 64 |  | √ | 0 | 客户 bd_customer |
+| 15 | fpayingcustomerid | 付款方 | int8 | 64 |  | √ | 0 | [客户 bd_customer](../basedata_files/bd_customer.md) |
 | 16 | fownertype | 货主类型 | varchar | 30 |  | √ | ' ' | 货主类型,枚举: bos_org :核算组织 bd_supplier :供应商 bd_customer :客户 |
 | 17 | fkeeperid | 保管者 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 18 | fbaseunitid | 基本单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 19 | fassistunitid | 辅助单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 18 | fbaseunitid | 基本单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 19 | fassistunitid | 辅助单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 20 | fqty | 数量 | numeric | 23 | 10 | √ | 0 | 数量 |
-| 21 | fserialunitid | 序列号单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 21 | fserialunitid | 序列号单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 22 | flotnum | 批号 | varchar | 200 |  | √ | ' ' | 批号 |
 | 23 | ffrozenstatus | 冻结状态 | bpchar | 1 |  | √ | '1' | 冻结状态,枚举: 1 :未冻结 2 :已冻结 |
-| 24 | funitid | 计量单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 24 | funitid | 计量单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 25 | fispresent | 是否赠品 | bpchar | 1 |  | √ | '0' | 是否赠品 |
-| 26 | fstockid | 仓库 | int8 | 64 |  | √ | 0 | 仓库 bd_warehouse |
+| 26 | fstockid | 仓库 | int8 | 64 |  | √ | 0 | [仓库 bd_warehouse](../sbd_files/bd_warehouse.md) |
 | 27 | fkeepertype | 保管者类型 | varchar | 30 |  | √ | ' ' | 保管者类型,枚举: bos_org :业务单元 bd_supplier :供应商 bd_customer :客户 |
-| 28 | fdeliverystatusid | 发货状态 | int8 | 64 |  | √ | 0 | 发货状态 ococic_deliverstatus |
+| 28 | fdeliverystatusid | 发货状态 | int8 | 64 |  | √ | 0 | [发货状态 ococic_deliverstatus](../ococic_files/ococic_deliverstatus.md) |
 | 29 | fserialnumber | 序列号 | varchar | 80 |  | √ | ' ' | 序列号 |
-| 30 | fitemid | 商品编码 | int8 | 64 |  | √ | 0 | 商品信息 ocdbd_iteminfo |
+| 30 | fitemid | 商品编码 | int8 | 64 |  | √ | 0 | [商品信息 ocdbd_iteminfo](../ocdbd_files/ocdbd_iteminfo.md) |
 | 31 | fclosestatus | 关闭状态 | bpchar | 1 |  | √ | '1' | 关闭状态,枚举: 1 :未关闭 2 :手工关闭 3 :自动关闭 |
 | 32 | finstalldate | 要求安装时间 | timestamp | 0 |  |  | null | 要求安装时间 |
 | 33 | fownerid | 货主 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
 | 34 | fassistattrid | fassistattrid | int8 | 64 |  | √ | 0 |  |
-| 35 | fchannelwarehouseid | 渠道仓库 | int8 | 64 |  | √ | 0 | 渠道仓库 ococic_warehouse |
+| 35 | fchannelwarehouseid | 渠道仓库 | int8 | 64 |  | √ | 0 | [渠道仓库 ococic_warehouse](../ococic_files/ococic_warehouse.md) |
 | 36 | fisnegativesell | 是否负卖 | bpchar | 1 |  | √ | '0' | 是否负卖 |
 | 37 | finstallstatus | 安装状态 | bpchar | 1 |  | √ | 'A' | 安装状态,枚举: A :未开始 B :部分安装 C :已安装 |
 | 38 | fexpirydate | 到期日期 | timestamp | 0 |  |  | null | 到期日期 |
 | 39 | fbaseqty | 基本单位数量 | numeric | 23 | 10 | √ | 0 | 基本单位数量 |
 | 40 | fassistqty | 辅助单位数量 | numeric | 23 | 10 | √ | 0 | 辅助单位数量 |
-| 41 | fsettlecustomerid | 收票方 | int8 | 64 |  | √ | 0 | 客户 bd_customer |
+| 41 | fsettlecustomerid | 收票方 | int8 | 64 |  | √ | 0 | [客户 bd_customer](../basedata_files/bd_customer.md) |
 | 42 | fproducedate | 生产日期 | timestamp | 0 |  |  | null | 生产日期 |
 | 43 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 44 | fstockorgid | 库存组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 44 | fstockorgid | 库存组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 45 | farrivaldate | 要求到货时间 | timestamp | 0 |  |  | null | 要求到货时间 |
 | 46 | fisneedinstall | 是否需要安装 | bpchar | 1 |  | √ | '0' | 是否需要安装 |
-| 47 | fsaledepartmentid | 销售部门 | int8 | 64 |  | √ | 0 | 行政组织（部门） bos_adminorg |
+| 47 | fsaledepartmentid | 销售部门 | int8 | 64 |  | √ | 0 | [行政组织（部门） bos_adminorg](../base_files/bos_adminorg.md) |
 
 ### 列规则定义
 
@@ -82,21 +82,21 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fbillstatus | 单据状态 | bpchar | 1 |  | √ | 'C' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 5 | ftradetype | 购销模式 | bpchar | 1 |  | √ | ' ' | 购销模式,枚举: A :普通外销 B :内销分步结算 C :内部调拨 D :寄售外销 E :渠道购销 F :内销同步结算 |
 | 6 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
-| 7 | fdeliverystatusid | 发货状态 | int8 | 64 |  | √ | 0 | 发货状态 ococic_deliverstatus |
+| 7 | fdeliverystatusid | 发货状态 | int8 | 64 |  | √ | 0 | [发货状态 ococic_deliverstatus](../ococic_files/ococic_deliverstatus.md) |
 | 8 | fbiztime | 业务日期 | timestamp | 0 |  |  | null | 业务日期 |
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 10 | fdistributionmodeid | 配送模式 | int8 | 64 |  | √ | 0 | 配送模式 ocdbd_distributionmode |
-| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fdistributionmodeid | 配送模式 | int8 | 64 |  | √ | 0 | [配送模式 ocdbd_distributionmode](../ococic_files/ocdbd_distributionmode.md) |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fmasterid | fmasterid | int8 | 64 |  | √ | 0 |  |
 | 13 | fsignstatus | 签收状态 | bpchar | 1 |  | √ | 'A' | 签收状态,枚举: A :未开始 B :待签收 C :部分签收 D :已签收 |
-| 14 | fbusinesstypeid | 业务类型 | int8 | 64 |  | √ | 0 | 业务类型 bd_biztype |
+| 14 | fbusinesstypeid | 业务类型 | int8 | 64 |  | √ | 0 | [业务类型 bd_biztype](../sbd_files/bd_biztype.md) |
 | 15 | fbillno | 单据编号 | varchar | 80 |  | √ | ' ' | 单据编号 |
-| 16 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 16 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 17 | fbilltypeid | 单据类型 | int8 | 64 |  | √ | 0 | 单据类型 bos_billtype |
 
 ### 列规则定义
@@ -224,27 +224,27 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fremark | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
-| 3 | finvgroupid | 库存组 | int8 | 64 |  | √ | 0 | 供应链业务组 bd_operatorgroup |
+| 3 | finvgroupid | 库存组 | int8 | 64 |  | √ | 0 | [供应链业务组 bd_operatorgroup](../sbd_files/bd_operatorgroup.md) |
 | 4 | faddress | 国家/省/市/区 | varchar | 36 |  | √ | ' ' | 国家/省/市/区 |
-| 5 | foperatorid | 销售员 | int8 | 64 |  | √ | 0 | 渠道用户(已废弃) ocdbd_channeluser |
-| 6 | foperatorgroupid | 销售组 | int8 | 64 |  | √ | 0 | 供应链业务组 bd_operatorgroup |
+| 5 | foperatorid | 销售员 | int8 | 64 |  | √ | 0 | [渠道用户(已废弃) ocdbd_channeluser](../ocdbd_files/ocdbd_channeluser.md) |
+| 6 | foperatorgroupid | 销售组 | int8 | 64 |  | √ | 0 | [供应链业务组 bd_operatorgroup](../sbd_files/bd_operatorgroup.md) |
 | 7 | fconsignee | 收货人 | varchar | 80 |  | √ | ' ' | 收货人 |
-| 8 | forgid | 销售组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 9 | fdepartmentid | 销售部门 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 10 | fconsigneechannelid | 收货渠道 | int8 | 64 |  | √ | 0 | 渠道 ocdbd_channel |
-| 11 | fsalechannelid | 销售渠道 | int8 | 64 |  | √ | 0 | 渠道 ocdbd_channel |
-| 12 | fsupplierid | 供应商 | int8 | 64 |  | √ | 0 | 供应商 bd_supplier |
+| 8 | forgid | 销售组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 9 | fdepartmentid | 销售部门 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 10 | fconsigneechannelid | 收货渠道 | int8 | 64 |  | √ | 0 | [渠道 ocdbd_channel](../ocdbd_files/ocdbd_channel.md) |
+| 11 | fsalechannelid | 销售渠道 | int8 | 64 |  | √ | 0 | [渠道 ocdbd_channel](../ocdbd_files/ocdbd_channel.md) |
+| 12 | fsupplierid | 供应商 | int8 | 64 |  | √ | 0 | [供应商 bd_supplier](../basedata_files/bd_supplier.md) |
 | 13 | fconsigneephone | 联系电话 | varchar | 30 |  | √ | ' ' | 联系电话 |
-| 14 | fpurchannelid | 订货渠道 | int8 | 64 |  | √ | 0 | 渠道 ocdbd_channel |
-| 15 | fdeliverdeptid | 发货部门 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 14 | fpurchannelid | 订货渠道 | int8 | 64 |  | √ | 0 | [渠道 ocdbd_channel](../ocdbd_files/ocdbd_channel.md) |
+| 15 | fdeliverdeptid | 发货部门 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 16 | falladdress | 完整地址 | varchar | 255 |  | √ | ' ' | 完整地址 |
-| 17 | fsettleorgid | 结算组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 18 | fpurcustomerid | 订货客户 | int8 | 64 |  | √ | 0 | 客户 bd_customer |
-| 19 | fdeliveroperatorid | 仓管员 | int8 | 64 |  | √ | 0 | 供应链业务员 bd_operator |
-| 20 | fmemberinfoid | 会员 | int8 | 64 |  | √ | 0 | 会员档案 ocdbd_user |
-| 21 | freccustomerid | 收货客户 | int8 | 64 |  | √ | 0 | 客户 bd_customer |
-| 22 | fstockorgid | 发货库存组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 23 | fdeliverychannelid | 发货渠道 | int8 | 64 |  | √ | 0 | 渠道 ocdbd_channel |
+| 17 | fsettleorgid | 结算组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 18 | fpurcustomerid | 订货客户 | int8 | 64 |  | √ | 0 | [客户 bd_customer](../basedata_files/bd_customer.md) |
+| 19 | fdeliveroperatorid | 仓管员 | int8 | 64 |  | √ | 0 | [供应链业务员 bd_operator](../sbd_files/bd_operator.md) |
+| 20 | fmemberinfoid | 会员 | int8 | 64 |  | √ | 0 | [顾客信息 ocdbd_user](../ocdbd_files/ocdbd_user.md) |
+| 21 | freccustomerid | 收货客户 | int8 | 64 |  | √ | 0 | [客户 bd_customer](../basedata_files/bd_customer.md) |
+| 22 | fstockorgid | 发货库存组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 23 | fdeliverychannelid | 发货渠道 | int8 | 64 |  | √ | 0 | [渠道 ocdbd_channel](../ocdbd_files/ocdbd_channel.md) |
 | 24 | fdetailaddress | 详细地址 | varchar | 255 |  | √ | ' ' | 详细地址 |
 
 ### 列规则定义
@@ -275,10 +275,10 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fcarno | 车牌号 | varchar | 30 |  | √ | ' ' | 车牌号 |
 | 3 | flogisticsbill | 物流单号 | varchar | 80 |  | √ | ' ' | 物流单号 |
-| 4 | flogisticcompid | 物流公司 | int8 | 64 |  | √ | 0 | 物流公司 bd_logisticcomp |
+| 4 | flogisticcompid | 物流公司 | int8 | 64 |  | √ | 0 | [物流公司 bd_logisticcomp](../sbd_files/bd_logisticcomp.md) |
 | 5 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 6 | finfodescription | 信息说明 | varchar | 255 |  | √ | ' ' | 信息说明 |
-| 7 | fdriverid | 配送司机 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 7 | fdriverid | 配送司机 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 8 | fdriver | 配送司机 | varchar | 80 |  | √ | ' ' | 配送司机 |
 | 9 | flogisticscompany | 物流公司 | varchar | 80 |  | √ | ' ' | 物流公司 |
 | 10 | fsignstatus | 签收状态 | bpchar | 1 |  | √ | 'A' | 签收状态,枚举: A :未开始 B :待签收 C :部分签收 D :已签收 |
@@ -354,9 +354,9 @@
 | 8 | fistax | 是否含税 | bpchar | 1 |  | √ | '1' | 是否含税 |
 | 9 | fcurtotalamount | 金额本位币 | numeric | 23 | 10 | √ | 0 | 金额本位币 |
 | 10 | fexratedate | 汇率日期 | timestamp | 0 |  |  | null | 汇率日期 |
-| 11 | fexratetableid | 汇率表 | int8 | 64 |  | √ | 0 | 汇率表 bd_exratetable |
-| 12 | fsettlecurrencyid | 结算币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
-| 13 | fcurrencyid | 本位币 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 11 | fexratetableid | 汇率表 | int8 | 64 |  | √ | 0 | [汇率表 bd_exratetable](../base_files/bd_exratetable.md) |
+| 12 | fsettlecurrencyid | 结算币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
+| 13 | fcurrencyid | 本位币 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 | 14 | ftotaltaxamount | 税额 | numeric | 23 | 10 | √ | 0 | 税额 |
 
 ### 列规则定义
@@ -384,13 +384,13 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fiscorrect | 是否补录 | bpchar | 1 |  | √ | '0' | 是否补录 |
-| 2 | fitemserialid | 商品序列号 | int8 | 64 |  | √ | 0 | 商品序列号 ococic_snmainfile |
+| 2 | fitemserialid | 商品序列号 | int8 | 64 |  | √ | 0 | [商品序列号 ococic_snmainfile](../ococic_files/ococic_snmainfile.md) |
 | 3 | fcomment | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
 | 4 | fserialno | 序列号 | varchar | 80 |  | √ | ' ' | 序列号 |
 | 5 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 6 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 | id |
 | 7 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
-| 8 | fscmserialid | 供应链序列号 | int8 | 64 |  | √ | 0 | 序列号主档 bd_snmainfile |
+| 8 | fscmserialid | 供应链序列号 | int8 | 64 |  | √ | 0 | [序列号主档 bd_snmainfile](../sbd_files/bd_snmainfile.md) |
 
 ### 列规则定义
 
@@ -465,7 +465,7 @@
 | 12 | fcurtaxamount | 税额本位币 | numeric | 23 | 10 | √ | 0 | 税额本位币 |
 | 13 | fcuramount | 金额本位币 | numeric | 23 | 10 | √ | 0 | 金额本位币 |
 | 14 | fcurallamount | 价税合计本位币 | numeric | 23 | 10 | √ | 0 | 价税合计本位币 |
-| 15 | ftaxrateid | 税率 | int8 | 64 |  | √ | 0 | 税率 bd_taxrate |
+| 15 | ftaxrateid | 税率 | int8 | 64 |  | √ | 0 | [税率 bd_taxrate](../basedata_files/bd_taxrate.md) |
 | 16 | factualprice | 实际单价 | numeric | 23 | 10 | √ | 0 | 实际单价 |
 | 17 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 

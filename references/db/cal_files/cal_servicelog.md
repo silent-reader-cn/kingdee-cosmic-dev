@@ -43,9 +43,9 @@
 | 3 | fisclose | 是否关闭 | bpchar | 1 |  | √ | '0' | 是否关闭 |
 | 4 | flog_tag | 日志_详情 | text | 0 |  |  | null | 日志_详情 |
 | 5 | ftimes | 重试次数 | int4 | 32 |  | √ | 0 | 重试次数 |
-| 6 | fbizentityobjectid | 业务对象 | varchar | 80 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 6 | fbizentityobjectid | 业务对象 | varchar | 80 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 7 | fparammap | 参数 | varchar | 255 |  | √ | ' ' | 参数 |
-| 8 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 8 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 9 | factionname | 功能名称 | varchar | 80 |  | √ | ' ' | 功能名称,枚举: AUDIT :库存审核 UNAUDIT :库存反审核 PURWRITEOFF :采购核销 PURUNWRITEOFF :采购反核销 ADDAVERAG :实时移动成本计算 SALEWRITEOFF :销售核销 SALEUNWRITEOFF :销售反核销 SETTLEACCOUNT :存货结账 UNSETTLEACCOUNT :存货反结账 COSTADJUSTAUDIT :成本调整单审核 COSTADJUSTUNAUDIT :成本调整单反审核 COSTESTIMATECREATE :费用暂估单创建 COSTESTIMATEDELETE :费用暂估单删除 SUBMIT :库存提交 UNSUBMIT :库存撤销 |
 | 10 | fparammap_tag | 参数_详情 | text | 0 |  |  | null | 参数_详情 |
 | 11 | fservicetype | 接口类型 | varchar | 80 |  | √ | ' ' | 接口类型,枚举: A :校验接口 B :业务接口 |

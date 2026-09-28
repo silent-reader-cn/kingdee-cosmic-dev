@@ -14,9 +14,9 @@
 | 3 | fmodifydate | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 4 | frequestlimit | 请求上限 | int4 | 32 |  | √ | 0 | 请求上限 |
 | 5 | fenablelog | 是否启用分析日志 | bpchar | 1 |  | √ | '0' | 是否启用分析日志 |
-| 6 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 7 | fnumber | 编码 | varchar | 50 |  | √ | ' ' | 编码 |
-| 8 | fexportlimit | 引出记录上限 | int4 | 32 |  | √ | 0 | 引出记录上限 |
+| 8 | fexportlimit | 导出记录上限 | int4 | 32 |  | √ | 0 | 导出记录上限 |
 
 ### 列规则定义
 

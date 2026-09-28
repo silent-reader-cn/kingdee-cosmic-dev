@@ -34,6 +34,37 @@
 
 ---
 
+## 企业质量保障能力-主表 t_srm_compentqos
+
+- **表名称：** 企业质量保障能力-主表
+- **表名：** t_srm_compentqos
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
+| 2 | fprojectid | 寻源项目F7 | int8 | 64 |  | √ | 0 | [招标项目F7 src_projectf7](../src_files/src_projectf7.md) |
+| 3 | fparentid | 父单据ID | varchar | 100 |  | √ | ' ' | 父单据ID |
+| 4 | fentitykey | 组件标识 | varchar | 100 |  | √ | ' ' | 组件标识 |
+| 5 | fmainorgid | 主业务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 6 | fpentitykey | 父单据标识 | varchar | 100 |  | √ | ' ' | 父单据标识 |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fid | fid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | pk_t_srm_compentqos |  | fid |
+| 2 | idx_srm_compentqos_parent |  | fparentid |
+
+---
+
 ## 附件-附件表 t_srm_compqosaptitude_fj
 
 - **表名称：** 附件-附件表
@@ -43,7 +74,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 附件字段实体 bd_attachment |
+| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [附件字段实体 bd_attachment](../frame_files/bd_attachment.md) |
 | 2 | fpkid | fpkid | int8 | 64 |  | √ | 0 | FPKID |
 | 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 
@@ -62,37 +93,6 @@
 
 ---
 
-## 企业质量保障能力-主表 t_srm_compentqos
-
-- **表名称：** 企业质量保障能力-主表
-- **表名：** t_srm_compentqos
-
-### 表格列定义
-
-| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fprojectid | 寻源项目F7 | int8 | 64 |  | √ | 0 | 招标项目F7 src_projectf7 |
-| 3 | fparentid | 父单据ID | varchar | 100 |  | √ | ' ' | 父单据ID |
-| 4 | fentitykey | 组件标识 | varchar | 100 |  | √ | ' ' | 组件标识 |
-| 5 | fmainorgid | 主业务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 6 | fpentitykey | 父单据标识 | varchar | 100 |  | √ | ' ' | 父单据标识 |
-
-### 列规则定义
-
-| 序号 | 键编码 | 列字段 |
-| :--- | :--- | :--- |
-| 1 | fid | fid |
-
-### 索引定义
-
-| 序号 | 索引名 | 唯一 | 列字段 |
-| :--- | :--- | :--- | :--- |
-| 1 | pk_t_srm_compentqos |  | fid |
-| 2 | idx_srm_compentqos_parent |  | fparentid |
-
----
-
 ## 资质信息分录-子表 t_srm_compqosaptitude
 
 - **表名称：** 资质信息分录-子表
@@ -108,12 +108,12 @@
 | 4 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 5 | fnote | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
 | 6 | fissuedate | 签发日期 | timestamp | 0 |  |  | null | 签发日期 |
-| 7 | fcompanytypeid | 供货类型 | int8 | 64 |  | √ | 0 | 供货类型 bd_company_type |
+| 7 | fcompanytypeid | 供货类型 | int8 | 64 |  | √ | 0 | [供货类型 bd_company_type](../basedata_files/bd_company_type.md) |
 | 8 | frequired | 必选 | bpchar | 1 |  | √ | '0' | 必选 |
 | 9 | faptitudenumber | 资质编号 | varchar | 100 |  | √ | ' ' | 资质编号 |
 | 10 | ftype | 资质类型 | varchar | 10 |  | √ | ' ' | 资质类型,枚举: 1 :三/五证合一 2 :营业执照 3 :税务登记证 4 :组织机构代码证 5 :社会保险登记证 6 :一般纳税人证明材料 7 :统计登记证 8 :其他证照 |
 | 11 | fissueorg | 签发机构 | varchar | 255 |  | √ | ' ' | 签发机构 |
-| 12 | faptitudetypeid | 资质类型-新 | int8 | 64 |  | √ | 0 | 资质类型维护 bd_qualification_type |
+| 12 | faptitudetypeid | 资质类型-新 | int8 | 64 |  | √ | 0 | [资质类型维护 bd_qualification_type](../basedata_files/bd_qualification_type.md) |
 | 13 | fcheckdate | 最近年检时间 | timestamp | 0 |  |  | null | 最近年检时间 |
 | 14 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 15 | fgrade | 资质等级 | varchar | 100 |  | √ | ' ' | 资质等级 |

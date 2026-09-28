@@ -15,7 +15,7 @@
 | 4 | ffs | 份数 | int8 | 64 |  | √ | 0 | 份数 |
 | 5 | fsbbid | 申报表id | varchar | 50 |  | √ | ' ' | 申报表id |
 | 6 | fse | 税额 | numeric | 23 | 10 |  | null | 税额 |
-| 7 | fewblname | 二维表行名称 | varchar | 50 |  | √ | ' ' | 二维表行名称 |
+| 7 | fewblname | 二维表行名称 | varchar | 150 |  | √ | ' ' | 二维表行名称 |
 
 ### 列规则定义
 

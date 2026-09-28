@@ -89,7 +89,7 @@
 | 6 | finvoice_time | 开票时间 | timestamp | 0 |  |  | null | 开票时间 |
 | 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 8 | fserial_no | 发票流水号 | varchar | 36 |  | √ | ' ' | 发票流水号 |
-| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | finvoicing_party_name | 开票单位名称 | varchar | 500 |  | √ | ' ' | 开票单位名称 |
 | 11 | fcheck_code | 校验码 | varchar | 50 |  | √ | ' ' | 校验码 |
 | 12 | fpayer_party_code | 交款人代码 | varchar | 30 |  | √ | ' ' | 交款人代码 |
@@ -97,8 +97,8 @@
 | 14 | faccount_date | 会计属期 | timestamp | 0 |  |  | null | 会计属期 |
 | 15 | fbillno | 单据编号 | varchar | 50 |  | √ | ' ' | 单据编号 |
 | 16 | fremark | 备注 | varchar | 500 |  | √ | ' ' | 备注 |
-| 17 | forg_id | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 18 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 17 | forg_id | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 18 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 19 | faws_serial_no | AWS发票流水号 | varchar | 36 |  | √ | ' ' | AWS发票流水号 |
 | 20 | ftotal_amount | 总金额 | numeric | 23 | 10 | √ | 0 | 总金额 |
 | 21 | fhandling_person | 开票人 | varchar | 20 |  | √ | ' ' | 开票人 |
@@ -111,15 +111,15 @@
 | 28 | finvoice_no | 电子票据号码 | varchar | 50 |  | √ | ' ' | 电子票据号码 |
 | 29 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
 | 30 | fpay_mode | 交款方式 | varchar | 10 |  | √ | ' ' | 交款方式,枚举: |
-| 31 | ftax_org | 纳税主体 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 31 | ftax_org | 纳税主体 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 32 | fdelete | 可用状态 | varchar | 4 |  | √ | '1' | 可用状态,枚举: 1 :可用 2 :作废 3 :删除 |
 | 33 | fexpense_status | 报销状态 | varchar | 2 |  |  | null | 报销状态,枚举: 1 :未报销 30 :审核中 60 :已报销 65 :已入账 |
 | 34 | fpayer_party_type | 交款人类型 | varchar | 10 |  | √ | ' ' | 交款人类型,枚举: |
 | 35 | foriginal_state | 原件签收状态 | varchar | 2 |  |  | null | 原件签收状态,枚举: 0 :未签收 1 :已签收 |
 | 36 | fchecker | 复核人 | varchar | 20 |  | √ | ' ' | 复核人 |
-| 37 | finvoice_type | 发票类型 | int8 | 64 |  | √ | 0 | 发票类型 bd_invoicetype |
-| 38 | fproject | 项目 | int8 | 64 |  | √ | 0 | 项目 bd_project |
-| 39 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 37 | finvoice_type | 发票类型 | int8 | 64 |  | √ | 0 | [发票种类 bd_invoicetype](../basedata_files/bd_invoicetype.md) |
+| 38 | fproject | 项目 | int8 | 64 |  | √ | 0 | [项目 bd_project](../basedata_files/bd_project.md) |
+| 39 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 40 | frelated_invoice_no | 红票票据号码 | varchar | 10 |  | √ | ' ' | 红票票据号码 |
 
 ### 列规则定义

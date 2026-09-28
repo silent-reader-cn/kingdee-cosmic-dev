@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fcancelinvoicenum | 作废发票份数 | int8 | 64 |  | √ | 0 | 作废发票份数 |
-| 3 | forgfield | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | forgfield | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | fblueinvoicenum | 蓝字发票份数 | int8 | 64 |  | √ | 0 | 蓝字发票份数 |
 | 5 | fblueinvoicetax | 蓝字发票税额 | numeric | 23 | 10 | √ | 0.0000000000 | 蓝字发票税额 |
 | 6 | ftaxrate | 税率 | numeric | 23 | 10 | √ | 0.0000000000 | 税率 |

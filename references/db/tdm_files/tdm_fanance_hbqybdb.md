@@ -26,7 +26,7 @@
 | 15 | fsnzxcb | 上年金额.专项储备 | numeric | 23 | 10 | √ | 0.0000000000 | 上年金额.专项储备 |
 | 16 | fsnxj | 上年金额.小计 | numeric | 23 | 10 | √ | 0.0000000000 | 上年金额.小计 |
 | 17 | fbnjkcg | 本年金额.减:库存股 | numeric | 23 | 10 | √ | 0.0000000000 | 本年金额.减:库存股 |
-| 18 | freportitem | 报表项目 | int8 | 64 |  | √ | 0 | 所有者权益变动表项目 tdm_item_qybdb |
+| 18 | freportitem | 报表项目 | int8 | 64 |  | √ | 0 | [所有者权益变动表项目 tdm_item_qybdb](../tdm_files/tdm_item_qybdb.md) |
 | 19 | fsnqtqygj | 上年金额.其他权益工具.其他 | numeric | 23 | 10 | √ | 0.0000000000 | 上年金额.其他权益工具.其他 |
 | 20 | fsnybfxzb | 上年金额.一般风险准备* | numeric | 23 | 10 | √ | 0.0000000000 | 上年金额.一般风险准备* |
 | 21 | fewblname | 二维表行名称 | varchar | 200 |  | √ | ' ' | 二维表行名称 |

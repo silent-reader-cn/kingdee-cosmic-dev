@@ -17,14 +17,14 @@
 | 6 | fcreatedate | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 7 | fisdisplay | 是否显示 | bpchar | 1 |  | √ | '1' | 是否显示 |
 | 8 | fisneedmark | 是否必须标注结果 | bpchar | 1 |  | √ | '0' | 是否必须标注结果 |
-| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | factid | 节点id | varchar | 255 |  | √ | ' ' | 节点id |
 | 11 | fcheckresult | 检查结果 | varchar | 50 |  | √ | ' ' | 检查结果,枚举: approve :通过 failed :不通过 unconfirmed :待确认 |
 | 12 | fmodifydate | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 13 | fassigneeid | 处理人ID | int8 | 64 |  | √ | 0 | 处理人ID |
 | 14 | fcondition | 条件 | text | 0 |  |  | null | 条件 |
 | 15 | factivityinstanceid | 活动实例id | int8 | 64 |  | √ | 0 | 活动实例id |
-| 16 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 16 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 17 | fdisplayname | 显示名称 | varchar | 1000 |  | √ | ' ' | 显示名称 |
 | 18 | fexecutionid | 执行实例id | int8 | 64 |  | √ | 0 | 执行实例id |
 | 19 | fdescription | 详细说明 | varchar | 1000 |  | √ | ' ' | 详细说明 |

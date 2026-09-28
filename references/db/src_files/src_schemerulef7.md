@@ -1,8 +1,38 @@
-# 评分规则F7-src_schemerulef7
+# 评分细则F7-src_schemerulef7
 
-## 评分规则F7-主表 t_src_schemerule
+## 评分细则F7-多语言表 t_src_schemerule_l
 
-- **表名称：** 评分规则F7-主表
+- **表名称：** 评分细则F7-多语言表
+- **表名：** t_src_schemerule_l
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fitem | 规则描述 | varchar | 510 |  | √ | ' ' | 规则描述 |
+| 2 | fnote | 备注 | varchar | 1020 |  | √ | ' ' | 备注 |
+| 3 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 |  |
+| 4 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
+| 5 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fpkid | fpkid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_src_schemerule_l_fid |  | fdetailid,flocaleid |
+| 2 | pk_src_schemerule_l |  | fpkid |
+
+---
+
+## 评分细则F7-主表 t_src_schemerule
+
+- **表名称：** 评分细则F7-主表
 - **表名：** t_src_schemerule
 
 ### 表格列定义
@@ -18,7 +48,7 @@
 | 7 | fseq | 序号 | int4 | 32 |  | √ | 0 | 序号 |
 | 8 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 | id |
 | 9 | fitemscore | 得分 | numeric | 23 | 10 | √ | 0 | 得分 |
-| 10 | fentryid | 评分指标 | int8 | 64 |  | √ | 0 | 评分指标F7 src_indexf7 |
+| 10 | fentryid | 评分指标 | int8 | 64 |  | √ | 0 | [评分指标F7 src_indexf7](../src_files/src_indexf7.md) |
 | 11 | fitemminscore | 最低得分(≥) | numeric | 23 | 10 | √ | 0 | 最低得分(≥) |
 
 ### 列规则定义

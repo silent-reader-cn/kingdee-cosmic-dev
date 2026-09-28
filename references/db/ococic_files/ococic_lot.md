@@ -40,16 +40,16 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fcreatetime | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
-| 4 | fmaterialid | 物料 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 4 | fmaterialid | 物料 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 5 | fauxptyid | 辅助属性 | int8 | 64 |  | √ | 0 | null 001 |
-| 6 | fitemid | 商品 | int8 | 64 |  | √ | 0 | 商品信息 ocdbd_iteminfo |
+| 6 | fitemid | 商品 | int8 | 64 |  | √ | 0 | [商品信息 ocdbd_iteminfo](../ocdbd_files/ocdbd_iteminfo.md) |
 | 7 | fmodifytime | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
-| 8 | fscmlotid | 供应链批号 | int8 | 64 |  | √ | 0 | 批号主档 bd_lot |
+| 8 | fscmlotid | 供应链批号 | int8 | 64 |  | √ | 0 | [批号主档 bd_lot](../sbd_files/bd_lot.md) |
 | 9 | fstatus | 数据状态 | bpchar | 1 |  | √ | 'A' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 10 | flotid | 批号 | int8 | 64 |  | √ | 0 | 商品批号信息 ocdbd_lotinfo |
-| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | flotid | 批号 | int8 | 64 |  | √ | 0 | [商品批号信息 ocdbd_lotinfo](../ococic_files/ocdbd_lotinfo.md) |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 13 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 14 | fnumber | 批号 | varchar | 80 |  | √ | ' ' | 批号 |
@@ -64,7 +64,7 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_ocdbd_lot_num |  | fnumber |
-| 2 | pk_ocdbd_lot |  | fid |
+| 1 | pk_ocdbd_lot |  | fid |
+| 2 | idx_ocdbd_lot_num |  | fnumber |
 | 3 | idx_ocdbd_lot_item |  | fitemid |
 | 4 | idx_ocdbd_lot_lot |  | flotid |

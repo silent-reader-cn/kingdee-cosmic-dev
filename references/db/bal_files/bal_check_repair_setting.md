@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | '0' |  |
-| 2 | frule | 余额规则编码 | varchar | 36 |  | √ | ' ' | 余额更新规则列表 bal_balanceupdaterule |
+| 2 | frule | 余额规则编码 | varchar | 36 |  | √ | ' ' | [余额更新规则列表 bal_balanceupdaterule](../bal_files/bal_balanceupdaterule.md) |
 | 3 | fbillfs_tag | 重算条件_详情 | text | 0 |  |  | null | 重算条件_详情 |
 | 4 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 5 | fbillfs | 重算条件 | varchar | 100 |  | √ | ' ' | 重算条件 |
@@ -45,8 +45,8 @@
 | 1 | fid | fid | int8 | 64 |  | √ | '0' | id |
 | 2 | fmodifydate | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 3 | fno | 编码 | varchar | 36 |  | √ | ' ' | 编码 |
-| 4 | fbal | 余额表 | varchar | 36 |  | √ | ' ' | 余额表 bal_balanceinfo |
-| 5 | fmodifier | 修改人 | int8 | 64 |  | √ | '0' | 人员 bos_user |
+| 4 | fbal | 余额表 | varchar | 36 |  | √ | ' ' | [余额表 bal_balanceinfo](../bal_files/bal_balanceinfo.md) |
+| 5 | fmodifier | 修改人 | int8 | 64 |  | √ | '0' | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

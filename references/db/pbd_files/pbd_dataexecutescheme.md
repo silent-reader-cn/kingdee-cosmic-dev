@@ -41,23 +41,26 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | varchar | 36 |  | √ | ' ' | id |
 | 2 | fname | 名称 | varchar | 512 |  | √ | ' ' | 名称 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 4 | fexecutechannelid | 执行渠道 | varchar | 36 |  | √ | ' ' | 集成渠道 pbd_scdatachannel |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 4 | fexecutechannelid | 执行渠道 | varchar | 36 |  | √ | ' ' | [集成渠道 pbd_scdatachannel](../pbd_files/pbd_scdatachannel.md) |
 | 5 | ffailstrategy | 失败处理策略 | varchar | 50 |  | √ | ' ' | 失败处理策略,枚举: retry :重试三次挂起 ignore :直接挂起 |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 7 | fisv | 方案开发商 | varchar | 80 |  | √ | ' ' | 方案开发商 |
-| 8 | fexecuteinterface | 业务处理接口 | varchar | 255 |  | √ | ' ' | 业务处理接口,枚举: beforeexecuteoperationtransaction :执行数据处理前服务（beforeexecuteoperationtransaction） afterexecuteoperationtransaction :执行数据处理后服务（afterexecuteoperationtransaction） |
-| 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 10 | fexecutesceneid | 执行场景 | varchar | 36 |  | √ | ' ' | 处理场景定义 pbd_scenedefine |
-| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 12 | fpreset | 是否预置 | bpchar | 1 |  | √ | '0' | 是否预置 |
-| 13 | fexecuteserviceid | 执行服务 | varchar | 36 |  | √ | ' ' | 请求服务定义 pbd_servicedefine |
-| 14 | fenable | 使用状态 | bpchar | 1 |  | √ | '0' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 15 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
-| 16 | fjointsystemtype | fjointsystemtype | varchar | 50 |  | √ | ' ' |  |
-| 17 | fentityid | 业务处理绑定实体 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
-| 18 | foperatekey | 业务处理绑定操作 | varchar | 255 |  | √ | ' ' | 业务处理绑定操作,枚举: |
-| 19 | fexecutetype | 触发方式 | varchar | 120 |  | √ | ' ' | 触发方式,枚举: operateevent :操作调用 manual :手工调用 |
+| 7 | fisnewrequired | 开启新事务 | bpchar | 1 |  | √ | '0' | 开启新事务 |
+| 8 | fisv | 方案开发商 | varchar | 80 |  | √ | ' ' | 方案开发商 |
+| 9 | fexecuteinterface | 业务处理接口 | varchar | 255 |  | √ | ' ' | 业务处理接口,枚举: beforeexecuteoperationtransaction :执行数据处理前事务外服务（beforeexecuteoperationtransaction） beginOperationTransaction :执行数据处理前事务内服务（beginOperationTransaction） endOperationTransaction :执行数据处理后事务内服务（endOperationTransaction） afterexecuteoperationtransaction :执行数据处理后事务外服务（afterexecuteoperationtransaction） |
+| 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 11 | fexecutesceneid | 执行场景 | varchar | 36 |  | √ | ' ' | [处理场景定义 pbd_scenedefine](../pbd_files/pbd_scenedefine.md) |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 13 | fpreset | 是否预置 | bpchar | 1 |  | √ | '0' | 是否预置 |
+| 14 | fexecuteserviceid | 执行服务 | varchar | 36 |  | √ | ' ' | [请求服务定义 pbd_servicedefine](../pbd_files/pbd_servicedefine.md) |
+| 15 | fissync | 是否同步 | bpchar | 1 |  | √ | '1' | 是否同步 |
+| 16 | fenable | 使用状态 | bpchar | 1 |  | √ | '0' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 17 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
+| 18 | fjointsystemtype | fjointsystemtype | varchar | 50 |  | √ | ' ' |  |
+| 19 | fentityid | 业务处理对象 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
+| 20 | foperatekey | 业务处理绑定操作 | varchar | 255 |  | √ | ' ' | 业务处理绑定操作,枚举: |
+| 21 | fexecutetype | 触发方式 | varchar | 120 |  | √ | ' ' | 触发方式,枚举: operateevent :操作调用 manual :手工调用 |
+| 22 | fislog | 记录日志 | bpchar | 1 |  | √ | '0' | 记录日志 |
 
 ### 列规则定义
 
@@ -101,3 +104,32 @@
 | :--- | :--- | :--- | :--- |
 | 1 | idx_pbd_executescheme_e_ftamp |  | fexecutestamp |
 | 2 | pk_pbd_executescheme_e |  | fid |
+
+---
+
+## 多系统对接执行方案-多语言表 t_pbd_executescheme_l
+
+- **表名称：** 多系统对接执行方案-多语言表
+- **表名：** t_pbd_executescheme_l
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | varchar | 40 |  | √ | ' ' |  |
+| 2 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
+| 3 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
+| 4 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fpkid | fpkid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_pbd_executescheme_l |  | fid,flocaleid |
+| 2 | pk_pbd_executescheme_l |  | fpkid |

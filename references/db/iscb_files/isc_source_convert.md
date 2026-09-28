@@ -17,10 +17,10 @@
 | 6 | fnew_name | 资源名称（新） | varchar | 100 |  |  | null | 资源名称（新） |
 | 7 | fnew_res_pk | 资源ID（新） | varchar | 50 |  |  | null | 资源ID（新） |
 | 8 | fnew_number | 资源编码（新） | varchar | 100 |  |  | null | 资源编码（新） |
-| 9 | fmodifierfield | 修改人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 9 | fmodifierfield | 修改人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | fmodifydatefield | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
 | 11 | fstate | 状态 | varchar | 50 |  |  | null | 状态,枚举: READY :就绪 SUCCESS :成功 FAILED :失败 OMITTED :忽略 |
-| 12 | ftype | 类型 | varchar | 36 |  |  | null | 业务对象 bos_objecttype |
+| 12 | ftype | 类型 | varchar | 36 |  |  | null | [业务对象 bos_objecttype](../mdl_files/bos_objecttype.md) |
 | 13 | fstack_trace | fstack_trace | text | 0 |  |  | null |  |
 | 14 | fnumber | 资源编码 | varchar | 100 |  |  | null | 资源编码 |
 | 15 | fcontent | fcontent | text | 0 |  |  | null |  |
@@ -87,7 +87,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fremark | 备注 | varchar | 150 |  |  | null | 备注 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fbillstatus | 单据状态 | varchar | 50 |  |  | null | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 6 | fsource_tenant | 来源 | varchar | 100 |  |  | null | 来源 |
@@ -97,13 +97,13 @@
 | 10 | fprogress | 进度 | varchar | 50 |  |  | null | 进度,枚举: READY :暂存 PARSING :解析中 PARSED :已解析 CONVERTED :转换完成 CONVERTING :转换中 |
 | 11 | fprotect_level | 资源保护等级 | varchar | 50 |  |  | null | 资源保护等级,枚举: DEFAULT :默认 READ_ONLY :只读 UNPROTECTED :无保护 |
 | 12 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 13 | fres_type | 资源类型 | varchar | 36 |  |  | null | 业务对象 bos_objecttype |
+| 13 | fres_type | 资源类型 | varchar | 36 |  |  | null | [业务对象 bos_objecttype](../mdl_files/bos_objecttype.md) |
 | 14 | fstate | 状态 | varchar | 50 |  |  | null | 状态,枚举: READY :就绪 SUCCESS :已结束 FAILED :失败 |
-| 15 | fcreatorid | 创建人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 15 | fcreatorid | 创建人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 16 | fsource_trace | 来源追溯 | varchar | 600 |  |  | null | 来源追溯 |
 | 17 | fmode | 转换模式 | varchar | 50 |  |  | null | 转换模式,枚举: cover :覆盖 copy :复制 reset_trace :重置追溯信息 |
 | 18 | fbillno | 单据编号 | varchar | 30 |  |  | null | 单据编号 |
-| 19 | fauditorid | 审核人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 19 | fauditorid | 审核人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

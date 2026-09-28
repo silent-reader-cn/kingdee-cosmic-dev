@@ -42,7 +42,7 @@
 | 2 | fsceneinputid | 场景输入参数id | int8 | 64 |  | √ | 0 | 场景输入参数id |
 | 3 | foperate | 操作 | varchar | 20 |  | √ | ' ' | 操作,枚举: new :新增 modify :修改 delete :删除 |
 | 4 | fname | 场景输入参数名称 | varchar | 100 |  | √ | ' ' | 场景输入参数名称 |
-| 5 | foperatorid | 操作人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | foperatorid | 操作人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | fscenenumber | 所属场景编码 | varchar | 50 |  | √ | ' ' | 所属场景编码 |
 | 7 | fsceneid | 所属场景id | int8 | 64 |  | √ | 0 | 所属场景id |
 | 8 | foperatetime | 操作时间 | timestamp | 0 |  |  | null | 操作时间 |

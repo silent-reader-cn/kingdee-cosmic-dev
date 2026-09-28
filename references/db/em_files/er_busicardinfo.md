@@ -40,18 +40,18 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 4 | fuser | 员工 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 4 | fuser | 员工 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fcirculationflag | 流通状态 | varchar | 50 |  | √ | ' ' | 流通状态,枚举: Y :不流通 N :流通 |
-| 6 | fdept | 部门 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 7 | fcompany | 公司 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | fdept | 部门 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 7 | fcompany | 公司 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | faccout | 银行账户 | varchar | 50 |  | √ | ' ' | 银行账户 |
 | 9 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 12 | fserver | 服务商 | int8 | 64 |  | √ | 0 | 服务商设置 er_biz_info |
-| 13 | fcanceldate | 销卡日期 | timestamp | 0 |  |  | null | 销卡日期 |
-| 14 | factivationdate | 开卡日期 | timestamp | 0 |  |  | null | 开卡日期 |
+| 12 | fserver | 服务商 | int8 | 64 |  | √ | 0 | [服务商设置 er_biz_info](../em_files/er_biz_info.md) |
+| 13 | fcanceldate | 销卡时间 | timestamp | 0 |  |  | null | 销卡时间 |
+| 14 | factivationdate | 开卡时间 | timestamp | 0 |  |  | null | 开卡时间 |
 | 15 | fenable | 使用状态 | varchar | 50 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 16 | factivationcode | 开卡标识 | varchar | 50 |  | √ | ' ' | 开卡标识 |
 | 17 | fnumber | 编码 | varchar | 50 |  | √ | ' ' | 编码 |

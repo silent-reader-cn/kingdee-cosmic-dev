@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fcontract | 补充合同号 | varchar | 50 |  | √ | ' ' | 补充合同号 |
-| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | fcorebillseq | 核心单据行号 | varchar | 50 |  | √ | ' ' | 核心单据行号 |
 | 5 | foptype | 收款处理 | varchar | 50 |  | √ | ' ' | 收款处理,枚举: |
 | 6 | fbizamt | 业务处理金额 | numeric | 23 | 10 | √ | 0.0000000000 | 业务处理金额 |
@@ -19,13 +19,13 @@
 | 8 | ffee | 手续费 | numeric | 23 | 10 | √ | 0.0000000000 | 手续费 |
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 10 | fcorebillno | 核心单据编号 | varchar | 50 |  | √ | ' ' | 核心单据编号 |
-| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fsettledamt | 已核销金额 | numeric | 23 | 10 | √ | 0.0000000000 | 已核销金额 |
 | 13 | fentrydetailinfo | 分录详细 | text | 0 |  |  | null | 分录详细 |
 | 14 | fcorebilltype | 核心单据类型 | varchar | 50 |  | √ | ' ' | 核心单据类型,枚举: |
 | 15 | frecbillid | 收款单id | int8 | 64 |  | √ | 0 | 收款单id |
 | 16 | fbillno | 单据编号 | varchar | 80 |  | √ | ' ' | 单据编号 |
-| 17 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 17 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 18 | funsettledamt | 未核销金额 | numeric | 23 | 10 | √ | 0.0000000000 | 未核销金额 |
 | 19 | fbillstatus | 单据状态 | varchar | 5 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 20 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
@@ -36,7 +36,7 @@
 | 25 | fentrydetailinfo_tag | 分录详细_详情 | text | 0 |  |  | null | 分录详细_详情 |
 | 26 | factrecamt | 实收金额 | numeric | 23 | 10 | √ | 0.0000000000 | 实收金额 |
 | 27 | fentryid | 分录行id | int8 | 64 |  | √ | 0 | 分录行id |
-| 28 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 28 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

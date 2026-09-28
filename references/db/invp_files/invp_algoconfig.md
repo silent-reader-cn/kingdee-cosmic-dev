@@ -68,24 +68,24 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fapproverid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fapproverid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | fdisabledate | 禁用时间 | timestamp | 0 |  |  | null | 禁用时间 |
-| 5 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 7 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 10 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 11 | fbitindex | 位图 | int8 | 64 |  | √ | 0 | 位图 |
 | 12 | fversion | 版本 | varchar | 50 |  | √ | ' ' | 版本 |
-| 13 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 13 | fcreateorgid | 业务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 14 | fapprovedate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
 | 15 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 16 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 17 | fbizapp | 所属应用 | varchar | 36 |  | √ | ' ' | 业务应用实体 bos_devportal_bizapp |
+| 16 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 17 | fbizapp | 所属应用 | varchar | 36 |  | √ | ' ' | [业务应用实体 bos_devportal_bizapp](../mdl_files/bos_devportal_bizapp.md) |
 | 18 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 19 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 19 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 20 | fbatchsize | 分批大小 | int4 | 32 |  | √ | 0 | 分批大小 |
 | 21 | fctrlstrategy | 控制策略 | varchar | 50 |  | √ | ' ' | 控制策略,枚举: 5 :全局共享 |
 | 22 | fbatchcal | 分批运算 | bpchar | 1 |  | √ | '0' | 分批运算 |
@@ -104,8 +104,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | pk_t_invp_algoconfig |  | fid |
-| 2 | idx_invp_algoconfig_org |  | fcreateorgid |
+| 1 | idx_invp_algoconfig_org |  | fcreateorgid |
+| 2 | pk_t_invp_algoconfig |  | fid |
 | 3 | idx_t_invp_algoconfig_master |  | fmasterid |
 | 4 | idx_t_invp_algoconfig_createorg |  | fcreateorgid |
 
@@ -123,7 +123,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fisbatchcal | 分批运算 | bpchar | 1 |  | √ | '0' | 分批运算 |
 | 3 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 4 | falgorithm | 算法节点 | int8 | 64 |  | √ | 0 | 算法注册配置 invp_algoregister |
+| 4 | falgorithm | 算法节点 | int8 | 64 |  | √ | 0 | [算法注册配置 invp_algoregister](../invp_files/invp_algoregister.md) |
 | 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 
 ### 列规则定义

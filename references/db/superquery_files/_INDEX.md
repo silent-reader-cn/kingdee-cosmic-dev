@@ -16,5 +16,5 @@
 | 4 | `t_flydb_schema_l` | Schema管理-多语言表 | 4 | [bos_flydb_schema.md](./bos_flydb_schema.md) |
 | 5 | `t_flydb_schema_perm` | Schema权限-主表 | 4 | [bos_flydb_schema_perm.md](./bos_flydb_schema_perm.md) |
 | 6 | `t_flydb_schema_ref` | 自定义实体范围-多选基础资料表 | 3 | [bos_flydb_schema.md](./bos_flydb_schema.md) |
-| 7 | `t_meta_entitydesign` | 业务对象列表_可多选-主表 | 0 | [bos_flydb_objlist.md](./bos_flydb_objlist.md) |
-| 8 | `t_meta_entitydesign_l` | 业务对象列表_可多选-多语言表 | 0 | [bos_flydb_objlist.md](./bos_flydb_objlist.md) |
+| 7 | `t_meta_entitydesign` | 业务对象列表_可多选-主表 | 18 | [bos_flydb_objlist.md](./bos_flydb_objlist.md) |
+| 8 | `t_meta_entitydesign_l` | 业务对象列表_可多选-多语言表 | 6 | [bos_flydb_objlist.md](./bos_flydb_objlist.md) |

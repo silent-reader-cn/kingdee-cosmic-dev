@@ -12,7 +12,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fdepreresult | 折旧结果 | varchar | 100 |  |  | ' ' | 折旧结果 |
 | 3 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 4 | ffincardid | 财务卡片ID | int8 | 64 |  | √ | 0 | 财务卡片基础资料 fa_card_fin_base |
+| 4 | ffincardid | 财务卡片ID | int8 | 64 |  | √ | 0 | [财务卡片基础资料 fa_card_fin_base](../fa_files/fa_card_fin_base.md) |
 | 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 
 ### 列规则定义
@@ -48,8 +48,8 @@
 | 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 8 | fresult_tag | 日志记录_详情 | varchar | 60 |  | √ | ' ' | 日志记录_详情 |
 | 9 | fenddate | 结束时间 | timestamp | 0 |  |  | null | 结束时间 |
-| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 11 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 11 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fbilltypefield | 单据类型 | int8 | 64 |  | √ | 0 | 单据类型 bos_billtype |
 | 13 | fbillno | 单据编号 | varchar | 60 |  | √ | ' ' | 单据编号 |
 
@@ -64,5 +64,5 @@
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
 | 1 | idx_fa_depre_log_fenddate |  | fenddate |
-| 2 | idx_fa_dalydeprelog_fbillno |  | fbillno |
-| 3 | t_fa_dailydepre_log_pkey |  | fid |
+| 2 | t_fa_dailydepre_log_pkey |  | fid |
+| 3 | idx_fa_dalydeprelog_fbillno |  | fbillno |

@@ -10,15 +10,15 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fexitemid | 商品编码 | int8 | 64 |  | √ | 0 | 商品信息 ocdbd_iteminfo |
-| 3 | fexunitid | 单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 2 | fexitemid | 商品编码 | int8 | 64 |  | √ | 0 | [商品信息 ocdbd_iteminfo](../ocdbd_files/ocdbd_iteminfo.md) |
+| 3 | fexunitid | 单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 4 | fextype | 类型 | bpchar | 1 |  | √ | '1' | 类型,枚举: 1 :商品 2 :商品分类 3 :商品品牌 4 :商品标签 5 :综合 |
-| 5 | fexitemlabelid | 商品标签 | int8 | 64 |  | √ | 0 | 商品标签 ocdbd_item_label |
-| 6 | fexbarcodeid | 商品条形码 | int8 | 64 |  | √ | 0 | 商品条形码 ocdbd_item_barcode |
-| 7 | fexmaterielid | 物料 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 5 | fexitemlabelid | 商品标签 | int8 | 64 |  | √ | 0 | [商品标签 ocdbd_item_label](../ocdbd_files/ocdbd_item_label.md) |
+| 6 | fexbarcodeid | 商品条形码 | int8 | 64 |  | √ | 0 | [商品条形码 ocdbd_item_barcode](../ocdbd_files/ocdbd_item_barcode.md) |
+| 7 | fexmaterielid | 物料 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 8 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 9 | fexitemclassid | 商品分类 | int8 | 64 |  | √ | 0 | 商品分类 mdr_item_class |
-| 10 | fexbrandid | 商品品牌 | int8 | 64 |  | √ | 0 | 商品品牌 mdr_item_brand |
+| 9 | fexitemclassid | 商品分类 | int8 | 64 |  | √ | 0 | [商品分类 mdr_item_class](../gmc_files/mdr_item_class.md) |
+| 10 | fexbrandid | 商品品牌 | int8 | 64 |  | √ | 0 | [商品品牌 mdr_item_brand](../gmc_files/mdr_item_brand.md) |
 | 11 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 
 ### 列规则定义
@@ -46,14 +46,14 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fitemlabelid | 商品标签 | int8 | 64 |  | √ | 0 | 商品标签 ocdbd_item_label |
+| 2 | fitemlabelid | 商品标签 | int8 | 64 |  | √ | 0 | [商品标签 ocdbd_item_label](../ocdbd_files/ocdbd_item_label.md) |
 | 3 | fpromoteprice | 促销特价 | numeric | 23 | 10 | √ | 0 | 促销特价 |
-| 4 | fsaleattrid | 销售属性(废弃) | int8 | 64 |  | √ | 0 | 商品销售属性 ocdbd_item_saleattr |
+| 4 | fsaleattrid | 销售属性(废弃) | int8 | 64 |  | √ | 0 | [商品销售属性 ocdbd_item_saleattr](../ocdbd_files/ocdbd_item_saleattr.md) |
 | 5 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 6 | fmaterielid | 物料 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 6 | fmaterielid | 物料 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 7 | fassumecostscale | 费用承担比例 | numeric | 23 | 10 | √ | 0 | 费用承担比例 |
-| 8 | fbrandid | 商品品牌 | int8 | 64 |  | √ | 0 | 商品品牌 mdr_item_brand |
-| 9 | fstocktypeid | 库存类型(废弃) | int8 | 64 |  | √ | 0 | 库存类型 bd_invtype |
+| 8 | fbrandid | 商品品牌 | int8 | 64 |  | √ | 0 | [商品品牌 mdr_item_brand](../gmc_files/mdr_item_brand.md) |
+| 9 | fstocktypeid | 库存类型(废弃) | int8 | 64 |  | √ | 0 | [库存类型 bd_invtype](../sbd_files/bd_invtype.md) |
 | 10 | fquotaamount | 优惠额度 | numeric | 23 | 10 | √ | 0 | 优惠额度 |
 | 11 | fselectnum | fselectnum | int4 | 32 |  | √ | 0 |  |
 | 12 | fcostassumeobject | 费用承担类型类型 | varchar | 30 |  | √ | ' ' | 费用承担类型类型,枚举: bd_supplier :供应商 bos_org :组织 ocdbd_channel :门店 |
@@ -61,14 +61,14 @@
 | 14 | fitemprice | 零售价 | numeric | 23 | 10 | √ | 0 | 零售价 |
 | 15 | fdiscountprice | 折后价 | numeric | 23 | 10 | √ | 0 | 折后价 |
 | 16 | fcostassumeobjid | 费用承担对象 | int8 | 64 |  | √ | 0 | 供应商 bd_supplier |
-| 17 | fitemclassid | 商品分类 | int8 | 64 |  | √ | 0 | 商品分类 mdr_item_class |
-| 18 | funitid | 单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 17 | fitemclassid | 商品分类 | int8 | 64 |  | √ | 0 | [商品分类 mdr_item_class](../gmc_files/mdr_item_class.md) |
+| 18 | funitid | 单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 19 | fisdropout | 是否除外 | bpchar | 1 |  | √ | '0' | 是否除外 |
 | 20 | fdiscount | 折扣 | numeric | 23 | 10 | √ | 0 | 折扣 |
-| 21 | fitemid | 商品编码 | int8 | 64 |  | √ | 0 | 商品信息 ocdbd_iteminfo |
+| 21 | fitemid | 商品编码 | int8 | 64 |  | √ | 0 | [商品信息 ocdbd_iteminfo](../ocdbd_files/ocdbd_iteminfo.md) |
 | 22 | ftype | 类型 | bpchar | 1 |  | √ | '1' | 类型,枚举: 1 :商品 2 :商品分类 3 :商品品牌 4 :商品标签 5 :综合 |
 | 23 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 24 | fbarcodeid | 商品条形码 | int8 | 64 |  | √ | 0 | 商品条形码 ocdbd_item_barcode |
+| 24 | fbarcodeid | 商品条形码 | int8 | 64 |  | √ | 0 | [商品条形码 ocdbd_item_barcode](../ocdbd_files/ocdbd_item_barcode.md) |
 | 25 | fassistattid | 辅助属性 | int8 | 64 |  | √ | 0 | null 001 |
 
 ### 列规则定义
@@ -96,7 +96,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 渠道分类 ocdbd_channel_class |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [渠道分类 ocdbd_channel_class](../ocdbd_files/ocdbd_channel_class.md) |
 | 3 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
 
 ### 列规则定义
@@ -123,7 +123,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 库存类型 bd_invtype |
+| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [库存类型 bd_invtype](../sbd_files/bd_invtype.md) |
 | 2 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 | 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 
@@ -151,7 +151,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 商品销售属性 ocdbd_item_saleattr |
+| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [商品销售属性 ocdbd_item_saleattr](../ocdbd_files/ocdbd_item_saleattr.md) |
 | 2 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 | 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 
@@ -211,8 +211,8 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fisexecute | 是否执行 | bpchar | 1 |  | √ | '0' | 是否执行 |
-| 3 | fapplyorgid | 组织编码 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 4 | fbranchid | 门店编码 | int8 | 64 |  | √ | 0 | 渠道 ocdbd_channel |
+| 3 | fapplyorgid | 组织编码 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 4 | fbranchid | 门店编码 | int8 | 64 |  | √ | 0 | [渠道 ocdbd_channel](../ocdbd_files/ocdbd_channel.md) |
 | 5 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 6 | fparententryid | fparententryid | int8 | 64 |  | √ | 0 | pid |
 | 7 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
@@ -287,7 +287,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 商品销售属性 ocdbd_item_saleattr |
+| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [商品销售属性 ocdbd_item_saleattr](../ocdbd_files/ocdbd_item_saleattr.md) |
 | 2 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 | 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 
@@ -316,13 +316,13 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fmemberlabelid | 会员标签 | int8 | 64 |  | √ | 0 | 会员档案 ocdbd_user |
+| 2 | fmemberlabelid | 会员标签 | int8 | 64 |  | √ | 0 | [顾客信息 ocdbd_user](../ocdbd_files/ocdbd_user.md) |
 | 3 | fdesignation | 名称 | varchar | 80 |  | √ | ' ' | 名称 |
-| 4 | fmemberid | 会员 | int8 | 64 |  | √ | 0 | 会员档案 ocdbd_user |
+| 4 | fmemberid | 会员 | int8 | 64 |  | √ | 0 | [顾客信息 ocdbd_user](../ocdbd_files/ocdbd_user.md) |
 | 5 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 6 | fvipleverid | 会员等级 | int8 | 64 |  | √ | 0 | 会员等级定义 ocdbd_vip_level |
+| 6 | fvipleverid | 会员等级 | int8 | 64 |  | √ | 0 | [会员等级定义 ocdbd_vip_level](../ocdbd_files/ocdbd_vip_level.md) |
 | 7 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 8 | ftypetext | 类型 | varchar | 255 |  | √ | ' ' | 业务对象 bos_objecttype |
+| 8 | ftypetext | 类型 | varchar | 255 |  | √ | ' ' | [业务对象 bos_objecttype](../mdl_files/bos_objecttype.md) |
 
 ### 列规则定义
 
@@ -348,7 +348,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 库存类型 bd_invtype |
+| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [库存类型 bd_invtype](../sbd_files/bd_invtype.md) |
 | 2 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 | 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 
@@ -377,7 +377,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
 
 ### 列规则定义
@@ -405,28 +405,28 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fpromotionsid | 促销活动 | int8 | 64 |  | √ | 0 | 促销活动 ocdbd_promotion |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 4 | fdeptid | 部门 | int8 | 64 |  | √ | 0 | 行政组织（部门） bos_adminorg |
+| 2 | fpromotionsid | 促销活动 | int8 | 64 |  | √ | 0 | [促销活动 ocdbd_promotion](../ocdpm_files/ocdbd_promotion.md) |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 4 | fdeptid | 部门 | int8 | 64 |  | √ | 0 | [行政组织（部门） bos_adminorg](../base_files/bos_adminorg.md) |
 | 5 | fdynamicbill | 促销表单标识 | varchar | 36 |  | √ | ' ' | 促销表单标识 |
 | 6 | fbillstatus | 单据状态 | bpchar | 1 |  | √ | 'A' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 7 | fcomment | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
 | 8 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 9 | forgid | 业务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 9 | forgid | 业务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 10 | fpromoteimageurl | 活动图片 | varchar | 255 |  | √ | ' ' | 活动图片 |
 | 11 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
 | 12 | fpromotetheme | 促销主题 | varchar | 100 |  | √ | ' ' | 促销主题 |
 | 13 | fbillname | 促销方案名称 | varchar | 100 |  | √ | ' ' | 促销方案名称 |
 | 14 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 15 | fenddate | 结束日期 | timestamp | 0 |  |  | null | 结束日期 |
-| 16 | fterminator | 终止人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 16 | fterminator | 终止人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 17 | fterminatortime | 终止时间 | timestamp | 0 |  |  | null | 终止时间 |
-| 18 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 18 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 19 | fstartdate | 开始日期 | timestamp | 0 |  |  | null | 开始日期 |
-| 20 | fpromotetypeid | 促销类型 | int8 | 64 |  | √ | 0 | 促销类型 ocdbd_promotetype |
-| 21 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 20 | fpromotetypeid | 促销类型 | int8 | 64 |  | √ | 0 | [促销类型 ocdbd_promotetype](../ocdpm_files/ocdbd_promotetype.md) |
+| 21 | fcurrencyid | 币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 | 22 | fbillno | 促销方案编号 | varchar | 80 |  | √ | ' ' | 促销方案编号 |
-| 23 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 23 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 24 | fpromotestatus | 促销状态 | bpchar | 1 |  | √ | 'A' | 促销状态,枚举: A :未开始 B :执行中 C :已终止 |
 
 ### 列规则定义
@@ -439,8 +439,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_ocdpm_promote_bno |  | fbillno |
-| 2 | pk_ocdpm_promote |  | fid |
+| 1 | pk_ocdpm_promote |  | fid |
+| 2 | idx_ocdpm_promote_bno |  | fbillno |
 
 ---
 

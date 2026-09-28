@@ -9,11 +9,11 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | 寻源项目 | int8 | 64 |  | √ | 0 | 招标项目F7 src_projectf7 |
+| 1 | fid | 寻源项目 | int8 | 64 |  | √ | 0 | [招标项目F7 src_projectf7](../src_files/src_projectf7.md) |
 | 2 | fremark | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
 | 3 | ftimediff | 耗时偏差(天) | numeric | 19 | 6 | √ | 0 | 耗时偏差(天) |
 | 4 | fdiffrate | 耗时偏差率(%) | numeric | 19 | 6 | √ | 0 | 耗时偏差率(%) |
-| 5 | fplanitemid | 寻源计划项 | int8 | 64 |  | √ | 0 | 寻源计划项 src_planitem |
+| 5 | fplanitemid | 寻源计划项 | int8 | 64 |  | √ | 0 | [寻源计划项 src_planitem](../src_files/src_planitem.md) |
 | 6 | fsrcbillid | 源单ID | int8 | 64 |  | √ | 0 | 源单ID |
 | 7 | fbegindate | 计划开始时间 | timestamp | 0 |  |  | null | 计划开始时间 |
 | 8 | fbegindate2 | 实际开始时间 | timestamp | 0 |  |  | null | 实际开始时间 |

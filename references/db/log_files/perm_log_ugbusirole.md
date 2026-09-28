@@ -16,14 +16,14 @@
 | 5 | fperm_logid | 操作日志ID | int8 | 64 |  | √ | 0 | 操作日志ID |
 | 6 | fusrgrp_number | 用户组编码 | varchar | 80 |  | √ | ' ' | 用户组编码 |
 | 7 | fusrgrpstdid | 用户组分类id | int8 | 64 |  | √ | '1404221671421785088' | 用户组分类id |
-| 8 | fstarttime | 生效日期 | timestamp | 0 |  |  | null | 生效日期 |
+| 8 | fstarttime | 生效时间 | timestamp | 0 |  |  | null | 生效时间 |
 | 9 | fbusirole_name | 业务角色名称 | varchar | 255 |  | √ | ' ' | 业务角色名称 |
 | 10 | fusrgrp_id | 用户组id | int8 | 64 |  | √ | 0 | 用户组id |
 | 11 | fusrgrpstd_desc | 用户组分类描述 | varchar | 255 |  | √ | ' ' | 用户组分类描述 |
 | 12 | fcreate_time | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 13 | fdatachange_type | 数据变更类型 | int4 | 32 |  | √ | 0 | 数据变更类型 |
 | 14 | fbusirole_id | 业务角色id | int8 | 64 |  | √ | 0 | 业务角色id |
-| 15 | fendtime | 失效日期 | timestamp | 0 |  |  | null | 失效日期 |
+| 15 | fendtime | 失效时间 | timestamp | 0 |  |  | null | 失效时间 |
 | 16 | fop_desc | 操作描述 | varchar | 300 |  | √ | ' ' | 操作描述 |
 
 ### 列规则定义

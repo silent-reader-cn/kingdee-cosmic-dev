@@ -13,7 +13,7 @@
 | 2 | fleftbracket |  | varchar | 5 |  | √ | ' ' | ,枚举: ( :( (( :(( ((( :((( |
 | 3 | fconditionalfilterdesc | 条件过滤 | varchar | 2000 |  | √ | ' ' | 条件过滤 |
 | 4 | frightbracket |  | varchar | 5 |  | √ | ' ' | ,枚举: ) :) )) :)) ))) :))) |
-| 5 | fmmbill | 实体 | varchar | 255 |  | √ | 0 | 主实体对象 bos_entityobject |
+| 5 | fmmbill | 实体 | varchar | 255 |  | √ | 0 | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 6 | fcalculationformula_tag | 计算公式(jjson)_详情 | text | 0 |  |  | ' ' | 计算公式(jjson)_详情 |
 | 7 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 8 | flogic | 逻辑 | varchar | 5 |  | √ | ' ' | 逻辑,枚举: and :并且 or :或者 |
@@ -51,14 +51,14 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbtapp | 应用 | varchar | 50 |  | √ | ' ' | 业务应用实体 bos_devportal_bizapp |
+| 2 | fbtapp | 应用 | varchar | 50 |  | √ | ' ' | [业务应用实体 bos_devportal_bizapp](../mdl_files/bos_devportal_bizapp.md) |
 | 3 | fbttriggertype | 触发类型 | varchar | 5 |  | √ | ' ' | 触发类型,枚举: A :微服务 B :业务事件中心 |
 | 4 | fbttriggerevent | 触发事件服务 | varchar | 100 |  | √ | ' ' | 触发事件服务 |
-| 5 | fbtbill | 实体 | varchar | 255 |  | √ | 0 | 主实体对象 bos_entityobject |
+| 5 | fbtbill | 实体 | varchar | 255 |  | √ | 0 | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 6 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 7 | fbtmethod | 方法 | varchar | 50 |  | √ | ' ' | 方法 |
 | 8 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 9 | fbtcloud | 云 | varchar | 50 |  | √ | ' ' | 业务云 bos_devportal_bizcloud |
+| 9 | fbtcloud | 云 | varchar | 50 |  | √ | ' ' | [业务云 bos_devportal_bizcloud](../mdl_files/bos_devportal_bizcloud.md) |
 
 ### 列规则定义
 
@@ -90,7 +90,7 @@
 | 3 | fbcoperationobject | 操作对象 | varchar | 50 |  | √ | ' ' | 操作对象 |
 | 4 | fbcconditionalfilter | 条件过滤(json) | varchar | 2000 |  | √ | ' ' | 条件过滤(json) |
 | 5 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 6 | fbcbill | 实体 | varchar | 255 |  | √ | 0 | 主实体对象 bos_entityobject |
+| 6 | fbcbill | 实体 | varchar | 255 |  | √ | 0 | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 7 | fbcconditionalfilterdesc | 条件过滤 | varchar | 2000 |  | √ | ' ' | 条件过滤 |
 | 8 | fbccontroltype | 控制类型 | varchar | 5 |  | √ | ' ' | 控制类型,枚举: A :功能操作 B :字段修改 |
 | 9 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
@@ -122,20 +122,20 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 3 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 4 | fbillstate | 目标状态 | int8 | 64 |  | √ | 0 | 项目状态 bd_projectstatus |
+| 2 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 3 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 4 | fbillstate | 目标状态 | int8 | 64 |  | √ | 0 | [项目状态 bd_projectstatus](../basedata_files/bd_projectstatus.md) |
 | 5 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 6 | fstatus | 数据状态 | varchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 7 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 7 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 8 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 9 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 10 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
-| 11 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 12 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 12 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fname | 规则名称 | varchar | 50 |  | √ | ' ' | 规则名称 |
 | 14 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 15 | fbill | 目标实体 | varchar | 255 |  | √ | 0 | 主实体对象 bos_entityobject |
+| 15 | fbill | 目标实体 | varchar | 255 |  | √ | 0 | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 16 | fbillfield | 目标字段(json) | varchar | 50 |  | √ | ' ' | 目标字段(json) |
 | 17 | fauditdate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
 | 18 | fctrlstrategy | 控制策略 | varchar | 5 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
@@ -144,7 +144,7 @@
 | 21 | fnumber | 规则编码 | varchar | 30 |  | √ | ' ' | 规则编码 |
 | 22 | fdesc | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
 | 23 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
-| 24 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 24 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 25 | fcombofield | 更新方式 | varchar | 5 |  | √ | ' ' | 更新方式,枚举: A :人工 B :自动 C :人工+自动 |
 
 ### 列规则定义
@@ -157,8 +157,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | pk_mpdm_staterule |  | fid |
-| 2 | idx_t_mpdm_staterule_createorg |  | fcreateorgid |
+| 1 | idx_t_mpdm_staterule_createorg |  | fcreateorgid |
+| 2 | pk_mpdm_staterule |  | fid |
 | 3 | idx_mpdm_statle_fcreatetime |  | fcreatetime |
 | 4 | idx_mpdm_statle_fnumber |  | fnumber |
 | 5 | idx_t_mpdm_staterule_master |  | fmasterid |
@@ -215,8 +215,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | pk_mpdm_staterule_l |  | fpkid |
-| 2 | idx_mpdm_statlel_fid |  | fid,flocaleid |
+| 1 | idx_mpdm_statlel_fid |  | fid,flocaleid |
+| 2 | pk_mpdm_staterule_l |  | fpkid |
 | 3 | idx_mpdm_statlel_fname |  | fname |
 
 ---

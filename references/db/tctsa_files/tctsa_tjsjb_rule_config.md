@@ -45,7 +45,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | finvaliddate | 失效日期 | timestamp | 0 |  |  | null | 失效日期 |
 | 5 | fbusinesssource | 业务来源 | varchar | 50 |  | √ | ' ' | 业务来源,枚举: 0 :纳税申报 1 :事项填报 2 :计提底稿 3 :税金计提单 4 :海外纳税申报 |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
@@ -54,15 +54,15 @@
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 10 | fyhstaxitems | 税目 | int8 | 64 |  | √ | 0 | 印花税-税目及税率 tpo_tcsd_taxrate |
 | 11 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 14 | ftype | 申报表类型 | varchar | 36 |  | √ | ' ' | 模板类型 tctb_template_type |
-| 15 | ftaxareagroup | 税收辖区 | int8 | 64 |  | √ | 0 | 税收辖区 bastax_taxareagroup |
+| 14 | ftype | 申报表类型 | varchar | 36 |  | √ | ' ' | [模板类型 tctb_template_type](../tctb_files/tctb_template_type.md) |
+| 15 | ftaxareagroup | 税收辖区 | int8 | 64 |  | √ | 0 | [税收辖区 bastax_taxareagroup](../basedata_files/bastax_taxareagroup.md) |
 | 16 | ffcstaxitems | 税目 | int8 | 64 |  | √ | 0 | 房产税和城镇土地税-税目及税率 tpo_tcret_taxrate |
 | 17 | fenable | 使用状态 | varchar | 50 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 18 | ftaxitemsname | 税目名称 | varchar | 50 |  | √ | ' ' | 税目名称 |
 | 19 | fnumber | 编号 | varchar | 30 |  | √ | ' ' | 编号 |
-| 20 | ftaxtype | 税种 | int8 | 64 |  | √ | 0 | 税种 bd_taxcategory |
+| 20 | ftaxtype | 税种 | int8 | 64 |  | √ | 0 | [税种 bd_taxcategory](../basedata_files/bd_taxcategory.md) |
 
 ### 列规则定义
 

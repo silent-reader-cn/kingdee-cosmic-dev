@@ -27,8 +27,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | pk_t_supplier_data_detail |  | fentryid |
-| 2 | idx_supplier_data_detail_fk |  | fid |
+| 1 | idx_supplier_data_detail_fk |  | fid |
+| 2 | pk_t_supplier_data_detail |  | fentryid |
 
 ---
 
@@ -44,13 +44,13 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | ftotal_income | 年度累计采购额 | numeric | 30 | 10 | √ | 0 | 年度累计采购额 |
 | 3 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 4 | fipoorg | 编制组织 | int8 | 64 |  | √ | 0 | IPO编制组织 ipo_org |
-| 5 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fipoorg | 编制组织 | int8 | 64 |  | √ | 0 | [IPO编制组织 ipo_org](../ipobase_files/ipo_org.md) |
+| 5 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | freportdate | 报告期 | timestamp | 0 |  |  | null | 报告期 |
 | 7 | fcreatedate | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
 | 8 | fmodifydate | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
 | 9 | fsourcetype | 来源方式 | varchar | 50 |  | √ | ' ' | 来源方式,枚举: 1 :手工引入 |
-| 10 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fyear | 年 | int4 | 32 |  | √ | 0 | 年 |
 | 12 | fperiod | 期 | int4 | 32 |  | √ | 0 | 期 |
 | 13 | fcycle | 周期 | varchar | 50 |  | √ | ' ' | 周期,枚举: 4 :月报 5 :季报 6 :半年报 7 :年报 |

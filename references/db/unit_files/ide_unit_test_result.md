@@ -10,10 +10,10 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | varchar | 18 |  | √ | ' ' | id |
-| 2 | fsubsysid | 所属应用 | varchar | 32 |  |  | null | 业务应用实体 bos_devportal_bizapp |
+| 2 | fsubsysid | 所属应用 | varchar | 32 |  |  | null | [业务应用实体 bos_devportal_bizapp](../mdl_files/bos_devportal_bizapp.md) |
 | 3 | fresulttype | 是否正常 | bpchar | 1 |  |  | null | 是否正常 |
 | 4 | ftestnumber | 用例项数量 | int8 | 64 |  |  | null | 用例项数量 |
-| 5 | fcaseid | 测试用例名称 | varchar | 18 |  |  | null | 单元测试功能发布 ide_unit_test_detail |
+| 5 | fcaseid | 测试用例名称 | varchar | 18 |  |  | null | [单元测试功能发布 ide_unit_test_detail](../unit_files/ide_unit_test_detail.md) |
 | 6 | fdatetime | 时间 | timestamp | 0 |  |  | null | 时间 |
 | 7 | freturnmsg | 测试结果 | varchar | 100 |  |  | null | 测试结果 |
 

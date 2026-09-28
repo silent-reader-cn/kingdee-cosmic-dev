@@ -44,11 +44,11 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | ftotalamount | 价税合计 | numeric | 23 | 10 | √ | 0.0000000000 | 价税合计 |
 | 4 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 5 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 6 | fbaseinvoicetype | 发票类型 | int8 | 64 |  | √ | 0 | 发票类型 bd_invoicetype |
+| 5 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 6 | fbaseinvoicetype | 发票类型 | int8 | 64 |  | √ | 0 | [发票种类 bd_invoicetype](../basedata_files/bd_invoicetype.md) |
 | 7 | finvoicecode | 对应蓝字发票代码 | varchar | 32 |  | √ | ' ' | 对应蓝字发票代码 |
 | 8 | finvoicedata | 填开日期 | timestamp | 0 |  |  | null | 填开日期 |
 | 9 | fbuyername | 购方名称 | varchar | 100 |  | √ | ' ' | 购方名称 |
@@ -57,7 +57,7 @@
 | 12 | fbillno | 单据编号 | varchar | 30 |  | √ | ' ' | 单据编号 |
 | 13 | fsalertaxno | 销方税号 | varchar | 20 |  | √ | ' ' | 销方税号 |
 | 14 | fbuyertaxno | 购方税号 | varchar | 20 |  | √ | ' ' | 购方税号 |
-| 15 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 15 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 16 | fbillstatus | 单据状态 | varchar | 30 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 17 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 18 | fserialno | 红字专用发票信息表编号 | varchar | 50 |  | √ | ' ' | 红字专用发票信息表编号 |
@@ -68,7 +68,7 @@
 | 23 | fsalername | 销方名称 | varchar | 100 |  | √ | ' ' | 销方名称 |
 | 24 | fdatasource | 数据来源 | varchar | 30 |  | √ | ' ' | 数据来源 |
 | 25 | ftotaltaxamount | 合计税额 | numeric | 23 | 10 | √ | 0.0000000000 | 合计税额 |
-| 26 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 26 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

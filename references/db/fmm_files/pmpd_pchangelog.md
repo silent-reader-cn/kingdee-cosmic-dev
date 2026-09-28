@@ -43,19 +43,19 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fbillstatus | 单据状态 | varchar | 50 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 4 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
 | 5 | freason | 变更原因 | varchar | 255 |  | √ | ' ' | 变更原因 |
 | 6 | fpcnumber | 变更单单据编码 | varchar | 30 |  | √ | ' ' | 变更单单据编码 |
 | 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 8 | fchangeperid | 变更人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | fchangeperid | 变更人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fstatus | 变更状态 | varchar | 30 |  | √ | ' ' | 变更状态,枚举: A :变更中 B :变更完成 |
 | 10 | fchangetime | 变更时间 | timestamp | 0 |  |  | null | 变更时间 |
 | 11 | fpnumber | 项目编号 | varchar | 30 |  | √ | ' ' | 项目编号 |
 | 12 | fpname | 项目名称 | varchar | 50 |  | √ | ' ' | 项目名称 |
 | 13 | fbillno | 单据编号 | varchar | 30 |  | √ | ' ' | 单据编号 |
-| 14 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

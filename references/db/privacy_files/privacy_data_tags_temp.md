@@ -40,6 +40,38 @@
 
 ---
 
+## 单据体-多语言表 t_privacy_data_field_tpl_l
+
+- **表名称：** 单据体-多语言表
+- **表名：** t_privacy_data_field_tpl_l
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fapp_name | 所属应用 | varchar | 100 |  | √ | ' ' | 所属应用 |
+| 2 | ffield_desc | 字段名称 | varchar | 100 |  | √ | ' ' | 字段名称 |
+| 3 | fcloud_name | 所属云 | varchar | 100 |  | √ | ' ' | 所属云 |
+| 4 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
+| 5 | fentity_name | 所属实体 | varchar | 200 |  | √ | ' ' | 所属实体 |
+| 6 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
+| 7 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fpkid | fpkid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | pk_privacy_data_field_tpl_l |  | fpkid |
+| 2 | idx_privacy_datafield_t_l_fid |  | fentryid,flocaleid |
+
+---
+
 ## 数据安全标签模板-多语言表 t_privacy_data_tag_tpl_l
 
 - **表名称：** 数据安全标签模板-多语言表
@@ -84,8 +116,8 @@
 | 4 | fcreatedate | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
 | 5 | ftype | 类型 | bpchar | 1 |  | √ | '0' | 类型,枚举: 0 :默认 1 :自动升级 |
 | 6 | fmodifydate | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
-| 7 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 8 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 7 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 8 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fnumber | 编码 | varchar | 50 |  | √ | ' ' | 编码 |
 
 ### 列规则定义

@@ -12,7 +12,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | frightoffset | 右偏差 | numeric | 23 | 10 | √ | 0.0000000000 | 右偏差 |
 | 3 | foffsetrate | 偏差率 | numeric | 23 | 10 | √ | 0.0000000000 | 偏差率 |
-| 4 | fuserid | 用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fuserid | 用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fleftoffset | 左偏差 | numeric | 23 | 10 | √ | 0.0000000000 | 左偏差 |
 | 6 | fdifftype | 差异类型 | varchar | 30 |  | √ | '1' | 差异类型,枚举: 1 :物料子要素 2 :全部子要素 |
 

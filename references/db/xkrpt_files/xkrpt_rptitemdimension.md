@@ -13,10 +13,10 @@
 | 2 | fcreatedate | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
 | 3 | fmodifydate | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
 | 4 | freportid | 报表id | varchar | 36 |  | √ | ' ' | 报表id |
-| 5 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 6 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 7 | fdimensionkey | 维度Key | text | 0 |  |  | null | 维度Key |
-| 8 | fdimensionids | 维度ids | text | 0 |  |  | null | 维度ids |
+| 5 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 6 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 7 | fdimensionkey | 维度Key | varchar | 2000 |  |  | null | 维度Key |
+| 8 | fdimensionids | 维度ids | varchar | 2000 |  |  | null | 维度ids |
 
 ### 列规则定义
 
@@ -48,7 +48,7 @@
 | 4 | fdimensionid | 维度ID | int8 | 64 |  | √ | 0 | 维度ID |
 | 5 | fdimensionname | 维度名称 | varchar | 250 |  | √ | ' ' | 维度名称 |
 | 6 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 7 | fdimensionkey | dimensionKey | text | 0 |  |  | null | dimensionKey |
+| 7 | fdimensionkey | dimensionKey | varchar | 2000 |  |  | null | dimensionKey |
 | 8 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 9 | fdimensiondatanumber | 维度数据编码 | varchar | 250 |  | √ | ' ' | 维度数据编码 |
 

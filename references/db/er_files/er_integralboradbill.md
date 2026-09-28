@@ -15,7 +15,7 @@
 | 4 | fmodifierid | fmodifierid | int8 | 64 |  | √ | 0 |  |
 | 5 | fcreatetime | fcreatetime | timestamp | 0 |  |  | null |  |
 | 6 | fdisabledate | fdisabledate | timestamp | 0 |  |  | null |  |
-| 7 | fuserid | 用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 7 | fuserid | 用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 8 | fpraisecount | 点赞数量 | varchar | 44 |  | √ | ' ' | 点赞数量 |
 | 9 | fcontrolstatus | fcontrolstatus | bpchar | 1 |  | √ | '0' |  |
 | 10 | fmodifytime | fmodifytime | timestamp | 0 |  |  | null |  |

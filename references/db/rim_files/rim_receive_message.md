@@ -14,10 +14,10 @@
 | 3 | fstate | 状态 | varchar | 4 |  | √ | ' ' | 状态,枚举: 1 :成功 0 :失败 |
 | 4 | fcreatetime | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
 | 5 | fmethod | 处理方法 | varchar | 30 |  | √ | ' ' | 处理方法 |
-| 6 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 7 | freq_msg | 请求内容 | varchar | 255 |  | √ | ' ' | 请求内容 |
 | 8 | ferror_msg | 错误信息 | varchar | 500 |  | √ | ' ' | 错误信息 |
-| 9 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | fbizid | 业务id | varchar | 50 |  | √ | ' ' | 业务id |
 | 11 | fmodifytime | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
 | 12 | freq_msg_tag | 请求内容_详情 | text | 0 |  |  | null | 请求内容_详情 |

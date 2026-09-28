@@ -10,12 +10,12 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | frefundabletaxamount | 即征即退税额 | numeric | 23 | 10 | √ | 0.0000000000 | 即征即退税额 |
 | 4 | feffectivetaxamount | 有效税额 | numeric | 23 | 10 | √ | 0.0000000000 | 有效税额 |
 | 5 | fmodifytime | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
-| 6 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 7 | fbaseinvoicetype | 发票类型 | int8 | 64 |  | √ | 0 | 发票类型 bd_invoicetype |
+| 6 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 7 | fbaseinvoicetype | 发票类型 | int8 | 64 |  | √ | 0 | [发票种类 bd_invoicetype](../basedata_files/bd_invoicetype.md) |
 | 8 | fsignstatus | 标记状态 | varchar | 30 |  | √ | ' ' | 标记状态,枚举: 1 :未标记 2 :已取消标记 |
 | 9 | fsignedtaxamount | 已标识税额 | numeric | 23 | 10 | √ | 0.0000000000 | 已标识税额 |
 | 10 | finvoicecode | 发票代码 | varchar | 100 |  | √ | ' ' | 发票代码 |
@@ -23,7 +23,7 @@
 | 12 | fremark | 备注 | varchar | 250 |  | √ | ' ' | 备注 |
 | 13 | ftaxperiod | 所属税期 | varchar | 100 |  | √ | ' ' | 所属税期 |
 | 14 | ftaxamount | 合计税额 | numeric | 23 | 10 | √ | 0.0000000000 | 合计税额 |
-| 15 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 15 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 16 | fsignrate | 标识比列 | numeric | 23 | 10 | √ | 0.0000000000 | 标识比列 |
 | 17 | fundistinguishtaxamount | 无法划分税额 | numeric | 23 | 10 | √ | 0.0000000000 | 无法划分税额 |
 | 18 | fcreatetime | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |

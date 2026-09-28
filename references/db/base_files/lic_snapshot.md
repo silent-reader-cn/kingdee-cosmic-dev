@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreatetime | 备份日期 | timestamp | 0 |  |  | null | 备份日期 |
+| 2 | fcreatetime | 备份时间 | timestamp | 0 |  |  | null | 备份时间 |
 | 3 | fdata_tag | 内容_详情 | text | 0 |  |  | null | 内容_详情 |
 | 4 | fsnapshottype | 快照类型 | varchar | 50 |  | √ | ' ' | 快照类型,枚举: 0 :用户备份快照 1 :试算快照 2 :系统备份快照 |
 | 5 | fdata | 内容 | text | 0 |  |  | null | 内容 |

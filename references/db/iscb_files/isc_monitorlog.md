@@ -99,7 +99,7 @@
 | 9 | fexceptionstack_tag | 异常堆栈_详情 | text | 0 |  |  | null | 异常堆栈_详情 |
 | 10 | fstatus | 执行状态 | varchar | 30 |  | √ | ' ' | 执行状态,枚举: 0 :等待执行 1 :正在执行 2 :成功 3 :失败 4 :取消 5 :等待反馈 6 :部分成功 |
 | 11 | foperationtype | 操作类型 | varchar | 100 |  | √ | ' ' | 操作类型 |
-| 12 | fintegration | 集成方案 | int8 | 64 |  | √ | 0 | 集成方案（废弃） isc_guide |
+| 12 | fintegration | 集成方案 | int8 | 64 |  | √ | 0 | [集成方案（废弃） isc_guide](../iscb_files/isc_guide.md) |
 | 13 | fexportdata | 传出数据 | text | 0 |  |  | null | 传出数据 |
 | 14 | fexcutetotal | 总执行条数 | varchar | 100 |  | √ | '0' | 总执行条数 |
 | 15 | forigsystem | 源系统 | varchar | 100 |  | √ | ' ' | 源系统 |

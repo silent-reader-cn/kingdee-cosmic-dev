@@ -1,8 +1,8 @@
-# 出库核算&#x2f;关账&#x2f;结账（方案）-cal_query_scheme_autoop
+# 出库核算/关账/结账（方案）-cal_query_scheme_autoop
 
-## 出库核算&#x2f;关账&#x2f;结账（方案）-主表 t_cal_query_scheme_autoop
+## 出库核算/关账/结账（方案）-主表 t_cal_query_scheme_autoop
 
-- **表名称：** 出库核算&#x2f;关账&#x2f;结账（方案）-主表
+- **表名称：** 出库核算/关账/结账（方案）-主表
 - **表名：** t_cal_query_scheme_autoop
 
 ### 表格列定义
@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
-| 3 | fqueryschemeid | 查询方案 | int8 | 64 |  | √ | 0 | 查询方案 cal_query_scheme |
+| 3 | fqueryschemeid | 查询方案 | int8 | 64 |  | √ | 0 | [查询方案 cal_query_scheme](../cal_files/cal_query_scheme.md) |
 | 4 | fnumber | 编码 | varchar | 255 |  | √ | ' ' | 编码 |
 
 ### 列规则定义

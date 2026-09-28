@@ -12,7 +12,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fisrequired | 必录 | bpchar | 1 |  | √ | '0' | 必录 |
 | 3 | fseq | 分录行号 | int2 | 16 |  | √ | 0 | 分录行号 |
-| 4 | fpreconfigid | 字段名称 | int8 | 64 |  | √ | 0 | 姓名预置字段 cts_nameprefield |
+| 4 | fpreconfigid | 字段名称 | int8 | 64 |  | √ | 0 | [姓名预置字段 cts_nameprefield](../cts_files/cts_nameprefield.md) |
 | 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 6 | fcustomlabel | 用户自定义标签 | varchar | 50 |  | √ | ' ' | 用户自定义标签 |
 | 7 | fisshow | 是否显示 | bpchar | 1 |  | √ | ' ' | 是否显示 |
@@ -42,17 +42,19 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fstatus | 数据状态 | varchar | 10 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 4 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 5 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 7 | fissystem | 是否系统预置 | bpchar | 1 |  | √ | '0' | 是否系统预置 |
-| 8 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 9 | fdisabledate | 禁用时间 | timestamp | 0 |  |  | null | 禁用时间 |
-| 10 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 11 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
-| 12 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 3 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
+| 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 5 | fdisabledate | 禁用时间 | timestamp | 0 |  |  | null | 禁用时间 |
+| 6 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 7 | fdescription | 描述 | varchar | 255 |  | √ | ' ' | 描述 |
+| 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 9 | fstatus | 数据状态 | varchar | 10 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
+| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 11 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
+| 12 | fissystem | 是否系统预置 | bpchar | 1 |  | √ | '0' | 是否系统预置 |
+| 13 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 14 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
 
 ### 列规则定义
 

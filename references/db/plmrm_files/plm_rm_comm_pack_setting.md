@@ -24,9 +24,9 @@
 | 13 | fothernamemrd | 别名 | varchar | 50 |  | √ | ' ' | 别名 |
 | 14 | fsoftprdsf | SF | bpchar | 1 |  | √ | '0' | SF |
 | 15 | fothernameprd | 别名 | varchar | 50 |  | √ | ' ' | 别名 |
-| 16 | fbasedatafieldprd | 图标基础资料 | int8 | 64 |  | √ | 0 | 工作项图标 plm_ipditempic |
+| 16 | fbasedatafieldprd | 图标基础资料 | int8 | 64 |  | √ | 0 | [工作项图标 plm_ipditempic](../plmipdsm_files/plm_ipditempic.md) |
 | 17 | fcombofieldmrd | 图标 | varchar | 50 |  | √ | ' ' | 图标,枚举: |
-| 18 | fbasedatafieldmrd | 图标基础资料 | int8 | 64 |  | √ | 0 | 工作项图标 plm_ipditempic |
+| 18 | fbasedatafieldmrd | 图标基础资料 | int8 | 64 |  | √ | 0 | [工作项图标 plm_ipditempic](../plmipdsm_files/plm_ipditempic.md) |
 | 19 | felecmrdsf | SF | bpchar | 1 |  | √ | '0' | SF |
 | 20 | fsoftprdrr | RR | bpchar | 1 |  | √ | '1' | RR |
 | 21 | fsoftmrdsf | SF | bpchar | 1 |  | √ | '0' | SF |
@@ -35,12 +35,14 @@
 | 24 | fsoftmrdsr | SR | bpchar | 1 |  | √ | '0' | SR |
 | 25 | fsoftmrdus | US | bpchar | 1 |  | √ | '0' | US |
 | 26 | felecprdar | AR | bpchar | 1 |  | √ | '0' | AR |
-| 27 | felecprdpb | PB | bpchar | 1 |  | √ | '0' | PB |
-| 28 | felecprdrr | RR | bpchar | 1 |  | √ | '1' | RR |
-| 29 | fsoftprdpb | PB | bpchar | 1 |  | √ | '0' | PB |
-| 30 | felecmrdar | AR | bpchar | 1 |  | √ | '0' | AR |
-| 31 | felecmrdpb | PB | bpchar | 1 |  | √ | '0' | PB |
-| 32 | fsoftmrdir | IR | bpchar | 1 |  | √ | '0' | IR |
+| 27 | fmrddoc | 在线需求文档 | bpchar | 1 |  | √ | '0' | 在线需求文档 |
+| 28 | felecprdpb | PB | bpchar | 1 |  | √ | '0' | PB |
+| 29 | felecprdrr | RR | bpchar | 1 |  | √ | '1' | RR |
+| 30 | fprddoc | 在线需求文档 | bpchar | 1 |  | √ | '0' | 在线需求文档 |
+| 31 | fsoftprdpb | PB | bpchar | 1 |  | √ | '0' | PB |
+| 32 | felecmrdar | AR | bpchar | 1 |  | √ | '0' | AR |
+| 33 | felecmrdpb | PB | bpchar | 1 |  | √ | '0' | PB |
+| 34 | fsoftmrdir | IR | bpchar | 1 |  | √ | '0' | IR |
 
 ### 列规则定义
 

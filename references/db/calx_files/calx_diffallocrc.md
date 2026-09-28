@@ -14,10 +14,10 @@
 | 3 | fstatus | 状态 | bpchar | 1 |  | √ | ' ' | 状态,枚举: A :处理中 B :成功 C :失败 |
 | 4 | fparam | 向导参数 | varchar | 255 |  | √ | ' ' | 向导参数 |
 | 5 | fallocmodel | 分摊方式 | varchar | 30 |  | √ | ' ' | 分摊方式,枚举: A :按单据编号 B :按单据类型 |
-| 6 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 7 | fbillstatus | 单据状态 | bpchar | 1 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 8 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 9 | fuserid | 操作用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fuserid | 操作用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | foperation | 操作 | varchar | 50 |  | √ | ' ' | 操作 |
 | 11 | fparam_tag | 向导参数_详情 | text | 0 |  |  | null | 向导参数_详情 |
 | 12 | fstarttime | 开始时间 | timestamp | 0 |  |  | null | 开始时间 |

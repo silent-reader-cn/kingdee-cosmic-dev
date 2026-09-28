@@ -40,22 +40,27 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreator | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fcreator | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fuser | 登录用户 | varchar | 64 |  | √ | ' ' | 登录用户 |
 | 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 5 | fcisconfig | fcisconfig | int8 | 64 |  | √ | 0 |  |
-| 6 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 7 | fpassword | 登录密码 | varchar | 64 |  | √ | ' ' | 登录密码 |
-| 8 | fintegratedserviceid | 集成服务标识 | varchar | 200 |  | √ | ' ' | 集成服务标识 |
-| 9 | fcreateorg | 集成服务商 | varchar | 200 |  | √ | ' ' | 集成服务商 |
-| 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 11 | fintegservicetypenumber | 集成服务类型编码 | varchar | 256 |  | √ | ' ' | 集成服务类型编码 |
-| 12 | fintegservicetype | 集成服务类型 | varchar | 200 |  | √ | ' ' | 集成服务类型 |
-| 13 | fpkgname | 集成服务名称 | varchar | 200 |  | √ | ' ' | 集成服务名称 |
-| 14 | fenable | 单据状态 | varchar | 1 |  | √ | '0' | 单据状态,枚举: 0 :禁用 1 :启用 |
-| 15 | fistimeout | 超时设置 | varchar | 1 |  | √ | '0' | 超时设置 |
-| 16 | ftimeout | 超时设置(秒) | int4 | 32 |  | √ | 3 | 超时设置(秒) |
-| 17 | fisfreelogin | 免密登录 | varchar | 1 |  | √ | '0' | 免密登录 |
+| 6 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 7 | fmenuconfiguration | 是否展示菜单配置项 | varchar | 1 |  | √ | ' ' | 是否展示菜单配置项,枚举: 0 :否 1 :是 |
+| 8 | fpassword | 登录密码 | varchar | 64 |  | √ | ' ' | 登录密码 |
+| 9 | fintegratedserviceid | 集成服务标识 | varchar | 200 |  | √ | ' ' | 集成服务标识 |
+| 10 | fcisconfigshowflag | 集成配置展示开关 | varchar | 1 |  | √ | '1' | 集成配置展示开关 |
+| 11 | fcisconfigflag | 集成配置开关 | varchar | 1 |  | √ | '1' | 集成配置开关 |
+| 12 | fcreateorg | 集成服务商 | varchar | 200 |  | √ | ' ' | 集成服务商 |
+| 13 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 14 | fintegservicetypenumber | 集成服务类型编码 | varchar | 256 |  | √ | ' ' | 集成服务类型编码 |
+| 15 | fmenushowflag | 菜单配置展示开关 | varchar | 1 |  | √ | '0' | 菜单配置展示开关 |
+| 16 | fintegservicetype | 集成服务类型 | varchar | 200 |  | √ | ' ' | 集成服务类型 |
+| 17 | fpkgname | 集成服务名称 | varchar | 200 |  | √ | ' ' | 集成服务名称 |
+| 18 | fenable | 单据状态 | varchar | 1 |  | √ | '0' | 单据状态,枚举: 0 :禁用 1 :启用 |
+| 19 | fistimeout | 超时设置 | varchar | 1 |  | √ | '0' | 超时设置 |
+| 20 | ftimeout | 超时设置(秒) | int4 | 32 |  | √ | 3 | 超时设置(秒) |
+| 21 | fmenuflag | 菜单配置开关 | varchar | 1 |  | √ | '0' | 菜单配置开关 |
+| 22 | fisfreelogin | 免密登录 | varchar | 1 |  | √ | '0' | 免密登录 |
 
 ### 列规则定义
 

@@ -65,9 +65,9 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fremark | 备注 | varchar | 255 |  |  | ' ' | 备注 |
-| 3 | fname | 名称 | varchar | 100 |  |  | ' ' | 名称 |
-| 4 | ffullname | 长名称 | varchar | 255 |  |  | ' ' | 长名称 |
+| 2 | fremark | 备注 | varchar | 500 |  |  | ' ' | 备注 |
+| 3 | fname | 名称 | varchar | 500 |  |  | ' ' | 名称 |
+| 4 | ffullname | 长名称 | varchar | 500 |  |  | ' ' | 长名称 |
 | 5 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
 | 6 | fpkid | fpkid | varchar | 18 |  | √ | ' ' | pkid |
 
@@ -98,23 +98,23 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fisleaf | 是否叶子 | bpchar | 1 |  | √ | '0' | 是否叶子 |
 | 3 | fcardindexprefix | 卡片编码前缀 | varchar | 50 |  | √ | ' ' | 卡片编码前缀 |
-| 4 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 5 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 4 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 5 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 7 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 10 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 11 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
 | 12 | fissyspreset | 系统预置 | bpchar | 1 |  | √ | '0' | 系统预置 |
-| 13 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 14 | fremark | 备注 | varchar | 255 |  |  | ' ' | 备注 |
-| 15 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 16 | fname | 名称 | varchar | 100 |  |  | ' ' | 名称 |
-| 17 | fparentid | 上级 | int8 | 64 |  | √ | 0 | 资产类别 fa_assetcategory |
+| 13 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 14 | fremark | 备注 | varchar | 500 |  |  | ' ' | 备注 |
+| 15 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 16 | fname | 名称 | varchar | 500 |  |  | ' ' | 名称 |
+| 17 | fparentid | 上级 | int8 | 64 |  | √ | 0 | [资产类别 fa_assetcategory](../fa_files/fa_assetcategory.md) |
 | 18 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 19 | ffullname | 长名称 | varchar | 255 |  |  | ' ' | 长名称 |
-| 20 | funitid | 计量单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 19 | ffullname | 长名称 | varchar | 500 |  |  | ' ' | 长名称 |
+| 20 | funitid | 计量单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 21 | flongnumber | 长编码 | varchar | 80 |  | √ | ' ' | 长编码 |
 | 22 | fctrlstrategy | 控制策略 | varchar | 10 |  | √ | ' ' | 控制策略,枚举: 5 :全局共享 7 :私有 |
 | 23 | fisdataasset | 数据资产 | bpchar | 1 |  | √ | '0' | 数据资产 |

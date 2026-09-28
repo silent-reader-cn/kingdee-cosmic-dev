@@ -41,7 +41,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | foperate | 操作 | varchar | 10 |  | √ | ' ' | 操作,枚举: modify :修改 new :新增 enable :启用 disable :禁用 delete :删除 |
 | 3 | fname | fname | varchar | 100 |  | √ | ' ' |  |
-| 4 | foperatorid | 操作人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | foperatorid | 操作人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | foperatetime | 操作时间 | timestamp | 0 |  |  | null | 操作时间 |
 | 6 | fnumber | 指标编码 | varchar | 50 |  | √ | ' ' | 指标编码 |
 | 7 | ftargetid | 指标id | int8 | 64 |  | √ | 0 | 指标id |

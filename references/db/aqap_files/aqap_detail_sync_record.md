@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | null | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fbillstatus | 单据状态 | varchar | 50 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 5 | fcompensation_detail | 补偿详情 | varchar | 256 |  |  | null | 补偿详情 |
@@ -23,12 +23,12 @@
 | 12 | fbank_name | 银行名称 | varchar | 50 |  | √ | ' ' | 银行名称 |
 | 13 | fcustom_id | 租户号 | varchar | 50 |  | √ | ' ' | 租户号 |
 | 14 | fsync_count | 联机查询次数 | int8 | 64 |  | √ | 1 | 联机查询次数 |
-| 15 | fcreatorid | 创建人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 15 | fcreatorid | 创建人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 16 | fis_completed | 是否完整 | int8 | 64 |  |  | null | 是否完整 |
 | 17 | fenable | 使用状态 | int8 | 64 |  | √ | 1 | 使用状态 |
 | 18 | fsync_date | 交易日期 | timestamp | 0 |  |  | null | 交易日期 |
 | 19 | fbillno | 单据编号 | varchar | 30 |  | √ | ' ' | 单据编号 |
-| 20 | fauditorid | 审核人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 20 | fauditorid | 审核人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

@@ -12,7 +12,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fisfirstlogin | 首次登陆 | bpchar | 1 |  | √ | '1' | 首次登陆 |
 | 3 | fbizapplist | fbizapplist | bpchar | 1 |  | √ | ' ' |  |
-| 4 | fuserid | 用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fuserid | 用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fpagelist | fpagelist | bpchar | 1 |  | √ | '1' |  |
 | 6 | fappmainpage | 首次应用首页 | bpchar | 1 |  | √ | ' ' | 首次应用首页 |
 | 7 | fmainpage | 首次门户首页 | bpchar | 1 |  | √ | '1' | 首次门户首页 |

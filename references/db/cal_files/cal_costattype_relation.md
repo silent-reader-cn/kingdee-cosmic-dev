@@ -9,8 +9,8 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | 成本主体 | int8 | 64 |  | √ | 0 | 成本主体 cal_bd_costaccount |
-| 2 | fbasedataid | 成本主体类别 | int8 | 64 |  | √ | 0 | 成本主体类别 cal_bd_costaccounttype |
+| 1 | fid | 成本主体 | int8 | 64 |  | √ | 0 | [成本主体 cal_bd_costaccount](../cal_files/cal_bd_costaccount.md) |
+| 2 | fbasedataid | 成本主体类别 | int8 | 64 |  | √ | 0 | [成本主体类别 cal_bd_costaccounttype](../cal_files/cal_bd_costaccounttype.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | id |
 
 ### 列规则定义

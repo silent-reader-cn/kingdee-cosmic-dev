@@ -42,7 +42,7 @@
 | 2 | fshrusername | 员工姓名 | varchar | 100 |  | √ | ' ' | 员工姓名 |
 | 3 | fshruserid | 内码 | varchar | 50 |  | √ | ' ' | 内码 |
 | 4 | fcreatetime | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
-| 5 | fuserid | 工号 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | fuserid | 工号 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | fshrusernumber | 员工工号 | varchar | 100 |  | √ | ' ' | 员工工号 |
 | 7 | fmodifytime | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
 

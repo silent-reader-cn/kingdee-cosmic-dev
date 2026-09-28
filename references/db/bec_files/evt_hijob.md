@@ -12,14 +12,14 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fexceptionmsg | 相关数据 | text | 0 |  |  | null | 相关数据 |
 | 3 | frepeat | 重复 | varchar | 30 |  | √ | ' ' | 重复 |
-| 4 | fhandlertype | 服务类型 | varchar | 30 |  | √ | ' ' | 服务类型,枚举: event-execute-operation :执行操作服务 async-event-dispatch :事件分发 event-execute-microservice :执行微服务 trigger-http-api :执行restful服务 customevent-execute-operation :自定义事件执行操作服务 event-send-message :发送消息服务 event-execute-plugin :执行插件服务 execute-ext-event :自定义服务 event-start-process :启动流程 tryCloseBizFlow :尝试关闭业务流 |
+| 4 | fhandlertype | 服务类型 | varchar | 30 |  | √ | ' ' | 服务类型,枚举: event-execute-operation :执行操作服务 async-event-dispatch :事件分发 event-execute-microservice :执行微服务 trigger-http-api :执行restful服务 customevent-execute-operation :自定义事件执行操作服务 event-send-message :发送消息服务 event-execute-plugin :执行插件服务 execute-ext-event :自定义服务 event-start-process :启动流程 tryCloseBizFlow :尝试关闭业务流 event-execute-rpa :调用RPA |
 | 5 | fprocdefid | 服务ID | int8 | 64 |  | √ | 0 | 服务ID |
 | 6 | fentitynumber | 实体编码 | varchar | 50 |  | √ | ' ' | 实体编码 |
 | 7 | fsource | 来源 | varchar | 60 |  | √ | ' ' | 来源 |
 | 8 | flockownerid | 锁定人ID | varchar | 100 |  | √ | ' ' | 锁定人ID |
 | 9 | fretries | 重试次数 | int4 | 32 |  | √ | 3 | 重试次数 |
 | 10 | flockexptime | 锁定失效日期 | timestamp | 0 |  |  | null | 锁定失效日期 |
-| 11 | fcreatedate | 接收时间 | timestamp | 0 |  |  | null | 接收时间 |
+| 11 | fcreatedate | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 12 | fmodifydate | 最后修改时间 | timestamp | 0 |  |  | null | 最后修改时间 |
 | 13 | frooteventinstid | 起始事件实例id | int8 | 64 |  | √ | 0 | 起始事件实例id |
 | 14 | foperation | 操作 | varchar | 300 |  | √ | ' ' | 操作,枚举: submit :提交 save :保存 audit :审核 |

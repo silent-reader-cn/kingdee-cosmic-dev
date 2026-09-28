@@ -16,12 +16,14 @@
 | 5 | fprocdefid | 流程定义ID | int8 | 64 |  | √ | 0 | 流程定义ID |
 | 6 | factivityid | 活动节点ID | varchar | 255 |  | √ | ' ' | 活动节点ID |
 | 7 | fprocinstid | 流程实例ID | int8 | 64 |  | √ | 0 | 流程实例ID |
-| 8 | fcreatedate | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 9 | fduration | 耗时 | int8 | 64 |  | √ | 0 | 耗时 |
-| 10 | ftype | 类型 | varchar | 50 |  | √ | ' ' | 类型 |
-| 11 | fmodifydate | 最后修改时间 | timestamp | 0 |  |  | null | 最后修改时间 |
-| 12 | fendtime | 结束时间 | timestamp | 0 |  |  | null | 结束时间 |
-| 13 | fcontent | fcontent | text | 0 |  |  | null |  |
+| 8 | fownerid | 添加人 | int8 | 64 |  | √ | 0 | 添加人 |
+| 9 | fcreatedate | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 10 | fduration | 耗时 | int8 | 64 |  | √ | 0 | 耗时 |
+| 11 | ftype | 类型 | varchar | 50 |  | √ | ' ' | 类型 |
+| 12 | fmodifydate | 最后修改时间 | timestamp | 0 |  |  | null | 最后修改时间 |
+| 13 | fendtime | 结束时间 | timestamp | 0 |  |  | null | 结束时间 |
+| 14 | fcontent | fcontent | text | 0 |  |  | null |  |
+| 15 | ftaskid | 任务id | int8 | 64 |  | √ | 0 | 任务id |
 
 ### 列规则定义
 

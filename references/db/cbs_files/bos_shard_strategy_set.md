@@ -40,7 +40,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fshardingenable | 是否启用 | bpchar | 1 |  | √ | ' ' | 是否启用 |
-| 3 | fentitynumber | 选择分片表单 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 3 | fentitynumber | 选择分片表单 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 4 | fstrategy | 分片策略值 | varchar | 50 |  | √ | ' ' | 分片策略值 |
 | 5 | fprogress | 迁移进度 | varchar | 2000 |  | √ | ' ' | 迁移进度 |
 | 6 | fcustomstrategyclass | 自定义策略类路径 | varchar | 255 |  |  | ' ' | 自定义策略类路径 |
@@ -49,7 +49,7 @@
 | 9 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 10 | fstatus_flag | 状态标志 | varchar | 50 |  | √ | ' ' | 状态标志 |
 | 11 | fstrategyparams | 分片策略参数 | varchar | 1000 |  | √ | ' ' | 分片策略参数 |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 14 | fmoving_record | 已迁移数量 | varchar | 50 |  | √ | ' ' | 已迁移数量 |
 | 15 | ftotal_record | 总数据量 | varchar | 50 |  | √ | ' ' | 总数据量 |

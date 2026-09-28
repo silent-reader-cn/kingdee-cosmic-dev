@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fskillnumber | 技能编码 | varchar | 50 |  | √ | ' ' | 技能编码 |
-| 3 | fuserid | 访问用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fuserid | 访问用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fresult | 结果 | bpchar | 1 |  | √ | '1' | 结果 |
 | 5 | fskillname | 技能名称 | varchar | 50 |  | √ | ' ' | 技能名称 |
 | 6 | faccesstime | 访问时间 | timestamp | 0 |  |  | null | 访问时间 |

@@ -10,8 +10,8 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | 渠道主键 | int8 | 64 |  | √ | 0 | 渠道主键 |
-| 2 | fclassstandardid | 渠道分类标准 | int8 | 64 |  | √ | 0 | 渠道分类标准 ocdbd_channel_standard |
-| 3 | fchannelclassid | 渠道分类 | int8 | 64 |  | √ | 0 | 渠道分类 ocdbd_channel_class |
+| 2 | fclassstandardid | 渠道分类标准 | int8 | 64 |  | √ | 0 | [渠道分类标准 ocdbd_channel_standard](../ocdbd_files/ocdbd_channel_standard.md) |
+| 3 | fchannelclassid | 渠道分类 | int8 | 64 |  | √ | 0 | [渠道分类 ocdbd_channel_class](../ocdbd_files/ocdbd_channel_class.md) |
 | 4 | fseq | fseq | int4 | 32 |  | √ | 0 |  |
 | 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 

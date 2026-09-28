@@ -11,10 +11,10 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fremark | 备注 | varchar | 400 |  | √ | ' ' | 备注 |
-| 3 | fparentid | 上级组织 | int8 | 64 |  | √ | 0 | 税务组织实体 tctb_org_entity |
+| 3 | fparentid | 上级组织 | int8 | 64 |  | √ | 0 | [税务组织实体 tctb_org_entity](../tctb_files/tctb_org_entity.md) |
 | 4 | forgcode | 组织编码 | varchar | 100 |  | √ | ' ' | 组织编码 |
 | 5 | parententryid | parententryid | int8 | 64 |  | √ | 0 |  |
-| 6 | forgid | 组织id | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | forgid | 组织id | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fkdqjyqylx | fkdqjyqylx | varchar | 50 |  | √ | ' ' |  |
 | 8 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 9 | fissuesbb | fissuesbb | bpchar | 1 |  | √ | ' ' |  |
@@ -62,23 +62,28 @@
 | 9 | fchangestatus | fchangestatus | varchar | 50 |  | √ | ' ' |  |
 | 10 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 11 | ffixedratio | ffixedratio | numeric | 23 | 10 | √ | 0 |  |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 14 | fzjggdbl | fzjggdbl | numeric | 23 | 10 | √ | 0 |  |
-| 15 | fchangedate | fchangedate | timestamp | 0 |  |  | null |  |
-| 16 | fybtsehffs | fybtsehffs | varchar | 50 |  | √ | ' ' |  |
-| 17 | ftaxtype | ftaxtype | varchar | 30 |  | √ | ' ' |  |
-| 18 | ffpxssrfw | ffpxssrfw | varchar | 50 |  | √ | ' ' |  |
-| 19 | fversion | fversion | varchar | 30 |  | √ | ' ' |  |
-| 20 | fname | fname | varchar | 100 |  | √ | ' ' |  |
-| 21 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 22 | fbillstatus | fbillstatus | varchar | 50 |  | √ | ' ' |  |
-| 23 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 24 | fsummaryorgtype | fsummaryorgtype | varchar | 30 |  | √ | ' ' |  |
-| 25 | fchangerid | fchangerid | int8 | 64 |  | √ | 0 |  |
-| 26 | fenable | 使用状态 | varchar | 30 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 27 | fnumber | 方案编码 | varchar | 100 |  | √ | ' ' | 方案编码 |
-| 28 | fsummaryway | fsummaryway | varchar | 30 |  | √ | ' ' |  |
+| 14 | fsummarypurpose | fsummarypurpose | varchar | 50 |  | √ | ' ' |  |
+| 15 | fzjggdbl | fzjggdbl | numeric | 23 | 10 | √ | 0 |  |
+| 16 | fchangedate | fchangedate | timestamp | 0 |  |  | null |  |
+| 17 | fybtsehffs | fybtsehffs | varchar | 50 |  | √ | ' ' |  |
+| 18 | ftaxtype | ftaxtype | varchar | 30 |  | √ | ' ' |  |
+| 19 | ffpxssrfw | ffpxssrfw | varchar | 50 |  | √ | ' ' |  |
+| 20 | fxfszfjgsefpfs | fxfszfjgsefpfs | varchar | 50 |  | √ | ' ' |  |
+| 21 | fversion | fversion | varchar | 30 |  | √ | ' ' |  |
+| 22 | fname | fname | varchar | 100 |  | √ | ' ' |  |
+| 23 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 24 | fstepsummary | fstepsummary | bpchar | 1 |  | √ | '0' |  |
+| 25 | fbillstatus | fbillstatus | varchar | 50 |  | √ | ' ' |  |
+| 26 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 27 | fybtsejsfs | fybtsejsfs | varchar | 50 |  | √ | ' ' |  |
+| 28 | fsummaryorgtype | fsummaryorgtype | varchar | 30 |  | √ | ' ' |  |
+| 29 | fchangerid | fchangerid | int8 | 64 |  | √ | 0 |  |
+| 30 | fenable | 使用状态 | varchar | 30 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 31 | fnumber | 方案编码 | varchar | 100 |  | √ | ' ' | 方案编码 |
+| 32 | fsummarydeclaration | fsummarydeclaration | bpchar | 1 |  | √ | '0' |  |
+| 33 | fsummaryway | fsummaryway | varchar | 30 |  | √ | ' ' |  |
 
 ### 列规则定义
 

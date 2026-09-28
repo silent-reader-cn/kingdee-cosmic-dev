@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 账簿类型 bd_accountbookstype |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [账簿类型 bd_accountbookstype](../fibd_files/bd_accountbookstype.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -38,7 +38,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 账簿 gl_accountbook |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [账簿 gl_accountbook](../gl_files/gl_accountbook.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -67,12 +67,12 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fstrikeopre | 触发操作 | varchar | 30 |  | √ | ' ' | 触发操作,枚举: audit :审核 post :过账 |
-| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 4 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 4 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 6 | fsrcacctableid | 源科目表 | int8 | 64 |  | √ | 0 | 科目表 bd_accounttable |
+| 6 | fsrcacctableid | 源科目表 | int8 | 64 |  | √ | 0 | [科目表 bd_accounttable](../fibd_files/bd_accounttable.md) |
 | 7 | fstatus | 数据状态 | bpchar | 1 |  | √ | 'C' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 10 | ftargetaccbookname | ftargetaccbookname | varchar | 500 |  | √ | ' ' |  |
 | 11 | fentrymerge | 分录合并选项 | varchar | 500 |  |  | ' ' | 分录合并选项 |
@@ -81,22 +81,23 @@
 | 14 | fexeway | 执行方式 | varchar | 30 |  | √ | ' ' | 执行方式,枚举: ontime :实时 afterwards :事后 |
 | 15 | fsourceaccbookname | fsourceaccbookname | varchar | 500 |  | √ | ' ' |  |
 | 16 | fismergeentry | 合并相同分录行 | bpchar | 1 |  | √ | 'A' | 合并相同分录行,枚举: A :合并 B :不合并 |
-| 17 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 17 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 18 | fname | fname | varchar | 100 |  | √ | ' ' |  |
-| 19 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 20 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 21 | ftargetstatus | 目标凭证状态 | varchar | 30 |  | √ | ' ' | 目标凭证状态,枚举: A :暂存 B :已提交 |
-| 22 | fsourceaccbooktypeid | 源账簿类型 | int8 | 64 |  | √ | 0 | 账簿类型 bd_accountbookstype |
-| 23 | fvoucherfilter | 凭证过滤 | varchar | 1000 |  |  | ' ' | 凭证过滤 |
-| 24 | fctrlstrategy | 控制策略 | bpchar | 1 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
-| 25 | fsourcebookid | 来源账簿 | int8 | 64 |  | √ | 0 | 账簿 gl_accountbook |
-| 26 | fvoucherfilterjson | 凭证过滤JSON | varchar | 1000 |  |  | ' ' | 凭证过滤JSON |
-| 27 | fentrymergedesc | 分录合并选项 | varchar | 500 |  | √ | ' ' | 分录合并选项 |
-| 28 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 29 | fnumber | 编码 | varchar | 60 |  | √ | ' ' | 编码 |
-| 30 | fuseorgid | fuseorgid | int8 | 64 |  | √ | 0 |  |
-| 31 | fsourceaccbookid | fsourceaccbookid | int8 | 64 |  | √ | 0 |  |
-| 32 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
+| 19 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 20 | fissamecreatorid | 目标凭证制单人与来源凭证一致 | bpchar | 1 |  | √ | '0' | 目标凭证制单人与来源凭证一致 |
+| 21 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 22 | ftargetstatus | 目标凭证状态 | varchar | 30 |  | √ | ' ' | 目标凭证状态,枚举: A :暂存 B :已提交 |
+| 23 | fsourceaccbooktypeid | 源账簿类型 | int8 | 64 |  | √ | 0 | [账簿类型 bd_accountbookstype](../fibd_files/bd_accountbookstype.md) |
+| 24 | fvoucherfilter | 凭证过滤 | varchar | 1000 |  |  | ' ' | 凭证过滤 |
+| 25 | fctrlstrategy | 控制策略 | bpchar | 1 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
+| 26 | fsourcebookid | 来源账簿 | int8 | 64 |  | √ | 0 | [账簿 gl_accountbook](../gl_files/gl_accountbook.md) |
+| 27 | fvoucherfilterjson | 凭证过滤JSON | varchar | 1000 |  |  | ' ' | 凭证过滤JSON |
+| 28 | fentrymergedesc | 分录合并选项 | varchar | 500 |  | √ | ' ' | 分录合并选项 |
+| 29 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 30 | fnumber | 编码 | varchar | 60 |  | √ | ' ' | 编码 |
+| 31 | fuseorgid | fuseorgid | int8 | 64 |  | √ | 0 |  |
+| 32 | fsourceaccbookid | fsourceaccbookid | int8 | 64 |  | √ | 0 |  |
+| 33 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
 
 ### 列规则定义
 

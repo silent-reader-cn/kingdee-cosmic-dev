@@ -14,8 +14,9 @@
 | 3 | fappname | 星瀚应用名称 | varchar | 150 |  | √ | ' ' | 星瀚应用名称 |
 | 4 | fenable | 启用 | bpchar | 1 |  | √ | '1' | 启用 |
 | 5 | fformtype | 表单类型 | bpchar | 1 |  | √ | '1' | 表单类型,枚举: 1 :表单页面 2 :轻分析 |
-| 6 | fformnum | 表单编码 | varchar | 150 |  | √ | ' ' | 表单编码 |
+| 6 | fformnum | 移动端表单地址 | varchar | 150 |  | √ | ' ' | 移动端表单地址 |
 | 7 | fappnum | 表单应用编码 | varchar | 36 |  | √ | ' ' | 表单应用编码 |
+| 8 | fpcformnum | pc端表单地址 | varchar | 80 |  | √ | ' ' | pc端表单地址 |
 
 ### 列规则定义
 

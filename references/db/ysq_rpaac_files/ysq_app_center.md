@@ -14,14 +14,14 @@
 | 3 | fk_ysq_app_group_number | 许可分组id | int8 | 64 |  |  | null | 许可分组id |
 | 4 | fk_ysq_app_use_helper | 使用帮助 | varchar | 255 |  | √ | ' ' | 使用帮助 |
 | 5 | fk_ysq_launch_date | 上架时间 | timestamp | 0 |  |  | null | 上架时间 |
-| 6 | forgid | 组织 | int8 | 64 |  |  | null | 业务单元 bos_org |
-| 7 | fsrccreateorgid | 原创建组织 | int8 | 64 |  |  | null | 业务单元 bos_org |
+| 6 | forgid | 组织 | int8 | 64 |  |  | null | [业务单元 bos_org](../base_files/bos_org.md) |
+| 7 | fsrccreateorgid | 原创建组织 | int8 | 64 |  |  | null | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | fk_ysq_app_label | 应用标签 | varchar | 1024 |  | √ | ' ' | 应用标签 |
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 10 | fk_ysq_app_product_type | 产品线类型 | varchar | 50 |  | √ | ' ' | 产品线类型,枚举: 星瀚 :星瀚 星空旗舰版 :星空旗舰版 |
 | 11 | fk_ysq_app_name | 应用机器人名称 | varchar | 256 |  | √ | ' ' | 应用机器人名称 |
 | 12 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 13 | fcreatorid | 创建人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 13 | fcreatorid | 创建人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | fmasterid | 主数据内码 | int8 | 64 |  |  | null | 主数据内码 |
 | 15 | fk_ysq_app_involve_sys | 涉及系统 | varchar | 1024 |  | √ | ' ' | 涉及系统 |
 | 16 | fk_ysq_app_special | 是否专用 | varchar | 50 |  | √ | ' ' | 是否专用,枚举: yes :是 no :否 |
@@ -31,11 +31,11 @@
 | 20 | fk_ysq_app_permit_code | 许可编号 | varchar | 1024 |  | √ | ' ' | 许可编号 |
 | 21 | fk_ysq_app_run_type | 使用权限分类 | varchar | 50 |  |  | '3' | 使用权限分类 |
 | 22 | fk_ysq_last_version | 最新版本 | varchar | 256 |  | √ | ' ' | 最新版本 |
-| 23 | fcreateorgid | 创建组织 | int8 | 64 |  |  | null | 业务单元 bos_org |
+| 23 | fcreateorgid | 创建组织 | int8 | 64 |  |  | null | [业务单元 bos_org](../base_files/bos_org.md) |
 | 24 | fk_ysq_proc_code | 流程编号 | varchar | 32 |  | √ | ' ' | 流程编号 |
 | 25 | fk_ysq_app_icon | 应用图标 | varchar | 255 |  | √ | ' ' | 应用图标 |
 | 26 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 27 | fmodifierid | 修改人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 27 | fmodifierid | 修改人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 28 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 29 | fk_ysq_update_date | 更新时间 | timestamp | 0 |  |  | null | 更新时间 |
 | 30 | fk_ysq_dev_com_code | 开发者公司标识 | varchar | 64 |  | √ | ' ' | 开发者公司标识 |
@@ -74,7 +74,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 附件字段实体 bd_attachment |
+| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [附件字段实体 bd_attachment](../frame_files/bd_attachment.md) |
 | 2 | fpkid | fpkid | int8 | 64 |  | √ | null | FPKID |
 | 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 

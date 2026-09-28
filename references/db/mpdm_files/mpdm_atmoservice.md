@@ -40,7 +40,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fcreateorgid | fcreateorgid | int8 | 64 |  | √ | 0 |  |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fmethodname | 方法名 | varchar | 50 |  | √ | ' ' | 方法名 |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 6 | fuseorg | fuseorg | int8 | 64 |  | √ | 0 |  |
@@ -52,7 +52,7 @@
 | 12 | fappid | 所属应用 | varchar | 50 |  | √ | ' ' | 所属应用 |
 | 13 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 14 | finparam | finparam | varchar | 255 |  | √ | ' ' |  |
-| 15 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 15 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 16 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 17 | fcloudid | 所属云 | varchar | 50 |  | √ | ' ' | 所属云 |
 | 18 | fservicename | 接口名 | varchar | 50 |  | √ | ' ' | 接口名 |

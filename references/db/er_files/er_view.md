@@ -42,15 +42,15 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | frank | 排名 | int8 | 64 |  | √ | 0 | 排名 |
 | 3 | fcreateorgid | fcreateorgid | int8 | 64 |  | √ | 0 |  |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 6 | fdisabledate | fdisabledate | timestamp | 0 |  |  | null |  |
-| 7 | fuserid | 用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 7 | fuserid | 用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 8 | fpraisecount | 排名数量 | varchar | 44 |  | √ | ' ' | 排名数量 |
 | 9 | fcontrolstatus | fcontrolstatus | bpchar | 1 |  | √ | '0' |  |
 | 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 11 | fstatus | 数据状态 | varchar | 25 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 14 | fyearscore | 年度积分 | int8 | 64 |  | √ | 0 | 年度积分 |
 | 15 | fnowdate | 日期 | timestamp | 0 |  |  | null | 日期 |

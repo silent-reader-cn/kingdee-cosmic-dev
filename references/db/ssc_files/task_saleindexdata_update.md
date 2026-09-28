@@ -11,9 +11,9 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fpropvalue | 属性值 | int8 | 64 |  | √ | 0 | 属性值 |
-| 3 | fsscid | 共享中心 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | fsscid | 共享中心 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | fpropname | 属性名 | varchar | 32 |  | √ | ' ' | 属性名 |
-| 5 | fuser | 用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | fuser | 用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | fupdatetime | 更新时间 | timestamp | 0 |  |  | null | 更新时间 |
 
 ### 列规则定义

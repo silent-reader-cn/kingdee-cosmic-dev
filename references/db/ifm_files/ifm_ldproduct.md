@@ -13,8 +13,8 @@
 | 2 | ffloatrate | 浮动利率 | bpchar | 1 |  | √ | '0' | 浮动利率 |
 | 3 | fcategory | 类别 | varchar | 80 |  | √ | ' ' | 类别,枚举: C :定期存款 D :通知存款 E :短期贷款 F :中长期贷款 G :长期贷款 |
 | 4 | fratesignbp | 利率浮动基点（BP） | varchar | 80 |  | √ | ' ' | 利率浮动基点（BP）,枚举: add :加 subtract :减 |
-| 5 | freferrateid | 参考利率 | int8 | 64 |  | √ | 0 | 参考利率 tbd_referrate |
-| 6 | frateproductid | 参考利率 | int8 | 64 |  | √ | 0 | 参考利率 tbd_referrate |
+| 5 | freferrateid | 参考利率 | int8 | 64 |  | √ | 0 | [参考利率表 tbd_referrate](../fbd_files/tbd_referrate.md) |
+| 6 | frateproductid | 参考利率 | int8 | 64 |  | √ | 0 | [参考利率表 tbd_referrate](../fbd_files/tbd_referrate.md) |
 | 7 | fservicecategory | 金融服务项目 | varchar | 80 |  | √ | ' ' | 金融服务项目,枚举: B :贷款 A :定期存款 C :通知存款 |
 | 8 | fbiztype | fbiztype | varchar | 80 |  | √ | ' ' |  |
 | 9 | fratefloatpoints | 整数 | int8 | 64 |  | √ | 0 | 整数 |
@@ -24,7 +24,7 @@
 | 13 | frateprice | 利率挂牌价格(%) | varchar | 80 |  | √ | ' ' | 利率挂牌价格(%) |
 | 14 | fbasis | 利率转换天数 | varchar | 80 |  | √ | ' ' | 利率转换天数,枚举: Actual_360 :360 Actual_365 :365 |
 | 15 | fproductprice | 利率挂牌价格% | varchar | 80 |  | √ | ' ' | 利率挂牌价格% |
-| 16 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 16 | fcurrencyid | 币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 | 17 | fratesign | 利率浮动基点（BP） | varchar | 80 |  | √ | ' ' | 利率浮动基点（BP）,枚举: add :加 subtract :减 |
 | 18 | fratetype | 利率类型 | varchar | 30 |  | √ | ' ' | 利率类型,枚举: fixed :固定利率 float :浮动利率 agree :协议利率 |
 | 19 | fpricenum | 利率挂牌价格% | numeric | 23 | 10 | √ | 0 | 利率挂牌价格% |
@@ -39,8 +39,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | pk_t_cfm_financingvarieties_p |  | fid |
-| 2 | idx_cfm_financingvarieties_p |  | fcategory |
+| 1 | idx_cfm_financingvarieties_p |  | fcategory |
+| 2 | pk_t_cfm_financingvarieties_p |  | fid |
 
 ---
 
@@ -92,27 +92,28 @@
 | 6 | fispreset | fispreset | bpchar | 1 |  | √ | '0' |  |
 | 7 | fmodifytime | 最后更新时间 | timestamp | 0 |  |  | null | 最后更新时间 |
 | 8 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 9 | fcredittype | 授信类别 | int8 | 64 |  | √ | 0 | 授信类别 cfm_credittype |
+| 9 | fcredittype | 授信类别 | int8 | 64 |  | √ | 0 | [授信类别 cfm_credittype](../creditm_files/cfm_credittype.md) |
 | 10 | fbiztype | 业务种类 | varchar | 80 |  | √ | ' ' | 业务种类,枚举: cfm :融资品种 ifm :存贷款产品 |
-| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 13 | fenablerid | 启用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fenablerid | 启用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | ffinsource | ffinsource | varchar | 30 |  | √ | ' ' |  |
-| 15 | fmodifierid | 最后更新人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 15 | fmodifierid | 最后更新人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 16 | fname | 产品名称 | varchar | 255 |  | √ | ' ' | 产品名称 |
-| 17 | fcenterid | 结算中心 | int8 | 64 |  | √ | 0 | 金融机构 bd_finorginfo |
-| 18 | fparentid | fparentid | int8 | 64 |  | √ | 0 |  |
-| 19 | fcomment | fcomment | varchar | 255 |  | √ | ' ' |  |
-| 20 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 21 | ffullname | ffullname | varchar | 255 |  | √ | ' ' |  |
-| 22 | flongnumber | flongnumber | varchar | 80 |  | √ | ' ' |  |
-| 23 | fenabledate | 启用日期 | timestamp | 0 |  |  | null | 启用日期 |
-| 24 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 25 | flevel | flevel | int8 | 64 |  | √ | 0 |  |
-| 26 | fenable | 使用状态 | varchar | 30 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 27 | fnumber | 产品编码 | varchar | 80 |  | √ | ' ' | 产品编码 |
-| 28 | fcreditratio | fcreditratio | int4 | 32 |  | √ | 0 |  |
-| 29 | fperpetualbond | fperpetualbond | bpchar | 1 |  | √ | '0' |  |
+| 17 | fcenterid | 结算中心 | int8 | 64 |  | √ | 0 | [金融机构 bd_finorginfo](../basedata_files/bd_finorginfo.md) |
+| 18 | floanterm | floanterm | varchar | 50 |  | √ | ' ' |  |
+| 19 | fparentid | fparentid | int8 | 64 |  | √ | 0 |  |
+| 20 | fcomment | fcomment | varchar | 255 |  | √ | ' ' |  |
+| 21 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 22 | ffullname | ffullname | varchar | 255 |  | √ | ' ' |  |
+| 23 | flongnumber | flongnumber | varchar | 80 |  | √ | ' ' |  |
+| 24 | fenabledate | 启用日期 | timestamp | 0 |  |  | null | 启用日期 |
+| 25 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 26 | flevel | flevel | int8 | 64 |  | √ | 0 |  |
+| 27 | fenable | 使用状态 | varchar | 30 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 28 | fnumber | 产品编码 | varchar | 80 |  | √ | ' ' | 产品编码 |
+| 29 | fcreditratio | fcreditratio | int4 | 32 |  | √ | 0 |  |
+| 30 | fperpetualbond | fperpetualbond | bpchar | 1 |  | √ | '0' |  |
 
 ### 列规则定义
 

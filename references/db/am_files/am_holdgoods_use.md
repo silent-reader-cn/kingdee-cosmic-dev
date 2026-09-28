@@ -45,7 +45,7 @@
 | 3 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 4 | fpropertytype | 变更属性 | varchar | 50 |  | √ | ' ' | 变更属性,枚举: goodsname :实物名称 startdate :生效日期 enddate :失效日期 permission :权限 keeper :保管人 description :说明 associatedtype :关联单据类型 |
 | 5 | fcbillid | 关联单据ID | varchar | 50 |  | √ | '0' | 关联单据ID |
-| 6 | fckeeperid | 保管人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | fckeeperid | 保管人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 7 | fafterchange | 变更后 | varchar | 2000 |  | √ | ' ' | 变更后 |
 | 8 | fcstartdate | 变更后生效日期 | timestamp | 0 |  |  | null | 变更后生效日期 |
 | 9 | fcpermission | 变更后权限 | varchar | 50 |  | √ | ' ' | 变更后权限,枚举: A :查询 B :制单 C :复核 D :管理员 |
@@ -81,18 +81,18 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | fname | varchar | 255 |  | √ | ' ' |  |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 5 | fstakeholderld | fstakeholderld | varchar | 36 |  | √ | ' ' |  |
-| 6 | forgid | 收付组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 7 | fstakeholderid | 业务干系人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | forgid | 收付组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 7 | fstakeholderid | 业务干系人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 8 | fbusinesstype | 业务分类 | varchar | 50 |  | √ | ' ' | 业务分类,枚举: transfer :交接 return :归还 adoption :领用 change :变更 logout :注销 loss :挂失 invalid :作废 |
 | 9 | freason | freason | varchar | 512 |  | √ | ' ' |  |
 | 10 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
 | 11 | fpredictdate | 预计归还日期 | timestamp | 0 |  |  | null | 预计归还日期 |
 | 12 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 13 | fstatus | 单据状态 | varchar | 50 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 16 | fbusinessdate | 业务日期 | timestamp | 0 |  |  | null | 业务日期 |
 | 17 | fenable | 使用状态 | varchar | 50 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
@@ -123,9 +123,9 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | finventorygoodid | 实物编码 | int8 | 64 |  | √ | 0 | 库存实物管理 am_inventorygoodmanager |
+| 2 | finventorygoodid | 实物编码 | int8 | 64 |  | √ | 0 | [库存实物管理 am_inventorygoodmanager](../am_files/am_inventorygoodmanager.md) |
 | 3 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 4 | fadopterid | 领用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fadopterid | 领用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 
 ### 列规则定义

@@ -24,8 +24,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_isc_conntype_fnum |  | fnumber |
-| 2 | t_isc_conntype_pkey |  | fid |
+| 1 | t_isc_conntype_pkey |  | fid |
+| 2 | idx_isc_conntype_fnum |  | fnumber |
 
 ---
 

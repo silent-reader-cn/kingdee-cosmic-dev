@@ -41,26 +41,27 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fbillstatus | 单据状态 | varchar | 10 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :审核中 D :审核未通过 E :审核通过 H :废弃 I :关闭 |
 | 4 | ftel | 联系方式 | varchar | 50 |  | √ | ' ' | 联系方式 |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 6 | forgid | 部门 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 7 | fcostdeptid | 费用承担部门 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | forgid | 部门 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 7 | fcostdeptid | 费用承担部门 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | fremarks | fremarks | varchar | 200 |  | √ | ' ' |  |
 | 9 | fdescription | 事由 | varchar | 600 |  | √ | ' ' | 事由 |
 | 10 | fchangetype | 变更类型 | varchar | 50 |  | √ | ' ' | 变更类型,枚举: 1 :干系人变更 2 :干系人变更+申请人变更 |
-| 11 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
+| 11 | fauditdate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
 | 12 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 13 | fapplierposition | 职位 | varchar | 50 |  | √ | ' ' | 职位 |
-| 14 | fapplierid | 申请人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 15 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fapplierid | 申请人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 15 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 16 | fchangedate | 变更日期 | timestamp | 0 |  |  | null | 变更日期 |
-| 17 | fnextauditor | 下一步审核人 | varchar | 50 |  | √ | ' ' | 下一步审核人 |
-| 18 | fcurrencyid | 本位币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
-| 19 | fbillno | 单据编号 | varchar | 80 |  | √ | ' ' | 单据编号 |
-| 20 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 21 | fcompanyid | 公司 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 17 | ftrdbizno | 第三方业务编号 | varchar | 160 |  | √ | ' ' | 第三方业务编号 |
+| 18 | fnextauditor | 下一步审核人 | varchar | 50 |  | √ | ' ' | 下一步审核人 |
+| 19 | fcurrencyid | 本位币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
+| 20 | fbillno | 单据编号 | varchar | 80 |  | √ | ' ' | 单据编号 |
+| 21 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 22 | fcompanyid | 公司 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 
 ### 列规则定义
 
@@ -118,7 +119,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 2 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 |  |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
@@ -147,12 +148,12 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fapplierafter | 申请人(变更后) | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fapplierafter | 申请人(变更后) | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fsrcdeptid | 反写部门id | varchar | 50 |  | √ | ' ' | 反写部门id |
 | 4 | fremarks | 备注 | varchar | 200 |  | √ | ' ' | 备注 |
 | 5 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 6 | fapplierbefore | 申请人(变更前) | varchar | 200 |  | √ | ' ' | 申请人(变更前) |
-| 7 | foribilltype | 源单类型 | varchar | 50 |  | √ | ' ' | 源单类型,枚举: er_dailyapplybill :费用申请单 er_dailyloanbill :借款单 er_tripreqbill :出差申请单 er_applyprojectbill :立项单 er_costestimatebill :暂估单 er_prepaybill :预付单 er_contractbill :合同台账单 er_withholdingbill :费用预提单 er_publicreimbursebill :对公报销单 er_dailyreimbursebill :费用报销单 er_tripreimbursebill :差旅报销单 |
+| 7 | foribilltype | 源单类型 | varchar | 50 |  | √ | ' ' | 源单类型,枚举: er_dailyapplybill :费用申请单 er_dailyloanbill :借款单 er_tripreqbill :出差申请单 er_applyprojectbill :立项单 er_costestimatebill :暂估单 er_prepaybill :预付单 er_contractbill :合同台账单 er_withholdingbill :费用预提单 er_publicreimbursebill :对公报销单 er_dailyreimbursebill :费用报销单 er_tripreimbursebill :差旅报销单 er_dailyvehiclebill :用车申请单 er_tripreimburse_cardgrid :全球差旅报销单 er_tripreqbill_inter :全球出差申请单 er_billingpool :账单池 er_applypaybill :挂账付款申请单 |
 | 8 | fstakeholderbefore | 干系人(变更前) | varchar | 200 |  | √ | ' ' | 干系人(变更前) |
 | 9 | foribillno | 单据编号 | varchar | 50 |  | √ | ' ' | 单据编号 |
 | 10 | fbizdate | 申请日期 | timestamp | 0 |  |  | null | 申请日期 |
@@ -170,8 +171,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | pk_er_stakeholderdetail |  | fdetailid |
-| 2 | idx_er_stakeholderdetail_fk |  | fid |
+| 1 | idx_er_stakeholderdetail_fk |  | fid |
+| 2 | pk_er_stakeholderdetail |  | fdetailid |
 
 ---
 
@@ -238,8 +239,8 @@
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
 | 1 | idx_er_stakeholderbill_tc_tid |  | ftid |
-| 2 | idx_er_stakeholderbill_tc_tbill |  | ftbillid |
-| 3 | pk_er_stakeholderbill_tc |  | fid |
+| 2 | pk_er_stakeholderbill_tc |  | fid |
+| 3 | idx_er_stakeholderbill_tc_tbill |  | ftbillid |
 
 ---
 

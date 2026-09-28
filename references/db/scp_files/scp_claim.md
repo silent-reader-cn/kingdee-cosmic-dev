@@ -44,32 +44,35 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fmainbillentryseq | 核心单据分录序号 | int8 | 64 |  | √ | 0 | 核心单据分录序号 |
-| 3 | fgoodsid | 商品编码 | int8 | 64 |  | √ | 0 | 商品档案 pbd_goods |
-| 4 | fmaterialid | 物料编码 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 3 | fgoodsid | 商品编码 | int8 | 64 |  | √ | 0 | [商品档案 pbd_goods](../pbd_files/pbd_goods.md) |
+| 4 | fmaterialid | 物料编码 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 5 | fmainbillentity | 核心单据实体 | varchar | 50 |  | √ | ' ' | 核心单据实体 |
 | 6 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 7 | freceiptbillno | 收货单号 | varchar | 80 |  | √ | ' ' | 收货单号 |
-| 8 | fsrcbillentryseq | 来源单据分录序号 | int8 | 64 |  | √ | 0 | 来源单据分录序号 |
-| 9 | fclaimamount | 本次索赔金额 | numeric | 23 | 10 | √ | 0 | 本次索赔金额 |
-| 10 | fmainbillid | 核心单据ID | varchar | 50 |  | √ | ' ' | 核心单据ID |
-| 11 | fsrcbillentity | 来源单据实体 | varchar | 50 |  | √ | ' ' | 来源单据实体 |
-| 12 | fremark | 说明 | varchar | 512 |  | √ | ' ' | 说明 |
-| 13 | fclassify | 分类 | int8 | 64 |  | √ | 0 | 协同辅助资料 pbd_mallextdata |
-| 14 | fqty | 数量 | numeric | 23 | 10 | √ | 0 | 数量 |
-| 15 | frcvorgid | 收货组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 16 | fsrcbillnumber | 来源单据编号 | varchar | 80 |  | √ | ' ' | 来源单据编号 |
-| 17 | fpurorgid | 采购组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 18 | fsrcbillid | 来源单据ID | varchar | 50 |  | √ | ' ' | 来源单据ID |
-| 19 | fmainbillnumber | 核心单据编号 | varchar | 80 |  | √ | ' ' | 核心单据编号 |
-| 20 | funitid | 计量单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 21 | fgoodsdesc | 商品描述 | varchar | 255 |  | √ | ' ' | 商品描述 |
-| 22 | fsrcbillentryid | 来源单据行ID | int8 | 64 |  | √ | 0 | 来源单据行ID |
-| 23 | fclaimtax | 本次索赔税额 | numeric | 23 | 10 | √ | 0 | 本次索赔税额 |
-| 24 | fmainbillentryid | 核心单据行ID | varchar | 50 |  | √ | ' ' | 核心单据行ID |
-| 25 | fclaimtaxamount | 本次索赔价税合计 | numeric | 23 | 10 | √ | 0 | 本次索赔价税合计 |
-| 26 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 27 | fpobillno | 订单编号 | varchar | 80 |  | √ | ' ' | 订单编号 |
-| 28 | fmaterialname | 物料名称 | varchar | 255 |  | √ | ' ' | 物料名称 |
+| 7 | finvoicetaxamount | 开票抵扣金额 | numeric | 23 | 10 | √ | 0 | 开票抵扣金额 |
+| 8 | freceiptbillno | 收货单号 | varchar | 80 |  | √ | ' ' | 收货单号 |
+| 9 | fsrcbillentryseq | 来源单据分录序号 | int8 | 64 |  | √ | 0 | 来源单据分录序号 |
+| 10 | fclaimamount | 本次索赔金额 | numeric | 23 | 10 | √ | 0 | 本次索赔金额 |
+| 11 | fmainbillid | 核心单据ID | varchar | 50 |  | √ | ' ' | 核心单据ID |
+| 12 | fsrcbillentity | 来源单据实体 | varchar | 50 |  | √ | ' ' | 来源单据实体 |
+| 13 | fremark | 说明 | varchar | 512 |  | √ | ' ' | 说明 |
+| 14 | fclassify | 分类 | int8 | 64 |  | √ | 0 | [协同辅助资料 pbd_mallextdata](../pbd_files/pbd_mallextdata.md) |
+| 15 | fqty | 数量 | numeric | 23 | 10 | √ | 0 | 数量 |
+| 16 | frcvorgid | 收货组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 17 | fsrcbillnumber | 来源单据编号 | varchar | 80 |  | √ | ' ' | 来源单据编号 |
+| 18 | fpurorgid | 采购组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 19 | fsrcbillid | 来源单据ID | varchar | 50 |  | √ | ' ' | 来源单据ID |
+| 20 | fmainbillnumber | 核心单据编号 | varchar | 80 |  | √ | ' ' | 核心单据编号 |
+| 21 | funitid | 计量单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 22 | fgoodsdesc | 商品描述 | varchar | 255 |  | √ | ' ' | 商品描述 |
+| 23 | fsrcbillentryid | 来源单据行ID | int8 | 64 |  | √ | 0 | 来源单据行ID |
+| 24 | fclaimtax | 本次索赔税额 | numeric | 23 | 10 | √ | 0 | 本次索赔税额 |
+| 25 | frelateinvoicetaxamount | 关联开票价税合计 | numeric | 23 | 10 | √ | 0 | 关联开票价税合计 |
+| 26 | fmainbillentryid | 核心单据行ID | varchar | 50 |  | √ | ' ' | 核心单据行ID |
+| 27 | fclaimtaxamount | 本次索赔价税合计 | numeric | 23 | 10 | √ | 0 | 本次索赔价税合计 |
+| 28 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 29 | fpobillno | 订单编号 | varchar | 80 |  | √ | ' ' | 订单编号 |
+| 30 | fmaterialname | 物料名称 | varchar | 255 |  | √ | ' ' | 物料名称 |
+| 31 | fchecktaxamount | 对账抵扣金额 | numeric | 23 | 10 | √ | 0 | 对账抵扣金额 |
 
 ### 列规则定义
 
@@ -162,7 +165,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 附件字段实体 bd_attachment |
+| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [附件字段实体 bd_attachment](../frame_files/bd_attachment.md) |
 | 2 | fpkid | fpkid | int8 | 64 |  | √ | 0 | FPKID |
 | 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 
@@ -223,36 +226,41 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | foperatorid | 采购方联系人 | int8 | 64 |  | √ | 0 | 供应链业务员 bd_operator |
-| 3 | forgid | 核算方 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 4 | fclaimtype | 索赔类型 | bpchar | 1 |  | √ | ' ' | 索赔类型,枚举: 1 :品质扣款 2 :其他扣款 |
-| 5 | fbilldate | 业务日期 | timestamp | 0 |  |  | null | 业务日期 |
-| 6 | fcfmdate | 确认时间 | timestamp | 0 |  |  | null | 确认时间 |
-| 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 8 | forigin | 发起方 | bpchar | 1 |  | √ | ' ' | 发起方,枚举: 1 :供应商 2 :采购方 |
-| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 10 | fcancelid | 取消人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 11 | fbillno | 索赔单号 | varchar | 80 |  | √ | ' ' | 索赔单号 |
-| 12 | fversion | 版本号 | int8 | 64 |  | √ | 0 | 版本号 |
-| 13 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 14 | fpurorgid | 发起方 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 15 | fcurrid | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
-| 16 | fbillstatus | 单据状态 | bpchar | 1 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 17 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 18 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
-| 19 | fbizpartnerid | 商务伙伴 | int8 | 64 |  | √ | 0 | 商务伙伴 bd_bizpartner |
-| 20 | fcfmid | 确认人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 21 | fsupplierid | 供应商 | int8 | 64 |  | √ | 0 | 供应商 bd_supplier |
-| 22 | fcfmstatus | 索赔状态 | bpchar | 1 |  | √ | ' ' | 索赔状态,枚举: A :待确认 B :已确认 G :已申诉 Z :已取消 |
-| 23 | fcanceldate | 取消日期 | timestamp | 0 |  |  | null | 取消日期 |
-| 24 | fclaimdesc | 索赔说明 | varchar | 512 |  | √ | ' ' | 索赔说明 |
-| 25 | fpersonid | 采购方联系人（废弃） | int8 | 64 |  | √ | 0 | 业务员 pur_bizperson |
-| 26 | fhopendate | 要求反馈日期 | timestamp | 0 |  |  | null | 要求反馈日期 |
-| 27 | fsumtaxamount | 索赔价税合计 | numeric | 23 | 10 | √ | 0 | 索赔价税合计 |
-| 28 | fversionstatus | 版本状态 | bpchar | 1 |  | √ | '1' | 版本状态 |
-| 29 | fsrcbilltype | 来源单据类型 | bpchar | 1 |  | √ | ' ' | 来源单据类型,枚举: 0 :新增 1 :质量问题通知 2 :采购收货 |
-| 30 | fcontacterid | 供应商联系人 | int8 | 64 |  | √ | 0 | 供应商用户 pur_supuser |
-| 31 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fcontrolcriterion | 抵扣至 | bpchar | 1 |  | √ | ' ' | 抵扣至,枚举: 0 :数量控制的收货/入库 1 :金额控制的收货/入库 |
+| 3 | finvsumtaxamount | 开票抵扣金额 | numeric | 23 | 10 | √ | 0 | 开票抵扣金额 |
+| 4 | foperatorid | 采购方联系人 | int8 | 64 |  | √ | 0 | [供应链业务员 bd_operator](../sbd_files/bd_operator.md) |
+| 5 | fchecksumtaxamount | 对账抵扣金额 | numeric | 23 | 10 | √ | 0 | 对账抵扣金额 |
+| 6 | frelateinvsumtaxamount | 关联开票价税合计 | numeric | 23 | 10 | √ | 0 | 关联开票价税合计 |
+| 7 | forgid | 核算方 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 8 | fclaimtype | 索赔类型 | bpchar | 1 |  | √ | ' ' | 索赔类型,枚举: 1 :品质扣款 3 :折扣 4 :返利 2 :其他扣款 |
+| 9 | fbilldate | 业务日期 | timestamp | 0 |  |  | null | 业务日期 |
+| 10 | fcfmdate | 确认时间 | timestamp | 0 |  |  | null | 确认时间 |
+| 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 12 | forigin | 发起方 | bpchar | 1 |  | √ | ' ' | 发起方,枚举: 1 :供应商 2 :采购方 |
+| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 14 | fcancelid | 取消人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 15 | fprocessingtype | 处理方式 | bpchar | 1 |  | √ | ' ' | 处理方式,枚举: 1 :货款抵扣 2 :货物抵扣 3 :现金抵扣 4 :其他 |
+| 16 | fbillno | 索赔单号 | varchar | 80 |  | √ | ' ' | 索赔单号 |
+| 17 | fversion | 版本号 | int8 | 64 |  | √ | 0 | 版本号 |
+| 18 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 19 | fpurorgid | 发起方 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 20 | fcurrid | 币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
+| 21 | fbillstatus | 单据状态 | bpchar | 1 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
+| 22 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 23 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
+| 24 | fbizpartnerid | 商务伙伴 | int8 | 64 |  | √ | 0 | [商务伙伴 bd_bizpartner](../base_files/bd_bizpartner.md) |
+| 25 | fcfmid | 确认人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 26 | fsupplierid | 供应商 | int8 | 64 |  | √ | 0 | [供应商 bd_supplier](../basedata_files/bd_supplier.md) |
+| 27 | fcfmstatus | 索赔状态 | bpchar | 1 |  | √ | ' ' | 索赔状态,枚举: A :待确认 B :已确认 G :已申诉 Z :已取消 |
+| 28 | fcanceldate | 取消日期 | timestamp | 0 |  |  | null | 取消日期 |
+| 29 | fclaimdesc | 索赔说明 | varchar | 512 |  | √ | ' ' | 索赔说明 |
+| 30 | fpersonid | 采购方联系人（废弃） | int8 | 64 |  | √ | 0 | [业务员 pur_bizperson](../pbd_files/pur_bizperson.md) |
+| 31 | fhopendate | 要求反馈日期 | timestamp | 0 |  |  | null | 要求反馈日期 |
+| 32 | fsumtaxamount | 索赔价税合计 | numeric | 23 | 10 | √ | 0 | 索赔价税合计 |
+| 33 | fversionstatus | 版本状态 | bpchar | 1 |  | √ | '1' | 版本状态 |
+| 34 | fsrcbilltype | 来源单据类型 | bpchar | 1 |  | √ | ' ' | 来源单据类型,枚举: 0 :新增 1 :质量问题通知 2 :采购收货 |
+| 35 | fcontacterid | 供应商联系人 | int8 | 64 |  | √ | 0 | [协同业务员 scp_bizperson](../scp_files/scp_bizperson.md) |
+| 36 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 
@@ -283,9 +291,9 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fclaimexplain | 申诉说明 | varchar | 512 |  | √ | ' ' | 申诉说明 |
-| 3 | fclaimantid | 申诉人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fclaimantid | 申诉人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fdisposaltype | 处理方式 | bpchar | 1 |  | √ | ' ' | 处理方式,枚举: 1 :变更索赔 2 :取消索赔 3 :不处理 |
-| 5 | fdisposalerid | 处理人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | fdisposalerid | 处理人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | fdisposalnote | 处理意见 | varchar | 512 |  | √ | ' ' | 处理意见 |
 | 7 | fdisposalertime | 处理时间 | timestamp | 0 |  |  | null | 处理时间 |
 | 8 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |

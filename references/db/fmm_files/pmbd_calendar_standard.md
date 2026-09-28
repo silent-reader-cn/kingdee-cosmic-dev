@@ -10,13 +10,13 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 3 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 3 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | fmondayradio | 周一工作类型 | varchar | 5 |  | √ | ' ' | 周一工作类型,枚举: |
 | 5 | faudittime | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
 | 6 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 7 | fstatus | 数据状态 | varchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 10 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 11 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
@@ -25,9 +25,9 @@
 | 14 | fhourday | 小时/天 | numeric | 23 | 10 | √ | 0 | 小时/天 |
 | 15 | fexpirstartdate | 日期范围.开始 | timestamp | 0 |  |  | null | 日期范围.开始 |
 | 16 | fhourmonth | 小时/月 | numeric | 23 | 10 | √ | 0 | 小时/月 |
-| 17 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 17 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 18 | fname | 项目日历名称 | varchar | 50 |  | √ | ' ' | 项目日历名称 |
-| 19 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 19 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 20 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 21 | ftuesdayradio | 周二工作类型 | varchar | 5 |  | √ | ' ' | 周二工作类型,枚举: 1 :半天工作日 2 :全天工作日 3 :固定休息日 |
 | 22 | fhourweekend | 小时/周 | numeric | 23 | 10 | √ | 0 | 小时/周 |
@@ -40,7 +40,7 @@
 | 29 | fthursdayradio | 周四工作类型 | varchar | 5 |  | √ | ' ' | 周四工作类型,枚举: 1 :半天工作日 2 :全天工作日 3 :固定休息日 |
 | 30 | fwednesdayradio | 周三工作类型 | varchar | 5 |  | √ | ' ' | 周三工作类型,枚举: 1 :半天工作日 2 :全天工作日 3 :固定休息日 |
 | 31 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
-| 32 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 32 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 33 | fhouryear | 小时/年 | numeric | 23 | 10 | √ | 0 | 小时/年 |
 
 ### 列规则定义

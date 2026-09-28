@@ -11,8 +11,8 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | ftime | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
-| 3 | frisknumber | 风险编号 | int8 | 64 |  | √ | 0 | 风险设置 tctrc_risk_definition |
-| 4 | fuser | 收藏用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | frisknumber | 风险编号 | int8 | 64 |  | √ | 0 | [风险设置 tctrc_risk_definition](../tctrc_files/tctrc_risk_definition.md) |
+| 4 | fuser | 收藏用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | friskname | 风险名称 | varchar | 100 |  | √ | ' ' | 风险名称 |
 | 6 | fcollectexplain | 收藏说明 | varchar | 510 |  | √ | ' ' | 收藏说明 |
 

@@ -10,23 +10,23 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 3 | fgroupid | 模式凭证类别 | int8 | 64 |  | √ | 0 | 模式凭证类别 gl_templatevouchergroup |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 3 | fgroupid | 模式凭证类别 | int8 | 64 |  | √ | 0 | [模式凭证类别 gl_templatevouchergroup](../gl_files/gl_templatevouchergroup.md) |
 | 4 | fname | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 6 | forgid | 核算组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | forgid | 核算组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fauditdate | fauditdate | timestamp | 0 |  |  | null |  |
 | 8 | fdescription | 备注 | varchar | 255 |  |  | ' ' | 备注 |
-| 9 | fbookstypeid | 账簿类型 | int8 | 64 |  | √ | 0 | 账簿类型 bd_accountbookstype |
-| 10 | fbookid | 账簿 | int8 | 64 |  | √ | 0 | 账簿 gl_accountbook |
+| 9 | fbookstypeid | 账簿类型 | int8 | 64 |  | √ | 0 | [账簿类型 bd_accountbookstype](../fibd_files/bd_accountbookstype.md) |
+| 10 | fbookid | 账簿 | int8 | 64 |  | √ | 0 | [账簿 gl_accountbook](../gl_files/gl_accountbook.md) |
 | 11 | fexratedataid | fexratedataid | int8 | 64 |  | √ | 0 |  |
 | 12 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 13 | ftypeid | 凭证字 | int8 | 64 |  | √ | 0 | 凭证字 gl_vouchertype |
+| 13 | ftypeid | 凭证字 | int8 | 64 |  | √ | 0 | [凭证字 gl_vouchertype](../gl_files/gl_vouchertype.md) |
 | 14 | fstatus | 数据状态 | bpchar | 1 |  | √ | '0' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 15 | fattachments | 附件数 | int8 | 64 |  | √ | 0 | 附件数 |
-| 16 | fcreatorid | 制单 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 16 | fcreatorid | 制单 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 17 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 18 | floccurrency | 组织本位币 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 18 | floccurrency | 组织本位币 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 | 19 | fbizdate | 业务日期 | timestamp | 0 |  |  | null | 业务日期 |
 | 20 | fenable | 使用状态 | bpchar | 1 |  | √ | '0' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 21 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
@@ -89,32 +89,34 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | foriginalcredit | 原币贷方 | numeric | 19 | 6 | √ | 0.000000 | 原币贷方 |
 | 3 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 4 | foriginalamount | 原币金额 | numeric | 19 | 6 | √ | 0.000000 | 原币金额 |
-| 5 | fmaincfamount | 主表项目金额 | numeric | 19 | 6 | √ | 0.000000 | 主表项目金额 |
-| 6 | fmaincfassgrpid | 主表核算维度 | int8 | 64 |  | √ | 0 | null 002 |
-| 7 | fprice | 单价 | numeric | 23 | 10 | √ | 0.0000000000 | 单价 |
-| 8 | fentrydc | 分录方向 | varchar | 2 |  | √ | '0' | 分录方向,枚举: 1 :借 -1 :贷 |
-| 9 | freportingdebit | 报告币借方 | numeric | 19 | 6 | √ | 0.000000 | 报告币借方 |
-| 10 | flocaldebit | 借方 | numeric | 19 | 6 | √ | 0.000000 | 借方 |
-| 11 | flocalcredit | 贷方 | numeric | 19 | 6 | √ | 0.000000 | 贷方 |
-| 12 | freportingamount | 报告币金额 | numeric | 19 | 6 | √ | 0.000000 | 报告币金额 |
-| 13 | fquantity | 数量 | numeric | 23 | 10 | √ | 0.0000000000 | 数量 |
-| 14 | fsuppcfamount | 附表项目金额 | numeric | 19 | 6 | √ | 0.000000 | 附表项目金额 |
-| 15 | fdebitlocalcomb | 借方 | bpchar | 1 |  | √ | '1' | 借方,枚举: 0 :金额 1 :税额 2 :价税合计 |
-| 16 | flocalamount | 本位币金额 | numeric | 19 | 6 | √ | 0.000000 | 本位币金额 |
-| 17 | fassgrpid | 核算维度 | int8 | 64 |  | √ | 0 | null 002 |
-| 18 | fmaincfitemid | 主表项目 | int8 | 64 |  | √ | 0 | 现金流量项目 gl_cashflowitem |
-| 19 | freportexchangerate | 报告币汇率 | numeric | 23 | 10 | √ | 0.0000000000 | 报告币汇率 |
-| 20 | freportingcredit | 报告币贷方 | numeric | 19 | 6 | √ | 0.000000 | 报告币贷方 |
-| 21 | fdescription | 摘要 | varchar | 255 |  | √ | ' ' | 摘要 |
-| 22 | flocalexchangerate | 汇率 | numeric | 23 | 10 | √ | 0.0000000000 | 汇率 |
-| 23 | fsuppcfitemid | 附表项目 | int8 | 64 |  | √ | 0 | 现金流量项目 gl_cashflowitem |
-| 24 | fcreditlocalcomb | 贷方 | bpchar | 1 |  | √ | '1' | 贷方,枚举: 0 :金额 1 :税额 2 :价税合计 |
-| 25 | fmeasureunitid | 计量单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 26 | foriginaldebit | 原币借方 | numeric | 19 | 6 | √ | 0.000000 | 原币借方 |
-| 27 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 28 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
-| 29 | faccountid | 科目 | int8 | 64 |  | √ | 0 | 会计科目 bd_accountview |
+| 4 | fdiffitemid | 差异项目 | int8 | 64 |  | √ | 0 | [差异项目 gl_diffitem](../gl_files/gl_diffitem.md) |
+| 5 | foriginalamount | 原币金额 | numeric | 19 | 6 | √ | 0.000000 | 原币金额 |
+| 6 | fmaincfamount | 主表项目金额 | numeric | 19 | 6 | √ | 0.000000 | 主表项目金额 |
+| 7 | fmaincfassgrpid | 主表核算维度 | int8 | 64 |  | √ | 0 | null 002 |
+| 8 | fprice | 单价 | numeric | 23 | 10 | √ | 0.0000000000 | 单价 |
+| 9 | fentrydc | 分录方向 | varchar | 2 |  | √ | '0' | 分录方向,枚举: 1 :借 -1 :贷 |
+| 10 | fdiffitemamt | 差异金额 | numeric | 23 | 10 | √ | 0 | 差异金额 |
+| 11 | freportingdebit | 报告币借方 | numeric | 19 | 6 | √ | 0.000000 | 报告币借方 |
+| 12 | flocaldebit | 借方 | numeric | 19 | 6 | √ | 0.000000 | 借方 |
+| 13 | flocalcredit | 贷方 | numeric | 19 | 6 | √ | 0.000000 | 贷方 |
+| 14 | freportingamount | 报告币金额 | numeric | 19 | 6 | √ | 0.000000 | 报告币金额 |
+| 15 | fquantity | 数量 | numeric | 23 | 10 | √ | 0.0000000000 | 数量 |
+| 16 | fsuppcfamount | 附表项目金额 | numeric | 19 | 6 | √ | 0.000000 | 附表项目金额 |
+| 17 | fdebitlocalcomb | 借方 | bpchar | 1 |  | √ | '1' | 借方,枚举: 0 :金额 1 :税额 2 :价税合计 |
+| 18 | flocalamount | 本位币金额 | numeric | 19 | 6 | √ | 0.000000 | 本位币金额 |
+| 19 | fassgrpid | 核算维度 | int8 | 64 |  | √ | 0 | null 002 |
+| 20 | fmaincfitemid | 主表项目 | int8 | 64 |  | √ | 0 | [现金流量项目 gl_cashflowitem](../gl_files/gl_cashflowitem.md) |
+| 21 | freportexchangerate | 报告币汇率 | numeric | 23 | 10 | √ | 0.0000000000 | 报告币汇率 |
+| 22 | freportingcredit | 报告币贷方 | numeric | 19 | 6 | √ | 0.000000 | 报告币贷方 |
+| 23 | fdescription | 摘要 | varchar | 1020 |  | √ | ' ' | 摘要 |
+| 24 | flocalexchangerate | 汇率 | numeric | 23 | 10 | √ | 0.0000000000 | 汇率 |
+| 25 | fsuppcfitemid | 附表项目 | int8 | 64 |  | √ | 0 | [现金流量项目 gl_cashflowitem](../gl_files/gl_cashflowitem.md) |
+| 26 | fcreditlocalcomb | 贷方 | bpchar | 1 |  | √ | '1' | 贷方,枚举: 0 :金额 1 :税额 2 :价税合计 |
+| 27 | fmeasureunitid | 计量单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 28 | foriginaldebit | 原币借方 | numeric | 19 | 6 | √ | 0.000000 | 原币借方 |
+| 29 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 30 | fcurrencyid | 币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
+| 31 | faccountid | 科目 | int8 | 64 |  | √ | 0 | 会计科目 bd_accountview |
 
 ### 列规则定义
 

@@ -62,7 +62,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | varchar | 36 |  | √ | ' ' |  |
-| 2 | fname | 方案名称 | varchar | 100 |  | √ | ' ' | 方案名称 |
+| 2 | fname | 方案名称 | varchar | 300 |  | √ | ' ' | 方案名称 |
 | 3 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
 | 4 | fdata | fdata | text | 0 |  |  | null |  |
 | 5 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |

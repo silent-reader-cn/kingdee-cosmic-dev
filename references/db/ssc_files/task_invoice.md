@@ -12,13 +12,13 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | ftaxexcluded | 不含税单价 | numeric | 19 | 6 | √ | 0.000000 | 不含税单价 |
 | 3 | ftaxrate | 税率 | numeric | 19 | 6 | √ | 0.000000 | 税率 |
-| 4 | fmaterialid | 物料 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 4 | fmaterialid | 物料 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 5 | fspecs | 规格型号 | varchar | 255 |  |  | null | 规格型号 |
 | 6 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 7 | ftaxprice | 含税单价 | numeric | 19 | 6 | √ | 0.000000 | 含税单价 |
 | 8 | fmoney | 金额 | numeric | 19 | 6 | √ | 0.000000 | 金额 |
 | 9 | ftaxtotal | 价税合计 | numeric | 19 | 6 | √ | 0.000000 | 价税合计 |
-| 10 | fmeasureunitid | 计量单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 10 | fmeasureunitid | 计量单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 11 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 12 | fquantity | 数量 | numeric | 19 | 6 | √ | 0.000000 | 数量 |
 | 13 | fproductname | 商品名称 | varchar | 255 |  |  | null | 商品名称 |
@@ -60,7 +60,7 @@
 | 10 | ftemplatetype | 模板类型 | varchar | 100 |  | √ | ' ' | 模板类型 |
 | 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 12 | ftransferout | 进项转出 | numeric | 19 | 6 | √ | 0.000000 | 进项转出 |
-| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | fcompanysale | 销方公司 | varchar | 255 |  |  | null | 销方公司 |
 | 15 | fbankinformationbuy | 购方银行名称/账号 | varchar | 255 |  |  | null | 购方银行名称/账号 |
 | 16 | finvoicenumber | 发票号码 | varchar | 100 |  | √ | ' ' | 发票号码 |
@@ -69,10 +69,10 @@
 | 19 | ftaxnumberbuy | 购方公司税号 | varchar | 30 |  | √ | ' ' | 购方公司税号 |
 | 20 | finvoicecode | 发票代码 | varchar | 100 |  | √ | ' ' | 发票代码 |
 | 21 | fbillstatu | fbillstatu | varchar | 30 |  | √ | ' ' |  |
-| 22 | fauthenticatorid | 认证人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 22 | fauthenticatorid | 认证人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 23 | fbillno | 单据编号 | varchar | 30 |  | √ | ' ' | 单据编号 |
 | 24 | fremark | 备注 | varchar | 255 |  |  | null | 备注 |
-| 25 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 25 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 26 | fvoucherid | 凭证 | int8 | 64 |  | √ | 0 | 凭证 |
 | 27 | fbillstatus | 单据状态 | varchar | 30 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 28 | fauthenticateway | 认证方式 | varchar | 100 |  | √ | ' ' | 认证方式 |
@@ -91,8 +91,8 @@
 | 41 | fdeductible | 可抵税额 | numeric | 19 | 6 | √ | 0.000000 | 可抵税额 |
 | 42 | ftaxnumbersale | 销方公司税号 | varchar | 30 |  | √ | ' ' | 销方公司税号 |
 | 43 | famounttax | 价税合计 | numeric | 19 | 6 | √ | 0.000000 | 价税合计 |
-| 44 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 45 | fbilltypeid | 业务单据 | int8 | 64 |  | √ | 0 | 业务单据 task_taskbill |
+| 44 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 45 | fbilltypeid | 业务单据 | int8 | 64 |  | √ | 0 | [业务单据 task_taskbill](../ssc_files/task_taskbill.md) |
 | 46 | ftemplatetpye | ftemplatetpye | varchar | 255 |  |  | null |  |
 
 ### 列规则定义

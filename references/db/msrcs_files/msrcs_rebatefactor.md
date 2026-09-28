@@ -1,4 +1,4 @@
-# 返利计算因子库-msrcs_rebatefactor
+# 返利计算指标-msrcs_rebatefactor
 
 ## 指定维度分录-子表 t_msrcs_rebatefactorde
 
@@ -32,9 +32,9 @@
 
 ---
 
-## 返利计算因子库-主表 t_msrcs_rebatefactor
+## 返利计算指标-主表 t_msrcs_rebatefactor
 
-- **表名称：** 返利计算因子库-主表
+- **表名称：** 返利计算指标-主表
 - **表名：** t_msrcs_rebatefactor
 
 ### 表格列定义
@@ -43,23 +43,24 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
-| 3 | fstatisticmethod | 统计方式 | bpchar | 1 |  | √ | 'A' | 统计方式,枚举: A :合计 |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fstatisticmethod | 函数 | bpchar | 1 |  | √ | 'A' | 函数,枚举: A :合计 |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fcomment | 说明 | varchar | 255 |  | √ | ' ' | 说明 |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 7 | fstatisticdimension | 统计维度 | varchar | 255 |  | √ | ' ' | 统计维度,枚举: |
-| 8 | fispreset | 系统预设 | bpchar | 1 |  | √ | '0' | 系统预设 |
-| 9 | ffieldkey | 字段标识 | varchar | 80 |  | √ | ' ' | 字段标识 |
-| 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 11 | fstatus | 数据状态 | bpchar | 1 |  | √ | 'C' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 12 | fformuladesc | 计算公式 | varchar | 255 |  | √ | ' ' | 计算公式 |
-| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 14 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 15 | fcustomplugin | 自定义插件 | varchar | 255 |  | √ | ' ' | 自定义插件 |
-| 16 | fsourcemodel | 来源计算模型 | varchar | 80 |  | √ | ' ' | 主实体对象 bos_entityobject |
-| 17 | fformula | 计算公式 | varchar | 2000 |  | √ | ' ' | 计算公式 |
-| 18 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 19 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
+| 8 | fdatasourceid | 数据源 | int8 | 64 |  | √ | 0 | [返利计算数据源 msrcs_rebatesource](../msrcs_files/msrcs_rebatesource.md) |
+| 9 | fispreset | 系统预设 | bpchar | 1 |  | √ | '0' | 系统预设 |
+| 10 | ffieldkey | 字段标识 | varchar | 80 |  | √ | ' ' | 字段标识 |
+| 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 12 | fstatus | 数据状态 | bpchar | 1 |  | √ | 'C' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
+| 13 | fformuladesc | 计算公式说明 | varchar | 255 |  | √ | ' ' | 计算公式说明 |
+| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 15 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
+| 16 | fcustomplugin | 自定义插件 | varchar | 255 |  | √ | ' ' | 自定义插件 |
+| 17 | fsourcemodel | 来源计算模型 | varchar | 80 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
+| 18 | fformula | 计算公式 | varchar | 2000 |  | √ | ' ' | 计算公式 |
+| 19 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 20 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
 
 ### 列规则定义
 
@@ -76,9 +77,9 @@
 
 ---
 
-## 返利计算因子库-多语言表 t_msrcs_rebatefactor_l
+## 返利计算指标-多语言表 t_msrcs_rebatefactor_l
 
-- **表名称：** 返利计算因子库-多语言表
+- **表名称：** 返利计算指标-多语言表
 - **表名：** t_msrcs_rebatefactor_l
 
 ### 表格列定义

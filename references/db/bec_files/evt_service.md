@@ -39,16 +39,16 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fname | 服务名称 | varchar | 100 |  | √ | ' ' | 服务名称 |
-| 3 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fname | 服务名称 | varchar | 300 |  | √ | ' ' | 服务名称 |
+| 3 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | finnerservice | 内置服务 | bpchar | 1 |  | √ | '0' | 内置服务 |
 | 5 | fstatus | 服务启用 | bpchar | 1 |  | √ | '1' | 服务启用,枚举: 0 :禁用 1 :启用 |
 | 6 | fcreatedate | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 7 | ftype | 实现类型 | varchar | 30 |  | √ | ' ' | 实现类型,枚举: java :java服务 script :脚本服务 http :HTTP服务 |
-| 8 | fconfig | 服务配置页面 | varchar | 36 |  | √ | ' ' | 表单元数据 bos_formmeta |
-| 9 | fapp | 所属应用 | varchar | 36 |  | √ | ' ' | 业务应用实体 bos_devportal_bizapp |
+| 8 | fconfig | 服务配置页面 | varchar | 36 |  | √ | ' ' | [表单元数据 bos_formmeta](../mdl_files/bos_formmeta.md) |
+| 9 | fapp | 所属应用 | varchar | 36 |  | √ | ' ' | [业务应用实体 bos_devportal_bizapp](../mdl_files/bos_devportal_bizapp.md) |
 | 10 | fmodifydate | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 11 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fscene | 服务应用场景 | varchar | 100 |  | √ | ' ' | 服务应用场景 |
 | 13 | fimplementation | 服务实现 | varchar | 400 |  | √ | ' ' | 服务实现 |
 | 14 | fnumber | 服务编码 | varchar | 500 |  | √ | ' ' | 服务编码 |

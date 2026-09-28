@@ -92,12 +92,12 @@
 | 21 | fdebitamount | 付款金额 | numeric | 19 | 6 | √ | 0.000000 | 付款金额 |
 | 22 | fbankname | 付方开户银行名称 | varchar | 100 |  | √ | ' ' | 付方开户银行名称 |
 | 23 | fport | 服务器开放端口 | int8 | 64 |  | √ | 0 | 服务器开放端口 |
-| 24 | fdatasource | 数据来源 | varchar | 30 |  | √ | ' ' | 数据来源,枚举: frombank :银企接口 import :模板引入 modify :系统修复 image :图片引入 fromifm :结算中心 cbs :招行CBS |
+| 24 | fdatasource | 数据来源 | varchar | 30 |  | √ | ' ' | 数据来源,枚举: frombank :银企接口 import :模板引入 modify :系统修复 image :图片引入 fromifm :结算中心 cbs :招行CBS nb :宁波银行财资大管家 |
 | 25 | ffileflag | 是否文件 | bpchar | 1 |  | √ | '0' | 是否文件 |
-| 26 | fbankid | 开户银行 | int8 | 64 |  | √ | 0 | 金融机构 bd_finorginfo |
+| 26 | fbankid | 开户银行 | int8 | 64 |  | √ | 0 | [金融机构 bd_finorginfo](../basedata_files/bd_finorginfo.md) |
 | 27 | ftransdetailid | 银行交易明细id | int8 | 64 |  | √ | 0 | 银行交易明细id |
-| 28 | faccountbankid | 银行账户 | int8 | 64 |  | √ | 0 | 银行账户 bd_accountbanks |
-| 29 | fcompanyid | 收付组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 28 | faccountbankid | 银行账户 | int8 | 64 |  | √ | 0 | [银行账户 bd_accountbanks](../basedata_files/bd_accountbanks.md) |
+| 29 | fcompanyid | 收付组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 30 | fhost | 服务器主机地址 | varchar | 100 |  | √ | ' ' | 服务器主机地址 |
 | 31 | fcompleteflag | 是否完成标识 | bpchar | 1 |  | √ | '0' | 是否完成标识 |
 | 32 | foppbank | 对方开户银行 | varchar | 255 |  | √ | ' ' | 对方开户银行 |
@@ -105,22 +105,24 @@
 | 34 | fpassword | 服务器认证密码 | varchar | 100 |  | √ | ' ' | 服务器认证密码 |
 | 35 | fbizrefno | 业务参考号 | varchar | 100 |  | √ | ' ' | 业务参考号 |
 | 36 | faccno | 付方账号 | varchar | 80 |  | √ | ' ' | 付方账号 |
-| 37 | fuse | 用途 | varchar | 255 |  | √ | ' ' | 用途 |
-| 38 | fusername | 服务器认证用户名 | varchar | 100 |  | √ | ' ' | 服务器认证用户名 |
-| 39 | fbiztype | 业务类型 | varchar | 30 |  | √ | ' ' | 业务类型,枚举: 1 :普通 2 :上划 3 :下拨 |
-| 40 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 41 | ftranstellno | 记账柜员 | varchar | 100 |  | √ | ' ' | 记账柜员 |
-| 42 | fvalidcode | 验证码 | varchar | 100 |  | √ | ' ' | 验证码 |
-| 43 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 44 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 45 | ffinancialtypeid | ffinancialtypeid | int8 | 64 |  | √ | 0 |  |
-| 46 | faccname | 付款人名称 | varchar | 100 |  | √ | ' ' | 付款人名称 |
-| 47 | foppbankname | 对方银行账号名称 | varchar | 100 |  | √ | ' ' | 对方银行账号名称 |
-| 48 | fprintcount | 打印次数 | int8 | 64 |  | √ | 0 | 打印次数 |
-| 49 | fbizdate | 交易日期 | timestamp | 0 |  |  | null | 交易日期 |
-| 50 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
-| 51 | fdetaildatetime | 明细交易时间 | timestamp | 0 |  |  | null | 明细交易时间 |
-| 52 | ffilepath | 回单路径文件名 | varchar | 500 |  | √ | ' ' | 回单路径文件名 |
+| 37 | fisextracted | 是否已抽取 | bpchar | 1 |  | √ | '0' | 是否已抽取 |
+| 38 | fuse | 用途 | varchar | 255 |  | √ | ' ' | 用途 |
+| 39 | fusername | 服务器认证用户名 | varchar | 100 |  | √ | ' ' | 服务器认证用户名 |
+| 40 | fbiztype | 业务类型 | varchar | 30 |  | √ | ' ' | 业务类型,枚举: 1 :普通 2 :上划 3 :下拨 |
+| 41 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 42 | fisarchive | 是否归档 | bpchar | 1 |  | √ | '0' | 是否归档 |
+| 43 | ftranstellno | 记账柜员 | varchar | 100 |  | √ | ' ' | 记账柜员 |
+| 44 | fvalidcode | 验证码 | varchar | 100 |  | √ | ' ' | 验证码 |
+| 45 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 46 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 47 | ffinancialtypeid | ffinancialtypeid | int8 | 64 |  | √ | 0 |  |
+| 48 | faccname | 付款人名称 | varchar | 100 |  | √ | ' ' | 付款人名称 |
+| 49 | foppbankname | 对方银行账号名称 | varchar | 255 |  |  | ' ' | 对方银行账号名称 |
+| 50 | fprintcount | 打印次数 | int8 | 64 |  | √ | 0 | 打印次数 |
+| 51 | fbizdate | 交易日期 | timestamp | 0 |  |  | null | 交易日期 |
+| 52 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
+| 53 | fdetaildatetime | 明细交易时间 | timestamp | 0 |  |  | null | 明细交易时间 |
+| 54 | ffilepath | 回单路径文件名 | varchar | 500 |  | √ | ' ' | 回单路径文件名 |
 
 ### 列规则定义
 

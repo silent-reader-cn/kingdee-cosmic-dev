@@ -11,10 +11,10 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fstatus | 完成状态 | varchar | 10 |  | √ | '1' | 完成状态,枚举: 0 :未开始 1 :已完成 |
-| 3 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 4 | fguiderefid | 指引关联 | int8 | 64 |  | √ | 0 | 指引步骤关联页面/表单 xkguide_ref |
+| 3 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 4 | fguiderefid | 指引关联 | int8 | 64 |  | √ | 0 | [指引步骤关联页面/表单 xkguide_ref](../xkbase_files/xkguide_ref.md) |
 | 5 | fcreatetime | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
-| 6 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 
 ### 列规则定义
 

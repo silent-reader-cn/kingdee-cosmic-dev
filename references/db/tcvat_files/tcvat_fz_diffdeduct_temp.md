@@ -14,7 +14,7 @@
 | 3 | fdifftypeid | 差额扣除类型 | int8 | 64 |  | √ | 0 | 业务定义分录 tpo_tcvat_bizdef_entity |
 | 4 | fserialno | 流水号 | varchar | 50 |  | √ | ' ' | 流水号 |
 | 5 | fstartdate | 开始日期 | timestamp | 0 |  |  | null | 开始日期 |
-| 6 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fdeadline | 缴纳期限 | varchar | 30 |  | √ | ' ' | 缴纳期限,枚举: aysb :按月申报 ajsb :按季申报 |
 | 8 | fproject | 项目 | varchar | 50 |  | √ | ' ' | 项目 |
 | 9 | frowno | 行号 | varchar | 50 |  | √ | ' ' | 行号 |

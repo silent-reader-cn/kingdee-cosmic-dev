@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreator | 用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fcreator | 用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | freduceamount | 本单占用额度 | numeric | 23 | 10 | √ | 0 | 本单占用额度 |
 | 4 | farchiveid | 信用档案ID | int8 | 64 |  | √ | 0 | 信用档案ID |
 | 5 | fcreatetime | 操作日期 | timestamp | 0 |  |  | null | 操作日期 |

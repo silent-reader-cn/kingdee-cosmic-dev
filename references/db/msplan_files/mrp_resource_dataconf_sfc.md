@@ -10,21 +10,21 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcgnumber | 资源注册配置编码 | int8 | 64 |  | √ | 0 | 资源注册模型 mrp_resourceregister_cf |
+| 2 | fcgnumber | 资源注册配置编码 | int8 | 64 |  | √ | 0 | [资源注册模型 mrp_resourceregister_cf](../msplan_files/mrp_resourceregister_cf.md) |
 | 3 | fcreateorgid | fcreateorgid | int8 | 64 |  | √ | 0 |  |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 7 | fauditdate | fauditdate | timestamp | 0 |  |  | null |  |
 | 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 9 | fissystemdesign | 系统预设 | bpchar | 1 |  | √ | '0' | 系统预设 |
 | 10 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | ftype | ftype | varchar | 30 |  | √ | ' ' |  |
 | 13 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 14 | flargetextfield_tag | 目标实体条件存储_详情 | text | 0 |  |  | null | 目标实体条件存储_详情 |
 | 15 | fsourcetype | 应用来源 | varchar | 10 |  | √ | 'mrp' | 应用来源 |
-| 16 | fbillfieldtransferid | 实体字段映射 | int8 | 64 |  | √ | 0 | 实体字段映射 mrp_billfieldtransfer |
+| 16 | fbillfieldtransferid | 实体字段映射 | int8 | 64 |  | √ | 0 | [实体字段映射 mrp_billfieldtransfer](../msplan_files/mrp_billfieldtransfer.md) |
 | 17 | fsourcedataid | fsourcedataid | int8 | 64 |  | √ | 0 |  |
 | 18 | fbitindex | fbitindex | int8 | 64 |  | √ | 0 |  |
 | 19 | fenable | 使用状态 | varchar | 30 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
@@ -58,7 +58,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fname | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
+| 2 | fname | 名称 | varchar | 160 |  | √ | ' ' | 名称 |
 | 3 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
 | 4 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
 

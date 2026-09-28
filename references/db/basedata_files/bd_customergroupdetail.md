@@ -10,10 +10,10 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreateorgid | 分类创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 3 | fstandardid | 分类标准 | int8 | 64 |  | √ | 0 | 客户分类标准 bd_customergroupstandard |
-| 4 | fgroupid | 分类 | int8 | 64 |  | √ | 0 | 客户分类 bd_customergroup |
-| 5 | fcustomerid | 客户 | int8 | 64 |  | √ | 0 | 客户 bd_customer |
+| 2 | fcreateorgid | 分类创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 3 | fstandardid | 分类标准 | int8 | 64 |  | √ | 0 | [客户分类标准 bd_customergroupstandard](../basedata_files/bd_customergroupstandard.md) |
+| 4 | fgroupid | 分类 | int8 | 64 |  | √ | 0 | [客户分类 bd_customergroup](../basedata_files/bd_customergroup.md) |
+| 5 | fcustomerid | 客户 | int8 | 64 |  | √ | 0 | [客户 bd_customer](../basedata_files/bd_customer.md) |
 
 ### 列规则定义
 

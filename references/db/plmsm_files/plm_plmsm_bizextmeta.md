@@ -10,9 +10,9 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fpdextmetadataid | 扩展模型单据 | varchar | 36 |  | √ | ' ' | 表单元数据 bos_formmeta |
+| 2 | fpdextmetadataid | 扩展模型单据 | varchar | 36 |  | √ | ' ' | [表单元数据 bos_formmeta](../mdl_files/bos_formmeta.md) |
 | 3 | fkey | 源对象键值 | varchar | 50 |  | √ | ' ' | 源对象键值 |
-| 4 | fcfgextmetadataid | 配置模型单据 | varchar | 36 |  | √ | ' ' | 表单元数据 bos_formmeta |
+| 4 | fcfgextmetadataid | 配置模型单据 | varchar | 36 |  | √ | ' ' | [表单元数据 bos_formmeta](../mdl_files/bos_formmeta.md) |
 
 ### 列规则定义
 

@@ -14,7 +14,7 @@
 | 3 | fhas_gendiff | 是否已生成差异 | bpchar | 1 |  | √ | '0' | 是否已生成差异 |
 | 4 | fbusi_type | 业务类型 | varchar | 100 |  | √ | ' ' | 业务类型 |
 | 5 | fop | 操作标识 | varchar | 100 |  | √ | ' ' | 操作标识 |
-| 6 | fcloud_id | 云 | varchar | 36 |  | √ | ' ' | 业务云 bos_devportal_bizcloud |
+| 6 | fcloud_id | 云 | varchar | 36 |  | √ | ' ' | [业务云 bos_devportal_bizcloud](../mdl_files/bos_devportal_bizcloud.md) |
 | 7 | foper_name | 操作用户名称 | varchar | 50 |  | √ | ' ' | 操作用户名称 |
 | 8 | ffrom_backup | 是否归档还原而来 | bpchar | 1 |  | √ | '0' | 是否归档还原而来 |
 | 9 | fperm_item_name | 权限项名 | varchar | 50 |  | √ | ' ' | 权限项名 |
@@ -32,8 +32,8 @@
 | 21 | foper_org_name | 操作组织名 | varchar | 50 |  | √ | ' ' | 操作组织名 |
 | 22 | fclient_type | 客户端类型 | varchar | 300 |  | √ | ' ' | 客户端类型,枚举: web :PC端 mobile :移动端 api :接口 |
 | 23 | fcloud_name | 云名称 | varchar | 100 |  | √ | ' ' | 云名称 |
-| 24 | foper_id | 操作用户ID | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 25 | foper_org_id | 操作组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 24 | foper_id | 操作用户ID | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 25 | foper_org_id | 操作组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 26 | fopbtn | 操作按钮名称 | varchar | 100 |  | √ | ' ' | 操作按钮名称 |
 | 27 | fop_item_number | 操作项编码 | varchar | 100 |  | √ | ' ' | 操作项编码 |
 | 28 | fperm_item_id | 权限项ID | varchar | 36 |  | √ | ' ' | 权限项ID |
@@ -46,7 +46,7 @@
 | 35 | foper_time | 操作时间 | timestamp | 0 |  |  | null | 操作时间 |
 | 36 | fnumber | 操作编码 | varchar | 50 |  | √ | ' ' | 操作编码 |
 | 37 | fpre_data | 操作前数据 | text | 0 |  |  | null | 操作前数据 |
-| 38 | fapp_id | 应用 | varchar | 36 |  | √ | ' ' | 业务应用实体 bos_devportal_bizapp |
+| 38 | fapp_id | 应用 | varchar | 36 |  | √ | ' ' | [业务应用实体 bos_devportal_bizapp](../mdl_files/bos_devportal_bizapp.md) |
 
 ### 列规则定义
 

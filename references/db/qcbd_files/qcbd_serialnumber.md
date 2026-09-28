@@ -49,7 +49,7 @@
 | 10 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 11 | fusedinspectid | 序列号被使用检验单（不良品单）对象ID | int8 | 64 |  | √ | 0 | 序列号被使用检验单（不良品单）对象ID |
 | 12 | fenable | 使用状态 | varchar | 30 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 13 | fmaterial | 物料 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 13 | fmaterial | 物料 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 14 | fnumber | 序列号显示 | varchar | 100 |  | √ | ' ' | 序列号显示 |
 | 15 | fsnnumber | 序列号 | varchar | 100 |  | √ | ' ' | 序列号 |
 | 16 | fsrcbilltype | 来源单据类型 | varchar | 100 |  | √ | ' ' | 来源单据类型 |

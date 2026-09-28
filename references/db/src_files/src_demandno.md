@@ -12,7 +12,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fdecidelink | fdecidelink | varchar | 100 |  | √ | ' ' |  |
 | 3 | fdecstatus | 关联采委会状态 | bpchar | 1 |  | √ | ' ' | 关联采委会状态,枚举: A :未上报 B :已上报 C :已关联 |
-| 4 | fdecisionid | 采委会决策单号 | int8 | 64 |  | √ | 0 | 采委会决策单号 src_decisionbillnotwo |
+| 4 | fdecisionid | 采委会决策单号 | int8 | 64 |  | √ | 0 | [采委会决策单号 src_decisionbillnotwo](../src_files/src_decisionbillnotwo.md) |
 | 5 | fistemppush | fistemppush | bpchar | 1 |  | √ | '0' |  |
 | 6 | fdecidenumber | 会议决策单号 | varchar | 50 |  | √ | ' ' | 会议决策单号 |
 | 7 | fresultstatus | fresultstatus | bpchar | 1 |  | √ | ' ' |  |
@@ -74,7 +74,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -88,8 +88,8 @@
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
 | 1 | idx_src_demandpurorg_fid |  | fid |
-| 2 | pk_src_demandpurorg |  | fpkid |
-| 3 | idx_src_demandpurorg_bid |  | fbasedataid |
+| 2 | idx_src_demandpurorg_bid |  | fbasedataid |
+| 3 | pk_src_demandpurorg |  | fpkid |
 
 ---
 
@@ -120,13 +120,13 @@
 | 16 | fbillno | fbillno | varchar | 100 |  | √ | ' ' |  |
 | 17 | fwinrule | fwinrule | int8 | 64 |  | √ | 0 |  |
 | 18 | fisfunction | fisfunction | bpchar | 1 |  | √ | '0' |  |
-| 19 | fprojectid | 寻源项目ID | int8 | 64 |  | √ | 0 | 招标项目F7 src_projectf7 |
+| 19 | fprojectid | 寻源项目ID | int8 | 64 |  | √ | 0 | [招标项目F7 src_projectf7](../src_files/src_projectf7.md) |
 | 20 | fbillstatus | fbillstatus | bpchar | 1 |  | √ | ' ' |  |
 | 21 | fbillno2 | fbillno2 | varchar | 50 |  | √ | ' ' |  |
 | 22 | fwinerqty | fwinerqty | int8 | 64 |  | √ | 0 |  |
 | 23 | fauditdate | fauditdate | timestamp | 0 |  |  | null |  |
 | 24 | fscenename_des | 寻源项目名称 | varchar | 100 |  | √ | ' ' | 寻源项目名称 |
-| 25 | fpurtype | 寻源方式 | int8 | 64 |  | √ | 0 | 招标辅助资料 pds_extdata |
+| 25 | fpurtype | 寻源方式 | int8 | 64 |  | √ | 0 | [招标辅助资料 pds_extdata](../pds_files/pds_extdata.md) |
 | 26 | fruleassess | fruleassess | varchar | 30 |  | √ | ' ' |  |
 | 27 | fquerycondition | fquerycondition | varchar | 255 |  | √ | ' ' |  |
 | 28 | fscenechasisstid | fscenechasisstid | int8 | 64 |  | √ | 0 |  |
@@ -152,7 +152,7 @@
 | 48 | forigncreator | forigncreator | int8 | 64 |  | √ | 0 |  |
 | 49 | fbusinessper | fbusinessper | numeric | 23 | 10 | √ | 0 |  |
 | 50 | fisprice | fisprice | bpchar | 1 |  | √ | '0' |  |
-| 51 | fsrcflowconfig | 寻源流程 | int8 | 64 |  | √ | 0 | 流程配置 pds_flowconfig |
+| 51 | fsrcflowconfig | 寻源流程 | int8 | 64 |  | √ | 0 | [流程配置 pds_flowconfig](../pds_files/pds_flowconfig.md) |
 | 52 | fdiscardrule | fdiscardrule | varchar | 1000 |  | √ | ' ' |  |
 
 ### 列规则定义
@@ -180,7 +180,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 项目立项分录F7 src_demandf7two |
+| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [项目立项分录F7 src_demandf7two](../src_files/src_demandf7two.md) |
 | 2 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 | 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 
@@ -211,9 +211,9 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | 单据ID | int8 | 64 |  | √ | 0 | 单据ID |
 | 2 | fisproject | fisproject | bpchar | 1 |  | √ | '0' |  |
-| 3 | forgid | 采购组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | forgid | 采购组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | fplace | fplace | int8 | 64 |  | √ | 0 |  |
-| 5 | fsrctypeid | 寻源流程 | int8 | 64 |  | √ | 0 | 流程配置 pds_flowconfig |
+| 5 | fsrctypeid | 寻源流程 | int8 | 64 |  | √ | 0 | [流程配置 pds_flowconfig](../pds_files/pds_flowconfig.md) |
 | 6 | fpentitykey | 父单据标识 | varchar | 50 |  | √ | ' ' | 父单据标识 |
 | 7 | fmodifytime | fmodifytime | timestamp | 0 |  |  | null |  |
 | 8 | fsrcemotion | fsrcemotion | varchar | 30 |  | √ | ' ' |  |
@@ -242,13 +242,13 @@
 | 31 | fbilltypeid | fbilltypeid | int8 | 64 |  | √ | 0 |  |
 | 32 | fdemandaffiliateid | fdemandaffiliateid | int8 | 64 |  | √ | 0 |  |
 | 33 | famount | 预估未税金额 | numeric | 23 | 10 | √ | 0 | 预估未税金额 |
-| 34 | fpurdeptid | 采购部门 | int8 | 64 |  | √ | 0 | 采购部门 pds_purdepart |
+| 34 | fpurdeptid | 采购部门 | int8 | 64 |  | √ | 0 | [采购部门 pds_purdepart](../pds_files/pds_purdepart.md) |
 | 35 | fsurplusamount | 预估价税合计 | numeric | 23 | 10 | √ | 0 | 预估价税合计 |
-| 36 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 36 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 37 | fnotreason | fnotreason | varchar | 100 |  | √ | ' ' |  |
 | 38 | fismultiscene | fismultiscene | bpchar | 1 |  | √ | '1' |  |
-| 39 | fpurgroupid | 采购组 | int8 | 64 |  | √ | 0 | 采购业务组(封存) bd_pmoperatorgroup |
-| 40 | fbiztypeid | 业务类型 | int8 | 64 |  | √ | 0 | 业务类型 bd_biztype |
+| 39 | fpurgroupid | 采购组 | int8 | 64 |  | √ | 0 | [采购业务组(封存) bd_pmoperatorgroup](../sbd_files/bd_pmoperatorgroup.md) |
+| 40 | fbiztypeid | 业务类型 | int8 | 64 |  | √ | 0 | [业务类型 bd_biztype](../sbd_files/bd_biztype.md) |
 | 41 | fpurdecision | 会议决策 | bpchar | 1 |  | √ | ' ' | 会议决策 |
 | 42 | ftaxtype | 价格录入方式 | bpchar | 1 |  | √ | '1' | 价格录入方式,枚举: 1 :录入含税价 2 :录入未税价 3 :价内税(含税) |
 | 43 | fmodifierid | fmodifierid | int8 | 64 |  | √ | 0 |  |
@@ -266,10 +266,10 @@
 | 55 | flastupdatetime | flastupdatetime | timestamp | 0 |  |  | null |  |
 | 56 | forigncreator | forigncreator | int8 | 64 |  | √ | 0 |  |
 | 57 | fpurchasetype | 采购类型 | varchar | 30 |  | √ | ' ' | 采购类型,枚举: 0 :年采 1 :非年采 2 :混和采购 |
-| 58 | fsourcetypeid | 寻源方式 | int8 | 64 |  | √ | 0 | 招标辅助资料 pds_extdata |
+| 58 | fsourcetypeid | 寻源方式 | int8 | 64 |  | √ | 0 | [招标辅助资料 pds_extdata](../pds_files/pds_extdata.md) |
 | 59 | fsumtaxamount | fsumtaxamount | numeric | 23 | 10 | √ | 0 |  |
 | 60 | fsumtax | fsumtax | numeric | 23 | 10 | √ | 0 |  |
-| 61 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 61 | fcurrencyid | 币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 
 ### 列规则定义
 
@@ -296,7 +296,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 附件字段实体 bd_attachment |
+| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [附件字段实体 bd_attachment](../frame_files/bd_attachment.md) |
 | 2 | fpkid | fpkid | int8 | 64 |  | √ | 0 | FPKID |
 | 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 
@@ -325,7 +325,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 供应商 bd_supplier |
+| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [供应商 bd_supplier](../basedata_files/bd_supplier.md) |
 | 2 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 | 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 
@@ -355,16 +355,16 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | ftextfield1 | ftextfield1 | varchar | 50 |  | √ | ' ' |  |
-| 3 | freqorgid | 需求组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | freqorgid | 需求组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | ftaxrate | 税率(%) | numeric | 23 | 10 | √ | 0 | 税率(%) |
 | 5 | fsupplierno1 | fsupplierno1 | int8 | 64 |  | √ | 0 |  |
 | 6 | fiscontrolqty | fiscontrolqty | bpchar | 1 |  | √ | '1' |  |
 | 7 | farrivedate1 | 交货日期 | timestamp | 0 |  |  | null | 交货日期 |
-| 8 | forgid | 采购组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 8 | forgid | 采购组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 9 | fauxptyid | fauxptyid | int8 | 64 |  | √ | 0 |  |
 | 10 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 11 | fprojectno1 | fprojectno1 | varchar | 50 |  | √ | ' ' |  |
-| 12 | fentryrcvorgid | 收货组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 12 | fentryrcvorgid | 收货组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 13 | fcheckboxfield1 | fcheckboxfield1 | bpchar | 1 |  | √ | ' ' |  |
 | 14 | fk_sf_city | fk_sf_city | int8 | 64 |  | √ | 0 |  |
 | 15 | fsrctypeid | fsrctypeid | int8 | 64 |  | √ | 0 |  |
@@ -373,7 +373,7 @@
 | 18 | frfqbillno | frfqbillno | varchar | 50 |  | √ | ' ' |  |
 | 19 | fapplicationdate | fapplicationdate | timestamp | 0 |  |  | null |  |
 | 20 | freqsource11 | freqsource11 | varchar | 30 |  | √ | ' ' |  |
-| 21 | fmaterial1 | 标的编码 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 21 | fmaterial1 | 标的编码 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 22 | fbaseunitid | fbaseunitid | int8 | 64 |  | √ | 0 |  |
 | 23 | fapplicantid | fapplicantid | int8 | 64 |  | √ | 0 |  |
 | 24 | findicate1 | findicate1 | varchar | 30 |  | √ | ' ' |  |
@@ -381,53 +381,54 @@
 | 26 | fprice3 | fprice3 | numeric | 23 | 10 | √ | 0 |  |
 | 27 | fprojectid | fprojectid | int8 | 64 |  | √ | 0 |  |
 | 28 | fsrcbillid | fsrcbillid | varchar | 50 |  | √ | ' ' |  |
-| 29 | freqqty2 | freqqty2 | numeric | 23 | 10 | √ | 0 |  |
-| 30 | fminiorderqty | fminiorderqty | numeric | 23 | 10 | √ | 0 |  |
-| 31 | fmaterialname1 | fmaterialname1 | varchar | 100 |  | √ | ' ' |  |
-| 32 | ftax | ftax | numeric | 23 | 10 | √ | 0 |  |
-| 33 | fk_sf_companycode | fk_sf_companycode | int8 | 64 |  | √ | 0 |  |
-| 34 | funit2 | 计量单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 35 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 36 | freqdescribe | 备注 | varchar | 512 |  | √ | ' ' | 备注 |
-| 37 | frowtypeid | frowtypeid | int8 | 64 |  | √ | 0 |  |
-| 38 | fprice2 | fprice2 | numeric | 23 | 10 | √ | 0 |  |
-| 39 | fyearswitch | fyearswitch | bpchar | 1 |  | √ | ' ' |  |
-| 40 | fmaterialname | 标的名称 | varchar | 255 |  | √ | ' ' | 标的名称 |
-| 41 | freqorg1 | freqorg1 | int8 | 64 |  | √ | 0 |  |
-| 42 | fentryamount | 未税金额 | numeric | 23 | 10 | √ | 0 | 未税金额 |
-| 43 | fsrcentryid | fsrcentryid | varchar | 50 |  | √ | ' ' |  |
-| 44 | fsrcbillno | fsrcbillno | varchar | 50 |  | √ | ' ' |  |
-| 45 | ftaxamount2 | 价税合计 | numeric | 23 | 10 | √ | 0 | 价税合计 |
-| 46 | fcontractline | fcontractline | int8 | 64 |  | √ | 0 |  |
-| 47 | fk_sf_place | fk_sf_place | int8 | 64 |  | √ | 0 |  |
-| 48 | fspecialreason | 标的描述 | varchar | 1024 |  |  | ' ' | 标的描述 |
-| 49 | fmaterialmodel1 | 规格型号 | varchar | 1024 |  | √ | ' ' | 规格型号 |
-| 50 | fprice | 预估未税单价 | numeric | 23 | 10 | √ | 0 | 预估未税单价 |
-| 51 | fminipackqty | fminipackqty | numeric | 23 | 10 | √ | 0 |  |
-| 52 | fapplyno1 | fapplyno1 | varchar | 50 |  | √ | ' ' |  |
-| 53 | ftaxprice1 | 预估含税单价 | numeric | 23 | 10 | √ | 0 | 预估含税单价 |
-| 54 | fsceneid | fsceneid | int8 | 64 |  | √ | 0 |  |
-| 55 | fcategory2 | 品类 | int8 | 64 |  | √ | 0 | 物料分类 bd_materialgroup |
-| 56 | fspecialpurreason | fspecialpurreason | varchar | 50 |  | √ | ' ' |  |
-| 57 | fcontractnold | fcontractnold | int8 | 64 |  | √ | 0 |  |
-| 58 | fld | fld | varchar | 50 |  | √ | ' ' |  |
-| 59 | fmaterial1code | fmaterial1code | varchar | 50 |  | √ | ' ' |  |
-| 60 | fecpno | fecpno | varchar | 50 |  | √ | ' ' |  |
-| 61 | fbdprojectid | fbdprojectid | int8 | 64 |  | √ | 0 |  |
-| 62 | fmaterialgroup1 | fmaterialgroup1 | int8 | 64 |  | √ | 0 |  |
-| 63 | freqtype1 | freqtype1 | int8 | 64 |  | √ | 0 |  |
-| 64 | ftaxitemid | 税率 | int8 | 64 |  | √ | 0 | 税率 bd_taxrate |
-| 65 | fentrystatus11 | fentrystatus11 | varchar | 30 |  | √ | ' ' |  |
-| 66 | fqty1 | fqty1 | numeric | 23 | 10 | √ | 0 |  |
-| 67 | fprojectname1 | fprojectname1 | varchar | 50 |  | √ | ' ' |  |
-| 68 | fprice12 | fprice12 | numeric | 23 | 10 | √ | 0 |  |
-| 69 | fprice13 | fprice13 | numeric | 23 | 10 | √ | 0 |  |
-| 70 | fprice14 | fprice14 | numeric | 23 | 10 | √ | 0 |  |
-| 71 | fprice15 | fprice15 | numeric | 23 | 10 | √ | 0 |  |
-| 72 | fapplyno | fapplyno | varchar | 50 |  | √ | ' ' |  |
-| 73 | fsuppliername1 | fsuppliername1 | varchar | 50 |  | √ | ' ' |  |
-| 74 | fk_sf_busiarea | fk_sf_busiarea | int8 | 64 |  | √ | 0 |  |
-| 75 | fbaseqty | fbaseqty | numeric | 23 | 10 | √ | 0 |  |
+| 29 | fispresent | fispresent | bpchar | 1 |  | √ | '0' |  |
+| 30 | freqqty2 | freqqty2 | numeric | 23 | 10 | √ | 0 |  |
+| 31 | fminiorderqty | fminiorderqty | numeric | 23 | 10 | √ | 0 |  |
+| 32 | fmaterialname1 | fmaterialname1 | varchar | 100 |  | √ | ' ' |  |
+| 33 | ftax | ftax | numeric | 23 | 10 | √ | 0 |  |
+| 34 | fk_sf_companycode | fk_sf_companycode | int8 | 64 |  | √ | 0 |  |
+| 35 | funit2 | 计量单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 36 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 37 | freqdescribe | 备注 | varchar | 512 |  | √ | ' ' | 备注 |
+| 38 | frowtypeid | frowtypeid | int8 | 64 |  | √ | 0 |  |
+| 39 | fprice2 | fprice2 | numeric | 23 | 10 | √ | 0 |  |
+| 40 | fyearswitch | fyearswitch | bpchar | 1 |  | √ | ' ' |  |
+| 41 | fmaterialname | 标的名称 | varchar | 255 |  | √ | ' ' | 标的名称 |
+| 42 | freqorg1 | freqorg1 | int8 | 64 |  | √ | 0 |  |
+| 43 | fentryamount | 未税金额 | numeric | 23 | 10 | √ | 0 | 未税金额 |
+| 44 | fsrcentryid | fsrcentryid | varchar | 50 |  | √ | ' ' |  |
+| 45 | fsrcbillno | fsrcbillno | varchar | 50 |  | √ | ' ' |  |
+| 46 | ftaxamount2 | 价税合计 | numeric | 23 | 10 | √ | 0 | 价税合计 |
+| 47 | fcontractline | fcontractline | int8 | 64 |  | √ | 0 |  |
+| 48 | fk_sf_place | fk_sf_place | int8 | 64 |  | √ | 0 |  |
+| 49 | fspecialreason | 标的描述 | varchar | 1024 |  |  | ' ' | 标的描述 |
+| 50 | fmaterialmodel1 | 规格型号 | varchar | 1024 |  | √ | ' ' | 规格型号 |
+| 51 | fprice | 预估未税单价 | numeric | 23 | 10 | √ | 0 | 预估未税单价 |
+| 52 | fminipackqty | fminipackqty | numeric | 23 | 10 | √ | 0 |  |
+| 53 | fapplyno1 | fapplyno1 | varchar | 50 |  | √ | ' ' |  |
+| 54 | ftaxprice1 | 预估含税单价 | numeric | 23 | 10 | √ | 0 | 预估含税单价 |
+| 55 | fsceneid | fsceneid | int8 | 64 |  | √ | 0 |  |
+| 56 | fcategory2 | 品类 | int8 | 64 |  | √ | 0 | [物料分类 bd_materialgroup](../basedata_files/bd_materialgroup.md) |
+| 57 | fspecialpurreason | fspecialpurreason | varchar | 50 |  | √ | ' ' |  |
+| 58 | fcontractnold | fcontractnold | int8 | 64 |  | √ | 0 |  |
+| 59 | fld | fld | varchar | 50 |  | √ | ' ' |  |
+| 60 | fmaterial1code | fmaterial1code | varchar | 50 |  | √ | ' ' |  |
+| 61 | fecpno | fecpno | varchar | 50 |  | √ | ' ' |  |
+| 62 | fbdprojectid | fbdprojectid | int8 | 64 |  | √ | 0 |  |
+| 63 | fmaterialgroup1 | fmaterialgroup1 | int8 | 64 |  | √ | 0 |  |
+| 64 | freqtype1 | freqtype1 | int8 | 64 |  | √ | 0 |  |
+| 65 | ftaxitemid | 税率 | int8 | 64 |  | √ | 0 | [税率 bd_taxrate](../basedata_files/bd_taxrate.md) |
+| 66 | fentrystatus11 | fentrystatus11 | varchar | 30 |  | √ | ' ' |  |
+| 67 | fqty1 | fqty1 | numeric | 23 | 10 | √ | 0 |  |
+| 68 | fprojectname1 | fprojectname1 | varchar | 50 |  | √ | ' ' |  |
+| 69 | fprice12 | fprice12 | numeric | 23 | 10 | √ | 0 |  |
+| 70 | fprice13 | fprice13 | numeric | 23 | 10 | √ | 0 |  |
+| 71 | fprice14 | fprice14 | numeric | 23 | 10 | √ | 0 |  |
+| 72 | fprice15 | fprice15 | numeric | 23 | 10 | √ | 0 |  |
+| 73 | fapplyno | fapplyno | varchar | 50 |  | √ | ' ' |  |
+| 74 | fsuppliername1 | fsuppliername1 | varchar | 50 |  | √ | ' ' |  |
+| 75 | fk_sf_busiarea | fk_sf_busiarea | int8 | 64 |  | √ | 0 |  |
+| 76 | fbaseqty | fbaseqty | numeric | 23 | 10 | √ | 0 |  |
 
 ### 列规则定义
 

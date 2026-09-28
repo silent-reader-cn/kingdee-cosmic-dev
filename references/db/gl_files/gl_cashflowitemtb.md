@@ -25,8 +25,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_cashflowitemtb_local |  | fid,flocaleid |
-| 2 | pk_gl_cashflowitemtb_l |  | fpkid |
+| 1 | pk_gl_cashflowitemtb_l |  | fpkid |
+| 2 | idx_cashflowitemtb_local |  | fid,flocaleid |
 
 ---
 
@@ -40,7 +40,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | felementtableid | 会计要素表 | int8 | 64 |  | √ | 0 | 会计要素表 bd_element_table |
+| 2 | felementtableid | 会计要素表 | int8 | 64 |  | √ | 0 | [会计要素表 bd_element_table](../gl_files/bd_element_table.md) |
 | 3 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
 | 4 | fissyspreset | 系统预置 | bpchar | 1 |  | √ | '0' | 系统预置 |
 

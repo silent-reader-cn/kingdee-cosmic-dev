@@ -23,7 +23,7 @@
 | 11 | `t_fah_bgtask_log_detail` | 日志明细记录-子表 | 7 | [fah_bgtask_log.md](./fah_bgtask_log.md) |
 | 12 | `t_fah_ext_modfldgrp` | 数据字段分组定义-主表 | 11 | [fah_ext_model_fldgrp.md](./fah_ext_model_fldgrp.md) |
 | 13 | `t_fah_ext_modflds` | 外部数据模型分录-主表 | 13 | [fah_ext_dataentry.md](./fah_ext_dataentry.md) |
-| 14 | `t_fah_flex_import_log` | 引入日志-主表 | 9 | [fah_flex_importlog.md](./fah_flex_importlog.md) |
+| 14 | `t_fah_flex_import_log` | 导入日志-主表 | 9 | [fah_flex_importlog.md](./fah_flex_importlog.md) |
 | 15 | `t_fah_flex_import_log_en` | 错误详情-子表 | 4 | [fah_flex_importlog.md](./fah_flex_importlog.md) |
 | 16 | `t_fah_flex_mapval` | 映射键值对弹性域数据表-主表 | 42 | [fah_flex_mapval.md](./fah_flex_mapval.md) |
 | 17 | `t_fah_flex_struc` | 映射结构弹性域元数据定义-主表 | 13 | [fah_flex_struc.md](./fah_flex_struc.md) |

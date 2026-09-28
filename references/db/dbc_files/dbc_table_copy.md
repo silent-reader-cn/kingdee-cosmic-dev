@@ -39,9 +39,9 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fsrc_db_id | 来源数据库 | int8 | 64 |  | √ | 0 | 数据库 dbc_database |
+| 2 | fsrc_db_id | 来源数据库 | int8 | 64 |  | √ | 0 | [数据库 dbc_database](../dbc_files/dbc_database.md) |
 | 3 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 6 | fretry_count | 最大重试次数 | int4 | 32 |  | √ | 0 | 最大重试次数 |
 | 7 | fbatch_size | 批处理大小 | int4 | 32 |  | √ | 0 | 批处理大小 |
@@ -53,9 +53,9 @@
 | 13 | ftrigged_count | 触发次数 | int8 | 64 |  | √ | 0 | 触发次数 |
 | 14 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 15 | fretry_interval | 重试间隔(分钟) | varchar | 50 |  | √ | ' ' | 重试间隔(分钟) |
-| 16 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 16 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 17 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 18 | ftar_db_id | 目标数据库 | int8 | 64 |  | √ | 0 | 数据库 dbc_database |
+| 18 | ftar_db_id | 目标数据库 | int8 | 64 |  | √ | 0 | [数据库 dbc_database](../dbc_files/dbc_database.md) |
 | 19 | fschedule | 触发间隔 | varchar | 50 |  | √ | ' ' | 触发间隔 |
 | 20 | fenable | 使用状态 | bpchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :启用 |
 | 21 | fvalidated_time | 启用时间 | timestamp | 0 |  |  | null | 启用时间 |
@@ -90,7 +90,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | flink | 逻辑连接符 | varchar | 10 |  | √ | ' ' | 逻辑连接符,枚举: AND :与 OR :或 |
-| 3 | fschema_id | 数据表名 | int8 | 64 |  | √ | 0 | 集成对象 isc_metadata_schema |
+| 3 | fschema_id | 数据表名 | int8 | 64 |  | √ | 0 | [集成对象 isc_metadata_schema](../iscb_files/isc_metadata_schema.md) |
 | 4 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 5 | ffilter | where条件 | varchar | 2000 |  | √ | ' ' | where条件 |
 | 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |

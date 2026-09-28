@@ -1,34 +1,5 @@
 # 水印内容配置-plmdc_watermark_conf
 
-## 水印内容配置-主表 t_plmdc_watermark_conf
-
-- **表名称：** 水印内容配置-主表
-- **表名：** t_plmdc_watermark_conf
-
-### 表格列定义
-
-| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fname | 名称 | varchar | 500 |  | √ | ' ' | 名称 |
-| 3 | fexample | 文本示例 | varchar | 500 |  | √ | ' ' | 文本示例 |
-| 4 | fnumber | 编码 | varchar | 500 |  | √ | ' ' | 编码 |
-
-### 列规则定义
-
-| 序号 | 键编码 | 列字段 |
-| :--- | :--- | :--- |
-| 1 | fid | fid |
-
-### 索引定义
-
-| 序号 | 索引名 | 唯一 | 列字段 |
-| :--- | :--- | :--- | :--- |
-| 1 | pk_t_plmdc_watermark_conf |  | fid |
-| 2 | idx_plmdc_wm_conf_fnumber |  | fnumber |
-
----
-
 ## 水印内容信息配置-子表 t_plmdc_watermkcof_entry
 
 - **表名称：** 水印内容信息配置-子表
@@ -60,3 +31,32 @@
 | :--- | :--- | :--- | :--- |
 | 1 | pk_t_plmdc_watermkcof_entry |  | fentryid |
 | 2 | idx_plmdc_watermkcof_entry_fid |  | fid |
+
+---
+
+## 水印内容配置-主表 t_plmdc_watermark_conf
+
+- **表名称：** 水印内容配置-主表
+- **表名：** t_plmdc_watermark_conf
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
+| 2 | fname | 名称 | varchar | 500 |  | √ | ' ' | 名称 |
+| 3 | fexample | 文本示例 | varchar | 500 |  | √ | ' ' | 文本示例 |
+| 4 | fnumber | 编码 | varchar | 500 |  | √ | ' ' | 编码 |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fid | fid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | pk_t_plmdc_watermark_conf |  | fid |
+| 2 | idx_plmdc_wm_conf_fnumber |  | fnumber |

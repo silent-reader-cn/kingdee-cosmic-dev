@@ -13,9 +13,9 @@
 | 2 | ftaxperiod | 所属月份 | varchar | 50 |  | √ | ' ' | 所属月份 |
 | 3 | ftaxamount | 合计税额 | numeric | 23 | 10 | √ | 0 | 合计税额 |
 | 4 | ftaxrate | 税率 | numeric | 23 | 10 | √ | 0 | 税率 |
-| 5 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | finvoiceamount | 不含税金额 | numeric | 23 | 10 | √ | 0 | 不含税金额 |
-| 7 | ftable | 数据源 | int8 | 64 |  | √ | 0 | 数据源配置 tctb_custom_datasource |
+| 7 | ftable | 数据源 | int8 | 64 |  | √ | 0 | [数据源配置 tctb_custom_datasource](../tctb_files/tctb_custom_datasource.md) |
 | 8 | ftaxaccountserialno | 台账流水号 | varchar | 50 |  | √ | ' ' | 台账流水号 |
 | 9 | fconditionjson | 过滤条件 | text | 0 |  |  | null | 过滤条件 |
 | 10 | ffiltercondition | 过滤条件设置 | varchar | 255 |  | √ | ' ' | 过滤条件设置 |

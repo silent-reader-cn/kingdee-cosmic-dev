@@ -156,41 +156,41 @@
 | 5 | fbizstatus | 业务状态 | varchar | 1 |  | √ | ' ' | 业务状态,枚举: A :正常 B :挂起 C :关闭 |
 | 6 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 7 | fyieldrate | 成品率 | numeric | 23 | 10 | √ | 0 | 成品率 |
-| 8 | fconfiguredcodeid | 配置号 | int8 | 64 |  | √ | 0 | 配置号 bd_configuredcode |
-| 9 | forderentryid | 生产工单分录 | int8 | 64 |  | √ | 0 | 生产工单分录f7 pom_mftorder_f7 |
+| 8 | fconfiguredcodeid | 配置号 | int8 | 64 |  | √ | 0 | [配置号（废弃） bd_configuredcode](../sbd_files/bd_configuredcode.md) |
+| 9 | forderentryid | 生产工单分录 | int8 | 64 |  | √ | 0 | [生产工单分录f7 pom_mftorder_f7](../pom_files/pom_mftorder_f7.md) |
 | 10 | fmaterialspread | 重新展算订单物料 | bpchar | 1 |  | √ | ' ' | 重新展算订单物料 |
 | 11 | fmappingid | 关联分录id | varchar | 50 |  | √ | ' ' | 关联分录id |
 | 12 | fauxproperty | 辅助属性 | int8 | 64 |  | √ | 0 | null 001 |
-| 13 | fbomid | BOM | int8 | 64 |  | √ | 0 | BOM维护 pdm_mftbom |
-| 14 | fworkcenterid | 工作中心 | int8 | 64 |  | √ | 0 | 工作中心定义(废弃) mpdm_workcentre |
-| 15 | fqualityorgid | 质检组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 16 | ftracknumberid | 跟踪号 | int8 | 64 |  | √ | 0 | 跟踪号 bd_tracknumber |
+| 13 | fbomid | BOM | int8 | 64 |  | √ | 0 | [BOM维护 pdm_mftbom](../fmm_files/pdm_mftbom.md) |
+| 14 | fworkcenterid | 工作中心 | int8 | 64 |  | √ | 0 | [工作中心定义(废弃) mpdm_workcentre](../mpdm_files/mpdm_workcentre.md) |
+| 15 | fqualityorgid | 质检组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 16 | ftracknumberid | 跟踪号 | int8 | 64 |  | √ | 0 | [跟踪号 bd_tracknumber](../sbd_files/bd_tracknumber.md) |
 | 17 | fparententryid | fparententryid | int8 | 64 |  | √ | 0 | pid |
 | 18 | ftaskstatus | 任务状态 | varchar | 1 |  | √ | ' ' | 任务状态,枚举: A :未开工 B :开工 C :完工 D :部分完工 |
-| 19 | fbaseunitid | 基本单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 19 | fbaseunitid | 基本单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 20 | fplanpreparetime | 计划准备时间 | timestamp | 0 |  |  | null | 计划准备时间 |
-| 21 | fauxptyunitid | 辅助单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 21 | fauxptyunitid | 辅助单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 22 | fqty | 数量 | numeric | 23 | 10 | √ | 0 | 数量 |
 | 23 | finllimit | 入库下限允差（%） | numeric | 23 | 10 | √ | 0 | 入库下限允差（%） |
 | 24 | fbatchno | 批号 | varchar | 50 |  | √ | ' ' | 批号 |
-| 25 | fproducedeptid | 生产部门 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 25 | fproducedeptid | 生产部门 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 26 | fipid | ipid | int8 | 64 |  | √ | 0 | ipid |
 | 27 | fisconrpttqty | 控制汇报数量 | bpchar | 1 |  | √ | '0' | 控制汇报数量 |
-| 28 | funitid | 计量单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 29 | finwardeptid | 入库组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 30 | fwarehouseid | 仓库 | int8 | 64 |  | √ | 0 | 仓库 bd_warehouse |
+| 28 | funitid | 计量单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 29 | finwardeptid | 入库组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 30 | fwarehouseid | 仓库 | int8 | 64 |  | √ | 0 | [仓库 bd_warehouse](../sbd_files/bd_warehouse.md) |
 | 31 | forderno | 源生产工单编号 | varchar | 50 |  | √ | ' ' | 源生产工单编号 |
 | 32 | fproducttype | 产品类型 | varchar | 5 |  | √ | ' ' | 产品类型,枚举: C :主产品 A :联产品 B :副产品 |
 | 33 | fplanstatus | 计划状态 | varchar | 1 |  | √ | ' ' | 计划状态,枚举: A :计划 B :计划确认 C :下达 |
 | 34 | fplanbegintime | 计划开工时间 | timestamp | 0 |  |  | null | 计划开工时间 |
-| 35 | flotid | 批号主档 | int8 | 64 |  | √ | 0 | 批号主档 bd_lot |
-| 36 | flocationid | 仓位 | int8 | 64 |  | √ | 0 | 仓位 bd_location |
+| 35 | flotid | 批号主档 | int8 | 64 |  | √ | 0 | [批号主档 bd_lot](../sbd_files/bd_lot.md) |
+| 36 | flocationid | 仓位 | int8 | 64 |  | √ | 0 | [仓位 bd_location](../sbd_files/bd_location.md) |
 | 37 | fexpendbomtime | 展BOM时间 | timestamp | 0 |  |  | null | 展BOM时间 |
-| 38 | fproductid | 产品编码 | int8 | 64 |  | √ | 0 | 物料生产信息 bd_materialmftinfo |
+| 38 | fproductid | 产品编码 | int8 | 64 |  | √ | 0 | [物料生产信息 bd_materialmftinfo](../sbd_files/bd_materialmftinfo.md) |
 | 39 | finhlimit | 入库上限允差（%） | numeric | 23 | 10 | √ | 0 | 入库上限允差（%） |
 | 40 | fplanendtime | 计划完工时间 | timestamp | 0 |  |  | null | 计划完工时间 |
 | 41 | fbaseqty | 基本数量 | numeric | 23 | 10 | √ | 0 | 基本数量 |
-| 42 | fmanuversionid | 生产版本 | int8 | 64 |  | √ | 0 | 生产版本 pdm_manuversion |
+| 42 | fmanuversionid | 生产版本 | int8 | 64 |  | √ | 0 | [生产版本 pdm_manuversion](../fmm_files/pdm_manuversion.md) |
 | 43 | fisinspection | 产品检验 | bpchar | 1 |  | √ | ' ' | 产品检验 |
 | 44 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 45 | fauxptyqty | 辅助数量 | numeric | 23 | 10 | √ | 0 | 辅助数量 |
@@ -225,7 +225,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fplanendtimemerge | 计划完工时间 | timestamp | 0 |  |  | null | 计划完工时间 |
 | 3 | fbaseqtymerge | 基本数量 | numeric | 23 | 10 | √ | 0 | 基本数量 |
-| 4 | ftracknomgid | 跟踪号 | int8 | 64 |  | √ | 0 | 跟踪号 bd_tracknumber |
+| 4 | ftracknomgid | 跟踪号 | int8 | 64 |  | √ | 0 | [跟踪号 bd_tracknumber](../sbd_files/bd_tracknumber.md) |
 | 5 | fexpdbomtmerge | 展BOM时间 | timestamp | 0 |  |  | null | 展BOM时间 |
 | 6 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 7 | fplanpretimemerge | 计划准备时间 | timestamp | 0 |  |  | null | 计划准备时间 |
@@ -234,36 +234,36 @@
 | 10 | fpcesroutemergeid | 工艺路线 | int8 | 64 |  | √ | 0 | 工艺路线维护（废弃） pdm_route |
 | 11 | finhlimitmerge | 入库上限允差（%） | numeric | 23 | 10 | √ | 0 | 入库上限允差（%） |
 | 12 | fmaterialspdmerge | 重新展算订单物料 | bpchar | 1 |  | √ | ' ' | 重新展算订单物料 |
-| 13 | frouterepmergeid | 工艺路线替代号 | int8 | 64 |  | √ | 0 | 基础资料带组织模板 mpdm_routereplace |
-| 14 | finwardeptmergeid | 入库组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 13 | frouterepmergeid | 工艺路线替代号 | int8 | 64 |  | √ | 0 | [基础资料带组织模板 mpdm_routereplace](../mpdm_files/mpdm_routereplace.md) |
+| 14 | finwardeptmergeid | 入库组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 15 | fbizstatusmg | 业务状态 | varchar | 1 |  | √ | ' ' | 业务状态,枚举: A :正常 B :挂起 C :关闭 |
-| 16 | fworkcentermgid | 工作中心 | int8 | 64 |  | √ | 0 | 工作中心定义(废弃) mpdm_workcentre |
-| 17 | flocationmgid | 仓位 | int8 | 64 |  | √ | 0 | 仓位 bd_location |
+| 16 | fworkcentermgid | 工作中心 | int8 | 64 |  | √ | 0 | [工作中心定义(废弃) mpdm_workcentre](../mpdm_files/mpdm_workcentre.md) |
+| 17 | flocationmgid | 仓位 | int8 | 64 |  | √ | 0 | [仓位 bd_location](../sbd_files/bd_location.md) |
 | 18 | fplanbgtimemerge | 计划开工时间 | timestamp | 0 |  |  | null | 计划开工时间 |
 | 19 | fbatchnomg | 批号 | varchar | 50 |  | √ | ' ' | 批号 |
 | 20 | fparententryid | fparententryid | int8 | 64 |  | √ | 0 | pid |
-| 21 | fbommergeid | BOM | int8 | 64 |  | √ | 0 | BOM维护 pdm_mftbom |
+| 21 | fbommergeid | BOM | int8 | 64 |  | √ | 0 | [BOM维护 pdm_mftbom](../fmm_files/pdm_mftbom.md) |
 | 22 | fisconrptqtymerge | 控制汇报数量 | bpchar | 1 |  | √ | '0' | 控制汇报数量 |
 | 23 | fmergeordeno | 目标生产工单 | varchar | 50 |  | √ | ' ' | 目标生产工单 |
 | 24 | ftaskstamerge | 任务状态 | varchar | 1 |  | √ | ' ' | 任务状态,枚举: A :未开工 B :开工 C :完工 D :部分完工 |
 | 25 | fyieldratemg | 成品率 | numeric | 23 | 10 | √ | 0 | 成品率 |
 | 26 | fiscontrolqtymg | 控制入库数量 | bpchar | 1 |  | √ | ' ' | 控制入库数量 |
-| 27 | funitmergeid | 计量单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 28 | fproddeptmergeid | 生产部门 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 27 | funitmergeid | 计量单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 28 | fproddeptmergeid | 生产部门 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 29 | fisinspectmerge | 产品检验 | bpchar | 1 |  | √ | ' ' | 产品检验 |
-| 30 | fbaseunitmergeid | 基本单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 31 | fconfigcodemgid | 配置号 | int8 | 64 |  | √ | 0 | 配置号 bd_configuredcode |
-| 32 | fqualityorgmgid | 质检组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 33 | flotmergeid | 批号主档 | int8 | 64 |  | √ | 0 | 批号主档 bd_lot |
+| 30 | fbaseunitmergeid | 基本单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 31 | fconfigcodemgid | 配置号 | int8 | 64 |  | √ | 0 | [配置号（废弃） bd_configuredcode](../sbd_files/bd_configuredcode.md) |
+| 32 | fqualityorgmgid | 质检组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 33 | flotmergeid | 批号主档 | int8 | 64 |  | √ | 0 | [批号主档 bd_lot](../sbd_files/bd_lot.md) |
 | 34 | faqtymerge | 辅助数量 | numeric | 23 | 10 | √ | 0 | 辅助数量 |
 | 35 | fmappingmgid | 关联分录id | varchar | 50 |  | √ | ' ' | 关联分录id |
-| 36 | fwarehousemergeid | 仓库 | int8 | 64 |  | √ | 0 | 仓库 bd_warehouse |
-| 37 | fmversionmergeid | 生产版本 | int8 | 64 |  | √ | 0 | 生产版本 pdm_manuversion |
+| 36 | fwarehousemergeid | 仓库 | int8 | 64 |  | √ | 0 | [仓库 bd_warehouse](../sbd_files/bd_warehouse.md) |
+| 37 | fmversionmergeid | 生产版本 | int8 | 64 |  | √ | 0 | [生产版本 pdm_manuversion](../fmm_files/pdm_manuversion.md) |
 | 38 | fplanstamerge | 计划状态 | varchar | 1 |  | √ | ' ' | 计划状态,枚举: A :计划 B :计划确认 C :下达 |
 | 39 | finllimitmerge | 入库下限允差（%） | numeric | 23 | 10 | √ | 0 | 入库下限允差（%） |
-| 40 | fproductmergeid | 产品编码 | int8 | 64 |  | √ | 0 | 物料生产信息 bd_materialmftinfo |
+| 40 | fproductmergeid | 产品编码 | int8 | 64 |  | √ | 0 | [物料生产信息 bd_materialmftinfo](../sbd_files/bd_materialmftinfo.md) |
 | 41 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 42 | faunitmergeid | 辅助单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 42 | faunitmergeid | 辅助单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 43 | fauxpromerge | 辅助属性 | int8 | 64 |  | √ | 0 | null 001 |
 | 44 | fproducttypemerge | 产品类型 | varchar | 5 |  | √ | ' ' | 产品类型,枚举: C :主产品 A :联产品 B :副产品 |
 
@@ -389,16 +389,16 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fremark | 合并原因 | varchar | 255 |  | √ | ' ' | 合并原因 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fbillstatus | 单据状态 | bpchar | 1 |  | √ | '0' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 5 | fmergeorderid | 生成的合并工单id | int8 | 64 |  | √ | 0 | 生成的合并工单id |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 7 | forgid | 生产组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 7 | forgid | 生产组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fbillno | 单据编号 | varchar | 80 |  | √ | ' ' | 单据编号 |
-| 12 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | ftransactiontypeid | ftransactiontypeid | int8 | 64 |  | √ | 0 |  |
 | 14 | fbilltypeid | 单据类型 | int8 | 64 |  | √ | 0 | 单据类型 bos_billtype |
 

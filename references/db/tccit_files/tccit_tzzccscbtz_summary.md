@@ -14,7 +14,7 @@
 | 3 | fitemtype | 项目类型 | varchar | 50 |  | √ | ' ' | 项目类型,枚举: cqgqtz :按权益法核算长期股权投资对初始投资成本调整确认收益 jrzccstz :交易性金融资产初始投资调整 |
 | 4 | fskcyje | 税会差异金额 | numeric | 23 | 10 | √ | 0.0000000000 | 税会差异金额 |
 | 5 | fskssqz | 结束时间 | timestamp | 0 |  |  | null | 结束时间 |
-| 6 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fnstzje | 纳税调整金额 | numeric | 23 | 10 | √ | 0.0000000000 | 纳税调整金额 |
 | 8 | fskssqq | 开始时间 | timestamp | 0 |  |  | null | 开始时间 |
 

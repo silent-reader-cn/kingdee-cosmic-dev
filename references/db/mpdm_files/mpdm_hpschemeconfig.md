@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fhomecardid | 移动首页卡片 | int8 | 64 |  | √ | 0 | 移动首页卡片 mpdm_homecardconfig |
+| 2 | fhomecardid | 移动首页卡片 | int8 | 64 |  | √ | 0 | [移动首页卡片 mpdm_homecardconfig](../mpdm_files/mpdm_homecardconfig.md) |
 | 3 | fseqnumber | 默认顺序号 | int8 | 64 |  | √ | 0 | 默认顺序号 |
 | 4 | fcardispreset | 系统预设 | bpchar | 1 |  | √ | '0' | 系统预设 |
 | 5 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
@@ -42,16 +42,16 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 5 | fmobhomebizobjid | 移动页面 | varchar | 80 |  | √ | ' ' | 业务对象 bos_objecttype |
+| 5 | fmobhomebizobjid | 移动页面 | varchar | 80 |  | √ | ' ' | [业务对象 bos_objecttype](../mdl_files/bos_objecttype.md) |
 | 6 | fdescription | 应用说明 | varchar | 255 |  | √ | ' ' | 应用说明 |
 | 7 | fispreset | 系统预设 | bpchar | 1 |  | √ | '0' | 系统预设 |
 | 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 9 | ficonpath | 图标路径 | varchar | 1000 |  | √ | ' ' | 图标路径 |
 | 10 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 11 | fschemeseq | 应用列表序号 | int8 | 64 |  | √ | 0 | 应用列表序号 |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 14 | fenable | 使用状态 | bpchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 15 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |

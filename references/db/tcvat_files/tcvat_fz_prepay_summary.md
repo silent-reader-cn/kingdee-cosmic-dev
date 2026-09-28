@@ -14,7 +14,7 @@
 | 3 | ftaxrate | 税率 | varchar | 50 |  | √ | ' ' | 税率 |
 | 4 | fprepayrate | 预征率 | varchar | 50 |  | √ | ' ' | 预征率 |
 | 5 | fserialno | 流水号 | varchar | 50 |  | √ | ' ' | 流水号 |
-| 6 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fdeclaretype | 申报类型 | varchar | 30 |  | √ | ' ' | 申报类型,枚举: 1 :汇总申报 2 :自主申报 |
 | 8 | ftaxreductionid | 减免税性质代码 | int8 | 64 |  | √ | 0 | 减免政策代码 tpo_taxdeduction |
 | 9 | fdescription | 业务描述 | varchar | 50 |  | √ | ' ' | 业务描述 |

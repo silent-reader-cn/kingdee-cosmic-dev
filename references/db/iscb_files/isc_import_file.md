@@ -46,17 +46,17 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 3 | fgroupid | 数据源 | int8 | 64 |  | √ | 0 | 数据源管理 isc_data_source |
+| 3 | fgroupid | 数据源 | int8 | 64 |  | √ | 0 | [数据源管理 isc_data_source](../iscb_files/isc_data_source.md) |
 | 4 | fsource_tenant | 来源 | varchar | 100 |  | √ | ' ' | 来源 |
 | 5 | ffiletype | 文件类型 | varchar | 50 |  | √ | ' ' | 文件类型,枚举: json :Json 对象格式(*.json) xlsx :Excel 工作簿(*.xlsx) xls :Excel 97-2003 工作簿(*.xls) csv :CSV 逗号分隔值(*.csv) |
-| 6 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 7 | fisv | 开发商 | varchar | 100 |  | √ | ' ' | 开发商 |
 | 8 | fprotect_level | 保护等级 | varchar | 30 |  | √ | ' ' | 保护等级,枚举: DEFAULT :默认 READ_ONLY :只读 UNPROTECTED :无保护 |
 | 9 | fimport_target | 导入对象 | int8 | 64 |  | √ | 0 | 集成对象 isc_metadata_schema |
 | 10 | fcreatedate | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 11 | fmodifydate | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 12 | fsource_trace | 来源追溯 | varchar | 600 |  | √ | ' ' | 来源追溯 |
-| 13 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | fproxy_user | 代理用户 | varchar | 50 |  | √ | ' ' | 代理用户 |
 | 15 | fmode | 模式 | varchar | 50 |  | √ | ' ' | 模式,枚举: RequiresTransaction :单个事务 BreakOnError :错误时中止 ResumeOnError :错误时忽略 |
 | 16 | fimport_target_type | 迁入对象类别 | varchar | 50 |  | √ | ' ' | 迁入对象类别,枚举: isc_metadata_schema :集成对象 isc_data_copy_trigger :启动方案 isc_service_flow :服务流程 |
@@ -74,8 +74,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_import_file_m |  | fmodifydate |
-| 2 | pk_t_iscb_import_file |  | fid |
+| 1 | pk_t_iscb_import_file |  | fid |
+| 2 | idx_import_file_m |  | fmodifydate |
 | 3 | idx_iscb_import_file |  | fgroupid |
 
 ---

@@ -12,25 +12,25 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | ffrequency | 快照版本 | varchar | 80 |  | √ | ' ' | 快照版本,枚举: realtime :查询频率 day :每天 |
 | 3 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
-| 4 | fmodifierid | 最后更新人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmodifierid | 最后更新人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fcomment | fcomment | varchar | 255 |  | √ | ' ' |  |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 7 | fenabledate | 启用日期 | timestamp | 0 |  |  | null | 启用日期 |
 | 8 | fdisabledate | 禁用日期 | timestamp | 0 |  |  | null | 禁用日期 |
-| 9 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | fqueryparam | 查询参数 | varchar | 255 |  | √ | ' ' | 查询参数 |
 | 11 | fmodifytime | 最后更新时间 | timestamp | 0 |  |  | null | 最后更新时间 |
 | 12 | fqueryitem | 查询方案 | varchar | 255 |  | √ | ' ' | 查询方案,枚举: |
 | 13 | fqueryitem_tag | fqueryitem_tag | text | 0 |  |  | ' ' |  |
 | 14 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 15 | fqueryparam_tag | 查询参数_详情 | text | 0 |  |  | ' ' | 查询参数_详情 |
-| 16 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 16 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 17 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 18 | freporttype | 报表类型 | varchar | 30 |  | √ | ' ' | 报表类型,枚举: qing :轻分析报表 common :普通报表 |
 | 19 | fenable | 使用状态 | varchar | 30 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 20 | fenablerid | 启用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 20 | fenablerid | 启用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 21 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
-| 22 | fformid | 报表 | varchar | 80 |  | √ | ' ' | 表单元数据 bos_formmeta |
+| 22 | fformid | 报表 | varchar | 80 |  | √ | ' ' | [表单元数据 bos_formmeta](../mdl_files/bos_formmeta.md) |
 | 23 | fqueryplugin | 数据取数插件 | varchar | 255 |  | √ | ' ' | 数据取数插件 |
 
 ### 列规则定义

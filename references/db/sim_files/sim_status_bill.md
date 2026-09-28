@@ -12,7 +12,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fcancelbluetotalamount | 已作废蓝票金额 | numeric | 23 | 10 | √ | 0.0000000000 | 已作废蓝票金额 |
 | 3 | fblueinvoicenum | 未作废蓝票数量 | int8 | 64 |  | √ | 0 | 未作废蓝票数量 |
-| 4 | forg | 组织 | int8 | 64 |  | √ | 0 | 企业管理 bdm_org |
+| 4 | forg | 组织 | int8 | 64 |  | √ | 0 | [企业管理 bdm_org](../bdm_files/bdm_org.md) |
 | 5 | fbluetotalamount | 未作废蓝票金额 | numeric | 23 | 10 | √ | 0.0000000000 | 未作废蓝票金额 |
 | 6 | fissuedevice | 开票设备编号 | varchar | 50 |  | √ | ' ' | 开票设备编号 |
 | 7 | finvoicetype | 发票种类 | varchar | 30 |  | √ | ' ' | 发票种类,枚举: 026 :电子普票 028 :电子专票 |

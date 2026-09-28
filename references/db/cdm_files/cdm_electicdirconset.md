@@ -10,25 +10,29 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 最后更新人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 最后更新人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fname | fname | varchar | 100 |  | √ | ' ' |  |
 | 4 | fcomment | fcomment | varchar | 255 |  | √ | ' ' |  |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 6 | forgid | 收付组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | forgid | 资金组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fdisabledate | 禁用日期 | timestamp | 0 |  |  | null | 禁用日期 |
 | 8 | fenabledate | 启用日期 | timestamp | 0 |  |  | null | 启用日期 |
-| 9 | fdefaultaccount | 默认票据账户 | int8 | 64 |  | √ | 0 | 银行账户 bd_accountbanks |
-| 10 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 11 | fbankname | 开户行行号 | varchar | 50 |  | √ | ' ' | 开户行行号 |
-| 12 | fmodifytime | 最后更新时间 | timestamp | 0 |  |  | null | 最后更新时间 |
-| 13 | fstatus | 数据状态 | varchar | 30 |  | √ | 'C' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 14 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 15 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 16 | fdirectconnchannelid | 直连渠道 | int8 | 64 |  | √ | 0 | 银行类别 bd_bankcgsetting |
-| 17 | fbankinterface | 银企接口 | varchar | 50 |  | √ | ' ' | 银企接口,枚举: |
-| 18 | fenablerid | 启用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 19 | fenable | 使用状态 | bpchar | 1 |  | √ | '0' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 20 | fnumber | 编码 | varchar | 50 |  | √ | ' ' | 编码 |
+| 9 | fdefaultaccount | 票据账户 | int8 | 64 |  | √ | 0 | [银行账户 bd_accountbanks](../basedata_files/bd_accountbanks.md) |
+| 10 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 11 | ffinorgtype | 金融机构类别 | varchar | 50 |  | √ | ' ' | 金融机构类别,枚举: 0 :银行 1 :结算中心 3 :财务公司 4 :第三方支付机构 2 :其他金融机构 5 :信托公司 6 :金融资产管理公司 7 :金融租赁公司 8 :证券公司 9 :基金管理公司 10 :保险公司 11 :其他 |
+| 12 | fbankname | 开户行行号 | varchar | 255 |  | √ | ' ' | 开户行行号 |
+| 13 | fmodifytime | 最后更新时间 | timestamp | 0 |  |  | null | 最后更新时间 |
+| 14 | fstatus | 数据状态 | varchar | 30 |  | √ | 'C' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
+| 15 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
+| 16 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 17 | fdirectconnchannelid | 直连渠道 | int8 | 64 |  | √ | 0 | [银行类别 bd_bankcgsetting](../basedata_files/bd_bankcgsetting.md) |
+| 18 | fislockedsplit | 流通标识已锁定时拆分 | bpchar | 1 |  | √ | '0' | 流通标识已锁定时拆分 |
+| 19 | fbankinterface | 银企接口 | varchar | 50 |  | √ | ' ' | 银企接口,枚举: |
+| 20 | fenablerid | 启用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 21 | fenable | 使用状态 | bpchar | 1 |  | √ | '0' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 22 | fisnewgenerbill | 新一代票据接口 | bpchar | 1 |  | √ | '0' | 新一代票据接口 |
+| 23 | fnumber | 编码 | varchar | 50 |  | √ | ' ' | 编码 |
+| 24 | fistransbank | 跨行调拨默认票据账户 | bpchar | 1 |  | √ | '0' | 跨行调拨默认票据账户 |
 
 ### 列规则定义
 

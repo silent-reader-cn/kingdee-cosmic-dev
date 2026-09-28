@@ -39,11 +39,11 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 3 | fcaller | 调用者 | int8 | 64 |  | √ | 0 | API调用者 isc_apic_caller |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 3 | fcaller | 调用者 | int8 | 64 |  | √ | 0 | [API调用者 isc_apic_caller](../iscb_files/isc_apic_caller.md) |
 | 4 | fformat_script_tag | API调用脚本_详情 | text | 0 |  |  | null | API调用脚本_详情 |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 6 | fsubscriber | 消息订阅主题 | int8 | 64 |  | √ | 0 | 消息订阅主题 isc_mq_subscriber |
+| 6 | fsubscriber | 消息订阅主题 | int8 | 64 |  | √ | 0 | [消息订阅主题 isc_mq_subscriber](../iscb_files/isc_mq_subscriber.md) |
 | 7 | fsource_tenant | 来源 | varchar | 100 |  | √ | ' ' | 来源 |
 | 8 | fisv | 开发商 | varchar | 100 |  | √ | ' ' | 开发商 |
 | 9 | fapi_type | API类型 | varchar | 50 |  | √ | ' ' | API类型,枚举: isc_apic_for_external_api :外部系统API isc_apic_script :自定义API isc_apic_webapi :WebAPI登记 |
@@ -51,7 +51,7 @@
 | 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 12 | fformat_script | API调用脚本 | varchar | 255 |  | √ | ' ' | API调用脚本 |
 | 13 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 16 | fsource_trace | 来源追溯 | varchar | 600 |  | √ | ' ' | 来源追溯 |
 | 17 | fenable | 使用状态 | varchar | 30 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |

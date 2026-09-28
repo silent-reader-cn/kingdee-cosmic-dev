@@ -1,6 +1,6 @@
 # botp 模块表清单
 
-> 本模块共收录 **29** 张表定义，来自 `botp_files/`。
+> 本模块共收录 **34** 张表定义，来自 `botp_files/`。
 
 > 索引由 `scripts/build_index.py` 从 Markdown 自动生成，请勿手工编辑。
 > 检索本模块表结构请用统一检索脚本（比翻本文件更快）：
@@ -25,11 +25,11 @@
 | 13 | `t_botp_convertrule_s` | 签入转换规则-分表 | 3 | [botp_crlistcheckin.md](./botp_crlistcheckin.md) |
 | 14 | `t_botp_convertrulever` | 转换规则版本-主表 | 13 | [botp_convertrulever.md](./botp_convertrulever.md) |
 | 15 | `t_botp_convertrulever_l` | 转换规则版本-多语言表 | 4 | [botp_convertrulever.md](./botp_convertrulever.md) |
-| 16 | `t_botp_entrytracker` | 反写快照-主表 | 0 | [botp_snapshot.md](./botp_snapshot.md) |
-| 17 | `t_botp_entrytracker` | 反写快照_业务跟踪-主表 | 0 | [botp_snapshot_tc.md](./botp_snapshot_tc.md) |
+| 16 | `t_botp_entrytracker` | 反写快照-主表 | 7 | [botp_snapshot.md](./botp_snapshot.md) |
+| 17 | `t_botp_entrytracker` | 反写快照_业务跟踪-主表 | 7 | [botp_snapshot_tc.md](./botp_snapshot_tc.md) |
 | 18 | `t_botp_link_log` | 关联关系日志（废弃）-主表 | 16 | [botp_link_log.md](./botp_link_log.md) |
 | 19 | `t_botp_linkdeleted_record` | 关联关系删除记录-主表 | 12 | [link_deleted_record.md](./link_deleted_record.md) |
-| 20 | `t_botp_log` | 反写日志-主表 | 0 | [botp_log.md](./botp_log.md) |
+| 20 | `t_botp_log` | 反写日志-主表 | 20 | [botp_log.md](./botp_log.md) |
 | 21 | `t_botp_writeback_watch` | 单据反写报告-主表 | 16 | [botp_writebackwatch.md](./botp_writebackwatch.md) |
 | 22 | `t_botp_writebackrule` | 反写规则-主表 | 20 | [botp_writebackrule.md](./botp_writebackrule.md) |
 | 23 | `t_botp_writebackrule` | 签入反写规则-主表 | 20 | [botp_wrlistcheckin.md](./botp_wrlistcheckin.md) |
@@ -37,5 +37,10 @@
 | 25 | `t_botp_writebackrule_l` | 签入反写规则-多语言表 | 5 | [botp_wrlistcheckin.md](./botp_wrlistcheckin.md) |
 | 26 | `t_botp_writebackrule_s` | 反写规则-分表 | 2 | [botp_writebackrule.md](./botp_writebackrule.md) |
 | 27 | `t_botp_writebackrule_s` | 签入反写规则-分表 | 2 | [botp_wrlistcheckin.md](./botp_wrlistcheckin.md) |
-| 28 | `t_botp_writebacksnap` | 反写记录单据体-子表 | 0 | [botp_snapshot.md](./botp_snapshot.md) |
-| 29 | `t_botp_writebacksnap` | 反写快照_反写条目-主表 | 0 | [botp_snapshot_wb.md](./botp_snapshot_wb.md) |
+| 28 | `t_botp_writebacksnap` | 反写记录单据体-子表 | 10 | [botp_snapshot.md](./botp_snapshot.md) |
+| 29 | `t_botp_writebacksnap` | 反写快照_反写条目-主表 | 10 | [botp_snapshot_wb.md](./botp_snapshot_wb.md) |
+| 30 | `t_xkbotp_taildiff` | 尾差规则-主表 | 17 | [xkbotp_taildiff.md](./xkbotp_taildiff.md) |
+| 31 | `t_xkbotp_taildiff_factor` | 基本条件设置单据体-子表 | 6 | [xkbotp_taildiff.md](./xkbotp_taildiff.md) |
+| 32 | `t_xkbotp_taildiff_field` | 尾查字段和条件设置单据体-子表 | 10 | [xkbotp_taildiff.md](./xkbotp_taildiff.md) |
+| 33 | `t_xkbotp_taildiff_l` | 尾差规则-多语言表 | 4 | [xkbotp_taildiff.md](./xkbotp_taildiff.md) |
+| 34 | `t_xkbotp_taildiff_rules` | 转换规则设置单据体-子表 | 4 | [xkbotp_taildiff.md](./xkbotp_taildiff.md) |

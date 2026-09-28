@@ -11,10 +11,10 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fremark | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
-| 3 | fgroupid | 许可分组 | int8 | 64 |  | √ | 0 | 许可分组 lic_group |
-| 4 | fbizobjectid | 业务对象 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
-| 5 | fmoduleid | 许可模块 | int8 | 64 |  | √ | 0 | 许可模块 lic_module |
-| 6 | fbizappid | 应用 | varchar | 36 |  | √ | ' ' | 业务应用实体 bos_devportal_bizapp |
+| 3 | fgroupid | 许可分组 | int8 | 64 |  | √ | 0 | [许可分组 lic_group](../base_files/lic_group.md) |
+| 4 | fbizobjectid | 业务对象 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
+| 5 | fmoduleid | 许可模块 | int8 | 64 |  | √ | 0 | [许可模块 lic_module](../base_files/lic_module.md) |
+| 6 | fbizappid | 应用 | varchar | 36 |  | √ | ' ' | [业务应用实体 bos_devportal_bizapp](../mdl_files/bos_devportal_bizapp.md) |
 
 ### 列规则定义
 

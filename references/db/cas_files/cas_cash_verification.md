@@ -43,16 +43,16 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | frealcashamountrmk | 实点现金备注 | varchar | 255 |  | √ | ' ' | 实点现金备注 |
 | 3 | fadjustbalancermk | 调整后现金余额备注 | varchar | 255 |  | √ | ' ' | 调整后现金余额备注 |
-| 4 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 4 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | finventorydeficitrmk | 盘亏备注 | varchar | 255 |  | √ | ' ' | 盘亏备注 |
-| 6 | fcashaccountid | 现金账户 | int8 | 64 |  | √ | 0 | 现金账户F7 cas_accountcashtreelistf7 |
+| 6 | fcashaccountid | 现金账户 | int8 | 64 |  | √ | 0 | [现金账户F7 cas_accountcashtreelistf7](../cas_files/cas_accountcashtreelistf7.md) |
 | 7 | funbookedreceivedrmk | 加：未入账已收款备注 | varchar | 255 |  | √ | ' ' | 加：未入账已收款备注 |
 | 8 | funbookedpaid | 减：未入账已付款 | numeric | 23 | 10 | √ | 0.0000000000 | 减：未入账已付款 |
 | 9 | finventorysurplus | 盘盈 | numeric | 23 | 10 | √ | 0.0000000000 | 盘盈 |
 | 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 11 | fbookedunreceivedrmk | 减：已入账未收款备注 | varchar | 255 |  | √ | ' ' | 减：已入账未收款备注 |
 | 12 | fbookedunpaid | 加：已入账未付款 | numeric | 23 | 10 | √ | 0.0000000000 | 加：已入账未付款 |
-| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | fcheckresult | 现金盘点结果 | varchar | 30 |  | √ | '0' | 现金盘点结果,枚举: 0 :待盘点 1 :盘盈 2 :盘亏 3 :账实相符 |
 | 15 | finventorydeficit | 盘亏 | numeric | 23 | 10 | √ | 0.0000000000 | 盘亏 |
 | 16 | faccountbalancermk | 盘点日账户余额备注 | varchar | 255 |  | √ | ' ' | 盘点日账户余额备注 |
@@ -60,8 +60,8 @@
 | 18 | funbookedreceived | 加：未入账已收款 | numeric | 23 | 10 | √ | 0.0000000000 | 加：未入账已收款 |
 | 19 | fbookedunpaidrmk | 加：已入账未付款备注 | varchar | 255 |  | √ | ' ' | 加：已入账未付款备注 |
 | 20 | fbillno | 单据编号 | varchar | 50 |  | √ | ' ' | 单据编号 |
-| 21 | fcashierid | 出纳 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 22 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 21 | fcashierid | 出纳 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 22 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 23 | fbillstatus | 单据状态 | varchar | 30 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 24 | frealcashamount | 实点现金 | numeric | 23 | 10 | √ | 0.0000000000 | 实点现金 |
 | 25 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
@@ -71,8 +71,8 @@
 | 29 | funbookedpaidrmk | 减：未入账已付款备注 | varchar | 255 |  | √ | ' ' | 减：未入账已付款备注 |
 | 30 | fisvoucher | 生成凭证 | bpchar | 1 |  | √ | '0' | 生成凭证 |
 | 31 | finventorysurplusrmk | 盘盈备注 | varchar | 255 |  | √ | ' ' | 盘盈备注 |
-| 32 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
-| 33 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 32 | fcurrencyid | 币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
+| 33 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 34 | fadjustbalance | 调整后现金余额 | numeric | 23 | 10 | √ | 0.0000000000 | 调整后现金余额 |
 
 ### 列规则定义

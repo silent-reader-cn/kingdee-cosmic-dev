@@ -12,8 +12,8 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fbankinterfaceid | 银企接口 | varchar | 200 |  |  | null | 银企接口,枚举: 1 :接口A 2 :接口B |
 | 3 | fmaxpay | 每笔最大金额 | numeric | 19 | 6 | √ | 0.000000 | 每笔最大金额 |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 5 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 5 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | fcreatetime | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
 | 7 | fcount | 最大笔数 | int8 | 64 |  | √ | 0 | 最大笔数 |
 | 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |

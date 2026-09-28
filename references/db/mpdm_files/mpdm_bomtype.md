@@ -10,10 +10,10 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fissalebom | 订单 | bpchar | 1 |  | √ | '0' | 订单 |
+| 2 | fissalebom | 订单BOM | bpchar | 1 |  | √ | '0' | 订单BOM |
 | 3 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 4 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 5 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 7 | fismfg | fismfg | bpchar | 1 |  | √ | '0' |  |
 | 8 | fispackage | fispackage | bpchar | 1 |  | √ | '0' |  |
@@ -22,14 +22,14 @@
 | 11 | fistool | fistool | bpchar | 1 |  | √ | '0' |  |
 | 12 | fisecnupdate | ECN修改(废弃) | bpchar | 1 |  | √ | '0' | ECN修改(废弃) |
 | 13 | fisinsloc | 安装位置 | bpchar | 1 |  | √ | '0' | 安装位置 |
-| 14 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 16 | fisparts | fisparts | bpchar | 1 |  | √ | '0' |  |
 | 17 | fisversionvalid | 版本同时有效 | bpchar | 1 |  | √ | '0' | 版本同时有效 |
 | 18 | fisecnversion | ECN版本 | bpchar | 1 |  | √ | '0' | ECN版本 |
 | 19 | fissyspre | 预置 | bpchar | 1 |  | √ | '0' | 预置 |
-| 20 | fisstandard | 标准 | bpchar | 1 |  | √ | '0' | 标准 |
-| 21 | fissuperbom | 配置 | bpchar | 1 |  | √ | '0' | 配置 |
+| 20 | fisstandard | 标准BOM | bpchar | 1 |  | √ | '0' | 标准BOM |
+| 21 | fissuperbom | 配置BOM | bpchar | 1 |  | √ | '0' | 配置BOM |
 | 22 | fiscost | fiscost | bpchar | 1 |  | √ | '0' |  |
 | 23 | fisversion | fisversion | bpchar | 1 |  | √ | '0' |  |
 | 24 | fisdesign | fisdesign | bpchar | 1 |  | √ | '0' |  |

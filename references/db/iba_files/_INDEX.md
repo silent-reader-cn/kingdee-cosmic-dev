@@ -26,7 +26,7 @@
 | 14 | `t_iba_nrincome_stat` | 非经常性损益表-主表 | 14 | [iba_nrincome_stat.md](./iba_nrincome_stat.md) |
 | 15 | `t_iba_nrincomes_detail` | 单据体-子表 | 5 | [iba_nrincome_stat.md](./iba_nrincome_stat.md) |
 | 16 | `t_iba_overhead` | 管理费用明细表-主表 | 14 | [iba_overhead.md](./iba_overhead.md) |
-| 17 | `t_iba_parameter` | 参数设置数据-主表 | 7 | [iba_parameter.md](./iba_parameter.md) |
+| 17 | `t_iba_parameter` | 参数设置数据-主表 | 10 | [iba_parameter.md](./iba_parameter.md) |
 | 18 | `t_iba_patent_count` | 专利数量表-主表 | 14 | [iba_patent_count.md](./iba_patent_count.md) |
 | 19 | `t_iba_payrollpay` | 应付职工薪酬表-主表 | 14 | [iba_payrollpay.md](./iba_payrollpay.md) |
 | 20 | `t_iba_pcount_detail` | 单据体-子表 | 5 | [iba_patent_count.md](./iba_patent_count.md) |
@@ -40,7 +40,7 @@
 | 28 | `t_iba_sellingexpense` | 销售费用明细表-主表 | 14 | [iba_sellingexpense.md](./iba_sellingexpense.md) |
 | 29 | `t_iba_staff_build` | 人员结构表-主表 | 14 | [iba_staff_build.md](./iba_staff_build.md) |
 | 30 | `t_iba_staff_build_detail` | 单据体-子表 | 5 | [iba_staff_build.md](./iba_staff_build.md) |
-| 31 | `t_iba_structure_detail` | 结构明细-子表 | 13 | [main_business_structure.md](./main_business_structure.md) |
+| 31 | `t_iba_structure_detail` | 结构明细-子表 | 14 | [main_business_structure.md](./main_business_structure.md) |
 | 32 | `t_iba_top5_customer_data` | 收入前五客户表-主表 | 15 | [iba_top5_customer_data.md](./iba_top5_customer_data.md) |
 | 33 | `t_iba_top5_supplier_data` | 采购前五供应商表-主表 | 15 | [iba_top5_supplier_data.md](./iba_top5_supplier_data.md) |
 | 34 | `t_overhead_detail` | 单据体-子表 | 5 | [iba_overhead.md](./iba_overhead.md) |

@@ -13,8 +13,10 @@
 | 2 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 3 | fprelevyrate | 预征率 | numeric | 23 | 10 | √ | 0 | 预征率 |
 | 4 | fseq | fseq | int4 | 32 |  | √ | 0 |  |
-| 5 | fsubbuildingtype | 房产类型子目 | int8 | 64 |  | √ | 0 | 业务定义 tpo_tdzzs_bizdef |
-| 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 5 | fexpirationend | fexpirationend | timestamp | 0 |  |  | null |  |
+| 6 | fsubbuildingtype | 房产类型子目 | int8 | 64 |  | √ | 0 | 业务定义 tpo_tdzzs_bizdef |
+| 7 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 8 | fexpirationstart | fexpirationstart | timestamp | 0 |  |  | null |  |
 
 ### 列规则定义
 

@@ -39,7 +39,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fsrcstdrptid | 源标准报表 | int8 | 64 |  | √ | 0 | 标准报表项目 fsa_rptitems |
+| 2 | fsrcstdrptid | 源标准报表 | int8 | 64 |  | √ | 0 | [标准报表项目 fsa_rptitems](../fsa_files/fsa_rptitems.md) |
 | 3 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 4 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 
@@ -68,7 +68,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 4 | fcalcformular_tag | 表达式_详情 | text | 0 |  |  | null | 表达式_详情 |
 | 5 | fcalcformular | 表达式 | varchar | 510 |  | √ | ' ' | 表达式 |
@@ -76,7 +76,7 @@
 | 7 | frptitemsrctype | 数据来源类型 | bpchar | 1 |  | √ | ' ' | 数据来源类型,枚举: 0 :系统预置 1 :自定义 |
 | 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 9 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 12 | fdisplayformular_tag | 表达译文_详情 | text | 0 |  |  | null | 表达译文_详情 |
 | 13 | fdescription_tag | 描述_详情 | text | 0 |  |  | null | 描述_详情 |

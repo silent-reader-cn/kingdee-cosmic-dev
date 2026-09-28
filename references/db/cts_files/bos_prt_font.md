@@ -12,7 +12,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | frcid | 资源ID | varchar | 50 |  | √ | ' ' | 资源ID |
 | 3 | fname | 字体名称 | varchar | 80 |  | √ | ' ' | 字体名称 |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fbillstatus | 状态 | bpchar | 1 |  | √ | ' ' | 状态,枚举: A :暂存 B :提交 |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  | √ | LOCALTIMESTAMP | 创建时间 |
 | 7 | fordernum | 排序 | int4 | 32 |  | √ | 0 | 排序 |
@@ -20,11 +20,12 @@
 | 9 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
 | 10 | fsource | 来源 | bpchar | 1 |  | √ | ' ' | 来源,枚举: 1 :系统预制 2 :自定义 |
 | 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fnumber | 字体编码 | varchar | 50 |  | √ | ' ' | 字体编码 |
-| 14 | falias | falias | varchar | 50 |  | √ | ' ' |  |
+| 14 | falias | falias | varchar | 100 |  | √ | ' ' |  |
 | 15 | fbillno | 单据编码 | varchar | 50 |  | √ | ' ' | 单据编码 |
-| 16 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 16 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 17 | fisdefault | 默认字体 | bpchar | 1 |  | √ | '0' | 默认字体 |
 
 ### 列规则定义
 
@@ -53,7 +54,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | flocaleid | flocaleid | varchar | 20 |  | √ | ' ' | localeid |
 | 3 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
-| 4 | falias | 字体别名 | varchar | 100 |  | √ | ' ' | 字体别名 |
+| 4 | falias | 字体名称 | varchar | 100 |  | √ | ' ' | 字体名称 |
 
 ### 列规则定义
 

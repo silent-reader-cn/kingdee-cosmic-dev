@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 3 | fentitytype | 单据类型 | varchar | 255 |  | √ | ' ' | 单据类型,枚举: DAILYREIMBURSEBILL :费用报销单 PUBLICREIMBURSEBILL :对公报销单 DAILYAPPLYBILL :费用申请单 DAILYLOANBILL :借款单 TRIPREQBILL :出差申请单 TRIPREIMBURSEBILL :差旅报销单 REPAYMENTBILL :还款单 EXPENSERECORDBILL :费用记录 TRIPRECORDBILL :差旅记录 EXPENSESHAREBILL :费用分摊单 |
+| 3 | fentitytype | 单据类型 | varchar | 255 |  | √ | ' ' | 单据类型,枚举: DAILYREIMBURSEBILL :费用报销单 PUBLICREIMBURSEBILL :对公报销单 DAILYAPPLYBILL :费用申请单 DAILYLOANBILL :借款单 TRIPREQBILL :出差申请单 TRIPREIMBURSEBILL :差旅报销单 REPAYMENTBILL :还款单 EXPENSERECORDBILL :费用记录 TRIPRECORDBILL :差旅记录 EXPENSESHAREBILL :费用分摊单 PREPAYBILL :预付单 APPLYPAYBILL :挂账付款申请单 APPLYPROJECTBILL :立项单 WITHHOLDINGBILL :费用预提单 REIMCTLAPPLYBILL :额度申请单 COSTESTIMATEBILL :费用暂估单 DAILYVEHICLEBILL :用车申请单 CHECKINGPAYBILL :商旅付款申请单 CONTRACTBILL :合同台账单 MEAL_APPLICATION_BILL :用餐申请单 ACCOUNTCHANGEBILL :收款信息变更单 STAKEHOLDERCHANGEBILL :干系人变更单 TRIPREIMBURSE_CARDGRID :国内/国际差旅报销单 |
 | 4 | fentityid | entityid | varchar | 255 |  | √ | ' ' | entityid |
 | 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 

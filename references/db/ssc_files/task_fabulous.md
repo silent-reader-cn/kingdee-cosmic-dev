@@ -11,9 +11,9 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | ftaskproperty | 任务属性 | varchar | 10 |  | √ | '0' | 任务属性,枚举: 0 :审单任务 5 :质检任务 |
-| 3 | fthumbupuser | 点赞用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fthumbupuser | 点赞用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fdate | 点赞日期 | timestamp | 0 |  |  | null | 点赞日期 |
-| 5 | fbythumbupuser | 被点赞用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | fbythumbupuser | 被点赞用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

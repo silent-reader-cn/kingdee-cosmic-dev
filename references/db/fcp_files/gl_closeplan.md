@@ -16,7 +16,7 @@
 | 5 | fcreatorid | fcreatorid | int8 | 64 |  | √ | 0 |  |
 | 6 | fstartdate | 版本化日期 | timestamp | 0 |  |  | null | 版本化日期 |
 | 7 | fcreatetime | fcreatetime | timestamp | 0 |  |  | null |  |
-| 8 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 8 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 9 | fday | 天数 | int4 | 32 |  | √ | 0 | 天数 |
 | 10 | fmodifytime | fmodifytime | timestamp | 0 |  |  | null |  |
 

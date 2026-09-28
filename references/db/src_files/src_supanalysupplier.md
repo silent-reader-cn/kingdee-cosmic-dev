@@ -42,7 +42,7 @@
 | 2 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 3 | fnote | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
 | 4 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 5 | fsupplierid | 供应商 | int8 | 64 |  | √ | 0 | 供应商 bd_supplier |
+| 5 | fsupplierid | 供应商 | int8 | 64 |  | √ | 0 | [供应商 bd_supplier](../basedata_files/bd_supplier.md) |
 
 ### 列规则定义
 

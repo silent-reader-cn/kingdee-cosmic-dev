@@ -26,8 +26,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | t_bd_supplierlinkman_l_pkey |  | fpkid |
-| 2 | idx_bd_supplinkman_l_entry |  | fentryid,flocaleid |
+| 1 | idx_bd_supplinkman_l_entry |  | fentryid,flocaleid |
+| 2 | t_bd_supplierlinkman_l_pkey |  | fpkid |
 
 ---
 

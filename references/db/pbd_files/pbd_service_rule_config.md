@@ -74,7 +74,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fbillstatus | 单据状态 | bpchar | 1 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 4 | foperator | 业务触发场景 | varchar | 50 |  | √ | ' ' | 业务触发场景 |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
@@ -82,14 +82,14 @@
 | 7 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
 | 8 | ftriggertype | 触发类别 | bpchar | 1 |  | √ | ' ' | 触发类别,枚举: A :业务操作 B :条件触发 |
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 11 | fplatformapild | 来源接口名称 | int8 | 64 |  | √ | 0 | 外部系统API pbd_extsys_api |
+| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 11 | fplatformapild | 来源接口名称 | int8 | 64 |  | √ | 0 | [外部系统API pbd_extsys_api](../pbd_files/pbd_extsys_api.md) |
 | 12 | fbillid | 业务调用方案BillId | int8 | 64 |  | √ | 0 | 业务调用方案BillId |
-| 13 | fbillentity | 关联业务单据或组件 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
-| 14 | fstandardapild | 标准接口名称 | int8 | 64 |  | √ | 0 | 接口标准化管理 pbd_standard_api |
+| 13 | fbillentity | 关联业务单据或组件 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
+| 14 | fstandardapild | 标准接口名称 | int8 | 64 |  | √ | 0 | [接口映射方案 pbd_standard_api](../pbd_files/pbd_standard_api.md) |
 | 15 | fentryid | 业务调用方案EntryID | int8 | 64 |  | √ | 0 | 业务调用方案EntryID |
 | 16 | fbillno | 单据编号 | varchar | 80 |  | √ | ' ' | 单据编号 |
-| 17 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 17 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

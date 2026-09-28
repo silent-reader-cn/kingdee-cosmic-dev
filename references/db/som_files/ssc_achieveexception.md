@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fsscid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fsscid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fcreatedate | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 4 | fmodifydate | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 5 | frecalstatus | 重算状态 | bpchar | 1 |  | √ | ' ' | 重算状态,枚举: 0 :成功 1 :失败 |

@@ -100,7 +100,7 @@
 | 5 | fentrysourcefiledname | 资源对象名称 | varchar | 255 |  | √ | ' ' | 资源对象名称 |
 | 6 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 7 | fentrycalculateexc_tag | 计算公式_详情 | text | 0 |  |  | null | 计算公式_详情 |
-| 8 | fentryalgoregister | 自定义插件 | int8 | 64 |  | √ | 0 | 算法注册配置 mrp_algoregister |
+| 8 | fentryalgoregister | 自定义插件 | int8 | 64 |  | √ | 0 | [算法注册配置 mrp_algoregister](../msplan_files/mrp_algoregister.md) |
 | 9 | fentrycalculateexc | 计算公式 | varchar | 255 |  | √ | ' ' | 计算公式 |
 | 10 | fentrycalcorder | 计算顺序 | int4 | 32 |  | √ | 0 | 计算顺序 |
 | 11 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
@@ -132,22 +132,22 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 6 | fsrcbillid | 资源对象 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
-| 7 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 8 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | fsrcbillid | 资源对象 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
+| 7 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 8 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 10 | fctrlstrategy | 控制策略 | varchar | 50 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
 | 11 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 14 | freadylevelid | 就绪状态优先级 | int8 | 64 |  | √ | 0 | 就绪状态优先级定义 fmm_readylevel |
-| 15 | fdestbillid | 关联对象 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 14 | freadylevelid | 就绪状态优先级 | int8 | 64 |  | √ | 0 | [就绪状态优先级定义 fmm_readylevel](../fmm_files/fmm_readylevel.md) |
+| 15 | fdestbillid | 关联对象 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 16 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
-| 17 | fbillfieldtransferid | 实体字段映射 | int8 | 64 |  | √ | 0 | 实体字段映射 mrp_billfieldtransfer |
+| 17 | fbillfieldtransferid | 实体字段映射 | int8 | 64 |  | √ | 0 | [实体字段映射 mrp_billfieldtransfer](../msplan_files/mrp_billfieldtransfer.md) |
 | 18 | fbitindex | 位图 | int8 | 64 |  | √ | 0 | 位图 |
 | 19 | fenable | 使用状态 | varchar | 50 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 20 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |

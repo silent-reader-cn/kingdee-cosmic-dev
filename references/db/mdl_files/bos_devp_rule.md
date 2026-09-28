@@ -52,7 +52,7 @@
 | 11 | fload | 加载 | bpchar | 1 |  | √ | '0' | 加载 |
 | 12 | freport | 报表控件 | bpchar | 1 |  | √ | '0' | 报表控件 |
 | 13 | fcard | 卡片控件 | bpchar | 1 |  | √ | '0' | 卡片控件 |
-| 14 | fformid | 定义参数 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 14 | fformid | 定义参数 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 
 ### 列规则定义
 

@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | ftargetbillnumber | 目标单标识 | varchar | 50 |  | √ | ' ' | 目标单标识 |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  | √ | LOCALTIMESTAMP | 创建时间 |
 | 6 | fenablecarrycreaterule | 开启新建规则携带 | bpchar | 1 |  | √ | '0' | 开启新建规则携带 |
@@ -21,7 +21,7 @@
 | 10 | fsourcebillnumber | 源单标识 | varchar | 50 |  | √ | ' ' | 源单标识 |
 | 11 | fdisablecreaterule | 禁止新建规则 | bpchar | 1 |  | √ | '0' | 禁止新建规则 |
 | 12 | fmustinput | 必录控制 | varchar | 255 |  | √ | ' ' | 必录控制 |
-| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 15 | fenable | 使用状态 | bpchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 16 | fnumber | 编码 | varchar | 36 |  | √ | ' ' | 编码 |

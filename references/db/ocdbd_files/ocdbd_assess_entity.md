@@ -9,7 +9,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | 年度 | int8 | 64 |  | √ | 0 | 营销周期 ocdbd_assess_period |
+| 1 | fid | 年度 | int8 | 64 |  | √ | 0 | [营销周期 ocdbd_assess_period](../ocdbd_files/ocdbd_assess_period.md) |
 | 2 | fmonthname | 月度名称 | varchar | 80 |  | √ | ' ' | 月度名称 |
 | 3 | fseq | 序号 | int4 | 32 |  | √ | 0 | 序号 |
 | 4 | fentrymonth | 月份 | int4 | 32 |  | √ | 0 | 月份 |

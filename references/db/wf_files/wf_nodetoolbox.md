@@ -11,14 +11,14 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 5 | fprocesstype | 流程类型 | varchar | 50 |  | √ | 'AuditFlow' | 流程类型,枚举: AuditFlow :审批流 |
-| 6 | forg | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | forg | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fappid | 应用id | varchar | 50 |  | √ | ' ' | 应用id |
 | 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 9 | fapplicationtype | 应用类型 | varchar | 50 |  | √ | 'common' | 应用类型,枚举: common :通用 |
-| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fcloudid | 云ID | varchar | 50 |  | √ | ' ' | 云ID |
 | 12 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
 | 13 | fisinitialization | 是否预置 | bpchar | 1 |  | √ | '0' | 是否预置 |
@@ -80,7 +80,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 4 | fnodetemplate | 节点模板 | int8 | 64 |  | √ | 0 | 节点模板库 wf_nodetemplate |
+| 4 | fnodetemplate | 节点模板 | int8 | 64 |  | √ | 0 | [节点模板库 wf_nodetemplate](../wf_files/wf_nodetemplate.md) |
 
 ### 列规则定义
 

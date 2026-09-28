@@ -1,6 +1,6 @@
 # dbc 模块表清单
 
-> 本模块共收录 **13** 张表定义，来自 `dbc_files/`。
+> 本模块共收录 **15** 张表定义，来自 `dbc_files/`。
 
 > 索引由 `scripts/build_index.py` 从 Markdown 自动生成，请勿手工编辑。
 > 检索本模块表结构请用统一检索脚本（比翻本文件更快）：
@@ -18,8 +18,10 @@
 | 6 | `t_dbc_table_copy_items` | 过滤条件-子表 | 7 | [dbc_table_copy.md](./dbc_table_copy.md) |
 | 7 | `t_dbc_table_copy_l` | 数据表复制-多语言表 | 4 | [dbc_table_copy.md](./dbc_table_copy.md) |
 | 8 | `t_dbc_table_copy_log` | 数据表复制日志-主表 | 26 | [dbc_table_copy_log.md](./dbc_table_copy_log.md) |
-| 9 | `t_dbc_tc_log_items` | 单据体-子表 | 17 | [dbc_table_copy_log.md](./dbc_table_copy_log.md) |
-| 10 | `t_isc_database_link` | 数据库连接-主表 | 56 | [dbc_database_link.md](./dbc_database_link.md) |
-| 11 | `t_isc_database_link_l` | 数据库连接-多语言表 | 4 | [dbc_database_link.md](./dbc_database_link.md) |
-| 12 | `t_isc_datasource` | 数据库-主表 | 18 | [dbc_database.md](./dbc_database.md) |
-| 13 | `t_isc_datasource_l` | 数据库-多语言表 | 4 | [dbc_database.md](./dbc_database.md) |
+| 9 | `t_dbc_table_diff` | 比较结果-主表 | 20 | [dbc_table_diff.md](./dbc_table_diff.md) |
+| 10 | `t_dbc_table_diff_items` | 单据体-子表 | 8 | [dbc_table_diff.md](./dbc_table_diff.md) |
+| 11 | `t_dbc_tc_log_items` | 单据体-子表 | 17 | [dbc_table_copy_log.md](./dbc_table_copy_log.md) |
+| 12 | `t_isc_database_link` | 数据库连接-主表 | 60 | [dbc_database_link.md](./dbc_database_link.md) |
+| 13 | `t_isc_database_link_l` | 数据库连接-多语言表 | 4 | [dbc_database_link.md](./dbc_database_link.md) |
+| 14 | `t_isc_datasource` | 数据库-主表 | 18 | [dbc_database.md](./dbc_database.md) |
+| 15 | `t_isc_datasource_l` | 数据库-多语言表 | 4 | [dbc_database.md](./dbc_database.md) |

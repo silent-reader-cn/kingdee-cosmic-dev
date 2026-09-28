@@ -41,22 +41,22 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | null | id |
-| 2 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fisleaf | 是否叶子 | bpchar | 1 |  |  | null | 是否叶子 |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
-| 6 | fparentid | 上级分类 | int8 | 64 |  | √ | 0 | 供应商分类 bd_suppliergroup |
+| 6 | fparentid | 上级分类 | int8 | 64 |  | √ | 0 | [供应商分类 bd_suppliergroup](../basedata_files/bd_suppliergroup.md) |
 | 7 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 8 | flongnumber | 长编码 | varchar | 255 |  |  | null | 长编码 |
 | 9 | fdisabledate | 禁用时间 | timestamp | 0 |  |  | null | 禁用时间 |
-| 10 | fdisablerid | 禁用人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 10 | fdisablerid | 禁用人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fdescription | 描述 | varchar | 255 |  | √ | ' ' | 描述 |
 | 12 | fispreset | 系统预设 | bpchar | 1 |  | √ | '0' | 系统预设 |
 | 13 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 14 | flevel | 级次 | int8 | 64 |  |  | null | 级次 |
 | 15 | fstatus | 数据状态 | varchar | 10 |  |  | null | 数据状态,枚举: Z :暂存 A :创建 B :已提交 C :已审核 |
-| 16 | fstandardid | 供应商分类标准 | int8 | 64 |  | √ | 0 | 供应商分类标准 bd_suppliergroupstandard |
-| 17 | fcreatorid | 创建人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 16 | fstandardid | 供应商分类标准 | int8 | 64 |  | √ | 0 | [供应商分类标准 bd_suppliergroupstandard](../basedata_files/bd_suppliergroupstandard.md) |
+| 17 | fcreatorid | 创建人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 18 | fmasterid | 主数据内码 | int8 | 64 |  |  | null | 主数据内码 |
 | 19 | fenable | 使用状态 | bpchar | 1 |  |  | null | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 20 | fnumber | 编码 | varchar | 80 |  |  | null | 编码 |

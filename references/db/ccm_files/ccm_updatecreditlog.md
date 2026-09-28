@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreator | 用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fcreator | 用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | farchiveid | 信用档案ID | int8 | 64 |  | √ | 0 | 信用档案ID |
 | 4 | fcreatetime | 操作日期 | timestamp | 0 |  |  | null | 操作日期 |
 | 5 | farchivename | 档案名称 | varchar | 255 |  | √ | ' ' | 档案名称 |
@@ -24,7 +24,7 @@
 | 13 | fcontrolmode | 控制强度 | varchar | 30 |  | √ | ' ' | 控制强度,枚举: cancel :取消交易 warning :预警提示 |
 | 14 | fsuccess | 检查通过 | bpchar | 1 |  | √ | ' ' | 检查通过 |
 | 15 | fbalance | 余额 | numeric | 23 | 10 | √ | 0 | 余额 |
-| 16 | fscheme | 信控方案 | int8 | 64 |  | √ | 0 | 信用控制方案 ccm_schemes |
+| 16 | fscheme | 信控方案 | int8 | 64 |  | √ | 0 | [信用控制方案 ccm_schemes](../ccm_files/ccm_schemes.md) |
 | 17 | fquotatype | 额度类型 | varchar | 30 |  | √ | ' ' | 额度类型,枚举: amount :信用额度 qty :信用数量 days :信用天数 overdueamt :逾期额度 |
 | 18 | fdirection | 更新方向 | varchar | 30 |  | √ | ' ' | 更新方向,枚举: reduce :减少 increase :增加 |
 | 19 | flogtype | 日志类型 | varchar | 30 |  | √ | ' ' | 日志类型,枚举: check :正常检查日志 other :其他日志 |

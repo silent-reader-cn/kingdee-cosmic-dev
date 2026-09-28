@@ -36,5 +36,5 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | pk_tcvvt_finance_scjyxxb |  | fid |
-| 2 | idx_tcvvt_scjyxxb |  | fsbbid,fewblxh |
+| 1 | idx_tcvvt_scjyxxb |  | fsbbid,fewblxh |
+| 2 | pk_tcvvt_finance_scjyxxb |  | fid |

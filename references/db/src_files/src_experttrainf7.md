@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fexpertid | 专家 | int8 | 64 |  | √ | 0 | 专家资料 src_expert |
+| 2 | fexpertid | 专家 | int8 | 64 |  | √ | 0 | [专家资料 src_expert](../src_files/src_expert.md) |
 | 3 | faddress | faddress | varchar | 255 |  | √ | ' ' |  |
 | 4 | faptitudename | faptitudename | varchar | 255 |  | √ | ' ' |  |
 | 5 | forgid | forgid | int8 | 64 |  | √ | 0 |  |
@@ -24,7 +24,7 @@
 | 13 | funauditorid | funauditorid | int8 | 64 |  | √ | 0 |  |
 | 14 | fbillno | 培训编号 | varchar | 30 |  | √ | ' ' | 培训编号 |
 | 15 | fgrade | fgrade | varchar | 50 |  | √ | ' ' |  |
-| 16 | fitemtypeid | 类型 | int8 | 64 |  | √ | 0 | 招标辅助资料 pds_extdata |
+| 16 | fitemtypeid | 类型 | int8 | 64 |  | √ | 0 | [招标辅助资料 pds_extdata](../pds_files/pds_extdata.md) |
 | 17 | fbizorg | fbizorg | varchar | 255 |  | √ | ' ' |  |
 | 18 | fremark | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
 | 19 | fmodifierid | fmodifierid | int8 | 64 |  | √ | 0 |  |

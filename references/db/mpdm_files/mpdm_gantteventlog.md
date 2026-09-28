@@ -11,17 +11,17 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 操作事件 | varchar | 100 |  | √ | ' ' | 操作事件 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | faftercontent | 操作后内容 | varchar | 1000 |  | √ | ' ' | 操作后内容 |
 | 5 | fcreatetime | 操作时间 | timestamp | 0 |  |  | null | 操作时间 |
-| 6 | fbusinessobjid | 业务对象 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 6 | fbusinessobjid | 业务对象 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 7 | fresult | 执行结果 | varchar | 50 |  | √ | ' ' | 执行结果,枚举: 0 :失败 1 :成功 |
 | 8 | fdatasourceid | 页面 | varchar | 50 |  | √ | ' ' | 页面 |
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 10 | fbeforecontent | 操作前内容 | varchar | 1000 |  | √ | ' ' | 操作前内容 |
 | 11 | fstatus | 数据状态 | varchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 12 | fclientip | 客户端地址 | varchar | 50 |  | √ | ' ' | 客户端地址 |
-| 13 | fcreatorid | 操作人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fcreatorid | 操作人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 15 | ffailcause | 失败原因 | varchar | 1000 |  | √ | ' ' | 失败原因 |
 | 16 | fenable | 使用状态 | varchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |

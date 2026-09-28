@@ -11,12 +11,12 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fmodifierid | fmodifierid | int8 | 64 |  | √ | 0 |  |
-| 3 | fprojectid | 寻源项目 | int8 | 64 |  | √ | 0 | 招标项目F7 src_projectf7 |
+| 3 | fprojectid | 寻源项目 | int8 | 64 |  | √ | 0 | [招标项目F7 src_projectf7](../src_files/src_projectf7.md) |
 | 4 | fbillstatus | fbillstatus | bpchar | 1 |  | √ | 'A' |  |
 | 5 | fparentid | fparentid | varchar | 50 |  | √ | ' ' |  |
 | 6 | fcreatetime | fcreatetime | timestamp | 0 |  |  | null |  |
 | 7 | forgid | forgid | int8 | 64 |  | √ | 0 |  |
-| 8 | fschemeid | 分析方案 | int8 | 64 |  | √ | 0 | 方案配置 src_scheme |
+| 8 | fschemeid | 分析方案 | int8 | 64 |  | √ | 0 | [方案配置 src_scheme](../src_files/src_scheme.md) |
 | 9 | flastupdateuserid | flastupdateuserid | int8 | 64 |  | √ | 0 |  |
 | 10 | fauditdate | fauditdate | timestamp | 0 |  |  | null |  |
 | 11 | fdescription | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
@@ -24,7 +24,7 @@
 | 13 | fmodifytime | fmodifytime | timestamp | 0 |  |  | null |  |
 | 14 | fcreatorid | fcreatorid | int8 | 64 |  | √ | 0 |  |
 | 15 | fauditorid | fauditorid | int8 | 64 |  | √ | 0 |  |
-| 16 | fbillno | 编号 | varchar | 30 |  | √ | ' ' | 编号 |
+| 16 | fbillno | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
 | 17 | ftemplate | ftemplate | int8 | 64 |  | √ | 0 |  |
 
 ### 列规则定义

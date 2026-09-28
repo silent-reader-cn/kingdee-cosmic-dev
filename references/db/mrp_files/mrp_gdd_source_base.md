@@ -39,27 +39,27 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmaterialparentcode | 父项编码 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 2 | fmaterialparentcode | 父项编码 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 3 | fqty | fqty | numeric | 23 | 10 | √ | 0.0000000000 |  |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 5 | fmaterialgroup | 编码分类 | int8 | 64 |  | √ | 0 | 物料分类 bd_materialgroup |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 5 | fmaterialgroup | 编码分类 | int8 | 64 |  | √ | 0 | [物料分类 bd_materialgroup](../basedata_files/bd_materialgroup.md) |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 7 | fpbom | PBOM | int8 | 64 |  | √ | 0 | 物料 bd_material |
-| 8 | fconfiguredcode | 配置号 | int8 | 64 |  | √ | 0 | 配置号 bd_configuredcode |
+| 7 | fpbom | PBOM | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
+| 8 | fconfiguredcode | 配置号 | int8 | 64 |  | √ | 0 | [配置号（废弃） bd_configuredcode](../sbd_files/bd_configuredcode.md) |
 | 9 | frequirementtype | 需求类型 | varchar | 50 |  | √ | ' ' | 需求类型 |
 | 10 | fpauxproperty | 父项辅助属性 | int8 | 64 |  | √ | 0 | null 001 |
-| 11 | fcaculatelog | 计划运算号 | int8 | 64 |  | √ | 0 | 运算日志 mrp_caculate_log |
+| 11 | fcaculatelog | 计划运算号 | int8 | 64 |  | √ | 0 | [运算日志 mrp_caculate_log](../msplan_files/mrp_caculate_log.md) |
 | 12 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 13 | fproductmodel | 产品型号 | int8 | 64 |  | √ | 0 | 产品目录 bd_productsummary |
+| 13 | fproductmodel | 产品型号 | int8 | 64 |  | √ | 0 | [产品目录 bd_productsummary](../basedata_files/bd_productsummary.md) |
 | 14 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 15 | fqtys | 数量 | varchar | 50 |  | √ | ' ' | 数量 |
 | 16 | fauxproperty | 辅助属性 | int8 | 64 |  | √ | 0 | null 001 |
-| 17 | fpconfiguredcode | 父项配置号 | int8 | 64 |  | √ | 0 | 配置号 bd_configuredcode |
-| 18 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 17 | fpconfiguredcode | 父项配置号 | int8 | 64 |  | √ | 0 | [配置号（废弃） bd_configuredcode](../sbd_files/bd_configuredcode.md) |
+| 18 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 19 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 20 | fenable | 使用状态 | varchar | 30 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 21 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
-| 22 | fmaterialcode | 编码 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 22 | fmaterialcode | 编码 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 
 ### 列规则定义
 

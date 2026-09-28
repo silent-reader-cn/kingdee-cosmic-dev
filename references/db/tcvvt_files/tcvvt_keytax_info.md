@@ -41,7 +41,7 @@
 | 30 | fsfzmqqy | 27.是否自贸区企业 | varchar | 50 |  | √ | ' ' | 27.是否自贸区企业 |
 | 31 | fzyckgj | 28.主要出口国家（地区） | varchar | 50 |  | √ | ' ' | 28.主要出口国家（地区） |
 | 32 | fqyyyzzdjsj | 5.企业营业执照的登记时间 | varchar | 50 |  | √ | ' ' | 5.企业营业执照的登记时间 |
-| 33 | fzcdz | 35.注册地址 | varchar | 50 |  | √ | ' ' | 35.注册地址 |
+| 33 | fzcdz | 35.注册地址 | varchar | 255 |  | √ | ' ' | 35.注册地址 |
 | 34 | fgytzbl | 7.国有投资比例（%） | numeric | 23 | 10 | √ | 0 | 7.国有投资比例（%） |
 | 35 | fsbbid | 申报表id | varchar | 100 |  | √ | ' ' | 申报表id |
 | 36 | fzzsnsfs | 15.增值税缴纳方式 | varchar | 50 |  | √ | ' ' | 15.增值税缴纳方式 |
@@ -67,6 +67,6 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_tcvvt_keytax_info |  | fewblxh,fsbbid |
-| 2 | pk_tcvvt_keytax_info |  | fid |
+| 1 | pk_tcvvt_keytax_info |  | fid |
+| 2 | idx_tcvvt_keytax_info |  | fewblxh,fsbbid |
 | 3 | idx_tcvvt_keytax_info2 |  | fsbbid |

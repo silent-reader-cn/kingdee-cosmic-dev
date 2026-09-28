@@ -77,7 +77,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 1 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 2 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 3 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 | id |
 | 4 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
@@ -106,7 +106,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fleaseid | 租赁项目 | int8 | 64 |  | √ | 0 | 房产出租信息 tdm_house_rental_info |
+| 1 | fleaseid | 租赁项目 | int8 | 64 |  | √ | 0 | [房产出租信息 tdm_house_rental_info](../tdm_files/tdm_house_rental_info.md) |
 | 2 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 3 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 | id |
 | 4 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
@@ -122,8 +122,8 @@
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
 | 1 | idx_tcret_sharingscheme_lea_fk |  | fentryid |
-| 2 | idx_sharingscheme_lea_fleaseid |  | fleaseid |
-| 3 | pk_tcret_sharingscheme_lea |  | fdetailid |
+| 2 | pk_tcret_sharingscheme_lea |  | fdetailid |
+| 3 | idx_sharingscheme_lea_fleaseid |  | fleaseid |
 
 ---
 
@@ -166,7 +166,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fautoshar | 自动共享 | bpchar | 1 |  | √ | ' ' | 自动共享 |
 | 4 | fplanname | 方案名称 | varchar | 50 |  | √ | ' ' | 方案名称 |
 

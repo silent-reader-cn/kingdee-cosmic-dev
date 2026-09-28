@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | freceivephone | 收件人电话 | varchar | 50 |  | √ | ' ' | 收件人电话 |
-| 3 | flogisticscompid | 物流公司 | int8 | 64 |  | √ | 0 | 物流公司 bd_logisticcomp |
+| 3 | flogisticscompid | 物流公司 | int8 | 64 |  | √ | 0 | [物流公司 bd_logisticcomp](../sbd_files/bd_logisticcomp.md) |
 | 4 | flogisticsnum | 物流单号 | varchar | 80 |  | √ | ' ' | 物流单号 |
 | 5 | fsenderphone | 寄件人电话 | varchar | 50 |  | √ | ' ' | 寄件人电话 |
 | 6 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |

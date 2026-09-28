@@ -40,7 +40,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fexpression |  | text | 0 |  |  | null |  |
 | 4 | fvalidtime | 生效时间： | timestamp | 0 |  |  | null | 生效时间： |
 | 5 | fprocdefid | 流程定义ID | int8 | 64 |  | √ | 0 | 流程定义ID |
@@ -50,7 +50,7 @@
 | 9 | fshowtext | 显示文字： | varchar | 184 |  | √ | ' ' | 显示文字： |
 | 10 | fcreatedate | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 11 | ftype | 类型： | varchar | 30 |  | √ | ' ' | 类型：,枚举: sequenceFlow :连线条件 autoApproval :自动审批条件 participant :参与人条件 processStartUp :流程启动条件 skip :跳过条件 |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fmodifydate | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 14 | fplugin | 业务插件： | text | 0 |  |  | null | 业务插件： |
 | 15 | fversion | 版本 | varchar | 36 |  | √ | ' ' | 版本 |
@@ -89,7 +89,7 @@
 | 7 | fentitynumber | 被选中的实体名称 | varchar | 255 |  | √ | ' ' | 被选中的实体名称 |
 | 8 | fvaluetype | 值类型 | varchar | 100 |  | √ | ' ' | 值类型 |
 | 9 | foperation | 操作符 | varchar | 30 |  | √ | ' ' | 操作符 |
-| 10 | flogic | 逻辑符 | varchar | 30 |  | √ | ' ' | 逻辑符,枚举: && :并且 || :或者 |
+| 10 | flogic | 逻辑符 | varchar | 30 |  | √ | ' ' | 逻辑符,枚举: && :并且 \|\| :或者 |
 | 11 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 
 ### 列规则定义

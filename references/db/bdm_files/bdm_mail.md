@@ -12,7 +12,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 4 | fepinfo | 企业信息 | int8 | 64 |  | √ | 0 | 企业基础信息 bdm_enterprise_baseinfo |
+| 4 | fepinfo | 企业信息 | int8 | 64 |  | √ | 0 | [企业基础信息 bdm_enterprise_baseinfo](../bdm_files/bdm_enterprise_baseinfo.md) |
 
 ### 列规则定义
 
@@ -52,7 +52,7 @@
 | 12 | fseparator | 分隔符选择 | varchar | 50 |  | √ | ' ' | 分隔符选择,枚举: 0 :_ 1 :& 2 :- 3 :. 4 :* |
 | 13 | fserveraddress | 服务器地址 | varchar | 50 |  | √ | ' ' | 服务器地址 |
 | 14 | fssl | SSL加密 | bpchar | 1 |  | √ | ' ' | SSL加密 |
-| 15 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 15 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 16 | fport | 端口号 | int8 | 64 |  | √ | 0 | 端口号 |
 | 17 | fnumber | 编号 | varchar | 50 |  | √ | ' ' | 编号 |
 | 18 | fclientname | 用户名 | varchar | 50 |  | √ | ' ' | 用户名 |

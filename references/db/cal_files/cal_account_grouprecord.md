@@ -11,8 +11,8 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fcostrecordentryid | 核算成本记录分录ID | int8 | 64 |  | √ | 0 | 核算成本记录分录ID |
-| 3 | fperiodid | 期间 | int8 | 64 |  | √ | 0 | 会计日历 bd_period |
-| 4 | fmaterialid | 物料 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 3 | fperiodid | 期间 | int8 | 64 |  | √ | 0 | [会计日历 bd_period](../fibd_files/bd_period.md) |
+| 4 | fmaterialid | 物料 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 5 | fcalbillid | 核算单ID | int8 | 64 |  | √ | 0 | 核算单ID |
 | 6 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 7 | fislastentry | 是否调拨完成 | bpchar | 1 |  | √ | '0' | 是否调拨完成 |
@@ -20,10 +20,10 @@
 | 9 | fgroupno | 分组号 | int8 | 64 |  | √ | 0 | 分组号 |
 | 10 | fcalentryid | 核算单分录ID | int8 | 64 |  | √ | 0 | 核算单分录ID |
 | 11 | fbizbillid | 业务单据ID | int8 | 64 |  | √ | 0 | 业务单据ID |
-| 12 | fownerid | 货主 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 12 | fownerid | 货主 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 13 | fweight | 权重 | numeric | 23 | 10 | √ | 0.0000000000 | 权重 |
 | 14 | ftype | 类型 | bpchar | 1 |  | √ | ' ' | 类型,枚举: 0 :源单 1 :目标单 |
-| 15 | fcostaccountid | 成本主体 | int8 | 64 |  | √ | 0 | 成本主体 cal_bd_costaccount |
+| 15 | fcostaccountid | 成本主体 | int8 | 64 |  | √ | 0 | [成本主体 cal_bd_costaccount](../cal_files/cal_bd_costaccount.md) |
 | 16 | fisbeforeperiod | 是否往期单据 | bpchar | 1 |  | √ | '0' | 是否往期单据 |
 | 17 | fbookdate | 记账日期 | timestamp | 0 |  |  | null | 记账日期 |
 | 18 | fbaseqty | 数量 | numeric | 23 | 10 | √ | 0 | 数量 |
@@ -60,7 +60,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcostaccounttypeid | 主体类别 | int8 | 64 |  | √ | 0 | 成本主体类别 cal_bd_costaccounttype |
+| 2 | fcostaccounttypeid | 主体类别 | int8 | 64 |  | √ | 0 | [成本主体类别 cal_bd_costaccounttype](../cal_files/cal_bd_costaccounttype.md) |
 | 3 | fcostcolumn | 成组成本字段 | varchar | 255 |  | √ | ' ' | 成组成本字段,枚举: materialcost :材料成本 processcost :委外费用 fee :采购成本 manufacturecost :制造费用 resource :人工费用 |
 | 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 5 | fiscompleted | 是否结转完成 | bpchar | 1 |  | √ | '0' | 是否结转完成 |

@@ -31,7 +31,7 @@
 | 20 | fperiodid | fperiodid | int8 | 64 |  | √ | 0 |  |
 | 21 | fassgrpid | fassgrpid | int8 | 64 |  | √ | 0 |  |
 | 22 | fcreatetime | fcreatetime | timestamp | 0 |  |  | null |  |
-| 23 | fdescription | fdescription | varchar | 255 |  | √ | ' ' |  |
+| 23 | fdescription | fdescription | varchar | 1020 |  | √ | ' ' |  |
 | 24 | fbookid | fbookid | int8 | 64 |  | √ | 0 |  |
 | 25 | fbooktypeid | fbooktypeid | int8 | 64 |  | √ | 0 |  |
 | 26 | fvchentryid | fvchentryid | int8 | 64 |  | √ | 0 |  |

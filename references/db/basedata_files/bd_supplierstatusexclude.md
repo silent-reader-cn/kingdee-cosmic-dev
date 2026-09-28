@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fsupplierstatus | 供应商状态 | int8 | 64 |  | √ | 0 | 供应商状态 bd_supplierstatus |
+| 2 | fsupplierstatus | 供应商状态 | int8 | 64 |  | √ | 0 | [供应商状态 bd_supplierstatus](../basedata_files/bd_supplierstatus.md) |
 
 ### 列规则定义
 

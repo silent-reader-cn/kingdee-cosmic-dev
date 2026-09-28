@@ -43,7 +43,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 3 | flast_modifier_id | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | flast_modifier_id | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fmax_threads | 最大线程数 | int4 | 32 |  | √ | 0 | 最大线程数 |
 | 5 | fnumber | 编码 | varchar | 50 |  | √ | ' ' | 编码 |
 | 6 | flast_modified_time | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |

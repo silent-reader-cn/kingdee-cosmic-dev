@@ -27,14 +27,15 @@
 | 16 | fextname | 文件类型 | varchar | 30 |  |  | null | 文件类型 |
 | 17 | fauditmen | fauditmen | int8 | 64 |  | √ | 0 |  |
 | 18 | fattachmentpanel | fattachmentpanel | varchar | 80 |  |  | null |  |
-| 19 | ffilestorage | ffilestorage | bpchar | 1 |  | √ | '0' |  |
-| 20 | fattachmentsize | fattachmentsize | varchar | 50 |  |  | null |  |
-| 21 | ffileid | ffileid | varchar | 500 |  | √ | ' ' |  |
-| 22 | faliasfilename | faliasfilename | varchar | 255 |  |  | null |  |
-| 23 | fnumber | fnumber | varchar | 50 |  |  | null |  |
-| 24 | fattachmentname | fattachmentname | varchar | 255 |  |  | null |  |
-| 25 | finterid | finterid | varchar | 50 |  |  | null |  |
-| 26 | fbilltype | fbilltype | varchar | 50 |  |  | null |  |
+| 19 | fdragseq | fdragseq | int8 | 64 |  | √ | 0 |  |
+| 20 | ffilestorage | ffilestorage | bpchar | 1 |  | √ | '0' |  |
+| 21 | fattachmentsize | fattachmentsize | varchar | 50 |  |  | null |  |
+| 22 | ffileid | ffileid | varchar | 500 |  | √ | ' ' |  |
+| 23 | faliasfilename | faliasfilename | varchar | 255 |  |  | null |  |
+| 24 | fnumber | fnumber | varchar | 50 |  |  | null |  |
+| 25 | fattachmentname | fattachmentname | varchar | 255 |  |  | null |  |
+| 26 | finterid | finterid | varchar | 50 |  |  | null |  |
+| 27 | fbilltype | fbilltype | varchar | 50 |  |  | null |  |
 
 ### 列规则定义
 

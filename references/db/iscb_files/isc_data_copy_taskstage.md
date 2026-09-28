@@ -45,19 +45,19 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fhost | 执行服务器 | varchar | 150 |  | √ | ' ' | 执行服务器 |
 | 3 | fbegin_time | 开始时间 | timestamp | 0 |  |  | null | 开始时间 |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | flog_tag | 分批日志_详情 | text | 0 |  |  | null | 分批日志_详情 |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 7 | fend_time | 结束时间 | timestamp | 0 |  |  | null | 结束时间 |
 | 8 | ftotal_failed | 失败批数 | int8 | 64 |  | √ | 0 | 失败批数 |
 | 9 | flog | 分批日志 | varchar | 255 |  | √ | ' ' | 分批日志 |
 | 10 | fmodifytime | 状态更新时间 | timestamp | 0 |  |  | null | 状态更新时间 |
-| 11 | fdata_trigger | 启动方案 | int8 | 64 |  | √ | 0 | 启动方案 isc_data_copy_trigger |
+| 11 | fdata_trigger | 启动方案 | int8 | 64 |  | √ | 0 | [启动方案 isc_data_copy_trigger](../iscb_files/isc_data_copy_trigger.md) |
 | 12 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 13 | fstate | 执行状态 | varchar | 30 |  | √ | ' ' | 执行状态,枚举: C :创建 R :执行中 S :完成 F :失败 X :已撤销 W :等待中 |
-| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 16 | fdata_copy | 数据集成方案 | int8 | 64 |  | √ | 0 | 数据集成方案 isc_data_copy |
+| 16 | fdata_copy | 数据集成方案 | int8 | 64 |  | √ | 0 | [数据集成方案 isc_data_copy](../iscb_files/isc_data_copy.md) |
 | 17 | ftotal_count | 总行数 | int8 | 64 |  | √ | 0 | 总行数 |
 | 18 | fenable | 执行状态 | varchar | 30 |  | √ | ' ' | 执行状态,枚举: 0 :禁用 1 :可用 |
 | 19 | fnumber | 编码 | varchar | 60 |  | √ | ' ' | 编码 |
@@ -74,8 +74,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | t_isc_data_copy_taskstage_pkey |  | fid |
-| 2 | idx_isc_data_copy_ts_0 |  | fmodifierid |
+| 1 | idx_isc_data_copy_ts_0 |  | fmodifierid |
+| 2 | t_isc_data_copy_taskstage_pkey |  | fid |
 | 3 | idx_isc_data_copy_ts_1 |  | fnumber |
 
 ---

@@ -10,12 +10,14 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fissendtoadmin | 是否发送通知到管理员 | bpchar | 1 |  | √ | '0' | 是否发送通知到管理员 |
 | 4 | fcreatetime | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
 | 5 | fisupdate | 是否更新 | bpchar | 1 |  | √ | '0' | 是否更新 |
 | 6 | fversionnum | 版本号 | varchar | 50 |  | √ | ' ' | 版本号 |
-| 7 | fsource | 预置数据实体 | varchar | 36 |  | √ | ' ' | 预置数据实体 |
+| 7 | fguideinfo | 更新说明 | varchar | 1024 |  | √ | ' ' | 更新说明 |
+| 8 | fsource | 预置数据实体 | varchar | 36 |  | √ | ' ' | 预置数据实体 |
+| 9 | fcountry | 国家或地区 | int8 | 64 |  | √ | 0 | [国家和地区 bd_country](../base_files/bd_country.md) |
 
 ### 列规则定义
 

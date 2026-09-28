@@ -40,21 +40,21 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fcreateorgid | fcreateorgid | int8 | 64 |  | √ | 0 |  |
-| 3 | fgroupid | 单位分组 | int8 | 64 |  | √ | 0 | 计量单位分组 bd_measureunitsgroup |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fgroupid | 单位分组 | int8 | 64 |  | √ | 0 | [计量单位分组 bd_measureunitsgroup](../base_files/bd_measureunitsgroup.md) |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
 | 6 | fprecision | 单位精度 | int8 | 64 |  | √ | 0 | 单位精度 |
 | 7 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 8 | forgid | forgid | int8 | 64 |  | √ | 0 |  |
 | 9 | fdisabledate | 禁用时间 | timestamp | 0 |  |  | null | 禁用时间 |
 | 10 | fk_kdxk_fcheckunit | 基准单位 | bpchar | 1 |  | √ | '0' | 基准单位 |
-| 11 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fauditdate | fauditdate | timestamp | 0 |  |  | null |  |
 | 13 | fispreset | 系统预设 | bpchar | 1 |  | √ | '1' | 系统预设 |
 | 14 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 15 | fprecisiontype | 精度处理 | varchar | 50 |  | √ | ' ' | 精度处理,枚举: 1 :四舍五入 2 :舍位 3 :进位 |
 | 16 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 17 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 17 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 18 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 19 | fenable | 使用状态 | bpchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 20 | fdisablestatus | fdisablestatus | bpchar | 1 |  | √ | '1' |  |

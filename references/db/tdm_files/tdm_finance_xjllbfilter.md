@@ -13,18 +13,18 @@
 | 2 | fewblxh | 二维表序号 | varchar | 30 |  | √ | ' ' | 二维表序号,枚举: 1 :1 |
 | 3 | fpeirod | 税期 | varchar | 100 |  | √ | ' ' | 税期 |
 | 4 | ftemplateid | 报表模板ID | numeric | 19 |  | √ | 0 | 报表模板ID |
-| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | fbzorg | 编制单位 | varchar | 100 |  | √ | ' ' | 编制单位 |
 | 7 | fsourcesystem | 来源系统 | varchar | 50 |  | √ | ' ' | 来源系统,枚举: ierp :苍穹 eas :EAS |
 | 8 | fskssqq | 税款所属期起 | timestamp | 0 |  |  | null | 税款所属期起 |
-| 9 | ftemplatetype | 报表类型 | varchar | 50 |  | √ | ' ' | 模板类型 tctb_template_type |
+| 9 | ftemplatetype | 报表类型 | varchar | 50 |  | √ | ' ' | [模板类型 tctb_template_type](../tctb_files/tctb_template_type.md) |
 | 10 | fadjperi | 调整期间 | varchar | 50 |  | √ | ' ' | 调整期间 |
 | 11 | ftypeid | 财务报表类型ID | varchar | 100 |  | √ | ' ' | 财务报表类型ID |
 | 12 | faccountbookstype | 账簿类型 | varchar | 50 |  | √ | ' ' | 账簿类型 |
 | 13 | fskssqz | 税款所属期止 | timestamp | 0 |  |  | null | 税款所属期止 |
-| 14 | fdatasource | 数据来源 | varchar | 50 |  | √ | ' ' | 数据来源,枚举: xttb :系统同步 mbyr :模板引入 sgxz :手工新增 |
+| 14 | fdatasource | 数据来源 | varchar | 50 |  | √ | ' ' | 数据来源,枚举: xttb :系统同步 mbyr :模板导入 sgxz :手工新增 |
 | 15 | fisadjust | 调整期 | bpchar | 1 |  | √ | '0' | 调整期 |
-| 16 | ftemplate | 模板 | int8 | 64 |  | √ | 0 | 报表模板 tdm_finance_template |
+| 16 | ftemplate | 模板 | int8 | 64 |  | √ | 0 | [报表模板 tdm_finance_template](../tdm_files/tdm_finance_template.md) |
 
 ### 列规则定义
 
@@ -55,7 +55,7 @@
 | 3 | fewblxh | fewblxh | varchar | 50 |  | √ | ' ' |  |
 | 4 | fbndljje | 本年累计金额 | numeric | 23 | 10 | √ | 0.0000000000 | 本年累计金额 |
 | 5 | fsbbid | 申报表id | varchar | 100 |  | √ | ' ' | 申报表id |
-| 6 | freportitem | 报表项目 | int8 | 64 |  | √ | 0 | 现金流量表项目 tdm_item_xjllb |
+| 6 | freportitem | 报表项目 | int8 | 64 |  | √ | 0 | [现金流量表项目 tdm_item_xjllb](../tdm_files/tdm_item_xjllb.md) |
 | 7 | fbqje | 本期金额 | numeric | 23 | 10 | √ | 0.0000000000 | 本期金额 |
 
 ### 列规则定义
@@ -68,6 +68,6 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | t_tdm_xjllb_pkey |  | fid |
-| 2 | idx_t_tdm_xjllb |  | fsbbid |
+| 1 | idx_t_tdm_xjllb |  | fsbbid |
+| 2 | t_tdm_xjllb_pkey |  | fid |
 | 3 | idx_t_tdm_xjllb_1 |  | fewblxh,fsbbid |

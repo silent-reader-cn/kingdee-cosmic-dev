@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | null |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | null | 用户信息 bos_usergroup_user |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | null | [用户信息 bos_usergroup_user](../base_files/bos_usergroup_user.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | null | pkid |
 
 ### 列规则定义
@@ -23,8 +23,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_perm_log_diff_bd_user_fk |  | fid |
-| 2 | pk_perm_log_diff_bd_user |  | fpkid |
+| 1 | pk_perm_log_diff_bd_user |  | fpkid |
+| 2 | idx_perm_log_diff_bd_user_fk |  | fid |
 
 ---
 
@@ -38,7 +38,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | null |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | null | 业务单据关联基础资字段 perm_bdauth_field |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | null | [业务单据关联基础资字段 perm_bdauth_field](../xkbase_files/perm_bdauth_field.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | null | pkid |
 
 ### 列规则定义
@@ -66,7 +66,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | null |  |
-| 2 | fbasedataid | fbasedataid | varchar | 36 |  | √ | null | 通用角色 perm_role |
+| 2 | fbasedataid | fbasedataid | varchar | 36 |  | √ | null | [通用角色 perm_role](../base_files/perm_role.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | null | pkid |
 
 ### 列规则定义
@@ -101,8 +101,8 @@
 | 6 | fdatachange_type | 数据变更类型枚举类 | int8 | 64 |  | √ | 0 | 数据变更类型枚举类 |
 | 7 | fcontroltype | 数据类型 | varchar | 50 |  | √ | ' ' | 数据类型,枚举: 0 :修改前 1 :修改后 |
 | 8 | fentity_name | 业务对象名称 | varchar | 200 |  | √ | ' ' | 业务对象名称 |
-| 9 | fentityid | 业务对象id | varchar | 36 |  | √ | ' ' | 业务对象 bos_objecttype |
-| 10 | fappid | 应用id | varchar | 36 |  | √ | ' ' | 业务应用实体 bos_devportal_bizapp |
+| 9 | fentityid | 业务对象id | varchar | 36 |  | √ | ' ' | [业务对象 bos_objecttype](../mdl_files/bos_objecttype.md) |
+| 10 | fappid | 应用id | varchar | 36 |  | √ | ' ' | [业务应用实体 bos_devportal_bizapp](../mdl_files/bos_devportal_bizapp.md) |
 
 ### 列规则定义
 
@@ -129,7 +129,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | null |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | null | 用户信息 bos_usergroup_user |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | null | [用户信息 bos_usergroup_user](../base_files/bos_usergroup_user.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | null | pkid |
 
 ### 列规则定义
@@ -157,7 +157,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | null |  |
-| 2 | fbasedataid | fbasedataid | varchar | 36 |  | √ | null | 通用角色 perm_role |
+| 2 | fbasedataid | fbasedataid | varchar | 36 |  | √ | null | [通用角色 perm_role](../base_files/perm_role.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | null | pkid |
 
 ### 列规则定义
@@ -185,7 +185,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | null |  |
-| 2 | fbasedataid | fbasedataid | varchar | 36 |  | √ | null | 权限项 perm_permitem |
+| 2 | fbasedataid | fbasedataid | varchar | 36 |  | √ | null | [权限项 perm_permitem](../base_files/perm_permitem.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | null | pkid |
 
 ### 列规则定义

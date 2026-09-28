@@ -12,7 +12,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fcouldid | 云id | varchar | 50 |  | √ | ' ' | 云id |
 | 3 | fwritebackplugin | 反写插件 | varchar | 255 |  | √ | ' ' | 反写插件 |
-| 4 | fbilltype | 单据 | varchar | 40 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 4 | fbilltype | 单据 | varchar | 40 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 5 | fappid | appid | varchar | 50 |  | √ | ' ' | appid |
 
 ### 列规则定义

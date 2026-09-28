@@ -10,8 +10,8 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fratingagencyid | 评级机构 | int8 | 64 |  | √ | 0 | 评级机构 tbd_ratingagency |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fratingagencyid | 评级机构 | int8 | 64 |  | √ | 0 | [评级机构 tbd_ratingagency](../fbd_files/tbd_ratingagency.md) |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fname | 名称 | varchar | 80 |  | √ | ' ' | 名称 |
 | 5 | fratingscale | 评级 | varchar | 80 |  | √ | ' ' | 评级 |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
@@ -20,7 +20,7 @@
 | 9 | fratingscaleid | 选择的评级分录id | varchar | 30 |  | √ | ' ' | 选择的评级分录id |
 | 10 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 11 | fratingtype | 评级类型 | varchar | 30 |  | √ | ' ' | 评级类型,枚举: bd_country :国家地区 tbd_issuer :发行人 tm_bondissuef7 :债券发行 |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 14 | fratingobject | 评级对象 | int8 | 64 |  | √ | 0 | 国家和地区 bd_country |
 | 15 | feffectivedate | 生效日期 | timestamp | 0 |  |  | null | 生效日期 |

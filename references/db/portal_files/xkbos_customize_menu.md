@@ -10,10 +10,10 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreator | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fcreator | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 4 | fdata_tag | 自定义数据_详情 | text | 0 |  |  | ' ' | 自定义数据_详情 |
-| 5 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | fuserid | 用户id | int8 | 64 |  | √ | 0 | 用户id |
 | 7 | fdata | 自定义数据 | varchar | 255 |  | √ | ' ' | 自定义数据 |
 | 8 | fadmin | 是否管理员数据 | int4 | 32 |  | √ | 2 | 是否管理员数据 |

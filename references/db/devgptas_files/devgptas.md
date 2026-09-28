@@ -1,1 +1,1 @@
-# Cosmic应用开发助手-devgptas
+# AI应用开发助手-devgptas

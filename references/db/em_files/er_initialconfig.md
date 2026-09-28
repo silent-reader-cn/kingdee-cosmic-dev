@@ -1,8 +1,8 @@
-# 初始化任务项-er_initialconfig
+# 初始化任务项（废弃）-er_initialconfig
 
-## 初始化任务项-主表 t_er_initialconfig
+## 初始化任务项（废弃）-主表 t_er_initialconfig
 
-- **表名称：** 初始化任务项-主表
+- **表名称：** 初始化任务项（废弃）-主表
 - **表名：** t_er_initialconfig
 
 ### 表格列定义
@@ -11,19 +11,19 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fisleaf | fisleaf | bpchar | 1 |  | √ | ' ' |  |
-| 3 | fgroupid | 分组 | int8 | 64 |  | √ | 0 | 初始化任务项分类维护 er_initialgroup |
+| 3 | fgroupid | 分组 | int8 | 64 |  | √ | 0 | [初始化任务项分类维护（废弃） er_initialgroup](../em_files/er_initialgroup.md) |
 | 4 | forgid | forgid | int8 | 64 |  | √ | 0 |  |
-| 5 | fentitymeta | 初始化配置项目 | varchar | 36 |  | √ | ' ' | 业务对象 bos_objecttype |
+| 5 | fentitymeta | 初始化配置项目 | varchar | 36 |  | √ | ' ' | [业务对象 bos_objecttype](../mdl_files/bos_objecttype.md) |
 | 6 | fispreset | 是否预设 | bpchar | 1 |  | √ | ' ' | 是否预设 |
 | 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 8 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 11 | fsourcedataid | fsourcedataid | int8 | 64 |  | √ | 0 |  |
 | 12 | fbitindex | fbitindex | int8 | 64 |  | √ | 0 |  |
 | 13 | fcreateorgid | fcreateorgid | int8 | 64 |  | √ | 0 |  |
 | 14 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 15 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 15 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 16 | fmustset | 必须配置 | bpchar | 1 |  | √ | ' ' | 必须配置 |
 | 17 | fparentid | fparentid | int8 | 64 |  | √ | 0 |  |
 | 18 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
@@ -51,9 +51,9 @@
 
 ---
 
-## 初始化任务项-多语言表 t_er_initialconfig_l
+## 初始化任务项（废弃）-多语言表 t_er_initialconfig_l
 
-- **表名称：** 初始化任务项-多语言表
+- **表名称：** 初始化任务项（废弃）-多语言表
 - **表名：** t_er_initialconfig_l
 
 ### 表格列定义

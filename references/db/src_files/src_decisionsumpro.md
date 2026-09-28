@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | 单据ID | int8 | 64 |  | √ | 0 | 单据ID |
-| 2 | fprojectid | 项目 | int8 | 64 |  | √ | 0 | 定标F7 src_decisionf7 |
+| 2 | fprojectid | 项目 | int8 | 64 |  | √ | 0 | [定标F7 src_decisionf7](../src_files/src_decisionf7.md) |
 | 3 | fseq | 序号 | int8 | 64 |  | √ | 0 | 序号 |
 | 4 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 

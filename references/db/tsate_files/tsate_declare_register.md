@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fauthorizationcode | 认证码 | varchar | 50 |  | √ | ' ' | 认证码 |
-| 3 | fdeclarechannel | 申报通道 | int8 | 64 |  | √ | 0 | 申报通道 tsate_channel |
+| 3 | fdeclarechannel | 申报通道 | int8 | 64 |  | √ | 0 | [申报通道 tsate_channel](../tsate_files/tsate_channel.md) |
 | 4 | fnsrsbh | 纳税人识别号 | varchar | 50 |  | √ | ' ' | 纳税人识别号 |
 | 5 | fchannel | 供应商 | varchar | 50 |  | √ | ' ' | 供应商,枚举: 1 :金蝶 2 :航信 3 :云账房 |
 

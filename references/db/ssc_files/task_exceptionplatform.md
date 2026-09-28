@@ -17,7 +17,7 @@
 | 6 | ftype | 异常类型 | varchar | 50 |  | √ | ' ' | 异常类型,枚举: 0 :方法类 |
 | 7 | fclassname | 全类名 | varchar | 200 |  | √ | ' ' | 全类名 |
 | 8 | fexceptioninfo | 异常信息 | varchar | 500 |  | √ | ' ' | 异常信息 |
-| 9 | fuserid | 处理人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fuserid | 处理人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | fstacktrace | 异常堆栈 | varchar | 200 |  | √ | ' ' | 异常堆栈 |
 | 11 | fstacktrace_tag | 异常堆栈_详情 | text | 0 |  |  | null | 异常堆栈_详情 |
 

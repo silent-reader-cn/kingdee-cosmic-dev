@@ -16,7 +16,7 @@
 | 5 | fnormalelectroniclimit | 电子普票含税限额 | numeric | 23 | 10 | √ | 0 | 电子普票含税限额 |
 | 6 | fspecialelectroniclimit | 电子专票含税限额 | numeric | 23 | 10 | √ | 0 | 电子专票含税限额 |
 | 7 | fftaxcalculatetype | 税额计算方式 | varchar | 2 |  | √ | ' ' | 税额计算方式,枚举: 0 :以实际输入税额为准，系统不调整税额误差 1 :以系统计算为准，系统将调整误差 |
-| 8 | forg | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 8 | forg | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 9 | fspecialallelimit | 全电专票含税限额 | numeric | 23 | 10 | √ | 0 | 全电专票含税限额 |
 | 10 | fspecialpaperlimit | 纸质专票含税限额 | numeric | 23 | 10 | √ | 0 | 纸质专票含税限额 |
 | 11 | fnormalallelimit | 全电普票含税限额 | numeric | 23 | 10 | √ | 0 | 全电普票含税限额 |

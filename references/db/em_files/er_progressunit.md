@@ -11,9 +11,9 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fcompleted | 是否完成 | bpchar | 1 |  | √ | ' ' | 是否完成 |
-| 3 | fbaseaccorgid | 核算组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 4 | finitialgroupid | 初始化任务项分类 | int8 | 64 |  | √ | 0 | 初始化任务项分类维护 er_initialgroup |
-| 5 | finitialconfigid | 初始化配置项 | int8 | 64 |  | √ | 0 | 初始化任务项 er_initialconfig |
+| 3 | fbaseaccorgid | 核算组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 4 | finitialgroupid | 初始化任务项分类 | int8 | 64 |  | √ | 0 | [初始化任务项分类维护（废弃） er_initialgroup](../em_files/er_initialgroup.md) |
+| 5 | finitialconfigid | 初始化配置项 | int8 | 64 |  | √ | 0 | [初始化任务项（废弃） er_initialconfig](../em_files/er_initialconfig.md) |
 
 ### 列规则定义
 

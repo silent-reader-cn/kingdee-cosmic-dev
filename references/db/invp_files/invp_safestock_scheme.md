@@ -68,7 +68,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -97,27 +97,27 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | ftracedays | 统计N天历史数据 | int8 | 64 |  | √ | 0 | 统计N天历史数据 |
-| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 4 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 5 | fconsumptionmodelid | 安全库存模型 | int8 | 64 |  | √ | 0 | 资源注册模型 invp_model_register |
+| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 4 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 5 | fconsumptionmodelid | 安全库存模型 | int8 | 64 |  | √ | 0 | [资源注册模型 invp_model_register](../invp_files/invp_model_register.md) |
 | 6 | fservicelevel | 客户服务水平（%） | varchar | 30 |  | √ | ' ' | 客户服务水平（%） |
 | 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 8 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 11 | fplangroupid | 计划组 | int8 | 64 |  | √ | 0 | 供应链业务组 bd_operatorgroup |
+| 11 | fplangroupid | 计划组 | int8 | 64 |  | √ | 0 | [供应链业务组 bd_operatorgroup](../sbd_files/bd_operatorgroup.md) |
 | 12 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 13 | fbitindex | 位图 | int8 | 64 |  | √ | 0 | 位图 |
 | 14 | fcoefficient | 安全系数 | numeric | 23 | 10 | √ | 0 | 安全系数 |
 | 15 | fcreateorgid | fcreateorgid | int8 | 64 |  | √ | 0 |  |
 | 16 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
-| 17 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 18 | fdemmappingid | 匹配维度映射 | int8 | 64 |  | √ | 0 | 匹配映射配置 invp_matchmapping_config |
+| 17 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 18 | fdemmappingid | 匹配维度映射 | int8 | 64 |  | √ | 0 | [匹配映射配置 invp_matchmapping_config](../invp_files/invp_matchmapping_config.md) |
 | 19 | fupdatetype | 安全库存记录更新方式 | varchar | 30 |  | √ | ' ' | 安全库存记录更新方式,枚举: A :追加 B :覆盖 |
 | 20 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 21 | fplanorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 21 | fplanorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 22 | finvlevelcol | 安全库存天数字段 | varchar | 50 |  | √ | ' ' | 安全库存天数字段 |
-| 23 | fplannerid | 计划员 | int8 | 64 |  | √ | 0 | 供应链业务员 bd_operator |
+| 23 | fplannerid | 计划员 | int8 | 64 |  | √ | 0 | [供应链业务员 bd_operator](../sbd_files/bd_operator.md) |
 | 24 | fselectrulejson | 取数条件（json） | varchar | 512 |  | √ | ' ' | 取数条件（json） |
 | 25 | finvlevelcolsign | 安全库存天数字段标识 | varchar | 50 |  | √ | ' ' | 安全库存天数字段标识 |
 | 26 | finvlevelid | finvlevelid | int8 | 64 |  | √ | 0 |  |
@@ -130,7 +130,7 @@
 | 33 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
 | 34 | fselectruleformula | 取数条件（表达式） | varchar | 512 |  | √ | ' ' | 取数条件（表达式） |
 | 35 | fsourcebitindex | 原资料位图 | int8 | 64 |  | √ | 0 | 原资料位图 |
-| 36 | fdimension | 库存水位维度 | int8 | 64 |  | √ | 0 | 库存水位维度 msplan_plan_dimension |
+| 36 | fdimension | 库存水位维度 | int8 | 64 |  | √ | 0 | [库存水位维度 msplan_plan_dimension](../msplan_files/msplan_plan_dimension.md) |
 
 ### 列规则定义
 

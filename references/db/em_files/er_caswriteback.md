@@ -10,12 +10,14 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | foperatetype | 操作 | varchar | 30 |  | √ | ' ' | 操作 |
-| 3 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 4 | ftargetentryid | 分录id | int8 | 64 |  | √ | 0 | 分录id |
-| 5 | fbilltype | 单据类型 | varchar | 50 |  | √ | ' ' | 单据类型 |
-| 6 | ftargetbillid | 单据id | int8 | 64 |  | √ | 0 | 单据id |
-| 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 2 | frecid | 收款单id | int8 | 64 |  | √ | 0 | 收款单id |
+| 3 | foperatetype | 操作 | varchar | 30 |  | √ | ' ' | 操作 |
+| 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 5 | fvalid | 有效 | bpchar | 1 |  | √ | '1' | 有效 |
+| 6 | ftargetentryid | 分录id | int8 | 64 |  | √ | 0 | 分录id |
+| 7 | fbilltype | 单据类型 | varchar | 50 |  | √ | ' ' | 单据类型 |
+| 8 | ftargetbillid | 单据id | int8 | 64 |  | √ | 0 | 单据id |
+| 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 
 ### 列规则定义
 

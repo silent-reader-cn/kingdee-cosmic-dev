@@ -39,15 +39,15 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fapproverid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fapproverid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fname | 价格类型名称 | varchar | 100 |  | √ | ' ' | 价格类型名称 |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fisallowadjust | 是否允许门店调整 | bpchar | 1 |  | √ | '0' | 是否允许门店调整 |
 | 6 | fcomment | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
 | 7 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 8 | fshortnumber | 助记码 | varchar | 30 |  | √ | ' ' | 助记码 |
 | 9 | fapprovetime | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
-| 10 | fdisablerid | 失效人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fdisablerid | 失效人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fiscontrolprice | 是否控价 | bpchar | 1 |  | √ | '0' | 是否控价 |
 | 12 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 13 | fdisabletime | 失效时间 | timestamp | 0 |  |  | null | 失效时间 |
@@ -56,7 +56,7 @@
 | 16 | fallowadjustnum | 允许调整次数 | int4 | 32 |  | √ | 0 | 允许调整次数 |
 | 17 | fpricefield | 对应价目表字段 | bpchar | 1 |  | √ | ' ' | 对应价目表字段,枚举: A :标准零售价 B :厂家控价 C :唯一价 D :会员价 E :特价 F :预留价格1 G :预留价格2 H :预留价格3 I :预留价格4 J :预留价格5 |
 | 18 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 19 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 19 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 20 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :失效 1 :生效 |
 | 21 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
 | 22 | fissyspreset | 是否预置 | bpchar | 1 |  | √ | '0' | 是否预置 |

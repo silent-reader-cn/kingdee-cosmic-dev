@@ -12,18 +12,18 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fzsxm | fzsxm | varchar | 50 |  | √ | ' ' |  |
 | 3 | ftaxrate | 应税所得率 | numeric | 23 | 10 | √ | 0 | 应税所得率 |
-| 4 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 4 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | fzspm | 征收品目 | int8 | 64 |  | √ | 0 | 征收品目 tpo_zspm |
 | 6 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 7 | fdeductionamount | 减免税（费）额 | numeric | 23 | 10 | √ | 0 | 减免税（费）额 |
 | 8 | fenddate | 税（费）款所属期止 | timestamp | 0 |  |  | null | 税（费）款所属期止 |
 | 9 | fjbrysfzjlx | fjbrysfzjlx | varchar | 50 |  | √ | ' ' |  |
-| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fzzsdeductiontype | 增值税小规模纳税减免性质 | varchar | 50 |  | √ | ' ' | 增值税小规模纳税减免性质 |
-| 12 | ftaxdeductionid | 减免性质代码 | int8 | 64 |  | √ | 0 | 减免政策代码 tpo_taxdeduction |
+| 12 | ftaxdeductionid | 减免性质代码和名称 | int8 | 64 |  | √ | 0 | 减免政策代码 tpo_taxdeduction |
 | 13 | fjbrphone | fjbrphone | varchar | 50 |  | √ | ' ' |  |
-| 14 | fbillno | 申报表编号 | varchar | 30 |  | √ | ' ' | 申报表编号 |
-| 15 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fbillno | 单据编号 | varchar | 30 |  | √ | ' ' | 单据编号 |
+| 15 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 16 | ftaxableitem | 应税项 | numeric | 23 | 10 | √ | 0 | 应税项 |
 | 17 | fbillstatus | 单据状态 | varchar | 50 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 18 | foperator | foperator | varchar | 50 |  | √ | ' ' |  |
@@ -35,11 +35,12 @@
 | 24 | fstartdate | 税（费）款所属期起 | timestamp | 0 |  |  | null | 税（费）款所属期起 |
 | 25 | fquickdeduction | 速算扣除数 | numeric | 23 | 10 | √ | 0 | 速算扣除数 |
 | 26 | fpayperiod | 缴纳期限 | varchar | 50 |  | √ | ' ' | 缴纳期限,枚举: month :月 season :季 halfyear :半年 year :年 |
-| 27 | fsbbid | 申报表ID | int8 | 64 |  | √ | 0 | 纳税申报表基础资料 bdtaxr_nsrxx |
-| 28 | ftaxoffice | 税务机关 | int8 | 64 |  | √ | 0 | 税务机关 bastax_taxorgan |
-| 29 | fdeductitem | 减除项 | numeric | 23 | 10 | √ | 0 | 减除项 |
-| 30 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 31 | fbqyjse | 本期已缴税（费）额 | numeric | 23 | 10 | √ | 0 | 本期已缴税（费）额 |
+| 27 | fsbbid | 申报表 | int8 | 64 |  | √ | 0 | [纳税申报表基础资料 bdtaxr_nsrxx](../bdtaxr_files/bdtaxr_nsrxx.md) |
+| 28 | fdatasource | 数据来源 | varchar | 50 |  | √ | ' ' | 数据来源,枚举: dataimport :数据引入 handadd :手工新增 |
+| 29 | ftaxoffice | 税务机关 | int8 | 64 |  | √ | 0 | [税务机关 bastax_taxorgan](../bastax_files/bastax_taxorgan.md) |
+| 30 | fdeductitem | 减除项 | numeric | 23 | 10 | √ | 0 | 减除项 |
+| 31 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 32 | fbqyjse | 本期已缴税（费）额 | numeric | 23 | 10 | √ | 0 | 本期已缴税（费）额 |
 
 ### 列规则定义
 

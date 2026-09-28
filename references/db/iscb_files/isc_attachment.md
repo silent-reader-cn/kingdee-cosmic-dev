@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fsrc_cn | 源系统连接 | int8 | 64 |  | √ | 0 | 连接器配置 isc_database_link |
+| 2 | fsrc_cn | 源系统连接 | int8 | 64 |  | √ | 0 | [连接器配置 isc_database_link](../iscb_files/isc_database_link.md) |
 | 3 | fsrc_att_create_time | 源附件创建时间 | timestamp | 0 |  |  | null | 源附件创建时间 |
 | 4 | ffile_name | 附件文件名 | varchar | 255 |  | √ | ' ' | 附件文件名 |
 | 5 | fsrc_oid | 源单ID | varchar | 50 |  | √ | ' ' | 源单ID |
@@ -22,7 +22,7 @@
 | 11 | f3 | 目标附件创建人ID | varchar | 255 |  | √ | ' ' | 目标附件创建人ID |
 | 12 | fcreated_time | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 13 | fsrc_table | 源单数据表 | varchar | 50 |  | √ | ' ' | 源单数据表 |
-| 14 | ftar_cn | 目标系统连接 | int8 | 64 |  | √ | 0 | 连接器配置 isc_database_link |
+| 14 | ftar_cn | 目标系统连接 | int8 | 64 |  | √ | 0 | [连接器配置 isc_database_link](../iscb_files/isc_database_link.md) |
 | 15 | fstate | fstate | varchar | 30 |  | √ | ' ' |  |
 | 16 | fupdated_time | 更新时间 | timestamp | 0 |  |  | null | 更新时间 |
 | 17 | fsrc_att_creator | 源附件创建人ID | varchar | 100 |  | √ | ' ' | 源附件创建人ID |

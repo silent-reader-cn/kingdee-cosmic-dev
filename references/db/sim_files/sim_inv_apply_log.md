@@ -15,22 +15,22 @@
 | 4 | fapplydate | 申领时间 | timestamp | 0 |  |  | null | 申领时间 |
 | 5 | fdispose | 处理状态 | varchar | 30 |  | √ | ' ' | 处理状态,枚举: 0 :申领中 1 :成功 2 :失败 3 :撤销 |
 | 6 | fno | 申领序号 | varchar | 40 |  | √ | ' ' | 申领序号 |
-| 7 | fagent | 经办人姓名 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 7 | fagent | 经办人姓名 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 8 | fdisposedate | 处理时间 | timestamp | 0 |  |  | null | 处理时间 |
 | 9 | fmsg | 申领说明 | varchar | 255 |  | √ | ' ' | 申领说明 |
-| 10 | forg | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 10 | forg | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 11 | fconductor | fconductor | int8 | 64 |  | √ | 0 |  |
 | 12 | fnum | 申领数量 | int8 | 64 |  | √ | 0 | 申领数量 |
 | 13 | finvoicekindcode | 发票种类代码 | varchar | 20 |  | √ | ' ' | 发票种类代码 |
 | 14 | ftype | 申领方式 | varchar | 30 |  | √ | ' ' | 申领方式,枚举: 1 :自行领取 2 :快递配送 |
 | 15 | finvoicetype | 发票类型 | varchar | 30 |  | √ | ' ' | 发票类型,枚举: 004 :纸质增值税专用发票 005 :机动车销售统一发票 006 :二手车销售统一发票 007 :增值税普通发票（纸票） 025 :增值税普通发票（卷票） 026 :增值税电子普通发票 028 :增值税电子专用发票 |
-| 16 | ftax | 纳税人名称 | int8 | 64 |  | √ | 0 | 企业基础信息 bdm_enterprise_baseinfo |
+| 16 | ftax | 纳税人名称 | int8 | 64 |  | √ | 0 | [企业基础信息 bdm_enterprise_baseinfo](../bdm_files/bdm_enterprise_baseinfo.md) |
 | 17 | fapplypurchasequantity | fapplypurchasequantity | int8 | 64 |  | √ | 0 |  |
 | 18 | fdisposemsg | 处理信息 | varchar | 100 |  | √ | ' ' | 处理信息 |
 | 19 | finvoicekindname | 发票种类名称 | varchar | 20 |  | √ | ' ' | 发票种类名称 |
 | 20 | fterminal | 自动分发终端 | varchar | 50 |  | √ | ' ' | 自动分发终端 |
 | 21 | fapplytype | 结果确认标志 | varchar | 30 |  | √ | ' ' | 结果确认标志,枚举: 0 :未确认 1 :已确认 |
-| 22 | feqinfo | 设备编号 | int8 | 64 |  | √ | 0 | 开票设备 bdm_tax_equipment |
+| 22 | feqinfo | 设备编号 | int8 | 64 |  | √ | 0 | [开票设备 bdm_tax_equipment](../bdm_files/bdm_tax_equipment.md) |
 
 ### 列规则定义
 

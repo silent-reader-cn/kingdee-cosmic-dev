@@ -40,10 +40,10 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fpricedesc | 取值公式描述 | varchar | 255 |  | √ | ' ' | 取值公式描述 |
 | 3 | fpriceexp | 金额取值公式 | varchar | 255 |  | √ | ' ' | 金额取值公式 |
-| 4 | fcostsubelementid | 成本子要素 | int8 | 64 |  | √ | 0 | 成本子要素 cad_subelement |
+| 4 | fcostsubelementid | 成本子要素 | int8 | 64 |  | √ | 0 | [成本子要素 cad_subelement](../basedata_files/cad_subelement.md) |
 | 5 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 6 | fentityobject | 业务对象 | varchar | 80 |  | √ | ' ' | 主实体对象 bos_entityobject |
-| 7 | fcostelementid | 成本要素 | int8 | 64 |  | √ | 0 | 成本要素 cad_element |
+| 6 | fentityobject | 业务对象 | varchar | 80 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
+| 7 | fcostelementid | 成本要素 | int8 | 64 |  | √ | 0 | [成本要素 cad_element](../basedata_files/cad_element.md) |
 | 8 | fpricetranexpr | 取值公式 | varchar | 255 |  | √ | ' ' | 取值公式 |
 | 9 | fpricename | 名称 | varchar | 80 |  | √ | ' ' | 名称 |
 | 10 | fpriceexp_tag | 金额取值公式_详情 | text | 0 |  |  | null | 金额取值公式_详情 |

@@ -12,7 +12,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fvalue | 取值 | varchar | 50 |  | √ | ' ' | 取值 |
 | 3 | fkey | 标识 | varchar | 50 |  | √ | ' ' | 标识 |
-| 4 | fwriteofftype | 核销类别 | int8 | 64 |  | √ | 0 | 核销类别 msmod_writeofftype |
+| 4 | fwriteofftype | 核销类别 | int8 | 64 |  | √ | 0 | [核销类别 msmod_writeofftype](../mscommon_files/msmod_writeofftype.md) |
 
 ### 列规则定义
 

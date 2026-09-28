@@ -17,7 +17,7 @@
 | 6 | ftenant_no | 租户 | varchar | 30 |  | √ | ' ' | 租户 |
 | 7 | fexpense_num | 报销单编码 | varchar | 50 |  | √ | ' ' | 报销单编码 |
 | 8 | fupdate_time | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 9 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 9 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 10 | freimbursing_id | 苍穹的原始报销单ID | varchar | 50 |  | √ | ' ' | 苍穹的原始报销单ID |
 | 11 | fapprove_amount | 核准金额 | numeric | 23 | 10 | √ | 0.0000000000 | 核准金额 |
 | 12 | fappid | appid | varchar | 50 |  | √ | ' ' | appid |

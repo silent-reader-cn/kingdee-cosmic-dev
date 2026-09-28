@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fname | 方案名称 | varchar | 50 |  | √ | ' ' | 方案名称 |
+| 2 | fname | 方案名称 | varchar | 100 |  | √ | ' ' | 方案名称 |
 | 3 | freceivenotice | 启用 | bpchar | 1 |  | √ | '0' | 启用 |
 | 4 | fresulttype | 数据类型 | varchar | 50 |  | √ | ' ' | 数据类型,枚举: |
 | 5 | fresulttypename | 数据类型 | varchar | 50 |  | √ | ' ' | 数据类型 |
@@ -19,7 +19,7 @@
 | 8 | fmodeltypename | 预测模型方案 | varchar | 50 |  | √ | ' ' | 预测模型方案 |
 | 9 | fstatus | 状态 | bpchar | 1 |  | √ | '0' | 状态,枚举: 0 :未启用 1 :已启用 |
 | 10 | fcreatedate | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fmodifydate | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 13 | feventnumber | 事件编码 | varchar | 50 |  | √ | ' ' | 事件编码 |
 | 14 | fappname | 智能应用 | varchar | 50 |  | √ | ' ' | 智能应用 |
@@ -27,7 +27,7 @@
 | 16 | fregion | 区域（Region） | varchar | 50 |  | √ | ' ' | 区域（Region） |
 | 17 | fmodeltypeid | 预测方案 | varchar | 50 |  | √ | ' ' | 预测方案,枚举: |
 | 18 | fnumber | 方案编码 | varchar | 30 |  | √ | ' ' | 方案编码 |
-| 19 | fbizobj | 业务对象 | varchar | 50 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 19 | fbizobj | 业务对象 | varchar | 50 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 20 | ffiltercondition | 过滤条件 | varchar | 512 |  |  | null | 过滤条件 |
 | 21 | fcustomparams | 自定义参数 | varchar | 255 |  | √ | ' ' | 自定义参数 |
 

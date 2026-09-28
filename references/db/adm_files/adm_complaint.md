@@ -19,26 +19,27 @@
 | 8 | fcomplaintstatus | 投诉状态 | varchar | 10 |  | √ | ' ' | 投诉状态,枚举: A :待受理 B :处理中 C :已完成 |
 | 9 | fstatus | 投诉管理单据状态 | varchar | 10 |  | √ | ' ' | 投诉管理单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 10 | fcomplaintdetail | 投诉详情 | varchar | 2000 |  | √ | ' ' | 投诉详情 |
-| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 12 | fprecomments | fprecomments | varchar | 10 |  | √ | ' ' |  |
-| 13 | fcomplaintcompany | 被投诉公司 | varchar | 100 |  | √ | ' ' | 被投诉公司 |
-| 14 | fmanagecomplaintstatus | 投诉管理单据投诉状态 | varchar | 10 |  | √ | ' ' | 投诉管理单据投诉状态,枚举: A :待受理 B :处理中 C :已完成 D :结果提交 |
-| 15 | fdealuserid | fdealuserid | int8 | 64 |  | √ | 0 |  |
-| 16 | fsolvedate | 期望解决日期 | timestamp | 0 |  |  | null | 期望解决日期 |
-| 17 | fbillno | 单据编号 | varchar | 30 |  | √ | ' ' | 单据编号 |
-| 18 | fname | 投诉主题 | varchar | 255 |  | √ | ' ' | 投诉主题 |
-| 19 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 20 | fbillstatus | 单据状态 | varchar | 10 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 21 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 22 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
-| 23 | fsupplierid | 供应商 | int8 | 64 |  | √ | 0 | 供应商 bd_supplier |
-| 24 | fcomplaintuser | 被投诉人 | varchar | 100 |  | √ | ' ' | 被投诉人 |
-| 25 | flaunchuserid | 投诉发起人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 26 | fhandlestatus | 投诉处理单据状态 | varchar | 10 |  | √ | ' ' | 投诉处理单据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 27 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 28 | fexplain | fexplain | varchar | 512 |  | √ | ' ' |  |
-| 29 | flaunchdate | 投诉发起日期 | timestamp | 0 |  |  | null | 投诉发起日期 |
-| 30 | fhandlecomplaintstatus | 投诉处理投诉状态 | varchar | 10 |  | √ | ' ' | 投诉处理投诉状态,枚举: A :待处理 B :结果提交 C :结果发布 |
+| 11 | fbiztype | 投诉类型 | bpchar | 1 |  | √ | ' ' | 投诉类型,枚举: 1 :采购项目投诉 2 :廉政投诉 3 :其他投诉 |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 13 | fprecomments | fprecomments | varchar | 10 |  | √ | ' ' |  |
+| 14 | fcomplaintcompany | 被投诉公司 | varchar | 100 |  | √ | ' ' | 被投诉公司 |
+| 15 | fmanagecomplaintstatus | 投诉管理单据投诉状态 | varchar | 10 |  | √ | ' ' | 投诉管理单据投诉状态,枚举: A :待受理 B :处理中 C :已完成 D :结果提交 |
+| 16 | fdealuserid | fdealuserid | int8 | 64 |  | √ | 0 |  |
+| 17 | fsolvedate | 期望解决日期 | timestamp | 0 |  |  | null | 期望解决日期 |
+| 18 | fbillno | 单据编号 | varchar | 30 |  | √ | ' ' | 单据编号 |
+| 19 | fname | 投诉主题 | varchar | 255 |  | √ | ' ' | 投诉主题 |
+| 20 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 21 | fbillstatus | 单据状态 | varchar | 10 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
+| 22 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 23 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
+| 24 | fsupplierid | 供应商 | int8 | 64 |  | √ | 0 | [供应商 bd_supplier](../basedata_files/bd_supplier.md) |
+| 25 | fcomplaintuser | 被投诉人 | varchar | 100 |  | √ | ' ' | 被投诉人 |
+| 26 | flaunchuserid | 投诉发起人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 27 | fhandlestatus | 投诉处理单据状态 | varchar | 10 |  | √ | ' ' | 投诉处理单据状态,枚举: A :暂存 B :已提交 C :已审核 |
+| 28 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 29 | fexplain | fexplain | varchar | 512 |  | √ | ' ' |  |
+| 30 | flaunchdate | 投诉发起日期 | timestamp | 0 |  |  | null | 投诉发起日期 |
+| 31 | fhandlecomplaintstatus | 投诉处理投诉状态 | varchar | 10 |  | √ | ' ' | 投诉处理投诉状态,枚举: A :待处理 B :结果提交 C :已完成 |
 
 ### 列规则定义
 

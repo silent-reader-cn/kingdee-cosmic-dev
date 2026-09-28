@@ -48,7 +48,7 @@
 | 8 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 9 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 | id |
 | 10 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
-| 11 | fentrychangetype | 变更方式 | varchar | 50 |  | √ | ' ' | 变更方式,枚举: A :新增 B :修改 C :删除 |
+| 11 | fentrychangetype | 变更方式 | varchar | 50 |  | √ | ' ' | 变更方式,枚举: A :新增 B : C :删除 |
 | 12 | fisdefault | 默认 | bpchar | 1 |  | √ | '0' | 默认 |
 
 ### 列规则定义
@@ -75,30 +75,30 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | 映射方案 | int8 | 64 |  | √ | 0 | 税务组织映射方案 tctb_orgmapentity |
-| 2 | fvaliderid | 生效人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 3 | ftaxorg | 税务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 1 | fid | 映射方案 | int8 | 64 |  | √ | 0 | [税务组织映射方案 tctb_orgmapentity](../tctb_files/tctb_orgmapentity.md) |
+| 2 | fvaliderid | 生效人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 3 | ftaxorg | 税务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | fsourcebillentity | 源单实体 | varchar | 50 |  | √ | ' ' | 源单实体 |
 | 5 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 6 | fchangestatus | 变更状态 | varchar | 50 |  | √ | ' ' | 变更状态,枚举: A :正常 B :变更中 C :已变更 |
 | 7 | fstatus | 单据状态 | varchar | 50 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 10 | fchangedate | 变更日期 | timestamp | 0 |  |  | null | 变更日期 |
 | 11 | fvaliddate | 生效时间 | timestamp | 0 |  |  | null | 生效时间 |
 | 12 | fsourcebillno | 税务组织映射编码 | varchar | 120 |  | √ | ' ' | 税务组织映射编码 |
 | 13 | fversion | 版本号 | varchar | 30 |  | √ | ' ' | 版本号 |
 | 14 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 15 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 15 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 16 | fsourcebillstatus | 映射关系单据状态 | varchar | 50 |  | √ | ' ' | 映射关系单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 17 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 18 | fchangebizdate | 变更单日期 | timestamp | 0 |  |  | null | 变更单日期 |
 | 19 | freason | 变更原因 | varchar | 512 |  | √ | ' ' | 变更原因 |
 | 20 | fvalidstatus | 生效状态 | varchar | 50 |  | √ | ' ' | 生效状态,枚举: A :未生效 B :已生效 |
 | 21 | fsourcebillid | 源单ID | int8 | 64 |  | √ | 0 | 源单ID |
-| 22 | fchangerid | 变更人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 22 | fchangerid | 变更人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 23 | fenable | 使用状态 | varchar | 50 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 24 | fnumber | 编码 | varchar | 100 |  | √ | ' ' | 编码 |
+| 24 | fnumber | 单据编号 | varchar | 100 |  | √ | ' ' | 单据编号 |
 | 25 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 
 ### 列规则定义

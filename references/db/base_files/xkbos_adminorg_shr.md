@@ -41,7 +41,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fshrorgname | 行政组织名称 | varchar | 255 |  | √ | ' ' | 行政组织名称 |
-| 3 | fadminorgid | 部门编码 | int8 | 64 |  | √ | 0 | 行政组织（部门） bos_adminorg |
+| 3 | fadminorgid | 部门编码 | int8 | 64 |  | √ | 0 | [行政组织（部门） bos_adminorg](../base_files/bos_adminorg.md) |
 | 4 | fshrorgid | 内码 | varchar | 44 |  | √ | ' ' | 内码 |
 | 5 | fcreatetime | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
 | 6 | fshrorgfullname | 行政组织全称 | varchar | 500 |  |  | ' ' | 行政组织全称 |

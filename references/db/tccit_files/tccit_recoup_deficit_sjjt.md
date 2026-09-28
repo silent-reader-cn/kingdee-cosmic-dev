@@ -15,7 +15,7 @@
 | 4 | fitem | 项目 | varchar | 50 |  | √ | ' ' | 项目,枚举: item1 :利润总额 item2 :加：特定业务计算的应纳税所得额 item3 :减：不征税收入 item4 :减：免税收入、减计收入、加计扣除 item5 :减：资产加速折旧、摊销 item6 :减：所得减免 item7 :享受减免后的应纳税所得额(1+2-3-4-5-6) item8 :待弥补以前年度亏损金额 item9 :本年所得弥补以前年度亏损金额 item10 :弥补以前年度亏损后所得(7-9) |
 | 5 | famount | 金额 | numeric | 23 | 10 | √ | 0 | 金额 |
 | 6 | fskssqq | 日期范围.开始 | timestamp | 0 |  |  | null | 日期范围.开始 |
-| 7 | forg | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 7 | forg | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 
 ### 列规则定义
 

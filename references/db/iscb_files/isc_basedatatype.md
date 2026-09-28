@@ -10,23 +10,23 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 3 | fgroupid | 元数据对照 | int8 | 64 |  | √ | 0 | 集成业务对象（废弃） isc_entity |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 3 | fgroupid | 元数据对照 | int8 | 64 |  | √ | 0 | [集成业务对象（废弃） isc_entity](../iscb_files/isc_entity.md) |
 | 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 5 | forgid | 组织单元 | varchar | 20 |  | √ | ' ' | 业务单元 bos_org |
-| 6 | fsourcesystem | 来源系统 | int8 | 64 |  | √ | 0 | 外部集成信息（废弃） isc_sysconn |
+| 5 | forgid | 组织单元 | varchar | 20 |  | √ | ' ' | [业务单元 bos_org](../base_files/bos_org.md) |
+| 6 | fsourcesystem | 来源系统 | int8 | 64 |  | √ | 0 | [外部集成信息（废弃） isc_sysconn](../iscb_files/isc_sysconn.md) |
 | 7 | fcommon | 是否通用 | varchar | 30 |  | √ | ' ' | 是否通用,枚举: 1 :是 0 :否 |
 | 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 9 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 12 | fpreset | fpreset | int8 | 64 |  | √ | 0 |  |
 | 13 | fbasedatafilter | 基础资料过滤条件 | varchar | 510 |  | √ | ' ' | 基础资料过滤条件 |
 | 14 | fmappingtype | 数据匹配规则 | varchar | 30 |  | √ | ' ' | 数据匹配规则,枚举: 0 :编码 1 :名称 |
-| 15 | ftargetsystem | 目标系统 | int8 | 64 |  | √ | 0 | 外部集成信息（废弃） isc_sysconn |
+| 15 | ftargetsystem | 目标系统 | int8 | 64 |  | √ | 0 | [外部集成信息（废弃） isc_sysconn](../iscb_files/isc_sysconn.md) |
 | 16 | fenable | 使用状态 | int8 | 64 |  | √ | 0 | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 17 | fnumber | 编码 | varchar | 50 |  | √ | ' ' | 编码 |
-| 18 | fbaseentity | 金蝶云苍穹实体 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 18 | fbaseentity | 金蝶云苍穹实体 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 
 ### 列规则定义
 
@@ -53,7 +53,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | 基础资料 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 2 | fbasedataid | 基础资料 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 | 3 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 4 | fsrcname | 源数据名称 | varchar | 100 |  | √ | ' ' | 源数据名称 |
 | 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
@@ -84,7 +84,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | 基础资料 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 2 | fbasedataid | 基础资料 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 | 3 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 4 | fsrcname | 源数据名称 | varchar | 100 |  | √ | ' ' | 源数据名称 |
 | 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
@@ -174,7 +174,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fdestnumber | 目标数据编码 | varchar | 100 |  | √ | ' ' | 目标数据编码 |
-| 3 | fbasedataid | 基础资料 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 3 | fbasedataid | 基础资料 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 | 4 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 5 | fsrcname | 源数据名称 | varchar | 100 |  | √ | ' ' | 源数据名称 |
 | 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |

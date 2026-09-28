@@ -58,12 +58,12 @@
 | 47 | fmainbillentryseq | fmainbillentryseq | int8 | 64 |  | √ | 0 |  |
 | 48 | flotnumber | flotnumber | varchar | 50 |  | √ | ' ' |  |
 | 49 | fuseoutbaseqty | fuseoutbaseqty | numeric | 23 | 10 | √ | 0 |  |
-| 50 | fmaterialid | 物料编码 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 50 | fmaterialid | 物料编码 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 51 | funit2ndid | funit2ndid | int8 | 64 |  | √ | 0 |  |
 | 52 | fpriority | fpriority | int8 | 64 |  | √ | 0 |  |
 | 53 | fwmssstatus | fwmssstatus | varchar | 50 |  | √ | ' ' |  |
 | 54 | fconfiguredcodeid | fconfiguredcodeid | int8 | 64 |  | √ | 0 |  |
-| 55 | fmaterielmasterid | 物料(主数据) | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 55 | fmaterielmasterid | 物料(主数据) | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 56 | forderentryid | forderentryid | int8 | 64 |  | √ | 0 |  |
 | 57 | freplaceplan | freplaceplan | int8 | 64 |  | √ | 0 |  |
 | 58 | ftracknumberid | ftracknumberid | int8 | 64 |  | √ | 0 |  |

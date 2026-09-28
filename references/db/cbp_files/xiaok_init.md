@@ -1,8 +1,8 @@
-# 小K初始化-xiaok_init
+# 智能初始化-xiaok_init
 
-## 小K初始化-主表 t_daxk_xiaok_init
+## 智能初始化-主表 t_daxk_xiaok_init
 
-- **表名称：** 小K初始化-主表
+- **表名称：** 智能初始化-主表
 - **表名：** t_daxk_xiaok_init
 
 ### 表格列定义
@@ -17,11 +17,11 @@
 | 6 | ftenantid | tenantid | varchar | 30 |  | √ | ' ' | tenantid |
 | 7 | fthirdpwd | 系统密码 | varchar | 255 |  |  | null | 系统密码 |
 | 8 | faappid | appId | varchar | 255 |  |  | null | appId |
-| 9 | frobotname | 机器人名称 | varchar | 60 |  | √ | ' ' | 机器人名称 |
+| 9 | frobotname | 名称 | varchar | 60 |  | √ | ' ' | 名称 |
 | 10 | fformatedcreatetime | 初始化时间 | timestamp | 0 |  |  | null | 初始化时间 |
 | 11 | fserverurl | 服务器地址 | varchar | 255 |  |  | null | 服务器地址 |
 | 12 | fappsecret_enp | fappsecret_enp | text | 0 |  |  | null |  |
-| 13 | frobotstatus | 机器人状态 | varchar | 255 |  |  | ' ' | 机器人状态 |
+| 13 | frobotstatus | 状态 | varchar | 255 |  |  | ' ' | 状态 |
 | 14 | fthirdpwdsecret | 加密后的系统密码 | varchar | 255 |  |  | null | 加密后的系统密码 |
 | 15 | fthirdappid | 系统编码 | varchar | 255 |  |  | null | 系统编码 |
 | 16 | frobotid | robotId | int8 | 64 |  | √ | 0 | robotId |

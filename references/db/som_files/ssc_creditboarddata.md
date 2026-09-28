@@ -40,7 +40,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fsscid | 共享中心 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fsscid | 共享中心 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | ftaskcompletednum | 共享任务完成量 | int4 | 32 |  | √ | 0 | 共享任务完成量 |
 | 4 | fmasterid | fmasterid | int8 | 64 |  | √ | 0 |  |
 | 5 | ftasksubscorenum | ftasksubscorenum | int4 | 32 |  | √ | 0 |  |
@@ -73,12 +73,12 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fuser | 员工 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 3 | fcompany | 公司 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fuser | 员工 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 3 | fcompany | 公司 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 5 | fsubscoretype | 扣分类型 | bpchar | 1 |  | √ | '0' | 扣分类型,枚举: 0 :共享审核批退原因 1 :审批通过但有违规 2 :共享审核 3 :影像超期 4 :质检任务 |
 | 6 | fbillbiztypeid | 业务类型id | varchar | 50 |  | √ | ' ' | 业务类型id |
-| 7 | fbizsys | 业务系统 | int8 | 64 |  | √ | 0 | 业务系统 bas_extenderp |
+| 7 | fbizsys | 业务系统 | int8 | 64 |  | √ | 0 | [业务系统 bas_extenderp](../sys_files/bas_extenderp.md) |
 | 8 | fbizbill | 单据实体 | varchar | 50 |  | √ | ' ' | 单据实体 |
 | 9 | fbillid | 单据id | int8 | 64 |  | √ | 0 | 单据id |
 | 10 | fsubscore | 信用扣分 | numeric | 19 | 6 | √ | 0.000000 | 信用扣分 |

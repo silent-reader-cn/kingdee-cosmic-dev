@@ -18,7 +18,7 @@
 | 7 | fserviceclass | 实现类 | varchar | 400 |  | √ | ' ' | 实现类 |
 | 8 | fservicename | 消息渠道名称 | varchar | 100 |  | √ | ' ' | 消息渠道名称 |
 | 9 | ftpl | 模板 | text | 0 |  |  | null | 模板 |
-| 10 | forg | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 10 | forg | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 11 | fcustomparams | 自定义参数 | varchar | 2000 |  | √ | ' ' | 自定义参数 |
 
 ### 列规则定义

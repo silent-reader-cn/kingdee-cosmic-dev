@@ -13,7 +13,7 @@
 | 2 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 3 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
 | 4 | fabstracttext_tag | 摘要_详情 | text | 0 |  |  | null | 摘要_详情 |
-| 5 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | flargetext_tag | 大文本_详情 | text | 0 |  |  | null | 大文本_详情 |
 | 7 | fbillid | 所属单据 | varchar | 50 |  | √ | ' ' | 所属单据 |
 | 8 | fcreatedatefield | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |

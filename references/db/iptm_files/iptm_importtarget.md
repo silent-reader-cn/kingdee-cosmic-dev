@@ -12,10 +12,10 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
 | 3 | fisleaf | 是否叶子 | bpchar | 1 |  | √ | '1' | 是否叶子 |
-| 4 | fparentid | 上级分类 | int8 | 64 |  | √ | 0 | 目标业务对象列表 iptm_importtarget |
+| 4 | fparentid | 上级分类 | int8 | 64 |  | √ | 0 | [目标业务对象列表 iptm_importtarget](../iptm_files/iptm_importtarget.md) |
 | 5 | flongnumber | 长编码 | varchar | 255 |  | √ | ' ' | 长编码 |
 | 6 | fimportcode | 引入执行码 | varchar | 15 |  | √ | ' ' | 引入执行码 |
-| 7 | fentitymeta | 对象编码 | varchar | 80 |  | √ | ' ' | 实体元数据 bos_entitymeta |
+| 7 | fentitymeta | 对象编码 | varchar | 80 |  | √ | ' ' | [实体元数据 bos_entitymeta](../mdl_files/bos_entitymeta.md) |
 | 8 | fmulreplacefield | 数据替换规则的唯一值 | varchar | 50 |  | √ | ' ' | 数据替换规则的唯一值,枚举: |
 | 9 | fimportway | 引入方式 | varchar | 50 |  | √ | ' ' | 引入方式,枚举: new :添加新数据 override :更新已有数据 overridenew :更新已有数据并添加新数据 |
 | 10 | flevel | 级次 | int4 | 32 |  | √ | 0 | 级次 |

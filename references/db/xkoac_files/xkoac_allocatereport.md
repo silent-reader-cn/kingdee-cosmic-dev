@@ -10,19 +10,19 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | famoeabid | 经营单元 | int8 | 64 |  | √ | 0 | 经营单元 xkoac_unit |
+| 2 | famoeabid | 经营单元 | int8 | 64 |  | √ | 0 | [经营单元 xkoac_unit](../basedata_files/xkoac_unit.md) |
 | 3 | fsourcenum | 来源单据编号 | varchar | 100 |  | √ | ' ' | 来源单据编号 |
 | 4 | fbuildtasktag | 生成批号 | varchar | 100 |  | √ | ' ' | 生成批号 |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 6 | fresultbill | 结果单ID | int8 | 64 |  | √ | 0 | 结果单ID |
-| 7 | fimptplan | 分摊方案编码 | int8 | 64 |  | √ | 0 | 经营费用分摊方案 xkoac_allocationplan |
+| 7 | fimptplan | 分摊方案编码 | int8 | 64 |  | √ | 0 | [经营费用分摊方案 xkoac_allocationplan](../xkoac_files/xkoac_allocationplan.md) |
 | 8 | fallocatestatus | 分摊状态 | bpchar | 1 |  | √ | '0' | 分摊状态,枚举: 0 :分摊成功 1 :分摊失败 |
-| 9 | faccountbookid | 经营账簿 | int8 | 64 |  | √ | 0 | 经营账簿 xkoac_operatingbook |
-| 10 | fsourcebill | 来源单据 | varchar | 50 |  | √ | ' ' | 主实体对象 bos_entityobject |
-| 11 | fcreatorid | 执行人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | faccountbookid | 经营账簿 | int8 | 64 |  | √ | 0 | [经营账簿 xkoac_operatingbook](../xkoac_files/xkoac_operatingbook.md) |
+| 10 | fsourcebill | 来源单据 | varchar | 50 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
+| 11 | fcreatorid | 执行人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fsourcebillid | 来源单据ID | varchar | 50 |  | √ | ' ' | 来源单据ID |
 | 13 | fplanseq | 分摊方案行ID | int4 | 32 |  | √ | 0 | 分摊方案行ID |
-| 14 | fperiod | 期间 | int8 | 64 |  | √ | 0 | 会计日历 bd_period |
+| 14 | fperiod | 期间 | int8 | 64 |  | √ | 0 | [会计日历 bd_period](../fibd_files/bd_period.md) |
 | 15 | fresultbillno | 经营费用分摊结果单编号 | varchar | 100 |  | √ | ' ' | 经营费用分摊结果单编号 |
 
 ### 列规则定义

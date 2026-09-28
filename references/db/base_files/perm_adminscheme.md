@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
 | 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 5 | fdisabledate | fdisabledate | timestamp | 0 |  |  | null |  |
@@ -21,7 +21,7 @@
 | 10 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 11 | fisallowbizoperate | 是否允许业务操作 | bpchar | 1 |  | √ | '0' | 是否允许业务操作 |
 | 12 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :启用 |
 | 15 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
 
@@ -79,12 +79,12 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fentitynum | 业务对象 | varchar | 36 |  | √ | ' ' | 业务对象 bos_objecttype |
-| 2 | fpermitemid | 权限项 | varchar | 36 |  | √ | ' ' | 权限项 perm_permitem |
+| 1 | fentitynum | 业务对象 | varchar | 36 |  | √ | ' ' | [业务对象 bos_objecttype](../mdl_files/bos_objecttype.md) |
+| 2 | fpermitemid | 权限项 | varchar | 36 |  | √ | ' ' | [权限项 perm_permitem](../base_files/perm_permitem.md) |
 | 3 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 4 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 | id |
 | 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
-| 6 | fbizappid | 应用 | varchar | 36 |  | √ | ' ' | 业务应用实体 bos_devportal_bizapp |
+| 6 | fbizappid | 应用 | varchar | 36 |  | √ | ' ' | [业务应用实体 bos_devportal_bizapp](../mdl_files/bos_devportal_bizapp.md) |
 
 ### 列规则定义
 
@@ -112,7 +112,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 3 | fadmintype | 管理员类型 | int8 | 64 |  | √ | 0 | 虚拟管理员类型 perm_admintype |
+| 3 | fadmintype | 管理员类型 | int8 | 64 |  | √ | 0 | [虚拟管理员类型 perm_admintype](../base_files/perm_admintype.md) |
 | 4 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 
 ### 列规则定义

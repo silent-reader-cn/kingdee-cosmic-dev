@@ -17,11 +17,11 @@
 | 6 | fapplytime | 申请日期 | timestamp | 0 |  |  | null | 申请日期 |
 | 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 8 | fexchangerate | 汇率 | numeric | 23 | 10 | √ | 0.0000000000 | 汇率 |
-| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | ffinancialchapter | 财务专用章名称 | varchar | 80 |  | √ | ' ' | 财务专用章名称 |
 | 11 | fclosedatef | 预计销户日期 | timestamp | 0 |  |  | null | 预计销户日期 |
 | 12 | fbillno | 单据编号 | varchar | 80 |  | √ | ' ' | 单据编号 |
-| 13 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | fbillstatus | 单据状态 | varchar | 80 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :销户审批中 C :完成 H :销户处理中 R :销户复核中 I :审核中 E :退单 |
 | 15 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 16 | fbacktime | fbacktime | timestamp | 0 |  |  | null |  |
@@ -29,17 +29,17 @@
 | 18 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
 | 19 | fdescription | fdescription | varchar | 255 |  | √ | ' ' |  |
 | 20 | fbackreason | 退单意见 | varchar | 500 |  | √ | ' ' | 退单意见 |
-| 21 | fapplierid | 申请人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 21 | fapplierid | 申请人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 22 | fbasecurrencyid | fbasecurrencyid | int8 | 64 |  | √ | 0 |  |
 | 23 | fclosereason | fclosereason | varchar | 255 |  | √ | ' ' |  |
-| 24 | flegalperson | 账户法定代表人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 24 | flegalperson | 账户法定代表人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 25 | fbizdate | 业务日期 | timestamp | 0 |  |  | null | 业务日期 |
 | 26 | fsourcebillid | 源单id | int8 | 64 |  | √ | 0 | 源单id |
-| 27 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
-| 28 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 29 | faccountbankid | 银行账户 | int8 | 64 |  | √ | 0 | 银行账户 bd_accountbanks |
+| 27 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
+| 28 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 29 | faccountbankid | 银行账户 | int8 | 64 |  | √ | 0 | [银行账户 bd_accountbanks](../basedata_files/bd_accountbanks.md) |
 | 30 | flocamt | 金额折本位币 | numeric | 19 | 6 | √ | 0.000000 | 金额折本位币 |
-| 31 | fcompanyid | 收付组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 31 | fcompanyid | 收付组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 
 ### 列规则定义
 

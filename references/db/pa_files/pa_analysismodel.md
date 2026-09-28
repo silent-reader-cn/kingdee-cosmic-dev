@@ -10,16 +10,16 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fname | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
 | 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 5 | fdescription | 描述 | varchar | 255 |  | √ | ' ' | 描述 |
-| 6 | fanalysis_system | 分析体系 | int8 | 64 |  | √ | 0 | 分析体系 pa_anasystemsetting |
+| 6 | fanalysis_system | 分析体系 | int8 | 64 |  | √ | 0 | [分析体系 pa_anasystemsetting](../pa_files/pa_anasystemsetting.md) |
 | 7 | ftablenumber | 数据表编码 | varchar | 50 |  | √ | ' ' | 数据表编码 |
 | 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 9 | fstatus | 数据状态 | bpchar | 1 |  | √ | 'C' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 10 | fperiodtypeid | 期间类型 | int8 | 64 |  | √ | 0 | 会计日历类型 bd_period_type |
-| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fperiodtypeid | 期间类型 | int8 | 64 |  | √ | 0 | [会计日历类型 bd_period_type](../fibd_files/bd_period_type.md) |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 13 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 14 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
@@ -54,7 +54,7 @@
 | 2 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 3 | fmeasure_fieldnumber | 度量字段编码 | varchar | 255 |  | √ | ' ' | 度量字段编码 |
 | 4 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 5 | fmeasure_id | 度量 | int8 | 64 |  | √ | 0 | 度量 pa_measure |
+| 5 | fmeasure_id | 度量 | int8 | 64 |  | √ | 0 | [度量 pa_measure](../pa_files/pa_measure.md) |
 | 6 | fmeasure_fieldname | 字段选择 | varchar | 255 |  | √ | ' ' | 字段选择 |
 
 ### 列规则定义
@@ -87,7 +87,7 @@
 | 4 | ffield_name | 字段 | varchar | 255 |  | √ | ' ' | 字段 |
 | 5 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 7 | fdimension_id | 维度 | int8 | 64 |  | √ | 0 | 维度 pa_dimension |
+| 7 | fdimension_id | 维度 | int8 | 64 |  | √ | 0 | [维度 pa_dimension](../pa_files/pa_dimension.md) |
 | 8 | fnecessity_dim | 模型必要维度 | bpchar | 1 |  | √ | ' ' | 模型必要维度,枚举: 0 :组织 1 :会计期间 2 :会计科目 |
 
 ### 列规则定义

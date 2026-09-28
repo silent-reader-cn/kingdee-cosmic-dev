@@ -12,54 +12,66 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | freworksection | 返工来源工序段 | varchar | 1000 |  | √ | ' ' | 返工来源工序段 |
 | 3 | frelationid | 代码生成id(关联id) | int8 | 64 |  | √ | 0 | 代码生成id(关联id) |
-| 4 | fislastprocess | 末序 | bpchar | 1 |  | √ | '0' | 末序 |
-| 5 | fprocessqty | 工序数量 | numeric | 23 | 10 | √ | 0 | 工序数量 |
-| 6 | fprocesscontrolcode | 工序控制码 | int8 | 64 |  | √ | 0 | 工序控制码 mpdm_processcontrolcode |
-| 7 | fsequencetype | 工序序列类型 | bpchar | 1 |  | √ | ' ' | 工序序列类型,枚举: A :并行序列 B :返工序列 C :主干序列 |
-| 8 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 9 | freportsbqty | freportsbqty | numeric | 23 | 10 | √ | 0 |  |
-| 10 | fprocessroutid | 工艺路线id | int8 | 64 |  | √ | 0 | 工艺路线 mpdm_sfcprocessroute |
-| 11 | fbegintime | fbegintime | timestamp | 0 |  |  | null |  |
-| 12 | fupprocesstype | 上工序类型 | varchar | 10 |  | √ | ' ' | 上工序类型,枚举: A :单个 B :多个 C :群组 |
-| 13 | fisfirstprocess | 首序 | bpchar | 1 |  | √ | '0' | 首序 |
-| 14 | flowerqty | flowerqty | numeric | 23 | 10 | √ | 0 |  |
-| 15 | fprocessdepartid | 加工车间 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 16 | freworkplanqty | freworkplanqty | numeric | 23 | 10 | √ | 0 |  |
-| 17 | fprocessnumber | 工序号 | int4 | 32 |  | √ | 0 | 工序号 |
-| 18 | ftobereworkedqty | ftobereworkedqty | numeric | 23 | 10 | √ | 0 |  |
-| 19 | fprocessinfocode | fprocessinfocode | varchar | 30 |  | √ | ' ' |  |
-| 20 | fprocessunit | 工序单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 21 | freworkedqty | freworkedqty | numeric | 23 | 10 | √ | 0 |  |
-| 22 | fhigherqty | fhigherqty | numeric | 23 | 10 | √ | 0 |  |
-| 23 | fprocessorg | 加工组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 24 | fplanbegintime | 计划开工日期(可修改) | timestamp | 0 |  |  | null | 计划开工日期(可修改) |
-| 25 | freworksequence | 返工来源序列号 | int8 | 64 |  | √ | 0 | 返工来源序列号 |
-| 26 | fsumquaqyt | fsumquaqyt | numeric | 23 | 10 | √ | 0 |  |
-| 27 | fplanendtime1 | 计划完工日期(上游带入不可改) | timestamp | 0 |  |  | null | 计划完工日期(上游带入不可改) |
-| 28 | fpromethod | 加工类型 | varchar | 10 |  | √ | ' ' | 加工类型,枚举: 1 :厂内加工 2 :内协加工 3 :委外加工 |
-| 29 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 30 | fsumstockwastqty | fsumstockwastqty | numeric | 23 | 10 | √ | 0 |  |
-| 31 | fprocesssequence | 序列号 | int8 | 64 |  | √ | 0 | 序列号 |
-| 32 | fintoqty | fintoqty | numeric | 23 | 10 | √ | 0 |  |
-| 33 | fbasebsqty | 基本批量 | numeric | 23 | 10 | √ | 0 | 基本批量 |
-| 34 | fupprocessid | 上工序id（工序计划分录id） | varchar | 1000 |  | √ | ' ' | 上工序id（工序计划分录id） |
-| 35 | freportmethod | 汇报控制 | varchar | 10 |  | √ | ' ' | 汇报控制,枚举: no :不汇报 must :必须汇报 |
-| 36 | frevoveryqty | frevoveryqty | numeric | 23 | 10 | √ | 0 |  |
-| 37 | fprocessinstructions | 工序说明 | varchar | 512 |  | √ | ' ' | 工序说明 |
-| 38 | foutsourcedqty | foutsourcedqty | numeric | 23 | 10 | √ | 0 |  |
-| 39 | fprocesscode | 工序编码 | int8 | 64 |  | √ | 0 | 标准工序 mpdm_normprocess |
-| 40 | fsumworkwastqty | fsumworkwastqty | numeric | 23 | 10 | √ | 0 |  |
-| 41 | freportordercontrol | freportordercontrol | bpchar | 1 |  | √ | ' ' |  |
-| 42 | fnextprocessid | 下工序id（工序计划分录id） | varchar | 1000 |  | √ | ' ' | 下工序id（工序计划分录id） |
-| 43 | fcompleteqty | fcompleteqty | numeric | 23 | 10 | √ | 0 |  |
-| 44 | fismilestone | 里程碑 | bpchar | 1 |  | √ | '0' | 里程碑 |
-| 45 | fplanbegintime1 | 计划开工日期(上游带入不可改) | timestamp | 0 |  |  | null | 计划开工日期(上游带入不可改) |
-| 46 | fprocesstatus | 工序状态 | varchar | 10 |  | √ | ' ' | 工序状态,枚举: A :计划 B :下达 C :开工 D :完工 |
-| 47 | fplanendtime | 计划完工日期(可修改) | timestamp | 0 |  |  | null | 计划完工日期(可修改) |
-| 48 | fismainprocess | 主工序 | bpchar | 1 |  | √ | '0' | 主工序 |
-| 49 | fendtime | fendtime | timestamp | 0 |  |  | null |  |
-| 50 | fprocesscenter | 工作中心 | int8 | 64 |  | √ | 0 | 工作中心 sfc_workcenter |
-| 51 | freworkprocesses | 返工来源工序 | int8 | 64 |  | √ | 0 | 返工来源工序 |
+| 4 | ftransinrelationids | ftransinrelationids | varchar | 500 |  | √ | ' ' |  |
+| 5 | fislastprocess | 末序 | bpchar | 1 |  | √ | '0' | 末序 |
+| 6 | fprocessqty | 工序数量 | numeric | 23 | 10 | √ | 0 | 工序数量 |
+| 7 | fprocesscontrolcode | 工序控制码 | int8 | 64 |  | √ | 0 | [工序控制码 mpdm_processcontrolcode](../mpdm_files/mpdm_processcontrolcode.md) |
+| 8 | fsequencetype | 工序序列类型 | bpchar | 1 |  | √ | ' ' | 工序序列类型,枚举: A :并行序列 B :返工序列 C :主干序列 |
+| 9 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
+| 10 | freportsbqty | freportsbqty | numeric | 23 | 10 | √ | 0 |  |
+| 11 | fprocessroutid | 工艺路线id | int8 | 64 |  | √ | 0 | [工艺路线 mpdm_sfcprocessroute](../sbd_files/mpdm_sfcprocessroute.md) |
+| 12 | fbegintime | fbegintime | timestamp | 0 |  |  | null |  |
+| 13 | fclosetime | fclosetime | timestamp | 0 |  |  | null |  |
+| 14 | fupprocesstype | 上工序类型 | varchar | 10 |  | √ | ' ' | 上工序类型,枚举: A :单个 B :多个 C :群组 |
+| 15 | fsendworktype | fsendworktype | bpchar | 1 |  | √ | ' ' |  |
+| 16 | fisfirstprocess | 首序 | bpchar | 1 |  | √ | '0' | 首序 |
+| 17 | flowerqty | flowerqty | numeric | 23 | 10 | √ | 0 |  |
+| 18 | fprocessdepartid | 加工车间 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 19 | freworkplanqty | freworkplanqty | numeric | 23 | 10 | √ | 0 |  |
+| 20 | fprocessnumber | 工序号 | int4 | 32 |  | √ | 0 | 工序号 |
+| 21 | ftobereworkedqty | ftobereworkedqty | numeric | 23 | 10 | √ | 0 |  |
+| 22 | fprocessinfocode | fprocessinfocode | varchar | 30 |  | √ | ' ' |  |
+| 23 | fsequenceremark | fsequenceremark | varchar | 512 |  | √ | ' ' |  |
+| 24 | fprocessunit | 工序单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 25 | freworkedqty | freworkedqty | numeric | 23 | 10 | √ | 0 |  |
+| 26 | fhigherqty | fhigherqty | numeric | 23 | 10 | √ | 0 |  |
+| 27 | ftransoutrelationids | ftransoutrelationids | varchar | 500 |  | √ | ' ' |  |
+| 28 | fprocessorg | 加工组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 29 | fplanbegintime | 计划开工日期(可修改) | timestamp | 0 |  |  | null | 计划开工日期(可修改) |
+| 30 | freworksequence | 返工来源序列号 | int8 | 64 |  | √ | 0 | 返工来源序列号 |
+| 31 | fsumquaqyt | fsumquaqyt | numeric | 23 | 10 | √ | 0 |  |
+| 32 | fplanendtime1 | 计划完工日期(上游带入不可改) | timestamp | 0 |  |  | null | 计划完工日期(上游带入不可改) |
+| 33 | fpromethod | 加工类型 | varchar | 10 |  | √ | ' ' | 加工类型,枚举: 1 :厂内加工 2 :内协加工 3 :委外加工 |
+| 34 | fiskeyprocess | fiskeyprocess | bpchar | 1 |  | √ | '0' |  |
+| 35 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 36 | fsumstockwastqty | fsumstockwastqty | numeric | 23 | 10 | √ | 0 |  |
+| 37 | freworkmode | freworkmode | bpchar | 1 |  | √ | ' ' |  |
+| 38 | fprocesssequence | 工序序列 | int8 | 64 |  | √ | 0 | 工序序列 |
+| 39 | fjobtype | fjobtype | bpchar | 1 |  | √ | ' ' |  |
+| 40 | fintoqty | fintoqty | numeric | 23 | 10 | √ | 0 |  |
+| 41 | fbasebsqty | 基本批量 | numeric | 23 | 10 | √ | 0 | 基本批量 |
+| 42 | fupprocessid | 上工序id（工序计划分录id） | varchar | 1000 |  | √ | ' ' | 上工序id（工序计划分录id） |
+| 43 | freportmethod | 汇报控制 | varchar | 10 |  | √ | ' ' | 汇报控制,枚举: no :不汇报 must :必须汇报 |
+| 44 | frevoveryqty | frevoveryqty | numeric | 23 | 10 | √ | 0 |  |
+| 45 | fprocessinstructions | 工序说明 | varchar | 512 |  | √ | ' ' | 工序说明 |
+| 46 | foutsourcedqty | foutsourcedqty | numeric | 23 | 10 | √ | 0 |  |
+| 47 | fprocesscode | 工序编码 | int8 | 64 |  | √ | 0 | [标准工序 mpdm_normprocess](../mpdm_files/mpdm_normprocess.md) |
+| 48 | fsumworkwastqty | fsumworkwastqty | numeric | 23 | 10 | √ | 0 |  |
+| 49 | fclosebeforestatus | fclosebeforestatus | varchar | 10 |  | √ | ' ' |  |
+| 50 | freportordercontrol | freportordercontrol | bpchar | 1 |  | √ | ' ' |  |
+| 51 | fnextprocessid | 下工序id（工序计划分录id） | varchar | 1000 |  | √ | ' ' | 下工序id（工序计划分录id） |
+| 52 | freportqty | freportqty | numeric | 23 | 10 | √ | 0 |  |
+| 53 | fcompleteqty | fcompleteqty | numeric | 23 | 10 | √ | 0 |  |
+| 54 | fismilestone | 里程碑 | bpchar | 1 |  | √ | '0' | 里程碑 |
+| 55 | fplanbegintime1 | 计划开工日期(上游带入不可改) | timestamp | 0 |  |  | null | 计划开工日期(上游带入不可改) |
+| 56 | ftransinqty | ftransinqty | numeric | 23 | 10 | √ | 0 |  |
+| 57 | fprocesstatus | 工序状态 | varchar | 10 |  | √ | ' ' | 工序状态,枚举: A :计划 B :下达 C :开工 D :完工 |
+| 58 | fplanendtime | 计划完工日期(可修改) | timestamp | 0 |  |  | null | 计划完工日期(可修改) |
+| 59 | ftransinunitid | ftransinunitid | int8 | 64 |  | √ | 0 |  |
+| 60 | fismainprocess | 主工序 | bpchar | 1 |  | √ | '0' | 主工序 |
+| 61 | fendtime | fendtime | timestamp | 0 |  |  | null |  |
+| 62 | fprocesscenter | 工作中心 | int8 | 64 |  | √ | 0 | [工作中心 sfc_workcenter](../mpdm_files/sfc_workcenter.md) |
+| 63 | freworkprocesses | 返工来源工序 | int8 | 64 |  | √ | 0 | 返工来源工序 |
 
 ### 列规则定义
 
@@ -86,45 +98,58 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fprocessrout | 工艺路线 | int8 | 64 |  | √ | 0 | 工艺路线 mpdm_sfcprocessroute |
-| 3 | fworkentryf7 | 生产工单分录 | int8 | 64 |  | √ | 0 | 生产工单分录F7 sfc_mftorder_f7 |
-| 4 | forgid | 生产组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 5 | fsbillentity | 来源单据实体 | varchar | 50 |  | √ | ' ' | 来源单据实体 |
-| 6 | fworkshop | fworkshop | int8 | 64 |  | √ | 0 |  |
-| 7 | fauxptyunit | 辅助单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 8 | fmaterialversion | 物料版本 | int8 | 64 |  | √ | 0 | 物料版本 bd_bomversion_new |
-| 9 | fconfiguredcodeid | fconfiguredcodeid | int8 | 64 |  | √ | 0 |  |
-| 10 | fbaseunit | 基本单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 12 | fworkid | 工单id | int8 | 64 |  | √ | 0 | 工单id |
-| 13 | fdepartid | 车间 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 14 | fprojno | 项目号 | int8 | 64 |  | √ | 0 | 项目 bd_project |
-| 15 | fauxproperty | 辅助属性 | int8 | 64 |  | √ | 0 | null 001 |
-| 16 | fworkrowid | 工单行id | int8 | 64 |  | √ | 0 | 工单行id |
-| 17 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 18 | fworkn | 工单号 | varchar | 50 |  | √ | ' ' | 工单号 |
-| 19 | fmaterial | 产品编码 | int8 | 64 |  | √ | 0 | 物料生产信息 bd_materialmftinfo |
-| 20 | fsourcebillrowid | 来源单据行id | int8 | 64 |  | √ | 0 | 来源单据行id |
-| 21 | fcorebilltype | 核心单据类型 | int8 | 64 |  | √ | 0 | 单据类型 bos_billtype |
-| 22 | ftracknumber | 跟踪号 | int8 | 64 |  | √ | 0 | 跟踪号 bd_tracknumber |
-| 23 | fsourcebillno | 来源单据编号 | varchar | 80 |  | √ | ' ' | 来源单据编号 |
-| 24 | fbillno | 单据编号 | varchar | 100 |  | √ | ' ' | 单据编号 |
-| 25 | fqty | 数量 | numeric | 23 | 10 | √ | 0 | 数量 |
-| 26 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 27 | fsourcebilltype | 来源单据类型 | int8 | 64 |  | √ | 0 | 单据类型 bos_billtype |
-| 28 | fbillstatus | 单据状态 | bpchar | 1 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 29 | fbatchno | 批号 | varchar | 50 |  | √ | ' ' | 批号 |
-| 30 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 31 | fauditdate | fauditdate | timestamp | 0 |  |  | null |  |
-| 32 | fcorebillentity | 核心单据实体 | varchar | 50 |  | √ | ' ' | 核心单据实体 |
-| 33 | fworkrown | 工单行号 | int4 | 32 |  | √ | 0 | 工单行号 |
-| 34 | fsourcebillrow | 来源单据行号 | int4 | 32 |  | √ | 0 | 来源单据行号 |
-| 35 | fsourcebillid | 来源单据id | int8 | 64 |  | √ | 0 | 来源单据id |
-| 36 | fbaseqty | 基本数量 | numeric | 23 | 10 | √ | 0 | 基本数量 |
-| 37 | fauditorid | fauditorid | int8 | 64 |  | √ | 0 |  |
-| 38 | funit | 单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 39 | fbilltype | 单据类型 | int8 | 64 |  | √ | 0 | 单据类型 bos_billtype |
-| 40 | fauxptyqty | 辅助数量 | numeric | 23 | 10 | √ | 0 | 辅助数量 |
+| 2 | fprocessrout | 工艺路线 | int8 | 64 |  | √ | 0 | [工艺路线 mpdm_sfcprocessroute](../sbd_files/mpdm_sfcprocessroute.md) |
+| 3 | fworkentryf7 | 生产工单分录 | int8 | 64 |  | √ | 0 | [生产工单分录F7 sfc_mftorder_f7](../sfc_files/sfc_mftorder_f7.md) |
+| 4 | forgid | 生产组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 5 | fworkshop | fworkshop | int8 | 64 |  | √ | 0 |  |
+| 6 | fbaseunit | 基本单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 8 | fprojno | 项目号 | int8 | 64 |  | √ | 0 | [项目 bd_project](../basedata_files/bd_project.md) |
+| 9 | fauxproperty | 辅助属性 | int8 | 64 |  | √ | 0 | null 001 |
+| 10 | fworkrowid | 工单行id | int8 | 64 |  | √ | 0 | 工单行id |
+| 11 | fbomid | fbomid | int8 | 64 |  | √ | 0 |  |
+| 12 | fworkn | 工单号 | varchar | 50 |  | √ | ' ' | 工单号 |
+| 13 | fprocessroutechange | fprocessroutechange | bpchar | 1 |  | √ | '0' |  |
+| 14 | fmaterial | 产品编码 | int8 | 64 |  | √ | 0 | [物料生产信息 bd_materialmftinfo](../sbd_files/bd_materialmftinfo.md) |
+| 15 | fcorebilltype | 核心单据类型 | int8 | 64 |  | √ | 0 | [单据类型 bos_billtype](../cts_files/bos_billtype.md) |
+| 16 | fentrustorgid | fentrustorgid | int8 | 64 |  | √ | 0 |  |
+| 17 | ftracknumber | 跟踪号 | int8 | 64 |  | √ | 0 | [跟踪号 bd_tracknumber](../sbd_files/bd_tracknumber.md) |
+| 18 | fsourcebillno | 来源单据编号 | varchar | 80 |  | √ | ' ' | 来源单据编号 |
+| 19 | fbillno | 单据编号 | varchar | 100 |  | √ | ' ' | 单据编号 |
+| 20 | fqty | 数量 | numeric | 23 | 10 | √ | 0 | 数量 |
+| 21 | fsourcebilltype | 来源单据类型 | int8 | 64 |  | √ | 0 | [单据类型 bos_billtype](../cts_files/bos_billtype.md) |
+| 22 | fbillstatus | 单据状态 | bpchar | 1 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
+| 23 | fbatchno | 批号 | varchar | 50 |  | √ | ' ' | 批号 |
+| 24 | flicensenoid | flicensenoid | int8 | 64 |  | √ | 0 |  |
+| 25 | fauditdate | fauditdate | timestamp | 0 |  |  | null |  |
+| 26 | fcorebillentity | 核心单据实体 | varchar | 50 |  | √ | ' ' | 核心单据实体 |
+| 27 | fworkrown | 工单行号 | int4 | 32 |  | √ | 0 | 工单行号 |
+| 28 | flotid | flotid | int8 | 64 |  | √ | 0 |  |
+| 29 | fauditorid | fauditorid | int8 | 64 |  | √ | 0 |  |
+| 30 | funit | 单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 31 | fmaterielfieldid | fmaterielfieldid | int8 | 64 |  | √ | 0 |  |
+| 32 | fsbillentity | 来源单据实体 | varchar | 50 |  | √ | ' ' | 来源单据实体 |
+| 33 | fbizstatus | fbizstatus | bpchar | 1 |  | √ | ' ' |  |
+| 34 | fauxptyunit | 辅助单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 35 | fmaterialversion | 物料版本 | int8 | 64 |  | √ | 0 | [物料版本 bd_bomversion_new](../basedata_files/bd_bomversion_new.md) |
+| 36 | fconfiguredcodeid | fconfiguredcodeid | int8 | 64 |  | √ | 0 |  |
+| 37 | fbonded | fbonded | bpchar | 1 |  | √ | '0' |  |
+| 38 | fworkid | 工单id | int8 | 64 |  | √ | 0 | 工单id |
+| 39 | fdepartid | 生产车间 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 40 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 41 | fisread | fisread | bpchar | 1 |  | √ | '0' |  |
+| 42 | fpickstatus | fpickstatus | bpchar | 1 |  | √ | ' ' |  |
+| 43 | fsourcebillrowid | 来源单据行id | int8 | 64 |  | √ | 0 | 来源单据行id |
+| 44 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 45 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 46 | fisdevproduce | fisdevproduce | bpchar | 1 |  | √ | '0' |  |
+| 47 | fplanstatus | fplanstatus | bpchar | 1 |  | √ | ' ' |  |
+| 48 | fsourcebillrow | 来源单据行号 | int4 | 32 |  | √ | 0 | 来源单据行号 |
+| 49 | fsourcebillid | 来源单据id | int8 | 64 |  | √ | 0 | 来源单据id |
+| 50 | fmpmtaskno | fmpmtaskno | int8 | 64 |  | √ | 0 |  |
+| 51 | fbaseqty | 基本数量 | numeric | 23 | 10 | √ | 0 | 基本数量 |
+| 52 | fbilltype | 单据类型 | int8 | 64 |  | √ | 0 | 单据类型 bos_billtype |
+| 53 | fauxptyqty | 辅助数量 | numeric | 23 | 10 | √ | 0 | 辅助数量 |
 
 ### 列规则定义
 
@@ -151,46 +176,77 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fintoqty | 转入数量 | numeric | 23 | 10 | √ | 0 | 转入数量 |
-| 3 | fsumworkwastbaseqty | fsumworkwastbaseqty | numeric | 23 | 10 | √ | 0 |  |
+| 2 | freworkoutproqty | freworkoutproqty | numeric | 23 | 10 | √ | 0 |  |
+| 3 | fdamageproqty | fdamageproqty | numeric | 23 | 10 | √ | 0 |  |
 | 4 | fsumcompleteqty | 累计完工数量 | numeric | 23 | 10 | √ | 0 | 累计完工数量 |
 | 5 | freportsbqty | 汇报选单数量 | numeric | 23 | 10 | √ | 0 | 汇报选单数量 |
-| 6 | ftobereworkedbaseqty | ftobereworkedbaseqty | numeric | 23 | 10 | √ | 0 |  |
-| 7 | freportmethod | freportmethod | varchar | 10 |  | √ | ' ' |  |
-| 8 | fsumcompletebaseqty | fsumcompletebaseqty | numeric | 23 | 10 | √ | 0 |  |
-| 9 | fheadunitfactor | 表头单位换算系数 | int4 | 32 |  | √ | 0 | 表头单位换算系数 |
-| 10 | fbegintime | 实际开工日期 | timestamp | 0 |  |  | null | 实际开工日期 |
-| 11 | fsumworkwastproqty | fsumworkwastproqty | numeric | 23 | 10 | √ | 0 |  |
-| 12 | frevoveryqty | 委外收回数量 | numeric | 23 | 10 | √ | 0 | 委外收回数量 |
-| 13 | ftobeinspectproqty | ftobeinspectproqty | numeric | 23 | 10 | √ | 0 |  |
-| 14 | foutsourcedqty | 委外发出数量 | numeric | 23 | 10 | √ | 0 | 委外发出数量 |
-| 15 | flowerqty | 汇报下限 | numeric | 23 | 10 | √ | 0 | 汇报下限 |
-| 16 | fsumquabaseqyt | fsumquabaseqyt | numeric | 23 | 10 | √ | 0 |  |
-| 17 | freworkdrawqty | freworkdrawqty | numeric | 23 | 10 | √ | 0 |  |
-| 18 | fouttoqty | 转出数量 | numeric | 23 | 10 | √ | 0 | 转出数量 |
-| 19 | fsumworkwastqty | 累计工废数量 | numeric | 23 | 10 | √ | 0 | 累计工废数量 |
-| 20 | ftobereworkedqty | 待返工数量 | numeric | 23 | 10 | √ | 0 | 待返工数量 |
-| 21 | fsumstockwastproqty | fsumstockwastproqty | numeric | 23 | 10 | √ | 0 |  |
-| 22 | ftobereworkedproqty | ftobereworkedproqty | numeric | 23 | 10 | √ | 0 |  |
-| 23 | ftobeinspectqty | ftobeinspectqty | numeric | 23 | 10 | √ | 0 |  |
-| 24 | fcompletebaseqty | fcompletebaseqty | numeric | 23 | 10 | √ | 0 |  |
-| 25 | ftobeinsbaseqty | ftobeinsbaseqty | numeric | 23 | 10 | √ | 0 |  |
-| 26 | foutsourcedsbqty | foutsourcedsbqty | numeric | 23 | 10 | √ | 0 |  |
-| 27 | fprounitfactor | 工序单位换算系数 | int4 | 32 |  | √ | 0 | 工序单位换算系数 |
-| 28 | freworkedqty | 返工下推数量 | numeric | 23 | 10 | √ | 0 | 返工下推数量 |
-| 29 | fhigherqty | 汇报上限 | numeric | 23 | 10 | √ | 0 | 汇报上限 |
-| 30 | fsumstockwastbaseqty | fsumstockwastbaseqty | numeric | 23 | 10 | √ | 0 |  |
-| 31 | fcompleteproqty | fcompleteproqty | numeric | 23 | 10 | √ | 0 |  |
-| 32 | fcompleteqty | 完工数量 | numeric | 23 | 10 | √ | 0 | 完工数量 |
-| 33 | ftransfersbqty | ftransfersbqty | numeric | 23 | 10 | √ | 0 |  |
-| 34 | fsumquaproqyt | fsumquaproqyt | numeric | 23 | 10 | √ | 0 |  |
-| 35 | fsumquaqyt | 累计合格数量 | numeric | 23 | 10 | √ | 0 | 累计合格数量 |
-| 36 | freportdownlimit | freportdownlimit | numeric | 23 | 10 | √ | 0 |  |
-| 37 | fendtime | 实际完工日期 | timestamp | 0 |  |  | null | 实际完工日期 |
-| 38 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
-| 39 | fsumstockwastqty | 累计料废数量 | numeric | 23 | 10 | √ | 0 | 累计料废数量 |
-| 40 | freportupperlimit | freportupperlimit | numeric | 23 | 10 | √ | 0 |  |
-| 41 | fyetreworkedqty | 已返工数量 | numeric | 23 | 10 | √ | 0 | 已返工数量 |
+| 6 | fsumcompletebaseqty | fsumcompletebaseqty | numeric | 23 | 10 | √ | 0 |  |
+| 7 | fheadunitfactor | 表头单位换算系数 | int4 | 32 |  | √ | 0 | 表头单位换算系数 |
+| 8 | fbegintime | 实际开工日期 | timestamp | 0 |  |  | null | 实际开工日期 |
+| 9 | finproqty | finproqty | numeric | 23 | 10 | √ | 0 |  |
+| 10 | flowerqty | 汇报下限 | numeric | 23 | 10 | √ | 0 | 汇报下限 |
+| 11 | fyetsendworkqty | fyetsendworkqty | numeric | 23 | 10 | √ | 0 |  |
+| 12 | fsumquabaseqyt | fsumquabaseqyt | numeric | 23 | 10 | √ | 0 |  |
+| 13 | finbaseqty | finbaseqty | numeric | 23 | 10 | √ | 0 |  |
+| 14 | freworkdrawqty | freworkdrawqty | numeric | 23 | 10 | √ | 0 |  |
+| 15 | ftobesendworkbaseqty | ftobesendworkbaseqty | numeric | 23 | 10 | √ | 0 |  |
+| 16 | fouttoqty | 转出数量 | numeric | 23 | 10 | √ | 0 | 转出数量 |
+| 17 | ftobereworkedqty | 待返工数量 | numeric | 23 | 10 | √ | 0 | 待返工数量 |
+| 18 | ftobereworkedproqty | ftobereworkedproqty | numeric | 23 | 10 | √ | 0 |  |
+| 19 | frelateinbaseqty | frelateinbaseqty | numeric | 23 | 10 | √ | 0 |  |
+| 20 | frelatereworkoutbaseqty | frelatereworkoutbaseqty | numeric | 23 | 10 | √ | 0 |  |
+| 21 | ftobeinsbaseqty | ftobeinsbaseqty | numeric | 23 | 10 | √ | 0 |  |
+| 22 | foutsourcedsbqty | foutsourcedsbqty | numeric | 23 | 10 | √ | 0 |  |
+| 23 | frelateinproqty | frelateinproqty | numeric | 23 | 10 | √ | 0 |  |
+| 24 | fprounitfactor | 工序单位换算系数 | int4 | 32 |  | √ | 0 | 工序单位换算系数 |
+| 25 | freworkedqty | 返工下推数量 | numeric | 23 | 10 | √ | 0 | 返工下推数量 |
+| 26 | fhigherqty | 汇报上限 | numeric | 23 | 10 | √ | 0 | 汇报上限 |
+| 27 | fyetsendworkbaseqty | fyetsendworkbaseqty | numeric | 23 | 10 | √ | 0 |  |
+| 28 | fsumstockwastbaseqty | fsumstockwastbaseqty | numeric | 23 | 10 | √ | 0 |  |
+| 29 | fsampledestorybaseqty | fsampledestorybaseqty | numeric | 23 | 10 | √ | 0 |  |
+| 30 | fsendworkstate | 派工状态 | bpchar | 1 |  | √ | ' ' | 派工状态,枚举: A :无需派工 B :待派工 C :派工中 D :已派工 |
+| 31 | ftransfersbqty | ftransfersbqty | numeric | 23 | 10 | √ | 0 |  |
+| 32 | fsumquaproqyt | fsumquaproqyt | numeric | 23 | 10 | √ | 0 |  |
+| 33 | fsumquaqyt | 累计合格数量 | numeric | 23 | 10 | √ | 0 | 累计合格数量 |
+| 34 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
+| 35 | fsumstockwastqty | 累计料废数量 | numeric | 23 | 10 | √ | 0 | 累计料废数量 |
+| 36 | freportupperlimit | freportupperlimit | numeric | 23 | 10 | √ | 0 |  |
+| 37 | freworkoutqty | freworkoutqty | numeric | 23 | 10 | √ | 0 |  |
+| 38 | fintoqty | 转入数量 | numeric | 23 | 10 | √ | 0 | 转入数量 |
+| 39 | finqty | finqty | numeric | 23 | 10 | √ | 0 |  |
+| 40 | foutqty | foutqty | numeric | 23 | 10 | √ | 0 |  |
+| 41 | freworkoutbaseqty | freworkoutbaseqty | numeric | 23 | 10 | √ | 0 |  |
+| 42 | frelateoutqty | frelateoutqty | numeric | 23 | 10 | √ | 0 |  |
+| 43 | fsumworkwastbaseqty | fsumworkwastbaseqty | numeric | 23 | 10 | √ | 0 |  |
+| 44 | frelatereworkoutproqty | frelatereworkoutproqty | numeric | 23 | 10 | √ | 0 |  |
+| 45 | fsampledestoryproqty | fsampledestoryproqty | numeric | 23 | 10 | √ | 0 |  |
+| 46 | ftobereworkedbaseqty | ftobereworkedbaseqty | numeric | 23 | 10 | √ | 0 |  |
+| 47 | freportmethod | freportmethod | varchar | 10 |  | √ | ' ' |  |
+| 48 | fdamagebaseqty | fdamagebaseqty | numeric | 23 | 10 | √ | 0 |  |
+| 49 | fyetsendworkproqty | fyetsendworkproqty | numeric | 23 | 10 | √ | 0 |  |
+| 50 | frelateoutbaseqty | frelateoutbaseqty | numeric | 23 | 10 | √ | 0 |  |
+| 51 | fsumworkwastproqty | fsumworkwastproqty | numeric | 23 | 10 | √ | 0 |  |
+| 52 | frevoveryqty | 委外收回数量 | numeric | 23 | 10 | √ | 0 | 委外收回数量 |
+| 53 | ftobeinspectproqty | ftobeinspectproqty | numeric | 23 | 10 | √ | 0 |  |
+| 54 | foutsourcedqty | 委外发出数量 | numeric | 23 | 10 | √ | 0 | 委外发出数量 |
+| 55 | ftobesendworkproqty | ftobesendworkproqty | numeric | 23 | 10 | √ | 0 |  |
+| 56 | foutproqty | foutproqty | numeric | 23 | 10 | √ | 0 |  |
+| 57 | frelatereworkoutqty | frelatereworkoutqty | numeric | 23 | 10 | √ | 0 |  |
+| 58 | fsumworkwastqty | 累计工废数量 | numeric | 23 | 10 | √ | 0 | 累计工废数量 |
+| 59 | fsumstockwastproqty | fsumstockwastproqty | numeric | 23 | 10 | √ | 0 |  |
+| 60 | frelateoutproqty | frelateoutproqty | numeric | 23 | 10 | √ | 0 |  |
+| 61 | frelateinqty | frelateinqty | numeric | 23 | 10 | √ | 0 |  |
+| 62 | ftobeinspectqty | ftobeinspectqty | numeric | 23 | 10 | √ | 0 |  |
+| 63 | fcompletebaseqty | fcompletebaseqty | numeric | 23 | 10 | √ | 0 |  |
+| 64 | fsampledestoryqty | fsampledestoryqty | numeric | 23 | 10 | √ | 0 |  |
+| 65 | fcompleteproqty | fcompleteproqty | numeric | 23 | 10 | √ | 0 |  |
+| 66 | foutbaseqty | foutbaseqty | numeric | 23 | 10 | √ | 0 |  |
+| 67 | fcompleteqty | 完工数量 | numeric | 23 | 10 | √ | 0 | 完工数量 |
+| 68 | ftobesendworkqty | ftobesendworkqty | numeric | 23 | 10 | √ | 0 |  |
+| 69 | freportdownlimit | freportdownlimit | numeric | 23 | 10 | √ | 0 |  |
+| 70 | fdamageqty | fdamageqty | numeric | 23 | 10 | √ | 0 |  |
+| 71 | fendtime | 实际完工日期 | timestamp | 0 |  |  | null | 实际完工日期 |
+| 72 | fyetreworkedqty | 已返工数量 | numeric | 23 | 10 | √ | 0 | 已返工数量 |
 
 ### 列规则定义
 
@@ -217,28 +273,29 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fpurchasegroupid | 采购组 | int8 | 64 |  | √ | 0 | 供应链业务组 bd_operatorgroup |
-| 3 | foutreworkproqty | foutreworkproqty | numeric | 23 | 10 | √ | 0 |  |
-| 4 | finreworkproqty | finreworkproqty | numeric | 23 | 10 | √ | 0 |  |
-| 5 | foutsourcepriceandtax | 委外含税单价 | numeric | 23 | 10 | √ | 0 | 委外含税单价 |
-| 6 | fworkwasteprice | 工废单价 | numeric | 23 | 10 | √ | 0 | 工废单价 |
-| 7 | foutreworkqty | foutreworkqty | numeric | 23 | 10 | √ | 0 |  |
-| 8 | finacceptqty | finacceptqty | numeric | 23 | 10 | √ | 0 |  |
-| 9 | fchargeunitid | 计价单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 10 | finsendmenuqty | finsendmenuqty | numeric | 23 | 10 | √ | 0 |  |
-| 11 | fpurchaseorgid | 采购组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 12 | fsupplierid | 供应商 | int8 | 64 |  | √ | 0 | 供应商 bd_supplier |
-| 13 | finreworkbaseqty | finreworkbaseqty | numeric | 23 | 10 | √ | 0 |  |
-| 14 | fscrapwasteprice | 料废单价 | numeric | 23 | 10 | √ | 0 | 料废单价 |
-| 15 | fworkwastepriceandtax | 工废含税单价 | numeric | 23 | 10 | √ | 0 | 工废含税单价 |
-| 16 | foutreworkbaseqty | foutreworkbaseqty | numeric | 23 | 10 | √ | 0 |  |
-| 17 | ftaxrateid | 税率 | int8 | 64 |  | √ | 0 | 税率 bd_taxrate |
-| 18 | finsendqty | finsendqty | numeric | 23 | 10 | √ | 0 |  |
-| 19 | fscrapwastepriceandtax | 料废含税单价 | numeric | 23 | 10 | √ | 0 | 料废含税单价 |
-| 20 | finreworkqty | finreworkqty | numeric | 23 | 10 | √ | 0 |  |
-| 21 | foutsourceprice | 委外单价 | numeric | 23 | 10 | √ | 0 | 委外单价 |
-| 22 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
-| 23 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 2 | ftaxratevalue | ftaxratevalue | numeric | 23 | 10 | √ | 0 |  |
+| 3 | fpurchasegroupid | 采购组 | int8 | 64 |  | √ | 0 | [供应链业务组 bd_operatorgroup](../sbd_files/bd_operatorgroup.md) |
+| 4 | foutreworkproqty | foutreworkproqty | numeric | 23 | 10 | √ | 0 |  |
+| 5 | finreworkproqty | finreworkproqty | numeric | 23 | 10 | √ | 0 |  |
+| 6 | foutsourcepriceandtax | 委外含税单价 | numeric | 23 | 10 | √ | 0 | 委外含税单价 |
+| 7 | fworkwasteprice | 工废单价 | numeric | 23 | 10 | √ | 0 | 工废单价 |
+| 8 | foutreworkqty | foutreworkqty | numeric | 23 | 10 | √ | 0 |  |
+| 9 | finacceptqty | finacceptqty | numeric | 23 | 10 | √ | 0 |  |
+| 10 | fchargeunitid | 计价单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 11 | finsendmenuqty | finsendmenuqty | numeric | 23 | 10 | √ | 0 |  |
+| 12 | fpurchaseorgid | 采购组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 13 | fsupplierid | 供应商 | int8 | 64 |  | √ | 0 | 供应商 bd_supplier |
+| 14 | finreworkbaseqty | finreworkbaseqty | numeric | 23 | 10 | √ | 0 |  |
+| 15 | fscrapwasteprice | 料废单价 | numeric | 23 | 10 | √ | 0 | 料废单价 |
+| 16 | fworkwastepriceandtax | 工废含税单价 | numeric | 23 | 10 | √ | 0 | 工废含税单价 |
+| 17 | foutreworkbaseqty | foutreworkbaseqty | numeric | 23 | 10 | √ | 0 |  |
+| 18 | ftaxrateid | 税率 | int8 | 64 |  | √ | 0 | [税率 bd_taxrate](../basedata_files/bd_taxrate.md) |
+| 19 | finsendqty | finsendqty | numeric | 23 | 10 | √ | 0 |  |
+| 20 | fscrapwastepriceandtax | 料废含税单价 | numeric | 23 | 10 | √ | 0 | 料废含税单价 |
+| 21 | finreworkqty | finreworkqty | numeric | 23 | 10 | √ | 0 |  |
+| 22 | foutsourceprice | 委外单价 | numeric | 23 | 10 | √ | 0 | 委外单价 |
+| 23 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
+| 24 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 
 ### 列规则定义
 
@@ -278,7 +335,7 @@
 | 12 | fwalplanqty | 加工活动人工计划数量 | numeric | 23 | 10 | √ | 0 | 加工活动人工计划数量 |
 | 13 | fraresource | fraresource | int8 | 64 |  | √ | 0 |  |
 | 14 | frmpformulaid | frmpformulaid | int8 | 64 |  | √ | 0 |  |
-| 15 | fpamunit | 准备活动机器单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 15 | fpamunit | 准备活动机器单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 16 | fpmactivityreport | fpmactivityreport | int8 | 64 |  | √ | 0 |  |
 | 17 | fwalreportqty | 加工活动人工汇报数量 | numeric | 23 | 10 | √ | 0 | 加工活动人工汇报数量 |
 | 18 | fsumwalplanqty | 加工活动人工计划活动总量 | numeric | 23 | 10 | √ | 0 | 加工活动人工计划活动总量 |
@@ -286,14 +343,14 @@
 | 20 | fiswam | 加工活动机器 | bpchar | 1 |  | √ | '0' | 加工活动机器 |
 | 21 | fpalplanqty | 准备活动人工计划数量 | numeric | 23 | 10 | √ | 0 | 准备活动人工计划数量 |
 | 22 | fpamplanqty | 准备活动机器计划数量 | numeric | 23 | 10 | √ | 0 | 准备活动机器计划数量 |
-| 23 | funitfield | 准备活动人工单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 23 | funitfield | 准备活动人工单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 24 | fpalreportqty | 准备活动人工活动汇报数量 | numeric | 23 | 10 | √ | 0 | 准备活动人工活动汇报数量 |
-| 25 | fwalunit | 加工活动人工单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 25 | fwalunit | 加工活动人工单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 26 | fpaactivityreport | fpaactivityreport | int8 | 64 |  | √ | 0 |  |
 | 27 | fpapformulaid | fpapformulaid | int8 | 64 |  | √ | 0 |  |
 | 28 | fwamplanqty | 加工活动机器计划数量 | numeric | 23 | 10 | √ | 0 | 加工活动机器计划数量 |
 | 29 | fiscomeup3 | 加工人工默认 | bpchar | 1 |  | √ | '0' | 加工人工默认 |
-| 30 | fwamunit | 加工活动机器单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 30 | fwamunit | 加工活动机器单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 31 | fiscomeup4 | 加工机器默认 | bpchar | 1 |  | √ | '0' | 加工机器默认 |
 | 32 | fiscomeup1 | 准备人工默认 | bpchar | 1 |  | √ | '0' | 准备人工默认 |
 | 33 | fsumpamplanqty | 准备活动机器计划活动总量 | numeric | 23 | 10 | √ | 0 | 准备活动机器计划活动总量 |
@@ -340,19 +397,19 @@
 | 11 | fsumoopplanqty | 其他活动一人工计划活动总量 | numeric | 23 | 10 | √ | 0 | 其他活动一人工计划活动总量 |
 | 12 | fpamreportqty8 | 其他活动二人工汇报数量 | numeric | 23 | 10 | √ | 0 | 其他活动二人工汇报数量 |
 | 13 | ftaresource | ftaresource | int8 | 64 |  | √ | 0 |  |
-| 14 | funitfield8 | 其他活动二人工单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 14 | funitfield8 | 其他活动二人工单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 15 | fpamreportqty4 | 其他活动二机器汇报数量 | numeric | 23 | 10 | √ | 0 | 其他活动二机器汇报数量 |
 | 16 | ftmactivityreport | ftmactivityreport | int8 | 64 |  | √ | 0 |  |
-| 17 | funitfield3 | 其他活动一机器单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 17 | funitfield3 | 其他活动一机器单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 18 | fpalplanqty7 | 其他活动一人工计划数量 | numeric | 23 | 10 | √ | 0 | 其他活动一人工计划数量 |
 | 19 | ftapformulaid | ftapformulaid | int8 | 64 |  | √ | 0 |  |
 | 20 | fpalplanqty4 | 其他活动二机器计划数量 | numeric | 23 | 10 | √ | 0 | 其他活动二机器计划数量 |
 | 21 | fomactivityreport | fomactivityreport | int8 | 64 |  | √ | 0 |  |
 | 22 | fpamreportqty3 | 其他活动一机器汇报数量 | numeric | 23 | 10 | √ | 0 | 其他活动一机器汇报数量 |
 | 23 | ftaactivityreport | ftaactivityreport | int8 | 64 |  | √ | 0 |  |
-| 24 | funitfield7 | 其他活动一人工单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 24 | funitfield7 | 其他活动一人工单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 25 | fpalplanqty3 | 其他活动一机器计划数量 | numeric | 23 | 10 | √ | 0 | 其他活动一机器计划数量 |
-| 26 | funitfield4 | 其他活动二机器单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 26 | funitfield4 | 其他活动二机器单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 27 | fsumospplanqty | 其他活动二人工计划活动总量 | numeric | 23 | 10 | √ | 0 | 其他活动二人工计划活动总量 |
 | 28 | ftmpformulaid | ftmpformulaid | int8 | 64 |  | √ | 0 |  |
 | 29 | fispal4 | 其他活动二机器 | bpchar | 1 |  | √ | '0' | 其他活动二机器 |
@@ -425,9 +482,10 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fprocessinstructions | 工序说明 | varchar | 512 |  | √ | ' ' | 工序说明 |
-| 2 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
-| 3 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
-| 4 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
+| 2 | fsequenceremark | fsequenceremark | varchar | 512 |  | √ | ' ' |  |
+| 3 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
+| 4 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
+| 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 
 ### 列规则定义
 
@@ -456,12 +514,12 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fprocesssequence | 拆分序列号 | int4 | 32 |  | √ | 0 | 拆分序列号 |
 | 3 | fendprocessnumber | 拆分结束工序号 | int4 | 32 |  | √ | 0 | 拆分结束工序号 |
-| 4 | fsrcprocessplanid | 来源工序计划 | int8 | 64 |  | √ | 0 | 工序计划 sfc_bd_processplan |
+| 4 | fsrcprocessplanid | 来源工序计划 | int8 | 64 |  | √ | 0 | [工序计划 sfc_bd_processplan](../sfc_files/sfc_bd_processplan.md) |
 | 5 | fsplittype | 产生方式 | bpchar | 1 |  | √ | ' ' | 产生方式,枚举: A :首序到底拆分 B :中间工序到底拆分 C :指定工序段拆分 D :生成内协工序计划 |
 | 6 | fstartprocessnumber | 拆分起始工序号 | int4 | 32 |  | √ | 0 | 拆分起始工序号 |
 | 7 | fbillsn | 拆分流水号（直接下级流水） | int4 | 32 |  | √ | 0 | 拆分流水号（直接下级流水） |
 | 8 | fcount | 拆分个数（直接下级个数） | int4 | 32 |  | √ | 0 | 拆分个数（直接下级个数） |
-| 9 | frootprocessplanid | 主工序计划 | int8 | 64 |  | √ | 0 | 工序计划 sfc_bd_processplan |
+| 9 | frootprocessplanid | 主工序计划 | int8 | 64 |  | √ | 0 | [工序计划 sfc_bd_processplan](../sfc_files/sfc_bd_processplan.md) |
 
 ### 列规则定义
 

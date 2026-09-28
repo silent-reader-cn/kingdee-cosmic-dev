@@ -40,20 +40,20 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fname | 名称 | varchar | 80 |  | √ | ' ' | 名称 |
 | 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 5 | frowtype | 行类型 | bpchar | 1 |  | √ | 'A' | 行类型,枚举: A :主产品行 B :赠品行 |
-| 6 | flimittype | 限量方式 | int8 | 64 |  | √ | 0 | 限量方式 ocdpm_limittype |
-| 7 | fpromotionpolicyid | 促销编码 | int8 | 64 |  | √ | 0 | 促销政策 ocdpm_promotepolicyf7 |
+| 6 | flimittype | 限量方式 | int8 | 64 |  | √ | 0 | [限量方式 ocdpm_limittype](../ocdpm_files/ocdpm_limittype.md) |
+| 7 | fpromotionpolicyid | 促销编码 | int8 | 64 |  | √ | 0 | [促销政策 ocdpm_promotepolicyf7](../ocdpm_files/ocdpm_promotepolicyf7.md) |
 | 8 | fremainderqty | 剩余数量/份数 | numeric | 23 | 10 | √ | 0 | 剩余数量/份数 |
 | 9 | flimitqty | 限量数量/份数 | numeric | 23 | 10 | √ | 0 | 限量数量/份数 |
 | 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 11 | fstatus | 数据状态 | bpchar | 1 |  | √ | 'C' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 14 | fprogroupnoid | 促销组号 | int8 | 64 |  | √ | 0 | 辅助资料 bos_assistantdata_detail |
-| 15 | fpggroupnoid | 主产品组/赠品组号 | int8 | 64 |  | √ | 0 | 辅助资料 bos_assistantdata_detail |
+| 14 | fprogroupnoid | 促销组号 | int8 | 64 |  | √ | 0 | [辅助资料 bos_assistantdata_detail](../base_files/bos_assistantdata_detail.md) |
+| 15 | fpggroupnoid | 主产品组/赠品组号 | int8 | 64 |  | √ | 0 | [辅助资料 bos_assistantdata_detail](../base_files/bos_assistantdata_detail.md) |
 | 16 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 17 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
 | 18 | fcontent | 限量内容 | varchar | 2000 |  | √ | ' ' | 限量内容 |
@@ -87,11 +87,11 @@
 | 2 | fppruleentryid | 关联促销规则分录ID | int8 | 64 |  | √ | 0 | 关联促销规则分录ID |
 | 3 | fauxpropid | 辅助属性 | int8 | 64 |  | √ | 0 | null 001 |
 | 4 | fentryusedmqty | 已使用份数 | numeric | 23 | 10 | √ | 0 | 已使用份数 |
-| 5 | fmaterialid | 物料 | int8 | 64 |  | √ | 0 | 物料 bd_material |
-| 6 | funitid | 计量单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 5 | fmaterialid | 物料 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
+| 6 | funitid | 计量单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 7 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 8 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 9 | fitemid | 商品 | int8 | 64 |  | √ | 0 | 商品信息 ocdbd_iteminfo |
+| 9 | fitemid | 商品 | int8 | 64 |  | √ | 0 | [商品信息 ocdbd_iteminfo](../ocdbd_files/ocdbd_iteminfo.md) |
 | 10 | fentryusedqty | 已使用数量 | numeric | 23 | 10 | √ | 0 | 已使用数量 |
 
 ### 列规则定义

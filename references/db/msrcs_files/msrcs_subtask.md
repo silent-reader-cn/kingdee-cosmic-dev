@@ -1,8 +1,8 @@
-# 返利子任务详情-msrcs_subtask
+# 返利子任务-msrcs_subtask
 
-## 返利子任务详情-主表 t_msrcs_subtask
+## 返利子任务-主表 t_msrcs_subtask
 
-- **表名称：** 返利子任务详情-主表
+- **表名称：** 返利子任务-主表
 - **表名：** t_msrcs_subtask
 
 ### 表格列定义
@@ -14,7 +14,7 @@
 | 3 | fstatus | 状态 | bpchar | 1 |  | √ | 'A' | 状态,枚举: A :准备 B :运行中 C :出错 D :终止 Z :完成 |
 | 4 | fdetail | 日志详情 | varchar | 2000 |  | √ | ' ' | 日志详情 |
 | 5 | frecords | 满足政策条件记录数 | int8 | 64 |  | √ | 0 | 满足政策条件记录数 |
-| 6 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 7 | ftaskno | 子任务号 | varchar | 50 |  | √ | ' ' | 子任务号 |
 | 8 | fsourceid | 来源数据ID | int8 | 64 |  | √ | 0 | 来源数据ID |
 | 9 | fendtime | 结束时间 | timestamp | 0 |  |  | null | 结束时间 |

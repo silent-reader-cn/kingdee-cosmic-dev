@@ -24,7 +24,7 @@
 | 13 | fxbillentryseq | 变更单分录行号 | varchar | 50 |  | √ | ' ' | 变更单分录行号 |
 | 14 | fsrcbillentryseq | 单据分录行号 | varchar | 50 |  | √ | ' ' | 单据分录行号 |
 | 15 | fxbillentryid | 变更单分录ID | int8 | 64 |  | √ | 0 | 变更单分录ID |
-| 16 | fcreatorid | 变更人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 16 | fcreatorid | 变更人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 17 | fxbilljson_tag | 变更单Json_详情 | text | 0 |  |  | null | 变更单Json_详情 |
 | 18 | fsrcbilljson_tag | 订单Json_详情 | text | 0 |  |  | null | 订单Json_详情 |
 | 19 | fentrychangetype | 变更方式 | varchar | 30 |  | √ | ' ' | 变更方式,枚举: A :新增 B :修改 C :取消 |

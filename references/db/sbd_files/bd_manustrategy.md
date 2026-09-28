@@ -39,7 +39,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 制造策略维度 bd_manustrategydim |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [制造策略维度 bd_manustrategydim](../sbd_files/bd_manustrategydim.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -67,7 +67,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 制造策略维度 bd_manustrategydim |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [制造策略维度 bd_manustrategydim](../sbd_files/bd_manustrategydim.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -95,7 +95,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 制造策略领域(供应链) bd_manustrategydomain |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [制造策略领域(供应链) bd_manustrategydomain](../sbd_files/bd_manustrategydomain.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -124,19 +124,20 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 策略名称 | varchar | 364 |  | √ | ' ' | 策略名称 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fisinway | 考虑在途/在制 | bpchar | 1 |  | √ | '0' | 考虑在途/在制 |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 6 | fdemandmodel | 计划模式 | varchar | 30 |  | √ | ' ' | 计划模式,枚举: MTS :MTS MTO :MTO ETO :ETO PTO :PTO |
 | 7 | fiscurrentstock | 考虑即时库存 | bpchar | 1 |  | √ | '0' | 考虑即时库存 |
 | 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 9 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 11 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 12 | fissystem | 系统预设 | bpchar | 1 |  | √ | '0' | 系统预设 |
-| 13 | fenable | 使用状态 | varchar | 10 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 14 | fnumber | 策略编码 | varchar | 50 |  | √ | ' ' | 策略编码 |
-| 15 | fissafestock | 考虑安全库存 | bpchar | 1 |  | √ | '0' | 考虑安全库存 |
+| 10 | fchildsetoff | 子项预测冲减 | bpchar | 1 |  | √ | '0' | 子项预测冲减 |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 12 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
+| 13 | fissystem | 系统预设 | bpchar | 1 |  | √ | '0' | 系统预设 |
+| 14 | fenable | 使用状态 | varchar | 10 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 15 | fnumber | 策略编码 | varchar | 50 |  | √ | ' ' | 策略编码 |
+| 16 | fissafestock | 考虑安全库存 | bpchar | 1 |  | √ | '0' | 考虑安全库存 |
 
 ### 列规则定义
 
@@ -163,7 +164,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 制造策略维度 bd_manustrategydim |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [制造策略维度 bd_manustrategydim](../sbd_files/bd_manustrategydim.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义

@@ -11,20 +11,23 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fqty | 数量 | numeric | 23 | 10 | √ | 0.0000000000 | 数量 |
-| 3 | finvaliddate | 失效日期 | timestamp | 0 |  |  | null | 失效日期 |
-| 4 | fmaterialid | 物料编码 | int8 | 64 |  | √ | 0 | 物料 bd_material |
-| 5 | funitid | 计量单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 6 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 7 | fversionid | 版本号 | int8 | 64 |  | √ | 0 | BOM版本 bd_bomversion |
-| 8 | foperationnumber | foperationnumber | varchar | 50 |  | √ | ' ' |  |
-| 9 | fprodunitid | fprodunitid | int8 | 64 |  | √ | 0 |  |
-| 10 | ftype | 产品类型 | varchar | 30 |  | √ | ' ' | 产品类型,枚举: 10720 :联产品 10730 :副产品 |
-| 11 | fvaliddate | 生效日期 | timestamp | 0 |  |  | null | 生效日期 |
-| 12 | fauxpropertyid | 辅助属性 | int8 | 64 |  | √ | 0 | null 001 |
-| 13 | fprodqty | fprodqty | numeric | 23 | 10 | √ | 0 |  |
-| 14 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 15 | foperationid | 产出工序 | int8 | 64 |  | √ | 0 | 标准工序定义(废弃) mpdm_workprocedure |
-| 16 | fprocessseq | fprocessseq | varchar | 50 |  | √ | ' ' |  |
+| 3 | fprocesssequence | fprocesssequence | int4 | 32 |  | √ | 0 |  |
+| 4 | finvaliddate | 失效日期 | timestamp | 0 |  |  | null | 失效日期 |
+| 5 | fmaterialid | 物料编码 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
+| 6 | funitid | 计量单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 7 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
+| 8 | fversionid | 版本号 | int8 | 64 |  | √ | 0 | [BOM版本 bd_bomversion](../basedata_files/bd_bomversion.md) |
+| 9 | foperationnumber | foperationnumber | varchar | 50 |  | √ | ' ' |  |
+| 10 | fprodunitid | fprodunitid | int8 | 64 |  | √ | 0 |  |
+| 11 | ftype | 产品类型 | varchar | 30 |  | √ | ' ' | 产品类型,枚举: 10720 :联产品 10730 :副产品 |
+| 12 | fentrymasterid | fentrymasterid | int8 | 64 |  | √ | 0 |  |
+| 13 | fvaliddate | 生效日期 | timestamp | 0 |  |  | null | 生效日期 |
+| 14 | fauxpropertyid | 辅助属性 | int8 | 64 |  | √ | 0 | null 001 |
+| 15 | fprocessnumber | fprocessnumber | int4 | 32 |  | √ | 0 |  |
+| 16 | fprodqty | fprodqty | numeric | 23 | 10 | √ | 0 |  |
+| 17 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 18 | foperationid | 产出工序 | int8 | 64 |  | √ | 0 | [标准工序定义(废弃) mpdm_workprocedure](../mpdm_files/mpdm_workprocedure.md) |
+| 19 | fprocessseq | fprocessseq | varchar | 50 |  | √ | ' ' |  |
 
 ### 列规则定义
 
@@ -51,11 +54,11 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fgroupid | BOM分组 | int8 | 64 |  | √ | 0 | BOM分组 mpdm_bomgroup |
-| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fgroupid | BOM分组 | int8 | 64 |  | √ | 0 | [BOM分组 mpdm_bomgroup](../mpdm_files/mpdm_bomgroup.md) |
+| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | fyieldrate | 成品率 | numeric | 23 | 10 | √ | 0.0000000000 | 成品率 |
 | 5 | fdisabledate | 禁用日期 | timestamp | 0 |  |  | null | 禁用日期 |
-| 6 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 8 | fsalorderentryseq | fsalorderentryseq | varchar | 50 |  | √ | ' ' |  |
 | 9 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
@@ -65,44 +68,45 @@
 | 13 | fsalorderid | fsalorderid | int8 | 64 |  | √ | 0 |  |
 | 14 | funitid | funitid | int8 | 64 |  | √ | 0 |  |
 | 15 | fqtybaseunit | fqtybaseunit | int8 | 64 |  | √ | 0 |  |
-| 16 | fversionid | 版本号 | int8 | 64 |  | √ | 0 | 物料版本 bd_bomversion_new |
+| 16 | fversionid | 版本号 | int8 | 64 |  | √ | 0 | [物料版本 bd_bomversion_new](../basedata_files/bd_bomversion_new.md) |
 | 17 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
-| 18 | ftypeid | BOM类型 | int8 | 64 |  | √ | 0 | BOM类型 mpdm_bomtype |
+| 18 | ftypeid | BOM类型 | int8 | 64 |  | √ | 0 | [BOM类型 mpdm_bomtype](../mpdm_files/mpdm_bomtype.md) |
 | 19 | fenable | 使用状态 | varchar | 30 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 20 | fdatasource | fdatasource | bpchar | 1 |  | √ | 1 |  |
-| 21 | fnumber | BOM编码 | varchar | 30 |  | √ | ' ' | BOM编码 |
+| 21 | fnumber | BOM编码 | varchar | 100 |  | √ | ' ' | BOM编码 |
 | 22 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
-| 23 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 23 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 24 | fisdefault | fisdefault | bpchar | 1 |  | √ | '0' |  |
 | 25 | fcustomerid | fcustomerid | int8 | 64 |  | √ | 0 |  |
 | 26 | fsalorderno | fsalorderno | varchar | 50 |  |  | ' ' |  |
 | 27 | fsalorderentryid | fsalorderentryid | int8 | 64 |  | √ | 0 |  |
-| 28 | fdisableuserid | 禁用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 29 | fmaterialid | 产品编码 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 28 | fdisableuserid | 禁用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 29 | fmaterialid | 产品编码 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 30 | fecn | fecn | int8 | 64 |  | √ | 0 |  |
 | 31 | fiscoproduct | 联副产品 | bpchar | 1 |  | √ | '0' | 联副产品 |
 | 32 | fconfiguredcodeid | fconfiguredcodeid | int8 | 64 |  | √ | 0 |  |
-| 33 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 34 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 35 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 36 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
-| 37 | fplmmaterialver | fplmmaterialver | varchar | 50 |  | √ | ' ' |  |
-| 38 | fenableuserid | 启用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 39 | freplacenoid | 替代号 | int8 | 64 |  | √ | 0 | BOM替代号 mpdm_replaceno |
-| 40 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 41 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 42 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 43 | fecnversion | fecnversion | varchar | 50 |  | √ | ' ' |  |
-| 44 | fenabledate | 启用日期 | timestamp | 0 |  |  | null | 启用日期 |
-| 45 | fmatid | fmatid | int8 | 64 |  | √ | 0 |  |
-| 46 | fbomuse | fbomuse | varchar | 36 |  | √ | ',A,B,C,D,' |  |
-| 47 | fctrlstrategy | 控制策略 | varchar | 30 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
-| 48 | fplmbomid | fplmbomid | int8 | 64 |  | √ | 0 |  |
-| 49 | fbasedatafield | fbasedatafield | int8 | 64 |  | √ | 0 |  |
-| 50 | fsrcsuperbomid | fsrcsuperbomid | int8 | 64 |  | √ | 0 |  |
-| 51 | fauxpropertyid | 辅助属性 | int8 | 64 |  | √ | 0 | null 001 |
-| 52 | fuseorgid | fuseorgid | int8 | 64 |  | √ | 0 |  |
-| 53 | fbaseqty | fbaseqty | numeric | 23 | 10 | √ | 0 |  |
+| 33 | fbonded | fbonded | bpchar | 1 |  | √ | '0' |  |
+| 34 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
+| 35 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 36 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
+| 37 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
+| 38 | fplmmaterialver | fplmmaterialver | varchar | 50 |  | √ | ' ' |  |
+| 39 | fenableuserid | 启用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 40 | freplacenoid | 替代号 | int8 | 64 |  | √ | 0 | [BOM替代号 mpdm_replaceno](../mpdm_files/mpdm_replaceno.md) |
+| 41 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 42 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 43 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 44 | fecnversion | fecnversion | varchar | 50 |  | √ | ' ' |  |
+| 45 | fenabledate | 启用日期 | timestamp | 0 |  |  | null | 启用日期 |
+| 46 | fmatid | fmatid | int8 | 64 |  | √ | 0 |  |
+| 47 | fbomuse | fbomuse | varchar | 36 |  | √ | ',A,B,C,D,' |  |
+| 48 | fctrlstrategy | 控制策略 | varchar | 30 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
+| 49 | fplmbomid | fplmbomid | int8 | 64 |  | √ | 0 |  |
+| 50 | fbasedatafield | fbasedatafield | int8 | 64 |  | √ | 0 |  |
+| 51 | fsrcsuperbomid | fsrcsuperbomid | int8 | 64 |  | √ | 0 |  |
+| 52 | fauxpropertyid | 辅助属性 | int8 | 64 |  | √ | 0 | null 001 |
+| 53 | fuseorgid | fuseorgid | int8 | 64 |  | √ | 0 |  |
+| 54 | fbaseqty | fbaseqty | numeric | 23 | 10 | √ | 0 |  |
 
 ### 列规则定义
 
@@ -114,8 +118,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_t_pdm_mftbom_createorg |  | fcreateorgid |
-| 2 | t_pdm_mftbom_pkey |  | fid |
+| 1 | t_pdm_mftbom_pkey |  | fid |
+| 2 | idx_t_pdm_mftbom_createorg |  | fcreateorgid |
 | 3 | idx_t_pdm_mftbom_master |  | fmasterid |
 | 4 | idx_pdm_mftbom_compt3 |  | fmatid,ftypeid,fstatus,fenable |
 | 5 | idx_pdm_mftbom_compt1 |  | fmatid,ftypeid,fstatus,fenable,freplacenoid,fversionid |
@@ -191,51 +195,53 @@
 | 20 | fentrychildtype | fentrychildtype | varchar | 30 |  | √ | ' ' |  |
 | 21 | fqtydenominator | 用量：分母 | numeric | 23 | 10 | √ | 0.0000000000 | 用量：分母 |
 | 22 | fecnvaliddate | fecnvaliddate | timestamp | 0 |  |  | null |  |
-| 23 | funitid | 计量单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 24 | fversionid | 版本号 | int8 | 64 |  | √ | 0 | 物料版本 bd_bomversion_new |
+| 23 | funitid | 计量单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 24 | fversionid | 版本号 | int8 | 64 |  | √ | 0 | [物料版本 bd_bomversion_new](../basedata_files/bd_bomversion_new.md) |
 | 25 | fwarehouseid | fwarehouseid | int8 | 64 |  | √ | 0 |  |
-| 26 | fownerid | fownerid | int8 | 64 |  | √ | 0 |  |
-| 27 | fsupplymode | fsupplymode | varchar | 30 |  | √ | ' ' |  |
-| 28 | fismodifiable | fismodifiable | bpchar | 1 |  | √ | '0' |  |
-| 29 | foutorgid | foutorgid | int8 | 64 |  | √ | 0 |  |
-| 30 | ftimeunit | ftimeunit | varchar | 30 |  | √ | ' ' |  |
-| 31 | fisoptional | fisoptional | bpchar | 1 |  | √ | '0' |  |
-| 32 | fisreplaceshow | fisreplaceshow | bpchar | 1 |  | √ | '0' |  |
-| 33 | fnumber | fnumber | varchar | 50 |  | √ | ' ' |  |
-| 34 | fsupplyorgid | fsupplyorgid | int8 | 64 |  | √ | 0 |  |
-| 35 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 36 | fentryecn | fentryecn | int8 | 64 |  | √ | 0 |  |
-| 37 | fprocessseq | fprocessseq | varchar | 50 |  | √ | ' ' |  |
-| 38 | fsupplytype | fsupplytype | varchar | 30 |  | √ | ' ' |  |
-| 39 | fiskey | fiskey | bpchar | 1 |  | √ | '0' |  |
-| 40 | fmaterialid | 组件编码 | int8 | 64 |  | √ | 0 | 物料 bd_material |
-| 41 | freplacemode | freplacemode | varchar | 5 |  | √ | ' ' |  |
-| 42 | fchildnumerator | fchildnumerator | numeric | 23 | 10 | √ | 0 |  |
-| 43 | foperationnumber | foperationnumber | varchar | 50 |  | √ | ' ' |  |
-| 44 | fleadtime | fleadtime | int8 | 64 |  | √ | 0 |  |
-| 45 | fmaterialattr | fmaterialattr | varchar | 30 |  | √ | ' ' |  |
-| 46 | foutlocationid | foutlocationid | int8 | 64 |  | √ | 0 |  |
-| 47 | fentryconfigcode | fentryconfigcode | int8 | 64 |  | √ | 0 |  |
-| 48 | fisreplaceplanmm | fisreplaceplanmm | bpchar | 1 |  | √ | '0' |  |
-| 49 | fchildunitid | fchildunitid | int8 | 64 |  | √ | 0 |  |
-| 50 | fqtytype | 用量类型 | varchar | 30 |  | √ | ' ' | 用量类型,枚举: A :变动 B :固定 C :阶梯 |
-| 51 | fqtynumerator | 用量：分子 | numeric | 23 | 10 | √ | 0.0000000000 | 用量：分子 |
-| 52 | fecnno | fecnno | varchar | 50 |  | √ | ' ' |  |
-| 53 | fisbackflush | fisbackflush | varchar | 30 |  | √ | ' ' |  |
-| 54 | fisreplaceable | fisreplaceable | bpchar | 1 |  | √ | '0' |  |
-| 55 | fprovidetype | fprovidetype | int8 | 64 |  | √ | 0 |  |
-| 56 | ffixscrap | 固定损耗 | numeric | 23 | 10 | √ | 0.0000000000 | 固定损耗 |
-| 57 | ftype | 组件类型 | varchar | 30 |  | √ | ' ' | 组件类型,枚举: A :库存 |
-| 58 | flocationid | flocationid | int8 | 64 |  | √ | 0 |  |
-| 59 | foutwarehouseid | foutwarehouseid | int8 | 64 |  | √ | 0 |  |
-| 60 | fisstockalloc | fisstockalloc | bpchar | 1 |  | √ | '0' |  |
-| 61 | freplaceplanstrategy | freplaceplanstrategy | varchar | 10 |  | √ | ' ' |  |
-| 62 | fisbulkmaterial | fisbulkmaterial | bpchar | 1 |  | √ | '0' |  |
-| 63 | fprovideorgid | fprovideorgid | int8 | 64 |  | √ | 0 |  |
-| 64 | fisselectable | fisselectable | bpchar | 1 |  | √ | '0' |  |
-| 65 | fauxpropertyid | 辅助属性 | int8 | 64 |  | √ | 0 | null 001 |
-| 66 | fisbackflushnew | fisbackflushnew | varchar | 30 |  | √ | ' ' |  |
-| 67 | freplaceplanid | freplaceplanid | int8 | 64 |  | √ | 0 |  |
+| 26 | frepacetype | frepacetype | varchar | 50 |  | √ | ' ' |  |
+| 27 | fownerid | fownerid | int8 | 64 |  | √ | 0 |  |
+| 28 | fsupplymode | fsupplymode | varchar | 30 |  | √ | ' ' |  |
+| 29 | fismodifiable | fismodifiable | bpchar | 1 |  | √ | '0' |  |
+| 30 | foutorgid | foutorgid | int8 | 64 |  | √ | 0 |  |
+| 31 | ftimeunit | ftimeunit | varchar | 30 |  | √ | ' ' |  |
+| 32 | fisoptional | fisoptional | bpchar | 1 |  | √ | '0' |  |
+| 33 | fentrymasterid | fentrymasterid | int8 | 64 |  | √ | 0 |  |
+| 34 | fisreplaceshow | fisreplaceshow | bpchar | 1 |  | √ | '0' |  |
+| 35 | fnumber | fnumber | varchar | 50 |  | √ | ' ' |  |
+| 36 | fsupplyorgid | fsupplyorgid | int8 | 64 |  | √ | 0 |  |
+| 37 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 38 | fentryecn | fentryecn | int8 | 64 |  | √ | 0 |  |
+| 39 | fprocessseq | fprocessseq | varchar | 50 |  | √ | ' ' |  |
+| 40 | fsupplytype | fsupplytype | varchar | 30 |  | √ | ' ' |  |
+| 41 | fiskey | fiskey | bpchar | 1 |  | √ | '0' |  |
+| 42 | fmaterialid | 组件编码 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
+| 43 | freplacemode | freplacemode | varchar | 5 |  | √ | ' ' |  |
+| 44 | fchildnumerator | fchildnumerator | numeric | 23 | 10 | √ | 0 |  |
+| 45 | foperationnumber | foperationnumber | varchar | 50 |  | √ | ' ' |  |
+| 46 | fleadtime | fleadtime | int8 | 64 |  | √ | 0 |  |
+| 47 | fmaterialattr | fmaterialattr | varchar | 30 |  | √ | ' ' |  |
+| 48 | foutlocationid | foutlocationid | int8 | 64 |  | √ | 0 |  |
+| 49 | fentryconfigcode | fentryconfigcode | int8 | 64 |  | √ | 0 |  |
+| 50 | fisreplaceplanmm | fisreplaceplanmm | bpchar | 1 |  | √ | '0' |  |
+| 51 | fchildunitid | fchildunitid | int8 | 64 |  | √ | 0 |  |
+| 52 | fqtytype | 用量类型 | varchar | 30 |  | √ | ' ' | 用量类型,枚举: A :变动 B :固定 C :阶梯 |
+| 53 | fqtynumerator | 用量：分子 | numeric | 23 | 10 | √ | 0.0000000000 | 用量：分子 |
+| 54 | fecnno | fecnno | varchar | 50 |  | √ | ' ' |  |
+| 55 | fisbackflush | fisbackflush | varchar | 30 |  | √ | ' ' |  |
+| 56 | fisreplaceable | fisreplaceable | bpchar | 1 |  | √ | '0' |  |
+| 57 | fprovidetype | fprovidetype | int8 | 64 |  | √ | 0 |  |
+| 58 | ffixscrap | 固定损耗 | numeric | 23 | 10 | √ | 0.0000000000 | 固定损耗 |
+| 59 | ftype | 组件类型 | varchar | 30 |  | √ | ' ' | 组件类型,枚举: A :库存 |
+| 60 | flocationid | flocationid | int8 | 64 |  | √ | 0 |  |
+| 61 | foutwarehouseid | foutwarehouseid | int8 | 64 |  | √ | 0 |  |
+| 62 | fisstockalloc | fisstockalloc | bpchar | 1 |  | √ | '0' |  |
+| 63 | freplaceplanstrategy | freplaceplanstrategy | varchar | 10 |  | √ | ' ' |  |
+| 64 | fisbulkmaterial | fisbulkmaterial | bpchar | 1 |  | √ | '0' |  |
+| 65 | fprovideorgid | fprovideorgid | int8 | 64 |  | √ | 0 |  |
+| 66 | fisselectable | fisselectable | bpchar | 1 |  | √ | '0' |  |
+| 67 | fauxpropertyid | 辅助属性 | int8 | 64 |  | √ | 0 | null 001 |
+| 68 | fisbackflushnew | fisbackflushnew | varchar | 30 |  | √ | ' ' |  |
+| 69 | freplaceplanid | freplaceplanid | int8 | 64 |  | √ | 0 |  |
 
 ### 列规则定义
 
@@ -298,7 +304,7 @@
 | 2 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 |  |
 | 3 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
 | 4 | fpkid | fpkid | varchar | 18 |  | √ | ' ' | pkid |
-| 5 | fsetuplocation | 安装位置 | varchar | 50 |  | √ | ' ' | 安装位置 |
+| 5 | fsetuplocation | 安装位置 | varchar | 2000 |  | √ | ' ' | 安装位置 |
 
 ### 列规则定义
 

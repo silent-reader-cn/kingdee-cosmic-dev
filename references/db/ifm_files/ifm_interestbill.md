@@ -16,13 +16,13 @@
 | 5 | flender | 贷款人 | varchar | 80 |  | √ | ' ' | 贷款人 |
 | 6 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 7 | fbitbackinfo | 退单信息 | varchar | 255 |  | √ | ' ' | 退单信息 |
-| 8 | finstbankacctid | 付息银行账号 | int8 | 64 |  | √ | 0 | 银行账户 bd_accountbanks |
+| 8 | finstbankacctid | 付息银行账号 | int8 | 64 |  | √ | 0 | [银行账户 bd_accountbanks](../basedata_files/bd_accountbanks.md) |
 | 9 | fafterchargeinstamt | 冲销后应付利息 | numeric | 19 | 6 | √ | 0.000000 | 冲销后应付利息 |
 | 10 | fbillno | 结息单编号 | varchar | 80 |  | √ | ' ' | 结息单编号 |
 | 11 | fstartinstdate | 起息日 | timestamp | 0 |  |  | null | 起息日 |
-| 12 | fclientorgid | 受托机构 | int8 | 64 |  | √ | 0 | 金融机构 bd_finorginfo |
+| 12 | fclientorgid | 受托机构 | int8 | 64 |  | √ | 0 | [金融机构 bd_finorginfo](../basedata_files/bd_finorginfo.md) |
 | 13 | flendernature | 贷款人性质 | varchar | 80 |  | √ | ' ' | 贷款人性质,枚举: outgroup :集团外 ingroup :集团内 |
-| 14 | ffinproductid | 融资品种 | int8 | 64 |  | √ | 0 | 融资品种 cfm_financingvarieties |
+| 14 | ffinproductid | 融资品种 | int8 | 64 |  | √ | 0 | [融资品种 cfm_financingvarieties](../cfm_files/cfm_financingvarieties.md) |
 | 15 | fbillstatus | 单据状态 | varchar | 80 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 16 | fproductfactoryid | fproductfactoryid | int8 | 64 |  | √ | 0 |  |
 | 17 | fpredictinstamt | 测算利息 | numeric | 19 | 6 | √ | 0.000000 | 测算利息 |
@@ -31,33 +31,33 @@
 | 20 | fafterexpiredate | 展期后到期日期 | timestamp | 0 |  |  | null | 展期后到期日期 |
 | 21 | fthischargeinstamt | 本单冲销金额 | numeric | 19 | 6 | √ | 0.000000 | 本单冲销金额 |
 | 22 | fcontractbillno | 合同单据编号 | varchar | 80 |  | √ | ' ' | 合同单据编号 |
-| 23 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 23 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 24 | fcompanyid | fcompanyid | int8 | 64 |  | √ | 0 |  |
-| 25 | ffinorginfoid | 贷款人 | int8 | 64 |  | √ | 0 | 金融机构 bd_finorginfo |
+| 25 | ffinorginfoid | 贷款人 | int8 | 64 |  | √ | 0 | [金融机构 bd_finorginfo](../basedata_files/bd_finorginfo.md) |
 | 26 | fbatchnoid | 冲销批次id | int8 | 64 |  | √ | 0 | 冲销批次id |
 | 27 | fpayeebillno | 付款单编号 | varchar | 80 |  | √ | ' ' | 付款单编号 |
 | 28 | fwriteoffstatus | 冲销状态 | varchar | 80 |  | √ | ' ' | 冲销状态,枚举: no_writeoff :未冲销 writeoff :已冲销 |
 | 29 | fendinstdate | 结息日 | timestamp | 0 |  |  | null | 结息日 |
 | 30 | factualinstamt | 应付利息 | numeric | 19 | 6 | √ | 0.000000 | 应付利息 |
 | 31 | fisinit | 是否初始化 | bpchar | 1 |  | √ | '0' | 是否初始化 |
-| 32 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 32 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 33 | fexpiredate | 到期日期 | timestamp | 0 |  |  | null | 到期日期 |
 | 34 | frepaymentid | 还款id | int8 | 64 |  | √ | 0 | 还款id |
 | 35 | fbechargeinstamt | 冲销前应付利息 | numeric | 19 | 6 | √ | 0.000000 | 冲销前应付利息 |
 | 36 | floandate | 放款日期 | timestamp | 0 |  |  | null | 放款日期 |
 | 37 | finstbillctg | 付息单类别 | varchar | 80 |  | √ | ' ' | 付息单类别,枚举: payinterst :付息 payprinandinte :还本付息 |
-| 38 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 38 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 39 | fdrawamt | 放款金额 | numeric | 19 | 6 | √ | 0.000000 | 放款金额 |
 | 40 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 41 | floanbillno | 放款单编号 | varchar | 80 |  | √ | ' ' | 放款单编号 |
-| 42 | finstschemeid | 结息方案 | int8 | 64 |  | √ | 0 | 结息方案 cfm_inscheme |
+| 42 | finstschemeid | 结息方案 | int8 | 64 |  | √ | 0 | [结息计划方案 cfm_inscheme](../cfm_files/cfm_inscheme.md) |
 | 43 | fcontractno | 合同号 | varchar | 80 |  | √ | ' ' | 合同号 |
-| 44 | floanorgid | 贷款人 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 44 | floanorgid | 贷款人 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 45 | fnotrepayamt | 未还本金 | numeric | 19 | 6 | √ | 0.000000 | 未还本金 |
 | 46 | floantype | 贷款类型 | varchar | 80 |  | √ | ' ' | 贷款类型,枚举: loan :普通贷款 sl :银团贷款 ec :企业往来 entrust :委托贷款 bond :债券发行 |
 | 47 | fbizdate | 付息日 | timestamp | 0 |  |  | null | 付息日 |
 | 48 | fsourcebillid | 源单id | int8 | 64 |  | √ | 0 | 源单id |
-| 49 | fcurrencyid | 借款币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 49 | fcurrencyid | 借款币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 
 ### 列规则定义
 
@@ -86,15 +86,15 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | flenddraccountid | 借款方借方科目 | int8 | 64 |  | √ | 0 | 会计科目 bd_accountview |
 | 3 | fbankcheckflag | 对账标识码 | varchar | 80 |  | √ | ' ' | 对账标识码 |
-| 4 | forgid | 借款人 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 4 | forgid | 借款人 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | fconfirmstatus | 确认状态 | varchar | 30 |  | √ | ' ' | 确认状态,枚举: registrying :登记中 waitconfirm :待确认 yetconfirm :已确认 yetreturn :已回退 |
 | 6 | fiscycleloan | 循环贷款 | bpchar | 1 |  | √ | '0' | 循环贷款 |
 | 7 | fcompanyer | 借款人(旧) | varchar | 30 |  | √ | ' ' | 借款人(旧) |
-| 8 | fpayeebankid | 收款银行 | int8 | 64 |  | √ | 0 | 行名行号 bd_bebank |
+| 8 | fpayeebankid | 收款银行 | int8 | 64 |  | √ | 0 | [行名行号 bd_bebank](../basedata_files/bd_bebank.md) |
 | 9 | freturnreason | 退回原因 | varchar | 255 |  | √ | ' ' | 退回原因 |
 | 10 | fsettlestatus | 提交结算中心状态 | varchar | 80 |  | √ | ' ' | 提交结算中心状态,枚举: addnew :新增 submit :已提交 accept :已受理 bitback :已退回 hide :隐藏 |
-| 11 | fregistorgid | 登记组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 12 | fcreditorgid | 债权人(组织) | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 11 | fregistorgid | 登记组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 12 | fcreditorgid | 债权人(组织) | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 13 | fpayeeaccttext | 收款账号 | varchar | 80 |  | √ | ' ' | 收款账号 |
 | 14 | fconfirmdescription | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
 | 15 | fcreditorid | 债权人id | int8 | 64 |  | √ | 0 | 债权人id |
@@ -105,21 +105,22 @@
 | 20 | frecbillno | 收款单编号 | varchar | 80 |  | √ | ' ' | 收款单编号 |
 | 21 | fbatchno | 批次号 | varchar | 80 |  | √ | ' ' | 批次号 |
 | 22 | flendcraccountid | 借款方贷方科目 | int8 | 64 |  | √ | 0 | 会计科目 bd_accountview |
-| 23 | fproductfactoryid | 融资模型 | int8 | 64 |  | √ | 0 | 融资模型 cfm_productfactory |
-| 24 | fpaybillid | 付款单 | int8 | 64 |  | √ | 0 | 付款单 cas_paybill_f7 |
+| 23 | fproductfactoryid | 融资模型 | int8 | 64 |  | √ | 0 | [融资模型 cfm_productfactory](../cfm_files/cfm_productfactory.md) |
+| 24 | fpaybillid | 付款单 | int8 | 64 |  | √ | 0 | [付款单 cas_paybill_f7](../cas_files/cas_paybill_f7.md) |
 | 25 | fdebtortype | 借款人类型 | varchar | 30 |  | √ | ' ' | 借款人类型,枚举: innerunit :内部单位 bank :银行 finorg :非银行金融机构 custom :客商 other :其它 |
 | 26 | fpayeetype | 收款人类型 | varchar | 80 |  | √ | ' ' | 收款人类型,枚举: bd_supplier :供应商 fbd_other :其他 |
 | 27 | ftextcreditor | 债权人 | varchar | 80 |  | √ | ' ' | 债权人 |
-| 28 | fsettlecenterid | 结算中心 | int8 | 64 |  | √ | 0 | 金融机构 bd_finorginfo |
+| 28 | fsettlecenterid | 结算中心 | int8 | 64 |  | √ | 0 | [金融机构 bd_finorginfo](../basedata_files/bd_finorginfo.md) |
 | 29 | fpayeeid | 收款人 | int8 | 64 |  | √ | 0 | 供应商 bd_supplier |
-| 30 | fbizdealno | 受理单编号 | varchar | 80 |  | √ | ' ' | 受理单编号 |
-| 31 | floancraccountid | 贷款方贷方科目 | int8 | 64 |  | √ | 0 | 会计科目 bd_accountview |
-| 32 | fconfirmerid | 确认人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 33 | fcreditortype | 债权人类型 | varchar | 30 |  | √ | ' ' | 债权人类型,枚举: innerunit :内部单位 bank :银行 finorg :非银行金融机构 settlecenter :结算中心 custom :客商 other :其他 |
-| 34 | fdatasource | 数据来源 | varchar | 30 |  | √ | ' ' | 数据来源,枚举: cfm :融资管理 invest :投资管理 ifm :内部金融管理 bond :债券 |
-| 35 | fpayeetext | 收款人 | varchar | 80 |  | √ | ' ' | 收款人 |
-| 36 | fconfirmtime | 确认时间 | timestamp | 0 |  |  | null | 确认时间 |
-| 37 | floaneracctbankid | 收息银行账号 | int8 | 64 |  | √ | 0 | 银行账户 bd_accountbanks |
+| 30 | fpayamt | fpayamt | numeric | 23 | 10 | √ | 0 |  |
+| 31 | fbizdealno | 受理单编号 | varchar | 80 |  | √ | ' ' | 受理单编号 |
+| 32 | floancraccountid | 贷款方贷方科目 | int8 | 64 |  | √ | 0 | 会计科目 bd_accountview |
+| 33 | fconfirmerid | 确认人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 34 | fcreditortype | 债权人类型 | varchar | 30 |  | √ | ' ' | 债权人类型,枚举: innerunit :内部单位 bank :银行 finorg :非银行金融机构 settlecenter :结算中心 custom :客商 other :其他 |
+| 35 | fdatasource | 数据来源 | varchar | 30 |  | √ | ' ' | 数据来源,枚举: cfm :融资管理 invest :投资管理 ifm :内部金融管理 bond :债券 |
+| 36 | fpayeetext | 收款人 | varchar | 80 |  | √ | ' ' | 收款人 |
+| 37 | fconfirmtime | 确认时间 | timestamp | 0 |  |  | null | 确认时间 |
+| 38 | floaneracctbankid | 收息银行账号 | int8 | 64 |  | √ | 0 | [银行账户 bd_accountbanks](../basedata_files/bd_accountbanks.md) |
 
 ### 列规则定义
 

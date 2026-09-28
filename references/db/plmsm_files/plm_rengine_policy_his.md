@@ -12,7 +12,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | foperate | 操作 | varchar | 20 |  | √ | ' ' | 操作,枚举: new :新增 modify :修改 delete :删除 enable :启用 disable :禁用 |
 | 3 | fname | 策略名称 | varchar | 100 |  | √ | ' ' | 策略名称 |
-| 4 | foperatorid | 操作人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | foperatorid | 操作人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | foperatetime | 操作时间 | timestamp | 0 |  |  | null | 操作时间 |
 | 6 | fnumber | 策略编码 | varchar | 50 |  | √ | ' ' | 策略编码 |
 | 7 | fpolicyid | 策略id | int8 | 64 |  | √ | 0 | 策略id |

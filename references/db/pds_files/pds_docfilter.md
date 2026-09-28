@@ -40,7 +40,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 流程配置 pds_flowconfig |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [流程配置 pds_flowconfig](../pds_files/pds_flowconfig.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -71,23 +71,23 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fisv_id | 开发商标识 | varchar | 50 |  | √ | ' ' | 开发商标识 |
 | 3 | fname | 名称 | varchar | 300 |  | √ | ' ' | 名称 |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 6 | fpriority | 优先级 | int4 | 32 |  | √ | 0 | 优先级 |
-| 7 | fbasetype | 评分类型 | bpchar | 1 |  | √ | ' ' | 评分类型,枚举: 1 :评技术标 2 :评商务标 3 :评商务综合 4 :资质预审 7 :资质后审 6 :综合评标(技术+商务+商务综合) |
+| 7 | fbasetype | 评分类型 | bpchar | 1 |  | √ | ' ' | 评分类型,枚举: 1 :评技术标 2 :评商务标 3 :评商务综合 4 :资质预审 6 :综合评标(技术+商务+商务综合) 7 :资质后审 8 :专家考评 9 :综合评标(技术+商务综合) |
 | 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 9 | fisopencontrol | 仅查看已开标的文件 | bpchar | 1 |  | √ | '1' | 仅查看已开标的文件 |
+| 9 | fisopencontrol | 可查看的文件状态 | bpchar | 1 |  | √ | '1' | 可查看的文件状态,枚举: 0 :已投标 1 :已开标 2 :不限制 |
 | 10 | fmatchfield | 匹配度 | int4 | 32 |  | √ | 0 | 匹配度 |
 | 11 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 14 | fopentype | 开标方式 | varchar | 50 |  | √ | ' ' | 开标方式,枚举: 1 :同时开技术标和商务标 2 :先开评技术标，后开商务标 3 :自动开标 4 :并行开技术标和商务标 9 :报价即开标(非密封报价) |
-| 15 | fpackfiletype | 可查看的文件类型 | varchar | 50 |  | √ | ' ' | 可查看的文件类型,枚举: 1 :技术标书 2 :商务标书 3 :通用标书 4 :商务综合标书 5 :资审审查标书 6 :报名附件 7 :协同附件 8 :报价附件 |
+| 15 | fpackfiletype | 可查看的文件类型 | varchar | 50 |  | √ | ' ' | 可查看的文件类型,枚举: 1 :技术标书 2 :商务标书 3 :通用标书 4 :商务综合标书 5 :资审审查标书 6 :报名附件 7 :协同附件 8 :报价附件 9 :其他附件 |
 | 16 | fenable | 可用状态 | bpchar | 1 |  | √ | ' ' | 可用状态,枚举: 0 :禁用 1 :可用 |
 | 17 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
 | 18 | fopenstatus | 当前项目的开标状态 | varchar | 50 |  | √ | ' ' | 当前项目的开标状态,枚举: 1 :待开标 2 :已开技术标 3 :已开商务标 4 :已开标 6 :议价中 9 :已定标 A :已归档 B :已终止 |
 | 19 | fissyspreset | 系统预置 | bpchar | 1 |  | √ | '0' | 系统预置 |
-| 20 | fbiznode | 业务节点/业务对象 | varchar | 30 |  | √ | ' ' | 业务对象 bos_objecttype |
+| 20 | fbiznode | 业务节点/业务对象 | varchar | 30 |  | √ | ' ' | [业务对象 bos_objecttype](../mdl_files/bos_objecttype.md) |
 | 21 | fisdefault | 是否默认 | bpchar | 1 |  | √ | '0' | 是否默认 |
 
 ### 列规则定义
@@ -117,7 +117,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 招标辅助资料 pds_extdata |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [招标辅助资料 pds_extdata](../pds_files/pds_extdata.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -146,7 +146,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 业务角色 pds_bizrole |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [业务角色 pds_bizrole](../pds_files/pds_bizrole.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义

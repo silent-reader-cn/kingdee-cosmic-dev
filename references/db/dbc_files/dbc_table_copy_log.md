@@ -37,8 +37,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_dbc_tc_log_items_0 |  | fid |
-| 2 | pk_t_dbc_tc_log_items |  | fentryid |
+| 1 | pk_t_dbc_tc_log_items |  | fentryid |
+| 2 | idx_dbc_tc_log_items_0 |  | fid |
 
 ---
 
@@ -57,14 +57,14 @@
 | 4 | fremark_tag | 备注_详情 | text | 0 |  |  | null | 备注_详情 |
 | 5 | fend_time | 结束时间 | timestamp | 0 |  |  | null | 结束时间 |
 | 6 | fmodifytime | 状态更新时间 | timestamp | 0 |  |  | null | 状态更新时间 |
-| 7 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 7 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 8 | fexe_count | 重试次数 | int4 | 32 |  | √ | 0 | 重试次数 |
-| 9 | ftar_db_id | 目标数据库 | int8 | 64 |  | √ | 0 | 数据库 dbc_database |
+| 9 | ftar_db_id | 目标数据库 | int8 | 64 |  | √ | 0 | [数据库 dbc_database](../dbc_files/dbc_database.md) |
 | 10 | ftotal_bytes_count | 总字节数 | int8 | 64 |  | √ | 0 | 总字节数 |
 | 11 | ffailed_count | 失败数据表个数 | int4 | 32 |  | √ | 0 | 失败数据表个数 |
 | 12 | fremark | 备注 | varchar | 300 |  | √ | ' ' | 备注 |
-| 13 | fsrc_db_id | 来源数据库 | int8 | 64 |  | √ | 0 | 数据库 dbc_database |
-| 14 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fsrc_db_id | 来源数据库 | int8 | 64 |  | √ | 0 | [数据库 dbc_database](../dbc_files/dbc_database.md) |
+| 14 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 16 | fomitted_count | 忽略数据表个数 | int4 | 32 |  | √ | 0 | 忽略数据表个数 |
 | 17 | fretry_count | 最大重试次数 | int4 | 32 |  | √ | 0 | 最大重试次数 |
@@ -74,7 +74,7 @@
 | 21 | fretry_interval | 重试间隔(分钟) | varchar | 50 |  | √ | ' ' | 重试间隔(分钟) |
 | 22 | fstate | 状态 | varchar | 30 |  | √ | ' ' | 状态,枚举: READY :创建 RUNNING :执行中 SUCCESS :完成 FAILED :失败 ABORTED :已撤销 |
 | 23 | fsuccess_count | 完成数据表个数 | int4 | 32 |  | √ | 0 | 完成数据表个数 |
-| 24 | ftable_copy_id | 数据表复制 | int8 | 64 |  | √ | 0 | 数据表复制 dbc_table_copy |
+| 24 | ftable_copy_id | 数据表复制 | int8 | 64 |  | √ | 0 | [数据表复制 dbc_table_copy](../dbc_files/dbc_table_copy.md) |
 | 25 | fnumber | 编码 | varchar | 50 |  | √ | ' ' | 编码 |
 | 26 | ftable_count | 数据表总数 | int4 | 32 |  | √ | 0 | 数据表总数 |
 
@@ -88,7 +88,7 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | pk_t_dbc_table_copy_log |  | fid |
-| 2 | idx_dbc_table_copy_log_0 |  | fnumber |
+| 1 | idx_dbc_table_copy_log_0 |  | fnumber |
+| 2 | pk_t_dbc_table_copy_log |  | fid |
 | 3 | idx_dbc_table_copy_log_1 |  | fcreatetime |
 | 4 | idx_dbc_table_copy_log_2 |  | ftable_copy_id |

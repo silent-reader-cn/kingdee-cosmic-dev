@@ -10,9 +10,9 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | 主数据id | int8 | 64 |  | √ | 0 | 主数据id |
-| 2 | fparentid | 上级组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fparentid | 上级组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fysfwjzjtfpse | 应税服务即征即退-分配税额 | numeric | 23 | 10 | √ | 0 | 应税服务即征即退-分配税额 |
-| 4 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 4 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | fysfwfpse | 应税服务-分配税额 | numeric | 23 | 10 | √ | 0 | 应税服务-分配税额 |
 | 6 | fysfwjzjtxssr | 应税服务即征即退-销售收入 | numeric | 23 | 10 | √ | 0 | 应税服务即征即退-销售收入 |
 | 7 | ffpse | 一般货物及劳务-分配税额 | numeric | 23 | 10 | √ | 0 | 一般货物及劳务-分配税额 |
@@ -27,7 +27,7 @@
 | 16 | fysfwxssr | 应税服务-销售收入 | numeric | 23 | 10 | √ | 0 | 应税服务-销售收入 |
 | 17 | fysfwjzjtfpbl | 应税服务即征即退-分配比例 | numeric | 23 | 10 | √ | 0 | 应税服务即征即退-分配比例 |
 | 18 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 19 | fsuborg | 汇总方案组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 19 | fsuborg | 汇总方案组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 20 | flevelname | 层级 | varchar | 50 |  | √ | ' ' | 层级,枚举: 1 :1级 2 :2级 3 :3级 |
 
 ### 列规则定义

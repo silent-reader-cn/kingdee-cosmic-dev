@@ -15,7 +15,7 @@
 | 4 | fistraden | fistraden | bpchar | 1 |  | √ | '0' |  |
 | 5 | furl | 跳转行业信息 | varchar | 200 |  | √ | ' ' | 跳转行业信息 |
 | 6 | ftradenature | 行业属性 | varchar | 50 |  | √ | ' ' | 行业属性,枚举: 0 :鼓励行业 1 :限制行业 2 :禁止行业 |
-| 7 | fquotainfo | 原子指标 | int8 | 64 |  | √ | 0 | 指标库 ipo_quota_info |
+| 7 | fquotainfo | 原子指标 | int8 | 64 |  | √ | 0 | [指标库 ipo_quota_info](../ipobase_files/ipo_quota_info.md) |
 
 ### 列规则定义
 
@@ -42,7 +42,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 证监会行业 csrc_industry_info |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [证监会行业 csrc_industry_info](../ipobase_files/csrc_industry_info.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义

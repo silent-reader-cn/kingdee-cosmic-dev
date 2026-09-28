@@ -15,7 +15,7 @@
 | 4 | fdetailmsg | 详细信息 | varchar | 255 |  | √ | ' ' | 详细信息 |
 | 5 | foperatmin | 运行时间（分钟） | numeric | 23 | 10 | √ | 0.0000000000 | 运行时间（分钟） |
 | 6 | fstepseq | 步骤顺序 | varchar | 50 |  | √ | ' ' | 步骤顺序 |
-| 7 | fstepname | 步骤名称 | varchar | 200 |  | √ | ' ' | 步骤名称 |
+| 7 | fstepname | 步骤名称 | varchar | 500 |  | √ | ' ' | 步骤名称 |
 | 8 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 9 | fresult | 运行结果 | varchar | 50 |  | √ | ' ' | 运行结果 |
 | 10 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
@@ -45,52 +45,54 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fplanprogamid | 计划方案ID | int8 | 64 |  | √ | 0 | 计划方案ID |
-| 3 | fistoformal | 模拟计划转正式 | bpchar | 1 |  | √ | '0' | 模拟计划转正式 |
-| 4 | fclearstatus | 清理状态 | varchar | 30 |  | √ | 'A' | 清理状态,枚举: A :未清理 B :已清理 |
-| 5 | fplangramentity | 计划方案实体标识 | varchar | 60 |  | √ | ' ' | 计划方案实体标识 |
-| 6 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 7 | fmachineid | 运算机器ID | varchar | 50 |  | √ | ' ' | 运算机器ID |
-| 8 | fcalculatepro | 计算进度 | numeric | 23 | 10 | √ | 0.0000000000 | 计算进度 |
-| 9 | fprogramnumber | 计划方案编码 | varchar | 60 |  | √ | ' ' | 计划方案编码 |
-| 10 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 12 | fisallowdateinpast | 允许计划订单开始日期在过去 | bpchar | 1 |  | √ | '0' | 允许计划订单开始日期在过去 |
-| 13 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 14 | fenddate | 结束时间 | timestamp | 0 |  |  | null | 结束时间 |
-| 15 | fsummin | 计算总时长（分钟） | numeric | 23 | 10 | √ | 0.0000000000 | 计算总时长（分钟） |
-| 16 | fiscustomize | 定制 | bpchar | 1 |  | √ | '0' | 定制 |
-| 17 | fcreatorid | 执行人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 18 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 19 | fplandate | 计划日期 | timestamp | 0 |  |  | null | 计划日期 |
-| 20 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
-| 21 | fisllc | 重算低位码 | bpchar | 1 |  | √ | '0' | 重算低位码 |
-| 22 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
-| 23 | fisnotsetup | 未设置 | bpchar | 1 |  | √ | '0' | 未设置 |
-| 24 | fcreateorgid | 计划组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 25 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 26 | fbomcheckresult | BOM嵌套检查结果 | varchar | 255 |  | √ | ' ' | BOM嵌套检查结果 |
-| 27 | fmrpid | MRP计算实例ID | varchar | 255 |  | √ | ' ' | MRP计算实例ID |
-| 28 | fcalculatestatus | 计算状态 | varchar | 100 |  | √ | ' ' | 计算状态,枚举: A :正常结束 B :异常终止 C :手工终止 D :运行中 |
-| 29 | frecaluteresult | 重算低位码结果 | varchar | 255 |  | √ | ' ' | 重算低位码结果 |
-| 30 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 31 | fprogramname | 计划方案名称 | varchar | 60 |  | √ | ' ' | 计划方案名称 |
-| 32 | fismpsonly | 只算MPS | bpchar | 1 |  | √ | '0' | 只算MPS |
-| 33 | foperatmode | 运行方式 | varchar | 255 |  | √ | ' ' | 运行方式 |
-| 34 | fplsschemeid | fplsschemeid | int8 | 64 |  | √ | 0 |  |
-| 35 | fplantag | fplantag | varchar | 255 |  | √ | ' ' |  |
-| 36 | fctrlstrategy | 控制策略 | varchar | 30 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
-| 37 | fiscommon | 通用 | bpchar | 1 |  | √ | '0' | 通用 |
-| 38 | fdataversion | 数据版本定义 | int8 | 64 |  | √ | 0 | 数据版本 msplan_ds_version |
-| 39 | fstartdate | 启动时间 | timestamp | 0 |  |  | null | 启动时间 |
-| 40 | fruntype | 运算类型 | varchar | 30 |  | √ | ' ' | 运算类型,枚举: A :MRP B :齐套计划 C :调拨计划 D :计划齐套 E :交货计划 F :库存计划 H :资源计划 I :资源评估 P :产线排程 |
-| 41 | fisselection | 选配 | bpchar | 1 |  | √ | '0' | 选配 |
-| 42 | foperatmodekey | 运行方式标识 | varchar | 255 |  | √ | ' ' | 运行方式标识 |
-| 43 | fenable | 使用状态 | varchar | 30 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 44 | fplantype | 计划类型 | varchar | 255 |  | √ | ' ' | 计划类型 |
-| 45 | fnumber | 计划运算号 | varchar | 30 |  | √ | ' ' | 计划运算号 |
-| 46 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
-| 47 | fisbomcheck | BOM嵌套检查 | bpchar | 1 |  | √ | '0' | BOM嵌套检查 |
+| 2 | fistoformal | 模拟计划转正式 | bpchar | 1 |  | √ | '0' | 模拟计划转正式 |
+| 3 | fclearstatus | 清理状态 | varchar | 30 |  | √ | 'A' | 清理状态,枚举: A :未清理 B :已清理 |
+| 4 | fplangramentity | 计划方案实体标识 | varchar | 60 |  | √ | ' ' | 计划方案实体标识 |
+| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 6 | fprogramnumber | 计划方案编码 | varchar | 60 |  | √ | ' ' | 计划方案编码 |
+| 7 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 9 | fenddate | 结束时间 | timestamp | 0 |  |  | null | 结束时间 |
+| 10 | fsummin | 计算总时长（分钟） | numeric | 23 | 10 | √ | 0.0000000000 | 计算总时长（分钟） |
+| 11 | fiscustomize | 定制 | bpchar | 1 |  | √ | '0' | 定制 |
+| 12 | fplandate | 计划日期 | timestamp | 0 |  |  | null | 计划日期 |
+| 13 | fheartbeattime | 心跳时间(30秒更新一次) | timestamp | 0 |  |  | null | 心跳时间(30秒更新一次) |
+| 14 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
+| 15 | fisnotsetup | 未设置 | bpchar | 1 |  | √ | '0' | 未设置 |
+| 16 | fcalculatestatus | 计算状态 | varchar | 100 |  | √ | ' ' | 计算状态,枚举: A :正常结束 B :异常终止 C :手工终止 D :运行中 |
+| 17 | fplsschemeid | fplsschemeid | int8 | 64 |  | √ | 0 |  |
+| 18 | fiscommon | 通用 | bpchar | 1 |  | √ | '0' | 通用 |
+| 19 | fstartdate | 启动时间 | timestamp | 0 |  |  | null | 启动时间 |
+| 20 | fruntype | 运算类型 | varchar | 30 |  | √ | ' ' | 运算类型,枚举: A :标准MRP B :预算MRP P :项目MRP |
+| 21 | fisselection | 选配 | bpchar | 1 |  | √ | '0' | 选配 |
+| 22 | fenable | 使用状态 | varchar | 30 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 23 | fnumber | 计划运算号 | varchar | 30 |  | √ | ' ' | 计划运算号 |
+| 24 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
+| 25 | fplanprogamid | 计划方案ID | int8 | 64 |  | √ | 0 | 计划方案ID |
+| 26 | fmachineid | 运算机器ID | varchar | 50 |  | √ | ' ' | 运算机器ID |
+| 27 | fcalculatepro | 计算进度 | numeric | 23 | 10 | √ | 0.0000000000 | 计算进度 |
+| 28 | fisallowdateinpast | 允许计划订单开始日期在过去 | bpchar | 1 |  | √ | '0' | 允许计划订单开始日期在过去 |
+| 29 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
+| 30 | fcreatorid | 执行人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 31 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
+| 32 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
+| 33 | fisllc | 重算低位码 | bpchar | 1 |  | √ | '0' | 重算低位码 |
+| 34 | fcreateorgid | 计划组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 35 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 36 | fbomcheckresult | BOM嵌套检查结果 | varchar | 255 |  | √ | ' ' | BOM嵌套检查结果 |
+| 37 | fmrpid | MRP计算实例ID | varchar | 255 |  | √ | ' ' | MRP计算实例ID |
+| 38 | frecaluteresult | 重算低位码结果 | varchar | 255 |  | √ | ' ' | 重算低位码结果 |
+| 39 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 40 | fismpsonly | 只算MPS | bpchar | 1 |  | √ | '0' | 只算MPS |
+| 41 | fprogramname | 计划方案名称 | varchar | 128 |  |  | ' ' | 计划方案名称 |
+| 42 | foperatmode | 运行方式 | varchar | 255 |  | √ | ' ' | 运行方式 |
+| 43 | fheartbeat | 心跳检测 | varchar | 4 |  | √ | ' ' | 心跳检测,枚举: 0 :检测未开始 1 :心跳正常 2 :心跳异常终止 3 :已完成 |
+| 44 | fplantag | fplantag | varchar | 255 |  | √ | ' ' |  |
+| 45 | fctrlstrategy | 控制策略 | varchar | 30 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
+| 46 | fdataversion | 数据版本定义 | int8 | 64 |  | √ | 0 | [数据版本 msplan_ds_version](../msplan_files/msplan_ds_version.md) |
+| 47 | foperatmodekey | 运行方式标识 | varchar | 255 |  | √ | ' ' | 运行方式标识 |
+| 48 | fplantype | 计划类型 | varchar | 255 |  | √ | ' ' | 计划类型 |
+| 49 | fisbomcheck | BOM嵌套检查 | bpchar | 1 |  | √ | '0' | BOM嵌套检查 |
 
 ### 列规则定义
 
@@ -133,8 +135,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | t_mrp_caculatelog_u_pkey |  | fdataid,fuseorgid |
-| 2 | idx_t_mrp_caculatelog_u_uo |  | fuseorgid |
+| 1 | idx_t_mrp_caculatelog_u_uo |  | fuseorgid |
+| 2 | t_mrp_caculatelog_u_pkey |  | fdataid,fuseorgid |
 
 ---
 
@@ -148,7 +150,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 计划标识 mpdm_plantag |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [计划标识 mpdm_plantag](../mpdm_files/mpdm_plantag.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义

@@ -12,13 +12,13 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fsecret | 密码 | varchar | 50 |  | √ | ' ' | 密码 |
 | 3 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 6 | fcityname | 税号所属地 | varchar | 50 |  | √ | ' ' | 税号所属地 |
-| 7 | fepinfo | 企业名称 | int8 | 64 |  | √ | 0 | 企业基础信息 bdm_enterprise_baseinfo |
+| 7 | fepinfo | 企业名称 | int8 | 64 |  | √ | 0 | [企业基础信息 bdm_enterprise_baseinfo](../bdm_files/bdm_enterprise_baseinfo.md) |
 | 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 9 | fstatus | 数据状态 | varchar | 10 |  | √ | '1' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 12 | falleinvoiceaccount | 账号 | varchar | 100 |  | √ | ' ' | 账号 |
 | 13 | ftaxno | 企业税号 | varchar | 50 |  | √ | ' ' | 企业税号 |
@@ -52,7 +52,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 4 | forg | 组织 | int8 | 64 |  | √ | 0 | 企业管理 bdm_org |
+| 4 | forg | 组织 | int8 | 64 |  | √ | 0 | [企业管理 bdm_org](../bdm_files/bdm_org.md) |
 
 ### 列规则定义
 
@@ -93,5 +93,5 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_bdm_einvoice_account_l |  | fid |
-| 2 | pk_t_bdm_einvoice_account_l |  | fpkid |
+| 1 | pk_t_bdm_einvoice_account_l |  | fpkid |
+| 2 | idx_bdm_einvoice_account_l |  | fid |

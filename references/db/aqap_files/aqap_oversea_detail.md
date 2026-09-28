@@ -20,7 +20,7 @@
 | 9 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 10 | fext_field1 | ext_Field1 | varchar | 100 |  |  | ' ' | ext_Field1 |
 | 11 | fcustom_id | 租户号 | varchar | 50 |  | √ | ' ' | 租户号 |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fmasterid | 主数据内码 | int8 | 64 |  |  | null | 主数据内码 |
 | 14 | fdetail_type | detail_Type | varchar | 50 |  |  | ' ' | detail_Type |
 | 15 | fext_field4 | ext_Field4 | varchar | 100 |  |  | ' ' | ext_Field4 |
@@ -33,7 +33,7 @@
 | 22 | fpay_bank_version | 银行版本 | varchar | 50 |  |  | ' ' | 银行版本 |
 | 23 | fpay_bank_name | 付款银行名 | varchar | 50 |  |  | ' ' | 付款银行名 |
 | 24 | fname | 户名 | varchar | 50 |  |  | ' ' | 户名 |
-| 25 | fmodifierid | 修改人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 25 | fmodifierid | 修改人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 26 | fdetail_no | detail_No | varchar | 250 |  |  | ' ' | detail_No |
 | 27 | fext_biz_field | ext_Biz_Field | varchar | 300 |  |  | ' ' | ext_Biz_Field |
 | 28 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |

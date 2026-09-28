@@ -14,14 +14,14 @@
 | 3 | fname | fname | varchar | 255 |  | √ | ' ' |  |
 | 4 | fcreatetime | fcreatetime | timestamp | 0 |  |  | null |  |
 | 5 | flayout | 布局信息 | text | 0 |  |  | null | 布局信息 |
-| 6 | fuserid | 用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | fuserid | 用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 7 | fdisablerid | fdisablerid | int8 | 64 |  | √ | 0 |  |
 | 8 | flayout_tag | flayout_tag | text | 0 |  |  | ' ' |  |
 | 9 | fformnum | fformnum | varchar | 36 |  | √ | ' ' |  |
 | 10 | fschemetype | fschemetype | bpchar | 1 |  | √ | '1' |  |
 | 11 | fispreset | fispreset | bpchar | 1 |  | √ | '1' |  |
 | 12 | fismultiorg | fismultiorg | bpchar | 1 |  | √ | '1' |  |
-| 13 | fbizappid | 业务应用 | varchar | 36 |  | √ | ' ' | 业务应用实体 bos_devportal_bizapp |
+| 13 | fbizappid | 业务应用 | varchar | 36 |  | √ | ' ' | [业务应用实体 bos_devportal_bizapp](../mdl_files/bos_devportal_bizapp.md) |
 | 14 | fcustomable | fcustomable | bpchar | 1 |  | √ | '1' |  |
 | 15 | fmodifytime | fmodifytime | timestamp | 0 |  |  | null |  |
 | 16 | fdisabletime | fdisabletime | timestamp | 0 |  |  | null |  |
@@ -29,7 +29,7 @@
 | 18 | fcreatorid | fcreatorid | int8 | 64 |  | √ | 0 |  |
 | 19 | fmasterid | fmasterid | int8 | 64 |  | √ | 0 |  |
 | 20 | fenable | fenable | bpchar | 1 |  | √ | '1' |  |
-| 21 | fnumber | fnumber | varchar | 36 |  | √ | ' ' |  |
+| 21 | fnumber | fnumber | varchar | 100 |  | √ | ' ' |  |
 | 22 | fisdef | fisdef | bpchar | 1 |  | √ | '0' |  |
 
 ### 列规则定义

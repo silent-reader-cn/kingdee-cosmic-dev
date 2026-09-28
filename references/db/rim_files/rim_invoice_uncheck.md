@@ -25,7 +25,7 @@
 | 14 | fpage_no | 对于文件页码 | int4 | 32 |  | √ | 0 | 对于文件页码 |
 | 15 | fresource | 发票来源 | varchar | 50 |  | √ | ' ' | 发票来源,枚举: 9 :税盘 10 :滴滴 11 :云票儿 |
 | 16 | fexpense_amount | 已报销金额 | numeric | 23 | 10 | √ | 0.0000000000 | 已报销金额 |
-| 17 | forg_id | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 17 | forg_id | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 18 | ftotal_amount | 价税合计 | numeric | 23 | 10 | √ | 0.0000000000 | 价税合计 |
 | 19 | fexpense_time | 报销时间 | timestamp | 0 |  |  | null | 报销时间 |
 | 20 | fdeduction_purpose | 抵扣用途 | varchar | 50 |  | √ | ' ' | 抵扣用途,枚举: 1 :抵扣 2 :不抵扣 |
@@ -48,7 +48,7 @@
 | 37 | fexpense_no | 报销单号 | varchar | 500 |  | √ | ' ' | 报销单号 |
 | 38 | fserial_no | 发票流水号 | varchar | 36 |  | √ | ' ' | 发票流水号 |
 | 39 | fcreate_time | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 40 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 40 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 41 | faccount_date | 会计属期 | timestamp | 0 |  |  | null | 会计属期 |
 | 42 | finvoice_info | 发票信息 | varchar | 50 |  | √ | ' ' | 发票信息,枚举: ty_1 :电子普通发票 ty_2 :电子专用发票 ty_3 :增值税普通发票 ty_4 :增值税专用发票 ty_5 :普通纸质卷票 ty_7 :通用机打发票 ty_8 :出租车票 ty_9 :火车票 ty_10 :飞机行程单 ty_11 :其它票 ty_12 :机动车销售发票 ty_13 :二手车销售发票 ty_14 :定额发票 ty_15 :通行费电子发票 ty_16 :公路汽车票 ty_17 :过路桥费发票 ty_19 :完税证明 ty_20 :轮船票 ty_23 :通用机打电子发票 st_3 :红冲 st_2 :作废 ex_1 :未用 ex_30 :在用 ex_60 :已用 ex_65 :已入账 ch_1 :已验 ch_2 :未验 ch_3 :未验 or_0 :未签收 or_1 :已签收 au_0 :未勾选 au_1 :已勾选 au_2 :已认证 au_3 :已认证 au_4 :已抵扣 mo_1 :已改 |
 | 43 | finvoice_date | 发票日期 | timestamp | 0 |  |  | null | 发票日期 |
@@ -59,7 +59,7 @@
 | 48 | fcheck_status | 查验状态 | varchar | 2 |  | √ | ' ' | 查验状态,枚举: 1 :通过 2 :不通过 3 :未查验 |
 | 49 | fcontinuous_no | 是否串号 | varchar | 2 |  | √ | ' ' | 是否串号,枚举: 0 :否 1 :是 |
 | 50 | fdest_area | 目的地地区 | varchar | 150 |  | √ | ' ' | 目的地地区 |
-| 51 | finvoice_type | 发票类型 | int8 | 64 |  | √ | 0 | 发票类型 bd_invoicetype |
+| 51 | finvoice_type | 发票类型 | int8 | 64 |  | √ | 0 | [发票种类 bd_invoicetype](../basedata_files/bd_invoicetype.md) |
 
 ### 列规则定义
 

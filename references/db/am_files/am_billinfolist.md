@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fpropname | 业务属性名称 | varchar | 500 |  | √ | ' ' | 业务属性名称 |
-| 3 | fcreatorid | 用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fcreatorid | 用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fpropnum | 业务属性编号 | varchar | 500 |  | √ | ' ' | 业务属性编号 |
 | 5 | fbillid | 所选单据主键 | varchar | 50 |  | √ | '0' | 所选单据主键 |
 | 6 | fbilltype | 单据类型 | varchar | 50 |  | √ | ' ' | 单据类型 |

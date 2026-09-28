@@ -10,5 +10,5 @@
 
 | 序号 | 数据库表名 | 中文名称 | 字段数 | 详细定义文件 |
 | :---: | :--- | :--- | :---: | :--- |
-| 1 | `t_daxk_xiaok_config` | 小K配置项-主表 | 2 | [xiaok_config.md](./xiaok_config.md) |
-| 2 | `t_daxk_xiaok_init` | 小K初始化-主表 | 17 | [xiaok_init.md](./xiaok_init.md) |
+| 1 | `t_daxk_xiaok_config` | 智能配置项-主表 | 2 | [xiaok_config.md](./xiaok_config.md) |
+| 2 | `t_daxk_xiaok_init` | 智能初始化-主表 | 17 | [xiaok_init.md](./xiaok_init.md) |

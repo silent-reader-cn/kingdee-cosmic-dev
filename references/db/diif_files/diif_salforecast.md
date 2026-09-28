@@ -10,18 +10,18 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fgroupid | 销售组 | int8 | 64 |  | √ | 0 | 供应链业务组 bd_operatorgroup |
+| 2 | fgroupid | 销售组 | int8 | 64 |  | √ | 0 | [供应链业务组 bd_operatorgroup](../sbd_files/bd_operatorgroup.md) |
 | 3 | fcustomdimname | 自定义维度名称 | varchar | 50 |  | √ | ' ' | 自定义维度名称 |
-| 4 | forgid | 销售组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 5 | fcustid | 客户 | int8 | 64 |  | √ | 0 | 客户 bd_customer |
+| 4 | forgid | 销售组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 5 | fcustid | 客户 | int8 | 64 |  | √ | 0 | [客户 bd_customer](../basedata_files/bd_customer.md) |
 | 6 | fcycleunit | 预测周期单位 | varchar | 50 |  | √ | ' ' | 预测周期单位,枚举: MONTH :月 WEEK :周 DAY :日 |
 | 7 | fschemeid | 方案id | int8 | 64 |  | √ | 0 | 方案id |
 | 8 | fmaterialdim | 物料维度 | varchar | 50 |  | √ | ' ' | 物料维度 |
 | 9 | frefhistorycyclecount | 参考历史周期数 | int4 | 32 |  | √ | 0 | 参考历史周期数 |
-| 10 | fcustgroupid | 客户分类 | int8 | 64 |  | √ | 0 | 客户分类 bd_customergroup |
+| 10 | fcustgroupid | 客户分类 | int8 | 64 |  | √ | 0 | [客户分类 bd_customergroup](../basedata_files/bd_customergroup.md) |
 | 11 | fusepromodel | 是否启用智能销售预测模型 | bpchar | 1 |  | √ | '0' | 是否启用智能销售预测模型 |
 | 12 | fcreatedate | 创建日期 | timestamp | 0 |  | √ | LOCALTIMESTAMP | 创建日期 |
-| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | fmodifydate | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 15 | fcustomdimbasetype | 自定义维度类型 | varchar | 50 |  | √ | ' ' | 自定义维度类型,枚举: bd_tpl :基础数据模板 |
 | 16 | fforecastcycle | 预测运算周期 | varchar | 50 |  | √ | ' ' | 预测运算周期 |
@@ -29,9 +29,9 @@
 | 18 | fcustombaseid | 自定义维度 | int8 | 64 |  | √ | 0 | 基础数据模板 bd_tpl |
 | 19 | fbillno | 预测单编号 | varchar | 30 |  | √ | ' ' | 预测单编号 |
 | 20 | fschemebillno | 预测方案编号 | varchar | 30 |  | √ | ' ' | 预测方案编号 |
-| 21 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 22 | fdeptid | 销售部门 | int8 | 64 |  | √ | 0 | 行政组织（部门） bos_adminorg |
-| 23 | fresponsibleid | 责任人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 21 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 22 | fdeptid | 销售部门 | int8 | 64 |  | √ | 0 | [行政组织（部门） bos_adminorg](../base_files/bos_adminorg.md) |
+| 23 | fresponsibleid | 责任人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 24 | fbillstatus | 单据状态 | varchar | 50 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 25 | fcomment | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
 | 26 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
@@ -40,8 +40,8 @@
 | 29 | fschemename | 预测方案名称 | varchar | 50 |  | √ | ' ' | 预测方案名称 |
 | 30 | fforecastdate | 预测日期 | timestamp | 0 |  | √ | LOCALTIMESTAMP | 预测日期 |
 | 31 | fresponsiblevisible | 预测单仅责任人可见 | bpchar | 1 |  | √ | '0' | 预测单仅责任人可见 |
-| 32 | fcurrencyid | 本位币 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
-| 33 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 32 | fcurrencyid | 本位币 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
+| 33 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 34 | fbilltypeid | 单据类型 | int8 | 64 |  | √ | 0 | 单据类型 bos_billtype |
 
 ### 列规则定义
@@ -126,12 +126,12 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fmaterialid | 物料编码 | int8 | 64 |  | √ | 0 | 物料 bd_material |
-| 3 | fmaterialgroupid | 物料分类 | int8 | 64 |  | √ | 0 | 物料分类 bd_materialgroup |
+| 2 | fmaterialid | 物料编码 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
+| 3 | fmaterialgroupid | 物料分类 | int8 | 64 |  | √ | 0 | [物料分类 bd_materialgroup](../basedata_files/bd_materialgroup.md) |
 | 4 | fauxptyid | 辅助属性 | int8 | 64 |  | √ | 0 | null 001 |
 | 5 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 6 | falgorithm | 预测模型 | varchar | 50 |  | √ | ' ' | 预测模型,枚举: TE :三重指数平滑算法 MA :移动平均算法 |
-| 7 | fbaseunitid | 基本单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 7 | fbaseunitid | 基本单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 8 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 9 | fprice | 参考单价 | numeric | 23 | 10 | √ | 0 | 参考单价 |
 

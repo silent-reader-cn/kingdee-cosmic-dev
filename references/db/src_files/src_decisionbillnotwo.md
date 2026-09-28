@@ -11,12 +11,12 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | 单据ID | int8 | 64 |  | √ | 0 | 单据ID |
 | 2 | fdecisionamount | 采委会剩余金额 | numeric | 23 | 10 | √ | 0 | 采委会剩余金额 |
-| 3 | forgid | 采购组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | forgid | 采购组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | fmulilangtextfield | fmulilangtextfield | varchar | 300 |  | √ | ' ' |  |
 | 5 | fmodifytime | fmodifytime | timestamp | 0 |  |  | null |  |
 | 6 | fdecisionform | fdecisionform | int8 | 64 |  | √ | 0 |  |
 | 7 | ftitle | 标题 | varchar | 300 |  | √ | ' ' | 标题 |
-| 8 | fpurchaser | 采购员 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | fpurchaser | 采购员 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fpurgroup | fpurgroup | int8 | 64 |  | √ | 0 |  |
 | 10 | fdecidecontent | fdecidecontent | varchar | 255 |  | √ | ' ' |  |
 | 11 | fsourcebillno | fsourcebillno | varchar | 100 |  | √ | ' ' |  |
@@ -52,7 +52,7 @@
 | 41 | fcurrency | fcurrency | int8 | 64 |  | √ | 0 |  |
 | 42 | fcostattribution | fcostattribution | int8 | 64 |  | √ | 0 |  |
 | 43 | fcencortype | fcencortype | varchar | 30 |  | √ | ' ' |  |
-| 44 | fdecisiontype | 决策类型 | int8 | 64 |  | √ | 0 | 招标辅助资料 pds_extdata |
+| 44 | fdecisiontype | 决策类型 | int8 | 64 |  | √ | 0 | [招标辅助资料 pds_extdata](../pds_files/pds_extdata.md) |
 | 45 | forigncreator | forigncreator | int8 | 64 |  | √ | 0 |  |
 | 46 | fcfmstatus | fcfmstatus | bpchar | 1 |  | √ | ' ' |  |
 | 47 | flevel | flevel | int8 | 64 |  | √ | 0 |  |
@@ -87,7 +87,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义

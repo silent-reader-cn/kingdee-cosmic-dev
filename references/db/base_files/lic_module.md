@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
-| 3 | fgroupid | 许可分组 | int8 | 64 |  | √ | 0 | 许可分组 lic_group |
+| 3 | fgroupid | 许可分组 | int8 | 64 |  | √ | 0 | [许可分组 lic_group](../base_files/lic_group.md) |
 | 4 | fnumber | 编码 | varchar | 36 |  | √ | ' ' | 编码 |
 | 5 | fdescription | 描述 | varchar | 255 |  | √ | ' ' | 描述 |
 
@@ -27,6 +27,65 @@
 | :--- | :--- | :--- | :--- |
 | 1 | idx_t_lic_module_number |  | fnumber |
 | 2 | pk_t_lic_module |  | fid |
+
+---
+
+## 模块版本信息-子表 t_lic_module_version
+
+- **表名称：** 模块版本信息-子表
+- **表名：** t_lic_module_version
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fnameversion | 名称 | varchar | 255 |  |  | null | 名称 |
+| 3 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
+| 4 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 5 | fversion | 版本 | varchar | 50 |  | √ | ' ' | 版本 |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fentryid | fentryid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_lic_module_version_fk |  | fid |
+| 2 | pk_t_lic_module_version |  | fentryid |
+
+---
+
+## 模块版本信息-多语言表 t_lic_module_version_l
+
+- **表名称：** 模块版本信息-多语言表
+- **表名：** t_lic_module_version_l
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fnameversion | 名称 | varchar | 255 |  |  | null | 名称 |
+| 2 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
+| 3 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
+| 4 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fpkid | fpkid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | pk_t_lic_module_version_l |  | fpkid |
+| 2 | idx_lic_module_version_l_0 |  | fentryid,flocaleid |
 
 ---
 

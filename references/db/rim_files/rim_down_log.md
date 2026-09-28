@@ -19,12 +19,12 @@
 | 8 | fbatch_no | 发票云同步批次号 | varchar | 36 |  | √ | ' ' | 发票云同步批次号 |
 | 9 | ftax_no | 税号 | varchar | 30 |  | √ | ' ' | 税号 |
 | 10 | finout | 进销项 | varchar | 2 |  | √ | ' ' | 进销项,枚举: 1 :进项 2 :销项 3 :进项状态更新 |
-| 11 | forg | 核算组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 11 | forg | 核算组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 12 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 13 | fapply_step | 进销项申请页数 | int4 | 32 |  | √ | 0 | 进销项申请页数 |
 | 14 | fsync_task_no | 增量同步任务号 | varchar | 50 |  | √ | ' ' | 增量同步任务号 |
 | 15 | ftax_batch_no | 批次号 | varchar | 50 |  | √ | ' ' | 批次号 |
-| 16 | finvoicetype | 发票类型 | int8 | 64 |  | √ | 0 | 发票类型 bd_invoicetype |
+| 16 | finvoicetype | 发票类型 | int8 | 64 |  | √ | 0 | [发票种类 bd_invoicetype](../basedata_files/bd_invoicetype.md) |
 | 17 | ftaskno | 进销项下载任务号 | varchar | 50 |  | √ | ' ' | 进销项下载任务号 |
 | 18 | finvoice_startdate | 下载开始时间 | timestamp | 0 |  |  | null | 下载开始时间 |
 | 19 | fsuccess_total_num | 处理成功的份数 | int4 | 32 |  | √ | 0 | 处理成功的份数 |

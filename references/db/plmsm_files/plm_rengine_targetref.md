@@ -10,9 +10,9 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | ftargetid | 指标 | int8 | 64 |  | √ | 0 | 指标管理 plm_rengine_target |
-| 3 | fdesignruleid | 设计时规则 | int8 | 64 |  | √ | 0 | 规则设计（规则引擎） plm_rengine_ruledesign |
-| 4 | fpolicyid | 策略 | int8 | 64 |  | √ | 0 | 规则设计（规则引擎） plm_rengine_ruledesign |
+| 2 | ftargetid | 指标 | int8 | 64 |  | √ | 0 | [指标管理 plm_rengine_target](../plmsm_files/plm_rengine_target.md) |
+| 3 | fdesignruleid | 设计时规则 | int8 | 64 |  | √ | 0 | [规则设计（规则引擎） plm_rengine_ruledesign](../plmsm_files/plm_rengine_ruledesign.md) |
+| 4 | fpolicyid | 策略 | int8 | 64 |  | √ | 0 | [规则设计（规则引擎） plm_rengine_ruledesign](../plmsm_files/plm_rengine_ruledesign.md) |
 
 ### 列规则定义
 

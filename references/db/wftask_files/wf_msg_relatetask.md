@@ -25,5 +25,5 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | t_wf_relatetaskid_pkey |  | fid |
-| 2 | idx_wf_relatetaskid |  | ftaskid |
+| 1 | idx_wf_relatetaskid |  | ftaskid |
+| 2 | t_wf_relatetaskid_pkey |  | fid |

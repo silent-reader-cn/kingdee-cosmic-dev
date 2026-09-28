@@ -12,8 +12,8 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | ftaxamount | 税额 | numeric | 23 | 10 | √ | 0.0000000000 | 税额 |
 | 3 | ftaxrate | 税率/征收率 | numeric | 23 | 10 | √ | 0.0000000000 | 税率/征收率 |
-| 4 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 5 | finvoiceorg | 汇总方案组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 4 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 5 | finvoiceorg | 汇总方案组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | fdeclaretype | 申报方式 | varchar | 50 |  | √ | ' ' | 申报方式,枚举: 2 :汇总 3 :被汇总 |
 | 7 | famount | 不含税金额 | numeric | 23 | 10 | √ | 0.0000000000 | 不含税金额 |
 | 8 | fskssqq | 开始日期 | timestamp | 0 |  |  | null | 开始日期 |
@@ -22,7 +22,7 @@
 | 11 | fgoodscode | 商品编码 | varchar | 50 |  | √ | ' ' | 商品编码 |
 | 12 | fskssqz | 结束日期 | timestamp | 0 |  |  | null | 结束日期 |
 | 13 | fgoodsname | 商品名称 | varchar | 50 |  | √ | ' ' | 商品名称 |
-| 14 | fbaseinvoicetype | 发票类型 | int8 | 64 |  | √ | 0 | 发票类型 bd_invoicetype |
+| 14 | fbaseinvoicetype | 发票类型 | int8 | 64 |  | √ | 0 | [发票种类 bd_invoicetype](../basedata_files/bd_invoicetype.md) |
 | 15 | finvoicedate | 开票日期 | timestamp | 0 |  |  | null | 开票日期 |
 | 16 | finvoicecode | 发票代码 | varchar | 50 |  | √ | ' ' | 发票代码 |
 | 17 | ftotal | 价税合计 | numeric | 23 | 10 | √ | 0.0000000000 | 价税合计 |

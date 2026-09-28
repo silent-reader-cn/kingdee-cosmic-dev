@@ -39,26 +39,27 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | 盘点方案id | int8 | 64 |  | √ | 0 | 盘点方案 fa_inventscheme_new |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 1 | fid | 盘点方案id | int8 | 64 |  | √ | 0 | [盘点方案 fa_inventscheme_new](../fa_files/fa_inventscheme_new.md) |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fname | fname | varchar | 100 |  | √ | ' ' |  |
 | 4 | fqtytypevalue | fqtytypevalue | varchar | 10 |  | √ | '0' |  |
-| 5 | fchargepersonid | 负责人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 7 | ffiltercondition_tag | ffiltercondition_tag | text | 0 |  |  | ' ' |  |
-| 8 | fseq | fseq | int8 | 64 |  | √ | 0 |  |
-| 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 10 | fstatus | 生成状态 | bpchar | 1 |  | √ | 'A' | 生成状态,枚举: A :未下达 B :已下达 C :已生成 |
-| 11 | finventschemeentryid | finventschemeentryid | int8 | 64 |  | √ | 0 |  |
-| 12 | fassetunitid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 13 | ffinaccountdate | 入账截止日期 | timestamp | 0 |  |  | null | 入账截止日期 |
-| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 15 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 16 | ftaskrule | 任务拆分规则 | varchar | 50 |  | √ | ' ' | 任务拆分规则 |
-| 17 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 18 | fnumber | 编码 | varchar | 50 |  | √ | ' ' | 编码 |
-| 19 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 20 | ffiltercondition | ffiltercondition | varchar | 512 |  | √ | ' ' |  |
+| 5 | fchargepersonid | 负责人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 6 | finventorymode | finventorymode | varchar | 200 |  | √ | ' ' |  |
+| 7 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 8 | ffiltercondition_tag | ffiltercondition_tag | text | 0 |  |  | ' ' |  |
+| 9 | fseq | fseq | int8 | 64 |  | √ | 0 |  |
+| 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 11 | fstatus | 生成状态 | bpchar | 1 |  | √ | 'A' | 生成状态,枚举: A :未下达 B :已下达 C :已生成 |
+| 12 | finventschemeentryid | finventschemeentryid | int8 | 64 |  | √ | 0 |  |
+| 13 | fassetunitid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 14 | ffinaccountdate | 入账截止日期 | timestamp | 0 |  |  | null | 入账截止日期 |
+| 15 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 16 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
+| 17 | ftaskrule | 任务拆分规则 | varchar | 50 |  | √ | ' ' | 任务拆分规则 |
+| 18 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 19 | fnumber | 编码 | varchar | 50 |  | √ | ' ' | 编码 |
+| 20 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 21 | ffiltercondition | ffiltercondition | varchar | 512 |  | √ | ' ' |  |
 
 ### 列规则定义
 

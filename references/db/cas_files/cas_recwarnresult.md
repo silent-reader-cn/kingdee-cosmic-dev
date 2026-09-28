@@ -13,7 +13,7 @@
 | 2 | fstatus | 状态 | bpchar | 1 |  | √ | '0' | 状态,枚举: 0 :待确认 1 :已确认 |
 | 3 | fcreatedate | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
 | 4 | fbatchno | 批次号 | varchar | 50 |  | √ | ' ' | 批次号 |
-| 5 | fcreaterid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | fcreaterid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 
@@ -44,7 +44,7 @@
 | 2 | fhassave | 是否当前提交单 | bpchar | 1 |  | √ | '0' | 是否当前提交单 |
 | 3 | fbillstatus | 状态 | varchar | 30 |  | √ | ' ' | 状态,枚举: A :暂存 B :已提交 C :已审核 D :已收款 |
 | 4 | fcreatetime | 创建时间 | varchar | 50 |  | √ | ' ' | 创建时间 |
-| 5 | fcurrency | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 5 | fcurrency | 币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 | 6 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 7 | fnote | 记录 | varchar | 50 |  | √ | ' ' | 记录 |
 | 8 | fpayer | 付款人 | varchar | 200 |  | √ | ' ' | 付款人 |

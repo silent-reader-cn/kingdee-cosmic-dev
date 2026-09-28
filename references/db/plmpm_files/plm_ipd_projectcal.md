@@ -39,7 +39,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
+| 2 | fname | 名称 | varchar | 80 |  | √ | ' ' | 名称 |
 | 3 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
 | 4 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
 
@@ -69,33 +69,35 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fweekdayamstart | 工作日上午.开始 | int4 | 32 |  | √ | '-1' | 工作日上午.开始 |
-| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 4 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 4 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | fispreset | 是否预置 | bpchar | 1 |  | √ | '0' | 是否预置 |
 | 6 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 7 | ftextfield | 描述 | varchar | 50 |  | √ | ' ' | 描述 |
 | 8 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 9 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 11 | fcalrangestart | 日历范围.开始 | timestamp | 0 |  |  | null | 日历范围.开始 |
-| 12 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
-| 13 | fbitindex | 位图 | int8 | 64 |  | √ | 0 | 位图 |
-| 14 | fcalrangeend | 日历范围.结束 | timestamp | 0 |  |  | null | 日历范围.结束 |
-| 15 | fweekdaypmend | 工作日下午.结束 | int4 | 32 |  | √ | '-1' | 工作日下午.结束 |
-| 16 | fweekdayamend | 工作日上午.结束 | int4 | 32 |  | √ | '-1' | 工作日上午.结束 |
-| 17 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 18 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 19 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 20 | fprojectid | 所属项目 | int8 | 64 |  | √ | 0 | 项目 plm_ipd_project |
-| 21 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 22 | fctrlstrategy | 控制策略 | varchar | 50 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
-| 23 | fcalendardsetid | 工作日历配置 | int8 | 64 |  | √ | 0 | 设置项目日历 plm_ipd_prosetcal |
-| 24 | fweekdaypmstart | 工作日下午.开始 | int4 | 32 |  | √ | '-1' | 工作日下午.开始 |
-| 25 | fenable | 使用状态 | varchar | 50 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 26 | fuseorgid | fuseorgid | int8 | 64 |  | √ | 0 |  |
-| 27 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
-| 28 | fsourcebitindex | 原资料位图 | int8 | 64 |  | √ | 0 | 原资料位图 |
-| 29 | fisdefault | 默认日历 | bpchar | 1 |  | √ | '0' | 默认日历 |
+| 9 | foriginalcalendarid | 原日历 | int8 | 64 |  | √ | 0 | [配置-项目日历 plm_ipd_projectcal](../plmpm_files/plm_ipd_projectcal.md) |
+| 10 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 12 | fcalrangestart | 日历范围.开始 | timestamp | 0 |  |  | null | 日历范围.开始 |
+| 13 | ftypesource | 类型来源 | varchar | 50 |  | √ | ' ' | 类型来源 |
+| 14 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
+| 15 | fbitindex | 位图 | int8 | 64 |  | √ | 0 | 位图 |
+| 16 | fcalrangeend | 日历范围.结束 | timestamp | 0 |  |  | null | 日历范围.结束 |
+| 17 | fweekdaypmend | 工作日下午.结束 | int4 | 32 |  | √ | '-1' | 工作日下午.结束 |
+| 18 | fweekdayamend | 工作日上午.结束 | int4 | 32 |  | √ | '-1' | 工作日上午.结束 |
+| 19 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 20 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 21 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
+| 22 | fprojectid | 所属项目 | int8 | 64 |  | √ | 0 | [项目 plm_ipd_project](../plmpm_files/plm_ipd_project.md) |
+| 23 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 24 | fctrlstrategy | 控制策略 | varchar | 50 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
+| 25 | fcalendardsetid | 工作日历配置 | int8 | 64 |  | √ | 0 | [设置项目日历 plm_ipd_prosetcal](../plmpm_files/plm_ipd_prosetcal.md) |
+| 26 | fweekdaypmstart | 工作日下午.开始 | int4 | 32 |  | √ | '-1' | 工作日下午.开始 |
+| 27 | fenable | 使用状态 | varchar | 50 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 28 | fuseorgid | 业务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 29 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
+| 30 | fsourcebitindex | 原资料位图 | int8 | 64 |  | √ | 0 | 原资料位图 |
+| 31 | fisdefault | 默认日历 | bpchar | 1 |  | √ | '0' | 默认日历 |
 
 ### 列规则定义
 

@@ -37,17 +37,22 @@
 | 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 5 | fcisconfig | fcisconfig | int8 | 64 |  | √ | 0 |  |
 | 6 | fmodifier | fmodifier | int8 | 64 |  | √ | 0 |  |
-| 7 | fpassword | fpassword | varchar | 64 |  | √ | ' ' |  |
-| 8 | fintegratedserviceid | fintegratedserviceid | varchar | 200 |  | √ | ' ' |  |
-| 9 | fcreateorg | fcreateorg | varchar | 200 |  | √ | ' ' |  |
-| 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 11 | fintegservicetypenumber | fintegservicetypenumber | varchar | 256 |  | √ | ' ' |  |
-| 12 | fintegservicetype | fintegservicetype | varchar | 200 |  | √ | ' ' |  |
-| 13 | fpkgname | fpkgname | varchar | 200 |  | √ | ' ' |  |
-| 14 | fenable | 使用状态 | varchar | 1 |  | √ | '0' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 15 | fistimeout | fistimeout | varchar | 1 |  | √ | '0' |  |
-| 16 | ftimeout | ftimeout | int4 | 32 |  | √ | 3 |  |
-| 17 | fisfreelogin | fisfreelogin | varchar | 1 |  | √ | '0' |  |
+| 7 | fmenuconfiguration | fmenuconfiguration | varchar | 1 |  | √ | ' ' |  |
+| 8 | fpassword | fpassword | varchar | 64 |  | √ | ' ' |  |
+| 9 | fintegratedserviceid | fintegratedserviceid | varchar | 200 |  | √ | ' ' |  |
+| 10 | fcisconfigshowflag | fcisconfigshowflag | varchar | 1 |  | √ | '1' |  |
+| 11 | fcisconfigflag | fcisconfigflag | varchar | 1 |  | √ | '1' |  |
+| 12 | fcreateorg | fcreateorg | varchar | 200 |  | √ | ' ' |  |
+| 13 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 14 | fintegservicetypenumber | fintegservicetypenumber | varchar | 256 |  | √ | ' ' |  |
+| 15 | fmenushowflag | fmenushowflag | varchar | 1 |  | √ | '0' |  |
+| 16 | fintegservicetype | fintegservicetype | varchar | 200 |  | √ | ' ' |  |
+| 17 | fpkgname | fpkgname | varchar | 200 |  | √ | ' ' |  |
+| 18 | fenable | 使用状态 | varchar | 1 |  | √ | '0' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 19 | fistimeout | fistimeout | varchar | 1 |  | √ | '0' |  |
+| 20 | ftimeout | ftimeout | int4 | 32 |  | √ | 3 |  |
+| 21 | fmenuflag | fmenuflag | varchar | 1 |  | √ | '0' |  |
+| 22 | fisfreelogin | fisfreelogin | varchar | 1 |  | √ | '0' |  |
 
 ### 列规则定义
 

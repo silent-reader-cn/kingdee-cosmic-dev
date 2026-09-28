@@ -41,27 +41,27 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | faccsettingid | 方案编码 | int8 | 64 |  | √ | 0 | 存货跌价准备设置 cal_fallprice_setting |
+| 2 | faccsettingid | 方案编码 | int8 | 64 |  | √ | 0 | [存货跌价准备设置 cal_fallprice_setting](../cal_files/cal_fallprice_setting.md) |
 | 3 | fremark | fremark | varchar | 255 |  | √ | ' ' |  |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 5 | fperiodid | 会计期间 | int8 | 64 |  | √ | 0 | 会计日历 bd_period |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 5 | fperiodid | 会计期间 | int8 | 64 |  | √ | 0 | [会计日历 bd_period](../fibd_files/bd_period.md) |
 | 6 | fbillstatus | 单据状态 | bpchar | 1 |  | √ | 'A' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 7 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 8 | forgid | 核算组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 9 | flastupdateuserid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | forgid | 核算组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 9 | flastupdateuserid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | fvouchernum | 凭证号 | varchar | 60 |  | √ | ' ' | 凭证号 |
 | 11 | fauditdate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
 | 12 | flastupdatetime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 13 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | fbizdate | 业务日期 | timestamp | 0 |  |  | null | 业务日期 |
 | 16 | fsourcebillid | 源单id | int8 | 64 |  | √ | 0 | 源单id |
-| 17 | fcostaccountid | 成本主体 | int8 | 64 |  | √ | 0 | 成本主体 cal_bd_costaccount |
+| 17 | fcostaccountid | 成本主体 | int8 | 64 |  | √ | 0 | [成本主体 cal_bd_costaccount](../cal_files/cal_bd_costaccount.md) |
 | 18 | fperiod | 会计期间编码 | int8 | 64 |  | √ | 0 | 会计期间编码 |
 | 19 | fbookdate | 记账日期 | timestamp | 0 |  |  | null | 记账日期 |
 | 20 | fisvoucher | 已生成凭证 | bpchar | 1 |  | √ | '0' | 已生成凭证 |
-| 21 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
-| 22 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 21 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
+| 22 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 23 | fbillno | 单据编号 | varchar | 80 |  | √ | ' ' | 单据编号 |
 
 ### 列规则定义
@@ -153,40 +153,43 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fmaterialid | 物料 | int8 | 64 |  | √ | 0 | 物料 bd_material |
-| 3 | fmaterialgroupid | 物料分类 | int8 | 64 |  | √ | 0 | 物料分类 bd_materialgroup |
+| 2 | fmaterialid | 物料 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
+| 3 | fmaterialgroupid | 物料分类 | int8 | 64 |  | √ | 0 | [物料分类 bd_materialgroup](../basedata_files/bd_materialgroup.md) |
 | 4 | fsourceentryid | 源单分录id | int8 | 64 |  | √ | 0 | 源单分录id |
 | 5 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 6 | fcurperiodoutqty | 本期出库数量 | numeric | 23 | 10 | √ | 0.0000000000 | 本期出库数量 |
-| 7 | fmversionid | 物料版本 | int8 | 64 |  | √ | 0 | 物料版本 bd_bomversion_new |
+| 7 | fmversionid | 物料版本 | int8 | 64 |  | √ | 0 | [物料版本 bd_bomversion_new](../basedata_files/bd_bomversion_new.md) |
 | 8 | famount | 存货余额 | numeric | 23 | 10 | √ | 0.0000000000 | 存货余额 |
-| 9 | fconfiguredcodeid | 配置号 | int8 | 64 |  | √ | 0 | 配置号 bd_configuredcode |
-| 10 | finvstatusid | 库存状态 | int8 | 64 |  | √ | 0 | 库存状态 bd_invstatus |
-| 11 | finvagefrom | 库龄从（天） | int8 | 64 |  | √ | 0 | 库龄从（天） |
-| 12 | fwarehousegroupid | 仓库分组 | int8 | 64 |  | √ | 0 | 仓库分组 bd_warehousegroup |
-| 13 | frushbaseqty | 跌价冲回数量 | numeric | 23 | 10 | √ | 0.0000000000 | 跌价冲回数量 |
-| 14 | frealizableamount | 可变现净值 | numeric | 23 | 10 | √ | 0.0000000000 | 可变现净值 |
-| 15 | frushamount | 跌价冲回金额 | numeric | 23 | 10 | √ | 0.0000000000 | 跌价冲回金额 |
-| 16 | fassistid | 辅助属性 | int8 | 64 |  | √ | 0 | null 001 |
-| 17 | fownertype | 货主类型 | varchar | 30 |  | √ | 'bos_org' | 货主类型,枚举: bos_org :核算组织 |
-| 18 | ftracknumberid | 跟踪号 | int8 | 64 |  | √ | 0 | 跟踪号 bd_tracknumber |
-| 19 | funitrealizableamount | 单位可变现净值 | numeric | 23 | 10 | √ | 0.0000000000 | 单位可变现净值 |
-| 20 | flot | 批号 | varchar | 100 |  | √ | ' ' | 批号 |
-| 21 | fbaseunitid | 基本单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 22 | fcurperiodrushamount | 本期冲回金额 | numeric | 23 | 10 | √ | 0.0000000000 | 本期冲回金额 |
-| 23 | fbaseprice | 存货平均价 | numeric | 23 | 10 | √ | 0.0000000000 | 存货平均价 |
-| 24 | fstorageorgunitid | 库存组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 25 | fprojectid | 项目编码 | int8 | 64 |  | √ | 0 | 项目 bd_project |
-| 26 | finvtypeid | 库存类型 | int8 | 64 |  | √ | 0 | 库存类型 bd_invtype |
-| 27 | fwarehouseid | 仓库 | int8 | 64 |  | √ | 0 | 仓库 bd_warehouse |
-| 28 | fownerid | 货主 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 29 | flocationid | 仓位 | int8 | 64 |  | √ | 0 | 仓位 bd_location |
-| 30 | fcurperiodrushqty | 本期冲回数量 | numeric | 23 | 10 | √ | 0.0000000000 | 本期冲回数量 |
-| 31 | fexpirydateto | 剩余有效期至（天） | int4 | 32 |  | √ | 999999 | 剩余有效期至（天） |
-| 32 | fbaseqty | 存货数量 | numeric | 23 | 10 | √ | 0.0000000000 | 存货数量 |
-| 33 | fexpirydatefrom | 剩余有效期从（天） | int4 | 32 |  | √ | '-999999' | 剩余有效期从（天） |
-| 34 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 35 | finvageto | 库龄至（天） | int8 | 64 |  | √ | 0 | 库龄至（天） |
+| 9 | fconfiguredcodeid | 配置号 | int8 | 64 |  | √ | 0 | [配置号（废弃） bd_configuredcode](../sbd_files/bd_configuredcode.md) |
+| 10 | fbonded | 保税 | bpchar | 1 |  | √ | '0' | 保税 |
+| 11 | finvstatusid | 库存状态 | int8 | 64 |  | √ | 0 | [库存状态 bd_invstatus](../sbd_files/bd_invstatus.md) |
+| 12 | finvagefrom | 库龄从（天） | int8 | 64 |  | √ | 0 | 库龄从（天） |
+| 13 | fwarehousegroupid | 仓库分组 | int8 | 64 |  | √ | 0 | [仓库分组 bd_warehousegroup](../sbd_files/bd_warehousegroup.md) |
+| 14 | frushbaseqty | 跌价冲回数量 | numeric | 23 | 10 | √ | 0.0000000000 | 跌价冲回数量 |
+| 15 | fdevcost | 研发费用 | varchar | 10 |  | √ | '0' | 研发费用,枚举: 1 :是 0 :否 |
+| 16 | frealizableamount | 可变现净值 | numeric | 23 | 10 | √ | 0.0000000000 | 可变现净值 |
+| 17 | frushamount | 跌价冲回金额 | numeric | 23 | 10 | √ | 0.0000000000 | 跌价冲回金额 |
+| 18 | fassistid | 辅助属性 | int8 | 64 |  | √ | 0 | null 001 |
+| 19 | fownertype | 货主类型 | varchar | 30 |  | √ | 'bos_org' | 货主类型,枚举: bos_org :核算组织 |
+| 20 | ftracknumberid | 跟踪号 | int8 | 64 |  | √ | 0 | [跟踪号 bd_tracknumber](../sbd_files/bd_tracknumber.md) |
+| 21 | funitrealizableamount | 单位可变现净值 | numeric | 23 | 10 | √ | 0.0000000000 | 单位可变现净值 |
+| 22 | flot | 批号 | varchar | 100 |  | √ | ' ' | 批号 |
+| 23 | fbaseunitid | 基本单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 24 | fcurperiodrushamount | 本期冲回金额 | numeric | 23 | 10 | √ | 0.0000000000 | 本期冲回金额 |
+| 25 | fbaseprice | 存货平均价 | numeric | 23 | 10 | √ | 0.0000000000 | 存货平均价 |
+| 26 | fstorageorgunitid | 库存组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 27 | fprojectid | 项目编码 | int8 | 64 |  | √ | 0 | [项目 bd_project](../basedata_files/bd_project.md) |
+| 28 | finvtypeid | 库存类型 | int8 | 64 |  | √ | 0 | [库存类型 bd_invtype](../sbd_files/bd_invtype.md) |
+| 29 | flicensenoid | 许可证编号 | int8 | 64 |  | √ | 0 | [许可证 bd_licence](../sbd_files/bd_licence.md) |
+| 30 | fwarehouseid | 仓库 | int8 | 64 |  | √ | 0 | [仓库 bd_warehouse](../sbd_files/bd_warehouse.md) |
+| 31 | fownerid | 货主 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 32 | flocationid | 仓位 | int8 | 64 |  | √ | 0 | [仓位 bd_location](../sbd_files/bd_location.md) |
+| 33 | fcurperiodrushqty | 本期冲回数量 | numeric | 23 | 10 | √ | 0.0000000000 | 本期冲回数量 |
+| 34 | fexpirydateto | 剩余有效期至（天） | int4 | 32 |  | √ | 999999 | 剩余有效期至（天） |
+| 35 | fbaseqty | 存货数量 | numeric | 23 | 10 | √ | 0.0000000000 | 存货数量 |
+| 36 | fexpirydatefrom | 剩余有效期从（天） | int4 | 32 |  | √ | '-999999' | 剩余有效期从（天） |
+| 37 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 38 | finvageto | 库龄至（天） | int8 | 64 |  | √ | 0 | 库龄至（天） |
 
 ### 列规则定义
 

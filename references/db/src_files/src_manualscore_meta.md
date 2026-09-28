@@ -12,12 +12,13 @@
 | 1 | fid | 单据ID | int8 | 64 |  | √ | 0 | 单据ID |
 | 2 | fsuppliertype | 供应商类别 | varchar | 30 |  | √ | ' ' | 供应商类别,枚举: src_supplier :注册供应商 src_supplier_inner :内部供应商(员工) src_supplier_tmp :临时供应商 bd_supplier :供应商 |
 | 3 | fbizamount | 商务价格 | numeric | 23 | 10 | √ | 0 | 商务价格 |
-| 4 | fpackageid | 标段名称 | int8 | 64 |  | √ | 0 | 标段名称 src_packagef7 |
+| 4 | fpackageid | 标段 | int8 | 64 |  | √ | 0 | [标段名称 src_packagef7](../src_files/src_packagef7.md) |
 | 5 | fseq | 序号 | int4 | 32 |  | √ | 0 | 序号 |
-| 6 | fpurlistid | 标的名称 | int8 | 64 |  | √ | 0 | 采购清单F7 src_purlistf7 |
+| 6 | fpurlistid | 标的 | int8 | 64 |  | √ | 0 | 采购清单F7 src_purlistf7 |
 | 7 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 8 | fbizscore | 商务标得分 | numeric | 23 | 10 | √ | 0 | 商务标得分 |
 | 9 | fsupplierid | 供应商 | int8 | 64 |  | √ | 0 | 注册供应商 src_supplier |
+| 10 | fmaterialname | 标的名称 | varchar | 255 |  | √ | ' ' | 标的名称 |
 
 ### 列规则定义
 

@@ -51,22 +51,24 @@
 | 10 | forgviewid | 组织类型 | varchar | 50 |  | √ | ' ' | 组织类型 |
 | 11 | fpublish | 是否发布 | bpchar | 1 |  | √ | '0' | 是否发布 |
 | 12 | foperation | 启动操作 | varchar | 300 |  | √ | ' ' | 启动操作 |
-| 13 | fentrabillid | 入口单据ID | varchar | 36 |  | √ | ' ' | 实体元数据 bos_entitymeta |
+| 13 | fentrabillid | 入口单据ID | varchar | 36 |  | √ | ' ' | [实体元数据 bos_entitymeta](../mdl_files/bos_entitymeta.md) |
 | 14 | fversion | 版本 | varchar | 36 |  | √ | ' ' | 版本 |
 | 15 | fentrabill | 单据 | varchar | 36 |  | √ | ' ' | 单据 |
-| 16 | forgunitid | 所属组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 16 | forgunitid | 所属组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 17 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 修改人 |
 | 18 | fname | 名称 | varchar | 1024 |  | √ | ' ' | 名称 |
-| 19 | fcategory | 类别ID | int8 | 64 |  | √ | 0 | 流程分类 wf_processcagetory |
-| 20 | ftemplateid | 流程模板 | int8 | 64 |  | √ | 0 | 流程模板 wf_proctemplate |
-| 21 | fdescription | 描述 | varchar | 3000 |  | √ | ' ' | 描述 |
-| 22 | fgraphid | 设计器图形ID | int8 | 64 |  | √ | 0 | 设计器图形ID |
-| 23 | fdiscard | 是否废弃 | bpchar | 1 |  | √ | '0' | 是否废弃 |
-| 24 | fpngid | 流程SVG资源ID | int8 | 64 |  | √ | 0 | 流程SVG资源ID |
-| 25 | ftype | 流程类型 | varchar | 30 |  | √ | ' ' | 流程类型,枚举: AuditFlow :审批流 BizFlow :业务流 |
-| 26 | fparentprocid | 父流程ID | int8 | 64 |  | √ | 0 | 父流程ID |
-| 27 | fnumber | 编码 | varchar | 255 |  | √ | ' ' | 编码 |
-| 28 | fbpmnxmlid | BPMNXMLID | int8 | 64 |  | √ | 0 | BPMNXMLID |
+| 19 | fcategory | 类别ID | int8 | 64 |  | √ | 0 | [流程分类 wf_processcagetory](../wf_files/wf_processcagetory.md) |
+| 20 | ftemplateid | 流程模板 | int8 | 64 |  | √ | 0 | [流程模板 wf_proctemplate](../wf_files/wf_proctemplate.md) |
+| 21 | fallowmodification | 是否允许修改 | bpchar | 1 |  | √ | '1' | 是否允许修改 |
+| 22 | fdescription | 描述 | varchar | 3000 |  | √ | ' ' | 描述 |
+| 23 | fgraphid | 设计器图形ID | int8 | 64 |  | √ | 0 | 设计器图形ID |
+| 24 | fdiscard | 是否废弃 | bpchar | 1 |  | √ | '0' | 是否废弃 |
+| 25 | fpngid | 流程SVG资源ID | int8 | 64 |  | √ | 0 | 流程SVG资源ID |
+| 26 | ftype | 流程类型 | varchar | 30 |  | √ | ' ' | 流程类型,枚举: AuditFlow :审批流 BizFlow :业务流 |
+| 27 | fparentprocid | 父流程ID | int8 | 64 |  | √ | 0 | 父流程ID |
+| 28 | fprimarysubprocess | 子流程 | varchar | 30 |  | √ | ' ' | 子流程,枚举: sub :子流程 main :主流程 |
+| 29 | fnumber | 编码 | varchar | 255 |  | √ | ' ' | 编码 |
+| 30 | fbpmnxmlid | BPMNXMLID | int8 | 64 |  | √ | 0 | BPMNXMLID |
 
 ### 列规则定义
 
@@ -78,5 +80,5 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_wf_model_number |  | fnumber |
-| 2 | t_wf_model_pkey |  | fid |
+| 1 | t_wf_model_pkey |  | fid |
+| 2 | idx_wf_model_number |  | fnumber |

@@ -10,16 +10,16 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fcreatetime | 创建时间 | timestamp | 0 |  | √ | LOCALTIMESTAMP | 创建时间 |
-| 4 | fbizobject | 业务对象 | varchar | 50 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 4 | fbizobject | 业务对象 | varchar | 50 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 5 | fdisabledate | fdisabledate | timestamp | 0 |  |  | null |  |
 | 6 | fdisablerid | fdisablerid | int8 | 64 |  |  | null |  |
 | 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 8 | fappid | 所属应用 | varchar | 50 |  | √ | ' ' | 业务应用实体 bos_devportal_bizapp |
+| 8 | fappid | 所属应用 | varchar | 50 |  | √ | ' ' | [业务应用实体 bos_devportal_bizapp](../mdl_files/bos_devportal_bizapp.md) |
 | 9 | fstatus | 数据状态 | bpchar | 1 |  | √ | '0' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 10 | fprimitivetype | 原生类型 | varchar | 20 |  | √ | ' ' | 原生类型,枚举: string :字符串 boolean :布尔 date :日期 number :数值 object :对象 array :集合 |
-| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 13 | fmessagetype | 消息类型 | varchar | 20 |  | √ | ' ' | 消息类型,枚举: primitivetype :原生消息类型 bizobjecttype :业务对象消息类型 customtype :自定义消息类型 |
 | 14 | fenable | 使用状态 | bpchar | 1 |  | √ | '0' | 使用状态,枚举: 0 :禁用 1 :可用 |
@@ -116,7 +116,7 @@
 | 6 | fseq | 分录行号 | int8 | 64 |  |  | null | 分录行号 |
 | 7 | maximum | maximum | varchar | 50 |  |  | null |  |
 | 8 | fpattern | 正则表达式 | varchar | 200 |  | √ | ' ' | 正则表达式 |
-| 9 | fproptype | 属性类型 | int8 | 64 |  |  | null | API消息类型 open_messagetype |
+| 9 | fproptype | 属性类型 | int8 | 64 |  |  | null | [API消息类型 open_messagetype](../open_files/open_messagetype.md) |
 | 10 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 11 | minimum | minimum | varchar | 50 |  |  | null |  |
 

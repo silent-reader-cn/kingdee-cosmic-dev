@@ -18,7 +18,7 @@
 | 7 | fmunualsel | 手工选择 | varchar | 50 |  | √ | ' ' | 手工选择 |
 | 8 | fdataselection | 数据选择方式 | varchar | 50 |  | √ | ' ' | 数据选择方式,枚举: A :过滤条件选择 B :手工选择 |
 | 9 | fexportfilters_tag | 过滤条件存储_详情 | text | 0 |  |  | null | 过滤条件存储_详情 |
-| 10 | fitem | 配置项名称 | int8 | 64 |  | √ | 0 | 传输对象 iptm_ct_configitems |
+| 10 | fitem | 配置项名称 | int8 | 64 |  | √ | 0 | [传输对象 iptm_ct_configitems](../iptm_files/iptm_ct_configitems.md) |
 | 11 | fparententryid | fparententryid | int8 | 64 |  | √ | 0 | pid |
 | 12 | fentryremark | 备注 | varchar | 500 |  | √ | ' ' | 备注 |
 | 13 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
@@ -79,8 +79,8 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 方案名称 | varchar | 50 |  | √ | ' ' | 方案名称 |
 | 3 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 5 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 5 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 7 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 8 | fremarks | 备注 | varchar | 500 |  | √ | ' ' | 备注 |

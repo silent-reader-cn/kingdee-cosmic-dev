@@ -1,5 +1,36 @@
 # WebAPI登记-isc_apic_webapi
 
+## 断言-子表 t_iscb_assert_entryentity
+
+- **表名称：** 断言-子表
+- **表名：** t_iscb_assert_entryentity
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fassert_failed_content | 断言失败提示 | varchar | 255 |  | √ | ' ' | 断言失败提示 |
+| 3 | fassert_name | 断言名称 | varchar | 100 |  | √ | ' ' | 断言名称 |
+| 4 | fassert_condition | 断言表达式 | varchar | 1024 |  | √ | ' ' | 断言表达式 |
+| 5 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
+| 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fentryid | fentryid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | pk_t_iscb_assert_entryentity |  | fentryid |
+| 2 | idx_iscb_assert_entryentity_0 |  | fid |
+
+---
+
 ## WebAPI登记-多语言表 t_iscb_apic_webapi_l
 
 - **表名称：** WebAPI登记-多语言表
@@ -209,7 +240,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fgroupid | 数据源 | int8 | 64 |  | √ | 0 | 数据源管理 isc_data_source |
+| 2 | fgroupid | 数据源 | int8 | 64 |  | √ | 0 | [数据源管理 isc_data_source](../iscb_files/isc_data_source.md) |
 | 3 | fmethod |  | varchar | 50 |  | √ | ' ' | ,枚举: GET :GET POST :POST HEAD :HEAD OPTIONS :OPTIONS PUT :PUT DELETE :DELETE TRACE :TRACE PATCH :PATCH |
 | 4 | fsourceapp | 所属应用 | varchar | 50 |  | √ | ' ' | 所属应用 |
 | 5 | frecord_log | 记录API调用日志 | bpchar | 1 |  | √ | '0' | 记录API调用日志 |
@@ -218,29 +249,30 @@
 | 8 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 9 | fauth_required | 需要授权 | bpchar | 1 |  | √ | '0' | 需要授权 |
 | 10 | fnot_publish | 不发布到开放平台 | bpchar | 1 |  | √ | '1' | 不发布到开放平台 |
-| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 13 | fnamespace | 命名空间 | varchar | 255 |  | √ | ' ' | 命名空间 |
-| 14 | fwsinputparam | 输入参数名 | varchar | 150 |  | √ | ' ' | 输入参数名 |
-| 15 | fis_multipart | multipart/form-data | bpchar | 1 |  | √ | '0' | multipart/form-data |
-| 16 | fin_digest | API参数摘要模板 | varchar | 100 |  | √ | ' ' | API参数摘要模板 |
-| 17 | ftimeout | 超时时长 | int8 | 64 |  | √ | 0 | 超时时长 |
-| 18 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
-| 19 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 20 | fcharset | 字符集 | varchar | 50 |  | √ | ' ' | 字符集 |
-| 21 | furl_prefix | URL前缀 | varchar | 255 |  | √ | ' ' | URL前缀 |
-| 22 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 23 | fscript_mode | 脚本模式 | bpchar | 1 |  | √ | '0' | 脚本模式 |
-| 24 | fout_digest | API结果摘要模板 | varchar | 100 |  | √ | ' ' | API结果摘要模板 |
-| 25 | fomit_empty_params | 忽略空参数 | bpchar | 1 |  | √ | '0' | 忽略空参数 |
-| 26 | fopenapi_version | 开放平台版本 | varchar | 10 |  | √ | ' ' | 开放平台版本,枚举: 2 :2.0 1 :1.0 |
-| 27 | finvoke_script_tag | 调用脚本_详情 | text | 0 |  |  | null | 调用脚本_详情 |
-| 28 | furl_path | URL路径 | varchar | 255 |  | √ | ' ' | URL路径 |
-| 29 | finvoke_script | 调用脚本 | varchar | 255 |  | √ | ' ' | 调用脚本 |
-| 30 | fconn_type | 连接类型 | varchar | 36 |  | √ | ' ' | 连接类型 isc_connection_type |
-| 31 | fenable | 使用状态 | varchar | 30 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 32 | fnumber | 编码 | varchar | 255 |  | √ | ' ' | 编码 |
-| 33 | fwsoutputparam | 输出参数名 | varchar | 150 |  | √ | ' ' | 输出参数名 |
+| 14 | fschema_category | 分类 | int8 | 64 |  | √ | 0 | [自定义分类 isc_schema_category](../iscb_files/isc_schema_category.md) |
+| 15 | fwsinputparam | 输入参数名 | varchar | 150 |  | √ | ' ' | 输入参数名 |
+| 16 | fis_multipart | multipart/form-data | bpchar | 1 |  | √ | '0' | multipart/form-data |
+| 17 | fin_digest | API参数摘要模板 | varchar | 100 |  | √ | ' ' | API参数摘要模板 |
+| 18 | ftimeout | 超时时长 | int8 | 64 |  | √ | 0 | 超时时长 |
+| 19 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
+| 20 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 21 | fcharset | 字符集 | varchar | 50 |  | √ | ' ' | 字符集 |
+| 22 | furl_prefix | URL前缀 | varchar | 255 |  | √ | ' ' | URL前缀 |
+| 23 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 24 | fscript_mode | 脚本模式 | bpchar | 1 |  | √ | '0' | 脚本模式 |
+| 25 | fout_digest | API结果摘要模板 | varchar | 100 |  | √ | ' ' | API结果摘要模板 |
+| 26 | fomit_empty_params | 忽略空参数 | bpchar | 1 |  | √ | '0' | 忽略空参数 |
+| 27 | fopenapi_version | 开放平台版本 | varchar | 10 |  | √ | ' ' | 开放平台版本,枚举: 2 :2.0 1 :1.0 |
+| 28 | finvoke_script_tag | 调用脚本_详情 | text | 0 |  |  | null | 调用脚本_详情 |
+| 29 | furl_path | URL路径 | varchar | 255 |  | √ | ' ' | URL路径 |
+| 30 | finvoke_script | 调用脚本 | varchar | 255 |  | √ | ' ' | 调用脚本 |
+| 31 | fconn_type | 连接类型 | varchar | 36 |  | √ | ' ' | [连接类型 isc_connection_type](../iscb_files/isc_connection_type.md) |
+| 32 | fenable | 使用状态 | varchar | 30 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 33 | fnumber | 编码 | varchar | 255 |  | √ | ' ' | 编码 |
+| 34 | fwsoutputparam | 输出参数名 | varchar | 150 |  | √ | ' ' | 输出参数名 |
 
 ### 列规则定义
 

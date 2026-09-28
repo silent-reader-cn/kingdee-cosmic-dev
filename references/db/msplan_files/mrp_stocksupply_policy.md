@@ -12,7 +12,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fintegerfield | 供货优先级 | int8 | 64 |  | √ | 0 | 供货优先级 |
 | 3 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 4 | fstorageorgid | 库存组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 4 | fstorageorgid | 库存组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 6 | fdecimalfield | 库存可供比例 | numeric | 23 | 10 | √ | 0.0000000000 | 库存可供比例 |
 
@@ -42,13 +42,13 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fpriority | 供货优先级 | int8 | 64 |  | √ | 0 | 供货优先级 |
-| 3 | fstocknumberid | 仓库编码 | int8 | 64 |  | √ | 0 | 仓库 bd_warehouse |
+| 3 | fstocknumberid | 仓库编码 | int8 | 64 |  | √ | 0 | [仓库 bd_warehouse](../sbd_files/bd_warehouse.md) |
 | 4 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 5 | fiswastewh | 三品库 | bpchar | 1 |  | √ | '0' | 三品库 |
 | 6 | fstorageaddress | fstorageaddress | varchar | 50 |  | √ | ' ' |  |
 | 7 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 8 | fstockorgid | 库存组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 9 | fstockindexid | 仓位 | int8 | 64 |  | √ | 0 | 仓位 bd_location |
+| 8 | fstockorgid | 库存组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 9 | fstockindexid | 仓位 | int8 | 64 |  | √ | 0 | [仓位 bd_location](../sbd_files/bd_location.md) |
 
 ### 列规则定义
 
@@ -76,7 +76,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fismrp | 参与MRP标识 | bpchar | 1 |  | √ | '0' | 参与MRP标识 |
-| 3 | fstocktypeid | 编码 | int8 | 64 |  | √ | 0 | 库存类型 bd_invtype |
+| 3 | fstocktypeid | 编码 | int8 | 64 |  | √ | 0 | [库存类型 bd_invtype](../sbd_files/bd_invtype.md) |
 | 4 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 
@@ -105,15 +105,15 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fmaterialorgid | 库存组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fmaterialorgid | 库存组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fpriority | 供货优先级 | int8 | 64 |  | √ | 0 | 供货优先级 |
 | 4 | fparentbasedatafield | fparentbasedatafield | int8 | 64 |  | √ | 0 |  |
 | 5 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 6 | fparententryid | fparententryid | int8 | 64 |  | √ | 0 | pid |
-| 7 | fstockid | 仓库编码 | int8 | 64 |  | √ | 0 | 仓库 bd_warehouse |
-| 8 | fmaterielid | 物料编码 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 7 | fstockid | 仓库编码 | int8 | 64 |  | √ | 0 | [仓库 bd_warehouse](../sbd_files/bd_warehouse.md) |
+| 8 | fmaterielid | 物料编码 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 9 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 10 | fstockindexid | 仓位 | int8 | 64 |  | √ | 0 | 仓位 bd_location |
+| 10 | fstockindexid | 仓位 | int8 | 64 |  | √ | 0 | [仓位 bd_location](../sbd_files/bd_location.md) |
 | 11 | fstockratio | 库存可供比例 | numeric | 23 | 10 | √ | 0.0000000000 | 库存可供比例 |
 
 ### 列规则定义
@@ -141,18 +141,18 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreateorgid | 需求组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fcreateorgid | 需求组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fuserorg | fuserorg | int8 | 64 |  | √ | 0 |  |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 6 | fbodtime | 运输周期（天） | int4 | 32 |  | √ | 0 | 运输周期（天） |
-| 7 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 7 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | fstocksetup | 仓库设置选项 | varchar | 30 |  | √ | ' ' | 仓库设置选项,枚举: 1 :全部仓库 3 :不参与MRP运算仓库 2 :参与MRP运算仓库 |
-| 9 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 9 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 11 | fctrlstrategy | 控制策略 | varchar | 30 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
 | 12 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 15 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 16 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
@@ -201,8 +201,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_t_mrp_stocksupply_u_uo |  | fuseorgid |
-| 2 | t_mrp_stocksupply_u_pkey |  | fdataid,fuseorgid |
+| 1 | t_mrp_stocksupply_u_pkey |  | fdataid,fuseorgid |
+| 2 | idx_t_mrp_stocksupply_u_uo |  | fuseorgid |
 
 ---
 
@@ -272,7 +272,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fismrp | 参与MRP标识 | bpchar | 1 |  | √ | '0' | 参与MRP标识 |
-| 3 | fstocktypeid | 编码 | int8 | 64 |  | √ | 0 | 库存状态 bd_invstatus |
+| 3 | fstocktypeid | 编码 | int8 | 64 |  | √ | 0 | [库存状态 bd_invstatus](../sbd_files/bd_invstatus.md) |
 | 4 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 

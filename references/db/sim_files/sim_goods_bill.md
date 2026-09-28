@@ -18,7 +18,7 @@
 | 7 | fdate | 日期 | timestamp | 0 |  |  | null | 日期 |
 | 8 | famount | 金额 | numeric | 23 | 10 | √ | 0.0000000000 | 金额 |
 | 9 | finvoicenum | 发票数量 | int8 | 64 |  | √ | 0 | 发票数量 |
-| 10 | forg | 组织 | int8 | 64 |  | √ | 0 | 企业管理 bdm_org |
+| 10 | forg | 组织 | int8 | 64 |  | √ | 0 | [企业管理 bdm_org](../bdm_files/bdm_org.md) |
 | 11 | funit | 计量单位 | varchar | 50 |  | √ | ' ' | 计量单位 |
 
 ### 列规则定义

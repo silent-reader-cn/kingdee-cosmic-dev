@@ -18,7 +18,7 @@
 | 7 | fcalculated | 是否已算余额 | bpchar | 1 |  | √ | '0' | 是否已算余额 |
 | 8 | forgid | 核算主体 | int8 | 64 |  | √ | 0 | 核算主体 |
 | 9 | famount | 本期发生 | numeric | 24 | 6 | √ | 0.000000 | 本期发生 |
-| 10 | fbookid | 账簿 | int8 | 64 |  | √ | 0 | 账簿 gl_accountbook |
+| 10 | fbookid | 账簿 | int8 | 64 |  | √ | 0 | [账簿 gl_accountbook](../gl_files/gl_accountbook.md) |
 | 11 | fbooktypeid | 账簿类型 | int8 | 64 |  | √ | 0 | 账簿类型 |
 | 12 | foperation | 执行操作 | varchar | 30 |  | √ | ' ' | 执行操作,枚举: submit :提交 enable :生效 disable :作废 delete :删除 |
 | 13 | fcount | 凭证分录数 | int8 | 64 |  | √ | 0 | 凭证分录数 |

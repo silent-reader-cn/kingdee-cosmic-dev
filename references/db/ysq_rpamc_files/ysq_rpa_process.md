@@ -44,7 +44,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | null | id |
 | 2 | fk_ysq_studio_ver | 设计器版本 | varchar | 64 |  | √ | ' ' | 设计器版本 |
 | 3 | fk_ysq_version_count | 版本数 | int8 | 64 |  |  | null | 版本数 |
-| 4 | forgid | 组织 | int8 | 64 |  |  | null | 业务单元 bos_org |
+| 4 | forgid | 组织 | int8 | 64 |  |  | null | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | fk_ysq_publish_time | 流程发布时间 | timestamp | 0 |  |  | null | 流程发布时间 |
 | 6 | fk_ysq_fail_try_times | 失败重试次数 | int8 | 64 |  |  | null | 失败重试次数 |
 | 7 | fk_ysq_proc_ver | 流程版本 | varchar | 64 |  | √ | ' ' | 流程版本 |
@@ -55,7 +55,7 @@
 | 12 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 13 | fk_ysq_dispatch_time | 调度数 | int8 | 64 |  |  | null | 调度数 |
 | 14 | fk_ysq_pending_timeout | 等待超时时间，分钟 | int8 | 64 |  |  | null | 等待超时时间，分钟 |
-| 15 | fcreatorid | 创建人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 15 | fcreatorid | 创建人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 16 | fk_ysq_proc_file | 流程文件 | varchar | 2000 |  | √ | ' ' | 流程文件 |
 | 17 | fk_ysq_key_words | 关键字(多个用空格) | varchar | 254 |  | √ | ' ' | 关键字(多个用空格) |
 | 18 | fk_ysq_param | ysq_param | varchar | 255 |  | √ | ' ' | ysq_param |
@@ -64,7 +64,7 @@
 | 21 | fk_ysq_proc_type | 流程类型 | varchar | 50 |  | √ | 'common' | 流程类型,枚举: common :普通 standard :标准 |
 | 22 | fbillno | 流程单据编号 | varchar | 32 |  | √ | ' ' | 流程单据编号 |
 | 23 | fk_ysq_proc_code | 流程编号 | varchar | 32 |  | √ | ' ' | 流程编号 |
-| 24 | fmodifierid | 修改人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 24 | fmodifierid | 修改人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 25 | fk_ysq_run_times | 任务运行次数 | int8 | 64 |  |  | null | 任务运行次数 |
 | 26 | fk_ysq_dev_user_alias | 开发者用户名 | varchar | 512 |  | √ | ' ' | 开发者用户名 |
 | 27 | fk_ysq_owner_user_alias | 所有者名称 | varchar | 512 |  | √ | ' ' | 所有者名称 |
@@ -79,7 +79,7 @@
 | 36 | fk_ysq_running_timeout | 运行超时时间，分钟 | int8 | 64 |  |  | null | 运行超时时间，分钟 |
 | 37 | fk_ysq_dev_user_fid | 开发者ID | int8 | 64 |  |  | null | 开发者ID |
 | 38 | fk_ysq_owner_user_fid | 所有者id | int8 | 64 |  |  | null | 所有者id |
-| 39 | fauditorid | 审核人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 39 | fauditorid | 审核人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

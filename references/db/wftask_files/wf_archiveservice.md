@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreator | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fcreator | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | farchivemsg | 消息通知 | text | 0 |  |  | null | 消息通知 |
 | 4 | farchenddate | 归档数据结束时间 | varchar | 100 |  | √ | ' ' | 归档数据结束时间,枚举: |
 | 5 | farchservicestartdate | 归档服务实际开始时间 | timestamp | 0 |  |  | null | 归档服务实际开始时间 |
@@ -27,7 +27,7 @@
 | 16 | fscheduletotalsum | 迭代归档数据总量 | int8 | 64 |  | √ | 0 | 迭代归档数据总量 |
 | 17 | fname | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
 | 18 | fdatabasezone | 归档库 | varchar | 100 |  | √ | ' ' | 归档库,枚举: |
-| 19 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 19 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 20 | farchserviceenddate | 归档服务结束时间 | timestamp | 0 |  |  | null | 归档服务结束时间 |
 | 21 | fstate | 归档状态 | varchar | 100 |  | √ | ' ' | 归档状态,枚举: archivewill :未开始 archiveing :归档中 archivefail :归档失败 archiveok :归档成功 |
 | 22 | fstartdate | 历史数据日期范围(以流程最终结束时间计算).开始 | timestamp | 0 |  |  | null | 历史数据日期范围(以流程最终结束时间计算).开始 |

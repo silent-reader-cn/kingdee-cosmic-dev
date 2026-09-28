@@ -4,7 +4,7 @@
 
 | 块 | 内容 | 规模 | 入口 |
 | :--- | :--- | :--- | :--- |
-| **块一 数据库** | 全量物理表结构（字段/列规则/索引） | 22769 张表 / 224 模块 | [db/_INDEX.md](./db/_INDEX.md) |
+| **块一 数据库** | 全量物理表结构（字段/列规则/索引） | 31547 张表 / 267 模块 | [db/_INDEX.md](./db/_INDEX.md) |
 | **块二 OpenAPI 手册** | 金蝶云社区开放平台官方手册 | 144 篇 / 8 分类 | [openapi/_INDEX.md](./openapi/_INDEX.md) |
 
 > 索引由 `scripts/build_index.py` 从 Markdown 自动生成，请勿手工编辑。
@@ -23,47 +23,47 @@ python scripts/search.py --list                              # 列出模块与�
 
 | 序号 | 模块 | 表数量 | 模块索引 |
 | :---: | :--- | ---: | :--- |
-| 1 | `src` | 1400 | [src_files/_INDEX.md](./db/src_files/_INDEX.md) |
-| 2 | `em` | 675 | [em_files/_INDEX.md](./db/em_files/_INDEX.md) |
-| 3 | `base` | 624 | [base_files/_INDEX.md](./db/base_files/_INDEX.md) |
-| 4 | `mpdm` | 618 | [mpdm_files/_INDEX.md](./db/mpdm_files/_INDEX.md) |
-| 5 | `srm` | 606 | [srm_files/_INDEX.md](./db/srm_files/_INDEX.md) |
-| 6 | `im` | 587 | [im_files/_INDEX.md](./db/im_files/_INDEX.md) |
-| 7 | `iscb` | 482 | [iscb_files/_INDEX.md](./db/iscb_files/_INDEX.md) |
-| 8 | `tccit` | 419 | [tccit_files/_INDEX.md](./db/tccit_files/_INDEX.md) |
-| 9 | `pbd` | 408 | [pbd_files/_INDEX.md](./db/pbd_files/_INDEX.md) |
-| 10 | `tcvat` | 407 | [tcvat_files/_INDEX.md](./db/tcvat_files/_INDEX.md) |
-| 11 | `plmsm` | 397 | [plmsm_files/_INDEX.md](./db/plmsm_files/_INDEX.md) |
-| 12 | `basedata` | 362 | [basedata_files/_INDEX.md](./db/basedata_files/_INDEX.md) |
-| 13 | `fmm` | 358 | [fmm_files/_INDEX.md](./db/fmm_files/_INDEX.md) |
-| 14 | `sfc` | 321 | [sfc_files/_INDEX.md](./db/sfc_files/_INDEX.md) |
-| 15 | `fa` | 313 | [fa_files/_INDEX.md](./db/fa_files/_INDEX.md) |
-| 16 | `sco` | 302 | [sco_files/_INDEX.md](./db/sco_files/_INDEX.md) |
-| 17 | `cas` | 300 | [cas_files/_INDEX.md](./db/cas_files/_INDEX.md) |
-| 18 | `cal` | 290 | [cal_files/_INDEX.md](./db/cal_files/_INDEX.md) |
-| 19 | `wf` | 279 | [wf_files/_INDEX.md](./db/wf_files/_INDEX.md) |
-| 20 | `gl` | 259 | [gl_files/_INDEX.md](./db/gl_files/_INDEX.md) |
-| 21 | `qcbd` | 256 | [qcbd_files/_INDEX.md](./db/qcbd_files/_INDEX.md) |
-| 22 | `mds` | 254 | [mds_files/_INDEX.md](./db/mds_files/_INDEX.md) |
-| 23 | `tdm` | 251 | [tdm_files/_INDEX.md](./db/tdm_files/_INDEX.md) |
-| 24 | `msplan` | 244 | [msplan_files/_INDEX.md](./db/msplan_files/_INDEX.md) |
-| 25 | `scp` | 242 | [scp_files/_INDEX.md](./db/scp_files/_INDEX.md) |
-| 26 | `ar` | 239 | [ar_files/_INDEX.md](./db/ar_files/_INDEX.md) |
-| 27 | `ifm` | 238 | [ifm_files/_INDEX.md](./db/ifm_files/_INDEX.md) |
-| 28 | `ssc` | 221 | [ssc_files/_INDEX.md](./db/ssc_files/_INDEX.md) |
-| 29 | `plmpm` | 219 | [plmpm_files/_INDEX.md](./db/plmpm_files/_INDEX.md) |
-| 30 | `pds` | 217 | [pds_files/_INDEX.md](./db/pds_files/_INDEX.md) |
-| 31 | `cts` | 207 | [cts_files/_INDEX.md](./db/cts_files/_INDEX.md) |
-| 32 | `pom` | 207 | [pom_files/_INDEX.md](./db/pom_files/_INDEX.md) |
-| 33 | `adm` | 205 | [adm_files/_INDEX.md](./db/adm_files/_INDEX.md) |
-| 34 | `ocdbd` | 204 | [ocdbd_files/_INDEX.md](./db/ocdbd_files/_INDEX.md) |
-| 35 | `mpm` | 200 | [mpm_files/_INDEX.md](./db/mpm_files/_INDEX.md) |
-| 36 | `ap` | 199 | [ap_files/_INDEX.md](./db/ap_files/_INDEX.md) |
-| 37 | `sm` | 190 | [sm_files/_INDEX.md](./db/sm_files/_INDEX.md) |
-| 38 | `mrp` | 189 | [mrp_files/_INDEX.md](./db/mrp_files/_INDEX.md) |
-| 39 | `tcret` | 183 | [tcret_files/_INDEX.md](./db/tcret_files/_INDEX.md) |
-| 40 | `xkbm` | 181 | [xkbm_files/_INDEX.md](./db/xkbm_files/_INDEX.md) |
-| … | 其余 184 个模块 | | 见 [db/_INDEX.md](./db/_INDEX.md) |
+| 1 | `src` | 2144 | [src_files/_INDEX.md](./db/src_files/_INDEX.md) |
+| 2 | `plmsm` | 979 | [plmsm_files/_INDEX.md](./db/plmsm_files/_INDEX.md) |
+| 3 | `em` | 815 | [em_files/_INDEX.md](./db/em_files/_INDEX.md) |
+| 4 | `srm` | 742 | [srm_files/_INDEX.md](./db/srm_files/_INDEX.md) |
+| 5 | `mpdm` | 704 | [mpdm_files/_INDEX.md](./db/mpdm_files/_INDEX.md) |
+| 6 | `base` | 680 | [base_files/_INDEX.md](./db/base_files/_INDEX.md) |
+| 7 | `im` | 680 | [im_files/_INDEX.md](./db/im_files/_INDEX.md) |
+| 8 | `pbd` | 525 | [pbd_files/_INDEX.md](./db/pbd_files/_INDEX.md) |
+| 9 | `iscb` | 493 | [iscb_files/_INDEX.md](./db/iscb_files/_INDEX.md) |
+| 10 | `tcvat` | 463 | [tcvat_files/_INDEX.md](./db/tcvat_files/_INDEX.md) |
+| 11 | `tccit` | 458 | [tccit_files/_INDEX.md](./db/tccit_files/_INDEX.md) |
+| 12 | `basedata` | 428 | [basedata_files/_INDEX.md](./db/basedata_files/_INDEX.md) |
+| 13 | `pur` | 368 | [pur_files/_INDEX.md](./db/pur_files/_INDEX.md) |
+| 14 | `fa` | 360 | [fa_files/_INDEX.md](./db/fa_files/_INDEX.md) |
+| 15 | `sfc` | 359 | [sfc_files/_INDEX.md](./db/sfc_files/_INDEX.md) |
+| 16 | `fmm` | 358 | [fmm_files/_INDEX.md](./db/fmm_files/_INDEX.md) |
+| 17 | `mpm` | 350 | [mpm_files/_INDEX.md](./db/mpm_files/_INDEX.md) |
+| 18 | `plmpm` | 342 | [plmpm_files/_INDEX.md](./db/plmpm_files/_INDEX.md) |
+| 19 | `cal` | 332 | [cal_files/_INDEX.md](./db/cal_files/_INDEX.md) |
+| 20 | `plmrm` | 328 | [plmrm_files/_INDEX.md](./db/plmrm_files/_INDEX.md) |
+| 21 | `pmm` | 325 | [pmm_files/_INDEX.md](./db/pmm_files/_INDEX.md) |
+| 22 | `xkbm` | 319 | [xkbm_files/_INDEX.md](./db/xkbm_files/_INDEX.md) |
+| 23 | `cas` | 317 | [cas_files/_INDEX.md](./db/cas_files/_INDEX.md) |
+| 24 | `sco` | 312 | [sco_files/_INDEX.md](./db/sco_files/_INDEX.md) |
+| 25 | `scp` | 301 | [scp_files/_INDEX.md](./db/scp_files/_INDEX.md) |
+| 26 | `gl` | 289 | [gl_files/_INDEX.md](./db/gl_files/_INDEX.md) |
+| 27 | `wf` | 289 | [wf_files/_INDEX.md](./db/wf_files/_INDEX.md) |
+| 28 | `qcbd` | 283 | [qcbd_files/_INDEX.md](./db/qcbd_files/_INDEX.md) |
+| 29 | `cts` | 276 | [cts_files/_INDEX.md](./db/cts_files/_INDEX.md) |
+| 30 | `tdm` | 272 | [tdm_files/_INDEX.md](./db/tdm_files/_INDEX.md) |
+| 31 | `cfm` | 271 | [cfm_files/_INDEX.md](./db/cfm_files/_INDEX.md) |
+| 32 | `pds` | 270 | [pds_files/_INDEX.md](./db/pds_files/_INDEX.md) |
+| 33 | `mds` | 269 | [mds_files/_INDEX.md](./db/mds_files/_INDEX.md) |
+| 34 | `ar` | 262 | [ar_files/_INDEX.md](./db/ar_files/_INDEX.md) |
+| 35 | `adm` | 261 | [adm_files/_INDEX.md](./db/adm_files/_INDEX.md) |
+| 36 | `ocdbd` | 254 | [ocdbd_files/_INDEX.md](./db/ocdbd_files/_INDEX.md) |
+| 37 | `msplan` | 250 | [msplan_files/_INDEX.md](./db/msplan_files/_INDEX.md) |
+| 38 | `sm` | 239 | [sm_files/_INDEX.md](./db/sm_files/_INDEX.md) |
+| 39 | `mrp` | 235 | [mrp_files/_INDEX.md](./db/mrp_files/_INDEX.md) |
+| 40 | `tcret` | 229 | [tcret_files/_INDEX.md](./db/tcret_files/_INDEX.md) |
+| … | 其余 227 个模块 | | 见 [db/_INDEX.md](./db/_INDEX.md) |
 
 ## 块二 OpenAPI 手册 · 分类概览
 

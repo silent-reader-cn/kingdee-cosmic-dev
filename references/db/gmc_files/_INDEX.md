@@ -10,7 +10,7 @@
 
 | 序号 | 数据库表名 | 中文名称 | 字段数 | 详细定义文件 |
 | :---: | :--- | :--- | :---: | :--- |
-| 1 | `t_bd_classstandard` | 商品分类标准-主表 | 23 | [bd_goodsclassstandard.md](./bd_goodsclassstandard.md) |
+| 1 | `t_bd_classstandard` | 商品分类标准-主表 | 25 | [bd_goodsclassstandard.md](./bd_goodsclassstandard.md) |
 | 2 | `t_bd_classstandard_l` | 商品分类标准-多语言表 | 5 | [bd_goodsclassstandard.md](./bd_goodsclassstandard.md) |
 | 3 | `t_bd_classstandard_m` | 商品分类标准-使用范围位图表 | 2 | [bd_goodsclassstandard.md](./bd_goodsclassstandard.md) |
 | 4 | `t_bd_classstandard_u` | 商品分类标准-使用范围表 | 3 | [bd_goodsclassstandard.md](./bd_goodsclassstandard.md) |

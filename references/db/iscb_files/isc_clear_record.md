@@ -13,7 +13,7 @@
 | 2 | fremark | 备注 | varchar | 100 |  | √ | ' ' | 备注 |
 | 3 | fstate | 状态 | varchar | 20 |  | √ | ' ' | 状态,枚举: running :正在运行 failed :失败 complete :完成 aborted :中断 cancelled :撤销 |
 | 4 | ftotal_count | 总条数 | int8 | 64 |  | √ | 0 | 总条数 |
-| 5 | foperator_id | 操作人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | foperator_id | 操作人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | fremark_tag | 备注_详情 | text | 0 |  |  | null | 备注_详情 |
 | 7 | fend_time | 结束时间 | timestamp | 0 |  |  | null | 结束时间 |
 | 8 | fstart_time | 操作时间 | timestamp | 0 |  |  | null | 操作时间 |

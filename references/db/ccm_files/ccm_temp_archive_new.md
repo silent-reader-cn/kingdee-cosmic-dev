@@ -33,52 +33,6 @@
 
 ---
 
-## 临时档案设置-子表 t_ccm_temparchive_entity
-
-- **表名称：** 临时档案设置-子表
-- **表名：** t_ccm_temparchive_entity
-
-### 表格列定义
-
-| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fexratetable | 汇率表 | int8 | 64 |  | √ | 0 | 汇率表 bd_exratetable |
-| 3 | fsinglecurcontrol | 币别隔离 | bpchar | 1 |  | √ | ' ' | 币别隔离 |
-| 4 | forgscope | 控制范围 | varchar | 50 |  | √ | ' ' | 控制范围,枚举: GLOBAL :集团范围 SINGLE :业务组织范围 |
-| 5 | fvaliddatebegindate | 有效期范围.开始 | timestamp | 0 |  |  | null | 有效期范围.开始 |
-| 6 | fcurrency | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
-| 7 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 8 | fmodifierfield | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 9 | ftempquota | 临时信用额度 | numeric | 23 | 10 | √ | 0 | 临时信用额度 |
-| 10 | froleid0 | 维度成员值0 | int8 | 64 |  | √ | 0 | 客户 bd_customer |
-| 11 | ftempoverdueamt | 临时逾期额度 | numeric | 23 | 10 | √ | 0 | 临时逾期额度 |
-| 12 | fmodifydatefield | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
-| 13 | froleid2 | 维度成员值2 | int8 | 64 |  | √ | 0 | 客户 bd_customer |
-| 14 | froleid1 | 维度成员值1 | int8 | 64 |  | √ | 0 | 客户 bd_customer |
-| 15 | froleid3 | 维度成员值3 | int8 | 64 |  | √ | 0 | 客户 bd_customer |
-| 16 | fe_remark | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
-| 17 | fscheme | 信用控制方案 | int8 | 64 |  | √ | 0 | 信用控制方案 ccm_schemes |
-| 18 | farchiveids | 普通档案ID列表 | varchar | 200 |  | √ | ' ' | 普通档案ID列表 |
-| 19 | ftempday | 临时信用天数 | int8 | 64 |  | √ | 0 | 临时信用天数 |
-| 20 | fvaliddateenddate | 有效期范围.结束 | timestamp | 0 |  |  | null | 有效期范围.结束 |
-| 21 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-
-### 列规则定义
-
-| 序号 | 键编码 | 列字段 |
-| :--- | :--- | :--- |
-| 1 | fentryid | fentryid |
-
-### 索引定义
-
-| 序号 | 索引名 | 唯一 | 列字段 |
-| :--- | :--- | :--- | :--- |
-| 1 | idx_ccm_temparchive_entity_fk |  | fid |
-| 2 | pk_t_ccm_temparchive_entity |  | fentryid |
-
----
-
 ## 授信组织-多选基础资料表 t_ccm_temparchive_orgs
 
 - **表名称：** 授信组织-多选基础资料表
@@ -88,7 +42,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 2 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 | 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 
@@ -198,6 +152,54 @@
 
 ---
 
+## 临时档案设置-子表 t_ccm_temparchive_entity
+
+- **表名称：** 临时档案设置-子表
+- **表名：** t_ccm_temparchive_entity
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fexratetable | 汇率表 | int8 | 64 |  | √ | 0 | [汇率表 bd_exratetable](../base_files/bd_exratetable.md) |
+| 3 | ftemparchiveids | 生成的临时档案ID列表 | varchar | 200 |  | √ | ' ' | 生成的临时档案ID列表 |
+| 4 | fsinglecurcontrol | 币种隔离 | bpchar | 1 |  | √ | ' ' | 币种隔离 |
+| 5 | forgscope | 控制范围 | varchar | 50 |  | √ | ' ' | 控制范围,枚举: GLOBAL :集团范围 SINGLE :业务组织范围 |
+| 6 | fvaliddatebegindate | 有效期范围.开始 | timestamp | 0 |  |  | null | 有效期范围.开始 |
+| 7 | fcurrency | 币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
+| 8 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
+| 9 | fmodifierfield | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 10 | ftempquota | 临时信用额度 | numeric | 23 | 10 | √ | 0 | 临时信用额度 |
+| 11 | froleid0 | 维度成员值0 | int8 | 64 |  | √ | 0 | 客户 bd_customer |
+| 12 | ftempoverdueamt | 临时逾期额度 | numeric | 23 | 10 | √ | 0 | 临时逾期额度 |
+| 13 | ftemsinglebal | 临时单笔限额 | numeric | 23 | 10 | √ | 0 | 临时单笔限额 |
+| 14 | fmodifydatefield | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
+| 15 | froleid2 | 维度成员值2 | int8 | 64 |  | √ | 0 | 客户 bd_customer |
+| 16 | froleid1 | 维度成员值1 | int8 | 64 |  | √ | 0 | 客户 bd_customer |
+| 17 | froleid3 | 维度成员值3 | int8 | 64 |  | √ | 0 | 客户 bd_customer |
+| 18 | fe_remark | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
+| 19 | fscheme | 信用控制方案 | int8 | 64 |  | √ | 0 | [信用控制方案 ccm_schemes](../ccm_files/ccm_schemes.md) |
+| 20 | farchiveids | 普通档案ID列表 | varchar | 200 |  | √ | ' ' | 普通档案ID列表 |
+| 21 | ftempday | 临时信用天数 | int8 | 64 |  | √ | 0 | 临时信用天数 |
+| 22 | fvaliddateenddate | 有效期范围.结束 | timestamp | 0 |  |  | null | 有效期范围.结束 |
+| 23 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fentryid | fentryid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_ccm_temparchive_entity_fk |  | fid |
+| 2 | pk_t_ccm_temparchive_entity |  | fentryid |
+
+---
+
 ## 临时信用档案申请-主表 t_ccm_temp_archive_new
 
 - **表名称：** 临时信用档案申请-主表
@@ -209,20 +211,20 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fremark | 备注 | varchar | 50 |  | √ | ' ' | 备注 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fbillstatus | 单据状态 | varchar | 50 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 6 | forgid | 申请组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | forgid | 申请组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | froletype2 | 维度成员类型2 | varchar | 50 |  | √ | ' ' | 维度成员类型2,枚举: bd_customer :客户 ccm_cusunicode :客户统一码 bd_material :物料 bos_org :业务单元 bd_operatorgroup :业务组 bd_supplier :供应商 bos_adminorg :行政组织 bd_materialgroup :物料分类 bos_user :人员 |
 | 8 | froletype3 | 维度成员类型3 | varchar | 50 |  | √ | ' ' | 维度成员类型3,枚举: bd_customer :客户 ccm_cusunicode :客户统一码 bd_material :物料 bos_org :业务单元 bd_operatorgroup :业务组 bd_supplier :供应商 bos_adminorg :行政组织 bd_materialgroup :物料分类 bos_user :人员 |
 | 9 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
 | 10 | froletype0 | 维度成员类型0 | varchar | 50 |  | √ | ' ' | 维度成员类型0,枚举: bd_customer :客户 ccm_cusunicode :客户统一码 bd_material :物料 bos_org :业务单元 bd_operatorgroup :业务组 bd_supplier :供应商 bos_adminorg :行政组织 bd_materialgroup :物料分类 bos_user :人员 |
 | 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 12 | froletype1 | 维度成员类型1 | varchar | 50 |  | √ | ' ' | 维度成员类型1,枚举: bd_customer :客户 ccm_cusunicode :客户统一码 bd_material :物料 bos_org :业务单元 bd_operatorgroup :业务组 bd_supplier :供应商 bos_adminorg :行政组织 bd_materialgroup :物料分类 bos_user :人员 |
-| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | fbillno | 单据编号 | varchar | 30 |  | √ | ' ' | 单据编号 |
-| 15 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 16 | fdimension | 信控维度 | int8 | 64 |  | √ | 0 | 信控维度 ccm_dimension |
+| 15 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 16 | fdimension | 信控维度 | int8 | 64 |  | √ | 0 | [信控维度 ccm_dimension](../ccm_files/ccm_dimension.md) |
 
 ### 列规则定义
 

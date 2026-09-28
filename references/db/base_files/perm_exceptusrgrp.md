@@ -10,8 +10,8 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | varchar | 18 |  | √ | ' ' | id |
-| 2 | fusergroupid | 用户组 | int8 | 64 |  | √ | 0 | 用户组 bos_usergroup |
-| 3 | foperationruleobjid | 特殊操作权限分配对象 | varchar | 18 |  | √ | ' ' | 特殊操作权限分配对象 perm_operationruleobj |
+| 2 | fusergroupid | 用户组 | int8 | 64 |  | √ | 0 | [用户组 bos_usergroup](../base_files/bos_usergroup.md) |
+| 3 | foperationruleobjid | 特殊操作权限分配对象 | varchar | 18 |  | √ | ' ' | [特殊操作权限分配对象 perm_operationruleobj](../base_files/perm_operationruleobj.md) |
 
 ### 列规则定义
 

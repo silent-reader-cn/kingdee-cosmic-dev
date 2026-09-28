@@ -40,9 +40,9 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fmaterialseq | 生产领料单对应物料及序列号 | varchar | 255 |  | √ | ' ' | 生产领料单对应物料及序列号 |
-| 3 | freplemateralid | 替换下来的部件编码 | int8 | 64 |  | √ | 0 | 物料库存信息 bd_materialinventoryinfo |
+| 3 | freplemateralid | 替换下来的部件编码 | int8 | 64 |  | √ | 0 | [物料库存信息 bd_materialinventoryinfo](../sbd_files/bd_materialinventoryinfo.md) |
 | 4 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 5 | fmodifierfield | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | fmodifierfield | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | frepleacedate | 更换日期 | timestamp | 0 |  |  | null | 更换日期 |
 | 7 | fpartdescription | 部件描述 | varchar | 255 |  | √ | ' ' | 部件描述 |
 | 8 | frepleseq | 替换下来的部件序列号 | varchar | 50 |  | √ | ' ' | 替换下来的部件序列号 |
@@ -178,19 +178,19 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fcustomer | 客户 | int8 | 64 |  | √ | 0 | 客户 bd_customer |
-| 4 | fprojectid | 项目 | int8 | 64 |  | √ | 0 | 项目 pmpd_project |
+| 4 | fprojectid | 项目 | int8 | 64 |  | √ | 0 | [项目 pmpd_project](../fmm_files/pmpd_project.md) |
 | 5 | fbillstatus | 单据状态 | varchar | 50 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 7 | fmaterialid | 检修设备注册号 | int8 | 64 |  | √ | 0 | 物料检修信息 mpdm_materialmtcinfo |
-| 8 | forgid | 生产组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 7 | fmaterialid | 检修设备注册号 | int8 | 64 |  | √ | 0 | [物料检修信息 mpdm_materialmtcinfo](../mpdm_files/mpdm_materialmtcinfo.md) |
+| 8 | forgid | 生产组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 9 | fauditdate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
 | 10 | forderno | 检修工单号 | varchar | 50 |  | √ | ' ' | 检修工单号 |
 | 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fbillno | 单据编号 | varchar | 30 |  | √ | ' ' | 单据编号 |
-| 14 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

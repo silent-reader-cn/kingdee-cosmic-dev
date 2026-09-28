@@ -12,7 +12,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fitemno | 行号 | int8 | 64 |  | √ | 0 | 行号 |
 | 3 | fftsde | 分摊所得额 | numeric | 23 | 10 | √ | 0.0000000000 | 分摊所得额 |
-| 4 | ftaxorg | 组织id | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 4 | ftaxorg | 组织id | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | fjmse | 减免税额 | numeric | 23 | 10 | √ | 0.0000000000 | 减免税额 |
 | 6 | fskssqz | 结束日期 | timestamp | 0 |  |  | null | 结束日期 |
 | 7 | fftrate | 分摊比例 | numeric | 23 | 10 | √ | 0.0000000000 | 分摊比例 |

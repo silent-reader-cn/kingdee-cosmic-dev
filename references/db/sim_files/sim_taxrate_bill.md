@@ -14,7 +14,7 @@
 | 3 | finvoicetype | 发票种类 | varchar | 30 |  | √ | ' ' | 发票种类,枚举: 028 :电子专票 026 :电子普票 |
 | 4 | fsalername | 销方名称 | varchar | 50 |  | √ | ' ' | 销方名称 |
 | 5 | fdate | 日期 | timestamp | 0 |  |  | null | 日期 |
-| 6 | forg | 组织 | int8 | 64 |  | √ | 0 | 企业管理 bdm_org |
+| 6 | forg | 组织 | int8 | 64 |  | √ | 0 | [企业管理 bdm_org](../bdm_files/bdm_org.md) |
 | 7 | fsalertaxno | 销方税号 | varchar | 50 |  | √ | ' ' | 销方税号 |
 | 8 | finvoicenature | 发票性质 | varchar | 30 |  | √ | ' ' | 发票性质,枚举: 0 :蓝票 1 :红票 |
 

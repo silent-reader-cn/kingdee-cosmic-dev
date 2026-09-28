@@ -111,47 +111,48 @@
 | 26 | ftaxamount | ftaxamount | numeric | 23 | 10 | √ | 0 |  |
 | 27 | fdctrate | fdctrate | numeric | 23 | 10 | √ | 0 |  |
 | 28 | fprojectid | fprojectid | int8 | 64 |  | √ | 0 |  |
-| 29 | funitid | funitid | int8 | 64 |  | √ | 0 |  |
-| 30 | fpackagename | fpackagename | varchar | 50 |  | √ | ' ' |  |
-| 31 | fdescription | 标的描述 | varchar | 1024 |  | √ | ' ' | 标的描述 |
-| 32 | fhistoryprice | fhistoryprice | numeric | 23 | 10 | √ | 0 |  |
-| 33 | fsysresult | fsysresult | bpchar | 1 |  | √ | ' ' |  |
-| 34 | fsupplierid | fsupplierid | int8 | 64 |  | √ | 0 |  |
-| 35 | fsuppliertype | fsuppliertype | varchar | 30 |  | √ | ' ' |  |
-| 36 | ftax | ftax | numeric | 23 | 10 | √ | 0 |  |
-| 37 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 38 | fisdiscarded | fisdiscarded | bpchar | 1 |  | √ | '0' |  |
-| 39 | frank | frank | int8 | 64 |  | √ | 0 |  |
-| 40 | fmaterialid | 标的编码 | int8 | 64 |  | √ | 0 | 物料 bd_material |
-| 41 | fbizamount | fbizamount | numeric | 23 | 10 | √ | 0 |  |
-| 42 | fpreresult | fpreresult | bpchar | 1 |  | √ | ' ' |  |
-| 43 | fprecfmqty | fprecfmqty | numeric | 23 | 10 | √ | 0 |  |
-| 44 | fentrystatus | 当前状态 | bpchar | 1 |  | √ | ' ' | 当前状态,枚举: A :待报价 B :已报价 C :已开标 D :已关闭 E :已定标 F :已签约 G :暂存 H :已弃标的 I :已废标 J :已终止 |
-| 45 | ftaxprice | ftaxprice | numeric | 23 | 10 | √ | 0 |  |
-| 46 | fsuppliercode | fsuppliercode | bpchar | 50 |  | √ | ' ' |  |
-| 47 | famount | famount | numeric | 23 | 10 | √ | 0 |  |
-| 48 | fprice | fprice | numeric | 23 | 10 | √ | 0 |  |
-| 49 | ftranscost | ftranscost | numeric | 23 | 10 | √ | 0 |  |
-| 50 | ffeerate | ffeerate | numeric | 23 | 10 | √ | 0 |  |
-| 51 | fbidmaterialid | fbidmaterialid | int8 | 64 |  | √ | 0 |  |
-| 52 | fquotation | fquotation | bpchar | 1 |  | √ | '0' |  |
-| 53 | fcostdetail | fcostdetail | bpchar | 1 |  | √ | '0' |  |
-| 54 | fpkgamount | fpkgamount | numeric | 23 | 10 | √ | 0 |  |
-| 55 | fdistrictid | fdistrictid | int8 | 64 |  | √ | 0 |  |
-| 56 | fturns | fturns | varchar | 2 |  | √ | ' ' |  |
-| 57 | fpkgtaxamount | fpkgtaxamount | numeric | 23 | 10 | √ | 0 |  |
-| 58 | fdctamount | fdctamount | numeric | 23 | 10 | √ | 0 |  |
-| 59 | fisdecision | fisdecision | bpchar | 1 |  | √ | '0' |  |
-| 60 | forderratio | forderratio | numeric | 23 | 10 | √ | 0 |  |
-| 61 | fparentid | fparentid | varchar | 50 |  | √ | ' ' |  |
-| 62 | fsuppliername | fsuppliername | varchar | 100 |  | √ | ' ' |  |
-| 63 | fdecrease | fdecrease | numeric | 23 | 10 | √ | 0 |  |
-| 64 | ftaxitemid | ftaxitemid | int8 | 64 |  | √ | 0 |  |
-| 65 | fqtyto | fqtyto | numeric | 23 | 10 | √ | 0 |  |
-| 66 | fexratedate | fexratedate | timestamp | 0 |  |  | null |  |
-| 67 | fareaid | fareaid | int8 | 64 |  | √ | 0 |  |
-| 68 | fcurrencyid | fcurrencyid | int8 | 64 |  | √ | 0 |  |
-| 69 | fvieamount | fvieamount | numeric | 23 | 10 | √ | 0 |  |
+| 29 | fisbizitem | fisbizitem | bpchar | 1 |  | √ | '0' |  |
+| 30 | funitid | funitid | int8 | 64 |  | √ | 0 |  |
+| 31 | fpackagename | fpackagename | varchar | 50 |  | √ | ' ' |  |
+| 32 | fdescription | 标的描述 | varchar | 1024 |  | √ | ' ' | 标的描述 |
+| 33 | fhistoryprice | fhistoryprice | numeric | 23 | 10 | √ | 0 |  |
+| 34 | fsysresult | fsysresult | bpchar | 1 |  | √ | ' ' |  |
+| 35 | fsupplierid | fsupplierid | int8 | 64 |  | √ | 0 |  |
+| 36 | fsuppliertype | fsuppliertype | varchar | 30 |  | √ | ' ' |  |
+| 37 | ftax | ftax | numeric | 23 | 10 | √ | 0 |  |
+| 38 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 39 | fisdiscarded | fisdiscarded | bpchar | 1 |  | √ | '0' |  |
+| 40 | frank | frank | int8 | 64 |  | √ | 0 |  |
+| 41 | fmaterialid | 标的编码 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
+| 42 | fbizamount | fbizamount | numeric | 23 | 10 | √ | 0 |  |
+| 43 | fpreresult | fpreresult | bpchar | 1 |  | √ | ' ' |  |
+| 44 | fprecfmqty | fprecfmqty | numeric | 23 | 10 | √ | 0 |  |
+| 45 | fentrystatus | 当前状态 | bpchar | 1 |  | √ | ' ' | 当前状态,枚举: A :待报价 B :已报价 C :已开标 D :已关闭 E :已定标 F :已签约 G :暂存 H :已弃标的 I :已废标 J :已终止 |
+| 46 | ftaxprice | ftaxprice | numeric | 23 | 10 | √ | 0 |  |
+| 47 | fsuppliercode | fsuppliercode | bpchar | 50 |  | √ | ' ' |  |
+| 48 | famount | famount | numeric | 23 | 10 | √ | 0 |  |
+| 49 | fprice | fprice | numeric | 23 | 10 | √ | 0 |  |
+| 50 | ftranscost | ftranscost | numeric | 23 | 10 | √ | 0 |  |
+| 51 | ffeerate | ffeerate | numeric | 23 | 10 | √ | 0 |  |
+| 52 | fbidmaterialid | fbidmaterialid | int8 | 64 |  | √ | 0 |  |
+| 53 | fquotation | fquotation | bpchar | 1 |  | √ | '0' |  |
+| 54 | fcostdetail | fcostdetail | bpchar | 1 |  | √ | '0' |  |
+| 55 | fpkgamount | fpkgamount | numeric | 23 | 10 | √ | 0 |  |
+| 56 | fdistrictid | fdistrictid | int8 | 64 |  | √ | 0 |  |
+| 57 | fturns | fturns | varchar | 2 |  | √ | ' ' |  |
+| 58 | fpkgtaxamount | fpkgtaxamount | numeric | 23 | 10 | √ | 0 |  |
+| 59 | fdctamount | fdctamount | numeric | 23 | 10 | √ | 0 |  |
+| 60 | fisdecision | fisdecision | bpchar | 1 |  | √ | '0' |  |
+| 61 | forderratio | forderratio | numeric | 23 | 10 | √ | 0 |  |
+| 62 | fparentid | fparentid | varchar | 50 |  | √ | ' ' |  |
+| 63 | fsuppliername | fsuppliername | varchar | 100 |  | √ | ' ' |  |
+| 64 | fdecrease | fdecrease | numeric | 23 | 10 | √ | 0 |  |
+| 65 | ftaxitemid | ftaxitemid | int8 | 64 |  | √ | 0 |  |
+| 66 | fqtyto | fqtyto | numeric | 23 | 10 | √ | 0 |  |
+| 67 | fexratedate | fexratedate | timestamp | 0 |  |  | null |  |
+| 68 | fareaid | fareaid | int8 | 64 |  | √ | 0 |  |
+| 69 | fcurrencyid | fcurrencyid | int8 | 64 |  | √ | 0 |  |
+| 70 | fvieamount | fvieamount | numeric | 23 | 10 | √ | 0 |  |
 
 ### 列规则定义
 

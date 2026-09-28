@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | varchar | 36 |  | √ | ' ' |  |
-| 2 | fname | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
+| 2 | fname | 名称 | varchar | 300 |  | √ | ' ' | 名称 |
 | 3 | fisrequired | 必填 | bpchar | 1 |  | √ | '0' | 必填 |
 | 4 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 5 | fparam_length | 最大长度 | int4 | 32 |  | √ | 0 | 最大长度 |
@@ -18,7 +18,7 @@
 | 7 | fenum_values | 枚举值 | varchar | 250 |  | √ | ' ' | 枚举值 |
 | 8 | fdefault_value | 默认值 | varchar | 1000 |  | √ | ' ' | 默认值 |
 | 9 | fnumber | 编码 | varchar | 50 |  | √ | ' ' | 编码 |
-| 10 | fdesc | 描述 | varchar | 1000 |  | √ | ' ' | 描述 |
+| 10 | fdesc | 描述 | varchar | 2000 |  | √ | ' ' | 描述 |
 | 11 | fentryid | fentryid | varchar | 36 |  | √ | ' ' | id |
 | 12 | fentity_type | 基础资料类型 | varchar | 100 |  | √ | ' ' | 基础资料类型 |
 | 13 | fdatatype | 类型 | varchar | 50 |  | √ | ' ' | 类型,枚举: string :字符串 password :密码 long :长整数 checkbox :布尔值 combo :枚举 ref :基础资料 |
@@ -90,7 +90,7 @@
 | 10 | freg_event_script | 订阅脚本 | varchar | 510 |  |  | ' ' | 订阅脚本 |
 | 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 12 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | fmasterid | 主数据内码 | varchar | 50 |  | √ | ' ' | 主数据内码 |
 | 15 | fsource_trace | 来源追溯 | varchar | 600 |  | √ | ' ' | 来源追溯 |
 | 16 | fpreset | 是否预置 | bpchar | 1 |  | √ | '0' | 是否预置 |
@@ -100,9 +100,9 @@
 | 20 | fpermit | 连接配置操作权限 | varchar | 255 |  | √ | ',INSERT,UPDATE,DELETE,' | 连接配置操作权限,枚举: INSERT :可新增 UPDATE :可修改 DELETE :可删除 |
 | 21 | frefresh_script_tag | 会话刷新脚本_详情 | text | 0 |  |  | null | 会话刷新脚本_详情 |
 | 22 | fevent_handle_script | 事件处理脚本 | varchar | 510 |  |  | ' ' | 事件处理脚本 |
-| 23 | fremark | 描述 | varchar | 500 |  |  | ' ' | 描述 |
-| 24 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 25 | fversiondesc | 版本说明 | varchar | 500 |  | √ | ' ' | 版本说明 |
+| 23 | fremark | 描述 | varchar | 1500 |  |  | ' ' | 描述 |
+| 24 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 25 | fversiondesc | 版本说明 | varchar | 1500 |  | √ | ' ' | 版本说明 |
 | 26 | fiscustom | 自定义配置 | bpchar | 1 |  | √ | '0' | 自定义配置 |
 | 27 | funreg_event_script_tag | 取消订阅脚本_详情 | text | 0 |  |  | null | 取消订阅脚本_详情 |
 | 28 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |

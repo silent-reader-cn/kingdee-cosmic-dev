@@ -16,7 +16,7 @@
 | 5 | fmanage_status | 管理状态 | varchar | 2 |  | √ | ' ' | 管理状态,枚举: 0 :正常 1 :非正常 |
 | 6 | finvoice_status | 发票状态 | varchar | 2 |  | √ | ' ' | 发票状态,枚举: 0 :正常 1 :失控 2 :作废 3 :红冲 4 :异常 7 :部分红冲 |
 | 7 | ftax_period | 所属税期 | timestamp | 0 |  |  | null | 所属税期 |
-| 8 | forg | 核算组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 8 | forg | 核算组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 10 | feffective_tax_amount | 有效税额 | numeric | 23 | 10 | √ | 0 | 有效税额 |
 | 11 | fstatus | 处理状态 | varchar | 2 |  | √ | ' ' | 处理状态,枚举: 1 :处理成功 2 :已下载表头待查验 3 :超出初始的日期不处理 4 :进项下载缺少抵扣数据 5 :进销项已下载 6 :查验失败 |
@@ -31,7 +31,7 @@
 | 20 | finvoice_date | 开票日期 | timestamp | 0 |  |  | null | 开票日期 |
 | 21 | finvoice_code | 发票代码 | varchar | 30 |  | √ | ' ' | 发票代码 |
 | 22 | finvoice_no | 发票号码 | varchar | 30 |  | √ | ' ' | 发票号码 |
-| 23 | finvoicetype | 发票类型 | int8 | 64 |  | √ | 0 | 发票类型 bd_invoicetype |
+| 23 | finvoicetype | 发票类型 | int8 | 64 |  | √ | 0 | [发票种类 bd_invoicetype](../basedata_files/bd_invoicetype.md) |
 | 24 | fselect_authenticate_time | 勾选认证时间 | timestamp | 0 |  |  | null | 勾选认证时间 |
 | 25 | fscan_authenticate_time | 扫描认证时间 | timestamp | 0 |  |  | null | 扫描认证时间 |
 

@@ -9,21 +9,24 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | 评标任务 | int8 | 64 |  | √ | 0 | 评标任务F7 src_scoretaskf7 |
+| 1 | fid | 评标任务 | int8 | 64 |  | √ | 0 | [评标任务F7 src_scoretaskf7](../src_files/src_scoretaskf7.md) |
 | 2 | fthreshold | 门槛值 | numeric | 19 | 6 | √ | 0 | 门槛值 |
-| 3 | ffinalscore | 最终得分 | numeric | 19 | 6 | √ | 0 | 最终得分 |
-| 4 | findexdimension | 评标维度 | varchar | 255 |  | √ | ' ' | 评标维度 |
-| 5 | fmanscore | 评委评分 | numeric | 19 | 6 | √ | 0 | 评委评分 |
-| 6 | findexrule | 评分标准 | varchar | 1020 |  | √ | ' ' | 评分标准 |
-| 7 | fseq | 序号 | int4 | 32 |  | √ | 0 | 序号 |
-| 8 | findexid | 评估指标 | int8 | 64 |  | √ | 0 | 评分指标F7 src_indexf7 |
-| 9 | findexlibid | 指标库 | int8 | 64 |  | √ | 0 | 指标库 src_index |
-| 10 | fisveto | fisveto | bpchar | 1 |  | √ | '0' |  |
-| 11 | fisthreshold | 是否门槛 | bpchar | 1 |  | √ | '0' | 是否门槛 |
-| 12 | fweight | 指标权重% | numeric | 19 | 6 | √ | 0 | 指标权重% |
-| 13 | fsysscore | 系统评分 | numeric | 19 | 6 | √ | 0 | 系统评分 |
-| 14 | fscored | 指标已评分 | bpchar | 1 |  | √ | ' ' | 指标已评分 |
-| 15 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 3 | faptitudereplyvalue | faptitudereplyvalue | varchar | 512 |  | √ | ' ' |  |
+| 4 | ffinalscore | 最终得分 | numeric | 19 | 6 | √ | 0 | 最终得分 |
+| 5 | findexdimension | 评标维度 | varchar | 255 |  | √ | ' ' | 评标维度 |
+| 6 | fmanscore | 评委评分 | numeric | 19 | 6 | √ | 0 | 评委评分 |
+| 7 | findexrule | 评分标准 | varchar | 1020 |  | √ | ' ' | 评分标准 |
+| 8 | fentrystatus | 状态 | bpchar | 1 |  | √ | 'A' | 状态,枚举: A :待回复 B :已提交 C :已回复 |
+| 9 | fseq | 序号 | int4 | 32 |  | √ | 0 | 序号 |
+| 10 | findexid | 评估指标 | int8 | 64 |  | √ | 0 | [评分指标F7 src_indexf7](../src_files/src_indexf7.md) |
+| 11 | findexlibid | 指标库 | int8 | 64 |  | √ | 0 | [指标库 src_index](../src_files/src_index.md) |
+| 12 | fisveto | fisveto | bpchar | 1 |  | √ | '0' |  |
+| 13 | fisthreshold | 是否门槛 | bpchar | 1 |  | √ | '0' | 是否门槛 |
+| 14 | fweight | 指标权重% | numeric | 19 | 6 | √ | 0 | 指标权重% |
+| 15 | fsysscore | 系统评分 | numeric | 19 | 6 | √ | 0 | 系统评分 |
+| 16 | fscored | 指标已评分 | bpchar | 1 |  | √ | ' ' | 指标已评分 |
+| 17 | faptitudereply | faptitudereply | varchar | 512 |  | √ | ' ' |  |
+| 18 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 
 ### 列规则定义
 
@@ -51,21 +54,21 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fagentid | 代理评委 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fagentid | 代理评委 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fsrcentryid | 评标设置分录ID | int8 | 64 |  | √ | 0 | 评标设置分录ID |
 | 4 | fveto | fveto | varchar | 30 |  | √ | ' ' |  |
 | 5 | fisoverthreshold | fisoverthreshold | bpchar | 1 |  | √ | '0' |  |
-| 6 | forgid | 采购组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | forgid | 采购组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 8 | fnote | fnote | varchar | 255 |  | √ | ' ' |  |
-| 9 | findexid | 评估指标 | int8 | 64 |  | √ | 0 | 评分指标F7 src_indexf7 |
+| 8 | fnote | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
+| 9 | findexid | 评估指标 | int8 | 64 |  | √ | 0 | [评分指标F7 src_indexf7](../src_files/src_indexf7.md) |
 | 10 | fscorerweight | 权重% | numeric | 23 | 10 | √ | 0 | 权重% |
 | 11 | fpurlistid | 标的ID | int8 | 64 |  | √ | 0 | 标的ID |
 | 12 | fisveto | fisveto | varchar | 30 |  | √ | '0' |  |
 | 13 | fcreatorid | fcreatorid | int8 | 64 |  | √ | 0 |  |
 | 14 | finvalid | finvalid | bpchar | 1 |  | √ | '0' |  |
 | 15 | fpackageid | 标段ID | int8 | 64 |  | √ | 0 | 标段ID |
-| 16 | fscored | fscored | bpchar | 1 |  | √ | '0' |  |
+| 16 | fscored | 评委已评分 | bpchar | 1 |  | √ | '0' | 评委已评分 |
 | 17 | fisautoscore | fisautoscore | bpchar | 1 |  | √ | '0' |  |
 | 18 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 | id |
 | 19 | findexscore | 标准分值(权重) | numeric | 23 | 10 | √ | 0 | 标准分值(权重) |
@@ -80,7 +83,7 @@
 | 28 | fvalue | 评估值 | numeric | 23 | 10 | √ | 0 | 评估值 |
 | 29 | fsuppliertype | fsuppliertype | varchar | 30 |  | √ | ' ' |  |
 | 30 | fscorerscore | 评委得分 | numeric | 23 | 10 | √ | 0 | 评委得分 |
-| 31 | fscorerid | 评委 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 31 | fscorerid | 评委 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 32 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 | 33 | fscore | 得分 | numeric | 23 | 10 | √ | 0 | 得分 |
 

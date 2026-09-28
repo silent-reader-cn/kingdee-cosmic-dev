@@ -12,7 +12,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fadjustamount | 调整额 | numeric | 23 | 10 | √ | 0 | 调整额 |
 | 3 | fskssqz | 税款所属期.结束 | timestamp | 0 |  |  | null | 税款所属期.结束 |
-| 4 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 4 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | fskssqq | 税款所属期.开始 | timestamp | 0 |  |  | null | 税款所属期.开始 |
 | 6 | ftitlename | 调整项目 | varchar | 50 |  | √ | ' ' | 调整项目 |
 | 7 | fcellid | 单元格行列维 | varchar | 50 |  | √ | ' ' | 单元格行列维 |

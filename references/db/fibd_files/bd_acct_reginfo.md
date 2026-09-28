@@ -11,8 +11,8 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fcreatedate | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
-| 3 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 4 | fmetadata | 元数据 | varchar | 36 |  | √ | ' ' | 业务对象 bos_objecttype |
+| 3 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 4 | fmetadata | 元数据 | varchar | 36 |  | √ | ' ' | [业务对象 bos_objecttype](../mdl_files/bos_objecttype.md) |
 | 5 | fismutibasedata | 是否多选基础资料 | bpchar | 1 |  | √ | '0' | 是否多选基础资料 |
 | 6 | ffieldtype | 字段类型 | varchar | 50 |  | √ | ' ' | 字段类型,枚举: acct :科目 accttable :科目表 |
 | 7 | fuseorg | 使用组织 | varchar | 50 |  | √ | ' ' | 使用组织 |

@@ -39,20 +39,20 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fcharset | 字符集 | varchar | 100 |  | √ | ' ' | 字符集 |
 | 4 | fformat_script_tag | 消息格式化脚本_详情 | text | 0 |  |  | null | 消息格式化脚本_详情 |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 6 | fmq_server | 消息服务器 | int8 | 64 |  | √ | 0 | 消息队列服务器 isc_mq_server |
+| 6 | fmq_server | 消息服务器 | int8 | 64 |  | √ | 0 | [消息队列服务器 isc_mq_server](../iscb_files/isc_mq_server.md) |
 | 7 | fsource_tenant | 来源 | varchar | 100 |  | √ | ' ' | 来源 |
 | 8 | fisv | 开发商 | varchar | 100 |  | √ | ' ' | 开发商 |
-| 9 | fdata_source | 数据源 | int8 | 64 |  | √ | 0 | 数据源管理 isc_data_source |
+| 9 | fdata_source | 数据源 | int8 | 64 |  | √ | 0 | [数据源管理 isc_data_source](../iscb_files/isc_data_source.md) |
 | 10 | fprotect_level | 保护等级 | varchar | 30 |  | √ | ' ' | 保护等级,枚举: DEFAULT :默认 READ_ONLY :只读 UNPROTECTED :无保护 |
 | 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 12 | fformat_script | 消息格式化脚本 | varchar | 510 |  | √ | ' ' | 消息格式化脚本 |
 | 13 | fmsg_digest | 消息摘要模板 | varchar | 150 |  |  | ' ' | 消息摘要模板 |
 | 14 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 15 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 15 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 16 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 17 | fcustom_config | 自定义参数配置 | varchar | 1000 |  |  | ' ' | 自定义参数配置 |
 | 18 | fsource_trace | 来源追溯 | varchar | 600 |  | √ | ' ' | 来源追溯 |
@@ -60,7 +60,7 @@
 | 20 | fenable | 使用状态 | varchar | 30 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 21 | fdelay_time | 延时时间 | varchar | 20 |  |  | null | 延时时间,枚举: 1 :1秒 2 :5秒 3 :10秒 4 :30秒 5 :1分钟 6 :2分钟 7 :3分钟 8 :4分钟 9 :5分钟 10 :6分钟 11 :7分钟 12 :8分钟 13 :9分钟 14 :10分钟 15 :20分钟 16 :30分钟 17 :1小时 18 :2小时 |
 | 22 | fnumber | 编码 | varchar | 300 |  | √ | ' ' | 编码 |
-| 23 | fdata_structure | 数据结构 | int8 | 64 |  | √ | 0 | 集成对象 isc_metadata_schema |
+| 23 | fdata_structure | 数据结构 | int8 | 64 |  | √ | 0 | [集成对象 isc_metadata_schema](../iscb_files/isc_metadata_schema.md) |
 
 ### 列规则定义
 

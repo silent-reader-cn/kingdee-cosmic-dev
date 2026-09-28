@@ -47,9 +47,9 @@
 | 6 | foperationtype | 操作类型 | varchar | 30 |  | √ | ' ' | 操作类型 |
 | 7 | fdescription | 描述 | varchar | 500 |  | √ | ' ' | 描述 |
 | 8 | fenabled | 启用 | bpchar | 1 |  | √ | '0' | 启用 |
-| 9 | fentitytypeid | 业务对象 | varchar | 36 |  | √ | ' ' | 业务对象 bos_objecttype |
+| 9 | fentitytypeid | 业务对象 | varchar | 36 |  | √ | ' ' | [业务对象 bos_objecttype](../mdl_files/bos_objecttype.md) |
 | 10 | fispreset | 是否预置 | bpchar | 1 |  | √ | '0' | 是否预置 |
-| 11 | fbizappid | 应用 | varchar | 36 |  | √ | ' ' | 业务应用实体 bos_devportal_bizapp |
+| 11 | fbizappid | 应用 | varchar | 36 |  | √ | ' ' | [业务应用实体 bos_devportal_bizapp](../mdl_files/bos_devportal_bizapp.md) |
 
 ### 列规则定义
 

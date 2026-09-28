@@ -58,22 +58,24 @@
 | 14 | fkey | 编码 | varchar | 50 |  | √ | ' ' | 编码 |
 | 15 | fcategoryid | 类别ID | int8 | 64 |  | √ | 0 | 类别ID |
 | 16 | foperation | 绑定操作 | varchar | 300 |  | √ | ' ' | 绑定操作 |
-| 17 | fentrabillid | 入口单据 | varchar | 36 |  | √ | ' ' | 实体元数据 bos_entitymeta |
+| 17 | fentrabillid | 入口单据 | varchar | 36 |  | √ | ' ' | [实体元数据 bos_entitymeta](../mdl_files/bos_entitymeta.md) |
 | 18 | fversion | 版本 | varchar | 36 |  | √ | ' ' | 版本 |
 | 19 | fentrabill | 入口单据编码 | varchar | 36 |  | √ | ' ' | 入口单据编码 |
 | 20 | ftemplate | 模板 | varchar | 100 |  | √ | ' ' | 模板 |
-| 21 | forgunitid | 所属组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 21 | forgunitid | 所属组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 22 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 修改人 |
 | 23 | fname | 名称 | varchar | 500 |  | √ | ' ' | 名称 |
 | 24 | fversiondesc | 版本描述 | varchar | 255 |  | √ | ' ' | 版本描述 |
-| 25 | fresourceid | 模型资源ID | int8 | 64 |  | √ | 0 | 模型资源ID |
-| 26 | fgraphname | 流程图片资源名 | varchar | 80 |  | √ | ' ' | 流程图片资源名 |
-| 27 | fdescription | 描述 | varchar | 3000 |  | √ | ' ' | 描述 |
-| 28 | fversionstate | 版本状态 | varchar | 50 |  | √ | ' ' | 版本状态,枚举: newest :最新版 historical :历史版 |
-| 29 | fgraphicaldefined | 是否已生成图形 | bpchar | 1 |  | √ | '0' | 是否已生成图形 |
-| 30 | ftype | 流程类型 | varchar | 30 |  | √ | ' ' | 流程类型,枚举: AuditFlow :审批流 BizFlow :业务流 |
-| 31 | fparentprocid | 父流程ID | int8 | 64 |  | √ | 0 | 父流程ID |
-| 32 | fenable | 启用状态 | varchar | 30 |  | √ | ' ' | 启用状态,枚举: enable :启用 disable :禁用 |
+| 25 | fallowmodification | 是否允许修改 | bpchar | 1 |  | √ | '1' | 是否允许修改 |
+| 26 | fresourceid | 模型资源ID | int8 | 64 |  | √ | 0 | 模型资源ID |
+| 27 | fgraphname | 流程图片资源名 | varchar | 80 |  | √ | ' ' | 流程图片资源名 |
+| 28 | fdescription | 描述 | varchar | 3000 |  | √ | ' ' | 描述 |
+| 29 | fversionstate | 版本状态 | varchar | 50 |  | √ | ' ' | 版本状态,枚举: newest :最新版 historical :历史版 |
+| 30 | fgraphicaldefined | 是否已生成图形 | bpchar | 1 |  | √ | '0' | 是否已生成图形 |
+| 31 | ftype | 流程类型 | varchar | 30 |  | √ | ' ' | 流程类型,枚举: AuditFlow :审批流 BizFlow :业务流 |
+| 32 | fparentprocid | 父流程ID | int8 | 64 |  | √ | 0 | 父流程ID |
+| 33 | fenable | 启用状态 | varchar | 30 |  | √ | ' ' | 启用状态,枚举: enable :启用 disable :禁用 |
+| 34 | fprimarysubprocess | 子流程 | varchar | 30 |  | √ | ' ' | 子流程,枚举: sub :子流程 main :主流程 |
 
 ### 列规则定义
 

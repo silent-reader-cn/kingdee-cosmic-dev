@@ -11,15 +11,15 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fsplittype | 超长后截取方式 | varchar | 50 |  | √ | ' ' | 超长后截取方式,枚举: split_by_field :按字段截取 split_by_length :按长度截取 |
-| 3 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | flineremarknamerule | 命名规则 | varchar | 1000 |  | √ | ' ' | 命名规则 |
 | 5 | ffilter_tag | 启动条件_详情 | text | 0 |  |  | null | 启动条件_详情 |
-| 6 | forg | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | forg | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fcreatedate | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
 | 8 | fremarktype | 备注类型 | varchar | 50 |  | √ | ' ' | 备注类型,枚举: 0 :发票备注 1 :行备注 |
 | 9 | fmodifydate | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
-| 10 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 11 | finvoiceremarkseparator | 切换分隔符 | varchar | 50 |  | √ | ' ' | 切换分隔符,枚举: - :- ， :， . :. \ :\ / :/ _ :_ | :| * :* & :& ~ :~ 换行 :换行 |
+| 10 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 11 | finvoiceremarkseparator | 切换分隔符 | varchar | 50 |  | √ | ' ' | 切换分隔符,枚举: - :- ， :， . :. \ :\ / :/ _ :_ \| :\| * :* & :& ~ :~ 换行 :换行 |
 | 12 | ffilter | 启动条件 | varchar | 255 |  | √ | ' ' | 启动条件 |
 | 13 | finvoiceremarknameshow | 命名规则展示 | varchar | 1000 |  | √ | ' ' | 命名规则展示 |
 

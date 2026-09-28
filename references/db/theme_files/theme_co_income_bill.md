@@ -10,16 +10,16 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fothercoincomeratio | 其他业务收入占比 | numeric | 23 | 10 |  | null | 其他业务收入占比 |
 | 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 5 | fothercoincome | 其他业务收入 | numeric | 23 | 10 |  | null | 其他业务收入 |
 | 6 | freportdate | 报告期 | timestamp | 0 |  |  | null | 报告期 |
 | 7 | fmaincoincome | 主营业务收入 | numeric | 23 | 10 |  | null | 主营业务收入 |
 | 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 9 | fipoorgld | IPO主体 | int8 | 64 |  | √ | 0 | IPO编制组织 ipo_org |
+| 9 | fipoorgld | IPO主体 | int8 | 64 |  | √ | 0 | [IPO编制组织 ipo_org](../ipobase_files/ipo_org.md) |
 | 10 | fmainbusinessincomeratio | 主营业务收入占比 | numeric | 23 | 10 |  | null | 主营业务收入占比 |
-| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fcoincomegrowthrate | 营业收入增长率（%） | numeric | 23 | 10 |  | null | 营业收入增长率（%） |
 | 13 | fcoincometotal | 营业收入合计 | numeric | 23 | 10 |  | null | 营业收入合计 |
 

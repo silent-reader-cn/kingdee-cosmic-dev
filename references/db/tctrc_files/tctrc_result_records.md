@@ -45,7 +45,7 @@
 | 3 | ftext | 过滤条件 | varchar | 1000 |  | √ | ' ' | 过滤条件 |
 | 4 | fjson | 过滤条件JSON | varchar | 510 |  | √ | ' ' | 过滤条件JSON |
 | 5 | fexist | 存在 | varchar | 30 |  | √ | ' ' | 存在,枚举: 1 :存在 0 :不存在 |
-| 6 | ftableid | 取数表配置 | int8 | 64 |  | √ | 0 | 取数表配置 tpo_table_configs |
+| 6 | ftableid | 取数表配置 | int8 | 64 |  | √ | 0 | [数据源配置 tctb_custom_datasource](../tctb_files/tctb_custom_datasource.md) |
 | 7 | fjson_tag | 过滤条件JSON_详情 | text | 0 |  |  | null | 过滤条件JSON_详情 |
 | 8 | fisrisk | 是否为风险 | bpchar | 1 |  | √ | ' ' | 是否为风险 |
 | 9 | ffieldid | 字段ID | varchar | 1000 |  | √ | ' ' | 字段ID |

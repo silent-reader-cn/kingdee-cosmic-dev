@@ -1,4 +1,4 @@
-# 共享方案-tccit_rule_sharing
+# 共享方案（废弃）-tccit_rule_sharing
 
 ## 共享方案-多语言表 t_tccit_sharing_l
 
@@ -68,7 +68,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 1 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 2 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 3 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 | id |
 | 4 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
@@ -88,9 +88,9 @@
 
 ---
 
-## 共享方案-主表 t_tccit_sharing_edit
+## 共享方案（废弃）-主表 t_tccit_sharing_edit
 
-- **表名称：** 共享方案-主表
+- **表名称：** 共享方案（废弃）-主表
 - **表名：** t_tccit_sharing_edit
 
 ### 表格列定义
@@ -98,7 +98,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fsharetype | 共享方案类型 | varchar | 50 |  | √ | ' ' | 共享方案类型,枚举: yj :预缴 hj :汇缴 |
 | 4 | fautoshar | fautoshar | bpchar | 1 |  | √ | '0' |  |
 | 5 | fplanname | 方案名称 | varchar | 50 |  | √ | ' ' | 方案名称 |

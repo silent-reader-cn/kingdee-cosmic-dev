@@ -128,7 +128,7 @@
 | 10 | ftotalamount | 价税合计 | numeric | 23 | 10 | √ | 0.0000000000 | 价税合计 |
 | 11 | fpurchasername | 采购商名称 | varchar | 100 |  | √ | ' ' | 采购商名称 |
 | 12 | fconfirmbillno | 编号 | varchar | 100 |  | √ | ' ' | 编号 |
-| 13 | forg | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 13 | forg | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 14 | fsaleraddr | 销方地址电话 | varchar | 100 |  | √ | ' ' | 销方地址电话 |
 | 15 | fsplitrule | 拆合规则 | varchar | 50 |  | √ | ' ' | 拆合规则,枚举: |
 | 16 | fbuyername | 购方名称 | varchar | 100 |  | √ | ' ' | 购方名称 |

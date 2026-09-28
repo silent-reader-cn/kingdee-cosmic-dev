@@ -56,7 +56,7 @@
 | 15 | fnoticetplid | fnoticetplid | int8 | 64 |  | √ | 0 |  |
 | 16 | fbiztype | 公告类型 | bpchar | 1 |  | √ | ' ' | 公告类型,枚举: 1 :询价公告 2 :招标公告 3 :竞价公告 4 :比价公告 5 :中标公告 6 :招募公告 7 :行业动态 8 :系统公告 9 :评估公告 A :询价结果公告 B :竞价结果公告 C :寻源公告 D :流标公告 |
 | 17 | fcontent_tag | 内容_详情 | text | 0 |  |  | null | 内容_详情 |
-| 18 | fsourcetype | fsourcetype | int8 | 64 |  | √ | 0 |  |
+| 18 | fsourcetype | 寻源方式 | int8 | 64 |  | √ | 0 | [招标辅助资料 pds_extdata](../pds_files/pds_extdata.md) |
 | 19 | fcontent | 内容 | text | 0 |  |  | null | 内容 |
 | 20 | fbillno | 公告编号 | varchar | 80 |  | √ | ' ' | 公告编号 |
 | 21 | furgent | furgent | bpchar | 1 |  | √ | ' ' |  |

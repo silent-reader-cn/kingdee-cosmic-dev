@@ -67,7 +67,7 @@
 | 13 | fopentype | 开票类型 | varchar | 30 |  | √ | ' ' | 开票类型,枚举: 0 :蓝字发票 1 :红字发票 |
 | 14 | foriginalinvoicecode | 原发票代码 | varchar | 100 |  | √ | ' ' | 原发票代码 |
 | 15 | fauthdate | 认证日期 | timestamp | 0 |  |  | null | 认证日期 |
-| 16 | fbaseinvoicetype | 发票类型 | int8 | 64 |  | √ | 0 | 发票类型 bd_invoicetype |
+| 16 | fbaseinvoicetype | 发票类型 | int8 | 64 |  | √ | 0 | [发票种类 bd_invoicetype](../basedata_files/bd_invoicetype.md) |
 | 17 | fsignstatus | 签收状态 | varchar | 50 |  | √ | ' ' | 签收状态,枚举: 1 :已签收 0 :未签收 |
 | 18 | fselectstatus | 勾选状态 | varchar | 50 |  | √ | ' ' | 勾选状态,枚举: 1 :已勾选 0 :未勾选 |
 | 19 | fdatasource | 数据来源 | varchar | 50 |  | √ | ' ' | 数据来源 |
@@ -103,7 +103,7 @@
 | 2 | finvaliddate | 作废时间 | timestamp | 0 |  |  | null | 作废时间 |
 | 3 | fdrawer | 开票人 | varchar | 100 |  | √ | ' ' | 开票人 |
 | 4 | ftotalamount | 价税合计 | numeric | 23 | 2 | √ | 0.00 | 价税合计 |
-| 5 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | finputstatus | finputstatus | varchar | 30 |  | √ | ' ' |  |
 | 7 | fbuyeraccount | 购方银行帐号 | varchar | 100 |  | √ | ' ' | 购方银行帐号 |
 | 8 | fbuyeraddressphone | 购方地址电话 | varchar | 300 |  | √ | ' ' | 购方地址电话 |
@@ -126,11 +126,11 @@
 | 25 | flastrollouttime | flastrollouttime | timestamp | 0 |  |  | null |  |
 | 26 | fjzjtamount | 即征即退税额 | numeric | 23 | 2 | √ | 0.00 | 即征即退税额 |
 | 27 | fsalername | 销方名称 | varchar | 200 |  | √ | ' ' | 销方名称 |
-| 28 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 28 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 29 | fcheckcode | 校验码 | varchar | 100 |  | √ | ' ' | 校验码 |
 | 30 | fpayee | 收款人 | varchar | 100 |  | √ | ' ' | 收款人 |
 | 31 | finvoicestatus | 发票状态 | varchar | 30 |  | √ | ' ' | 发票状态,枚举: 0 :正常 1 :失控 2 :作废 3 :红冲 4 :异常 |
-| 32 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 32 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 33 | fscanauthenticatetime | 扫描认证时间 | timestamp | 0 |  |  | null | 扫描认证时间 |
 | 34 | fselecttime | 勾选时间 | timestamp | 0 |  |  | null | 勾选时间 |
 | 35 | freviewer | 复核人 | varchar | 100 |  | √ | ' ' | 复核人 |
@@ -139,7 +139,7 @@
 | 38 | fbuyertaxno | 购方税号 | varchar | 100 |  | √ | ' ' | 购方税号 |
 | 39 | fremark | 备注 | varchar | 480 |  | √ | ' ' | 备注 |
 | 40 | ftaxperiod | 所属税期 | varchar | 100 |  | √ | ' ' | 所属税期 |
-| 41 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 41 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 42 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 43 | fregisterstatus | fregisterstatus | varchar | 30 |  | √ | ' ' |  |
 | 44 | fremainamount | fremainamount | numeric | 23 | 2 | √ | 0.00 |  |

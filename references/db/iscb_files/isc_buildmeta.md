@@ -11,12 +11,12 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fremark | 备注 | varchar | 200 |  | √ | ' ' | 备注 |
-| 3 | fcreator | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 4 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 5 | fbizapp | 所属应用 | varchar | 36 |  | √ | ' ' | 业务应用实体 bos_devportal_bizapp |
+| 3 | fcreator | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 4 | fname | 名称 | varchar | 200 |  | √ | ' ' | 名称 |
+| 5 | fbizapp | 所属应用 | varchar | 36 |  | √ | ' ' | [业务应用实体 bos_devportal_bizapp](../mdl_files/bos_devportal_bizapp.md) |
 | 6 | fbizunit | 功能分组 | varchar | 36 |  | √ | ' ' | 功能分组,枚举: |
 | 7 | fcreatetime | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
-| 8 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fmodifytime | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
 | 10 | fstatus | 状态 | varchar | 50 |  | √ | ' ' | 状态,枚举: new :新建 update :待更新 success :已生成 |
 | 11 | ftable_name | 表名 | varchar | 50 |  | √ | ' ' | 表名 |

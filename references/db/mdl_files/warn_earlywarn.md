@@ -45,12 +45,12 @@
 | 3 | fparentid | ParentId | varchar | 36 |  | √ | ' ' | ParentId |
 | 4 | fmodeltype | fmodeltype | varchar | 30 |  | √ | 'EarlyWarnModel' |  |
 | 5 | fisv | 开发商 | varchar | 10 |  | √ | ' ' | 开发商 |
-| 6 | fdatasourceid | 数据源 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 6 | fdatasourceid | 数据源 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 7 | fleaf | 叶子节点 | bpchar | 1 |  | √ | '1' | 叶子节点 |
 | 8 | finheritpath | 继承路径 | varchar | 300 |  | √ | ' ' | 继承路径 |
-| 9 | fbizappid | 所属应用 | varchar | 36 |  | √ | ' ' | 业务应用实体 bos_devportal_bizapp |
+| 9 | fbizappid | 所属应用 | varchar | 36 |  | √ | ' ' | [业务应用实体 bos_devportal_bizapp](../mdl_files/bos_devportal_bizapp.md) |
 | 10 | fdatasourcetype | 数据源类型 | varchar | 10 |  | √ | 'Custom' | 数据源类型,枚举: bill :单据 basedata :基础资料 report :报表 custom :自定义数据源 |
-| 11 | fcreatedate | 创建日期 | timestamp | 0 |  | √ | LOCALTIMESTAMP | 创建日期 |
+| 11 | fcreatedate | 创建时间 | timestamp | 0 |  | √ | LOCALTIMESTAMP | 创建时间 |
 | 12 | ftype | 扩展状态 | bpchar | 1 |  | √ | '0' | 扩展状态,枚举: 0 :未扩展 1 :已继承 2 :已扩展 |
 | 13 | fmasterid | 原始业务预警对象 | varchar | 36 |  | √ | ' ' | 原始业务预警对象 |
 | 14 | fcreatorid | fcreatorid | int8 | 64 |  | √ | 0 |  |
@@ -60,7 +60,7 @@
 | 18 | fdata | fdata | text | 0 |  |  | null |  |
 | 19 | ftimestamp | ftimestamp | int8 | 64 |  | √ | 0 |  |
 | 20 | fistemplate | fistemplate | bpchar | 1 |  | √ | '0' |  |
-| 21 | fconditionformid | 条件配置表单 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 21 | fconditionformid | 条件配置表单 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 22 | fversion | fversion | int8 | 64 |  | √ | 0 |  |
 
 ### 列规则定义

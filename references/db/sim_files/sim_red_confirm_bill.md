@@ -109,17 +109,17 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fuseorg | 业务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 3 | forgid | 组织（没用上） | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fuseorg | 业务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 3 | forgid | 组织（没用上） | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | ftotalamount | 含税金额 | numeric | 23 | 10 | √ | 0 | 含税金额 |
 | 5 | fhsbz | 含税标志 | varchar | 30 |  | √ | '0' | 含税标志,枚举: 0 :不含税 1 :含税 |
 | 6 | fconfirmstatus | 确认状态 | varchar | 30 |  | √ | ' ' | 确认状态,枚举: 01 :无需确认 02 :销方录入待购方确认 03 :购方录入待销方确认 04 :购销双方已确认 05 :作废（销方录入购方否认） 06 :作废（购方录入销方否认） 07 :作废（超72小时未确认） 08 :作废（发起方已撤销） 09 :作废（确认后撤销） 10 :作废（异常凭证） |
-| 7 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 7 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | fsource | 数据来源 | varchar | 30 |  | √ | '1' | 数据来源,枚举: 1 :手工新增 2 :税局下载 5 :单据开票 |
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 10 | fstatus | 审核状态 | varchar | 30 |  | √ | ' ' | 审核状态,枚举: A :暂存 B :已提交 C :已审核 D :无需审批 |
 | 11 | ftotaltax | 税额 | numeric | 23 | 10 | √ | 0 | 税额 |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 14 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 15 | fbitindex | 位图 | int8 | 64 |  | √ | 0 | 位图 |
@@ -128,10 +128,10 @@
 | 18 | finvoiceno | 红票号码 | varchar | 50 |  | √ | ' ' | 红票号码 |
 | 19 | fbillno | 单据编号 | varchar | 50 |  | √ | ' ' | 单据编号 |
 | 20 | fsalertaxno | 销方税号 | varchar | 50 |  | √ | ' ' | 销方税号 |
-| 21 | fcreateorgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 21 | fcreateorgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 22 | fbuyertaxno | 购方税号 | varchar | 50 |  | √ | ' ' | 购方税号 |
 | 23 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 24 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 24 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 25 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 26 | fredreason | 红冲原因 | varchar | 30 |  | √ | '01' | 红冲原因,枚举: 01 :开票有误 03 :服务终止 04 :销售折让 |
 | 27 | foriginalinvoiceno | 原蓝票号码 | varchar | 30 |  | √ | ' ' | 原蓝票号码 |

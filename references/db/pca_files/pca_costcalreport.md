@@ -43,16 +43,16 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fpcacostaccountid | 项目核算主体 | int8 | 64 |  | √ | 0 | 项目核算主体 pca_costaccount |
+| 2 | fpcacostaccountid | 项目核算主体 | int8 | 64 |  | √ | 0 | [项目核算主体 pca_costaccount](../pca_files/pca_costaccount.md) |
 | 3 | fmodifierid | fmodifierid | int8 | 64 |  | √ | 0 |  |
 | 4 | fprogressmessage_tag | 过程详情_详情 | text | 0 |  |  | null | 过程详情_详情 |
-| 5 | fperiodid | 会计期间 | int8 | 64 |  | √ | 0 | 会计日历 bd_period |
+| 5 | fperiodid | 会计期间 | int8 | 64 |  | √ | 0 | [会计日历 bd_period](../fibd_files/bd_period.md) |
 | 6 | fbillstatus | 状态 | varchar | 30 |  | √ | ' ' | 状态,枚举: 1 :成功 2 :失败 3 :警告 0 :进行中 |
-| 7 | fcalorgid | 核算组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 7 | fcalorgid | 核算组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | fenddate | 结束时间 | timestamp | 0 |  |  | null | 结束时间 |
-| 9 | fcreatorid | 计算执行人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fcreatorid | 计算执行人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | fstartdate | 开始时间 | timestamp | 0 |  |  | null | 开始时间 |
-| 11 | freporttype | 报告类型 | varchar | 30 |  | √ | '0' | 报告类型,枚举: 0 :项目成本计算 1 :项目核算对象归集 2 :项目核算单归集 3 :项目公共费用归集单归集 |
+| 11 | freporttype | 报告类型 | varchar | 30 |  | √ | '0' | 报告类型,枚举: 0 :项目成本计算 1 :项目核算对象归集 2 :项目核算单归集 3 :项目公共费用归集单归集 4 :项目即时成本计算 5 :商机费用归集单归集 6 :项目人员工时明细归集 7 :项目结转单归集 |
 | 12 | fenable | fenable | varchar | 30 |  | √ | ' ' |  |
 | 13 | ftaskid | 计算任务号 | varchar | 255 |  | √ | ' ' | 计算任务号 |
 | 14 | ftotalcnsmtime | 总耗时(秒) | int4 | 32 |  | √ | 0 | 总耗时(秒) |

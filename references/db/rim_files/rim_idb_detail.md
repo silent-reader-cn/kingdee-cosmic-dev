@@ -28,5 +28,5 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_rim_idb_detail |  | forg_id,fdeal_time |
-| 2 | pk_t_rim_idb_detail |  | fid |
+| 1 | pk_t_rim_idb_detail |  | fid |
+| 2 | idx_rim_idb_detail |  | forg_id,fdeal_time |

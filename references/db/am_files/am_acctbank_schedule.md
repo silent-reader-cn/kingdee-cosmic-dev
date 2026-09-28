@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 结算方式 bd_settlementtype |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [结算方式 bd_settlementtype](../basedata_files/bd_settlementtype.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -38,7 +38,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -51,8 +51,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | pk_t_bd_accountbanks_cur |  | fpkid |
-| 2 | idx_t_bd_accountbanks_cur_fid |  | fid |
+| 1 | idx_t_bd_accountbanks_cur_fid |  | fid |
+| 2 | pk_t_bd_accountbanks_cur |  | fpkid |
 
 ---
 
@@ -97,14 +97,14 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fopenorgid | 开户组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fopenorgid | 开户组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | fparentbankacctid | fparentbankacctid | int8 | 64 |  | √ | 0 |  |
 | 5 | fclosedate | 销户日期 | timestamp | 0 |  |  | null | 销户日期 |
 | 6 | fcommonseal | 公章名称 | varchar | 80 |  | √ | ' ' | 公章名称 |
 | 7 | fauthorizeinfo | fauthorizeinfo | varchar | 512 |  | √ | ' ' |  |
-| 8 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 9 | finneracctid | 内部账户 | int8 | 64 |  | √ | 0 | 内部账户管理 ifm_inneracct |
+| 8 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 9 | finneracctid | 内部账户 | int8 | 64 |  | √ | 0 | [内部账户管理 ifm_inneracct](../ifm_files/ifm_inneracct.md) |
 | 10 | fmodifytime | 最后更新时间 | timestamp | 0 |  |  | null | 最后更新时间 |
 | 11 | facctstyle | 账户类型 | varchar | 80 |  | √ | ' ' | 账户类型,枚举: basic :基本存款账户 normal :一般存款账户 temp :临时存款账户 spcl :专用存款账户 fgn_curr :经常项目外汇账户 fng_fin :资本项目外汇账户 |
 | 12 | fbankinterface | 银企云接口 | varchar | 80 |  | √ | ' ' | 银企云接口,枚举: |
@@ -117,44 +117,46 @@
 | 19 | fauthquerpt | 授权查询银行回单 | bpchar | 1 |  | √ | '0' | 授权查询银行回单 |
 | 20 | fcurrencyname | 多币别名称 | varchar | 80 |  | √ | ' ' | 多币别名称 |
 | 21 | fnoopenlinereason | fnoopenlinereason | varchar | 512 |  | √ | ' ' |  |
-| 22 | facctpropertyid | 账户用途 | int8 | 64 |  | √ | 0 | 账户用途 bd_acctpurpose |
+| 22 | facctpropertyid | 账户用途 | int8 | 64 |  | √ | 0 | [账户用途 bd_acctpurpose](../basedata_files/bd_acctpurpose.md) |
 | 23 | facctstatus | 账户状态 | varchar | 80 |  | √ | ' ' | 账户状态,枚举: normal :正常 closing :销户中 changing :变更中 closed :已销户 freeze :冻结 |
-| 24 | flegalperson | 账户法定代表人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 24 | flegalperson | 账户法定代表人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 25 | fenable | 使用状态 | varchar | 80 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 26 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
-| 27 | fbankid | 开户行 | int8 | 64 |  | √ | 0 | 金融机构 bd_finorginfo |
+| 27 | fbankid | 开户行 | int8 | 64 |  | √ | 0 | [金融机构 bd_finorginfo](../basedata_files/bd_finorginfo.md) |
 | 28 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
-| 29 | fcompanyid | 申请组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 29 | fcompanyid | 申请组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 30 | fismulcurrency | 是否多币别 | bpchar | 1 |  | √ | ' ' | 是否多币别 |
-| 31 | fdefaultcurrencyid | 默认币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
-| 32 | fstatus | 数据状态 | varchar | 80 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 33 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 34 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 35 | fmanagecurrencyid | 账户管理费 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
-| 36 | finneraccountid | finneraccountid | int8 | 64 |  | √ | 0 |  |
-| 37 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
-| 38 | facctmanageamt | 账户管理费 | numeric | 19 | 6 | √ | 0.000000 | 账户管理费 |
-| 39 | facctclassify | 账户分类 | varchar | 30 |  | √ | ' ' | 账户分类,枚举: I :内部账户 B :银行账户 |
-| 40 | fbebankfunc | 银企云功能 | varchar | 80 |  | √ | ' ' | 银企云功能,枚举: query :查询 pay :支付 receipt :电子回单 ecd :电票 proxyinquiry :代理查询 |
-| 41 | fbanktype | 银行类别 | int8 | 64 |  | √ | 0 | 银行类别 bd_bankcgsetting |
-| 42 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 43 | fmodifierid | 最后更新人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 44 | fmanagerid | 账户管理人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 45 | fenglishname | 账户名称（英文） | varchar | 255 |  | √ | ' ' | 账户名称（英文） |
-| 46 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 47 | fstrategyid | 账户管理策略 | int8 | 64 |  | √ | 0 | 账户管理策略 am_strategy |
-| 48 | fnoopenbeireason | fnoopenbeireason | varchar | 512 |  | √ | ' ' |  |
-| 49 | fissetbankinterface | 开通银企接口 | bpchar | 1 |  | √ | ' ' | 开通银企接口 |
-| 50 | fbankaccountnumber | 银行账号 | varchar | 80 |  | √ | ' ' | 银行账号 |
-| 51 | fshortnumber | 助记码 | varchar | 80 |  | √ | ' ' | 助记码 |
-| 52 | fopendate | 开户日期 | timestamp | 0 |  |  | null | 开户日期 |
-| 53 | ffinorgtype | 金融机构类别 | varchar | 80 |  | √ | ' ' | 金融机构类别,枚举: 0 :银行 1 :结算中心 3 :财务公司 4 :第三方支付机构 2 :非银行金融机构 |
-| 54 | fscorgid | 结算中心业务单元 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 55 | fctrlstrategy | 控制策略 | varchar | 80 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
-| 56 | fsourcebillid | 源单id | int8 | 64 |  | √ | 0 | 源单id |
-| 57 | fisopenbank | 开通企业网上银行 | bpchar | 1 |  | √ | ' ' | 开通企业网上银行 |
-| 58 | fuseorgid | fuseorgid | int8 | 64 |  | √ | 0 |  |
-| 59 | fisdefaultrec | 默认收款户 | bpchar | 1 |  | √ | ' ' | 默认收款户 |
+| 31 | fdefaultcurrencyid | 默认币别 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
+| 32 | fk_bj73_textfield1 | 回款户名 | varchar | 50 |  | √ | ' ' | 回款户名 |
+| 33 | fstatus | 数据状态 | varchar | 80 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
+| 34 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 35 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
+| 36 | fmanagecurrencyid | 账户管理费 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
+| 37 | finneraccountid | finneraccountid | int8 | 64 |  | √ | 0 |  |
+| 38 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
+| 39 | facctmanageamt | 账户管理费 | numeric | 19 | 6 | √ | 0.000000 | 账户管理费 |
+| 40 | facctclassify | 账户分类 | varchar | 30 |  | √ | ' ' | 账户分类,枚举: I :内部账户 B :银行账户 |
+| 41 | fbebankfunc | 银企云功能 | varchar | 80 |  | √ | ' ' | 银企云功能,枚举: query :查询 pay :支付 receipt :电子回单 ecd :电票 proxyinquiry :代理查询 |
+| 42 | fbanktype | 银行类别 | int8 | 64 |  | √ | 0 | [银行类别 bd_bankcgsetting](../basedata_files/bd_bankcgsetting.md) |
+| 43 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 44 | fmodifierid | 最后更新人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 45 | fmanagerid | 账户管理人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 46 | fenglishname | 账户名称（英文） | varchar | 255 |  | √ | ' ' | 账户名称（英文） |
+| 47 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 48 | fstrategyid | 账户管理策略 | int8 | 64 |  | √ | 0 | [账户管理策略 am_strategy](../am_files/am_strategy.md) |
+| 49 | fnoopenbeireason | fnoopenbeireason | varchar | 512 |  | √ | ' ' |  |
+| 50 | fissetbankinterface | 开通银企接口 | bpchar | 1 |  | √ | ' ' | 开通银企接口 |
+| 51 | fbankaccountnumber | 银行账号 | varchar | 80 |  | √ | ' ' | 银行账号 |
+| 52 | fshortnumber | 助记码 | varchar | 80 |  | √ | ' ' | 助记码 |
+| 53 | fopendate | 开户日期 | timestamp | 0 |  |  | null | 开户日期 |
+| 54 | ffinorgtype | 金融机构类别 | varchar | 80 |  | √ | ' ' | 金融机构类别,枚举: 0 :银行 1 :结算中心 3 :财务公司 4 :第三方支付机构 2 :非银行金融机构 |
+| 55 | fscorgid | 结算中心业务单元 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 56 | fctrlstrategy | 控制策略 | varchar | 80 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
+| 57 | fsourcebillid | 源单id | int8 | 64 |  | √ | 0 | 源单id |
+| 58 | fk_bj73_textfield | 识别规则 | varchar | 2000 |  | √ | ' ' | 识别规则 |
+| 59 | fisopenbank | 开通企业网上银行 | bpchar | 1 |  | √ | ' ' | 开通企业网上银行 |
+| 60 | fuseorgid | fuseorgid | int8 | 64 |  | √ | 0 |  |
+| 61 | fisdefaultrec | 默认收款户 | bpchar | 1 |  | √ | ' ' | 默认收款户 |
 
 ### 列规则定义
 
@@ -184,7 +186,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 网银子账户 bd_netbankacct |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [网银子账户 bd_netbankacct](../basedata_files/bd_netbankacct.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义

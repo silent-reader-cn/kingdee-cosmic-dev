@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fname | fname | varchar | 50 |  | √ | ' ' |  |
 | 4 | freturnphone | 退换联系电话 | varchar | 50 |  | √ | ' ' | 退换联系电话 |
 | 5 | fapplydate | 申请时间 | timestamp | 0 |  |  | null | 申请时间 |
@@ -28,7 +28,7 @@
 | 17 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 18 | freturntype | 售后类型 | varchar | 10 |  | √ | ' ' | 售后类型,枚举: 10 :退货 20 :换货 30 :维修 1 :退货 2 :换货 3 :维修 4 :退货 5 :换货 |
 | 19 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 20 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 20 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 21 | fafsservicestepnum | 服务单环节编码 | varchar | 10 |  | √ | ' ' | 服务单环节编码 |
 | 22 | fenable | 使用状态 | bpchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 23 | fnumber | 服务单号 | varchar | 50 |  | √ | ' ' | 服务单号 |
@@ -88,7 +88,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fgoodsid | 商品 | int8 | 64 |  | √ | 0 | 商品档案 pbd_goods |
+| 2 | fgoodsid | 商品 | int8 | 64 |  | √ | 0 | [商品档案 pbd_goods](../pbd_files/pbd_goods.md) |
 | 3 | fsku | 商品编码 | varchar | 50 |  | √ | ' ' | 商品编码 |
 | 4 | freturnqty | 退货数量 | numeric | 23 | 10 | √ | 0.0000000000 | 退货数量 |
 | 5 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |

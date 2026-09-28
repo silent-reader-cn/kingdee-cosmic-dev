@@ -10,9 +10,9 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | varchar | 18 |  | √ | ' ' | id |
-| 2 | forgid | 部门 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 3 | foperationruleobjid | 特殊操作权限分配对象 | varchar | 18 |  | √ | ' ' | 特殊操作权限分配对象 perm_operationruleobj |
-| 4 | fdirectorid | 主管 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | forgid | 部门 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 3 | foperationruleobjid | 特殊操作权限分配对象 | varchar | 18 |  | √ | ' ' | [特殊操作权限分配对象 perm_operationruleobj](../base_files/perm_operationruleobj.md) |
+| 4 | fdirectorid | 主管 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

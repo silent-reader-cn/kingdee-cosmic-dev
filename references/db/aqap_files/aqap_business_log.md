@@ -39,11 +39,11 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | null | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fbank_login | 银行前置机 | varchar | 128 |  | √ | ' ' | 银行前置机 |
 | 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 5 | flog_time | 记录时间 | varchar | 50 |  | √ | ' ' | 记录时间 |
-| 6 | fbd_biz_name | 基础资料_业务类型 | int8 | 64 |  |  | null | 业务类型 aqap_business_type |
+| 6 | fbd_biz_name | 基础资料_业务类型 | int8 | 64 |  |  | null | [业务类型 aqap_business_type](../aqap_files/aqap_business_type.md) |
 | 7 | fbiz_seq | 业务流水号 | varchar | 50 |  | √ | ' ' | 业务流水号 |
 | 8 | fdt_query | 查询时间 | timestamp | 0 |  |  | null | 查询时间 |
 | 9 | faccount | 账号 | varchar | 128 |  | √ | ' ' | 账号 |
@@ -51,10 +51,10 @@
 | 11 | fbank_version | 银行版本 | varchar | 50 |  | √ | ' ' | 银行版本 |
 | 12 | frequest_seq | 请求流水号 | varchar | 50 |  | √ | ' ' | 请求流水号 |
 | 13 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 14 | fcreatorid | 创建人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 14 | fcreatorid | 创建人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | fmasterid | 主数据内码 | int8 | 64 |  |  | null | 主数据内码 |
 | 16 | fenable | 使用状态 | varchar | 50 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 17 | fbd_bank_version | 基础资料_银行版本 | int8 | 64 |  |  | null | 银行启用管理 aqap_bank |
+| 17 | fbd_bank_version | 基础资料_银行版本 | int8 | 64 |  |  | null | [银行启用管理 aqap_bank](../aqap_files/aqap_bank.md) |
 | 18 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
 | 19 | fbiz_name | 业务类型 | varchar | 50 |  | √ | ' ' | 业务类型 |
 

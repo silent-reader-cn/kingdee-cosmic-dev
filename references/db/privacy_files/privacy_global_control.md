@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | null | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 4 | fdailytotallimit | 每日解密总上限 | int8 | 64 |  |  | null | 每日解密总上限 |
 | 5 | fmessagechannel | 消息渠道 | varchar | 50 |  | √ | ' ' | 消息渠道,枚举: CLOUDHUB :云之家 EMAIL :邮件 MESSAGE :短信 |
@@ -45,7 +45,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | null |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | null | 人员 bos_user |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | null | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | null | pkid |
 
 ### 列规则定义

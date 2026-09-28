@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fvalue | 维度值 | varchar | 512 |  | √ | ' ' | 维度值 |
-| 3 | fcreatetime | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
+| 3 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 
 ### 列规则定义
 

@@ -15,11 +15,11 @@
 | 4 | finstanceid | 节点ID | varchar | 100 |  | √ | ' ' | 节点ID |
 | 5 | fdb | 数据库 | varchar | 20 |  | √ | ' ' | 数据库 |
 | 6 | ftxid | 事务ID | int8 | 64 |  | √ | '0' | 事务ID |
-| 7 | fcreaterid | 创建人 | int8 | 64 |  | √ | '0' | 人员 bos_user |
+| 7 | fcreaterid | 创建人 | int8 | 64 |  | √ | '0' | [人员 bos_user](../base_files/bos_user.md) |
 | 8 | fbillid | 单据ID | int8 | 64 |  | √ | '0' | 单据ID |
-| 9 | fbal | 余额表 | varchar | 36 |  | √ | ' ' | 余额表 bal_balanceinfo |
-| 10 | fruleid | 更新规则 | varchar | 36 |  | √ | ' ' | 余额更新规则列表 bal_balanceupdaterule |
-| 11 | fbillentity | 实体对象 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 9 | fbal | 余额表 | varchar | 36 |  | √ | ' ' | [余额表 bal_balanceinfo](../bal_files/bal_balanceinfo.md) |
+| 10 | fruleid | 更新规则 | varchar | 36 |  | √ | ' ' | [余额更新规则列表 bal_balanceupdaterule](../bal_files/bal_balanceupdaterule.md) |
+| 11 | fbillentity | 实体对象 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 
 ### 列规则定义
 

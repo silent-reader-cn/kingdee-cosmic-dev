@@ -41,7 +41,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 预警用户组 fatvs_warnusergroup |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [预警用户组 fatvs_warnusergroup](../fatvs_files/fatvs_warnusergroup.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -70,25 +70,25 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fmaxvalue | 指标最大值 | varchar | 50 |  | √ | ' ' | 指标最大值 |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 6 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 7 | fstatus | 数据状态 | varchar | 2 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 8 | fminvalue | 指标最小值 | varchar | 50 |  | √ | ' ' | 指标最小值 |
 | 9 | falarmvalue | 警戒值 | varchar | 50 |  | √ | ' ' | 警戒值 |
-| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 12 | femployee | 关联员工 | int8 | 64 |  | √ | 0 | 形象库 fatvs_employee |
+| 12 | femployee | 关联员工 | int8 | 64 |  | √ | 0 | [形象库 fatvs_employee](../fatvs_files/fatvs_employee.md) |
 | 13 | ftitlecontent | 标题内容 | varchar | 255 |  | √ | ' ' | 标题内容 |
 | 14 | findextype | 指标类型 | varchar | 50 |  | √ | ' ' | 指标类型,枚举: 0 :数字 1 :百分比 2 :文本 |
 | 15 | fcomparestatus | 比较状态 | varchar | 50 |  | √ | ' ' | 比较状态,枚举: 0 :大于 1 :小于 2 :大于等于 3 :小于等于 |
 | 16 | fenable | 启用状态 | bpchar | 1 |  | √ | '1' | 启用状态,枚举: 0 :禁用 1 :可用 |
-| 17 | fposition | 关联职位 | int8 | 64 |  | √ | 0 | 虚拟职位 fatvs_position |
+| 17 | fposition | 关联职位 | int8 | 64 |  | √ | 0 | [虚拟职位 fatvs_position](../fatvs_files/fatvs_position.md) |
 | 18 | fcontentvalue | 内容 | varchar | 1024 |  | √ | ' ' | 内容 |
 | 19 | fnumber | 编码 | varchar | 50 |  | √ | ' ' | 编码 |
-| 20 | fskillindex | 预警指标 | int8 | 64 |  | √ | 0 | 技能指标 fatvs_skill_index |
-| 21 | fskill | 预警技能 | int8 | 64 |  | √ | 0 | 技能 fatvs_skill |
+| 20 | fskillindex | 预警指标 | int8 | 64 |  | √ | 0 | [技能指标 fatvs_skill_index](../fatvs_files/fatvs_skill_index.md) |
+| 21 | fskill | 预警技能 | int8 | 64 |  | √ | 0 | [技能 fatvs_skill](../fatvs_files/fatvs_skill.md) |
 
 ### 列规则定义
 

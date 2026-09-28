@@ -11,21 +11,22 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fdraftid | 底稿ID | int8 | 64 |  | √ | 0 | 底稿ID |
-| 3 | frowcode | 单元格编码 | varchar | 50 |  | √ | ' ' | 单元格编码 |
-| 4 | ftaxorg | 取数组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | frowcode | 单元格编码 | varchar | 2000 |  | √ | ' ' | 单元格编码 |
+| 4 | ftaxorg | 取数组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 6 | fdraftnumber | 底稿编码 | varchar | 50 |  | √ | ' ' | 底稿编码 |
+| 6 | fdraftnumber | 底稿编号 | varchar | 50 |  | √ | ' ' | 底稿编号 |
 | 7 | fmodifier | fmodifier | varchar | 50 |  | √ | ' ' |  |
 | 8 | fmodifytime | fmodifytime | timestamp | 0 |  |  | null |  |
-| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 10 | ftzszq | 调整数值前 | numeric | 23 | 10 | √ | 0 | 调整数值前 |
-| 11 | fadjusttype | 调整类型 | varchar | 50 |  | √ | ' ' | 调整类型,枚举: 1 :数据源调整 2 :手工录入调整 |
-| 12 | ftzsm | 调整说明 | varchar | 1000 |  | √ | ' ' | 调整说明 |
-| 13 | foriginamount | 原数值 | numeric | 23 | 10 | √ | 0 | 原数值 |
-| 14 | fitemname | 业务名称 | varchar | 50 |  | √ | ' ' | 业务名称 |
-| 15 | fdrafttype | 底稿类型 | varchar | 50 |  | √ | ' ' | 底稿类型 |
-| 16 | fisrefreshmodify | 是否已刷新变更 | varchar | 1 |  | √ | ' ' | 是否已刷新变更 |
-| 17 | ftzszh | 调整数值后 | numeric | 23 | 10 | √ | 0 | 调整数值后 |
+| 9 | fdatastatus | 数据状态 | varchar | 10 |  | √ | ' ' | 数据状态,枚举: 0 :临时数据 1 :正式数据 |
+| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 11 | ftzszq | 调整数值前 | numeric | 23 | 10 | √ | 0 | 调整数值前 |
+| 12 | fadjusttype | 调整类型 | varchar | 50 |  | √ | ' ' | 调整类型,枚举: 1 :数据源调整 2 :手工录入调整 |
+| 13 | ftzsm | 调整说明 | varchar | 1000 |  | √ | ' ' | 调整说明 |
+| 14 | foriginamount | 原数值 | numeric | 23 | 10 | √ | 0 | 原数值 |
+| 15 | fitemname | 业务名称 | varchar | 2000 |  | √ | ' ' | 业务名称 |
+| 16 | fdrafttype | 底稿类型 | varchar | 50 |  | √ | ' ' | 底稿类型 |
+| 17 | fisrefreshmodify | 是否已刷新变更 | varchar | 1 |  | √ | ' ' | 是否已刷新变更 |
+| 18 | ftzszh | 调整数值后 | numeric | 23 | 10 | √ | 0 | 调整数值后 |
 
 ### 列规则定义
 

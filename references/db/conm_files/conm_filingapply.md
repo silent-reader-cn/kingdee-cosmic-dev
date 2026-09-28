@@ -74,28 +74,28 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 3 | fdeptid | 申请部门 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 3 | fdeptid | 申请部门 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | fcomment | 备注 | varchar | 512 |  |  | null | 备注 |
 | 5 | fbillstatus | 单据状态 | varchar | 5 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 6 | fsrcbillid | 来源实体ID | int8 | 64 |  | √ | 0 | 来源实体ID |
 | 7 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 8 | forgid | 申请组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 9 | fbizuserid | 申请人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | forgid | 申请组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 9 | fbizuserid | 申请人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | fcontractname | 合同名称 | varchar | 100 |  | √ | ' ' | 合同名称 |
-| 11 | flastupdateuserid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | flastupdateuserid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
 | 13 | fbiztime | 申请日期 | timestamp | 0 |  |  | null | 申请日期 |
 | 14 | flastupdatetime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 15 | fparty2nd | 乙方 | varchar | 255 |  | √ | ' ' | 乙方 |
 | 16 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 17 | fpartcid | 第三方 | int8 | 64 |  | √ | 0 | 商务伙伴 bd_bizpartner |
-| 18 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 17 | fpartcid | 第三方 | int8 | 64 |  | √ | 0 | [商务伙伴 bd_bizpartner](../base_files/bd_bizpartner.md) |
+| 18 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 19 | fparty1st | 甲方 | varchar | 255 |  | √ | ' ' | 甲方 |
 | 20 | fcontractnum | 合同编号 | varchar | 80 |  | √ | ' ' | 合同编号 |
 | 21 | fsrcbillentity | 来源实体 | varchar | 36 |  | √ | ' ' | 来源实体 |
 | 22 | fbillno | 单据编号 | varchar | 80 |  | √ | ' ' | 单据编号 |
-| 23 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 23 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

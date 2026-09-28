@@ -13,9 +13,11 @@
 | 2 | fclearqty | fclearqty | numeric | 19 | 6 | √ | 0.000000 |  |
 | 3 | fremark | fremark | varchar | 255 |  |  | ' ' |  |
 | 4 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 5 | fmeasureunitid | fmeasureunitid | int8 | 64 |  | √ | 0 |  |
-| 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 7 | frealcardid | frealcardid | int8 | 64 |  | √ | 0 |  |
+| 5 | funclearqty | funclearqty | numeric | 19 | 6 | √ | 0 |  |
+| 6 | fmeasureunitid | fmeasureunitid | int8 | 64 |  | √ | 0 |  |
+| 7 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 8 | frealcardid | frealcardid | int8 | 64 |  | √ | 0 |  |
+| 9 | fclearedqty | fclearedqty | numeric | 19 | 6 | √ | 0 |  |
 
 ### 列规则定义
 
@@ -45,18 +47,19 @@
 | 2 | fmodifierid | fmodifierid | int8 | 64 |  | √ | 0 |  |
 | 3 | fbillstatus | fbillstatus | varchar | 50 |  | √ | 'A' |  |
 | 4 | fcreatetime | fcreatetime | timestamp | 0 |  |  | null |  |
-| 5 | forgid | 货主组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 6 | fhasvoucher | fhasvoucher | bpchar | 1 |  | √ | '0' |  |
-| 7 | fhandlerid | fhandlerid | int8 | 64 |  | √ | 0 |  |
-| 8 | freason | 清理原因 | varchar | 255 |  |  | ' ' | 清理原因 |
-| 9 | fauditdate | fauditdate | timestamp | 0 |  |  | null |  |
-| 10 | fmodifytime | fmodifytime | timestamp | 0 |  |  | null |  |
-| 11 | fchangemodeid | 减少方式 | int8 | 64 |  | √ | 0 | 增减方式 fa_changemode |
-| 12 | fassetunitid | fassetunitid | int8 | 64 |  | √ | 0 |  |
-| 13 | fcreatorid | fcreatorid | int8 | 64 |  | √ | 0 |  |
-| 14 | fcleardate | 清理日期 | timestamp | 0 |  |  | null | 清理日期 |
-| 15 | fbillno | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
-| 16 | fauditorid | fauditorid | int8 | 64 |  | √ | 0 |  |
+| 5 | forgid | 货主组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 6 | fsrcbizapp | fsrcbizapp | bpchar | 1 |  | √ | '0' |  |
+| 7 | fhasvoucher | fhasvoucher | bpchar | 1 |  | √ | '0' |  |
+| 8 | fhandlerid | fhandlerid | int8 | 64 |  | √ | 0 |  |
+| 9 | freason | 清理原因 | varchar | 255 |  |  | ' ' | 清理原因 |
+| 10 | fauditdate | fauditdate | timestamp | 0 |  |  | null |  |
+| 11 | fmodifytime | fmodifytime | timestamp | 0 |  |  | null |  |
+| 12 | fchangemodeid | 减少方式 | int8 | 64 |  | √ | 0 | [增减方式 fa_changemode](../fa_files/fa_changemode.md) |
+| 13 | fassetunitid | fassetunitid | int8 | 64 |  | √ | 0 |  |
+| 14 | fcreatorid | fcreatorid | int8 | 64 |  | √ | 0 |  |
+| 15 | fcleardate | 清理日期 | timestamp | 0 |  |  | null | 清理日期 |
+| 16 | fbillno | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
+| 17 | fauditorid | fauditorid | int8 | 64 |  | √ | 0 |  |
 
 ### 列规则定义
 

@@ -43,7 +43,7 @@
 | 3 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
 | 4 | fdescription | 描述 | varchar | 512 |  | √ | ' ' | 描述 |
 | 5 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
-| 6 | fmainbizentityname | 主业务实体名称 | varchar | 50 |  | √ | ' ' | 主业务实体名称 |
+| 6 | fmainbizentityname | 主业务实体名称 | varchar | 200 |  |  | ' ' | 主业务实体名称 |
 
 ### 列规则定义
 
@@ -70,29 +70,31 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 3 | fname | fname | varchar | 255 |  | √ | ' ' |  |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 6 | forgid | 管理组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 7 | fisallowgenbc | 允许生成条码 | bpchar | 1 |  | √ | ' ' | 允许生成条码 |
-| 8 | fmainbizentitymark | 主业务实体标识 | varchar | 50 |  | √ | ' ' | 主业务实体标识 |
-| 9 | fdescription | 描述 | varchar | 255 |  | √ | ' ' | 描述 |
-| 10 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 11 | fbillname | 单据名称 | varchar | 80 |  | √ | ' ' | 单据名称 |
-| 12 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 13 | fctrlstrategy | 控制策略 | bpchar | 3 |  | √ | ' ' | 控制策略,枚举: 5 :全局共享 |
-| 14 | fmainbizentityname | 主业务实体名称 | varchar | 50 |  | √ | ' ' | 主业务实体名称 |
-| 15 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 16 | fbizobjectid | 业务对象 | varchar | 80 |  | √ | ' ' | 业务对象 bos_objecttype |
-| 17 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 18 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 19 | fsourcedataid | fsourcedataid | int8 | 64 |  | √ | 0 |  |
-| 20 | fissystem | 系统预置 | bpchar | 1 |  | √ | ' ' | 系统预置 |
-| 21 | fbitindex | fbitindex | int4 | 32 |  | √ | 0 |  |
-| 22 | fenable | 使用状态 | bpchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 23 | fnumber | 编号 | varchar | 80 |  | √ | ' ' | 编号 |
-| 24 | fsourcebitindex | fsourcebitindex | int4 | 32 |  | √ | 0 |  |
+| 2 | forgid | 管理组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 3 | fisallowgenbc | 允许生成条码 | bpchar | 1 |  | √ | ' ' | 允许生成条码 |
+| 4 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 5 | fbillfilterstr_tag | 大文本_详情 | text | 0 |  |  | null | 大文本_详情 |
+| 6 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 7 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
+| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 9 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
+| 10 | fsourcedataid | fsourcedataid | int8 | 64 |  | √ | 0 |  |
+| 11 | fissystem | 系统预置 | bpchar | 1 |  | √ | ' ' | 系统预置 |
+| 12 | fbitindex | fbitindex | int4 | 32 |  | √ | 0 |  |
+| 13 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 14 | fname | fname | varchar | 255 |  | √ | ' ' |  |
+| 15 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 16 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 17 | fmainbizentitymark | 主业务实体标识 | varchar | 50 |  | √ | ' ' | 主业务实体标识 |
+| 18 | fdescription | 描述 | varchar | 255 |  | √ | ' ' | 描述 |
+| 19 | fbillname | 单据名称 | varchar | 80 |  | √ | ' ' | 单据名称 |
+| 20 | fctrlstrategy | 控制策略 | bpchar | 3 |  | √ | ' ' | 控制策略,枚举: 5 :全局共享 |
+| 21 | fmainbizentityname | 主业务实体名称 | varchar | 50 |  | √ | ' ' | 主业务实体名称 |
+| 22 | fbizobjectid | 业务对象 | varchar | 80 |  | √ | ' ' | [业务对象 bos_objecttype](../mdl_files/bos_objecttype.md) |
+| 23 | fenable | 使用状态 | bpchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 24 | fnumber | 编号 | varchar | 80 |  | √ | ' ' | 编号 |
+| 25 | fsourcebitindex | fsourcebitindex | int4 | 32 |  | √ | 0 |  |
+| 26 | fbillfilterstr | 大文本 | varchar | 255 |  | √ | ' ' | 大文本 |
 
 ### 列规则定义
 

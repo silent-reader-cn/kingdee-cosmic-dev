@@ -1,9 +1,9 @@
 # 文件识别-bei_transdetail_file_rec
 
-## 文件识别-主表 t_bei_transdetail_filereg
+## 单据体-子表 t_bei_transdetailfr_entry
 
-- **表名称：** 文件识别-主表
-- **表名：** t_bei_transdetail_filereg
+- **表名称：** 单据体-子表
+- **表名：** t_bei_transdetailfr_entry
 
 ### 表格列定义
 
@@ -22,10 +22,10 @@
 
 ---
 
-## 单据体-子表 t_bei_transdetailfr_entry
+## 文件识别-主表 t_bei_transdetail_filereg
 
-- **表名称：** 单据体-子表
-- **表名：** t_bei_transdetailfr_entry
+- **表名称：** 文件识别-主表
+- **表名：** t_bei_transdetail_filereg
 
 ### 表格列定义
 

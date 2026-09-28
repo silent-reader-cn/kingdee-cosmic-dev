@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | flabel | 标签 | varchar | 50 |  | √ | ' ' | 标签 |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 6 | fsuggest_model | 建议的AI实例 | varchar | 100 |  | √ | ' ' | 建议的AI实例 |
@@ -19,7 +19,7 @@
 | 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 9 | flanguage_model | 绑定的AI实例 | varchar | 100 |  | √ | ' ' | 绑定的AI实例 |
 | 10 | ftype | 类型 | varchar | 50 |  | √ | ' ' | 类型,枚举: T :提示语 |
-| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fscene | 适用场景 | varchar | 50 |  | √ | ' ' | 适用场景 |
 | 13 | fprompt_tag | 提示词_详情 | text | 0 |  |  | null | 提示词_详情 |
 | 14 | fenable | 使用状态 | varchar | 30 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
@@ -71,5 +71,5 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | pk_t_isc_smart_robot_v |  | fentryid |
-| 2 | index_smart_robot_v |  | fid |
+| 1 | index_smart_robot_v |  | fid |
+| 2 | pk_t_isc_smart_robot_v |  | fentryid |

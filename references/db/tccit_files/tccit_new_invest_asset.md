@@ -10,23 +10,23 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fname | 投资标的名称 | varchar | 50 |  | √ | ' ' | 投资标的名称 |
 | 4 | fbillstatus | 单据状态 | varchar | 50 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 6 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fljjysf | 累计交易税费 | numeric | 23 | 10 | √ | 0.0000000000 | 累计交易税费 |
 | 8 | fljjsjc | 累计计税基础 | numeric | 23 | 10 | √ | 0.0000000000 | 累计计税基础 |
 | 9 | finvesttype | 投资性质 | int8 | 64 |  | √ | 0 | 业务定义分录 tpo_tccit_bizdef_entry |
 | 10 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
 | 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 12 | ftaxpayerid | 被投资企业纳税人识别号 | varchar | 50 |  | √ | ' ' | 被投资企业纳税人识别号 |
-| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | fassettype | 资产类型 | int8 | 64 |  | √ | 0 | 业务定义分录 tpo_tccit_bizdef_entry |
 | 15 | fljtzcbrzje | 投资成本入账总额 | numeric | 23 | 10 | √ | 0.0000000000 | 投资成本入账总额 |
 | 16 | fdesc | 描述 | varchar | 50 |  | √ | ' ' | 描述 |
 | 17 | fbillno | 资产编号 | varchar | 30 |  | √ | ' ' | 资产编号 |
-| 18 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 18 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 19 | fassetstatus | 资产状态 | varchar | 50 |  | √ | ' ' | 资产状态,枚举: 0 :持有 1 :处置 |
 
 ### 列规则定义

@@ -13,9 +13,12 @@
 | 2 | fqty | 数量 | numeric | 23 | 10 | √ | 0.0000000000 | 数量 |
 | 3 | fheadid | 成本记录ID/余额表ID | int8 | 64 |  | √ | 0 | 成本记录ID/余额表ID |
 | 4 | factualcost | 实际成本 | numeric | 23 | 10 | √ | 0.0000000000 | 实际成本 |
-| 5 | funitid | 计量单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 6 | fstandardcost | 标准成本 | numeric | 23 | 10 | √ | 0.0000000000 | 标准成本 |
-| 7 | fmainid | 成本记录结转明细ID/余额表结转明细ID | int8 | 64 |  | √ | 0 | 成本记录结转明细ID/余额表结转明细ID |
+| 5 | fperiodid | 会计期间 | int8 | 64 |  | √ | 0 | [会计日历 bd_period](../fibd_files/bd_period.md) |
+| 6 | funitid | 计量单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 7 | fstandardcost | 标准成本 | numeric | 23 | 10 | √ | 0.0000000000 | 标准成本 |
+| 8 | fcostaccountid | 成本主体 | int8 | 64 |  | √ | 0 | [成本主体 cal_bd_costaccount](../cal_files/cal_bd_costaccount.md) |
+| 9 | fbookdate | 记账日期 | timestamp | 0 |  |  | null | 记账日期 |
+| 10 | fmainid | 成本记录结转明细ID/余额表结转明细ID | int8 | 64 |  | √ | 0 | 成本记录结转明细ID/余额表结转明细ID |
 
 ### 列规则定义
 

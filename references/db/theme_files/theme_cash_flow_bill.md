@@ -19,13 +19,13 @@
 | 8 | fczlc05 | 支付其他与筹资活动有关的现金 | numeric | 23 | 10 |  | null | 支付其他与筹资活动有关的现金 |
 | 9 | fjylc09 | 支付其他与经营活动有关的现金 | numeric | 23 | 10 |  | null | 支付其他与经营活动有关的现金 |
 | 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 11 | fipoorgld | IPO主体 | int8 | 64 |  | √ | 0 | IPO编制组织 ipo_org |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fipoorgld | IPO主体 | int8 | 64 |  | √ | 0 | [IPO编制组织 ipo_org](../ipobase_files/ipo_org.md) |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fczje | 筹资活动产生的现金流量净额 | numeric | 23 | 10 |  | null | 筹资活动产生的现金流量净额 |
 | 14 | fjylc01 | 购买商品、接受劳务支付的现金 | numeric | 23 | 10 |  | null | 购买商品、接受劳务支付的现金 |
 | 15 | fczlc | 筹资活动现金流出小计 | numeric | 23 | 10 |  | null | 筹资活动现金流出小计 |
 | 16 | fxjjzj | 现金及现金等价物净增加额 | numeric | 23 | 10 |  | null | 现金及现金等价物净增加额 |
-| 17 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 17 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 18 | ftzlr04 | 处置子公司及其他营业单位收到的现金净额 | numeric | 23 | 10 |  | null | 处置子公司及其他营业单位收到的现金净额 |
 | 19 | ftzlr | 投资活动现金流入小计 | numeric | 23 | 10 |  | null | 投资活动现金流入小计 |
 | 20 | ftzlr03 | 处置固定资产、无形资产和其他长期资产收回的现金净额 | numeric | 23 | 10 |  | null | 处置固定资产、无形资产和其他长期资产收回的现金净额 |

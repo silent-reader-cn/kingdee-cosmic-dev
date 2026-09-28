@@ -12,7 +12,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fsrcbillno | 源单编号 | varchar | 80 |  | √ | ' ' | 源单编号 |
 | 3 | fsrcbillid | 源单ID | int8 | 64 |  | √ | 0 | 源单ID |
-| 4 | fcheckerid | 操作人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fcheckerid | 操作人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fsrcbilltype | 单据类型 | varchar | 80 |  | √ | ' ' | 单据类型 |
 | 6 | fchecktime | 操作时间 | timestamp | 0 |  |  | null | 操作时间 |
 | 7 | fcheckstatus | 确认事务 | bpchar | 1 |  | √ | 'A' | 确认事务,枚举: A :数据确认 B :取消确认 |

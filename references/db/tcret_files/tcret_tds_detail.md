@@ -54,7 +54,7 @@
 | 10 | fisshowfcsbyprice | fisshowfcsbyprice | bpchar | 1 |  | √ | ' ' |  |
 | 11 | fissuitableforsmall | 是否适用增值税小规模纳税人减征政策 | varchar | 30 |  | √ | ' ' | 是否适用增值税小规模纳税人减征政策,枚举: 1 :是 0 :否 |
 | 12 | fskssqq | 所属期起 | timestamp | 0 |  |  | null | 所属期起 |
-| 13 | forg | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 13 | forg | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 14 | ftaxstandard | 税额标准 | numeric | 23 | 10 | √ | 0.0000000000 | 税额标准 |
 | 15 | flandlevel | 土地等级 | varchar | 50 |  | √ | ' ' | 土地等级 |
 | 16 | fskssqz | 所属期止 | timestamp | 0 |  |  | null | 所属期止 |

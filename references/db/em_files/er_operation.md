@@ -43,7 +43,7 @@
 | 2 | fsync | 是否拦截 | bpchar | 1 |  | √ | '0' | 是否拦截 |
 | 3 | fsys | 是否预置 | bpchar | 1 |  | √ | '0' | 是否预置 |
 | 4 | fplugin | 插件 | varchar | 255 |  | √ | ' ' | 插件 |
-| 5 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
+| 5 | fnumber | 编号 | varchar | 80 |  | √ | ' ' | 编号 |
 
 ### 列规则定义
 

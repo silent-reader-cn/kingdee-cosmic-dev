@@ -29,5 +29,5 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | pk_t_plmdc_controlledseal |  | fid |
-| 2 | idx_plmdc_controlledseal_name |  | fname |
+| 1 | idx_plmdc_controlledseal_name |  | fname |
+| 2 | pk_t_plmdc_controlledseal |  | fid |

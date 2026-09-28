@@ -94,23 +94,23 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 6 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 7 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 7 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | fispreset | 系统预设 | bpchar | 1 |  | √ | '0' | 系统预设 |
 | 9 | fctrlstrategy | 控制策略 | varchar | 50 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
 | 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 11 | fstatus | 数据状态 | varchar | 5 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 12 | fhistorydata | 历史数据 | int8 | 64 |  | √ | 0 | 取数方案定义 mds_datafetchset |
-| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fhistorydata | 历史数据 | int8 | 64 |  | √ | 0 | [取数方案定义 mds_datafetchset](../mds_files/mds_datafetchset.md) |
+| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 15 | fsampledata | 样本数据 | int8 | 64 |  | √ | 0 | 取数方案定义 mds_datafetchset |
+| 15 | fsampledata | 样本数据 | int8 | 64 |  | √ | 0 | [取数方案定义 mds_datafetchset](../mds_files/mds_datafetchset.md) |
 | 16 | fsamplehistoryfilter | 样本历史过滤字段对照 | varchar | 2000 |  | √ | ' ' | 样本历史过滤字段对照 |
 | 17 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
-| 18 | falgorithmdef | 用量概率算法 | int8 | 64 |  | √ | 0 | 用量概率算法定义 mds_algorithmdef |
+| 18 | falgorithmdef | 用量概率算法 | int8 | 64 |  | √ | 0 | [用量概率算法定义 mds_algorithmdef](../mds_files/mds_algorithmdef.md) |
 | 19 | fmaterialchange | 物料转换 | bpchar | 1 |  | √ | '0' | 物料转换 |
 | 20 | fbitindex | 位图 | int8 | 64 |  | √ | 0 | 位图 |
 | 21 | fenable | 使用状态 | varchar | 5 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |

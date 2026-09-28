@@ -45,17 +45,17 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fuseorg | fuseorg | int8 | 64 |  | √ | 0 |  |
 | 3 | forgid | forgid | int8 | 64 |  | √ | 0 |  |
-| 4 | fbillobj | 单据 | varchar | 50 |  | √ | ' ' | 单据主实体 bos_billmainentity |
+| 4 | fbillobj | 单据 | varchar | 50 |  | √ | ' ' | [单据主实体 bos_billmainentity](../mdl_files/bos_billmainentity.md) |
 | 5 | fsrccreateorgid | fsrccreateorgid | int8 | 64 |  | √ | 0 |  |
 | 6 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 7 | fstatus | 数据状态 | varchar | 1 |  | √ | 'A' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fmasterid | fmasterid | int8 | 64 |  | √ | 0 |  |
 | 10 | fsourcedataid | fsourcedataid | int8 | 64 |  | √ | 0 |  |
 | 11 | fbitindex | fbitindex | int4 | 32 |  | √ | 0 |  |
 | 12 | fcreateorgid | fcreateorgid | int8 | 64 |  | √ | 0 |  |
 | 13 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 14 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 16 | fbillentry | 单据体标识（这里暂时隐藏，目前限定死为检验单的分录，后续配置界面需要调整） | varchar | 50 |  | √ | ' ' | 单据体标识（这里暂时隐藏，目前限定死为检验单的分录，后续配置界面需要调整） |
 | 17 | fauditdate | fauditdate | timestamp | 0 |  |  | null |  |

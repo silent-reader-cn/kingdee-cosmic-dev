@@ -70,8 +70,8 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 名称 | varchar | 80 |  | √ | ' ' | 名称 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 4 | fgroupid | 报表项目类型 | int8 | 64 |  | √ | 0 | 报表项目类型 pa_reportitemtype |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 4 | fgroupid | 报表项目类型 | int8 | 64 |  | √ | 0 | [报表项目类型 pa_reportitemtype](../pa_files/pa_reportitemtype.md) |
 | 5 | fisleaf | 明细报表项 | bpchar | 1 |  | √ | '1' | 明细报表项 |
 | 6 | fcomptype | 计算依据 | bpchar | 1 |  | √ | '0' | 计算依据,枚举: 0 :按维度计算 1 :按报表项目计算 |
 | 7 | fformulacom | 公式转码后用于计算 | varchar | 255 |  | √ | ' ' | 公式转码后用于计算 |
@@ -81,7 +81,7 @@
 | 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 12 | fstatus | 数据状态 | bpchar | 1 |  | √ | 'C' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 13 | fformuladesc | 公式描述 | varchar | 255 |  | √ | ' ' | 公式描述 |
-| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 16 | fparent | 父ID | int8 | 64 |  | √ | 0 | 父ID |
 | 17 | fformula | 公式 | varchar | 255 |  | √ | ' ' | 公式 |

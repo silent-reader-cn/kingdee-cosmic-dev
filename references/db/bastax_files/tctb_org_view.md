@@ -11,9 +11,9 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 实体方案名称 | varchar | 50 |  | √ | ' ' | 实体方案名称 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fcreatetime | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
-| 5 | fcreaterid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | fcreaterid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | fenable | fenable | bpchar | 1 |  | √ | ' ' |  |
 | 7 | fnumber | 实体方案编码 | varchar | 30 |  | √ | ' ' | 实体方案编码 |
 | 8 | fisdefault | fisdefault | bpchar | 1 |  | √ | ' ' |  |
@@ -49,7 +49,7 @@
 | 4 | flongnumber | 长编码 | varchar | 600 |  | √ | ' ' | 长编码 |
 | 5 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 7 | forg | 基础资料 | int8 | 64 |  | √ | 0 | 税务组织实体 tctb_org_entity |
+| 7 | forg | 基础资料 | int8 | 64 |  | √ | 0 | [税务组织实体 tctb_org_entity](../tctb_files/tctb_org_entity.md) |
 
 ### 列规则定义
 

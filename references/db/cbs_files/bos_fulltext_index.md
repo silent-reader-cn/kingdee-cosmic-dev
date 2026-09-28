@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | ffiltername | 过滤字段名 | varchar | 200 |  | √ | ' ' | 过滤字段名 |
-| 3 | fentityname | 实体对象编码 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 3 | fentityname | 实体对象编码 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 4 | fisenable | 是否启用 | bpchar | 1 |  | √ | ' ' | 是否启用 |
 | 5 | findextype | Type | varchar | 60 |  | √ | ' ' | Type |
 | 6 | findexname | ElasticSearch IndexName | varchar | 200 |  | √ | ' ' | ElasticSearch IndexName |

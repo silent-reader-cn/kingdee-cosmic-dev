@@ -13,7 +13,7 @@
 | 2 | fisjoin | 是否参会 | bpchar | 1 |  | √ | '0' | 是否参会 |
 | 3 | fjointime | 参会时间 | timestamp | 0 |  |  | null | 参会时间 |
 | 4 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 5 | fperid | 工号 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | fperid | 工号 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | fisnewjoin | 是否现场参会新增人员 | bpchar | 1 |  | √ | '0' | 是否现场参会新增人员 |
 | 7 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 
@@ -44,7 +44,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fpk | PK | int8 | 64 |  | √ | 0 | PK |
 | 3 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 4 | fmmcid | 会议模块配置 | int8 | 64 |  | √ | 0 | 会议模块配置(废弃) sfc_meetmodconfig |
+| 4 | fmmcid | 会议模块配置 | int8 | 64 |  | √ | 0 | [会议模块配置(废弃) sfc_meetmodconfig](../sfc_files/sfc_meetmodconfig.md) |
 | 5 | fcontent | 内容 | varchar | 2000 |  | √ | ' ' | 内容 |
 | 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 7 | fischecked |  | bpchar | 1 |  | √ | '0' |  |
@@ -77,31 +77,31 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fmeetingbegintime | 会议开始时间 | timestamp | 0 |  |  | null | 会议开始时间 |
 | 3 | fmeetingstatus | 会议状态 | varchar | 50 |  | √ | ' ' | 会议状态,枚举: A :未结束 B :已结束 |
-| 4 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 4 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | fmcentrytabs_tag | 会议内容页签_详情 | text | 0 |  |  | null | 会议内容页签_详情 |
 | 6 | fmeetingduration | 会议时长 | varchar | 50 |  | √ | ' ' | 会议时长 |
 | 7 | fpers | 参会人员 | varchar | 255 |  | √ | ' ' | 参会人员 |
 | 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 9 | fpers_tag | 参会人员_详情 | text | 0 |  |  | ' ' | 参会人员_详情 |
-| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fmeetingendtime | 会议结束时间 | timestamp | 0 |  |  | null | 会议结束时间 |
 | 12 | fmocentrytabs | 会议相关内容页签 | varchar | 255 |  | √ | ' ' | 会议相关内容页签 |
-| 13 | fmrtypeid | 检修设备类型 | int8 | 64 |  | √ | 0 | 检修设备类型 mpdm_mrtype |
-| 14 | foriginatorid | 会议发起人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fmrtypeid | 检修设备类型 | int8 | 64 |  | √ | 0 | [检修设备类型 mpdm_mrtype](../mpdm_files/mpdm_mrtype.md) |
+| 14 | foriginatorid | 会议发起人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | fbillno | 单据编号 | varchar | 30 |  | √ | ' ' | 单据编号 |
-| 16 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 17 | foriginatororgid | 会议发起部门 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 18 | fprojectid | 项目号 | int8 | 64 |  | √ | 0 | 项目 pmpd_project |
+| 16 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 17 | foriginatororgid | 会议发起部门 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 18 | fprojectid | 项目号 | int8 | 64 |  | √ | 0 | [项目 pmpd_project](../fmm_files/pmpd_project.md) |
 | 19 | fbillstatus | 单据状态 | varchar | 50 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 20 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 21 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
-| 22 | fmeetingtypeid | 会议类型 | int8 | 64 |  | √ | 0 | 会议类型(废弃) sfc_meettype |
+| 22 | fmeetingtypeid | 会议类型 | int8 | 64 |  | √ | 0 | [会议类型(废弃) sfc_meettype](../sfc_files/sfc_meettype.md) |
 | 23 | fmeetingloc | 会议地点 | varchar | 255 |  | √ | ' ' | 会议地点 |
-| 24 | fovhldeviceid | 检修设备注册号 | int8 | 64 |  | √ | 0 | 物料检修信息 mpdm_materialmtcinfo |
-| 25 | findustryid | 行业 | int8 | 64 |  | √ | 0 | 树形基础资料模板 mpdm_professiona |
+| 24 | fovhldeviceid | 检修设备注册号 | int8 | 64 |  | √ | 0 | [物料检修信息 mpdm_materialmtcinfo](../mpdm_files/mpdm_materialmtcinfo.md) |
+| 25 | findustryid | 行业 | int8 | 64 |  | √ | 0 | [树形基础资料模板 mpdm_professiona](../mpdm_files/mpdm_professiona.md) |
 | 26 | fmocentrytabs_tag | 会议相关内容页签_详情 | text | 0 |  |  | null | 会议相关内容页签_详情 |
 | 27 | fistemplate | 是否为模板 | bpchar | 1 |  | √ | '0' | 是否为模板 |
-| 28 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 28 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 29 | fmcentrytabs | 会议内容页签 | varchar | 255 |  | √ | ' ' | 会议内容页签 |
 
 ### 列规则定义
@@ -132,7 +132,7 @@
 | 2 | fpk | PK | int8 | 64 |  | √ | 0 | PK |
 | 3 | fotherdesc | 其他说明 | varchar | 255 |  | √ | ' ' | 其他说明 |
 | 4 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 5 | fmmcid | 会议模块配置 | int8 | 64 |  | √ | 0 | 会议模块配置(废弃) sfc_meetmodconfig |
+| 5 | fmmcid | 会议模块配置 | int8 | 64 |  | √ | 0 | [会议模块配置(废弃) sfc_meetmodconfig](../sfc_files/sfc_meetmodconfig.md) |
 | 6 | fcontent | 内容 | varchar | 2000 |  | √ | ' ' | 内容 |
 | 7 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 8 | fischecked |  | bpchar | 1 |  | √ | '0' |  |

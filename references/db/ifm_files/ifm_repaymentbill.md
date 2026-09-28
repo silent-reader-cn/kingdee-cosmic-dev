@@ -43,7 +43,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fcontractbizdate | fcontractbizdate | timestamp | 0 |  |  | null |  |
 | 3 | fpaybillno | 付款单编号 | varchar | 80 |  | √ | ' ' | 付款单编号 |
-| 4 | forgid | 资金组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 4 | forgid | 资金组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | fnotrepayamount | 未还本金(old) | numeric | 19 | 6 | √ | 0.000000 | 未还本金(old) |
 | 6 | famount | 合同收回本金 | numeric | 19 | 6 | √ | 0.000000 | 合同收回本金 |
 | 7 | flender | flender | varchar | 80 |  | √ | ' ' |  |
@@ -52,8 +52,8 @@
 | 10 | fisinit | 是否初始化 | bpchar | 1 |  | √ | '0' | 是否初始化 |
 | 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 12 | fexchangerate | fexchangerate | numeric | 23 | 10 | √ | 0.0000000000 |  |
-| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 14 | fcreditorgid | 债权组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 14 | fcreditorgid | 债权组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 15 | fcreditorid | 债权人id | int8 | 64 |  | √ | 0 | 债权人id |
 | 16 | fexpiredate | fexpiredate | timestamp | 0 |  |  | null |  |
 | 17 | fbitbackinfo | 退单信息 | varchar | 255 |  | √ | ' ' | 退单信息 |
@@ -61,10 +61,10 @@
 | 19 | fdrawamount | 提款金额(old) | numeric | 19 | 6 | √ | 0.000000 | 提款金额(old) |
 | 20 | floandate | floandate | timestamp | 0 |  |  | null |  |
 | 21 | fbillno | 贷款收回单编号 | varchar | 80 |  | √ | ' ' | 贷款收回单编号 |
-| 22 | fclientorgid | 受托机构 | int8 | 64 |  | √ | 0 | 金融机构 bd_finorginfo |
-| 23 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 22 | fclientorgid | 受托机构 | int8 | 64 |  | √ | 0 | [金融机构 bd_finorginfo](../basedata_files/bd_finorginfo.md) |
+| 23 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 24 | fispayinterest | 是否付息(old) | bpchar | 1 |  | √ | '0' | 是否付息(old) |
-| 25 | ffinproductid | 融资品种 | int8 | 64 |  | √ | 0 | 融资品种 cfm_financingvarieties |
+| 25 | ffinproductid | 融资品种 | int8 | 64 |  | √ | 0 | [融资品种 cfm_financingvarieties](../cfm_files/cfm_financingvarieties.md) |
 | 26 | flendernature | 贷款人性质 | varchar | 30 |  | √ | ' ' | 贷款人性质,枚举: outgroup :集团外 ingroup :集团内 |
 | 27 | fbillstatus | 单据状态 | varchar | 30 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 28 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
@@ -80,11 +80,11 @@
 | 38 | fbizdate | 收回日期 | timestamp | 0 |  |  | null | 收回日期 |
 | 39 | fcontractbillno | fcontractbillno | varchar | 80 |  | √ | ' ' |  |
 | 40 | fsourcebillid | 源单id | int8 | 64 |  | √ | 0 | 源单id |
-| 41 | fstageplanid | 本金收回方案 | int8 | 64 |  | √ | 0 | 分期还款方案 cfm_repayagingcheme |
+| 41 | fstageplanid | 本金收回方案 | int8 | 64 |  | √ | 0 | [还款计划方案 cfm_repayagingcheme](../cfm_files/cfm_repayagingcheme.md) |
 | 42 | fisvoucher | 是否已生成凭证 | bpchar | 1 |  | √ | '0' | 是否已生成凭证 |
-| 43 | fcurrencyid | 借款币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
-| 44 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 45 | faccountbankid | 还款银行账号 | int8 | 64 |  | √ | 0 | 银行账户 bd_accountbanks |
+| 43 | fcurrencyid | 借款币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
+| 44 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 45 | faccountbankid | 还款银行账号 | int8 | 64 |  | √ | 0 | [银行账户 bd_accountbanks](../basedata_files/bd_accountbanks.md) |
 | 46 | flocamt | flocamt | numeric | 19 | 6 | √ | 0.000000 |  |
 | 47 | fcompanyid | fcompanyid | int8 | 64 |  | √ | 0 |  |
 | 48 | ffinorginfoid | ffinorginfoid | int8 | 64 |  | √ | 0 |  |
@@ -180,7 +180,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | floanbillid | 放款单编号 | int8 | 64 |  | √ | 0 | 提款处理 cfm_loanbill_f7 |
+| 2 | floanbillid | 放款单编号 | int8 | 64 |  | √ | 0 | [提款处理单 cfm_loanbill_f7](../cfm_files/cfm_loanbill_f7.md) |
 | 3 | fnotrepayamount | 未收回本金 | numeric | 19 | 6 | √ | 0 | 未收回本金 |
 | 4 | fintdetail_tag | 利息测算明细_详情 | text | 0 |  |  | null | 利息测算明细_详情 |
 | 5 | fdrawamount | 放款金额 | numeric | 19 | 6 | √ | 0 | 放款金额 |
@@ -249,14 +249,14 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | flenddraccountid | 借款方借方科目 | int8 | 64 |  | √ | 0 | 会计科目 bd_accountview |
 | 3 | fbankcheckflag | 对账标识码 | varchar | 80 |  | √ | ' ' | 对账标识码 |
-| 4 | fpayeeacctid | 收款账号 | int8 | 64 |  | √ | 0 | 银行账户 bd_accountbanks |
+| 4 | fpayeeacctid | 收款账号 | int8 | 64 |  | √ | 0 | [银行账户 bd_accountbanks](../basedata_files/bd_accountbanks.md) |
 | 5 | fconfirmstatus | 确认状态 | varchar | 30 |  | √ | ' ' | 确认状态,枚举: registrying :登记中 waitconfirm :待确认 yetconfirm :已确认 yetreturn :已退回 |
 | 6 | fiscycleloan | 循环贷款 | bpchar | 1 |  | √ | '0' | 循环贷款 |
 | 7 | fcompanyer | fcompanyer | varchar | 30 |  | √ | ' ' |  |
-| 8 | fpayeebankid | 收款银行 | int8 | 64 |  | √ | 0 | 行名行号 bd_bebank |
+| 8 | fpayeebankid | 收款银行 | int8 | 64 |  | √ | 0 | [行名行号 bd_bebank](../basedata_files/bd_bebank.md) |
 | 9 | freturnreason | 退回原因 | varchar | 255 |  | √ | ' ' | 退回原因 |
 | 10 | fsettlestatus | 提交结算中心状态 | varchar | 80 |  | √ | ' ' | 提交结算中心状态,枚举: addnew :新增 submit :已提交 accept :已受理 bitback :已退回 |
-| 11 | fregistorgid | 登记组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 11 | fregistorgid | 登记组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 12 | fpayeeaccttext | 收款账号 | varchar | 80 |  | √ | ' ' | 收款账号 |
 | 13 | fconfirmdescription | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
 | 14 | fpayeebanktext | 收款银行 | varchar | 80 |  | √ | ' ' | 收款银行 |
@@ -265,24 +265,25 @@
 | 17 | ftextdebtor | 借款人 | varchar | 80 |  | √ | ' ' | 借款人 |
 | 18 | frecbillno | 收款单编号 | varchar | 80 |  | √ | ' ' | 收款单编号 |
 | 19 | flendcraccountid | 借款方贷方科目 | int8 | 64 |  | √ | 0 | 会计科目 bd_accountview |
-| 20 | fproductfactoryid | 融资模型 | int8 | 64 |  | √ | 0 | 融资模型 cfm_productfactory |
-| 21 | floancontractbillid | 合同单据编号 | int8 | 64 |  | √ | 0 | 融资合同 cfm_loancontractbill_f7 |
-| 22 | fpaybillid | 付款单 | int8 | 64 |  | √ | 0 | 付款单 cas_paybill_f7 |
+| 20 | fproductfactoryid | 融资模型 | int8 | 64 |  | √ | 0 | [融资模型 cfm_productfactory](../cfm_files/cfm_productfactory.md) |
+| 21 | floancontractbillid | 合同单据编号 | int8 | 64 |  | √ | 0 | [借款合同 cfm_loancontractbill_f7](../cfm_files/cfm_loancontractbill_f7.md) |
+| 22 | fpaybillid | 付款单 | int8 | 64 |  | √ | 0 | [付款单 cas_paybill_f7](../cas_files/cas_paybill_f7.md) |
 | 23 | fpayeetype | 收款人类型 | varchar | 80 |  | √ | ' ' | 收款人类型,枚举: bd_supplier :供应商 fbd_other :其他 |
 | 24 | ftextcreditor | 债权人 | varchar | 80 |  | √ | ' ' | 债权人 |
 | 25 | fisratio | 按比例还款 | bpchar | 1 |  | √ | '0' | 按比例还款 |
-| 26 | fsettlecenterid | 结算中心 | int8 | 64 |  | √ | 0 | 金融机构 bd_finorginfo |
+| 26 | fsettlecenterid | 结算中心 | int8 | 64 |  | √ | 0 | [金融机构 bd_finorginfo](../basedata_files/bd_finorginfo.md) |
 | 27 | fpayeeid | 收款人 | int8 | 64 |  | √ | 0 | 供应商 bd_supplier |
-| 28 | fbizdealno | 受理单编号 | varchar | 80 |  | √ | ' ' | 受理单编号 |
-| 29 | floancraccountid | 贷款方贷方科目 | int8 | 64 |  | √ | 0 | 会计科目 bd_accountview |
-| 30 | floantype | 贷款类型 | varchar | 30 |  | √ | ' ' | 贷款类型,枚举: loan :普通贷款 sl :银团贷款 ec :企业往来 entrust :委托贷款 bond :债券发行 |
-| 31 | ftotalamt | 合计金额 | numeric | 23 | 10 | √ | 0 | 合计金额 |
-| 32 | fconfirmerid | 确认人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 33 | fdatasource | 数据来源 | varchar | 30 |  | √ | ' ' | 数据来源,枚举: cfm :融资管理 invest :投资管理 bond :债券 ifm :内部金融管理 |
-| 34 | fpayeetext | 收款人 | varchar | 80 |  | √ | ' ' | 收款人 |
-| 35 | fconfirmtime | 确认时间 | timestamp | 0 |  |  | null | 确认时间 |
-| 36 | frepayapplyid | 还款申请单 | int8 | 64 |  | √ | 0 | 还款申请 cfm_repayapplybill_f7 |
-| 37 | floaneracctbankid | 本金收回银行账号 | int8 | 64 |  | √ | 0 | 银行账户 bd_accountbanks |
+| 28 | fpayamt | fpayamt | numeric | 23 | 10 | √ | 0 |  |
+| 29 | fbizdealno | 受理单编号 | varchar | 80 |  | √ | ' ' | 受理单编号 |
+| 30 | floancraccountid | 贷款方贷方科目 | int8 | 64 |  | √ | 0 | 会计科目 bd_accountview |
+| 31 | floantype | 贷款类型 | varchar | 30 |  | √ | ' ' | 贷款类型,枚举: loan :普通贷款 sl :银团贷款 ec :企业往来 entrust :委托贷款 bond :债券发行 |
+| 32 | ftotalamt | 合计金额 | numeric | 23 | 10 | √ | 0 | 合计金额 |
+| 33 | fconfirmerid | 确认人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 34 | fdatasource | 数据来源 | varchar | 30 |  | √ | ' ' | 数据来源,枚举: cfm :融资管理 invest :投资管理 bond :债券 ifm :内部金融管理 |
+| 35 | fpayeetext | 收款人 | varchar | 80 |  | √ | ' ' | 收款人 |
+| 36 | fconfirmtime | 确认时间 | timestamp | 0 |  |  | null | 确认时间 |
+| 37 | frepayapplyid | 还款申请单 | int8 | 64 |  | √ | 0 | [还款申请 cfm_repayapplybill_f7](../cfm_files/cfm_repayapplybill_f7.md) |
+| 38 | floaneracctbankid | 本金收回银行账号 | int8 | 64 |  | √ | 0 | [银行账户 bd_accountbanks](../basedata_files/bd_accountbanks.md) |
 
 ### 列规则定义
 

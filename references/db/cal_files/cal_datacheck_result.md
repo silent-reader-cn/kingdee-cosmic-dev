@@ -9,7 +9,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fobjtypeid | 对象类型 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 1 | fobjtypeid | 对象类型 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 2 | fdetailinfo | 详情 | varchar | 30 |  | √ | ' ' | 详情 |
 | 3 | fisrepaired | 是否已修复 | bpchar | 1 |  | √ | ' ' | 是否已修复 |
 | 4 | fobjid | 异常对象id | int8 | 64 |  | √ | 0 | 异常对象id |
@@ -44,10 +44,10 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcostaccountbaseid | 成本主体 | int8 | 64 |  | √ | 0 | 成本主体 cal_bd_costaccount |
+| 2 | fcostaccountbaseid | 成本主体 | int8 | 64 |  | √ | 0 | [成本主体 cal_bd_costaccount](../cal_files/cal_bd_costaccount.md) |
 | 3 | fcheckplantype | 检查计划类型 | varchar | 30 |  | √ | ' ' | 检查计划类型,枚举: cal_datacheck_plan :巡检计划 cal_task :后台任务 |
 | 4 | fcalorg | 核算组织 | varchar | 2000 |  | √ | ' ' | 核算组织 |
-| 5 | fuserid | 检查用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | fuserid | 检查用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | fpurpose | 用途 | varchar | 5 |  | √ | ' ' | 用途,枚举: A :日常巡检 B :结账 C :关账 D :出库核算 |
 | 7 | fowner | 货主 | varchar | 2000 |  | √ | ' ' | 货主 |
 | 8 | fcostaccount | 成本主体 | varchar | 2000 |  | √ | ' ' | 成本主体 |
@@ -55,7 +55,7 @@
 | 10 | fownerid | 货主 | int8 | 64 |  | √ | 0 | 货主 |
 | 11 | fcheckplanid | 检查计划 | int8 | 64 |  | √ | 0 | 巡检计划 cal_datacheck_plan |
 | 12 | fchecktime | 检查时间 | timestamp | 0 |  |  | null | 检查时间 |
-| 13 | fchecktaskid | 检查任务 | int8 | 64 |  | √ | 0 | 检查任务 cal_datacheck_task |
+| 13 | fchecktaskid | 检查任务 | int8 | 64 |  | √ | 0 | [检查任务 cal_datacheck_task](../cal_files/cal_datacheck_task.md) |
 
 ### 列规则定义
 
@@ -86,7 +86,7 @@
 | 3 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 4 | fruningstatus | 运行状态 | bpchar | 1 |  | √ | ' ' | 运行状态,枚举: A :未开始 B :运行中 C :已完成 |
 | 5 | fdescription | 描述 | varchar | 225 |  | √ | ' ' | 描述 |
-| 6 | fcheckitemid | 检查项 | int8 | 64 |  | √ | 0 | 检查项 cal_datacheck_item |
+| 6 | fcheckitemid | 检查项 | int8 | 64 |  | √ | 0 | [检查项 cal_datacheck_item](../cal_files/cal_datacheck_item.md) |
 | 7 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 
 ### 列规则定义

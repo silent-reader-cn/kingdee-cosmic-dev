@@ -1,4 +1,4 @@
-# 供应商管理处理配置-pbd_srmdatasetting
+# 数据处理配置-pbd_srmdatasetting
 
 ## 任务明细分录-子表 t_pur_taskconfig
 
@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 3 | ftaskid | 任务明细 | int8 | 64 |  | √ | 0 | 数据处理任务节点 pbd_scdatatask |
+| 3 | ftaskid | 任务明细 | int8 | 64 |  | √ | 0 | [数据处理任务节点 pbd_scdatatask](../pbd_files/pbd_scdatatask.md) |
 | 4 | fvalid | 启用状态 | bpchar | 1 |  | √ | '1' | 启用状态 |
 | 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 6 | fsubsort | 执行顺序 | int8 | 64 |  | √ | 0 | 执行顺序 |
@@ -32,9 +32,9 @@
 
 ---
 
-## 供应商管理处理配置-主表 t_pur_scdataset
+## 数据处理配置-主表 t_pur_scdataset
 
-- **表名称：** 供应商管理处理配置-主表
+- **表名称：** 数据处理配置-主表
 - **表名：** t_pur_scdataset
 
 ### 表格列定义
@@ -43,10 +43,10 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fgroupid | fgroupid | int8 | 64 |  | √ | 0 |  |
 | 5 | fname | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
-| 6 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 7 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 8 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 9 | fispre | 是否预置 | bpchar | 1 |  | √ | '0' | 是否预置 |
@@ -69,9 +69,9 @@
 
 ---
 
-## 供应商管理处理配置-多语言表 t_pur_scdataset_l
+## 数据处理配置-多语言表 t_pur_scdataset_l
 
-- **表名称：** 供应商管理处理配置-多语言表
+- **表名称：** 数据处理配置-多语言表
 - **表名：** t_pur_scdataset_l
 
 ### 表格列定义

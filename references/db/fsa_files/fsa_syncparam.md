@@ -104,7 +104,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 4 | fignoredimnull | 忽略为空度量值 | bpchar | 1 |  | √ | ' ' | 忽略为空度量值 |
 | 5 | fdatasrctype | 数据源类型 | varchar | 50 |  | √ | ' ' | 数据源类型,枚举: 0 :自定义 bcmParamSource :星瀚合并报表 2 :星瀚预算 3 :星瀚总账 fileParamSource :导入离线数据 |
@@ -113,12 +113,12 @@
 | 8 | ftablenumber | 数据表编码 | varchar | 30 |  | √ | ' ' | 数据表编码 |
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 10 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 13 | fenable | 使用状态 | bpchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 14 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
 | 15 | ftablename | 数据表名称 | varchar | 30 |  | √ | ' ' | 数据表名称 |
-| 16 | fdatacollectionid | 数据集合 | int8 | 64 |  | √ | 0 | 数据集合 fsa_data_collection |
+| 16 | fdatacollectionid | 数据集合 | int8 | 64 |  | √ | 0 | [数据集合 fsa_data_collection](../fsa_files/fsa_data_collection.md) |
 
 ### 列规则定义
 

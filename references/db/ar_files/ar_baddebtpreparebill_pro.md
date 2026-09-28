@@ -12,61 +12,62 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fcuraccruedamt | 本期末应计提金额 | numeric | 23 | 10 | √ | 0 | 本期末应计提金额 |
 | 3 | faramtsum | 累计应收账款 | numeric | 23 | 10 | √ | 0 | 累计应收账款 |
-| 4 | forgid | 结算组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 4 | forgid | 结算组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 6 | fexchangerate | 汇率 | numeric | 23 | 10 | √ | 0 | 汇率 |
 | 7 | frecoveramt | 本期坏账收回金额 | numeric | 23 | 10 | √ | 0 | 本期坏账收回金额 |
 | 8 | frecamount | frecamount | numeric | 23 | 10 | √ | 0 |  |
 | 9 | frecoverlocalamt | 本期坏账收回金额(本位币) | numeric | 23 | 10 | √ | 0 | 本期坏账收回金额(本位币) |
-| 10 | fexratetableid | 汇率表 | int8 | 64 |  | √ | 0 | 汇率表 bd_exratetable |
+| 10 | fexratetableid | 汇率表 | int8 | 64 |  | √ | 0 | [汇率表 bd_exratetable](../base_files/bd_exratetable.md) |
 | 11 | flastaccruedamt | 期初已计提金额 | numeric | 23 | 10 | √ | 0 | 期初已计提金额 |
 | 12 | fbillno | 单据编号 | varchar | 80 |  | √ | ' ' | 单据编号 |
 | 13 | fstandardlocalamt | 坏账计提基数(本位币) | numeric | 23 | 10 | √ | 0 | 坏账计提基数(本位币) |
 | 14 | fstandardamt | 坏账计提基数 | numeric | 23 | 10 | √ | 0 | 坏账计提基数 |
-| 15 | fperiodid | 计提期间 | int8 | 64 |  | √ | 0 | 会计日历 bd_period |
+| 15 | fperiodid | 计提期间 | int8 | 64 |  | √ | 0 | [会计日历 bd_period](../fibd_files/bd_period.md) |
 | 16 | fsourcebilltype | fsourcebilltype | varchar | 30 |  | √ | ' ' |  |
 | 17 | fbillstatus | 单据状态 | varchar | 30 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 18 | fauditdate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
-| 19 | faccrualpercent | faccrualpercent | numeric | 23 | 10 | √ | 0 |  |
-| 20 | farlocalamtsum | 累计应收账款(本位币) | numeric | 23 | 10 | √ | 0 | 累计应收账款(本位币) |
-| 21 | fauditadjustmentlocalamt | 审计调整金额(本位币) | numeric | 23 | 10 | √ | 0 | 审计调整金额(本位币) |
-| 22 | fisvoucher | 已生成凭证 | bpchar | 1 |  | √ | '0' | 已生成凭证 |
-| 23 | fbookdate | 记账日期 | timestamp | 0 |  |  | null | 记账日期 |
-| 24 | freclocalamt | freclocalamt | numeric | 23 | 10 | √ | 0 |  |
-| 25 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 26 | fisperiod | 是否初始化 | bpchar | 1 |  | √ | '0' | 是否初始化 |
-| 27 | faccrualdate | 计提日期 | timestamp | 0 |  |  | null | 计提日期 |
-| 28 | fasstacttype | fasstacttype | varchar | 30 |  | √ | ' ' |  |
-| 29 | foffsetamt | foffsetamt | numeric | 23 | 10 | √ | 0 |  |
-| 30 | fcuraccruallocalamt | 本期计提坏账准备金额(本位币) | numeric | 23 | 10 | √ | 0 | 本期计提坏账准备金额(本位币) |
-| 31 | flosslocalamt | 本期坏账损失金额(本位币) | numeric | 23 | 10 | √ | 0 | 本期坏账损失金额(本位币) |
-| 32 | fquotation | 换算方式 | varchar | 30 |  | √ | ' ' | 换算方式,枚举: 0 :直接汇率 1 :间接汇率 |
-| 33 | flossamt | 本期坏账损失金额 | numeric | 23 | 10 | √ | 0 | 本期坏账损失金额 |
-| 34 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 35 | fauditadjustmentamt | 审计调整金额 | numeric | 23 | 10 | √ | 0 | 审计调整金额 |
-| 36 | flossamtsum | 累计坏账损失金额 | numeric | 23 | 10 | √ | 0 | 累计坏账损失金额 |
-| 37 | fagingrange | fagingrange | varchar | 50 |  | √ | ' ' |  |
-| 38 | fcuraccruedlocalamt | 本期末应计提金额(本位币) | numeric | 23 | 10 | √ | 0 | 本期末应计提金额(本位币) |
-| 39 | frecoverlocalamtsum | 累计坏账收回金额(本位币) | numeric | 23 | 10 | √ | 0 | 累计坏账收回金额(本位币) |
-| 40 | faccrualfrequency | 计提频率 | varchar | 30 |  | √ | ' ' | 计提频率,枚举: month :月 quarter :季 semiannual :半年 year :年 |
-| 41 | fisoffset | fisoffset | bpchar | 1 |  | √ | '0' |  |
-| 42 | fremark | 备注 | varchar | 512 |  | √ | ' ' | 备注 |
-| 43 | foffsetlocalamt | foffsetlocalamt | numeric | 23 | 10 | √ | 0 |  |
-| 44 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 45 | flastaccruedlocalamt | 期初已计提金额(本位币) | numeric | 23 | 10 | √ | 0 | 期初已计提金额(本位币) |
-| 46 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 47 | fasstactid | fasstactid | int8 | 64 |  | √ | 0 |  |
-| 48 | fsourcebilldate | fsourcebilldate | timestamp | 0 |  |  | null |  |
-| 49 | faccrualmethod | faccrualmethod | varchar | 50 |  | √ | ' ' |  |
-| 50 | fbasecurrencyid | 本位币 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
-| 51 | fsourcebillid | fsourcebillid | int8 | 64 |  | √ | 0 |  |
-| 52 | fexratedate | 汇率日期 | timestamp | 0 |  |  | null | 汇率日期 |
-| 53 | faccrualobjid | faccrualobjid | int8 | 64 |  | √ | 0 |  |
-| 54 | faccrualschemeid | faccrualschemeid | int8 | 64 |  | √ | 0 |  |
-| 55 | flosslocalamtsum | 累计坏账损失金额(本位币) | numeric | 23 | 10 | √ | 0 | 累计坏账损失金额(本位币) |
-| 56 | frecoveramtsum | 累计坏账收回金额 | numeric | 23 | 10 | √ | 0 | 累计坏账收回金额 |
-| 57 | fcuraccrualamt | 本期计提坏账准备金额 | numeric | 23 | 10 | √ | 0 | 本期计提坏账准备金额 |
-| 58 | fcurrencyid | 结算币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 19 | fmigsrc | 来源系统 | int4 | 32 |  | √ | 0 | 来源系统 |
+| 20 | faccrualpercent | faccrualpercent | numeric | 23 | 10 | √ | 0 |  |
+| 21 | farlocalamtsum | 累计应收账款(本位币) | numeric | 23 | 10 | √ | 0 | 累计应收账款(本位币) |
+| 22 | fauditadjustmentlocalamt | 审计调整金额(本位币) | numeric | 23 | 10 | √ | 0 | 审计调整金额(本位币) |
+| 23 | fisvoucher | 已生成凭证 | bpchar | 1 |  | √ | '0' | 已生成凭证 |
+| 24 | fbookdate | 记账日期 | timestamp | 0 |  |  | null | 记账日期 |
+| 25 | freclocalamt | freclocalamt | numeric | 23 | 10 | √ | 0 |  |
+| 26 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 27 | fisperiod | 是否初始化 | bpchar | 1 |  | √ | '0' | 是否初始化 |
+| 28 | faccrualdate | 计提日期 | timestamp | 0 |  |  | null | 计提日期 |
+| 29 | fasstacttype | fasstacttype | varchar | 30 |  | √ | ' ' |  |
+| 30 | foffsetamt | foffsetamt | numeric | 23 | 10 | √ | 0 |  |
+| 31 | fcuraccruallocalamt | 本期计提坏账准备金额(本位币) | numeric | 23 | 10 | √ | 0 | 本期计提坏账准备金额(本位币) |
+| 32 | flosslocalamt | 本期坏账损失金额(本位币) | numeric | 23 | 10 | √ | 0 | 本期坏账损失金额(本位币) |
+| 33 | fquotation | 换算方式 | varchar | 30 |  | √ | ' ' | 换算方式,枚举: 0 :直接汇率 1 :间接汇率 |
+| 34 | flossamt | 本期坏账损失金额 | numeric | 23 | 10 | √ | 0 | 本期坏账损失金额 |
+| 35 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 36 | fauditadjustmentamt | 审计调整金额 | numeric | 23 | 10 | √ | 0 | 审计调整金额 |
+| 37 | flossamtsum | 累计坏账损失金额 | numeric | 23 | 10 | √ | 0 | 累计坏账损失金额 |
+| 38 | fagingrange | fagingrange | varchar | 50 |  | √ | ' ' |  |
+| 39 | fcuraccruedlocalamt | 本期末应计提金额(本位币) | numeric | 23 | 10 | √ | 0 | 本期末应计提金额(本位币) |
+| 40 | frecoverlocalamtsum | 累计坏账收回金额(本位币) | numeric | 23 | 10 | √ | 0 | 累计坏账收回金额(本位币) |
+| 41 | faccrualfrequency | 计提频率 | varchar | 30 |  | √ | ' ' | 计提频率,枚举: month :月 quarter :季 semiannual :半年 year :年 |
+| 42 | fisoffset | fisoffset | bpchar | 1 |  | √ | '0' |  |
+| 43 | fremark | 备注 | varchar | 512 |  | √ | ' ' | 备注 |
+| 44 | foffsetlocalamt | foffsetlocalamt | numeric | 23 | 10 | √ | 0 |  |
+| 45 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 46 | flastaccruedlocalamt | 期初已计提金额(本位币) | numeric | 23 | 10 | √ | 0 | 期初已计提金额(本位币) |
+| 47 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 48 | fasstactid | fasstactid | int8 | 64 |  | √ | 0 |  |
+| 49 | fsourcebilldate | fsourcebilldate | timestamp | 0 |  |  | null |  |
+| 50 | faccrualmethod | faccrualmethod | varchar | 50 |  | √ | ' ' |  |
+| 51 | fbasecurrencyid | 本位币 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
+| 52 | fsourcebillid | fsourcebillid | int8 | 64 |  | √ | 0 |  |
+| 53 | fexratedate | 汇率日期 | timestamp | 0 |  |  | null | 汇率日期 |
+| 54 | faccrualobjid | faccrualobjid | int8 | 64 |  | √ | 0 |  |
+| 55 | faccrualschemeid | faccrualschemeid | int8 | 64 |  | √ | 0 |  |
+| 56 | flosslocalamtsum | 累计坏账损失金额(本位币) | numeric | 23 | 10 | √ | 0 | 累计坏账损失金额(本位币) |
+| 57 | frecoveramtsum | 累计坏账收回金额 | numeric | 23 | 10 | √ | 0 | 累计坏账收回金额 |
+| 58 | fcuraccrualamt | 本期计提坏账准备金额 | numeric | 23 | 10 | √ | 0 | 本期计提坏账准备金额 |
+| 59 | fcurrencyid | 结算币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 
 ### 列规则定义
 

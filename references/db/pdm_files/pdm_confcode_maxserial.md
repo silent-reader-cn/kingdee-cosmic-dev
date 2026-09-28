@@ -1,8 +1,8 @@
-# 配置号规则最大流水号-pdm_confcode_maxserial
+# 配置号规则最大流水号（废弃）-pdm_confcode_maxserial
 
-## 配置号规则最大流水号-主表 t_pdm_rulemaxserial
+## 配置号规则最大流水号（废弃）-主表 t_pdm_rulemaxserial
 
-- **表名称：** 配置号规则最大流水号-主表
+- **表名称：** 配置号规则最大流水号（废弃）-主表
 - **表名：** t_pdm_rulemaxserial
 
 ### 表格列定义

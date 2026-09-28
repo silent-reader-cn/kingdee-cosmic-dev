@@ -25,5 +25,5 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | pk_t_plm_data_bank |  | fid,fdatatype |
-| 2 | idx_plm_data_bank_data |  | fdata |
+| 1 | idx_plm_data_bank_data |  | fdata |
+| 2 | pk_t_plm_data_bank |  | fid,fdatatype |

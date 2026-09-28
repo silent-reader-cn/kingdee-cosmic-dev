@@ -10,8 +10,8 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fsscid | 共享中心 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 3 | fbizbill | 业务单据 | int8 | 64 |  | √ | 0 | 业务单据 task_taskbill |
+| 2 | fsscid | 共享中心 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 3 | fbizbill | 业务单据 | int8 | 64 |  | √ | 0 | [业务单据 task_taskbill](../ssc_files/task_taskbill.md) |
 | 4 | fstackinfo_tag | 错误堆栈_详情 | text | 0 |  |  | null | 错误堆栈_详情 |
 | 5 | fstackinfo | 错误堆栈 | varchar | 255 |  | √ | ' ' | 错误堆栈 |
 | 6 | ffailurereason | 失败原因 | varchar | 150 |  | √ | ' ' | 失败原因 |

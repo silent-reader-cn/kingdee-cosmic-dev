@@ -28,8 +28,8 @@
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
 | 1 | idx_ssc_qualmsgtaskid |  | fqualitycheck |
-| 2 | idx_ssc_qualmsgckpoint |  | fpoint |
-| 3 | t_tk_qualitymessage_pkey |  | fid |
+| 2 | t_tk_qualitymessage_pkey |  | fid |
+| 3 | idx_ssc_qualmsgckpoint |  | fpoint |
 
 ---
 
@@ -44,7 +44,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fmessage | 信息 | varchar | 1000 |  | √ | ' ' | 信息 |
-| 3 | fusercheck | 用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fusercheck | 用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fisnewmessage | 是否是最新信息 | int8 | 64 |  | √ | 0 | 是否是最新信息 |
 | 5 | fmessagetype | 信息类型 | bpchar | 1 |  | √ | ' ' | 信息类型,枚举: 0 :质检意见 1 :整改意见 2 :复核意见 |
 | 6 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |

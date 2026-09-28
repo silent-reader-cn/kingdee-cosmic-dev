@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fsuppliertype | fsuppliertype | varchar | 30 |  | √ | ' ' |  |
-| 3 | fsupplier | 供应商 | int8 | 64 |  | √ | 0 | 注册供应商 src_supplier |
+| 3 | fsupplier | 供应商 | int8 | 64 |  | √ | 0 | [注册供应商 src_supplier](../pds_files/src_supplier.md) |
 | 4 | fentryidtwo | fentryidtwo | int8 | 64 |  | √ | 0 |  |
 | 5 | fisinvite | 是否邀请 | bpchar | 1 |  | √ | '0' | 是否邀请 |
 | 6 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
@@ -43,7 +43,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 2 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 | 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 
@@ -72,7 +72,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 物料分类 bd_materialgroup |
+| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [物料分类 bd_materialgroup](../basedata_files/bd_materialgroup.md) |
 | 2 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 | 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 
@@ -117,7 +117,7 @@
 | 14 | fprojectno | fprojectno | varchar | 50 |  | √ | ' ' |  |
 | 15 | fdetailid | fdetailid | varchar | 50 |  | √ | ' ' |  |
 | 16 | fbillno | 场景编号 | varchar | 100 |  | √ | ' ' | 场景编号 |
-| 17 | fwinrule | 中标原则 | int8 | 64 |  | √ | 0 | 招标辅助资料 pds_extdata |
+| 17 | fwinrule | 中标原则 | int8 | 64 |  | √ | 0 | [招标辅助资料 pds_extdata](../pds_files/pds_extdata.md) |
 | 18 | fisfunction | 生效状态 | bpchar | 1 |  | √ | '0' | 生效状态,枚举: A :未生效 B :生效 C :失效 D :过期 |
 | 19 | fprojectid | fprojectid | int8 | 64 |  | √ | 0 |  |
 | 20 | fbillstatus | fbillstatus | bpchar | 1 |  | √ | ' ' |  |
@@ -125,7 +125,7 @@
 | 22 | fwinerqty | 中标供应商数量 | int8 | 64 |  | √ | 0 | 中标供应商数量 |
 | 23 | fauditdate | fauditdate | timestamp | 0 |  |  | null |  |
 | 24 | fscenename_des | 场景名称 | varchar | 100 |  | √ | ' ' | 场景名称 |
-| 25 | fpurtype | 寻源方式 | int8 | 64 |  | √ | 0 | 招标辅助资料 pds_extdata |
+| 25 | fpurtype | 寻源方式 | int8 | 64 |  | √ | 0 | [招标辅助资料 pds_extdata](../pds_files/pds_extdata.md) |
 | 26 | fruleassess | 商务报价计算规则（评估） | varchar | 30 |  | √ | ' ' | 商务报价计算规则（评估）,枚举: 1 :标的单价 2 :报价包的采购总金额 3 :报价包内所有产品的平均价 4 :其他 |
 | 27 | fquerycondition | 邀请条件 | varchar | 255 |  | √ | ' ' | 邀请条件 |
 | 28 | fscenechasisstid | fscenechasisstid | int8 | 64 |  | √ | 0 |  |
@@ -145,7 +145,7 @@
 | 42 | forderrule | 订单分配规则 | varchar | 1000 |  | √ | ' ' | 订单分配规则 |
 | 43 | fremark | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
 | 44 | fmodifierid | fmodifierid | int8 | 64 |  | √ | 0 |  |
-| 45 | ftalkrule | 谈判原则 | int8 | 64 |  | √ | 0 | 招标辅助资料 pds_extdata |
+| 45 | ftalkrule | 谈判原则 | int8 | 64 |  | √ | 0 | [招标辅助资料 pds_extdata](../pds_files/pds_extdata.md) |
 | 46 | fskillper | 技术标占比(%) | numeric | 23 | 10 | √ | 0 | 技术标占比(%) |
 | 47 | fcreatetime | fcreatetime | timestamp | 0 |  |  | null |  |
 | 48 | forigncreator | forigncreator | int8 | 64 |  | √ | 0 |  |
@@ -179,7 +179,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 供应商 bd_supplier |
+| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [供应商 bd_supplier](../basedata_files/bd_supplier.md) |
 | 2 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 | 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 

@@ -99,18 +99,18 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmaterialcfgid | 物料编码 | int8 | 64 |  | √ | 0 | 物料质检信息 bd_inspect_cfg |
+| 2 | fmaterialcfgid | 物料编码 | int8 | 64 |  | √ | 0 | [物料质检信息 bd_inspect_cfg](../sbd_files/bd_inspect_cfg.md) |
 | 3 | fsrcentryid | 来源分录id | int8 | 64 |  | √ | 0 | 来源分录id |
 | 4 | ftasktype | 任务类型 | varchar | 1 |  | √ | '1' | 任务类型,枚举: 1 :已认领 2 :已委托 3 :已指派 4 :已接受 |
-| 5 | fmaterialid | 物料主数据 | int8 | 64 |  | √ | 0 | 物料 bd_material |
-| 6 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 7 | ftaskexecutor | 执行人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 8 | fmanager | 质检主管 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 9 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | fmaterialid | 物料主数据 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
+| 6 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 7 | ftaskexecutor | 执行人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 8 | fmanager | 质检主管 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 9 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 11 | fstatus | 数据状态 | varchar | 1 |  | √ | 'A' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 12 | fbiztype | 业务类型 | int8 | 64 |  | √ | 0 | 业务类型 bd_biztype |
-| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fbiztype | 业务类型 | int8 | 64 |  | √ | 0 | [业务类型 bd_biztype](../sbd_files/bd_biztype.md) |
+| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 15 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 16 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
@@ -118,12 +118,12 @@
 | 18 | ftaskstatus | 任务状态 | varchar | 1 |  | √ | '0' | 任务状态,枚举: 0 :检验中 1 :已提交 2 :未开始 3 :已关闭 4 :已修改 |
 | 19 | fxkallocationtype | 分配类型 | bpchar | 1 |  | √ | ' ' | 分配类型,枚举: 1 :个性化 2 :共享型 |
 | 20 | facceptstatus | 委托人接受状态 | varchar | 1 |  | √ | '0' | 委托人接受状态,枚举: 0 :未接受 1 :已接受 |
-| 21 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 22 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 21 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 22 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 23 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
 | 24 | fsrcbillid | 来源单据id | int8 | 64 |  | √ | 0 | 来源单据id |
 | 25 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 26 | funitid | 计量单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 26 | funitid | 计量单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 27 | fexpectdate | 期望完成日期 | timestamp | 0 |  |  | null | 期望完成日期 |
 | 28 | fauditdate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
 | 29 | fstarttime | 开始时间 | timestamp | 0 |  |  | null | 开始时间 |
@@ -133,11 +133,11 @@
 | 33 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
 | 34 | fendtime | 完成时间 | timestamp | 0 |  |  | null | 完成时间 |
 | 35 | fisurgent | 任务加急 | bpchar | 1 |  | √ | '0' | 任务加急 |
-| 36 | fuseorgid | 业务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 36 | fuseorgid | 业务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 37 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
-| 38 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 39 | ftaskclaimant | 认领人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 40 | ftaskclient | 委托人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 38 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 39 | ftaskclaimant | 认领人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 40 | ftaskclient | 委托人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

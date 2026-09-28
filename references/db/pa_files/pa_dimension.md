@@ -70,22 +70,22 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fname | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
 | 4 | fgroupid | 字段值 | int8 | 64 |  | √ | 0 | 科目表 pa_accounttype |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 6 | fasstacttype | 关联业务维度 | int8 | 64 |  | √ | 0 | 业务维度 ai_asstacttype |
+| 6 | fasstacttype | 关联业务维度 | int8 | 64 |  | √ | 0 | [业务维度 ai_asstacttype](../ai_files/ai_asstacttype.md) |
 | 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 8 | ftypefield | 类型字段 | varchar | 36 |  | √ | ' ' | 类型字段,枚举: |
 | 9 | fstatus | 数据状态 | bpchar | 1 |  | √ | 'C' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 12 | fdimensiontype | 维度类型 | bpchar | 1 |  | √ | ' ' | 维度类型,枚举: 1 :基础资料类型 2 :辅助资料类型 3 :文本类型 4 :期间维度 |
-| 13 | fassistantsourceid | 辅助资料来源 | int8 | 64 |  | √ | 0 | 辅助资料分类 bos_assistantdatagroup |
+| 13 | fassistantsourceid | 辅助资料来源 | int8 | 64 |  | √ | 0 | [辅助资料分类 bos_assistantdatagroup](../base_files/bos_assistantdatagroup.md) |
 | 14 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 15 | fdimensionsrcid | 维度来源 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 15 | fdimensionsrcid | 维度来源 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 16 | fnumber | 编码 | varchar | 50 |  | √ | ' ' | 编码 |
-| 17 | fsystemid | 分析体系 | int8 | 64 |  | √ | 0 | 分析体系 pa_anasystemsetting |
+| 17 | fsystemid | 分析体系 | int8 | 64 |  | √ | 0 | [分析体系 pa_anasystemsetting](../pa_files/pa_anasystemsetting.md) |
 | 18 | fisdefault | 是否默认预置 | bpchar | 1 |  | √ | '0' | 是否默认预置 |
 | 19 | fgrouptype | 字段值类型 | varchar | 36 |  | √ | ' ' | 字段值类型,枚举: pa_accounttype :group bd_period_type :periodtype bd_accounttable :accounttable |
 

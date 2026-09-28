@@ -40,7 +40,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fispreinsert | 是否预置 | bpchar | 1 |  | √ | '0' | 是否预置 |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 6 | fapptype | 应用 | varchar | 30 |  | √ | ' ' | 应用,枚举: ar :应收 ap :应付 |
@@ -50,11 +50,11 @@
 | 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 11 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 12 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | fctrlexplain | 控制说明 | varchar | 255 |  | √ | ' ' | 控制说明 |
 | 15 | fctrltype | 控制类型 | varchar | 30 |  | √ | ' ' | 控制类型,枚举: warn :提醒 error :禁止 |
 | 16 | fenable | 使用状态 | varchar | 30 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 17 | fbizobjid | 控制对象 | varchar | 50 |  | √ | ' ' | 业务对象 bos_objecttype |
+| 17 | fbizobjid | 控制对象 | varchar | 50 |  | √ | ' ' | [业务对象 bos_objecttype](../mdl_files/bos_objecttype.md) |
 | 18 | fplugin | 插件 | varchar | 255 |  | √ | ' ' | 插件 |
 | 19 | fnumber | 编码 | varchar | 100 |  | √ | ' ' | 编码 |
 

@@ -10,19 +10,19 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | frefundabletaxamount | 即征即退税额 | numeric | 23 | 10 | √ | 0.0000000000 | 即征即退税额 |
 | 4 | feffectivetaxamount | 有效税额 | numeric | 23 | 10 | √ | 0.0000000000 | 有效税额 |
 | 5 | fmodifytime | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
 | 6 | fenddate | 结束日期 | timestamp | 0 |  |  | null | 结束日期 |
-| 7 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 7 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 8 | fsignstatus | 标记状态 | varchar | 30 |  | √ | ' ' | 标记状态,枚举: 1 :未标记 2 :已取消标记 |
 | 9 | fsignedtaxamount | 已标识税额 | numeric | 23 | 10 | √ | 0.0000000000 | 已标识税额 |
 | 10 | finvoicecode | 发票代码 | varchar | 50 |  | √ | ' ' | 发票代码 |
 | 11 | finvoiceno | 发票号码 | varchar | 50 |  | √ | ' ' | 发票号码 |
 | 12 | fremark | 备注 | varchar | 125 |  | √ | ' ' | 备注 |
 | 13 | ftaxamount | 合计税额 | numeric | 23 | 10 | √ | 0.0000000000 | 合计税额 |
-| 14 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | fsignrate | 标识比列 | numeric | 23 | 10 | √ | 0.0000000000 | 标识比列 |
 | 16 | fundistinguishtaxamount | 无法划分税额 | numeric | 23 | 10 | √ | 0.0000000000 | 无法划分税额 |
 | 17 | fcreatetime | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |

@@ -110,28 +110,28 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fsuretybillamt | 保证金金额 | numeric | 23 | 10 | √ | 0 | 保证金金额 |
-| 4 | fprojectid | 项目 | int8 | 64 |  | √ | 0 | 项目 bd_project |
+| 4 | fprojectid | 项目 | int8 | 64 |  | √ | 0 | [项目 bd_project](../basedata_files/bd_project.md) |
 | 5 | fsourcebilltype | 源单类型 | varchar | 50 |  | √ | ' ' | 源单类型,枚举: pac_projectsuretybill :现金保证金 |
 | 6 | fbillstatus | 单据状态 | varchar | 50 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 7 | fcontactunittype | 往来单位类型 | varchar | 50 |  | √ | ' ' | 往来单位类型,枚举: bd_customer :客户 |
 | 8 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 9 | forgid | 收付组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 9 | forgid | 收付组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 10 | fdeductdate | 扣款日期 | timestamp | 0 |  |  | null | 扣款日期 |
 | 11 | fsuretybillid | 关联的保证金 | int8 | 64 |  | √ | 0 | 项目保证金 pac_projectsuretybill |
 | 12 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
 | 13 | fdeductamt | 扣款金额 | numeric | 23 | 10 | √ | 0 | 扣款金额 |
 | 14 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 15 | fsourcebillnumber | 源单编码 | varchar | 50 |  | √ | ' ' | 源单编码 |
-| 16 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 16 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 17 | fsourcebillid | 源单ID | int8 | 64 |  | √ | 0 | 源单ID |
 | 18 | fcontactunit | 客户 | int8 | 64 |  | √ | 0 | 客户 bd_customer |
 | 19 | fdeductreason | 扣款原由 | varchar | 500 |  | √ | ' ' | 扣款原由 |
 | 20 | fisvoucher | 已生成凭证 | bpchar | 1 |  | √ | '0' | 已生成凭证 |
-| 21 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 21 | fcurrencyid | 币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 | 22 | fbillno | 单据编号 | varchar | 50 |  | √ | ' ' | 单据编号 |
-| 23 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 23 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 24 | fbilltype | 单据类型 | varchar | 50 |  | √ | ' ' | 单据类型,枚举: 0 :质保金扣款 |
 
 ### 列规则定义

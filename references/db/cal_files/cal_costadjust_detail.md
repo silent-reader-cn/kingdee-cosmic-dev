@@ -9,13 +9,13 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fmaterialid | 物料 | int8 | 64 |  | √ | 0 | 物料 bd_material |
-| 2 | fcostsubelementid | 成本子要素 | int8 | 64 |  | √ | 0 | 成本子要素 cad_subelement |
+| 1 | fmaterialid | 物料 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
+| 2 | fcostsubelementid | 成本子要素 | int8 | 64 |  | √ | 0 | [成本子要素 cad_subelement](../basedata_files/cad_subelement.md) |
 | 3 | fseq | 序号 | int8 | 64 |  | √ | 0 | 序号 |
 | 4 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 | id |
 | 5 | fentryid | 成本调整单分录ID | int8 | 64 |  | √ | 0 | 成本调整单分录ID |
-| 6 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
-| 7 | fcostelementid | 成本要素 | int8 | 64 |  | √ | 0 | 成本要素 cad_element |
+| 6 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
+| 7 | fcostelementid | 成本要素 | int8 | 64 |  | √ | 0 | [成本要素 cad_element](../basedata_files/cad_element.md) |
 | 8 | fadjustamt | 调整金额 | numeric | 23 | 10 | √ | 0.0000000000 | 调整金额 |
 
 ### 列规则定义

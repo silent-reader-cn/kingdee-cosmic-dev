@@ -34,7 +34,7 @@
 | 23 | ftxtattr5 | 文本5 | varchar | 150 |  | √ | ' ' | 文本5 |
 | 24 | ftxtattr4 | 文本4 | varchar | 150 |  | √ | ' ' | 文本4 |
 | 25 | ftxtattr3 | 文本3 | varchar | 150 |  | √ | ' ' | 文本3 |
-| 26 | fvaluesettypeid | 引用值集类型的ID | int8 | 64 |  | √ | 0 | 外部数据值集 fah_valueset_type |
+| 26 | fvaluesettypeid | 引用值集类型的ID | int8 | 64 |  | √ | 0 | [外部数据值集 fah_valueset_type](../edah_files/fah_valueset_type.md) |
 | 27 | fenable | 启用状态 | bpchar | 1 |  | √ | ' ' | 启用状态 |
 | 28 | fnumber | 值 | varchar | 150 |  | √ | ' ' | 值 |
 | 29 | ftxtattr20 | 文本20 | varchar | 150 |  | √ | ' ' | 文本20 |

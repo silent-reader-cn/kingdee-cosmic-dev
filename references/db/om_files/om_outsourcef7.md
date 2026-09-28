@@ -26,7 +26,7 @@
 | 15 | fdeliveraddress | fdeliveraddress | varchar | 512 |  |  | ' ' |  |
 | 16 | foproperation | foproperation | varchar | 50 |  | √ | ' ' |  |
 | 17 | freceivebaseqtyup | freceivebaseqtyup | numeric | 23 | 10 | √ | 0.0000000000 |  |
-| 18 | funitid | 计量单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 18 | funitid | 计量单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 19 | fispresent | fispresent | bpchar | 1 |  | √ | '0' |  |
 | 20 | fwarehouseid | fwarehouseid | int8 | 64 |  | √ | 0 |  |
 | 21 | fmaterialmasterid | fmaterialmasterid | int8 | 64 |  | √ | 0 |  |
@@ -41,7 +41,7 @@
 | 30 | fsupplierlot | fsupplierlot | varchar | 50 |  | √ | ' ' |  |
 | 31 | fdiscountamount | fdiscountamount | numeric | 23 | 10 | √ | 0.0000000000 |  |
 | 32 | famount | famount | numeric | 23 | 10 | √ | 0.0000000000 |  |
-| 33 | fconfiguredcodeid | 配置号 | int8 | 64 |  | √ | 0 | 配置号 bd_configuredcode |
+| 33 | fconfiguredcodeid | 配置号 | int8 | 64 |  | √ | 0 | [配置号（废弃） bd_configuredcode](../sbd_files/bd_configuredcode.md) |
 | 34 | fmaterialspread | fmaterialspread | bpchar | 1 |  | √ | '1' |  |
 | 35 | fauxunitid | fauxunitid | int8 | 64 |  | √ | 0 |  |
 | 36 | fbomname | fbomname | varchar | 50 |  | √ | ' ' |  |
@@ -66,7 +66,7 @@
 | 55 | fiscontrolqty | fiscontrolqty | bpchar | 1 |  | √ | '0' |  |
 | 56 | freceiverateup | freceiverateup | numeric | 23 | 10 | √ | 0.0000000000 |  |
 | 57 | fentrysettledeptid | fentrysettledeptid | int8 | 64 |  | √ | 0 |  |
-| 58 | fbomid | BOM | int8 | 64 |  | √ | 0 | BOM维护 pdm_mftbom |
+| 58 | fbomid | BOM | int8 | 64 |  | √ | 0 | [BOM维护 pdm_mftbom](../fmm_files/pdm_mftbom.md) |
 | 59 | fentrysettleorgid | fentrysettleorgid | int8 | 64 |  | √ | 0 |  |
 | 60 | foproperationid | foproperationid | int8 | 64 |  | √ | 0 |  |
 | 61 | fownertype | fownertype | varchar | 36 |  | √ | ' ' |  |
@@ -91,11 +91,11 @@
 | 80 | fmaterialname | fmaterialname | varchar | 255 |  | √ | ' ' |  |
 | 81 | fentryreqorgid | fentryreqorgid | int8 | 64 |  | √ | 0 |  |
 | 82 | frowclosestatus | 行关闭状态 | varchar | 30 |  | √ | ' ' | 行关闭状态,枚举: A :正常 B :已关闭 |
-| 83 | fmaterialid | 物料 | int8 | 64 |  | √ | 0 | 物料生产信息 bd_materialmftinfo |
+| 83 | fmaterialid | 物料 | int8 | 64 |  | √ | 0 | [物料生产信息 bd_materialmftinfo](../sbd_files/bd_materialmftinfo.md) |
 | 84 | fprice | fprice | numeric | 23 | 10 | √ | 0.0000000000 |  |
 | 85 | freceiveratedown | freceiveratedown | numeric | 23 | 10 | √ | 0.0000000000 |  |
 | 86 | ftechno | ftechno | varchar | 50 |  | √ | ' ' |  |
-| 87 | ftracknumberid | 跟踪号 | int8 | 64 |  | √ | 0 | 跟踪号 bd_tracknumber |
+| 87 | ftracknumberid | 跟踪号 | int8 | 64 |  | √ | 0 | [跟踪号 bd_tracknumber](../sbd_files/bd_tracknumber.md) |
 | 88 | froutename | froutename | varchar | 50 |  | √ | ' ' |  |
 | 89 | fiscontrolday | fiscontrolday | bpchar | 1 |  | √ | '0' |  |
 | 90 | famountandtax | famountandtax | numeric | 23 | 10 | √ | 0.0000000000 |  |

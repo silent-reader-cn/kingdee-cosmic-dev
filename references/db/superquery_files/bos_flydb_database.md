@@ -39,11 +39,11 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreator | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 3 | fcreatedate | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
+| 2 | fcreator | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 3 | fcreatedate | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 4 | fstate | 状态 | bpchar | 1 |  | √ | ' ' | 状态,枚举: A :启用 B :禁用 |
-| 5 | fmodifydate | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
-| 6 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | fmodifydate | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 6 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 7 | fnumber | 编码 | varchar | 50 |  | √ | ' ' | 编码 |
 
 ### 列规则定义

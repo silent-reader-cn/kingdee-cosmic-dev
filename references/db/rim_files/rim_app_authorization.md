@@ -14,7 +14,7 @@
 | 3 | fstatus | 授权状态 | varchar | 4 |  | √ | ' ' | 授权状态,枚举: 1 :已授权 2 :未授权 |
 | 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 5 | fapptype | 授权方 | varchar | 4 |  | √ | ' ' | 授权方,枚举: 1 :滴滴 2 :云票 |
-| 6 | fuserid | 用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | fuserid | 用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 8 | fphone_no | 手机号码 | varchar | 20 |  | √ | ' ' | 手机号码 |
 | 9 | fappid | 接入方标识 | varchar | 50 |  | √ | ' ' | 接入方标识 |

@@ -16,11 +16,11 @@
 | 5 | fbillqty | 单据数量 | int8 | 64 |  | √ | 0 | 单据数量 |
 | 6 | fexecstartdate | 操作开始时间 | timestamp | 0 |  |  | null | 操作开始时间 |
 | 7 | fexecenddate | 操作结束时间 | timestamp | 0 |  |  | null | 操作结束时间 |
-| 8 | fbizappid | 业务应用 | varchar | 36 |  | √ | ' ' | 业务应用实体 bos_devportal_bizapp |
+| 8 | fbizappid | 业务应用 | varchar | 36 |  | √ | ' ' | [业务应用实体 bos_devportal_bizapp](../mdl_files/bos_devportal_bizapp.md) |
 | 9 | fexecstatus | 执行状态 | bpchar | 1 |  | √ | ' ' | 执行状态,枚举: 1 :进行中 2 :成功 3 :失败 |
 | 10 | fsuccessbillqty | 成功数量 | int4 | 32 |  | √ | 0 | 成功数量 |
 | 11 | ffailbillqty | 失败数量 | int4 | 32 |  | √ | 0 | 失败数量 |
-| 12 | fintelschemaid | 执行方案 | int8 | 64 |  | √ | 0 | 智能执行方案 gl_intellexecschema |
+| 12 | fintelschemaid | 执行方案 | int8 | 64 |  | √ | 0 | [智能执行方案 gl_intellexecschema](../iep_files/gl_intellexecschema.md) |
 | 13 | fdate | fdate | int8 | 64 |  | √ | 0 |  |
 | 14 | fexecdetail | 执行描述 | text | 0 |  |  | null | 执行描述 |
 

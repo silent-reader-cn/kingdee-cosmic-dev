@@ -78,15 +78,15 @@
 | 9 | fcreatetime | fcreatetime | timestamp | 0 |  |  | null |  |
 | 10 | fsrcbillid | fsrcbillid | varchar | 50 |  | √ | ' ' |  |
 | 11 | fcfmopinion | fcfmopinion | varchar | 255 |  | √ | ' ' |  |
-| 12 | fhandlerid | 处理人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fhandlerid | 处理人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fauditdate | fauditdate | timestamp | 0 |  |  | null |  |
 | 14 | fcfmdate | 确认时间 | timestamp | 0 |  |  | null | 确认时间 |
 | 15 | fauditopinion | fauditopinion | varchar | 255 |  | √ | ' ' |  |
-| 16 | fcfmid | 确认人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 16 | fcfmid | 确认人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 17 | fmodifytime | fmodifytime | timestamp | 0 |  |  | null |  |
 | 18 | forigin | forigin | bpchar | 1 |  | √ | ' ' |  |
 | 19 | finvalidid | finvalidid | int8 | 64 |  | √ | 0 |  |
-| 20 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 20 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 21 | fsrcbilltype | fsrcbilltype | varchar | 50 |  | √ | ' ' |  |
 | 22 | fauditorid | fauditorid | int8 | 64 |  | √ | 0 |  |
 

@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | foperator | 操作人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | foperator | 操作人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | foperatetime | 操作时间 | timestamp | 0 |  |  | null | 操作时间 |
 | 4 | fsbbid | 申报表id | int8 | 64 |  | √ | 0 | 申报表id |
 | 5 | fapplyno | 申请编号 | varchar | 50 |  | √ | ' ' | 申请编号 |

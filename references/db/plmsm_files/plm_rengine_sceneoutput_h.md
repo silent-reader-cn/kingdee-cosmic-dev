@@ -41,7 +41,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | foperate | 操作 | varchar | 20 |  | √ | ' ' | 操作,枚举: new :新增 modify :修改 delete :删除 |
 | 3 | fname | 场景输出参数名称 | varchar | 50 |  | √ | ' ' | 场景输出参数名称 |
-| 4 | foperatorid | 操作人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | foperatorid | 操作人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fscenenumber | 所属场景编码 | varchar | 50 |  | √ | ' ' | 所属场景编码 |
 | 6 | fsceneid | 所属场景id | int8 | 64 |  | √ | 0 | 所属场景id |
 | 7 | fsceneoutputid | 场景输出参数id | int8 | 64 |  | √ | 0 | 场景输出参数id |

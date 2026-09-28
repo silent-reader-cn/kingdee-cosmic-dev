@@ -11,12 +11,16 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fstatus | 发布状态 | bpchar | 1 |  | √ | '0' | 发布状态 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 4 | fcreatedate | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 4 | fcreatedate | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 5 | ftype | 类型 | varchar | 50 |  | √ | ' ' | 类型,枚举: 1 :用户使用协议 2 :隐私政策 |
-| 6 | fmodifydate | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
-| 7 | fcreaterid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 8 | fversion | 版本 | varchar | 50 |  | √ | ' ' | 版本 |
+| 6 | fmodifydate | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 7 | fcontent_tag | 内容_详情 | text | 0 |  |  | null | 内容_详情 |
+| 8 | fcreaterid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 9 | fcountryid | 国家 | int8 | 64 |  | √ | 0 | [国家和地区 bd_country](../base_files/bd_country.md) |
+| 10 | flocaleid | 语种 | int8 | 64 |  | √ | 0 | [语言种类 inte_language](../base_files/inte_language.md) |
+| 11 | fcontent | 内容 | varchar | 255 |  | √ | ' ' | 内容 |
+| 12 | fversion | 版本 | varchar | 50 |  | √ | ' ' | 版本 |
 
 ### 列规则定义
 

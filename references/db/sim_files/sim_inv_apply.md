@@ -14,9 +14,9 @@
 | 3 | finvoicetype | 发票类型 | varchar | 30 |  | √ | ' ' | 发票类型,枚举: 026 :普通电子发票 027 :专用电子发票 |
 | 4 | favailablequantity | 可领用数量 | int8 | 64 |  | √ | 0 | 可领用数量 |
 | 5 | fapplypurchasequantity | 申请领购数量 | int8 | 64 |  | √ | 0 | 申请领购数量 |
-| 6 | forg | 组织 | int8 | 64 |  | √ | 0 | 企业管理 bdm_org |
-| 7 | fepinfo | 企业信息 | int8 | 64 |  | √ | 0 | 企业基础信息 bdm_enterprise_baseinfo |
-| 8 | fconductor | 处理人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | forg | 组织 | int8 | 64 |  | √ | 0 | [企业管理 bdm_org](../bdm_files/bdm_org.md) |
+| 7 | fepinfo | 企业信息 | int8 | 64 |  | √ | 0 | [企业基础信息 bdm_enterprise_baseinfo](../bdm_files/bdm_enterprise_baseinfo.md) |
+| 8 | fconductor | 处理人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

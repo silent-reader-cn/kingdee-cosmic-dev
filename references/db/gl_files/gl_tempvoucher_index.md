@@ -13,7 +13,8 @@
 | 2 | fvoucherid | 凭证 | int8 | 64 |  | √ | 0 | 凭证 |
 | 3 | fperiodid | 期间 | int8 | 64 |  | √ | 0 | 期间 |
 | 4 | forgid | 组织 | int8 | 64 |  | √ | 0 | 组织 |
-| 5 | faccountid | 科目 | int8 | 64 |  | √ | 0 | 科目 |
+| 5 | fbookid | 账簿 | int8 | 64 |  | √ | 0 | 账簿 |
+| 6 | faccountid | 科目 | int8 | 64 |  | √ | 0 | 科目 |
 
 ### 列规则定义
 

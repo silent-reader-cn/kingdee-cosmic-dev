@@ -1,38 +1,5 @@
 # 自动执行规则设置-cad_autoexecrulesetting
 
-## 单据体-子表 t_cad_autoexecruleentry
-
-- **表名称：** 单据体-子表
-- **表名：** t_cad_autoexecruleentry
-
-### 表格列定义
-
-| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fsourceorgid | 来源核算组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 3 | fmatgroupid | 物料分类 | int8 | 64 |  | √ | 0 | 物料分类 bd_materialgroup |
-| 4 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 5 | frefreshnewmat | 仅刷新新增物料 | bpchar | 1 |  | √ | '0' | 仅刷新新增物料 |
-| 6 | fmatgroupstdid | 物料分类标准 | int8 | 64 |  | √ | 0 | 物料分类标准 bd_materialgroupstandard |
-| 7 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 8 | fsourcemanuorgid | 来源生产组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-
-### 列规则定义
-
-| 序号 | 键编码 | 列字段 |
-| :--- | :--- | :--- |
-| 1 | fentryid | fentryid |
-
-### 索引定义
-
-| 序号 | 索引名 | 唯一 | 列字段 |
-| :--- | :--- | :--- | :--- |
-| 1 | pk_t_cad_autoexecruleentry |  | fentryid |
-| 2 | idx_cad_autoexecruleentry |  | fid |
-
----
-
 ## 自动执行规则设置-多语言表 t_cad_autoexecrulesetting_l
 
 - **表名称：** 自动执行规则设置-多语言表
@@ -73,11 +40,11 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 4 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 5 | fcosttypeid | 成本类型 | int8 | 64 |  | √ | 0 | 标准成本方案 cad_costtype |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 4 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 5 | fcosttypeid | 成本类型 | int8 | 64 |  | √ | 0 | [标准成本方案 cad_costtype](../basedata_files/cad_costtype.md) |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 7 | fautoexecorgid | 自动执行组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 7 | fautoexecorgid | 自动执行组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | fbillno | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 
@@ -94,3 +61,36 @@
 | 1 | idx_cad_autoexecrule_org |  | fautoexecorgid |
 | 2 | pk_t_cad_autoexecrulesetting |  | fid |
 | 3 | idx_cad_autoexecrule_ct |  | fcosttypeid |
+
+---
+
+## 单据体-子表 t_cad_autoexecruleentry
+
+- **表名称：** 单据体-子表
+- **表名：** t_cad_autoexecruleentry
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fsourceorgid | 来源核算组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 3 | fmatgroupid | 物料分类 | int8 | 64 |  | √ | 0 | [物料分类 bd_materialgroup](../basedata_files/bd_materialgroup.md) |
+| 4 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
+| 5 | frefreshnewmat | 仅刷新新增物料 | bpchar | 1 |  | √ | '0' | 仅刷新新增物料 |
+| 6 | fmatgroupstdid | 物料分类标准 | int8 | 64 |  | √ | 0 | [物料分类标准 bd_materialgroupstandard](../basedata_files/bd_materialgroupstandard.md) |
+| 7 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 8 | fsourcemanuorgid | 来源生产组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fentryid | fentryid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | pk_t_cad_autoexecruleentry |  | fentryid |
+| 2 | idx_cad_autoexecruleentry |  | fid |

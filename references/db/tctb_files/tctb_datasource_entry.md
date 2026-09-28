@@ -24,10 +24,12 @@
 | 13 | fisamount | 金额字段 | bpchar | 1 |  | √ | ' ' | 金额字段 |
 | 14 | fyearstate | 年份字段 | bpchar | 1 |  | √ | ' ' | 年份字段 |
 | 15 | fmonthstate | 月份字段 | bpchar | 1 |  | √ | ' ' | 月份字段 |
-| 16 | fstate | 查询状态 | bpchar | 1 |  | √ | ' ' | 查询状态 |
-| 17 | fdatastate | 时间字段 | bpchar | 1 |  | √ | ' ' | 时间字段 |
-| 18 | fbizsubname | 业务名称 | varchar | 500 |  | √ | ' ' | 业务名称 |
-| 19 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 16 | fdrilldownlinksetting | fdrilldownlinksetting | varchar | 500 |  | √ | ' ' |  |
+| 17 | fstate | 查询状态 | bpchar | 1 |  | √ | ' ' | 查询状态 |
+| 18 | fdatastate | 时间字段 | bpchar | 1 |  | √ | ' ' | 时间字段 |
+| 19 | fbizsubname | 业务名称 | varchar | 500 |  | √ | ' ' | 业务名称 |
+| 20 | fdrilldownlink | fdrilldownlink | bpchar | 1 |  | √ | '0' |  |
+| 21 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 
 ### 列规则定义
 

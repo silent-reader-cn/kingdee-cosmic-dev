@@ -12,7 +12,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | forgcode | 组织编码 | varchar | 50 |  | √ | ' ' | 组织编码 |
 | 3 | fleverno | fleverno | varchar | 50 |  | √ | ' ' |  |
-| 4 | forgid | 组织id | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 4 | forgid | 组织id | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 6 | fregistertypeid | fregistertypeid | int8 | 64 |  | √ | 0 |  |
 | 7 | fmodifytime | fmodifytime | timestamp | 0 |  |  | null |  |
@@ -26,7 +26,7 @@
 | 15 | fnationtaxorg | fnationtaxorg | varchar | 50 |  | √ | ' ' |  |
 | 16 | fremark | 备注 | varchar | 200 |  | √ | ' ' | 备注 |
 | 17 | fmodifierid | fmodifierid | int8 | 64 |  | √ | 0 |  |
-| 18 | fparentid | 上级组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 18 | fparentid | 上级组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 19 | felectronicfileno | felectronicfileno | varchar | 50 |  | √ | ' ' |  |
 | 20 | fisvirtualnode | fisvirtualnode | varchar | 30 |  | √ | ' ' |  |
 | 21 | fadress | fadress | varchar | 50 |  | √ | ' ' |  |
@@ -77,9 +77,9 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: 1 :保存 2 :启用 3 :禁用 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fenddate | 有效起止 | timestamp | 0 |  |  | null | 有效起止 |
-| 5 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 7 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 8 | fstartdate | 有效期起 | timestamp | 0 |  |  | null | 有效期起 |

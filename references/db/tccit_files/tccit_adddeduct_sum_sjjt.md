@@ -13,9 +13,9 @@
 | 2 | fdiscounttype | 优惠类型 | varchar | 50 |  | √ | ' ' | 优惠类型,枚举: |
 | 3 | fserialno | 流水号 | varchar | 50 |  | √ | ' ' | 流水号 |
 | 4 | fskssqz | 日期范围.结束 | timestamp | 0 |  |  | null | 日期范围.结束 |
-| 5 | forgid | 运行组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 6 | ftaxorgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 7 | fruleid | 优惠项目取数规则 | int8 | 64 |  | √ | 0 | 优惠项目取数规则 tccit_preferential_item |
+| 5 | forgid | 运行组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 6 | ftaxorgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 7 | fruleid | 优惠项目取数规则 | int8 | 64 |  | √ | 0 | [优惠项目取数规则 tccit_preferential_item](../tccit_files/tccit_preferential_item.md) |
 | 8 | fincome | 项目费用 | numeric | 23 | 10 | √ | 0 | 项目费用 |
 | 9 | fskssqq | 日期范围.开始 | timestamp | 0 |  |  | null | 日期范围.开始 |
 | 10 | fbnyffyjjkcze | 本年研发费用加计扣除总额 | numeric | 23 | 10 | √ | 0 | 本年研发费用加计扣除总额 |

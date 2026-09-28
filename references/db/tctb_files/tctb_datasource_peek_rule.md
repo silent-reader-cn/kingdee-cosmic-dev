@@ -12,7 +12,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fname | 名称 | varchar | 500 |  | √ | ' ' | 名称 |
 | 3 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
-| 4 | fdesc | 描述 | varchar | 500 |  | √ | ' ' | 描述 |
+| 4 | fdesc | 描述 | varchar | 1000 |  | √ | ' ' | 描述 |
 | 5 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
 
 ### 列规则定义
@@ -25,8 +25,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_tctb_datasource_pekrule_l |  | fid,flocaleid |
-| 2 | pk_tctb_datasource_pekrule_l |  | fpkid |
+| 1 | pk_tctb_datasource_pekrule_l |  | fpkid |
+| 2 | idx_tctb_datasource_pekrule_l |  | fid,flocaleid |
 
 ---
 
@@ -41,11 +41,11 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 3 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 5 | fenable | 使用状态 | varchar | 50 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 6 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
-| 7 | fgroupfield | 规则分类 | int8 | 64 |  | √ | 0 | 自定义数据源税种适用规则 tctb_datasouce_rule_tax |
+| 7 | fgroupfield | 规则分类 | int8 | 64 |  | √ | 0 | [自定义数据源税种适用规则 tctb_datasouce_rule_tax](../tctb_files/tctb_datasouce_rule_tax.md) |
 
 ### 列规则定义
 

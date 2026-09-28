@@ -55,14 +55,14 @@
 | 7 | fprocinstid | 实例内码 | int8 | 64 |  | √ | 0 | 实例内码 |
 | 8 | fretrycount | 重试次数 | int4 | 32 |  | √ | 0 | 重试次数 |
 | 9 | fappid | 应用内码 | int8 | 64 |  | √ | 0 | 应用内码 |
-| 10 | fmodifyid | 最后修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fmodifyid | 最后修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fmodifytime | 最后修改时间 | timestamp | 0 |  |  | null | 最后修改时间 |
 | 12 | fstatus | 消息类型 | varchar | 25 |  | √ | ' ' | 消息类型,枚举: NEW :待办 NEW_XB :协办 DEAL :已办 DELETE :删除 NOTICE :通知 PDELETE :删除流程 PHAVEDEAL :完成流程 |
 | 13 | fuserids | 消息接收人ID | varchar | 1000 |  | √ | ' ' | 消息接收人ID |
 | 14 | fcorpid | 企业团队ID | varchar | 80 |  | √ | ' ' | 企业团队ID |
 | 15 | fappname | 应用名称 | varchar | 50 |  | √ | ' ' | 应用名称 |
 | 16 | fmessagebody_tag | 消息体数据_详情 | text | 0 |  |  | null | 消息体数据_详情 |
-| 17 | fcreateid | 消息发送人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 17 | fcreateid | 消息发送人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 18 | ftaskid | 任务内码 | int8 | 64 |  | √ | 0 | 任务内码 |
 | 19 | fentryrole | 渠道 | varchar | 50 |  | √ | ' ' | 渠道,枚举: 0 :协同云 1 :企业微信 2 :钉钉 3 :WeLink 6 :飞书 9 :金蝶云APP 12 :Lark 5 :微信小程序 |
 

@@ -11,24 +11,25 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | varchar | 36 |  | √ | ' ' | id |
 | 2 | fname | 模板名称 | varchar | 256 |  | √ | ' ' | 模板名称 |
-| 3 | fbillformid | 实体 | varchar | 50 |  | √ | ' ' | 主实体对象 bos_entityobject |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fbillformid | 实体 | varchar | 50 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fmodify_v | 更新版本 | int8 | 64 |  | √ | 0 | 更新版本 |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  | √ | LOCALTIMESTAMP | 创建时间 |
-| 7 | forgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 7 | forgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | fisv | 开发商标识 | varchar | 50 |  |  | ' ' | 开发商标识 |
 | 9 | fstplid | 系统模板ID | varchar | 36 |  | √ | ' ' | 系统模板ID |
 | 10 | fbizappid | 应用ID | varchar | 36 |  | √ | ' ' | 应用ID |
 | 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 12 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 13 | fmasterid | 主数据内码 | varchar | 36 |  | √ | ' ' | 主数据内码 |
-| 14 | ftype | 模板来源 | bpchar | 1 |  | √ | ' ' | 模板来源,枚举: A :旧模板 B :新模板 |
-| 15 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 16 | ftpltype | 模版类型 | bpchar | 1 |  | √ | '0' | 模版类型,枚举: 0 :业务模版 1 :系统模版 |
-| 17 | fenable | 使用状态 | bpchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 18 | fnumber | 模板编码 | varchar | 80 |  | √ | ' ' | 模板编码 |
-| 19 | fdata | fdata | text | 0 |  |  | null |  |
-| 20 | fversion | 版本 | varchar | 30 |  | √ | ' ' | 版本 |
+| 13 | fbiztype | 业务类型 | bpchar | 1 |  | √ | '0' | 业务类型,枚举: 0 :常规 1 :蓝牙小票 2 :蓝牙标签 3 :蓝牙针式 |
+| 14 | fmasterid | 主数据内码 | varchar | 36 |  | √ | ' ' | 主数据内码 |
+| 15 | ftype | 模板来源 | bpchar | 1 |  | √ | ' ' | 模板来源,枚举: A :旧模板 B :新模板 |
+| 16 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 17 | ftpltype | 模版类型 | bpchar | 1 |  | √ | '0' | 模版类型,枚举: 0 :业务模版 1 :系统模版 |
+| 18 | fenable | 使用状态 | bpchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 19 | fnumber | 模板编码 | varchar | 80 |  | √ | ' ' | 模板编码 |
+| 20 | fdata | fdata | text | 0 |  |  | null |  |
+| 21 | fversion | 版本 | varchar | 30 |  | √ | ' ' | 版本 |
 
 ### 列规则定义
 

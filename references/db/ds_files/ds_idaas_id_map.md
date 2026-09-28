@@ -23,5 +23,5 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_t_ds_idaas_id_map |  | ferppersonid |
-| 2 | pk_t_ds_idaas_id_map |  | fid |
+| 1 | pk_t_ds_idaas_id_map |  | fid |
+| 2 | idx_t_ds_idaas_id_map |  | ferppersonid |

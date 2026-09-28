@@ -10,8 +10,8 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fexport_trigger | 数据导出任务 | int8 | 64 |  | √ | 0 | 数据导出任务 isc_export_file_trigger |
-| 3 | fcreator | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fexport_trigger | 数据导出任务 | int8 | 64 |  | √ | 0 | [数据导出任务 isc_export_file_trigger](../iscb_files/isc_export_file_trigger.md) |
+| 3 | fcreator | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
 | 5 | fdeal_bytes | 导出数据量（字节） | int8 | 64 |  | √ | 0 | 导出数据量（字节） |
 | 6 | fmessage | 日志信息 | varchar | 255 |  | √ | ' ' | 日志信息 |
@@ -20,7 +20,7 @@
 | 9 | fend_time | 结束时间 | timestamp | 0 |  |  | null | 结束时间 |
 | 10 | fignored_count | 忽略行数 | int4 | 32 |  | √ | 0 | 忽略行数 |
 | 11 | fstart_time | 开始时间 | timestamp | 0 |  |  | null | 开始时间 |
-| 12 | ffileschema | 数据导出方案 | int8 | 64 |  | √ | 0 | 数据导出方案 isc_export_file |
+| 12 | ffileschema | 数据导出方案 | int8 | 64 |  | √ | 0 | [数据导出方案 isc_export_file](../iscb_files/isc_export_file.md) |
 | 13 | fmodifytime | 状态更新时间 | timestamp | 0 |  |  | null | 状态更新时间 |
 | 14 | fstate | 执行状态 | varchar | 50 |  | √ | ' ' | 执行状态,枚举: C :创建 R :执行中 S :完成 F :失败 X :已撤销 W :等待中 P :部分成功 B :分批中 |
 | 15 | fsuccess_count | 成功行数 | int4 | 32 |  | √ | 0 | 成功行数 |

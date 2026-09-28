@@ -10,10 +10,11 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fparamvalue | 参数值 | varchar | 50 |  | √ | ' ' | 参数值 |
-| 3 | fparamname | 参数名称 | varchar | 50 |  | √ | ' ' | 参数名称 |
-| 4 | fparammsg | 参数描述 | varchar | 255 |  | √ | ' ' | 参数描述 |
-| 5 | fparamkey | 参数标识 | varchar | 50 |  | √ | ' ' | 参数标识 |
+| 2 | fparamvalue | 参数值 | varchar | 255 |  | √ | ' ' | 参数值 |
+| 3 | fapptype | 应用 | varchar | 10 |  | √ | ' ' | 应用,枚举: srm :供应商管理 adm :准入协同 pssc :采购需求管理 src :寻源管理 tnd :寻源协同 sou :询价与竞价 quo :报价与竞价 bid :招标管理 ten :投标管理 scc :合同协同 pur :采购协同 scp :供应协同 mal :购物商城 pmm :商城管理 ent :商城入驻 mcm :品类管理 pbd :基础资料 pds :采购领域服务 |
+| 4 | fparamname | 参数名称 | varchar | 50 |  | √ | ' ' | 参数名称 |
+| 5 | fparammsg | 参数描述 | varchar | 255 |  | √ | ' ' | 参数描述 |
+| 6 | fparamkey | 参数标识 | varchar | 50 |  | √ | ' ' | 参数标识 |
 
 ### 列规则定义
 

@@ -12,7 +12,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fdatekey | 日期字段标识 | varchar | 50 |  | √ | ' ' | 日期字段标识 |
 | 3 | ftimeunit | 时间单位 | varchar | 20 |  | √ | ' ' | 时间单位,枚举: D :天 H :小时 M :分钟 S :秒 |
-| 4 | fentitykey | 实体标识 | varchar | 50 |  | √ | ' ' | 单据主实体 bos_billmainentity |
+| 4 | fentitykey | 实体标识 | varchar | 50 |  | √ | ' ' | [单据主实体 bos_billmainentity](../mdl_files/bos_billmainentity.md) |
 | 5 | fdifftimes | 时间间隔 | int4 | 32 |  | √ | 0 | 时间间隔 |
 
 ### 列规则定义

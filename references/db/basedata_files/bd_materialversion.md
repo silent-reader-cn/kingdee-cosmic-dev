@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | finvaliddate | finvaliddate | timestamp | 0 |  |  | null |  |
-| 3 | fmaterialid | 物料 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 3 | fmaterialid | 物料 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 4 | forgid | forgid | int8 | 64 |  | √ | 0 |  |
 | 5 | fecnbillno | fecnbillno | varchar | 60 |  | √ | ' ' |  |
 | 6 | fsrccreateorgid | fsrccreateorgid | int8 | 64 |  | √ | 0 |  |
@@ -21,13 +21,13 @@
 | 10 | fdisabletime | fdisabletime | timestamp | 0 |  |  | null |  |
 | 11 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 12 | fecodate | fecodate | timestamp | 0 |  |  | null |  |
-| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | fmasterid | fmasterid | int8 | 64 |  | √ | 0 |  |
 | 15 | fsourcedataid | fsourcedataid | int8 | 64 |  | √ | 0 |  |
 | 16 | fbitindex | fbitindex | int4 | 32 |  | √ | 0 |  |
 | 17 | fversionname | fversionname | int8 | 64 |  | √ | 0 |  |
 | 18 | fbomversionrule | fbomversionrule | int8 | 64 |  | √ | 0 |  |
-| 19 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 19 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 20 | fremark | fremark | varchar | 60 |  | √ | ' ' |  |
 | 21 | fmodifierid | fmodifierid | int8 | 64 |  | √ | 0 |  |
 | 22 | fname | 名称 | varchar | 100 |  | √ | ' ' | 名称 |

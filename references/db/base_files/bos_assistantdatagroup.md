@@ -10,13 +10,13 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 100000 | 业务单元 bos_org |
+| 2 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 100000 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
-| 4 | fctrlviewid | 组织管控范围 | int8 | 64 |  | √ | 16 | 组织视图方案 bos_org_viewschema |
-| 5 | fparentid | 上级分类 | int8 | 64 |  | √ | 0 | 辅助资料分类 bos_assistantdatagroup |
+| 4 | fctrlviewid | 组织管控范围 | int8 | 64 |  | √ | 16 | [组织视图方案 bos_org_viewschema](../base_files/bos_org_viewschema.md) |
+| 5 | fparentid | 上级分类 | int8 | 64 |  | √ | 0 | [辅助资料分类 bos_assistantdatagroup](../base_files/bos_assistantdatagroup.md) |
 | 6 | fsubsystemid | fsubsystemid | varchar | 80 |  |  | ' ' |  |
 | 7 | fisgroupcontrol | 集团管控 | bpchar | 1 |  | √ | '0' | 集团管控 |
-| 8 | fbizcloudid | 业务云 | varchar | 80 |  |  | null | 业务云 bos_devportal_bizcloud |
+| 8 | fbizcloudid | 业务云 | varchar | 80 |  |  | null | [业务云 bos_devportal_bizcloud](../mdl_files/bos_devportal_bizcloud.md) |
 | 9 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
 | 10 | fdescription | 描述 | varchar | 255 |  | √ | ' ' | 描述 |
 | 11 | fissyspreset | 系统预置 | bpchar | 1 |  | √ | '0' | 系统预置 |

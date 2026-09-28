@@ -17,7 +17,7 @@
 | 6 | fbqybtse | 本期应缴税额 | numeric | 23 | 10 | √ | 0 | 本期应缴税额 |
 | 7 | fewblname | 二维表名称 | varchar | 50 |  | √ | ' ' | 二维表名称 |
 | 8 | fbuildingtypeid | 房产类型 | int8 | 64 |  | √ | 0 | 业务定义分录 tpo_tdzzs_bizdef_entry |
-| 9 | fsubbuildingtypeid | 房产类型子目 | int8 | 64 |  | √ | 0 | 房产类型子目 tcret_tdzzs_fclxzm |
+| 9 | fsubbuildingtypeid | 房产类型子目 | int8 | 64 |  | √ | 0 | [房产类型子目 tcret_tdzzs_fclxzm](../tcret_files/tcret_tdzzs_fclxzm.md) |
 | 10 | fhbsr | 货币收入 | numeric | 23 | 10 | √ | 0 | 货币收入 |
 | 11 | fstxssr | 视同销售收入 | numeric | 23 | 10 | √ | 0 | 视同销售收入 |
 | 12 | fyzl | 预征率（%） | numeric | 23 | 10 | √ | 0 | 预征率（%） |

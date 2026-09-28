@@ -53,8 +53,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | t_ifm_bizdealbill_dpt_e |  | fdealdate |
-| 2 | pk_ifm_bizdealbill_deposit_e |  | fid |
+| 1 | pk_ifm_bizdealbill_deposit_e |  | fid |
+| 2 | t_ifm_bizdealbill_dpt_e |  | fdealdate |
 
 ---
 
@@ -203,17 +203,17 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fterm | 期限（ymd） | varchar | 80 |  | √ | ' ' | 期限（ymd） |
 | 3 | fdealopinion | 受理意见 | varchar | 255 |  | √ | ' ' | 受理意见 |
-| 4 | forgid | 存款组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 4 | forgid | 存款组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | fisrevenue | 支付收益 | bpchar | 1 |  | √ | '0' | 支付收益 |
 | 6 | ftotalamount | 合计金额 | numeric | 23 | 10 | √ | 0 | 合计金额 |
 | 7 | ffinbillnoid | 存款单编号 | int8 | 64 |  | √ | 0 | 存款处理F7 cim_deposit_f7 |
 | 8 | frealrevenue | 实际收益 | numeric | 23 | 10 | √ | 0 | 实际收益 |
 | 9 | fprenoticeday | 提前通知天数 | varchar | 80 |  | √ | ' ' | 提前通知天数,枚举: 01 :一天 07 :七天 00 :其他 |
 | 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 11 | finvestvarietiesid | 存款产品 | int8 | 64 |  | √ | 0 | 投资品种 cim_investvarieties |
+| 11 | finvestvarietiesid | 存款产品 | int8 | 64 |  | √ | 0 | [投资品种 cim_investvarieties](../fbd_files/cim_investvarieties.md) |
 | 12 | fapplyid | 申请单编号 | int8 | 64 |  | √ | 0 | 存款申请F7 cim_deposit_apply_f7 |
 | 13 | freleasetype | 解活类型 | varchar | 80 |  | √ | ' ' | 解活类型,枚举: agreeon :约定解活 temporary :非约定解活 expire :到期解活 inadvance :提前解活 |
-| 14 | fdealuserid | 受理人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fdealuserid | 受理人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | fredeemdate | 解活日期 | timestamp | 0 |  |  | null | 解活日期 |
 | 16 | fratefloatpoint | 利率浮动基点 | numeric | 23 | 10 | √ | 0 | 利率浮动基点 |
 | 17 | fapplytype | 申请类型 | varchar | 80 |  | √ | ' ' | 申请类型,枚举: deposit :存款申请 release :解活申请 renew :续存申请 |
@@ -224,30 +224,30 @@
 | 22 | fpredictinstamt | 测算收益 | numeric | 23 | 10 | √ | 0 | 测算收益 |
 | 23 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
 | 24 | frateadjuststyle | 利率重置方式 | varchar | 80 |  | √ | ' ' | 利率重置方式,枚举: deadline :即期重置 cycle :周期性重置 hand :手工重置 noadjust :不重置 |
-| 25 | ffinaccountid | 存款账户F7 | int8 | 64 |  | √ | 0 | 银行账户 bd_accountbanks |
+| 25 | ffinaccountid | 存款账户F7 | int8 | 64 |  | √ | 0 | [银行账户 bd_accountbanks](../basedata_files/bd_accountbanks.md) |
 | 26 | fdepositamt | 存款金额 | numeric | 23 | 10 | √ | 0 | 存款金额 |
-| 27 | fproductid | 存款产品 | int8 | 64 |  | √ | 0 | 存贷款产品维护 ifm_ldproduct |
+| 27 | fproductid | 存款产品 | int8 | 64 |  | √ | 0 | [存贷款产品维护 ifm_ldproduct](../ifm_files/ifm_ldproduct.md) |
 | 28 | fbasis | 计息基准 | varchar | 80 |  | √ | ' ' | 计息基准,枚举: Actual_actual :Actual/actual SIA_30_360 :30/360(SIA) Actual_360 :Actual/360 Actual_365 :Acutal/365 BMA_30_360 :30/360(BMA) ISDA_30_360 :30/360(ISDA) European_30_360 :30/360(European) Japanese_Actual_365 :Acutal/365(Japanese) ICMA_Actual_actual :Actual/actual(ICMA) ICMA_Actual_360 :Actual/360(ICMA) ICMA_Actual_365 :Acutal/365(ICMA) ICMA_30_360 :30/360E(ICMA) ISDA_Actual_365 :Actual/365(ISDA) BUS_252 :BUS/252 |
 | 29 | fexpireredeposit | 到期续存 | varchar | 80 |  | √ | ' ' | 到期续存,枚举: noredeposit :不续存 principalredeposit :本金续存 principalintredeposit :本息续存 |
-| 30 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 31 | ffinorginfoid | 存款机构 | int8 | 64 |  | √ | 0 | 金融机构 bd_finorginfo |
+| 30 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 31 | ffinorginfoid | 存款机构 | int8 | 64 |  | √ | 0 | [金融机构 bd_finorginfo](../basedata_files/bd_finorginfo.md) |
 | 32 | finteresttype | 利率类型 | varchar | 80 |  | √ | ' ' | 利率类型,枚举: fixed :固定利率 float :浮动利率 |
 | 33 | fdemandrate | 活期利率（%） | numeric | 23 | 10 | √ | 0 | 活期利率（%） |
 | 34 | fbizstatus | 业务状态 | varchar | 80 |  | √ | ' ' | 业务状态,枚举: A :待受理 B :已受理 D :已退单 |
 | 35 | famount | 解活金额 | numeric | 23 | 10 | √ | 0 | 解活金额 |
 | 36 | fsurplusamount | 可解活金额 | numeric | 23 | 10 | √ | 0 | 可解活金额 |
-| 37 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 37 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 38 | fapplidate | 申请日期 | timestamp | 0 |  |  | null | 申请日期 |
 | 39 | fexpiredate | 到期日期 | timestamp | 0 |  |  | null | 到期日期 |
 | 40 | fredepositamount | 存款续存金额 | numeric | 23 | 10 | √ | 0 | 存款续存金额 |
-| 41 | freferencerate | 参考利率 | int8 | 64 |  | √ | 0 | 参考利率 tbd_referrate |
+| 41 | freferencerate | 参考利率 | int8 | 64 |  | √ | 0 | [参考利率表 tbd_referrate](../fbd_files/tbd_referrate.md) |
 | 42 | flastredeemdate | 上次解活日期 | timestamp | 0 |  |  | null | 上次解活日期 |
 | 43 | fremark | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
-| 44 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 45 | fapplyorgid | 申请组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 44 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 45 | fapplyorgid | 申请组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 46 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 47 | fsettleaccountid | 活期账户 | int8 | 64 |  | √ | 0 | 银行账户 bd_accountbanks |
-| 48 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 47 | fsettleaccountid | 活期账户 | int8 | 64 |  | √ | 0 | [银行账户 bd_accountbanks](../basedata_files/bd_accountbanks.md) |
+| 48 | fcurrencyid | 币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 | 49 | finterestrate | 存款利率（%） | numeric | 23 | 10 | √ | 0 | 存款利率（%） |
 | 50 | fratesign | 利率浮动基点（BP） | varchar | 80 |  | √ | ' ' | 利率浮动基点（BP）,枚举: add :加 subtract :减 |
 

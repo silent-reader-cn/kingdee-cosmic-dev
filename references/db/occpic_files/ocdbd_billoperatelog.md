@@ -12,7 +12,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fsrcbillid | 来源单据Id | int8 | 64 |  | √ | 0 | 来源单据Id |
 | 3 | foperatedate | 操作时间 | timestamp | 0 |  |  | null | 操作时间 |
-| 4 | fsrcbillentity | 来源单据 | varchar | 80 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 4 | fsrcbillentity | 来源单据 | varchar | 80 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 5 | foperation | 单据业务操作 | varchar | 50 |  | √ | ' ' | 单据业务操作,枚举: delete :删除 exception :异常 |
 | 6 | fdatatype | 业务取数规则 | varchar | 10 |  | √ | ' ' | 业务取数规则,枚举: A :预算取数规则 B :返利取数规则 |
 

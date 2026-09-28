@@ -30,5 +30,5 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_taxc_ysfwjcxm_sbbid_ewbxh |  | fsbbid,fewblxh |
-| 2 | pk_totf_whsyjsf_ysfwjcxmqd |  | fid |
+| 1 | pk_totf_whsyjsf_ysfwjcxmqd |  | fid |
+| 2 | idx_taxc_ysfwjcxm_sbbid_ewbxh |  | fsbbid,fewblxh |

@@ -11,9 +11,9 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | foperationkey | 操作Key | varchar | 36 |  | √ | ' ' | 操作Key |
-| 3 | fcreatorid | 执行人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fcreatorid | 执行人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fcreatetime | 创建时间 | timestamp | 0 |  | √ | LOCALTIMESTAMP | 创建时间 |
-| 5 | fentitykey | 业务对象 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 5 | fentitykey | 业务对象 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 6 | fobjectid | 对象ID | varchar | 36 |  | √ | ' ' | 对象ID |
 | 7 | fbatchid | 批次ID | varchar | 36 |  | √ | ' ' | 批次ID |
 

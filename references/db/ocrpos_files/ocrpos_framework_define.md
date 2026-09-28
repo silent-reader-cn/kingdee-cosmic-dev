@@ -12,16 +12,16 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fthemenumber | 主题编码 | varchar | 80 |  | √ | ' ' | 主题编码 |
 | 3 | fname | 模板名称 | varchar | 80 |  | √ | ' ' | 模板名称 |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 6 | fentityobjectid | 绑定页面对象 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 6 | fentityobjectid | 绑定页面对象 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 7 | fispreset | 系统预设 | bpchar | 1 |  | √ | '0' | 系统预设 |
 | 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 9 | fstatus | 数据状态 | bpchar | 1 |  | √ | 'A' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 12 | fmalllogo | 商城Logo | varchar | 255 |  | √ | ' ' | 商城Logo |
-| 13 | fuithemeid | 主题定制 | int8 | 64 |  | √ | 0 | 主题定制 bas_uitheme |
+| 13 | fuithemeid | 主题定制 | int8 | 64 |  | √ | 0 | [主题定制 bas_uitheme](../base_files/bas_uitheme.md) |
 | 14 | fenable | 启用状态 | bpchar | 1 |  | √ | '0' | 启用状态,枚举: 0 :禁用 1 :可用 |
 | 15 | fthemename | 主题名称 | varchar | 80 |  | √ | ' ' | 主题名称 |
 | 16 | fnumber | 模板编码 | varchar | 80 |  | √ | ' ' | 模板编码 |

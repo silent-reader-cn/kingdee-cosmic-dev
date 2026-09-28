@@ -13,7 +13,7 @@
 | 2 | fhost | 服务器 | varchar | 50 |  | √ | ' ' | 服务器 |
 | 3 | ftime | 时间 | timestamp | 0 |  |  | null | 时间 |
 | 4 | ftask_context | 任务上下文 | varchar | 255 |  | √ | ' ' | 任务上下文 |
-| 5 | fdata_stream | 数据流实例 | int8 | 64 |  | √ | 0 | 数据流实例 iscx_data_stream |
+| 5 | fdata_stream | 数据流实例 | int8 | 64 |  | √ | 0 | [数据流实例 iscx_data_stream](../iscx_files/iscx_data_stream.md) |
 | 6 | ftask_type | 任务类型 | varchar | 50 |  | √ | ' ' | 任务类型,枚举: FiberTask :数据线 BatchTask :批处理 StreamTask :数据查询 |
 | 7 | fdata_tag | 业务数据_详情 | text | 0 |  |  | null | 业务数据_详情 |
 | 8 | ftask_context_tag | 任务上下文_详情 | text | 0 |  |  | null | 任务上下文_详情 |

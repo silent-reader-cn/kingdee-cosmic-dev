@@ -12,11 +12,11 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | foperationtype | 操作类型 | varchar | 20 |  |  | null | 操作类型,枚举: PrintPreview :打印预览 Print :打印 |
 | 3 | fcreatetime | 打印发起日期 | timestamp | 0 |  | √ | LOCALTIMESTAMP | 打印发起日期 |
-| 4 | fcreater | 打印发起人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fcreater | 打印发起人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fbizobjid | 业务对象主键 | varchar | 100 |  | √ | ' ' | 业务对象主键 |
-| 6 | fformid | 业务实体 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
-| 7 | fbilltype | 单据类型 | int8 | 64 |  |  | null | 单据类型 bos_billtype |
-| 8 | ftemplate | 打印模板 | varchar | 36 |  | √ | ' ' | 表单元数据 bos_formmeta |
+| 6 | fformid | 业务实体 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
+| 7 | fbilltype | 单据类型 | int8 | 64 |  |  | null | [单据类型 bos_billtype](../cts_files/bos_billtype.md) |
+| 8 | ftemplate | 打印模板 | varchar | 36 |  | √ | ' ' | [表单元数据 bos_formmeta](../mdl_files/bos_formmeta.md) |
 
 ### 列规则定义
 

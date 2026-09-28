@@ -11,10 +11,10 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | 主表id | int8 | 64 |  | √ | 0 | 主表id |
 | 2 | fremark | 备注 | varchar | 400 |  | √ | ' ' | 备注 |
-| 3 | fparentid | 上级组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | fparentid | 上级组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | forgcode | 组织编码 | varchar | 100 |  | √ | ' ' | 组织编码 |
 | 5 | parententryid | parententryid | int8 | 64 |  | √ | 0 |  |
-| 6 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fkdqjyqylx | fkdqjyqylx | varchar | 50 |  | √ | ' ' |  |
 | 8 | fseq | fseq | int8 | 64 |  | √ | 0 |  |
 | 9 | fissuesbb | fissuesbb | bpchar | 1 |  | √ | ' ' |  |

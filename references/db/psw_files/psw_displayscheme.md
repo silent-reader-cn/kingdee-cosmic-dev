@@ -44,16 +44,28 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fschemename | 方案名称 | varchar | 100 |  | √ | ' ' | 方案名称 |
-| 3 | fcreator | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 4 | fshowana | 平衡后自动应用生产调整建议 | bpchar | 1 |  | √ | ' ' | 平衡后自动应用生产调整建议 |
+| 2 | fcreator | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 3 | fshowana | 平衡后自动应用生产调整建议 | bpchar | 1 |  | √ | ' ' | 平衡后自动应用生产调整建议 |
+| 4 | fhidenonworkday | 仅显示工作日 | bpchar | 1 |  | √ | '0' | 仅显示工作日 |
 | 5 | fstockoutmaterial | 仅显示缺货物料 | bpchar | 1 |  | √ | ' ' | 仅显示缺货物料 |
-| 6 | fcreatetime | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
-| 7 | fdisplaycontrol | 显示控制 | varchar | 50 |  | √ | ' ' | 显示控制,枚举: 0 :日计划产能 1 :累计计划产能 2 :产能利用率% 3 :日产能负载 4 :累计产能负载 5 :日生产数量 6 :累计生产数量 7 :日剩余产能 8 :累计剩余产能 |
-| 8 | fmaterialinfoconfig | 物料信息 | varchar | 50 |  | √ | ' ' | 物料信息,枚举: 0 :物料编码 1 :物料名称 2 :规格型号 3 :物料版本 4 :辅助属性 |
-| 9 | fproductionorgid | 生产组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 10 | fhasplanmaterial | 仅显示有生产线计划的物料 | bpchar | 1 |  | √ | ' ' | 仅显示有生产线计划的物料 |
-| 11 | fdefaultscheme | 默认方案 | bpchar | 1 |  | √ | ' ' | 默认方案,枚举: 0 :是 1 :否 |
+| 6 | fcacdaycnt | 可用性检查天数 | int8 | 64 |  | √ | 0 | 可用性检查天数 |
+| 7 | fcreatetime | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
+| 8 | fgeneratelog | 生成日志 | bpchar | 1 |  | √ | '0' | 生成日志 |
+| 9 | fcacexpandlevel | 默认展开层数 | int8 | 64 |  | √ | 0 | 默认展开层数 |
+| 10 | flevelingstrategy | 排程策略 | bpchar | 1 |  | √ | '0' | 排程策略,枚举: 0 :客户需求优先 1 :产能瓶颈优先 |
+| 11 | fhasplanmaterial | 仅显示有生产线计划的物料 | bpchar | 1 |  | √ | ' ' | 仅显示有生产线计划的物料 |
+| 12 | fdefaultscheme | 默认方案 | bpchar | 1 |  | √ | ' ' | 默认方案,枚举: 0 :是 1 :否 |
+| 13 | fautobucket | 自动排程 | bpchar | 1 |  | √ | ' ' | 自动排程 |
+| 14 | fratedqty | 额定日产量 | bpchar | 1 |  | √ | '0' | 额定日产量 |
+| 15 | fschemename | 方案名称 | varchar | 100 |  | √ | ' ' | 方案名称 |
+| 16 | ffixedtermplan | 计划固定期（天） | int4 | 32 |  | √ | 0 | 计划固定期（天） |
+| 17 | fislevelbyshift | 班次级排程 | bpchar | 1 |  | √ | '1' | 班次级排程 |
+| 18 | fcacdisplayctrl | 显示字段控制 | varchar | 50 |  | √ | ' ' | 显示字段控制,枚举: 0 :关键件 1 :替代件 2 :即时库存 3 :安全库存 4 :基本单位 5 :物料属性 |
+| 19 | fdisplaycontrol | 显示控制 | varchar | 50 |  | √ | ' ' | 显示控制,枚举: 0 :日计划产能 1 :累计计划产能 2 :产能利用率% 3 :日产能负载 4 :累计产能负载 5 :日生产数量 6 :累计生产数量 7 :日剩余产能 8 :累计剩余产能 |
+| 20 | fmaterialinfoconfig | 物料信息 | varchar | 50 |  | √ | ' ' | 物料信息,枚举: 0 :物料编码 1 :物料名称 2 :规格型号 3 :物料版本 4 :辅助属性 |
+| 21 | fproductionorgid | 生产组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 22 | fday | 按日排程（天） | int8 | 64 |  | √ | 0 | 按日排程（天） |
+| 23 | fbucketdatemodel | 排程时段模式 | varchar | 50 |  | √ | ' ' | 排程时段模式,枚举: 0 :按日排程 1 :按周排程 |
 
 ### 列规则定义
 

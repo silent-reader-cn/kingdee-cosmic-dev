@@ -1,4 +1,4 @@
-# 专家选择方案-src_expertscheme
+# 专家数据源-src_expertscheme
 
 ## 寻源方式-多选基础资料表 t_src_expertsourcetype
 
@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 招标辅助资料 pds_extdata |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [招标辅助资料 pds_extdata](../pds_files/pds_extdata.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -39,7 +39,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fmatchtype | 匹配方式 | varchar | 50 |  | √ | ' ' | 匹配方式,枚举: = :基础资料/多选基础资料/整数/ID/下拉列表 等于 ( = ) > :大于 ( > ） = :大于等于 ( >= ) :不等于 ( <> ) like :多选下拉列表/字符串 相似 ( like ) not like :多选下拉列表/字符串 不相似 ( not like ) in :在...之中 ( in ) (值为集合) not in :不在...之中 ( not in ) (值为集合) is null :为空 ( is null ) is not null :不为空 ( is not null ) match :匹配 ( match ) 全文检索 ftlike :ftlike(全文检索) exists :存在 ( exists ) 子查询 not exists :不存在 ( not exists ) 子查询 |
+| 2 | fmatchtype | 匹配方式 | varchar | 50 |  | √ | ' ' | 匹配方式,枚举: = :基础资料/多选基础资料/整数/ID/下拉列表 等于 ( = ) > :大于 ( > ） < :小于 ( < ) >= :大于等于 ( >= ) <= :小于等于 ( <= ) != :不等于 ( != ) <> :不等于 ( <> ) like :多选下拉列表/字符串 相似 ( like ) not like :多选下拉列表/字符串 不相似 ( not like ) in :在...之中 ( in ) (值为集合) not in :不在...之中 ( not in ) (值为集合) is null :为空 ( is null ) is not null :不为空 ( is not null ) match :匹配 ( match ) 全文检索 ftlike :ftlike(全文检索) exists :存在 ( exists ) 子查询 not exists :不存在 ( not exists ) 子查询 |
 | 3 | fqueryfieldtype | 查询字段类型 | varchar | 50 |  | √ | ' ' | 查询字段类型 |
 | 4 | ffieldtype | 字段名称 | varchar | 50 |  | √ | ' ' | 字段名称 |
 | 5 | fvaluefield | 值字段 | varchar | 50 |  | √ | ' ' | 值字段,枚举: |
@@ -65,9 +65,9 @@
 
 ---
 
-## 专家选择方案-多语言表 t_src_expertscheme_l
+## 专家数据源-多语言表 t_src_expertscheme_l
 
-- **表名称：** 专家选择方案-多语言表
+- **表名称：** 专家数据源-多语言表
 - **表名：** t_src_expertscheme_l
 
 ### 表格列定义
@@ -75,7 +75,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fname | 方案名称 | varchar | 300 |  | √ | ' ' | 方案名称 |
+| 2 | fname | 名称 | varchar | 300 |  | √ | ' ' | 名称 |
 | 3 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
 | 4 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
 
@@ -94,9 +94,9 @@
 
 ---
 
-## 专家选择方案-主表 t_src_expertscheme
+## 专家数据源-主表 t_src_expertscheme
 
-- **表名称：** 专家选择方案-主表
+- **表名称：** 专家数据源-主表
 - **表名：** t_src_expertscheme
 
 ### 表格列定义
@@ -105,25 +105,25 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fremark | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
-| 3 | fname | 方案名称 | varchar | 300 |  | √ | ' ' | 方案名称 |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fname | 名称 | varchar | 300 |  | √ | ' ' | 名称 |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fcondition_tag | 条件对象(后台字段)_详情 | text | 0 |  |  | null | 条件对象(后台字段)_详情 |
-| 6 | fmaindata | 二开评委主数据(一般不需要设置) | varchar | 50 |  | √ | ' ' | 业务对象 bos_objecttype |
-| 7 | fbasedataid | 待过滤的基础资料 | varchar | 36 |  | √ | ' ' | 业务对象 bos_objecttype |
+| 6 | fmaindata | 二开评委主数据(一般不需要设置) | varchar | 50 |  | √ | ' ' | [业务对象 bos_objecttype](../mdl_files/bos_objecttype.md) |
+| 7 | fbasedataid | 待过滤的基础资料(数据源) | varchar | 36 |  | √ | ' ' | [业务对象 bos_objecttype](../mdl_files/bos_objecttype.md) |
 | 8 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 9 | fpriority | 优先级 | int4 | 32 |  | √ | 0 | 优先级 |
 | 10 | ffieldname | 对应的系统用户字段 | varchar | 50 |  | √ | ' ' | 对应的系统用户字段,枚举: |
-| 11 | flastupdateuserid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | flastupdateuserid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | ffieldid | 字段标识 | varchar | 30 |  | √ | ' ' | 字段标识 |
 | 13 | flastupdatetime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 14 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 15 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 16 | fmatchfield | 匹配度 | int4 | 32 |  | √ | 0 | 匹配度 |
-| 17 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 17 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 18 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 19 | fenable | 可用状态 | bpchar | 1 |  | √ | ' ' | 可用状态,枚举: 0 :禁用 1 :可用 |
 | 20 | fcondition | 条件对象(后台字段) | varchar | 510 |  | √ | ' ' | 条件对象(后台字段) |
-| 21 | fnumber | 方案编码 | varchar | 30 |  | √ | ' ' | 方案编码 |
+| 21 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
 | 22 | fissyspreset | 系统预置 | bpchar | 1 |  | √ | '0' | 系统预置 |
 
 ### 列规则定义
@@ -154,7 +154,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fparamvalue | 默认值 | varchar | 512 |  | √ | ' ' | 默认值 |
-| 3 | fparameterid | 参数编码 | int8 | 64 |  | √ | 0 | 招标辅助资料 pds_extdata |
+| 3 | fparameterid | 参数编码 | int8 | 64 |  | √ | 0 | [招标辅助资料 pds_extdata](../pds_files/pds_extdata.md) |
 | 4 | fparamname | fparamname | varchar | 50 |  | √ | ' ' |  |
 | 5 | fbasedatainfo | 参数说明 | varchar | 512 |  | √ | ' ' | 参数说明 |
 | 6 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
@@ -204,5 +204,5 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | pk_src_expertschemeentry |  | fentryid |
-| 2 | idx_src_expertschemeentry_fid |  | fid |
+| 1 | idx_src_expertschemeentry_fid |  | fid |
+| 2 | pk_src_expertschemeentry |  | fentryid |

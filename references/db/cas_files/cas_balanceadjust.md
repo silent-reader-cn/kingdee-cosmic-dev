@@ -13,7 +13,7 @@
 | 2 | fvouchertype | 凭证类型 | varchar | 50 |  | √ | ' ' | 凭证类型 |
 | 3 | fpddate | 付款日期 | timestamp | 0 |  |  | null | 付款日期 |
 | 4 | fbanksourcetype | 来源类型 | varchar | 50 |  | √ | ' ' | 来源类型 |
-| 5 | forgid | 使用组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | forgid | 使用组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 7 | fsettlenumber | 结算号 | varchar | 2000 |  | √ | ' ' | 结算号 |
 | 8 | fbanksource | 来源 | varchar | 50 |  | √ | ' ' | 来源,枚举: 1 :手工录入 2 :单据生成 3 :标准导入 4 :凭证登帐 |
@@ -103,19 +103,19 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fbankaccountid | 银行账户 | int8 | 64 |  | √ | 0 | 银行账户 bd_accountbanks |
-| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fbankaccountid | 银行账户 | int8 | 64 |  | √ | 0 | [银行账户 bd_accountbanks](../basedata_files/bd_accountbanks.md) |
+| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | fdiffamount | 差异 | numeric | 19 | 6 | √ | 0.000000 | 差异 |
 | 5 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 6 | fjournalbalamt | 日记账余额 | numeric | 19 | 6 | √ | 0.000000 | 日记账余额 |
-| 7 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 7 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 8 | fisarchive | 是否归档 | bpchar | 1 |  | √ | '0' | 是否归档 |
 | 9 | fimageno | 影像编号 | varchar | 50 |  | √ | ' ' | 影像编号 |
 | 10 | fadjuststatementamt | 调整后余额 | numeric | 19 | 6 | √ | 0.000000 | 调整后余额 |
 | 11 | fbillno | 单据编号 | varchar | 80 |  | √ | ' ' | 单据编号 |
-| 12 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fbankgotamt | 加：企业未收 | numeric | 19 | 6 | √ | 0.000000 | 加：企业未收 |
-| 14 | fperiodid | 期初期间 | int8 | 64 |  | √ | 0 | 会计日历 bd_period |
+| 14 | fperiodid | 期初期间 | int8 | 64 |  | √ | 0 | [会计日历 bd_period](../fibd_files/bd_period.md) |
 | 15 | fbillstatus | 单据状态 | varchar | 5 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审批 |
 | 16 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 17 | fbankaccountnumber | 银行账号 | varchar | 80 |  | √ | ' ' | 银行账号 |
@@ -124,11 +124,11 @@
 | 20 | fentprpayedamt | 减：银行未付 | numeric | 19 | 6 | √ | 0.000000 | 减：银行未付 |
 | 21 | fadjustjournalamt | 调整后余额 | numeric | 19 | 6 | √ | 0.000000 | 调整后余额 |
 | 22 | fbizdate | 截止日期 | timestamp | 0 |  |  | null | 截止日期 |
-| 23 | fbankcgsetting | 银行类别 | int8 | 64 |  | √ | 0 | 银行类别 bd_bankcgsetting |
+| 23 | fbankcgsetting | 银行类别 | int8 | 64 |  | √ | 0 | [银行类别 bd_bankcgsetting](../basedata_files/bd_bankcgsetting.md) |
 | 24 | fstatmntbalamt | 对账单余额 | numeric | 19 | 6 | √ | 0.000000 | 对账单余额 |
 | 25 | fbankpayedamt | 减：企业未付 | numeric | 19 | 6 | √ | 0.000000 | 减：企业未付 |
-| 26 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
-| 27 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 26 | fcurrencyid | 币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
+| 27 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

@@ -14,7 +14,7 @@
 | 3 | fsqfse | 上期发生额 | numeric | 23 | 10 | √ | 0 | 上期发生额 |
 | 4 | fsqlje | 上期累计额 | numeric | 23 | 10 | √ | 0 | 上期累计额 |
 | 5 | fskssqz | 日期范围.结束 | timestamp | 0 |  |  | null | 日期范围.结束 |
-| 6 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fbqlje | 本期累计额 | numeric | 23 | 10 | √ | 0 | 本期累计额 |
 | 8 | fbqfse | 本期发生额 | numeric | 23 | 10 | √ | 0 | 本期发生额 |
 | 9 | fskssqq | 日期范围.开始 | timestamp | 0 |  |  | null | 日期范围.开始 |

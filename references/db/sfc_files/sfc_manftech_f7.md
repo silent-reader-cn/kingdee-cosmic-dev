@@ -35,8 +35,8 @@
 | 24 | ftotaloproutorderbaseqty | ftotaloproutorderbaseqty | numeric | 23 | 10 | √ | 0 |  |
 | 25 | flockqty | flockqty | numeric | 23 | 10 | √ | 0.0000000000 |  |
 | 26 | fentrustdinqty | fentrustdinqty | numeric | 23 | 10 | √ | 0 |  |
-| 27 | fpurchaseorgid | 采购组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 28 | fsupplierid | 供应商 | int8 | 64 |  | √ | 0 | 供应商 bd_supplier |
+| 27 | fpurchaseorgid | 采购组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 28 | fsupplierid | 供应商 | int8 | 64 |  | √ | 0 | [供应商 bd_supplier](../basedata_files/bd_supplier.md) |
 | 29 | fentrustfinqty | fentrustfinqty | numeric | 23 | 10 | √ | 0 |  |
 | 30 | fcurrencyfield | fcurrencyfield | int8 | 64 |  | √ | 0 |  |
 | 31 | fsettlementunitid | fsettlementunitid | int8 | 64 |  | √ | 0 |  |
@@ -103,7 +103,7 @@
 | 36 | foprtotalinbaseqty | foprtotalinbaseqty | numeric | 23 | 10 | √ | 0 |  |
 | 37 | fpushreworkreportbaseqty | fpushreworkreportbaseqty | numeric | 23 | 10 | √ | 0 |  |
 | 38 | fupperratio | fupperratio | numeric | 23 | 10 | √ | 0.0000000000 |  |
-| 39 | fheadunitid | 表头单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 39 | fheadunitid | 表头单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 40 | foprtotalreworkbaseqty | foprtotalreworkbaseqty | numeric | 23 | 10 | √ | 0 |  |
 | 41 | ffirstinspectionstatus | ffirstinspectionstatus | varchar | 30 |  | √ | ' ' |  |
 | 42 | fcollaborative | fcollaborative | bpchar | 1 |  | √ | '0' |  |
@@ -145,18 +145,18 @@
 | 9 | foprrepairedqty | foprrepairedqty | numeric | 23 | 10 | √ | 0.0000000000 |  |
 | 10 | foprnonum | foprnonum | int8 | 64 |  | √ | 0 |  |
 | 11 | fbasebatchqty | fbasebatchqty | numeric | 23 | 10 | √ | 0.0000000000 |  |
-| 12 | foprworkcenterid | 工作中心 | int8 | 64 |  | √ | 0 | 工作中心定义(废弃) mpdm_workcentre |
+| 12 | foprworkcenterid | 工作中心 | int8 | 64 |  | √ | 0 | [工作中心定义(废弃) mpdm_workcentre](../mpdm_files/mpdm_workcentre.md) |
 | 13 | foprworkshopid | foprworkshopid | int8 | 64 |  | √ | 0 |  |
 | 14 | foprtimeunit | foprtimeunit | varchar | 30 |  | √ | ' ' |  |
 | 15 | foprparentnum | foprparentnum | int8 | 64 |  | √ | 0 |  |
-| 16 | foproperationid | 工序编码 | int8 | 64 |  | √ | 0 | 标准工序定义(废弃) mpdm_workprocedure |
+| 16 | foproperationid | 工序编码 | int8 | 64 |  | √ | 0 | [标准工序定义(废弃) mpdm_workprocedure](../mpdm_files/mpdm_workprocedure.md) |
 | 17 | foprtotalmaterialqty | foprtotalmaterialqty | numeric | 23 | 10 | √ | 0.0000000000 |  |
 | 18 | foprsuggestsplitqty | foprsuggestsplitqty | numeric | 23 | 10 | √ | 0.0000000000 |  |
 | 19 | fecostcenterid | fecostcenterid | int8 | 64 |  | √ | 0 |  |
 | 20 | foprissplit | foprissplit | bpchar | 1 |  | √ | '0' |  |
 | 21 | foprsourcetype | foprsourcetype | varchar | 30 |  | √ | ' ' |  |
-| 22 | foprorgid | 生产组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 23 | foprunitid | 工序单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 22 | foprorgid | 生产组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 23 | foprunitid | 工序单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 24 | foprtotalsplitbaseqty | foprtotalsplitbaseqty | numeric | 23 | 10 | √ | 0 |  |
 | 25 | ftotalsplitqty | ftotalsplitqty | numeric | 23 | 10 | √ | 0.0000000000 |  |
 | 26 | foprtotalreportqty | 累计汇报数量 | numeric | 23 | 10 | √ | 0.0000000000 | 累计汇报数量 |
@@ -178,7 +178,7 @@
 | 42 | fprocessentryid | fprocessentryid | int8 | 64 |  | √ | 0 | id |
 | 43 | foprlatestfinishtime | foprlatestfinishtime | timestamp | 0 |  |  | null |  |
 | 44 | foprminoverlaptime | foprminoverlaptime | numeric | 23 | 10 | √ | 0.0000000000 |  |
-| 45 | foprctrlstrategy | 工序控制策略 | int8 | 64 |  | √ | 0 | 工序控制策略(废弃) mpdm_proctrlstrategy |
+| 45 | foprctrlstrategy | 工序控制策略 | int8 | 64 |  | √ | 0 | [工序控制策略(废弃) mpdm_proctrlstrategy](../mpdm_files/mpdm_proctrlstrategy.md) |
 | 46 | foprinvalid | foprinvalid | bpchar | 1 |  | √ | '0' |  |
 | 47 | foprtotalscrapqty | foprtotalscrapqty | numeric | 23 | 10 | √ | 0.0000000000 |  |
 | 48 | foprplanfinishtime | foprplanfinishtime | timestamp | 0 |  |  | null |  |

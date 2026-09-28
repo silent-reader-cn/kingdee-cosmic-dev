@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | forgfield | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | forgfield | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 4 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 
@@ -99,26 +99,26 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fappsecret | fappsecret | varchar | 50 |  | √ | ' ' |  |
 | 3 | fservernumber | fservernumber | varchar | 50 |  | √ | ' ' |  |
-| 4 | fuseorg | 业务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 4 | fuseorg | 业务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | fmainwarehouse | 是否主仓 | varchar | 50 |  | √ | ' ' | 是否主仓,枚举: 1 :是 0 :否 |
-| 7 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 7 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | fstoragetype | 存储方式 | varchar | 50 |  | √ | ' ' | 存储方式,枚举: A :仅云端存储 B :仅本地存储 |
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 10 | flocalserver | 服务器名称 | int8 | 64 |  | √ | 0 | 服务器配置 plm_plmdc_fs_cfg |
+| 10 | flocalserver | 服务器名称 | int8 | 64 |  | √ | 0 | [服务器配置 plm_plmdc_fs_cfg](../plmdc_files/plm_plmdc_fs_cfg.md) |
 | 11 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 14 | fsourcedataid | 原资料id | int4 | 32 |  | √ | 0 | 原资料id |
 | 15 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
 | 16 | fstoragedoclist | 存储文档类型列表 | varchar | 255 |  | √ | ' ' | 存储文档类型列表 |
-| 17 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 17 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 18 | fname | 方案名称 | varchar | 50 |  | √ | ' ' | 方案名称 |
-| 19 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 19 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 20 | fappkey | fappkey | varchar | 50 |  | √ | ' ' |  |
 | 21 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 22 | fstart | 启用 | bpchar | 1 |  | √ | '0' | 启用 |
-| 23 | fcloudserver | 服务器名称 | int8 | 64 |  | √ | 0 | 服务器配置 plm_plmdc_fs_cfg |
+| 23 | fcloudserver | 服务器名称 | int8 | 64 |  | √ | 0 | [服务器配置 plm_plmdc_fs_cfg](../plmdc_files/plm_plmdc_fs_cfg.md) |
 | 24 | fctrlstrategy | 控制策略 | varchar | 50 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
 | 25 | fstoragedoclist_tag | 存储文档类型列表_详情 | text | 0 |  |  | null | 存储文档类型列表_详情 |
 | 26 | fserveraddress | fserveraddress | varchar | 50 |  | √ | ' ' |  |

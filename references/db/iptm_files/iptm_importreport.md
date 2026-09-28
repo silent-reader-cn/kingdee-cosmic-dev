@@ -10,19 +10,19 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreator | 操作人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fcreator | 操作人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | ffailedcount | 失败 | int8 | 64 |  | √ | 0 | 失败 |
 | 4 | fbillstatus | 单据状态 | bpchar | 1 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 5 | fcreatetime | 开始时间 | timestamp | 0 |  |  | null | 开始时间 |
 | 6 | fentitykey | 引入对象内码 | varchar | 36 |  | √ | ' ' | 引入对象内码 |
-| 7 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 7 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 8 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
 | 9 | fdetail_tag | 明细信息_详情 | text | 0 |  |  | null | 明细信息_详情 |
 | 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 11 | fentityname | 引入对象 | varchar | 60 |  | √ | ' ' | 引入对象 |
 | 12 | fstatus | 引入状态 | bpchar | 1 |  | √ | ' ' | 引入状态,枚举: 0 :引入中 1 :异常 2 :完成 |
 | 13 | fdetail | 明细信息 | varchar | 255 |  | √ | ' ' | 明细信息 |
-| 14 | fauditor | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fauditor | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | fmainorgname | 主业务组织 | varchar | 255 |  | √ | ' ' | 主业务组织 |
 | 16 | fendtime | 结束时间 | timestamp | 0 |  |  | null | 结束时间 |
 | 17 | ftotalcount | 总数 | int8 | 64 |  | √ | 0 | 总数 |

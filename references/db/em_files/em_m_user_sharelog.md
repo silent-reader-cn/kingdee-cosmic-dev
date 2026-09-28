@@ -14,7 +14,7 @@
 | 3 | fcreatetime | 创建时间 | timestamp | 0 |  | √ | LOCALTIMESTAMP | 创建时间 |
 | 4 | fexpirationtime | 过期时间 | timestamp | 0 |  | √ | LOCALTIMESTAMP | 过期时间 |
 | 5 | fshareparamter | 参数 | varchar | 255 |  |  | null | 参数 |
-| 6 | fuserid | 用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | fuserid | 用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

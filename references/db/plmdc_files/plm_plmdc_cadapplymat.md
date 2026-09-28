@@ -15,8 +15,9 @@
 | 4 | funiquekey | 标识 | varchar | 50 |  | √ | ' ' | 标识 |
 | 5 | ffilename | 文件名 | varchar | 255 |  | √ | ' ' | 文件名 |
 | 6 | fmaterialid | 物料id | int8 | 64 |  | √ | 0 | 物料id |
-| 7 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 8 | fmatapplyid | 物料申请单 | int8 | 64 |  | √ | 0 | 物料申请单 plm_pdm_compose_maf |
+| 7 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 8 | flowercasename | 小写文件名 | varchar | 255 |  |  | ' ' | 小写文件名 |
+| 9 | fmatapplyid | 物料申请单 | int8 | 64 |  | √ | 0 | [物料申请单 plm_pdm_compose_maf](../plmsm_files/plm_pdm_compose_maf.md) |
 
 ### 列规则定义
 
@@ -29,4 +30,5 @@
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
 | 1 | idx_plmdc_cadapplymat |  | funiquekey |
-| 2 | pk_t_plmdc_cadapplymat |  | fid |
+| 2 | idx_plmdc_flowercasename |  | flowercasename |
+| 3 | pk_t_plmdc_cadapplymat |  | fid |

@@ -15,13 +15,14 @@
 | 4 | fdisktype | 文件存贮类型 | bpchar | 1 |  | √ | '1' | 文件存贮类型,枚举: 0 :附件服务器(未知） T :附件服务器（临时） P :附件服务器（永久） 2 :临时服务器 |
 | 5 | fexptype | 打印类型 | varchar | 20 |  | √ | ' ' | 打印类型,枚举: pdf :Pdf xls :Excel client :客户端 png :图片 |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  | √ | LOCALTIMESTAMP | 创建时间 |
-| 7 | forgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 7 | forgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | fservicen | 服务编码 | varchar | 50 |  | √ | ' ' | 服务编码 |
 | 9 | ftaskname | 任务名称 | varchar | 256 |  | √ | ' ' | 任务名称 |
 | 10 | fappid | 应用ID | varchar | 36 |  | √ | ' ' | 应用ID |
 | 11 | fstatus | 打印状态 | bpchar | 1 |  | √ | 'A' | 打印状态,枚举: A :打印中 B :打印完成 C :打印失败 |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 13 | ftaskid | 任务编号 | varchar | 50 |  | √ | ' ' | 任务编号 |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 13 | fext | 扩展参数 | varchar | 256 |  | √ | ' ' | 扩展参数 |
+| 14 | ftaskid | 任务编号 | varchar | 50 |  | √ | ' ' | 任务编号 |
 
 ### 列规则定义
 

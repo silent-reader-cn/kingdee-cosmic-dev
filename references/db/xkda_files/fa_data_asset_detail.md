@@ -43,14 +43,14 @@
 | 2 | finvaliddate | 失效时间 | timestamp | 0 |  |  | null | 失效时间 |
 | 3 | feffectuatedate | 生效时间 | timestamp | 0 |  |  | null | 生效时间 |
 | 4 | fstatus | 状态 | varchar | 10 |  | √ | ' ' | 状态,枚举: 1 :生效 2 :失效 |
-| 5 | fentrymodifier | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | fentrymodifier | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | fentryscale | 数据规模 | numeric | 23 | 10 | √ | 0 | 数据规模 |
-| 7 | fentrysupplier | 供应商 | int8 | 64 |  | √ | 0 | 供应商 bd_supplier |
+| 7 | fentrysupplier | 供应商 | int8 | 64 |  | √ | 0 | [供应商 bd_supplier](../basedata_files/bd_supplier.md) |
 | 8 | fseq | fseq | int4 | 32 |  | √ | 0 |  |
 | 9 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 10 | finvalidtype | finvalidtype | bpchar | 1 |  | √ | '1' |  |
 | 11 | fdetailsbillno | 单据编号 | varchar | 50 |  | √ | ' ' | 单据编号 |
-| 12 | fentryunit | 计量单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 12 | fentryunit | 计量单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 
 ### 列规则定义
 

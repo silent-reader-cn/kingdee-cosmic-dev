@@ -15,9 +15,9 @@
 | 4 | fbill_id | 单据ID | int8 | 64 |  | √ | 0 | 单据ID |
 | 5 | fop | 操作 | varchar | 50 |  | √ | ' ' | 操作 |
 | 6 | f_qty | 数量 | numeric | 23 | 10 | √ | 0 | 数量 |
-| 7 | fbill_obj | 单据实体 | varchar | 36 |  | √ | ' ' | 单据主实体 bos_billmainentity |
+| 7 | fbill_obj | 单据实体 | varchar | 36 |  | √ | ' ' | [单据主实体 bos_billmainentity](../mdl_files/bos_billmainentity.md) |
 | 8 | freserve_record | 净改变记录ID | int8 | 64 |  | √ | 0 | 净改变记录ID |
-| 9 | f_creater_id | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | f_creater_id | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | f_qty2nd | 辅助数量 | numeric | 23 | 10 | √ | 0 | 辅助数量 |
 | 11 | fcreate_date | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
 | 12 | fbill_entry_id | 单据分录ID | int8 | 64 |  | √ | 0 | 单据分录ID |

@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | forg_id | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | forg_id | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fcreate_time | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
 | 4 | fquery_type | 统计类型 | varchar | 20 |  | √ | ' ' | 统计类型,枚举: fcreatetime :采集日期 finvoice_date :开票日期 fauthenticate_time :认证日期 |
 | 5 | fdata_date | 数据日期 | timestamp | 0 |  |  | null | 数据日期 |

@@ -12,12 +12,15 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fremark | 修改原因 | varchar | 255 |  | √ | ' ' | 修改原因 |
 | 3 | foriginalvalue | 修改前 | varchar | 2000 |  | √ | ' ' | 修改前 |
-| 4 | fmodifydatefield | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
-| 5 | fsbbid | 申报表id | varchar | 100 |  | √ | ' ' | 申报表id |
-| 6 | fmodifytype | 修改类型 | varchar | 30 |  | √ | ' ' | 修改类型,枚举: 1 :系统变更 2 :修改变更 |
-| 7 | ftargetvalue | 修改后 | varchar | 2000 |  | √ | ' ' | 修改后 |
-| 8 | fmodifierfield | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 9 | fcellid | 单元格id | varchar | 100 |  | √ | ' ' | 单元格id |
+| 4 | fprojectname | 项目 | varchar | 500 |  | √ | ' ' | 项目 |
+| 5 | fmodifydatefield | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
+| 6 | fsheetname | 页签名称 | varchar | 100 |  | √ | ' ' | 页签名称 |
+| 7 | fsbbid | 申报表id | varchar | 100 |  | √ | ' ' | 申报表id |
+| 8 | fmodifytype | 修改类型 | varchar | 30 |  | √ | ' ' | 修改类型,枚举: 1 :系统变更 2 :修改变更 3 :税局初始化 |
+| 9 | ftargetvalue | 修改后 | varchar | 2000 |  | √ | ' ' | 修改后 |
+| 10 | fmodifierfield | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 11 | fcellid | 单元格id | varchar | 100 |  | √ | ' ' | 单元格id |
+| 12 | fsheetid | 页签id | int8 | 64 |  | √ | 0 | 页签配置 tpo_sheet |
 
 ### 列规则定义
 
@@ -29,5 +32,5 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_t_tctb_declare_his_ssid |  | fcellid,fsbbid |
-| 2 | t_tctb_declare_his_pkey |  | fid |
+| 1 | t_tctb_declare_his_pkey |  | fid |
+| 2 | idx_t_tctb_declare_his_ssid |  | fsbbid,fcellid |

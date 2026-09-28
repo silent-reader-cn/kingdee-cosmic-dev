@@ -22,7 +22,7 @@
 | 11 | fnot_deductible_type | 不抵扣原因 | varchar | 2 |  | √ | ' ' | 不抵扣原因,枚举: 1 :用于非应税项目 2 :用于免税项目 3 :用于集体福利或者个人消费 4 :遭受非正常损失 5 :其他 |
 | 12 | fresource | 发票来源 | varchar | 50 |  | √ | ' ' | 发票来源 |
 | 13 | fbillno | 单据编号 | varchar | 36 |  | √ | ' ' | 单据编号 |
-| 14 | forg_id | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 14 | forg_id | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 15 | ftotal_amount | 价税合计 | numeric | 23 | 10 | √ | 0 | 价税合计 |
 | 16 | fdeduction_purpose | 抵扣用途 | varchar | 2 |  | √ | ' ' | 抵扣用途,枚举: 1 :抵扣 2 :不抵扣 3 :退税 |
 | 17 | fbillstatus | 单据状态 | varchar | 2 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
@@ -32,8 +32,8 @@
 | 21 | fsaler_tax_no | 销方税号 | varchar | 20 |  | √ | ' ' | 销方税号 |
 | 22 | fdelete | 可用状态 | varchar | 4 |  | √ | ' ' | 可用状态,枚举: 1 :可用 2 :作废 3 :删除 |
 | 23 | fexpense_status | 报销状态 | varchar | 2 |  | √ | ' ' | 报销状态,枚举: 1 :未报销 30 :审核中 60 :已报销 65 :已入账 |
-| 24 | fproject | 项目 | int8 | 64 |  | √ | 0 | 项目 bd_project |
-| 25 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 24 | fproject | 项目 | int8 | 64 |  | √ | 0 | [项目 bd_project](../basedata_files/bd_project.md) |
+| 25 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 26 | fbuyer_name | 购方名称 | varchar | 120 |  | √ | ' ' | 购方名称 |
 | 27 | fproxy_saler_name | 代开单位名称 | varchar | 120 |  | √ | ' ' | 代开单位名称 |
 | 28 | finvoice_amount | 合计金额 | numeric | 23 | 10 | √ | 0 | 合计金额 |
@@ -43,14 +43,14 @@
 | 32 | fpurchase_ticket | 农产品发票类型 | varchar | 2 |  | √ | '0' | 农产品发票类型,枚举: 0 :空 1 :收购票 2 :销售票 |
 | 33 | finvoice_status | 发票状态 | varchar | 2 |  | √ | ' ' | 发票状态,枚举: 0 :正常 1 :失控 2 :作废 3 :红冲 7 :部分红冲 4 :异常 |
 | 34 | fserial_no | 发票流水号 | varchar | 36 |  | √ | ' ' | 发票流水号 |
-| 35 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 35 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 36 | fproxy_mark | 代开标识 | varchar | 4 |  | √ | ' ' | 代开标识,枚举: 0 :否 1 :是 |
 | 37 | freviewer | freviewer | varchar | 50 |  | √ | ' ' |  |
 | 38 | faccount_date | 会计属期 | timestamp | 0 |  |  | null | 会计属期 |
 | 39 | favail_deduct | 可扣除额 | numeric | 23 | 10 | √ | 0 | 可扣除额 |
 | 40 | fremark | 备注 | varchar | 400 |  | √ | ' ' | 备注 |
 | 41 | ftotal_deduct | 累计扣除额 | numeric | 23 | 10 | √ | 0 | 累计扣除额 |
-| 42 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 42 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 43 | faws_serial_no | AWS发票流水号 | varchar | 36 |  | √ | ' ' | AWS发票流水号 |
 | 44 | fsplit | fsplit | varchar | 50 |  | √ | ' ' |  |
 | 45 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
@@ -59,12 +59,12 @@
 | 48 | finvoice_no | 发票号码 | varchar | 32 |  | √ | ' ' | 发票号码 |
 | 49 | fcurrent_deduct | 本次扣除额 | numeric | 23 | 10 | √ | 0 | 本次扣除额 |
 | 50 | fbuyer_tax_no | 购方税号 | varchar | 20 |  | √ | ' ' | 购方税号 |
-| 51 | ftax_org | 纳税主体 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 51 | ftax_org | 纳税主体 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 52 | fsaler_name | 销方名称 | varchar | 120 |  | √ | ' ' | 销方名称 |
 | 53 | ftype | 0-蓝字发票；1-红字发票 | varchar | 50 |  | √ | ' ' | 0-蓝字发票；1-红字发票,枚举: 0 :蓝字发票 1 :红字发票 |
 | 54 | fremain_deduct | 剩余扣除额 | numeric | 23 | 10 | √ | 0 | 剩余扣除额 |
 | 55 | foriginal_state | 原件签收状态 | varchar | 2 |  | √ | ' ' | 原件签收状态,枚举: 0 :未签收 1 :已签收 |
-| 56 | finvoice_type | 发票类型 | int8 | 64 |  | √ | 0 | 发票类型 bd_invoicetype |
+| 56 | finvoice_type | 发票类型 | int8 | 64 |  | √ | 0 | [发票种类 bd_invoicetype](../basedata_files/bd_invoicetype.md) |
 | 57 | foriginal_invoice_code | foriginal_invoice_code | varchar | 32 |  | √ | ' ' |  |
 | 58 | foriginal_invoice_no | 原发票号码 | varchar | 32 |  | √ | ' ' | 原发票号码 |
 
@@ -79,8 +79,8 @@
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
 | 1 | idx_rim_inv_electric_serial |  | fserial_no |
-| 2 | pk_rim_inv_electric |  | fid |
-| 3 | idx_rim_inv_electric_no |  | finvoice_no |
+| 2 | idx_rim_inv_electric_no |  | finvoice_no |
+| 3 | pk_rim_inv_electric |  | fid |
 | 4 | idx_rim_inv_electric_taxorg |  | ftax_org |
 
 ---

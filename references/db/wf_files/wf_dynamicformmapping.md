@@ -11,19 +11,19 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 表单名称 | varchar | 500 |  | √ | ' ' | 表单名称 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fmodeltype | 表单类型 | varchar | 50 |  | √ | ' ' | 表单类型,枚举: DynamicFormModel :PC端的动态表单 MobileFormModel :移动版的动态表单 |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 6 | fsourceid | sourceid | varchar | 36 |  | √ | ' ' | sourceid |
 | 7 | fmodify | 可修改 | bpchar | 1 |  | √ | '0' | 可修改 |
-| 8 | fentitynumber | 实体 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 8 | fentitynumber | 实体 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 9 | fdescription | 描述 | varchar | 255 |  | √ | ' ' | 描述 |
-| 10 | fdynamicformnumber | 表单 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 10 | fdynamicformnumber | 表单 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 11 | fpreinsdata | 系统预设 | bpchar | 1 |  | √ | '0' | 系统预设 |
 | 12 | fbusinessenable | 业务使用状态 | varchar | 10 |  | √ | ' ' | 业务使用状态,枚举: 0 :禁用 1 :可用 2 :空 |
 | 13 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 14 | fmustinput | 必录 | bpchar | 1 |  | √ | '0' | 必录 |
-| 15 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 15 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 16 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 17 | fenable | 使用状态 | varchar | 10 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 18 | fnumber | 表单编码 | varchar | 30 |  | √ | ' ' | 表单编码 |

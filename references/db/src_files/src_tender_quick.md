@@ -55,39 +55,40 @@
 | 44 | fwinruleid | fwinruleid | int8 | 64 |  | √ | 0 |  |
 | 45 | fpurdeptid | fpurdeptid | int8 | 64 |  | √ | 0 |  |
 | 46 | famount | famount | numeric | 23 | 10 | √ | 0 |  |
-| 47 | fisaptitude | fisaptitude | bpchar | 1 |  | √ | '0' |  |
-| 48 | fsurplusamount | fsurplusamount | numeric | 23 | 10 | √ | 0 |  |
-| 49 | fsupopentype | fsupopentype | bpchar | 1 |  | √ | '1' |  |
-| 50 | fopentype | fopentype | bpchar | 1 |  | √ | ' ' |  |
-| 51 | fclosetask | fclosetask | varchar | 255 |  | √ | ' ' |  |
-| 52 | fpurgroupid | fpurgroupid | int8 | 64 |  | √ | 0 |  |
-| 53 | fbiztypeid | fbiztypeid | int8 | 64 |  | √ | 0 |  |
-| 54 | fismultipackage | fismultipackage | bpchar | 1 |  | √ | '0' |  |
-| 55 | fishidesupplier | fishidesupplier | bpchar | 1 |  | √ | '0' |  |
-| 56 | fsourceclassid | fsourceclassid | int8 | 64 |  | √ | 0 |  |
-| 57 | fopenstatus | fopenstatus | bpchar | 1 |  | √ | '1' |  |
-| 58 | fmanagetype | fmanagetype | bpchar | 1 |  | √ | ' ' |  |
-| 59 | ftaxtype | ftaxtype | varchar | 30 |  | √ | ' ' |  |
-| 60 | fbidname | fbidname | varchar | 300 |  | √ | ' ' |  |
-| 61 | fterminalnode | fterminalnode | int8 | 64 |  | √ | 0 |  |
-| 62 | fparentid | 父单据ID | varchar | 50 |  | √ | ' ' | 父单据ID |
-| 63 | fdonetask | fdonetask | varchar | 255 |  | √ | ' ' |  |
-| 64 | fisbypackage | fisbypackage | bpchar | 1 |  | √ | '0' |  |
-| 65 | fisbidpublish | fisbidpublish | bpchar | 1 |  | √ | '0' |  |
-| 66 | fentitykey | 组件标识 | varchar | 50 |  | √ | ' ' | 组件标识 |
-| 67 | fopendate | fopendate | timestamp | 0 |  |  | null |  |
-| 68 | fdecisiontype | fdecisiontype | bpchar | 1 |  | √ | ' ' |  |
-| 69 | fratio_biz | fratio_biz | numeric | 23 | 10 | √ | 0 |  |
-| 70 | fratio_tec | fratio_tec | numeric | 23 | 10 | √ | 0 |  |
-| 71 | fisopencontrol | fisopencontrol | bpchar | 1 |  | √ | '0' |  |
-| 72 | fisbypackage_apt | fisbypackage_apt | bpchar | 1 |  | √ | '0' |  |
-| 73 | fsourcetypeid | fsourcetypeid | int8 | 64 |  | √ | 0 |  |
-| 74 | fsumtaxamount | fsumtaxamount | numeric | 23 | 10 | √ | 0 |  |
-| 75 | fextfilterid | fextfilterid | int8 | 64 |  | √ | 0 |  |
-| 76 | fcurrentnode | fcurrentnode | int8 | 64 |  | √ | 0 |  |
-| 77 | fisquickpur | fisquickpur | bpchar | 1 |  | √ | '0' |  |
-| 78 | fcurrencyid | fcurrencyid | int8 | 64 |  | √ | 0 |  |
-| 79 | fratiotype | fratiotype | bpchar | 1 |  | √ | '1' |  |
+| 47 | fsystype | fsystype | bpchar | 1 |  | √ | '1' |  |
+| 48 | fisaptitude | fisaptitude | bpchar | 1 |  | √ | '0' |  |
+| 49 | fsurplusamount | fsurplusamount | numeric | 23 | 10 | √ | 0 |  |
+| 50 | fsupopentype | fsupopentype | bpchar | 1 |  | √ | '1' |  |
+| 51 | fopentype | fopentype | bpchar | 1 |  | √ | ' ' |  |
+| 52 | fclosetask | fclosetask | varchar | 255 |  | √ | ' ' |  |
+| 53 | fpurgroupid | fpurgroupid | int8 | 64 |  | √ | 0 |  |
+| 54 | fbiztypeid | fbiztypeid | int8 | 64 |  | √ | 0 |  |
+| 55 | fismultipackage | fismultipackage | bpchar | 1 |  | √ | '0' |  |
+| 56 | fishidesupplier | fishidesupplier | bpchar | 1 |  | √ | '0' |  |
+| 57 | fsourceclassid | fsourceclassid | int8 | 64 |  | √ | 0 |  |
+| 58 | fopenstatus | fopenstatus | bpchar | 1 |  | √ | '1' |  |
+| 59 | fmanagetype | fmanagetype | bpchar | 1 |  | √ | ' ' |  |
+| 60 | ftaxtype | ftaxtype | varchar | 30 |  | √ | ' ' |  |
+| 61 | fbidname | fbidname | varchar | 300 |  | √ | ' ' |  |
+| 62 | fterminalnode | fterminalnode | int8 | 64 |  | √ | 0 |  |
+| 63 | fparentid | 父单据ID | varchar | 50 |  | √ | ' ' | 父单据ID |
+| 64 | fdonetask | fdonetask | varchar | 255 |  | √ | ' ' |  |
+| 65 | fisbypackage | fisbypackage | bpchar | 1 |  | √ | '0' |  |
+| 66 | fisbidpublish | fisbidpublish | bpchar | 1 |  | √ | '0' |  |
+| 67 | fentitykey | 组件标识 | varchar | 50 |  | √ | ' ' | 组件标识 |
+| 68 | fopendate | fopendate | timestamp | 0 |  |  | null |  |
+| 69 | fdecisiontype | fdecisiontype | bpchar | 1 |  | √ | ' ' |  |
+| 70 | fratio_biz | fratio_biz | numeric | 23 | 10 | √ | 0 |  |
+| 71 | fratio_tec | fratio_tec | numeric | 23 | 10 | √ | 0 |  |
+| 72 | fisopencontrol | fisopencontrol | bpchar | 1 |  | √ | '0' |  |
+| 73 | fisbypackage_apt | fisbypackage_apt | bpchar | 1 |  | √ | '0' |  |
+| 74 | fsourcetypeid | fsourcetypeid | int8 | 64 |  | √ | 0 |  |
+| 75 | fsumtaxamount | fsumtaxamount | numeric | 23 | 10 | √ | 0 |  |
+| 76 | fextfilterid | fextfilterid | int8 | 64 |  | √ | 0 |  |
+| 77 | fcurrentnode | fcurrentnode | int8 | 64 |  | √ | 0 |  |
+| 78 | fisquickpur | fisquickpur | bpchar | 1 |  | √ | '0' |  |
+| 79 | fcurrencyid | fcurrencyid | int8 | 64 |  | √ | 0 |  |
+| 80 | fratiotype | fratiotype | bpchar | 1 |  | √ | '1' |  |
 
 ### 列规则定义
 
@@ -102,9 +103,9 @@
 | 1 | idx_src_project_sourceid |  | fsourceid |
 | 2 | idx_src_project_parentid |  | fparentid |
 | 3 | pk_src_project |  | fid |
-| 4 | idx_src_project_type |  | fsrctypeid |
-| 5 | idx_src_project_sourceclassid |  | fsourceclassid |
-| 6 | idx_src_project_status |  | fopenstatus |
+| 4 | idx_src_project_sourceclassid |  | fsourceclassid |
+| 5 | idx_src_project_status |  | fopenstatus |
+| 6 | idx_src_project_type |  | fsrctypeid |
 
 ---
 
@@ -118,70 +119,80 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | faddress | 联系地址 | varchar | 100 |  | √ | ' ' | 联系地址 |
-| 3 | fisupload | fisupload | bpchar | 1 |  | √ | '0' |  |
-| 4 | fistecopen | fistecopen | bpchar | 1 |  | √ | '0' |  |
-| 5 | fisbidpush | fisbidpush | bpchar | 1 |  | √ | '0' |  |
-| 6 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 7 | fnote | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
-| 8 | fbizopenuser | fbizopenuser | int8 | 64 |  | √ | 0 |  |
-| 9 | fdocamount | fdocamount | numeric | 23 | 10 | √ | 0 |  |
-| 10 | fmodifytime | fmodifytime | timestamp | 0 |  |  | null |  |
-| 11 | fisdownload | fisdownload | bpchar | 1 |  | √ | '0' |  |
-| 12 | fisdiscard | 是否废标 | bpchar | 1 |  | √ | '0' | 是否废标 |
-| 13 | fpackageid | 标段名称 | int8 | 64 |  | √ | 0 | 标段名称 src_packagef7 |
-| 14 | fcount2 | fcount2 | int4 | 32 |  | √ | 0 |  |
-| 15 | fisabandon | 是否拒标 | bpchar | 1 |  | √ | '0' | 是否拒标 |
-| 16 | faptopenuser | faptopenuser | int8 | 64 |  | √ | 0 |  |
-| 17 | fisconfirm | 是否应标 | bpchar | 1 |  | √ | '0' | 是否应标 |
-| 18 | fisnegotiate | 是否议标报价 | bpchar | 1 |  | √ | '0' | 是否议标报价 |
-| 19 | fabandonreason | 拒标原因 | varchar | 255 |  | √ | ' ' | 拒标原因 |
-| 20 | fphone | 联系电话 | varchar | 50 |  | √ | ' ' | 联系电话 |
-| 21 | fistender | 是否投标 | bpchar | 1 |  | √ | '0' | 是否投标 |
-| 22 | fisfeeagent | fisfeeagent | bpchar | 1 |  | √ | '0' |  |
-| 23 | femail | 电子邮件 | varchar | 50 |  | √ | ' ' | 电子邮件 |
-| 24 | ftecopendate | ftecopendate | timestamp | 0 |  |  | null |  |
-| 25 | fsumscore | fsumscore | numeric | 19 | 4 | √ | 0 |  |
-| 26 | freason | 废标原因 | varchar | 255 |  | √ | ' ' | 废标原因 |
-| 27 | fsupplierid | 供应商 | int8 | 64 |  | √ | 0 | 注册供应商 src_supplier |
-| 28 | fsuppliertype | 供应商类别 | varchar | 30 |  | √ | ' ' | 供应商类别,枚举: src_supplier :注册供应商 src_supplier_inner :内部供应商(员工) src_supplier_tmp :临时供应商 bd_supplier :供应商 |
-| 29 | fisaptopen | fisaptopen | bpchar | 1 |  | √ | '0' |  |
-| 30 | fisaptpush2 | fisaptpush2 | bpchar | 1 |  | √ | '0' |  |
-| 31 | fassessorder | fassessorder | int4 | 32 |  | √ | 0 |  |
-| 32 | fsupplierip | fsupplierip | varchar | 100 |  | √ | ' ' |  |
-| 33 | flinkman | 联系人 | varchar | 50 |  | √ | ' ' | 联系人 |
-| 34 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 35 | fisquote | 是否报价 | bpchar | 1 |  | √ | '0' | 是否报价 |
-| 36 | frank | frank | int4 | 32 |  | √ | 0 |  |
-| 37 | frisknum | frisknum | int4 | 32 |  | √ | 0 |  |
-| 38 | fisaptpush | fisaptpush | bpchar | 1 |  | √ | '0' |  |
-| 39 | fisviepublish | fisviepublish | bpchar | 1 |  | √ | '0' |  |
-| 40 | fbizamount | fbizamount | numeric | 23 | 10 | √ | 0 |  |
-| 41 | fentrystatus | 评标状态 | bpchar | 1 |  | √ | ' ' | 评标状态,枚举: A :待下达 B :已下达 C :部分评标 D :已评标 |
-| 42 | fsuppliercode | fsuppliercode | varchar | 50 |  | √ | ' ' |  |
-| 43 | fsource | 来源 | bpchar | 1 |  | √ | ' ' | 来源,枚举: 1 :来源采委会 2 :立项新增 9 :补充供应商 |
-| 44 | fisaptitude | fisaptitude | bpchar | 1 |  | √ | '0' |  |
-| 45 | fbidderid | fbidderid | int8 | 64 |  | √ | 0 |  |
-| 46 | fispayfee | 是否已缴纳 | bpchar | 1 |  | √ | '0' | 是否已缴纳 |
-| 47 | fcurrentrank | fcurrentrank | int4 | 32 |  | √ | 0 |  |
-| 48 | ffeeamount | 投标保证金 | numeric | 23 | 10 | √ | 0 | 投标保证金 |
-| 49 | ftecopenuser | ftecopenuser | int8 | 64 |  | √ | 0 |  |
-| 50 | fcount | fcount | int4 | 32 |  | √ | 0 |  |
-| 51 | fisexempt | fisexempt | bpchar | 1 |  | √ | '0' |  |
-| 52 | fispuragent | fispuragent | bpchar | 1 |  | √ | '0' |  |
-| 53 | fmodifierid | fmodifierid | int8 | 64 |  | √ | 0 |  |
-| 54 | fparentid | fparentid | varchar | 50 |  | √ | ' ' |  |
-| 55 | friskremark | friskremark | varchar | 510 |  | √ | ' ' |  |
-| 56 | fcreatetime | fcreatetime | timestamp | 0 |  |  | null |  |
-| 57 | fbizopendate | fbizopendate | timestamp | 0 |  |  | null |  |
-| 58 | fisinvite | 是否邀请 | bpchar | 1 |  | √ | '0' | 是否邀请 |
-| 59 | fisbidpublish | fisbidpublish | bpchar | 1 |  | √ | '0' |  |
-| 60 | faptitudenote | faptitudenote | varchar | 255 |  | √ | ' ' |  |
-| 61 | fentrysupplierip | fentrysupplierip | varchar | 100 |  | √ | ' ' |  |
-| 62 | fduty | fduty | varchar | 50 |  | √ | ' ' |  |
-| 63 | fispaydocfee | fispaydocfee | bpchar | 1 |  | √ | '0' |  |
-| 64 | faptopendate | faptopendate | timestamp | 0 |  |  | null |  |
-| 65 | fisbizopen | fisbizopen | bpchar | 1 |  | √ | '0' |  |
+| 2 | faptrank | faptrank | int4 | 32 |  | √ | 0 |  |
+| 3 | faddress | 联系地址 | varchar | 100 |  | √ | ' ' | 联系地址 |
+| 4 | fisupload | fisupload | bpchar | 1 |  | √ | '0' |  |
+| 5 | fistecopen | fistecopen | bpchar | 1 |  | √ | '0' |  |
+| 6 | fisexemptapt | fisexemptapt | bpchar | 1 |  | √ | '0' |  |
+| 7 | fisbidpush | fisbidpush | bpchar | 1 |  | √ | '0' |  |
+| 8 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
+| 9 | fnote | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
+| 10 | fbizopenuser | fbizopenuser | int8 | 64 |  | √ | 0 |  |
+| 11 | fdocamount | fdocamount | numeric | 23 | 10 | √ | 0 |  |
+| 12 | fmodifytime | fmodifytime | timestamp | 0 |  |  | null |  |
+| 13 | fisdownload | fisdownload | bpchar | 1 |  | √ | '0' |  |
+| 14 | fisdiscard | 是否废标 | bpchar | 1 |  | √ | '0' | 是否废标 |
+| 15 | ftecrank | ftecrank | int4 | 32 |  | √ | 0 |  |
+| 16 | fpackageid | 标段名称 | int8 | 64 |  | √ | 0 | [标段名称 src_packagef7](../src_files/src_packagef7.md) |
+| 17 | fcount2 | fcount2 | int4 | 32 |  | √ | 0 |  |
+| 18 | fisabandon | 是否拒标 | bpchar | 1 |  | √ | '0' | 是否拒标 |
+| 19 | faptopenuser | faptopenuser | int8 | 64 |  | √ | 0 |  |
+| 20 | fisconfirm | 是否应标 | bpchar | 1 |  | √ | '0' | 是否应标 |
+| 21 | fisnegotiate | 是否议标报价 | bpchar | 1 |  | √ | '0' | 是否议标报价 |
+| 22 | fabandonreason | 拒标原因 | varchar | 255 |  | √ | ' ' | 拒标原因 |
+| 23 | fphone | 联系电话 | varchar | 50 |  | √ | ' ' | 联系电话 |
+| 24 | fistender | 是否投标 | bpchar | 1 |  | √ | '0' | 是否投标 |
+| 25 | fisfeeagent | fisfeeagent | bpchar | 1 |  | √ | '0' |  |
+| 26 | femail | 电子邮件 | varchar | 50 |  | √ | ' ' | 电子邮件 |
+| 27 | ftecopendate | ftecopendate | timestamp | 0 |  |  | null |  |
+| 28 | fsumscore | fsumscore | numeric | 19 | 4 | √ | 0 |  |
+| 29 | freason | 废标原因 | varchar | 255 |  | √ | ' ' | 废标原因 |
+| 30 | fsupplierid | 供应商 | int8 | 64 |  | √ | 0 | 注册供应商 src_supplier |
+| 31 | fsuppliertype | 供应商类别 | varchar | 30 |  | √ | ' ' | 供应商类别,枚举: src_supplier :注册供应商 src_supplier_inner :内部供应商(员工) src_supplier_tmp :临时供应商 bd_supplier :供应商 |
+| 32 | fisaptopen | fisaptopen | bpchar | 1 |  | √ | '0' |  |
+| 33 | ftempsupplierid | ftempsupplierid | int8 | 64 |  | √ | 0 |  |
+| 34 | fisaptpush2 | fisaptpush2 | bpchar | 1 |  | √ | '0' |  |
+| 35 | fassessorder | fassessorder | int4 | 32 |  | √ | 0 |  |
+| 36 | fsupplierip | fsupplierip | varchar | 100 |  | √ | ' ' |  |
+| 37 | flinkman | 联系人 | varchar | 50 |  | √ | ' ' | 联系人 |
+| 38 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 39 | fisquote | 是否报价 | bpchar | 1 |  | √ | '0' | 是否报价 |
+| 40 | frank | frank | int4 | 32 |  | √ | 0 |  |
+| 41 | frisknum | frisknum | int4 | 32 |  | √ | 0 |  |
+| 42 | fisaptpush | fisaptpush | bpchar | 1 |  | √ | '0' |  |
+| 43 | fisviepublish | fisviepublish | bpchar | 1 |  | √ | '0' |  |
+| 44 | fsocietycreditcode | fsocietycreditcode | varchar | 255 |  | √ | ' ' |  |
+| 45 | fbizamount | fbizamount | numeric | 23 | 10 | √ | 0 |  |
+| 46 | fentrystatus | 评标状态 | bpchar | 1 |  | √ | ' ' | 评标状态,枚举: A :待下达 B :已下达 C :部分评标 D :已评标 |
+| 47 | fsuppliercode | fsuppliercode | varchar | 50 |  | √ | ' ' |  |
+| 48 | fsource | 来源 | bpchar | 1 |  | √ | ' ' | 来源,枚举: 1 :来源采委会 2 :立项新增 9 :补充供应商 |
+| 49 | fisaptitude | fisaptitude | bpchar | 1 |  | √ | '0' |  |
+| 50 | fbidderid | fbidderid | int8 | 64 |  | √ | 0 |  |
+| 51 | fispayfee | 是否已缴纳 | bpchar | 1 |  | √ | '0' | 是否已缴纳 |
+| 52 | fcurrentrank | fcurrentrank | int4 | 32 |  | √ | 0 |  |
+| 53 | ffeeamount | 投标保证金 | numeric | 23 | 10 | √ | 0 | 投标保证金 |
+| 54 | ftecopenuser | ftecopenuser | int8 | 64 |  | √ | 0 |  |
+| 55 | fpurlistnote | fpurlistnote | varchar | 50 |  | √ | ' ' |  |
+| 56 | fcount | fcount | int4 | 32 |  | √ | 0 |  |
+| 57 | fispuraptitude | fispuraptitude | bpchar | 1 |  | √ | '0' |  |
+| 58 | fisexempt | fisexempt | bpchar | 1 |  | √ | '0' |  |
+| 59 | fispuragent | fispuragent | bpchar | 1 |  | √ | '0' |  |
+| 60 | fmodifierid | fmodifierid | int8 | 64 |  | √ | 0 |  |
+| 61 | fquotedate | fquotedate | timestamp | 0 |  |  | null |  |
+| 62 | fparentid | fparentid | varchar | 50 |  | √ | ' ' |  |
+| 63 | friskremark | friskremark | varchar | 510 |  | √ | ' ' |  |
+| 64 | fcreatetime | fcreatetime | timestamp | 0 |  |  | null |  |
+| 65 | fbizopendate | fbizopendate | timestamp | 0 |  |  | null |  |
+| 66 | fisinvite | 是否邀请 | bpchar | 1 |  | √ | '0' | 是否邀请 |
+| 67 | fisbidpublish | fisbidpublish | bpchar | 1 |  | √ | '0' |  |
+| 68 | faptitudenote | faptitudenote | varchar | 255 |  | √ | ' ' |  |
+| 69 | fbizrank | fbizrank | int4 | 32 |  | √ | 0 |  |
+| 70 | fentrysupplierip | fentrysupplierip | varchar | 100 |  | √ | ' ' |  |
+| 71 | fduty | fduty | varchar | 50 |  | √ | ' ' |  |
+| 72 | fispaydocfee | fispaydocfee | bpchar | 1 |  | √ | '0' |  |
+| 73 | faptopendate | faptopendate | timestamp | 0 |  |  | null |  |
+| 74 | fisaptitudereply | fisaptitudereply | bpchar | 1 |  | √ | '0' |  |
+| 75 | fisbizopen | fisbizopen | bpchar | 1 |  | √ | '0' |  |
 
 ### 列规则定义
 

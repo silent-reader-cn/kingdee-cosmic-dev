@@ -47,7 +47,7 @@
 | 5 | fparentname | 上级行政区划 | varchar | 512 |  | √ | ' ' | 上级行政区划 |
 | 6 | forigindescription | 原描述 | varchar | 255 |  | √ | ' ' | 原描述 |
 | 7 | fcitynumber | 电话区号 | varchar | 255 |  | √ | ' ' | 电话区号 |
-| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fupdatemode | 更新方式 | varchar | 10 |  | √ | ' ' | 更新方式,枚举: insert :新增 update :更新 disable :禁用 |
 | 10 | foriginfullspell | 原全拼 | varchar | 255 |  | √ | ' ' | 原全拼 |
 | 11 | fareacode | 参考码 | varchar | 36 |  | √ | ' ' | 参考码 |

@@ -41,7 +41,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 4 | fformat | 显示格式 | varchar | 30 |  | √ | ' ' | 显示格式,枚举: 1 :货币符号+数值 2 :数值+货币符号 |
 | 5 | fsortcode | 排序码 | varchar | 50 |  | √ | ' ' | 排序码 |
@@ -51,7 +51,7 @@
 | 9 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 10 | fisshowsign | 显示货币符号 | bpchar | 1 |  | √ | '0' | 显示货币符号 |
 | 11 | fssid | 来源系统ID | varchar | 50 |  | √ | ' ' | 来源系统ID |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 14 | fpriceprecision | 单价精度 | int8 | 64 |  | √ | 0 | 单价精度 |
 | 15 | fissystem | 是否系统预置 | bpchar | 1 |  | √ | '0' | 是否系统预置 |

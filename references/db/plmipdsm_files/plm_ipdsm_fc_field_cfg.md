@@ -27,35 +27,6 @@
 
 ---
 
-## 字段配置-多语言表 t_plm_ipdsm_fc_cfg_e_l
-
-- **表名称：** 字段配置-多语言表
-- **表名：** t_plm_ipdsm_fc_cfg_e_l
-
-### 表格列定义
-
-| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fnewname | 重命名 | varchar | 50 |  | √ | ' ' | 重命名 |
-| 2 | flocaleid | flocaleid | varchar | 50 |  | √ | ' ' | localeid |
-| 3 | fpkid | fpkid | varchar | 50 |  | √ | ' ' | pkid |
-| 4 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
-
-### 列规则定义
-
-| 序号 | 键编码 | 列字段 |
-| :--- | :--- | :--- |
-| 1 | fpkid | fpkid |
-
-### 索引定义
-
-| 序号 | 索引名 | 唯一 | 列字段 |
-| :--- | :--- | :--- | :--- |
-| 1 | pk_plm_ipdsm_fc_cfg_e_l |  | fpkid |
-| 2 | idx_ipd_fc_field_cfg_e_l |  | fentryid,flocaleid |
-
----
-
 ## 字段配置-子表 t_plm_ipdsm_fc_cfg_e
 
 - **表名称：** 字段配置-子表
@@ -86,3 +57,32 @@
 | :--- | :--- | :--- | :--- |
 | 1 | idx_plm_ipdsm_fc_cfg_e_fk |  | fid,ffieldname,ffieldkey,fnewname |
 | 2 | pk_plm_ipdsm_fc_cfg_e |  | fentryid |
+
+---
+
+## 字段配置-多语言表 t_plm_ipdsm_fc_cfg_e_l
+
+- **表名称：** 字段配置-多语言表
+- **表名：** t_plm_ipdsm_fc_cfg_e_l
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fnewname | 重命名 | varchar | 50 |  | √ | ' ' | 重命名 |
+| 2 | flocaleid | flocaleid | varchar | 50 |  | √ | ' ' | localeid |
+| 3 | fpkid | fpkid | varchar | 50 |  | √ | ' ' | pkid |
+| 4 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fpkid | fpkid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | pk_plm_ipdsm_fc_cfg_e_l |  | fpkid |
+| 2 | idx_ipd_fc_field_cfg_e_l |  | fentryid,flocaleid |

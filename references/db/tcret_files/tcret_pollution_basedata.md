@@ -10,22 +10,22 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | faccountorg | 核算组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 3 | fpwxkznum | 排污许可证编号 | int8 | 64 |  | √ | 0 | 环保税排污许可证 tctb_hjbhs_entry |
+| 2 | faccountorg | 核算组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 3 | fpwxkznum | 排污许可证编号 | int8 | 64 |  | √ | 0 | [环保税排污许可证 tctb_hjbhs_entry](../tctb_files/tctb_hjbhs_entry.md) |
 | 4 | fsthjzgbm | 生态环境主管部门 | varchar | 50 |  | √ | ' ' | 生态环境主管部门 |
-| 5 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | fweidu | 纬度-度 | int8 | 64 |  | √ | 0 | 纬度-度 |
 | 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 8 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 9 | fenddate | 税源有效期止 | timestamp | 0 |  |  | null | 税源有效期止 |
-| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 12 | fbizdimensiontype | 业务维度 | varchar | 50 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 12 | fbizdimensiontype | 业务维度 | varchar | 50 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 13 | fjingdufen | 经度-分 | int8 | 64 |  | √ | 0 | 经度-分 |
-| 14 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | fweidufen | 纬度-分 | int8 | 64 |  | √ | 0 | 纬度-分 |
 | 16 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 17 | fpfksszgswjg | 排放口所属主管税务机关 | int8 | 64 |  | √ | 0 | 税务机关 bastax_taxorgan |
+| 17 | fpfksszgswjg | 排放口所属主管税务机关 | int8 | 64 |  | √ | 0 | [税务机关 bastax_taxorgan](../bastax_files/bastax_taxorgan.md) |
 | 18 | fbizdimensionname | 业务维度值 | varchar | 200 |  | √ | ' ' | 业务维度值 |
 | 19 | fscjyszx | 生产经营所在乡 | varchar | 50 |  | √ | ' ' | 生产经营所在乡 |
 | 20 | fweidumiao | 纬度-秒 | numeric | 23 | 10 | √ | 0 | 纬度-秒 |
@@ -93,13 +93,14 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fmark | 备注 | varchar | 50 |  | √ | ' ' | 备注 |
 | 3 | fzszm | 征收子目 | int8 | 64 |  | √ | 0 | 业务定义分录 tpo_hbs_bizdef_entry |
-| 4 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 5 | fswrwzl | 水污染物种类 | int8 | 64 |  | √ | 0 | 业务定义分录 tpo_hbs_bizdef_entry |
-| 6 | fbzndz | 标准浓度值 | numeric | 23 | 10 | √ | 0 | 标准浓度值 |
-| 7 | fwrwlb | 污染物类别 | int8 | 64 |  | √ | 0 | 业务定义分录 tpo_hbs_bizdef_entry |
-| 8 | fwrwmc | 污染物名称 | int8 | 64 |  | √ | 0 | 业务定义分录(树) tpo_hbs_bizdefen_tree |
-| 9 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 10 | fwrwpfljsff | 污染物排放量计算方法 | int8 | 64 |  | √ | 0 | 业务定义分录 tpo_hbs_bizdef_entry |
+| 4 | fdwse | 单位税额 | numeric | 23 | 10 | √ | 0 | 单位税额 |
+| 5 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
+| 6 | fswrwzl | 水污染物种类 | int8 | 64 |  | √ | 0 | 业务定义分录 tpo_hbs_bizdef_entry |
+| 7 | fbzndz | 标准浓度值 | numeric | 23 | 10 | √ | 0 | 标准浓度值 |
+| 8 | fwrwlb | 污染物类别 | int8 | 64 |  | √ | 0 | 业务定义分录 tpo_hbs_bizdef_entry |
+| 9 | fwrwmc | 污染物名称 | int8 | 64 |  | √ | 0 | 业务定义分录(树) tpo_hbs_bizdefen_tree |
+| 10 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 11 | fwrwpfljsff | 污染物排放量计算方法 | int8 | 64 |  | √ | 0 | 业务定义分录 tpo_hbs_bizdef_entry |
 
 ### 列规则定义
 

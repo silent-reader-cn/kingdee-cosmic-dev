@@ -12,7 +12,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fappnumber | 验权应用 | varchar | 50 |  | √ | ' ' | 验权应用,枚举: |
 | 3 | fformnumber | 表单编码 | varchar | 50 |  | √ | ' ' | 表单编码 |
-| 4 | fformid | 表单对象 | varchar | 50 |  | √ | ' ' | 表单元数据 bos_formmeta |
+| 4 | fformid | 表单对象 | varchar | 50 |  | √ | ' ' | [表单元数据 bos_formmeta](../mdl_files/bos_formmeta.md) |
 
 ### 列规则定义
 

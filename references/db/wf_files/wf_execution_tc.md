@@ -30,8 +30,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | t_wf_execution_l_pkey |  | fpkid |
-| 2 | idx_wf_execution_localeid |  | fid,flocaleid |
+| 1 | idx_wf_execution_localeid |  | fid,flocaleid |
+| 2 | t_wf_execution_l_pkey |  | fpkid |
 
 ---
 
@@ -77,24 +77,25 @@
 | 31 | ftimerjobcount | 定时工作数 | int8 | 64 |  | √ | 0 | 定时工作数 |
 | 32 | fcreatedate | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 33 | fbusinessid | 流程标识 | varchar | 255 |  | √ | ' ' | 流程标识 |
-| 34 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 34 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 35 | fvarcount | 变量数 | int8 | 64 |  | √ | 0 | 变量数 |
 | 36 | factivityname | 当前节点 | varchar | 500 |  | √ | ' ' | 当前节点 |
 | 37 | fidlinkcount | 用户连接数 | int8 | 64 |  | √ | 0 | 用户连接数 |
-| 38 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 38 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 39 | fparentid | 父流程实例ID | int8 | 64 |  | √ | 0 | 父流程实例ID |
 | 40 | ftestingplanid | 测试计划id | int8 | 64 |  | √ | 0 | 测试计划id |
 | 41 | fsubject | 单据主题 | varchar | 3000 |  | √ | ' ' | 单据主题 |
 | 42 | fcachedentstate | 终止类型 | int8 | 64 |  | √ | 0 | 终止类型 |
 | 43 | fprocesstype | 流程类型 | varchar | 30 |  | √ | 'AuditFlow' | 流程类型,枚举: AuditFlow :审批流 BizFlow :业务流 |
 | 44 | fmainorgid | 组织id | int8 | 64 |  | √ | 0 | 组织id |
-| 45 | fjobcount | 工作数 | int8 | 64 |  | √ | 0 | 工作数 |
-| 46 | fpresentassignee | 当前处理人 | varchar | 2000 |  | √ | ' ' | 当前处理人 |
-| 47 | ftaskid | 当前任务ID | int8 | 64 |  | √ | 0 | 当前任务ID |
-| 48 | fentrabillname | 入口单据 | varchar | 255 |  | √ | ' ' | 入口单据 |
-| 49 | flocktime | 锁定时间 | timestamp | 0 |  |  | null | 锁定时间 |
-| 50 | fbilltype | 业务单据类型 | varchar | 50 |  | √ | ' ' | 业务单据类型 |
-| 51 | fsuspjobcount | 挂起工作数 | int8 | 64 |  | √ | 0 | 挂起工作数 |
+| 45 | fissubprocess | 子流程 | bpchar | 1 |  | √ | '0' | 子流程 |
+| 46 | fjobcount | 工作数 | int8 | 64 |  | √ | 0 | 工作数 |
+| 47 | fpresentassignee | 当前处理人 | varchar | 2000 |  | √ | ' ' | 当前处理人 |
+| 48 | ftaskid | 当前任务ID | int8 | 64 |  | √ | 0 | 当前任务ID |
+| 49 | fentrabillname | 入口单据 | varchar | 255 |  | √ | ' ' | 入口单据 |
+| 50 | flocktime | 锁定时间 | timestamp | 0 |  |  | null | 锁定时间 |
+| 51 | fbilltype | 业务单据类型 | varchar | 50 |  | √ | ' ' | 业务单据类型 |
+| 52 | fsuspjobcount | 挂起工作数 | int8 | 64 |  | √ | 0 | 挂起工作数 |
 
 ### 列规则定义
 

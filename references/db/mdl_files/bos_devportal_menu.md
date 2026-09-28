@@ -44,21 +44,21 @@
 | 3 | fparentid | 上级菜单ID | varchar | 36 |  | √ | ' ' | 上级菜单ID |
 | 4 | fvisible | 可见性 | bpchar | 1 |  | √ | ' ' | 可见性 |
 | 5 | fseq | 序号 | int8 | 64 |  | √ | 0 | 序号 |
-| 6 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 7 | fdescription | fdescription | varchar | 500 |  | √ | ' ' |  |
 | 8 | fcommon | fcommon | bpchar | 1 |  | √ | ' ' |  |
 | 9 | fshortcutentrance | 快捷入口图标值 | varchar | 500 |  |  | null | 快捷入口图标值 |
 | 10 | fbizappid | 应用ID | varchar | 36 |  | √ | ' ' | 应用ID |
 | 11 | ficon | 图标 | varchar | 500 |  | √ | ' ' | 图标 |
-| 12 | fpermission | 权限项 | varchar | 100 |  | √ | ' ' | 权限项 perm_permitem |
+| 12 | fpermission | 权限项 | varchar | 100 |  | √ | ' ' | [权限项 perm_permitem](../base_files/perm_permitem.md) |
 | 13 | fparametertype | 参数类型 | varchar | 50 |  | √ | ' ' | 参数类型,枚举: FormShowParameter :动态表单 BillShowParameter :单据 BaseShowParameter :基础资料 ListShowParameter :列表 ReportShowParameter :报表 ParameterShowParameter :参数 |
-| 14 | fcreatedate | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
+| 14 | fcreatedate | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 15 | fsimplenumber | 简码 | varchar | 20 |  | √ | ' ' | 简码 |
 | 16 | fvectorimage | 矢量图值 | varchar | 500 |  | √ | ' ' | 矢量图值 |
 | 17 | fopentype | 打开方式 | varchar | 5 |  | √ | '0' | 打开方式,枚举: 0 :默认 1 :弹窗 |
-| 18 | fmodifydate | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
+| 18 | fmodifydate | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 19 | ficonact | 激活图标 | varchar | 500 |  | √ | ' ' | 激活图标 |
-| 20 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 20 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 21 | fnumber | 编码 | varchar | 50 |  | √ | ' ' | 编码 |
 | 22 | fformid | 页面ID | varchar | 36 |  | √ | ' ' | 页面ID |
 | 23 | fformname | 页面 | varchar | 100 |  | √ | ' ' | 页面 |

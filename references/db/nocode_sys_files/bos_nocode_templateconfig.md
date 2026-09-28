@@ -17,7 +17,7 @@
 | 6 | fcreatedatefield | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
 | 7 | forg | 组织 | varchar | 50 |  | √ | ' ' | 组织 |
 | 8 | fappid | 应用id | varchar | 50 |  | √ | ' ' | 应用id |
-| 9 | fcreaterfield | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fcreaterfield | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | ficon | 图标 | varchar | 200 |  | √ | ' ' | 图标 |
 | 11 | ftype | 下拉列表 | varchar | 50 |  | √ | ' ' | 下拉列表,枚举: 0 :表单模板 1 :应用模板 |
 | 12 | fdesc | 描述 | varchar | 255 |  | √ | ' ' | 描述 |
@@ -50,7 +50,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 模板行业 bos_nocode_ttrades |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [模板行业 bos_nocode_ttrades](../nocode_sys_files/bos_nocode_ttrades.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -78,7 +78,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 模板领域 bos_nocode_tdomains |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [模板领域 bos_nocode_tdomains](../nocode_sys_files/bos_nocode_tdomains.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义

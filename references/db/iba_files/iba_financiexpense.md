@@ -13,7 +13,7 @@
 | 2 | fvalue | 财务费用 | numeric | 23 | 10 |  | null | 财务费用 |
 | 3 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 4 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 5 | fquota | 指标 | int8 | 64 |  | √ | 0 | 指标库 ipo_quota_info |
+| 5 | fquota | 指标 | int8 | 64 |  | √ | 0 | [指标库 ipo_quota_info](../ipobase_files/ipo_quota_info.md) |
 
 ### 列规则定义
 
@@ -41,13 +41,13 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 3 | fipoorg | 编制组织 | int8 | 64 |  | √ | 0 | IPO编制组织 ipo_org |
-| 4 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fipoorg | 编制组织 | int8 | 64 |  | √ | 0 | [IPO编制组织 ipo_org](../ipobase_files/ipo_org.md) |
+| 4 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | freportdate | 报告期 | timestamp | 0 |  |  | null | 报告期 |
 | 6 | fcreatedate | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
 | 7 | fmodifydate | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
 | 8 | fsourcetype | 来源方式 | varchar | 50 |  | √ | ' ' | 来源方式,枚举: 1 :手工引入 |
-| 9 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | fyear | 年 | int4 | 32 |  | √ | 0 | 年 |
 | 11 | fperiod | 期 | int4 | 32 |  | √ | 0 | 期 |
 | 12 | fcycle | 周期 | varchar | 50 |  | √ | ' ' | 周期,枚举: 4 :月报 5 :季报 6 :半年报 7 :年报 |

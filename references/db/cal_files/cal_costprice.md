@@ -74,7 +74,7 @@
 | 4 | fcostpricelib | 成本价类别 | varchar | 2000 |  | √ | ' ' | 成本价类别,枚举: |
 | 5 | fpriceexp | fpriceexp | varchar | 255 |  | √ | ' ' |  |
 | 6 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 7 | fentityobject | 业务对象 | varchar | 80 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 7 | fentityobject | 业务对象 | varchar | 80 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 8 | fispreset | 系统预设 | bpchar | 1 |  | √ | '0' | 系统预设,枚举: 1 : 0 : |
 | 9 | fpricetranexpr | fpricetranexpr | varchar | 255 |  | √ | ' ' |  |
 | 10 | fbillfilter_tag | 过滤条件_详情 | text | 0 |  |  | null | 过滤条件_详情 |
@@ -84,7 +84,7 @@
 | 14 | fpricename | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
 | 15 | fbeforeperiod | 取价追溯期间 | int8 | 64 |  | √ | 0 | 取价追溯期间 |
 | 16 | fenable | 单据状态 | bpchar | 1 |  | √ | '1' | 单据状态,枚举: 0 :禁用 1 :可用 |
-| 17 | fpriceplugin | 取价插件 | int8 | 64 |  | √ | 0 | 核算预置插件 cal_plugin |
+| 17 | fpriceplugin | 取价插件 | int8 | 64 |  | √ | 0 | [核算预置插件 cal_plugin](../cal_files/cal_plugin.md) |
 | 18 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 19 | fpricenum | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
 

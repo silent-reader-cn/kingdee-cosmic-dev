@@ -11,18 +11,24 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fisentrypreset | 系统预置 | bpchar | 1 |  | √ | ' ' | 系统预置 |
-| 3 | ftargetobjcol | 标识 | varchar | 100 |  | √ | ' ' | 标识 |
-| 4 | fsourcebillcol | 标识 | varchar | 100 |  | √ | ' ' | 标识 |
-| 5 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 6 | fformuladesc | 计算公式 | varchar | 512 |  | √ | ' ' | 计算公式 |
-| 7 | fselectvalue | 取值 | bpchar | 1 |  | √ | '0' | 取值,枚举: 0 :源单字段 1 :计算公式 2 :按条件取值 |
-| 8 | fformula | 计算公式json | varchar | 255 |  | √ | ' ' | 计算公式json |
-| 9 | ftargetobjcolname | ftargetobjcolname | varchar | 255 |  | √ | ' ' |  |
-| 10 | fsourcebillcolno | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
-| 11 | fformula_tag | 计算公式json_详情 | text | 0 |  |  | null | 计算公式json_详情 |
-| 12 | ftargetobjcolno | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
-| 13 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 14 | fsourcebillcolname | fsourcebillcolname | varchar | 255 |  | √ | ' ' |  |
+| 3 | fsourcebillcolext | 标识 | varchar | 100 |  | √ | ' ' | 标识 |
+| 4 | ftargetobjcol | 标识 | varchar | 100 |  | √ | ' ' | 标识 |
+| 5 | fformulaext | 计算公式json | varchar | 500 |  | √ | ' ' | 计算公式json |
+| 6 | fsourcebillcol | 标识 | varchar | 100 |  | √ | ' ' | 标识 |
+| 7 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
+| 8 | fsourcebillcolnoext | 名称 | varchar | 200 |  | √ | ' ' | 名称 |
+| 9 | fformuladesc | 计算公式 | varchar | 512 |  | √ | ' ' | 计算公式 |
+| 10 | fformuladescext | 计算公式 | varchar | 200 |  | √ | ' ' | 计算公式 |
+| 11 | fselectvalue | 取值 | bpchar | 1 |  | √ | '0' | 取值,枚举: 0 :源单字段 1 :计算公式 2 :按条件取值 |
+| 12 | fselectvalueext | 取值 | varchar | 20 |  | √ | ' ' | 取值,枚举: 0 :源单字段 1 :计算公式 2 :按条件取值 3 :常量 |
+| 13 | fformula | 计算公式json | varchar | 255 |  | √ | ' ' | 计算公式json |
+| 14 | ftargetobjcolname | ftargetobjcolname | varchar | 255 |  | √ | ' ' |  |
+| 15 | fsourcebillcolno | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
+| 16 | fformula_tag | 计算公式json_详情 | text | 0 |  |  | null | 计算公式json_详情 |
+| 17 | ftargetobjcolno | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
+| 18 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 19 | fformulaext_tag | 计算公式json_详情 | text | 0 |  |  | null | 计算公式json_详情 |
+| 20 | fsourcebillcolname | fsourcebillcolname | varchar | 255 |  | √ | ' ' |  |
 
 ### 列规则定义
 
@@ -79,16 +85,16 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
 | 4 | fissysinit | 系统预设 | bpchar | 1 |  | √ | '0' | 系统预设 |
-| 5 | ftargetobj | 目标业务实体 | varchar | 72 |  | √ | ' ' | 主实体对象 bos_entityobject |
-| 6 | fcreaterid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | ftargetobj | 目标业务实体 | varchar | 72 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
+| 6 | fcreaterid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 7 | fdisabledate | 禁用时间 | timestamp | 0 |  |  | null | 禁用时间 |
-| 8 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fdescription | 描述 | varchar | 255 |  | √ | ' ' | 描述 |
-| 10 | fsourcebill | 来源单据 | varchar | 72 |  | √ | ' ' | 主实体对象 bos_entityobject |
-| 11 | fbizappid | 所属应用 | varchar | 72 |  | √ | ' ' | 业务应用实体 bos_devportal_bizapp |
+| 10 | fsourcebill | 来源单据 | varchar | 72 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
+| 11 | fbizappid | 所属应用 | varchar | 72 |  | √ | ' ' | [业务应用实体 bos_devportal_bizapp](../mdl_files/bos_devportal_bizapp.md) |
 | 12 | fstatus | 单据状态 | varchar | 1 |  | √ | 'C' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 13 | fcreatedate | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 14 | fisenable | 启用 | bpchar | 1 |  | √ | '0' | 启用 |

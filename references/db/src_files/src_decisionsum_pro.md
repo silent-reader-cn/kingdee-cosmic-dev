@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fprojectid | 寻源项目编号 | int8 | 64 |  | √ | 0 | 定标F7 src_decisionf7 |
+| 2 | fprojectid | 寻源项目编号 | int8 | 64 |  | √ | 0 | [定标F7 src_decisionf7](../src_files/src_decisionf7.md) |
 | 3 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 4 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 
@@ -41,7 +41,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fisproject | fisproject | bpchar | 1 |  | √ | '0' |  |
 | 3 | forgid | forgid | int8 | 64 |  | √ | 0 |  |
-| 4 | fsourceid | 寻源项目 | int8 | 64 |  | √ | 0 | 项目立项F7 src_demandnotwo |
+| 4 | fsourceid | 寻源项目 | int8 | 64 |  | √ | 0 | [项目立项F7 src_demandnotwo](../src_files/src_demandnotwo.md) |
 | 5 | fbizstatus | fbizstatus | bpchar | 1 |  | √ | ' ' |  |
 | 6 | fbilldate | fbilldate | timestamp | 0 |  |  | null |  |
 | 7 | fpurdeptid | fpurdeptid | int8 | 64 |  | √ | 0 |  |

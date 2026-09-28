@@ -40,32 +40,32 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | forgid | 管理组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 3 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | forgid | 管理组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 3 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 5 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 6 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 7 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 8 | fbillqtyfieldcode | 计划数量字段编码 | varchar | 255 |  | √ | ' ' | 计划数量字段编码 |
 | 9 | fsourcedataid | 原资料ID | int8 | 64 |  | √ | 0 | 原资料ID |
 | 10 | fbitindex | 位图 | int8 | 64 |  | √ | 0 | 位图 |
 | 11 | fbillqtyfieldentry | fbillqtyfieldentry | varchar | 255 |  | √ | ' ' |  |
-| 12 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 12 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 13 | fremark | 备注 | varchar | 512 |  | √ | ' ' | 备注 |
 | 14 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
-| 15 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 15 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 16 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 17 | fmainbizentitymark | 主业务实体标识 | varchar | 255 |  | √ | ' ' | 主业务实体标识 |
 | 18 | fauditdate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
-| 19 | fsrcbizbillld | 来源业务单据 | varchar | 255 |  | √ | ' ' | 业务对象 bos_objecttype |
+| 19 | fsrcbizbillld | 来源业务单据 | varchar | 255 |  | √ | ' ' | [业务对象 bos_objecttype](../mdl_files/bos_objecttype.md) |
 | 20 | fctrlstrategy | 控制策略 | varchar | 30 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
 | 21 | fmulbillqtyfieldname | 计划数量字段名称 | varchar | 255 |  | √ | ' ' | 计划数量字段名称 |
 | 22 | fsyspreset | 系统预设 | bpchar | 1 |  | √ | ' ' | 系统预设 |
 | 23 | fenable | 使用状态 | bpchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 24 | fbizobjwhiteid | 条码业务对象 | int8 | 64 |  | √ | 0 | 条码业务对象白名单 barcm_bizobjwhitelist |
+| 24 | fbizobjwhiteid | 条码业务对象 | int8 | 64 |  | √ | 0 | [条码业务对象白名单 barcm_bizobjwhitelist](../barcm_files/barcm_bizobjwhitelist.md) |
 | 25 | fnumber | 编号 | varchar | 80 |  | √ | ' ' | 编号 |
 | 26 | fsourcebitindex | 原资料位图 | int8 | 64 |  | √ | 0 | 原资料位图 |
-| 27 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 27 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

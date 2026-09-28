@@ -19,7 +19,7 @@
 | 8 | fsrcbillversion | 变更版本 | varchar | 30 |  | √ | ' ' | 变更版本 |
 | 9 | fxbillid | 变更单ID | int8 | 64 |  | √ | 0 | 变更单ID |
 | 10 | fcrdentryjson | 单据体变更履历json | varchar | 512 |  |  | null | 单据体变更履历json |
-| 11 | fxcreatorid | 变更人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fxcreatorid | 变更人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fxbillentity | 变更单实体 | varchar | 80 |  | √ | ' ' | 变更单实体 |
 | 13 | fcrdentryjson_tag | 单据体变更履历json_详情 | text | 0 |  |  | null | 单据体变更履历json_详情 |
 | 14 | fsrcbillentity | 源单实体 | varchar | 80 |  | √ | ' ' | 源单实体 |

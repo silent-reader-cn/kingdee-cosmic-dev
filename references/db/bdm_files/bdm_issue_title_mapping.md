@@ -10,16 +10,16 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreator | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fcreator | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fcreatedate | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
 | 4 | foriginalbuyertaxno | 购方税号 | varchar | 50 |  | √ | ' ' | 购方税号 |
 | 5 | fmodifydate | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
 | 6 | fsysbuerypk | 开票购方ID | varchar | 50 |  | √ | ' ' | 开票购方ID |
 | 7 | foriginalbuyername | 购方名称 | varchar | 200 |  | √ | ' ' | 购方名称 |
-| 8 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fsysbuyername | 开票购方名称 | varchar | 50 |  | √ | ' ' | 开票购方名称 |
 | 10 | fsysbuyertaxno | 开票购方税号 | varchar | 50 |  | √ | ' ' | 开票购方税号 |
-| 11 | forg | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 11 | forg | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 
 ### 列规则定义
 

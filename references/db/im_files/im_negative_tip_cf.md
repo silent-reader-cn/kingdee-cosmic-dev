@@ -74,13 +74,13 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 名称 | varchar | 150 |  | √ | ' ' | 名称 |
 | 3 | fcreatedate | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 4 | fbaltb | 余额表标识 | varchar | 50 |  | √ | ' ' | 余额表 bal_balanceinfo |
+| 4 | fbaltb | 余额表标识 | varchar | 50 |  | √ | ' ' | [余额表 bal_balanceinfo](../bal_files/bal_balanceinfo.md) |
 | 5 | fmodifydate | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 6 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 7 | fbillscope | 单据范围 | varchar | 512 |  | √ | ' ' | 单据范围,枚举: |
 | 8 | fdesp | 描述 | varchar | 200 |  | √ | ' ' | 描述 |
 | 9 | fenable | 启用状态 | bpchar | 1 |  | √ | '1' | 启用状态,枚举: 0 :禁用 1 :启用 |
-| 10 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fnumber | 编码 | varchar | 50 |  | √ | ' ' | 编码 |
 
 ### 列规则定义

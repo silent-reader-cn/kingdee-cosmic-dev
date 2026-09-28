@@ -417,8 +417,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_msplan_fentryety_l |  | fentryid,flocaleid |
-| 2 | pk_msplan_fentryety_l |  | fpkid |
+| 1 | pk_msplan_fentryety_l |  | fpkid |
+| 2 | idx_msplan_fentryety_l |  | fentryid,flocaleid |
 
 ---
 
@@ -566,7 +566,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fname | fname | varchar | 100 |  | √ | ' ' |  |
+| 2 | fname | fname | varchar | 195 |  | √ | ' ' |  |
 | 3 | flocaleid | flocaleid | varchar | 255 |  | √ | ' ' |  |
 | 4 | fpkid | fpkid | varchar | 255 |  | √ | ' ' |  |
 

@@ -40,24 +40,28 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fxkispreset | 系统预设 | bpchar | 1 |  | √ | '0' | 系统预设 |
-| 4 | fmsgchannelid | 消息渠道 | int8 | 64 |  | √ | 0 | 消息渠道 msg_channel |
+| 4 | fmsgchannelid | 消息渠道 | int8 | 64 |  | √ | 0 | [消息渠道 msg_channel](../wftask_files/msg_channel.md) |
 | 5 | ftoall | 全员推送 | bpchar | 1 |  | √ | '0' | 全员推送 |
 | 6 | fxklink | 链接地址 | varchar | 2000 |  | √ | ' ' | 链接地址 |
 | 7 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 8 | fvalidtime | 有效时间（分钟） | int8 | 64 |  | √ | 0 | 有效时间（分钟） |
-| 9 | fmsgtypeid | 消息类型 | int8 | 64 |  | √ | 0 | 消息类型 msg_type |
-| 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 11 | fmessageid | 消息id | int8 | 64 |  | √ | 0 | 消息id |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 13 | fcontent_tag | 消息正文_详情 | text | 0 |  |  | ' ' | 消息正文_详情 |
-| 14 | fsendtime | 发送时间 | timestamp | 0 |  |  | null | 发送时间 |
-| 15 | fxkimage | 消息图片 | varchar | 255 |  | √ | ' ' | 消息图片 |
-| 16 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
-| 17 | fsendstatus | 发送状态 | varchar | 30 |  | √ | ' ' | 发送状态,枚举: 1 :未发送 2 :已发送 3 :已撤回 |
-| 18 | fcontent | 消息正文 | text | 0 |  |  | ' ' | 消息正文 |
-| 19 | fshowtype | 展现形式 | varchar | 30 |  | √ | ' ' | 展现形式,枚举: 1 :弹窗展示 2 :悬浮窗展示 3 :列表提示 10 :首页企业公告卡片 |
+| 9 | ftoptime | 置顶时间 | timestamp | 0 |  |  | null | 置顶时间 |
+| 10 | fistop | 是否置顶 | bpchar | 1 |  | √ | '0' | 是否置顶 |
+| 11 | fmsgtypeid | 消息类型 | int8 | 64 |  | √ | 0 | [消息类型 msg_type](../wftask_files/msg_type.md) |
+| 12 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 13 | ftopuser | 置顶操作人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 14 | ftitle | 消息标题 | varchar | 255 |  | √ | ' ' | 消息标题 |
+| 15 | fmessageid | 消息id | int8 | 64 |  | √ | 0 | 消息id |
+| 16 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 17 | fcontent_tag | 消息正文_详情 | text | 0 |  |  | ' ' | 消息正文_详情 |
+| 18 | fsendtime | 发送时间 | timestamp | 0 |  |  | null | 发送时间 |
+| 19 | fxkimage | 消息图片 | varchar | 255 |  | √ | ' ' | 消息图片 |
+| 20 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
+| 21 | fsendstatus | 发送状态 | varchar | 30 |  | √ | ' ' | 发送状态,枚举: 1 :未发送 2 :已发送 3 :已撤回 |
+| 22 | fcontent | 消息正文 | text | 0 |  |  | ' ' | 消息正文 |
+| 23 | fshowtype | 展现形式 | varchar | 30 |  | √ | ' ' | 展现形式,枚举: 1 :弹窗展示 2 :悬浮窗展示 3 :列表提示 10 :首页企业公告卡片 |
 
 ### 列规则定义
 
@@ -84,7 +88,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 人员类型 bos_usertype |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [人员类型 bos_usertype](../base_files/bos_usertype.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -112,7 +116,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -140,7 +144,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义

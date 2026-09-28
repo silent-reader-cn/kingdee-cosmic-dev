@@ -47,7 +47,7 @@
 | 4 | fshardingcount | 分片数 | int8 | 64 |  | √ | 0 | 分片数 |
 | 5 | fsharding | 是否分表 | bpchar | 1 |  | √ | ' ' | 是否分表,枚举: 0 :否 1 :是 |
 | 6 | foriginaltablecount | 原表数 | int8 | 64 |  | √ | 0 | 原表数 |
-| 7 | fentitynumber | 表单 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 7 | fentitynumber | 实体 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 8 | ftotalcount | 总行数 | int8 | 64 |  | √ | 0 | 总行数 |
 | 9 | ftablecount | 总表数 | int8 | 64 |  | √ | 0 | 总表数 |
 | 10 | fcost | 统计耗时（秒） | numeric | 23 | 10 | √ | 0.0000000000 | 统计耗时（秒） |

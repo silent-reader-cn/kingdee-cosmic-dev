@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -37,8 +37,8 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fremark | 分支备注 | varchar | 100 |  | √ | ' ' | 分支备注 |
-| 2 | fname | 分支场景名 | varchar | 100 |  | √ | ' ' | 分支场景名 |
+| 1 | fremark | 分支备注 | varchar | 500 |  | √ | ' ' | 分支备注 |
+| 2 | fname | 分支场景名 | varchar | 255 |  | √ | ' ' | 分支场景名 |
 | 3 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
 | 4 | fpkid | fpkid | varchar | 18 |  | √ | ' ' | pkid |
 | 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
@@ -69,7 +69,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fremark | 分支备注 | varchar | 500 |  |  | ' ' | 分支备注 |
-| 3 | fname | 分支场景名 | varchar | 100 |  | √ | ' ' | 分支场景名 |
+| 3 | fname | 分支场景名 | varchar | 255 |  | √ | ' ' | 分支场景名 |
 | 4 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 6 | fcode | 分支场景编码 | varchar | 100 |  | √ | ' ' | 分支场景编码 |
@@ -99,9 +99,10 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fname | 场景名 | varchar | 100 |  | √ | ' ' | 场景名 |
-| 3 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
-| 4 | fpkid | fpkid | varchar | 18 |  | √ | ' ' | pkid |
+| 2 | fremark | 备注 | varchar | 500 |  | √ | ' ' | 备注 |
+| 3 | fname | 场景名 | varchar | 255 |  | √ | ' ' | 场景名 |
+| 4 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
+| 5 | fpkid | fpkid | varchar | 18 |  | √ | ' ' | pkid |
 
 ### 列规则定义
 
@@ -129,7 +130,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fremark | 备注 | varchar | 500 |  |  | ' ' | 备注 |
-| 3 | fname | 场景名 | varchar | 100 |  | √ | ' ' | 场景名 |
+| 3 | fname | 场景名 | varchar | 255 |  | √ | ' ' | 场景名 |
 | 4 | fphone | fphone | varchar | 240 |  | √ | ' ' |  |
 | 5 | fnotice_operator | 是否通知操作人 | bpchar | 1 |  | √ | '0' | 是否通知操作人 |
 | 6 | fapp | 所属应用 | varchar | 100 |  | √ | ' ' | 所属应用 |

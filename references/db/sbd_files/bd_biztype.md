@@ -40,19 +40,19 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fname | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
 | 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 5 | fissale | 销售 | bpchar | 1 |  | √ | '0' | 销售 |
-| 6 | fdomain | 领域 | varchar | 80 |  | √ | '0' | 领域,枚举: 0 :销售 1 :采购 2 :库存 3 :生产 5 :委外 4 :其他 6 :VMI 7 :检修 8 :质量 9 :应收 10 :应付 11 :出纳 12 :滚动销售 13 :零售 |
+| 6 | fdomain | 领域 | varchar | 80 |  | √ | '0' | 领域,枚举: 0 :销售 1 :采购 2 :库存 3 :生产 5 :委外 4 :其他 6 :VMI 7 :检修 8 :质量 9 :应收 10 :应付 11 :出纳 12 :滚动销售 13 :零售 14 :贸易 15 :组织间结算 16 :收入会计 |
 | 7 | fdisabledate | 禁用时间 | timestamp | 0 |  |  | null | 禁用时间 |
-| 8 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fdescription | 描述 | varchar | 255 |  | √ | ' ' | 描述 |
 | 10 | fispreset | 系统预设 | bpchar | 1 |  | √ | '0' | 系统预设 |
 | 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 12 | fisinventory | 库存 | bpchar | 1 |  | √ | '0' | 库存 |
 | 13 | fstatus | 数据状态 | varchar | 5 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 16 | fispurchase | 采购 | bpchar | 1 |  | √ | '0' | 采购 |
 | 17 | fbizcategory | 业务分类 | varchar | 5 |  | √ | ' ' | 业务分类,枚举: BZ :标准 WW :委外 FY :费用 ZC :资产 VMI :VMI ZY :直运 FX :分销 JS :寄售 ST :受托 |
@@ -86,7 +86,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 4 | flinetypeid | 编码 | int8 | 64 |  | √ | 0 | 行类型 bd_linetype |
+| 4 | flinetypeid | 编码 | int8 | 64 |  | √ | 0 | [行类型 bd_linetype](../sbd_files/bd_linetype.md) |
 | 5 | fisdefault | 是否默认 | bpchar | 1 |  | √ | '0' | 是否默认 |
 | 6 | fispreset | 系统预设 | bpchar | 1 |  | √ | '0' | 系统预设 |
 
@@ -115,7 +115,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbillform | 单据 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 2 | fbillform | 单据 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 3 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 4 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 

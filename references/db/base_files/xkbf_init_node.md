@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fgroupid | 所属分组 | int8 | 64 |  | √ | 0 | 可视化业务流程初始节点分组 xkbf_init_node_gr |
+| 2 | fgroupid | 所属分组 | int8 | 64 |  | √ | 0 | [可视化业务流程初始节点分组 xkbf_init_node_gr](../xkbase_files/xkbf_init_node_gr.md) |
 | 3 | fnodename | 节点名称 | varchar | 255 |  | √ | ' ' | 节点名称 |
 | 4 | fconfig | 节点配置（json） | text | 0 |  |  | ' ' | 节点配置（json） |
 

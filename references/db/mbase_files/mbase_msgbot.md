@@ -16,7 +16,7 @@
 | 5 | fcreatedate | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
 | 6 | fmodifydate | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
 | 7 | fcorpid | CorpId | varchar | 50 |  | √ | ' ' | CorpId |
-| 8 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fentryrolename | 平台类型 | varchar | 50 |  | √ | ' ' | 平台类型 |
 | 10 | fenable | 可用状态 | bpchar | 1 |  | √ | '1' | 可用状态,枚举: 0 :禁用 1 :可用 |
 | 11 | fnumber | 编码 | varchar | 50 |  | √ | ' ' | 编码 |

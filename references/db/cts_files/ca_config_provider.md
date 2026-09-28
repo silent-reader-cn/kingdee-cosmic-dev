@@ -1,8 +1,8 @@
-# 签名供应商-ca_config_provider
+# 签名供应商方案-ca_config_provider
 
-## 签名供应商-多语言表 t_bd_signconfig_l
+## 签名供应商方案-多语言表 t_bd_signconfig_l
 
-- **表名称：** 签名供应商-多语言表
+- **表名称：** 签名供应商方案-多语言表
 - **表名：** t_bd_signconfig_l
 
 ### 表格列定义
@@ -29,9 +29,9 @@
 
 ---
 
-## 签名供应商-主表 t_bd_signconfig
+## 签名供应商方案-主表 t_bd_signconfig
 
-- **表名称：** 签名供应商-主表
+- **表名称：** 签名供应商方案-主表
 - **表名：** t_bd_signconfig
 
 ### 表格列定义

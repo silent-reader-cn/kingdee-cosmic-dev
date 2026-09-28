@@ -49,8 +49,8 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | foptime | 修复时间 | timestamp | 0 |  |  | null | 修复时间 |
 | 3 | ftraceid | 全链路ID | varchar | 64 |  | √ | ' ' | 全链路ID |
-| 4 | fopuserid | 修复人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 5 | fentityid | 修复单据 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 4 | fopuserid | 修复人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 5 | fentityid | 修复单据 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 6 | fopreason | 异常信息 | varchar | 1000 |  |  | null | 异常信息 |
 
 ### 列规则定义

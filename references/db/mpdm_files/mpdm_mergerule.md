@@ -95,20 +95,20 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fmergetype | 合并日期类型 | varchar | 30 |  | √ | ' ' | 合并日期类型,枚举: A :周期最早 B :周期最晚 |
-| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 4 | fchoosecycle | 指定周期 | int8 | 64 |  | √ | 0 | 合并周期 mpdm_mergecycle |
-| 5 | fmergedimen | 合并维度 | int8 | 64 |  | √ | 0 | 合并维度 mpdm_mergedimension |
-| 6 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 4 | fchoosecycle | 指定周期 | int8 | 64 |  | √ | 0 | [星空制造基础资料带组织模板 mpdm_mergecycle](../mpdm_files/mpdm_mergecycle.md) |
+| 5 | fmergedimen | 合并维度 | int8 | 64 |  | √ | 0 | [合并维度 mpdm_mergedimension](../mpdm_files/mpdm_mergedimension.md) |
+| 6 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 8 | fis_require_source | 考虑需求来源号 | bpchar | 1 |  | √ | '0' | 考虑需求来源号 |
 | 9 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 12 | fmergetime | 合并时机 | varchar | 30 |  | √ | ' ' | 合并时机,枚举: A :净需求合并 B :毛需求合并 |
 | 13 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 14 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
-| 15 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 16 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 15 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 16 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 17 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 18 | fctrlstrategy | 控制策略 | varchar | 30 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
 | 19 | fdate_offsetday | 合并日期偏移天数 | int4 | 32 |  | √ | 0 | 合并日期偏移天数 |
@@ -132,5 +132,5 @@
 | :--- | :--- | :--- | :--- |
 | 1 | idx_t_mpdm_mergerule_master |  | fmasterid |
 | 2 | idx_t_mpdm_mergerule_createorg |  | fcreateorgid |
-| 3 | idx_mpdm_mergerule |  | fnumber,fcreateorgid |
-| 4 | t_mpdm_mergerule_pkey |  | fid |
+| 3 | t_mpdm_mergerule_pkey |  | fid |
+| 4 | idx_mpdm_mergerule |  | fnumber,fcreateorgid |

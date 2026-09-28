@@ -10,17 +10,17 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fbillstatus | 状态 | varchar | 50 |  | √ | ' ' | 状态,枚举: 0 :禁用 1 :可用 |
 | 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 5 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | fgovname | 政府主管部门 | varchar | 50 |  | √ | ' ' | 政府主管部门 |
 | 7 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
 | 8 | fsumregisterpay | 累计登记支出金额 | numeric | 23 | 10 | √ | 0.0000000000 | 累计登记支出金额 |
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 10 | fprojectname | 所属项目名称 | varchar | 50 |  | √ | ' ' | 所属项目名称 |
 | 11 | fincomedate | 收入日期 | timestamp | 0 |  |  | null | 收入日期 |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | ftype | 业务类型 | varchar | 50 |  | √ | ' ' | 业务类型,枚举: specialfund :专项用途财政性资金 other :其他 |
 | 14 | fzeroratingamount | 其中：不征税收入金额 | numeric | 23 | 10 | √ | 0.0000000000 | 其中：不征税收入金额 |
 | 15 | fbizdesc | 业务描述 | varchar | 50 |  | √ | ' ' | 业务描述 |
@@ -31,7 +31,7 @@
 | 20 | fenable | fenable | varchar | 50 |  | √ | ' ' |  |
 | 21 | fsumincludedtaxable | 累计计入应税收入 | numeric | 23 | 10 | √ | 0.0000000000 | 累计计入应税收入 |
 | 22 | fbillno | 业务编号 | varchar | 30 |  | √ | ' ' | 业务编号 |
-| 23 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 23 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 24 | fbalanceamount | 结余可用金额 | numeric | 23 | 10 | √ | 0.0000000000 | 结余可用金额 |
 
 ### 列规则定义

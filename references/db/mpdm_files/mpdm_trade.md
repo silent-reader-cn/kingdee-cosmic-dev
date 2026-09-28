@@ -11,8 +11,8 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 4 | fparenttrade | 上级行业 | int8 | 64 |  | √ | 0 | 行业 mpdm_trade |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 4 | fparenttrade | 上级行业 | int8 | 64 |  | √ | 0 | [行业 mpdm_trade](../mpdm_files/mpdm_trade.md) |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 6 | fremarks | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
 | 7 | fenabledate | 启用时间 | timestamp | 0 |  |  | null | 启用时间 |
@@ -20,16 +20,16 @@
 | 9 | fisskill | 技能 | bpchar | 1 |  | √ | ' ' | 技能 |
 | 10 | fauditdate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
 | 11 | funauditdate | 反审核时间 | timestamp | 0 |  |  | null | 反审核时间 |
-| 12 | fdisableuser | 禁用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fdisableuser | 禁用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 14 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 15 | fenableuser | 启用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 16 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 15 | fenableuser | 启用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 16 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 17 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 18 | fauditor | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 18 | fauditor | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 19 | fenable | 使用状态 | varchar | 50 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 20 | fnumber | 编码 | varchar | 50 |  | √ | ' ' | 编码 |
-| 21 | funauditor | 反审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 21 | funauditor | 反审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

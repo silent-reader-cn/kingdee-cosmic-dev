@@ -10,14 +10,14 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreator | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fcreator | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fstatus | 状态 | bpchar | 1 |  | √ | ' ' | 状态,枚举: A :启用 B :禁用 |
-| 4 | fcreatedate | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
+| 4 | fcreatedate | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 5 | ftype | 类型 | varchar | 50 |  | √ | ' ' | 类型,枚举: cosmic :苍穹 kafka :Kafka es :Elasticsearch |
-| 6 | fmodifydate | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
-| 7 | fdatabaseid | 所属库 | int8 | 64 |  | √ | 0 | 库 bos_flydb_database |
+| 6 | fmodifydate | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 7 | fdatabaseid | 所属库 | int8 | 64 |  | √ | 0 | [库 bos_flydb_database](../superquery_files/bos_flydb_database.md) |
 | 8 | ftablestype | 实体范围 | bpchar | 1 |  | √ | ' ' | 实体范围,枚举: 1 :默认 2 :自定义 |
-| 9 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | fnumber | 编码 | varchar | 50 |  | √ | ' ' | 编码 |
 
 ### 列规则定义
@@ -45,7 +45,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 2 | fbasedataid | fbasedataid | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义

@@ -17,8 +17,8 @@
 | 6 | femail | 公司邮箱 | varchar | 100 |  | √ | ' ' | 公司邮箱 |
 | 7 | fcontacts | 联系人 | varchar | 20 |  | √ | ' ' | 联系人 |
 | 8 | fepname | 购方名称 | varchar | 100 |  | √ | ' ' | 购方名称 |
-| 9 | forg | 关联组织信息 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 10 | fepinfo | 当前用户所属企业 | int8 | 64 |  | √ | 0 | 企业基础信息 bdm_enterprise_baseinfo |
+| 9 | forg | 关联组织信息 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 10 | fepinfo | 当前用户所属企业 | int8 | 64 |  | √ | 0 | [企业基础信息 bdm_enterprise_baseinfo](../bdm_files/bdm_enterprise_baseinfo.md) |
 | 11 | fmodifytime | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
 | 12 | fstatus | 启用/禁用 | varchar | 30 |  | √ | ' ' | 启用/禁用,枚举: 1 :启用 0 :禁用 |
 | 13 | fidcode | 身份证号码 | varchar | 20 |  | √ | ' ' | 身份证号码 |

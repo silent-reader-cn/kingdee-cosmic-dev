@@ -12,8 +12,8 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fremark | 备注 | varchar | 500 |  | √ | ' ' | 备注 |
 | 3 | fname | 方案名称 | varchar | 50 |  | √ | ' ' | 方案名称 |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 5 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 5 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | fbizsystems | 业务系统 | varchar | 50 |  | √ | ' ' | 业务系统,枚举: fa :固定资产 gl :总账 |
 | 7 | fenable | 使用状态 | bpchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :启用 |
 | 8 | fnumber | 方案编码 | varchar | 80 |  | √ | ' ' | 方案编码 |
@@ -30,8 +30,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | pk_gl_autoclose_scheme |  | fid |
-| 2 | idx_autoclose_scheme_num |  | fnumber |
+| 1 | idx_autoclose_scheme_num |  | fnumber |
+| 2 | pk_gl_autoclose_scheme |  | fid |
 
 ---
 
@@ -107,7 +107,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 账簿 gl_accountbook |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [账簿 gl_accountbook](../gl_files/gl_accountbook.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -139,7 +139,7 @@
 | 3 | fscheduleplanid | 调度计划id | varchar | 18 |  | √ | ' ' | 调度计划id |
 | 4 | fbizsystem | 业务系统 | varchar | 50 |  | √ | ' ' | 业务系统 |
 | 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 6 | fexecutorid | 执行人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | fexecutorid | 执行人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

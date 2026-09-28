@@ -14,11 +14,11 @@
 | 3 | fisincludesubtoorg | 受托包含下级 | bpchar | 1 |  | √ | '0' | 受托包含下级 |
 | 4 | fisincludesubfromorg | 委托包含下级 | bpchar | 1 |  | √ | '0' | 委托包含下级 |
 | 5 | fconddeleenabled | 启用条件委托 | bpchar | 1 |  | √ | '0' | 启用条件委托 |
-| 6 | ftoorgid | 行政组织（部门） | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 7 | fisdefaultfromorg | 是否默认委托组织 | bpchar | 1 |  | √ | '0' | 是否默认委托组织 |
-| 8 | fisdefaulttoorg | 默认 | bpchar | 1 |  | √ | '0' | 默认 |
-| 9 | ftyperelationid | 协作关系类型 | int8 | 64 |  | √ | 0 | 业务协作关系 bos_org_typerelation |
-| 10 | ffromorgid | 业务单元 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | ftoorgid | 行政组织（部门） | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 7 | fisdefaultfromorg | 默认委托组织 | bpchar | 1 |  | √ | '0' | 默认委托组织 |
+| 8 | fisdefaulttoorg | 默认受托组织 | bpchar | 1 |  | √ | '0' | 默认受托组织 |
+| 9 | ftyperelationid | 协作关系类型 | int8 | 64 |  | √ | 0 | [业务协作关系 bos_org_typerelation](../base_files/bos_org_typerelation.md) |
+| 10 | ffromorgid | 业务单元 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 11 | fxkenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 1 :可用 0 :禁用 |
 
 ### 列规则定义

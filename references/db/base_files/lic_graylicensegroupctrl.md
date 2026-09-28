@@ -11,8 +11,8 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fremark | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
-| 3 | fbizobjectid | 业务对象 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
-| 4 | fschemeid | 灰度特性方案 | int8 | 64 |  | √ | 0 | 灰度特性 lic_grayfeaturescheme |
+| 3 | fbizobjectid | 业务对象 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
+| 4 | fschemeid | 灰度特性方案 | int8 | 64 |  | √ | 0 | [灰度特性 lic_grayfeaturescheme](../base_files/lic_grayfeaturescheme.md) |
 
 ### 列规则定义
 

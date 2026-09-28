@@ -12,11 +12,11 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | ffconditionjson | 过滤条件 | text | 0 |  |  | null | 过滤条件 |
 | 3 | fexratejson | 汇率转换 | varchar | 255 |  | √ | ' ' | 汇率转换 |
-| 4 | famountfield | 金额字段 | int8 | 64 |  | √ | 0 | 数据源字段配置 tctb_datasource_entry |
+| 4 | famountfield | 金额字段 | int8 | 64 |  | √ | 0 | [数据源字段配置 tctb_datasource_entry](../tctb_files/tctb_datasource_entry.md) |
 | 5 | fadvancedconfjson | 取数逻辑 | text | 0 |  |  | null | 取数逻辑 |
 | 6 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 7 | fbizname | 业务名称 | varchar | 50 |  | √ | ' ' | 业务名称 |
-| 8 | ftable | 数据源 | int8 | 64 |  | √ | 0 | 数据源配置 tctb_custom_datasource |
+| 8 | ftable | 数据源 | int8 | 64 |  | √ | 0 | [数据源配置 tctb_custom_datasource](../tctb_files/tctb_custom_datasource.md) |
 | 9 | fvatrate | 增值税税率 | numeric | 23 | 10 | √ | 0 | 增值税税率 |
 | 10 | fabsolute | 绝对值 | bpchar | 1 |  | √ | ' ' | 绝对值 |
 | 11 | fiscustomtable | fiscustomtable | bpchar | 1 |  | √ | ' ' |  |
@@ -52,10 +52,10 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fspap | 自产/外购 | varchar | 50 |  | √ | ' ' | 自产/外购,枚举: self :自产 out :外购 |
 | 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | forgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | fruletype | 规则类型 | varchar | 30 |  | √ | ' ' | 规则类型,枚举: private :自用规则 public :可分配规则 |
 | 7 | fbusinessfeature | 业务特性 | varchar | 30 |  | √ | ' ' | 业务特性,枚举: 1 :以发票口径为应税销售额 2 :以会计口径为应税销售额 4 :以发票和会计口径孰大原则确认应税销售额 |
 | 8 | fitemid | 取数项目选择 | int8 | 64 |  | √ | 0 | 优惠项目（树） tpo_discount_tree |
@@ -63,7 +63,7 @@
 | 10 | fcosttype | 费用归集 | varchar | 30 |  | √ | ' ' | 费用归集,枚举: manage :管理费用 sale :销售费用 financing :财务费用 |
 | 11 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 12 | fitemtype | 取数项目类型 | varchar | 50 |  | √ | ' ' | 取数项目类型,枚举: tpo_discount_tree :优惠项目（树） tpo_yearitems_tree :项目取数（树） |
-| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 15 | ftype | 类型 | varchar | 30 |  | √ | ' ' | 类型,枚举: income :收入成本 period :期间费用 ajust :扣除调整 dsale :视同销售 zcajust :资产调整 srajust :收入调整 tssx :特殊事项调整 other :其他 ssyh :税收优惠 |
 | 16 | fvatrate | fvatrate | numeric | 23 | 10 | √ | 0 |  |

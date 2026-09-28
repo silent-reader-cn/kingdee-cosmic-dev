@@ -14,7 +14,7 @@
 | 3 | fname | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
 | 4 | fstatus | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 5 | fmandatory | 必选节点 | bpchar | 1 |  | √ | '0' | 必选节点 |
-| 6 | fbizobject | 业务单据 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 6 | fbizobject | 业务单据 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 7 | fpreset | 系统预置 | bpchar | 1 |  | √ | '0' | 系统预置 |
 | 8 | fserviceclass | 服务处理类 | varchar | 255 |  | √ | ' ' | 服务处理类 |
 | 9 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |

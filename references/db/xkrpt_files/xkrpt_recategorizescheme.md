@@ -1,48 +1,5 @@
 # 净额重分类方案-xkrpt_recategorizescheme
 
-## 净额重分类方案-主表 t_xkrpt_recategoryscheme
-
-- **表名称：** 净额重分类方案-主表
-- **表名：** t_xkrpt_recategoryscheme
-
-### 表格列定义
-
-| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fname | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 5 | fpositiveitem | 净额正数记入 | int8 | 64 |  | √ | 0 | 报表项目 xkbd_rptitem |
-| 6 | fdescription | 描述 | varchar | 255 |  | √ | ' ' | 描述 |
-| 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 8 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 10 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 11 | fmaindime | 主核算维度 | varchar | 50 |  | √ | ' ' | 主核算维度,枚举: |
-| 12 | fenable | 使用状态 | bpchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 13 | facctformula | 科目表达式 | varchar | 2000 |  | √ | ' ' | 科目表达式 |
-| 14 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
-| 15 | fexprsrc | 表达式原始值 | varchar | 2000 |  | √ | ' ' | 表达式原始值 |
-| 16 | fforbiddate | 禁用时间 | timestamp | 0 |  |  | null | 禁用时间 |
-| 17 | fforbidderid | 禁用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 18 | fnegativeitem | 净额负数记入 | int8 | 64 |  | √ | 0 | 报表项目 xkbd_rptitem |
-
-### 列规则定义
-
-| 序号 | 键编码 | 列字段 |
-| :--- | :--- | :--- |
-| 1 | fid | fid |
-
-### 索引定义
-
-| 序号 | 索引名 | 唯一 | 列字段 |
-| :--- | :--- | :--- | :--- |
-| 1 | t_xkrpt_recategory_number |  | fnumber |
-| 2 | pk_xkrpt_recategoryscheme |  | fid |
-
----
-
 ## 净额重分类方案-多语言表 t_xkrpt_recategoryscheme_l
 
 - **表名称：** 净额重分类方案-多语言表
@@ -104,6 +61,50 @@
 
 ---
 
+## 净额重分类方案-主表 t_xkrpt_recategoryscheme
+
+- **表名称：** 净额重分类方案-主表
+- **表名：** t_xkrpt_recategoryscheme
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
+| 2 | fname | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 5 | fpositiveitem | 净额正数记入 | int8 | 64 |  | √ | 0 | [报表项目 xkbd_rptitem](../fibd_files/xkbd_rptitem.md) |
+| 6 | fdescription | 描述 | varchar | 255 |  | √ | ' ' | 描述 |
+| 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 8 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
+| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 10 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
+| 11 | fmaindime | 主核算维度 | varchar | 50 |  | √ | ' ' | 主核算维度,枚举: |
+| 12 | fdimemaptype | 维度映射类型 | bpchar | 1 |  | √ | '0' | 维度映射类型,枚举: 1 :使用“商务伙伴”作为维度的对应关系 2 :使用“关联字段”作为维度的对应关系 |
+| 13 | fenable | 使用状态 | bpchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 14 | facctformula | 科目表达式 | varchar | 2000 |  | √ | ' ' | 科目表达式 |
+| 15 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
+| 16 | fexprsrc | 表达式原始值 | varchar | 2000 |  | √ | ' ' | 表达式原始值 |
+| 17 | fforbiddate | 禁用时间 | timestamp | 0 |  |  | null | 禁用时间 |
+| 18 | fforbidderid | 禁用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 19 | fnegativeitem | 净额负数记入 | int8 | 64 |  | √ | 0 | [报表项目 xkbd_rptitem](../fibd_files/xkbd_rptitem.md) |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fid | fid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | t_xkrpt_recategory_number |  | fnumber |
+| 2 | pk_xkrpt_recategoryscheme |  | fid |
+
+---
+
 ## 项目数据类型-多选基础资料表 t_xkrpt_reschemedatatype
 
 - **表名称：** 项目数据类型-多选基础资料表
@@ -114,7 +115,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 项目数据类型 xkbd_rptitemdatatype |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [项目数据类型 xkbd_rptitemdatatype](../fibd_files/xkbd_rptitemdatatype.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义

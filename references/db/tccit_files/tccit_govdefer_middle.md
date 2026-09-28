@@ -15,7 +15,7 @@
 | 4 | fbillstatus | 单据状态 | varchar | 50 |  | √ | ' ' | 单据状态,枚举: 0 :禁用 1 :可用 |
 | 5 | faccountingmethod | 核算方法 | varchar | 50 |  | √ | ' ' | 核算方法,枚举: 1 :总额法 2 :净额法 |
 | 6 | fdnjzsy | 本年账载金额 | numeric | 23 | 10 | √ | 0.0000000000 | 本年账载金额 |
-| 7 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 7 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | fnote | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
 | 9 | fsywjzamount | 剩余未结转金额 | numeric | 23 | 10 | √ | 0.0000000000 | 剩余未结转金额 |
 | 10 | fgovdepartment | 发放补助政府主管部门 | varchar | 50 |  | √ | ' ' | 发放补助政府主管部门 |

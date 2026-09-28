@@ -25,7 +25,7 @@
 | 14 | fispuragent | fispuragent | bpchar | 1 |  | √ | '0' |  |
 | 15 | fmodifierid | fmodifierid | int8 | 64 |  | √ | 0 |  |
 | 16 | ftemplateid | ftemplateid | int8 | 64 |  | √ | 0 |  |
-| 17 | fprojectid | 寻源项目 | int8 | 64 |  | √ | 0 | 寻源项目 pds_projectf7 |
+| 17 | fprojectid | 寻源项目 | int8 | 64 |  | √ | 0 | [寻源项目 pds_projectf7](../pds_files/pds_projectf7.md) |
 | 18 | fbillstatus | 单据状态 | bpchar | 1 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 D :重新审核 |
 | 19 | fparentid | fparentid | varchar | 50 |  | √ | ' ' |  |
 | 20 | fcreatetime | fcreatetime | timestamp | 0 |  |  | null |  |
@@ -33,7 +33,7 @@
 | 22 | flastupdateuserid | flastupdateuserid | int8 | 64 |  | √ | 0 |  |
 | 23 | fauditdate | fauditdate | timestamp | 0 |  |  | null |  |
 | 24 | fbizpartnerid | fbizpartnerid | int8 | 64 |  | √ | 0 |  |
-| 25 | fsupplierid | 供应商 | int8 | 64 |  | √ | 0 | 供应商 bd_supplier |
+| 25 | fsupplierid | 供应商 | int8 | 64 |  | √ | 0 | [供应商 bd_supplier](../basedata_files/bd_supplier.md) |
 | 26 | flastupdatetime | flastupdatetime | timestamp | 0 |  |  | null |  |
 | 27 | fsuppliertype | fsuppliertype | varchar | 30 |  | √ | ' ' |  |
 | 28 | fdeadline | fdeadline | timestamp | 0 |  |  | null |  |

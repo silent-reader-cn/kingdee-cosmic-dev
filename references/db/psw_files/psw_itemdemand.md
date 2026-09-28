@@ -10,16 +10,16 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  |  | null | 人员 bos_user |
-| 3 | fcreatorid | 创建人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
+| 3 | fcreatorid | 创建人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fbillstatus | 单据状态 | bpchar | 1 |  | √ | 'A' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  | √ | LOCALTIMESTAMP | 创建时间 |
-| 6 | forgid | 组织 | int8 | 64 |  |  | null | 业务单元 bos_org |
+| 6 | forgid | 组织 | int8 | 64 |  |  | null | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
 | 8 | fbillno | 单据编号 | varchar | 50 |  | √ | ' ' | 单据编号 |
-| 9 | fauditorid | 审核人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 9 | fauditorid | 审核人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | fmodifytime | 修改时间 | timestamp | 0 |  | √ | LOCALTIMESTAMP | 修改时间 |
-| 11 | fmainmaterielid | 物料 | int8 | 64 |  |  | null | 物料 bd_material |
+| 11 | fmainmaterielid | 物料 | int8 | 64 |  |  | null | [物料 bd_material](../basedata_files/bd_material.md) |
 
 ### 列规则定义
 
@@ -54,7 +54,7 @@
 | 7 | fplandate | 计划日期 | timestamp | 0 |  |  | null | 计划日期 |
 | 8 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 9 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 10 | fmodifierfield | 修改人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 10 | fmodifierfield | 修改人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

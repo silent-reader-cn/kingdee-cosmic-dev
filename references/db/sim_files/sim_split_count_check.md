@@ -13,7 +13,7 @@
 | 2 | finvoiceamountsum | 原始金额汇总 | numeric | 23 | 10 | √ | 0.0000000000 | 原始金额汇总 |
 | 3 | ftotaltaxdiffer | 税额差值 | numeric | 23 | 10 | √ | 0.0000000000 | 税额差值 |
 | 4 | ftotalamount | 发票价税合计 | numeric | 23 | 10 | √ | 0.0000000000 | 发票价税合计 |
-| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | ftotaltaxsum | 原始税额汇总 | numeric | 23 | 10 | √ | 0.0000000000 | 原始税额汇总 |
 | 7 | fdatefield | 开票日期 | timestamp | 0 |  |  | null | 开票日期 |
 | 8 | finvoiceconfirms | 已确认单据编号 | varchar | 255 |  | √ | ' ' | 已确认单据编号 |

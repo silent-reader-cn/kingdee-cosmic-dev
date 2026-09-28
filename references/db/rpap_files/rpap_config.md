@@ -11,15 +11,15 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fsecret | 对称加密秘钥 | varchar | 255 |  | √ | ' ' | 对称加密秘钥 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fappsecret | 应用Secret | varchar | 50 |  | √ | ' ' | 应用Secret |
-| 5 | fthirdtypeid | 第三方类型 | int8 | 64 |  | √ | 0 | 第三方类型 rpap_thirdtype |
+| 5 | fthirdtypeid | 第三方类型 | int8 | 64 |  | √ | 0 | [第三方类型 rpap_thirdtype](../rpap_files/rpap_thirdtype.md) |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 7 | fappidset | 应用ID | varchar | 50 |  | √ | ' ' | 应用ID |
-| 8 | fappid | 第三方应用 | int8 | 64 |  | √ | 0 | 第三方应用（废弃） open_3rdapps |
+| 8 | fappid | 第三方应用 | int8 | 64 |  | √ | 0 | [第三方应用（废弃） open_3rdapps](../open_files/open_3rdapps.md) |
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 10 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 13 | fenable | 是否启用 | varchar | 30 |  | √ | ' ' | 是否启用,枚举: 0 :停用 1 :启用 |
 | 14 | fnumber | 编码 | varchar | 255 |  | √ | ' ' | 编码 |

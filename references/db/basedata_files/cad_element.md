@@ -11,8 +11,8 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 4 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 4 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 6 | ftype | 属性 | varchar | 30 |  | √ | ' ' | 属性,枚举: 001 :材料成本 002 :采购成本 003 :制造费用 004 :人工费用 005 :委外费用 006 :项目费用 |
 | 7 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
@@ -20,7 +20,7 @@
 | 9 | fenable | 使用状态 | varchar | 30 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 10 | fnumber | 编码 | varchar | 60 |  | √ | ' ' | 编码 |
 | 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 12 | felementtypeid | 成本要素分类 | int8 | 64 |  | √ | 0 | 成本要素分类 cad_elementtype |
+| 12 | felementtypeid | 成本要素分类 | int8 | 64 |  | √ | 0 | [成本要素分类 cad_elementtype](../basedata_files/cad_elementtype.md) |
 
 ### 列规则定义
 

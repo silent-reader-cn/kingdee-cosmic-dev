@@ -15,7 +15,7 @@
 | 4 | ftenant_no | 租户 | varchar | 30 |  | √ | ' ' | 租户 |
 | 5 | fupdate_time | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
 | 6 | fcreate_time | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
-| 7 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 7 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 8 | fvouch_no | 凭证号 | varchar | 50 |  | √ | ' ' | 凭证号 |
 | 9 | fvouch_date | 凭证记账日期 | timestamp | 0 |  |  | null | 凭证记账日期 |
 | 10 | fresource | 凭证来源 | varchar | 50 |  | √ | ' ' | 凭证来源,枚举: 1 :全票池维护 4 :苍穹 9 :第三方系统 |

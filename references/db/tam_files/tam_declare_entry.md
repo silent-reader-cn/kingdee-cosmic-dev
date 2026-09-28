@@ -27,5 +27,5 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_tam_declare_entry_fk |  | fid |
-| 2 | pk_tam_declare_entry |  | fentryid |
+| 1 | pk_tam_declare_entry |  | fentryid |
+| 2 | idx_tam_declare_entry_fk |  | fid |

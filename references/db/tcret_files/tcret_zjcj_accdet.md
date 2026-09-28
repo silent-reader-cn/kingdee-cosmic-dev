@@ -11,17 +11,17 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | ftaxperiod | 所属税期 | varchar | 50 |  | √ | ' ' | 所属税期 |
-| 3 | famountfield | 金额字段 | int8 | 64 |  | √ | 0 | 数据源字段配置 tctb_datasource_entry |
-| 4 | forgid | 取数组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | famountfield | 金额字段 | int8 | 64 |  | √ | 0 | [数据源字段配置 tctb_datasource_entry](../tctb_files/tctb_datasource_entry.md) |
+| 4 | forgid | 取数组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | fbizname | 业务名称 | varchar | 50 |  | √ | ' ' | 业务名称 |
 | 6 | famount | 不含税金额 | numeric | 23 | 10 | √ | 0 | 不含税金额 |
 | 7 | fskssqq | 日期范围.开始 | timestamp | 0 |  |  | null | 日期范围.开始 |
 | 8 | fskssqz | 日期范围.结束 | timestamp | 0 |  |  | null | 日期范围.结束 |
 | 9 | ffetchamount | 取数金额 | numeric | 23 | 10 | √ | 0 | 取数金额 |
-| 10 | ftable | 数据源 | int8 | 64 |  | √ | 0 | 数据源配置 tctb_custom_datasource |
+| 10 | ftable | 数据源 | int8 | 64 |  | √ | 0 | [数据源配置 tctb_custom_datasource](../tctb_files/tctb_custom_datasource.md) |
 | 11 | ftaxaccountserialno | 项目编号 | varchar | 50 |  | √ | ' ' | 项目编号 |
 | 12 | fabsolute | 绝对值 | bpchar | 1 |  | √ | '0' | 绝对值 |
-| 13 | fruleid | 规则id | int8 | 64 |  | √ | 0 | 房产出租租金 tcret_rule_fcczzj |
+| 13 | fruleid | 规则id | int8 | 64 |  | √ | 0 | [房产出租租金 tcret_rule_fcczzj](../tcret_files/tcret_rule_fcczzj.md) |
 | 14 | ffiltercondition | 过滤条件 | varchar | 255 |  | √ | ' ' | 过滤条件 |
 | 15 | frentid | 租金项目id | varchar | 50 |  | √ | ' ' | 租金项目id |
 | 16 | fdatadirection | 取数方向 | varchar | 50 |  | √ | ' ' | 取数方向,枚举: positive :正向 reverse :反向 |

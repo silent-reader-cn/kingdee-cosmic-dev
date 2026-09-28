@@ -22,7 +22,7 @@
 | 11 | fcarrier | 承运人 | varchar | 32 |  | √ | ' ' | 承运人 |
 | 12 | fresource | 发票来源 | varchar | 50 |  | √ | ' ' | 发票来源 |
 | 13 | fbillno | 单据编号 | varchar | 36 |  | √ | ' ' | 单据编号 |
-| 14 | forg_id | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 14 | forg_id | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 15 | ftotal_amount | 价税合计 | numeric | 23 | 10 | √ | 0.0000000000 | 价税合计 |
 | 16 | fbillstatus | 单据状态 | varchar | 2 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 17 | ffuel_surcharge | 燃油附加费 | numeric | 23 | 10 | √ | 0.0000000000 | 燃油附加费 |
@@ -32,18 +32,18 @@
 | 21 | fcustomer_name | 顾客姓名 | varchar | 32 |  | √ | ' ' | 顾客姓名 |
 | 22 | fdelete | 可用状态 | varchar | 4 |  | √ | '1' | 可用状态,枚举: 1 :可用 2 :作废 3 :删除 |
 | 23 | fexpense_status | 报销状态 | varchar | 2 |  | √ | ' ' | 报销状态,枚举: 1 :未报销 30 :审核中 60 :已报销 65 :已入账 |
-| 24 | fproject | 项目 | int8 | 64 |  | √ | 0 | 项目 bd_project |
+| 24 | fproject | 项目 | int8 | 64 |  | √ | 0 | [项目 bd_project](../basedata_files/bd_project.md) |
 | 25 | fseat_grade | 座位等级 | varchar | 10 |  | √ | ' ' | 座位等级 |
-| 26 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 26 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 27 | ftransport_deduction | 旅客运输抵扣 | varchar | 2 |  | √ | ' ' | 旅客运输抵扣,枚举: 0 :未抵扣 1 :已抵扣 2 :预抵扣 |
 | 28 | finvoice_amount | 票价 | numeric | 23 | 10 | √ | 0.0000000000 | 票价 |
 | 29 | fcustomer_id_no | 身份证号 | varchar | 25 |  | √ | ' ' | 身份证号 |
 | 30 | fserial_no | 发票流水号 | varchar | 36 |  | √ | ' ' | 发票流水号 |
-| 31 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 31 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 32 | fagent_code | 销售单位代码 | varchar | 32 |  | √ | ' ' | 销售单位代码 |
 | 33 | fflight_num | 航班号 | varchar | 32 |  | √ | ' ' | 航班号 |
 | 34 | faccount_date | 会计属期 | timestamp | 0 |  |  | null | 会计属期 |
-| 35 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 35 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 36 | fprint_num | 印刷序列号 | varchar | 32 |  | √ | ' ' | 印刷序列号 |
 | 37 | faws_serial_no | AWS发票流水号 | varchar | 36 |  | √ | ' ' | AWS发票流水号 |
 | 38 | ftax_rate | 税率 | numeric | 23 | 10 | √ | 0.0000000000 | 税率 |
@@ -53,10 +53,10 @@
 | 42 | fdestination | 目的地 | varchar | 32 |  | √ | ' ' | 目的地 |
 | 43 | fother_amount | 其他税费 | numeric | 23 | 10 | √ | 0.0000000000 | 其他税费 |
 | 44 | fairport_construction_fee | 机场建设费 | numeric | 23 | 10 | √ | 0.0000000000 | 机场建设费 |
-| 45 | ftax_org | 纳税主体 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 45 | ftax_org | 纳税主体 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 46 | fair_time | 乘机时间 | varchar | 10 |  | √ | ' ' | 乘机时间 |
 | 47 | foriginal_state | 原件签收状态 | varchar | 2 |  | √ | ' ' | 原件签收状态,枚举: 0 :未签收 1 :已签收 |
-| 48 | finvoice_type | 发票类型 | int8 | 64 |  | √ | 0 | 发票类型 bd_invoicetype |
+| 48 | finvoice_type | 发票类型 | int8 | 64 |  | √ | 0 | [发票种类 bd_invoicetype](../basedata_files/bd_invoicetype.md) |
 | 49 | fendorsement | 签注 | varchar | 120 |  | √ | ' ' | 签注 |
 | 50 | fplace_of_departure | 出发地 | varchar | 32 |  | √ | ' ' | 出发地 |
 | 51 | fair_num | 机票编号 | varchar | 32 |  | √ | ' ' | 机票编号 |

@@ -12,7 +12,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | finvestrate | 投资比例（%） | numeric | 23 | 10 | √ | 0.0000000000 | 投资比例（%） |
 | 3 | fcurryeardividend | 当年分配的股息红利金额 | numeric | 23 | 10 | √ | 0.0000000000 | 当年分配的股息红利金额 |
-| 4 | fnationality | 国籍 | int8 | 64 |  | √ | 0 | 国家和地区 bd_country |
+| 4 | fnationality | 国籍 | int8 | 64 |  | √ | 0 | [国家和地区 bd_country](../base_files/bd_country.md) |
 | 5 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 7 | fgdname | 股东名称 | varchar | 50 |  | √ | ' ' | 股东名称 |
@@ -102,7 +102,7 @@
 | 5 | fzjgftbl | 总机构分摊比例（%） | numeric | 23 | 10 | √ | 0 | 总机构分摊比例（%） |
 | 6 | fincome6 | 投资资产初始成本调整 | bpchar | 1 |  | √ | ' ' | 投资资产初始成本调整 |
 | 7 | fincome3 | 投资资产持有收益调整 | bpchar | 1 |  | √ | ' ' | 投资资产持有收益调整 |
-| 8 | forgid | 组织名称： | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 8 | forgid | 组织名称： | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 9 | fincome4 | 房地产特定业务调整 | bpchar | 1 |  | √ | ' ' | 房地产特定业务调整 |
 | 10 | fdeduct9 | 罚款、滞纳金、与收入无关的支出、赞助支出 | bpchar | 1 |  | √ | ' ' | 罚款、滞纳金、与收入无关的支出、赞助支出 |
 | 11 | fincome7 | 公允价值变动损益调整 | bpchar | 1 |  | √ | ' ' | 公允价值变动损益调整 |
@@ -124,7 +124,7 @@
 | 27 | fother7 | 销售未完工开发产品 | bpchar | 1 |  | √ | ' ' | 销售未完工开发产品 |
 | 28 | fstartdate | 年度期间： | timestamp | 0 |  |  | null | 年度期间： |
 | 29 | fother8 | 创业投资企业优惠 | bpchar | 1 |  | √ | ' ' | 创业投资企业优惠 |
-| 30 | fregistertype | 登记注册类型： | int8 | 64 |  | √ | 0 | 注册登记类型 tax_info_registertype |
+| 30 | fregistertype | 登记注册类型： | int8 | 64 |  | √ | 0 | [注册登记类型 tax_info_registertype](../tctb_files/tax_info_registertype.md) |
 | 31 | fother1 | 企业重组及递延纳税事项 | bpchar | 1 |  | √ | ' ' | 企业重组及递延纳税事项 |
 | 32 | ftssx1 | 合伙企业法人合伙人应分得的应纳税所得额 | bpchar | 1 |  | √ | ' ' | 合伙企业法人合伙人应分得的应纳税所得额 |
 | 33 | fillegal | 从事国家限制或禁止行业： | bpchar | 1 |  | √ | ' ' | 从事国家限制或禁止行业： |
@@ -200,7 +200,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | forgid | 组织 | int8 | 64 |  | √ | 0 | 税务组织信息 bastax_taxorg |
+| 2 | forgid | 组织 | int8 | 64 |  | √ | 0 | [税务组织信息 bastax_taxorg](../bastax_files/bastax_taxorg.md) |
 | 3 | fkdqjyqylx | 跨地区经营企业类型 | varchar | 50 |  | √ | ' ' | 跨地区经营企业类型,枚举: 100 :非跨地区经营企业 210 :总机构（跨省）——适用《跨地区经营汇总纳税企业所得税征收管理办法》 220 :总机构（跨省）——不适用《跨地区经营汇总纳税企业所得税征收管理办法》 230 :总机构（省内） 311 :分支机构（须进行完整年度申报并按比例纳税） 312 :分支机构（须进行完整年度申报但不就地缴纳） : |
 | 4 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 5 | fparententryid | fparententryid | int8 | 64 |  | √ | 0 | pid |

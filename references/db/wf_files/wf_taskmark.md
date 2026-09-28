@@ -41,8 +41,8 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | ficon | 显示图标 | varchar | 100 |  | √ | ' ' | 显示图标 |
-| 3 | fname | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
-| 4 | fvalue | 值 | varchar | 300 |  | √ | ' ' | 值 |
+| 3 | fvalue | 值 | varchar | 300 |  | √ | ' ' | 值 |
+| 4 | fname | 名称 | varchar | 200 |  | √ | ' ' | 名称 |
 | 5 | fcategorynumber | 类别编码 | varchar | 100 |  | √ | ' ' | 类别编码 |
 | 6 | fcategoryname | 类别名称 | varchar | 100 |  | √ | ' ' | 类别名称 |
 | 7 | fcolor | 颜色 | varchar | 100 |  | √ | ' ' | 颜色 |

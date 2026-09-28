@@ -100,10 +100,10 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | ftype | 检查类别 | varchar | 30 |  | √ | ' ' | 检查类别,枚举: 0 :卷算检查 1 :在产计算 2 :完工计算 3 :期末计算 4 :差异分摊检查 |
 | 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 5 | ftaskconfigid | 执行任务 | int8 | 64 |  | √ | 0 | 任务配置 sca_taskconfig |
+| 5 | ftaskconfigid | 执行任务 | int8 | 64 |  | √ | 0 | [任务配置 sca_taskconfig](../aca_files/sca_taskconfig.md) |
 | 6 | fbillno | 单据编号 | varchar | 60 |  | √ | ' ' | 单据编号 |
 
 ### 列规则定义

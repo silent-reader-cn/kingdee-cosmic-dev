@@ -13,7 +13,7 @@
 | 2 | fiscustom | 个性化标识 | bpchar | 1 |  | √ | ' ' | 个性化标识 |
 | 3 | fmaptypeid | 映射类型id | int8 | 64 |  | √ | 0 | 映射类型id |
 | 4 | fdescription | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
-| 5 | fownorgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | fownorgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | forgtype | 适用组织类型 | varchar | 2 |  | √ | ' ' | 适用组织类型 |
 
 ### 列规则定义

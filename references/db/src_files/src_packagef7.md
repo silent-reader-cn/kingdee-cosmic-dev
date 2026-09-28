@@ -9,7 +9,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | 招标项目 | int8 | 64 |  | √ | 0 | 招标项目F7 src_projectf7 |
+| 1 | fid | 招标项目 | int8 | 64 |  | √ | 0 | [招标项目F7 src_projectf7](../src_files/src_projectf7.md) |
 | 2 | fisaptassess2 | fisaptassess2 | bpchar | 1 |  | √ | '0' |  |
 | 3 | fistecopen | 技术标已开标 | bpchar | 1 |  | √ | '0' | 技术标已开标 |
 | 4 | fpackfeeitemid | fpackfeeitemid | int8 | 64 |  | √ | 0 |  |
@@ -20,7 +20,7 @@
 | 9 | fisaptassess | fisaptassess | bpchar | 1 |  | √ | '0' |  |
 | 10 | ftecopenuser | ftecopenuser | int8 | 64 |  | √ | 0 |  |
 | 11 | ffeeamount | ffeeamount | numeric | 19 | 6 | √ | 0 |  |
-| 12 | fpackageid | 标段ID | int8 | 64 |  | √ | 0 | 标段名称 src_packagef7 |
+| 12 | fpackageid | 标段ID | int8 | 64 |  | √ | 0 | [标段名称 src_packagef7](../src_files/src_packagef7.md) |
 | 13 | fturns | fturns | varchar | 2 |  | √ | ' ' |  |
 | 14 | faptopenuser | faptopenuser | int8 | 64 |  | √ | 0 |  |
 | 15 | faptassessdate2 | faptassessdate2 | timestamp | 0 |  |  | null |  |

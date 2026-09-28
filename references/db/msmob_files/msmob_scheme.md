@@ -41,7 +41,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname |  | varchar | 50 |  | √ | ' ' |  |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 5 | fdescription | 方案描述 | varchar | 255 |  | √ | ' ' | 方案描述 |
 | 6 | fschemetype | 方案类型 | varchar | 50 |  | √ | ' ' | 方案类型 |
@@ -49,7 +49,7 @@
 | 8 | fschemename | 方案名称 | varchar | 50 |  | √ | ' ' | 方案名称 |
 | 9 | fdefault | 是否最近方案 | bpchar | 1 |  | √ | '0' | 是否最近方案 |
 | 10 | fstatus | 数据状态 | bpchar | 1 |  | √ | 'A' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 13 | fcontent_tag | 方案内容_详情 | text | 0 |  |  | null | 方案内容_详情 |
 | 14 | frecentusetime | 最近使用时间 | timestamp | 0 |  |  | null | 最近使用时间 |

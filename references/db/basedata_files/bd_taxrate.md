@@ -128,34 +128,34 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | ftaxrate | 值 | numeric | 23 | 10 | √ | 0.0000000000 | 值 |
-| 3 | forgid | 用户选择组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | forgid | 用户选择组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | fexpdate | 失效日期 | timestamp | 0 |  |  | null | 失效日期 |
 | 5 | fdisabledate | 禁用时间 | timestamp | 0 |  |  | null | 禁用时间 |
-| 6 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 7 | ftaxarea | 税收辖区 | int8 | 64 |  | √ | 0 | 税收辖区 bastax_taxareagroup |
+| 6 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 7 | ftaxarea | 税收辖区 | int8 | 64 |  | √ | 0 | [税收辖区 bastax_taxareagroup](../basedata_files/bastax_taxareagroup.md) |
 | 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 9 | ftaxationsys | 税收制度 | int8 | 64 |  | √ | 0 | 税收制度 bd_taxationsys |
+| 9 | ftaxationsys | 税收制度 | int8 | 64 |  | √ | 0 | [税收制度 bd_taxationsys](../basedata_files/bd_taxationsys.md) |
 | 10 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 11 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 13 | ftaxratetype | 税率类型 | int8 | 64 |  | √ | 0 | 税率类型 bd_taxratetype |
-| 14 | ftaxcategoryid | 税种 | int8 | 64 |  | √ | 0 | 税种 bd_taxcategory |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 13 | ftaxratetype | 税率类型 | int8 | 64 |  | √ | 0 | [税率类型 bd_taxratetype](../basedata_files/bd_taxratetype.md) |
+| 14 | ftaxcategoryid | 税种 | int8 | 64 |  | √ | 0 | [税种 bd_taxcategory](../basedata_files/bd_taxcategory.md) |
 | 15 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 16 | fissystem | 系统预设 | bpchar | 1 |  | √ | '0' | 系统预设,枚举: 0 :否 1 :是 |
 | 17 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
 | 18 | factivedate | 生效日期 | timestamp | 0 |  |  | null | 生效日期 |
-| 19 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 20 | fuserorg | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 21 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 19 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 20 | fuserorg | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 21 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 22 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 23 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 24 | fvaluetype | 值类型 | varchar | 50 |  | √ | ' ' | 值类型,枚举: 1 :比例(%) 2 :单位税额 |
-| 25 | ftaxunit | 计税单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 23 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 24 | fvaluetype | 值类型 | varchar | 50 |  | √ | ' ' | 值类型,枚举: 1 :比例税率（%） 2 :定额税率 3 :累进税率（%） |
+| 25 | ftaxunit | 计税单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 26 | fctrlstrategy | 控制策略 | varchar | 30 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
 | 27 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 28 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
 | 29 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
-| 30 | fcountry | 国家或地区 | int8 | 64 |  | √ | 0 | 国家和地区 bd_country |
+| 30 | fcountry | 国家或地区 | int8 | 64 |  | √ | 0 | [国家和地区 bd_country](../base_files/bd_country.md) |
 
 ### 列规则定义
 

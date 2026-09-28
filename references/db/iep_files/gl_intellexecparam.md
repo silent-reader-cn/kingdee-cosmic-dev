@@ -41,10 +41,10 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fparamname | 参数名称 | varchar | 200 |  | √ | ' ' | 参数名称 |
-| 2 | fparamdesc | 参数描述 | varchar | 400 |  | √ | ' ' | 参数描述 |
+| 1 | fparamname | 参数名称 | varchar | 255 |  | √ | ' ' | 参数名称 |
+| 2 | fparamdesc | 参数描述 | varchar | 1000 |  | √ | ' ' | 参数描述 |
 | 3 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
-| 4 | fcomboval | 有效值范围 | varchar | 1000 |  |  | ' ' | 有效值范围 |
+| 4 | fcomboval | 有效值范围 | varchar | 1000 |  | √ | ' ' | 有效值范围 |
 | 5 | fpkid | fpkid | varchar | 18 |  | √ | ' ' | pkid |
 | 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 
@@ -104,7 +104,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fbussiness | 业务类型 | varchar | 80 |  | √ | ' ' | 业务类型,枚举: |
-| 3 | fbizapp | 业务应用 | varchar | 18 |  | √ | ' ' | 业务应用实体 bos_devportal_bizapp |
+| 3 | fbizapp | 业务应用 | varchar | 18 |  | √ | ' ' | [业务应用实体 bos_devportal_bizapp](../mdl_files/bos_devportal_bizapp.md) |
 | 4 | foper | 执行操作 | varchar | 80 |  | √ | ' ' | 执行操作,枚举: |
 | 5 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
 

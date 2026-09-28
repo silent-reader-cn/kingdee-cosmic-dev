@@ -11,12 +11,14 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
-| 3 | fcomment | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
-| 4 | ffailmessage | 疑似防重校验不通过提示 | varchar | 255 |  | √ | ' ' | 疑似防重校验不通过提示 |
-| 5 | flocaleid | flocaleid | varchar | 30 |  | √ | ' ' | localeid |
-| 6 | fcheckopname | 目标单据的校验操作 | varchar | 255 |  | √ | ' ' | 目标单据的校验操作 |
-| 7 | flandingopname | 目标单据落地的弹框操作 | varchar | 255 |  | √ | ' ' | 目标单据落地的弹框操作 |
-| 8 | fpkid | fpkid | varchar | 30 |  | √ | ' ' | pkid |
+| 3 | fmainorgfieldname | 当前单据的主业务组织字段 | varchar | 255 |  | √ | ' ' | 当前单据的主业务组织字段 |
+| 4 | fcomment | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
+| 5 | ffailmessage | 疑似防重校验不通过提示 | varchar | 255 |  | √ | ' ' | 疑似防重校验不通过提示 |
+| 6 | fbizdatefieldname | 当前单据的业务日期字段 | varchar | 255 |  | √ | ' ' | 当前单据的业务日期字段 |
+| 7 | flocaleid | flocaleid | varchar | 30 |  | √ | ' ' | localeid |
+| 8 | fcheckopname | 目标单据的校验操作 | varchar | 255 |  | √ | ' ' | 目标单据的校验操作 |
+| 9 | flandingopname | 目标单据落地的弹框操作 | varchar | 255 |  | √ | ' ' | 目标单据落地的弹框操作 |
+| 10 | fpkid | fpkid | varchar | 30 |  | √ | ' ' | pkid |
 
 ### 列规则定义
 
@@ -80,30 +82,38 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcheckentityid | 当前单匹配的业务单据 | varchar | 50 |  | √ | ' ' | 单据主实体 bos_billmainentity |
-| 3 | fdisabledate | 禁用日期 | timestamp | 0 |  |  | null | 禁用日期 |
-| 4 | fdestentityid | 当前单据 | varchar | 50 |  | √ | ' ' | 单据主实体 bos_billmainentity |
-| 5 | fmodifytime | 最后更新时间 | timestamp | 0 |  |  | null | 最后更新时间 |
-| 6 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 7 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 8 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 9 | fmessagefield | 疑似防重校验提示字段 | varchar | 50 |  | √ | ' ' | 疑似防重校验提示字段 |
-| 10 | flandingop | 当前单据的控制操作 | varchar | 255 |  | √ | ' ' | 当前单据的控制操作,枚举: |
-| 11 | fctrltype | 疑似防重控制 | varchar | 30 |  | √ | ' ' | 疑似防重控制,枚举: warning :预警 landing :落地 control :严控 |
-| 12 | fenablerid | 启用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 13 | fchecksignfield | 疑似防重校验标识字段 | varchar | 50 |  | √ | ' ' | 疑似防重校验标识字段 |
-| 14 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
-| 15 | fmodifierid | 最后更新人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 16 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 17 | fenabledate | 启用日期 | timestamp | 0 |  |  | null | 启用日期 |
-| 18 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 19 | fcheckopname | 目标单据的校验操作 | varchar | 255 |  | √ | ' ' | 目标单据的校验操作 |
-| 20 | fopenmq | 开启MQ消费 | bpchar | 1 |  | √ | '1' | 开启MQ消费 |
-| 21 | fcheckop | 当前单据的校验操作 | varchar | 255 |  | √ | ' ' | 当前单据的校验操作,枚举: |
-| 22 | ffailmessage | 疑似防重校验不通过提示 | varchar | 255 |  | √ | ' ' | 疑似防重校验不通过提示 |
-| 23 | fenable | 使用状态 | varchar | 30 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 24 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
-| 25 | flandingopname | 目标单据落地的弹框操作 | varchar | 255 |  | √ | ' ' | 目标单据落地的弹框操作 |
+| 2 | fcheckentityid | 当前单匹配的业务单据 | varchar | 50 |  | √ | ' ' | [单据主实体 bos_billmainentity](../mdl_files/bos_billmainentity.md) |
+| 3 | fusestatus | 使用状态 | varchar | 50 |  | √ | ' ' | 使用状态,枚举: create :创建中 apply :已生效 change :变更中 |
+| 4 | fdisabledate | 禁用日期 | timestamp | 0 |  |  | null | 禁用日期 |
+| 5 | fbizdatefieldname | 当前单据的业务日期字段 | varchar | 255 |  | √ | ' ' | 当前单据的业务日期字段 |
+| 6 | fdestentityid | 当前单据 | varchar | 50 |  | √ | ' ' | [单据主实体 bos_billmainentity](../mdl_files/bos_billmainentity.md) |
+| 7 | fispreset | 是否系统预置 | bpchar | 1 |  | √ | '0' | 是否系统预置 |
+| 8 | fmodifytime | 最后更新时间 | timestamp | 0 |  |  | null | 最后更新时间 |
+| 9 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
+| 10 | fmainorgfieldname | 当前单据的主业务组织字段 | varchar | 255 |  | √ | ' ' | 当前单据的主业务组织字段 |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 12 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
+| 13 | fmessagefield | 疑似防重校验提示字段 | varchar | 50 |  | √ | ' ' | 疑似防重校验提示字段 |
+| 14 | flandingop | 当前单据的控制操作 | varchar | 255 |  | √ | ' ' | 当前单据的控制操作,枚举: |
+| 15 | fctrltype | 疑似防重控制 | varchar | 30 |  | √ | ' ' | 疑似防重控制,枚举: warning :预警 landing :落地 control :严控 |
+| 16 | fenablerid | 启用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 17 | fchecksignfield | 疑似防重校验标识字段 | varchar | 50 |  | √ | ' ' | 疑似防重校验标识字段 |
+| 18 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
+| 19 | fmodifierid | 最后更新人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 20 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 21 | fenabledate | 启用日期 | timestamp | 0 |  |  | null | 启用日期 |
+| 22 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 23 | fcheckopname | 目标单据的校验操作 | varchar | 255 |  | √ | ' ' | 目标单据的校验操作 |
+| 24 | fopenmq | 开启MQ消费 | bpchar | 1 |  | √ | '1' | 开启MQ消费 |
+| 25 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
+| 26 | fmainorgfield | 当前单据的主业务组织字段 | varchar | 50 |  | √ | ' ' | 当前单据的主业务组织字段,枚举: |
+| 27 | fbizdatefield | 当前单据的业务日期字段 | varchar | 50 |  | √ | ' ' | 当前单据的业务日期字段,枚举: |
+| 28 | fcheckop | 当前单据的校验操作 | varchar | 255 |  | √ | ' ' | 当前单据的校验操作,枚举: |
+| 29 | ffailmessage | 疑似防重校验不通过提示 | varchar | 255 |  | √ | ' ' | 疑似防重校验不通过提示 |
+| 30 | fenable | 使用状态 | varchar | 30 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 31 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
+| 32 | flandingopname | 目标单据落地的弹框操作 | varchar | 255 |  | √ | ' ' | 目标单据落地的弹框操作 |
+| 33 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

@@ -11,10 +11,10 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | ftaxamount | 税额 | numeric | 23 | 10 | √ | 0.0000000000 | 税额 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fjzjtflag | 是否包含即征即退业务 | bpchar | 1 |  | √ | ' ' | 是否包含即征即退业务 |
-| 5 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 6 | fcreaterid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 6 | fcreaterid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 7 | fvoucherdate | 开票日期 | timestamp | 0 |  |  | null | 开票日期 |
 | 8 | fvoucherno | 发票号码 | varchar | 50 |  | √ | ' ' | 发票号码 |
 | 9 | famount | 不含税金额 | numeric | 23 | 10 | √ | 0.0000000000 | 不含税金额 |
@@ -25,7 +25,7 @@
 | 14 | fmodifydate | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
 | 15 | fgoodsname | 主要商品名称 | varchar | 100 |  | √ | ' ' | 主要商品名称 |
 | 16 | fstartdate | 开始日期 | timestamp | 0 |  |  | null | 开始日期 |
-| 17 | fbaseinvoicetype | 发票类型 | int8 | 64 |  | √ | 0 | 发票类型 bd_invoicetype |
+| 17 | fbaseinvoicetype | 发票类型 | int8 | 64 |  | √ | 0 | [发票种类 bd_invoicetype](../basedata_files/bd_invoicetype.md) |
 | 18 | ftaxaccountserialno | 台账流水号 | varchar | 50 |  | √ | ' ' | 台账流水号 |
 | 19 | finvoicecode | 发票代码 | varchar | 32 |  | √ | ' ' | 发票代码 |
 | 20 | fexportflag | 是否包含出口业务 | bpchar | 1 |  | √ | ' ' | 是否包含出口业务 |

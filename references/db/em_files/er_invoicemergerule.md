@@ -47,28 +47,29 @@
 | 7 | fuserdefinerule | 自定义条件json | varchar | 2000 |  | √ | ' ' | 自定义条件json |
 | 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 9 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 12 | fgoodnameequal | 商品名称相同 | bpchar | 1 |  | √ | '0' | 商品名称相同 |
 | 13 | fudrdisplay | 自定义 | varchar | 2000 |  | √ | ' ' | 自定义 |
 | 14 | finvoicedatedetailequal | 年月日相同 | bpchar | 1 |  | √ | '0' | 年月日相同 |
 | 15 | famountequal | 金额相同 | bpchar | 1 |  | √ | '0' | 金额相同 |
-| 16 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 16 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 17 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 18 | fbuyernameequal | 收票公司相同 | bpchar | 1 |  | √ | '0' | 收票公司相同 |
 | 19 | fseatgradequal | 座位等级相同 | bpchar | 1 |  | √ | '0' | 座位等级相同 |
 | 20 | ftaxrateequal | 税率相同 | bpchar | 1 |  | √ | '0' | 税率相同 |
-| 21 | fitemequal | 费用/差旅项目相同 | bpchar | 1 |  | √ | '0' | 费用/差旅项目相同 |
-| 22 | fjs | js文本 | varchar | 2000 |  | √ | ' ' | js文本 |
-| 23 | foffsetequal | 是否抵扣相同 | bpchar | 1 |  | √ | '1' | 是否抵扣相同 |
-| 24 | finvoicetype | 发票类型 | varchar | 50 |  | √ | ' ' | 发票类型,枚举: 1 :普通电子发票 2 :电子发票专票 3 :普通纸质发票 4 :专用纸质发票 5 :普通纸质卷票 7 :通用机打 8 :的士票 9 :火车票 10 :飞机票 11 :其他 12 :机动车 13 :二手车 14 :定额发票 15 :通行费 16 :客运票 17 :过路过桥费 18 :车船税发票（专票） 19 :完税证明 20 :轮船票 21 :海关缴款书 23 :通用机打电子发票 24 :火车退票 25 :财政电子票据 |
-| 25 | fsalernameequal | 开票公司相同 | bpchar | 1 |  | √ | '0' | 开票公司相同 |
-| 26 | forder | 排序序号 | int8 | 64 |  | √ | 0 | 排序序号 |
-| 27 | fgoodcodeequal | 税收分类编码相同 | bpchar | 1 |  | √ | '0' | 税收分类编码相同 |
-| 28 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 29 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
-| 30 | fismerge | 是否合并(废弃) | bpchar | 1 |  | √ | '1' | 是否合并(废弃),枚举: 1 :是 0 :否 |
-| 31 | ftaxnumequal | 税号相同 | bpchar | 1 |  | √ | '0' | 税号相同 |
+| 21 | finvoicetypef7 | 发票类型 | int8 | 64 |  | √ | 0 | [发票类型(发票云) er_invoicetype](../basedata_files/er_invoicetype.md) |
+| 22 | fitemequal | 费用/差旅项目相同 | bpchar | 1 |  | √ | '0' | 费用/差旅项目相同 |
+| 23 | fjs | js文本 | varchar | 2000 |  | √ | ' ' | js文本 |
+| 24 | foffsetequal | 可抵扣相同 | bpchar | 1 |  | √ | '1' | 可抵扣相同 |
+| 25 | finvoicetype | 发票类型 | varchar | 50 |  | √ | ' ' | 发票类型,枚举: 1 :普通电子发票 2 :电子发票专票 3 :普通纸质发票 4 :专用纸质发票 5 :普通纸质卷票 7 :通用机打 8 :的士票 9 :火车票 10 :飞机票 11 :其他 12 :机动车 13 :二手车 14 :定额发票 15 :通行费 16 :客运票 17 :过路过桥费 18 :车船税发票（专票） 19 :完税证明 20 :轮船票 21 :海关缴款书 23 :通用机打电子发票 24 :火车退票 25 :财政电子票据 |
+| 26 | fsalernameequal | 开票公司相同 | bpchar | 1 |  | √ | '0' | 开票公司相同 |
+| 27 | forder | 排序序号 | int8 | 64 |  | √ | 0 | 排序序号 |
+| 28 | fgoodcodeequal | 税收分类编码相同 | bpchar | 1 |  | √ | '0' | 税收分类编码相同 |
+| 29 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 30 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
+| 31 | fismerge | 合并(废弃) | bpchar | 1 |  | √ | '1' | 合并(废弃),枚举: 1 :是 0 :否 |
+| 32 | ftaxnumequal | 税号相同 | bpchar | 1 |  | √ | '0' | 税号相同 |
 
 ### 列规则定义
 

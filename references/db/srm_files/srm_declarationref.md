@@ -17,7 +17,7 @@
 | 6 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
 | 7 | fcfmdate | 确认时间 | timestamp | 0 |  |  | null | 确认时间 |
 | 8 | fcontent | 文档内容 | varchar | 255 |  | √ | ' ' | 文档内容 |
-| 9 | fcfmid | 确认人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fcfmid | 确认人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | froleid | 维度成员 | int8 | 64 |  | √ | 0 | 维度成员 ccm_role |
+| 2 | froleid | 维度成员 | int8 | 64 |  | √ | 0 | [维度成员 ccm_role](../ccm_files/ccm_role.md) |
 | 3 | frolevalueid | 维度成员值id | int8 | 64 |  | √ | 0 | 维度成员值id |
 | 4 | fcontrolstatus | 受控状态 | varchar | 30 |  | √ | ' ' | 受控状态,枚举: 0 :不受控 1 :受控 |
 

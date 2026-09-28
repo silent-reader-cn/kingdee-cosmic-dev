@@ -15,7 +15,7 @@
 | 4 | fdrawer | 开票人 | varchar | 50 |  | √ | ' ' | 开票人 |
 | 5 | ftaxrate | 税率 | varchar | 30 |  | √ | ' ' | 税率,枚举: 0 :0% 0.01 :1% 0.03 :3% 0.04 :4% 0.05 :5% 0.06 :6% 0.09 :9% 0.10 :10% 0.11 :11% 0.13 :13% 0.16 :16% 0.17 :17% |
 | 6 | ftotalamount | 价税合计 | numeric | 23 | 10 | √ | 0 | 价税合计 |
-| 7 | forgid | 组织： | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 7 | forgid | 组织： | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | fvehicleidcode | 车辆识别代码/车架号码 | varchar | 50 |  | √ | ' ' | 车辆识别代码/车架号码 |
 | 9 | fbuyercardno | 购方身份证号/组织机构代码 | varchar | 50 |  | √ | ' ' | 购方身份证号/组织机构代码 |
 | 10 | fcertificatenum | 合格证 | varchar | 50 |  | √ | ' ' | 合格证 |
@@ -31,7 +31,7 @@
 | 20 | fbillno | 单据编号 | varchar | 50 |  | √ | ' ' | 单据编号 |
 | 21 | fversion | 版本号： | varchar | 30 |  | √ | ' ' | 版本号：,枚举: 0 :旧版 1 :新版 |
 | 22 | fsalertaxno | 销方税号 | varchar | 50 |  | √ | ' ' | 销方税号 |
-| 23 | fmaintaxorg | 税务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 23 | fmaintaxorg | 税务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 24 | fbatchno | 批次号 | varchar | 50 |  | √ | ' ' | 批次号 |
 | 25 | fbrandmodel | 厂牌型号 | varchar | 80 |  | √ | ' ' | 厂牌型号 |
 | 26 | foriginalinvoiceno | 原发票号码 | varchar | 30 |  | √ | ' ' | 原发票号码 |
@@ -59,7 +59,7 @@
 | 48 | fissuetime | 开票日期 | timestamp | 0 |  |  | null | 开票日期 |
 | 49 | freviewer | 复核人 | varchar | 50 |  | √ | ' ' | 复核人 |
 | 50 | fprintflag | 打印标识 | varchar | 30 |  | √ | ' ' | 打印标识,枚举: 0 :未打印 1 :已打印 2 :打印失败 |
-| 51 | fvehicleid | 车辆类型 | int8 | 64 |  | √ | 0 | 车辆信息管理 bdm_vehicle_info |
+| 51 | fvehicleid | 车辆类型 | int8 | 64 |  | √ | 0 | [车辆信息管理 bdm_vehicle_info](../bdm_files/bdm_vehicle_info.md) |
 | 52 | fskm | 多行文本 | varchar | 255 |  | √ | ' ' | 多行文本 |
 | 53 | fbuyertaxno | 购方纳税人识别号 | varchar | 50 |  | √ | ' ' | 购方纳税人识别号 |
 | 54 | fsalerbank | fsalerbank | varchar | 100 |  | √ | ' ' |  |

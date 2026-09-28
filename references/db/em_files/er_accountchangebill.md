@@ -11,23 +11,24 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fchangerow | 源单行号 | varchar | 50 |  | √ | ' ' | 源单行号 |
-| 3 | fchangepayeraccountname | 账户名称 | varchar | 100 |  | √ | ' ' | 账户名称 |
-| 4 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 5 | fchangesupplier | 收款人（供应商） | int8 | 64 |  | √ | 0 | 供应商 bd_supplier |
-| 6 | fchangepayertype | 收款人类型 | varchar | 50 |  | √ | ' ' | 收款人类型,枚举: bd_supplier :供应商 bd_customer :客户 bos_org :内部公司 er_payeer :个人 other :其他 |
-| 7 | fchangebillno | 源单编码 | varchar | 80 |  | √ | ' ' | 源单编码 |
-| 8 | fchangecasorg | 收款人（内部公司） | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 9 | fchangebilltype | 源单类型 | varchar | 50 |  | √ | ' ' | 源单类型 |
-| 10 | fchangepayerbank | 开户银行 | int8 | 64 |  | √ | 0 | 行名行号 bd_bebank |
-| 11 | fchangepayeraccount | 银行账号 | varchar | 100 |  | √ | ' ' | 银行账号 |
-| 12 | fchangebillid | 源单id | varchar | 50 |  | √ | ' ' | 源单id |
-| 13 | fchangepayername | 收款人 | varchar | 100 |  | √ | ' ' | 收款人 |
-| 14 | fchangecustomer | 收款人（客户） | int8 | 64 |  | √ | 0 | 客户 bd_customer |
-| 15 | fchangeamount | 金额 | numeric | 23 | 10 | √ | 0 | 金额 |
-| 16 | fchangeentryid | 源单分录id | varchar | 50 |  | √ | ' ' | 源单分录id |
-| 17 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 18 | fchangepayeerid | 收款人（个人） | int8 | 64 |  | √ | 0 | 收款信息 er_payeer |
-| 19 | fchangecurrency | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 3 | fchangeothercontactunit | 其他往来单位 | int8 | 64 |  | √ | 0 | [其他往来单位 cas_othercontactunit](../cas_files/cas_othercontactunit.md) |
+| 4 | fchangepayeraccountname | 账户名称 | varchar | 100 |  | √ | ' ' | 账户名称 |
+| 5 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
+| 6 | fchangesupplier | 收款人（供应商） | int8 | 64 |  | √ | 0 | [供应商 bd_supplier](../basedata_files/bd_supplier.md) |
+| 7 | fchangepayertype | 收款人类型 | varchar | 50 |  | √ | ' ' | 收款人类型,枚举: bd_supplier :供应商 bd_customer :客户 bos_org :内部公司 er_payeer :个人 other :其他 cas_othercontactunit :其他往来单位 |
+| 8 | fchangebillno | 源单编号 | varchar | 80 |  | √ | ' ' | 源单编号 |
+| 9 | fchangecasorg | 收款人（内部公司） | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 10 | fchangebilltype | 源单类型 | varchar | 50 |  | √ | ' ' | 源单类型 |
+| 11 | fchangepayerbank | 开户银行 | int8 | 64 |  | √ | 0 | [行名行号 bd_bebank](../basedata_files/bd_bebank.md) |
+| 12 | fchangepayeraccount | 银行账号 | varchar | 100 |  | √ | ' ' | 银行账号 |
+| 13 | fchangebillid | 源单id | varchar | 50 |  | √ | ' ' | 源单id |
+| 14 | fchangepayername | 收款人 | varchar | 100 |  | √ | ' ' | 收款人 |
+| 15 | fchangecustomer | 收款人（客户） | int8 | 64 |  | √ | 0 | [客户 bd_customer](../basedata_files/bd_customer.md) |
+| 16 | fchangeamount | 金额 | numeric | 23 | 10 | √ | 0 | 金额 |
+| 17 | fchangeentryid | 源单分录id | varchar | 50 |  | √ | ' ' | 源单分录id |
+| 18 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 19 | fchangepayeerid | 收款人（个人） | int8 | 64 |  | √ | 0 | [收款信息 er_payeer](../em_files/er_payeer.md) |
+| 20 | fchangecurrency | 币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 
 ### 列规则定义
 
@@ -55,23 +56,24 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fsourceamount | 金额 | numeric | 23 | 10 | √ | 0 | 金额 |
-| 3 | fcustomer | 收款人（客户） | int8 | 64 |  | √ | 0 | 客户 bd_customer |
+| 3 | fcustomer | 收款人（客户） | int8 | 64 |  | √ | 0 | [客户 bd_customer](../basedata_files/bd_customer.md) |
 | 4 | fsourcebilltype | 源单类型 | varchar | 50 |  | √ | ' ' | 源单类型 |
-| 5 | fpayertype | 收款人类型 | varchar | 50 |  | √ | ' ' | 收款人类型,枚举: bd_supplier :供应商 bd_customer :客户 bos_org :内部公司 er_payeer :个人 other :其他 |
-| 6 | fsourceentryid | 源单分录id | varchar | 50 |  | √ | ' ' | 源单分录id |
-| 7 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 8 | fsourcecurrency | 源分录币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
-| 9 | fcasorg | 收款人（内部公司） | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 10 | fpayerbank | 开户银行 | int8 | 64 |  | √ | 0 | 行名行号 bd_bebank |
-| 11 | fpayername | 收款人 | varchar | 100 |  | √ | ' ' | 收款人 |
-| 12 | fsupplier | 收款人（供应商） | int8 | 64 |  | √ | 0 | 供应商 bd_supplier |
-| 13 | fpayeerid | 收款人（个人） | int8 | 64 |  | √ | 0 | 收款信息 er_payeer |
-| 14 | fsourcebillid | 源单id | varchar | 50 |  | √ | 0 | 源单id |
-| 15 | fpayeraccountname | 账户名称 | varchar | 100 |  | √ | ' ' | 账户名称 |
-| 16 | fpayeraccount | 银行账号 | varchar | 100 |  | √ | ' ' | 银行账号 |
-| 17 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 18 | fsourcebillno | 源单编码 | varchar | 80 |  | √ | ' ' | 源单编码 |
-| 19 | fsourcerow | 源单行号 | varchar | 50 |  | √ | ' ' | 源单行号 |
+| 5 | fothercontactunit | 其他往来单位 | int8 | 64 |  | √ | 0 | [其他往来单位 cas_othercontactunit](../cas_files/cas_othercontactunit.md) |
+| 6 | fpayertype | 收款人类型 | varchar | 50 |  | √ | ' ' | 收款人类型,枚举: bd_supplier :供应商 bd_customer :客户 bos_org :内部公司 er_payeer :个人 other :其他 cas_othercontactunit :其他往来单位 |
+| 7 | fsourceentryid | 源单分录id | varchar | 50 |  | √ | ' ' | 源单分录id |
+| 8 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
+| 9 | fsourcecurrency | 源分录币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
+| 10 | fcasorg | 收款人（内部公司） | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 11 | fpayerbank | 开户银行 | int8 | 64 |  | √ | 0 | [行名行号 bd_bebank](../basedata_files/bd_bebank.md) |
+| 12 | fpayername | 收款人 | varchar | 100 |  | √ | ' ' | 收款人 |
+| 13 | fsupplier | 收款人（供应商） | int8 | 64 |  | √ | 0 | [供应商 bd_supplier](../basedata_files/bd_supplier.md) |
+| 14 | fpayeerid | 收款人（个人） | int8 | 64 |  | √ | 0 | [收款信息 er_payeer](../em_files/er_payeer.md) |
+| 15 | fsourcebillid | 源单id | varchar | 50 |  | √ | 0 | 源单id |
+| 16 | fpayeraccountname | 账户名称 | varchar | 100 |  | √ | ' ' | 账户名称 |
+| 17 | fpayeraccount | 银行账号 | varchar | 100 |  | √ | ' ' | 银行账号 |
+| 18 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 19 | fsourcebillno | 源单编号 | varchar | 80 |  | √ | ' ' | 源单编号 |
+| 20 | fsourcerow | 源单行号 | varchar | 50 |  | √ | ' ' | 源单行号 |
 
 ### 列规则定义
 
@@ -127,22 +129,23 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fbillstatus | 单据状态 | varchar | 1 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :审核中 D :审核未通过 E :审核通过 H :废弃 I :关闭 |
 | 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 5 | ftel | 联系方式 | varchar | 100 |  | √ | ' ' | 联系方式 |
-| 6 | forgid | 部门 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 7 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
+| 6 | forgid | 部门 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 7 | fauditdate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
 | 8 | fdescription | 事由 | varchar | 1000 |  | √ | ' ' | 事由 |
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 10 | fapplierposition | 职位 | varchar | 100 |  | √ | ' ' | 职位 |
-| 11 | fapplierid | 申请人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fapplierid | 申请人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fchangedate | 变更日期 | timestamp | 0 |  |  | null | 变更日期 |
-| 14 | fnextauditor | 下一步审核人 | varchar | 200 |  | √ | ' ' | 下一步审核人 |
-| 15 | fbillno | 单据编号 | varchar | 80 |  | √ | ' ' | 单据编号 |
-| 16 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 17 | fcompanyid | 公司 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 14 | ftrdbizno | 第三方业务编号 | varchar | 160 |  | √ | ' ' | 第三方业务编号 |
+| 15 | fnextauditor | 下一步审核人 | varchar | 200 |  | √ | ' ' | 下一步审核人 |
+| 16 | fbillno | 单据编号 | varchar | 80 |  | √ | ' ' | 单据编号 |
+| 17 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 18 | fcompanyid | 公司 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 
 ### 列规则定义
 

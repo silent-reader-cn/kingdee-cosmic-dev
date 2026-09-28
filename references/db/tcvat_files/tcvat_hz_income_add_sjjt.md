@@ -12,12 +12,13 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fenddate | 税款所属期止 | timestamp | 0 |  |  | null | 税款所属期止 |
 | 3 | fstartdate | 税款所属期起 | timestamp | 0 |  |  | null | 税款所属期起 |
-| 4 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 4 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | fcurrentdecrease | 本期调减额 | numeric | 23 | 10 | √ | 0 | 本期调减额 |
-| 6 | ftaxpayertype | 纳税人类型 | varchar | 50 |  | √ | ' ' | 纳税人类型 |
-| 7 | fservicetype | 业务类型 | varchar | 50 |  | √ | ' ' | 业务类型 |
-| 8 | frowno | 序号 | varchar | 50 |  | √ | ' ' | 序号 |
-| 9 | fcurrentamount | 本期发生额 | numeric | 23 | 10 | √ | 0 | 本期发生额 |
+| 6 | fdeadline | 缴纳期限 | varchar | 50 |  | √ | ' ' | 缴纳期限,枚举: aysb :按月申报 ajsb :按季申报 |
+| 7 | ftaxpayertype | 纳税人类型 | varchar | 50 |  | √ | ' ' | 纳税人类型 |
+| 8 | fservicetype | 业务类型 | varchar | 50 |  | √ | ' ' | 业务类型 |
+| 9 | frowno | 序号 | varchar | 50 |  | √ | ' ' | 序号 |
+| 10 | fcurrentamount | 本期发生额 | numeric | 23 | 10 | √ | 0 | 本期发生额 |
 
 ### 列规则定义
 

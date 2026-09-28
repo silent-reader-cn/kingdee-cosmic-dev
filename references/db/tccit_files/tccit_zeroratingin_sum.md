@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fserialno | 流水号 | varchar | 50 |  | √ | ' ' | 流水号 |
-| 3 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | fskssqq | 日期范围.开始 | timestamp | 0 |  |  | null | 日期范围.开始 |
 | 5 | fpayregammount | 费用化支出金额 | numeric | 23 | 10 | √ | 0 | 费用化支出金额 |
 | 6 | fincomedate | 取得日期 | timestamp | 0 |  |  | null | 取得日期 |

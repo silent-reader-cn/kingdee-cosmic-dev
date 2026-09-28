@@ -48,14 +48,14 @@
 | 5 | fstatus | 数据状态 | bpchar | 1 |  |  | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 6 | fcreatedate | fcreatedate | timestamp | 0 |  | √ | LOCALTIMESTAMP |  |
 | 7 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fmodifydate | fmodifydate | timestamp | 0 |  |  | LOCALTIMESTAMP |  |
 | 10 | fforbiderid | fforbiderid | int8 | 64 |  | √ | 0 |  |
 | 11 | fapprovedate | fapprovedate | timestamp | 0 |  |  | null |  |
 | 12 | fcreateorgid | fcreateorgid | int8 | 64 |  | √ | 0 |  |
-| 13 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
-| 15 | fparentid | 上级 | int8 | 64 |  |  | null | 云打印服务 bos_cloudprintservice |
+| 15 | fparentid | 上级 | int8 | 64 |  |  | null | [云打印服务 bos_cloudprintservice](../frame_files/bos_cloudprintservice.md) |
 | 16 | fcreatetime | 创建时间 | timestamp | 0 |  | √ | LOCALTIMESTAMP | 创建时间 |
 | 17 | ffullname | 长名称 | varchar | 100 |  | √ | ' ' | 长名称 |
 | 18 | flongnumber | 长编码 | varchar | 256 |  | √ | ' ' | 长编码 |

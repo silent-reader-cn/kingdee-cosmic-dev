@@ -1,4 +1,4 @@
-# 配置号编码规则-bd_configcoderule
+# 配置号编码规则（废弃）-bd_configcoderule
 
 ## 单据体-子表 t_bd_configcoderuleentry
 
@@ -16,7 +16,7 @@
 | 5 | fformat | 格式 | varchar | 50 |  | √ | ' ' | 格式 |
 | 6 | fformatvalue | 格式值 | varchar | 50 |  | √ | ' ' | 格式值 |
 | 7 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 8 | fcodeattr | 编码属性 | int8 | 64 |  | √ | 0 | 配置号编码属性 bd_configcodeattr |
+| 8 | fcodeattr | 编码属性 | int8 | 64 |  | √ | 0 | [配置号编码属性（废弃） bd_configcodeattr](../sbd_files/bd_configcodeattr.md) |
 | 9 | fsetvalue | 设置值 | varchar | 20 |  | √ | ' ' | 设置值 |
 | 10 | fentrylength | 长度 | int8 | 64 |  | √ | 0 | 长度 |
 | 11 | fusemode | 使用模式 | bpchar | 1 |  | √ | ' ' | 使用模式,枚举: A :完全取值 B :部分截断 |
@@ -40,9 +40,9 @@
 
 ---
 
-## 配置号编码规则-多语言表 t_bd_configcoderule_l
+## 配置号编码规则（废弃）-多语言表 t_bd_configcoderule_l
 
-- **表名称：** 配置号编码规则-多语言表
+- **表名称：** 配置号编码规则（废弃）-多语言表
 - **表名：** t_bd_configcoderule_l
 
 ### 表格列定义
@@ -69,9 +69,9 @@
 
 ---
 
-## 配置号编码规则-主表 t_bd_configcoderule
+## 配置号编码规则（废弃）-主表 t_bd_configcoderule
 
-- **表名称：** 配置号编码规则-主表
+- **表名称：** 配置号编码规则（废弃）-主表
 - **表名：** t_bd_configcoderule
 
 ### 表格列定义
@@ -80,16 +80,16 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 5 | fdescription | 描述 | varchar | 255 |  | √ | ' ' | 描述 |
-| 6 | fdisableuser | 禁用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | fdisableuser | 禁用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 8 | fdisabletime | 禁用时间 | timestamp | 0 |  |  | null | 禁用时间 |
 | 9 | fenabletime | 启用时间 | timestamp | 0 |  |  | null | 启用时间 |
 | 10 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 11 | fenableuser | 启用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fenableuser | 启用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 14 | fseparator | 段间分隔符 | bpchar | 1 |  | √ | ' ' | 段间分隔符 |
 | 15 | fdescription_tag | fdescription_tag | text | 0 |  |  | null |  |

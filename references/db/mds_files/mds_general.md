@@ -41,8 +41,8 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
 | 3 | fstatus | 数据状态 | varchar | 5 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 5 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 5 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 7 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 8 | fenable | 使用状态 | varchar | 5 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
@@ -74,20 +74,20 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fcustomer | 客户编码 | int8 | 64 |  | √ | 0 | 客户 bd_customer |
-| 3 | fentrymodifier | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fcustomer | 客户编码 | int8 | 64 |  | √ | 0 | [客户 bd_customer](../basedata_files/bd_customer.md) |
+| 3 | fentrymodifier | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | freasondesc | 原因描述 | varchar | 255 |  | √ | ' ' | 原因描述 |
 | 5 | fentrymodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 6 | flongcycle | 长周期 | numeric | 23 | 10 | √ | 0 | 长周期 |
 | 7 | favgdelivery | 三年平均交期 | numeric | 23 | 10 | √ | 0 | 三年平均交期 |
 | 8 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 9 | factype | 检修设备类型 | int8 | 64 |  | √ | 0 | 检修设备类型 mpdm_mrtype |
-| 10 | fapplicant | 申请人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 11 | fentrycreator | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | factype | 检修设备类型 | int8 | 64 |  | √ | 0 | [检修设备类型 mpdm_mrtype](../mpdm_files/mpdm_mrtype.md) |
+| 10 | fapplicant | 申请人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 11 | fentrycreator | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | feffectdate | 生效日期 | timestamp | 0 |  |  | null | 生效日期 |
-| 13 | fmaterialtype | 物料类型 | int8 | 64 |  | √ | 0 | 物料分类 bd_materialgroup |
+| 13 | fmaterialtype | 物料类型 | int8 | 64 |  | √ | 0 | [物料分类 bd_materialgroup](../basedata_files/bd_materialgroup.md) |
 | 14 | fentrycreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 15 | fmaterial | 物料编码 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 15 | fmaterial | 物料编码 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 16 | fislongcyclemater | 是否长周期物料 | bpchar | 1 |  | √ | '0' | 是否长周期物料 |
 | 17 | flosedate | 失效日期 | timestamp | 0 |  |  | null | 失效日期 |
 | 18 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |

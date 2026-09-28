@@ -11,16 +11,16 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fpaycustomerid | fpaycustomerid | int8 | 64 |  | √ | 0 |  |
-| 3 | fpayerbankid | 开户银行 | int8 | 64 |  | √ | 0 | 行名行号 bd_bebank |
+| 3 | fpayerbankid | 开户银行 | int8 | 64 |  | √ | 0 | [行名行号 bd_bebank](../basedata_files/bd_bebank.md) |
 | 4 | faccountname | faccountname | varchar | 255 |  | √ | ' ' |  |
-| 5 | fpaycurrencyid | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 5 | fpaycurrencyid | 币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 | 6 | fseq | fseq | int4 | 32 |  | √ | 0 |  |
 | 7 | freceivableamt | 收款金额 | numeric | 23 | 10 | √ | 0 | 收款金额 |
 | 8 | fpaytype | fpaytype | bpchar | 1 |  | √ | ' ' |  |
 | 9 | fpayrate | 汇率 | numeric | 23 | 10 | √ | 0 | 汇率 |
 | 10 | freceivableamtlocal | 本位币金额 | numeric | 23 | 10 | √ | 0 | 本位币金额 |
 | 11 | fpayeraccount | 银行账号 | varchar | 100 |  | √ | ' ' | 银行账号 |
-| 12 | fpayerid | 收款人 | int8 | 64 |  | √ | 0 | 收款信息 er_payeer |
+| 12 | fpayerid | 收款人 | int8 | 64 |  | √ | 0 | [收款信息 er_payeer](../em_files/er_payeer.md) |
 | 13 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 14 | fsettlementtypeid | fsettlementtypeid | int8 | 64 |  | √ | 0 |  |
 

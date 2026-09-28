@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fcreatetime | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
-| 3 | farticheckpoint | 人工检查项 | int8 | 64 |  | √ | 0 | 人工检查项 task_checkpoint |
+| 3 | farticheckpoint | 人工检查项 | int8 | 64 |  | √ | 0 | [人工检查项 task_checkpoint](../ssc_files/task_checkpoint.md) |
 | 4 | fiscontented | 是否合格 | bpchar | 1 |  | √ | '0' | 是否合格 |
 | 5 | ftaskid | 任务id | varchar | 50 |  | √ | ' ' | 任务id |
 

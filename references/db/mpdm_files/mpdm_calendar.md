@@ -70,7 +70,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fname | 日历名称 | varchar | 100 |  | √ | ' ' | 日历名称 |
+| 2 | fname | 日历名称 | varchar | 225 |  | √ | ' ' | 日历名称 |
 | 3 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
 | 4 | fpkid | fpkid | varchar | 18 |  | √ | ' ' | pkid |
 
@@ -127,26 +127,26 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fissunrest | 周日 | bpchar | 1 |  | √ | '1' | 周日 |
 | 3 | fexpiringyearto | 结束年 | varchar | 30 |  | √ | ' ' | 结束年,枚举: |
-| 4 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 5 | fworkshop | 车间 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 4 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 5 | fworkshop | 车间 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | fiswedrest | 周三 | bpchar | 1 |  | √ | '0' | 周三 |
-| 7 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 7 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | fishalfmonrest | 周一 | bpchar | 1 |  | √ | '0' | 周一 |
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 10 | fishalftuerest | 周二 | bpchar | 1 |  | √ | '0' | 周二 |
 | 11 | fishalfsatrest | 周六 | bpchar | 1 |  | √ | '0' | 周六 |
 | 12 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 15 | fishalfwedrest | 周三 | bpchar | 1 |  | √ | '0' | 周三 |
 | 16 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 17 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
 | 18 | fisfrirest | 周五 | bpchar | 1 |  | √ | '0' | 周五 |
 | 19 | fishalfthurest | 周四 | bpchar | 1 |  | √ | '0' | 周四 |
-| 20 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 21 | fuserorg | 使用组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 20 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 21 | fuserorg | 使用组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 22 | fismonrest | 周一 | bpchar | 1 |  | √ | '0' | 周一 |
-| 23 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 23 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 24 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 25 | fisindividuation | 个性化标志 | int8 | 64 |  | √ | 0 | 个性化标志 |
 | 26 | fisthurest | 周四 | bpchar | 1 |  | √ | '0' | 周四 |

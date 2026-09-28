@@ -41,21 +41,21 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fremark | 备注 | varchar | 255 |  |  | null | 备注 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fname | 名称 | varchar | 80 |  | √ | ' ' | 名称 |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 6 | fcalsystemid | 核算体系 | int8 | 64 |  | √ | 0 | 核算体系 xkbd_accountingsys |
-| 7 | fcalorgid | 核算组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | fcalsystemid | 核算体系 | int8 | 64 |  | √ | 0 | [核算体系 xkbd_accountingsys](../fibd_files/xkbd_accountingsys.md) |
+| 7 | fcalorgid | 核算组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | fismainaccount | 是否默认成本主体 | bpchar | 1 |  | √ | '0' | 是否默认成本主体 |
 | 9 | fremark_tag | fremark_tag | text | 0 |  |  | null |  |
-| 10 | fdividebasisid | 划分依据 | int8 | 64 |  | √ | 0 | 划分依据 cal_bd_dividebasis |
+| 10 | fdividebasisid | 划分依据 | int8 | 64 |  | √ | 0 | [划分依据 cal_bd_dividebasis](../cal_files/cal_bd_dividebasis.md) |
 | 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 12 | fstatus | 数据状态 | varchar | 5 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 13 | fcalpolicyid | 会计政策 | int8 | 64 |  | √ | 0 | 会计政策 cal_bd_calpolicy |
-| 14 | fbooktypeid | 主体类别 | int8 | 64 |  | √ | 0 | 成本主体类别 cal_bd_costaccounttype |
-| 15 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fcalpolicyid | 会计政策 | int8 | 64 |  | √ | 0 | [会计政策 cal_bd_calpolicy](../cal_files/cal_bd_calpolicy.md) |
+| 14 | fbooktypeid | 主体类别 | int8 | 64 |  | √ | 0 | [成本主体类别 cal_bd_costaccounttype](../cal_files/cal_bd_costaccounttype.md) |
+| 15 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 16 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 17 | fcosttypeid | 成本类型 | int8 | 64 |  | √ | 0 | 标准成本方案 cad_costtype |
+| 17 | fcosttypeid | 成本类型 | int8 | 64 |  | √ | 0 | [标准成本方案 cad_costtype](../basedata_files/cad_costtype.md) |
 | 18 | fendinitcheck | 结束初始化对账是否提示 | bpchar | 1 |  | √ | '0' | 结束初始化对账是否提示,枚举: A :校验-提示 B :不校验 C :校验-强制 |
 | 19 | fisenabledrealtimecost | 启用即时成本 | bpchar | 1 |  | √ | '0' | 启用即时成本 |
 | 20 | fenable | 使用状态 | varchar | 5 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |

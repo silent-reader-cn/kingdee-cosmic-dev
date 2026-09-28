@@ -1,8 +1,8 @@
-# 字段权限方案-perm_fieldscheme
+# 属性/明细字段权限方案-perm_fieldscheme
 
-## 字段权限方案-主表 t_perm_fieldscheme
+## 属性/明细字段权限方案-主表 t_perm_fieldscheme
 
-- **表名称：** 字段权限方案-主表
+- **表名称：** 属性/明细字段权限方案-主表
 - **表名：** t_perm_fieldscheme
 
 ### 表格列定义
@@ -11,19 +11,19 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 方案名称 | varchar | 255 |  | √ | ' ' | 方案名称 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fcontrolfieldtype | 控件字段类型 | varchar | 255 |  | √ | ' ' | 控件字段类型,枚举: |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 6 | ffieldfrom | 字段来源类型 | varchar | 10 |  | √ | '2' | 字段来源类型,枚举: 2 :按字段 1 :按字段属性 |
+| 6 | ffieldfrom | 方案类型 | varchar | 10 |  | √ | '2' | 方案类型,枚举: 2 :明细字段权限方案 1 :属性字段权限方案 |
 | 7 | fcontrolmode | 控制模式 | varchar | 10 |  | √ | ' ' | 控制模式,枚举: 10 :禁止查看 20 :禁止编辑 |
-| 8 | fappid | 应用 | varchar | 36 |  | √ | ' ' | 业务应用实体 bos_devportal_bizapp |
+| 8 | fappid | 应用 | varchar | 36 |  | √ | ' ' | [业务应用实体 bos_devportal_bizapp](../mdl_files/bos_devportal_bizapp.md) |
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 10 | fsensitive | 敏感字段方案 | bpchar | 1 |  | √ | '0' | 敏感字段方案 |
 | 11 | fstatus | 数据状态 | varchar | 30 |  | √ | 'C' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 12 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | fissystem | 系统预设 | bpchar | 1 |  | √ | '0' | 系统预设 |
-| 15 | fentnum | 业务对象 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 15 | fentnum | 业务对象 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 16 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 17 | fnumber | 方案编码 | varchar | 30 |  | √ | ' ' | 方案编码 |
 | 18 | fdesc | 描述 | varchar | 255 |  | √ | ' ' | 描述 |
@@ -43,9 +43,9 @@
 
 ---
 
-## 字段权限方案-多语言表 t_perm_fieldscheme_l
+## 属性/明细字段权限方案-多语言表 t_perm_fieldscheme_l
 
-- **表名称：** 字段权限方案-多语言表
+- **表名称：** 属性/明细字段权限方案-多语言表
 - **表名：** t_perm_fieldscheme_l
 
 ### 表格列定义
@@ -70,6 +70,66 @@
 | :--- | :--- | :--- | :--- |
 | 1 | pk_t_perm_fieldscheme_l |  | fpkid |
 | 2 | idx_perm_fieldscheme_l |  | fid,flocaleid |
+
+---
+
+## 字段类型明细-子表 t_xkperm_fieldschemet
+
+- **表名称：** 字段类型明细-子表
+- **表名：** t_xkperm_fieldschemet
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | ffieldtype | 字段编码 | int8 | 64 |  | √ | 0 | [业务字段类型 xkperm_businessfieldtype](../xkbase_files/xkperm_businessfieldtype.md) |
+| 3 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
+| 4 | fcontrolmode | 控制模式 | varchar | 50 |  | √ | ' ' | 控制模式 |
+| 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fentryid | fentryid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_perm_fieldschemet_fid |  | fid,fseq |
+| 2 | pk_xkperm_fieldschemet |  | fentryid |
+
+---
+
+## 业务对象明细-子表 t_xkperm_fieldschemeo
+
+- **表名称：** 业务对象明细-子表
+- **表名：** t_xkperm_fieldschemeo
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fentnum | 业务对象编码 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
+| 3 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
+| 4 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 5 | fbizappid | 应用 | varchar | 36 |  | √ | ' ' | [业务应用实体 bos_devportal_bizapp](../mdl_files/bos_devportal_bizapp.md) |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fentryid | fentryid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | pk_xkperm_fieldschemeo |  | fentryid |
+| 2 | idx_perm_fieldschemeo_fid |  | fid,fseq |
 
 ---
 

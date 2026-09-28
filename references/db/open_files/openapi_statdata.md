@@ -11,12 +11,13 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | ftime | 日期 | int8 | 64 |  | √ | 0 | 日期 |
-| 3 | fthirdid | 第三方应用 | int8 | 64 |  | √ | 0 | 第三方应用维护 openapi_3rdapps |
+| 3 | fthirdid | 第三方应用 | int8 | 64 |  | √ | 0 | [第三方应用 third_app](../open_files/third_app.md) |
 | 4 | ftype | 类型 | int4 | 32 |  | √ | 0 | 类型,枚举: 1 :时明细(24小时) 2 :天明细(90天) 7 :天汇总数据 9 :总汇总数据 |
-| 5 | fapiid | API | int8 | 64 |  | √ | 0 | API服务 openapi_apilist |
-| 6 | fsuccesscnt | 成功次数 | int8 | 64 |  | √ | 0 | 成功次数 |
-| 7 | fcnt | 调用总次数 | int8 | 64 |  | √ | 0 | 调用总次数 |
-| 8 | fcost | 调用总耗时 | int8 | 64 |  | √ | 0 | 调用总耗时 |
+| 5 | fapiid | API | int8 | 64 |  | √ | 0 | [API服务 openapi_apilist](../open_files/openapi_apilist.md) |
+| 6 | fbillcnt | 计费次数 | int8 | 64 |  | √ | 0 | 计费次数 |
+| 7 | fsuccesscnt | 成功次数 | int8 | 64 |  | √ | 0 | 成功次数 |
+| 8 | fcnt | 调用总次数 | int8 | 64 |  | √ | 0 | 调用总次数 |
+| 9 | fcost | 调用总耗时 | int8 | 64 |  | √ | 0 | 调用总耗时 |
 
 ### 列规则定义
 

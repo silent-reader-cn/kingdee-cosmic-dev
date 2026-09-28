@@ -18,7 +18,7 @@
 | 7 | fverifyqty | 核销数量 | numeric | 23 | 10 | √ | 0 | 核销数量 |
 | 8 | fverifybilleid | 核销单据分录id | int8 | 64 |  | √ | 0 | 核销单据分录id |
 | 9 | fverifyfield | 核销字段 | varchar | 255 |  | √ | ' ' | 核销字段 |
-| 10 | fverifyformid | 核销对象 | varchar | 30 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 10 | fverifyformid | 核销对象 | varchar | 30 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 
 ### 列规则定义
 

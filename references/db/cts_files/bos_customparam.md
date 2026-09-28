@@ -11,13 +11,13 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 参数名称 | varchar | 255 |  | √ | ' ' | 参数名称 |
-| 3 | fgroupid | 分组 | int8 | 64 |  | √ | 0 | 系统参数分类 bos_sysparam_group |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fgroupid | 分组 | int8 | 64 |  | √ | 0 | [系统参数分类 bos_sysparam_group](../cts_files/bos_sysparam_group.md) |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  | √ | LOCALTIMESTAMP | 创建时间 |
 | 6 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 7 | fvalue | 参数值 | varchar | 255 |  | √ | ' ' | 参数值 |
 | 8 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 9 | fcreatorid | 创建人 | varchar | 50 |  | √ | ' ' | 人员 bos_user |
+| 9 | fcreatorid | 创建人 | varchar | 50 |  | √ | ' ' | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | fmasterid | 主数据内码 | varchar | 36 |  | √ | ' ' | 主数据内码 |
 | 11 | fkey | 参数编码 | varchar | 80 |  | √ | ' ' | 参数编码 |
 | 12 | fsort | fsort | int4 | 32 |  | √ | 0 |  |

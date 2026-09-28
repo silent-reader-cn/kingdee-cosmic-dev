@@ -11,8 +11,10 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fenablebalanceservicelog | 开启资金池服务日志 | bpchar | 1 |  | √ | '1' | 开启资金池服务日志 |
-| 3 | fenablerecordsubscription | 使用事件订阅 | bpchar | 1 |  | √ | '1' | 使用事件订阅 |
-| 4 | fbalancebatchcount | 资金池批量更新 | int4 | 32 |  | √ | 50 | 资金池批量更新 |
+| 3 | fak | ak | varchar | 255 |  | √ | ' ' | ak |
+| 4 | fenablerecordsubscription | 使用事件订阅 | bpchar | 1 |  | √ | '1' | 使用事件订阅 |
+| 5 | fenablerepuse | 是否启用货补 | bpchar | 1 |  | √ | '0' | 是否启用货补 |
+| 6 | fbalancebatchcount | 资金池批量更新 | int4 | 32 |  | √ | 50 | 资金池批量更新 |
 
 ### 列规则定义
 

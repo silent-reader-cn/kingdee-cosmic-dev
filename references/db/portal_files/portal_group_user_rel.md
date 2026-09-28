@@ -10,8 +10,8 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fgroupid | 方案用户组 | int8 | 64 |  | √ | 0 | 用户组 portal_scheme_group |
-| 3 | fuserid | 人员 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fgroupid | 方案用户组 | int8 | 64 |  | √ | 0 | [用户组 portal_scheme_group](../portal_files/portal_scheme_group.md) |
+| 3 | fuserid | 人员 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

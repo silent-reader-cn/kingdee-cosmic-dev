@@ -10,8 +10,8 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmastercfgid | 主业务单据配置 | int8 | 64 |  | √ | 0 | 业务数据统计配置表 iptm_bds_config |
-| 3 | frelationcfgid | 关联业务单据配置 | int8 | 64 |  | √ | 0 | 业务数据统计配置表 iptm_bds_config |
+| 2 | fmastercfgid | 主业务单据配置 | int8 | 64 |  | √ | 0 | [业务数据统计配置表 iptm_bds_config](../iptm_files/iptm_bds_config.md) |
+| 3 | frelationcfgid | 关联业务单据配置 | int8 | 64 |  | √ | 0 | [业务数据统计配置表 iptm_bds_config](../iptm_files/iptm_bds_config.md) |
 
 ### 列规则定义
 

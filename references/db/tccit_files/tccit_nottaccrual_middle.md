@@ -14,7 +14,7 @@
 | 3 | fsyjzje | 当年剩余结转 | numeric | 23 | 10 | √ | 0.0000000000 | 当年剩余结转 |
 | 4 | fbillstatus | 单据状态 | varchar | 50 |  | √ | ' ' | 单据状态,枚举: 0 :禁用 1 :可用 |
 | 5 | fljtaxincome | 累计税收收入金额 | numeric | 23 | 10 | √ | 0.0000000000 | 累计税收收入金额 |
-| 6 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fdnzzsr | 本年账载收入 | numeric | 23 | 10 | √ | 0.0000000000 | 本年账载收入 |
 | 8 | fdnsssr | 本年税收收入 | numeric | 23 | 10 | √ | 0.0000000000 | 本年税收收入 |
 | 9 | fsyjzamount | 剩余结转金额 | numeric | 23 | 10 | √ | 0.0000000000 | 剩余结转金额 |

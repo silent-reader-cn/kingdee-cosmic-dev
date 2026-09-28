@@ -17,9 +17,9 @@
 | 6 | fcreatedate | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
 | 7 | fdispatchtime | 提交时间 | timestamp | 0 |  |  | null | 提交时间 |
 | 8 | fmodifydate | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
-| 9 | foperater | 操作人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | foperater | 操作人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | fendtime | 结束运行时间 | timestamp | 0 |  |  | null | 结束运行时间 |
-| 11 | ftaskdefine | 任务 | varchar | 36 |  | √ | ' ' | 调度执行程序 sch_taskdefine |
+| 11 | ftaskdefine | 任务 | varchar | 36 |  | √ | ' ' | [调度执行程序 sch_taskdefine](../sys_files/sch_taskdefine.md) |
 | 12 | ftaskid | 任务id | varchar | 50 |  | √ | ' ' | 任务id |
 | 13 | fexecutetype | 执行类型 | varchar | 50 |  | √ | ' ' | 执行类型,枚举: 1 :自动执行 2 :手工执行 |
 

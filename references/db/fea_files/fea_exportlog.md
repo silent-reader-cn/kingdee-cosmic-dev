@@ -39,12 +39,12 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fuser | 导出人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fuser | 导出人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | ffiletype | 文件格式 | varchar | 100 |  | √ | ' ' | 文件格式 |
 | 4 | fplanname | fplanname | varchar | 100 |  | √ | ' ' |  |
 | 5 | fdatetime | 导出时间 | timestamp | 0 |  |  | null | 导出时间 |
-| 6 | fplan | 导出方案 | int8 | 64 |  | √ | 0 | 导出方案 fea_plan |
-| 7 | forg | 核算组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | fplan | 导出方案 | int8 | 64 |  | √ | 0 | [导出方案 fea_plan](../fea_files/fea_plan.md) |
+| 7 | forg | 核算组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | fplannumber | 导出方案编码 | varchar | 30 |  | √ | ' ' | 导出方案编码 |
 
 ### 列规则定义

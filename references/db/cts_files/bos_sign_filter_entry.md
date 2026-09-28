@@ -9,7 +9,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | 签名方案 | int8 | 64 |  | √ | 0 | 签名方案 sign_scheme |
+| 1 | fid | 签名方案 | int8 | 64 |  | √ | 0 | [签名方案 sign_scheme](../cts_files/sign_scheme.md) |
 | 2 | ffiltername | 过滤条件 | varchar | 100 |  | √ | ' ' | 过滤条件 |
 | 3 | ffiltertype | 类型 | bpchar | 1 |  | √ | '1' | 类型,枚举: 1 :匹配 |
 | 4 | fenable | 启用 | bpchar | 1 |  | √ | '0' | 启用 |

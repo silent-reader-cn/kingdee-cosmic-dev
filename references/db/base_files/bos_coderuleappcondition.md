@@ -9,7 +9,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | 编码规则 | varchar | 36 |  | √ | ' ' | 编码规则 bos_coderule |
+| 1 | fid | 编码规则 | varchar | 36 |  | √ | ' ' | [编码规则 bos_coderule](../base_files/bos_coderule.md) |
 | 2 | fpropertyvalue | 属性值 | varchar | 100 |  | √ | ' ' | 属性值 |
 | 3 | fseq | 序号 | int8 | 64 |  | √ | 0 | 序号 |
 | 4 | fproperty | 属性 | varchar | 100 |  | √ | ' ' | 属性 |

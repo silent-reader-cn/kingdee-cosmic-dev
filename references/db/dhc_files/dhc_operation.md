@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fbindbill | 接入单据 | int8 | 64 |  | √ | 0 | 接入单据 dhc_billaccessed |
+| 2 | fbindbill | 接入单据 | int8 | 64 |  | √ | 0 | [接入单据 dhc_billaccessed](../dhc_files/dhc_billaccessed.md) |
 | 3 | finnerid | 接入单据内码 | varchar | 50 |  | √ | ' ' | 接入单据内码 |
 | 4 | foperationname | 触发操作名称 | varchar | 100 |  | √ | ' ' | 触发操作名称 |
 | 5 | foperationnumber | 触发操作编码 | varchar | 100 |  | √ | ' ' | 触发操作编码 |

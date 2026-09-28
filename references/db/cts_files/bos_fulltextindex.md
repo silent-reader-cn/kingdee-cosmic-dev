@@ -12,7 +12,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fsynctime | 同步时间 | timestamp | 0 |  |  | null | 同步时间 |
 | 3 | ffieldname | 索引字段 | varchar | 4000 |  | √ | ' ' | 索引字段 |
-| 4 | fentitynumber | 实体对象 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 4 | fentitynumber | 实体对象 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 
 ### 列规则定义
 

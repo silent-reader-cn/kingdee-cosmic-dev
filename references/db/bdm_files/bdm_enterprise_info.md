@@ -132,9 +132,9 @@
 | 5 | foilexpireendtime | 成品油标识有效期.结束 | timestamp | 0 |  |  | null | 成品油标识有效期.结束 |
 | 6 | fzgswjgdm | 税务机关代码： | varchar | 50 |  | √ | ' ' | 税务机关代码： |
 | 7 | foilwhitelistmark | 成品油白名单标识 | varchar | 30 |  | √ | ' ' | 成品油白名单标识,枚举: 00 :非成品油白名单企业 01 :成品油白名单企业 |
-| 8 | forg | 组织 | int8 | 64 |  | √ | 0 | 企业管理 bdm_org |
+| 8 | forg | 组织 | int8 | 64 |  | √ | 0 | [企业管理 bdm_org](../bdm_files/bdm_org.md) |
 | 9 | fmodifytime | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
-| 10 | fepinfo | 企业基础信息 | int8 | 64 |  | √ | 0 | 企业基础信息 bdm_enterprise_baseinfo |
+| 10 | fepinfo | 企业基础信息 | int8 | 64 |  | √ | 0 | [企业基础信息 bdm_enterprise_baseinfo](../bdm_files/bdm_enterprise_baseinfo.md) |
 | 11 | fissuemark | 控制开票标志 | varchar | 30 |  | √ | ' ' | 控制开票标志,枚举: 00 :允许 01 :禁止 |
 | 12 | fregisterseq | 征管系统登记序号 | varchar | 50 |  | √ | ' ' | 征管系统登记序号 |
 | 13 | fversionno | 版本号 | varchar | 50 |  | √ | ' ' | 版本号 |
@@ -164,5 +164,5 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_bdm_enterprise_info_edx |  | fzgswjgdm |
-| 2 | pk_bdm_enterprise_info |  | fid |
+| 1 | pk_bdm_enterprise_info |  | fid |
+| 2 | idx_bdm_enterprise_info_edx |  | fzgswjgdm |

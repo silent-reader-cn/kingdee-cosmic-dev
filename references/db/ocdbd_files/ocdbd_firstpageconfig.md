@@ -1,66 +1,5 @@
 # 首页设置-ocdbd_firstpageconfig
 
-## 首页使用卡片设置-子表 t_ocdbd_usecardaccount
-
-- **表名称：** 首页使用卡片设置-子表
-- **表名：** t_ocdbd_usecardaccount
-
-### 表格列定义
-
-| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | faccountname | faccountname | varchar | 80 |  | √ | ' ' |  |
-| 3 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 4 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 1 :启用 0 :禁用 |
-| 5 | fplugin | 数据插件 | varchar | 255 |  | √ | ' ' | 数据插件 |
-| 6 | fissyspreset | 系统预设 | bpchar | 1 |  | √ | '0' | 系统预设 |
-| 7 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-
-### 列规则定义
-
-| 序号 | 键编码 | 列字段 |
-| :--- | :--- | :--- |
-| 1 | fentryid | fentryid |
-
-### 索引定义
-
-| 序号 | 索引名 | 唯一 | 列字段 |
-| :--- | :--- | :--- | :--- |
-| 1 | pk_ocdbd_usecardaccount |  | fentryid |
-| 2 | idx_ocdbd_usecardaccount_fid |  | fid |
-
----
-
-## 首页设置-多语言表 t_ocdbd_firstpage_l
-
-- **表名称：** 首页设置-多语言表
-- **表名：** t_ocdbd_firstpage_l
-
-### 表格列定义
-
-| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fname | 名称 | varchar | 80 |  | √ | ' ' | 名称 |
-| 3 | flocaleid | flocaleid | varchar | 10 |  | √ | 'zh_CN' | localeid |
-| 4 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
-
-### 列规则定义
-
-| 序号 | 键编码 | 列字段 |
-| :--- | :--- | :--- |
-| 1 | fpkid | fpkid |
-
-### 索引定义
-
-| 序号 | 索引名 | 唯一 | 列字段 |
-| :--- | :--- | :--- | :--- |
-| 1 | idx_ocdbd_firstpagel_flid |  | fid,flocaleid |
-| 2 | pk_ocdbd_firstpage_l |  | fpkid |
-
----
-
 ## 首页设置-主表 t_ocdbd_firstpage
 
 - **表名称：** 首页设置-主表
@@ -71,29 +10,30 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 4 | fname | fname | varchar | 80 |  | √ | ' ' |  |
-| 5 | fpagetype | 页面类型 | bpchar | 1 |  | √ | ' ' | 页面类型,枚举: A :PC端 B :移动端 |
-| 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 7 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 8 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 9 | faudittime | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
-| 10 | fbaseviewid | 所属页面 | varchar | 50 |  | √ | ' ' | 主实体对象 bos_entityobject |
-| 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 12 | fctrlstrategy | 控制策略 | bpchar | 1 |  | √ | '5' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
-| 13 | fstatus | 数据状态 | bpchar | 1 |  | √ | 'A' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 14 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 15 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 16 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
-| 17 | fbitindex | 位图 | int8 | 64 |  | √ | 0 | 位图 |
-| 18 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 19 | fportalid | fportalid | int8 | 64 |  | √ | 0 |  |
-| 20 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
-| 21 | fuseorgid | 业务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 22 | fissyspreset | 是否系统预设 | bpchar | 1 |  | √ | '0' | 是否系统预设 |
-| 23 | fsourcebitindex | 原资料位图 | int8 | 64 |  | √ | 0 | 原资料位图 |
-| 24 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 3 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 4 | faudittime | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
+| 5 | fbaseviewid | 所属页面 | varchar | 50 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
+| 6 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 7 | fstatus | 数据状态 | bpchar | 1 |  | √ | 'A' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
+| 8 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
+| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 10 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
+| 11 | fbitindex | 位图 | int8 | 64 |  | √ | 0 | 位图 |
+| 12 | fportalid | fportalid | int8 | 64 |  | √ | 0 |  |
+| 13 | fissyspreset | 是否系统预设 | bpchar | 1 |  | √ | '0' | 是否系统预设 |
+| 14 | fschemeobjid | 首页方案 | int8 | 64 |  | √ | 0 | [首页方案 portal_scheme](../portal_files/portal_scheme.md) |
+| 15 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 16 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 17 | fname | fname | varchar | 80 |  | √ | ' ' |  |
+| 18 | fpagetype | 页面类型 | bpchar | 1 |  | √ | ' ' | 页面类型,枚举: A :渠道门户PC端 B :渠道门户移动端 C :渠道管家PC端 D :渠道管家移动端 |
+| 19 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 20 | fctrlstrategy | 控制策略 | bpchar | 1 |  | √ | '5' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
+| 21 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 22 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
+| 23 | fuseorgid | 业务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 24 | fsourcebitindex | 原资料位图 | int8 | 64 |  | √ | 0 | 原资料位图 |
+| 25 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 
@@ -112,35 +52,6 @@
 
 ---
 
-## 首页设置-使用范围表 t_ocdbd_firstpage_u
-
-- **表名称：** 首页设置-使用范围表
-- **表名：** t_ocdbd_firstpage_u
-
-### 表格列定义
-
-| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fcreateorgid | fcreateorgid | int8 | 64 |  |  | null |  |
-| 2 | fdataid | fdataid | int8 | 64 |  | √ | null |  |
-| 3 | fuseorgid | fuseorgid | int8 | 64 |  | √ | null |  |
-
-### 列规则定义
-
-| 序号 | 键编码 | 列字段 |
-| :--- | :--- | :--- |
-| 1 | fdataid | fdataid,fuseorgid |
-| 2 | fuseorgid | fdataid,fuseorgid |
-
-### 索引定义
-
-| 序号 | 索引名 | 唯一 | 列字段 |
-| :--- | :--- | :--- | :--- |
-| 1 | idx_t_ocdbd_firstpage_u_uo |  | fuseorgid |
-| 2 | pk_t_ocdbd_firstpage_u |  | fdataid,fuseorgid |
-
----
-
 ## 首页使用卡片设置-子表 t_ocdbd_usecardcfg
 
 - **表名称：** 首页使用卡片设置-子表
@@ -152,7 +63,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fname | fname | varchar | 80 |  | √ | ' ' |  |
-| 3 | fcardtypeid | 卡片类型 | int8 | 64 |  | √ | 0 | 卡片主档 ocdbd_firstpage_cardtype |
+| 3 | fcardtypeid | 卡片类型 | int8 | 64 |  | √ | 0 | [卡片主档 ocdbd_firstpage_cardtype](../ocdbd_files/ocdbd_firstpage_cardtype.md) |
 | 4 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 5 | flocationy | y | numeric | 23 | 10 | √ | 0 | y |
 | 6 | flocationx | x | numeric | 23 | 10 | √ | 0 | x |
@@ -265,66 +176,6 @@
 
 ---
 
-## 首页产品配置-子表 t_ocdbd_showitemdetail
-
-- **表名称：** 首页产品配置-子表
-- **表名：** t_ocdbd_showitemdetail
-
-### 表格列定义
-
-| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 2 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态 |
-| 3 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 | id |
-| 4 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
-| 5 | fitemid | 产品 | int8 | 64 |  | √ | 0 | 商品信息 ocdbd_iteminfo |
-| 6 | fitemlevel | 顺序号 | int4 | 32 |  | √ | 0 | 顺序号 |
-
-### 列规则定义
-
-| 序号 | 键编码 | 列字段 |
-| :--- | :--- | :--- |
-| 1 | fdetailid | fdetailid |
-
-### 索引定义
-
-| 序号 | 索引名 | 唯一 | 列字段 |
-| :--- | :--- | :--- | :--- |
-| 1 | pk_ocdbd_showitemdetail |  | fdetailid |
-| 2 | idx_ocdbd_showitemdetail_eid |  | fentryid |
-
----
-
-## 卡片内容详情-多语言表 t_ocdbd_usecardcfgdl_l
-
-- **表名称：** 卡片内容详情-多语言表
-- **表名：** t_ocdbd_usecardcfgdl_l
-
-### 表格列定义
-
-| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fname | 卡片内容名称 | varchar | 80 |  | √ | ' ' | 卡片内容名称 |
-| 2 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 |  |
-| 3 | flocaleid | flocaleid | varchar | 10 |  | √ | 'zh_CN' | localeid |
-| 4 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
-
-### 列规则定义
-
-| 序号 | 键编码 | 列字段 |
-| :--- | :--- | :--- |
-| 1 | fpkid | fpkid |
-
-### 索引定义
-
-| 序号 | 索引名 | 唯一 | 列字段 |
-| :--- | :--- | :--- | :--- |
-| 1 | pk_ocdbd_usecardcfgdl_l |  | fpkid |
-| 2 | idx_ocdbd_usecardcfgdll_dlid |  | fdetailid,flocaleid |
-
----
-
 ## 卡片内容详情-子表 t_ocdbd_usecardcfgdl
 
 - **表名称：** 卡片内容详情-子表
@@ -376,7 +227,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 资金账户 ocdbd_incentiveaccount |
+| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [资金账户 ocdbd_incentiveaccount](../occba_files/ocdbd_incentiveaccount.md) |
 | 2 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 | 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 
@@ -392,3 +243,183 @@
 | :--- | :--- | :--- | :--- |
 | 1 | idx_ocdbd_accountset |  | fentryid,fbasedataid |
 | 2 | pk_ocdbd_accountset |  | fpkid |
+
+---
+
+## 首页使用卡片设置-子表 t_ocdbd_usecardaccount
+
+- **表名称：** 首页使用卡片设置-子表
+- **表名：** t_ocdbd_usecardaccount
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | faccountname | faccountname | varchar | 80 |  | √ | ' ' |  |
+| 3 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
+| 4 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 1 :启用 0 :禁用 |
+| 5 | fplugin | 数据插件 | varchar | 255 |  | √ | ' ' | 数据插件 |
+| 6 | fissyspreset | 系统预设 | bpchar | 1 |  | √ | '0' | 系统预设 |
+| 7 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fentryid | fentryid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | pk_ocdbd_usecardaccount |  | fentryid |
+| 2 | idx_ocdbd_usecardaccount_fid |  | fid |
+
+---
+
+## 首页设置-多语言表 t_ocdbd_firstpage_l
+
+- **表名称：** 首页设置-多语言表
+- **表名：** t_ocdbd_firstpage_l
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fname | 名称 | varchar | 80 |  | √ | ' ' | 名称 |
+| 3 | flocaleid | flocaleid | varchar | 10 |  | √ | 'zh_CN' | localeid |
+| 4 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fpkid | fpkid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_ocdbd_firstpagel_flid |  | fid,flocaleid |
+| 2 | pk_ocdbd_firstpage_l |  | fpkid |
+
+---
+
+## 首页设置-使用范围表 t_ocdbd_firstpage_u
+
+- **表名称：** 首页设置-使用范围表
+- **表名：** t_ocdbd_firstpage_u
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fcreateorgid | fcreateorgid | int8 | 64 |  |  | null |  |
+| 2 | fdataid | fdataid | int8 | 64 |  | √ | null |  |
+| 3 | fuseorgid | fuseorgid | int8 | 64 |  | √ | null |  |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fdataid | fdataid,fuseorgid |
+| 2 | fuseorgid | fdataid,fuseorgid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_t_ocdbd_firstpage_u_uo |  | fuseorgid |
+| 2 | pk_t_ocdbd_firstpage_u |  | fdataid,fuseorgid |
+
+---
+
+## 首页产品配置-子表 t_ocdbd_showitemdetail
+
+- **表名称：** 首页产品配置-子表
+- **表名：** t_ocdbd_showitemdetail
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
+| 2 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态 |
+| 3 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 | id |
+| 4 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
+| 5 | fitemid | 产品 | int8 | 64 |  | √ | 0 | [商品信息 ocdbd_iteminfo](../ocdbd_files/ocdbd_iteminfo.md) |
+| 6 | fitemlevel | 顺序号 | int4 | 32 |  | √ | 0 | 顺序号 |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fdetailid | fdetailid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | pk_ocdbd_showitemdetail |  | fdetailid |
+| 2 | idx_ocdbd_showitemdetail_eid |  | fentryid |
+
+---
+
+## 分配销售组织-子表 t_ocdbd_firstpage_org
+
+- **表名称：** 分配销售组织-子表
+- **表名：** t_ocdbd_firstpage_org
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fisenable | 是否启用 | bpchar | 1 |  | √ | '1' | 是否启用 |
+| 3 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
+| 4 | fsaleorgid | 销售组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fentryid | fentryid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_ocdbd_firstpage_org |  | fsaleorgid |
+| 2 | pk_ocdbd_firstpage_org |  | fentryid |
+
+---
+
+## 卡片内容详情-多语言表 t_ocdbd_usecardcfgdl_l
+
+- **表名称：** 卡片内容详情-多语言表
+- **表名：** t_ocdbd_usecardcfgdl_l
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fname | 卡片内容名称 | varchar | 80 |  | √ | ' ' | 卡片内容名称 |
+| 2 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 |  |
+| 3 | flocaleid | flocaleid | varchar | 10 |  | √ | 'zh_CN' | localeid |
+| 4 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fpkid | fpkid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | pk_ocdbd_usecardcfgdl_l |  | fpkid |
+| 2 | idx_ocdbd_usecardcfgdll_dlid |  | fdetailid,flocaleid |

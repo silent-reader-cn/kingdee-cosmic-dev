@@ -12,7 +12,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 修改人 |
 | 3 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 创建人 |
-| 4 | fuser | 用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fuser | 用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 6 | fpassword | 密码 | varchar | 255 |  | √ | ' ' | 密码 |
 | 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |

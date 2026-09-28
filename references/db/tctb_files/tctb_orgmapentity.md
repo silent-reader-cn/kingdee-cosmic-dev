@@ -40,15 +40,16 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fname | 方案名称 | varchar | 100 |  | √ | ' ' | 方案名称 |
-| 5 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 7 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 8 | fmapobject | 映射对象 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
-| 9 | fenable | 使用状态 | varchar | 50 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 10 | fnumber | 方案编码 | varchar | 50 |  | √ | ' ' | 方案编码 |
-| 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 7 | fmapobjectnew | 映射对象 | int8 | 64 |  | √ | 0 | [辅助属性定义 bd_auxproperty](../sbd_files/bd_auxproperty.md) |
+| 8 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 9 | fmapobject | 映射对象（无需填写） | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
+| 10 | fenable | 使用状态 | varchar | 50 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 11 | fnumber | 方案编码 | varchar | 50 |  | √ | ' ' | 方案编码 |
+| 12 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 
 ### 列规则定义
 
@@ -113,7 +114,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fname | fname | varchar | 50 |  | √ | ' ' |  |
 | 3 | fmodifierid | fmodifierid | int8 | 64 |  | √ | 0 |  |
-| 4 | ftaxorg | 税务组织编码 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 4 | ftaxorg | 税务组织编码 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | fcreatetime | fcreatetime | timestamp | 0 |  |  | null |  |
 | 6 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 7 | fmodifytime | fmodifytime | timestamp | 0 |  |  | null |  |

@@ -12,7 +12,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fdirect | 业务方向 | bpchar | 1 |  | √ | '0' | 业务方向,枚举: 0 :正向业务 1 :反向业务 |
 | 3 | fsysinit | 系统预设 | bpchar | 1 |  | √ | '0' | 系统预设 |
-| 4 | fbill | 单据对象 | varchar | 72 |  | √ | ' ' | 单据主实体 bos_billmainentity |
+| 4 | fbill | 单据对象 | varchar | 72 |  | √ | ' ' | [单据主实体 bos_billmainentity](../mdl_files/bos_billmainentity.md) |
 | 5 | fenable | 使用状态 | bpchar | 1 |  | √ | '0' | 使用状态,枚举: 1 :可用 0 :禁用 |
 | 6 | fnumber | 编码 | varchar | 120 |  | √ | ' ' | 编码 |
 | 7 | fdescription | 描述 | varchar | 500 |  | √ | ' ' | 描述 |

@@ -18,13 +18,13 @@
 | 7 | fchecktype | fchecktype | bpchar | 1 |  | √ | ' ' |  |
 | 8 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 9 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fprop | fprop | bpchar | 1 |  | √ | ' ' |  |
 | 12 | fcreateorgid | fcreateorgid | int8 | 64 |  | √ | 0 |  |
 | 13 | fremark | fremark | varchar | 255 |  | √ | ' ' |  |
-| 14 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | fname | fname | varchar | 100 |  | √ | ' ' |  |
-| 16 | fparentid | 业务类别 | int8 | 64 |  | √ | 0 | 协同辅助资料 pbd_mallextdata |
+| 16 | fparentid | 业务类别 | int8 | 64 |  | √ | 0 | [协同辅助资料 pbd_mallextdata](../pbd_files/pbd_mallextdata.md) |
 | 17 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 18 | fdesttype | fdesttype | bpchar | 1 |  | √ | ' ' |  |
 | 19 | fdisablerid | fdisablerid | int8 | 64 |  | √ | 0 |  |

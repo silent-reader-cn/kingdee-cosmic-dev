@@ -13,7 +13,7 @@
 | 2 | fstate | 状态 | varchar | 50 |  | √ | ' ' | 状态 |
 | 3 | ftraceid | traceid | varchar | 50 |  | √ | ' ' | traceid |
 | 4 | ffullname | 科目.名称 | varchar | 255 |  | √ | ' ' | 科目.名称 |
-| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | foptype | 操作类型 | varchar | 50 |  | √ | ' ' | 操作类型 |
 | 7 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 8 | fnumber | 科目.编码 | varchar | 30 |  | √ | ' ' | 科目.编码 |
@@ -46,7 +46,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -76,13 +76,13 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | foptime | 操作日期 | timestamp | 0 |  |  | null | 操作日期 |
 | 3 | foplog | 日志 | varchar | 1000 |  |  | ' ' | 日志 |
-| 4 | foporgid | 操作组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 4 | foporgid | 操作组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | foldaccount | 源科目 | text | 0 |  |  | null | 源科目 |
 | 6 | fopaccountids | 科目 | text | 0 |  |  | null | 科目 |
-| 7 | fopuserid | 操作人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 7 | fopuserid | 操作人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 8 | foptype | 操作类型 | varchar | 32 |  | √ | ' ' | 操作类型 |
 | 9 | frequestid | requestid | varchar | 32 |  | √ | ' ' | requestid |
-| 10 | faccounttableid | 科目表 | int8 | 64 |  | √ | 0 | 科目表 bd_accounttable |
+| 10 | faccounttableid | 科目表 | int8 | 64 |  | √ | 0 | [科目表 bd_accounttable](../fibd_files/bd_accounttable.md) |
 | 11 | fnewaccount | 新科目 | text | 0 |  |  | null | 新科目 |
 
 ### 列规则定义

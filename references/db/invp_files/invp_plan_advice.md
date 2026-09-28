@@ -14,26 +14,26 @@
 | 3 | fauxptyid | 辅助属性 | int8 | 64 |  | √ | 0 | null 001 |
 | 4 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 5 | fconfirmqty | 确认基本数量 | numeric | 23 | 10 | √ | 0 | 确认基本数量 |
-| 6 | fmaterielid | 物料编码 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 6 | fmaterielid | 物料编码 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 7 | funpushqty | 未投放基本数量 | numeric | 23 | 10 | √ | 0 | 未投放基本数量 |
 | 8 | fdemandbillentryid | 需求单据行id | int8 | 64 |  | √ | 0 | 需求单据行id |
 | 9 | fdemandseq | 需求单据行号 | int4 | 32 |  | √ | 0 | 需求单据行号 |
 | 10 | fdemandbillno | 需求单据编号 | varchar | 80 |  | √ | ' ' | 需求单据编号 |
-| 11 | fplangroup | 计划组 | int8 | 64 |  | √ | 0 | 供应链业务组 bd_operatorgroup |
+| 11 | fplangroup | 计划组 | int8 | 64 |  | √ | 0 | [供应链业务组 bd_operatorgroup](../sbd_files/bd_operatorgroup.md) |
 | 12 | fplandate | 计划建议日期 | timestamp | 0 |  |  | null | 计划建议日期 |
 | 13 | fjoinqty | 关联基本数量 | numeric | 23 | 10 | √ | 0 | 关联基本数量 |
 | 14 | fdate | 计划可用日期 | timestamp | 0 |  |  | null | 计划可用日期 |
-| 15 | fbaseunitid | 基本单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 16 | fdemandorgid | 需求组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 15 | fbaseunitid | 基本单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 16 | fdemandorgid | 需求组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 17 | fqty | 建议基本数量 | numeric | 23 | 10 | √ | 0 | 建议基本数量 |
 | 18 | fpushqty | 已投放基本数量 | numeric | 23 | 10 | √ | 0 | 已投放基本数量 |
-| 19 | fplanuser | 计划员 | int8 | 64 |  | √ | 0 | 供应链业务员 bd_operator |
-| 20 | fwarehouseid | 需求仓库 | int8 | 64 |  | √ | 0 | 仓库 bd_warehouse |
+| 19 | fplanuser | 计划员 | int8 | 64 |  | √ | 0 | [供应链业务员 bd_operator](../sbd_files/bd_operator.md) |
+| 20 | fwarehouseid | 需求仓库 | int8 | 64 |  | √ | 0 | [仓库 bd_warehouse](../sbd_files/bd_warehouse.md) |
 | 21 | fentryremarks | 备注 | varchar | 512 |  | √ | ' ' | 备注 |
 | 22 | ffinishdate | 计划完成日期 | timestamp | 0 |  |  | null | 计划完成日期 |
 | 23 | frowterminatestatus | 行终止 | bpchar | 1 |  | √ | ' ' | 行终止,枚举: A :正常 B :已终止 |
 | 24 | fstartdate | 计划开始日期 | timestamp | 0 |  |  | null | 计划开始日期 |
-| 25 | fsupplyorgid | 供应组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 25 | fsupplyorgid | 供应组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 26 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 27 | fdemandbillid | 需求单据id | int8 | 64 |  | √ | 0 | 需求单据id |
 
@@ -120,25 +120,25 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 3 | fplanschemeid | 计划方案 | int8 | 64 |  | √ | 0 | 库存计划方案 invp_scheme |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 3 | fplanschemeid | 计划方案 | int8 | 64 |  | √ | 0 | [库存计划方案 invp_scheme](../invp_files/invp_scheme.md) |
 | 4 | fbillstatus | 单据状态 | varchar | 50 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 6 | fadvicetype | 建议类型 | varchar | 50 |  | √ | ' ' | 建议类型,枚举: A :采购 E :调拨 |
-| 7 | forgid | 计划组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 7 | forgid | 计划组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | fremarks | 备注 | varchar | 512 |  | √ | ' ' | 备注 |
 | 9 | fclosedate | 关闭日期 | timestamp | 0 |  |  | null | 关闭日期 |
 | 10 | fauditdate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
 | 11 | fhandcloseflag | 手工关闭 | bpchar | 1 |  | √ | ' ' | 手工关闭 |
 | 12 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 13 | fclosestatus | 关闭状态 | bpchar | 1 |  | √ | ' ' | 关闭状态,枚举: A :正常 B :已关闭 |
-| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | fmainplantype | 计划类型 | bpchar | 1 |  | √ | ' ' | 计划类型,枚举: A :再订货点 B :最大最小 D :固定期间 E :安全库存 |
-| 16 | fbiztypeid | 业务类型 | int8 | 64 |  | √ | 0 | 业务类型 bd_biztype |
+| 16 | fbiztypeid | 业务类型 | int8 | 64 |  | √ | 0 | [业务类型 bd_biztype](../sbd_files/bd_biztype.md) |
 | 17 | fcalcsource | 计算来源 | bpchar | 1 |  | √ | ' ' | 计算来源,枚举: 1 :手工运算 2 :调度运算 |
-| 18 | fcloserid | 关闭人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 18 | fcloserid | 关闭人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 19 | fbillno | 单据编号 | varchar | 80 |  | √ | ' ' | 单据编号 |
-| 20 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 20 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 21 | fplancalnum | 计划运算号 | varchar | 80 |  | √ | ' ' | 计划运算号 |
 | 22 | fbilltypeid | 单据类型 | int8 | 64 |  | √ | 0 | 单据类型 bos_billtype |
 

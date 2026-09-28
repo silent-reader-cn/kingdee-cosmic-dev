@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | finvoicetypeid | 发票类型 | int8 | 64 |  | √ | 0 | 发票类型(发票云) er_invoicetype |
+| 2 | finvoicetypeid | 发票类型 | int8 | 64 |  | √ | 0 | [发票类型(发票云) er_invoicetype](../basedata_files/er_invoicetype.md) |
 | 3 | ftickettype | 电子凭证类型 | varchar | 80 |  | √ | ' ' | 电子凭证类型,枚举: |
 
 ### 列规则定义

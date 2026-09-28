@@ -15,15 +15,15 @@
 | 4 | fticketcreatetime | 创建时间(票据) | timestamp | 0 |  |  | null | 创建时间(票据) |
 | 5 | flicensenumber | 车牌号 | varchar | 24 |  | √ | ' ' | 车牌号 |
 | 6 | fprice | 单价 | numeric | 23 | 10 | √ | 0.0000000000 | 单价 |
-| 7 | forg | 税务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 7 | forg | 税务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 10 | fbaseinvoicetype | 发票类型 | int8 | 64 |  | √ | 0 | 发票类型 bd_invoicetype |
+| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 10 | fbaseinvoicetype | 发票类型 | int8 | 64 |  | √ | 0 | [发票种类 bd_invoicetype](../basedata_files/bd_invoicetype.md) |
 | 11 | finvoicedate | 乘车日期 | timestamp | 0 |  |  | null | 乘车日期 |
 | 12 | finvoicecode | 发票代码 | varchar | 24 |  | √ | ' ' | 发票代码 |
 | 13 | finvoiceno | 发票号码 | varchar | 16 |  | √ | ' ' | 发票号码 |
 | 14 | fbillno | 单据编号 | varchar | 60 |  | √ | ' ' | 单据编号 |
-| 15 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 15 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 16 | fbillstatus | 单据状态 | varchar | 30 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 17 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 18 | fmileage | 里程 | numeric | 23 | 10 | √ | 0.0000000000 | 里程 |
@@ -32,7 +32,7 @@
 | 21 | ftype | 发票类型 | varchar | 30 |  | √ | ' ' | 发票类型,枚举: 8 :的士票 |
 | 22 | fdatasource | 数据来源 | varchar | 50 |  | √ | ' ' | 数据来源 |
 | 23 | ftimegetoff | 下车时间 | varchar | 20 |  | √ | ' ' | 下车时间 |
-| 24 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 24 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 25 | ftimegeton | 上车时间 | varchar | 20 |  | √ | ' ' | 上车时间 |
 
 ### 列规则定义

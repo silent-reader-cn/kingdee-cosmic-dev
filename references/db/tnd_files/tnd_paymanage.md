@@ -55,39 +55,40 @@
 | 44 | fwinruleid | fwinruleid | int8 | 64 |  | √ | 0 |  |
 | 45 | fpurdeptid | fpurdeptid | int8 | 64 |  | √ | 0 |  |
 | 46 | famount | famount | numeric | 23 | 10 | √ | 0 |  |
-| 47 | fisaptitude | fisaptitude | bpchar | 1 |  | √ | '0' |  |
-| 48 | fsurplusamount | fsurplusamount | numeric | 23 | 10 | √ | 0 |  |
-| 49 | fsupopentype | fsupopentype | bpchar | 1 |  | √ | '1' |  |
-| 50 | fopentype | fopentype | bpchar | 1 |  | √ | ' ' |  |
-| 51 | fclosetask | fclosetask | varchar | 255 |  | √ | ' ' |  |
-| 52 | fpurgroupid | fpurgroupid | int8 | 64 |  | √ | 0 |  |
-| 53 | fbiztypeid | fbiztypeid | int8 | 64 |  | √ | 0 |  |
-| 54 | fismultipackage | fismultipackage | bpchar | 1 |  | √ | '0' |  |
-| 55 | fishidesupplier | fishidesupplier | bpchar | 1 |  | √ | '0' |  |
-| 56 | fsourceclassid | fsourceclassid | int8 | 64 |  | √ | 0 |  |
-| 57 | fopenstatus | fopenstatus | bpchar | 1 |  | √ | '1' |  |
-| 58 | fmanagetype | fmanagetype | bpchar | 1 |  | √ | ' ' |  |
-| 59 | ftaxtype | ftaxtype | varchar | 30 |  | √ | ' ' |  |
-| 60 | fbidname | fbidname | varchar | 300 |  | √ | ' ' |  |
-| 61 | fterminalnode | fterminalnode | int8 | 64 |  | √ | 0 |  |
-| 62 | fparentid | fparentid | varchar | 50 |  | √ | ' ' |  |
-| 63 | fdonetask | fdonetask | varchar | 255 |  | √ | ' ' |  |
-| 64 | fisbypackage | fisbypackage | bpchar | 1 |  | √ | '0' |  |
-| 65 | fisbidpublish | fisbidpublish | bpchar | 1 |  | √ | '0' |  |
-| 66 | fentitykey | fentitykey | varchar | 50 |  | √ | ' ' |  |
-| 67 | fopendate | fopendate | timestamp | 0 |  |  | null |  |
-| 68 | fdecisiontype | fdecisiontype | bpchar | 1 |  | √ | ' ' |  |
-| 69 | fratio_biz | fratio_biz | numeric | 23 | 10 | √ | 0 |  |
-| 70 | fratio_tec | fratio_tec | numeric | 23 | 10 | √ | 0 |  |
-| 71 | fisopencontrol | fisopencontrol | bpchar | 1 |  | √ | '0' |  |
-| 72 | fisbypackage_apt | fisbypackage_apt | bpchar | 1 |  | √ | '0' |  |
-| 73 | fsourcetypeid | fsourcetypeid | int8 | 64 |  | √ | 0 |  |
-| 74 | fsumtaxamount | fsumtaxamount | numeric | 23 | 10 | √ | 0 |  |
-| 75 | fextfilterid | fextfilterid | int8 | 64 |  | √ | 0 |  |
-| 76 | fcurrentnode | fcurrentnode | int8 | 64 |  | √ | 0 |  |
-| 77 | fisquickpur | fisquickpur | bpchar | 1 |  | √ | '0' |  |
-| 78 | fcurrencyid | fcurrencyid | int8 | 64 |  | √ | 0 |  |
-| 79 | fratiotype | fratiotype | bpchar | 1 |  | √ | '1' |  |
+| 47 | fsystype | fsystype | bpchar | 1 |  | √ | '1' |  |
+| 48 | fisaptitude | fisaptitude | bpchar | 1 |  | √ | '0' |  |
+| 49 | fsurplusamount | fsurplusamount | numeric | 23 | 10 | √ | 0 |  |
+| 50 | fsupopentype | fsupopentype | bpchar | 1 |  | √ | '1' |  |
+| 51 | fopentype | fopentype | bpchar | 1 |  | √ | ' ' |  |
+| 52 | fclosetask | fclosetask | varchar | 255 |  | √ | ' ' |  |
+| 53 | fpurgroupid | fpurgroupid | int8 | 64 |  | √ | 0 |  |
+| 54 | fbiztypeid | fbiztypeid | int8 | 64 |  | √ | 0 |  |
+| 55 | fismultipackage | fismultipackage | bpchar | 1 |  | √ | '0' |  |
+| 56 | fishidesupplier | fishidesupplier | bpchar | 1 |  | √ | '0' |  |
+| 57 | fsourceclassid | fsourceclassid | int8 | 64 |  | √ | 0 |  |
+| 58 | fopenstatus | fopenstatus | bpchar | 1 |  | √ | '1' |  |
+| 59 | fmanagetype | fmanagetype | bpchar | 1 |  | √ | ' ' |  |
+| 60 | ftaxtype | ftaxtype | varchar | 30 |  | √ | ' ' |  |
+| 61 | fbidname | fbidname | varchar | 300 |  | √ | ' ' |  |
+| 62 | fterminalnode | fterminalnode | int8 | 64 |  | √ | 0 |  |
+| 63 | fparentid | fparentid | varchar | 50 |  | √ | ' ' |  |
+| 64 | fdonetask | fdonetask | varchar | 255 |  | √ | ' ' |  |
+| 65 | fisbypackage | fisbypackage | bpchar | 1 |  | √ | '0' |  |
+| 66 | fisbidpublish | fisbidpublish | bpchar | 1 |  | √ | '0' |  |
+| 67 | fentitykey | fentitykey | varchar | 50 |  | √ | ' ' |  |
+| 68 | fopendate | fopendate | timestamp | 0 |  |  | null |  |
+| 69 | fdecisiontype | fdecisiontype | bpchar | 1 |  | √ | ' ' |  |
+| 70 | fratio_biz | fratio_biz | numeric | 23 | 10 | √ | 0 |  |
+| 71 | fratio_tec | fratio_tec | numeric | 23 | 10 | √ | 0 |  |
+| 72 | fisopencontrol | fisopencontrol | bpchar | 1 |  | √ | '0' |  |
+| 73 | fisbypackage_apt | fisbypackage_apt | bpchar | 1 |  | √ | '0' |  |
+| 74 | fsourcetypeid | fsourcetypeid | int8 | 64 |  | √ | 0 |  |
+| 75 | fsumtaxamount | fsumtaxamount | numeric | 23 | 10 | √ | 0 |  |
+| 76 | fextfilterid | fextfilterid | int8 | 64 |  | √ | 0 |  |
+| 77 | fcurrentnode | fcurrentnode | int8 | 64 |  | √ | 0 |  |
+| 78 | fisquickpur | fisquickpur | bpchar | 1 |  | √ | '0' |  |
+| 79 | fcurrencyid | fcurrencyid | int8 | 64 |  | √ | 0 |  |
+| 80 | fratiotype | fratiotype | bpchar | 1 |  | √ | '1' |  |
 
 ### 列规则定义
 
@@ -102,9 +103,9 @@
 | 1 | idx_src_project_sourceid |  | fsourceid |
 | 2 | pk_src_project |  | fid |
 | 3 | idx_src_project_parentid |  | fparentid |
-| 4 | idx_src_project_type |  | fsrctypeid |
-| 5 | idx_src_project_sourceclassid |  | fsourceclassid |
-| 6 | idx_src_project_status |  | fopenstatus |
+| 4 | idx_src_project_sourceclassid |  | fsourceclassid |
+| 5 | idx_src_project_status |  | fopenstatus |
+| 6 | idx_src_project_type |  | fsrctypeid |
 
 ---
 
@@ -117,7 +118,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 附件字段实体 bd_attachment |
+| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [附件字段实体 bd_attachment](../frame_files/bd_attachment.md) |
 | 2 | fpkid | fpkid | int8 | 64 |  | √ | 0 | FPKID |
 | 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 
@@ -154,10 +155,10 @@
 | 6 | fresult | fresult | bpchar | 1 |  | √ | ' ' |  |
 | 7 | freturnopinion | freturnopinion | varchar | 100 |  | √ | ' ' |  |
 | 8 | fcfmdate | fcfmdate | timestamp | 0 |  |  | null |  |
-| 9 | ffeewayid | 收费方式 | int8 | 64 |  | √ | 0 | 招标辅助资料 pds_extdata |
+| 9 | ffeewayid | 收费方式 | int8 | 64 |  | √ | 0 | [招标辅助资料 pds_extdata](../pds_files/pds_extdata.md) |
 | 10 | fmodifytime | fmodifytime | timestamp | 0 |  |  | null |  |
 | 11 | ftransferuserid | ftransferuserid | int8 | 64 |  | √ | 0 |  |
-| 12 | fpackageid | 标段名称 | int8 | 64 |  | √ | 0 | 标段名称 src_packagef7 |
+| 12 | fpackageid | 标段名称 | int8 | 64 |  | √ | 0 | [标段名称 src_packagef7](../src_files/src_packagef7.md) |
 | 13 | fsurplustype | fsurplustype | bpchar | 1 |  | √ | ' ' |  |
 | 14 | fcarryoveropinion | fcarryoveropinion | varchar | 100 |  | √ | ' ' |  |
 | 15 | fconfirmdate | fconfirmdate | timestamp | 0 |  |  | null |  |
@@ -170,7 +171,7 @@
 | 22 | fcarryoverdate | fcarryoverdate | timestamp | 0 |  |  | null |  |
 | 23 | fusesurplus | fusesurplus | numeric | 23 | 10 | √ | 0 |  |
 | 24 | frejectopinion | frejectopinion | varchar | 100 |  | √ | ' ' |  |
-| 25 | ffeeitemid | 收费项 | int8 | 64 |  | √ | 0 | 招标辅助资料 pds_extdata |
+| 25 | ffeeitemid | 收费项 | int8 | 64 |  | √ | 0 | [招标辅助资料 pds_extdata](../pds_files/pds_extdata.md) |
 | 26 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 27 | fauditorid | fauditorid | int8 | 64 |  | √ | 0 |  |
 | 28 | fentrystatus | 行状态 | bpchar | 1 |  | √ | ' ' | 行状态,枚举: A :暂存 B :已提交 C :已审核 |
@@ -180,7 +181,7 @@
 | 32 | fpurdeptid | fpurdeptid | int8 | 64 |  | √ | 0 |  |
 | 33 | fsurplusamount | 可用余额 | numeric | 23 | 10 | √ | 0 | 可用余额 |
 | 34 | fpresurplusamount | fpresurplusamount | numeric | 23 | 10 | √ | 0 |  |
-| 35 | fpaystatus | 缴费状态 | bpchar | 1 |  | √ | ' ' | 缴费状态,枚举: A :待收款 B :已收款|待确认 C :已收款|已确认 D :已退还 E :已转结余 F :免交 |
+| 35 | fpaystatus | 缴费状态 | bpchar | 1 |  | √ | ' ' | 缴费状态,枚举: A :待收款 B :已收款\|待确认 C :已收款\|已确认 D :已退还 E :已转结余 F :免交 |
 | 36 | fcreatorid | fcreatorid | int8 | 64 |  | √ | 0 |  |
 | 37 | frejectdate | frejectdate | timestamp | 0 |  |  | null |  |
 | 38 | ffeeamount | 收费金额 | numeric | 23 | 10 | √ | 0 | 收费金额 |
@@ -196,11 +197,11 @@
 | 48 | freturnamount | freturnamount | numeric | 23 | 10 | √ | 0 |  |
 | 49 | fcarryoveramount | fcarryoveramount | numeric | 23 | 10 | √ | 0 |  |
 | 50 | ftransferopinion | ftransferopinion | varchar | 100 |  | √ | ' ' |  |
-| 51 | fbizpartnerid | 商务伙伴 | int8 | 64 |  | √ | 0 | 商务伙伴 bd_bizpartner |
+| 51 | fbizpartnerid | 商务伙伴 | int8 | 64 |  | √ | 0 | [商务伙伴 bd_bizpartner](../base_files/bd_bizpartner.md) |
 | 52 | frejectuserid | frejectuserid | int8 | 64 |  | √ | 0 |  |
 | 53 | fcfmstatus | fcfmstatus | bpchar | 1 |  | √ | ' ' |  |
 | 54 | fconfirmopinion | fconfirmopinion | varchar | 255 |  | √ | ' ' |  |
-| 55 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 55 | fcurrencyid | 币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 | 56 | fpaydate | 收款时间 | timestamp | 0 |  |  | null | 收款时间 |
 
 ### 列规则定义
@@ -217,6 +218,6 @@
 | 2 | idx_src_paymententry_fpg |  | fpackageid |
 | 3 | idx_src_paymententry_fid |  | fid |
 | 4 | idx_src_paymententry_ftype |  | fsurplustype |
-| 5 | pk_src_paymententry |  | fentryid |
-| 6 | idx_src_paymententry_fbillno |  | fbillno |
+| 5 | idx_src_paymententry_fbillno |  | fbillno |
+| 6 | pk_src_paymententry |  | fentryid |
 | 7 | idx_src_paymententry_fsup |  | fsupplierid |

@@ -10,13 +10,14 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fagentid | 代理评委 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fagentid | 代理评委 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fscorerscore | 评委评分 | numeric | 23 | 10 | √ | 0 | 评委评分 |
-| 4 | fgradeid | 考评等级 | int8 | 64 |  | √ | 0 | 招标辅助资料 pds_extdata |
-| 5 | fscorerid | 评委 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 6 | fsuggestion | 考评意见 | varchar | 510 |  | √ | ' ' | 考评意见 |
-| 7 | fisvalid | 是否合格 | bpchar | 1 |  | √ | '0' | 是否合格,枚举: 0 :未评审 1 :合格 2 :不合格 |
-| 8 | fscoretaskid | 考评任务 | int8 | 64 |  | √ | 0 | 考评记录F7 src_evaluatetaskf7 |
+| 4 | fprojectid | 考评项目 | int8 | 64 |  | √ | 0 | [专家考评F7 src_evaluatef7](../src_files/src_evaluatef7.md) |
+| 5 | fgradeid | 考评等级 | int8 | 64 |  | √ | 0 | [招标辅助资料 pds_extdata](../pds_files/pds_extdata.md) |
+| 6 | fscorerid | 评委 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 7 | fsuggestion | 考评意见 | varchar | 510 |  | √ | ' ' | 考评意见 |
+| 8 | fisvalid | 是否合格 | bpchar | 1 |  | √ | '0' | 是否合格,枚举: 0 :未评审 1 :合格 2 :不合格 |
+| 9 | fscoretaskid | 考评任务 | int8 | 64 |  | √ | 0 | [考评记录F7 src_evaluatetaskf7](../src_files/src_evaluatetaskf7.md) |
 
 ### 列规则定义
 
@@ -29,8 +30,9 @@
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
 | 1 | idx_src_evaluateopinion_sid |  | fscorerid |
-| 2 | pk_src_evaluateopinion |  | fid |
-| 3 | idx_src_evaluateopinion_tid |  | fscoretaskid |
+| 2 | idx_src_evaluateopinion_pid |  | fprojectid |
+| 3 | pk_src_evaluateopinion |  | fid |
+| 4 | idx_src_evaluateopinion_tid |  | fscoretaskid |
 
 ---
 
@@ -44,7 +46,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 附件字段实体 bd_attachment |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [附件字段实体 bd_attachment](../frame_files/bd_attachment.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | FPKID |
 
 ### 列规则定义

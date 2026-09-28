@@ -10,11 +10,11 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fcreatetime | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
-| 4 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 5 | fmenuid | 菜单id | varchar | 36 |  | √ | ' ' | 业务应用菜单 bos_devportal_menu |
-| 6 | fbizappid | 应用id | varchar | 36 |  | √ | ' ' | 业务应用实体 bos_devportal_bizapp |
+| 4 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 5 | fmenuid | 菜单id | varchar | 36 |  | √ | ' ' | [业务应用菜单 bos_devportal_menu](../mdl_files/bos_devportal_menu.md) |
+| 6 | fbizappid | 应用id | varchar | 36 |  | √ | ' ' | [业务应用实体 bos_devportal_bizapp](../mdl_files/bos_devportal_bizapp.md) |
 
 ### 列规则定义
 

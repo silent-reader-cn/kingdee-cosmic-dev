@@ -94,32 +94,32 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fdisabledate | 禁用时间 | timestamp | 0 |  |  | null | 禁用时间 |
-| 3 | finspectjobid | 数据巡检任务 | int8 | 64 |  | √ | 0 | 数据巡检任务 msbd_inspectjob |
+| 3 | finspectjobid | 数据巡检任务 | int8 | 64 |  | √ | 0 | [数据巡检任务 msbd_inspectjob](../msbd_files/msbd_inspectjob.md) |
 | 4 | fsfailnotify | 失败 | bpchar | 1 |  | √ | '0' | 失败 |
 | 5 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 6 | fschprincipalid | 计划负责人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | fschprincipalid | 计划负责人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 7 | fstatus | 数据状态 | varchar | 5 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 8 | fssuccessnotify | 成功 | bpchar | 1 |  | √ | '0' | 成功 |
-| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 11 | fareadescription | 条件描述 | varchar | 2000 |  |  | null | 条件描述 |
 | 12 | fissendmsg | 巡检结果异常时是否将消息发送到消息中心 | bpchar | 1 |  | √ | '0' | 巡检结果异常时是否将消息发送到消息中心 |
-| 13 | fentityid | 数据巡检维度 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 13 | fentityid | 数据巡检维度 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 14 | fplan | cron表达式 | varchar | 300 |  | √ | ' ' | cron表达式 |
-| 15 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 15 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 16 | fname | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
 | 17 | fareajson | 数据范围条件json | varchar | 512 |  |  | null | 数据范围条件json |
 | 18 | fscopetype | fscopetype | varchar | 5 |  | √ | ' ' |  |
 | 19 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 20 | fjobid | 调度作业 | varchar | 36 |  | √ | ' ' | 调度作业 sch_job |
+| 20 | fjobid | 调度作业 | varchar | 36 |  | √ | ' ' | [调度作业 sch_job](../sys_files/sch_job.md) |
 | 21 | fareajson_tag | 数据范围条件json_详情 | text | 0 |  |  | null | 数据范围条件json_详情 |
-| 22 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 22 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 23 | fdescription | fdescription | varchar | 512 |  |  | null |  |
 | 24 | fstarttime | 生效时间 | timestamp | 0 |  |  | null | 生效时间 |
 | 25 | fstimeout | 超时 | bpchar | 1 |  | √ | '0' | 超时 |
-| 26 | fmsgreceiver | 消息接收人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 26 | fmsgreceiver | 消息接收人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 27 | fsmsgcontent | 消息内容 | varchar | 2000 |  |  | null | 消息内容 |
-| 28 | fscheduleid | 调度计划 | varchar | 36 |  | √ | ' ' | 调度计划 sch_schedule |
+| 28 | fscheduleid | 调度计划 | varchar | 36 |  | √ | ' ' | [调度计划 sch_schedule](../sys_files/sch_schedule.md) |
 | 29 | fsnotifytype | 消息渠道 | varchar | 300 |  | √ | ' ' | 消息渠道,枚举: |
 | 30 | fenable | 使用状态 | varchar | 5 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 31 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |

@@ -15,8 +15,8 @@
 | 4 | fcreatedate | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 5 | ftype | 类型 | int8 | 64 |  | √ | 0 | 数据类型 - 简单值 isc_type_simple_value |
 | 6 | fmodifydate | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 7 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 8 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 7 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 8 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fnumber | 编码 | varchar | 60 |  | √ | ' ' | 编码 |
 | 10 | fdescription | 描述 | varchar | 250 |  | √ | ' ' | 描述 |
 | 11 | fis_array | 是否数组 | bpchar | 1 |  | √ | ' ' | 是否数组 |

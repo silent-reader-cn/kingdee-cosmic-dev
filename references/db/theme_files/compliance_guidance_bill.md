@@ -12,16 +12,16 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | ftabcontent_tag | 页签内容_详情 | text | 0 |  |  | null | 页签内容_详情 |
 | 3 | fgroupid | 树节点id | varchar | 50 |  | √ | ' ' | 树节点id |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fcreatetime | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
 | 6 | forgid | forgid | int8 | 64 |  | √ | 0 |  |
 | 7 | fcompliancelabelguide | 合规标签指引 | int8 | 64 |  |  | null | 合规标签指引 |
 | 8 | frelatedtopics | 关联主题 | varchar | 50 |  | √ | ' ' | 关联主题 |
 | 9 | fmodifytime | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
-| 10 | fipoorgld | IPO主体 | int8 | 64 |  |  | null | IPO编制组织 ipo_org |
+| 10 | fipoorgld | IPO主体 | int8 | 64 |  |  | null | [IPO编制组织 ipo_org](../ipobase_files/ipo_org.md) |
 | 11 | fdefault | 是否预置 | bpchar | 1 |  | √ | '1' | 是否预置 |
 | 12 | ftabname | 页签名称 | varchar | 50 |  | √ | ' ' | 页签名称 |
-| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | ftabcontent | 页签内容 | varchar | 255 |  | √ | ' ' | 页签内容 |
 | 15 | ftabcode | 页签编码 | varchar | 50 |  | √ | ' ' | 页签编码 |
 | 16 | fisshow | 是否显示 | bpchar | 1 |  | √ | '1' | 是否显示 |

@@ -20,7 +20,7 @@
 | 9 | fxbillid | 变更单ID | int8 | 64 |  | √ | 0 | 变更单ID |
 | 10 | fsrcbilljson | 订单Json | varchar | 512 |  |  | null | 订单Json |
 | 11 | fbiztime | 变更日期 | timestamp | 0 |  |  | null | 变更日期 |
-| 12 | fcreatorid | 变更人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fcreatorid | 变更人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fxbilljson_tag | 变更单Json_详情 | text | 0 |  |  | null | 变更单Json_详情 |
 | 14 | fsrcbilljson_tag | 订单Json_详情 | text | 0 |  |  | null | 订单Json_详情 |
 | 15 | fxreason | 变更原因 | varchar | 512 |  |  | ' ' | 变更原因 |

@@ -11,17 +11,17 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 科目名称 | varchar | 500 |  | √ | ' ' | 科目名称 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fisleaf | 是否叶子 | bpchar | 1 |  | √ | '0' | 是否叶子 |
-| 5 | fparentid | 父级科目代码 | int8 | 64 |  | √ | 0 | 科目 tcvvt_clique_account |
+| 5 | fparentid | 父级科目代码 | int8 | 64 |  | √ | 0 | [科目 tcvvt_clique_account](../tcvvt_files/tcvvt_clique_account.md) |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 7 | forgid | 核算组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 7 | forgid | 核算组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | fnd_dm | 年度代码 | varchar | 4 |  | √ | ' ' | 年度代码 |
 | 9 | flongnumber | 长编码 | varchar | 400 |  | √ | ' ' | 长编码 |
 | 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 11 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 12 | flevel | 级次 | int8 | 64 |  | √ | 0 | 级次 |
-| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 15 | fkmfx | 科目方向 | varchar | 50 |  | √ | ' ' | 科目方向,枚举: 1 :借方 2 :贷方 3 :其他 9 :未知 |
 | 16 | fyear | 年度代码 | timestamp | 0 |  |  | null | 年度代码 |

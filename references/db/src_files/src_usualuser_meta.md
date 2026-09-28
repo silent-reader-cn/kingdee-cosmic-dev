@@ -12,13 +12,13 @@
 | 1 | fid | 单据id | int8 | 64 |  | √ | 0 | 单据id |
 | 2 | fduty | 职位 | varchar | 50 |  | √ | ' ' | 职位 |
 | 3 | fphone | 联系电话 | varchar | 50 |  | √ | ' ' | 联系电话 |
-| 4 | fdeptid | 部门 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 4 | fdeptid | 部门 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | femail | 电子邮箱 | varchar | 50 |  | √ | ' ' | 电子邮箱 |
 | 6 | fseq | 序号 | int8 | 64 |  | √ | 0 | 序号 |
 | 7 | fnote | 备注 | varchar | 50 |  | √ | ' ' | 备注 |
 | 8 | fnumber | 工号 | varchar | 36 |  | √ | ' ' | 工号 |
 | 9 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 10 | fbidderid | 姓名 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fbidderid | 姓名 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

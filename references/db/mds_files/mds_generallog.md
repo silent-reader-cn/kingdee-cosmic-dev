@@ -50,22 +50,22 @@
 | 10 | factypecount | 检修设备类型总数 | int8 | 64 |  | √ | 0 | 检修设备类型总数 |
 | 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 12 | fstatus | 数据状态 | varchar | 5 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 13 | fhisusecalclog | 历史用量运算日志 | int8 | 64 |  | √ | 0 | 历史用量运算日志 mds_hisusecalclog |
-| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fhisusecalclog | 历史用量运算日志 | int8 | 64 |  | √ | 0 | [历史用量运算日志 mds_hisusecalclog](../mds_files/mds_hisusecalclog.md) |
+| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 16 | ftargetstarttime | 启动时间 | timestamp | 0 |  |  | null | 启动时间 |
 | 17 | fsugendtime | 结束时间 | timestamp | 0 |  |  | null | 结束时间 |
 | 18 | fusecountmin | 最小使用频率 | int8 | 64 |  | √ | 0 | 最小使用频率 |
 | 19 | fspecialsumtime | 计算总时长（秒） | numeric | 23 | 10 | √ | 0 | 计算总时长（秒） |
-| 20 | fgeneralplan | 通用备货计划 | int8 | 64 |  | √ | 0 | 取数方案定义 mds_datafetchset |
+| 20 | fgeneralplan | 通用备货计划 | int8 | 64 |  | √ | 0 | [取数方案定义 mds_datafetchset](../mds_files/mds_datafetchset.md) |
 | 21 | frepeatcal | 重运算 | bpchar | 1 |  | √ | '0' | 重运算 |
 | 22 | fsugsumtime | 计算总时长（秒） | numeric | 23 | 10 | √ | 0 | 计算总时长（秒） |
 | 23 | fcalstatus | 计算状态 | varchar | 5 |  | √ | ' ' | 计算状态,枚举: A :待运算 B :运算中 C :完成 D :终止 E :错误 |
 | 24 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
-| 25 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 25 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 26 | fplansumtime | 计算总时长（秒） | numeric | 23 | 10 | √ | 0 | 计算总时长（秒） |
 | 27 | fchecktypecount | 检修级别总数 | int8 | 64 |  | √ | 0 | 检修级别总数 |
-| 28 | fhisuseset | 历史用量运算方案 | int8 | 64 |  | √ | 0 | 历史用量运算方案定义 mds_hisuseset |
+| 28 | fhisuseset | 历史用量运算方案 | int8 | 64 |  | √ | 0 | [历史用量运算方案定义 mds_hisuseset](../mds_files/mds_hisuseset.md) |
 | 29 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 30 | ftargetendtime | 结束时间 | timestamp | 0 |  |  | null | 结束时间 |
 | 31 | fplancount | 计划总数 | int8 | 64 |  | √ | 0 | 计划总数 |
@@ -73,7 +73,7 @@
 | 33 | fstocknocount | 备货编码总数 | int8 | 64 |  | √ | 0 | 备货编码总数 |
 | 34 | fsumtime | 计算总时长（秒） | numeric | 23 | 10 | √ | 0 | 计算总时长（秒） |
 | 35 | ferrmsg | 详细信息 | varchar | 255 |  | √ | ' ' | 详细信息 |
-| 36 | fgeneralset | 通用备货方案 | int8 | 64 |  | √ | 0 | 通用备货方案 mds_generalset |
+| 36 | fgeneralset | 通用备货方案 | int8 | 64 |  | √ | 0 | [通用备货方案 mds_generalset](../mds_files/mds_generalset.md) |
 | 37 | fspecialstarttime | 启动时间 | timestamp | 0 |  |  | null | 启动时间 |
 | 38 | fenable | 使用状态 | varchar | 5 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 39 | flatest | 最新版本 | bpchar | 1 |  | √ | '0' | 最新版本 |

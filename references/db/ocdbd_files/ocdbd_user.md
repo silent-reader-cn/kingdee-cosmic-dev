@@ -1,41 +1,4 @@
-# 会员档案-ocdbd_user
-
-## 地址单据体-子表 t_ocdbd_user_addr_entry
-
-- **表名称：** 地址单据体-子表
-- **表名：** t_ocdbd_user_addr_entry
-
-### 表格列定义
-
-| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | ftypeid | 地址类型 | int8 | 64 |  | √ | 0 | 辅助资料 bos_assistantdata_detail |
-| 3 | fphone | 联系电话 | varchar | 80 |  | √ | ' ' | 联系电话 |
-| 4 | fprovinceid | 省份 | int8 | 64 |  | √ | 0 | 行政区划 bd_admindivision |
-| 5 | fcontact | 联系人 | varchar | 80 |  | √ | ' ' | 联系人 |
-| 6 | fcityid | 城市 | int8 | 64 |  | √ | 0 | 行政区划 bd_admindivision |
-| 7 | fdistrictid | 所属区域 | varchar | 36 |  | √ | ' ' | 所属区域 |
-| 8 | fdetailedaddress | 详细地址 | varchar | 255 |  | √ | ' ' | 详细地址 |
-| 9 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 10 | fcountryid | 国家 | int8 | 64 |  | √ | 0 | 行政区划 bd_admindivision |
-| 11 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 12 | fisdefault | 是否默认地址 | bpchar | 1 |  | √ | '0' | 是否默认地址 |
-
-### 列规则定义
-
-| 序号 | 键编码 | 列字段 |
-| :--- | :--- | :--- |
-| 1 | fentryid | fentryid |
-
-### 索引定义
-
-| 序号 | 索引名 | 唯一 | 列字段 |
-| :--- | :--- | :--- | :--- |
-| 1 | pk_ocdbd_user_addr_entry |  | fentryid |
-| 2 | idx_ocdbd_useraddrentry_fid |  | fid |
-
----
+# 顾客信息-ocdbd_user
 
 ## 证件信息单据体-子表 t_ocdbd_user_cert_entry
 
@@ -47,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | ftypeid | 证件类型 | int8 | 64 |  | √ | 0 | 辅助资料 bos_assistantdata_detail |
+| 2 | ftypeid | 证件类型 | int8 | 64 |  | √ | 0 | [辅助资料 bos_assistantdata_detail](../base_files/bos_assistantdata_detail.md) |
 | 3 | fname | 证件姓名 | varchar | 80 |  | √ | ' ' | 证件姓名 |
 | 4 | fcomment | 备注 | varchar | 80 |  | √ | ' ' | 备注 |
 | 5 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
@@ -67,39 +30,6 @@
 | 1 | pk_ocdbd_user_cert_entry |  | fentryid |
 | 2 | idx_ocdbd_usercertentry_fid |  | fid |
 | 3 | idx_ocdbd_usercertentry_fnum |  | fnumber |
-
----
-
-## 银行卡单据体-子表 t_ocdbd_user_bank_entry
-
-- **表名称：** 银行卡单据体-子表
-- **表名：** t_ocdbd_user_bank_entry
-
-### 表格列定义
-
-| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fname | 开户人姓名 | varchar | 80 |  | √ | ' ' | 开户人姓名 |
-| 3 | fcomment | 备注 | varchar | 80 |  | √ | ' ' | 备注 |
-| 4 | fdepositbankid | 开户银行 | int8 | 64 |  | √ | 0 | 银行类别 bd_bankcgsetting |
-| 5 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 6 | fnumber | 银行卡卡号 | varchar | 80 |  | √ | ' ' | 银行卡卡号 |
-| 7 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 8 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
-
-### 列规则定义
-
-| 序号 | 键编码 | 列字段 |
-| :--- | :--- | :--- |
-| 1 | fentryid | fentryid |
-
-### 索引定义
-
-| 序号 | 索引名 | 唯一 | 列字段 |
-| :--- | :--- | :--- | :--- |
-| 1 | pk_ocdbd_user_bank_entry |  | fentryid |
-| 2 | idx_ocdbd_userbankentry_fid |  | fid |
 
 ---
 
@@ -141,9 +71,9 @@
 
 ---
 
-## 会员档案-使用范围表 t_ocdbd_user_u
+## 顾客信息-使用范围表 t_ocdbd_user_u
 
-- **表名称：** 会员档案-使用范围表
+- **表名称：** 顾客信息-使用范围表
 - **表名：** t_ocdbd_user_u
 
 ### 表格列定义
@@ -170,9 +100,9 @@
 
 ---
 
-## 会员档案-多语言表 t_ocdbd_user_l
+## 顾客信息-多语言表 t_ocdbd_user_l
 
-- **表名称：** 会员档案-多语言表
+- **表名称：** 顾客信息-多语言表
 - **表名：** t_ocdbd_user_l
 
 ### 表格列定义
@@ -200,9 +130,9 @@
 
 ---
 
-## 会员档案-分表 t_ocdbd_user_r
+## 顾客信息-分表 t_ocdbd_user_r
 
-- **表名称：** 会员档案-分表
+- **表名称：** 顾客信息-分表
 - **表名：** t_ocdbd_user_r
 
 ### 表格列定义
@@ -211,11 +141,11 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fdeveloptime | 开发时间 | timestamp | 0 |  |  | null | 开发时间 |
-| 3 | fagentid | 经纪人 | int8 | 64 |  | √ | 0 | 会员档案 ocdbd_user |
-| 4 | fdeveloperid | 开发人 | int8 | 64 |  | √ | 0 | 渠道用户(已废弃) ocdbd_channeluser |
-| 5 | fconsultantid | 专属顾问 | int8 | 64 |  | √ | 0 | 渠道用户(已废弃) ocdbd_channeluser |
-| 6 | fassignreasonid | 专属顾问分配原因 | int8 | 64 |  | √ | 0 | 辅助资料 bos_assistantdata_detail |
-| 7 | flastconsultantid | 原专属顾问 | int8 | 64 |  | √ | 0 | 渠道用户(已废弃) ocdbd_channeluser |
+| 3 | fagentid | 经纪人 | int8 | 64 |  | √ | 0 | [顾客信息 ocdbd_user](../ocdbd_files/ocdbd_user.md) |
+| 4 | fdeveloperid | 开发人 | int8 | 64 |  | √ | 0 | [渠道用户(已废弃) ocdbd_channeluser](../ocdbd_files/ocdbd_channeluser.md) |
+| 5 | fconsultantid | 专属顾问 | int8 | 64 |  | √ | 0 | [渠道用户(已废弃) ocdbd_channeluser](../ocdbd_files/ocdbd_channeluser.md) |
+| 6 | fassignreasonid | 专属顾问分配原因 | int8 | 64 |  | √ | 0 | [辅助资料 bos_assistantdata_detail](../base_files/bos_assistantdata_detail.md) |
+| 7 | flastconsultantid | 原专属顾问 | int8 | 64 |  | √ | 0 | [渠道用户(已废弃) ocdbd_channeluser](../ocdbd_files/ocdbd_channeluser.md) |
 | 8 | fassigntime | 专属顾问安排时间 | timestamp | 0 |  |  | null | 专属顾问安排时间 |
 
 ### 列规则定义
@@ -228,8 +158,157 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_ocdbd_userr_fdevid |  | fdeveloperid |
-| 2 | pk_ocdbd_user_r |  | fid |
+| 1 | pk_ocdbd_user_r |  | fid |
+| 2 | idx_ocdbd_userr_fdevid |  | fdeveloperid |
+
+---
+
+## 顾客信息-主表 t_ocdbd_user
+
+- **表名称：** 顾客信息-主表
+- **表名：** t_ocdbd_user
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
+| 2 | forgid | 所属业务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 3 | fdistrict | 注册区/县 | varchar | 80 |  | √ | ' ' | 注册区/县 |
+| 4 | fauthentication | fauthentication | bpchar | 1 |  | √ | '0' |  |
+| 5 | foccupationid | 职业 | int8 | 64 |  | √ | 0 | [辅助资料 bos_assistantdata_detail](../base_files/bos_assistantdata_detail.md) |
+| 6 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 7 | fsrcappname | 来源应用名称 | varchar | 80 |  | √ | ' ' | 来源应用名称 |
+| 8 | faudittime | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
+| 9 | fmobile | 手机号码 | varchar | 80 |  | √ | ' ' | 手机号码 |
+| 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 11 | fdisabletime | 禁用时间 | timestamp | 0 |  |  | null | 禁用时间 |
+| 12 | fshortmobile | 手机号码(不带国际代码) | varchar | 80 |  | √ | ' ' | 手机号码(不带国际代码) |
+| 13 | fstatus | 数据状态 | bpchar | 1 |  | √ | 'A' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
+| 14 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
+| 15 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 16 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
+| 17 | fbitindex | 位图 | int8 | 64 |  | √ | 0 | 位图 |
+| 18 | fcity | 注册城市 | varchar | 80 |  | √ | ' ' | 注册城市 |
+| 19 | fchannelid | 来源渠道 | int8 | 64 |  | √ | 0 | [渠道 ocdbd_channel](../ocdbd_files/ocdbd_channel.md) |
+| 20 | fidsystem | 入口ID体系 | bpchar | 1 |  | √ | 'A' | 入口ID体系,枚举: A :站内会员ID体系 B :微信授权ID体系 |
+| 21 | fnationalityid | 民族 | int8 | 64 |  | √ | 0 | [辅助资料 bos_assistantdata_detail](../base_files/bos_assistantdata_detail.md) |
+| 22 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 23 | fname | 姓名 | varchar | 80 |  | √ | ' ' | 姓名 |
+| 24 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 25 | fbirthday | 生日 | timestamp | 0 |  |  | null | 生日 |
+| 26 | fcomment | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
+| 27 | feducationid | 学历 | int8 | 64 |  | √ | 0 | [辅助资料 bos_assistantdata_detail](../base_files/bos_assistantdata_detail.md) |
+| 28 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 29 | favatarurl | 头像 | varchar | 255 |  | √ | ' ' | 头像 |
+| 30 | femail | 邮箱 | varchar | 80 |  | √ | ' ' | 邮箱 |
+| 31 | fsplitid | 管理区隔 | int8 | 64 |  | √ | 0 | [管理区隔 ocdbd_usersplit](../ocdbd_files/ocdbd_usersplit.md) |
+| 32 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 33 | fmonthlyincomeid | 家庭月收入 | int8 | 64 |  | √ | 0 | [辅助资料 bos_assistantdata_detail](../base_files/bos_assistantdata_detail.md) |
+| 34 | ftelephone | 固定电话 | varchar | 80 |  | √ | ' ' | 固定电话 |
+| 35 | fctrlstrategy | 控制策略 | varchar | 10 |  | √ | '5' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
+| 36 | fsex | 性别 | bpchar | 1 |  | √ | '0' | 性别,枚举: 0 :保密 1 :男 2 :女 |
+| 37 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 38 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
+| 39 | fuserstatus | 顾客状态 | bpchar | 1 |  | √ | 'B' | 顾客状态,枚举: A :未激活 B :正常 C :已注销 |
+| 40 | fsrcapptype | 来源应用类型 | bpchar | 1 |  | √ | 'A' | 来源应用类型,枚举: A :APP B :微信小程序 C :微信公众号 D :PC POS E :APP POS F :H5 G :网站 H :苍穹会员中心 I :企微小程序 |
+| 41 | fsourcebitindex | 原资料位图 | int8 | 64 |  | √ | 0 | 原资料位图 |
+| 42 | fprovince | 注册省份 | varchar | 80 |  | √ | ' ' | 注册省份 |
+| 43 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 44 | fviplevelid | 顾客等级 | int8 | 64 |  | √ | 0 | [会员等级定义 ocdbd_vip_level](../ocdbd_files/ocdbd_vip_level.md) |
+| 45 | fviptypeid | 顾客类型 | int8 | 64 |  | √ | 0 | [辅助资料 bos_assistantdata_detail](../base_files/bos_assistantdata_detail.md) |
+| 46 | fcustomerid | 所属客户 | int8 | 64 |  | √ | 0 | 客户 bd_customer |
+| 47 | fcountry | 注册国家 | varchar | 80 |  | √ | ' ' | 注册国家 |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fid | fid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_ocdbd_user_fmobile |  | fmobile |
+| 2 | idx_ocdbd_user_fnum |  | fnumber |
+| 3 | pk_ocdbd_user |  | fid |
+| 4 | idx_t_ocdbd_user_createorg |  | fcreateorgid |
+| 5 | idx_ocdbd_user_fname |  | fname |
+| 6 | idx_ocdbd_user_fcorgid |  | fcreateorgid |
+| 7 | idx_t_ocdbd_user_master |  | fmasterid |
+| 8 | idx_ocdbd_user_forgid |  | forgid |
+| 9 | idx_ocdbd_user_fsmobile |  | fshortmobile |
+
+---
+
+## 地址单据体-子表 t_ocdbd_user_addr_entry
+
+- **表名称：** 地址单据体-子表
+- **表名：** t_ocdbd_user_addr_entry
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | ftypeid | 地址类型 | int8 | 64 |  | √ | 0 | [辅助资料 bos_assistantdata_detail](../base_files/bos_assistantdata_detail.md) |
+| 3 | fphone | 联系电话 | varchar | 80 |  | √ | ' ' | 联系电话 |
+| 4 | fprovinceid | 省份 | int8 | 64 |  | √ | 0 | [行政区划 bd_admindivision](../base_files/bd_admindivision.md) |
+| 5 | fcontact | 联系人 | varchar | 80 |  | √ | ' ' | 联系人 |
+| 6 | fcityid | 城市 | int8 | 64 |  | √ | 0 | [行政区划 bd_admindivision](../base_files/bd_admindivision.md) |
+| 7 | fdistrictid | 所属区域 | varchar | 36 |  | √ | ' ' | 所属区域 |
+| 8 | fdetailedaddress | 详细地址 | varchar | 255 |  | √ | ' ' | 详细地址 |
+| 9 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
+| 10 | fcountryid | 国家 | int8 | 64 |  | √ | 0 | [行政区划 bd_admindivision](../base_files/bd_admindivision.md) |
+| 11 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 12 | fisdefault | 是否默认地址 | bpchar | 1 |  | √ | '0' | 是否默认地址 |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fentryid | fentryid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | pk_ocdbd_user_addr_entry |  | fentryid |
+| 2 | idx_ocdbd_useraddrentry_fid |  | fid |
+
+---
+
+## 银行卡单据体-子表 t_ocdbd_user_bank_entry
+
+- **表名称：** 银行卡单据体-子表
+- **表名：** t_ocdbd_user_bank_entry
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fname | 开户人姓名 | varchar | 80 |  | √ | ' ' | 开户人姓名 |
+| 3 | fcomment | 备注 | varchar | 80 |  | √ | ' ' | 备注 |
+| 4 | fdepositbankid | 开户银行 | int8 | 64 |  | √ | 0 | [银行类别 bd_bankcgsetting](../basedata_files/bd_bankcgsetting.md) |
+| 5 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
+| 6 | fnumber | 银行卡卡号 | varchar | 80 |  | √ | ' ' | 银行卡卡号 |
+| 7 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 8 | fcurrencyid | 币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fentryid | fentryid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | pk_ocdbd_user_bank_entry |  | fentryid |
+| 2 | idx_ocdbd_userbankentry_fid |  | fid |
 
 ---
 
@@ -243,7 +322,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | ftagid | 会员标签 | int8 | 64 |  | √ | 0 | 标签定义 ocdbd_user_tag |
+| 2 | ftagid | 顾客标签 | int8 | 64 |  | √ | 0 | [标签定义 ocdbd_user_tag](../ocdbd_files/ocdbd_user_tag.md) |
 | 3 | fcreatetime | 打标时间 | timestamp | 0 |  |  | null | 打标时间 |
 | 4 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
@@ -279,7 +358,7 @@
 | 3 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 4 | favatarurl | 头像 | varchar | 255 |  | √ | ' ' | 头像 |
 | 5 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 6 | fapptypeid | 应用类型 | int8 | 64 |  | √ | 0 | 辅助资料 bos_assistantdata_detail |
+| 6 | fapptypeid | 应用类型 | int8 | 64 |  | √ | 0 | [辅助资料 bos_assistantdata_detail](../base_files/bos_assistantdata_detail.md) |
 | 7 | fnickname | 昵称 | varchar | 255 |  | √ | ' ' | 昵称 |
 | 8 | fappid | 应用ID | varchar | 80 |  | √ | ' ' | 应用ID |
 | 9 | fmodifytime | 更新时间 | timestamp | 0 |  |  | null | 更新时间 |
@@ -307,85 +386,6 @@
 
 ---
 
-## 会员档案-主表 t_ocdbd_user
-
-- **表名称：** 会员档案-主表
-- **表名：** t_ocdbd_user
-
-### 表格列定义
-
-| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | forgid | 所属业务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 3 | fdistrict | 注册区/县 | varchar | 80 |  | √ | ' ' | 注册区/县 |
-| 4 | fauthentication | fauthentication | bpchar | 1 |  | √ | '0' |  |
-| 5 | foccupationid | 职业 | int8 | 64 |  | √ | 0 | 辅助资料 bos_assistantdata_detail |
-| 6 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 7 | fsrcappname | 来源应用名称 | varchar | 80 |  | √ | ' ' | 来源应用名称 |
-| 8 | faudittime | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
-| 9 | fmobile | 手机号码 | varchar | 80 |  | √ | ' ' | 手机号码 |
-| 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 11 | fdisabletime | 禁用时间 | timestamp | 0 |  |  | null | 禁用时间 |
-| 12 | fshortmobile | 手机号码(不带国际代码) | varchar | 80 |  | √ | ' ' | 手机号码(不带国际代码) |
-| 13 | fstatus | 数据状态 | bpchar | 1 |  | √ | 'A' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 14 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 15 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 16 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
-| 17 | fbitindex | 位图 | int8 | 64 |  | √ | 0 | 位图 |
-| 18 | fcity | 注册城市 | varchar | 80 |  | √ | ' ' | 注册城市 |
-| 19 | fchannelid | 来源渠道 | int8 | 64 |  | √ | 0 | 渠道 ocdbd_channel |
-| 20 | fidsystem | 入口ID体系 | bpchar | 1 |  | √ | 'A' | 入口ID体系,枚举: A :站内会员ID体系 B :微信授权ID体系 |
-| 21 | fnationalityid | 民族 | int8 | 64 |  | √ | 0 | 辅助资料 bos_assistantdata_detail |
-| 22 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 23 | fname | 姓名 | varchar | 80 |  | √ | ' ' | 姓名 |
-| 24 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 25 | fbirthday | 生日 | timestamp | 0 |  |  | null | 生日 |
-| 26 | fcomment | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
-| 27 | feducationid | 学历 | int8 | 64 |  | √ | 0 | 辅助资料 bos_assistantdata_detail |
-| 28 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 29 | favatarurl | 头像 | varchar | 255 |  | √ | ' ' | 头像 |
-| 30 | femail | 邮箱 | varchar | 80 |  | √ | ' ' | 邮箱 |
-| 31 | fsplitid | 管理区隔 | int8 | 64 |  | √ | 0 | 管理区隔 ocdbd_usersplit |
-| 32 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 33 | fmonthlyincomeid | 家庭月收入 | int8 | 64 |  | √ | 0 | 辅助资料 bos_assistantdata_detail |
-| 34 | ftelephone | 固定电话 | varchar | 80 |  | √ | ' ' | 固定电话 |
-| 35 | fctrlstrategy | 控制策略 | varchar | 10 |  | √ | '5' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
-| 36 | fsex | 性别 | bpchar | 1 |  | √ | '0' | 性别,枚举: 0 :保密 1 :男 2 :女 |
-| 37 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 38 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
-| 39 | fuserstatus | 会员状态 | bpchar | 1 |  | √ | 'B' | 会员状态,枚举: A :未激活 B :正常 C :已注销 |
-| 40 | fsrcapptype | 来源应用类型 | bpchar | 1 |  | √ | 'A' | 来源应用类型,枚举: A :APP B :微信小程序 C :微信公众号 D :PC POS E :APP POS F :H5 G :网站 H :苍穹会员中心 I :企微小程序 |
-| 41 | fsourcebitindex | 原资料位图 | int8 | 64 |  | √ | 0 | 原资料位图 |
-| 42 | fprovince | 注册省份 | varchar | 80 |  | √ | ' ' | 注册省份 |
-| 43 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 44 | fviplevelid | 会员等级 | int8 | 64 |  | √ | 0 | 会员等级定义 ocdbd_vip_level |
-| 45 | fviptypeid | 会员类型 | int8 | 64 |  | √ | 0 | 辅助资料 bos_assistantdata_detail |
-| 46 | fcustomerid | 所属客户 | int8 | 64 |  | √ | 0 | 客户 bd_customer |
-| 47 | fcountry | 注册国家 | varchar | 80 |  | √ | ' ' | 注册国家 |
-
-### 列规则定义
-
-| 序号 | 键编码 | 列字段 |
-| :--- | :--- | :--- |
-| 1 | fid | fid |
-
-### 索引定义
-
-| 序号 | 索引名 | 唯一 | 列字段 |
-| :--- | :--- | :--- | :--- |
-| 1 | idx_ocdbd_user_fmobile |  | fmobile |
-| 2 | idx_ocdbd_user_fnum |  | fnumber |
-| 3 | pk_ocdbd_user |  | fid |
-| 4 | idx_t_ocdbd_user_createorg |  | fcreateorgid |
-| 5 | idx_ocdbd_user_fname |  | fname |
-| 6 | idx_ocdbd_user_fcorgid |  | fcreateorgid |
-| 7 | idx_t_ocdbd_user_master |  | fmasterid |
-| 8 | idx_ocdbd_user_forgid |  | forgid |
-| 9 | idx_ocdbd_user_fsmobile |  | fshortmobile |
-
----
-
 ## 纪念日单据体-子表 t_ocdbd_user_comm_entry
 
 - **表名称：** 纪念日单据体-子表
@@ -396,7 +396,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | ftypeid | 纪念日类型 | int8 | 64 |  | √ | 0 | 辅助资料 bos_assistantdata_detail |
+| 2 | ftypeid | 纪念日类型 | int8 | 64 |  | √ | 0 | [辅助资料 bos_assistantdata_detail](../base_files/bos_assistantdata_detail.md) |
 | 3 | fcomment | 备注 | varchar | 80 |  | √ | ' ' | 备注 |
 | 4 | fdate | 日期 | timestamp | 0 |  |  | null | 日期 |
 | 5 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |

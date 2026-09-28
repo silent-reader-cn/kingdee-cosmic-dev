@@ -1,42 +1,5 @@
 # （废弃）单据策略-ccm_billstrategy
 
-## 重算策略取值分录-子表 t_ccm_bs_recalentry
-
-- **表名称：** 重算策略取值分录-子表
-- **表名：** t_ccm_bs_recalentry
-
-### 表格列定义
-
-| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fnewrecalfilter_tag | 过滤条件（后台）_详情 | text | 0 |  |  | null | 过滤条件（后台）_详情 |
-| 3 | fnewrecalformula_tag | 取值公式（后台）_详情 | text | 0 |  |  | null | 取值公式（后台）_详情 |
-| 4 | fnewrecalformula | 取值公式（后台） | varchar | 255 |  | √ | ' ' | 取值公式（后台） |
-| 5 | frecalformula_tag | 取值公式（后台废弃） | text | 0 |  |  | null | 取值公式（后台废弃） |
-| 6 | frecaldesc | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
-| 7 | frecalfilter | 过滤条件 | varchar | 510 |  | √ | ' ' | 过滤条件 |
-| 8 | frecalfilter_tag | 过滤条件（后台废弃） | text | 0 |  |  | null | 过滤条件（后台废弃） |
-| 9 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 10 | fnewrecalfilter | 过滤条件（后台） | varchar | 255 |  | √ | ' ' | 过滤条件（后台） |
-| 11 | frecalformula | 取值公式 | varchar | 510 |  | √ | ' ' | 取值公式 |
-| 12 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-
-### 列规则定义
-
-| 序号 | 键编码 | 列字段 |
-| :--- | :--- | :--- |
-| 1 | fentryid | fentryid |
-
-### 索引定义
-
-| 序号 | 索引名 | 唯一 | 列字段 |
-| :--- | :--- | :--- | :--- |
-| 1 | idx_ccm_bsr_fid |  | fid |
-| 2 | t_ccm_bs_recalentry_pkey |  | fentryid |
-
----
-
 ## 检查策略取值分录-子表 t_ccm_bs_checkentry
 
 - **表名称：** 检查策略取值分录-子表
@@ -92,15 +55,15 @@
 | 7 | fplugintype | 插件类型 | varchar | 10 |  | √ | ' ' | 插件类型,枚举: java :java ks :ks |
 | 8 | fcheckops | 检查信用操作 | varchar | 2000 |  | √ | ' ' | 检查信用操作,枚举: submit :提交 audit :审核 cancelrec :取消收款 |
 | 9 | fstatus | 数据状态 | varchar | 10 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 12 | fchecktypeid | 信用控制形式 | int8 | 64 |  | √ | 0 | （废弃）信用控制形式 ccm_checktype |
+| 12 | fchecktypeid | 信用控制形式 | int8 | 64 |  | √ | 0 | [（废弃）信用控制形式 ccm_checktype](../ccm_files/ccm_checktype.md) |
 | 13 | fplugin | 插件 | varchar | 255 |  | √ | ' ' | 插件 |
-| 14 | fentityid | 业务单据 | varchar | 80 |  | √ | ' ' | 单据主实体 bos_billmainentity |
-| 15 | fassingentityid | 逾期单据 | varchar | 80 |  | √ | ' ' | 单据主实体 bos_billmainentity |
+| 14 | fentityid | 业务单据 | varchar | 80 |  | √ | ' ' | [单据主实体 bos_billmainentity](../mdl_files/bos_billmainentity.md) |
+| 15 | fassingentityid | 逾期单据 | varchar | 80 |  | √ | ' ' | [单据主实体 bos_billmainentity](../mdl_files/bos_billmainentity.md) |
 | 16 | fnewdatafilter | 过滤条件(后台) | varchar | 255 |  | √ | ' ' | 过滤条件(后台) |
-| 17 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 18 | fname | 名称 | varchar | 80 |  | √ | ' ' | 名称 |
+| 17 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 18 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
 | 19 | frecalculateplugin | 插件 | varchar | 255 |  | √ | ' ' | 插件 |
 | 20 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 21 | freduceops | 信用占用操作 | varchar | 2000 |  | √ | ' ' | 信用占用操作,枚举: submit :提交 audit :审核 cancelrec :取消收款 |
@@ -140,7 +103,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fname | 名称 | varchar | 80 |  | √ | ' ' | 名称 |
+| 2 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
 | 3 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
 | 4 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
 
@@ -156,3 +119,40 @@
 | :--- | :--- | :--- | :--- |
 | 1 | t_ccm_billstrategy_l_pkey |  | fpkid |
 | 2 | idx_ccm_bs_fid_flocale |  | fid,flocaleid |
+
+---
+
+## 重算策略取值分录-子表 t_ccm_bs_recalentry
+
+- **表名称：** 重算策略取值分录-子表
+- **表名：** t_ccm_bs_recalentry
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fnewrecalfilter_tag | 过滤条件（后台）_详情 | text | 0 |  |  | null | 过滤条件（后台）_详情 |
+| 3 | fnewrecalformula_tag | 取值公式（后台）_详情 | text | 0 |  |  | null | 取值公式（后台）_详情 |
+| 4 | fnewrecalformula | 取值公式（后台） | varchar | 255 |  | √ | ' ' | 取值公式（后台） |
+| 5 | frecalformula_tag | 取值公式（后台废弃） | text | 0 |  |  | null | 取值公式（后台废弃） |
+| 6 | frecaldesc | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
+| 7 | frecalfilter | 过滤条件 | varchar | 510 |  | √ | ' ' | 过滤条件 |
+| 8 | frecalfilter_tag | 过滤条件（后台废弃） | text | 0 |  |  | null | 过滤条件（后台废弃） |
+| 9 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
+| 10 | fnewrecalfilter | 过滤条件（后台） | varchar | 255 |  | √ | ' ' | 过滤条件（后台） |
+| 11 | frecalformula | 取值公式 | varchar | 510 |  | √ | ' ' | 取值公式 |
+| 12 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fentryid | fentryid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_ccm_bsr_fid |  | fid |
+| 2 | t_ccm_bs_recalentry_pkey |  | fentryid |

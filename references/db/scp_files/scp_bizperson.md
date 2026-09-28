@@ -10,35 +10,35 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fgroupid | 所属业务组 | int8 | 64 |  | √ | 0 | 业务组 pur_bizgroup |
-| 3 | forgid | 业务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fgroupid | 所属业务组 | int8 | 64 |  | √ | 0 | [业务组 pur_bizgroup](../pbd_files/pur_bizgroup.md) |
+| 3 | forgid | 业务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | fdisabledate | fdisabledate | timestamp | 0 |  |  | null |  |
-| 5 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 7 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :保存 B :已提交 C :已审核 |
-| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 10 | fsupgroupid | 供应商分组 | int8 | 64 |  | √ | 0 | 供应商分类 bd_suppliergroup |
+| 10 | fsupgroupid | 供应商分组 | int8 | 64 |  | √ | 0 | [供应商分类 bd_suppliergroup](../basedata_files/bd_suppliergroup.md) |
 | 11 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 12 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
-| 13 | fscpuserid | 供应商用户 | int8 | 64 |  | √ | 0 | 供应商用户 pur_supuser |
+| 13 | fscpuserid | 供应商用户 | int8 | 64 |  | √ | 0 | [供应商用户 pur_supuser](../basedata_files/pur_supuser.md) |
 | 14 | fbizscope | 业务类型 | varchar | 50 |  | √ | ' ' | 业务类型,枚举: 1 :订单 2 :收货 3 :退货 4 :对账 5 :收票 6 :付款 7 :询价 8 :招标 A :全部 |
-| 15 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 15 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 16 | fremark | fremark | varchar | 255 |  | √ | ' ' |  |
-| 17 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 17 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 18 | fname | fname | varchar | 50 |  | √ | ' ' |  |
 | 19 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 20 | fuserid | 对应人员 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 20 | fuserid | 对应人员 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 21 | fdisablerid | fdisablerid | int8 | 64 |  | √ | 0 |  |
 | 22 | fauditdate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
-| 23 | fbizpartnerid | 商务伙伴 | int8 | 64 |  | √ | 0 | 商务伙伴 bd_bizpartner |
-| 24 | fsupplierid | 销售方 | int8 | 64 |  | √ | 0 | 供应商 bd_supplier |
+| 23 | fbizpartnerid | 商务伙伴 | int8 | 64 |  | √ | 0 | [商务伙伴 bd_bizpartner](../base_files/bd_bizpartner.md) |
+| 24 | fsupplierid | 销售方 | int8 | 64 |  | √ | 0 | [供应商 bd_supplier](../basedata_files/bd_supplier.md) |
 | 25 | fctrlstrategy | 控制策略 | bpchar | 1 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
 | 26 | fenable | 使用状态 | bpchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 27 | fnumber | 编码 | varchar | 50 |  | √ | ' ' | 编码 |
-| 28 | fuseorgid | 业务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 28 | fuseorgid | 业务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 29 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
-| 30 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 30 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 
@@ -70,11 +70,11 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fdefault | 默认 | bpchar | 1 |  | √ | ' ' | 默认 |
 | 3 | fforbid | 停用 | bpchar | 1 |  | √ | ' ' | 停用 |
-| 4 | fpurorgid | 采购方 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 4 | fpurorgid | 采购方 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 6 | fnote | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
 | 7 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 8 | fcontacterid | 联系人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | fcontacterid | 联系人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fbizscope | 业务类型 | varchar | 50 |  | √ | ' ' | 业务类型,枚举: 1 :订单 2 :发货 3 :退货 4 :对账 5 :开票 6 :收款 7 :报价 8 :投标 A :全部 |
 
 ### 列规则定义
@@ -92,9 +92,9 @@
 
 ---
 
-## 采购方(影响：订单&#x2f;发货&#x2f;收货&#x2f;入库&#x2f;退货)-多选基础资料表 t_pur_supbiz_purorg
+## 采购方(影响：订单/发货/收货/入库/退货)-多选基础资料表 t_pur_supbiz_purorg
 
-- **表名称：** 采购方(影响：订单&#x2f;发货&#x2f;收货&#x2f;入库&#x2f;退货)-多选基础资料表
+- **表名称：** 采购方(影响：订单/发货/收货/入库/退货)-多选基础资料表
 - **表名：** t_pur_supbiz_purorg
 
 ### 表格列定义
@@ -102,7 +102,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -205,9 +205,9 @@
 
 ---
 
-## 收货方(影响：订单&#x2f;发货&#x2f;收货&#x2f;入库&#x2f;退货)-多选基础资料表 t_pur_supbiz_rcvorg
+## 收货方(影响：订单/发货/收货/入库/退货)-多选基础资料表 t_pur_supbiz_rcvorg
 
-- **表名称：** 收货方(影响：订单&#x2f;发货&#x2f;收货&#x2f;入库&#x2f;退货)-多选基础资料表
+- **表名称：** 收货方(影响：订单/发货/收货/入库/退货)-多选基础资料表
 - **表名：** t_pur_supbiz_rcvorg
 
 ### 表格列定义
@@ -215,7 +215,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -233,9 +233,9 @@
 
 ---
 
-## 核算方(影响：对账&#x2f;开票&#x2f;收款)-多选基础资料表 t_pur_supbiz_setorg
+## 核算方(影响：对账/开票/收款)-多选基础资料表 t_pur_supbiz_setorg
 
-- **表名称：** 核算方(影响：对账&#x2f;开票&#x2f;收款)-多选基础资料表
+- **表名称：** 核算方(影响：对账/开票/收款)-多选基础资料表
 - **表名：** t_pur_supbiz_setorg
 
 ### 表格列定义
@@ -243,7 +243,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义

@@ -16,13 +16,13 @@
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 6 | fexecutestatus | 执行状态 | varchar | 30 |  | √ | ' ' | 执行状态,枚举: 0 :待升级 1 :升级中 2 :升级完成 3 :升级失败 |
 | 7 | fintervaldays | 间隔时间(天) | int4 | 32 |  | √ | 0 | 间隔时间(天) |
-| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fdateendtime | 数据升级截止日期 | timestamp | 0 |  |  | null | 数据升级截止日期 |
 | 10 | fplugin | 升级插件 | varchar | 100 |  | √ | ' ' | 升级插件 |
-| 11 | fbizobj | 升级对象 | varchar | 50 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 11 | fbizobj | 升级对象 | varchar | 50 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 12 | fbillno | 单据编号 | varchar | 80 |  | √ | ' ' | 单据编号 |
 | 13 | fisdefault | 是否预置 | bpchar | 1 |  | √ | '0' | 是否预置 |
-| 14 | fexecutorid | 执行人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fexecutorid | 执行人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

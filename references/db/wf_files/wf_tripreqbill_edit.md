@@ -10,20 +10,20 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | ffromplaceid | 出发地 | int8 | 64 |  | √ | 0 | 行政区划 bd_admindivision |
+| 2 | ffromplaceid | 出发地 | int8 | 64 |  | √ | 0 | [行政区划 bd_admindivision](../base_files/bd_admindivision.md) |
 | 3 | fexchangerateprec | 汇率精度 | int8 | 64 |  | √ | 0 | 汇率精度 |
-| 4 | ftravelerid | 行程人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | ftravelerid | 行程人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | foriamount | 原币金额 | numeric | 23 | 10 | √ | 0.0000000000 | 原币金额 |
 | 6 | fconvertmode | 汇率折算方式 | varchar | 30 |  | √ | ' ' | 汇率折算方式,枚举: |
-| 7 | ftripcurrencyid | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 7 | ftripcurrencyid | 币别 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 | 8 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 9 | froundtrip | 单程/往返 | varchar | 30 |  | √ | ' ' | 单程/往返,枚举: 1 :单程 2 :往返 |
 | 10 | ftripamount | 申请金额 | numeric | 23 | 10 | √ | 0.0000000000 | 申请金额 |
 | 11 | fexchangerate | 汇率 | numeric | 23 | 10 | √ | 0.0000000000 | 汇率 |
 | 12 | fenddate | 结束日期 | timestamp | 0 |  |  | null | 结束日期 |
-| 13 | ftoplaceid | 目的地 | int8 | 64 |  | √ | 0 | 行政区划 bd_admindivision |
+| 13 | ftoplaceid | 目的地 | int8 | 64 |  | √ | 0 | [行政区划 bd_admindivision](../base_files/bd_admindivision.md) |
 | 14 | fstartdate | 开始日期 | timestamp | 0 |  |  | null | 开始日期 |
-| 15 | fentrycostdept | 分录费用承担部门 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 15 | fentrycostdept | 分录费用承担部门 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 16 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 17 | fvehicle | 交通工具 | varchar | 30 |  | √ | ' ' | 交通工具,枚举: 1 :飞机 2 :大巴 3 :火车 |
 
@@ -42,6 +42,41 @@
 
 ---
 
+## 出差申请单-流程内测-反写记录表 t_wf_reqbill_wb
+
+- **表名称：** 出差申请单-流程内测-反写记录表
+- **表名：** t_wf_reqbill_wb
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | null |  |
+| 2 | foperate | foperate | varchar | 50 |  | √ | ' ' |  |
+| 3 | fruleverid | fruleverid | int8 | 64 |  |  | null |  |
+| 4 | fsbillid | fsbillid | int8 | 64 |  |  | null |  |
+| 5 | fstableid | fstableid | int8 | 64 |  |  | null |  |
+| 6 | fsid | fsid | int8 | 64 |  |  | null |  |
+| 7 | fwritevalue | fwritevalue | numeric | 23 | 10 |  | null |  |
+| 8 | fseq | fseq | int4 | 32 |  | √ | 0 |  |
+| 9 | fentryid | fentryid | int8 | 64 |  | √ | null |  |
+| 10 | fruleitemid | fruleitemid | int8 | 64 |  |  | null |  |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fentryid | fentryid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_wf_reqbill_wb_fk |  | fid |
+| 2 | pk_wf_reqbill_wb |  | fentryid |
+
+---
+
 ## 出差申请单-流程内测-主表 t_wf_reqbill
 
 - **表名称：** 出差申请单-流程内测-主表
@@ -52,12 +87,12 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fapplierid | 申请人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fapplierid | 申请人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fbillstatus | 单据状态 | varchar | 30 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 D :审核中 E :审核通过 F :等待付款 G :已付款 H :已废弃 I :已结束 J :审核不通过 |
 | 4 | ftel | 联系方式 | varchar | 100 |  | √ | ' ' | 联系方式 |
 | 5 | fdepartment | 部门 | varchar | 100 |  | √ | ' ' | 部门 |
 | 6 | fbizdate | 申请日期 | timestamp | 0 |  |  | null | 申请日期 |
-| 7 | fcostdeptid | 费用承担部门 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 7 | fcostdeptid | 费用承担部门 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | fdescription | 事由 | varchar | 100 |  | √ | ' ' | 事由 |
 | 9 | famount | 金额 | numeric | 23 | 10 | √ | 0.0000000000 | 金额 |
 | 10 | fbillno | 单据编号 | varchar | 60 |  | √ | ' ' | 单据编号 |
@@ -122,32 +157,74 @@
 
 ---
 
-## -子表 t_wf_reqtripentryc
+## 关联子实体-子表 t_wf_reqtripentry_lk
 
-- **表名称：** -子表
-- **表名：** t_wf_reqtripentryc
+- **表名称：** 关联子实体-子表
+- **表名：** t_wf_reqtripentry_lk
 
 ### 表格列定义
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fsbillid | 源单内码 | int8 | 64 |  |  | null | 源单内码 |
+| 2 | fstableid | 源单主实体编码 | int8 | 64 |  |  | null | 源单主实体编码 |
+| 3 | fsid | 源单主实体内码 | int8 | 64 |  |  | null | 源单主实体内码 |
+| 4 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
+| 5 | fentryid | fentryid | int8 | 64 |  | √ | null |  |
+| 6 | fpkid | fpkid | int8 | 64 |  | √ | null | id |
 
 ### 列规则定义
 
 | 序号 | 键编码 | 列字段 |
 | :--- | :--- | :--- |
+| 1 | fpkid | fpkid |
 
 ### 索引定义
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
+| 1 | idx_wf_reqtripentry_lk_fk |  | fentryid |
+| 2 | pk_wf_reqtripentry_lk |  | fpkid |
 
 ---
 
-## 附件字段1-附件表 q1
+## 出差申请单-流程内测-关联追踪表 t_wf_reqbill_tc
 
-- **表名称：** 附件字段1-附件表
-- **表名：** q1
+- **表名称：** 出差申请单-流程内测-关联追踪表
+- **表名：** t_wf_reqbill_tc
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | null |  |
+| 2 | ftbillid | ftbillid | int8 | 64 |  |  | null |  |
+| 3 | fttableid | fttableid | int8 | 64 |  |  | null |  |
+| 4 | fsbillid | fsbillid | int8 | 64 |  |  | null |  |
+| 5 | fstableid | fstableid | int8 | 64 |  |  | null |  |
+| 6 | fsid | fsid | int8 | 64 |  |  | null |  |
+| 7 | ftid | ftid | int8 | 64 |  |  | null |  |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fid | fid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | pk_wf_reqbill_tc |  | fid |
+| 2 | idx_wf_reqbill_tc_tbill |  | ftbillid |
+| 3 | idx_wf_reqbill_tc_tid |  | ftid |
+
+---
+
+## -子表 t_wf_reqtripentryc
+
+- **表名称：** -子表
+- **表名：** t_wf_reqtripentryc
 
 ### 表格列定义
 
@@ -317,3 +394,34 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
+
+---
+
+## 关联子实体-子表 t_wf_reqbill_lk
+
+- **表名称：** 关联子实体-子表
+- **表名：** t_wf_reqbill_lk
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | null |  |
+| 2 | fsbillid | 源单内码 | int8 | 64 |  |  | null | 源单内码 |
+| 3 | fstableid | 源单主实体编码 | int8 | 64 |  |  | null | 源单主实体编码 |
+| 4 | fsid | 源单主实体内码 | int8 | 64 |  |  | null | 源单主实体内码 |
+| 5 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
+| 6 | fpkid | fpkid | int8 | 64 |  | √ | null | id |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fpkid | fpkid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | pk_wf_reqbill_lk |  | fpkid |
+| 2 | idx_wf_reqbill_lk_fk |  | fid |

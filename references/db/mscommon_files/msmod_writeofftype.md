@@ -43,7 +43,7 @@
 | 2 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 3 | fsharefield | 分摊标准字段 | varchar | 50 |  | √ | ' ' | 分摊标准字段 |
 | 4 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 5 | fsharewfbilltypeid | 核销单据 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 5 | fsharewfbilltypeid | 核销单据 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 6 | fsharefieldkey | 分摊标准字段Key | varchar | 50 |  | √ | ' ' | 分摊标准字段Key |
 
 ### 列规则定义
@@ -77,16 +77,16 @@
 | 5 | ffiltercondition_tag | 过滤条件有效值_详情 | text | 0 |  |  | null | 过滤条件有效值_详情 |
 | 6 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 7 | fwriteoffbillname | 核销单据名称 | varchar | 50 |  | √ | ' ' | 核销单据名称 |
-| 8 | fwfbillalias | 核销单据标识 | int8 | 64 |  | √ | 0 | 核销单据类型 msmod_billtype |
+| 8 | fwfbillalias | 核销单据标识 | int8 | 64 |  | √ | 0 | [核销单据类型 msmod_billtype](../mscommon_files/msmod_billtype.md) |
 | 9 | fcfiltercondition_tag | 追加过滤条件有效值_详情 | text | 0 |  |  | null | 追加过滤条件有效值_详情 |
 | 10 | ffilterconditionview | 过滤条件 | varchar | 512 |  | √ | ' ' | 过滤条件 |
 | 11 | fmodifytime | fmodifytime | timestamp | 0 |  |  | null |  |
-| 12 | fwfmapping | 核销记录映射配置 | int8 | 64 |  | √ | 0 | 通用映射配置 sbs_billfieldmapping |
+| 12 | fwfmapping | 核销记录映射配置 | int8 | 64 |  | √ | 0 | [通用映射配置 sbs_billfieldmapping](../mscommon_files/sbs_billfieldmapping.md) |
 | 13 | fwriteoffbillnumber | 核销单据编码 | varchar | 80 |  | √ | ' ' | 核销单据编码 |
 | 14 | fstatus | fstatus | bpchar | 1 |  | √ | ' ' |  |
 | 15 | fcreatorid | fcreatorid | int8 | 64 |  | √ | 0 |  |
 | 16 | fmasterid | fmasterid | int8 | 64 |  | √ | 0 |  |
-| 17 | fwriteoffbilltypeid | 核销单据 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 17 | fwriteoffbilltypeid | 核销单据 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 18 | ffiltercondition | 过滤条件有效值 | varchar | 255 |  | √ | ' ' | 过滤条件有效值 |
 | 19 | fcfilterconditionview | 追加过滤条件 | varchar | 512 |  | √ | ' ' | 追加过滤条件 |
 | 20 | fcfiltercondition | 追加过滤条件有效值 | varchar | 255 |  | √ | ' ' | 追加过滤条件有效值 |
@@ -100,7 +100,7 @@
 | 28 | ffilterconditiondesc | 过滤条件详情(JSON) | varchar | 255 |  | √ | ' ' | 过滤条件详情(JSON) |
 | 29 | frbwriteoff | 红蓝核销 | bpchar | 1 |  | √ | '0' | 红蓝核销 |
 | 30 | fwriteofftypenumber | 核销类别编码 | varchar | 80 |  | √ | ' ' | 核销类别编码 |
-| 31 | frbwfmapping | 红蓝核销记录映射 | int8 | 64 |  | √ | 0 | 通用映射配置 sbs_billfieldmapping |
+| 31 | frbwfmapping | 红蓝核销记录映射 | int8 | 64 |  | √ | 0 | [通用映射配置 sbs_billfieldmapping](../mscommon_files/sbs_billfieldmapping.md) |
 | 32 | ffilterconditiondesc_tag | 过滤条件详情(JSON)_详情 | text | 0 |  |  | null | 过滤条件详情(JSON)_详情 |
 | 33 | fcfilterconditiondesc | 追加过滤条件详情(JSON) | varchar | 255 |  | √ | ' ' | 追加过滤条件详情(JSON) |
 | 34 | fnumber | fnumber | varchar | 80 |  | √ | ' ' |  |
@@ -134,18 +134,18 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fisfeeshare | 核销采用分摊算法 | bpchar | 1 |  | √ | '0' | 核销采用分摊算法 |
-| 4 | fbizapp | 所属应用 | varchar | 36 |  | √ | ' ' | 业务应用列表 bos_devp_bizapplist |
+| 4 | fbizapp | 所属应用 | varchar | 36 |  | √ | ' ' | [业务应用列表 bos_devp_bizapplist](../devnew_files/bos_devp_bizapplist.md) |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 6 | fispreset | 系统预设 | bpchar | 1 |  | √ | '0' | 系统预设 |
 | 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 8 | fstatus | 数据状态 | bpchar | 1 |  | √ | 'C' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 11 | fwriteoffplugin | 核销插件 | varchar | 255 |  | √ | ' ' | 核销插件 |
 | 12 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 13 | fwriteoffrecordbillid | 核销记录存储 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 13 | fwriteoffrecordbillid | 核销记录存储 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 14 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
 | 15 | fwriteofftype | 核销类型 | varchar | 5 |  | √ | 'A' | 核销类型,枚举: A :核销 B :费用分摊 |
 
@@ -248,12 +248,12 @@
 | 3 | fwfbeispreset | 系统预设 | bpchar | 1 |  | √ | '0' | 系统预设 |
 | 4 | ftargetbilltypeid | 目标单据 | varchar | 36 |  | √ | ' ' | 目标单据,枚举: |
 | 5 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 6 | fbotpruleid | BOTP规则 | varchar | 50 |  | √ | ' ' | 转换规则 botp_crlist |
+| 6 | fbotpruleid | BOTP规则 | varchar | 50 |  | √ | ' ' | [转换规则 botp_crlist](../botp_files/botp_crlist.md) |
 | 7 | fisdeletefilter | 反核销删除条件 | varchar | 512 |  | √ | ' ' | 反核销删除条件 |
 | 8 | fautoplugin | fautoplugin | varchar | 255 |  | √ | ' ' |  |
 | 9 | fisdeletefilterdesc_tag | 删除条件过滤详情_详情 | text | 0 |  |  | null | 删除条件过滤详情_详情 |
-| 10 | ftargetbilltype | 目标单据 | int8 | 64 |  | √ | 0 | 核销单据类型 msmod_billtype |
-| 11 | fsrcbilltype | 来源单据 | int8 | 64 |  | √ | 0 | 核销单据类型 msmod_billtype |
+| 10 | ftargetbilltype | 目标单据 | int8 | 64 |  | √ | 0 | [核销单据类型 msmod_billtype](../mscommon_files/msmod_billtype.md) |
+| 11 | fsrcbilltype | 来源单据 | int8 | 64 |  | √ | 0 | [核销单据类型 msmod_billtype](../mscommon_files/msmod_billtype.md) |
 | 12 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 13 | fsrcbilltypeid | 来源单据 | varchar | 36 |  | √ | ' ' | 来源单据,枚举: |
 

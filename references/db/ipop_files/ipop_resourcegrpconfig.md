@@ -39,7 +39,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 资源清单明细 ipop_resoucelistdetail |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [资源清单明细 ipop_resoucelistdetail](../ipop_files/ipop_resoucelistdetail.md) |
 | 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 | 4 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
@@ -70,11 +70,11 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
 | 3 | fstatus | 使用状态 | varchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fcreatedate | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
 | 6 | fmodifydate | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 7 | fproductid | 产品系列 | int8 | 64 |  | √ | 0 | 资源辅助资料 ipop_resauxiliarydata |
-| 8 | fcreaterid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 7 | fproductid | 产品系列 | int8 | 64 |  | √ | 0 | [资源辅助资料 ipop_resauxiliarydata](../ipop_files/ipop_resauxiliarydata.md) |
+| 8 | fcreaterid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fprodseriessn | fprodseriessn | varchar | 50 |  | √ | ' ' |  |
 
 ### 列规则定义

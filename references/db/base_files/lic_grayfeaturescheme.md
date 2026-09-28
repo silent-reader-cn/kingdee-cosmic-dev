@@ -46,7 +46,7 @@
 | 4 | fappnum | 编码 | varchar | 100 |  | √ | ' ' | 编码 |
 | 5 | fproduct | 产品标识码 | int8 | 64 |  | √ | 0 | 产品标识码 |
 | 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 7 | fappid | 业务应用名称 | varchar | 100 |  | √ | ' ' | 业务应用实体 bos_devportal_bizapp |
+| 7 | fappid | 业务应用名称 | varchar | 100 |  | √ | ' ' | [业务应用实体 bos_devportal_bizapp](../mdl_files/bos_devportal_bizapp.md) |
 
 ### 列规则定义
 
@@ -75,7 +75,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fcloudnum | 编码 | varchar | 100 |  | √ | ' ' | 编码 |
 | 3 | fisblack | 是否加入黑名单 | bpchar | 1 |  | √ | '1' | 是否加入黑名单 |
-| 4 | fcloudid | 业务云名称 | varchar | 100 |  | √ | ' ' | 业务云 bos_devportal_bizcloud |
+| 4 | fcloudid | 业务云名称 | varchar | 100 |  | √ | ' ' | [业务云 bos_devportal_bizcloud](../mdl_files/bos_devportal_bizcloud.md) |
 | 5 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 6 | fproduct | 产品标识码 | int8 | 64 |  | √ | 0 | 产品标识码 |
 | 7 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
@@ -107,12 +107,13 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fentitynum | 业务对象编码 | varchar | 100 |  | √ | ' ' | 业务对象编码 |
 | 3 | fisblack | 是否加入黑名单 | bpchar | 1 |  | √ | '1' | 是否加入黑名单 |
-| 4 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 5 | fappnum | 应用编码 | varchar | 100 |  | √ | ' ' | 应用编码 |
-| 6 | fentityid | 业务对象名称 | varchar | 100 |  | √ | ' ' | 业务对象 bos_objecttype |
-| 7 | fproduct | 产品标识码 | int8 | 64 |  | √ | 0 | 产品标识码 |
-| 8 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 9 | fappid | 应用 | varchar | 50 |  | √ | ' ' | 业务应用实体 bos_devportal_bizapp |
+| 4 | fonsale | 是否上架 | bpchar | 1 |  | √ | '0' | 是否上架 |
+| 5 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
+| 6 | fappnum | 应用编码 | varchar | 100 |  | √ | ' ' | 应用编码 |
+| 7 | fentityid | 业务对象名称 | varchar | 100 |  | √ | ' ' | [业务对象 bos_objecttype](../mdl_files/bos_objecttype.md) |
+| 8 | fproduct | 产品标识码 | int8 | 64 |  | √ | 0 | 产品标识码 |
+| 9 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 10 | fappid | 应用 | varchar | 50 |  | √ | ' ' | [业务应用实体 bos_devportal_bizapp](../mdl_files/bos_devportal_bizapp.md) |
 
 ### 列规则定义
 

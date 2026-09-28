@@ -28,7 +28,7 @@
 | 17 | freal_transferdate | freal_transferdate | timestamp | 0 |  |  | null |  |
 | 18 | fexpense_amount | fexpense_amount | numeric | 23 | 10 | √ | 0.0000000000 |  |
 | 19 | fbillno | fbillno | varchar | 36 |  | √ | ' ' |  |
-| 20 | forg_id | 核算组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 20 | forg_id | 核算组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 21 | ftotal_amount | 价税合计 | numeric | 23 | 10 | √ | 0.0000000000 | 价税合计 |
 | 22 | fexpense_time | fexpense_time | timestamp | 0 |  |  | null |  |
 | 23 | fdeduction_purpose | fdeduction_purpose | varchar | 50 |  | √ | ' ' |  |
@@ -46,7 +46,7 @@
 | 35 | foriginal_time | foriginal_time | timestamp | 0 |  |  | null |  |
 | 36 | fisvoucher | fisvoucher | varchar | 2 |  | √ | ' ' |  |
 | 37 | fcollect_type | fcollect_type | varchar | 2 |  | √ | ' ' |  |
-| 38 | fproject | 项目 | int8 | 64 |  | √ | 0 | 预缴项目信息 tcvat_prepay_project_info |
+| 38 | fproject | 项目 | int8 | 64 |  | √ | 0 | [预缴项目信息 tcvat_prepay_project_info](../tcvat_files/tcvat_prepay_project_info.md) |
 | 39 | fsalelist_complete | fsalelist_complete | varchar | 10 |  | √ | ' ' |  |
 | 40 | fis_revise | fis_revise | varchar | 50 |  | √ | ' ' |  |
 | 41 | fauditorid | fauditorid | int8 | 64 |  | √ | 0 |  |
@@ -74,14 +74,14 @@
 | 63 | ftotal_tax_amount | 合计税额 | numeric | 23 | 10 | √ | 0.0000000000 | 合计税额 |
 | 64 | finvoice_no | 发票号码 | varchar | 32 |  | √ | ' ' | 发票号码 |
 | 65 | fbuyer_tax_no | fbuyer_tax_no | varchar | 30 |  | √ | ' ' |  |
-| 66 | ftax_org | 税务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 66 | ftax_org | 税务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 67 | fsaler_name | 销方名称 | varchar | 150 |  | √ | ' ' | 销方名称 |
 | 68 | fcheck_status | fcheck_status | varchar | 50 |  | √ | ' ' |  |
 | 69 | fcontinuous_no | fcontinuous_no | varchar | 2 |  | √ | ' ' |  |
 | 70 | faudit_result | faudit_result | varchar | 2 |  | √ | '0' |  |
 | 71 | foriginal_state | foriginal_state | varchar | 50 |  | √ | ' ' |  |
 | 72 | fdest_area | fdest_area | varchar | 150 |  | √ | ' ' |  |
-| 73 | finvoice_type | 发票类型 | int8 | 64 |  | √ | 0 | 发票类型 bd_invoicetype |
+| 73 | finvoice_type | 发票类型 | int8 | 64 |  | √ | 0 | [发票种类 bd_invoicetype](../basedata_files/bd_invoicetype.md) |
 | 74 | frollout_remark | frollout_remark | varchar | 300 |  | √ | ' ' |  |
 | 75 | faccount_tax_amount | faccount_tax_amount | numeric | 23 | 10 | √ | 0 |  |
 

@@ -10,11 +10,11 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | funitactualcost | 单价 | numeric | 23 | 10 | √ | 0 | 单价 |
-| 2 | fcostsubelementid | 成本子要素 | int8 | 64 |  | √ | 0 | 成本子要素 cad_subelement |
+| 2 | fcostsubelementid | 成本子要素 | int8 | 64 |  | √ | 0 | [成本子要素 cad_subelement](../basedata_files/cad_subelement.md) |
 | 3 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 4 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 | id |
 | 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
-| 6 | fcostelementid | 成本要素 | int8 | 64 |  | √ | 0 | 成本要素 cad_element |
+| 6 | fcostelementid | 成本要素 | int8 | 64 |  | √ | 0 | [成本要素 cad_element](../basedata_files/cad_element.md) |
 
 ### 列规则定义
 
@@ -69,23 +69,25 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fapproverid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fapproverid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 6 | fcalorgid | 核算组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | fcalorgid | 核算组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fapprovetime | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
 | 8 | fisfitbycaldimension | 按核算维度设置 | bpchar | 1 |  | √ | '0' | 按核算维度设置 |
-| 9 | fcalrangeid | 核算范围 | int8 | 64 |  | √ | 0 | 核算范围 cal_bd_calrange |
-| 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 11 | fisfitbycalrange | 按核算范围设置 | bpchar | 1 |  | √ | '0' | 按核算范围设置 |
-| 12 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 14 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 15 | fsetdimension | 设置维度 | varchar | 255 |  | √ | ' ' | 设置维度,枚举: x :物料 owner :货主 storageorgunit :库存组织 warehouse :仓库 location :仓位 assist :辅助属性 lot :批号 mversion :物料版本 invtype :库存类型 invstatus :库存状态 project :项目编码 configuredcode :配置号 tracknumber :跟踪号 |
-| 16 | fcostaccountid | 成本主体 | int8 | 64 |  | √ | 0 | 成本主体 cal_bd_costaccount |
-| 17 | fenable | 使用状态 | bpchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 18 | fnumber | 编码 | varchar | 255 |  | √ | ' ' | 编码 |
+| 9 | fismigrate | 是否（企业版）迁移 | bpchar | 1 |  |  | '0' | 是否（企业版）迁移 |
+| 10 | fcalrangeid | 核算范围 | int8 | 64 |  | √ | 0 | [核算范围 cal_bd_calrange](../cal_files/cal_bd_calrange.md) |
+| 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 12 | fisfitbycalrange | 按核算范围设置 | bpchar | 1 |  | √ | '0' | 按核算范围设置 |
+| 13 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
+| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 15 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
+| 16 | fsetdimension | 设置维度 | varchar | 255 |  | √ | ' ' | 设置维度,枚举: x :物料 owner :货主 storageorgunit :库存组织 warehouse :仓库 location :仓位 assist :辅助属性 lot :批号 mversion :物料版本 invtype :库存类型 invstatus :库存状态 project :项目编码 configuredcode :配置号 tracknumber :跟踪号 |
+| 17 | fcostaccountid | 成本主体 | int8 | 64 |  | √ | 0 | [成本主体 cal_bd_costaccount](../cal_files/cal_bd_costaccount.md) |
+| 18 | fenable | 使用状态 | bpchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 19 | fnumber | 编码 | varchar | 255 |  | √ | ' ' | 编码 |
+| 20 | fcurrencyid | 币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 
 ### 列规则定义
 
@@ -112,20 +114,24 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fstorageorgunitid | 库存组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fstorageorgunitid | 库存组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fassist | 辅助属性 | int8 | 64 |  | √ | 0 | null 001 |
 | 4 | funitactualcost | 单价 | numeric | 23 | 10 | √ | 0 | 单价 |
-| 5 | fmaterialid | 物料编码 | int8 | 64 |  | √ | 0 | 物料 bd_material |
-| 6 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 7 | fmversionid | 物料版本 | int8 | 64 |  | √ | 0 | 物料版本 bd_bomversion_new |
-| 8 | fwarehouseid | 仓库 | int8 | 64 |  | √ | 0 | 仓库 bd_warehouse |
-| 9 | fownerid | 货主 | int8 | 64 |  | √ | 0 | 客户 bd_customer |
-| 10 | flocationid | 仓位 | int8 | 64 |  | √ | 0 | 仓位 bd_location |
-| 11 | fownertype | 货主类型 | varchar | 30 |  | √ | ' ' | 货主类型,枚举: bd_customer :客户 bd_supplier :供应商 bos_org :业务单元 |
-| 12 | fproject | 项目编码 | int8 | 64 |  | √ | 0 | 项目 bd_project |
-| 13 | flot | 批号 | varchar | 510 |  | √ | ' ' | 批号 |
-| 14 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 15 | ftracknumber | 跟踪号 | int8 | 64 |  | √ | 0 | 跟踪号 bd_tracknumber |
+| 5 | finvtypeid | 库存类型 | int8 | 64 |  | √ | 0 | [库存类型 bd_invtype](../sbd_files/bd_invtype.md) |
+| 6 | fmaterialid | 物料编码 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
+| 7 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
+| 8 | fmversionid | 物料版本 | int8 | 64 |  | √ | 0 | [物料版本 bd_bomversion_new](../basedata_files/bd_bomversion_new.md) |
+| 9 | flicensenoid | 许可证编号 | int8 | 64 |  | √ | 0 | [许可证 bd_licence](../sbd_files/bd_licence.md) |
+| 10 | fwarehouseid | 仓库 | int8 | 64 |  | √ | 0 | [仓库 bd_warehouse](../sbd_files/bd_warehouse.md) |
+| 11 | finvstatusid | 库存状态 | int8 | 64 |  | √ | 0 | [库存类型 bd_invtype](../sbd_files/bd_invtype.md) |
+| 12 | fownerid | 货主 | int8 | 64 |  | √ | 0 | 客户 bd_customer |
+| 13 | fdevcost | 研发费用 | varchar | 10 |  | √ | '0' | 研发费用,枚举: 1 :是 0 :否 |
+| 14 | flocationid | 仓位 | int8 | 64 |  | √ | 0 | [仓位 bd_location](../sbd_files/bd_location.md) |
+| 15 | fownertype | 货主类型 | varchar | 30 |  | √ | ' ' | 货主类型,枚举: bd_customer :客户 bd_supplier :供应商 bos_org :业务单元 |
+| 16 | fproject | 项目编码 | int8 | 64 |  | √ | 0 | [项目 bd_project](../basedata_files/bd_project.md) |
+| 17 | flot | 批号 | varchar | 510 |  | √ | ' ' | 批号 |
+| 18 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 19 | ftracknumber | 跟踪号 | int8 | 64 |  | √ | 0 | [跟踪号 bd_tracknumber](../sbd_files/bd_tracknumber.md) |
 
 ### 列规则定义
 

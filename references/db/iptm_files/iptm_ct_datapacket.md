@@ -9,7 +9,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 附件字段实体 bd_attachment |
+| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [附件字段实体 bd_attachment](../frame_files/bd_attachment.md) |
 | 2 | fpkid | fpkid | int8 | 64 |  | √ | 0 | FPKID |
 | 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 
@@ -39,7 +39,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 传输包名称 | varchar | 50 |  | √ | ' ' | 传输包名称 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fsrcdatacenter | 传输路径 | varchar | 500 |  | √ | ' ' | 传输路径 |
 | 5 | fdestdatacenter | 目标数据中心 | varchar | 500 |  | √ | ' ' | 目标数据中心 |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
@@ -47,10 +47,10 @@
 | 8 | flockedstatus | 锁定状态 | varchar | 50 |  | √ | ' ' | 锁定状态,枚举: 0 :未锁定 1 :已锁定 |
 | 9 | fsyncstate | 同步状态 | varchar | 50 |  | √ | ' ' | 同步状态,枚举: 0 :未同步 1 :已同步 2 :同步失败 3 :同步未完成 |
 | 10 | fremarks | 备注 | varchar | 2000 |  | √ | ' ' | 备注 |
-| 11 | fpacketversion | 上线版本 | int8 | 64 |  | √ | 0 | 上线版本 iptm_ct_version |
+| 11 | fpacketversion | 上线版本 | int8 | 64 |  | √ | 0 | [上线版本 iptm_ct_version](../iptm_files/iptm_ct_version.md) |
 | 12 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 13 | fstatus | 传输包状态 | varchar | 50 |  | √ | ' ' | 传输包状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 16 | fpackettype | 传输包类型 | varchar | 50 |  | √ | ' ' | 传输包类型,枚举: 1 :基础配置 2 :元数据 |
 | 17 | fenable | 使用状态 | varchar | 50 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
@@ -86,7 +86,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fcreatetime | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
-| 3 | fbizobject | 业务对象 | int8 | 64 |  | √ | 0 | 传输对象 iptm_ct_configitems |
+| 3 | fbizobject | 业务对象 | int8 | 64 |  | √ | 0 | [传输对象 iptm_ct_configitems](../iptm_files/iptm_ct_configitems.md) |
 | 4 | fsyncstate | 同步状态 | varchar | 50 |  | √ | ' ' | 同步状态,枚举: 0 :未同步 1 :同步完成 2 :同步失败 |
 | 5 | fentrystatus | 子包状态 | varchar | 50 |  | √ | ' ' | 子包状态,枚举: 0 :正常 1 :作废 |
 | 6 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |

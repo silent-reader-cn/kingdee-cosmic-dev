@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | forgid | 生产组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | forgid | 生产组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fswsnum | 补充工作单数量 | int8 | 64 |  | √ | 0 | 补充工作单数量 |
 | 4 | ftransactiontype | ftransactiontype | int8 | 64 |  | √ | 0 |  |
 | 5 | fbilldate | 单据日期 | timestamp | 0 |  |  | null | 单据日期 |
@@ -19,21 +19,21 @@
 | 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 9 | fattachmentcount | 附件数 | int8 | 64 |  | √ | 0 | 附件数 |
 | 10 | fbiztype | 业务类型 | varchar | 50 |  | √ | ' ' | 业务类型 |
-| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fsrcbillentity | 来源单据实体 | varchar | 50 |  | √ | ' ' | 来源单据实体,枚举: pom_mrosws :补充工作单 |
 | 13 | fbillno | 单据编号 | varchar | 30 |  | √ | ' ' | 单据编号 |
 | 14 | fremark | 备注 | varchar | 500 |  | √ | ' ' | 备注 |
-| 15 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 15 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 16 | fbilltypenew | fbilltypenew | int8 | 64 |  | √ | 0 |  |
 | 17 | fbillstatus | 单据状态 | varchar | 50 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 D :作废 |
 | 18 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 19 | fauditdate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
 | 20 | fnumberautogen | 编码自动生成 | bpchar | 1 |  | √ | '0' | 编码自动生成 |
-| 21 | fdailyexptype | 日常任务类型 | int8 | 64 |  | √ | 0 | 日常任务定义 mpdm_dailyexptypedef |
+| 21 | fdailyexptype | 日常任务类型 | int8 | 64 |  | √ | 0 | [日常任务定义 mpdm_dailyexptypedef](../mpdm_files/mpdm_dailyexptypedef.md) |
 | 22 | fisgentoelecbill | 是否生成检修控制单 | bpchar | 1 |  | √ | '0' | 是否生成检修控制单 |
 | 23 | fprintcount | 打印次数 | int8 | 64 |  | √ | 0 | 打印次数 |
 | 24 | fissuborder | 是否子工单 | bpchar | 1 |  | √ | '0' | 是否子工单 |
-| 25 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 25 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 26 | fbilltype | 单据类型 | int8 | 64 |  | √ | 0 | 单据类型 bos_billtype |
 | 27 | fisshowlist | 是否检修工单列表显示 | bpchar | 1 |  | √ | '0' | 是否检修工单列表显示 |
 
@@ -61,7 +61,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 缺陷类型 fmm_defecttype |
+| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [缺陷类型 fmm_defecttype](../fmm_files/fmm_defecttype.md) |
 | 2 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 | 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 
@@ -89,7 +89,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 项目任务清单 pmts_task |
+| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [项目任务清单 pmts_task](../fmm_files/pmts_task.md) |
 | 2 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 | 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 
@@ -191,8 +191,8 @@
 | 8 | fmtlcostqty | 料废数量 | numeric | 23 | 10 | √ | 0 | 料废数量 |
 | 9 | fstockqty | 下推入库基本数量 | numeric | 23 | 10 | √ | 0 | 下推入库基本数量 |
 | 10 | fcontrolno | 控制号 | varchar | 50 |  | √ | ' ' | 控制号 |
-| 11 | froutereplace | 工艺路线替代号 | int8 | 64 |  | √ | 0 | 基础资料带组织模板 mpdm_routereplace |
-| 12 | finwarconsigner | 入库货主 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 11 | froutereplace | 工艺路线替代号 | int8 | 64 |  | √ | 0 | [基础资料带组织模板 mpdm_routereplace](../mpdm_files/mpdm_routereplace.md) |
+| 12 | finwarconsigner | 入库货主 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 13 | fendcasetime | 齐套时间 | timestamp | 0 |  |  | null | 齐套时间 |
 | 14 | fscrinwaqty | 报废品入库基本数量 | numeric | 23 | 10 | √ | 0 | 报废品入库基本数量 |
 | 15 | frepminqty | 汇报下限数量 | numeric | 23 | 10 | √ | 0 | 汇报下限数量 |
@@ -211,9 +211,9 @@
 | 28 | fworkwasteqty | 工废数量 | numeric | 23 | 10 | √ | 0 | 工废数量 |
 | 29 | fquainwaqty | 合格品入库基本数量 | numeric | 23 | 10 | √ | 0 | 合格品入库基本数量 |
 | 30 | frepairqty | 返修数量 | numeric | 23 | 10 | √ | 0 | 返修数量 |
-| 31 | fmanuversion | 生产版本 | int8 | 64 |  | √ | 0 | 生产版本 pdm_manuversion |
+| 31 | fmanuversion | 生产版本 | int8 | 64 |  | √ | 0 | [生产版本 pdm_manuversion](../fmm_files/pdm_manuversion.md) |
 | 32 | freworkqty | 返工数量 | numeric | 23 | 10 | √ | 0 | 返工数量 |
-| 33 | farea | 工作区域 | int8 | 64 |  | √ | 0 | 工作区域 mpdm_area |
+| 33 | farea | 工作区域 | int8 | 64 |  | √ | 0 | [工作区域 mpdm_area](../mpdm_files/mpdm_area.md) |
 | 34 | fisinspection | 产品检验 | bpchar | 1 |  | √ | '0' | 产品检验 |
 | 35 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 | 36 | frptqty | 下推汇报数量 | numeric | 23 | 10 | √ | 0 | 下推汇报数量 |
@@ -231,12 +231,12 @@
 | 48 | fsrcsplitbillseq | 来源拆分工单行号 | int8 | 64 |  | √ | 0 | 生产工单分录F7模板 mpdm_mftorder_tplf7 |
 | 49 | festscrapqty | 预计报废数量 | numeric | 23 | 10 | √ | 0 | 预计报废数量 |
 | 50 | frepinwaqty | 返工品入库数量 | numeric | 23 | 10 | √ | 0 | 返工品入库数量 |
-| 51 | fqualityorg | 质检组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 51 | fqualityorg | 质检组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 52 | frcvinlowlimit | 入库下限允差（%） | numeric | 23 | 10 | √ | 0 | 入库下限允差（%） |
 | 53 | finwarmax | 入库上限基本数量 | numeric | 23 | 10 | √ | 0 | 入库上限基本数量 |
 | 54 | freportqty | 汇报数量 | numeric | 23 | 10 | √ | 0 | 汇报数量 |
 | 55 | fexpendbomtime | 展BOM时间 | timestamp | 0 |  |  | null | 展BOM时间 |
-| 56 | foutputoperation | 产出工序 | int8 | 64 |  | √ | 0 | 标准工序定义(废弃) mpdm_workprocedure |
+| 56 | foutputoperation | 产出工序 | int8 | 64 |  | √ | 0 | [标准工序定义(废弃) mpdm_workprocedure](../mpdm_files/mpdm_workprocedure.md) |
 
 ### 列规则定义
 
@@ -295,23 +295,23 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fplanqty | 计划数量 | numeric | 23 | 10 | √ | 0 | 计划数量 |
-| 3 | fdefectsiteid | 缺陷部位 | int8 | 64 |  | √ | 0 | 缺陷部位 fmm_defectsite |
-| 4 | fmaterielinv | 物料库存信息 | int8 | 64 |  | √ | 0 | 物料库存信息 bd_materialinventoryinfo |
-| 5 | fdisposalmeasuresid | 处置措施 | int8 | 64 |  | √ | 0 | 处置措施 fmm_disposalmeasures |
-| 6 | flocation | 仓位 | int8 | 64 |  | √ | 0 | 仓位 bd_location |
+| 3 | fdefectsiteid | 缺陷部位 | int8 | 64 |  | √ | 0 | [缺陷部位 fmm_defectsite](../fmm_files/fmm_defectsite.md) |
+| 4 | fmaterielinv | 物料库存信息 | int8 | 64 |  | √ | 0 | [物料库存信息 bd_materialinventoryinfo](../sbd_files/bd_materialinventoryinfo.md) |
+| 5 | fdisposalmeasuresid | 处置措施 | int8 | 64 |  | √ | 0 | [处置措施 fmm_disposalmeasures](../fmm_files/fmm_disposalmeasures.md) |
+| 6 | flocation | 仓位 | int8 | 64 |  | √ | 0 | [仓位 bd_location](../sbd_files/bd_location.md) |
 | 7 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 8 | fworkcardid | 工卡 | int8 | 64 |  | √ | 0 | 工卡 mpdm_mrocardroute |
-| 9 | fbdproject | 系统云项目 | int8 | 64 |  | √ | 0 | 项目 bd_project |
-| 10 | fbaseunit | 基本单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 11 | fexecondition | 执行条件 | int8 | 64 |  | √ | 0 | 执行条件 mpdm_execondition |
+| 8 | fworkcardid | 工卡 | int8 | 64 |  | √ | 0 | [工卡 mpdm_mrocardroute](../mpdm_files/mpdm_mrocardroute.md) |
+| 9 | fbdproject | 系统云项目 | int8 | 64 |  | √ | 0 | [项目 bd_project](../basedata_files/bd_project.md) |
+| 10 | fbaseunit | 基本单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 11 | fexecondition | 执行条件 | int8 | 64 |  | √ | 0 | [执行条件 mpdm_execondition](../mpdm_files/mpdm_execondition.md) |
 | 12 | fclosetime | 关闭时间 | timestamp | 0 |  |  | null | 关闭时间 |
 | 13 | fauxproperty | 辅助属性 | int8 | 64 |  | √ | 0 | null 001 |
-| 14 | fbomid | BOM | int8 | 64 |  | √ | 0 | BOM维护 pdm_mftbom |
-| 15 | fataid | 章节号 | int8 | 64 |  | √ | 0 | ATA章节号 mpdm_atachapterno |
+| 14 | fbomid | BOM | int8 | 64 |  | √ | 0 | [BOM维护 pdm_mftbom](../fmm_files/pdm_mftbom.md) |
+| 15 | fataid | 章节号 | int8 | 64 |  | √ | 0 | [ATA章节号 mpdm_atachapterno](../mpdm_files/mpdm_atachapterno.md) |
 | 16 | fpageseq | 页码 | varchar | 50 |  | √ | ' ' | 页码 |
 | 17 | fparententryid | fparententryid | int8 | 64 |  | √ | 0 | pid |
 | 18 | ftaskstatus | 任务状态 | varchar | 50 |  | √ | ' ' | 任务状态,枚举: A :未开工 B :开工 C :完工 D :部分完工 E :取消 F :保留 G :重下达 H :暂停 J :废弃 |
-| 19 | fmaterial | 物料编码 | int8 | 64 |  | √ | 0 | 物料生产信息 bd_materialmftinfo |
+| 19 | fmaterial | 物料编码 | int8 | 64 |  | √ | 0 | [物料生产信息 bd_materialmftinfo](../sbd_files/bd_materialmftinfo.md) |
 | 20 | fmanftechstatus | 工序计划状态 | varchar | 50 |  | √ | ' ' | 工序计划状态,枚举: T :存在工序计划 F :不存在工序计划 |
 | 21 | fisassistmanual | 协助填写手册 | bpchar | 1 |  | √ | '0' | 协助填写手册 |
 | 22 | fqty | 数量 | numeric | 23 | 10 | √ | 0 | 数量 |
@@ -321,51 +321,51 @@
 | 26 | fplansuretime | 计划确认时间 | timestamp | 0 |  |  | null | 计划确认时间 |
 | 27 | fstartworktime | 开工时间 | timestamp | 0 |  |  | null | 开工时间 |
 | 28 | fsourcebilltype | 来源单据类型 | varchar | 50 |  | √ | ' ' | 来源单据类型 |
-| 29 | fprojectid | 项目号 | int8 | 64 |  | √ | 0 | 项目 pmpd_project |
+| 29 | fprojectid | 项目号 | int8 | 64 |  | √ | 0 | [项目 pmpd_project](../fmm_files/pmpd_project.md) |
 | 30 | fbatchno | 批号 | varchar | 50 |  | √ | ' ' | 批号 |
 | 31 | fheadbillno | 生产工单编号 | varchar | 50 |  | √ | ' ' | 生产工单编号 |
 | 32 | fismajordefect | 是否重要结构缺陷 | bpchar | 1 |  | √ | '0' | 是否重要结构缺陷 |
 | 33 | factualhours | 实际消耗工时 | numeric | 23 | 10 | √ | 0 | 实际消耗工时 |
 | 34 | fprocessroute | 工艺路线编码 | int8 | 64 |  | √ | 0 | 工艺路线维护（废弃） pdm_route |
-| 35 | fwarehouse | 仓库 | int8 | 64 |  | √ | 0 | 仓库 bd_warehouse |
+| 35 | fwarehouse | 仓库 | int8 | 64 |  | √ | 0 | [仓库 bd_warehouse](../sbd_files/bd_warehouse.md) |
 | 36 | fsourceentryseq | 来源单据分录行号 | varchar | 50 |  | √ | ' ' | 来源单据分录行号 |
-| 37 | fmartype | 检修设备类型 | int8 | 64 |  | √ | 0 | 检修设备类型 mpdm_mrtype |
-| 38 | fbeginbookdate | 开工记账日期 | timestamp | 0 |  |  | null | 开工记账日期 |
+| 37 | fmartype | 检修设备类型 | int8 | 64 |  | √ | 0 | [检修设备类型 mpdm_mrtype](../mpdm_files/mpdm_mrtype.md) |
+| 38 | fbeginbookdate | 投产记账日期 | timestamp | 0 |  |  | null | 投产记账日期 |
 | 39 | fplanbegintime | 计划开工时间 | timestamp | 0 |  |  | null | 计划开工时间 |
-| 40 | flotid | 批号主档 | int8 | 64 |  | √ | 0 | 批号主档 bd_lot |
+| 40 | flotid | 批号主档 | int8 | 64 |  | √ | 0 | [批号主档 bd_lot](../sbd_files/bd_lot.md) |
 | 41 | fwbsid | fwbsid | int8 | 64 |  | √ | 0 |  |
 | 42 | fdefectdesc | 缺陷描述 | varchar | 500 |  | √ | ' ' | 缺陷描述 |
 | 43 | fkittingstatus | 齐套状态 | varchar | 50 |  | √ | ' ' | 齐套状态,枚举: A :未检查 B :短缺 C :可用 |
-| 44 | fmaterielmtc | 检修设备注册号 | int8 | 64 |  | √ | 0 | 物料检修信息 mpdm_materialmtcinfo |
-| 45 | fworkstage | 工作类别 | int8 | 64 |  | √ | 0 | 工作类别 mpdm_workcategories |
+| 44 | fmaterielmtc | 检修设备注册号 | int8 | 64 |  | √ | 0 | [物料检修信息 mpdm_materialmtcinfo](../mpdm_files/mpdm_materialmtcinfo.md) |
+| 45 | fworkstage | 工作类别 | int8 | 64 |  | √ | 0 | [工作类别 mpdm_workcategories](../mpdm_files/mpdm_workcategories.md) |
 | 46 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 47 | funit | 计量单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 48 | fcustomerid | 客户 | int8 | 64 |  | √ | 0 | 客户 bd_customer |
-| 49 | fassisterid | 协助者 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 50 | fzone | 功能位置 | int8 | 64 |  | √ | 0 | 功能位置 mpdm_functionlocation |
+| 47 | funit | 计量单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 48 | fcustomerid | 客户 | int8 | 64 |  | √ | 0 | [客户 bd_customer](../basedata_files/bd_customer.md) |
+| 49 | fassisterid | 协助者 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 50 | fzone | 功能位置 | int8 | 64 |  | √ | 0 | [功能位置 mpdm_functionlocation](../mpdm_files/mpdm_functionlocation.md) |
 | 51 | fpriority | 优先级 | int8 | 64 |  | √ | 0 | 优先级 |
 | 52 | fata | 章节号(废弃) | varchar | 50 |  | √ | ' ' | 章节号(废弃) |
 | 53 | fbizstatus | 业务状态 | varchar | 50 |  | √ | ' ' | 业务状态,枚举: A :正常 B :挂起 C :关闭 |
-| 54 | fauxptyunit | 辅助单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 55 | fconfiguredcodeid | 配置号 | int8 | 64 |  | √ | 0 | 配置号 bd_configuredcode |
-| 56 | fmaterielmasterid | 物料(主数据) | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 54 | fauxptyunit | 辅助单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 55 | fconfiguredcodeid | 配置号 | int8 | 64 |  | √ | 0 | [配置号（废弃） bd_configuredcode](../sbd_files/bd_configuredcode.md) |
+| 56 | fmaterielmasterid | 物料(主数据) | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 57 | fclosebookdate | 关闭记账日期 | timestamp | 0 |  |  | null | 关闭记账日期 |
-| 58 | finwardept | 入库组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 58 | finwardept | 入库组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 59 | fpickstatus | 领料状态 | varchar | 50 |  | √ | ' ' | 领料状态,枚举: A :未领料 B :部分领料 C :全部领料 D :超额领料 |
-| 60 | fworkcenterid | 工作中心 | int8 | 64 |  | √ | 0 | 工作中心定义(废弃) mpdm_workcentre |
+| 60 | fworkcenterid | 工作中心 | int8 | 64 |  | √ | 0 | [工作中心定义(废弃) mpdm_workcentre](../mpdm_files/mpdm_workcentre.md) |
 | 61 | fprojecttaskid | fprojecttaskid | int8 | 64 |  | √ | 0 |  |
-| 62 | fmaintrade | 主行业 | int8 | 64 |  | √ | 0 | 树形基础资料模板 mpdm_professiona |
-| 63 | ftracknumberid | 跟踪号 | int8 | 64 |  | √ | 0 | 跟踪号 bd_tracknumber |
+| 62 | fmaintrade | 主行业 | int8 | 64 |  | √ | 0 | [树形基础资料模板 mpdm_professiona](../mpdm_files/mpdm_professiona.md) |
+| 63 | ftracknumberid | 跟踪号 | int8 | 64 |  | √ | 0 | [跟踪号 bd_tracknumber](../sbd_files/bd_tracknumber.md) |
 | 64 | ftransmittime | 下达时间 | timestamp | 0 |  |  | null | 下达时间 |
 | 65 | fisrecheck | 是否复检 | bpchar | 1 |  | √ | '0' | 是否复检 |
 | 66 | fmodifystatustime | 状态更新时间 | timestamp | 0 |  |  | null | 状态更新时间 |
-| 67 | fdefectreasonid | 缺陷原因 | int8 | 64 |  | √ | 0 | 缺陷原因 fmm_defectreason |
-| 68 | fworkhourunitid | 工时单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 67 | fdefectreasonid | 缺陷原因 | int8 | 64 |  | √ | 0 | [缺陷原因 fmm_defectreason](../fmm_files/fmm_defectreason.md) |
+| 68 | fworkhourunitid | 工时单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 69 | fisassist | 请求协助 | bpchar | 1 |  | √ | '0' | 请求协助 |
-| 70 | fproducedept | 生产部门 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 70 | fproducedept | 生产部门 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 71 | fproducttype | 产品类型 | varchar | 50 |  | √ | ' ' | 产品类型,枚举: C :主产品 A :联产品 B :副产品 |
 | 72 | fplanstatus | 计划状态 | varchar | 50 |  | √ | ' ' | 计划状态,枚举: A :计划 B :计划确认 C :下达 |
-| 73 | fproductmodel | 产品型号 | int8 | 64 |  | √ | 0 | 工卡维护 mpdm_workcards |
+| 73 | fproductmodel | 产品型号 | int8 | 64 |  | √ | 0 | [工卡维护 mpdm_workcards](../mpdm_files/mpdm_workcards.md) |
 | 74 | fplanhours | 计划消耗工时 | numeric | 23 | 10 | √ | 0 | 计划消耗工时 |
 | 75 | fsourcebillnumber | 来源单据编号 | varchar | 50 |  | √ | ' ' | 来源单据编号 |
 | 76 | fassisthours | 协助填写预估工时 | numeric | 23 | 10 | √ | 0 | 协助填写预估工时 |
@@ -403,7 +403,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fbasedataid | fbasedataid | varchar | 36 |  | √ | ' ' | WBS pmts_wbs |
+| 1 | fbasedataid | fbasedataid | varchar | 36 |  | √ | ' ' | [WBS pmts_wbs](../fmm_files/pmts_wbs.md) |
 | 2 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 | 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 
@@ -466,7 +466,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fbasedataid | fbasedataid | varchar | 36 |  | √ | ' ' | 类型标识 mpdm_typeidentity |
+| 1 | fbasedataid | fbasedataid | varchar | 36 |  | √ | ' ' | [类型标识 mpdm_typeidentity](../mpdm_files/mpdm_typeidentity.md) |
 | 2 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 | 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 

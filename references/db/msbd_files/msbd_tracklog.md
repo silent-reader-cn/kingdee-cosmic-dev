@@ -16,7 +16,7 @@
 | 5 | fclassname | 类名 | varchar | 512 |  |  | null | 类名 |
 | 6 | finvokedcodeposition | 调用服务代码位置 | varchar | 512 |  |  | null | 调用服务代码位置 |
 | 7 | fmethodparam | 方法参数 | varchar | 512 |  |  | null | 方法参数 |
-| 8 | fuserid | 用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | fuserid | 用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fmethodparam_tag | 方法参数_详情 | text | 0 |  |  | null | 方法参数_详情 |
 | 10 | fdatetime | 时间 | timestamp | 0 |  |  | null | 时间 |
 | 11 | ftracklogdetail_tag | 日志_详情 | text | 0 |  |  | null | 日志_详情 |
@@ -37,5 +37,5 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_t_msbd_tracklog_type |  | fdatetime,fuserid |
-| 2 | pk_t_msbd_tracklog |  | fid |
+| 1 | pk_t_msbd_tracklog |  | fid |
+| 2 | idx_t_msbd_tracklog_type |  | fdatetime,fuserid |

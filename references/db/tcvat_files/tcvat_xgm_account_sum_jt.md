@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | ftaxrate | 税率 | varchar | 50 |  | √ | ' ' | 税率 |
-| 3 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | fnoneinvoiceamount | 未开发票销售额 | numeric | 23 | 10 | √ | 0 | 未开发票销售额 |
 | 5 | fspecialtaxamount | 专用发票税额 | numeric | 23 | 10 | √ | 0 | 专用发票税额 |
 | 6 | fnonetaxamount | 未开发票税额 | numeric | 23 | 10 | √ | 0 | 未开发票税额 |

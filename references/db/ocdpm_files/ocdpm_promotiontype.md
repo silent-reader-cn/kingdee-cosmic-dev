@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 渠道促销策略 ocdpm_promotionstrategy |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [渠道促销策略 ocdpm_promotionstrategy](../ocdpm_files/ocdpm_promotionstrategy.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -38,27 +38,27 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fname | 促销类型名称 | varchar | 210 |  | √ | ' ' | 促销类型名称 |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fisdeploy | 是否配置 | bpchar | 1 |  | √ | '0' | 是否配置 |
-| 6 | fpromobjectid | 促销类别 | int8 | 64 |  | √ | 0 | 渠道促销类别 ocdpm_promotionobject |
+| 6 | fpromobjectid | 促销类别 | int8 | 64 |  | √ | 0 | [渠道促销类别 ocdpm_promotionobject](../ocdpm_files/ocdpm_promotionobject.md) |
 | 7 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 8 | fpromotionpolicyid | fpromotionpolicyid | int8 | 64 |  | √ | 0 |  |
 | 9 | fladdertype | 阶梯类型 | bpchar | 1 |  | √ | 'A' | 阶梯类型,枚举: A :阶梯(最高阶梯计算) C :无 |
-| 10 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 10 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 11 | fispresent | 是否预设 | bpchar | 1 |  | √ | '0' | 是否预设 |
 | 12 | fpromlink | 促销环节 | bpchar | 1 |  | √ | 'A' | 促销环节,枚举: A :全渠道（渠道间交易） B :供应链 C :全渠道（渠道向企业交易） |
-| 13 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 13 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 14 | fctrlstrategy | 控制策略 | varchar | 10 |  | √ | '5' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
 | 15 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 16 | fstatus | 数据状态 | bpchar | 1 |  | √ | 'A' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 17 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 17 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 18 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 19 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 20 | fbitindex | 位图 | int8 | 64 |  | √ | 0 | 位图 |
 | 21 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 22 | fpromrequire | 促销条件 | bpchar | 1 |  | √ | 'A' | 促销条件,枚举: A :按数量 B :按金额 |
+| 22 | fpromrequire | 促销条件 | bpchar | 1 |  | √ | 'A' | 促销条件,枚举: A :按数量 B :按金额 C :按累计数量 D :按累计金额 |
 | 23 | fnumber | 促销类型编码 | varchar | 80 |  | √ | ' ' | 促销类型编码 |
 | 24 | fsourcebitindex | 原资料位图 | int8 | 64 |  | √ | 0 | 原资料位图 |
 
@@ -91,7 +91,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fdescribe | 说明 | varchar | 255 |  | √ | ' ' | 说明 |
 | 3 | fisedit | 是否编辑 | bpchar | 1 |  | √ | '1' | 是否编辑 |
-| 4 | ffieldname | ffieldname | varchar | 80 |  | √ | ' ' |  |
+| 4 | ffieldname | ffieldname | varchar | 255 |  | √ | ' ' |  |
 | 5 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 6 | frequire | 是否必填 | bpchar | 1 |  | √ | '1' | 是否必填 |
 | 7 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
@@ -181,7 +181,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fdescribe | 说明 | varchar | 406 |  | √ | ' ' | 说明 |
-| 2 | ffieldname | 字段名称 | varchar | 80 |  | √ | ' ' | 字段名称 |
+| 2 | ffieldname | 字段名称 | varchar | 255 |  | √ | ' ' | 字段名称 |
 | 3 | flocaleid | flocaleid | varchar | 10 |  | √ | 'zh_CN' | localeid |
 | 4 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
 | 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |

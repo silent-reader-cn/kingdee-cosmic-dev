@@ -11,8 +11,8 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fprogresstype | 操作类型 | varchar | 100 |  | √ | ' ' | 操作类型 |
-| 3 | fcreatetime | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
-| 4 | fentitynumber | 实体标识 | varchar | 50 |  | √ | ' ' | 实体标识 |
+| 3 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 4 | fentitynumber | 实体编码 | varchar | 50 |  | √ | ' ' | 实体编码 |
 | 5 | ftaskid | 任务ID | int8 | 64 |  | √ | 0 | 任务ID |
 | 6 | foperationlog | 日志 | varchar | 2000 |  | √ | ' ' | 日志 |
 

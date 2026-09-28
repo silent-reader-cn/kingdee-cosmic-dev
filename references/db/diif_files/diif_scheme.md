@@ -10,12 +10,12 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreator | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 3 | fapproverid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fcreator | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 3 | fapproverid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fnextforecastdate | 下次预测运算时间 | timestamp | 0 |  |  | null | 下次预测运算时间 |
 | 5 | fcycleunit | 预测周期单位 | varchar | 50 |  | √ | ' ' | 预测周期单位,枚举: MONTH :月 WEEK :周 DAY :日 |
-| 6 | fsourceid | 数据源 | int8 | 64 |  | √ | 0 | 预测数据源 diif_source |
-| 7 | fcustomerstdid | 客户分类标准选择 | int8 | 64 |  | √ | 0 | 客户分类标准 bd_customergroupstandard |
+| 6 | fsourceid | 数据源 | int8 | 64 |  | √ | 0 | [预测数据源 diif_source](../diif_files/diif_source.md) |
+| 7 | fcustomerstdid | 客户分类标准选择 | int8 | 64 |  | √ | 0 | [客户分类标准 bd_customergroupstandard](../basedata_files/bd_customergroupstandard.md) |
 | 8 | fmaterialdim | 物料维度 | varchar | 50 |  | √ | ' ' | 物料维度,枚举: SKU :物料编码+辅助属性 MATERIAL :物料编码 MATERIALGROUP :物料分类 |
 | 9 | frefhistorycyclecount | 显示历史周期数 | int4 | 32 |  | √ | 0 | 显示历史周期数 |
 | 10 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' |  |
@@ -30,12 +30,12 @@
 | 19 | fbillno | 方案编号 | varchar | 50 |  | √ | ' ' | 方案编号 |
 | 20 | fapprovedate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
 | 21 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 22 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 22 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 23 | frollingdateset | 日期设置 | varchar | 50 |  | √ | ' ' | 日期设置 |
 | 24 | fbillstatus | 单据状态 | varchar | 50 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 25 | fincludecurrentcycle | 预测包含本期 | bpchar | 1 |  | √ | '0' | 预测包含本期 |
 | 26 | flatestforecastcycle | 最新预测运算周期 | varchar | 50 |  | √ | ' ' | 最新预测运算周期 |
-| 27 | fmaterialstdid | 物料分类标准选择 | int8 | 64 |  | √ | 0 | 物料分类标准 bd_materialgroupstandard |
+| 27 | fmaterialstdid | 物料分类标准选择 | int8 | 64 |  | √ | 0 | [物料分类标准 bd_materialgroupstandard](../basedata_files/bd_materialgroupstandard.md) |
 | 28 | fcustomerenable | 开启客户维度 | bpchar | 1 |  | √ | '0' | 开启客户维度 |
 | 29 | flatestforecastdate | 最新预测运算时间 | timestamp | 0 |  |  | null | 最新预测运算时间 |
 | 30 | fcustomerdim | 客户粒度 | varchar | 50 |  | √ | ' ' | 客户粒度,枚举: CUSTOMERGROUP :客户分类 CUSTOMER :客户 |
@@ -108,16 +108,16 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fresponsibleid | 默认责任人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 3 | fsalesdeptid | 销售部门 | int8 | 64 |  | √ | 0 | 行政组织（部门） bos_adminorg |
-| 4 | fcustomergroupid | 客户分类 | int8 | 64 |  | √ | 0 | 客户分类 bd_customergroup |
+| 2 | fresponsibleid | 默认责任人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 3 | fsalesdeptid | 销售部门 | int8 | 64 |  | √ | 0 | [行政组织（部门） bos_adminorg](../base_files/bos_adminorg.md) |
+| 4 | fcustomergroupid | 客户分类 | int8 | 64 |  | √ | 0 | [客户分类 bd_customergroup](../basedata_files/bd_customergroup.md) |
 | 5 | fschemematerial | 物料明细 | varchar | 50 |  | √ | ' ' | 物料明细 |
-| 6 | fsalesorgid | 销售组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | fsalesorgid | 销售组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 8 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 9 | fsalesgroupid | 销售组 | int8 | 64 |  | √ | 0 | 供应链业务组 bd_operatorgroup |
+| 9 | fsalesgroupid | 销售组 | int8 | 64 |  | √ | 0 | [供应链业务组 bd_operatorgroup](../sbd_files/bd_operatorgroup.md) |
 | 10 | fcustombaseid | 自定义维度 | int8 | 64 |  | √ | 0 | 基础数据模板 bd_tpl |
-| 11 | fcustomerid | 客户 | int8 | 64 |  | √ | 0 | 客户 bd_customer |
+| 11 | fcustomerid | 客户 | int8 | 64 |  | √ | 0 | [客户 bd_customer](../basedata_files/bd_customer.md) |
 
 ### 列规则定义
 
@@ -144,10 +144,10 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fauxptyid | 辅助属性 | int8 | 64 |  | √ | 0 | null 001 |
-| 2 | fmaterialgroupid | 物料分类 | int8 | 64 |  | √ | 0 | 物料分类 bd_materialgroup |
+| 2 | fmaterialgroupid | 物料分类 | int8 | 64 |  | √ | 0 | [物料分类 bd_materialgroup](../basedata_files/bd_materialgroup.md) |
 | 3 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 4 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 | id |
-| 5 | fmaterielid | 物料 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 5 | fmaterielid | 物料 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 
 ### 列规则定义

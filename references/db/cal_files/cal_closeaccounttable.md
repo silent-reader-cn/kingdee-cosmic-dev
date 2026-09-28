@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fownerid | 货主 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fownerid | 货主 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fisleaf | 是否叶子节点 | bpchar | 1 |  | √ | '0' | 是否叶子节点 |
 | 4 | fclosedate | 关账日期 | timestamp | 0 |  |  | null | 关账日期 |
 | 5 | fpreviousid | 上一次关账记录 | int8 | 64 |  | √ | 0 | 上一次关账记录 |

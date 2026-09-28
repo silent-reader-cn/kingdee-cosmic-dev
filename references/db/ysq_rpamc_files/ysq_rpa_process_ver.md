@@ -27,8 +27,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | pk_tk_ysq_rpa_process_ver_l |  | fpkid |
-| 2 | idx__ysq_rpa_process_ver_l_0 |  | fid,flocaleid |
+| 1 | idx__ysq_rpa_process_ver_l_0 |  | fid,flocaleid |
+| 2 | pk_tk_ysq_rpa_process_ver_l |  | fpkid |
 
 ---
 
@@ -43,7 +43,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | null | id |
 | 2 | fk_ysq_studio_ver | 设计器版本 | varchar | 64 |  | √ | ' ' | 设计器版本 |
-| 3 | forgid | 组织 | int8 | 64 |  |  | null | 业务单元 bos_org |
+| 3 | forgid | 组织 | int8 | 64 |  |  | null | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | fk_ysq_publish_time | 版本发布时间 | timestamp | 0 |  |  | null | 版本发布时间 |
 | 5 | fk_ysq_ver_explain | 版本说明 | varchar | 2000 |  | √ | ' ' | 版本说明 |
 | 6 | fk_ysq_proc_ver | 流程版本号 | varchar | 64 |  | √ | ' ' | 流程版本号 |
@@ -54,14 +54,14 @@
 | 11 | fk_ysq_pro_run_info | 运行次数 | varchar | 50 |  | √ | ' ' | 运行次数 |
 | 12 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 13 | fk_ysq_dispatch_time | 调度数 | int8 | 64 |  |  | null | 调度数 |
-| 14 | fcreatorid | 创建人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 14 | fcreatorid | 创建人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | fk_ysq_proc_file | 流程文件路径 | varchar | 2000 |  | √ | ' ' | 流程文件路径 |
 | 16 | fk_ysq_param | 运行参数模板 | varchar | 255 |  | √ | ' ' | 运行参数模板 |
 | 17 | fk_ysq_file_size | 文件大小 | int8 | 64 |  |  | null | 文件大小 |
 | 18 | fk_ysq_textfield | 是否是应用机器人 | varchar | 50 |  | √ | ' ' | 是否是应用机器人 |
 | 19 | fbillno | 单据编号 | varchar | 30 |  | √ | ' ' | 单据编号 |
 | 20 | fk_ysq_proc_code | 流程编号 | varchar | 32 |  | √ | ' ' | 流程编号 |
-| 21 | fmodifierid | 修改人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 21 | fmodifierid | 修改人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 22 | fk_ysq_dev_user_alias | 开发者用户名 | varchar | 512 |  | √ | ' ' | 开发者用户名 |
 | 23 | fk_ysq_run_times | 任务运行次数 | int8 | 64 |  |  | null | 任务运行次数 |
 | 24 | fk_ysq_owner_user_alias | 所有者名称 | varchar | 512 |  | √ | ' ' | 所有者名称 |
@@ -75,7 +75,7 @@
 | 32 | fk_ysq_is_activity | 是否活动 | varchar | 50 |  | √ | ' ' | 是否活动,枚举: yes :是 no :否 |
 | 33 | fk_ysq_dev_user_fid | 开发者ID | int8 | 64 |  |  | null | 开发者ID |
 | 34 | fk_ysq_owner_user_fid | 所有者ID | int8 | 64 |  |  | null | 所有者ID |
-| 35 | fauditorid | 审核人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 35 | fauditorid | 审核人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

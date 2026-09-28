@@ -47,7 +47,7 @@
 | 6 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 7 | fzzstsnrdm | 增值税特殊内容代码 | varchar | 50 |  | √ | ' ' | 增值税特殊内容代码 |
 | 8 | fstatus | 数据状态 | varchar | 4 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 11 | fbmbbbh | 编码表版本号 | varchar | 50 |  | √ | ' ' | 编码表版本号 |
 | 12 | fsimplecodename | 分类编码简称 | varchar | 50 |  | √ | ' ' | 分类编码简称 |
@@ -55,8 +55,8 @@
 | 14 | fyhzcmc | 优惠政策名称 | varchar | 50 |  | √ | ' ' | 优惠政策名称 |
 | 15 | fxfsgl | 消费税管理 | varchar | 50 |  | √ | ' ' | 消费税管理 |
 | 16 | fcode | 编码 | varchar | 50 |  | √ | ' ' | 编码 |
-| 17 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 18 | fparentid | 上级 | int8 | 64 |  | √ | 0 | 税收分类编码(废弃) bdm_taxrate_code |
+| 17 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 18 | fparentid | 上级 | int8 | 64 |  | √ | 0 | [税收分类编码(废弃) bdm_taxrate_code](../bdm_files/bdm_taxrate_code.md) |
 | 19 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 20 | fxfszcyj | 消费税政策依据 | varchar | 1000 |  | √ | ' ' | 消费税政策依据 |
 | 21 | flongnumber | 长编码 | varchar | 200 |  | √ | ' ' | 长编码 |

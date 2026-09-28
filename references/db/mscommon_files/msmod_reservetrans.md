@@ -14,8 +14,8 @@
 | 3 | fafrecordid | 转移后预留记录ID | int8 | 64 |  | √ | 0 | 转移后预留记录ID |
 | 4 | fbillentryid | 单据分录ID | int8 | 64 |  | √ | 0 | 单据分录ID |
 | 5 | ftranstype | 转移类型 | varchar | 50 |  | √ | ' ' | 转移类型,枚举: trans :预留转移 replace :预留替换 |
-| 6 | ftransbill | 单据实体 | varchar | 50 |  | √ | ' ' | 单据主实体 bos_billmainentity |
-| 7 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | ftransbill | 单据实体 | varchar | 50 |  | √ | ' ' | [单据主实体 bos_billmainentity](../mdl_files/bos_billmainentity.md) |
+| 7 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 8 | fbillid | 单据ID | int8 | 64 |  | √ | 0 | 单据ID |
 | 9 | fbfrecordid | 转移前预留记录ID | int8 | 64 |  | √ | 0 | 转移前预留记录ID |
 

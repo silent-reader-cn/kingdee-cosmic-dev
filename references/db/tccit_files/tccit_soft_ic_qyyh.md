@@ -10,23 +10,23 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fbillstatus | 单据状态 | varchar | 50 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 5 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | fyjkfryrs | 研究开发人员人数 | int8 | 64 |  | √ | 0 | 研究开发人员人数 |
 | 7 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
 | 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 9 | ffhtjdxssr | 符合条件的销售（营业）收入 | numeric | 23 | 10 | √ | 0.0000000000 | 符合条件的销售（营业）收入 |
 | 10 | fyffyze | 研发费用总额 | numeric | 23 | 10 | √ | 0.0000000000 | 研发费用总额 |
-| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fjnyffyje | 境内研发费用金额 | numeric | 23 | 10 | √ | 0.0000000000 | 境内研发费用金额 |
 | 13 | fyear | 年度 | timestamp | 0 |  |  | null | 年度 |
 | 14 | fqysrze | 企业收入总额 | numeric | 23 | 10 | √ | 0.0000000000 | 企业收入总额 |
 | 15 | fbnypjzgzrs | 企业本年月平均职工总人数 | int8 | 64 |  | √ | 0 | 企业本年月平均职工总人数 |
 | 16 | fjydxzkysxlzgrs | 具有大学专科以上学历职工人数 | int8 | 64 |  | √ | 0 | 具有大学专科以上学历职工人数 |
-| 17 | fbillno | 业务编码 | varchar | 30 |  | √ | ' ' | 业务编码 |
-| 18 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 17 | fbillno | 业务编号 | varchar | 30 |  | √ | ' ' | 业务编号 |
+| 18 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

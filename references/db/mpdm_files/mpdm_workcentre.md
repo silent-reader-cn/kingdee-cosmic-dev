@@ -11,10 +11,10 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fresouceqty | 资源数量 | int4 | 32 |  | √ | 0 | 资源数量 |
-| 3 | fresourcenumber | 资源编码 | varchar | 30 |  | √ | ' ' | 资源维护(废弃) mpdm_resources |
+| 3 | fresourcenumber | 资源编码 | varchar | 30 |  | √ | ' ' | [资源维护(废弃) mpdm_resources](../mpdm_files/mpdm_resources.md) |
 | 4 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 6 | fprocessactive | 工序活动 | int8 | 64 |  | √ | 0 | 工序活动定义(废弃) mpdm_processactivity |
+| 6 | fprocessactive | 工序活动 | int8 | 64 |  | √ | 0 | [工序活动定义(废弃) mpdm_processactivity](../mpdm_files/mpdm_processactivity.md) |
 
 ### 列规则定义
 
@@ -41,23 +41,23 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fworkcent | 工作中心 | int8 | 64 |  | √ | 0 | 工作中心定义(废弃) mpdm_workcentre |
-| 3 | fmaterialgroup | 物料控制组 | int8 | 64 |  | √ | 0 | 物料控制组 bd_materialcontrolgroup |
+| 2 | fworkcent | 工作中心 | int8 | 64 |  | √ | 0 | [工作中心定义(废弃) mpdm_workcentre](../mpdm_files/mpdm_workcentre.md) |
+| 3 | fmaterialgroup | 物料控制组 | int8 | 64 |  | √ | 0 | [物料控制组 bd_materialcontrolgroup](../basedata_files/bd_materialcontrolgroup.md) |
 | 4 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 5 | fcreatedatefield | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
 | 6 | fcapacitynumber | fcapacitynumber | varchar | 50 |  | √ | ' ' |  |
 | 7 | fproducttype | 产品维度 | varchar | 30 |  | √ | ' ' | 产品维度,枚举: A :物料 C :物料控制组 |
-| 8 | fmodifierfield | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 9 | fcreaterfield | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 10 | fcapagroupnum | 能力项组编码 | int8 | 64 |  | √ | 0 | 能力项组 mpdm_capacitygroup |
+| 8 | fmodifierfield | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 9 | fcreaterfield | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 10 | fcapagroupnum | 能力项组编码 | int8 | 64 |  | √ | 0 | [能力项组 mpdm_capacitygroup](../mpdm_files/mpdm_capacitygroup.md) |
 | 11 | fmodifydatefield | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
 | 12 | fcapacityqty | fcapacityqty | numeric | 23 | 10 | √ | 0.0000000000 |  |
 | 13 | fefficiencyqty | fefficiencyqty | numeric | 23 | 10 | √ | 0.0000000000 |  |
 | 14 | fcapagroupseq | 能力项组编码序号 | int4 | 32 |  | √ | 0 | 能力项组编码序号 |
-| 15 | fmaterial | 物料 | int8 | 64 |  | √ | 0 | 物料生产信息 bd_materialmftinfo |
+| 15 | fmaterial | 物料 | int8 | 64 |  | √ | 0 | [物料生产信息 bd_materialmftinfo](../sbd_files/bd_materialmftinfo.md) |
 | 16 | fcapacityname | fcapacityname | varchar | 50 |  | √ | ' ' |  |
 | 17 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 18 | funit | 计量单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 18 | funit | 计量单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 19 | faddefficiencyqty | faddefficiencyqty | numeric | 23 | 10 | √ | 0.0000000000 |  |
 
 ### 列规则定义
@@ -85,35 +85,35 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fgroupid | 工作中心类别 | int8 | 64 |  | √ | 0 | 工作中心类别(废弃) mpdm_workcentgroup |
+| 2 | fgroupid | 工作中心类别 | int8 | 64 |  | √ | 0 | [工作中心类别(废弃) mpdm_workcentgroup](../mpdm_files/mpdm_workcentgroup.md) |
 | 3 | fremake | 备注 | varchar | 510 |  | √ | ' ' | 备注 |
 | 4 | fuseorg | fuseorg | int8 | 64 |  | √ | 0 |  |
-| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 6 | fcalendar | 生产日历 | int8 | 64 |  | √ | 0 | 生产日历 mpdm_calendar |
-| 7 | fworkshop | 车间 | int8 | 64 |  | √ | 0 | 车间设置 mpdm_workshopsetup |
-| 8 | flocation | 仓位 | int8 | 64 |  | √ | 0 | 仓位 bd_location |
-| 9 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 6 | fcalendar | 生产日历 | int8 | 64 |  | √ | 0 | [生产日历 mpdm_calendar](../mpdm_files/mpdm_calendar.md) |
+| 7 | fworkshop | 车间 | int8 | 64 |  | √ | 0 | [车间设置 mpdm_workshopsetup](../mpdm_files/mpdm_workshopsetup.md) |
+| 8 | flocation | 仓位 | int8 | 64 |  | √ | 0 | [仓位 bd_location](../sbd_files/bd_location.md) |
+| 9 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 11 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 14 | fprocessstrategy | 工序控制策略 | int8 | 64 |  | √ | 0 | 工序控制策略(废弃) mpdm_proctrlstrategy |
+| 14 | fprocessstrategy | 工序控制策略 | int8 | 64 |  | √ | 0 | [工序控制策略(废弃) mpdm_proctrlstrategy](../mpdm_files/mpdm_proctrlstrategy.md) |
 | 15 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 16 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
 | 17 | fbackflushflag | 倒冲 | varchar | 20 |  | √ | ' ' | 倒冲,枚举: 0 :否 1 :是 |
-| 18 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 19 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 20 | fabilitytype | 能力类别 | int8 | 64 |  | √ | 0 | 基础资料模板 mpdm_abilitytype |
+| 18 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 19 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 20 | fabilitytype | 能力类别 | int8 | 64 |  | √ | 0 | [基础资料模板 mpdm_abilitytype](../mpdm_files/mpdm_abilitytype.md) |
 | 21 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 22 | fparentcenter | 上级工作中心 | int8 | 64 |  | √ | 0 | 工作中心定义(废弃) mpdm_workcentre |
-| 23 | factivestandard | 活动量标准值 | int8 | 64 |  | √ | 0 | 基础资料带组织模板 mpdm_activestandard |
+| 22 | fparentcenter | 上级工作中心 | int8 | 64 |  | √ | 0 | [工作中心定义(废弃) mpdm_workcentre](../mpdm_files/mpdm_workcentre.md) |
+| 23 | factivestandard | 活动量标准值 | int8 | 64 |  | √ | 0 | [基础资料带组织模板 mpdm_activestandard](../mpdm_files/mpdm_activestandard.md) |
 | 24 | fctrlstrategy | 控制策略 | varchar | 30 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
-| 25 | fwarehouse | 仓库 | int8 | 64 |  | √ | 0 | 仓库 bd_warehouse |
+| 25 | fwarehouse | 仓库 | int8 | 64 |  | √ | 0 | [仓库 bd_warehouse](../sbd_files/bd_warehouse.md) |
 | 26 | fenable | 使用状态 | varchar | 30 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 27 | fworkmode | 工作模式 | varchar | 20 |  | √ | ' ' | 工作模式,枚举: A :自然日历 B :工作日历 |
 | 28 | fnumber | 工作中心编码 | varchar | 60 |  | √ | ' ' | 工作中心编码 |
 | 29 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
-| 30 | fparentorg | 所属组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 30 | fparentorg | 所属组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 
 ### 列规则定义
 
@@ -125,8 +125,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | t_mpdm_workcentre_pkey |  | fid |
-| 2 | idx_mpdm_workcentre_forg |  | fnumber,fcreateorgid |
+| 1 | idx_mpdm_workcentre_forg |  | fnumber,fcreateorgid |
+| 2 | t_mpdm_workcentre_pkey |  | fid |
 | 3 | idx_t_mpdm_workcentre_createorg |  | fcreateorgid |
 | 4 | idx_t_mpdm_workcentre_master |  | fmasterid |
 
@@ -182,8 +182,8 @@
 | 2 | fcapacitytype | 能力项类别 | varchar | 50 |  | √ | ' ' | 能力项类别,枚举: A :固定值 B :计算值 |
 | 3 | fcreatedatefield | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
 | 4 | fcapacitynumber | 能力项编码 | varchar | 50 |  | √ | ' ' | 能力项编码 |
-| 5 | fmodifierfield | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 6 | fcreaterfield | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | fmodifierfield | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 6 | fcreaterfield | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 7 | fmodifydatefield | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
 | 8 | fcapacityqty | 能力数值 | numeric | 23 | 10 | √ | 0.0000000000 | 能力数值 |
 | 9 | fefficiencyqty | 效率 | numeric | 23 | 10 | √ | 0.0000000000 | 效率 |
@@ -301,12 +301,12 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | factiveformula | 活动量公式-标准公式 | int8 | 64 |  | √ | 0 | 工序活动公式(废弃) mpdm_processformula |
+| 2 | factiveformula | 活动量公式-标准公式 | int8 | 64 |  | √ | 0 | [工序活动公式(废弃) mpdm_processformula](../mpdm_files/mpdm_processformula.md) |
 | 3 | fprocessqty | 基本数量 | int4 | 32 |  | √ | 0 | 基本数量 |
-| 4 | fprocessunit | 计量单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 5 | freportformula | 活动量汇报公式-标准公式 | int8 | 64 |  | √ | 0 | 工序活动公式(废弃) mpdm_processformula |
+| 4 | fprocessunit | 计量单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 5 | freportformula | 活动量汇报公式-标准公式 | int8 | 64 |  | √ | 0 | [工序活动公式(废弃) mpdm_processformula](../mpdm_files/mpdm_processformula.md) |
 | 6 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 7 | fprocessnumber | 工序活动编码 | int8 | 64 |  | √ | 0 | 工序活动定义(废弃) mpdm_processactivity |
+| 7 | fprocessnumber | 工序活动编码 | int8 | 64 |  | √ | 0 | [工序活动定义(废弃) mpdm_processactivity](../mpdm_files/mpdm_processactivity.md) |
 | 8 | fprocessroutecontrol | 工艺路线录入控制 | bpchar | 1 |  | √ | ' ' | 工艺路线录入控制,枚举: 1 :必录 2 :可选 3 :不检查 |
 | 9 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 

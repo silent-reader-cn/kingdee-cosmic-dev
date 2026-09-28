@@ -21,30 +21,35 @@
 | 10 | fopentype | 开标方式 | bpchar | 1 |  | √ | ' ' | 开标方式,枚举: 1 :截止时间手动开标 |
 | 11 | fturns | 议价轮次 | varchar | 2 |  | √ | ' ' | 议价轮次,枚举: 1 :首轮 2 :议价(1) 3 :议价(2) 4 :议价(3) 5 :议价(4) 6 :议价(5) 7 :议价(6) 8 :议价(7) 9 :议价(8) 10 :议价(9) 11 :议价(10) 12 :议价(11) 13 :议价(12) 14 :议价(13) 15 :议价(14) |
 | 12 | fpurgroupid | fpurgroupid | int8 | 64 |  | √ | 0 |  |
-| 13 | fbillno | 议价单号 | varchar | 30 |  | √ | ' ' | 议价单号 |
-| 14 | fmodifierid | fmodifierid | int8 | 64 |  | √ | 0 |  |
-| 15 | ftemplateid | ftemplateid | int8 | 64 |  | √ | 0 |  |
-| 16 | fprojectid | 招标项目 | int8 | 64 |  | √ | 0 | 招标项目F7 src_projectf7 |
-| 17 | fbillstatus | 单据状态 | bpchar | 1 |  | √ | ' ' | 单据状态,枚举: A :创建 B :审核中 C :已审核 D :重新审核 |
-| 18 | fparentid | fparentid | varchar | 50 |  | √ | ' ' |  |
-| 19 | fcreatetime | fcreatetime | timestamp | 0 |  |  | null |  |
-| 20 | fbidcount | fbidcount | int4 | 32 |  | √ | 0 |  |
-| 21 | flastupdateuserid | flastupdateuserid | int8 | 64 |  | √ | 0 |  |
-| 22 | fauditdate | fauditdate | timestamp | 0 |  |  | null |  |
-| 23 | fbizpartnerid | fbizpartnerid | int8 | 64 |  | √ | 0 |  |
-| 24 | fsupplierid | fsupplierid | int8 | 64 |  | √ | 0 |  |
-| 25 | flastupdatetime | flastupdatetime | timestamp | 0 |  |  | null |  |
-| 26 | fquotenum | fquotenum | bpchar | 1 |  | √ | '1' |  |
-| 27 | fsuppliertype | fsuppliertype | varchar | 30 |  | √ | ' ' |  |
-| 28 | fcontent_tag | fcontent_tag | text | 0 |  |  | null |  |
-| 29 | fdeadline | 报价截止时间 | timestamp | 0 |  |  | null | 报价截止时间 |
-| 30 | fisnotice | fisnotice | bpchar | 1 |  | √ | '0' |  |
-| 31 | fcontent | fcontent | varchar | 255 |  | √ | ' ' |  |
-| 32 | fcurrentnode | fcurrentnode | int8 | 64 |  | √ | 0 |  |
-| 33 | fnegotiatetype | 议价方式 | bpchar | 1 |  | √ | ' ' | 议价方式,枚举: 1 :线上议价 2 :线下议价(标的) 3 :线下议价(标段) 4 :电子竞价 |
-| 34 | fisreplenish | fisreplenish | bpchar | 1 |  | √ | '0' |  |
-| 35 | fauditorid | fauditorid | int8 | 64 |  | √ | 0 |  |
-| 36 | fisquotebidopen | 已议标开标 | bpchar | 1 |  | √ | '0' | 已议标开标 |
+| 13 | floctaxamount | floctaxamount | numeric | 23 | 10 | √ | 0 |  |
+| 14 | fpreamount | fpreamount | numeric | 23 | 10 | √ | 0 |  |
+| 15 | fbillno | 议价单号 | varchar | 30 |  | √ | ' ' | 议价单号 |
+| 16 | fpretaxamount | fpretaxamount | numeric | 23 | 10 | √ | 0 |  |
+| 17 | fmodifierid | fmodifierid | int8 | 64 |  | √ | 0 |  |
+| 18 | ftemplateid | ftemplateid | int8 | 64 |  | √ | 0 |  |
+| 19 | fprojectid | 招标项目 | int8 | 64 |  | √ | 0 | [招标项目F7 src_projectf7](../src_files/src_projectf7.md) |
+| 20 | fbillstatus | 单据状态 | bpchar | 1 |  | √ | ' ' | 单据状态,枚举: A :创建 B :审核中 C :已审核 D :重新审核 |
+| 21 | fparentid | fparentid | varchar | 50 |  | √ | ' ' |  |
+| 22 | fcreatetime | fcreatetime | timestamp | 0 |  |  | null |  |
+| 23 | fbidcount | fbidcount | int4 | 32 |  | √ | 0 |  |
+| 24 | flastupdateuserid | flastupdateuserid | int8 | 64 |  | √ | 0 |  |
+| 25 | fauditdate | fauditdate | timestamp | 0 |  |  | null |  |
+| 26 | fbizpartnerid | fbizpartnerid | int8 | 64 |  | √ | 0 |  |
+| 27 | fsupplierid | fsupplierid | int8 | 64 |  | √ | 0 |  |
+| 28 | flastupdatetime | flastupdatetime | timestamp | 0 |  |  | null |  |
+| 29 | fquotenum | fquotenum | bpchar | 1 |  | √ | '1' |  |
+| 30 | fsuppliertype | fsuppliertype | varchar | 30 |  | √ | ' ' |  |
+| 31 | fcontent_tag | fcontent_tag | text | 0 |  |  | null |  |
+| 32 | flocamount | flocamount | numeric | 23 | 10 | √ | 0 |  |
+| 33 | fdeadline | 报价截止时间 | timestamp | 0 |  |  | null | 报价截止时间 |
+| 34 | fisnotice | fisnotice | bpchar | 1 |  | √ | '0' |  |
+| 35 | fcontent | fcontent | varchar | 255 |  | √ | ' ' |  |
+| 36 | fcurrentnode | fcurrentnode | int8 | 64 |  | √ | 0 |  |
+| 37 | fnegotiatetype | 议价方式 | bpchar | 1 |  | √ | ' ' | 议价方式,枚举: 1 :线上议价 2 :线下议价(标的) 3 :线下议价(标段) 4 :电子竞价 |
+| 38 | fisreplenish | fisreplenish | bpchar | 1 |  | √ | '0' |  |
+| 39 | fcurrencyid | fcurrencyid | int8 | 64 |  | √ | 0 |  |
+| 40 | fauditorid | fauditorid | int8 | 64 |  | √ | 0 |  |
+| 41 | fisquotebidopen | 已议标开标 | bpchar | 1 |  | √ | '0' | 已议标开标 |
 
 ### 列规则定义
 

@@ -25,5 +25,5 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_ccm_recalarchiveid |  | farchiveid |
-| 2 | pk_ccm_recalarchive |  | fid |
+| 1 | pk_ccm_recalarchive |  | fid |
+| 2 | idx_ccm_recalarchiveid |  | farchiveid |

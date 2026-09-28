@@ -11,20 +11,20 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fremark | 描述信息 | varchar | 512 |  | √ | ' ' | 描述信息 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fbillstatus | 单据状态 | bpchar | 1 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 5 | fbarcodevaluehead | 条码值 | varchar | 1000 |  | √ | ' ' | 条码值 |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 7 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 7 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | fauditdate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
 | 9 | fstarttime | 开始时间 | timestamp | 0 |  |  | null | 开始时间 |
 | 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 11 | fparsestatus | 解析状态 | bpchar | 1 |  | √ | ' ' | 解析状态,枚举: A :解析成功 B :解析异常 |
 | 12 | fduration | 耗时（毫秒） | int8 | 64 |  | √ | 0 | 耗时（毫秒） |
-| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | fendtime | 结束时间 | timestamp | 0 |  |  | null | 结束时间 |
 | 15 | fbillno | 单据编号 | varchar | 80 |  | √ | ' ' | 单据编号 |
-| 16 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 16 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 
@@ -52,7 +52,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fmessage | 说明信息 | varchar | 512 |  | √ | ' ' | 说明信息 |
-| 3 | fbarcoderuleid | 条码规则 | int8 | 64 |  | √ | 0 | 条码规则 barcm_barcoderule |
+| 3 | fbarcoderuleid | 条码规则 | int8 | 64 |  | √ | 0 | [条码规则 barcm_barcoderule](../barcm_files/barcm_barcoderule.md) |
 | 4 | fbarcodevalue | 条码值 | varchar | 255 |  | √ | ' ' | 条码值 |
 | 5 | fentrystatus | 状态 | bpchar | 1 |  | √ | ' ' | 状态,枚举: A :成功 B :失败 |
 | 6 | fentryduration | 耗时（毫秒） | int8 | 64 |  | √ | 0 | 耗时（毫秒） |

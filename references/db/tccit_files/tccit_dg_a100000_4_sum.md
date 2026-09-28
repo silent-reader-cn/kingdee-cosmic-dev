@@ -12,12 +12,15 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fjsdjm | 减：所得减免 | numeric | 23 | 10 | √ | 0.0000000000 | 减：所得减免 |
 | 3 | flmhjnsd | 减免后境内所得 | numeric | 23 | 10 | √ | 0.0000000000 | 减免后境内所得 |
-| 4 | fqtxmsdjm | 其他项目所得减免 | numeric | 23 | 10 | √ | 0.0000000000 | 其他项目所得减免 |
-| 5 | fskssqz | 结束日期 | timestamp | 0 |  |  | null | 结束日期 |
-| 6 | fnstzhsd | 纳税调整后所得 | numeric | 23 | 10 | √ | 0.0000000000 | 纳税调整后所得 |
-| 7 | forgid | 组织 | int8 | 64 |  | √ | 0 | 组织 |
-| 8 | fjszrxmsdjm | 技术转让项目所得减免 | numeric | 23 | 10 | √ | 0.0000000000 | 技术转让项目所得减免 |
-| 9 | fskssqq | 开始时间 | timestamp | 0 |  |  | null | 开始时间 |
+| 4 | fewblxh | 二维表序号 | varchar | 50 |  | √ | ' ' | 二维表序号,枚举: 1 :行号 |
+| 5 | fqtxmsdjm | 其他项目所得减免 | numeric | 23 | 10 | √ | 0.0000000000 | 其他项目所得减免 |
+| 6 | fskssqz | 结束日期 | timestamp | 0 |  |  | null | 结束日期 |
+| 7 | fnstzhsd | 纳税调整后所得 | numeric | 23 | 10 | √ | 0.0000000000 | 纳税调整后所得 |
+| 8 | forgid | 组织 | int8 | 64 |  | √ | 0 | 组织 |
+| 9 | fjszrxmsdjm | 技术转让项目所得减免 | numeric | 23 | 10 | √ | 0.0000000000 | 技术转让项目所得减免 |
+| 10 | fsbbid | 申报表id | varchar | 50 |  | √ | ' ' | 申报表id |
+| 11 | fskssqq | 开始时间 | timestamp | 0 |  |  | null | 开始时间 |
+| 12 | fewblname | 二维表名称 | varchar | 50 |  | √ | ' ' | 二维表名称 |
 
 ### 列规则定义
 

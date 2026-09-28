@@ -15,7 +15,7 @@
 | 4 | fstate | 比对结果 | varchar | 50 |  | √ | ' ' | 比对结果,枚举: A :无差异 B :异常 |
 | 5 | faccountnumber | 科目编码 | varchar | 100 |  | √ | ' ' | 科目编码 |
 | 6 | faccountbookstype | 账簿类型 | varchar | 50 |  | √ | ' ' | 账簿类型 |
-| 7 | forgid | 核算组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 7 | forgid | 核算组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | faccountname | 科目名称 | varchar | 255 |  | √ | ' ' | 科目名称 |
 | 9 | fcreditbegin_src | 期初贷方金额（源单据） | numeric | 23 | 10 | √ | 0 | 期初贷方金额（源单据） |
 | 10 | fperiodnumber | 会计期间 | int8 | 64 |  | √ | 0 | 会计期间 |

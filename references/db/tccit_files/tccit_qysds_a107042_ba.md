@@ -30,5 +30,5 @@
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
 | 1 | idx_tccit_qysds_a107042_ba_1 |  | fewblxh,fsbbid |
-| 2 | t_tccit_qysds_a107042_ba_pkey |  | fid |
-| 3 | idx_tccit_qysds_a107042_ba |  | fsbbid |
+| 2 | idx_tccit_qysds_a107042_ba |  | fsbbid |
+| 3 | t_tccit_qysds_a107042_ba_pkey |  | fid |

@@ -42,7 +42,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | frelfieldkey | 关联字段（标识） | varchar | 255 |  | √ | ' ' | 关联字段（标识） |
 | 3 | fislock | 锁定 | bpchar | 1 |  | √ | '0' | 锁定 |
-| 4 | frelentity | 关联实体 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 4 | frelentity | 关联实体 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 5 | fismustinput | 必录 | bpchar | 1 |  | √ | '0' | 必录 |
 | 6 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 7 | fplantype | 计划类型 | bpchar | 1 |  | √ | 'A' | 计划类型,枚举: A :再订货点 B :最大最小 C :平衡利库 D :固定期间 |
@@ -78,14 +78,14 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fisfixedperiod | 固定期间 | bpchar | 1 |  | √ | '0' | 固定期间 |
 | 3 | fname | 因子名称 | varchar | 50 |  | √ | ' ' | 因子名称 |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 6 | fisbalanceinv | 平衡利库 | bpchar | 1 |  | √ | '0' | 平衡利库 |
 | 7 | fsrccreateorgid | fsrccreateorgid | int8 | 64 |  | √ | 0 |  |
 | 8 | fispreset | 系统预设 | bpchar | 1 |  | √ | '0' | 系统预设 |
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 10 | fstatus | 数据状态 | bpchar | 1 |  | √ | 'C' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 13 | ftype | 因子类型 | bpchar | 1 |  | √ | 'A' | 因子类型,枚举: A :日期 B :数量 |
 | 14 | fismaxandmin | 最大最小 | bpchar | 1 |  | √ | '0' | 最大最小 |

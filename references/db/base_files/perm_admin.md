@@ -12,7 +12,7 @@
 | 1 | fid | fid | varchar | 36 |  | √ | ' ' |  |
 | 2 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 3 | fentryid | fentryid | varchar | 36 |  | √ | ' ' | id |
-| 4 | fappid | 业务应用 | varchar | 36 |  | √ | ' ' | 业务应用实体 bos_devportal_bizapp |
+| 4 | fappid | 业务应用 | varchar | 36 |  | √ | ' ' | [业务应用实体 bos_devportal_bizapp](../mdl_files/bos_devportal_bizapp.md) |
 
 ### 列规则定义
 
@@ -40,26 +40,26 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | varchar | 18 |  | √ | ' ' | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fisleaf | 是否叶子 | bpchar | 1 |  | √ | '1' | 是否叶子 |
-| 4 | fparentid | 上级 | varchar | 36 |  | √ | ' ' | 管理员实体 perm_admin |
+| 4 | fparentid | 上级 | varchar | 36 |  | √ | ' ' | [管理员实体 perm_admin](../base_files/perm_admin.md) |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 6 | flongnumber | 长编码 | varchar | 255 |  | √ | ' ' | 长编码 |
 | 7 | fdisabledate | 禁用时间 | timestamp | 0 |  |  | null | 禁用时间 |
-| 8 | fuserid | 用户名 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 9 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | fuserid | 用户名 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 9 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | fupdatorid | fupdatorid | int8 | 64 |  | √ | 0 |  |
 | 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 12 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 D :启用 E :禁用 |
 | 13 | flevel | 级次 | int8 | 64 |  | √ | 0 | 级次 |
 | 14 | ftype | 类型 | varchar | 36 |  | √ | ' ' | 类型,枚举: 10 :超级管理员 20 :管理组织管理员 |
-| 15 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 15 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 16 | fmasterid | 主数据内码 | varchar | 18 |  | √ | ' ' | 主数据内码 |
 | 17 | fisupdate | fisupdate | bpchar | 1 |  | √ | '0' |  |
 | 18 | fupdatetime | fupdatetime | timestamp | 0 |  |  | null |  |
 | 19 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 20 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
-| 21 | fadmintype | 管理员类型 | int8 | 64 |  | √ | 1 | 虚拟管理员类型 perm_admintype |
+| 21 | fadmintype | 管理员类型 | int8 | 64 |  | √ | 1 | [虚拟管理员类型 perm_admintype](../base_files/perm_admintype.md) |
 
 ### 列规则定义
 
@@ -88,7 +88,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | varchar | 36 |  | √ | ' ' |  |
-| 2 | fbizorgid | 管理组织编码 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fbizorgid | 管理组织编码 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 4 | fentryid | fentryid | varchar | 36 |  | √ | ' ' | id |
 
@@ -149,7 +149,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | varchar | 36 |  | √ | ' ' |  |
 | 2 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 3 | fuserid | 人员 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fuserid | 人员 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fentryid | fentryid | varchar | 36 |  | √ | ' ' | id |
 
 ### 列规则定义
@@ -177,7 +177,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | varchar | 36 |  | √ | ' ' |  |
-| 2 | fadminorgid | 行政组织 | int8 | 64 |  | √ | 0 | 行政组织（部门） bos_adminorg |
+| 2 | fadminorgid | 行政组织 | int8 | 64 |  | √ | 0 | [行政组织（部门） bos_adminorg](../base_files/bos_adminorg.md) |
 | 3 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 4 | fentryid | fentryid | varchar | 36 |  | √ | ' ' | id |
 

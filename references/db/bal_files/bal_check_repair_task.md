@@ -13,19 +13,19 @@
 | 2 | fparam | 任务参数 | varchar | 100 |  | √ | ' ' | 任务参数 |
 | 3 | ferrormsg | 错误信息 | varchar | 100 |  | √ | ' ' | 错误信息 |
 | 4 | fponitkey | 增量标识 | varchar | 80 |  | √ | ' ' | 增量标识 |
-| 5 | fbill | 单据实体 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 5 | fbill | 单据实体 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 6 | fmanagertraceid | 调度Traceid | varchar | 30 |  | √ | ' ' | 调度Traceid |
-| 7 | fparenttaskid | 父任务 | int8 | 64 |  | √ | '0' | 余额巡检重算 bal_check_repair |
+| 7 | fparenttaskid | 父任务 | int8 | 64 |  | √ | '0' | [余额巡检重算 bal_check_repair](../bal_files/bal_check_repair.md) |
 | 8 | ftasktraceid | 执行Traceid | varchar | 30 |  | √ | ' ' | 执行Traceid |
 | 9 | ffromid | 起始ID | int8 | 64 |  | √ | '0' | 起始ID |
 | 10 | ftoid | 结束ID | int8 | 64 |  | √ | '0' | 结束ID |
-| 11 | frule | 余额更新规则 | varchar | 36 |  | √ | ' ' | 余额更新规则列表 bal_balanceupdaterule |
+| 11 | frule | 余额更新规则 | varchar | 36 |  | √ | ' ' | [余额更新规则列表 bal_balanceupdaterule](../bal_files/bal_balanceupdaterule.md) |
 | 12 | fstatus | 执行结果 | bpchar | 1 |  | √ | ' ' | 执行结果,枚举: A :已创建 B :已通知 C :有差异 D :无差异 E :异常失败 F :成功 |
 | 13 | fcreatedate | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 14 | fresultdata_tag | 异常数据_详情 | text | 0 |  |  | null | 异常数据_详情 |
-| 15 | fsparseseq | 稀疏序列 | int8 | 64 |  | √ | '0' | 稀疏序列 bal_sparse_seq |
+| 15 | fsparseseq | 稀疏序列 | int8 | 64 |  | √ | '0' | [稀疏序列 bal_sparse_seq](../bal_files/bal_sparse_seq.md) |
 | 16 | ftaskno | 任务编号 | varchar | 50 |  | √ | ' ' | 任务编号 |
-| 17 | fcreater | 创建人 | int8 | 64 |  | √ | '0' | 人员 bos_user |
+| 17 | fcreater | 创建人 | int8 | 64 |  | √ | '0' | [人员 bos_user](../base_files/bos_user.md) |
 | 18 | frunstatus | 执行状态 | bpchar | 1 |  | √ | ' ' | 执行状态,枚举: 1 :执行中 2 :已结束 3 :系统繁忙 |
 | 19 | fparam_tag | 任务参数_详情 | text | 0 |  |  | null | 任务参数_详情 |
 | 20 | fresultdata | 异常数据 | varchar | 100 |  | √ | ' ' | 异常数据 |

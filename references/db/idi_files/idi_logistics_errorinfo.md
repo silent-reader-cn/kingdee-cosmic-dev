@@ -16,9 +16,9 @@
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 6 | forder | 快递单号 | varchar | 50 |  | √ | ' ' | 快递单号 |
 | 7 | fbillid | 单据id | varchar | 36 |  | √ | ' ' | 单据id |
-| 8 | fbillno | 单据编码 | varchar | 80 |  | √ | ' ' | 单据编码 |
+| 8 | fbillno | 单据编号 | varchar | 80 |  | √ | ' ' | 单据编号 |
 | 9 | fmobile | 联系人手机号码 | varchar | 30 |  | √ | ' ' | 联系人手机号码 |
-| 10 | fbilltypeid | 单据类型 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 10 | fbilltypeid | 单据类型 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 11 | fcode | 错误码 | varchar | 5 |  | √ | ' ' | 错误码 |
 
 ### 列规则定义

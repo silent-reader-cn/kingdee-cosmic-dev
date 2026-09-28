@@ -1,8 +1,8 @@
-# 商城订单基础资料-mal_order_bd
+# 商城订单-mal_order_bd
 
-## 商城订单基础资料-分表 t_mal_order_a
+## 商城订单-分表 t_mal_order_a
 
-- **表名称：** 商城订单基础资料-分表
+- **表名称：** 商城订单-分表
 - **表名：** t_mal_order_a
 
 ### 表格列定义
@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fecorderid | fecorderid | int8 | 64 |  | √ | 0 |  |
 | 4 | fcreatetime | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
 | 5 | fjdorderstatus | fjdorderstatus | varchar | 255 |  | √ | ' ' |  |
@@ -21,8 +21,8 @@
 | 10 | fmodifytime | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
 | 11 | forigin | forigin | bpchar | 1 |  | √ | ' ' |  |
 | 12 | fjdorderid | fjdorderid | varchar | 80 |  | √ | ' ' |  |
-| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 14 | fasyncstatus | fasyncstatus | bpchar | 1 |  | √ | ' ' |  |
+| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 14 | fasyncstatus | 下游单据状态 | bpchar | 1 |  | √ | ' ' | 下游单据状态,枚举: A :未完成 B :已完成 |
 | 15 | fecorderstatus | fecorderstatus | bpchar | 1 |  | √ | ' ' |  |
 | 16 | fauditorid | fauditorid | int8 | 64 |  | √ | 0 |  |
 
@@ -53,44 +53,51 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | faddvalue | faddvalue | bpchar | 1 |  | √ | ' ' |  |
-| 3 | fgoodsimg | fgoodsimg | varchar | 255 |  |  | ' ' |  |
-| 4 | fgoodsid | 商品编码 | int8 | 64 |  | √ | 0 | 商品管理 pmm_prodmanage |
-| 5 | ftaxrate | ftaxrate | numeric | 19 | 6 | √ | 0.000000 |  |
-| 6 | fmaterialid | fmaterialid | int8 | 64 |  | √ | 0 |  |
-| 7 | fentrystatus | fentrystatus | bpchar | 1 |  | √ | ' ' |  |
-| 8 | fsumorderqty | fsumorderqty | numeric | 19 | 6 | √ | 0.000000 |  |
-| 9 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 10 | fnote | fnote | varchar | 255 |  | √ | ' ' |  |
-| 11 | ftaxprice | 商品价格 | numeric | 23 | 10 | √ | 0.0000000000 | 商品价格 |
-| 12 | fcostitemid | fcostitemid | int8 | 64 |  | √ | 0 |  |
-| 13 | famount | famount | numeric | 19 | 6 | √ | 0.000000 |  |
-| 14 | fprice | fprice | numeric | 23 | 10 | √ | 0.0000000000 |  |
-| 15 | fpurtypeid | 采购类型 | int8 | 64 |  | √ | 0 | 协同辅助资料 pbd_mallextdata |
-| 16 | fjdorderid | fjdorderid | varchar | 80 |  | √ | ' ' |  |
-| 17 | fsumreceiptqty | fsumreceiptqty | numeric | 19 | 6 | √ | 0.000000 |  |
-| 18 | fsumreturnreqqty | fsumreturnreqqty | numeric | 19 | 6 | √ | 0.000000 |  |
-| 19 | fdctamount | fdctamount | numeric | 19 | 6 | √ | 0.000000 |  |
-| 20 | ftaxrateid | ftaxrateid | int8 | 64 |  | √ | 0 |  |
-| 21 | fsumpayamt | fsumpayamt | numeric | 19 | 6 | √ | 0.000000 |  |
-| 22 | fsuppilerid | fsuppilerid | int8 | 64 |  | √ | 0 |  |
-| 23 | fqty | 数量 | numeric | 19 | 6 | √ | 0.000000 | 数量 |
-| 24 | ftaxamount | 商品金额 | numeric | 19 | 6 | √ | 0.000000 | 商品金额 |
-| 25 | ferpbillstatus | ferpbillstatus | bpchar | 1 |  | √ | ' ' |  |
-| 26 | fdctrate | fdctrate | numeric | 19 | 6 | √ | 0.000000 |  |
-| 27 | fcategory | fcategory | varchar | 80 |  | √ | ' ' |  |
-| 28 | flogstatus | flogstatus | bpchar | 1 |  | √ | ' ' |  |
-| 29 | funitid | 计量单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 30 | fjdorderstatus | fjdorderstatus | varchar | 255 |  | √ | ' ' |  |
-| 31 | fispresent | fispresent | bpchar | 1 |  | √ | ' ' |  |
-| 32 | fgoodsdesc | fgoodsdesc | varchar | 255 |  | √ | ' ' |  |
-| 33 | ferpbillnumber | 采购订单号 | varchar | 80 |  | √ | ' ' | 采购订单号 |
-| 34 | fsumrequestqty | fsumrequestqty | numeric | 19 | 6 | √ | 0.000000 |  |
-| 35 | fsumoutstockqty | fsumoutstockqty | numeric | 19 | 6 | √ | 0.000000 |  |
-| 36 | fsuminstockqty | fsuminstockqty | numeric | 19 | 6 | √ | 0.000000 |  |
-| 37 | ftax | ftax | numeric | 19 | 6 | √ | 0.000000 |  |
-| 38 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 39 | flinetypeid | flinetypeid | int8 | 64 |  | √ | 0 |  |
-| 40 | fsuminvamt | fsuminvamt | numeric | 19 | 6 | √ | 0.000000 |  |
+| 3 | fcommentfirststatus | fcommentfirststatus | bpchar | 1 |  | √ | 'A' |  |
+| 4 | fgoodsimg | fgoodsimg | varchar | 255 |  |  | ' ' |  |
+| 5 | fgoodsid | 商品编码 | int8 | 64 |  | √ | 0 | [自建商品池 pmm_prodmanage](../pmm_files/pmm_prodmanage.md) |
+| 6 | ftaxrate | ftaxrate | numeric | 19 | 6 | √ | 0.000000 |  |
+| 7 | fmaterialid | fmaterialid | int8 | 64 |  | √ | 0 |  |
+| 8 | fentrystatus | fentrystatus | bpchar | 1 |  | √ | ' ' |  |
+| 9 | fsumorderqty | fsumorderqty | numeric | 19 | 6 | √ | 0.000000 |  |
+| 10 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
+| 11 | fnote | fnote | varchar | 255 |  | √ | ' ' |  |
+| 12 | ftaxprice | 商品价格 | numeric | 23 | 10 | √ | 0.0000000000 | 商品价格 |
+| 13 | fcostitemid | fcostitemid | int8 | 64 |  | √ | 0 |  |
+| 14 | famount | famount | numeric | 19 | 6 | √ | 0.000000 |  |
+| 15 | fentrycostprojectid | fentrycostprojectid | int8 | 64 |  | √ | 0 |  |
+| 16 | fprice | fprice | numeric | 23 | 10 | √ | 0.0000000000 |  |
+| 17 | fpurtypeid | 采购类型 | int8 | 64 |  | √ | 0 | [协同辅助资料 pbd_mallextdata](../pbd_files/pbd_mallextdata.md) |
+| 18 | fcommentfollowstatus | fcommentfollowstatus | bpchar | 1 |  | √ | 'A' |  |
+| 19 | fjdorderid | fjdorderid | varchar | 80 |  | √ | ' ' |  |
+| 20 | fcompareid | fcompareid | varchar | 80 |  | √ | ' ' |  |
+| 21 | fsumreceiptqty | fsumreceiptqty | numeric | 19 | 6 | √ | 0.000000 |  |
+| 22 | fsumreturnreqqty | fsumreturnreqqty | numeric | 19 | 6 | √ | 0.000000 |  |
+| 23 | fdctamount | fdctamount | numeric | 19 | 6 | √ | 0.000000 |  |
+| 24 | ftaxrateid | ftaxrateid | int8 | 64 |  | √ | 0 |  |
+| 25 | fcompareremark | fcompareremark | varchar | 255 |  | √ | ' ' |  |
+| 26 | fsumpayamt | fsumpayamt | numeric | 19 | 6 | √ | 0.000000 |  |
+| 27 | fsuppilerid | 商家 | int8 | 64 |  | √ | 0 | [供应商 bd_supplier](../basedata_files/bd_supplier.md) |
+| 28 | fqty | 数量 | numeric | 19 | 6 | √ | 0.000000 | 数量 |
+| 29 | ftaxamount | 商品金额 | numeric | 19 | 6 | √ | 0.000000 | 商品金额 |
+| 30 | ferpbillstatus | ferpbillstatus | bpchar | 1 |  | √ | ' ' |  |
+| 31 | fdctrate | fdctrate | numeric | 19 | 6 | √ | 0.000000 |  |
+| 32 | fcategory | fcategory | varchar | 80 |  | √ | ' ' |  |
+| 33 | flogstatus | flogstatus | bpchar | 1 |  | √ | ' ' |  |
+| 34 | funitid | 计量单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 35 | fjdorderstatus | fjdorderstatus | varchar | 255 |  | √ | ' ' |  |
+| 36 | fispresent | fispresent | bpchar | 1 |  | √ | ' ' |  |
+| 37 | fgoodsdesc | fgoodsdesc | varchar | 255 |  | √ | ' ' |  |
+| 38 | ferpbillnumber | 采购订单号 | varchar | 80 |  | √ | ' ' | 采购订单号 |
+| 39 | fsumrequestqty | fsumrequestqty | numeric | 19 | 6 | √ | 0.000000 |  |
+| 40 | fsumoutstockqty | fsumoutstockqty | numeric | 19 | 6 | √ | 0.000000 |  |
+| 41 | fsuminstockqty | fsuminstockqty | numeric | 19 | 6 | √ | 0.000000 |  |
+| 42 | ftax | ftax | numeric | 19 | 6 | √ | 0.000000 |  |
+| 43 | fcompareresult | fcompareresult | bpchar | 1 |  | √ | ' ' |  |
+| 44 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 45 | flinetypeid | flinetypeid | int8 | 64 |  | √ | 0 |  |
+| 46 | fsuminvamt | fsuminvamt | numeric | 19 | 6 | √ | 0.000000 |  |
+| 47 | fgoodsuseid | fgoodsuseid | int8 | 64 |  | √ | 0 |  |
 
 ### 列规则定义
 
@@ -108,9 +115,9 @@
 
 ---
 
-## 商城订单基础资料-主表 t_mal_order
+## 商城订单-主表 t_mal_order
 
-- **表名称：** 商城订单基础资料-主表
+- **表名称：** 商城订单-主表
 - **表名：** t_mal_order
 
 ### 表格列定义
@@ -118,25 +125,25 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmalpaytype | 支付方式 | int8 | 64 |  | √ | 0 | 商城支付方式 pbd_paytype |
+| 2 | fmalpaytype | 支付方式 | int8 | 64 |  | √ | 0 | [商城支付方式 pbd_paytype](../pbd_files/pbd_paytype.md) |
 | 3 | fdelidate | fdelidate | timestamp | 0 |  |  | null |  |
 | 4 | finvdetail | finvdetail | varchar | 2 |  | √ | ' ' |  |
 | 5 | floccurrid | floccurrid | int8 | 64 |  | √ | 0 |  |
-| 6 | forgid | 采购组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | forgid | 采购组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fdeporgid | fdeporgid | int8 | 64 |  | √ | 0 |  |
 | 8 | fbilldate | 订货日期 | timestamp | 0 |  |  | null | 订货日期 |
 | 9 | fexchtypeid | fexchtypeid | int8 | 64 |  | √ | 0 |  |
 | 10 | freqpersonid | freqpersonid | int8 | 64 |  | √ | 0 |  |
 | 11 | fbiztype | fbiztype | bpchar | 1 |  | √ | ' ' |  |
-| 12 | fmalinvtype | 发票类型 | int8 | 64 |  | √ | 0 | 发票类型 bd_invoicetype |
+| 12 | fmalinvtype | 发票类型 | int8 | 64 |  | √ | 0 | [发票种类 bd_invoicetype](../basedata_files/bd_invoicetype.md) |
 | 13 | finvtype | finvtype | bpchar | 1 |  | √ | ' ' |  |
 | 14 | fsumamount | fsumamount | numeric | 19 | 6 | √ | 0.000000 |  |
-| 15 | fplatform | 电商平台 | bpchar | 1 |  | √ | ' ' | 电商平台,枚举: 1 :自建商城 2 :京东商城 3 :苏宁易购 4 :西域商城 5 :得力商城 6 :晨光商城 |
-| 16 | freceiptid | 收货人 | int8 | 64 |  | √ | 0 | 收货信息 pbd_receiptinfo |
+| 15 | fplatform | 电商平台 | bpchar | 1 |  | √ | ' ' | 电商平台,枚举: 1 :自建商城 2 :京东商城 3 :苏宁易购 4 :得力商城 5 :西域商城 6 :晨光商城 7 :京东工业品 8 :鑫方盛商城 9 :震坤行商城 |
+| 16 | freceiptid | 收货人 | int8 | 64 |  | √ | 0 | [收货信息 pbd_receiptinfo](../pbd_files/pbd_receiptinfo.md) |
 | 17 | ftaxtype | ftaxtype | bpchar | 1 |  | √ | ' ' |  |
-| 18 | fbillno | 订单号 | varchar | 80 |  | √ | ' ' | 订单号 |
+| 18 | fbillno | 商城订单号 | varchar | 80 |  | √ | ' ' | 商城订单号 |
 | 19 | fcostprojectid | fcostprojectid | int8 | 64 |  | √ | 0 |  |
-| 20 | frcvorgid | 收货组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 20 | frcvorgid | 收货组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 21 | fcostorgid | fcostorgid | int8 | 64 |  | √ | 0 |  |
 | 22 | ffreight | ffreight | numeric | 19 | 6 | √ | 0.000000 |  |
 | 23 | fcurrid | fcurrid | int8 | 64 |  | √ | 0 |  |
@@ -155,7 +162,7 @@
 | 36 | fexpenseorgid | fexpenseorgid | int8 | 64 |  | √ | 0 |  |
 | 37 | fpersonid | fpersonid | int8 | 64 |  | √ | 0 |  |
 | 38 | fsumtaxamount | fsumtaxamount | numeric | 19 | 6 | √ | 0.000000 |  |
-| 39 | fsettleorgid | 核算公司 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 39 | fsettleorgid | 核算公司 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 40 | fsumtax | fsumtax | numeric | 19 | 6 | √ | 0.000000 |  |
 | 41 | ftalentid | ftalentid | varchar | 80 |  | √ | ' ' |  |
 | 42 | fbusinesstypeid | fbusinesstypeid | int8 | 64 |  | √ | 0 |  |

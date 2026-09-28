@@ -9,7 +9,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 供应商用户 pur_supuser |
+| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [供应商用户 pur_supuser](../basedata_files/pur_supuser.md) |
 | 2 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 | 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 
@@ -38,7 +38,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 附件字段实体 bd_attachment |
+| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [附件字段实体 bd_attachment](../frame_files/bd_attachment.md) |
 | 2 | fpkid | fpkid | int8 | 64 |  | √ | 0 | FPKID |
 | 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 
@@ -67,7 +67,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 附件字段实体 bd_attachment |
+| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [附件字段实体 bd_attachment](../frame_files/bd_attachment.md) |
 | 2 | fpkid | fpkid | int8 | 64 |  | √ | 0 | FPKID |
 | 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 
@@ -99,21 +99,21 @@
 | 1 | fid | 单据id | int8 | 64 |  | √ | 0 | 单据id |
 | 2 | faddress | faddress | varchar | 50 |  | √ | ' ' |  |
 | 3 | freplydate | 要求回复时间 | timestamp | 0 |  |  | null | 要求回复时间 |
-| 4 | forgid | 采购组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 4 | forgid | 采购组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | fentrystatus | 发布状态 | bpchar | 1 |  | √ | ' ' | 发布状态,枚举: A :暂存 B :已提交 C :已发布 |
 | 6 | fseq | fseq | int8 | 64 |  | √ | 0 |  |
 | 7 | fcfmdate | 回复时间 | timestamp | 0 |  |  | null | 回复时间 |
 | 8 | fsupletterstype | 函件类型 | bpchar | 1 |  | √ | ' ' | 函件类型,枚举: 4 :邀请函 |
 | 9 | ffsstatus | ffsstatus | bpchar | 1 |  | √ | ' ' |  |
 | 10 | femailstatus | femailstatus | varchar | 30 |  | √ | ' ' |  |
-| 11 | fentryprojectid | 招标项目编号 | int8 | 64 |  | √ | 0 | 招标项目F7 src_projectf7 |
-| 12 | fpurpublisher | 采购方发布人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fentryprojectid | 招标项目编号 | int8 | 64 |  | √ | 0 | [招标项目F7 src_projectf7](../src_files/src_projectf7.md) |
+| 12 | fpurpublisher | 采购方发布人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fphone | fphone | varchar | 50 |  | √ | ' ' |  |
 | 14 | femail | femail | varchar | 50 |  | √ | ' ' |  |
 | 15 | frefusenote | 拒绝原因 | varchar | 255 |  | √ | ' ' | 拒绝原因 |
 | 16 | fissend | 是否发送 | bpchar | 1 |  | √ | '0' | 是否发送 |
 | 17 | fuserid | fuserid | int8 | 64 |  | √ | 0 |  |
-| 18 | fbizpartnerid | 商务伙伴 | int8 | 64 |  | √ | 0 | 商务伙伴 bd_bizpartner |
+| 18 | fbizpartnerid | 商务伙伴 | int8 | 64 |  | √ | 0 | [商务伙伴 bd_bizpartner](../base_files/bd_bizpartner.md) |
 | 19 | fsupplierid | 供应商 | int8 | 64 |  | √ | 0 | 注册供应商 src_supplier |
 | 20 | fduty | fduty | varchar | 50 |  | √ | ' ' |  |
 | 21 | fcfmstatus | 回复状态 | bpchar | 1 |  | √ | ' ' | 回复状态,枚举: A :待回复 B :已回复 C :已拒绝 D :已终止/废标 E :已定标 |

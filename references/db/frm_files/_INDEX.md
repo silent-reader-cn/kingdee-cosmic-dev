@@ -1,6 +1,6 @@
 # frm 模块表清单
 
-> 本模块共收录 **53** 张表定义，来自 `frm_files/`。
+> 本模块共收录 **60** 张表定义，来自 `frm_files/`。
 
 > 索引由 `scripts/build_index.py` 从 Markdown 自动生成，请勿手工编辑。
 > 检索本模块表结构请用统一检索脚本（比翻本文件更快）：
@@ -35,16 +35,16 @@
 | 23 | `t_ai_rec_impl` | 对账业务接口实现-主表 | 0 | [frm_reconciliation_impl.md](./frm_reconciliation_impl.md) |
 | 24 | `t_ai_rec_impl_entry` | 单据体-子表 | 0 | [frm_reconciliation_impl.md](./frm_reconciliation_impl.md) |
 | 25 | `t_ai_rec_impl_l` | 对账业务接口实现-多语言表 | 0 | [frm_reconciliation_impl.md](./frm_reconciliation_impl.md) |
-| 26 | `t_ai_recdatarule` | 业务取数规则-主表 | 24 | [frm_recdatarule.md](./frm_recdatarule.md) |
-| 27 | `t_ai_recdatarule_assist` | 业务维度-多选基础资料表 | 3 | [frm_recdatarule.md](./frm_recdatarule.md) |
+| 26 | `t_ai_recdatarule` | 业务取数规则-主表 | 26 | [frm_recdatarule.md](./frm_recdatarule.md) |
+| 27 | `t_ai_recdatarule_assist` | 对账维度-子表 | 5 | [frm_recdatarule.md](./frm_recdatarule.md) |
 | 28 | `t_ai_recdatarule_l` | 业务取数规则-多语言表 | 4 | [frm_recdatarule.md](./frm_recdatarule.md) |
 | 29 | `t_ai_recdatarule_m` | 业务取数规则-使用范围位图表 | 2 | [frm_recdatarule.md](./frm_recdatarule.md) |
 | 30 | `t_ai_recdatarule_u` | 业务取数规则-使用范围表 | 3 | [frm_recdatarule.md](./frm_recdatarule.md) |
-| 31 | `t_ai_recdataruleentry` | 取数规则-子表 | 26 | [frm_recdatarule.md](./frm_recdatarule.md) |
-| 32 | `t_ai_recdataruleentry_l` | 取数规则-多语言表 | 5 | [frm_recdatarule.md](./frm_recdatarule.md) |
+| 31 | `t_ai_recdataruleentry` | 取数规则-子表 | 28 | [frm_recdatarule.md](./frm_recdatarule.md) |
+| 32 | `t_ai_recdataruleentry_l` | 取数规则-多语言表 | 10 | [frm_recdatarule.md](./frm_recdatarule.md) |
 | 33 | `t_ai_recdimconfig` | 对账维度配置-主表 | 14 | [frm_rec_dimconfig.md](./frm_rec_dimconfig.md) |
 | 34 | `t_ai_recdimconfig_l` | 对账维度配置-多语言表 | 4 | [frm_rec_dimconfig.md](./frm_rec_dimconfig.md) |
-| 35 | `t_ai_recon_scheme` | 业财对账方案-主表 | 29 | [frm_reconciliation_scheme.md](./frm_reconciliation_scheme.md) |
+| 35 | `t_ai_recon_scheme` | 业财对账方案-主表 | 30 | [frm_reconciliation_scheme.md](./frm_reconciliation_scheme.md) |
 | 36 | `t_ai_recon_scheme_acct` | 科目-多选基础资料表 | 3 | [frm_reconciliation_scheme.md](./frm_reconciliation_scheme.md) |
 | 37 | `t_ai_recon_scheme_amtype2` | 对账类型-多选基础资料表 | 4 | [frm_reconciliation_scheme.md](./frm_reconciliation_scheme.md) |
 | 38 | `t_ai_recon_scheme_books` | 适用账簿-多选基础资料表 | 3 | [frm_reconciliation_scheme.md](./frm_reconciliation_scheme.md) |
@@ -52,14 +52,21 @@
 | 40 | `t_ai_recon_scheme_m` | 业财对账方案-使用范围位图表 | 2 | [frm_reconciliation_scheme.md](./frm_reconciliation_scheme.md) |
 | 41 | `t_ai_recon_scheme_u` | 业财对账方案-使用范围表 | 3 | [frm_reconciliation_scheme.md](./frm_reconciliation_scheme.md) |
 | 42 | `t_ai_recon_tab3entry` | 对账设置-子表 | 18 | [frm_reconciliation_scheme.md](./frm_reconciliation_scheme.md) |
-| 43 | `t_frm_rec_sumentry_acct` | 科目-多选基础资料表 | 3 | [frm_rec_summary.md](./frm_rec_summary.md) |
-| 44 | `t_frm_rec_summary` | 对账汇总结果快照-主表 | 11 | [frm_rec_summary.md](./frm_rec_summary.md) |
-| 45 | `t_frm_rec_summaryentry` | 单据体-子表 | 29 | [frm_rec_summary.md](./frm_rec_summary.md) |
-| 46 | `t_frm_sumentry_acct` | 科目-多选基础资料表 | 3 | [frm_sumresult.md](./frm_sumresult.md) |
-| 47 | `t_frm_sumresult` | 对账汇总结果-主表 | 9 | [frm_sumresult.md](./frm_sumresult.md) |
-| 48 | `t_frm_sumresultentry` | 单据体-子表 | 26 | [frm_sumresult.md](./frm_sumresult.md) |
-| 49 | `t_frm_task` | 对账任务-主表 | 26 | [frm_task.md](./frm_task.md) |
-| 50 | `t_frm_task_account` | 科目-多选基础资料表 | 3 | [frm_task.md](./frm_task.md) |
-| 51 | `t_frm_task_amounttype` | 取数类型-多选基础资料表 | 3 | [frm_task.md](./frm_task.md) |
-| 52 | `t_frm_task_detail` | 取数规则分录-子表 | 15 | [frm_task.md](./frm_task.md) |
-| 53 | `t_frm_task_entry` | 对账方案分录-子表 | 11 | [frm_task.md](./frm_task.md) |
+| 43 | `t_frm_autoreconciliation` | 自动对账方案-主表 | 16 | [frm_autoreconciliation.md](./frm_autoreconciliation.md) |
+| 44 | `t_frm_autoreconciliation_l` | 自动对账方案-多语言表 | 5 | [frm_autoreconciliation.md](./frm_autoreconciliation.md) |
+| 45 | `t_frm_autoreconentry` | 单据体-子表 | 7 | [frm_autoreconciliation.md](./frm_autoreconciliation.md) |
+| 46 | `t_frm_autoreconentry_app` | 业务系统-多选基础资料表 | 3 | [frm_autoreconciliation.md](./frm_autoreconciliation.md) |
+| 47 | `t_frm_autoreport` | 自动对账报告-主表 | 9 | [frm_autocheckreport.md](./frm_autocheckreport.md) |
+| 48 | `t_frm_autoreportentry` | 单据体-子表 | 9 | [frm_autocheckreport.md](./frm_autocheckreport.md) |
+| 49 | `t_frm_rec_sumentry_acct` | 科目-多选基础资料表 | 3 | [frm_rec_summary.md](./frm_rec_summary.md) |
+| 50 | `t_frm_rec_summary` | 对账汇总结果快照-主表 | 11 | [frm_rec_summary.md](./frm_rec_summary.md) |
+| 51 | `t_frm_rec_summaryentry` | 单据体-子表 | 29 | [frm_rec_summary.md](./frm_rec_summary.md) |
+| 52 | `t_frm_sumentry_acct` | 科目-多选基础资料表 | 3 | [frm_sumresult.md](./frm_sumresult.md) |
+| 53 | `t_frm_sumresult` | 对账汇总结果-主表 | 9 | [frm_sumresult.md](./frm_sumresult.md) |
+| 54 | `t_frm_sumresultentry` | 单据体-子表 | 38 | [frm_sumresult.md](./frm_sumresult.md) |
+| 55 | `t_frm_sumresultentry_plan` | 单据体-子表 | 6 | [frm_sumresult.md](./frm_sumresult.md) |
+| 56 | `t_frm_task` | 对账任务-主表 | 26 | [frm_task.md](./frm_task.md) |
+| 57 | `t_frm_task_account` | 科目-多选基础资料表 | 3 | [frm_task.md](./frm_task.md) |
+| 58 | `t_frm_task_amounttype` | 取数类型-多选基础资料表 | 3 | [frm_task.md](./frm_task.md) |
+| 59 | `t_frm_task_detail` | 取数规则分录-子表 | 15 | [frm_task.md](./frm_task.md) |
+| 60 | `t_frm_task_entry` | 对账方案分录-子表 | 11 | [frm_task.md](./frm_task.md) |

@@ -13,7 +13,7 @@
 | 2 | fzfgjj | 住房公积金 | numeric | 23 | 10 | √ | 0.0000000000 | 住房公积金 |
 | 3 | fqtqyyjsxftz | 其他企业佣金手续费调整 | numeric | 23 | 10 | √ | 0.0000000000 | 其他企业佣金手续费调整 |
 | 4 | fgzxj | 工资薪金 | numeric | 23 | 10 | √ | 0.0000000000 | 工资薪金 |
-| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | fghjh | 工会经费 | numeric | 23 | 10 | √ | 0.0000000000 | 工会经费 |
 | 7 | fskssqq | 日期范围.开始 | timestamp | 0 |  |  | null | 日期范围.开始 |
 | 8 | fbcyl | 补充养老 | numeric | 23 | 10 | √ | 0.0000000000 | 补充养老 |

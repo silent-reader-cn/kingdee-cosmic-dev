@@ -12,16 +12,16 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fcalstatus | 计算状态 | varchar | 5 |  | √ | ' ' | 计算状态,枚举: A :待运算 B :运算中 C :完成 D :终止 E :错误 |
 | 3 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 5 | fdatafetchset | 历史取数方案 | int8 | 64 |  | √ | 0 | 取数方案定义 mds_datafetchset |
-| 6 | fhisuseset | 历史用量运算方案编码 | int8 | 64 |  | √ | 0 | 历史用量运算方案定义 mds_hisuseset |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 5 | fdatafetchset | 历史取数方案 | int8 | 64 |  | √ | 0 | [取数方案定义 mds_datafetchset](../mds_files/mds_datafetchset.md) |
+| 6 | fhisuseset | 历史用量运算方案编码 | int8 | 64 |  | √ | 0 | [历史用量运算方案定义 mds_hisuseset](../mds_files/mds_hisuseset.md) |
 | 7 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 8 | ferrmsg_tag | 详细信息_详情 | text | 0 |  |  | null | 详细信息_详情 |
 | 9 | fistransform | 物料转换 | bpchar | 1 |  | √ | '0' | 物料转换 |
 | 10 | fstarttime | 启动时间 | timestamp | 0 |  |  | null | 启动时间 |
 | 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 12 | fstatus | 数据状态 | varchar | 5 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | fsumtime | 计算总时长（秒） | numeric | 23 | 10 | √ | 0 | 计算总时长（秒） |
 | 15 | ferrmsg | 详细信息 | varchar | 255 |  | √ | ' ' | 详细信息 |
 | 16 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
@@ -70,5 +70,5 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_mds_hisusecalclog_l_id |  | fid,flocaleid |
-| 2 | pk_mds_hisusecalclog_l |  | fpkid |
+| 1 | pk_mds_hisusecalclog_l |  | fpkid |
+| 2 | idx_mds_hisusecalclog_l_id |  | fid,flocaleid |

@@ -15,18 +15,19 @@
 | 4 | fbizcloudid | fbizcloudid | varchar | 36 |  |  | null |  |
 | 5 | fisv | isv | varchar | 8 |  | √ | ' ' | isv |
 | 6 | fwidth | fwidth | int8 | 64 |  |  | null |  |
-| 7 | fcreatedate | 创建日期 | timestamp | 0 |  | √ | LOCALTIMESTAMP | 创建日期 |
+| 7 | fcreatedate | 创建时间 | timestamp | 0 |  | √ | LOCALTIMESTAMP | 创建时间 |
 | 8 | furl0 | 完整路径 | varchar | 255 |  | √ | ' ' | 完整路径 |
 | 9 | ftype | 类型 | varchar | 10 |  |  | null | 类型,枚举: icon :图标 image :图片 |
 | 10 | furl5 | furl5 | varchar | 255 |  | √ | ' ' |  |
 | 11 | fheight | fheight | int8 | 64 |  |  | null |  |
-| 12 | fcategoryid | 分类 | int8 | 64 |  |  | null | 图片分类 bos_resourcecategory |
+| 12 | fcategoryid | 分类 | int8 | 64 |  |  | null | [图片分类 bos_resourcecategory](../ide_files/bos_resourcecategory.md) |
 | 13 | fpath | 分类路径 | varchar | 50 |  |  | null | 分类路径 |
 | 14 | fnumber | 编码 | varchar | 255 |  | √ | ' ' | 编码 |
 | 15 | furl1 | furl1 | varchar | 255 |  | √ | ' ' |  |
-| 16 | furl2 | furl2 | varchar | 255 |  | √ | ' ' |  |
-| 17 | furl3 | furl3 | varchar | 255 |  | √ | ' ' |  |
-| 18 | furl4 | furl4 | varchar | 255 |  | √ | ' ' |  |
+| 16 | frtlimageshowtype | RTL镜像 | bpchar | 1 |  | √ | ' ' | RTL镜像,枚举: 2 :直接镜像 1 :替换图片 |
+| 17 | furl2 | furl2 | varchar | 255 |  | √ | ' ' |  |
+| 18 | furl3 | furl3 | varchar | 255 |  | √ | ' ' |  |
+| 19 | furl4 | furl4 | varchar | 255 |  | √ | ' ' |  |
 
 ### 列规则定义
 
@@ -40,6 +41,7 @@
 | :--- | :--- | :--- | :--- |
 | 1 | idx_bas_pictureresource |  | fnumber |
 | 2 | t_bas_pictureresource_pkey |  | fid |
+| 3 | idx_bas_pictureresource_furl |  | furl0 |
 
 ---
 
@@ -68,6 +70,6 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | t_bas_pictureresource_l_pkey |  | fpkid |
-| 2 | idx_mdl_pictureresource_l |  | fid,flocaleid |
+| 1 | idx_mdl_pictureresource_l |  | fid,flocaleid |
+| 2 | t_bas_pictureresource_l_pkey |  | fpkid |
 | 3 | t_bas_pictureresource_l_fid_flocaleid_key |  | fid,flocaleid |

@@ -14,7 +14,7 @@
 | 3 | fcreatetime | 长日期 | timestamp | 0 |  |  | null | 长日期 |
 | 4 | fselectkey | 已选字段标识 | varchar | 50 |  | √ | ' ' | 已选字段标识 |
 | 5 | fselectalias | 已选字段别名 | varchar | 50 |  | √ | ' ' | 已选字段别名 |
-| 6 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fselectname | 已选字段名称 | varchar | 50 |  | √ | ' ' | 已选字段名称 |
 | 8 | fselected | 是否已选 | bpchar | 1 |  | √ | ' ' | 是否已选,枚举: 1 :展示 0 :不展示 |
 | 9 | fremarkid | 备注id | int8 | 64 |  | √ | 0 | 备注id |

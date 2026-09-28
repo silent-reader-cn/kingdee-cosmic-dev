@@ -24,7 +24,7 @@
 | 13 | fseptember | 九月 | numeric | 23 | 10 |  | null | 九月 |
 | 14 | fthreequarter | 三季度 | numeric | 23 | 10 |  | null | 三季度 |
 | 15 | flowerhalfyear | 下半年 | numeric | 23 | 10 |  | null | 下半年 |
-| 16 | fquota | 指标 | int8 | 64 |  | √ | 0 | 指标库 ipo_quota_info |
+| 16 | fquota | 指标 | int8 | 64 |  | √ | 0 | [指标库 ipo_quota_info](../ipobase_files/ipo_quota_info.md) |
 | 17 | fmay | 五月 | numeric | 23 | 10 |  | null | 五月 |
 | 18 | fnovember | 十一月 | numeric | 23 | 10 |  | null | 十一月 |
 | 19 | fjuly | 七月 | numeric | 23 | 10 |  | null | 七月 |
@@ -44,8 +44,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | pk_cfa_targetv_detail |  | fentryid |
-| 2 | idx_cfa_targetv_detail_fk |  | fid |
+| 1 | idx_cfa_targetv_detail_fk |  | fid |
+| 2 | pk_cfa_targetv_detail |  | fentryid |
 
 ---
 
@@ -59,15 +59,15 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 4 | fpolicy | 会计政策 | int8 | 64 |  | √ | 0 | 会计政策 xkbd_policy |
-| 5 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 6 | faccountingsys | 核算体系 | int8 | 64 |  | √ | 0 | 核算体系 xkbd_accountingsys |
+| 4 | fpolicy | 会计政策 | int8 | 64 |  | √ | 0 | [会计政策 xkbd_policy](../fibd_files/xkbd_policy.md) |
+| 5 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 6 | faccountingsys | 核算体系 | int8 | 64 |  | √ | 0 | [核算体系 xkbd_accountingsys](../fibd_files/xkbd_accountingsys.md) |
 | 7 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 8 | fsource | 来源方式 | varchar | 50 |  | √ | ' ' | 来源方式,枚举: 0 :手工引入 |
 | 9 | fbillno | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
-| 10 | forg | 核算组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 10 | forg | 核算组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 12 | ftargetannual | 数据年度 | int4 | 32 |  | √ | 0 | 数据年度 |
 
@@ -81,5 +81,5 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | pk_cfa_target_index |  | fbillno |
-| 2 | pk_cfa_target_value |  | fid |
+| 1 | pk_cfa_target_value |  | fid |
+| 2 | pk_cfa_target_index |  | fbillno |

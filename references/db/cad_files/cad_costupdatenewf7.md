@@ -14,7 +14,7 @@
 | 3 | fresmatbyuseauxpt_tag | fresmatbyuseauxpt_tag | text | 0 |  |  | null |  |
 | 4 | fcreatorid | fcreatorid | int8 | 64 |  | √ | 0 |  |
 | 5 | fupdatebillno | 更新编码 | varchar | 80 |  | √ | ' ' | 更新编码 |
-| 6 | ftargetcosttype | 目标成本类型 | int8 | 64 |  | √ | 0 | 标准成本方案 cad_costtype |
+| 6 | ftargetcosttype | 目标成本类型 | int8 | 64 |  | √ | 0 | [标准成本方案 cad_costtype](../basedata_files/cad_costtype.md) |
 | 7 | fresbynoref | fresbynoref | varchar | 2000 |  | √ | ' ' |  |
 | 8 | fupdatestatus | fupdatestatus | varchar | 80 |  | √ | ' ' |  |
 | 9 | fresmatbyuseauxpt | fresmatbyuseauxpt | varchar | 2000 |  | √ | ' ' |  |
@@ -24,7 +24,7 @@
 | 13 | fbillstatus | fbillstatus | varchar | 30 |  | √ | ' ' |  |
 | 14 | fcreatetime | fcreatetime | timestamp | 0 |  |  | null |  |
 | 15 | fauditdate | fauditdate | timestamp | 0 |  |  | null |  |
-| 16 | fsrccosttype | 源成本类型 | int8 | 64 |  | √ | 0 | 标准成本方案 cad_costtype |
+| 16 | fsrccosttype | 源成本类型 | int8 | 64 |  | √ | 0 | [标准成本方案 cad_costtype](../basedata_files/cad_costtype.md) |
 | 17 | fiscalccurlevel | fiscalccurlevel | bpchar | 1 |  | √ | '0' |  |
 | 18 | fisspecifymaterial | fisspecifymaterial | bpchar | 1 |  | √ | '0' |  |
 | 19 | fmatgrpstdid | fmatgrpstdid | int8 | 64 |  | √ | 0 |  |

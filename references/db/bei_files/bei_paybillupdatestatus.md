@@ -1,40 +1,5 @@
 # 付款状态变更单-bei_paybillupdatestatus
 
-## 付款状态变更单-反写记录表 t_bei_updatepaystat_wb
-
-- **表名称：** 付款状态变更单-反写记录表
-- **表名：** t_bei_updatepaystat_wb
-
-### 表格列定义
-
-| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | foperate | foperate | varchar | 30 |  | √ | ' ' |  |
-| 3 | fruleverid | fruleverid | int8 | 64 |  | √ | 0 |  |
-| 4 | fsbillid | fsbillid | int8 | 64 |  | √ | 0 |  |
-| 5 | fstableid | fstableid | int8 | 64 |  | √ | 0 |  |
-| 6 | fsid | fsid | int8 | 64 |  | √ | 0 |  |
-| 7 | fwritevalue | fwritevalue | numeric | 19 | 6 | √ | 0.000000 |  |
-| 8 | fseq | fseq | int8 | 64 |  | √ | 0 |  |
-| 9 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
-| 10 | fruleitemid | fruleitemid | int8 | 64 |  | √ | 0 |  |
-
-### 列规则定义
-
-| 序号 | 键编码 | 列字段 |
-| :--- | :--- | :--- |
-| 1 | fentryid | fentryid |
-
-### 索引定义
-
-| 序号 | 索引名 | 唯一 | 列字段 |
-| :--- | :--- | :--- | :--- |
-| 1 | idx_t_bei_updatepaystat_wb |  | fid |
-| 2 | t_bei_updatepaystat_wb_pkey |  | fentryid |
-
----
-
 ## 付款状态变更单-多语言表 t_bei_updatepaystat_l
 
 - **表名称：** 付款状态变更单-多语言表
@@ -61,6 +26,41 @@
 | :--- | :--- | :--- | :--- |
 | 1 | t_bei_updatepaystat_l_pkey |  | fpkid |
 | 2 | idx_t_bei_updatepaystat_l |  | fid,flocaleid |
+
+---
+
+## 签署人单据体-子表 t_bei_updatepay_confirm
+
+- **表名称：** 签署人单据体-子表
+- **表名：** t_bei_updatepay_confirm
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fdisclaimercontent | 风险告知内容 | varchar | 255 |  | √ | ' ' | 风险告知内容 |
+| 3 | fdisclaimername | 风险告知 | varchar | 255 |  | √ | ' ' | 风险告知 |
+| 4 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
+| 5 | fdisclaimercontent_tag | 风险告知内容_详情 | text | 0 |  |  | null | 风险告知内容_详情 |
+| 6 | fconfirmtime | 签署时间 | timestamp | 0 |  |  | null | 签署时间 |
+| 7 | fconfirmuser | 签署人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 8 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 9 | fconfirmusetype | 签署人类型 | varchar | 50 |  | √ | ' ' | 签署人类型,枚举: A :签署人 B :知悉人 |
+| 10 | fdisclaimerid | fdisclaimerid | int8 | 64 |  | √ | 0 |  |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fentryid | fentryid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | pk_t_bei_updatepay_confirm |  | fentryid |
+| 2 | idx_bei_updatepay_confirm |  | fid |
 
 ---
 
@@ -111,7 +111,7 @@
 | 5 | fencpayacct | 收款账号 | varchar | 30 |  |  | null | 收款账号 |
 | 6 | fpayamt | 付款金额 | numeric | 19 | 6 | √ | 0.000000 | 付款金额 |
 | 7 | fencpayamt | 付款金额 | varchar | 30 |  |  | null | 付款金额 |
-| 8 | fpayacctorgid | 收款账号收付组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 8 | fpayacctorgid | 收款账号收付组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 9 | fpaystatus | 付款状态 | varchar | 30 |  | √ | ' ' | 付款状态,枚举: OP :准备提交 TS :交易成功 TF :交易失败 NC :交易未确认 OS :银企处理中 BP :银行处理中 |
 | 10 | ferrmsg | 操作失败原因 | varchar | 255 |  | √ | ' ' | 操作失败原因 |
 | 11 | frecuser | 收款人 | varchar | 255 |  | √ | ' ' | 收款人 |
@@ -135,6 +135,41 @@
 | :--- | :--- | :--- | :--- |
 | 1 | idx_t_bei_updatepaystat_entry |  | fid |
 | 2 | t_bei_updatepaystat_entry_pkey |  | fentryid |
+
+---
+
+## 付款状态变更单-反写记录表 t_bei_updatepaystat_wb
+
+- **表名称：** 付款状态变更单-反写记录表
+- **表名：** t_bei_updatepaystat_wb
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | foperate | foperate | varchar | 30 |  | √ | ' ' |  |
+| 3 | fruleverid | fruleverid | int8 | 64 |  | √ | 0 |  |
+| 4 | fsbillid | fsbillid | int8 | 64 |  | √ | 0 |  |
+| 5 | fstableid | fstableid | int8 | 64 |  | √ | 0 |  |
+| 6 | fsid | fsid | int8 | 64 |  | √ | 0 |  |
+| 7 | fwritevalue | fwritevalue | numeric | 19 | 6 | √ | 0.000000 |  |
+| 8 | fseq | fseq | int8 | 64 |  | √ | 0 |  |
+| 9 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
+| 10 | fruleitemid | fruleitemid | int8 | 64 |  | √ | 0 |  |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fentryid | fentryid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_t_bei_updatepaystat_wb |  | fid |
+| 2 | t_bei_updatepaystat_wb_pkey |  | fentryid |
 
 ---
 
@@ -213,29 +248,31 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 3 | fbillstatus | 单据状态 | varchar | 30 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 6 | fskipproc | 是否跳过流程 | bpchar | 1 |  | √ | '0' | 是否跳过流程 |
-| 7 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
-| 8 | famount | 金额 | numeric | 19 | 6 | √ | 0.000000 | 金额 |
-| 9 | fdescription | fdescription | varchar | 255 |  | √ | ' ' |  |
-| 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 11 | fexchangerate | 汇率 | numeric | 23 | 10 | √ | 0.0000000000 | 汇率 |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 13 | fsourcetype | 单据类型 | varchar | 30 |  | √ | ' ' | 单据类型,枚举: bei_bankpaybill :银行付款单 bei_bankagentpay :银行代发单 bei_banktransupbill :银行上划单 bei_banktransdownbill :银行下拨单 |
-| 14 | fbizdate | 业务日期 | timestamp | 0 |  |  | null | 业务日期 |
-| 15 | fsourcebillid | 源单id | int8 | 64 |  | √ | 0 | 源单id |
-| 16 | fisencryption | 是否加密 | bpchar | 1 |  | √ | '0' | 是否加密 |
-| 17 | fbankid | 开户银行 | int8 | 64 |  | √ | 0 | 金融机构 bd_finorginfo |
-| 18 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
-| 19 | fsourcebillno | 源单编号 | varchar | 100 |  | √ | ' ' | 源单编号 |
-| 20 | fbillno | 单据编号 | varchar | 30 |  | √ | ' ' | 单据编号 |
-| 21 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 22 | faccountbankid | 银行账户 | int8 | 64 |  | √ | 0 | 银行账户 bd_accountbanks |
-| 23 | flocamt | 金额折本位币 | numeric | 19 | 6 | √ | 0.000000 | 金额折本位币 |
-| 24 | fcompanyid | 收付组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 3 | fskipproc | 是否跳过流程 | bpchar | 1 |  | √ | '0' | 是否跳过流程 |
+| 4 | famount | 金额 | numeric | 19 | 6 | √ | 0.000000 | 金额 |
+| 5 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 6 | fexchangerate | 汇率 | numeric | 23 | 10 | √ | 0.0000000000 | 汇率 |
+| 7 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 8 | fsourcetype | 单据类型 | varchar | 30 |  | √ | ' ' | 单据类型,枚举: bei_bankpaybill :银行付款单 bei_bankagentpay :银行代发单 bei_banktransupbill :银行上划单 bei_banktransdownbill :银行下拨单 |
+| 9 | fconfirmtext | 请输入 | varchar | 255 |  | √ | ' ' | 请输入 |
+| 10 | fsourcebillno | 源单编号 | varchar | 100 |  | √ | ' ' | 源单编号 |
+| 11 | fbillno | 单据编号 | varchar | 30 |  | √ | ' ' | 单据编号 |
+| 12 | fconfirmid | 确认人 | varchar | 255 |  | √ | ' ' | [人员 bos_user](../base_files/bos_user.md) |
+| 13 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 14 | fbillstatus | 单据状态 | varchar | 30 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
+| 15 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 16 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
+| 17 | fdescription | fdescription | varchar | 255 |  | √ | ' ' |  |
+| 18 | fbizdate | 业务日期 | timestamp | 0 |  |  | null | 业务日期 |
+| 19 | fsourcebillid | 源单id | int8 | 64 |  | √ | 0 | 源单id |
+| 20 | fisencryption | 是否加密 | bpchar | 1 |  | √ | '0' | 是否加密 |
+| 21 | fbankid | 开户银行 | int8 | 64 |  | √ | 0 | [金融机构 bd_finorginfo](../basedata_files/bd_finorginfo.md) |
+| 22 | fcurrencyid | 币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
+| 23 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 24 | faccountbankid | 银行账户 | int8 | 64 |  | √ | 0 | [银行账户 bd_accountbanks](../basedata_files/bd_accountbanks.md) |
+| 25 | flocamt | 金额折本位币 | numeric | 19 | 6 | √ | 0.000000 | 金额折本位币 |
+| 26 | fcompanyid | 收付组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 
 ### 列规则定义
 

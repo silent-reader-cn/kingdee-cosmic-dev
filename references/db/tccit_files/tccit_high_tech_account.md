@@ -40,22 +40,22 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fpeoples | 本年科技人员数 | int8 | 64 |  | √ | 0 | 本年科技人员数 |
 | 4 | fmark | 备注 | varchar | 50 |  | √ | ' ' | 备注 |
 | 5 | fbillstatus | 单据状态 | varchar | 50 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 7 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 7 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | ftotalpeoples | 本年职工总数 | int8 | 64 |  | √ | 0 | 本年职工总数 |
 | 12 | fyear | 年度 | timestamp | 0 |  |  | null | 年度 |
 | 13 | fpeoplerate | 本年科技人员占比 | numeric | 23 | 10 | √ | 0.0000000000 | 本年科技人员占比 |
 | 14 | fhightechscope | 高新技术所属范围 | int8 | 64 |  | √ | 0 | 业务定义分录(树) tpo_tccit_bizdefen_tree |
 | 15 | fkeyrate3 | 三年研发费用占销售（营业）收入的比例 | numeric | 23 | 10 | √ | 0.0000000000 | 三年研发费用占销售（营业）收入的比例 |
-| 16 | fbillno | 业务编码 | varchar | 30 |  | √ | ' ' | 业务编码 |
-| 17 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 16 | fbillno | 业务编号 | varchar | 30 |  | √ | ' ' | 业务编号 |
+| 17 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 18 | fkeyrate1 | 本年科技人员占比 | numeric | 23 | 10 | √ | 0.0000000000 | 本年科技人员占比 |
 | 19 | fkeyrate2 | 本年高新收入占比 | numeric | 23 | 10 | √ | 0.0000000000 | 本年高新收入占比 |
 

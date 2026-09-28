@@ -18,9 +18,9 @@
 | 7 | fpublisher_server | 发布服务器 | varchar | 140 |  | √ | ' ' | 发布服务器 |
 | 8 | fpublished_time | 发送时间 | timestamp | 0 |  |  | null | 发送时间 |
 | 9 | fstate | 状态 | varchar | 30 |  | √ | ' ' | 状态,枚举: C :待发布 S :已发布 F :失败 |
-| 10 | fmessage_queue | 消息发布主题 | int8 | 64 |  | √ | 0 | 消息发布主题 isc_mq_publisher |
+| 10 | fmessage_queue | 消息发布主题 | int8 | 64 |  | √ | 0 | [消息发布主题 isc_mq_publisher](../iscb_files/isc_mq_publisher.md) |
 | 11 | fstack_trace | 错误堆栈 | varchar | 510 |  | √ | ' ' | 错误堆栈 |
-| 12 | fmessage_server | 消息队列服务器 | int8 | 64 |  | √ | 0 | 消息队列服务器 isc_mq_server |
+| 12 | fmessage_server | 消息队列服务器 | int8 | 64 |  | √ | 0 | [消息队列服务器 isc_mq_server](../iscb_files/isc_mq_server.md) |
 | 13 | fdata | 数据 | varchar | 510 |  | √ | ' ' | 数据 |
 
 ### 列规则定义

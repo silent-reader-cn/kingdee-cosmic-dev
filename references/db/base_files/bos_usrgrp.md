@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fisleaf | fisleaf | bpchar | 1 |  | √ | ' ' |  |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
 | 5 | fparentid | fparentid | int8 | 64 |  | √ | 0 |  |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
@@ -19,16 +19,16 @@
 | 8 | flongnumber | flongnumber | varchar | 255 |  | √ | ' ' |  |
 | 9 | fdisabledate | fdisabledate | timestamp | 0 |  |  | null |  |
 | 10 | fdisablerid | fdisablerid | int8 | 64 |  | √ | 0 |  |
-| 11 | fusrgrpstdid | 用户组分类 | int8 | 64 |  | √ | '1404221671421785088' | 用户组分类 perm_usergroupstandard |
+| 11 | fusrgrpstdid | 用户组分类 | int8 | 64 |  | √ | '1404221671421785088' | [用户组分类 perm_usergroupstandard](../base_files/perm_usergroupstandard.md) |
 | 12 | fdescription | fdescription | varchar | 500 |  | √ | ' ' |  |
 | 13 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 14 | fusergrouptypeid | 用户组类型 | int8 | 64 |  | √ | 0 | 用户组类型 bos_usergrouptype |
+| 14 | fusergrouptypeid | 用户组类型 | int8 | 64 |  | √ | 0 | [用户组类型 bos_usergrouptype](../base_files/bos_usergrouptype.md) |
 | 15 | flevel | flevel | int8 | 64 |  | √ | 0 |  |
 | 16 | fstatus | fstatus | varchar | 50 |  | √ | 'C' |  |
-| 17 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 17 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 18 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 19 | fseted_usrsycrule | 是否设置用户同步规则 | bpchar | 1 |  | √ | '0' | 是否设置用户同步规则 |
-| 20 | fenable | fenable | bpchar | 1 |  | √ | '1' |  |
+| 20 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 21 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
 
 ### 列规则定义

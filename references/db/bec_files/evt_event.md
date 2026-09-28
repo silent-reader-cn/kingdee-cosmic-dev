@@ -42,23 +42,23 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fopernumber | 操作编码 | varchar | 200 |  | √ | ' ' | 操作编码 |
-| 3 | fname | 事件名称 | varchar | 100 |  | √ | ' ' | 事件名称 |
+| 3 | fname | 事件名称 | varchar | 500 |  | √ | ' ' | 事件名称 |
 | 4 | fispreinsdata | 预制数据 | bpchar | 1 |  | √ | '0' | 预制数据 |
 | 5 | fpassoperparam | 传递操作参数 | bpchar | 1 |  | √ | '0' | 传递操作参数 |
-| 6 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 7 | fdescription | 事件描述 | varchar | 1000 |  | √ | ' ' | 事件描述 |
-| 8 | fsource | 来源应用 | varchar | 100 |  | √ | ' ' | 业务应用实体 bos_devportal_bizapp |
-| 9 | fentity | 业务对象 | varchar | 100 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 8 | fsource | 来源应用 | varchar | 100 |  | √ | ' ' | [业务应用实体 bos_devportal_bizapp](../mdl_files/bos_devportal_bizapp.md) |
+| 9 | fentity | 业务对象 | varchar | 100 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 10 | fstatus | 事件启用 | bpchar | 1 |  | √ | '1' | 事件启用,枚举: 0 :禁用 1 :启用 |
 | 11 | fcreatedate | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 12 | ftype | 事件类型 | varchar | 30 |  | √ | ' ' | 事件类型,枚举: cosmic :苍穹操作事件 custom :自定义事件 |
 | 13 | fmodifydate | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 14 | fismodified | 可维护 | bpchar | 1 |  | √ | '1' | 可维护 |
-| 15 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 15 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 16 | fscene | 应用场景 | varchar | 30 |  | √ | ' ' | 应用场景,枚举: operate :操作型事件 analyze :分析型事件 |
 | 17 | fnumberview | 事件编码 | varchar | 500 |  | √ | ' ' | 事件编码 |
 | 18 | fnumber | 事件编码（内部） | varchar | 500 |  | √ | ' ' | 事件编码（内部） |
-| 19 | foperation | 操作多语言 | varchar | 100 |  | √ | ' ' | 操作多语言 |
+| 19 | foperation | 操作多语言 | varchar | 200 |  | √ | ' ' | 操作多语言 |
 
 ### 列规则定义
 
@@ -88,10 +88,10 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fiscustom | 自定义 | bpchar | 1 |  | √ | '1' | 自定义 |
-| 3 | fconfigdescription | 类型描述 | varchar | 100 |  | √ | ' ' | 类型描述 |
+| 3 | fconfigdescription | 类型描述 | varchar | 500 |  | √ | ' ' | 类型描述 |
 | 4 | fconfignumber | 编码 | varchar | 100 |  | √ | ' ' | 编码 |
 | 5 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 6 | fconfigname | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
+| 6 | fconfigname | 名称 | varchar | 500 |  | √ | ' ' | 名称 |
 | 7 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 8 | fistransfer | 传递数据 | bpchar | 1 |  | √ | '0' | 传递数据 |
 | 9 | fconfigtype | 属性 | varchar | 3000 |  | √ | ' ' | 属性 |
@@ -137,5 +137,5 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | t_evt_eventconfig_l_pkey |  | fpkid |
-| 2 | idx_evt_eventconfig_l |  | fentryid,flocaleid |
+| 1 | idx_evt_eventconfig_l |  | fentryid,flocaleid |
+| 2 | t_evt_eventconfig_l_pkey |  | fpkid |

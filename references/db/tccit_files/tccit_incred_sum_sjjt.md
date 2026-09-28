@@ -14,10 +14,10 @@
 | 3 | fdiscounttype | 优惠类型 | varchar | 50 |  | √ | ' ' | 优惠类型,枚举: 1 :全额免税 2 :收入减计10% 3 :收入减计50% 4 :减半征收 |
 | 4 | fserialno | 流水号 | varchar | 50 |  | √ | ' ' | 流水号 |
 | 5 | fskssqz | 日期范围.结束 | timestamp | 0 |  |  | null | 日期范围.结束 |
-| 6 | forgid | 运行组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | forgid | 运行组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fincredincome | 项目所得 | numeric | 23 | 10 | √ | 0 | 项目所得 |
-| 8 | ftaxorgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 9 | fruleid | 优惠项目取数规则 | int8 | 64 |  | √ | 0 | 优惠项目取数规则 tccit_preferential_item |
+| 8 | ftaxorgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 9 | fruleid | 优惠项目取数规则 | int8 | 64 |  | √ | 0 | [优惠项目取数规则 tccit_preferential_item](../tccit_files/tccit_preferential_item.md) |
 | 10 | fincredtotal | 所得减免累计数 | numeric | 23 | 10 | √ | 0 | 所得减免累计数 |
 | 11 | fskssqq | 日期范围.开始 | timestamp | 0 |  |  | null | 日期范围.开始 |
 | 12 | freductratio | 减免比例 | numeric | 23 | 10 | √ | 0 | 减免比例 |

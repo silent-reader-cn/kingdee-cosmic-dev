@@ -16,7 +16,7 @@
 | 5 | fconnector | 明细组合符号 | varchar | 50 |  | √ | ' ' | 明细组合符号,枚举: + :+ : :: - :- _ :_ \ :\ / :/ ~ :~ & :& |
 | 6 | ftypedesc | 类别详情 | varchar | 255 |  | √ | ' ' | 类别详情 |
 | 7 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 8 | fworkcateid | 类别编码 | int8 | 64 |  | √ | 0 | 工作内容类别维护 mpdm_workcategory |
+| 8 | fworkcateid | 类别编码 | int8 | 64 |  | √ | 0 | [工作内容类别维护 mpdm_workcategory](../mpdm_files/mpdm_workcategory.md) |
 
 ### 列规则定义
 
@@ -128,21 +128,21 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fcontentdetail_tag | 工作内容详情_详情 | text | 0 |  |  | null | 工作内容详情_详情 |
-| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 4 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 4 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 6 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 7 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 7 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 8 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 9 | fcombotype | 组合格式 | varchar | 50 |  | √ | ' ' | 组合格式,枚举: A :类别详情 B :类别名称+类别详情 |
 | 10 | fcombosymbol | 类别组合符号 | varchar | 50 |  | √ | ' ' | 类别组合符号,枚举: + :+ : :: - :- _ :_ \ :\ / :/ ~ :~ & :& |
-| 11 | fauditor | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fauditor | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 13 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
-| 14 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 14 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 15 | fremark | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
 | 16 | fname | 工作内容名称 | varchar | 50 |  | √ | ' ' | 工作内容名称 |
-| 17 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 17 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 18 | faduittime | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
 | 19 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 20 | fctrlstrategy | 控制策略 | varchar | 50 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
@@ -164,8 +164,8 @@
 | :--- | :--- | :--- | :--- |
 | 1 | idx_t_mpdm_workscope_master |  | fmasterid |
 | 2 | pk_mpdm_workscope |  | fid |
-| 3 | idx_t_mpdm_workscope_createorg |  | fcreateorgid |
-| 4 | idx_mpdm_workscope_fnum |  | fnumber |
+| 3 | idx_mpdm_workscope_fnum |  | fnumber |
+| 4 | idx_t_mpdm_workscope_createorg |  | fcreateorgid |
 | 5 | idx_mpdm_workscope_fcorg |  | fcreateorgid |
 | 6 | idx_mpdm_workscope_fct |  | fcreatetime |
 
@@ -188,7 +188,7 @@
 | 6 | fdetailstatus | fdetailstatus | varchar | 50 |  | √ | ' ' |  |
 | 7 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 | id |
 | 8 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
-| 9 | fdetailsid | 名称 | int8 | 64 |  | √ | 0 | 工作内容明细 mpdm_workscopedetail |
+| 9 | fdetailsid | 名称 | int8 | 64 |  | √ | 0 | [工作内容明细 mpdm_workscopedetail](../mpdm_files/mpdm_workscopedetail.md) |
 
 ### 列规则定义
 
@@ -200,5 +200,5 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | pk_mpdm_workscope_detail |  | fdetailid |
-| 2 | idx_mpdm_workscope_dl_fseq |  | fentryid,fseq |
+| 1 | idx_mpdm_workscope_dl_fseq |  | fentryid,fseq |
+| 2 | pk_mpdm_workscope_detail |  | fdetailid |

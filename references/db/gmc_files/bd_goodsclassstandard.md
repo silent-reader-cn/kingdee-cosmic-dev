@@ -10,28 +10,30 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 3 | fmodifierid | 最后修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 4 | fname | fname | varchar | 255 |  | √ | ' ' |  |
-| 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 6 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 7 | fdisabledate | 禁用时间 | timestamp | 0 |  |  | null | 禁用时间 |
-| 8 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 9 | fdescription | fdescription | varchar | 255 |  | √ | ' ' |  |
-| 10 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 11 | fispreset | 系统预置 | bpchar | 1 |  | √ | '0' | 系统预置 |
-| 12 | fctrlstrategy | 控制策略 | varchar | 10 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
-| 13 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 14 | fstatus | 数据状态 | bpchar | 1 |  | √ | 'C' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 15 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 16 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 17 | fadminorgid | fadminorgid | int8 | 64 |  | √ | 0 |  |
-| 18 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
-| 19 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
-| 20 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 21 | fnumber | 分类标准编码 | varchar | 80 |  | √ | ' ' | 分类标准编码 |
-| 22 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
-| 23 | fscope | 应用范围 | varchar | 10 |  | √ | ' ' | 应用范围,枚举: 0 :销售 1 :采购 |
+| 2 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 3 | fdisabledate | 禁用时间 | timestamp | 0 |  |  | null | 禁用时间 |
+| 4 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 5 | fispreset | 系统预置 | bpchar | 1 |  | √ | '0' | 系统预置 |
+| 6 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 7 | fstatus | 数据状态 | bpchar | 1 |  | √ | 'C' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
+| 8 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
+| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 10 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
+| 11 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
+| 12 | fissync | 是否同步 | bpchar | 1 |  | √ | '1' | 是否同步 |
+| 13 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 14 | fmodifierid | 最后修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 15 | fname | fname | varchar | 255 |  | √ | ' ' |  |
+| 16 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 17 | fmaterialstandardid | 物料分类标准 | int8 | 64 |  | √ | 0 | [物料分类标准 bd_materialgroupstandard](../basedata_files/bd_materialgroupstandard.md) |
+| 18 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 19 | fdescription | fdescription | varchar | 255 |  | √ | ' ' |  |
+| 20 | fctrlstrategy | 控制策略 | varchar | 10 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
+| 21 | fadminorgid | fadminorgid | int8 | 64 |  | √ | 0 |  |
+| 22 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 23 | fnumber | 分类标准编码 | varchar | 80 |  | √ | ' ' | 分类标准编码 |
+| 24 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
+| 25 | fscope | 应用范围 | varchar | 10 |  | √ | ' ' | 应用范围,枚举: 0 :销售 1 :采购 |
 
 ### 列规则定义
 

@@ -1,1 +1,1 @@
-# 促销方案商品除外清单引入模板-ocdpm_promote_ex_template
+# 促销方案商品除外清单导入模板-ocdpm_promote_ex_template

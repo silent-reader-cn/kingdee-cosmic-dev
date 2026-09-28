@@ -11,8 +11,8 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | null | id |
 | 2 | fdenominator | 源单位换算系数 | int8 | 64 |  |  | null | 源单位换算系数 |
-| 3 | fsrcmuid | 源单位编码 | int8 | 64 |  |  | null | 计量单位 bd_measureunits |
-| 4 | fdesmuid | 目标单位编码 | int8 | 64 |  |  | null | 计量单位 bd_measureunits |
+| 3 | fsrcmuid | 源单位编码 | int8 | 64 |  |  | null | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 4 | fdesmuid | 目标单位编码 | int8 | 64 |  |  | null | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 5 | fenable | fenable | bpchar | 1 |  |  | null |  |
 | 6 | fnumerator | 目标单位换算系数 | int8 | 64 |  |  | null | 目标单位换算系数 |
 | 7 | fconverttype | 换算类型 | varchar | 10 |  |  | null | 换算类型,枚举: 1 :固定 2 :浮动 |

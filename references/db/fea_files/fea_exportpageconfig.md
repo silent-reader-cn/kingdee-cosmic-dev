@@ -14,7 +14,7 @@
 | 3 | ffiletype | 文件格式 | bpchar | 1 |  | √ | ' ' | 文件格式,枚举: 2 :通用 0 :xml 1 :csv |
 | 4 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 5 | fpagesize | 分片大小 | int4 | 32 |  | √ | 0 | 分片大小 |
-| 6 | fbizobjid | 业务对象 | varchar | 255 |  | √ | ' ' | 业务对象 bos_objecttype |
+| 6 | fbizobjid | 业务对象 | varchar | 255 |  | √ | ' ' | [业务对象 bos_objecttype](../mdl_files/bos_objecttype.md) |
 | 7 | fisperiod | 期间相关 | bpchar | 1 |  | √ | '0' | 期间相关 |
 
 ### 列规则定义

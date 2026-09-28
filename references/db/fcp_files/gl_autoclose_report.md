@@ -46,19 +46,19 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fperiodid | 期间 | int8 | 64 |  | √ | 0 | 会计日历 bd_period |
+| 2 | fperiodid | 期间 | int8 | 64 |  | √ | 0 | [会计日历 bd_period](../fibd_files/bd_period.md) |
 | 3 | fcreatetime | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
-| 4 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 5 | fschemeid | 自动结账方案 | int8 | 64 |  | √ | 0 | 自动结账方案 gl_autoclose_scheme |
+| 4 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 5 | fschemeid | 自动结账方案 | int8 | 64 |  | √ | 0 | [自动结账方案 gl_autoclose_scheme](../fcp_files/gl_autoclose_scheme.md) |
 | 6 | fcostseconds | 耗时（秒） | int4 | 32 |  | √ | 0 | 耗时（秒） |
-| 7 | faccountbookid | 账簿 | int8 | 64 |  | √ | 0 | 账簿 gl_accountbook |
+| 7 | faccountbookid | 账簿 | int8 | 64 |  | √ | 0 | [账簿 gl_accountbook](../gl_files/gl_accountbook.md) |
 | 8 | fbegintime | 开始时间 | timestamp | 0 |  |  | null | 开始时间 |
 | 9 | fmodifytime | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
 | 10 | fexecutemethod | 执行方式 | bpchar | 1 |  | √ | ' ' | 执行方式,枚举: 0 :自动执行 1 :手动执行 |
 | 11 | fbizsystem | 业务系统 | varchar | 50 |  | √ | ' ' | 业务系统,枚举: fa :固定资产 gl :总账 |
 | 12 | fnumber | 报告编码 | varchar | 80 |  | √ | ' ' | 报告编码 |
 | 13 | fendtime | 结束时间 | timestamp | 0 |  |  | null | 结束时间 |
-| 14 | fexecutorid | 执行人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fexecutorid | 执行人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

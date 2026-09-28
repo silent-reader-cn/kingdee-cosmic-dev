@@ -31,38 +31,6 @@
 
 ---
 
-## 任务操作记录-主表 t_mpm_taskoplog
-
-- **表名称：** 任务操作记录-主表
-- **表名：** t_mpm_taskoplog
-
-### 表格列定义
-
-| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fbizobjectid | 业务对象 | varchar | 80 |  | √ | ' ' | 业务对象 bos_objecttype |
-| 3 | foptime | 操作时间 | timestamp | 0 |  |  | null | 操作时间 |
-| 4 | foptype | 操作类型 | bpchar | 1 |  | √ | 'A' | 操作类型,枚举: A :新增 B :修改 C :删除 |
-| 5 | fobjectid | billid | int8 | 64 |  | √ | 0 | billid |
-| 6 | fuserid | 用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 7 | frelationbillid | 关联单据id | varchar | 255 |  | √ | ' ' | 关联单据id |
-
-### 列规则定义
-
-| 序号 | 键编码 | 列字段 |
-| :--- | :--- | :--- |
-| 1 | fid | fid |
-
-### 索引定义
-
-| 序号 | 索引名 | 唯一 | 列字段 |
-| :--- | :--- | :--- | :--- |
-| 1 | pk_mpm_taskoplog |  | fid |
-| 2 | idx_mpm_taskoplog_fi |  | fobjectid |
-
----
-
 ## 单据体-子表 t_mpm_taskopentry
 
 - **表名称：** 单据体-子表
@@ -94,3 +62,35 @@
 | :--- | :--- | :--- | :--- |
 | 1 | idx_mpm_taskopentry_fk |  | fid |
 | 2 | pk_mpm_taskopentry |  | fentryid |
+
+---
+
+## 任务操作记录-主表 t_mpm_taskoplog
+
+- **表名称：** 任务操作记录-主表
+- **表名：** t_mpm_taskoplog
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
+| 2 | fbizobjectid | 业务对象 | varchar | 80 |  | √ | ' ' | [业务对象 bos_objecttype](../mdl_files/bos_objecttype.md) |
+| 3 | foptime | 操作时间 | timestamp | 0 |  |  | null | 操作时间 |
+| 4 | foptype | 操作类型 | bpchar | 1 |  | √ | 'A' | 操作类型,枚举: A :新增 B :修改 C :删除 |
+| 5 | fobjectid | billid | int8 | 64 |  | √ | 0 | billid |
+| 6 | fuserid | 用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 7 | frelationbillid | 关联单据id | varchar | 255 |  | √ | ' ' | 关联单据id |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fid | fid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | pk_mpm_taskoplog |  | fid |
+| 2 | idx_mpm_taskoplog_fi |  | fobjectid |

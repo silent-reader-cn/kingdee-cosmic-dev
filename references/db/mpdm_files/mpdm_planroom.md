@@ -94,26 +94,26 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fremark | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
 | 4 | fname | 计划室名称 | varchar | 50 |  | √ | ' ' | 计划室名称 |
-| 5 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 7 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 8 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 7 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 8 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 9 | faudittime | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
 | 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 11 | fctrlstrategy | 控制策略 | varchar | 50 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
 | 12 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 15 | fplanroomtypeid | 计划室类型 | int8 | 64 |  | √ | 0 | 计划室类型 mpdm_planroom_type |
+| 15 | fplanroomtypeid | 计划室类型 | int8 | 64 |  | √ | 0 | [计划室类型 mpdm_planroom_type](../mpdm_files/mpdm_planroom_type.md) |
 | 16 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 17 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
 | 18 | fenable | 使用状态 | varchar | 50 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 19 | fnumber | 计划室编码 | varchar | 30 |  | √ | ' ' | 计划室编码 |
 | 20 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
-| 21 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 21 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 
@@ -127,8 +127,8 @@
 | :--- | :--- | :--- | :--- |
 | 1 | idx_mpdm_planroom_fct |  | fcreatetime |
 | 2 | idx_t_mpdm_planroom_master |  | fmasterid |
-| 3 | idx_t_mpdm_planroom_createorg |  | fcreateorgid |
-| 4 | idx_mpdm_planroom_fnum |  | fnumber |
+| 3 | idx_mpdm_planroom_fnum |  | fnumber |
+| 4 | idx_t_mpdm_planroom_createorg |  | fcreateorgid |
 | 5 | pk_mpdm_planroom |  | fid |
 | 6 | idx_mpdm_planroom_fci |  | fcreateorgid |
 
@@ -144,10 +144,10 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | frestypeid | 资源类别（弃用） | int8 | 64 |  | √ | 0 | 计划室资源类别 mpdm_planroom_restype |
+| 2 | frestypeid | 资源类别（弃用） | int8 | 64 |  | √ | 0 | [计划室资源类别 mpdm_planroom_restype](../mpdm_files/mpdm_planroom_restype.md) |
 | 3 | fremark | 备注（弃用） | varchar | 255 |  | √ | ' ' | 备注（弃用） |
 | 4 | fuse | 用途（弃用） | varchar | 100 |  | √ | ' ' | 用途（弃用） |
-| 5 | fresourceid | 资源名称 | int8 | 64 |  | √ | 0 | 计划室资源明细 mpdm_planroom_resource |
+| 5 | fresourceid | 资源名称 | int8 | 64 |  | √ | 0 | [计划室资源明细 mpdm_planroom_resource](../mpdm_files/mpdm_planroom_resource.md) |
 | 6 | flocation | 位置（弃用） | varchar | 100 |  | √ | ' ' | 位置（弃用） |
 | 7 | fresourcename | 资源名称（弃用） | varchar | 50 |  | √ | ' ' | 资源名称（弃用） |
 | 8 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |

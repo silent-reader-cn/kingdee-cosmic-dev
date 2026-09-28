@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fcreatedate | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 3 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fentitynumber | 业务对象编码 | varchar | 255 |  | √ | ' ' | 业务对象编码 |
 | 5 | fplannumber | 方案ID | int8 | 64 |  | √ | 0 | 方案ID |
 

@@ -10,26 +10,27 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 3 | fgroupid | 供应商分组 | int8 | 64 |  | √ | 0 | 供应商分类 bd_suppliergroup |
-| 4 | fmodifierid | 最近更新人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 3 | fgroupid | 供应商分组 | int8 | 64 |  | √ | 0 | [供应商分类 bd_suppliergroup](../basedata_files/bd_suppliergroup.md) |
+| 4 | fmodifierid | 最近更新人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fsynchrosourcelist | fsynchrosourcelist | bpchar | 1 |  | √ | '0' |  |
-| 6 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 7 | fbizpartnerid | 商务伙伴 | int8 | 64 |  | √ | 0 | 商务伙伴 bd_bizpartner |
-| 8 | fsupplierid | 供应商 | int8 | 64 |  | √ | 0 | 供应商 srm_supplier |
+| 6 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 7 | fbizpartnerid | 商务伙伴 | int8 | 64 |  | √ | 0 | [商务伙伴 bd_bizpartner](../base_files/bd_bizpartner.md) |
+| 8 | fsupplierid | 供应商 | int8 | 64 |  | √ | 0 | [供应商 srm_supplier](../srm_files/srm_supplier.md) |
 | 9 | feffectdate | 生效日期 | timestamp | 0 |  |  | null | 生效日期 |
 | 10 | fmodifytime | 最近更新时间 | timestamp | 0 |  |  | null | 最近更新时间 |
 | 11 | ffreezer | ffreezer | int8 | 64 |  | √ | 0 |  |
 | 12 | fauditstatus | 当前状态 | bpchar | 1 |  | √ | '1' | 当前状态,枚举: 1 :有效 2 :无效 3 :冻结 4 :退出 |
 | 13 | fissourcelist | 更新货源清单 | bpchar | 1 |  | √ | '0' | 更新货源清单 |
 | 14 | fsourcelistentryid | fsourcelistentryid | varchar | 80 |  | √ | ' ' |  |
-| 15 | forigin | forigin | bpchar | 1 |  | √ | ' ' |  |
-| 16 | fmasterid | fmasterid | int8 | 64 |  | √ | 0 |  |
-| 17 | fcategorytype | 类型 | bpchar | 1 |  | √ | 'B' | 类型,枚举: A :物料 B :品类 |
-| 18 | ffreezetime | ffreezetime | timestamp | 0 |  |  | null |  |
-| 19 | fexpirydate | 失效日期 | timestamp | 0 |  |  | null | 失效日期 |
-| 20 | fcategoryid | 采购品类 | int8 | 64 |  | √ | 0 | 物料分类 bd_materialgroup |
-| 21 | fmaterial | 物料 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 15 | fjointdatachannelid | fjointdatachannelid | varchar | 100 |  | √ | ' ' |  |
+| 16 | forigin | forigin | bpchar | 1 |  | √ | ' ' |  |
+| 17 | fmasterid | fmasterid | int8 | 64 |  | √ | 0 |  |
+| 18 | fcategorytype | 类型 | bpchar | 1 |  | √ | 'B' | 类型,枚举: A :物料 B :品类 |
+| 19 | ffreezetime | ffreezetime | timestamp | 0 |  |  | null |  |
+| 20 | fexpirydate | 失效日期 | timestamp | 0 |  |  | null | 失效日期 |
+| 21 | fcategoryid | 采购品类 | int8 | 64 |  | √ | 0 | [物料分类 bd_materialgroup](../basedata_files/bd_materialgroup.md) |
+| 22 | fmaterial | 物料 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 
 ### 列规则定义
 
@@ -43,5 +44,5 @@
 | :--- | :--- | :--- | :--- |
 | 1 | t_pur_supcategory_pkey |  | fid |
 | 2 | idx_pur_supcategory_org |  | forgid |
-| 3 | idx_pur_supcategory_cat |  | fcategoryid |
-| 4 | idx_pur_supcategory_sup |  | fsupplierid |
+| 3 | idx_pur_supcategory_sup |  | fsupplierid |
+| 4 | idx_pur_supcategory_cat |  | fcategoryid |

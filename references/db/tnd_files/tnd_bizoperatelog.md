@@ -1,8 +1,8 @@
 # 业务操作日志-tnd_bizoperatelog
 
-## 供应商-多选基础资料表 t_pds_bizoperatelog_sup
+## 供应商-废弃-多选基础资料表 t_pds_bizoperatelog_sup
 
-- **表名称：** 供应商-多选基础资料表
+- **表名称：** 供应商-废弃-多选基础资料表
 - **表名：** t_pds_bizoperatelog_sup
 
 ### 表格列定义
@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 供应商 bd_supplier |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [供应商 bd_supplier](../basedata_files/bd_supplier.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -39,8 +39,8 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fprojectid | 寻源项目 | int8 | 64 |  | √ | 0 | 招标项目F7 src_projectf7 |
-| 3 | fcreatorid | 操作人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fprojectid | 寻源项目 | int8 | 64 |  | √ | 0 | [招标项目F7 src_projectf7](../src_files/src_projectf7.md) |
+| 3 | fcreatorid | 操作人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | freason1 | 备注 | varchar | 1024 |  | √ | ' ' | 备注 |
 | 5 | fcreatetime | 操作时间 | timestamp | 0 |  |  | null | 操作时间 |
 | 6 | foptype | 操作类型 | varchar | 50 |  | √ | ' ' | 操作类型 |
@@ -61,8 +61,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_pds_bizoperatelog_bid |  | fbillid |
-| 2 | pk_pds_bizoperatelog |  | fid |
+| 1 | pk_pds_bizoperatelog |  | fid |
+| 2 | idx_pds_bizoperatelog_bid |  | fbillid |
 | 3 | idx_pds_bizoperatelog_oid |  | foptype |
 | 4 | idx_pds_bizoperatelog_pid |  | fprojectid |
 
@@ -78,7 +78,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义

@@ -9,7 +9,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fagentid | fagentid | int8 | 64 |  | √ | 0 |  |
+| 1 | fagentid | 代理评委 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 2 | fsrcentryid | 源单分录id(考评设置分录ID) | int8 | 64 |  | √ | 0 | 源单分录id(考评设置分录ID) |
 | 3 | fveto | 一票否决 | varchar | 30 |  | √ | ' ' | 一票否决,枚举: 1 :一级指标0分 2 :二级指标0分 3 :三级指标0分 9 :非否决项 |
 | 4 | fisoverthreshold | fisoverthreshold | bpchar | 1 |  | √ | '0' |  |
@@ -28,7 +28,7 @@
 | 17 | findexscore | findexscore | numeric | 23 | 10 | √ | 0 |  |
 | 18 | fprojectid | fprojectid | int8 | 64 |  | √ | 0 |  |
 | 19 | faverage | faverage | numeric | 23 | 10 | √ | 0 |  |
-| 20 | fparentid | fparentid | int8 | 64 |  | √ | 0 |  |
+| 20 | fparentid | 考评任务 | int8 | 64 |  | √ | 0 | [考评记录F7 src_evaluatetaskf7](../src_files/src_evaluatetaskf7.md) |
 | 21 | fsuppliername | fsuppliername | varchar | 100 |  | √ | ' ' |  |
 | 22 | fisfitted | 符合否 | bpchar | 1 |  | √ | '0' | 符合否 |
 | 23 | freason | 退回重评原因 | varchar | 255 |  | √ | ' ' | 退回重评原因 |
@@ -36,7 +36,7 @@
 | 25 | fvalue | 评估值 | numeric | 23 | 10 | √ | 0 | 评估值 |
 | 26 | fsuppliertype | fsuppliertype | varchar | 30 |  | √ | ' ' |  |
 | 27 | fscorerscore | 权重得分 | numeric | 23 | 10 | √ | 0 | 权重得分 |
-| 28 | fscorerid | 评委 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 28 | fscorerid | 评委 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 29 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 | 30 | fscore | 得分 | numeric | 23 | 10 | √ | 0 | 得分 |
 

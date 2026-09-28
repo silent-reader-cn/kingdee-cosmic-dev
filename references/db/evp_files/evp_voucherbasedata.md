@@ -12,7 +12,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | foperatorid | foperatorid | int8 | 64 |  | √ | 0 |  |
 | 3 | fisintopool | fisintopool | bpchar | 1 |  | √ | '0' |  |
-| 4 | forgid | 核算组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 4 | forgid | 核算组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | fdirectbillid | fdirectbillid | int8 | 64 |  | √ | 0 |  |
 | 6 | fisdelete | 已删除 | bpchar | 1 |  | √ | '0' | 已删除 |
 | 7 | fvoucherno | 凭证号 | varchar | 50 |  | √ | ' ' | 凭证号 |
@@ -20,17 +20,17 @@
 | 9 | fcreatorid | fcreatorid | int8 | 64 |  | √ | 0 |  |
 | 10 | farchivebatchcode | farchivebatchcode | varchar | 255 |  | √ | ' ' |  |
 | 11 | fisarchive | fisarchive | bpchar | 1 |  | √ | '0' |  |
-| 12 | foriginsysid | 集成系统 | int8 | 64 |  | √ | 0 | 集成系统配置 evp_originsys |
+| 12 | foriginsysid | 集成系统 | int8 | 64 |  | √ | 0 | [集成系统配置 evp_originsys](../evp_files/evp_originsys.md) |
 | 13 | fbillno | fbillno | varchar | 50 |  | √ | ' ' |  |
 | 14 | fdirectbillno | fdirectbillno | varchar | 50 |  | √ | ' ' |  |
 | 15 | fvdescription | 摘要 | varchar | 200 |  | √ | ' ' | 摘要 |
 | 16 | fvoucherid | fvoucherid | varchar | 50 |  | √ | ' ' |  |
 | 17 | fxhvoucherid | fxhvoucherid | int8 | 64 |  | √ | 0 |  |
-| 18 | fperiodid | 会计期间 | int8 | 64 |  | √ | 0 | 会计日历 bd_period |
+| 18 | fperiodid | 会计期间 | int8 | 64 |  | √ | 0 | [会计日历 bd_period](../fibd_files/bd_period.md) |
 | 19 | fseqno | fseqno | varchar | 200 |  | √ | ' ' |  |
 | 20 | fhaspullbill | fhaspullbill | bpchar | 1 |  | √ | '0' |  |
-| 21 | fbookid | 账簿 | int8 | 64 |  | √ | 0 | 账簿 gl_accountbook |
-| 22 | fbooktypeid | 账簿类型 | int8 | 64 |  | √ | 0 | 账簿类型 bd_accountbookstype |
+| 21 | fbookid | 账簿 | int8 | 64 |  | √ | 0 | [账簿 gl_accountbook](../gl_files/gl_accountbook.md) |
+| 22 | fbooktypeid | 账簿类型 | int8 | 64 |  | √ | 0 | [账簿类型 bd_accountbookstype](../fibd_files/bd_accountbookstype.md) |
 | 23 | fdirectbilltype | fdirectbilltype | varchar | 50 |  | √ | ' ' |  |
 | 24 | fperiodtypeid | fperiodtypeid | int8 | 64 |  | √ | 0 |  |
 | 25 | fbatchcode | fbatchcode | varchar | 128 |  | √ | ' ' |  |
@@ -38,7 +38,7 @@
 | 27 | fbillid | 原始单据ID | varchar | 50 |  | √ | ' ' | 原始单据ID |
 | 28 | fbookdate | 记账日期 | timestamp | 0 |  |  | null | 记账日期 |
 | 29 | fintopooldate | fintopooldate | timestamp | 0 |  |  | null |  |
-| 30 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 30 | fcurrencyid | 币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 
 ### 列规则定义
 

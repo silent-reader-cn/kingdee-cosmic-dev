@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fjar | jar包 | varchar | 200 |  | √ | ' ' | jar包 |
-| 3 | fbizappid | 应用id | varchar | 36 |  | √ | ' ' | 业务应用实体 bos_devportal_bizapp |
+| 3 | fbizappid | 应用id | varchar | 36 |  | √ | ' ' | [业务应用实体 bos_devportal_bizapp](../mdl_files/bos_devportal_bizapp.md) |
 
 ### 列规则定义
 

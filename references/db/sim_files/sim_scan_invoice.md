@@ -17,7 +17,7 @@
 | 6 | fbank | 开户银行 | varchar | 255 |  | √ | ' ' | 开户银行 |
 | 7 | fbankaccount | 银行账号 | varchar | 30 |  | √ | ' ' | 银行账号 |
 | 8 | fbuyerphone | 手机号码 | varchar | 20 |  | √ | ' ' | 手机号码 |
-| 9 | forg | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 9 | forg | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 10 | fstatus | 使用状态 | varchar | 50 |  | √ | ' ' | 使用状态,枚举: 0 :未使用 1 :已使用 |
 | 11 | finvoicephone | 开票电话 | varchar | 20 |  | √ | ' ' | 开票电话 |
 | 12 | fbuyerproperty | 购方类型 | varchar | 50 |  | √ | ' ' | 购方类型,枚举: 0 :企业 1 :个人 |

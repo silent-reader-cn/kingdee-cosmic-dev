@@ -1,4 +1,4 @@
-# 标准接口数据源-pbd_struct
+# 标准接口-pbd_struct
 
 ## 输出对象字段-子表 t_pbd_struct_outputentity
 
@@ -65,14 +65,14 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_pbd_struct_input_fid_fseq |  | fid,fseq |
-| 2 | pk_pbd_struct_inputentity |  | fentryid |
+| 1 | pk_pbd_struct_inputentity |  | fentryid |
+| 2 | idx_pbd_struct_input_fid_fseq |  | fid,fseq |
 
 ---
 
-## 标准接口数据源-多语言表 t_pbd_struct_l
+## 标准接口-多语言表 t_pbd_struct_l
 
-- **表名称：** 标准接口数据源-多语言表
+- **表名称：** 标准接口-多语言表
 - **表名：** t_pbd_struct_l
 
 ### 表格列定义
@@ -99,9 +99,9 @@
 
 ---
 
-## 标准接口数据源-主表 t_pbd_struct
+## 标准接口-主表 t_pbd_struct
 
-- **表名称：** 标准接口数据源-主表
+- **表名称：** 标准接口-主表
 - **表名：** t_pbd_struct
 
 ### 表格列定义
@@ -111,14 +111,14 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fremark | 接口描述 | varchar | 1000 |  | √ | ' ' | 接口描述 |
 | 3 | fname | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fispreinsdata | 是否预置 | bpchar | 1 |  | √ | '0' | 是否预置 |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 7 | fsourceid | 外部数据元数据库 | varchar | 36 |  | √ | ' ' | 业务对象 bos_objecttype |
+| 7 | fsourceid | 外部数据元数据库 | varchar | 36 |  | √ | ' ' | [业务对象 bos_objecttype](../mdl_files/bos_objecttype.md) |
 | 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 9 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 10 | ftype | 类型 | varchar | 50 |  | √ | ' ' | 类型,枚举: 1 :实体 2 :结构 |
-| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 13 | fentitycode | 元数据 | varchar | 512 |  | √ | ' ' | 元数据,枚举: |
 | 14 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |

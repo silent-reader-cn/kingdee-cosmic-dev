@@ -11,20 +11,21 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fremark | 备注 | varchar | 1000 |  | √ | ' ' | 备注 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fbillstatus | 单据状态 | bpchar | 1 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 6 | forgid | 生产组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | forgid | 生产组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
 | 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 9 | fdepartid | 生产车间 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 11 | fprocessorgid | 加工组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 12 | fprocessdepartid | 加工车间 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 9 | fdepartid | 生产车间 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 11 | fprocessorgid | 加工组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 12 | fprocessdepartid | 加工车间 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 13 | fdate | 接收日期 | timestamp | 0 |  |  | null | 接收日期 |
 | 14 | fbillno | 单据编号 | varchar | 80 |  | √ | ' ' | 单据编号 |
-| 15 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 16 | fbilltypeid | 单据类型 | int8 | 64 |  | √ | 0 | 单据类型 bos_billtype |
+| 15 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 16 | fpostdate | 记账日期 | timestamp | 0 |  |  | null | 记账日期 |
+| 17 | fbilltypeid | 单据类型 | int8 | 64 |  | √ | 0 | 单据类型 bos_billtype |
 
 ### 列规则定义
 
@@ -51,39 +52,46 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fproplanid | 工序计划 | int8 | 64 |  | √ | 0 | 工序计划F7 sfc_processplan_f7 |
-| 3 | fmaterialid | 产品编码 | int8 | 64 |  | √ | 0 | 物料生产信息 bd_materialmftinfo |
+| 2 | fproplanid | 工序计划 | int8 | 64 |  | √ | 0 | [工序计划F7 sfc_processplan_f7](../sfc_files/sfc_processplan_f7.md) |
+| 3 | fmaterialid | 产品编码 | int8 | 64 |  | √ | 0 | [物料生产信息 bd_materialmftinfo](../sbd_files/bd_materialmftinfo.md) |
 | 4 | fsbillentity | 来源单据实体 | varchar | 50 |  | √ | ' ' | 来源单据实体 |
 | 5 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 6 | fmaterialversion | 物料版本 | int8 | 64 |  | √ | 0 | 物料版本 bd_bomversion_new |
-| 7 | fsbilltypeid | 来源单据类型 | int8 | 64 |  | √ | 0 | 单据类型 bos_billtype |
-| 8 | fworkid | 生产工单号 | int8 | 64 |  | √ | 0 | 生产工单 pom_mftorder |
-| 9 | fauxproperty | 辅助属性 | int8 | 64 |  | √ | 0 | null 001 |
-| 10 | fworkrowid | 工单分录id | int8 | 64 |  | √ | 0 | 生产工单分录F7 sfc_mftorder_f7 |
-| 11 | fcorebilltypeid | 核心单据类型 | int8 | 64 |  | √ | 0 | 单据类型 bos_billtype |
-| 12 | ftracknumberid | 跟踪号 | int8 | 64 |  | √ | 0 | 跟踪号 bd_tracknumber |
-| 13 | fsbillrow | 来源单据行号 | int4 | 32 |  | √ | 0 | 来源单据行号 |
-| 14 | fsourcebillrowid | 来源单据行id | int8 | 64 |  | √ | 0 | 来源单据行id |
-| 15 | fcorebillrow | 核心单据行号 | int4 | 32 |  | √ | 0 | 核心单据行号 |
-| 16 | fbaseunitid | 产品基本单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 17 | fcreatesend | 已生成连续内协发出单 | bpchar | 1 |  | √ | '0' | 已生成连续内协发出单 |
-| 18 | finsendid | 连续内协关联发出单id | varchar | 50 |  | √ | ' ' | 连续内协关联发出单id |
-| 19 | fbatchno | 批号 | varchar | 50 |  | √ | ' ' | 批号 |
-| 20 | fcorebillid | 核心单据id | int8 | 64 |  | √ | 0 | 核心单据id |
-| 21 | funitid | 生产单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 22 | fcorebillnumber | 核心单据编号 | varchar | 100 |  | √ | ' ' | 核心单据编号 |
-| 23 | fcorebillentity | 核心单据实体 | varchar | 50 |  | √ | ' ' | 核心单据实体 |
-| 24 | fproducttype | 产品类型 | bpchar | 1 |  | √ | ' ' | 产品类型,枚举: C :主产品 A :联产品 B :副产品 |
-| 25 | fproplanentryid | 工序计划分录 | int8 | 64 |  | √ | 0 | 工序计划分录F7 sfc_processplanentry_f7 |
-| 26 | fisgenprocessreview | 已生成工序汇报单 | bpchar | 1 |  | √ | '0' | 已生成工序汇报单 |
-| 27 | fsourcebillnumber | 来源单据编号 | varchar | 100 |  | √ | ' ' | 来源单据编号 |
-| 28 | flotid | 批号主档 | int8 | 64 |  | √ | 0 | 批号主档 bd_lot |
-| 29 | fsourcebillid | 来源单据id | int8 | 64 |  | √ | 0 | 来源单据id |
-| 30 | fproplanbillid | 工序计划号 | int8 | 64 |  | √ | 0 | 工序计划 sfc_processplanbill |
-| 31 | fentryremark | 备注 | varchar | 1000 |  | √ | ' ' | 备注 |
-| 32 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 33 | fcorebillrowid | 核心单据行id | int8 | 64 |  | √ | 0 | 核心单据行id |
-| 34 | fprocessunitid | 工序单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 6 | fmaterialversion | 物料版本 | int8 | 64 |  | √ | 0 | [物料版本 bd_bomversion_new](../basedata_files/bd_bomversion_new.md) |
+| 7 | fsampledestoryproqty | 样本破坏生产数量 | numeric | 23 | 10 | √ | 0 | 样本破坏生产数量 |
+| 8 | fsbilltypeid | 来源单据类型 | int8 | 64 |  | √ | 0 | [单据类型 bos_billtype](../cts_files/bos_billtype.md) |
+| 9 | fbonded | 保税 | bpchar | 1 |  | √ | '0' | 保税 |
+| 10 | fworkid | 生产工单号 | int8 | 64 |  | √ | 0 | 生产工单 pom_mftorder |
+| 11 | fauxproperty | 辅助属性 | int8 | 64 |  | √ | 0 | null 001 |
+| 12 | fworkrowid | 工单分录id | int8 | 64 |  | √ | 0 | [生产工单分录F7 sfc_mftorder_f7](../sfc_files/sfc_mftorder_f7.md) |
+| 13 | fcorebilltypeid | 核心单据类型 | int8 | 64 |  | √ | 0 | [单据类型 bos_billtype](../cts_files/bos_billtype.md) |
+| 14 | ftracknumberid | 跟踪号 | int8 | 64 |  | √ | 0 | [跟踪号 bd_tracknumber](../sbd_files/bd_tracknumber.md) |
+| 15 | fsbillrow | 来源单据行号 | int4 | 32 |  | √ | 0 | 来源单据行号 |
+| 16 | fsourcebillrowid | 来源单据行id | int8 | 64 |  | √ | 0 | 来源单据行id |
+| 17 | fcorebillrow | 核心单据行号 | int4 | 32 |  | √ | 0 | 核心单据行号 |
+| 18 | fbaseunitid | 产品基本单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 19 | fcreatesend | 已生成连续内协发出单 | bpchar | 1 |  | √ | '0' | 已生成连续内协发出单 |
+| 20 | finsendid | 连续内协关联发出单id | varchar | 50 |  | √ | ' ' | 连续内协关联发出单id |
+| 21 | fbatchno | 批号 | varchar | 50 |  | √ | ' ' | 批号 |
+| 22 | fcorebillid | 核心单据id | int8 | 64 |  | √ | 0 | 核心单据id |
+| 23 | fbackflishflag | 倒冲标识 | varchar | 10 |  | √ | ' ' | 倒冲标识,枚举: not :未倒冲 sucess :倒冲成功 part :部分倒冲 |
+| 24 | funitid | 生产单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 25 | flicensenoid | 许可证编号 | int8 | 64 |  | √ | 0 | [许可证 bd_licence](../sbd_files/bd_licence.md) |
+| 26 | fcorebillnumber | 核心单据编号 | varchar | 100 |  | √ | ' ' | 核心单据编号 |
+| 27 | fsampledestoryqty | 样本破坏数量 | numeric | 23 | 10 | √ | 0 | 样本破坏数量 |
+| 28 | fcorebillentity | 核心单据实体 | varchar | 50 |  | √ | ' ' | 核心单据实体 |
+| 29 | fproducttype | 产品类型 | bpchar | 1 |  | √ | ' ' | 产品类型,枚举: C :主产品 A :联产品 B :副产品 |
+| 30 | fproplanentryid | 工序计划分录 | int8 | 64 |  | √ | 0 | [工序计划分录F7 sfc_processplanentry_f7](../sfc_files/sfc_processplanentry_f7.md) |
+| 31 | fisdevproduce | 研发试制 | bpchar | 1 |  | √ | '0' | 研发试制 |
+| 32 | fsampledestorybaseqty | 样本破坏基本数量 | numeric | 23 | 10 | √ | 0 | 样本破坏基本数量 |
+| 33 | fisgenprocessreview | 已生成工序汇报单 | bpchar | 1 |  | √ | '0' | 已生成工序汇报单 |
+| 34 | fsourcebillnumber | 来源单据编号 | varchar | 100 |  | √ | ' ' | 来源单据编号 |
+| 35 | flotid | 批号主档 | int8 | 64 |  | √ | 0 | [批号主档 bd_lot](../sbd_files/bd_lot.md) |
+| 36 | fsourcebillid | 来源单据id | int8 | 64 |  | √ | 0 | 来源单据id |
+| 37 | fproplanbillid | 工序计划号 | int8 | 64 |  | √ | 0 | 工序计划 sfc_processplanbill |
+| 38 | fentryremark | 备注 | varchar | 1000 |  | √ | ' ' | 备注 |
+| 39 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 40 | fcorebillrowid | 核心单据行id | int8 | 64 |  | √ | 0 | 核心单据行id |
+| 41 | fprocessunitid | 工序单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 
 ### 列规则定义
 
@@ -178,17 +186,21 @@
 | 5 | finspectprodqty | 检验生产数量 | numeric | 23 | 10 | √ | 0 | 检验生产数量 |
 | 6 | fproinspect | 工序检验 | bpchar | 1 |  | √ | '0' | 工序检验 |
 | 7 | finspectbaseqty | 基本检验数量 | numeric | 23 | 10 | √ | 0 | 基本检验数量 |
-| 8 | finsettlepushqty | 关联内协结算数量 | numeric | 23 | 10 | √ | 0 | 关联内协结算数量 |
-| 9 | finsettlebaseqty | 内协结算基本数量 | numeric | 23 | 10 | √ | 0 | 内协结算基本数量 |
-| 10 | finsettleprodqty | 内协结算生产数量 | numeric | 23 | 10 | √ | 0 | 内协结算生产数量 |
-| 11 | flinkinspectqty | 关联检验数量 | numeric | 23 | 10 | √ | 0 | 关联检验数量 |
-| 12 | finspectuserid | 质检员 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 13 | flinkinbaseqty | 基本关联检验数量 | numeric | 23 | 10 | √ | 0 | 基本关联检验数量 |
-| 14 | finsettlepushprodqty | 关联内协结算生产数量 | numeric | 23 | 10 | √ | 0 | 关联内协结算生产数量 |
-| 15 | finspectdepid | 质检部门 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 16 | finspectorg | 质检组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 17 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
-| 18 | finsettleqty | 内协结算数量 | numeric | 23 | 10 | √ | 0 | 内协结算数量 |
+| 8 | finspectschemeid | 检验方案编码 | int8 | 64 |  | √ | 0 | [检验方案 qcbd_inspectpro](../qcbd_files/qcbd_inspectpro.md) |
+| 9 | finsettlepushqty | 关联内协结算数量 | numeric | 23 | 10 | √ | 0 | 关联内协结算数量 |
+| 10 | finsettlebaseqty | 内协结算基本数量 | numeric | 23 | 10 | √ | 0 | 内协结算基本数量 |
+| 11 | finspectcompletedate | 期望检验完成日期 | timestamp | 0 |  |  | null | 期望检验完成日期 |
+| 12 | finsettleprodqty | 内协结算生产数量 | numeric | 23 | 10 | √ | 0 | 内协结算生产数量 |
+| 13 | flinkinspectqty | 关联检验数量 | numeric | 23 | 10 | √ | 0 | 关联检验数量 |
+| 14 | finspectuserid | 质检员 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 15 | finspectplanrowid | 检验方案分录id | int8 | 64 |  | √ | 0 | 检验方案分录id |
+| 16 | flinkinbaseqty | 基本关联检验数量 | numeric | 23 | 10 | √ | 0 | 基本关联检验数量 |
+| 17 | finsettlepushprodqty | 关联内协结算生产数量 | numeric | 23 | 10 | √ | 0 | 关联内协结算生产数量 |
+| 18 | finspectdepid | 质检部门 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 19 | fisurgent | 加急 | bpchar | 1 |  | √ | '0' | 加急 |
+| 20 | finspectorg | 质检组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 21 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
+| 22 | finsettleqty | 内协结算数量 | numeric | 23 | 10 | √ | 0 | 内协结算数量 |
 
 ### 列规则定义
 

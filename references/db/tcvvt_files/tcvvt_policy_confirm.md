@@ -13,7 +13,7 @@
 | 2 | fhbsyzqybdb | 合并所有者权益变动表 | bpchar | 1 |  | √ | ' ' | 合并所有者权益变动表 |
 | 3 | fhbzcfzb | 合并资产负债表 | bpchar | 1 |  | √ | ' ' | 合并资产负债表 |
 | 4 | flrb | 利润表 | bpchar | 1 |  | √ | ' ' | 利润表 |
-| 5 | forgid | 纳税人名称 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | forgid | 纳税人名称 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | fhblrb | 合并利润表 | bpchar | 1 |  | √ | ' ' | 合并利润表 |
 | 7 | fzcfzb | 资产负债表 | bpchar | 1 |  | √ | ' ' | 资产负债表 |
 | 8 | fxjllb | 现金流量表 | bpchar | 1 |  | √ | ' ' | 现金流量表 |
@@ -51,7 +51,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | forgid | 组织名称 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | forgid | 组织名称 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 4 | fparententryid | fparententryid | int8 | 64 |  | √ | 0 | pid |
 | 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |

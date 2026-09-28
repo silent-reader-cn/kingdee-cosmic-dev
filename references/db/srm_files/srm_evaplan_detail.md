@@ -12,7 +12,7 @@
 | 1 | fid | 单据ID | int8 | 64 |  | √ | 0 | 单据ID |
 | 2 | fweight | 权重% | numeric | 19 | 6 | √ | 0.000000 | 权重% |
 | 3 | fseq | 序号 | int8 | 64 |  | √ | 0 | 序号 |
-| 4 | findexid | 评估指标 | int8 | 64 |  | √ | 0 | 评估指标 srm_index |
+| 4 | findexid | 评估指标 | int8 | 64 |  | √ | 0 | [评估指标 srm_index](../srm_files/srm_index.md) |
 | 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 
 ### 列规则定义
@@ -41,7 +41,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fweight | 权重% | numeric | 19 | 6 | √ | 0.000000 | 权重% |
-| 2 | fscorerid | 评委 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fscorerid | 评委 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 4 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 | id |
 | 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |

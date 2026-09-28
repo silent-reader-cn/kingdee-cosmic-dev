@@ -10,14 +10,14 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreator | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fcreator | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fphone | 电话 | varchar | 50 |  | √ | ' ' | 电话 |
 | 4 | fpublickey_enp | fpublickey_enp | text | 0 |  |  | null |  |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 6 | fserver_accountid | 云端账套ID | varchar | 100 |  | √ | ' ' | 云端账套ID |
 | 7 | femail | 邮箱 | varchar | 50 |  | √ | ' ' | 邮箱 |
 | 8 | faccountname | 当前账套名称 | varchar | 50 |  | √ | ' ' | 当前账套名称 |
-| 9 | fmodifier | 申请人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fmodifier | 申请人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | ftenantid | 当前租户ID | varchar | 50 |  | √ | ' ' | 当前租户ID |
 | 11 | fmodifytime | 最后申请时间 | timestamp | 0 |  |  | null | 最后申请时间 |
 | 12 | ffileserver | 云端文件服务器地址 | varchar | 255 |  | √ | ' ' | 云端文件服务器地址 |

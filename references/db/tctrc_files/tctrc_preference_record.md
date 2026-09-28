@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | ftaxationsysid | 税收制度 | varchar | 50 |  | √ | ' ' | 税收制度 |
-| 3 | fstatisticprotid | 优惠项目 | varchar | 50 |  | √ | ' ' | 优惠项目 |
+| 3 | fstatisticprotid | 优惠项目 | varchar | 500 |  | √ | ' ' | 优惠项目 |
 | 4 | ftaxcategoryid | 税种 | varchar | 50 |  | √ | ' ' | 税种 |
 | 5 | famountincome | 所得额优惠 | varchar | 50 |  | √ | ' ' | 所得额优惠 |
 | 6 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |

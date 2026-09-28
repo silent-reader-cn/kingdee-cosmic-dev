@@ -65,18 +65,18 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | forgchange | 变更组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 3 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | forgchange | 变更组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 3 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fupdatetype | 变更方式 | varchar | 8 |  | √ | ' ' | 变更方式,枚举: A :直接变更 B :ECN变更 |
 | 6 | fcreatetime | 变更时间 | timestamp | 0 |  |  | null | 变更时间 |
-| 7 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 7 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | fsavecontent | 变更字段内容 | text | 0 |  |  | null | 变更字段内容 |
-| 9 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 9 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 11 | fctrlstrategy | 控制策略 | bpchar | 1 |  | √ | '5' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
 | 12 | fstatus | 数据状态 | bpchar | 1 |  | √ | 'A' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 15 | ftype | 变更类型 | bpchar | 1 |  | √ | ' ' | 变更类型,枚举: A :新增子项 B :修改子项 C :替换子项 D :失效子项 E :删除子项 |
 | 16 | fcontent_tag | 修改内容-大文本_详情 | text | 0 |  |  | null | 修改内容-大文本_详情 |
@@ -130,8 +130,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_t_pdm_mftbomlog_u_uo |  | fuseorgid |
-| 2 | pk_t_pdm_mftbomlog_u |  | fdataid,fuseorgid |
+| 1 | pk_t_pdm_mftbomlog_u |  | fdataid,fuseorgid |
+| 2 | idx_t_pdm_mftbomlog_u_uo |  | fuseorgid |
 
 ---
 

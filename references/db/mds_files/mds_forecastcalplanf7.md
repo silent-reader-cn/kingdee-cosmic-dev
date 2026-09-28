@@ -15,7 +15,7 @@
 | 4 | fmodifierid | fmodifierid | int8 | 64 |  | √ | 0 |  |
 | 5 | fbillstatus | 单据状态 | varchar | 5 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 6 | fcreatetime | fcreatetime | timestamp | 0 |  |  | null |  |
-| 7 | fpredversion | 目标预测版本 | int8 | 64 |  | √ | 0 | 版本定义 mds_vrds |
+| 7 | fpredversion | 目标预测版本 | int8 | 64 |  | √ | 0 | [版本定义 mds_vrds](../mds_files/mds_vrds.md) |
 | 8 | forgid | forgid | int8 | 64 |  | √ | 0 |  |
 | 9 | frunninglog_tag | frunninglog_tag | varchar | 2000 |  | √ | ' ' |  |
 | 10 | fauditdate | fauditdate | timestamp | 0 |  |  | null |  |

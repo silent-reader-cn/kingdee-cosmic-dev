@@ -13,14 +13,14 @@
 | 2 | fclosetype | 类型 | varchar | 10 |  | √ | ' ' | 类型,枚举: A :关账 B :反关账 |
 | 3 | flastdate | 上次关账日期 | timestamp | 0 |  |  | null | 上次关账日期 |
 | 4 | foperationtime | 操作时间 | timestamp | 0 |  |  | null | 操作时间 |
-| 5 | forgid | 核算组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | forgid | 核算组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | fexpectdate | 期望日期 | timestamp | 0 |  |  | null | 期望日期 |
 | 7 | fsuccess | 是否成功 | bpchar | 1 |  | √ | '0' | 是否成功 |
-| 8 | fownerid | 货主 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 8 | fownerid | 货主 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 9 | fdatemsg | 日期流转 | varchar | 80 |  | √ | ' ' | 日期流转 |
 | 10 | fcheckresult | 检查结果 | varchar | 255 |  | √ | ' ' | 检查结果 |
-| 11 | fqueryschemeid | 查询方案 | int8 | 64 |  | √ | 0 | 查询方案 cal_query_scheme |
-| 12 | foperationuserid | 操作用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fqueryschemeid | 查询方案 | int8 | 64 |  | √ | 0 | [查询方案 cal_query_scheme](../cal_files/cal_query_scheme.md) |
+| 12 | foperationuserid | 操作用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | ftaskid | 后台任务id | int8 | 64 |  | √ | 0 | 后台任务id |
 
 ### 列规则定义

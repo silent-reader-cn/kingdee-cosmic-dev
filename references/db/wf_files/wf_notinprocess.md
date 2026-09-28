@@ -10,11 +10,11 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fsubmitterid | 提单人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fsubmitterid | 提单人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fsubmittime | 提交时间 | timestamp | 0 |  |  | null | 提交时间 |
 | 4 | fentitynumber | 单据编码 | varchar | 36 |  | √ | ' ' | 单据编码 |
 | 5 | fvariables | 寻址变量表 | text | 0 |  |  | null | 寻址变量表 |
-| 6 | fdeadletterid | 异常流程ID | int8 | 64 |  | √ | 0 | 异常流程 wf_deadletterjob |
+| 6 | fdeadletterid | 异常流程ID | int8 | 64 |  | √ | 0 | [异常流程信息 wf_deadletterjob](../wf_files/wf_deadletterjob.md) |
 | 7 | foperate | 操作 | varchar | 50 |  | √ | ' ' | 操作 |
 | 8 | falarmmsgsendlogid | 报警消息发送日志Id | int8 | 64 |  | √ | 0 | 报警消息发送日志Id |
 | 9 | fbusinesskey | 单据ID | varchar | 36 |  | √ | ' ' | 单据ID |

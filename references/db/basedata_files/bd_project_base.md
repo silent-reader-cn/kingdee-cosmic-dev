@@ -43,46 +43,49 @@
 | 1 | fid | fid | int8 | 64 |  | √ | null | id |
 | 2 | fapproverid | fapproverid | int8 | 64 |  |  | null |  |
 | 3 | fisleaf | 是否叶子 | bpchar | 1 |  | √ | '1' | 是否叶子 |
-| 4 | forgid | 组织 | int8 | 64 |  |  | null | 业务单元 bos_org |
+| 4 | forgid | 组织 | int8 | 64 |  |  | null | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | fplanbegindate | 计划开始日期 | timestamp | 0 |  |  | null | 计划开始日期 |
-| 6 | fdisabledate | fdisabledate | timestamp | 0 |  |  | null |  |
-| 7 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 9 | fprocostindietrf | fprocostindietrf | bpchar | 1 |  | √ | '0' |  |
-| 10 | fstatus | 数据状态 | varchar | 30 |  |  | null | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 11 | fmasterid | 主数据内码 | int8 | 64 |  |  | null | 主数据内码 |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  |  | null | 人员 bos_user |
-| 13 | fsourcetype | fsourcetype | bpchar | 1 |  | √ | ' ' |  |
-| 14 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
-| 15 | fkindid | 项目分类 | int8 | 64 |  | √ | 0 | 项目分类 bd_projectkind |
-| 16 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
-| 17 | fbudgetproname | fbudgetproname | varchar | 255 |  | √ | ' ' |  |
-| 18 | fapprovedate | fapprovedate | timestamp | 0 |  |  | null |  |
-| 19 | fcreateorgid | 创建组织 | int8 | 64 |  |  | null | 业务单元 bos_org |
-| 20 | fmodifierid | 修改人 | int8 | 64 |  |  | null | 人员 bos_user |
-| 21 | fplanenddate | 计划完成日期 | timestamp | 0 |  |  | null | 计划完成日期 |
-| 22 | fname | 项目名称 | varchar | 255 |  | √ | ' ' | 项目名称 |
-| 23 | fprostatus | 项目状态 | int8 | 64 |  | √ | 0 | 项目状态 bd_projectstatus |
-| 24 | fparentid | 上级 | int8 | 64 |  | √ | 0 | 项目 bd_project_base |
-| 25 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 26 | ffullname | 长名称 | varchar | 2000 |  | √ | ' ' | 长名称 |
-| 27 | flongnumber | 长编码 | varchar | 810 |  | √ | ' ' | 长编码 |
-| 28 | fdisablerid | fdisablerid | int8 | 64 |  |  | null |  |
-| 29 | frefcheck | 是否反审核校验 | varchar | 30 |  | √ | '0' | 是否反审核校验,枚举: 0 :否 1 :是 |
-| 30 | fauditdate | fauditdate | timestamp | 0 |  |  | null |  |
-| 31 | fdepartmentid | fdepartmentid | int8 | 64 |  | √ | 0 |  |
-| 32 | fbudgetpronumber | fbudgetpronumber | varchar | 255 |  | √ | ' ' |  |
-| 33 | fctrlstrategy | 控制策略 | varchar | 10 |  |  | null | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
-| 34 | fsystemtype | fsystemtype | varchar | 30 |  | √ | 'SYS' |  |
-| 35 | flevel | 级次 | int8 | 64 |  | √ | 0 | 级次 |
-| 36 | fissys | 是否系统创建 | bpchar | 1 |  | √ | '0' | 是否系统创建 |
-| 37 | fenable | 使用状态 | bpchar | 1 |  |  | null | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 38 | fproaddress | 项目地址 | varchar | 255 |  | √ | ' ' | 项目地址 |
-| 39 | fnumber | 项目编码 | varchar | 80 |  |  | null | 项目编码 |
-| 40 | fuseorgid | 业务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 41 | fpmascreateorgid | fpmascreateorgid | int8 | 64 |  | √ | 0 |  |
-| 42 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
-| 43 | fauditorid | fauditorid | int8 | 64 |  | √ | 0 |  |
+| 6 | fprojectmanagerid | fprojectmanagerid | int8 | 64 |  | √ | 0 |  |
+| 7 | fdisabledate | fdisabledate | timestamp | 0 |  |  | null |  |
+| 8 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 10 | fprocostindietrf | fprocostindietrf | bpchar | 1 |  | √ | '0' |  |
+| 11 | fstatus | 数据状态 | varchar | 30 |  |  | null | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
+| 12 | fmasterid | 主数据内码 | int8 | 64 |  |  | null | 主数据内码 |
+| 13 | fcreatorid | 创建人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
+| 14 | fsourcetype | fsourcetype | bpchar | 1 |  | √ | ' ' |  |
+| 15 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
+| 16 | fkindid | 项目分类 | int8 | 64 |  | √ | 0 | [项目分类 bd_projectkind](../basedata_files/bd_projectkind.md) |
+| 17 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
+| 18 | fbudgetproname | fbudgetproname | varchar | 255 |  | √ | ' ' |  |
+| 19 | fapprovedate | fapprovedate | timestamp | 0 |  |  | null |  |
+| 20 | fcreateorgid | 创建组织 | int8 | 64 |  |  | null | [业务单元 bos_org](../base_files/bos_org.md) |
+| 21 | fmodifierid | 修改人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
+| 22 | fplanenddate | 计划完成日期 | timestamp | 0 |  |  | null | 计划完成日期 |
+| 23 | fname | 项目名称 | varchar | 255 |  | √ | ' ' | 项目名称 |
+| 24 | fprostatus | 项目状态 | int8 | 64 |  | √ | 0 | [项目状态 bd_projectstatus](../basedata_files/bd_projectstatus.md) |
+| 25 | fparentid | 上级 | int8 | 64 |  | √ | 0 | [项目 bd_project_base](../basedata_files/bd_project_base.md) |
+| 26 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 27 | ffullname | 长名称 | varchar | 2000 |  | √ | ' ' | 长名称 |
+| 28 | flongnumber | 长编码 | varchar | 810 |  | √ | ' ' | 长编码 |
+| 29 | fdisablerid | fdisablerid | int8 | 64 |  |  | null |  |
+| 30 | frefcheck | 是否反审核校验 | varchar | 30 |  | √ | '0' | 是否反审核校验,枚举: 0 :否 1 :是 |
+| 31 | fauditdate | fauditdate | timestamp | 0 |  |  | null |  |
+| 32 | fdepartmentid | fdepartmentid | int8 | 64 |  | √ | 0 |  |
+| 33 | fbudgetpronumber | fbudgetpronumber | varchar | 255 |  | √ | ' ' |  |
+| 34 | fctrlstrategy | 控制策略 | varchar | 10 |  |  | null | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
+| 35 | fsystemtype | fsystemtype | varchar | 30 |  | √ | 'SYS' |  |
+| 36 | flevel | 级次 | int8 | 64 |  | √ | 0 | 级次 |
+| 37 | fissys | 是否系统创建 | bpchar | 1 |  | √ | '0' | 是否系统创建 |
+| 38 | fenable | 使用状态 | bpchar | 1 |  |  | null | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 39 | fproaddress | 项目地址 | varchar | 255 |  | √ | ' ' | 项目地址 |
+| 40 | fnumber | 项目编码 | varchar | 80 |  |  | null | 项目编码 |
+| 41 | fuseorgid | 业务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 42 | fpmascreateorgid | fpmascreateorgid | int8 | 64 |  | √ | 0 |  |
+| 43 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
+| 44 | ffullid | ffullid | varchar | 200 |  | √ | ' ' |  |
+| 45 | fauditorid | fauditorid | int8 | 64 |  | √ | 0 |  |
+| 46 | fprojfinalaccount | fprojfinalaccount | varchar | 50 |  | √ | 'B' |  |
 
 ### 列规则定义
 
@@ -97,8 +100,8 @@
 | 1 | idx_t_bd_project_number |  | fnumber |
 | 2 | idx_t_bd_project_ctrlstrategy |  | fctrlstrategy |
 | 3 | idx_t_bd_project_master |  | fmasterid |
-| 4 | idx_t_bd_project_createorg |  | fcreateorgid |
-| 5 | t_bd_project_pkey |  | fid |
+| 4 | t_bd_project_pkey |  | fid |
+| 5 | idx_t_bd_project_createorg |  | fcreateorgid |
 
 ---
 

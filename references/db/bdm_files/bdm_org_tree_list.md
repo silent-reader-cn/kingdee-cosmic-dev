@@ -47,18 +47,18 @@
 | 5 | fdefaultdev | 默认设备 | varchar | 50 |  | √ | ' ' | 默认设备 |
 | 6 | fparentname | 上级组织名称 | varchar | 200 |  | √ | ' ' | 上级组织名称 |
 | 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 8 | fepinfo | 企业信息 | int8 | 64 |  | √ | 0 | 企业基础信息 bdm_enterprise_baseinfo |
+| 8 | fepinfo | 企业信息 | int8 | 64 |  | √ | 0 | [企业基础信息 bdm_enterprise_baseinfo](../bdm_files/bdm_enterprise_baseinfo.md) |
 | 9 | fstatus | 启用状态 | varchar | 30 |  | √ | ' ' | 启用状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 12 | falleaccount | falleaccount | int8 | 64 |  | √ | 0 |  |
 | 13 | fviewtype | 文本6 | varchar | 50 |  | √ | ' ' | 文本6 |
 | 14 | fname | 基础资料name | varchar | 200 |  | √ | ' ' | 基础资料name |
-| 15 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 15 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 16 | fdefaultterminal | fdefaultterminal | varchar | 50 |  | √ | ' ' |  |
 | 17 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 18 | flongnumber | 长编码 | varchar | 200 |  | √ | ' ' | 长编码 |
-| 19 | fparentbase | 上级组织 | int8 | 64 |  | √ | 0 | 树形组织列表 bdm_org_tree_list |
+| 19 | fparentbase | 上级组织 | int8 | 64 |  | √ | 0 | [树形组织列表 bdm_org_tree_list](../bdm_files/bdm_org_tree_list.md) |
 | 20 | fequipmenttype | fequipmenttype | varchar | 60 |  | √ | ' ' |  |
 | 21 | flevel | 级次 | int8 | 64 |  | √ | 0 | 级次 |
 | 22 | fdevlist_tag | 设备列表_详情 | text | 0 |  |  | null | 设备列表_详情 |

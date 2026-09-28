@@ -11,34 +11,34 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fisbadtoinitial_sg | 不良品处理单反审核回初始库存状态 | bpchar | 1 |  | √ | '0' | 不良品处理单反审核回初始库存状态 |
-| 3 | finvstatus_sgid | 请检自动转换库存状态 | int8 | 64 |  | √ | 0 | 库存状态 bd_invstatus |
-| 4 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 5 | ffreezestatusid | 质检冻结库存状态 | int8 | 64 |  | √ | 0 | 库存状态 bd_invstatus |
+| 3 | finvstatus_sgid | 请检自动转换库存状态 | int8 | 64 |  | √ | 0 | [库存状态 bd_invstatus](../sbd_files/bd_invstatus.md) |
+| 4 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 5 | ffreezestatusid | 质检冻结库存状态 | int8 | 64 |  | √ | 0 | [库存状态 bd_invstatus](../sbd_files/bd_invstatus.md) |
 | 6 | fisbadtoinitial | 不良品处理单反审核回初始库存状态 | bpchar | 1 |  | √ | '0' | 不良品处理单反审核回初始库存状态 |
-| 7 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 8 | fdisqualifiedstatusid | 不合格品库存状态 | int8 | 64 |  | √ | 0 | 库存状态 bd_invstatus |
+| 7 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 8 | fdisqualifiedstatusid | 不合格品库存状态 | int8 | 64 |  | √ | 0 | [库存状态 bd_invstatus](../sbd_files/bd_invstatus.md) |
 | 9 | fisfrezz_sg | 请检冻结库存（废弃） | bpchar | 1 |  | √ | '0' | 请检冻结库存（废弃） |
 | 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 11 | finvstatusid | 请检自动转换库存状态 | int8 | 64 |  | √ | 0 | 库存状态 bd_invstatus |
+| 11 | finvstatusid | 请检自动转换库存状态 | int8 | 64 |  | √ | 0 | [库存状态 bd_invstatus](../sbd_files/bd_invstatus.md) |
 | 12 | fstatus | 数据状态 | varchar | 1 |  | √ | 'A' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 15 | fbusinessorgid | 业务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 15 | fbusinessorgid | 业务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 16 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
-| 17 | ffreezstatus_sg | 质检冻结库存状态 | int8 | 64 |  | √ | 0 | 库存状态 bd_invstatus |
+| 17 | ffreezstatus_sg | 质检冻结库存状态 | int8 | 64 |  | √ | 0 | [库存状态 bd_invstatus](../sbd_files/bd_invstatus.md) |
 | 18 | fisinsptoinitial_sg | 检验单反审核自动回初始库存状态 | bpchar | 1 |  | √ | '0' | 检验单反审核自动回初始库存状态 |
-| 19 | fqualifiedstatusid | 合格品目标库存状态 | int8 | 64 |  | √ | 0 | 库存状态 bd_invstatus |
+| 19 | fqualifiedstatusid | 合格品目标库存状态 | int8 | 64 |  | √ | 0 | [库存状态 bd_invstatus](../sbd_files/bd_invstatus.md) |
 | 20 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
-| 21 | fquastatus_sg | 合格品目标库存状态 | int8 | 64 |  | √ | 0 | 库存状态 bd_invstatus |
+| 21 | fquastatus_sg | 合格品目标库存状态 | int8 | 64 |  | √ | 0 | [库存状态 bd_invstatus](../sbd_files/bd_invstatus.md) |
 | 22 | fisallowcrounaudit | 允许跨月单据反审核 | bpchar | 1 |  | √ | '0' | 允许跨月单据反审核 |
 | 23 | finventoryorgid | finventoryorgid | int8 | 64 |  | √ | 0 |  |
 | 24 | fxkallocationtype | 分配类型 | varchar | 30 |  | √ | ' ' | 分配类型,枚举: 1 :个性化 2 :共享型 |
 | 25 | fisfrezzinventory | 请检冻结库存·（废弃） | bpchar | 1 |  | √ | '0' | 请检冻结库存·（废弃） |
-| 26 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 26 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 27 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 28 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 28 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 29 | fisinsptoinitial | 检验单反审核自动回初始库存状态 | bpchar | 1 |  | √ | '0' | 检验单反审核自动回初始库存状态 |
-| 30 | fdisqualstatus_sg | 不合格品库存状态 | int8 | 64 |  | √ | 0 | 库存状态 bd_invstatus |
+| 30 | fdisqualstatus_sg | 不合格品库存状态 | int8 | 64 |  | √ | 0 | [库存状态 bd_invstatus](../sbd_files/bd_invstatus.md) |
 | 31 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 32 | fauditdate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
 | 33 | ffreezetime_sg | 请检冻结触发时机（废弃） | varchar | 1 |  | √ | 'A' | 请检冻结触发时机（废弃）,枚举: B :提交 C :审核 |
@@ -50,7 +50,7 @@
 | 39 | fenable | 使用状态 | varchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 40 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
 | 41 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
-| 42 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 42 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 
@@ -80,8 +80,8 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 3 | fprocessmodeid | 不良品处理方式 | int8 | 64 |  | √ | 0 | 不良品处理方式 bd_badhandmode |
-| 4 | finventorystatusid | 目标库存状态 | int8 | 64 |  | √ | 0 | 库存状态 bd_invstatus |
+| 3 | fprocessmodeid | 不良品处理方式 | int8 | 64 |  | √ | 0 | [不良品处理方式 bd_badhandmode](../basedata_files/bd_badhandmode.md) |
+| 4 | finventorystatusid | 目标库存状态 | int8 | 64 |  | √ | 0 | [库存状态 bd_invstatus](../sbd_files/bd_invstatus.md) |
 | 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 
 ### 列规则定义
@@ -108,7 +108,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义

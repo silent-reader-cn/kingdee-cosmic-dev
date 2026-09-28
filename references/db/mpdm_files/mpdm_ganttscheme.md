@@ -11,25 +11,26 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fmaxlevel | 任务最大层级 | int4 | 32 |  | √ | 0 | 任务最大层级 |
 | 5 | foperatorclass | 操作器实现类 | varchar | 80 |  | √ | ' ' | 操作器实现类 |
-| 6 | fdataentityid | 数据实体 | varchar | 255 |  | √ | ' ' | 业务对象 bos_objecttype |
+| 6 | fdataentityid | 数据实体 | varchar | 255 |  | √ | ' ' | [业务对象 bos_objecttype](../mdl_files/bos_objecttype.md) |
 | 7 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 8 | fimporterclass | 导入器实现类 | varchar | 80 |  | √ | ' ' | 导入器实现类 |
 | 9 | fispreset | 系统预设 | bpchar | 1 |  | √ | ' ' | 系统预设 |
-| 10 | ftaskentityid | 任务实体 | varchar | 255 |  | √ | ' ' | 业务对象 bos_objecttype |
+| 10 | ftaskentityid | 任务实体 | varchar | 255 |  | √ | ' ' | [业务对象 bos_objecttype](../mdl_files/bos_objecttype.md) |
 | 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 12 | fquerierclass | 查询器实现类 | varchar | 80 |  | √ | ' ' | 查询器实现类 |
 | 13 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 14 | fexporterclass | 导出器实现类 | varchar | 80 |  | √ | ' ' | 导出器实现类 |
-| 15 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 16 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 17 | fconvertorclass | 转换器实现类 | varchar | 80 |  | √ | ' ' | 转换器实现类 |
-| 18 | fconfigentityid | 配置实体 | varchar | 255 |  | √ | ' ' | 业务对象 bos_objecttype |
-| 19 | fenable | 使用状态 | bpchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 20 | fnumber | 编码 | varchar | 50 |  | √ | ' ' | 编码 |
-| 21 | fmaxcount | 任务最大数量 | int4 | 32 |  | √ | 0 | 任务最大数量 |
+| 15 | fsavebylevel | 任务按层级保存 | bpchar | 1 |  | √ | ' ' | 任务按层级保存 |
+| 16 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
+| 17 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 18 | fconvertorclass | 转换器实现类 | varchar | 80 |  | √ | ' ' | 转换器实现类 |
+| 19 | fconfigentityid | 配置实体 | varchar | 255 |  | √ | ' ' | [业务对象 bos_objecttype](../mdl_files/bos_objecttype.md) |
+| 20 | fenable | 使用状态 | bpchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 21 | fnumber | 编码 | varchar | 50 |  | √ | ' ' | 编码 |
+| 22 | fmaxcount | 任务最大数量 | int4 | 32 |  | √ | 0 | 任务最大数量 |
 
 ### 列规则定义
 
@@ -56,7 +57,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbizobjectid | 业务对象 | varchar | 255 |  | √ | ' ' | 业务对象 bos_objecttype |
+| 2 | fbizobjectid | 业务对象 | varchar | 255 |  | √ | ' ' | [业务对象 bos_objecttype](../mdl_files/bos_objecttype.md) |
 | 3 | fiscontrolpreset | 系统预设 | bpchar | 1 |  | √ | ' ' | 系统预设 |
 | 4 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 5 | fganttcontrol | 甘特图控件 | varchar | 50 |  | √ | ' ' | 甘特图控件 |

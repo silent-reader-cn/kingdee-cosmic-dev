@@ -13,7 +13,7 @@
 | 2 | fbillentryid | 业务单据分录ID | int8 | 64 |  | √ | 0 | 业务单据分录ID |
 | 3 | fsettlerelationid | 结算路径 | int8 | 64 |  | √ | 0 | 结算路径 |
 | 4 | fbillid | 业务单据ID | int8 | 64 |  | √ | 0 | 业务单据ID |
-| 5 | fbillentityid | 业务对象 | varchar | 50 |  | √ | ' ' | 业务对象 bos_objecttype |
+| 5 | fbillentityid | 业务对象 | varchar | 50 |  | √ | ' ' | [业务对象 bos_objecttype](../mdl_files/bos_objecttype.md) |
 | 6 | fentrykey | 分录实体名 | varchar | 50 |  | √ | ' ' | 分录实体名 |
 
 ### 列规则定义
@@ -27,4 +27,5 @@
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
 | 1 | idx_ism_billsettledata |  | fbillentityid,fbillentryid |
-| 2 | pk_ism_billsettledata |  | fid |
+| 2 | idx_ism_billsettledata_billid |  | fbillid |
+| 3 | pk_ism_billsettledata |  | fid |

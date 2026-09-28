@@ -11,15 +11,15 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | ffilterval_tag | 过滤器_详情 | text | 0 |  |  | null | 过滤器_详情 |
-| 3 | fentitymapping | 实体字段映射 | int8 | 64 |  | √ | 0 | 实体字段映射 mrp_billfieldtransfer |
+| 3 | fentitymapping | 实体字段映射 | int8 | 64 |  | √ | 0 | [实体字段映射 mrp_billfieldtransfer](../msplan_files/mrp_billfieldtransfer.md) |
 | 4 | fbillstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :提交 C :已审核 D :审核 |
-| 5 | fdatasrc | 数据源配置 | int8 | 64 |  | √ | 0 | 数据源配置 mrp_resource_dataconfig |
-| 6 | fentitytype | 实体 | varchar | 50 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 5 | fdatasrc | 数据源配置 | int8 | 64 |  | √ | 0 | [数据源配置 mrp_resource_dataconfig](../msplan_files/mrp_resource_dataconfig.md) |
+| 6 | fentitytype | 实体 | varchar | 50 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 7 | fcreatedatefield | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 8 | fmodifierfield | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | fmodifierfield | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fsrctype | 字段来源类型设置 | varchar | 50 |  | √ | ' ' | 字段来源类型设置,枚举: A :数据源设置 B :实体字段映射 C :实体 |
 | 10 | fmaterialfield | 物料字段 | varchar | 50 |  | √ | ' ' | 物料字段 |
-| 11 | fcreaterfield | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fcreaterfield | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fmodifydatefield | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 13 | fbillstatusfield | 使用状态 | varchar | 30 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 14 | ffilterval | 过滤器 | varchar | 255 |  | √ | ' ' | 过滤器 |

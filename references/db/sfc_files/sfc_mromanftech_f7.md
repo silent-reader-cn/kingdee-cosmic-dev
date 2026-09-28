@@ -21,7 +21,7 @@
 | 10 | foprpageseq | foprpageseq | varchar | 50 |  | √ | ' ' |  |
 | 11 | foprqty | foprqty | numeric | 23 | 10 | √ | 0 |  |
 | 12 | foprtotaljunkqty | foprtotaljunkqty | numeric | 23 | 10 | √ | 0 |  |
-| 13 | foprprofessionaid | 行业 | int8 | 64 |  | √ | 0 | 树形基础资料模板 mpdm_professiona |
+| 13 | foprprofessionaid | 行业 | int8 | 64 |  | √ | 0 | [树形基础资料模板 mpdm_professiona](../mpdm_files/mpdm_professiona.md) |
 | 14 | fmachiningtype | fmachiningtype | varchar | 50 |  | √ | ' ' |  |
 | 15 | foprproductionqty | foprproductionqty | numeric | 23 | 10 | √ | 0 |  |
 | 16 | foprassignorid | foprassignorid | int8 | 64 |  | √ | 0 |  |
@@ -29,13 +29,13 @@
 | 18 | foprworkcenterid | foprworkcenterid | int8 | 64 |  | √ | 0 |  |
 | 19 | foprtaskid | foprtaskid | int8 | 64 |  | √ | 0 |  |
 | 20 | foprworkshopid | foprworkshopid | int8 | 64 |  | √ | 0 |  |
-| 21 | foprprocessgroupid | 工序组 | int8 | 64 |  | √ | 0 | 工序组(废弃) mpdm_progroup |
+| 21 | foprprocessgroupid | 工序组 | int8 | 64 |  | √ | 0 | [工序组(废弃) mpdm_progroup](../mpdm_files/mpdm_progroup.md) |
 | 22 | foproperationid | foproperationid | int8 | 64 |  | √ | 0 |  |
 | 23 | foprsourceentryid | foprsourceentryid | varchar | 50 |  | √ | ' ' |  |
 | 24 | fopractualbegintime | fopractualbegintime | timestamp | 0 |  |  | null |  |
 | 25 | foprwbsid | foprwbsid | int8 | 64 |  | √ | 0 |  |
 | 26 | foprcustomhours | foprcustomhours | numeric | 23 | 10 | √ | 0 |  |
-| 27 | foprworkhourunitid | 工时单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 27 | foprworkhourunitid | 工时单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 28 | fecostcenterid | fecostcenterid | int8 | 64 |  | √ | 0 |  |
 | 29 | foprcheckerid | foprcheckerid | int8 | 64 |  | √ | 0 |  |
 | 30 | fopreffectivehours | fopreffectivehours | numeric | 23 | 10 | √ | 0 |  |

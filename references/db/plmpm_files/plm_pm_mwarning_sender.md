@@ -12,7 +12,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fwarnschedule | 预警监控方案 | varchar | 50 |  | √ | ' ' | 预警监控方案 |
 | 3 | ftype | 消息类型 | varchar | 50 |  | √ | ' ' | 消息类型,枚举: massage :消息 warning :预警 |
-| 4 | fsubscriptionld | 事件订阅 | int8 | 64 |  | √ | 0 | 事件订阅 evt_subscription |
+| 4 | fsubscriptionld | 事件订阅 | int8 | 64 |  | √ | 0 | [事件订阅 evt_subscription](../bec_files/evt_subscription.md) |
 
 ### 列规则定义
 
@@ -39,7 +39,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 项目角色 prjroletemplate |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [项目权限模板 plm_pm_prjrole](../plmpm_files/plm_pm_prjrole.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义

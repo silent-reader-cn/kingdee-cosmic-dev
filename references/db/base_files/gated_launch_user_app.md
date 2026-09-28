@@ -12,7 +12,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fmodifierid | fmodifierid | int8 | 64 |  | √ | 0 |  |
 | 3 | fcreatorid | fcreatorid | int8 | 64 |  | √ | 0 |  |
-| 4 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fcreatetime | fcreatetime | timestamp | 0 |  |  | null |  |
 | 6 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 | 7 | fmodifytime | fmodifytime | timestamp | 0 |  |  | null |  |
@@ -79,7 +79,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 灰度用户分组 gray_user_group |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [灰度用户分组 gray_user_group](../base_files/gray_user_group.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义

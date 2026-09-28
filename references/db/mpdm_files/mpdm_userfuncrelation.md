@@ -10,9 +10,9 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | ffuncsetid | 配置功能项 | int8 | 64 |  | √ | 0 | 移动首页功能 mpdm_functionconfig |
+| 2 | ffuncsetid | 配置功能项 | int8 | 64 |  | √ | 0 | [移动首页功能 mpdm_functionconfig](../mpdm_files/mpdm_functionconfig.md) |
 | 3 | fseqnumber | 顺序号 | int8 | 64 |  | √ | 0 | 顺序号 |
-| 4 | fuserid | 用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fuserid | 用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

@@ -11,9 +11,9 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 渠道公告主题 | varchar | 255 |  | √ | ' ' | 渠道公告主题 |
-| 3 | fcreatorid | 用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fcreatorid | 用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fcreatetime | 浏览时间 | timestamp | 0 |  |  | null | 浏览时间 |
-| 5 | fannounceid | 渠道公告 | int8 | 64 |  | √ | 0 | 渠道公告 occbo_channelannoun |
+| 5 | fannounceid | 渠道公告 | int8 | 64 |  | √ | 0 | [渠道公告 occbo_channelannoun](../occbo_files/occbo_channelannoun.md) |
 | 6 | fnumber | 渠道公告编号 | varchar | 80 |  | √ | ' ' | 渠道公告编号 |
 
 ### 列规则定义

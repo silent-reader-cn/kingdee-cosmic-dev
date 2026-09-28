@@ -71,11 +71,11 @@
 | 2 | ftaxamount | 含税金额 | numeric | 23 | 10 | √ | 0 | 含税金额 |
 | 3 | flevel | 级次 | int8 | 64 |  | √ | 0 | 级次 |
 | 4 | fisleaf | 是否叶子节点 | bpchar | 1 |  | √ | '0' | 是否叶子节点 |
-| 5 | fparentid | 上级成本项目 | int8 | 64 |  | √ | 0 | 成本项目 tdm_costitem |
+| 5 | fparentid | 上级成本项目 | int8 | 64 |  | √ | 0 | [成本项目 tdm_costitem](../tdm_files/tdm_costitem.md) |
 | 6 | ftax | 增值税税额 | numeric | 23 | 10 | √ | 0 | 增值税税额 |
 | 7 | fperiodnum | fperiodnum | int8 | 64 |  | √ | 0 |  |
 | 8 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 9 | fcostitemid | 成本项目编码 | int8 | 64 |  | √ | 0 | 成本项目 tdm_costitem |
+| 9 | fcostitemid | 成本项目编码 | int8 | 64 |  | √ | 0 | [成本项目 tdm_costitem](../tdm_files/tdm_costitem.md) |
 | 10 | famount | 不含税金额 | numeric | 23 | 10 | √ | 0 | 不含税金额 |
 | 11 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 
@@ -104,24 +104,24 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fname | 模板名称 | varchar | 50 |  | √ | ' ' | 模板名称 |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 6 | fuseorg | 使用组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 7 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 8 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | fuseorg | 使用组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 7 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 8 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 10 | fctrlstrategy | 控制策略 | varchar | 50 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
 | 11 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 14 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 15 | fbitindex | 位图 | int8 | 64 |  | √ | 0 | 位图 |
 | 16 | fenable | 使用状态 | varchar | 50 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 17 | fnumber | 模板编码 | varchar | 30 |  | √ | ' ' | 模板编码 |
 | 18 | fsourcebitindex | 原资料位图 | int8 | 64 |  | √ | 0 | 原资料位图 |
-| 19 | ftaxprojectid | 税务项目 | int8 | 64 |  | √ | 0 | 税务项目信息 bastax_taxproject |
+| 19 | ftaxprojectid | 税务项目 | int8 | 64 |  | √ | 0 | [税务项目信息 bastax_taxproject](../bastax_files/bastax_taxproject.md) |
 
 ### 列规则定义
 
@@ -136,5 +136,5 @@
 | 1 | idx_tdm_costtpl_2 |  | fmasterid |
 | 2 | idx_tdm_costtpl_1 |  | fcreateorgid |
 | 3 | idx_t_tdm_costtpl_master |  | fmasterid |
-| 4 | idx_t_tdm_costtpl_createorg |  | fcreateorgid |
-| 5 | pk_tdm_costtpl |  | fid |
+| 4 | pk_tdm_costtpl |  | fid |
+| 5 | idx_t_tdm_costtpl_createorg |  | fcreateorgid |

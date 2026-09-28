@@ -21,7 +21,7 @@
 | 10 | fmodified_time | 处理时间 | timestamp | 0 |  |  | null | 处理时间 |
 | 11 | fnode_title | 节点标题 | varchar | 50 |  | √ | ' ' | 节点标题 |
 | 12 | fstack_trace | 错误信息 | varchar | 255 |  | √ | ' ' | 错误信息 |
-| 13 | fservice_flow_id | 服务流程 | int8 | 64 |  | √ | 0 | 服务流程 isc_service_flow |
+| 13 | fservice_flow_id | 服务流程 | int8 | 64 |  | √ | 0 | [服务流程 isc_service_flow](../iscb_files/isc_service_flow.md) |
 | 14 | factivity_id | 节点实例ID | varchar | 50 |  | √ | ' ' | 节点实例ID |
 
 ### 列规则定义

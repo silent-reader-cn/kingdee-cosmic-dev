@@ -38,7 +38,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fassgrpid | 核算维度 | int8 | 64 |  | √ | 0 | 核算维度 bd_asstacttype |
+| 2 | fassgrpid | 核算维度 | int8 | 64 |  | √ | 0 | [核算维度 bd_asstacttype](../basedata_files/bd_asstacttype.md) |
 | 3 | fpage | 页签 | int8 | 64 |  | √ | 0 | 页签 |
 | 4 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 5 | fposition | 位置 | varchar | 50 |  | √ | ' ' | 位置 |

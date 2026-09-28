@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fuserid | 用户id | int8 | 64 |  | √ | 0 | 用户id |
-| 3 | fpresetverid | 预置数据版本信息 | int8 | 64 |  | √ | 0 | 预置数据版本信息 bd_predata_version |
+| 3 | fpresetverid | 预置数据版本信息 | int8 | 64 |  | √ | 0 | [预置数据版本信息 bd_predata_version](../base_files/bd_predata_version.md) |
 
 ### 列规则定义
 

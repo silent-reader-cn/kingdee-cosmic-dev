@@ -15,7 +15,7 @@
 | 4 | ffilter | 过滤条件 | varchar | 255 |  | √ | ' ' | 过滤条件 |
 | 5 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
 | 6 | ffilter_tag | 过滤条件_详情 | text | 0 |  |  | null | 过滤条件_详情 |
-| 7 | fentityid | 业务对象 | varchar | 80 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 7 | fentityid | 业务对象 | varchar | 80 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 
 ### 列规则定义
 

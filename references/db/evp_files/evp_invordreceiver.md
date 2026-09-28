@@ -11,23 +11,23 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fisintopool | 电子凭证入池 | bpchar | 1 |  | √ | '0' | 电子凭证入池 |
-| 3 | forgid | 核算组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | forgid | 核算组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | fbeginperiod | 权责发生制下支出所属期起 | varchar | 50 |  | √ | ' ' | 权责发生制下支出所属期起 |
 | 5 | fhasbeenpaid | 已付款 | bpchar | 1 |  | √ | '0' | 已付款 |
-| 6 | ffileurl | 原文件地址 | varchar | 500 |  | √ | ' ' | 原文件地址 |
+| 6 | ffileurl | 原文件地址 | varchar | 500 |  |  | ' ' | 原文件地址 |
 | 7 | fendyear | 所得税税前扣除年度止 | varchar | 50 |  | √ | ' ' | 所得税税前扣除年度止 |
 | 8 | farchivebatchcode | 归档批次号 | varchar | 255 |  | √ | ' ' | 归档批次号 |
-| 9 | fcostcompany | 费用承担公司 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 10 | ffilename | 原文件名 | varchar | 2000 |  | √ | ' ' | 原文件名 |
+| 9 | fcostcompany | 费用承担公司 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 10 | ffilename | 原文件名 | varchar | 2000 |  |  | ' ' | 原文件名 |
 | 11 | finvoicenumber | 发票号 | varchar | 50 |  | √ | ' ' | 发票号 |
 | 12 | fcontractnumber | 合同编码 | varchar | 50 |  | √ | ' ' | 合同编码 |
-| 13 | foriginsysid | 集成系统 | int8 | 64 |  | √ | 0 | 集成系统配置 evp_originsys |
+| 13 | foriginsysid | 集成系统 | int8 | 64 |  | √ | 0 | [集成系统配置 evp_originsys](../evp_files/evp_originsys.md) |
 | 14 | ftotalamountexcludingtax | 不含税金额合计 | numeric | 23 | 10 | √ | 0 | 不含税金额合计 |
 | 15 | fbillno | 单据编号 | varchar | 50 |  | √ | ' ' | 单据编号 |
-| 16 | fdirectbillno | 关联单据编号 | varchar | 50 |  | √ | ' ' | 关联单据编号 |
+| 16 | fdirectbillno | 关联单据号 | varchar | 50 |  | √ | ' ' | 关联单据号 |
 | 17 | fvoucherid | 关联凭证id | varchar | 50 |  | √ | ' ' | 关联凭证id |
 | 18 | fbeginyear | 所得税税前扣除年度起 | varchar | 50 |  | √ | ' ' | 所得税税前扣除年度起 |
-| 19 | fperiodid | 会计期间 | int8 | 64 |  | √ | 0 | 会计日历 bd_period |
+| 19 | fperiodid | 会计期间 | int8 | 64 |  | √ | 0 | [会计日历 bd_period](../fibd_files/bd_period.md) |
 | 20 | fseqno | 票据流水号（唯一标识） | varchar | 255 |  | √ | ' ' | 票据流水号（唯一标识） |
 | 21 | famortizationmethod | 固定资产无形资产摊销方法 | varchar | 50 |  | √ | ' ' | 固定资产无形资产摊销方法 |
 | 22 | fdirectbilltype | 关联单据类型 | varchar | 50 |  | √ | ' ' | 关联单据类型 |
@@ -40,27 +40,30 @@
 | 29 | fintopooldate | 入池时间 | timestamp | 0 |  |  | null | 入池时间 |
 | 30 | ftotaltaxamount | 税额合计 | numeric | 23 | 10 | √ | 0 | 税额合计 |
 | 31 | fisredinvoice | 红字发票 | bpchar | 1 |  | √ | '0' | 红字发票 |
-| 32 | foperatorid | 入池操作人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 32 | foperatorid | 入池操作人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 33 | fdirectbillid | 关联单据ID | int8 | 64 |  | √ | 0 | 关联单据ID |
 | 34 | fisdelete | 已删除 | bpchar | 1 |  | √ | '0' | 已删除 |
 | 35 | fvoucherno | 凭证号 | varchar | 50 |  | √ | ' ' | 凭证号 |
 | 36 | fcreatedate | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 37 | fbasetext | 原文件base64 | varchar | 500 |  | √ | ' ' | 原文件base64 |
-| 38 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 38 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 39 | fnameofseller | 销售方名称 | varchar | 255 |  | √ | ' ' | 销售方名称 |
-| 40 | fisarchive | 归档 | bpchar | 1 |  | √ | '0' | 归档 |
-| 41 | felectronicnumber | 银行回单编号 | varchar | 50 |  | √ | ' ' | 银行回单编号 |
-| 42 | fendperiod | 权责发生制下支出所属期止 | varchar | 50 |  | √ | ' ' | 权责发生制下支出所属期止 |
-| 43 | fdateofissue | 开票日期 | timestamp | 0 |  |  | null | 开票日期 |
-| 44 | ftaxsocialcreditcode | 销售方纳税人识别号（统一社会信用代码） | varchar | 50 |  | √ | ' ' | 销售方纳税人识别号（统一社会信用代码） |
-| 45 | fmatchingstate | 业务单据和发票匹配状态 | varchar | 50 |  | √ | ' ' | 业务单据和发票匹配状态 |
-| 46 | fxbrlurl | xbrl文件地址 | varchar | 255 |  | √ | ' ' | xbrl文件地址 |
-| 47 | fbatchcode | 批次号 | varchar | 255 |  | √ | ' ' | 批次号 |
-| 48 | fhasbeenfsos | 已做保理、出售、 资产证券化 | bpchar | 1 |  | √ | '0' | 已做保理、出售、 资产证券化 |
-| 49 | fhasbeenchecked | 已验真 | bpchar | 1 |  | √ | '0' | 已验真 |
-| 50 | fhasbeenbooked | 已入账 | bpchar | 1 |  | √ | '0' | 已入账 |
-| 51 | ftaxincludedamountinfigur | 价税合计（小写） | numeric | 23 | 10 | √ | 0 | 价税合计（小写） |
-| 52 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 40 | fsourcexbrl | 原始xbrl | varchar | 1000 |  | √ | ' ' | 原始xbrl |
+| 41 | fisarchive | 归档 | bpchar | 1 |  | √ | '0' | 归档 |
+| 42 | fsourcexbrldata_tag | 原始xbrlbase64_详情 | text | 0 |  |  | null | 原始xbrlbase64_详情 |
+| 43 | felectronicnumber | 银行回单编号 | varchar | 50 |  | √ | ' ' | 银行回单编号 |
+| 44 | fendperiod | 权责发生制下支出所属期止 | varchar | 50 |  | √ | ' ' | 权责发生制下支出所属期止 |
+| 45 | fdateofissue | 开票日期 | timestamp | 0 |  |  | null | 开票日期 |
+| 46 | ftaxsocialcreditcode | 销售方纳税人识别号（统一社会信用代码） | varchar | 50 |  | √ | ' ' | 销售方纳税人识别号（统一社会信用代码） |
+| 47 | fsourcexbrldata | 原始xbrlbase64 | varchar | 255 |  | √ | ' ' | 原始xbrlbase64 |
+| 48 | fmatchingstate | 业务单据和发票匹配状态 | varchar | 50 |  | √ | ' ' | 业务单据和发票匹配状态 |
+| 49 | fxbrlurl | xbrl文件地址 | varchar | 500 |  |  | ' ' | xbrl文件地址 |
+| 50 | fbatchcode | 批次号 | varchar | 255 |  | √ | ' ' | 批次号 |
+| 51 | fhasbeenfsos | 已做保理、出售、 资产证券化 | bpchar | 1 |  | √ | '0' | 已做保理、出售、 资产证券化 |
+| 52 | fhasbeenchecked | 已验真 | bpchar | 1 |  | √ | '0' | 已验真 |
+| 53 | fhasbeenbooked | 已入账 | bpchar | 1 |  | √ | '0' | 已入账 |
+| 54 | ftaxincludedamountinfigur | 价税合计（小写） | numeric | 23 | 10 | √ | 0 | 价税合计（小写） |
+| 55 | fcurrencyid | 币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 
 ### 列规则定义
 

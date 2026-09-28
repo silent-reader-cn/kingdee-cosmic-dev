@@ -11,23 +11,23 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fdisabledate | 禁用日期 | timestamp | 0 |  |  | null | 禁用日期 |
-| 3 | fdestentityid | 目标单 | varchar | 50 |  | √ | ' ' | 单据主实体 bos_billmainentity |
+| 3 | fdestentityid | 目标单 | varchar | 50 |  | √ | ' ' | [单据主实体 bos_billmainentity](../mdl_files/bos_billmainentity.md) |
 | 4 | fispreset | 是否系统预置 | bpchar | 1 |  | √ | '0' | 是否系统预置 |
 | 5 | fmodifytime | 最后更新时间 | timestamp | 0 |  |  | null | 最后更新时间 |
 | 6 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 7 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 7 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 8 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 9 | fsrclkprop | 源单关联属性 | varchar | 50 |  | √ | ' ' | 源单关联属性,枚举: 1 :源单单头id 2 :源单分录id |
-| 10 | fsrcentityid | 源单 | varchar | 50 |  | √ | ' ' | 单据主实体 bos_billmainentity |
-| 11 | fenablerid | 启用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fsrcentityid | 源单 | varchar | 50 |  | √ | ' ' | [单据主实体 bos_billmainentity](../mdl_files/bos_billmainentity.md) |
+| 11 | fenablerid | 启用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | ffilter | 数据过滤条件 | varchar | 255 |  | √ | ' ' | 数据过滤条件 |
 | 13 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
-| 14 | fmodifierid | 最后更新人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fmodifierid | 最后更新人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | fiscustomentity | 自定义源单 | bpchar | 1 |  | √ | '0' | 自定义源单 |
 | 16 | fcomment | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
 | 17 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 18 | fenabledate | 启用日期 | timestamp | 0 |  |  | null | 启用日期 |
-| 19 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 19 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 20 | ffilter_tag | 数据过滤条件_详情 | text | 0 |  |  | ' ' | 数据过滤条件_详情 |
 | 21 | foperate | 注册操作 | varchar | 30 |  | √ | ' ' | 注册操作,枚举: save :保存 submit :提交 delete :删除 |
 | 22 | fdestlkfield | 目标关联字段 | varchar | 50 |  | √ | ' ' | 目标关联字段 |

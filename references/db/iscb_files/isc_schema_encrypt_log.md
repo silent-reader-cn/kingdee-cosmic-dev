@@ -13,7 +13,7 @@
 | 2 | fname | 集成对象名称 | varchar | 150 |  | √ | ' ' | 集成对象名称 |
 | 3 | flog_tag | 数据脱敏操作_详情 | text | 0 |  |  | null | 数据脱敏操作_详情 |
 | 4 | ftype | 操作类型 | varchar | 50 |  | √ | ' ' | 操作类型 |
-| 5 | fcreatorid | 操作人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | fcreatorid | 操作人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | fcreatetime | 操作时间 | timestamp | 0 |  |  | null | 操作时间 |
 | 7 | fnumber | 集成对象编码 | varchar | 150 |  | √ | ' ' | 集成对象编码 |
 | 8 | fschemaid | 集成对象id | varchar | 50 |  | √ | ' ' | 集成对象id |

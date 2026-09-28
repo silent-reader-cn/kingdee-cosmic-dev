@@ -11,8 +11,8 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fcreatedate | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
-| 3 | fthumbupuser | 点赞用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 4 | fbythumbupuser | 被点赞用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fthumbupuser | 点赞用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 4 | fbythumbupuser | 被点赞用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fsource | 来源单据编码 | varchar | 50 |  | √ | ' ' | 来源单据编码 |
 
 ### 列规则定义

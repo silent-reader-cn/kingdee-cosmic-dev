@@ -10,16 +10,16 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 3 | frelationtypeid | 关系类型 | int8 | 64 |  | √ | 0 | 单据关系类型 bpm_billrelationtype |
+| 2 | fname | 名称 | varchar | 500 |  | √ | ' ' | 名称 |
+| 3 | frelationtypeid | 关系类型 | int8 | 64 |  | √ | 0 | [单据关系类型 bpm_billrelationtype](../bpm_files/bpm_billrelationtype.md) |
 | 4 | frelationtype | 关系类型 | varchar | 50 |  | √ | ' ' | 关系类型,枚举: |
-| 5 | ftargetbill | 目标单 | varchar | 200 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 5 | ftargetbill | 目标单 | varchar | 200 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 6 | fpreinsert | 内置数据 | bpchar | 1 |  | √ | '0' | 内置数据 |
 | 7 | fenable | 启用 | bpchar | 1 |  | √ | '1' | 启用 |
 | 8 | fnumber | 编码 | varchar | 50 |  | √ | ' ' | 编码 |
-| 9 | fsrcbill | 源单 | varchar | 200 |  | √ | ' ' | 主实体对象 bos_entityobject |
-| 10 | fdescription | 描述 | varchar | 500 |  | √ | ' ' | 描述 |
-| 11 | fparamjson | 参数 | text | 0 |  |  | null | 参数 |
+| 9 | fsrcbill | 源单 | varchar | 200 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
+| 10 | fparamjson | 参数 | text | 0 |  |  | null | 参数 |
+| 11 | fdescription | 描述 | varchar | 500 |  | √ | ' ' | 描述 |
 
 ### 列规则定义
 
@@ -32,8 +32,8 @@
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
 | 1 | idx_bpm_relationmodel_number |  | fnumber |
-| 2 | idx_bpm_relationmodel_bill |  | ftargetbill,fsrcbill |
-| 3 | pk_t_bpm_relationmodel |  | fid |
+| 2 | pk_t_bpm_relationmodel |  | fid |
+| 3 | idx_bpm_relationmodel_bill |  | ftargetbill,fsrcbill |
 
 ---
 

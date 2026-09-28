@@ -11,12 +11,12 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | foperate | 操作 | varchar | 30 |  | √ | ' ' | 操作,枚举: 0 :新增 1 :删除 |
-| 3 | fgroupid | 许可分组 | int8 | 64 |  | √ | 0 | 许可分组 lic_group |
+| 3 | fgroupid | 许可分组 | int8 | 64 |  | √ | 0 | [许可分组 lic_group](../base_files/lic_group.md) |
 | 4 | fstatus | 分配状态 | varchar | 30 |  | √ | ' ' | 分配状态 |
-| 5 | foptime | 操作日期 | timestamp | 0 |  |  | null | 操作日期 |
+| 5 | foptime | 操作时间 | timestamp | 0 |  |  | null | 操作时间 |
 | 6 | foperatetype | 分配来源 | varchar | 30 |  | √ | '1' | 分配来源,枚举: 1 :授权分配 2 :手动分配 3 :用户平台分配 4 :接口分配 5 :自动分配 6 :重新分配 0 :其它 |
-| 7 | fopuserid | 操作用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 8 | fassignuserid | 分配用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 7 | fopuserid | 操作用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 8 | fassignuserid | 分配用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fdescription | 描述 | varchar | 255 |  | √ | ' ' | 描述 |
 
 ### 列规则定义

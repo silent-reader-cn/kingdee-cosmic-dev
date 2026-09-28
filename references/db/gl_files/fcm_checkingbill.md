@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fbillnumber | 单据编码 | varchar | 30 |  | √ | ' ' | 单据编码 |
-| 3 | fname | 结账检查对象 | varchar | 100 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 3 | fname | 结账检查对象 | varchar | 100 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 4 | forgpropvalue | 组织规则 | varchar | 50 |  | √ | ' ' | 组织规则,枚举: |
 | 5 | fperiodpropvalue | 期间规则 | varchar | 50 |  | √ | ' ' | 期间规则,枚举: |
 | 6 | fcreatetime | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |

@@ -11,9 +11,9 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fremark | 备注 | varchar | 300 |  | √ | ' ' | 备注 |
-| 3 | fsrc_db_id | 来源数据库 | int8 | 64 |  | √ | 0 | 连接器配置 isc_database_link |
+| 3 | fsrc_db_id | 来源数据库 | int8 | 64 |  | √ | 0 | [连接器配置 isc_database_link](../iscb_files/isc_database_link.md) |
 | 4 | fbytes_count | 总字节数（MB） | int8 | 64 |  | √ | 0 | 总字节数（MB） |
-| 5 | fcreator_id | 执行人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | fcreator_id | 执行人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | fomitted_count | 忽略数据表个数 | int4 | 32 |  | √ | 0 | 忽略数据表个数 |
 | 7 | fremark_tag | 备注_详情 | text | 0 |  |  | null | 备注_详情 |
 | 8 | fbatch_size | 批处理大小 | int4 | 32 |  | √ | 0 | 批处理大小 |
@@ -28,7 +28,7 @@
 | 17 | fcreated_time | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 18 | fstate | 状态 | varchar | 30 |  | √ | ' ' | 状态,枚举: READY :就绪 SUCCESS :完成 FAILED :失败 ABORTED :撤销 RUNNING :执行中 |
 | 19 | fsuccess_count | 完成数据表个数 | int4 | 32 |  | √ | 0 | 完成数据表个数 |
-| 20 | ftar_db_id | 目标数据库 | int8 | 64 |  | √ | 0 | 连接器配置 isc_database_link |
+| 20 | ftar_db_id | 目标数据库 | int8 | 64 |  | √ | 0 | [连接器配置 isc_database_link](../iscb_files/isc_database_link.md) |
 | 21 | ffailed_count | 失败数据表个数 | int4 | 32 |  | √ | 0 | 失败数据表个数 |
 | 22 | fnumber | 任务编码 | varchar | 50 |  | √ | ' ' | 任务编码 |
 | 23 | fexclusive_tab_patterns | 忽略表模式 | varchar | 1000 |  | √ | ' ' | 忽略表模式 |

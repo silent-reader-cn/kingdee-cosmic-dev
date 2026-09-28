@@ -12,7 +12,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | ferrcontinue | 开票失败是否继续 | bpchar | 1 |  | √ | ' ' | 开票失败是否继续 |
 | 3 | fissueinvoiceorder | 开票顺序规则 | varchar | 50 |  | √ | ' ' | 开票顺序规则,枚举: |
-| 4 | forg | 组织 | int8 | 64 |  | √ | 0 | 企业管理 bdm_org |
+| 4 | forg | 组织 | int8 | 64 |  | √ | 0 | [企业管理 bdm_org](../bdm_files/bdm_org.md) |
 | 5 | ffieldtolong | 字段超长处理规则 | varchar | 50 |  | √ | ' ' | 字段超长处理规则,枚举: 1 :超长提示 2 :超长截取 |
 
 ### 列规则定义

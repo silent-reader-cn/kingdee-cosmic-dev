@@ -10,9 +10,9 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fuserpositionid | 人员任职 | int8 | 64 |  | √ | 0 | 人员任职 bos_userposition |
+| 2 | fuserpositionid | 人员任职 | int8 | 64 |  | √ | 0 | [人员任职 bos_userposition](../base_files/bos_userposition.md) |
 | 3 | fisdisplay | 显示 | varchar | 1 |  | √ | ' ' | 显示 |
-| 4 | fviewid | 行政组织视图 | int8 | 64 |  | √ | 0 | 组织视图方案 bos_org_viewschema |
+| 4 | fviewid | 行政组织视图 | int8 | 64 |  | √ | 0 | [组织视图方案 bos_org_viewschema](../base_files/bos_org_viewschema.md) |
 
 ### 列规则定义
 

@@ -12,7 +12,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | ftablebody | 规则 | text | 0 |  |  | null | 规则 |
 | 3 | ftablehead | 参数 | text | 0 |  |  | null | 参数 |
-| 4 | fpolicyid | 所属策略 | int8 | 64 |  | √ | 0 | 策略管理 plm_rengine_policy |
+| 4 | fpolicyid | 所属策略 | int8 | 64 |  | √ | 0 | [策略管理 plm_rengine_policy](../plmsm_files/plm_rengine_policy.md) |
 
 ### 列规则定义
 

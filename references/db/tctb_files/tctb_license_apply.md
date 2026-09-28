@@ -10,13 +10,13 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 3 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 3 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fbillstatus | 单据状态 | varchar | 50 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 6 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
-| 7 | fbillno | 申请编号 | varchar | 30 |  | √ | ' ' | 申请编号 |
-| 8 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 7 | fbillno | 单据编号 | varchar | 30 |  | √ | ' ' | 单据编号 |
+| 8 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 
 ### 列规则定义
@@ -44,14 +44,15 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fgroupid | 分组 | int8 | 64 |  | √ | 0 | 许可分组 tctb_license_group |
+| 2 | fgroupid | 分组 | int8 | 64 |  | √ | 0 | [许可分组 tctb_license_group](../tctb_files/tctb_license_group.md) |
 | 3 | fmodifydate | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
-| 4 | flicenseid | licenseid | int8 | 64 |  | √ | 0 | licenseid |
-| 5 | forgid | 组织编码 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 6 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 7 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 8 | fapplystatus | 申请状态 | varchar | 50 |  | √ | ' ' | 申请状态,枚举: A :授权 B :注销 |
-| 9 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 4 | ftaxsys | 税收制度 | int8 | 64 |  | √ | 1 | [税收制度 bd_taxationsys](../basedata_files/bd_taxationsys.md) |
+| 5 | flicenseid | licenseid | int8 | 64 |  | √ | 0 | licenseid |
+| 6 | forgid | 组织编码 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 7 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
+| 8 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 9 | fapplystatus | 申请状态 | varchar | 50 |  | √ | ' ' | 申请状态,枚举: A :授权 B :注销 |
+| 10 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 
 ### 列规则定义
 

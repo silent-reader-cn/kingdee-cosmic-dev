@@ -10,8 +10,8 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fuserid | 用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 3 | flangid | 语言 | int8 | 64 |  | √ | 0 | 语言种类 inte_language |
+| 2 | fuserid | 用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 3 | flangid | 语言 | int8 | 64 |  | √ | 0 | [语言种类 inte_language](../base_files/inte_language.md) |
 
 ### 列规则定义
 

@@ -40,23 +40,24 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 名称 | varchar | 80 |  | √ | ' ' | 名称 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 5 | ffilterscheme | 自定义过滤条件 | varchar | 2000 |  | √ | ' ' | 自定义过滤条件 |
-| 6 | fcalresultid | 计算结果 | varchar | 40 |  | √ | ' ' | 主实体对象 bos_entityobject |
-| 7 | fnodatamodel | 无结果输出时处理 | bpchar | 1 |  | √ | 'A' | 无结果输出时处理,枚举: A :不生成目标对象 B :生成目标对象 |
-| 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 9 | fpolicytargetid | 政策对象 | varchar | 40 |  | √ | ' ' | 主实体对象 bos_entityobject |
-| 10 | fstatus | 数据状态 | bpchar | 1 |  | √ | 'A' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 11 | foutputid | 输出目标 | varchar | 40 |  | √ | ' ' | 主实体对象 bos_entityobject |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 13 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 14 | frebatemodelid | 返利计算模型 | varchar | 40 |  | √ | ' ' | 主实体对象 bos_entityobject |
-| 15 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 16 | frebateschemaid | 返利计算方案 | int8 | 64 |  | √ | 0 | 返利计算方案 msrcs_rebateschema |
-| 17 | fplugin | 插件 | varchar | 255 |  | √ | ' ' | 插件 |
-| 18 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
-| 19 | fissyspreset | 是否预置 | bpchar | 1 |  | √ | '0' | 是否预置 |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 4 | finterfacerule | 界面规则 | varchar | 50 |  | √ | ' ' | 界面规则,枚举: |
+| 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 6 | ffilterscheme | 自定义过滤条件 | varchar | 2000 |  | √ | ' ' | 自定义过滤条件 |
+| 7 | fcalresultid | 计算结果 | varchar | 40 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
+| 8 | fnodatamodel | 无结果输出时处理 | bpchar | 1 |  | √ | 'A' | 无结果输出时处理,枚举: A :不生成目标对象 B :生成目标对象 |
+| 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 10 | fpolicytargetid | 政策对象 | varchar | 40 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
+| 11 | fstatus | 数据状态 | bpchar | 1 |  | √ | 'A' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
+| 12 | foutputid | 输出目标 | varchar | 40 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
+| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 14 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
+| 15 | frebatemodelid | 返利计算模型 | varchar | 40 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
+| 16 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 17 | frebateschemaid | 返利计算方案 | int8 | 64 |  | √ | 0 | [返利计算方案 msrcs_rebateschema](../msrcs_files/msrcs_rebateschema.md) |
+| 18 | fplugin | 插件 | varchar | 255 |  | √ | ' ' | 插件 |
+| 19 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
+| 20 | fissyspreset | 是否预置 | bpchar | 1 |  | √ | '0' | 是否预置 |
 
 ### 列规则定义
 
@@ -85,9 +86,9 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fupdatetype | 更新策略 | bpchar | 1 |  | √ | ' ' | 更新策略,枚举: A :新增修改全更新 B :仅新增更新 |
 | 3 | ffieldformula | 计算公式 | varchar | 2000 |  | √ | ' ' | 计算公式 |
-| 4 | fhandtype | 控制方式 | bpchar | 1 |  | √ | ' ' | 控制方式,枚举: A :单头主键 B :分录主键 C :行数据重复时合并数据 |
+| 4 | fhandtype | 控制方式 | bpchar | 1 |  | √ | ' ' | 控制方式,枚举: A :单头主键 B :分录主键 C :行数据重复时合并数据 D :数据删除标识字段 |
 | 5 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 6 | fsourcefieldtype | 源字段来源 | bpchar | 1 |  | √ | ' ' | 源字段来源,枚举: A :返利模型 B :政策对象 C :输出目标 D :计算结果 |
+| 6 | fsourcefieldtype | 源字段来源 | bpchar | 1 |  | √ | ' ' | 源字段来源,枚举: A :计算结果 B :政策对象 C :输出目标 |
 | 7 | fvaluetype | 取值方式 | bpchar | 1 |  | √ | ' ' | 取值方式,枚举: 0 :源字段 1 :计算公式 2 :按条件取值 3 :常量 |
 | 8 | fsname | 源字段名称 | varchar | 80 |  | √ | ' ' | 源字段名称 |
 | 9 | fconditionformula | 条件取值计算公式 | varchar | 255 |  | √ | ' ' | 条件取值计算公式 |

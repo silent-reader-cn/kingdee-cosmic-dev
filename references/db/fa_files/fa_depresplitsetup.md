@@ -43,7 +43,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 核算维度 bd_asstacttype |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [核算维度 bd_asstacttype](../basedata_files/bd_asstacttype.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -71,28 +71,28 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreateorgid | 货主组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fcreateorgid | 货主组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fname | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 6 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fmsg | 折旧费分摊信息 | text | 0 |  |  | null | 折旧费分摊信息 |
-| 8 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 9 | frealcardid | 资产卡片 | int8 | 64 |  | √ | 0 | 资产卡片基础资料 fa_card_real_base |
-| 10 | fpolicyid | 会计政策 | int8 | 64 |  | √ | 0 | 会计政策 xkbd_policy |
+| 8 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 9 | frealcardid | 资产卡片 | int8 | 64 |  | √ | 0 | [资产卡片基础资料 fa_card_real_base](../fa_files/fa_card_real_base.md) |
+| 10 | fpolicyid | 会计政策 | int8 | 64 |  | √ | 0 | [会计政策 xkbd_policy](../fibd_files/xkbd_policy.md) |
 | 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 12 | fctrlstrategy | 控制策略 | varchar | 10 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
 | 13 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 16 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
-| 17 | fendperiodid | 失效期间 | int8 | 64 |  | √ | 0 | 会计日历 bd_period |
+| 17 | fendperiodid | 失效期间 | int8 | 64 |  | √ | 0 | [会计日历 bd_period](../fibd_files/bd_period.md) |
 | 18 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
 | 19 | fenable | 使用状态 | bpchar | 1 |  | √ | '0' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 20 | fbeginperiodid | 生效开始期间 | int8 | 64 |  | √ | 0 | 会计日历 bd_period |
+| 20 | fbeginperiodid | 生效开始期间 | int8 | 64 |  | √ | 0 | [会计日历 bd_period](../fibd_files/bd_period.md) |
 | 21 | fnumber | 编号 | varchar | 80 |  | √ | ' ' | 编号 |
 | 22 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
-| 23 | fdepreuseid | 折旧用途 | int8 | 64 |  | √ | 0 | 折旧用途 fa_depreuse |
+| 23 | fdepreuseid | 折旧用途 | int8 | 64 |  | √ | 0 | [折旧用途 fa_depreuse](../fa_files/fa_depreuse.md) |
 
 ### 列规则定义
 
@@ -105,8 +105,8 @@
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
 | 1 | idx_t_fa_depresplitsetup_master |  | fmasterid |
-| 2 | idx_fa_depresplitsetup |  | forgid,fdepreuseid,fbeginperiodid,fendperiodid |
-| 3 | idx_t_fa_depresplitsetup_createorg |  | fcreateorgid |
+| 2 | idx_t_fa_depresplitsetup_createorg |  | fcreateorgid |
+| 3 | idx_fa_depresplitsetup |  | forgid,fdepreuseid,fbeginperiodid,fendperiodid |
 | 4 | t_fa_depresplitsetup_pkey |  | fid |
 | 5 | idx_fa_depresplitsetupcard |  | frealcardid |
 
@@ -209,10 +209,10 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 4 | forgdutyid | 部门属性 | int8 | 64 |  | √ | 0 | 部门属性 bos_org_duty |
+| 4 | forgdutyid | 部门属性 | int8 | 64 |  | √ | 0 | [部门属性 bos_org_duty](../base_files/bos_org_duty.md) |
 | 5 | fassinfo | 横表组合信息 | varchar | 4000 |  |  | null | 横表组合信息 |
 | 6 | fpercent | 分摊比例(%) | numeric | 19 | 6 | √ | 0.000000 | 分摊比例(%) |
-| 7 | fassinfoimport | 横表组合信息(引入) | varchar | 4000 |  |  | null | 横表组合信息(引入) |
+| 7 | fassinfoimport | 横表组合信息(导入) | varchar | 4000 |  |  | null | 横表组合信息(导入) |
 
 ### 列规则定义
 

@@ -1,8 +1,8 @@
-# 资产加速折旧&#x2f;摊销-tccit_assert_acce_depre
+# 资产加速折旧/摊销-tccit_assert_acce_depre
 
-## 资产加速折旧&#x2f;摊销-主表 t_tccit_assert_acce_depre
+## 资产加速折旧/摊销-主表 t_tccit_assert_acce_depre
 
-- **表名称：** 资产加速折旧&#x2f;摊销-主表
+- **表名称：** 资产加速折旧/摊销-主表
 - **表名：** t_tccit_assert_acce_depre
 
 ### 表格列定义

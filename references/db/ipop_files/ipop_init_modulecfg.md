@@ -11,10 +11,10 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | findex | 排序 | int4 | 32 |  | √ | 0 | 排序 |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 6 | flicensegroup | 许可分组/模块 | int8 | 64 |  | √ | 0 | 模块许可分组配置 ipop_init_licgroupcfg |
+| 6 | flicensegroup | 许可分组/模块 | int8 | 64 |  | √ | 0 | [模块许可分组配置 ipop_init_licgroupcfg](../ipop_files/ipop_init_licgroupcfg.md) |
 | 7 | fneedassignment | 是否需要分配任务 | bpchar | 1 |  | √ | ' ' | 是否需要分配任务 |
 | 8 | fbizfunctionkey | 检验的职能 | varchar | 50 |  | √ | ' ' | 检验的职能,枚举: all : fispurchase :采购职能 fissale :销售职能 fisproduce :生产职能 fisinventory :库存职能 fissettlement :结算职能 fisqc :质检职能 fisbankroll :收付职能 fisasset :资产职能 fistax :税务职能 |
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
@@ -23,7 +23,7 @@
 | 12 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 13 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 14 | ftype | 初始化类型 | bpchar | 1 |  | √ | ' ' | 初始化类型,枚举: 1 :系统初始化 2 :基础资料准备 3 :业务初始化 4 :对账 |
-| 15 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 15 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 16 | faccountingtype | 校验组织类型 | varchar | 10 |  | √ | ' ' | 校验组织类型,枚举: 0 : 1 :法人 2 :利润中心 |
 | 17 | fcheckbizfunction | 是否校验职能 | bpchar | 1 |  | √ | ' ' | 是否校验职能 |
 | 18 | fshowbyorg | 是否按组织显示 | bpchar | 1 |  | √ | ' ' | 是否按组织显示 |

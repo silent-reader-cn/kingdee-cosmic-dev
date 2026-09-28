@@ -44,7 +44,7 @@
 | 4 | fregisteraddress | 注册登记区域： | varchar | 50 |  | √ | ' ' | 注册登记区域： |
 | 5 | ftemplateid | 申报表模板 | varchar | 50 |  | √ | ' ' | 申报表模板 |
 | 6 | fstartdate | 开始时间： | timestamp | 0 |  |  | null | 开始时间： |
-| 7 | forgid | 组织名称： | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 7 | forgid | 组织名称： | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | fnewrule | 执行新准则： | varchar | 50 |  | √ | ' ' | 执行新准则：,枚举: yes :已执行 no :未执行 |
 | 9 | freporttype | 报表类型 | varchar | 50 |  | √ | ' ' | 报表类型,枚举: aysb :月度 ajsb :季度 ansb :年度 |
 | 10 | fdeclaretype | 申报企业类型： | varchar | 50 |  | √ | ' ' | 申报企业类型：,枚举: 100 :非跨地区经营企业 210 :总机构（跨省）——适用《跨地区经营汇总纳税企业所得税征收管理办法》 220 :总机构（跨省）——不适用《跨地区经营汇总纳税企业所得税征收管理办法》 230 :总机构（省内） 311 :分支机构（须进行完整年度申报并按比例纳税） 312 :分支机构（须进行完整年度申报但不就地缴纳） |

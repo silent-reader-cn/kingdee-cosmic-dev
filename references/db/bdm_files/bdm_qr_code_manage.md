@@ -16,7 +16,7 @@
 | 5 | fdefaultdev | fdefaultdev | varchar | 50 |  | √ | ' ' |  |
 | 6 | fparentname | fparentname | varchar | 200 |  | √ | ' ' |  |
 | 7 | fmodifytime | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
-| 8 | fepinfo | 企业信息 | int8 | 64 |  | √ | 0 | 企业基础信息 bdm_enterprise_baseinfo |
+| 8 | fepinfo | 企业信息 | int8 | 64 |  | √ | 0 | [企业基础信息 bdm_enterprise_baseinfo](../bdm_files/bdm_enterprise_baseinfo.md) |
 | 9 | fstatus | fstatus | varchar | 30 |  | √ | ' ' |  |
 | 10 | fcreatorid | fcreatorid | int8 | 64 |  | √ | 0 |  |
 | 11 | fmasterid | fmasterid | int8 | 64 |  | √ | 0 |  |

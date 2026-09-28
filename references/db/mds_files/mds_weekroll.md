@@ -45,22 +45,22 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fstime | 启动时间 | timestamp | 0 |  |  | null | 启动时间 |
-| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | fcalculatepro | 计算进度 | numeric | 23 | 10 | √ | 0.0000000000 | 计算进度 |
-| 5 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 7 | fplanid | 任务号 | varchar | 50 |  | √ | ' ' | 任务号 |
 | 8 | fstatus | 单据状态 | varchar | 5 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :计划 C :终止 D :关闭 |
 | 9 | faccstatus | 任务状态 | varchar | 5 |  | √ | ' ' | 任务状态,枚举: A :暂存 B :计划 C :终止 D :关闭 |
 | 10 | fsummin | 计算总时长（秒） | numeric | 23 | 10 | √ | 0.0000000000 | 计算总时长（秒） |
-| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 13 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 14 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
 | 15 | fsetval | 设置数据 | varchar | 2000 |  | √ | ' ' | 设置数据 |
 | 16 | fetime | 结束时间 | timestamp | 0 |  |  | null | 结束时间 |
-| 17 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 18 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 17 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 18 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 19 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 20 | fjobid | 作业号 | varchar | 50 |  | √ | ' ' | 作业号 |
 | 21 | fctrlstrategy | 控制策略 | varchar | 50 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
@@ -181,7 +181,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fentrymodifier | fentrymodifier | int8 | 64 |  | √ | 0 |  |
-| 3 | fverid | 周滚动版本 | int8 | 64 |  | √ | 0 | 版本定义 mds_vrds |
+| 3 | fverid | 周滚动版本 | int8 | 64 |  | √ | 0 | [版本定义 mds_vrds](../mds_files/mds_vrds.md) |
 | 4 | fentrycreatedate | fentrycreatedate | timestamp | 0 |  |  | null |  |
 | 5 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
@@ -215,7 +215,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fentrymodifier | fentrymodifier | int8 | 64 |  | √ | 0 |  |
 | 3 | fentrycreatedate | fentrycreatedate | timestamp | 0 |  |  | null |  |
-| 4 | fsetid | 发货取数 | int8 | 64 |  | √ | 0 | 数据源配置 mrp_resource_dataconf_rgt |
+| 4 | fsetid | 发货取数 | int8 | 64 |  | √ | 0 | [数据源配置 mrp_resource_dataconf_rgt](../msplan_files/mrp_resource_dataconf_rgt.md) |
 | 5 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 7 | fentrycreator | fentrycreator | int8 | 64 |  | √ | 0 |  |

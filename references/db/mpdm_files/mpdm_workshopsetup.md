@@ -13,7 +13,7 @@
 | 2 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 3 | fisbackflush | 默认倒冲 | bpchar | 1 |  | √ | '0' | 默认倒冲 |
 | 4 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 5 | fwarehouse | 编码 | int8 | 64 |  | √ | 0 | 仓库 bd_warehouse |
+| 5 | fwarehouse | 编码 | int8 | 64 |  | √ | 0 | [仓库 bd_warehouse](../sbd_files/bd_warehouse.md) |
 
 ### 列规则定义
 
@@ -71,39 +71,41 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fworkprincipal | 车间负责人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 4 | fcalendar | 生产日历 | int8 | 64 |  | √ | 0 | 生产日历 mpdm_calendar |
+| 2 | fworkprincipal | 车间负责人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 4 | fcalendar | 生产日历 | int8 | 64 |  | √ | 0 | [生产日历 mpdm_calendar](../mpdm_files/mpdm_calendar.md) |
 | 5 | fremakes | 备注 | varchar | 100 |  | √ | ' ' | 备注 |
-| 6 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fadvanceday | 领料提前期(天数) | int8 | 64 |  | √ | 0 | 领料提前期(天数) |
 | 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 9 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 10 | fclasssystem | 班制 | int8 | 64 |  | √ | 0 | 班制 mpdm_classsystem |
-| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fclasssystem | 班制 | int8 | 64 |  | √ | 0 | [班制 mpdm_classsystem](../mpdm_files/mpdm_classsystem.md) |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 13 | fautoday | 自动投放天数 | int8 | 64 |  | √ | 0 | 自动投放天数 |
 | 14 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 15 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
-| 16 | fcreateorgid | 生产组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 17 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 18 | fworkshoporgid | 车间 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 16 | fcreateorgid | 生产组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 17 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 18 | fworkshoporgid | 车间 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 19 | fdepttype | 部门类型 | varchar | 5 |  | √ | ' ' | 部门类型,枚举: A :离散制造 B :重复制造 |
-| 20 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 21 | fisprotransferbill | 内协工序启用转移单 | bpchar | 1 |  | √ | '0' | 内协工序启用转移单 |
-| 22 | fwarehouseid | 发料仓库 | int8 | 64 |  | √ | 0 | 仓库 bd_warehouse |
-| 23 | fctrlstrategy | 控制策略 | varchar | 30 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
-| 24 | fauditer | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 25 | fsubmitdate | 提交时间 | timestamp | 0 |  |  | null | 提交时间 |
-| 26 | fispropicking | 启用工序领料 | bpchar | 1 |  | √ | '0' | 启用工序领料 |
-| 27 | flocationid | 发料仓位 | int8 | 64 |  | √ | 0 | 仓位 bd_location |
-| 28 | fenable | 使用状态 | varchar | 30 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 29 | fnumber | 编码 | varchar | 60 |  | √ | ' ' | 编码 |
-| 30 | fsubmiter | 提交人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 31 | faduitdate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
-| 32 | fsupplyorgid | 发料组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 33 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
-| 34 | fisdefault | 默认 | bpchar | 1 |  | √ | '0' | 默认 |
+| 20 | fbondedwarehouseid | 保税仓库 | int8 | 64 |  | √ | 0 | [仓库 bd_warehouse](../sbd_files/bd_warehouse.md) |
+| 21 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 22 | fisprotransferbill | 内协工序启用转移单 | bpchar | 1 |  | √ | '0' | 内协工序启用转移单 |
+| 23 | fwarehouseid | 发料仓库 | int8 | 64 |  | √ | 0 | [仓库 bd_warehouse](../sbd_files/bd_warehouse.md) |
+| 24 | fbondedlocationid | 保税仓位 | int8 | 64 |  | √ | 0 | [仓位 bd_location](../sbd_files/bd_location.md) |
+| 25 | fctrlstrategy | 控制策略 | varchar | 30 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
+| 26 | fauditer | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 27 | fsubmitdate | 提交时间 | timestamp | 0 |  |  | null | 提交时间 |
+| 28 | fispropicking | 启用工序领料 | bpchar | 1 |  | √ | '0' | 启用工序领料 |
+| 29 | flocationid | 发料仓位 | int8 | 64 |  | √ | 0 | [仓位 bd_location](../sbd_files/bd_location.md) |
+| 30 | fenable | 使用状态 | varchar | 30 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 31 | fnumber | 编码 | varchar | 60 |  | √ | ' ' | 编码 |
+| 32 | fsubmiter | 提交人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 33 | faduitdate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
+| 34 | fsupplyorgid | 发料组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 35 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
+| 36 | fisdefault | 默认 | bpchar | 1 |  | √ | '0' | 默认 |
 
 ### 列规则定义
 
@@ -161,7 +163,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fname | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
+| 2 | fname | 名称 | varchar | 225 |  | √ | ' ' | 名称 |
 | 3 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
 | 4 | fpkid | fpkid | varchar | 18 |  | √ | ' ' | pkid |
 

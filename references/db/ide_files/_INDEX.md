@@ -18,7 +18,7 @@
 | 6 | `t_bas_metatpl_l` | 页面模板-多语言表 | 6 | [bos_metatemplate.md](./bos_metatemplate.md) |
 | 7 | `t_bas_metatplcat` | 页面模板分类-主表 | 16 | [bos_metatemplatecategory.md](./bos_metatemplatecategory.md) |
 | 8 | `t_bas_metatplcat_l` | 页面模板分类-多语言表 | 5 | [bos_metatemplatecategory.md](./bos_metatemplatecategory.md) |
-| 9 | `t_bas_pictureresource` | 图片编辑-主表 | 18 | [ide_pictureresediter.md](./ide_pictureresediter.md) |
+| 9 | `t_bas_pictureresource` | 图片编辑-主表 | 19 | [ide_pictureresediter.md](./ide_pictureresediter.md) |
 | 10 | `t_bas_pictureresource_l` | 图片编辑-多语言表 | 5 | [ide_pictureresediter.md](./ide_pictureresediter.md) |
 | 11 | `t_bas_programgroup` | 方案模板分组-主表 | 13 | [bos_schemegroup.md](./bos_schemegroup.md) |
 | 12 | `t_bas_programgroup_l` | 方案模板分组-多语言表 | 5 | [bos_schemegroup.md](./bos_schemegroup.md) |
@@ -26,5 +26,5 @@
 | 14 | `t_bas_programtemplate_l` | 方案模板-多语言表 | 5 | [bos_schemetemplate.md](./bos_schemetemplate.md) |
 | 15 | `t_bas_resourcecategory` | 图片分类-主表 | 14 | [bos_resourcecategory.md](./bos_resourcecategory.md) |
 | 16 | `t_bas_resourcecategory_l` | 图片分类-多语言表 | 5 | [bos_resourcecategory.md](./bos_resourcecategory.md) |
-| 17 | `t_meta_mainentityinfo` | 业务政策-主表 | 0 | [bos_bizpolicyobject.md](./bos_bizpolicyobject.md) |
-| 18 | `t_meta_mainentityinfo_l` | 业务政策-多语言表 | 0 | [bos_bizpolicyobject.md](./bos_bizpolicyobject.md) |
+| 17 | `t_meta_mainentityinfo` | 业务政策-主表 | 23 | [bos_bizpolicyobject.md](./bos_bizpolicyobject.md) |
+| 18 | `t_meta_mainentityinfo_l` | 业务政策-多语言表 | 4 | [bos_bizpolicyobject.md](./bos_bizpolicyobject.md) |

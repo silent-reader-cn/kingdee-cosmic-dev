@@ -10,8 +10,8 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fgroupid | 许可分组 | int8 | 64 |  | √ | 0 | 许可分组 lic_group |
-| 3 | forgid | 组织机构 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fgroupid | 许可分组 | int8 | 64 |  | √ | 0 | [许可分组 lic_group](../base_files/lic_group.md) |
+| 3 | forgid | 组织机构 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | fassignednum | 分配数量 | int4 | 32 |  | √ | 0 | 分配数量 |
 | 5 | fusednum | 使用数量 | int4 | 32 |  | √ | 0 | 使用数量 |
 

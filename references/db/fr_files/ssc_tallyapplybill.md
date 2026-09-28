@@ -11,19 +11,19 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | freversalmark | 冲销标识 | bpchar | 1 |  | √ | '1' | 冲销标识,枚举: 1 :未冲销单 2 :冲销单 3 :已冲销单 |
-| 3 | fmainbiztype | 报账业务类型 | int8 | 64 |  | √ | 0 | 报账业务类型 bd_businessitem |
-| 4 | fcompany | 申请人公司 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | fmainbiztype | 报账业务类型 | int8 | 64 |  | √ | 0 | [报账业务类型 bd_businessitem](../fibd_files/bd_businessitem.md) |
+| 4 | fcompany | 申请人公司 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 6 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 7 | ftallyamounttotal | 记账金额合计(本位币) | numeric | 23 | 10 | √ | 0.00 | 记账金额合计(本位币) |
 | 8 | fdepartment | 部门名称 | varchar | 60 |  | √ | ' ' | 部门名称 |
 | 9 | fposition | 职位 | varchar | 60 |  | √ | ' ' | 职位 |
 | 10 | fbillno | 单据编号 | varchar | 80 |  | √ | ' ' | 单据编号 |
-| 11 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fvoucherid | 凭证id | varchar | 60 |  | √ | ' ' | 凭证id |
 | 13 | fbillstatus | 单据状态 | bpchar | 1 |  | √ | 'A' | 单据状态,枚举: A :暂存 B :已提交 C :审核中 D :审核通过 E :审核不通过 F :废弃 |
 | 14 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 15 | fdept | 部门 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 15 | fdept | 部门 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 16 | fvouchernumber | 凭证号 | varchar | 60 |  | √ | ' ' | 凭证号 |
 | 17 | fiscurrency | 多币别 | bpchar | 1 |  | √ | '0' | 多币别 |
 | 18 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
@@ -33,11 +33,11 @@
 | 22 | fapplierid | fapplierid | int8 | 64 |  | √ | 0 |  |
 | 23 | fattachmentacount | 附件数 | int8 | 64 |  | √ | 0 | 附件数 |
 | 24 | fimagenumber | 影像编码 | varchar | 60 |  | √ | ' ' | 影像编码 |
-| 25 | forgcurrency | 组织本位币 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 25 | forgcurrency | 组织本位币 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 | 26 | fbizdate | 申请日期 | timestamp | 0 |  |  | null | 申请日期 |
-| 27 | ftallycompany | 核算组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 27 | ftallycompany | 核算组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 28 | fnextauditor | 下一步审核人 | varchar | 60 |  | √ | ' ' | 下一步审核人 |
-| 29 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 29 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 
@@ -82,8 +82,8 @@
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
 | 1 | idx_tk_tallyapplybill_tc_tid |  | ftid |
-| 2 | t_tk_tallyapplybill_tc_pkey |  | fid |
-| 3 | idx_tk_tallyapplybill_tc_tbill |  | ftbillid |
+| 2 | idx_tk_tallyapplybill_tc_tbill |  | ftbillid |
+| 3 | t_tk_tallyapplybill_tc_pkey |  | fid |
 
 ---
 
@@ -98,18 +98,18 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | ftaxamount | ftaxamount | numeric | 23 | 10 | √ | 0.00 |  |
-| 3 | fcustomer | 客户 | int8 | 64 |  | √ | 0 | 客户 bd_customer |
-| 4 | fexratetable | 汇率表 | int8 | 64 |  | √ | 0 | 汇率表 bd_exratetable |
-| 5 | fentrycurrency | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 3 | fcustomer | 客户 | int8 | 64 |  | √ | 0 | [客户 bd_customer](../basedata_files/bd_customer.md) |
+| 4 | fexratetable | 汇率表 | int8 | 64 |  | √ | 0 | [汇率表 bd_exratetable](../base_files/bd_exratetable.md) |
+| 5 | fentrycurrency | 币别 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 | 6 | fstardandtaxamount | fstardandtaxamount | numeric | 23 | 10 | √ | 0.00 |  |
 | 7 | fstandardtallyamount | 记账金额(本位币) | numeric | 23 | 10 | √ | 0.00 | 记账金额(本位币) |
 | 8 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 9 | fexchangerate | 汇率 | numeric | 19 | 4 | √ | 0.0000 | 汇率 |
-| 10 | fbizdetailtype | 业务项目 | int8 | 64 |  | √ | 0 | 费用项目 er_expenseitemedit |
-| 11 | fsupplier | 供应商 | int8 | 64 |  | √ | 0 | 供应商 bd_supplier |
-| 12 | ftallydeptid | 部门 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 10 | fbizdetailtype | 业务项目 | int8 | 64 |  | √ | 0 | [费用项目 er_expenseitemedit](../basedata_files/er_expenseitemedit.md) |
+| 11 | fsupplier | 供应商 | int8 | 64 |  | √ | 0 | [供应商 bd_supplier](../basedata_files/bd_supplier.md) |
+| 12 | ftallydeptid | 部门 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 13 | fbusinessdate | 业务日期 | timestamp | 0 |  |  | null | 业务日期 |
-| 14 | fcostcenter | 成本中心 | int8 | 64 |  | √ | 0 | 成本中心 bos_costcenter |
+| 14 | fcostcenter | 成本中心 | int8 | 64 |  | √ | 0 | [成本中心 bos_costcenter](../basedata_files/bos_costcenter.md) |
 | 15 | ftallyamount | 记账金额 | numeric | 23 | 10 | √ | 0.00 | 记账金额 |
 | 16 | fexratedate | 汇率日期 | timestamp | 0 |  |  | null | 汇率日期 |
 | 17 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 | id |

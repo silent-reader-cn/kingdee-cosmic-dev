@@ -10,14 +10,14 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fisfirst | 是否第一期间 | bpchar | 1 |  | √ | '0' | 是否第一期间 |
-| 4 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 5 | fperiodid | 期间 | int8 | 64 |  | √ | 0 | 会计日历 bd_period |
+| 4 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 5 | fperiodid | 期间 | int8 | 64 |  | √ | 0 | [会计日历 bd_period](../fibd_files/bd_period.md) |
 | 6 | fbillstatus | 计提状态 | varchar | 5 |  | √ | ' ' | 计提状态,枚举: A :未计提 B :已计提 |
-| 7 | fpolicytypeid | 政策类型 | int8 | 64 |  | √ | 0 | 政策类型 ar_policytype |
+| 7 | fpolicytypeid | 政策类型 | int8 | 64 |  | √ | 0 | [政策类型 ar_policytype](../ar_files/ar_policytype.md) |
 | 8 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 9 | forgid | 结算组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 9 | forgid | 结算组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 10 | fpolicyid | 应收政策ID | int8 | 64 |  | √ | 0 | 应收政策ID |
 | 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 

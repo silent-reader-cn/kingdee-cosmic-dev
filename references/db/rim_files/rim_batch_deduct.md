@@ -14,7 +14,7 @@
 | 3 | fis_all_ele | 是否全电企业 | varchar | 2 |  | √ | ' ' | 是否全电企业,枚举: 0 :否 1 :是 |
 | 4 | ftaxpayer_tax_no | 企业税号 | varchar | 32 |  | √ | ' ' | 企业税号 |
 | 5 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 6 | ftaxpayer_org | 组织名称 | int8 | 64 |  | √ | 0 | 企业管理 bdm_org |
+| 6 | ftaxpayer_org | 组织名称 | int8 | 64 |  | √ | 0 | [企业管理 bdm_org](../bdm_files/bdm_org.md) |
 | 7 | fconfirm_secret | 确认签名密码 | varchar | 32 |  | √ | ' ' | 确认签名密码 |
 | 8 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 
@@ -47,9 +47,9 @@
 | 2 | fname | 方案名称 | varchar | 50 |  | √ | ' ' | 方案名称 |
 | 3 | fcreatedate | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
 | 4 | fmodifydate | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
-| 5 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | fnumber | 方案编码 | varchar | 50 |  | √ | ' ' | 方案编码 |
-| 7 | forg | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 7 | forg | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 
 ### 列规则定义
 

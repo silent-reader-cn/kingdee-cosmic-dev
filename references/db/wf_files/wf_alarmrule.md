@@ -10,19 +10,20 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreator | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fcreator | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fname | 名称 | varchar | 200 |  | √ | ' ' | 名称 |
 | 4 | fchannelname | 渠道名称 | varchar | 200 |  | √ | ' ' | 渠道名称 |
 | 5 | ftimes | 报警次数 | int4 | 32 |  | √ | 0 | 报警次数 |
-| 6 | freceiver | 接收人 | varchar | 500 |  | √ | ' ' | 接收人 |
-| 7 | falarmscene | 报警场景 | varchar | 50 |  | √ | ' ' | 报警场景,枚举: plugintimeouterror :插件执行超时 errorAddress :寻址异常没有进入流程时 conflict :找到多条满足条件的流程而没有进入流程时 notFind :无匹配的流程而没有进入流程时 |
-| 8 | finterval | 报警间隔 | int4 | 32 |  | √ | 0 | 报警间隔 |
-| 9 | fcreatedate | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 10 | fconfig | 配置参数 | varchar | 500 |  | √ | ' ' | 配置参数 |
-| 11 | fenable | 是否启用 | bpchar | 1 |  | √ | '0' | 是否启用 |
-| 12 | fnumber | 编码 | varchar | 50 |  | √ | ' ' | 编码 |
-| 13 | fchannel | 发送渠道 | varchar | 200 |  | √ | ' ' | 发送渠道,枚举: |
-| 14 | freceivername | 接收人名称 | varchar | 500 |  | √ | ' ' | 接收人名称 |
+| 6 | fappnumber | 应用编码 | varchar | 20 |  | √ | 'wf' | 应用编码,枚举: wf :工作流 bec :业务实事件中心 |
+| 7 | freceiver | 接收人 | varchar | 500 |  | √ | ' ' | 接收人 |
+| 8 | falarmscene | 报警场景 | varchar | 50 |  | √ | ' ' | 报警场景,枚举: plugintimeouterror :插件执行超时 errorAddress :寻址异常没有进入流程时 conflict :找到多条满足条件的流程而没有进入流程时 notFind :无匹配的流程而没有进入流程时 |
+| 9 | finterval | 报警间隔 | int4 | 32 |  | √ | 0 | 报警间隔 |
+| 10 | fcreatedate | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 11 | fconfig | 配置参数 | varchar | 500 |  | √ | ' ' | 配置参数 |
+| 12 | fenable | 是否启用 | bpchar | 1 |  | √ | '0' | 是否启用 |
+| 13 | fnumber | 编码 | varchar | 50 |  | √ | ' ' | 编码 |
+| 14 | fchannel | 发送渠道 | varchar | 200 |  | √ | ' ' | 发送渠道,枚举: |
+| 15 | freceivername | 接收人名称 | varchar | 500 |  | √ | ' ' | 接收人名称 |
 
 ### 列规则定义
 

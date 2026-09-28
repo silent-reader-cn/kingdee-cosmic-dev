@@ -73,12 +73,12 @@
 | 2 | fbuyeraddr | 购方地址电话 | varchar | 150 |  | √ | ' ' | 购方地址电话 |
 | 3 | fdrawer | 开票人 | varchar | 50 |  | √ | ' ' | 开票人 |
 | 4 | ftotalamount | 价税合计 | numeric | 23 | 10 | √ | 0.0000000000 | 价税合计 |
-| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | forgid | 核算组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | ftaxedtype | 征税方式 | varchar | 8 |  | √ | ' ' | 征税方式,枚举: 0 :普通征税 |
 | 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 8 | finvoicecopy | 联次发票 | varchar | 30 |  | √ | ' ' | 联次发票,枚举: -1 :无 二联 :二联 三联 :三联 五联 :五联 |
 | 9 | fsalerbankacc | 销方银行账号(废弃) | varchar | 50 |  | √ | ' ' | 销方银行账号(废弃) |
-| 10 | fbaseinvoicetype | 基础发票种类 | int8 | 64 |  | √ | 0 | 发票类型 bd_invoicetype |
+| 10 | fbaseinvoicetype | 基础发票种类 | int8 | 64 |  | √ | 0 | [发票种类 bd_invoicetype](../basedata_files/bd_invoicetype.md) |
 | 11 | fsaleraddr | 销方地址电话 | varchar | 150 |  | √ | ' ' | 销方地址电话 |
 | 12 | finvoicecode | 发票代码 | varchar | 50 |  | √ | ' ' | 发票代码 |
 | 13 | fissuewritebackreason | 开票回写失败原因 | varchar | 100 |  | √ | ' ' | 开票回写失败原因 |
@@ -87,13 +87,13 @@
 | 16 | finvoiceno | 发票号码 | varchar | 50 |  | √ | ' ' | 发票号码 |
 | 17 | fbillno | 单据编号 | varchar | 50 |  | √ | ' ' | 单据编号 |
 | 18 | fsalertaxno | 销方纳税人识别号 | varchar | 50 |  | √ | ' ' | 销方纳税人识别号 |
-| 19 | fmaintaxorg | 税务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 19 | fmaintaxorg | 税务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 20 | foriginalinvoiceno | 原发票号码 | varchar | 50 |  | √ | ' ' | 原发票号码 |
 | 21 | fdeduction | 扣除额 | numeric | 23 | 10 | √ | 0.0000000000 | 扣除额 |
 | 22 | fbuyerphone | 购方手机号 | varchar | 50 |  | √ | ' ' | 购方手机号 |
 | 23 | forderno | 发票流水号 | varchar | 50 |  | √ | ' ' | 发票流水号 |
 | 24 | fsalertelno | 销方电话(废弃) | varchar | 50 |  | √ | ' ' | 销方电话(废弃) |
-| 25 | finvoicetype | 发票种类 | varchar | 8 |  | √ | ' ' | 发票种类,枚举: 026 :电子普通发票 028 :电子专用发票 007 :纸质普通发票 004 :纸质专用发票 025 :增值税普通发票（卷票） 10xdp :全电发票（普通发票） 08xdp :全电发票（增值税专用发票） |
+| 25 | finvoicetype | 发票类型 | varchar | 8 |  | √ | ' ' | 发票类型,枚举: 026 :电子普通发票 028 :电子专用发票 007 :纸质普通发票 004 :纸质专用发票 025 :增值税普通发票（卷票） 10xdp :全电发票（普通发票） 08xdp :全电发票（增值税专用发票） |
 | 26 | foriginalinvoicecode | 原发票代码 | varchar | 50 |  | √ | ' ' | 原发票代码 |
 | 27 | fbuyerbank | 购方开户行及账号 | varchar | 150 |  | √ | ' ' | 购方开户行及账号 |
 | 28 | fsalername | 销方名称 | varchar | 100 |  | √ | ' ' | 销方名称 |
@@ -112,10 +112,10 @@
 | 41 | fissuetime | 开票日期 | timestamp | 0 |  |  | null | 开票日期 |
 | 42 | fsourcetype | fsourcetype | varchar | 30 |  | √ | ' ' |  |
 | 43 | freviewer | 复核人 | varchar | 50 |  | √ | ' ' | 复核人 |
-| 44 | fbuyertaxno | 购方纳税人识别号 | varchar | 50 |  | √ | ' ' | 购方纳税人识别号 |
+| 44 | fbuyertaxno | 购方税号 | varchar | 50 |  | √ | ' ' | 购方税号 |
 | 45 | fsalerbank | 销方开户行及账号 | varchar | 150 |  | √ | ' ' | 销方开户行及账号 |
 | 46 | fremark | 备注 | varchar | 512 |  | √ | ' ' | 备注 |
-| 47 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 47 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 48 | fsplitorder | 拆分顺序 | int4 | 32 |  | √ | 1 | 拆分顺序 |
 | 49 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 50 | fapplicant | 红字信息表申请方 | varchar | 50 |  | √ | ' ' | 红字信息表申请方,枚举: 2 :销方申请 1 :购方申请-未抵扣 0 :购方申请-已抵扣 |
@@ -158,7 +158,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fadvancepaymentstatus | 预缴标识 | varchar | 50 |  | √ | ' ' | 预缴标识,枚举: 10 :不预缴 20 :未预缴 30 :待预缴 40 :已预缴 |
+| 2 | fadvancepaymentstatus | 预缴状态 | varchar | 50 |  | √ | ' ' | 预缴状态,枚举: 10 :不预缴 20 :未预缴 30 :待预缴 40 :已预缴 |
 
 ### 列规则定义
 
@@ -216,9 +216,9 @@
 | 31 | fcanredtaxamount | 可红冲税额 | numeric | 23 | 10 | √ | 0.0000000000 | 可红冲税额 |
 | 32 | fissuestatus | 开票状态 | varchar | 30 |  | √ | ' ' | 开票状态,枚举: 2 :未开票 4 :已提交 1 :开票中 0 :已开票 3 :开票失败 |
 | 33 | fcontraststatus | 对账状态 | varchar | 8 |  | √ | ' ' | 对账状态,枚举: 0 :失败 1 :成功 |
-| 34 | fproject | 项目 | int8 | 64 |  | √ | 0 | 预缴项目信息 tcvat_prepay_project_info |
+| 34 | fproject | 项目 | int8 | 64 |  | √ | 0 | [预缴项目信息 tcvat_prepay_project_info](../tcvat_files/tcvat_prepay_project_info.md) |
 | 35 | fsnapshoturl | 快照url | varchar | 330 |  | √ | ' ' | 快照url |
-| 36 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 36 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 37 | fterminalno | 终端编号 | varchar | 50 |  | √ | ' ' | 终端编号 |
 | 38 | fbuyertype | 数据来源 | varchar | 50 |  | √ | ' ' | 数据来源,枚举: 0 :单张 1 :批量导入 2 :数据同步 3 :接口同步 4 :单据拆合 5 :作废重开 6 :空白作废 7 :扫码开票 8 :excel导入 9 :进项下载 10 :公有云同步 11 :手工新增红字信息表编号 |
 | 39 | fabolishtype | 作废类型 | varchar | 5 |  | √ | ' ' | 作废类型,枚举: 0 :发票作废 1 :空白作废 |
@@ -230,8 +230,8 @@
 | 45 | fskm | 税控码 | varchar | 500 |  | √ | ' ' | 税控码 |
 | 46 | finvalider | 作废人 | varchar | 50 |  | √ | ' ' | 作废人 |
 | 47 | fxxbbh | fxxbbh | varchar | 20 |  | √ | ' ' |  |
-| 48 | foperator | 经办人 | int8 | 64 |  | √ | 0 | 经办人信息 bdm_operator_info |
-| 49 | finfocode | 红字信息表编号 | varchar | 50 |  | √ | ' ' | 红字信息表编号 |
+| 48 | foperator | 经办人 | int8 | 64 |  | √ | 0 | [经办人信息 bdm_operator_info](../bdm_files/bdm_operator_info.md) |
+| 49 | finfocode | 红字信息表编号/红字确认单编号 | varchar | 50 |  | √ | ' ' | 红字信息表编号/红字确认单编号 |
 | 50 | fthirdserialno | 第三方流水号 | varchar | 50 |  | √ | ' ' | 第三方流水号 |
 | 51 | fdatahash | 数据hash校验 | varchar | 50 |  | √ | ' ' | 数据hash校验 |
 | 52 | fbuyerproperty | 购方企业类型 | varchar | 30 |  | √ | ' ' | 购方企业类型,枚举: 0 :企业 1 :个人 |

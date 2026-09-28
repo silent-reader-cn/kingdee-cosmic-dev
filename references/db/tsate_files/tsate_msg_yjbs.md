@@ -14,27 +14,30 @@
 | 3 | fdetaillog | fdetaillog | varchar | 255 |  | √ | ' ' |  |
 | 4 | ftasktype | ftasktype | int8 | 64 |  | √ | 0 |  |
 | 5 | forgid | forgid | int8 | 64 |  | √ | 0 |  |
-| 6 | fmodifytime | fmodifytime | timestamp | 0 |  |  | null |  |
-| 7 | fcreatorid | fcreatorid | int8 | 64 |  | √ | 0 |  |
-| 8 | fskssqz | fskssqz | timestamp | 0 |  |  | null |  |
-| 9 | fsbqj | fsbqj | timestamp | 0 |  |  | null |  |
-| 10 | ftaxtype | ftaxtype | int8 | 64 |  | √ | 0 |  |
-| 11 | fbillno | fbillno | varchar | 100 |  | √ | ' ' |  |
-| 12 | fchannel | fchannel | varchar | 50 |  | √ | ' ' |  |
-| 13 | fmodifierid | fmodifierid | int8 | 64 |  | √ | 0 |  |
-| 14 | fdeclarechannel | fdeclarechannel | int8 | 64 |  | √ | 0 |  |
-| 15 | fbillstatus | fbillstatus | varchar | 50 |  | √ | ' ' |  |
-| 16 | fcreatetime | fcreatetime | timestamp | 0 |  |  | null |  |
-| 17 | fexecutestatus | fexecutestatus | varchar | 50 |  | √ | ' ' |  |
-| 18 | fauditdate | fauditdate | timestamp | 0 |  |  | null |  |
-| 19 | fskssqq | fskssqq | timestamp | 0 |  |  | null |  |
-| 20 | fpiclog | fpiclog | varchar | 255 |  | √ | ' ' |  |
-| 21 | ftype | ftype | varchar | 50 |  | √ | ' ' |  |
-| 22 | fdeallog | fdeallog | varchar | 255 |  | √ | ' ' |  |
-| 23 | fsbbid | fsbbid | varchar | 50 |  | √ | ' ' |  |
-| 24 | fexecutetype | fexecutetype | varchar | 50 |  | √ | ' ' |  |
-| 25 | fauditorid | fauditorid | int8 | 64 |  | √ | 0 |  |
-| 26 | flogdetail | flogdetail | varchar | 1000 |  | √ | ' ' |  |
+| 6 | fdimentionindex | fdimentionindex | varchar | 100 |  | √ | ' ' |  |
+| 7 | fmodifytime | fmodifytime | timestamp | 0 |  |  | null |  |
+| 8 | fcreatorid | fcreatorid | int8 | 64 |  | √ | 0 |  |
+| 9 | fskssqz | fskssqz | timestamp | 0 |  |  | null |  |
+| 10 | fsbqj | fsbqj | timestamp | 0 |  |  | null |  |
+| 11 | ftaxtype | ftaxtype | int8 | 64 |  | √ | 0 |  |
+| 12 | fbillno | fbillno | varchar | 100 |  | √ | ' ' |  |
+| 13 | fchannel | fchannel | varchar | 50 |  | √ | ' ' |  |
+| 14 | fmodifierid | fmodifierid | int8 | 64 |  | √ | 0 |  |
+| 15 | fdeclarechannel | fdeclarechannel | int8 | 64 |  | √ | 0 |  |
+| 16 | fbillstatus | fbillstatus | varchar | 50 |  | √ | ' ' |  |
+| 17 | fcreatetime | fcreatetime | timestamp | 0 |  |  | null |  |
+| 18 | fexecutestatus | fexecutestatus | varchar | 50 |  | √ | ' ' |  |
+| 19 | fauditdate | fauditdate | timestamp | 0 |  |  | null |  |
+| 20 | ftaskcontext | ftaskcontext | varchar | 255 |  | √ | ' ' |  |
+| 21 | fskssqq | fskssqq | timestamp | 0 |  |  | null |  |
+| 22 | ftaskcontext_tag | ftaskcontext_tag | text | 0 |  |  | null |  |
+| 23 | fpiclog | fpiclog | varchar | 255 |  | √ | ' ' |  |
+| 24 | ftype | ftype | varchar | 50 |  | √ | ' ' |  |
+| 25 | fdeallog | fdeallog | varchar | 255 |  | √ | ' ' |  |
+| 26 | fsbbid | fsbbid | varchar | 50 |  | √ | ' ' |  |
+| 27 | fexecutetype | fexecutetype | varchar | 50 |  | √ | ' ' |  |
+| 28 | fauditorid | fauditorid | int8 | 64 |  | √ | 0 |  |
+| 29 | flogdetail | flogdetail | varchar | 1000 |  | √ | ' ' |  |
 
 ### 列规则定义
 
@@ -47,5 +50,7 @@
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
 | 1 | pk_tsate_declare_record |  | fid |
-| 2 | idx_t_tsate_declare_record_1 |  | fsbbid |
-| 3 | idx_tsate_declare_record |  | forgid,ftype,fskssqq,fskssqz |
+| 2 | idx_t_taste_declare_record_3 |  | fdimentionindex |
+| 3 | idx_t_tsate_declare_record_1 |  | fsbbid |
+| 4 | idx_tsate_declare_record |  | forgid,ftype,fskssqq,fskssqz |
+| 5 | idx_t_tsate_declare_record_2 |  | fcreatetime,fexecutetype |

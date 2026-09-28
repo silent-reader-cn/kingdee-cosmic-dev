@@ -9,12 +9,12 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | 集团方案 | int8 | 64 |  | √ | 0 | 集团名册 tcvvt_group_book |
+| 1 | fid | 集团方案 | int8 | 64 |  | √ | 0 | [集团名册 tcvvt_group_book](../tcvvt_files/tcvvt_group_book.md) |
 | 2 | forgcode | forgcode | varchar | 50 |  | √ | ' ' |  |
 | 3 | fleverno | 企业管理层级编号 | varchar | 50 |  | √ | ' ' | 企业管理层级编号 |
-| 4 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 4 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | fseq | fseq | int8 | 64 |  | √ | 0 |  |
-| 6 | fregistertypeid | 登记注册类型 | int8 | 64 |  | √ | 0 | 注册登记类型 tax_info_registertype |
+| 6 | fregistertypeid | 登记注册类型 | int8 | 64 |  | √ | 0 | [注册登记类型 tax_info_registertype](../tctb_files/tax_info_registertype.md) |
 | 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 8 | fcreditcode | 统一社会信用代码 | varchar | 50 |  | √ | ' ' | 统一社会信用代码 |
 | 9 | fstockno | 股票代码 | varchar | 50 |  | √ | ' ' | 股票代码 |
@@ -25,7 +25,7 @@
 | 14 | flocaltaxorg | 地税局主管税务机关 | varchar | 50 |  | √ | ' ' | 地税局主管税务机关 |
 | 15 | fnationtaxorg | 国税局主管税务机关 | varchar | 50 |  | √ | ' ' | 国税局主管税务机关 |
 | 16 | fremark | fremark | varchar | 200 |  | √ | ' ' |  |
-| 17 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 17 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 18 | fparentid | 父组织id | int8 | 64 |  | √ | 0 | 父组织id |
 | 19 | felectronicfileno | 电子档案号 | varchar | 50 |  | √ | ' ' | 电子档案号 |
 | 20 | fisvirtualnode | 是否为虚拟结点 | varchar | 30 |  | √ | ' ' | 是否为虚拟结点,枚举: 1 :是 2 :否 |

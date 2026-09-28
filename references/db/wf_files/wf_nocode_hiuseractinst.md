@@ -25,8 +25,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_wf_nocode_hiuseractinst_l |  | fid,flocaleid |
-| 2 | pk_wf_nocode_hiuseractinst_l |  | fpkid |
+| 1 | pk_wf_nocode_hiuseractinst_l |  | fpkid |
+| 2 | idx_wf_nocode_hiuseractinst_l |  | fid,flocaleid |
 
 ---
 

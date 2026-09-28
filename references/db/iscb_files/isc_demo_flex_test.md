@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fbillino | 编码 | varchar | 50 |  | √ | ' ' | 编码 |
-| 3 | fentry_demo | 弹性域demo | int8 | 64 |  | √ | 0 | 弹性域配置测试 isc_demo_flex |
+| 3 | fentry_demo | 弹性域demo | int8 | 64 |  | √ | 0 | [弹性域配置测试 isc_demo_flex](../iscb_files/isc_demo_flex.md) |
 | 4 | fentry_flex | 弹性域 | int8 | 64 |  | √ | 0 | null 002 |
 | 5 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
@@ -43,7 +43,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fflex | 弹性域 | int8 | 64 |  | √ | 0 | null 002 |
 | 3 | fflexfield | fflexfield | int8 | 64 |  | √ | 0 |  |
-| 4 | fbasedatafield | 弹性域demo | int8 | 64 |  | √ | 0 | 弹性域配置测试 isc_demo_flex |
+| 4 | fbasedatafield | 弹性域demo | int8 | 64 |  | √ | 0 | [弹性域配置测试 isc_demo_flex](../iscb_files/isc_demo_flex.md) |
 | 5 | fnumber | 编码 | varchar | 50 |  | √ | ' ' | 编码 |
 
 ### 列规则定义

@@ -9,15 +9,15 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | spu | int8 | 64 |  | √ | 0 | 商品SPU ocdbd_spu |
+| 1 | fid | spu | int8 | 64 |  | √ | 0 | [商品SPU ocdbd_spu](../ocdbd_files/ocdbd_spu.md) |
 | 2 | fspumapname | 规格组合值 | varchar | 1000 |  | √ | ' ' | 规格组合值 |
 | 3 | fspumapids | 规则组合值idmap | varchar | 1000 |  | √ | ' ' | 规则组合值idmap |
 | 4 | fauxptyid | 对应商品辅助属性 | int8 | 64 |  | √ | 0 | null 001 |
 | 5 | fseq | 序号 | int4 | 32 |  | √ | 0 | 序号 |
 | 6 | fspumapnumber | 规格组合值编码 | varchar | 1000 |  | √ | ' ' | 规格组合值编码 |
-| 7 | fmaterielid | 物料 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 7 | fmaterielid | 物料 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 8 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 9 | fitemid | 对应商品编码 | int8 | 64 |  | √ | 0 | 商品信息 ocdbd_iteminfo |
+| 9 | fitemid | 对应商品编码 | int8 | 64 |  | √ | 0 | [商品信息 ocdbd_iteminfo](../ocdbd_files/ocdbd_iteminfo.md) |
 
 ### 列规则定义
 
@@ -44,8 +44,8 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fmapspecvalueid | spu规格值 | int8 | 64 |  | √ | 0 | SPU规格值 ocdbd_spu_specvalue |
-| 2 | fmapspecid | spu规格 | int8 | 64 |  | √ | 0 | SPU规格 ocdbd_spu_spec |
+| 1 | fmapspecvalueid | spu规格值 | int8 | 64 |  | √ | 0 | [SPU规格值 ocdbd_spu_specvalue](../ocdbd_files/ocdbd_spu_specvalue.md) |
+| 2 | fmapspecid | spu规格 | int8 | 64 |  | √ | 0 | [SPU规格 ocdbd_spu_spec](../ocdbd_files/ocdbd_spu_spec.md) |
 | 3 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 4 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 | id |
 | 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |

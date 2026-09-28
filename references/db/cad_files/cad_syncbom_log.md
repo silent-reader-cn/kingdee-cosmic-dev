@@ -11,8 +11,8 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fsynctime | 同步时刻 | timestamp | 0 |  |  | null | 同步时刻 |
-| 3 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 4 | fproductbom | 制造BOM | int8 | 64 |  | √ | 0 | BOM维护 pdm_mftbom |
+| 3 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 4 | fproductbom | 制造BOM | int8 | 64 |  | √ | 0 | [BOM维护 pdm_mftbom](../fmm_files/pdm_mftbom.md) |
 | 5 | fmsg | 失败原因 | varchar | 2000 |  | √ | ' ' | 失败原因 |
 
 ### 列规则定义

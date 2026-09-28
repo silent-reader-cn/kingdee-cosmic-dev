@@ -15,7 +15,7 @@
 | 4 | foptime | 操作时间 | timestamp | 0 |  |  | null | 操作时间 |
 | 5 | fissuccess | 是否成功 | bpchar | 1 |  |  | '0' | 是否成功 |
 | 6 | fopdescription | 操作描述 | varchar | 255 |  | √ | ' ' | 操作描述 |
-| 7 | fuserid | 操作人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 7 | fuserid | 操作人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

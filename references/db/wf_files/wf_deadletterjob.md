@@ -1,8 +1,8 @@
-# 异常流程-wf_deadletterjob
+# 异常流程信息-wf_deadletterjob
 
-## 异常流程-多语言表 t_wf_deadletterjob_l
+## 异常流程信息-多语言表 t_wf_deadletterjob_l
 
-- **表名称：** 异常流程-多语言表
+- **表名称：** 异常流程信息-多语言表
 - **表名：** t_wf_deadletterjob_l
 
 ### 表格列定义
@@ -32,9 +32,9 @@
 
 ---
 
-## 异常流程-主表 t_wf_deadletterjob
+## 异常流程信息-主表 t_wf_deadletterjob
 
-- **表名称：** 异常流程-主表
+- **表名称：** 异常流程信息-主表
 - **表名：** t_wf_deadletterjob
 
 ### 表格列定义
@@ -68,7 +68,7 @@
 | 25 | fduedate | 到期日期 | timestamp | 0 |  |  | null | 到期日期 |
 | 26 | fsrcjobid | 发起job | int8 | 64 |  | √ | 0 | 发起job |
 | 27 | fexclusive | 是否排他 | bpchar | 1 |  | √ | '0' | 是否排他 |
-| 28 | froottraceno | 根trace | varchar | 100 |  | √ | ' ' | 根trace |
+| 28 | froottraceno | TraceId | varchar | 100 |  | √ | ' ' | TraceId |
 | 29 | ftype | 类型 | varchar | 30 |  | √ | ' ' | 类型 |
 | 30 | fprocessinstanceid | 流程实例ID | int8 | 64 |  | √ | 0 | 流程实例ID |
 | 31 | fbusinesskey | 业务主键 | varchar | 36 |  | √ | ' ' | 业务主键 |

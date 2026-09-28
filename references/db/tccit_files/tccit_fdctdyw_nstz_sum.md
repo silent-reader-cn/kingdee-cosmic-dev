@@ -13,9 +13,9 @@
 | 2 | fserialno | 流水号 | varchar | 50 |  | √ | ' ' | 流水号 |
 | 3 | fskssqz | 日期范围.结束 | timestamp | 0 |  |  | null | 日期范围.结束 |
 | 4 | fitemnumber | 项目编码 | varchar | 50 |  | √ | ' ' | 项目编码 |
-| 5 | forgid | 运行组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | forgid | 运行组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | fentrytype | 取数类型 | varchar | 50 |  | √ | ' ' | 取数类型 |
-| 7 | ftaxorgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 7 | ftaxorgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | fbqje | 本期金额 | numeric | 23 | 10 | √ | 0 | 本期金额 |
 | 9 | fskssqq | 日期范围.开始 | timestamp | 0 |  |  | null | 日期范围.开始 |
 | 10 | fbnljje | 本年累计金额 | numeric | 23 | 10 | √ | 0 | 本年累计金额 |

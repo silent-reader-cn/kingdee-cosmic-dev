@@ -39,18 +39,18 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fname | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
 | 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 5 | fauditdate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
 | 6 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 7 | fcostelementid | 成本要素 | int8 | 64 |  | √ | 0 | 成本要素 cad_element |
+| 7 | fcostelementid | 成本要素 | int8 | 64 |  | √ | 0 | [成本要素 cad_element](../basedata_files/cad_element.md) |
 | 8 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 9 | fsupmaterielcount | 按物料成本计算 | bpchar | 1 |  | √ | '0' | 按物料成本计算 |
-| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 12 | ftype | 成本要素属性 | varchar | 30 |  | √ | ' ' | 成本要素属性,枚举: 001 :材料成本 002 :采购成本 003 :制造费用 004 :人工费用 005 :委外费用 006 :项目费用 |
-| 13 | fauditor | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fauditor | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | fissystem | 是否系统预置 | bpchar | 1 |  | √ | '0' | 是否系统预置 |
 | 15 | fdefaultvalue | 默认值 | bpchar | 1 |  | √ | '0' | 默认值 |
 | 16 | fsyncflag | 同步存货余额表 | bpchar | 1 |  | √ | '0' | 同步存货余额表 |

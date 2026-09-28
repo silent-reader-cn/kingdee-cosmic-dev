@@ -13,37 +13,37 @@
 | 2 | fpricenew | 未税单价(澄清后) | numeric | 23 | 10 | √ | 0 | 未税单价(澄清后) |
 | 3 | fsrcentryid | 源单分录ID | varchar | 50 |  | √ | ' ' | 源单分录ID |
 | 4 | ftaxrate | 税率(%)(澄清前) | numeric | 23 | 10 | √ | 0 | 税率(%)(澄清前) |
-| 5 | fmaterialid | 标的编码 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 5 | fmaterialid | 标的编码 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 6 | fentrystatus | 状态 | bpchar | 1 |  | √ | ' ' | 状态,枚举: A :待报价 B :已报价 C :已开标 D :已关闭 E :已定标 F :已签约 G :暂存 |
 | 7 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 8 | fnote | 备注 | varchar | 512 |  | √ | ' ' | 备注 |
 | 9 | ftaxprice | 含税单价(澄清前) | numeric | 23 | 10 | √ | 0 | 含税单价(澄清前) |
 | 10 | famount | 未税金额(澄清前) | numeric | 23 | 10 | √ | 0 | 未税金额(澄清前) |
 | 11 | fprice | 未税单价(澄清前) | numeric | 23 | 10 | √ | 0 | 未税单价(澄清前) |
-| 12 | fcurrencyidnew | 报价币别(澄清后) | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 12 | fcurrencyidnew | 报价币别(澄清后) | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 | 13 | fmaterialnane | 标的名称 | varchar | 100 |  | √ | ' ' | 标的名称 |
 | 14 | ftaxpricenew | 含税单价(澄清后) | numeric | 23 | 10 | √ | 0 | 含税单价(澄清后) |
 | 15 | fturns | 轮次 | varchar | 2 |  | √ | ' ' | 轮次,枚举: 1 :首轮 2 :议价(1) 3 :议价(2) 4 :议价(3) 5 :议价(4) 6 :议价(5) |
-| 16 | fcategoryid | 品类 | int8 | 64 |  | √ | 0 | 物料分类 bd_materialgroup |
+| 16 | fcategoryid | 品类 | int8 | 64 |  | √ | 0 | [物料分类 bd_materialgroup](../basedata_files/bd_materialgroup.md) |
 | 17 | fisnew | 是否澄清 | bpchar | 1 |  | √ | '0' | 是否澄清 |
 | 18 | ftaxratenew | 税率(%)(澄清后) | numeric | 23 | 10 | √ | 0 | 税率(%)(澄清后) |
 | 19 | fispresentnew | 赠品(澄清后) | bpchar | 1 |  | √ | '0' | 赠品(澄清后) |
 | 20 | fmaterialmodel | 规格型号 | varchar | 1024 |  | √ | ' ' | 规格型号 |
 | 21 | ftaxamount | 价税合计(澄清前) | numeric | 23 | 10 | √ | 0 | 价税合计(澄清前) |
 | 22 | fqty | 数量 | numeric | 23 | 10 | √ | 0 | 数量 |
-| 23 | ftaxitemidnew | 税率(澄清后) | int8 | 64 |  | √ | 0 | 税率 bd_taxrate |
-| 24 | funitid | 计量单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 23 | ftaxitemidnew | 税率(澄清后) | int8 | 64 |  | √ | 0 | [税率 bd_taxrate](../basedata_files/bd_taxrate.md) |
+| 24 | funitid | 计量单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 25 | fispresent | 赠品(澄清前) | bpchar | 1 |  | √ | '0' | 赠品(澄清前) |
 | 26 | fpackagename | 标段 | varchar | 50 |  | √ | ' ' | 标段 |
 | 27 | fdescription | 物料描述 | varchar | 1024 |  | √ | ' ' | 物料描述 |
-| 28 | fsupplierid | 供应商 | int8 | 64 |  | √ | 0 | 供应商 bd_supplier |
-| 29 | ftaxitemid | 税率(澄清前) | int8 | 64 |  | √ | 0 | 税率 bd_taxrate |
+| 28 | fsupplierid | 供应商 | int8 | 64 |  | √ | 0 | [供应商 bd_supplier](../basedata_files/bd_supplier.md) |
+| 29 | ftaxitemid | 税率(澄清前) | int8 | 64 |  | √ | 0 | [税率 bd_taxrate](../basedata_files/bd_taxrate.md) |
 | 30 | fisdiscardednew | 弃标的(澄清后) | bpchar | 1 |  | √ | '0' | 弃标的(澄清后) |
 | 31 | famountnew | 未税金额(澄清后) | numeric | 23 | 10 | √ | 0 | 未税金额(澄清后) |
 | 32 | ftaxamountnew | 价税合计(澄清后) | numeric | 23 | 10 | √ | 0 | 价税合计(澄清后) |
 | 33 | fqtynew | 数量(澄清后) | numeric | 23 | 10 | √ | 0 | 数量(澄清后) |
 | 34 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 35 | fcurrencyid | 报价币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 35 | fcurrencyid | 报价币别 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 | 36 | fisdiscarded | 弃标的(澄清前) | bpchar | 1 |  | √ | '0' | 弃标的(澄清前) |
 
 ### 列规则定义
@@ -71,7 +71,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 供应商用户 pur_supuser |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [供应商用户 pur_supuser](../basedata_files/pur_supuser.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -130,7 +130,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 供应商 bd_supplier |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [供应商 bd_supplier](../basedata_files/bd_supplier.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -160,32 +160,33 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | freplycontent | freplycontent | varchar | 1000 |  | √ | ' ' |  |
-| 3 | forgid | 采购组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | forgid | 采购组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | fpurdeptid | fpurdeptid | int8 | 64 |  | √ | 0 |  |
 | 5 | fisclarify | 是否价格澄清 | bpchar | 1 |  | √ | '0' | 是否价格澄清 |
 | 6 | fmodifytime | fmodifytime | timestamp | 0 |  |  | null |  |
 | 7 | fpublishtype | 发布类型 | bpchar | 1 |  | √ | ' ' | 发布类型,枚举: 1 :供应商提问 2 :采购方回复 3 :采购方澄清 4 :采购方提问 5 :供应商回复 6 :供应商澄清 7 :采购方价格澄清 |
 | 8 | forigin | 发起方 | bpchar | 1 |  | √ | '1' | 发起方,枚举: 1 :采购方端 2 :供应商端 3 :两端公用 |
-| 9 | fcreatorid | 发布人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 10 | fpackageid | 标段名称 | int8 | 64 |  | √ | 0 | 标段名称 src_packagef7 |
-| 11 | fbillno | 澄清编号 | varchar | 30 |  | √ | ' ' | 澄清编号 |
-| 12 | fmodifierid | fmodifierid | int8 | 64 |  | √ | 0 |  |
-| 13 | fresponderid | fresponderid | int8 | 64 |  | √ | 0 |  |
-| 14 | fprojectid | 招标项目 | int8 | 64 |  | √ | 0 | 招标项目F7 src_projectf7 |
-| 15 | fbillstatus | 业务状态 | bpchar | 1 |  | √ | ' ' | 业务状态,枚举: A :未回复 B :已回复 |
-| 16 | fcreatetime | 澄清时间 | timestamp | 0 |  |  | null | 澄清时间 |
-| 17 | fsrcbillid | fsrcbillid | int8 | 64 |  | √ | 0 |  |
-| 18 | freplytime | freplytime | timestamp | 0 |  |  | null |  |
-| 19 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
-| 20 | fbizpartnerid | 商务伙伴 | int8 | 64 |  | √ | 0 | 商务伙伴 bd_bizpartner |
-| 21 | fsupplierid | 供应商 | int8 | 64 |  | √ | 0 | 注册供应商 src_supplier |
-| 22 | fduedate | 答疑截止时间 | timestamp | 0 |  |  | null | 答疑截止时间 |
-| 23 | fsuppliertype | 供应商类别 | varchar | 30 |  | √ | ' ' | 供应商类别,枚举: src_supplier :注册供应商 src_supplier_inner :内部供应商(员工) src_supplier_tmp :临时供应商 bd_supplier :供应商 |
-| 24 | fquestype | 问题类型 | bpchar | 1 |  | √ | ' ' | 问题类型,枚举: 1 :技术 2 :商务 3 :商务综合 4 :资质预审 7 :资质后审 |
-| 25 | fisprice | 澄清后价格默认等于澄清前价格 | bpchar | 1 |  | √ | '1' | 澄清后价格默认等于澄清前价格 |
-| 26 | fcontent | fcontent | varchar | 1000 |  | √ | ' ' |  |
-| 27 | fcurrentnode | 当前节点 | int8 | 64 |  | √ | 0 | 业务节点 pds_biznode |
-| 28 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fcreatorid | 发布人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 10 | fpackageid | 标段名称 | int8 | 64 |  | √ | 0 | [标段名称 src_packagef7](../src_files/src_packagef7.md) |
+| 11 | fispurclarify | fispurclarify | bpchar | 1 |  | √ | '0' |  |
+| 12 | fbillno | 澄清编号 | varchar | 30 |  | √ | ' ' | 澄清编号 |
+| 13 | fmodifierid | fmodifierid | int8 | 64 |  | √ | 0 |  |
+| 14 | fresponderid | fresponderid | int8 | 64 |  | √ | 0 |  |
+| 15 | fprojectid | 招标项目 | int8 | 64 |  | √ | 0 | [招标项目F7 src_projectf7](../src_files/src_projectf7.md) |
+| 16 | fbillstatus | 发布状态 | bpchar | 1 |  | √ | ' ' | 发布状态,枚举: A :暂存 B :已提交 C :已发布 |
+| 17 | fcreatetime | 澄清时间 | timestamp | 0 |  |  | null | 澄清时间 |
+| 18 | fsrcbillid | fsrcbillid | int8 | 64 |  | √ | 0 |  |
+| 19 | freplytime | freplytime | timestamp | 0 |  |  | null |  |
+| 20 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
+| 21 | fbizpartnerid | 商务伙伴 | int8 | 64 |  | √ | 0 | [商务伙伴 bd_bizpartner](../base_files/bd_bizpartner.md) |
+| 22 | fsupplierid | 供应商 | int8 | 64 |  | √ | 0 | 注册供应商 src_supplier |
+| 23 | fduedate | 答疑截止时间 | timestamp | 0 |  |  | null | 答疑截止时间 |
+| 24 | fsuppliertype | 供应商类别 | varchar | 30 |  | √ | ' ' | 供应商类别,枚举: src_supplier :注册供应商 src_supplier_inner :内部供应商(员工) src_supplier_tmp :临时供应商 bd_supplier :供应商 |
+| 25 | fquestype | 问题类型 | bpchar | 1 |  | √ | ' ' | 问题类型,枚举: 1 :技术 2 :商务 3 :商务综合 4 :资质预审 7 :资质后审 |
+| 26 | fisprice | 澄清后价格默认等于澄清前价格 | bpchar | 1 |  | √ | '1' | 澄清后价格默认等于澄清前价格 |
+| 27 | fcontent | fcontent | varchar | 1000 |  | √ | ' ' |  |
+| 28 | fcurrentnode | 当前节点 | int8 | 64 |  | √ | 0 | [业务节点 pds_biznode](../pds_files/pds_biznode.md) |
+| 29 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

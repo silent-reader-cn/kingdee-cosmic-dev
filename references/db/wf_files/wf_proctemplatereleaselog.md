@@ -11,10 +11,10 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fcreatedate | 操作时间 | timestamp | 0 |  |  | null | 操作时间 |
-| 3 | fcreatorid | 操作人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fcreatorid | 操作人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fnewresourceid | 资源ID | int8 | 64 |  | √ | 0 | 资源ID |
 | 5 | foldresourceid | 上一版本资源ID | int8 | 64 |  | √ | 0 | 上一版本资源ID |
-| 6 | fproctplid | 流程模板 | int8 | 64 |  | √ | 0 | 流程模板 wf_proctemplate |
+| 6 | fproctplid | 流程模板 | int8 | 64 |  | √ | 0 | [流程模板 wf_proctemplate](../wf_files/wf_proctemplate.md) |
 | 7 | fversion | 版本 | int4 | 32 |  | √ | 0 | 版本 |
 
 ### 列规则定义

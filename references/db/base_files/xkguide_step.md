@@ -49,7 +49,7 @@
 | 5 | fdescstyle | 描述样式（json） | text | 0 |  |  | ' ' | 描述样式（json） |
 | 6 | fbtndoingtext | 按钮进行中状态文本 | varchar | 20 |  | √ | ' ' | 按钮进行中状态文本 |
 | 7 | fdurationstyle | 时长样式（json） | text | 0 |  |  | ' ' | 时长样式（json） |
-| 8 | fbizappid | 业务应用 | varchar | 50 |  | √ | ' ' | 业务应用实体 bos_devportal_bizapp |
+| 8 | fbizappid | 业务应用 | varchar | 50 |  | √ | ' ' | [业务应用实体 bos_devportal_bizapp](../mdl_files/bos_devportal_bizapp.md) |
 | 9 | fbtnstyle | 按钮样式（json） | text | 0 |  |  | ' ' | 按钮样式（json） |
 | 10 | fduration | 时长 | int4 | 32 |  | √ | 0 | 时长 |
 | 11 | fdurationunit | 时长单位 | varchar | 10 |  | √ | ' ' | 时长单位 |

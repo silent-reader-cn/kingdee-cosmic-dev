@@ -9,9 +9,9 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | 编码规则 | varchar | 36 |  | √ | ' ' | 编码规则 bos_coderule |
+| 1 | fid | 编码规则 | varchar | 36 |  | √ | ' ' | [编码规则 bos_coderule](../base_files/bos_coderule.md) |
 | 2 | fisincludesuborg | 包含下级 | bpchar | 1 |  | √ | ' ' | 包含下级 |
-| 3 | forgid | 编码组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | forgid | 编码组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | fseq | 序号 | int8 | 64 |  | √ | 0 | 序号 |
 | 5 | fentryid | fentryid | varchar | 36 |  | √ | ' ' | id |
 

@@ -13,7 +13,7 @@
 | 2 | fisredinvoice | 是否红字发票 | bpchar | 1 |  | √ | ' ' | 是否红字发票 |
 | 3 | faccountingentityname | 会计主体名称 | varchar | 50 |  | √ | ' ' | 会计主体名称 |
 | 4 | flargejson | 接收端json | varchar | 500 |  | √ | ' ' | 接收端json |
-| 5 | forgid | 归档组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | forgid | 归档组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | fdirectvoucherid | 凭证ID | int8 | 64 |  | √ | 0 | 凭证ID |
 | 7 | fissuedate | 填开日期 | timestamp | 0 |  |  | null | 填开日期 |
 | 8 | fdeductiontaxperiod | 抵扣税期 | varchar | 50 |  | √ | ' ' | 抵扣税期 |
@@ -28,7 +28,7 @@
 | 17 | ffare | 票价 | numeric | 23 | 10 | √ | 0 | 票价 |
 | 18 | fsourcebillno | 源单号码 | varchar | 30 |  | √ | ' ' | 源单号码 |
 | 19 | fissueparty | 填开单位 | varchar | 50 |  | √ | ' ' | 填开单位 |
-| 20 | fbilltype | 单据类型 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 20 | fbilltype | 单据类型 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 21 | flargejson_tag | 接收端json_详情 | text | 0 |  |  | null | 接收端json_详情 |
 
 ### 列规则定义

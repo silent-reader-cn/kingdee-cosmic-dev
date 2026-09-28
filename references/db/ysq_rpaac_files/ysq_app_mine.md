@@ -10,14 +10,14 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | null | id |
-| 2 | forgid | 组织 | int8 | 64 |  |  | null | 业务单元 bos_org |
+| 2 | forgid | 组织 | int8 | 64 |  |  | null | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fk_ysq_lic_status | 许可状态 | varchar | 50 |  | √ | ' ' | 许可状态,枚举: 0 :过期 1 :有效 |
-| 4 | fsrccreateorgid | 原创建组织 | int8 | 64 |  |  | null | 业务单元 bos_org |
+| 4 | fsrccreateorgid | 原创建组织 | int8 | 64 |  |  | null | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | fk_ysq_app_label | 应用标签 | varchar | 1024 |  | √ | ' ' | 应用标签 |
 | 6 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 7 | fk_ysq_app_name | 应用机器人名称 | varchar | 256 |  | √ | ' ' | 应用机器人名称 |
 | 8 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 9 | fcreatorid | 创建人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 9 | fcreatorid | 创建人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | fmasterid | 主数据内码 | int8 | 64 |  |  | null | 主数据内码 |
 | 11 | fk_ysq_app_involve_sys | 涉及系统 | varchar | 1024 |  | √ | ' ' | 涉及系统 |
 | 12 | fk_ysq_app_use_help | 使用帮助 | varchar | 255 |  | √ | ' ' | 使用帮助 |
@@ -28,11 +28,11 @@
 | 17 | fk_ysq_app_run_type | 使用权限分类 | varchar | 50 |  |  | '3' | 使用权限分类 |
 | 18 | fk_ysq_last_version | 机器人版本 | varchar | 256 |  | √ | ' ' | 机器人版本 |
 | 19 | fk_ysq_app_use_help_tag | 使用帮助_详情 | text | 0 |  |  | null | 使用帮助_详情 |
-| 20 | fcreateorgid | 创建组织 | int8 | 64 |  |  | null | 业务单元 bos_org |
+| 20 | fcreateorgid | 创建组织 | int8 | 64 |  |  | null | [业务单元 bos_org](../base_files/bos_org.md) |
 | 21 | fk_ysq_proc_code | 流程编号 | varchar | 32 |  | √ | ' ' | 流程编号 |
 | 22 | fk_ysq_app_icon | 应用图标 | varchar | 255 |  | √ | ' ' | 应用图标 |
 | 23 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 24 | fmodifierid | 修改人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 24 | fmodifierid | 修改人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 25 | fk_ysq_end_date | 结束时间 | timestamp | 0 |  |  | null | 结束时间 |
 | 26 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 27 | fk_ysq_update_date | 更新时间 | timestamp | 0 |  |  | null | 更新时间 |

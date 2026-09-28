@@ -40,15 +40,15 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fcreatedate | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
 | 5 | fmodifydate | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
-| 6 | fcalorgid | 核算组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 7 | fcreaterid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | fcalorgid | 核算组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 7 | fcreaterid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 8 | ffilter | 过滤条件 | varchar | 2000 |  | √ | ' ' | 过滤条件 |
 | 9 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
 | 10 | ffilter_tag | 过滤条件_详情 | text | 0 |  |  | null | 过滤条件_详情 |
-| 11 | fsyncuserid | 同步人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fsyncuserid | 同步人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

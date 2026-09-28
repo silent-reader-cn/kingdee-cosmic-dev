@@ -43,9 +43,9 @@
 | 2 | fentityname | 业务对象名称 | varchar | 100 |  | √ | ' ' | 业务对象名称 |
 | 3 | fcreatedate | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 4 | fmodifydate | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 5 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | fentitynumber | 业务对象编码 | varchar | 100 |  | √ | ' ' | 业务对象编码 |
-| 7 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 7 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 8 | fmsgtypename | 消息类型名称 | varchar | 50 |  | √ | ' ' | 消息类型名称 |
 | 9 | fmsgtype | 消息类型编码 | varchar | 100 |  | √ | ' ' | 消息类型编码 |
 | 10 | fdata | 事件数据 | text | 0 |  |  | null | 事件数据 |

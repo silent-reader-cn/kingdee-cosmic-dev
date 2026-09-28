@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | varchar | 36 |  | √ | ' ' | id |
 | 2 | fvalue | 属性值 | varchar | 80 |  | √ | ' ' | 属性值 |
-| 3 | fappcondproid | 适用条件属性 | varchar | 36 |  | √ | ' ' | 适用条件属性 bos_coderuleappcondpro |
+| 3 | fappcondproid | 适用条件属性 | varchar | 36 |  | √ | ' ' | [适用条件属性 bos_coderuleappcondpro](../base_files/bos_coderuleappcondpro.md) |
 
 ### 列规则定义
 

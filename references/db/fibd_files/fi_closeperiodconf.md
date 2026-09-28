@@ -13,7 +13,7 @@
 | 2 | fbizapp | 业务应用 | varchar | 50 |  | √ | ' ' | 业务应用 |
 | 3 | fbooktype | 账簿类型 | varchar | 50 |  | √ | ' ' | 账簿类型 |
 | 4 | fcloseoperiod | 结账 | varchar | 50 |  | √ | ' ' | 结账 |
-| 5 | fbiztypeid | 业务类型 | varchar | 50 |  | √ | ' ' | 单据主实体 bos_billmainentity |
+| 5 | fbiztypeid | 业务类型 | varchar | 50 |  | √ | ' ' | [单据主实体 bos_billmainentity](../mdl_files/bos_billmainentity.md) |
 | 6 | forg | 组织 | varchar | 50 |  | √ | ' ' | 组织 |
 | 7 | funcloseoperiod | 反结账 | varchar | 50 |  | √ | ' ' | 反结账 |
 

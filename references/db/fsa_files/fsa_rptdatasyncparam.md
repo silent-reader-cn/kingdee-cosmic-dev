@@ -41,11 +41,11 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fmappingsrctype | 取数来源 | bpchar | 1 |  | √ | ' ' | 取数来源,枚举: 0 :苍穹总账 1 :苍穹合并报表 |
 | 3 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 5 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 5 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 7 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 8 | facctperiodtype | 期间类型 | int8 | 64 |  | √ | 0 | 会计日历类型 bd_period_type |
+| 8 | facctperiodtype | 期间类型 | int8 | 64 |  | √ | 0 | [会计日历类型 bd_period_type](../fibd_files/bd_period_type.md) |
 | 9 | fenable | 使用状态 | bpchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 10 | fnumber | 同步参数编码 | varchar | 30 |  | √ | ' ' | 同步参数编码 |
 | 11 | frpttype | 源报表类型 | bpchar | 1 |  | √ | ' ' | 源报表类型,枚举: 0 :资产负债表 1 :利润表 2 :现金流量表 |
@@ -77,8 +77,8 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | facctorgview | 统计视图 | int8 | 64 |  | √ | 0 | 新增视图 bd_accountingsysviewsch |
-| 3 | frptmapping | 映射报表名称 | int8 | 64 |  | √ | 0 | 映射报表 fsa_rptmappings |
+| 2 | facctorgview | 统计视图 | int8 | 64 |  | √ | 0 | [新增视图 bd_accountingsysviewsch](../fibd_files/bd_accountingsysviewsch.md) |
+| 3 | frptmapping | 映射报表名称 | int8 | 64 |  | √ | 0 | [映射报表 fsa_rptmappings](../fsa_files/fsa_rptmappings.md) |
 | 4 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 

@@ -21,7 +21,7 @@
 | 10 | freqsource1 | freqsource1 | varchar | 30 |  | √ | ' ' |  |
 | 11 | flinenumber11 | flinenumber11 | varchar | 50 |  | √ | ' ' |  |
 | 12 | fspecialreasonyear | fspecialreasonyear | varchar | 50 |  | √ | ' ' |  |
-| 13 | fcategory3 | 品类 | int8 | 64 |  | √ | 0 | 物料分类 bd_materialgroup |
+| 13 | fcategory3 | 品类 | int8 | 64 |  | √ | 0 | [物料分类 bd_materialgroup](../basedata_files/bd_materialgroup.md) |
 | 14 | fentrystatus1 | fentrystatus1 | varchar | 30 |  | √ | ' ' |  |
 | 15 | freqdescribeyear1 | freqdescribeyear1 | varchar | 500 |  |  | ' ' |  |
 | 16 | fprojectno11 | fprojectno11 | varchar | 50 |  | √ | ' ' |  |
@@ -58,6 +58,6 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | pk_src_yearinfo |  | fentryid |
-| 2 | idx_src_yearinfo__fid |  | fid |
+| 1 | idx_src_yearinfo__fid |  | fid |
+| 2 | pk_src_yearinfo |  | fentryid |
 | 3 | idx_src_yearinfo_applyno |  | fapplyno11 |

@@ -15,7 +15,7 @@
 | 4 | fconditionjson | 配置条件 | text | 0 |  |  | null | 配置条件 |
 | 5 | fenddate | 失效时间 | timestamp | 0 |  |  | null | 失效时间 |
 | 6 | fgeneral | 通用 | bpchar | 1 |  | √ | '0' | 通用 |
-| 7 | ftype | 模板类型 | varchar | 30 |  | √ | ' ' | 模板类型 tctb_template_type |
+| 7 | ftype | 模板类型 | varchar | 30 |  | √ | ' ' | [模板类型 tctb_template_type](../tctb_files/tctb_template_type.md) |
 | 8 | fstartdate | 生效日期 | timestamp | 0 |  |  | null | 生效日期 |
 | 9 | fcontent_tag | 模板内容_详情 | text | 0 |  |  | null | 模板内容_详情 |
 | 10 | fupdatetime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |

@@ -76,7 +76,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fcrosstypeid | 横道类型 | int8 | 64 |  | √ | 0 | 横道类型 msplan_gantt_crosstype |
+| 2 | fcrosstypeid | 横道类型 | int8 | 64 |  | √ | 0 | [横道类型 msplan_gantt_crosstype](../msplan_files/msplan_gantt_crosstype.md) |
 | 3 | fcrossshap | 形状 | varchar | 5 |  | √ | ' ' | 形状,枚举: 1 :圆形 2 :菱形 3 :长方形 |
 | 4 | flimitvalue | 限制字符 | int4 | 32 |  | √ | 0 | 限制字符 |
 | 5 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
@@ -114,7 +114,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fentityflagid | 实体标识 | varchar | 255 |  | √ | 0 | 主实体对象 bos_entityobject |
+| 2 | fentityflagid | 实体标识 | varchar | 255 |  | √ | 0 | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 3 | fgroupflag | 分组字段标志 | varchar | 50 |  | √ | ' ' | 分组字段标志 |
 | 4 | fbandcolorval | 分组带颜色值 | varchar | 50 |  | √ | ' ' | 分组带颜色值 |
 | 5 | fbandcolor | 分组带颜色 | varchar | 50 |  | √ | ' ' | 分组带颜色 |
@@ -132,8 +132,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_msplan_jvwsup_fid |  | fid |
-| 2 | pk_msplan_jvwschgroup |  | fentryid |
+| 1 | pk_msplan_jvwschgroup |  | fentryid |
+| 2 | idx_msplan_jvwsup_fid |  | fid |
 | 3 | idx_msplan_jvwsup_fseq |  | fseq |
 
 ---
@@ -148,7 +148,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fname | 样式名称 | varchar | 100 |  | √ | ' ' | 样式名称 |
+| 2 | fname | 样式名称 | varchar | 165 |  | √ | ' ' | 样式名称 |
 | 3 | flocaleid | flocaleid | varchar | 255 |  | √ | ' ' | localeid |
 | 4 | fpkid | fpkid | varchar | 255 |  | √ | ' ' | pkid |
 
@@ -222,14 +222,14 @@
 | 10 | ftuesday | 星期二 | bpchar | 1 |  | √ | '0' | 星期二 |
 | 11 | fsecondhour | 时 | bpchar | 1 |  | √ | '0' | 时 |
 | 12 | fshowhline | 显示垂直线 | bpchar | 1 |  | √ | '0' | 显示垂直线 |
-| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 15 | finternalrow | 间隔行 | int4 | 32 |  | √ | 0 | 间隔行 |
 | 16 | fsourcedataid | fsourcedataid | int8 | 64 |  | √ | 0 |  |
 | 17 | fbitindex | fbitindex | int4 | 32 |  | √ | 0 |  |
 | 18 | fsaturday | 星期六 | bpchar | 1 |  | √ | '0' | 星期六 |
 | 19 | fcreateorgid | fcreateorgid | int8 | 64 |  | √ | 0 |  |
-| 20 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 20 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 21 | fassislinetype | 线形 | varchar | 5 |  | √ | ' ' | 线形,枚举: 1 :实线 2 :虚线 |
 | 22 | fname | 样式名称 | varchar | 100 |  | √ | ' ' | 样式名称 |
 | 23 | fwednesday | 星期三 | bpchar | 1 |  | √ | '0' | 星期三 |
@@ -255,7 +255,7 @@
 | 43 | finternalcol | 间隔列 | int4 | 32 |  | √ | 0 | 间隔列 |
 | 44 | fsourcebitindex | fsourcebitindex | int4 | 32 |  | √ | 0 |  |
 | 45 | fmonday | 星期一 | bpchar | 1 |  | √ | '0' | 星期一 |
-| 46 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 46 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 47 | ffirstyq | 年度+月+日 | bpchar | 1 |  | √ | '0' | 年度+月+日 |
 
 ### 列规则定义

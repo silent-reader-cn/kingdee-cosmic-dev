@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 方案名称 | varchar | 255 |  |  | ' ' | 方案名称 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | ffield | 文档所属领域 | varchar | 255 |  | √ | 'A' | 文档所属领域,枚举: A :合同文档 B :通用文档 |
 | 5 | fdescription | 方案说明 | varchar | 255 |  |  | ' ' | 方案说明 |
 | 6 | fmulignore | 忽略项 | varchar | 50 |  |  | '1,2,3' | 忽略项,枚举: 1 :页脚 2 :页眉 3 :目录 |
@@ -19,10 +19,10 @@
 | 8 | fcreatedate | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 9 | fmulcatalog | 展示差异分类 | varchar | 50 |  |  | '1,2,3' | 展示差异分类,枚举: 1 :新增 2 :修改 3 :删除 4 :要素差异 5 :普通差异 |
 | 10 | fshowlevel2 | 显示二级分类:新增、修改、删除 | bpchar | 1 |  | √ | '0' | 显示二级分类:新增、修改、删除 |
-| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fmodifydate | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 13 | fissys | 预置 | bpchar | 1 |  | √ | '0' | 预置 |
-| 14 | fbusinessobject | 使用的业务对象 | varchar | 255 |  |  | ' ' | 主实体对象 bos_entityobject |
+| 14 | fbusinessobject | 使用的业务对象 | varchar | 255 |  |  | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 15 | fnumber | 方案编码 | varchar | 255 |  | √ | ' ' | 方案编码 |
 
 ### 列规则定义

@@ -15,8 +15,8 @@
 | 4 | farchievetime | 归档时间 | timestamp | 0 |  |  | null | 归档时间 |
 | 5 | fbillid | 单据ID | int8 | 64 |  | √ | 0 | 单据ID |
 | 6 | fimagepath | 存储路径 | varchar | 200 |  | √ | ' ' | 存储路径 |
-| 7 | fbilltype | 单据类型 | varchar | 30 |  | √ | ' ' | 主实体对象 bos_entityobject |
-| 8 | farchieveid | 归档人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 7 | fbilltype | 单据类型 | varchar | 30 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
+| 8 | farchieveid | 归档人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

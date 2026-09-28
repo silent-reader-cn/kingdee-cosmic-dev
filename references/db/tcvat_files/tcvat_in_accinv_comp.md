@@ -10,23 +10,23 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fbillstatus | 单据状态 | varchar | 50 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 5 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | fbqyspbqyrzamtsum | 本期已收票，本期已入账税额合计 | numeric | 23 | 10 | √ | 0 | 本期已收票，本期已入账税额合计 |
 | 7 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
 | 8 | fwfstartdate | 核销期间.开始 | timestamp | 0 |  |  | null | 核销期间.开始 |
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 10 | fwriteofftypeid | 核销类别 | int8 | 64 |  | √ | 0 | 核销类别 msmod_writeofftype |
+| 10 | fwriteofftypeid | 核销类别 | int8 | 64 |  | √ | 0 | [核销类别 msmod_writeofftype](../mscommon_files/msmod_writeofftype.md) |
 | 11 | fwqwspbqyrzamtsum | 本期未收票，本期已入账税额合计 | numeric | 23 | 10 | √ | 0 | 本期未收票，本期已入账税额合计 |
 | 12 | fenddate | 所属税期.结束 | timestamp | 0 |  |  | null | 所属税期.结束 |
 | 13 | fwfenddate | 核销期间.结束 | timestamp | 0 |  |  | null | 核销期间.结束 |
-| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | fstartdate | 所属税期.开始 | timestamp | 0 |  |  | null | 所属税期.开始 |
 | 16 | fbqyspbqwrzamtsum | 本期已收票，本期未入账税额合计 | numeric | 23 | 10 | √ | 0 | 本期已收票，本期未入账税额合计 |
 | 17 | fbillno | 单据编号 | varchar | 30 |  | √ | ' ' | 单据编号 |
-| 18 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 18 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 
@@ -94,7 +94,7 @@
 | 3 | fje | 金额 | numeric | 23 | 10 | √ | 0 | 金额 |
 | 4 | fverifymatch | 核销匹配 | varchar | 150 |  | √ | ' ' | 核销匹配 |
 | 5 | fvoucherrow | 记账凭证行号 | varchar | 50 |  | √ | ' ' | 记账凭证行号 |
-| 6 | fbalance | 科目 | varchar | 36 |  | √ | ' ' | 科目 tdm_account |
+| 6 | fbalance | 科目 | varchar | 36 |  | √ | ' ' | [科目 tdm_account](../tdm_files/tdm_account.md) |
 | 7 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 8 | fvouchercode | 记账凭证编号 | varchar | 50 |  | √ | ' ' | 记账凭证编号 |
 | 9 | fvoucherdate | 记账凭证日期 | timestamp | 0 |  |  | null | 记账凭证日期 |
@@ -136,13 +136,13 @@
 | 9 | fvoucherdate | 记账凭证日期 | timestamp | 0 |  |  | null | 记账凭证日期 |
 | 10 | fauthenticateflag | 认证状态 | varchar | 50 |  | √ | ' ' | 认证状态,枚举: 0 :未勾选 1 :勾选 2 :勾选认证 3 :扫描认证 4 :预勾选 5 :勾选中 |
 | 11 | faccperiod | 会计期间号 | varchar | 50 |  | √ | ' ' | 会计期间号,枚举: 01 :01 02 :02 03 :03 04 :04 05 :05 06 :06 07 :07 08 :08 09 :09 10 :10 11 :11 12 :12 |
-| 12 | fwriteofftypeid | 核销类别 | int8 | 64 |  | √ | 0 | 核销类别 msmod_writeofftype |
+| 12 | fwriteofftypeid | 核销类别 | int8 | 64 |  | √ | 0 | [核销类别 msmod_writeofftype](../mscommon_files/msmod_writeofftype.md) |
 | 13 | fcurwfdata | 本期核销税额 | numeric | 23 | 10 | √ | 0 | 本期核销税额 |
 | 14 | foriginaltime | 签收时间 | timestamp | 0 |  |  | null | 签收时间 |
 | 15 | finvoiceamount | 发票金额 | numeric | 23 | 10 | √ | 0 | 发票金额 |
 | 16 | fsalername | 销方名称 | varchar | 120 |  | √ | ' ' | 销方名称 |
 | 17 | finvoicecode | 发票代码 | varchar | 50 |  | √ | ' ' | 发票代码 |
-| 18 | fbalanceid | 科目 | varchar | 36 |  | √ | ' ' | 科目 tdm_account |
+| 18 | fbalanceid | 科目 | varchar | 36 |  | √ | ' ' | [科目 tdm_account](../tdm_files/tdm_account.md) |
 | 19 | fwfdate | 核销日期 | timestamp | 0 |  |  | null | 核销日期 |
 | 20 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 21 | finvoiceno | 发票号码 | varchar | 50 |  | √ | ' ' | 发票号码 |

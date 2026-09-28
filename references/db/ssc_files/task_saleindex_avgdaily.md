@@ -10,10 +10,10 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fsscid | 共享中心 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fsscid | 共享中心 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fisquality | 是否质检任务 | bpchar | 1 |  | √ | ' ' | 是否质检任务 |
 | 4 | fnormalnum | 正常任务数 | int8 | 64 |  | √ | 0 | 正常任务数 |
-| 5 | fuser | 用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | fuser | 用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | fdate | 完成日期 | timestamp | 0 |  |  | null | 完成日期 |
 | 7 | fexpirenum | 超期任务数 | int8 | 64 |  | √ | 0 | 超期任务数 |
 

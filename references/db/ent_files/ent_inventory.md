@@ -12,13 +12,15 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fqty | 现有库存量 | numeric | 19 | 6 | √ | 0.000000 | 现有库存量 |
 | 3 | fstatus | fstatus | bpchar | 1 |  | √ | ' ' |  |
-| 4 | fgoodsid | 商品编码 | int8 | 64 |  | √ | 0 | 商品档案 pbd_goods |
-| 5 | flockedqty | 锁定库存量 | numeric | 19 | 6 | √ | 0.000000 | 锁定库存量 |
-| 6 | fclassid | 商品分类 | int8 | 64 |  | √ | 0 | 商品分类 mdr_goodsclass |
-| 7 | funitid | 计量单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 8 | favailableqty | 可用库存量 | numeric | 19 | 6 | √ | 0.000000 | 可用库存量 |
-| 9 | fbizpartnerid | 商务伙伴 | int8 | 64 |  | √ | 0 | 商务伙伴 bd_bizpartner |
-| 10 | fsupplierid | 商家 | int8 | 64 |  | √ | 0 | 供应商 bd_supplier |
+| 4 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 5 | fgoodsid | 商品编码 | int8 | 64 |  | √ | 0 | [商品档案 pbd_goods](../pbd_files/pbd_goods.md) |
+| 6 | flockedqty | 锁定库存量 | numeric | 19 | 6 | √ | 0.000000 | 锁定库存量 |
+| 7 | fclassid | 商品分类 | int8 | 64 |  | √ | 0 | [商品分类 mdr_goodsclass](../gmc_files/mdr_goodsclass.md) |
+| 8 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 9 | funitid | 计量单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 10 | favailableqty | 可用库存量 | numeric | 19 | 6 | √ | 0.000000 | 可用库存量 |
+| 11 | fbizpartnerid | 商务伙伴 | int8 | 64 |  | √ | 0 | [商务伙伴 bd_bizpartner](../base_files/bd_bizpartner.md) |
+| 12 | fsupplierid | 商家 | int8 | 64 |  | √ | 0 | [供应商 bd_supplier](../basedata_files/bd_supplier.md) |
 
 ### 列规则定义
 

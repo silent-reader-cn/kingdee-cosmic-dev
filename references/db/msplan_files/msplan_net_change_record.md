@@ -20,21 +20,21 @@
 | 9 | f_create_date | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 10 | fexpiredate | 预留到期日期 | timestamp | 0 |  |  | null | 预留到期日期 |
 | 11 | f_qty | 预留数量 | numeric | 23 | 10 | √ | 0 | 预留数量 |
-| 12 | f_bill_obj_id | 需求单据 | varchar | 50 |  | √ | ' ' | 单据主实体 bos_billmainentity |
+| 12 | f_bill_obj_id | 需求单据 | varchar | 50 |  | √ | ' ' | [单据主实体 bos_billmainentity](../mdl_files/bos_billmainentity.md) |
 | 13 | f_s_billnum | 供应单据编码 | varchar | 100 |  | √ | ' ' | 供应单据编码 |
 | 14 | freservesource | 预留来源 | varchar | 30 |  | √ | ' ' | 预留来源 |
-| 15 | f_s_unit | 计量单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 15 | f_s_unit | 计量单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 16 | f_ori_qty | 原始预留数量 | numeric | 23 | 10 | √ | 0 | 原始预留数量 |
-| 17 | f_s_baseunit | 基本单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 18 | f_s_org | 供应组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 17 | f_s_baseunit | 基本单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 18 | f_s_org | 供应组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 19 | f_bill_no | 需求单据编码 | varchar | 100 |  | √ | ' ' | 需求单据编码 |
 | 20 | fchange_type | 变更类型 | varchar | 50 |  | √ | ' ' | 变更类型,枚举: 0 :初始化 1 :新增 2 :转移 3 :替换 4 :拆分 |
 | 21 | f_bal_id | 供应ID | int8 | 64 |  | √ | 0 | 供应ID |
-| 22 | f_creater_id | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 23 | f_bal_obj_id | 供应对象 | varchar | 50 |  | √ | ' ' | 主实体对象 bos_entityobject |
-| 24 | f_s_materiel | 物料编码 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 22 | f_creater_id | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 23 | f_bal_obj_id | 供应对象 | varchar | 50 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
+| 24 | f_s_materiel | 物料编码 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 25 | ftransfertype | 转移类型 | varchar | 30 |  | √ | ' ' | 转移类型,枚举: 0 :需求转移 1 :供应转移 |
-| 26 | f_r_sale_org | 需求组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 26 | f_r_sale_org | 需求组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 27 | f_r_biz_date | 需求日期 | timestamp | 0 |  |  | null | 需求日期 |
 | 28 | f_billentry_seq | 需求单据分录行号 | int8 | 64 |  | √ | 0 | 需求单据分录行号 |
 | 29 | fisweak | 弱预留 | bpchar | 1 |  | √ | '0' | 弱预留 |

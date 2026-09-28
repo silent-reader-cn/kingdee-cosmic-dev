@@ -13,40 +13,40 @@
 | 2 | fchecktypedesc | 检修级别名称 | varchar | 80 |  | √ | ' ' | 检修级别名称 |
 | 3 | fbillqty | 单据数量 | numeric | 23 | 10 | √ | 0 | 单据数量 |
 | 4 | funitchange | 是否单位转换 | bpchar | 1 |  | √ | '0' | 是否单位转换 |
-| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | forderid | 工单ID | int8 | 64 |  | √ | 0 | 工单ID |
-| 7 | flogid | 运算号 | int8 | 64 |  | √ | 0 | 历史用量运算日志 mds_hisusecalclog |
+| 7 | flogid | 运算号 | int8 | 64 |  | √ | 0 | [历史用量运算日志 mds_hisusecalclog](../mds_files/mds_hisusecalclog.md) |
 | 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 9 | fchecktype | 检修级别 | int8 | 64 |  | √ | 0 | 检修级别 mpdm_checktype |
-| 10 | fbiztype | 业务类型 | int8 | 64 |  | √ | 0 | 业务类型 bd_biztype |
-| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fchecktype | 检修级别 | int8 | 64 |  | √ | 0 | [检修级别 mpdm_checktype](../mpdm_files/mpdm_checktype.md) |
+| 10 | fbiztype | 业务类型 | int8 | 64 |  | √ | 0 | [业务类型 bd_biztype](../sbd_files/bd_biztype.md) |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fconmtypenumber | 合同类型编码 | varchar | 2000 |  | √ | ' ' | 合同类型编码 |
-| 13 | fmaterial | 物料编码 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 13 | fmaterial | 物料编码 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 14 | fbillno | 单据编号 | varchar | 80 |  | √ | ' ' | 单据编号 |
-| 15 | facreg | 检修设备 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 15 | facreg | 检修设备 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 16 | fqty | 转换数量 | numeric | 23 | 10 | √ | 0 | 转换数量 |
-| 17 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 18 | fcustomer | 客户 | int8 | 64 |  | √ | 0 | 客户 bd_customer |
+| 17 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 18 | fcustomer | 客户 | int8 | 64 |  | √ | 0 | [客户 bd_customer](../basedata_files/bd_customer.md) |
 | 19 | fusedate | 单据日期 | timestamp | 0 |  |  | null | 单据日期 |
 | 20 | fbillstatus | 单据状态 | varchar | 5 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 21 | fhisuseset | 历史用量运算方案编码 | int8 | 64 |  | √ | 0 | 历史用量运算方案定义 mds_hisuseset |
+| 21 | fhisuseset | 历史用量运算方案编码 | int8 | 64 |  | √ | 0 | [历史用量运算方案定义 mds_hisuseset](../mds_files/mds_hisuseset.md) |
 | 22 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 23 | fcardtype | 工卡类型 | int8 | 64 |  | √ | 0 | 工卡类型 mpdm_jobcardtype |
+| 23 | fcardtype | 工卡类型 | int8 | 64 |  | √ | 0 | [工卡类型 mpdm_jobcardtype](../mpdm_files/mpdm_jobcardtype.md) |
 | 24 | fconmtypename | 合同类型名称 | varchar | 2000 |  | √ | ' ' | 合同类型名称 |
-| 25 | factype | 检修设备类型 | int8 | 64 |  | √ | 0 | 检修设备类型 mpdm_mrtype |
+| 25 | factype | 检修设备类型 | int8 | 64 |  | √ | 0 | [检修设备类型 mpdm_mrtype](../mpdm_files/mpdm_mrtype.md) |
 | 26 | fplanno | 计划号 | varchar | 50 |  | √ | ' ' | 计划号 |
 | 27 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
 | 28 | fconmtypeid | 合同类型ID | varchar | 2000 |  | √ | ' ' | 合同类型ID |
-| 29 | fmaterialtype | 物料类型 | int8 | 64 |  | √ | 0 | 物料分类 bd_materialgroup |
+| 29 | fmaterialtype | 物料类型 | int8 | 64 |  | √ | 0 | [物料分类 bd_materialgroup](../basedata_files/bd_materialgroup.md) |
 | 30 | fsupplyresp | 供货责任 | varchar | 5 |  | √ | ' ' | 供货责任,枚举: 0 :库存组织 1 :客户 2 :VMI供应商 3 :非VMI供应商 |
-| 31 | fatachapterno | 章节号 | int8 | 64 |  | √ | 0 | ATA章节号 mpdm_atachapterno |
-| 32 | fbeforematerial | 转换前物料编码 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 31 | fatachapterno | 章节号 | int8 | 64 |  | √ | 0 | [ATA章节号 mpdm_atachapterno](../mpdm_files/mpdm_atachapterno.md) |
+| 32 | fbeforematerial | 转换前物料编码 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 33 | fmaterialchange | 是否物料转换 | bpchar | 1 |  | √ | '0' | 是否物料转换 |
-| 34 | fproject | 项目号 | int8 | 64 |  | √ | 0 | 项目 pmpd_project |
-| 35 | fcard | 工卡号 | int8 | 64 |  | √ | 0 | 工卡 mpdm_mrocardroute |
-| 36 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 37 | funit | 计量单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 38 | fbeforeunit | 转换前计量单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 34 | fproject | 项目号 | int8 | 64 |  | √ | 0 | [项目 pmpd_project](../fmm_files/pmpd_project.md) |
+| 35 | fcard | 工卡号 | int8 | 64 |  | √ | 0 | [工卡 mpdm_mrocardroute](../mpdm_files/mpdm_mrocardroute.md) |
+| 36 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 37 | funit | 计量单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 38 | fbeforeunit | 转换前计量单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
 | 39 | fatanumber | 章节编码 | varchar | 80 |  | √ | ' ' | 章节编码 |
 
 ### 列规则定义

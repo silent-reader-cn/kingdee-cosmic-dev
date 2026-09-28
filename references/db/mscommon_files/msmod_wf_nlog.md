@@ -17,6 +17,7 @@
 | 6 | ftaskname | 任务名称 | varchar | 100 |  | √ | ' ' | 任务名称 |
 | 7 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 8 | ftaskclass | 任务执行类 | varchar | 100 |  | √ | ' ' | 任务执行类 |
+| 9 | ftaskexecinfo_tag | 任务执行信息_详情 | text | 0 |  |  | null | 任务执行信息_详情 |
 
 ### 列规则定义
 
@@ -51,9 +52,9 @@
 | 7 | fsrcbillno_tag | 发起方单据编号_详情 | text | 0 |  |  | null | 发起方单据编号_详情 |
 | 8 | fsrcbillno | 发起方单据编号 | varchar | 2000 |  | √ | ' ' | 发起方单据编号 |
 | 9 | fwfmode | 核销方式 | bpchar | 1 |  | √ | 'F' | 核销方式,枚举: F :流程核销 M :手工核销 A :手工自动核销 |
-| 10 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 11 | fsrcbillentity | 发起方单据对象 | varchar | 50 |  | √ | ' ' | 单据主实体 bos_billmainentity |
-| 12 | fwftype | 核销类别 | int8 | 64 |  | √ | 0 | 核销类别 msmod_writeofftype |
+| 10 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 11 | fsrcbillentity | 发起方单据对象 | varchar | 50 |  | √ | ' ' | [单据主实体 bos_billmainentity](../mdl_files/bos_billmainentity.md) |
+| 12 | fwftype | 核销类别 | int8 | 64 |  | √ | 0 | [核销类别 msmod_writeofftype](../mscommon_files/msmod_writeofftype.md) |
 
 ### 列规则定义
 

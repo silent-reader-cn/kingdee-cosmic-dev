@@ -17,7 +17,7 @@
 | 6 | fisincrementsync | 增量同步 | bpchar | 1 |  | √ | '0' | 增量同步 |
 | 7 | fislatestaudittime | 最新审核日期 | bpchar | 1 |  | √ | '1' | 最新审核日期 |
 | 8 | fsavetype | 保存类型 | varchar | 30 |  | √ | ' ' | 保存类型,枚举: A :同步成本BOM B :同步制造工艺路线 |
-| 9 | fuserid | 用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fuserid | 用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | fprocesstype | 工艺类型： | varchar | 30 |  | √ | ' ' | 工艺类型：,枚举: A :物料 B :物料组 C :通用 |
 | 11 | fisreplace | 包含替代件 | bpchar | 1 |  | √ | '0' | 包含替代件 |
 | 12 | fisjumplevel | 包含跳层 | bpchar | 1 |  | √ | '0' | 包含跳层 |

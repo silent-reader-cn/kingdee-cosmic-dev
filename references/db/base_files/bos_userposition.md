@@ -9,21 +9,21 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | 人员 | int8 | 64 |  | √ | null | 人员 bos_user |
+| 1 | fid | 人员 | int8 | 64 |  | √ | null | [人员 bos_user](../base_files/bos_user.md) |
 | 2 | fmaintain | fmaintain | varchar | 10 |  |  | null |  |
-| 3 | forgstructureid | 组织结构 | int8 | 64 |  | √ | 0 | 行政组织结构 bos_adminorg_structure |
+| 3 | forgstructureid | 组织结构 | int8 | 64 |  | √ | 0 | [行政组织结构 bos_adminorg_structure](../base_files/bos_adminorg_structure.md) |
 | 4 | fispartjob | 兼职 | bpchar | 1 |  | √ | ' ' | 兼职 |
 | 5 | fseq | fseq | int8 | 64 |  | √ | 0 |  |
 | 6 | fpostid | fpostid | varchar | 36 |  |  | null |  |
 | 7 | fsource | fsource | varchar | 10 |  |  | null |  |
 | 8 | fenddate | fenddate | timestamp | 0 |  |  | null |  |
-| 9 | fsuperiorid | 直接上级 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fsuperiorid | 直接上级 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | fisincharge | 负责人 | bpchar | 1 |  | √ | ' ' | 负责人 |
 | 11 | fstartdate | fstartdate | timestamp | 0 |  |  | null |  |
-| 12 | fdptid | 部门 | int8 | 64 |  | √ | null | 业务单元 bos_org |
+| 12 | fdptid | 部门 | int8 | 64 |  | √ | null | [业务单元 bos_org](../base_files/bos_org.md) |
 | 13 | fenable | fenable | bpchar | 1 |  |  | null |  |
 | 14 | fposition | 职位 | varchar | 255 |  | √ | ' ' | 职位 |
-| 15 | fpositionid | 岗位 | int8 | 64 |  | √ | 0 | 岗位 bos_position |
+| 15 | fpositionid | 岗位 | int8 | 64 |  | √ | 0 | [岗位 bos_position](../base_files/bos_position.md) |
 | 16 | fentryid | fentryid | int8 | 64 |  | √ | null | id |
 
 ### 列规则定义

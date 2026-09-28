@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fbaddebtavgrate | 坏账准备平均计提率（%） | numeric | 23 | 10 |  | null | 坏账准备平均计提率（%） |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fbaddebt | 坏账准备 | numeric | 23 | 10 |  | null | 坏账准备 |
 | 5 | farbookamount | 应收账款账面价值 | numeric | 23 | 10 |  | null | 应收账款账面价值 |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
@@ -20,8 +20,8 @@
 | 9 | freportdate | 报告期 | timestamp | 0 |  |  | null | 报告期 |
 | 10 | farturnoverrate | 应收账款周转率（次/年） | numeric | 23 | 10 |  | null | 应收账款周转率（次/年） |
 | 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 12 | fipoorgld | IPO主体 | int8 | 64 |  | √ | 0 | IPO编制组织 ipo_org |
-| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fipoorgld | IPO主体 | int8 | 64 |  | √ | 0 | [IPO编制组织 ipo_org](../ipobase_files/ipo_org.md) |
+| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | fbusinessincome | 营业收入 | numeric | 23 | 10 |  | null | 营业收入 |
 | 15 | farriseratio | 应收账款增长率（%） | numeric | 23 | 10 |  | null | 应收账款增长率（%） |
 

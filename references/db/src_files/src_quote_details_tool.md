@@ -1,0 +1,199 @@
+# 议价详情(工具)-src_quote_details_tool
+
+## 议价情况-子表 t_src_quote_details
+
+- **表名称：** 议价情况-子表
+- **表名：** t_src_quote_details
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fnegotiatedate | 议价时间 | timestamp | 0 |  |  | null | 议价时间 |
+| 3 | fsuppliertype | 供应商类别 | varchar | 30 |  | √ | ' ' | 供应商类别,枚举: bd_supplier :供应商 src_supplier :注册供应商 src_supplier_inner :内部供应商(员工) src_supplier_tmp :临时供应商 |
+| 4 | fentrystatus | 议标状态 | bpchar | 1 |  | √ | ' ' | 议标状态,枚举: A :未响应 B :已响应 |
+| 5 | fturns | 议价轮次 | varchar | 2 |  | √ | ' ' | 议价轮次,枚举: 1 :首轮 2 :议价(1) 3 :议价(2) 4 :议价(3) 5 :议价(4) 6 :议价(5) 7 :议价(6) 8 :议价(7) 9 :议价(8) 10 :议价(9) 11 :议价(10) 12 :议价(11) 13 :议价(12) 14 :议价(13) 15 :议价(14) |
+| 6 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
+| 7 | fsupplierip | 供应商IP | varchar | 100 |  | √ | ' ' | 供应商IP |
+| 8 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 9 | fnegotiatetype | 议价方式 | bpchar | 1 |  | √ | ' ' | 议价方式,枚举: 1 :线上议价 2 :线下议价(标的) 3 :线下议价(标段) 4 :电子竞价 |
+| 10 | fsupplierid | 供应商 | int8 | 64 |  | √ | 0 | 供应商 bd_supplier |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fentryid | fentryid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | pk_src_quote_details |  | fentryid |
+| 2 | idx_src_quote_details_fid |  | fid |
+| 3 | idx_src_quote_details_sup |  | fsupplierid |
+
+---
+
+## 议价详情(工具)-主表 t_src_project
+
+- **表名称：** 议价详情(工具)-主表
+- **表名：** t_src_project
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | 寻源项目F7 | int8 | 64 |  | √ | 0 | [招标项目F7 src_projectf7](../src_files/src_projectf7.md) |
+| 2 | fplanschemeid | fplanschemeid | int8 | 64 |  | √ | 0 |  |
+| 3 | freplydate | freplydate | timestamp | 0 |  |  | null |  |
+| 4 | faptschemeid | faptschemeid | int8 | 64 |  | √ | 0 |  |
+| 5 | fanswerdate | fanswerdate | timestamp | 0 |  |  | null |  |
+| 6 | forgid | forgid | int8 | 64 |  | √ | 0 |  |
+| 7 | fsourceid | fsourceid | int8 | 64 |  | √ | 0 |  |
+| 8 | fsrctypeid | fsrctypeid | int8 | 64 |  | √ | 0 |  |
+| 9 | fpentitykey | 父单据标识 | varchar | 50 |  | √ | ' ' | 父单据标识 |
+| 10 | ffeewayid | ffeewayid | int8 | 64 |  | √ | 0 |  |
+| 11 | fpayenddate | fpayenddate | timestamp | 0 |  |  | null |  |
+| 12 | forigin | 发起方 | varchar | 30 |  | √ | ' ' | 发起方,枚举: 1 :采购方端 2 :供应商端 3 :两端公用 |
+| 13 | fscoretype | fscoretype | bpchar | 1 |  | √ | ' ' |  |
+| 14 | fsumamount | fsumamount | numeric | 23 | 10 | √ | 0 |  |
+| 15 | fisbyproject | fisbyproject | bpchar | 1 |  | √ | '0' |  |
+| 16 | fbizschemeid | fbizschemeid | int8 | 64 |  | √ | 0 |  |
+| 17 | ftendertype | ftendertype | bpchar | 1 |  | √ | ' ' |  |
+| 18 | fbillno | fbillno | varchar | 30 |  | √ | ' ' |  |
+| 19 | fratio_oth | fratio_oth | numeric | 23 | 10 | √ | 0 |  |
+| 20 | fprojectid | fprojectid | int8 | 64 |  | √ | 0 |  |
+| 21 | fsrcbillid | fsrcbillid | varchar | 50 |  | √ | ' ' |  |
+| 22 | ftodotask | ftodotask | varchar | 255 |  | √ | ' ' |  |
+| 23 | falterqty | falterqty | int8 | 64 |  | √ | 0 |  |
+| 24 | fbidcount | fbidcount | int4 | 32 |  | √ | 0 |  |
+| 25 | fwinerqty | fwinerqty | int8 | 64 |  | √ | 0 |  |
+| 26 | fsupplierid | fsupplierid | int8 | 64 |  | √ | 0 |  |
+| 27 | ftecschemeid | ftecschemeid | int8 | 64 |  | √ | 0 |  |
+| 28 | fsuppliertype | fsuppliertype | varchar | 30 |  | √ | ' ' |  |
+| 29 | fnodename | fnodename | varchar | 50 |  | √ | ' ' |  |
+| 30 | fscoremethod | fscoremethod | bpchar | 1 |  | √ | ' ' |  |
+| 31 | fsendtendertime | fsendtendertime | timestamp | 0 |  |  | null |  |
+| 32 | fstopbiddate | fstopbiddate | timestamp | 0 |  |  | null |  |
+| 33 | fruleassess | fruleassess | bpchar | 1 |  | √ | ' ' |  |
+| 34 | fratio_syn | fratio_syn | numeric | 23 | 10 | √ | 0 |  |
+| 35 | fsrcbilltype | fsrcbilltype | varchar | 50 |  | √ | ' ' |  |
+| 36 | ffeeitemid | ffeeitemid | int8 | 64 |  | √ | 0 |  |
+| 37 | fbiderqty | fbiderqty | int8 | 64 |  | √ | 0 |  |
+| 38 | fbilltypeid | fbilltypeid | int8 | 64 |  | √ | 0 |  |
+| 39 | fisautoopen | fisautoopen | bpchar | 1 |  | √ | '0' |  |
+| 40 | fisviepublish | fisviepublish | bpchar | 1 |  | √ | '0' |  |
+| 41 | ftieredtype | ftieredtype | bpchar | 1 |  | √ | '1' |  |
+| 42 | fdecidedate | fdecidedate | timestamp | 0 |  |  | null |  |
+| 43 | fbilldate | fbilldate | timestamp | 0 |  |  | null |  |
+| 44 | fwinruleid | fwinruleid | int8 | 64 |  | √ | 0 |  |
+| 45 | fpurdeptid | fpurdeptid | int8 | 64 |  | √ | 0 |  |
+| 46 | famount | famount | numeric | 23 | 10 | √ | 0 |  |
+| 47 | fsystype | fsystype | bpchar | 1 |  | √ | '1' |  |
+| 48 | fisaptitude | fisaptitude | bpchar | 1 |  | √ | '0' |  |
+| 49 | fsurplusamount | fsurplusamount | numeric | 23 | 10 | √ | 0 |  |
+| 50 | fsupopentype | fsupopentype | bpchar | 1 |  | √ | '1' |  |
+| 51 | fopentype | fopentype | bpchar | 1 |  | √ | ' ' |  |
+| 52 | fclosetask | fclosetask | varchar | 255 |  | √ | ' ' |  |
+| 53 | fpurgroupid | fpurgroupid | int8 | 64 |  | √ | 0 |  |
+| 54 | fbiztypeid | fbiztypeid | int8 | 64 |  | √ | 0 |  |
+| 55 | fismultipackage | fismultipackage | bpchar | 1 |  | √ | '0' |  |
+| 56 | fishidesupplier | fishidesupplier | bpchar | 1 |  | √ | '0' |  |
+| 57 | fsourceclassid | fsourceclassid | int8 | 64 |  | √ | 0 |  |
+| 58 | fopenstatus | fopenstatus | bpchar | 1 |  | √ | '1' |  |
+| 59 | fmanagetype | fmanagetype | bpchar | 1 |  | √ | ' ' |  |
+| 60 | ftaxtype | ftaxtype | varchar | 30 |  | √ | ' ' |  |
+| 61 | fbidname | fbidname | varchar | 300 |  | √ | ' ' |  |
+| 62 | fterminalnode | fterminalnode | int8 | 64 |  | √ | 0 |  |
+| 63 | fparentid | 父单据ID | varchar | 50 |  | √ | ' ' | 父单据ID |
+| 64 | fdonetask | fdonetask | varchar | 255 |  | √ | ' ' |  |
+| 65 | fisbypackage | fisbypackage | bpchar | 1 |  | √ | '0' |  |
+| 66 | fisbidpublish | fisbidpublish | bpchar | 1 |  | √ | '0' |  |
+| 67 | fentitykey | 组件标识 | varchar | 50 |  | √ | ' ' | 组件标识 |
+| 68 | fopendate | fopendate | timestamp | 0 |  |  | null |  |
+| 69 | fdecisiontype | fdecisiontype | bpchar | 1 |  | √ | ' ' |  |
+| 70 | fratio_biz | fratio_biz | numeric | 23 | 10 | √ | 0 |  |
+| 71 | fratio_tec | fratio_tec | numeric | 23 | 10 | √ | 0 |  |
+| 72 | fisopencontrol | fisopencontrol | bpchar | 1 |  | √ | '0' |  |
+| 73 | fisbypackage_apt | fisbypackage_apt | bpchar | 1 |  | √ | '0' |  |
+| 74 | fsourcetypeid | fsourcetypeid | int8 | 64 |  | √ | 0 |  |
+| 75 | fsumtaxamount | fsumtaxamount | numeric | 23 | 10 | √ | 0 |  |
+| 76 | fextfilterid | fextfilterid | int8 | 64 |  | √ | 0 |  |
+| 77 | fcurrentnode | fcurrentnode | int8 | 64 |  | √ | 0 |  |
+| 78 | fisquickpur | fisquickpur | bpchar | 1 |  | √ | '0' |  |
+| 79 | fcurrencyid | fcurrencyid | int8 | 64 |  | √ | 0 |  |
+| 80 | fratiotype | fratiotype | bpchar | 1 |  | √ | '1' |  |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fid | fid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_src_project_sourceid |  | fsourceid |
+| 2 | idx_src_project_parentid |  | fparentid |
+| 3 | pk_src_project |  | fid |
+| 4 | idx_src_project_sourceclassid |  | fsourceclassid |
+| 5 | idx_src_project_status |  | fopenstatus |
+| 6 | idx_src_project_type |  | fsrctypeid |
+
+---
+
+## 议价详情(工具)-分表 t_src_project_q
+
+- **表名称：** 议价详情(工具)-分表
+- **表名：** t_src_project_q
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fispkgscheme | fispkgscheme | bpchar | 1 |  | √ | '0' |  |
+| 3 | fismanualscore | fismanualscore | bpchar | 1 |  | √ | '0' |  |
+| 4 | fbizstatus | fbizstatus | bpchar | 1 |  | √ | ' ' |  |
+| 5 | fschemeid | 推荐方案 | int8 | 64 |  | √ | 0 | [推荐方案 src_pattern](../src_files/src_pattern.md) |
+| 6 | fseq | fseq | int8 | 64 |  | √ | 0 |  |
+| 7 | funauditdate | funauditdate | timestamp | 0 |  |  | null |  |
+| 8 | fmodifytime | fmodifytime | timestamp | 0 |  |  | null |  |
+| 9 | fcreatorid | fcreatorid | int8 | 64 |  | √ | 0 |  |
+| 10 | fnegschemeid | fnegschemeid | int8 | 64 |  | √ | 0 |  |
+| 11 | funauditorid | funauditorid | int8 | 64 |  | √ | 0 |  |
+| 12 | fremark | fremark | varchar | 510 |  | √ | ' ' |  |
+| 13 | fmodifierid | fmodifierid | int8 | 64 |  | √ | 0 |  |
+| 14 | funsubmitterid | funsubmitterid | int8 | 64 |  | √ | 0 |  |
+| 15 | funsubmitdate | funsubmitdate | timestamp | 0 |  |  | null |  |
+| 16 | ftemplateid | ftemplateid | int8 | 64 |  | √ | 0 |  |
+| 17 | fbillstatus | fbillstatus | bpchar | 1 |  | √ | ' ' |  |
+| 18 | fsubmitterid | fsubmitterid | int8 | 64 |  | √ | 0 |  |
+| 19 | fcreatetime | fcreatetime | timestamp | 0 |  |  | null |  |
+| 20 | flastupdateuserid | flastupdateuserid | int8 | 64 |  | √ | 0 |  |
+| 21 | fauditdate | fauditdate | timestamp | 0 |  |  | null |  |
+| 22 | ftendency | ftendency | varchar | 50 |  | √ | ' ' |  |
+| 23 | fbasescore | fbasescore | numeric | 23 | 10 | √ | 0 |  |
+| 24 | fminscore | fminscore | numeric | 23 | 10 | √ | 0 |  |
+| 25 | flastupdatetime | flastupdatetime | timestamp | 0 |  |  | null |  |
+| 26 | fsubmitdate | fsubmitdate | timestamp | 0 |  |  | null |  |
+| 27 | ftopsupplier | ftopsupplier | int8 | 64 |  | √ | 1 |  |
+| 28 | fnegotiaterule | fnegotiaterule | bpchar | 1 |  | √ | ' ' |  |
+| 29 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
+| 30 | fauditorid | fauditorid | int8 | 64 |  | √ | 0 |  |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fid | fid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_src_project_q_fcreatorid |  | fcreatorid |
+| 2 | pk_src_project_q |  | fid |

@@ -42,30 +42,32 @@
 | 31 | fentitynumber | 实体编码 | varchar | 50 |  | √ | ' ' | 实体编码 |
 | 32 | fprocinstid | 流程实例ID | int8 | 64 |  | √ | 0 | 流程实例ID |
 | 33 | fsubprocessinstanceid | 子流程实例ID | int8 | 64 |  | √ | 0 | 子流程实例ID |
-| 34 | fexecutiontype | 执行类型 | varchar | 30 |  | √ | ' ' | 执行类型 |
-| 35 | fcreatedate | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 36 | fsignature | 手写签名 | varchar | 255 |  | √ | ' ' | 手写签名 |
-| 37 | factivityname | 节点名称 | varchar | 500 |  | √ | ' ' | 节点名称 |
-| 38 | fextendstr1 | 字符1 | varchar | 255 |  | √ | ' ' | 字符1 |
-| 39 | fextendstr2 | 字符2 | varchar | 255 |  | √ | ' ' | 字符2 |
-| 40 | fbacktoback | 是否背靠背 | bpchar | 1 |  | √ | '0' | 是否背靠背 |
-| 41 | fsendernameformat | 上一步处理人显示设置 | varchar | 255 |  | √ | ' ' | 上一步处理人显示设置 |
-| 42 | fstartnameformat | 发起人显示设置 | varchar | 255 |  | √ | ' ' | 发起人显示设置 |
-| 43 | ftime | 时间 | timestamp | 0 |  |  | null | 时间 |
-| 44 | fstep | 审批步长 | int8 | 64 |  | √ | 0 | 审批步长 |
-| 45 | fsubactivityname | 子节点名称 | varchar | 230 |  | √ | ' ' | 子节点名称 |
-| 46 | fprocessingmobilepage | 移动处理页面 | varchar | 50 |  | √ | ' ' | 移动处理页面 |
-| 47 | fcurrentsubject | 当前任务主题 | varchar | 3000 |  | √ | ' ' | 当前任务主题 |
-| 48 | fuserid | 用户ID | int8 | 64 |  | √ | 0 | 用户ID |
-| 49 | factivityid | 活动ID | varchar | 255 |  | √ | ' ' | 活动ID |
-| 50 | fprocesstype | 流程类型 | varchar | 30 |  | √ | 'AuditFlow' | 流程类型,枚举: AuditFlow :审批流 BizFlow :业务流 |
-| 51 | fdecisiontype | 决策类型 | varchar | 50 |  | √ | ' ' | 决策类型 |
-| 52 | ftype | 类型 | varchar | 100 |  | √ | ' ' | 类型 |
-| 53 | fresultnumber | 结果编码 | varchar | 50 |  | √ | ' ' | 结果编码 |
-| 54 | fpresentassignee | 当前处理人 | varchar | 1000 |  | √ | ' ' | 当前处理人 |
-| 55 | ftaskid | 任务ID | int8 | 64 |  | √ | 0 | 任务ID |
-| 56 | frichtextmessage | 富文本消息 | text | 0 |  |  | null | 富文本消息 |
-| 57 | fbilltype | 业务单据类型 | varchar | 50 |  | √ | ' ' | 业务单据类型 |
+| 34 | fsource | 来源系统 | varchar | 100 |  | √ | ' ' | 来源系统 |
+| 35 | fexecutiontype | 执行类型 | varchar | 30 |  | √ | ' ' | 执行类型 |
+| 36 | fcreatedate | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 37 | fsignature | 手写签名 | varchar | 255 |  | √ | ' ' | 手写签名 |
+| 38 | factivityname | 节点名称 | varchar | 500 |  | √ | ' ' | 节点名称 |
+| 39 | fextendstr1 | 字符1 | varchar | 255 |  | √ | ' ' | 字符1 |
+| 40 | fextendstr2 | 字符2 | varchar | 255 |  | √ | ' ' | 字符2 |
+| 41 | fbacktoback | 是否背靠背 | bpchar | 1 |  | √ | '0' | 是否背靠背 |
+| 42 | fsendernameformat | 上一步处理人显示设置 | varchar | 255 |  | √ | ' ' | 上一步处理人显示设置 |
+| 43 | fstartnameformat | 发起人显示设置 | varchar | 255 |  | √ | ' ' | 发起人显示设置 |
+| 44 | ftime | 时间 | timestamp | 0 |  |  | null | 时间 |
+| 45 | fstep | 审批步长 | int8 | 64 |  | √ | 0 | 审批步长 |
+| 46 | fsubactivityname | 子节点名称 | varchar | 230 |  | √ | ' ' | 子节点名称 |
+| 47 | fprocessingmobilepage | 移动处理页面 | varchar | 50 |  | √ | ' ' | 移动处理页面 |
+| 48 | fcurrentsubject | 当前任务主题 | varchar | 3000 |  | √ | ' ' | 当前任务主题 |
+| 49 | fsourcename | 来源系统名称 | varchar | 100 |  | √ | ' ' | 来源系统名称 |
+| 50 | fuserid | 用户ID | int8 | 64 |  | √ | 0 | 用户ID |
+| 51 | factivityid | 活动ID | varchar | 255 |  | √ | ' ' | 活动ID |
+| 52 | fprocesstype | 流程类型 | varchar | 30 |  | √ | 'AuditFlow' | 流程类型,枚举: AuditFlow :审批流 BizFlow :业务流 |
+| 53 | fdecisiontype | 决策类型 | varchar | 50 |  | √ | ' ' | 决策类型 |
+| 54 | ftype | 类型 | varchar | 100 |  | √ | ' ' | 类型 |
+| 55 | fresultnumber | 结果编码 | varchar | 50 |  | √ | ' ' | 结果编码 |
+| 56 | fpresentassignee | 当前处理人 | varchar | 1000 |  | √ | ' ' | 当前处理人 |
+| 57 | ftaskid | 任务ID | int8 | 64 |  | √ | 0 | 任务ID |
+| 58 | frichtextmessage | 富文本消息 | text | 0 |  |  | null | 富文本消息 |
+| 59 | fbilltype | 业务单据类型 | varchar | 50 |  | √ | ' ' | 业务单据类型 |
 
 ### 列规则定义
 
@@ -80,7 +82,7 @@
 | 1 | idx_wf_hicomment_delegateid |  | fdelegateid,ftype,fexecutiontype |
 | 2 | idx_wf_hicomment_owner |  | fownerid,ftype,fexecutiontype |
 | 3 | idx_wf_hicomment_enum |  | fentitynumber |
-| 4 | idx_wf_hicomment_userid |  | fuserid,ftype,fexecutiontype |
+| 4 | idx_wf_hicomment_userid |  | fuserid,ftime |
 | 5 | idx_wf_hicomment_time |  | ftime |
 | 6 | idx_wf_hicomment_businesskey |  | fbusinesskey |
 | 7 | idx_wf_hicomment_proc |  | fprocinstid |
@@ -108,17 +110,18 @@
 | 8 | fsendername | 上一步处理人名称 | varchar | 400 |  | √ | ' ' | 上一步处理人名称 |
 | 9 | fextendmulstr2 | 多语言字符串2 | varchar | 255 |  | √ | ' ' | 多语言字符串2 |
 | 10 | fextendmulstr1 | 多语言字符串1 | varchar | 255 |  | √ | ' ' | 多语言字符串1 |
-| 11 | fsensitivefieldchange | 敏感字段变化 | text | 0 |  |  | null | 敏感字段变化 |
-| 12 | ftrustname | 委托人名称 | varchar | 255 |  | √ | ' ' | 委托人名称 |
-| 13 | flocaleid | flocaleid | varchar | 8 |  | √ | ' ' | localeid |
-| 14 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
-| 15 | fassignee | 处理人 | varchar | 500 |  | √ | ' ' | 处理人 |
-| 16 | fentityname | 单据类型 | varchar | 115 |  | √ | ' ' | 单据类型 |
-| 17 | factivityname | 节点名称 | varchar | 500 |  | √ | ' ' | 节点名称 |
-| 18 | fresultname | 结果名称 | varchar | 115 |  | √ | ' ' | 结果名称 |
-| 19 | fpresentassignee | 当前处理人 | varchar | 1000 |  | √ | ' ' | 当前处理人 |
-| 20 | fsendernameformat | 上一步处理人显示设置 | varchar | 255 |  | √ | ' ' | 上一步处理人显示设置 |
-| 21 | fstartnameformat | 发起人显示设置 | varchar | 255 |  | √ | ' ' | 发起人显示设置 |
+| 11 | fsourcename | 来源系统名称 | varchar | 100 |  | √ | ' ' | 来源系统名称 |
+| 12 | fsensitivefieldchange | 敏感字段变化 | text | 0 |  |  | null | 敏感字段变化 |
+| 13 | ftrustname | 委托人名称 | varchar | 255 |  | √ | ' ' | 委托人名称 |
+| 14 | flocaleid | flocaleid | varchar | 8 |  | √ | ' ' | localeid |
+| 15 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
+| 16 | fassignee | 处理人 | varchar | 500 |  | √ | ' ' | 处理人 |
+| 17 | fentityname | 单据类型 | varchar | 115 |  | √ | ' ' | 单据类型 |
+| 18 | factivityname | 节点名称 | varchar | 500 |  | √ | ' ' | 节点名称 |
+| 19 | fresultname | 结果名称 | varchar | 115 |  | √ | ' ' | 结果名称 |
+| 20 | fpresentassignee | 当前处理人 | varchar | 1000 |  | √ | ' ' | 当前处理人 |
+| 21 | fsendernameformat | 上一步处理人显示设置 | varchar | 255 |  | √ | ' ' | 上一步处理人显示设置 |
+| 22 | fstartnameformat | 发起人显示设置 | varchar | 255 |  | √ | ' ' | 发起人显示设置 |
 
 ### 列规则定义
 

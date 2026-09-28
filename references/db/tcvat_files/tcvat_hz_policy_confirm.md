@@ -10,10 +10,10 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fbillstatus | 单据状态 | varchar | 30 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
 | 7 | fhzfs | 汇总方式： | varchar | 30 |  | √ | ' ' | 汇总方式：,枚举: 1 :预征方式 2 :分配方式 |
 | 8 | fhzqylx | 汇总企业类型： | varchar | 30 |  | √ | ' ' | 汇总企业类型：,枚举: 1 :航空运输企业 2 :铁路运输企业 3 :邮政企业 4 :电信企业 5 :一般企业 |
@@ -22,12 +22,12 @@
 | 11 | fenddate | 税款所属期止 | timestamp | 0 |  |  | null | 税款所属期止 |
 | 12 | fstatus | 状态 | varchar | 50 |  | √ | ' ' | 状态 |
 | 13 | fapplicablediffer | 差额扣除 | bpchar | 1 |  | √ | ' ' | 差额扣除 |
-| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | fisapplicableplus | 加计抵减进项税 | bpchar | 1 |  | √ | ' ' | 加计抵减进项税 |
 | 16 | fstartdate | 税款所属期起 | timestamp | 0 |  |  | null | 税款所属期起 |
 | 17 | fdeductionrate | 加计抵减比例： | varchar | 30 |  | √ | ' ' | 加计抵减比例：,枚举: |
 | 18 | fbillno | 单据编号 | varchar | 30 |  | √ | ' ' | 单据编号 |
-| 19 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 19 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 
@@ -55,8 +55,8 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | frate | 税率/征收率 | int8 | 64 |  | √ | 0 | 税率模板 tpo_tcvat_taxrates |
-| 3 | fsuborgid | 组织编码 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 4 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | fsuborgid | 组织编码 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 4 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 6 | fdeclaretype | 申报方式 | varchar | 30 |  | √ | ' ' | 申报方式,枚举: 1 :被汇总 2 :汇总 |
 | 7 | fruleid | 规则id | int8 | 64 |  | √ | 0 | 规则id |

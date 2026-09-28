@@ -10,8 +10,8 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fgroupid | 用户组 | int8 | 64 |  | √ | 0 | 用户组 portal_scheme_group |
-| 3 | fschemeid | 方案 | int8 | 64 |  | √ | 0 | 首页方案 portal_scheme |
+| 2 | fgroupid | 用户组 | int8 | 64 |  | √ | 0 | [用户组 portal_scheme_group](../portal_files/portal_scheme_group.md) |
+| 3 | fschemeid | 方案 | int8 | 64 |  | √ | 0 | [首页方案 portal_scheme](../portal_files/portal_scheme.md) |
 
 ### 列规则定义
 

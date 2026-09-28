@@ -13,13 +13,13 @@
 | 2 | fhisstatus | 状态 | varchar | 50 |  | √ | ' ' | 状态,枚举: A :进行中 S :成功 F :失败 C :取消 |
 | 3 | fhiscols_tag | 历史显示字段_详情 | text | 0 |  |  | null | 历史显示字段_详情 |
 | 4 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 5 | fhisentity | 历史实体 | varchar | 50 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 5 | fhisentity | 历史实体 | varchar | 50 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 6 | fhisfilter_tag | 历史过滤设置_详情 | text | 0 |  |  | null | 历史过滤设置_详情 |
 | 7 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 | id |
 | 8 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 | 9 | fhisstarttime | 开始时间 | timestamp | 0 |  |  | null | 开始时间 |
 | 10 | fhisfinishtime | 结束时间 | timestamp | 0 |  |  | null | 结束时间 |
-| 11 | fhissettings | 历史设置 | int8 | 64 |  | √ | 0 | 同步设置 msplan_ds_settings |
+| 11 | fhissettings | 历史设置 | int8 | 64 |  | √ | 0 | [同步设置 msplan_ds_settings](../msplan_files/msplan_ds_settings.md) |
 | 12 | fhiscols | 历史显示字段 | varchar | 255 |  | √ | ' ' | 历史显示字段 |
 
 ### 列规则定义
@@ -47,7 +47,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 同步设置 msplan_ds_settings |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [同步设置 msplan_ds_settings](../msplan_files/msplan_ds_settings.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -75,11 +75,11 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreaterfield | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fcreaterfield | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fbillstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 5 | fbillstatusfield | 使用状态 | varchar | 30 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
-| 6 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 7 | fnumber | 编码 | varchar | 50 |  | √ | ' ' | 编码 |
 | 8 | fdesc | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
 | 9 | fdesc_tag | 备注_详情 | text | 0 |  |  | null | 备注_详情 |
@@ -111,8 +111,8 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | factivestatus | 生效状态 | varchar | 50 |  | √ | ' ' | 生效状态,枚举: A :激活 B :失效 D :数据已删除 |
-| 3 | fexecutor | 执行人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 4 | fuserfield | 版本修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fexecutor | 执行人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 4 | fuserfield | 版本修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fsynclog_tag | 错误信息_详情 | text | 0 |  |  | null | 错误信息_详情 |
 | 6 | fstartdatetime | 开始时间 | timestamp | 0 |  |  | null | 开始时间 |
 | 7 | fsynclog | 错误信息 | varchar | 255 |  | √ | ' ' | 错误信息 |

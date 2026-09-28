@@ -12,11 +12,11 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fserialno | 台账流水号 | varchar | 50 |  | √ | ' ' | 台账流水号 |
 | 3 | ftaxitem | 税目名称 | varchar | 50 |  | √ | ' ' | 税目名称 |
-| 4 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 4 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | ftotalamount | 总额 | numeric | 23 | 10 | √ | 0 | 总额 |
 | 6 | famount | 金额 | numeric | 23 | 10 | √ | 0 | 金额 |
 | 7 | fskssqq | 税款所属期.开始 | timestamp | 0 |  |  | null | 税款所属期.开始 |
-| 8 | flongruleid | 规则ID | int8 | 64 |  | √ | 0 | 水利基金不含税收入规则 totf_rule_waterfund |
+| 8 | flongruleid | 规则ID | int8 | 64 |  | √ | 0 | [水利基金不含税收入规则 totf_rule_waterfund](../totf_files/totf_rule_waterfund.md) |
 | 9 | fmappingid | 映射字段ID | int8 | 64 |  | √ | 0 | 映射字段ID |
 | 10 | fadjustamount | 调整额 | numeric | 23 | 10 | √ | 0 | 调整额 |
 | 11 | fskssqz | 税款所属期.结束 | timestamp | 0 |  |  | null | 税款所属期.结束 |

@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | null |  |
-| 2 | froleid | 角色编码 | varchar | 36 |  | √ | ' ' | 通用角色 perm_role |
+| 2 | froleid | 角色编码 | varchar | 36 |  | √ | ' ' | [通用角色 perm_role](../base_files/perm_role.md) |
 | 3 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 4 | fentryid | fentryid | int8 | 64 |  | √ | null | id |
 
@@ -38,8 +38,8 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fsubdimensiontype | 维度属性 | varchar | 36 |  | √ | ' ' | 全局数据规则控制维度 perm_overallprop |
-| 2 | fsubpropentnum | 基础资料类型 | varchar | 36 |  | √ | ' ' | 业务对象 bos_objecttype |
+| 1 | fsubdimensiontype | 维度属性 | varchar | 36 |  | √ | ' ' | [全局数据规则控制维度 perm_overallprop](../base_files/perm_overallprop.md) |
+| 2 | fsubpropentnum | 基础资料类型 | varchar | 36 |  | √ | ' ' | [业务对象 bos_objecttype](../mdl_files/bos_objecttype.md) |
 | 3 | fsubfieldtype | 属性类型 | varchar | 50 |  | √ | ' ' | 属性类型,枚举: BasedataProp :基础资料 TextProp :文本 ComboProp :下拉列表 |
 | 4 | fsubpropkey | 属性名称 | varchar | 50 |  | √ | ' ' | 属性名称,枚举: |
 | 5 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
@@ -71,11 +71,11 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fentitynum | 业务对象 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 2 | fentitynum | 业务对象 | varchar | 36 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 3 | foverallprop | foverallprop | int8 | 64 |  | √ | 0 |  |
 | 4 | fapplyscope | fapplyscope | bpchar | 1 |  | √ | '1' |  |
 | 5 | fpropkey | fpropkey | varchar | 36 |  | √ | ' ' |  |
-| 6 | fappid | 应用 | varchar | 36 |  | √ | ' ' | 业务应用实体 bos_devportal_bizapp |
+| 6 | fappid | 应用 | varchar | 36 |  | √ | ' ' | [业务应用实体 bos_devportal_bizapp](../mdl_files/bos_devportal_bizapp.md) |
 
 ### 列规则定义
 
@@ -131,7 +131,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | null |  |
-| 2 | froleid | 角色编码 | varchar | 36 |  | √ | ' ' | 通用角色 perm_role |
+| 2 | froleid | 角色编码 | varchar | 36 |  | √ | ' ' | [通用角色 perm_role](../base_files/perm_role.md) |
 | 3 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 4 | fentryid | fentryid | int8 | 64 |  | √ | null | id |
 

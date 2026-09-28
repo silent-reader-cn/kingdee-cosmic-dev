@@ -1,8 +1,8 @@
-# 购买&#x2f;赎回理财存储表-aqap_bd_financing
+# 购买/赎回理财存储表-aqap_bd_financing
 
-## 购买&#x2f;赎回理财存储表-主表 t_aqap_bd_financing
+## 购买/赎回理财存储表-主表 t_aqap_bd_financing
 
-- **表名称：** 购买&#x2f;赎回理财存储表-主表
+- **表名称：** 购买/赎回理财存储表-主表
 - **表名：** t_aqap_bd_financing
 
 ### 表格列定义
@@ -39,7 +39,7 @@
 | 28 | fsubmit_success_time | 提交成功时间 | timestamp | 0 |  |  | null | 提交成功时间 |
 | 29 | fnumber | 购买/赎回份数 | varchar | 50 |  | √ | ' ' | 购买/赎回份数 |
 | 30 | ffoll_flag | 到期是否续存(1、续存，2、不续存)(工行) | varchar | 50 |  | √ | ' ' | 到期是否续存(1、续存，2、不续存)(工行) |
-| 31 | fauditorid | 审核人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 31 | fauditorid | 审核人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 32 | froll_date | 投资天数（工行） | varchar | 50 |  | √ | ' ' | 投资天数（工行） |
 | 33 | fvalue_date | 起息日 | timestamp | 0 |  |  | null | 起息日 |
 | 34 | fbank_status | 银行返回状态码 | varchar | 50 |  | √ | ' ' | 银行返回状态码 |
@@ -53,12 +53,12 @@
 | 42 | fstatus | 交易状态 | varchar | 50 |  | √ | ' ' | 交易状态 |
 | 43 | fcustom_id | 租户号 | varchar | 50 |  | √ | ' ' | 租户号 |
 | 44 | fsync_count | 同步次数 | int8 | 64 |  |  | null | 同步次数 |
-| 45 | fcreatorid | 创建人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 45 | fcreatorid | 创建人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 46 | fsecurities_accno | 证券账户（招行） | varchar | 50 |  | √ | ' ' | 证券账户（招行） |
 | 47 | frolldate | frolldate | varchar | 50 |  | √ | ' ' |  |
 | 48 | febg_id | 所属节点 | varchar | 50 |  | √ | ' ' | 所属节点 |
 | 49 | freversed_biz_field | 业务参数字段 | varchar | 500 |  | √ | ' ' | 业务参数字段 |
-| 50 | fmodifierid | 修改人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 50 | fmodifierid | 修改人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 51 | fredeem_flag | 赎回标记（招行） | varchar | 50 |  | √ | ' ' | 赎回标记（招行） |
 | 52 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 53 | fcurrency | 币别 | varchar | 50 |  | √ | ' ' | 币别 |

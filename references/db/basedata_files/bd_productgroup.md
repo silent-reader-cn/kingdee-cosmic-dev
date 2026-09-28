@@ -11,15 +11,15 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fisleaf | 是否叶子 | bpchar | 1 |  | √ | '1' | 是否叶子 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fcategory | 本级分组 | varchar | 30 |  | √ | ' ' | 本级分组,枚举: Consumers BUnit BG :Lv0 Product Category Product Line :Lv1 Product Category Product Area :Lv2 Product Category Product Family :Lv3 Product Category Product Series :Lv4 Product Series |
-| 5 | fparentid | 上级 | int8 | 64 |  | √ | 0 | 产品分类 bd_productgroup |
+| 5 | fparentid | 上级 | int8 | 64 |  | √ | 0 | [产品分类 bd_productgroup](../basedata_files/bd_productgroup.md) |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 7 | findustrialtype | 工业类型 | varchar | 255 |  | √ | ' ' | 工业类型 |
 | 8 | flongnumber | 长编码 | varchar | 255 |  | √ | ' ' | 长编码 |
 | 9 | fdisabledate | 禁用时间 | timestamp | 0 |  |  | null | 禁用时间 |
 | 10 | fznname | 名称（中文） | varchar | 255 |  | √ | ' ' | 名称（中文） |
-| 11 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fenname | 名称（英文） | varchar | 255 |  | √ | ' ' | 名称（英文） |
 | 13 | fispreset | fispreset | bpchar | 1 |  | √ | '0' |  |
 | 14 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
@@ -27,7 +27,7 @@
 | 16 | flevel | 级次 | int8 | 64 |  | √ | 0 | 级次 |
 | 17 | fstatus | 数据状态 | varchar | 10 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 18 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 19 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 19 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 20 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 21 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
 

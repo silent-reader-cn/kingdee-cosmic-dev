@@ -12,8 +12,8 @@
 | 1 | fid | 单据ID | int8 | 64 |  | √ | 0 | 单据ID |
 | 2 | fgroupid | fgroupid | int8 | 64 |  | √ | 0 |  |
 | 3 | ftaxrate | ftaxrate | numeric | 19 | 6 | √ | 0.000000 |  |
-| 4 | forgid | 采购方 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 5 | fentertypeid | 准入类型 | int8 | 64 |  | √ | 0 | 准入类型 srm_biztype |
+| 4 | forgid | 采购方 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 5 | fentertypeid | 准入类型 | int8 | 64 |  | √ | 0 | [准入类型 srm_biztype](../srm_files/srm_biztype.md) |
 | 6 | fhassample | 已样品确认 | bpchar | 1 |  | √ | ' ' | 已样品确认 |
 | 7 | fbilldate | 业务日期 | timestamp | 0 |  |  | null | 业务日期 |
 | 8 | fisapprove | 需要供应商生效 | bpchar | 1 |  | √ | '0' | 需要供应商生效 |
@@ -37,7 +37,7 @@
 | 26 | fissample | 需要样品确认 | bpchar | 1 |  | √ | '0' | 需要样品确认 |
 | 27 | flastupdateuserid | flastupdateuserid | int8 | 64 |  | √ | 0 |  |
 | 28 | fbizpartnerid | fbizpartnerid | int8 | 64 |  | √ | 0 |  |
-| 29 | fsupplierid | 供应商 | int8 | 64 |  | √ | 0 | 供应商 srm_supplier |
+| 29 | fsupplierid | 供应商 | int8 | 64 |  | √ | 0 | [供应商 srm_supplier](../srm_files/srm_supplier.md) |
 | 30 | flastupdatetime | flastupdatetime | timestamp | 0 |  |  | null |  |
 | 31 | fsettletypeid | fsettletypeid | int8 | 64 |  | √ | 0 |  |
 | 32 | fcfmstatus | fcfmstatus | bpchar | 1 |  | √ | ' ' |  |

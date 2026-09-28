@@ -17,7 +17,7 @@
 | 6 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 7 | fmaincfamount | 主表项目金额 | numeric | 23 | 10 | √ | 0.0000000000 | 主表项目金额 |
 | 8 | faccount | 会计科目（编码转id）（备用） | varchar | 255 |  | √ | ' ' | 会计科目（编码转id）（备用） |
-| 9 | fcurrencyinfo | 币别（编码转JSON） | varchar | 255 |  | √ | ' ' | 币别（编码转JSON） |
+| 9 | fcurrencyinfo | 币种（编码转JSON） | varchar | 255 |  | √ | ' ' | 币种（编码转JSON） |
 | 10 | fprice | 单价 | numeric | 23 | 10 | √ | 0.0000000000 | 单价 |
 | 11 | fentrydc | 分录方向 | varchar | 50 |  | √ | ' ' | 分录方向 |
 | 12 | fexpiredate | 到期日 | timestamp | 0 |  |  | null | 到期日 |
@@ -81,8 +81,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | pk_t_gl_syn_voucher |  | fid |
-| 2 | idx_gl_synvoucher |  | fbillno |
+| 1 | idx_gl_synvoucher |  | fbillno |
+| 2 | pk_t_gl_syn_voucher |  | fid |
 
 ---
 
@@ -114,5 +114,5 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | pk_t_gl_syn_subvoucherentry |  | fdetailid |
-| 2 | idx_gl_subentry |  | fentryid |
+| 1 | idx_gl_subentry |  | fentryid |
+| 2 | pk_t_gl_syn_subvoucherentry |  | fdetailid |

@@ -50,19 +50,19 @@
 | 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 11 | fplanusercode | 计划员代码 | varchar | 50 |  | √ | ' ' | 计划员代码 |
 | 12 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 13 | fmaterialplan | 物料计划信息 | int8 | 64 |  | √ | 0 | 物料计划信息 mpdm_materialplan |
-| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fmaterialplan | 物料计划信息 | int8 | 64 |  | √ | 0 | [物料计划信息 mpdm_materialplan](../sbd_files/mpdm_materialplan.md) |
+| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 16 | fitemnameshow | 物料编码名称 | varchar | 255 |  | √ | ' ' | 物料编码名称 |
 | 17 | fsourcedataid | fsourcedataid | int8 | 64 |  | √ | 0 |  |
 | 18 | fbitindex | fbitindex | int4 | 32 |  | √ | 0 |  |
 | 19 | fremark | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
 | 20 | fcreateorgid | fcreateorgid | int8 | 64 |  | √ | 0 |  |
-| 21 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 22 | fmaterielpbom | 产品族 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 21 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 22 | fmaterielpbom | 产品族 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 23 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 24 | fplanuser | 计划员 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 25 | fmaterielitem | 物料编码 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 24 | fplanuser | 计划员 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 25 | fmaterielitem | 物料编码 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 26 | fbomtype | 类型 | varchar | 50 |  | √ | ' ' | 类型,枚举: PBOM :产品族 MBOM :关联关系 |
 | 27 | fctrlstrategy | fctrlstrategy | varchar | 50 |  | √ | ' ' |  |
 | 28 | fsupmodel | 供应模式 | varchar | 50 |  | √ | ' ' | 供应模式 |

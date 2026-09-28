@@ -9,7 +9,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 2 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 | 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 
@@ -38,17 +38,33 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fattachname | 附件名称 | varchar | 255 |  |  | null | 附件名称 |
-| 3 | fattachurl | 附件 url | varchar | 512 |  |  | null | 附件 url |
+| 2 | fattstarttime | fattstarttime | timestamp | 0 |  |  | null |  |
+| 3 | fattlargetxt | fattlargetxt | varchar | 255 |  |  | null |  |
 | 4 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
-| 5 | fattachremark | 备注 | varchar | 1024 |  |  | null | 备注 |
-| 6 | fattachno | 附件序列号 | varchar | 80 |  | √ | ' ' | 附件序列号 |
-| 7 | frotationangle | 旋转角度 | varchar | 30 |  |  | null | 旋转角度 |
-| 8 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 9 | foriginalname | 源文件名称 | varchar | 255 |  |  | null | 源文件名称 |
-| 10 | fgathertime | 采集时间 | timestamp | 0 |  |  | null | 采集时间 |
-| 11 | fsnapshoturl | 快照 url | varchar | 512 |  |  | null | 快照 url |
-| 12 | fattachtype | 文件类型 | varchar | 30 |  |  | null | 文件类型,枚举: |
+| 5 | fattachserialno | fattachserialno | varchar | 255 |  | √ | ' ' |  |
+| 6 | fattsource | fattsource | varchar | 30 |  | √ | ' ' |  |
+| 7 | fattachno | 附件序列号 | varchar | 80 |  | √ | ' ' | 附件序列号 |
+| 8 | frotationangle | 旋转角度 | varchar | 30 |  |  | null | 旋转角度 |
+| 9 | fattaffairdiscription | fattaffairdiscription | varchar | 1024 |  |  | null |  |
+| 10 | fattheadcount | fattheadcount | int8 | 64 |  | √ | 0 |  |
+| 11 | fattcity | fattcity | varchar | 255 |  |  | null |  |
+| 12 | fattachurl | 附件 url | varchar | 512 |  |  | null | 附件 url |
+| 13 | fattenddate | fattenddate | timestamp | 0 |  |  | null |  |
+| 14 | fattinvoiceentyid | fattinvoiceentyid | int8 | 64 |  | √ | 0 |  |
+| 15 | fattfrom | fattfrom | varchar | 255 |  |  | null |  |
+| 16 | fattlargetxt_tag | fattlargetxt_tag | text | 0 |  |  | null |  |
+| 17 | fattachname | 附件名称 | varchar | 255 |  |  | null | 附件名称 |
+| 18 | fattachremark | 备注 | varchar | 1024 |  |  | null | 备注 |
+| 19 | foriginalname | 源文件名称 | varchar | 255 |  |  | null | 源文件名称 |
+| 20 | fattto | fattto | varchar | 255 |  |  | null |  |
+| 21 | fgathertime | 采集时间 | timestamp | 0 |  |  | null | 采集时间 |
+| 22 | fattendtime | fattendtime | timestamp | 0 |  |  | null |  |
+| 23 | fattapplydate | fattapplydate | timestamp | 0 |  |  | null |  |
+| 24 | fattstartdate | fattstartdate | timestamp | 0 |  |  | null |  |
+| 25 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 26 | fatttotalamount | fatttotalamount | numeric | 23 | 10 | √ | 0 |  |
+| 27 | fsnapshoturl | 快照 url | varchar | 512 |  |  | null | 快照 url |
+| 28 | fattachtype | 文件类型 | varchar | 30 |  |  | null | 文件类型,枚举: |
 
 ### 列规则定义
 
@@ -79,35 +95,35 @@
 | 3 | ftriporiaccappamount | 核定金额 | numeric | 23 | 10 | √ | 0.0000000000 | 核定金额 |
 | 4 | faccusedamount | 已报销金额（本位币） | numeric | 23 | 10 | √ | 0.0000000000 | 已报销金额（本位币） |
 | 5 | fconvertmode | fconvertmode | varchar | 5 |  | √ | ' ' |  |
-| 6 | ftripcurrencyid | 行程币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 6 | ftripcurrencyid | 行程币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 | 7 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 8 | froundtrip | froundtrip | varchar | 5 |  | √ | ' ' |  |
 | 9 | ftripamount | 借款金额（本位币） | numeric | 23 | 10 | √ | 0.0000000000 | 借款金额（本位币） |
 | 10 | ftripentrystatus | 行程状态 | varchar | 5 |  | √ | ' ' | 行程状态,枚举: A :暂存 B :提交 C :审核中 D :审核不通过 E :审核通过 G :已付款 I :关闭 |
-| 11 | fentrycostcompanyid | 费用承担公司 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 11 | fentrycostcompanyid | 费用承担公司 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 12 | fexchangerate | 汇率 | numeric | 23 | 10 | √ | 0.0000000000 | 汇率 |
 | 13 | fenddate | 结束日期 | timestamp | 0 |  |  | null | 结束日期 |
 | 14 | ftoplaceid | 目的地 | int8 | 64 |  | √ | 0 | 行政区划 bd_admindivision |
-| 15 | fistripmulcurrency | 多币别 | bpchar | 1 |  | √ | '0' | 多币别 |
+| 15 | fistripmulcurrency | 多币种 | bpchar | 1 |  | √ | '0' | 多币种 |
 | 16 | faccbalanceamount | 可用余额（本位币） | numeric | 23 | 10 | √ | 0.0000000000 | 可用余额（本位币） |
 | 17 | fvehicle | 交通工具 | varchar | 20 |  | √ | ' ' | 交通工具,枚举: 1 :飞机 2 :火车 3 :汽车 4 :轮船 5 :其他工具 |
 | 18 | ffromplaceid | 出发地 | int8 | 64 |  | √ | 0 | 行政区划 bd_admindivision |
-| 19 | fstdentrycostcenterid | 成本中心 | int8 | 64 |  | √ | 0 | 成本中心 bos_costcenter |
-| 20 | fprojectid | 项目 | int8 | 64 |  | √ | 0 | 项目 bd_project |
+| 19 | fstdentrycostcenterid | 成本中心 | int8 | 64 |  | √ | 0 | [成本中心 bos_costcenter](../basedata_files/bos_costcenter.md) |
+| 20 | fprojectid | 项目 | int8 | 64 |  | √ | 0 | [项目 bd_project](../basedata_files/bd_project.md) |
 | 21 | fexchangerateprec | fexchangerateprec | int8 | 64 |  | √ | 0 |  |
 | 22 | foriaccusedamount | 已报销金额 | numeric | 23 | 10 | √ | 0.0000000000 | 已报销金额 |
 | 23 | findex | 整数 | int8 | 64 |  | √ | 0 | 整数 |
 | 24 | foriaccbalanceamount | 可用金额 | numeric | 23 | 10 | √ | 0.0000000000 | 可用金额 |
 | 25 | fexpeorirepayamount | 还款金额 | numeric | 23 | 10 | √ | 0.0000000000 | 还款金额 |
-| 26 | ftripmpmbizopregid | 商机号 | int8 | 64 |  |  | null | 商机登记F7 mpm_bizopregf7 |
-| 27 | ftripmpmtaskid | 任务号 | int8 | 64 |  |  | null | 项目任务F7 mpm_task_f7 |
-| 28 | ftripexpenseitemid | 费用项目 | int8 | 64 |  | √ | 0 | 费用项目 er_expenseitemedit |
+| 26 | ftripmpmbizopregid | 商机号 | int8 | 64 |  |  | null | [商机登记F7 mpm_bizopregf7](../mpm_files/mpm_bizopregf7.md) |
+| 27 | ftripmpmtaskid | 任务号 | int8 | 64 |  |  | null | [项目任务 bd_projecttask](../basedata_files/bd_projecttask.md) |
+| 28 | ftripexpenseitemid | 费用项目 | int8 | 64 |  | √ | 0 | [费用项目 er_expenseitemedit](../basedata_files/er_expenseitemedit.md) |
 | 29 | fentrycreatetime | 行程分录创建时间 | timestamp | 0 |  |  | null | 行程分录创建时间 |
 | 30 | fexperepayamount | 还款金额（本位币） | numeric | 23 | 10 | √ | 0.0000000000 | 还款金额（本位币） |
 | 31 | fstartdate | 开始日期 | timestamp | 0 |  |  | null | 开始日期 |
 | 32 | ftripaccappamount | 核定金额（本位币） | numeric | 23 | 10 | √ | 0.0000000000 | 核定金额（本位币） |
 | 33 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 34 | fentrycostdeptid | 费用承担部门 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 34 | fentrycostdeptid | 费用承担部门 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 35 | fquotetype | 换算方式(行程) | bpchar | 1 |  | √ | '0' | 换算方式(行程),枚举: 0 :直接汇率 1 :间接汇率 |
 | 36 | ftripday | 行程天数 | int8 | 64 |  | √ | 0 | 行程天数 |
 
@@ -124,6 +140,7 @@
 | 1 | idx_er_rte_ftexpitemid |  | ftripexpenseitemid |
 | 2 | idx_er_rte_fseq |  | fid,fseq |
 | 3 | t_er_reqtripentry_pkey |  | fentryid |
+| 4 | idx_er_rte_fecostcompanyid |  | fentrycostcompanyid |
 
 ---
 
@@ -148,7 +165,7 @@
 | 10 | fexchangerate | 汇率 | numeric | 23 | 10 | √ | 0.0000000000 | 汇率 |
 | 11 | fpic | fpic | varchar | 255 |  | √ | ' ' |  |
 | 12 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 | id |
-| 13 | fexpenseitemid | 差旅项目 | int8 | 64 |  | √ | 0 | 差旅项目 er_tripexpenseitem |
+| 13 | fexpenseitemid | 差旅项目 | int8 | 64 |  | √ | 0 | [差旅项目 er_tripexpenseitem](../em_files/er_tripexpenseitem.md) |
 | 14 | ftaxamount | 税额 | numeric | 23 | 10 | √ | 0.0000000000 | 税额 |
 | 15 | fnotaxamount | 不含税金额 | numeric | 23 | 10 | √ | 0.0000000000 | 不含税金额 |
 | 16 | fexchangerateprec | fexchangerateprec | int8 | 64 |  | √ | 0 |  |
@@ -158,7 +175,7 @@
 | 20 | fnotaxoriamount | fnotaxoriamount | numeric | 23 | 10 | √ | 0.0000000000 |  |
 | 21 | fexpenseitemicon | 费用项目图标 | varchar | 255 |  | √ | ' ' | 费用项目图标 |
 | 22 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
-| 23 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 23 | fcurrencyid | 币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 | 24 | fquotetype | 换算方式(明细) | bpchar | 1 |  | √ | '0' | 换算方式(明细),枚举: 0 :直接汇率 1 :间接汇率 |
 | 25 | fentrybalamount | fentrybalamount | numeric | 23 | 10 | √ | 0.0000000000 |  |
 
@@ -218,7 +235,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 行政区划 bd_admindivision |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [行政区划 bd_admindivision](../base_files/bd_admindivision.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 | 4 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 
@@ -247,7 +264,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -276,7 +293,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 | 4 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 
@@ -306,64 +323,68 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | funauditmsg | 反审核意见 | varchar | 1000 |  |  | null | 反审核意见 |
-| 3 | fpaycompanyid | 支付公司 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | fpaycompanyid | 支付公司 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 4 | freimbursetime | 报销次数 | int8 | 64 |  | √ | 0 | 报销次数 |
-| 5 | forgid | 部门 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | forgid | 部门 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | fpartnerid | fpartnerid | int8 | 64 |  | √ | 0 |  |
-| 7 | fcostdeptid | 费用承担部门 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 8 | fhasvoucher | 是否生成凭证 | bpchar | 1 |  | √ | '0' | 是否生成凭证 |
+| 7 | fcostdeptid | 费用承担部门 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 8 | fhasvoucher | 生成凭证 | bpchar | 1 |  | √ | '0' | 生成凭证 |
 | 9 | fhead_paydate | 付款日期 | timestamp | 0 |  |  | null | 付款日期 |
 | 10 | frvehicle | 交通工具 | varchar | 10 |  | √ | ' ' | 交通工具,枚举: 1 :飞机 2 :火车 3 :汽车 4 :轮船 5 :其他工具 6 :中转 |
 | 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 12 | fstdcostcenterid | 成本中心 | int8 | 64 |  | √ | 0 | 成本中心 bos_costcenter |
-| 13 | forigin | 来源 | varchar | 10 |  | √ | ' ' | 来源,枚举: 1 :WEB 2 :移动端 3 :语音助手 |
+| 12 | fstdcostcenterid | 成本中心 | int8 | 64 |  | √ | 0 | [成本中心 bos_costcenter](../basedata_files/bos_costcenter.md) |
+| 13 | forigin | 来源 | varchar | 10 |  | √ | ' ' | 来源,枚举: 1 :WEB 2 :移动端 3 :语音助手 4 :苍穹AI |
 | 14 | fbookeddate | 记账日期 | timestamp | 0 |  |  | null | 记账日期 |
-| 15 | fimageno | 影像编号 | varchar | 100 |  | √ | ' ' | 影像编号 |
-| 16 | fbillno | 单据编码 | varchar | 80 |  | √ | ' ' | 单据编码 |
-| 17 | fcurrencysettingid | fcurrencysettingid | int8 | 64 |  | √ | 0 |  |
-| 18 | fischange | 是否变更 | bpchar | 1 |  | √ | '0' | 是否变更 |
-| 19 | fbillstatus | 单据状态 | varchar | 5 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :审核中 D :审核未通过 E :审核通过 F :等待付款 G :已付款 H :废弃 I :关闭 |
-| 20 | frfirstenddate | 第一段结束日期 | timestamp | 0 |  |  | null | 第一段结束日期 |
-| 21 | fdescription | 事由 | varchar | 1000 |  |  | null | 事由 |
-| 22 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
-| 23 | frfirstto | 第一段目的地 | varchar | 80 |  | √ | ' ' | 第一段目的地 |
-| 24 | frstartdate | 出发日期 | timestamp | 0 |  |  | null | 出发日期 |
-| 25 | fopenid | fopenid | varchar | 80 |  | √ | ' ' |  |
-| 26 | fapproveamount | 核定金额 | numeric | 23 | 10 | √ | 0.0000000000 | 核定金额 |
-| 27 | fnotpayamount | 未付金额 | numeric | 23 | 10 | √ | 0.0000000000 | 未付金额 |
-| 28 | fnextauditor | 下一步审核人 | varchar | 80 |  | √ | ' ' | 下一步审核人 |
-| 29 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 30 | fcompanyid | 申请人公司 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 31 | fbalanceamount | 未还余额 | numeric | 23 | 10 | √ | 0.0000000000 | 未还余额 |
-| 32 | fisoverbudget | 是否超预算 | bpchar | 1 |  | √ | '0' | 是否超预算 |
-| 33 | ftel | 联系方式 | varchar | 25 |  | √ | ' ' | 联系方式 |
-| 34 | fistravelers | 多出差人 | bpchar | 1 |  | √ | '0' | 多出差人 |
-| 35 | famount | 金额 | numeric | 23 | 10 | √ | 0.0000000000 | 金额 |
-| 36 | fpayamount | 已付金额 | numeric | 23 | 10 | √ | 0.0000000000 | 已付金额 |
-| 37 | fplandays | 预计天数 | int8 | 64 |  | √ | 0 | 预计天数 |
-| 38 | fsourcebillformid | fsourcebillformid | varchar | 30 |  | √ | ' ' |  |
-| 39 | freturnedamount | 已还金额 | numeric | 23 | 10 | √ | 0.0000000000 | 已还金额 |
-| 40 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 41 | fusedamount | 已用金额 | numeric | 23 | 10 | √ | 0.0000000000 | 已用金额 |
-| 42 | fencashamount | 付现金额 | numeric | 23 | 10 | √ | 0.0000000000 | 付现金额 |
-| 43 | fcostcompanyid | 费用承担公司 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 44 | fformid | 表单ID | varchar | 30 |  | √ | ' ' | 表单ID,枚举: er_tripreqbill :出差申请单 er_reqbill :费用申请单 er_tripreimbursebill :差旅费报销单 er_reimbursebill :费用报销单 er_loanbill :借款单 er_repaymentbill :还款单 |
-| 45 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 46 | ftriptypeid | 出差类型 | int8 | 64 |  | √ | 0 | 出差类型 er_triptype |
-| 47 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 48 | fiscurrency | 多币别 | bpchar | 1 |  | √ | '0' | 多币别 |
-| 49 | floanamount | 借款金额 | numeric | 23 | 10 | √ | 0.0000000000 | 借款金额 |
-| 50 | fisloan | 是否借款 | bpchar | 1 |  | √ | ' ' | 是否借款 |
-| 51 | fapplierposition | 职位 | varchar | 100 |  | √ | ' ' | 职位 |
-| 52 | fapplierid | 申请人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 53 | frfrom | 出发地 | varchar | 80 |  | √ | ' ' | 出发地 |
-| 54 | fispaybyhead | 按单头付款 | bpchar | 1 |  | √ | '0' | 按单头付款 |
-| 55 | fbizdate | 申请日期 | timestamp | 0 |  |  | null | 申请日期 |
-| 56 | fsourcebillid | 源单ID | varchar | 200 |  | √ | ' ' | 源单ID |
-| 57 | frto | 目的地 | varchar | 80 |  | √ | ' ' | 目的地 |
-| 58 | frenddate | 结束日期 | timestamp | 0 |  |  | null | 结束日期 |
-| 59 | fcurrencyid | 本位币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
-| 60 | frepaymentdate | 还款日期 | timestamp | 0 |  |  | null | 还款日期 |
+| 15 | fneeduploadinvoice | 有待上传的纸票/附件 | bpchar | 1 |  | √ | '0' | 有待上传的纸票/附件 |
+| 16 | ftrdbizno | 第三方业务编号 | varchar | 160 |  | √ | ' ' | 第三方业务编号 |
+| 17 | fimageno | 影像编号 | varchar | 100 |  | √ | ' ' | 影像编号 |
+| 18 | fbillno | 单据编号 | varchar | 80 |  | √ | ' ' | 单据编号 |
+| 19 | fcurrencysettingid | fcurrencysettingid | int8 | 64 |  | √ | 0 |  |
+| 20 | fischange | 变更 | bpchar | 1 |  | √ | '0' | 变更 |
+| 21 | fbillstatus | 单据状态 | varchar | 5 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :审核中 D :审核未通过 E :审核通过 F :等待付款 G :已付款 H :废弃 I :关闭 |
+| 22 | frfirstenddate | 第一段结束日期 | timestamp | 0 |  |  | null | 第一段结束日期 |
+| 23 | fdescription | 事由 | varchar | 1000 |  |  | null | 事由 |
+| 24 | fauditdate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
+| 25 | fmigsrc | 来源系统 | int4 | 32 |  | √ | 0 | 来源系统 |
+| 26 | frfirstto | 第一段目的地 | varchar | 80 |  | √ | ' ' | 第一段目的地 |
+| 27 | frstartdate | 出发日期 | timestamp | 0 |  |  | null | 出发日期 |
+| 28 | fopenid | fopenid | varchar | 80 |  | √ | ' ' |  |
+| 29 | fapproveamount | 核定金额 | numeric | 23 | 10 | √ | 0.0000000000 | 核定金额 |
+| 30 | fnotpayamount | 未付金额 | numeric | 23 | 10 | √ | 0.0000000000 | 未付金额 |
+| 31 | fnextauditor | 下一步审核人 | varchar | 80 |  | √ | ' ' | 下一步审核人 |
+| 32 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 33 | fcompanyid | 申请人公司 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 34 | fbalanceamount | 未还余额 | numeric | 23 | 10 | √ | 0.0000000000 | 未还余额 |
+| 35 | fisoverbudget | 超预算 | bpchar | 1 |  | √ | '0' | 超预算 |
+| 36 | ftel | 联系方式 | varchar | 25 |  | √ | ' ' | 联系方式 |
+| 37 | fistravelers | 多出差人 | bpchar | 1 |  | √ | '0' | 多出差人 |
+| 38 | famount | 金额 | numeric | 23 | 10 | √ | 0.0000000000 | 金额 |
+| 39 | fpayamount | 已付金额 | numeric | 23 | 10 | √ | 0.0000000000 | 已付金额 |
+| 40 | fplandays | 预计天数 | int8 | 64 |  | √ | 0 | 预计天数 |
+| 41 | fsourcebillformid | fsourcebillformid | varchar | 30 |  | √ | ' ' |  |
+| 42 | freturnedamount | 已还金额 | numeric | 23 | 10 | √ | 0.0000000000 | 已还金额 |
+| 43 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 44 | fusedamount | 已用金额 | numeric | 23 | 10 | √ | 0.0000000000 | 已用金额 |
+| 45 | fencashamount | 付现金额 | numeric | 23 | 10 | √ | 0.0000000000 | 付现金额 |
+| 46 | funrepaymentamount | 申请人未还款 | numeric | 23 | 10 | √ | 0 | 申请人未还款 |
+| 47 | fcostcompanyid | 费用承担公司 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 48 | fformid | 表单ID | varchar | 30 |  | √ | ' ' | 表单ID,枚举: er_tripreqbill :出差申请单 er_reqbill :费用申请单 er_tripreimbursebill :差旅费报销单 er_reimbursebill :费用报销单 er_loanbill :借款单 er_repaymentbill :还款单 |
+| 49 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 50 | ftriptypeid | 出差类型 | int8 | 64 |  | √ | 0 | [出差类型 er_triptype](../em_files/er_triptype.md) |
+| 51 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 52 | fiscurrency | 多币种 | bpchar | 1 |  | √ | '0' | 多币种 |
+| 53 | floanamount | 借款金额 | numeric | 23 | 10 | √ | 0.0000000000 | 借款金额 |
+| 54 | fisloan | 借款 | bpchar | 1 |  | √ | ' ' | 借款 |
+| 55 | fapplierposition | 职位 | varchar | 100 |  | √ | ' ' | 职位 |
+| 56 | fapplierid | 申请人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 57 | frfrom | 出发地 | varchar | 80 |  | √ | ' ' | 出发地 |
+| 58 | fispaybyhead | 按单头付款 | bpchar | 1 |  | √ | '0' | 按单头付款 |
+| 59 | fbizdate | 申请日期 | timestamp | 0 |  |  | null | 申请日期 |
+| 60 | fsourcebillid | 源单ID | varchar | 200 |  | √ | ' ' | 源单ID |
+| 61 | frto | 目的地 | varchar | 80 |  | √ | ' ' | 目的地 |
+| 62 | frenddate | 结束日期 | timestamp | 0 |  |  | null | 结束日期 |
+| 63 | fcurrencyid | 本位币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
+| 64 | frepaymentdate | 还款日期 | timestamp | 0 |  |  | null | 还款日期 |
 
 ### 列规则定义
 
@@ -380,9 +401,10 @@
 | 3 | idx_er_rb_fcreatorid |  | fcreatorid |
 | 4 | t_er_reqbill_pkey |  | fid |
 | 5 | idx_er_rb_fapplierid |  | fapplierid |
-| 6 | idx_er_rb_fbillno |  | fbillno |
-| 7 | idx_er_rb_fcompanyid |  | fcompanyid |
-| 8 | idx_er_rb_fbillstatus |  | fbillstatus |
+| 6 | idx_er_rb_costcompanyid |  | fcostcompanyid |
+| 7 | idx_er_rb_fbillno |  | fbillno |
+| 8 | idx_er_rb_fcompanyid |  | fcompanyid |
+| 9 | idx_er_rb_fbillstatus |  | fbillstatus |
 
 ---
 
@@ -497,30 +519,30 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | ftargetpayorg | 付款人 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | ftargetpayorg | 付款人 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | ftargetbizdate | 业务日期 | timestamp | 0 |  |  | null | 业务日期 |
 | 4 | ftargetbillno | 单据编号 | varchar | 80 |  | √ | ' ' | 单据编号 |
-| 5 | fdpcurrency | 付款币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 5 | fdpcurrency | 付款币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 | 6 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 7 | ffee | 手续费 | numeric | 23 | 10 | √ | 0.0000000000 | 手续费 |
-| 8 | ftargetentrustorg | 委托付款组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 8 | ftargetentrustorg | 委托付款组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 9 | fdpexchangerate | 付款汇率 | numeric | 23 | 10 | √ | 0.0000000000 | 付款汇率 |
 | 10 | flossamt | 汇兑损益 | numeric | 23 | 10 | √ | 0.0000000000 | 汇兑损益 |
 | 11 | fdpamt | 付款金额 | numeric | 23 | 10 | √ | 0.0000000000 | 付款金额 |
 | 12 | fagreedrate | 兑换汇率 | numeric | 23 | 10 | √ | 0.0000000000 | 兑换汇率 |
 | 13 | ftargetlocalamount | 收款金额(本位币) | numeric | 23 | 10 | √ | 0.0000000000 | 收款金额(本位币) |
-| 14 | ftargetpayacctid | 付款账号 | int8 | 64 |  | √ | 0 | 银行账户 bd_accountbanks |
+| 14 | ftargetpayacctid | 付款账号 | int8 | 64 |  | √ | 0 | [银行账户 bd_accountbanks](../basedata_files/bd_accountbanks.md) |
 | 15 | ftargetexchange | 收款汇率 | numeric | 23 | 10 | √ | 0.0000000000 | 收款汇率 |
-| 16 | ftargetpaybank | 付款银行 | int8 | 64 |  | √ | 0 | 金融机构 bd_finorginfo |
-| 17 | ffeecurrency | 手续费币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 16 | ftargetpaybank | 付款银行 | int8 | 64 |  | √ | 0 | [金融机构 bd_finorginfo](../basedata_files/bd_finorginfo.md) |
+| 17 | ffeecurrency | 手续费币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 | 18 | fdplocalamt | 付款金额(本位币) | numeric | 23 | 10 | √ | 0.0000000000 | 付款金额(本位币) |
 | 19 | ftargetpayamt | 收款金额 | numeric | 23 | 10 | √ | 0.0000000000 | 收款金额 |
 | 20 | ftargetpayacct | 付款账号（文本） | varchar | 50 |  | √ | ' ' | 付款账号（文本） |
-| 21 | ftargetopenorg | 核算组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 21 | ftargetopenorg | 核算组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 22 | ftargetbillid | 目标单据id | int8 | 64 |  | √ | 0 | 目标单据id |
 | 23 | ftargetpaydate | 付款日期 | timestamp | 0 |  |  | null | 付款日期 |
-| 24 | ftargetcurrency | 收款币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
-| 25 | ftargetsettletype | 结算方式 | int8 | 64 |  | √ | 0 | 结算方式 bd_settlementtype |
+| 24 | ftargetcurrency | 收款币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
+| 25 | ftargetsettletype | 结算方式 | int8 | 64 |  | √ | 0 | [结算方式 bd_settlementtype](../basedata_files/bd_settlementtype.md) |
 | 26 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 
 ### 列规则定义
@@ -583,38 +605,40 @@
 | 2 | faccpaidamount | 已还款金额（本位币） | numeric | 23 | 10 | √ | 0.0000000000 | 已还款金额（本位币） |
 | 3 | fbuildedamount | 已出单金额 | numeric | 23 | 10 | √ | 0.0000000000 | 已出单金额 |
 | 4 | foriamount | 金额 | numeric | 23 | 10 | √ | 0.0000000000 | 金额 |
-| 5 | fpayeraccount01 | 银行账号4位 | varchar | 50 |  | √ | ' ' | 银行账号4位 |
-| 6 | fconvertmode | fconvertmode | varchar | 5 |  | √ | ' ' |  |
-| 7 | fentrystatus | 分录状态 | bpchar | 1 |  | √ | '0' | 分录状态,枚举: F :等待付款 G :已付款 E :审核通过 I :关闭 |
-| 8 | fpayerdeptid | 收款人部门 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 9 | fpayercompid | 收款人公司 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 10 | fpayertype | 收款人类型 | varchar | 30 |  | √ | ' ' | 收款人类型,枚举: bd_supplier :供应商 bd_customer :客户 bos_org :内部公司 er_payeer :个人 other :其他 |
-| 11 | foriaccappamount | 核定金额 | numeric | 23 | 10 | √ | 0.0000000000 | 核定金额 |
-| 12 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 13 | famount | 金额（本位币） | numeric | 23 | 10 | √ | 0.0000000000 | 金额（本位币） |
-| 14 | foriaccnotpayamount | 未付金额 | numeric | 23 | 10 | √ | 0.0000000000 | 未付金额 |
-| 15 | fexchangerate | 汇率 | numeric | 23 | 10 | √ | 0.0000000000 | 汇率 |
-| 16 | fpayername | 收款人 | varchar | 100 |  | √ | ' ' | 收款人 |
-| 17 | fentryrepaydate | 还款日期 | timestamp | 0 |  |  | null | 还款日期 |
-| 18 | fpayeraccountname | 账户名称 | varchar | 50 |  | √ | ' ' | 账户名称 |
-| 19 | fpayerid | 收款人 | int8 | 64 |  | √ | 0 | 收款信息 er_payeer |
-| 20 | faccbalanceamount | 可用余额（本位币） | numeric | 23 | 10 | √ | 0.0000000000 | 可用余额（本位币） |
-| 21 | fpayerbankid | 开户银行 | int8 | 64 |  | √ | 0 | 行名行号 bd_bebank |
-| 22 | fpaymodeid | 支付方式 | int8 | 64 |  | √ | 0 | 结算方式 bd_settlementtype |
-| 23 | foriaccpayedamount | 已付金额 | numeric | 23 | 10 | √ | 0.0000000000 | 已付金额 |
-| 24 | fexchangerateprec | fexchangerateprec | numeric | 23 | 10 | √ | 0.0000000000 |  |
-| 25 | foriaccbalanceamount | 可用余额 | numeric | 23 | 10 | √ | 0.0000000000 | 可用余额 |
-| 26 | faccpayedamount | 已付金额（本位币） | numeric | 23 | 10 | √ | 0.0000000000 | 已付金额（本位币） |
-| 27 | faccnotpayamount | 未付金额(本位币) | numeric | 23 | 10 | √ | 0.0000000000 | 未付金额(本位币) |
-| 28 | fbanklogo | 银行卡logo图标 | varchar | 255 |  | √ | ' ' | 银行卡logo图标 |
-| 29 | faccounttype | faccounttype | varchar | 10 |  | √ | ' ' |  |
-| 30 | fpayeraccount02 | 银行账号(_old) | varchar | 50 |  | √ | ' ' | 银行账号(_old) |
-| 31 | fpaidamount | 已还款金额 | numeric | 23 | 10 | √ | 0.0000000000 | 已还款金额 |
-| 32 | fpayeraccount | 银行账号 | varchar | 50 |  | √ | ' ' | 银行账号 |
-| 33 | faccappamount | 核定金额（本位币） | numeric | 23 | 10 | √ | 0.0000000000 | 核定金额（本位币） |
-| 34 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 35 | fcurrencyid | 币种 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
-| 36 | fquotetype | 换算方式(收款) | bpchar | 1 |  | √ | '0' | 换算方式(收款),枚举: 0 :直接汇率 1 :间接汇率 |
+| 5 | fothercontactunit | 其他往来单位 | int8 | 64 |  | √ | 0 | [其他往来单位 cas_othercontactunit](../cas_files/cas_othercontactunit.md) |
+| 6 | fpayeraccount01 | 银行账号4位 | varchar | 50 |  | √ | ' ' | 银行账号4位 |
+| 7 | fconvertmode | fconvertmode | varchar | 5 |  | √ | ' ' |  |
+| 8 | fentrystatus | 分录状态 | bpchar | 1 |  | √ | '0' | 分录状态,枚举: F :等待付款 G :已付款 E :审核通过 I :关闭 |
+| 9 | fpayerdeptid | 收款人部门 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 10 | fpayercompid | 收款人公司 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 11 | fpayertype | 收款人类型 | varchar | 30 |  | √ | ' ' | 收款人类型,枚举: bd_supplier :供应商 bd_customer :客户 bos_org :内部公司 er_payeer :个人 other :其他 bos_user :职员 cas_othercontactunit :其他往来单位 |
+| 12 | foriaccappamount | 核定金额 | numeric | 23 | 10 | √ | 0.0000000000 | 核定金额 |
+| 13 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
+| 14 | famount | 金额（本位币） | numeric | 23 | 10 | √ | 0.0000000000 | 金额（本位币） |
+| 15 | foriaccnotpayamount | 未付金额 | numeric | 23 | 10 | √ | 0.0000000000 | 未付金额 |
+| 16 | fexchangerate | 汇率 | numeric | 23 | 10 | √ | 0.0000000000 | 汇率 |
+| 17 | fpayername | 收款人 | varchar | 100 |  | √ | ' ' | 收款人 |
+| 18 | fentryrepaydate | 还款日期 | timestamp | 0 |  |  | null | 还款日期 |
+| 19 | fpayeraccountname | 账户名称 | varchar | 50 |  | √ | ' ' | 账户名称 |
+| 20 | fpayerid | 收款人 | int8 | 64 |  | √ | 0 | [收款信息 er_payeer](../em_files/er_payeer.md) |
+| 21 | faccbalanceamount | 可用余额（本位币） | numeric | 23 | 10 | √ | 0.0000000000 | 可用余额（本位币） |
+| 22 | fpayerbankid | 开户银行 | int8 | 64 |  | √ | 0 | [行名行号 bd_bebank](../basedata_files/bd_bebank.md) |
+| 23 | fpaymodeid | 支付方式 | int8 | 64 |  | √ | 0 | [结算方式 bd_settlementtype](../basedata_files/bd_settlementtype.md) |
+| 24 | foriaccpayedamount | 已付金额 | numeric | 23 | 10 | √ | 0.0000000000 | 已付金额 |
+| 25 | fexchangerateprec | fexchangerateprec | numeric | 23 | 10 | √ | 0.0000000000 |  |
+| 26 | foriaccbalanceamount | 可用余额 | numeric | 23 | 10 | √ | 0.0000000000 | 可用余额 |
+| 27 | fbosuserid | 收款人（职员） | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 28 | faccpayedamount | 已付金额（本位币） | numeric | 23 | 10 | √ | 0.0000000000 | 已付金额（本位币） |
+| 29 | faccnotpayamount | 未付金额(本位币) | numeric | 23 | 10 | √ | 0.0000000000 | 未付金额(本位币) |
+| 30 | fbanklogo | 银行卡logo图标 | varchar | 255 |  | √ | ' ' | 银行卡logo图标 |
+| 31 | faccounttype | faccounttype | varchar | 10 |  | √ | ' ' |  |
+| 32 | fpayeraccount02 | 银行账号(_old) | varchar | 50 |  | √ | ' ' | 银行账号(_old) |
+| 33 | fpaidamount | 已还款金额 | numeric | 23 | 10 | √ | 0.0000000000 | 已还款金额 |
+| 34 | fpayeraccount | 银行账号 | varchar | 50 |  | √ | ' ' | 银行账号 |
+| 35 | faccappamount | 核定金额（本位币） | numeric | 23 | 10 | √ | 0.0000000000 | 核定金额（本位币） |
+| 36 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 37 | fcurrencyid | 币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
+| 38 | fquotetype | 换算方式(收款) | bpchar | 1 |  | √ | '0' | 换算方式(收款),枚举: 0 :直接汇率 1 :间接汇率 |
 
 ### 列规则定义
 
@@ -644,8 +668,8 @@
 | 2 | fattachmentcount | 附件数 | int4 | 32 |  | √ | 0 | 附件数 |
 | 3 | ftripreimbursetype | 可下推的差旅报销单类型 | varchar | 10 |  | √ | 'card' | 可下推的差旅报销单类型,枚举: card :卡片式 grid :表格式 |
 | 4 | fismanualrepay | 手否手动还款 | bpchar | 1 |  | √ | '0' | 手否手动还款 |
-| 5 | finvokeinvoicecloud | 是否与发票云交互 | bpchar | 1 |  | √ | '0' | 是否与发票云交互 |
-| 6 | fisenableinvoice | 是否启用发票云 | bpchar | 1 |  | √ | '0' | 是否启用发票云 |
+| 5 | finvokeinvoicecloud | 与发票云交互 | bpchar | 1 |  | √ | '0' | 与发票云交互 |
+| 6 | fisenableinvoice | 启用发票云 | bpchar | 1 |  | √ | '0' | 启用发票云 |
 | 7 | froutetype | 单程/往返 | varchar | 10 |  | √ | ' ' | 单程/往返,枚举: 0 :单程 1 :往返 |
 | 8 | fneedimagescan | 需要影像扫描 | bpchar | 1 |  | √ | '0' | 需要影像扫描,枚举: 1 :是 2 :否 |
 
@@ -702,7 +726,7 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 行政区划 bd_admindivision |
+| 1 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [行政区划 bd_admindivision](../base_files/bd_admindivision.md) |
 | 2 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 | 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
 
@@ -734,29 +758,29 @@
 | 2 | fsrcentryid | 原始分录id | int8 | 64 |  | √ | 0 | 原始分录id |
 | 3 | foriamount | 申请金额 | numeric | 23 | 10 | √ | 0.0000000000 | 申请金额 |
 | 4 | ftriporiaccappamount | 核定金额 | numeric | 23 | 10 | √ | 0.0000000000 | 核定金额 |
-| 5 | ftripcurrencyid | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 5 | ftripcurrencyid | 币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 | 6 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 7 | ftripamount | 申请金额（本位币） | numeric | 23 | 10 | √ | 0.0000000000 | 申请金额（本位币） |
-| 8 | fentrycostcompanyid | 费用承担公司 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 8 | fentrycostcompanyid | 费用承担公司 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 9 | fexchangerate | 汇率 | numeric | 23 | 10 | √ | 0.0000000000 | 汇率 |
 | 10 | fenddate | 结束日期 | timestamp | 0 |  |  | null | 结束日期 |
 | 11 | ftoplaceid | 目的地 | int8 | 64 |  | √ | 0 | 行政区划 bd_admindivision |
-| 12 | fistripmulcurrency | 是否多币别 | bpchar | 1 |  | √ | '0' | 是否多币别 |
+| 12 | fistripmulcurrency | 多币种 | bpchar | 1 |  | √ | '0' | 多币种 |
 | 13 | fchangedate | 变更日期（废弃） | timestamp | 0 |  |  | null | 变更日期（废弃） |
 | 14 | fvehicle | 交通工具 | varchar | 50 |  | √ | ' ' | 交通工具,枚举: 1 :飞机 2 :火车 3 :汽车 4 :轮船 5 :其他工具 |
-| 15 | fchanger | 变更人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 15 | fchanger | 变更人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 16 | ffromplaceid | 出发地 | int8 | 64 |  | √ | 0 | 行政区划 bd_admindivision |
-| 17 | fprojectid | 项目 | int8 | 64 |  | √ | 0 | 项目 bd_project |
-| 18 | fhistorytripmpmbizopreg | 商机号 | int8 | 64 |  |  | null | 商机登记F7 mpm_bizopregf7 |
+| 17 | fprojectid | 项目 | int8 | 64 |  | √ | 0 | [项目 bd_project](../basedata_files/bd_project.md) |
+| 18 | fhistorytripmpmbizopreg | 商机号 | int8 | 64 |  |  | null | [商机登记F7 mpm_bizopregf7](../mpm_files/mpm_bizopregf7.md) |
 | 19 | fsrcentrydata | 原始分录json数据 | text | 0 |  |  | null | 原始分录json数据 |
-| 20 | ftripexpenseitemid | 费用项目 | int8 | 64 |  | √ | 0 | 费用项目 er_expenseitemedit |
+| 20 | ftripexpenseitemid | 费用项目 | int8 | 64 |  | √ | 0 | [费用项目 er_expenseitemedit](../basedata_files/er_expenseitemedit.md) |
 | 21 | fsrcentrydata_tag | 原始分录json数据_详情 | text | 0 |  |  | null | 原始分录json数据_详情 |
 | 22 | fstartdate | 开始日期 | timestamp | 0 |  |  | null | 开始日期 |
 | 23 | ftripaccappamount | 核定金额(本位币) | numeric | 23 | 10 | √ | 0.0000000000 | 核定金额(本位币) |
-| 24 | fchangetime | 变更日期 | timestamp | 0 |  |  | null | 变更日期 |
-| 25 | fhistorytripmpmtask | 任务号 | int8 | 64 |  |  | null | 项目任务F7 mpm_task_f7 |
+| 24 | fchangetime | 变更时间 | timestamp | 0 |  |  | null | 变更时间 |
+| 25 | fhistorytripmpmtask | 任务号 | int8 | 64 |  |  | null | [项目任务 bd_projecttask](../basedata_files/bd_projecttask.md) |
 | 26 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 27 | fentrycostdeptid | 费用承担部门 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 27 | fentrycostdeptid | 费用承担部门 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 
 ### 列规则定义
 
@@ -783,7 +807,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义

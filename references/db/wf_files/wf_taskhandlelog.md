@@ -18,7 +18,7 @@
 | 7 | fbizidentifykey | 业务标识 | varchar | 255 |  | √ | ' ' | 业务标识 |
 | 8 | fprocdefid | 流程定义ID | int8 | 64 |  | √ | 0 | 流程定义ID |
 | 9 | fnote | 补充描述 | varchar | 500 |  | √ | ' ' | 补充描述 |
-| 10 | fgroupnumber | 待办分组 | int8 | 64 |  | √ | 0 | 待办分组 wf_tohandlegroup |
+| 10 | fgroupnumber | 待办分组 | int8 | 64 |  | √ | 0 | [待办分组 wf_tohandlegroup](../wf_files/wf_tohandlegroup.md) |
 | 11 | fprocinstid | 流程实例ID | int8 | 64 |  | √ | 0 | 流程实例ID |
 | 12 | fassignee | 现处理人名称 | varchar | 255 |  | √ | ' ' | 现处理人名称 |
 | 13 | fsource | 来源 | varchar | 100 |  | √ | ' ' | 来源 |
@@ -42,18 +42,20 @@
 | 31 | fstartname | 发起人 | varchar | 200 |  | √ | ' ' | 发起人 |
 | 32 | ftaskstate | 任务状态 | varchar | 30 |  | √ | ' ' | 任务状态 |
 | 33 | fterminalway | 终端处理方式 | varchar | 500 |  | √ | ' ' | 终端处理方式 |
-| 34 | factivityid | 活动ID | varchar | 255 |  | √ | ' ' | 活动ID |
-| 35 | fprocesstype | 流程类型 | varchar | 50 |  | √ | ' ' | 流程类型,枚举: AuditFlow :审批流 BizFlow :业务流 |
-| 36 | fowner | 原处理人名称 | varchar | 50 |  | √ | ' ' | 原处理人名称 |
-| 37 | fownerid | 原处理人 | int8 | 64 |  | √ | 0 | 原处理人 |
-| 38 | ftype | 类型 | varchar | 30 |  | √ | ' ' | 类型 |
-| 39 | fbusinesskey | 业务主键 | varchar | 36 |  | √ | ' ' | 业务主键 |
-| 40 | fopinion | 处理意见 | varchar | 3000 |  | √ | ' ' | 处理意见 |
-| 41 | fpresentassignee | 当前处理人 | varchar | 500 |  | √ | ' ' | 当前处理人 |
-| 42 | fendtime | 结束时间 | timestamp | 0 |  |  | null | 结束时间 |
-| 43 | fcompositetaskid | 聚合任务 | int8 | 64 |  | √ | 0 | 聚合任务 |
-| 44 | ftaskid | 任务id | int8 | 64 |  | √ | 0 | 任务id |
-| 45 | fownerformat | 原处理人名称格式化 | varchar | 500 |  | √ | ' ' | 原处理人名称格式化 |
+| 34 | fsourcename | 来源系统名称 | varchar | 100 |  | √ | ' ' | 来源系统名称 |
+| 35 | factivityid | 活动ID | varchar | 255 |  | √ | ' ' | 活动ID |
+| 36 | fprocesstype | 流程类型 | varchar | 50 |  | √ | ' ' | 流程类型,枚举: AuditFlow :审批流 BizFlow :业务流 |
+| 37 | fowner | 原处理人名称 | varchar | 50 |  | √ | ' ' | 原处理人名称 |
+| 38 | fownerid | 原处理人 | int8 | 64 |  | √ | 0 | 原处理人 |
+| 39 | ftype | 类型 | varchar | 30 |  | √ | ' ' | 类型 |
+| 40 | fdelegateid | 委托设置id | int8 | 64 |  | √ | 0 | 委托设置id |
+| 41 | fbusinesskey | 业务主键 | varchar | 36 |  | √ | ' ' | 业务主键 |
+| 42 | fopinion | 处理意见 | varchar | 3000 |  | √ | ' ' | 处理意见 |
+| 43 | fpresentassignee | 当前处理人 | varchar | 500 |  | √ | ' ' | 当前处理人 |
+| 44 | fendtime | 结束时间 | timestamp | 0 |  |  | null | 结束时间 |
+| 45 | fcompositetaskid | 聚合任务 | int8 | 64 |  | √ | 0 | 聚合任务 |
+| 46 | ftaskid | 任务id | int8 | 64 |  | √ | 0 | 任务id |
+| 47 | fownerformat | 原处理人名称格式化 | varchar | 500 |  | √ | ' ' | 原处理人名称格式化 |
 
 ### 列规则定义
 
@@ -67,8 +69,8 @@
 | :--- | :--- | :--- | :--- |
 | 1 | idx_wf_taskhandlelog_ownerid |  | fownerid,ftype,fexecutiontype |
 | 2 | idx_wf_taskhandlelog_task |  | ftaskid,ftype |
-| 3 | idx_wf_taskhandlelog_credate |  | fcreatedate |
-| 4 | t_wf_taskhandlelog_pkey |  | fid |
+| 3 | t_wf_taskhandlelog_pkey |  | fid |
+| 4 | idx_wf_taskhandlelog_credate |  | fcreatedate |
 | 5 | idx_wf_taskhandlelog_type |  | ftype |
 | 6 | idx_wf_taskhandlelog_procinst |  | fprocinstid |
 
@@ -88,18 +90,19 @@
 | 3 | fcurrentsubject | 当前任务主题 | varchar | 3000 |  | √ | ' ' | 当前任务主题 |
 | 4 | fstartname | 发起人 | varchar | 200 |  | √ | ' ' | 发起人 |
 | 5 | fsendername | 发送人名称 | varchar | 500 |  | √ | ' ' | 发送人名称 |
-| 6 | fnote | 补充描述 | varchar | 500 |  | √ | ' ' | 补充描述 |
-| 7 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
-| 8 | fpkid | fpkid | varchar | 20 |  | √ | ' ' | pkid |
-| 9 | fassignee | 现处理人名称 | varchar | 255 |  | √ | ' ' | 现处理人名称 |
-| 10 | fowner | 原处理人名称 | varchar | 200 |  | √ | ' ' | 原处理人名称 |
-| 11 | fentityname | 单据类型 | varchar | 115 |  | √ | ' ' | 单据类型 |
-| 12 | factivityname | 节点名称 | varchar | 255 |  | √ | ' ' | 节点名称 |
-| 13 | fopinion | 处理意见 | varchar | 2000 |  | √ | ' ' | 处理意见 |
-| 14 | fpresentassignee | 当前处理人 | varchar | 500 |  | √ | ' ' | 当前处理人 |
-| 15 | fstartnameformat | 发起人显示设置 | varchar | 300 |  | √ | ' ' | 发起人显示设置 |
-| 16 | fsendernameformat | 上一步处理人显示设置 | varchar | 500 |  | √ | ' ' | 上一步处理人显示设置 |
-| 17 | fownerformat | 原处理人名称格式化 | varchar | 500 |  | √ | ' ' | 原处理人名称格式化 |
+| 6 | fsourcename | 来源系统名称 | varchar | 100 |  | √ | ' ' | 来源系统名称 |
+| 7 | fnote | 补充描述 | varchar | 500 |  | √ | ' ' | 补充描述 |
+| 8 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
+| 9 | fpkid | fpkid | varchar | 20 |  | √ | ' ' | pkid |
+| 10 | fassignee | 现处理人名称 | varchar | 255 |  | √ | ' ' | 现处理人名称 |
+| 11 | fowner | 原处理人名称 | varchar | 200 |  | √ | ' ' | 原处理人名称 |
+| 12 | fentityname | 单据类型 | varchar | 115 |  | √ | ' ' | 单据类型 |
+| 13 | factivityname | 节点名称 | varchar | 255 |  | √ | ' ' | 节点名称 |
+| 14 | fopinion | 处理意见 | varchar | 2000 |  | √ | ' ' | 处理意见 |
+| 15 | fpresentassignee | 当前处理人 | varchar | 500 |  | √ | ' ' | 当前处理人 |
+| 16 | fstartnameformat | 发起人显示设置 | varchar | 300 |  | √ | ' ' | 发起人显示设置 |
+| 17 | fsendernameformat | 上一步处理人显示设置 | varchar | 500 |  | √ | ' ' | 上一步处理人显示设置 |
+| 18 | fownerformat | 原处理人名称格式化 | varchar | 500 |  | √ | ' ' | 原处理人名称格式化 |
 
 ### 列规则定义
 

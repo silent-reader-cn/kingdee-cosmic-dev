@@ -87,13 +87,13 @@
 | 47 | freqnbr | 流程流转号 | varchar | 50 |  | √ | ' ' | 流程流转号 |
 | 48 | fstatus | 交易状态 | varchar | 50 |  | √ | ' ' | 交易状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 49 | fnext_deposit | 转存标识 | varchar | 50 |  | √ | ' ' | 转存标识 |
-| 50 | fcreatorid | 创建人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 50 | fcreatorid | 创建人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 51 | fmasterid | 主数据内码 | int8 | 64 |  |  | null | 主数据内码 |
 | 52 | finftyp | 通知类型 | varchar | 50 |  | √ | ' ' | 通知类型 |
 | 53 | fcustomid | 租户id | varchar | 50 |  | √ | ' ' | 租户id |
 | 54 | ffixtaxint | 扣利息税 | varchar | 50 |  | √ | ' ' | 扣利息税 |
 | 55 | fbank_no | 支行行号 | varchar | 50 |  | √ | ' ' | 支行行号 |
-| 56 | fmodifierid | 修改人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 56 | fmodifierid | 修改人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 57 | ffixed_bank_no | 定期支行行号 | varchar | 50 |  | √ | ' ' | 定期支行行号 |
 | 58 | fendintdate | 止息日 | varchar | 50 |  | √ | ' ' | 止息日 |
 | 59 | fbank_login | 前置机编号 | varchar | 50 |  | √ | ' ' | 前置机编号 |

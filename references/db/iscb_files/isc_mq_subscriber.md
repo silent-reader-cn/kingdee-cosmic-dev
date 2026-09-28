@@ -10,19 +10,19 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fcharset | 字符集 | varchar | 100 |  | √ | ' ' | 字符集 |
 | 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 5 | fmq_server | 消息队列服务器 | int8 | 64 |  | √ | 0 | 消息队列服务器 isc_mq_server |
+| 5 | fmq_server | 消息队列服务器 | int8 | 64 |  | √ | 0 | [消息队列服务器 isc_mq_server](../iscb_files/isc_mq_server.md) |
 | 6 | fsource_tenant | 来源 | varchar | 100 |  | √ | ' ' | 来源 |
 | 7 | fisv | 开发商 | varchar | 100 |  | √ | ' ' | 开发商 |
-| 8 | fdata_source | 数据源 | int8 | 64 |  | √ | 0 | 数据源管理 isc_data_source |
+| 8 | fdata_source | 数据源 | int8 | 64 |  | √ | 0 | [数据源管理 isc_data_source](../iscb_files/isc_data_source.md) |
 | 9 | fprotect_level | 保护等级 | varchar | 30 |  | √ | ' ' | 保护等级,枚举: DEFAULT :默认 READ_ONLY :只读 UNPROTECTED :无保护 |
 | 10 | fparse_script | 消息解析脚本 | varchar | 510 |  | √ | ' ' | 消息解析脚本 |
 | 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 12 | fmsg_digest | 消息摘要模板 | varchar | 150 |  |  | ' ' | 消息摘要模板 |
 | 13 | fstatus | 数据状态 | varchar | 30 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 16 | fcustom_config | 自定义参数配置 | varchar | 1000 |  |  | ' ' | 自定义参数配置 |
 | 17 | fsource_trace | 来源追溯 | varchar | 600 |  | √ | ' ' | 来源追溯 |
@@ -31,7 +31,7 @@
 | 20 | fsub_ip_perttern | 订阅者IP | varchar | 500 |  | √ | ' ' | 订阅者IP |
 | 21 | fenable | 使用状态 | varchar | 30 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 22 | fnumber | 编码 | varchar | 300 |  | √ | ' ' | 编码 |
-| 23 | fdata_structure | 数据结构 | int8 | 64 |  | √ | 0 | 集成对象 isc_metadata_schema |
+| 23 | fdata_structure | 数据结构 | int8 | 64 |  | √ | 0 | [集成对象 isc_metadata_schema](../iscb_files/isc_metadata_schema.md) |
 
 ### 列规则定义
 

@@ -12,7 +12,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fcreatetime | 归档时间 | timestamp | 0 |  |  | null | 归档时间 |
 | 3 | ftasktype | 任务类型 | varchar | 50 |  | √ | ' ' | 任务类型,枚举: archive :归档转储 unarchive :反归档 |
-| 4 | fentitynumber | 表单编码 | varchar | 50 |  | √ | ' ' | 表单编码 |
+| 4 | fentitynumber | 实体编码 | varchar | 50 |  | √ | ' ' | 实体编码 |
 | 5 | fscheduleid | 调度id | int8 | 64 |  | √ | 0 | 调度id |
 | 6 | fconfigid | 单据配置id | int8 | 64 |  | √ | 0 | 单据配置id |
 | 7 | farchiveroute | 归档库 | varchar | 50 |  | √ | ' ' | 归档库 |

@@ -14,23 +14,23 @@
 | 3 | fstatic_reals | 静态数值变量 | varchar | 512 |  | √ | ' ' | 静态数值变量,枚举: |
 | 4 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 5 | fstatus | 数据状态 | bpchar | 1 |  | √ | 'A' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 6 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 7 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 8 | fconfig | 方案配置 | varchar | 255 |  | √ | ' ' | 方案配置 |
 | 9 | ftime_var_unknown_reals | 时变未知数值变量 | varchar | 512 |  | √ | ' ' | 时变未知数值变量,枚举: |
 | 10 | fvalidationlength | 验证集周期数 | int4 | 32 |  | √ | 0 | 验证集周期数 |
 | 11 | ftimefieldname | 预测时间字段 | varchar | 100 |  | √ | ' ' | 预测时间字段 |
 | 12 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 13 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | ftimegranularity | 预测时间粒度 | varchar | 50 |  | √ | ' ' | 预测时间粒度,枚举: fyear :年 fhalf_year :半年 fquarter :季度 fmonth :月 fweek :周 fdate :日 |
-| 15 | ffuturedataset | 未来数据集 | int8 | 64 |  | √ | 0 | 数据集 ids_gpe_dataset |
+| 15 | ffuturedataset | 未来数据集 | int8 | 64 |  | √ | 0 | [数据集 ids_gpe_dataset](../ids_files/ids_gpe_dataset.md) |
 | 16 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 17 | ftime_var_unknown_cateory | 时变未知分类变量 | varchar | 512 |  | √ | ' ' | 时变未知分类变量,枚举: |
 | 18 | fpredictlength | 预测长度 | int4 | 32 |  | √ | 0 | 预测长度 |
 | 19 | fstatic_category | 静态分类变量 | varchar | 512 |  | √ | ' ' | 静态分类变量,枚举: |
 | 20 | fpreobjfieldname | 预测对象字段 | varchar | 512 |  | √ | ' ' | 预测对象字段 |
 | 21 | fpredictstartdate | 预测起始日期 | timestamp | 0 |  |  | null | 预测起始日期 |
-| 22 | fdataset | 数据集 | int8 | 64 |  | √ | 0 | 数据集 ids_gpe_dataset |
+| 22 | fdataset | 数据集 | int8 | 64 |  | √ | 0 | [数据集 ids_gpe_dataset](../ids_files/ids_gpe_dataset.md) |
 | 23 | ftime_var_known_reals | 时变已知数值变量 | varchar | 512 |  | √ | ' ' | 时变已知数值变量,枚举: |
 | 24 | ftime_var_known_category | 时变已知分类变量 | varchar | 512 |  | √ | ' ' | 时变已知分类变量,枚举: |
 | 25 | ftargetfieldname | 预测目标字段 | varchar | 512 |  | √ | ' ' | 预测目标字段 |

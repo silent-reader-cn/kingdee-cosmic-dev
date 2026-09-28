@@ -16,7 +16,7 @@
 | 5 | fdetailstate | 说明(弃用) | varchar | 255 |  | √ | ' ' | 说明(弃用) |
 | 6 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 | id |
 | 7 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
-| 8 | fdetailsid | 名称 | int8 | 64 |  | √ | 0 | 工作内容明细 mpdm_workscopedetail |
+| 8 | fdetailsid | 名称 | int8 | 64 |  | √ | 0 | [工作内容明细 mpdm_workscopedetail](../mpdm_files/mpdm_workscopedetail.md) |
 
 ### 列规则定义
 
@@ -45,12 +45,12 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fcontentdetail_tag | 工作内容详情_详情 | text | 0 |  | √ | ' ' | 工作内容详情_详情 |
 | 3 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 6 | fworkscopetplid | 工作内容模板 | int8 | 64 |  | √ | 0 | 工作内容模板 mpdm_workscope |
+| 6 | fworkscopetplid | 工作内容模板 | int8 | 64 |  | √ | 0 | [工作内容模板 mpdm_workscope](../mpdm_files/mpdm_workscope.md) |
 | 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 8 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 10 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 11 | fcombotype | 组合格式 | varchar | 50 |  | √ | ' ' | 组合格式,枚举: A :类别详情 B :类别名称+类别详情 |
 | 12 | fcombosymbol | 类别组合符号 | varchar | 50 |  | √ | ' ' | 类别组合符号,枚举: + :+ : :: - :- _ :_ \ :\ / :/ ~ :~ & :& |
@@ -84,7 +84,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 工作内容明细 mpdm_workscopedetail |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [工作内容明细 mpdm_workscopedetail](../mpdm_files/mpdm_workscopedetail.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -141,7 +141,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 工作内容类别维护 mpdm_workcategory |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [工作内容类别维护 mpdm_workcategory](../mpdm_files/mpdm_workcategory.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -175,7 +175,7 @@
 | 5 | ftypedesc | 类别详情 | varchar | 255 |  | √ | ' ' | 类别详情 |
 | 6 | fconnector | 明细组合符号 | varchar | 50 |  | √ | ' ' | 明细组合符号,枚举: + :+ : :: - :- _ :_ \ :\ / :/ ~ :~ & :& |
 | 7 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 8 | fworkcateid | 类别编码 | int8 | 64 |  | √ | 0 | 工作内容类别维护 mpdm_workcategory |
+| 8 | fworkcateid | 类别编码 | int8 | 64 |  | √ | 0 | [工作内容类别维护 mpdm_workcategory](../mpdm_files/mpdm_workcategory.md) |
 
 ### 列规则定义
 

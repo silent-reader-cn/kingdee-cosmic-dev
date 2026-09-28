@@ -10,7 +10,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 业务类型 qcbd_biztype |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [业务类型 qcbd_biztype](../qcbd_files/qcbd_biztype.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -41,7 +41,7 @@
 | 2 | fcharttype | 图表类型 | varchar | 5 |  | √ | ' ' | 图表类型,枚举: A :柱状图 B :折线图 C :饼状图 |
 | 3 | fsecondyaxis | 次坐标轴 | bpchar | 1 |  | √ | '0' | 次坐标轴 |
 | 4 | fchecked | 选择标记 | bpchar | 1 |  | √ | '0' | 选择标记 |
-| 5 | fseriesnamesid | 序列名 | int8 | 64 |  | √ | 0 | 统计分析报表关键字 qcqs_analyrptkey |
+| 5 | fseriesnamesid | 序列名 | int8 | 64 |  | √ | 0 | [统计分析报表关键字 qcqs_analyrptkey](../qcqs_files/qcqs_analyrptkey.md) |
 | 6 | fcolor | 颜色 | varchar | 50 |  | √ | ' ' | 颜色 |
 | 7 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 8 | fseriesnamer | 序列名称 | varchar | 50 |  | √ | ' ' | 序列名称 |
@@ -88,8 +88,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | pk_qcqs_chartschem_l |  | fpkid |
-| 2 | idx_qcqs_chareml_fid |  | fid,flocaleid |
+| 1 | idx_qcqs_chareml_fid |  | fid,flocaleid |
+| 2 | pk_qcqs_chartschem_l |  | fpkid |
 | 3 | idx_qcqs_chareml_fname |  | fname |
 
 ---
@@ -134,17 +134,17 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fxaxisselect | 单选横坐标(方案详情单选列表) | varchar | 255 |  | √ | ' ' | 单选横坐标(方案详情单选列表) |
-| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 4 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 4 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 6 | fstatus | 数据状态 | varchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 7 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 7 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 8 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 9 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
-| 10 | frptflagid | 报表实体 | varchar | 255 |  | √ | '0' | 主实体对象 bos_entityobject |
+| 10 | frptflagid | 报表实体 | varchar | 255 |  | √ | '0' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 11 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
-| 12 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 13 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 13 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | fname | 方案名称 | varchar | 255 |  | √ | ' ' | 方案名称 |
 | 15 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 16 | fmulxaxisselect | 多选横坐标(方案详情多选列表) | varchar | 500 |  | √ | ' ' | 多选横坐标(方案详情多选列表) |
@@ -156,9 +156,9 @@
 | 22 | fenable | 使用状态 | varchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 23 | fschemtype | 方案维度 | varchar | 5 |  | √ | ' ' | 方案维度,枚举: A :业务类型 |
 | 24 | fnumber | 方案编码 | varchar | 100 |  | √ | ' ' | 方案编码 |
-| 25 | fuseorgid | 业务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 25 | fuseorgid | 业务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 26 | fsourcebitindex | 原资料位图 | int4 | 32 |  | √ | 0 | 原资料位图 |
-| 27 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 27 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 
 ### 列规则定义
 

@@ -19,7 +19,7 @@
 | 8 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 9 | freceivedimid | 输入标识 | varchar | 1024 |  | √ | ' ' | 输入标识 |
 | 10 | freceivedimensiontext_tag | 大文本4_详情 | text | 0 |  |  | null | 大文本4_详情 |
-| 11 | freceivedimension | 维度 | int8 | 64 |  | √ | 0 | 维度 pa_dimension |
+| 11 | freceivedimension | 维度 | int8 | 64 |  | √ | 0 | [维度 pa_dimension](../pa_files/pa_dimension.md) |
 
 ### 列规则定义
 
@@ -77,7 +77,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 度量 pa_measure |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [度量 pa_measure](../pa_files/pa_measure.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义
@@ -90,8 +90,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_pa_sharebase |  | fid |
-| 2 | pk_t_pa_sharebase |  | fpkid |
+| 1 | pk_t_pa_sharebase |  | fpkid |
+| 2 | idx_pa_sharebase |  | fid |
 
 ---
 
@@ -168,7 +168,7 @@
 | 2 | fdimensiontext | 大文本3 | varchar | 255 |  | √ | ' ' | 大文本3 |
 | 3 | fdimensionvalue | 维度值 | varchar | 1024 |  | √ | ' ' | 维度值 |
 | 4 | fdimensionid | 输入标识 | varchar | 1024 |  | √ | ' ' | 输入标识 |
-| 5 | fsenddimension | 维度 | int8 | 64 |  | √ | 0 | 维度 pa_dimension |
+| 5 | fsenddimension | 维度 | int8 | 64 |  | √ | 0 | [维度 pa_dimension](../pa_files/pa_dimension.md) |
 | 6 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 7 | fsenddimtype | 维度类型 | varchar | 50 |  | √ | ' ' | 维度类型 |
 | 8 | fsendmatename | 元数据标识 | varchar | 500 |  | √ | ' ' | 元数据标识 |
@@ -201,25 +201,25 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fname | fname | varchar | 100 |  | √ | ' ' |  |
 | 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 5 | flimittype | 限定方式 | varchar | 50 |  | √ | ' ' | 限定方式,枚举: 0 :排除 1 :仅包含 |
 | 6 | finputratiobox | 输入比例 | bpchar | 1 |  | √ | ' ' | 输入比例 |
-| 7 | fanalysissystemid | 分析体系 | int8 | 64 |  | √ | 0 | 分析体系 pa_anasystemsetting |
+| 7 | fanalysissystemid | 分析体系 | int8 | 64 |  | √ | 0 | [分析体系 pa_anasystemsetting](../pa_files/pa_anasystemsetting.md) |
 | 8 | freceiverule | 分摊方式 | varchar | 50 |  | √ | ' ' | 分摊方式,枚举: A :按分摊因子 B :按科目金额 C :按固定比例 |
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 10 | faccountfilter_tag | 科目过滤条件_详情 | text | 0 |  |  | null | 科目过滤条件_详情 |
 | 11 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 14 | fanalysismodelid | 分析模型 | int8 | 64 |  | √ | 0 | 分析模型 pa_analysismodel |
+| 14 | fanalysismodelid | 分析模型 | int8 | 64 |  | √ | 0 | [分析模型 pa_analysismodel](../pa_files/pa_analysismodel.md) |
 | 15 | fenable | 使用状态 | varchar | 50 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 16 | flimitbox | 是否限定组合 | bpchar | 1 |  | √ | ' ' | 是否限定组合 |
 | 17 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
 | 18 | faccountfilter | 科目过滤条件 | varchar | 255 |  | √ | ' ' | 科目过滤条件 |
-| 19 | fmeasure | 参考度量值 | int8 | 64 |  | √ | 0 | 度量 pa_measure |
-| 20 | fsharefactor | 分摊因子 | int8 | 64 |  | √ | 0 | 分摊因子 pa_sharefactor |
+| 19 | fmeasure | 参考度量值 | int8 | 64 |  | √ | 0 | [度量 pa_measure](../pa_files/pa_measure.md) |
+| 20 | fsharefactor | 分摊因子 | int8 | 64 |  | √ | 0 | [分摊因子 pa_sharefactor](../pa_files/pa_sharefactor.md) |
 
 ### 列规则定义
 

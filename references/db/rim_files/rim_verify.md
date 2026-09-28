@@ -12,7 +12,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 4 | forg | 基础资料 | int8 | 64 |  | √ | 0 | 树形组织列表 bdm_org_tree_list |
+| 4 | forg | 基础资料 | int8 | 64 |  | √ | 0 | [树形组织列表 bdm_org_tree_list](../bdm_files/bdm_org_tree_list.md) |
 
 ### 列规则定义
 
@@ -44,10 +44,10 @@
 | 4 | fbill_type | 业务单据类型 | varchar | 300 |  | √ | ' ' | 业务单据类型,枚举: 1 :应付单 er_dailyreimbursebill :费用报销单 er_tripreimbursebill :差旅报销单 4 :付款申请单 er_publicreimbursebill :对公报销单 |
 | 5 | fupdate_time | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
 | 6 | fbase_config | 通用配置 | varchar | 2000 |  | √ | ' ' | 通用配置 |
-| 7 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 7 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 8 | fstatus | 状态 | varchar | 2 |  | √ | ' ' | 状态,枚举: 0 :禁用 1 :启用 |
 | 9 | fcustom_config | 个性化配置 | varchar | 2000 |  | √ | ' ' | 个性化配置 |
-| 10 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 11 | fcreate_time | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
 | 12 | fcustom_config_tag | 个性化配置_详情 | text | 0 |  |  | '' | 个性化配置_详情 |
 | 13 | fsequence_type | 连号发票类型 | varchar | 200 |  | √ | ' ' | 连号发票类型 |

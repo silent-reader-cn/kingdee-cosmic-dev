@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | varchar | 20 |  | √ | ' ' | id |
 | 2 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
-| 3 | fssid | 来源系统 | int8 | 64 |  | √ | 0 | 来源系统 ds_srcsys |
+| 3 | fssid | 来源系统 | int8 | 64 |  | √ | 0 | [来源系统 ds_srcsys](../ds_files/ds_srcsys.md) |
 | 4 | fdc | 科目属性 | varchar | 2 |  | √ | ' ' | 科目属性 |
 | 5 | faccounttable | 科目表 | varchar | 36 |  | √ | ' ' | 科目表 |
 | 6 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |

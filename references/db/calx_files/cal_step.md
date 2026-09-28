@@ -52,5 +52,5 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | pk_cal_step |  | fid |
-| 2 | idx_cal_step_num |  | fnumber |
+| 1 | idx_cal_step_num |  | fnumber |
+| 2 | pk_cal_step |  | fid |

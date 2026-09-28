@@ -1,5 +1,69 @@
 # 企业规模及生产能力-srm_cmtscale
 
+## 主要原材料情况-子表 t_srm_commainproduct
+
+- **表名称：** 主要原材料情况-子表
+- **表名：** t_srm_commainproduct
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
+| 3 | fmaiproductname | 材料名称 | varchar | 255 |  | √ | ' ' | 材料名称 |
+| 4 | fmaiproductsup | 供应商名称 | varchar | 255 |  | √ | ' ' | 供应商名称 |
+| 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 6 | fmainnote | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fentryid | fentryid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | pk_t_srm_commainproduct |  | fentryid |
+| 2 | idx_srm_mainproduc_fid |  | fid |
+
+---
+
+## 主要生产设配情况-子表 t_srm_comproductentry
+
+- **表名称：** 主要生产设配情况-子表
+- **表名：** t_srm_comproductentry
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fproductoolname | 生产设备名称与型号 | varchar | 255 |  | √ | ' ' | 生产设备名称与型号 |
+| 3 | fproduction | 生产设配厂商 | varchar | 255 |  | √ | ' ' | 生产设配厂商 |
+| 4 | fdate | 购入日期 | timestamp | 0 |  |  | null | 购入日期 |
+| 5 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
+| 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 7 | fability | 单机产能 | varchar | 100 |  | √ | ' ' | 单机产能 |
+| 8 | fproductoolnum | 设备数量 | int8 | 64 |  | √ | 0 | 设备数量 |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fentryid | fentryid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_srm_cproductentry_fid |  | fid |
+| 2 | pk_t_srm_comproductentry |  | fentryid |
+
+---
+
 ## 主营产品分录-子表 t_srm_entrygoods
 
 - **表名称：** 主营产品分录-子表
@@ -57,18 +121,18 @@
 | 9 | fselfcheckpeo | 来料质检人数 | int8 | 64 |  | √ | 0 | 来料质检人数 |
 | 10 | frdpeoplenum | 产品开发人员 | int8 | 64 |  | √ | 0 | 产品开发人员 |
 | 11 | fqualitystaffnum | 质量人员数 | int8 | 64 |  | √ | 0 | 质量人员数 |
-| 12 | fstaffnum | 企业规模数 | int8 | 64 |  | √ | 0 | 企业规模数 |
+| 12 | fstaffnum | 企业员工数 | int8 | 64 |  | √ | 0 | 企业员工数 |
 | 13 | fwarehousearea | 库房面积 (平米) | int8 | 64 |  | √ | 0 | 库房面积 (平米) |
 | 14 | fofficearea | 办公室面积 (平米) | int8 | 64 |  | √ | 0 | 办公室面积 (平米) |
 | 15 | ftechniciannum | 技术人员数 | int8 | 64 |  | √ | 0 | 技术人员数 |
-| 16 | fprojectid | 寻源项目F7 | int8 | 64 |  | √ | 0 | 招标项目F7 src_projectf7 |
+| 16 | fprojectid | 寻源项目F7 | int8 | 64 |  | √ | 0 | [招标项目F7 src_projectf7](../src_files/src_projectf7.md) |
 | 17 | fparentid | 父单据ID | varchar | 100 |  | √ | ' ' | 父单据ID |
 | 18 | fplantarea | 厂房面积 (平米) | int8 | 64 |  | √ | 0 | 厂房面积 (平米) |
 | 19 | ftwoyearlater | 2年以上技术人员占比 (%) | int8 | 64 |  | √ | 0 | 2年以上技术人员占比 (%) |
 | 20 | fproductsample | 样品生产周期 (天) | int8 | 64 |  | √ | 0 | 样品生产周期 (天) |
 | 21 | fentitykey | 组件标识 | varchar | 100 |  | √ | ' ' | 组件标识 |
 | 22 | fiqpcpeo | 制程质检人数 | int8 | 64 |  | √ | 0 | 制程质检人数 |
-| 23 | fmainorgid | 主业务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 23 | fmainorgid | 主业务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 24 | fproductday | 生产前置期 (天) | int8 | 64 |  | √ | 0 | 生产前置期 (天) |
 | 25 | ffinshpropeo | 成品质检人数 | int8 | 64 |  | √ | 0 | 成品质检人数 |
 | 26 | frdability | 研发能力 | varchar | 10 |  | √ | ' ' | 研发能力,枚举: A :能自主设计开发新产品 B :联合开发 C :委托开发 D :无开发能力 |
@@ -89,37 +153,6 @@
 | :--- | :--- | :--- | :--- |
 | 1 | idx_srm_compentscale_parent |  | fparentid |
 | 2 | pk_t_srm_compentscale |  | fid |
-
----
-
-## 主要原材料情况-子表 t_srm_commainproduct
-
-- **表名称：** 主要原材料情况-子表
-- **表名：** t_srm_commainproduct
-
-### 表格列定义
-
-| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 3 | fmaiproductname | 材料名称 | varchar | 255 |  | √ | ' ' | 材料名称 |
-| 4 | fmaiproductsup | 供应商名称 | varchar | 255 |  | √ | ' ' | 供应商名称 |
-| 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 6 | fmainnote | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
-
-### 列规则定义
-
-| 序号 | 键编码 | 列字段 |
-| :--- | :--- | :--- |
-| 1 | fentryid | fentryid |
-
-### 索引定义
-
-| 序号 | 索引名 | 唯一 | 列字段 |
-| :--- | :--- | :--- | :--- |
-| 1 | pk_t_srm_commainproduct |  | fentryid |
-| 2 | idx_srm_mainproduc_fid |  | fid |
 
 ---
 
@@ -155,36 +188,3 @@
 | :--- | :--- | :--- | :--- |
 | 1 | idx_srm_cpartnerentry_fid |  | fid |
 | 2 | pk_t_srm_compartnerentry |  | fentryid |
-
----
-
-## 主要生产设配情况-子表 t_srm_comproductentry
-
-- **表名称：** 主要生产设配情况-子表
-- **表名：** t_srm_comproductentry
-
-### 表格列定义
-
-| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fproductoolname | 生产设备名称与型号 | varchar | 255 |  | √ | ' ' | 生产设备名称与型号 |
-| 3 | fproduction | 生产设配厂商 | varchar | 255 |  | √ | ' ' | 生产设配厂商 |
-| 4 | fdate | 购入日期 | timestamp | 0 |  |  | null | 购入日期 |
-| 5 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 7 | fability | 单机产能 | varchar | 100 |  | √ | ' ' | 单机产能 |
-| 8 | fproductoolnum | 设备数量 | int8 | 64 |  | √ | 0 | 设备数量 |
-
-### 列规则定义
-
-| 序号 | 键编码 | 列字段 |
-| :--- | :--- | :--- |
-| 1 | fentryid | fentryid |
-
-### 索引定义
-
-| 序号 | 索引名 | 唯一 | 列字段 |
-| :--- | :--- | :--- | :--- |
-| 1 | idx_srm_cproductentry_fid |  | fid |
-| 2 | pk_t_srm_comproductentry |  | fentryid |

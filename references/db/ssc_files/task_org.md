@@ -40,19 +40,19 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fisleaf | 是否叶子 | bpchar | 1 |  | √ | '0' | 是否叶子 |
 | 4 | fimportorgid | 导入组织主键 | varchar | 100 |  | √ | ' ' | 导入组织主键 |
-| 5 | fparentid | 上级 | int8 | 64 |  | √ | 0 | 共享中心组织分配 task_org |
+| 5 | fparentid | 上级 | int8 | 64 |  | √ | 0 | [共享中心组织分配 task_org](../ssc_files/task_org.md) |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 7 | fssccenterid | 共享中心 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 7 | fssccenterid | 共享中心 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | flongnumber | 长编码 | varchar | 500 |  | √ | ' ' | 长编码 |
-| 9 | forgtype | 组织类型 | int8 | 64 |  | √ | 0 | 组织视图方案 bos_org_viewschema |
+| 9 | forgtype | 组织类型 | int8 | 64 |  | √ | 0 | [组织视图方案 bos_org_viewschema](../base_files/bos_org_viewschema.md) |
 | 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 11 | forgpattern | 形态 | varchar | 10 |  | √ | ' ' | 形态,枚举: 1 :公司 2 :分公司 3 :事业部 4 :部门 |
 | 12 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 13 | flevel | 级次 | int8 | 64 |  | √ | 0 | 级次 |
-| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 16 | fenable | 使用状态 | bpchar | 1 |  | √ | '0' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 17 | fnumber | 编码 | varchar | 50 |  | √ | ' ' | 编码 |

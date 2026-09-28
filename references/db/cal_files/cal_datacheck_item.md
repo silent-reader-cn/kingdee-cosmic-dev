@@ -11,7 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 名称 | varchar | 80 |  | √ | ' ' | 名称 |
-| 3 | fbizobject | 业务对象 | varchar | 50 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 3 | fbizobject | 业务对象 | varchar | 50 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 4 | fiserroritem | 数据错误项 | bpchar | 1 |  | √ | ' ' | 数据错误项 |
 | 5 | fdescription | 描述 | varchar | 1000 |  | √ | ' ' | 描述 |
 | 6 | fappnum | 应用编码 | varchar | 10 |  | √ | ' ' | 应用编码 |

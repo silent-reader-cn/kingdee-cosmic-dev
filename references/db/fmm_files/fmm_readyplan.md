@@ -11,12 +11,12 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
 | 2 | fentryplanorder | 检查顺序 | int4 | 32 |  | √ | 0 | 检查顺序 |
-| 3 | fentryplanreadyrule | 资源就绪检查规则 | int8 | 64 |  | √ | 0 | 资源就绪检查规则 fmm_readyrule |
+| 3 | fentryplanreadyrule | 资源就绪检查规则 | int8 | 64 |  | √ | 0 | [资源就绪检查规则 fmm_readyrule](../fmm_files/fmm_readyrule.md) |
 | 4 | fentryplanrestype | 资源类型 | varchar | 255 |  | √ | ' ' | 资源类型,枚举: 0 :物料 1 :设备 2 :工具 3 :文件 4 :技术支持 5 :工卡 |
 | 5 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 7 | fentryplanfieldtransfer | 资源就绪匹配规则 | int8 | 64 |  | √ | 0 | 实体字段映射 mrp_billfieldtransfer |
-| 8 | fentryplanresbill | 资源对象 | varchar | 255 |  | √ | ' ' | 业务对象 bos_objecttype |
+| 7 | fentryplanfieldtransfer | 资源就绪匹配规则 | int8 | 64 |  | √ | 0 | [实体字段映射 mrp_billfieldtransfer](../msplan_files/mrp_billfieldtransfer.md) |
+| 8 | fentryplanresbill | 资源对象 | varchar | 255 |  | √ | ' ' | [业务对象 bos_objecttype](../mdl_files/bos_objecttype.md) |
 
 ### 列规则定义
 
@@ -43,13 +43,13 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fentryexeresbill | 资源对象 | varchar | 255 |  | √ | ' ' | 业务对象 bos_objecttype |
+| 2 | fentryexeresbill | 资源对象 | varchar | 255 |  | √ | ' ' | [业务对象 bos_objecttype](../mdl_files/bos_objecttype.md) |
 | 3 | fentryexeorder | 检查顺序 | int4 | 32 |  | √ | 0 | 检查顺序 |
 | 4 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 5 | fentryexerestype | 资源类型 | varchar | 255 |  | √ | ' ' | 资源类型,枚举: 0 :物料 1 :设备 2 :工具 3 :文件 4 :技术支持 5 :工卡 |
-| 6 | fentryexereadyrule | 资源就绪检查规则 | int8 | 64 |  | √ | 0 | 资源就绪检查规则 fmm_readyrule |
+| 6 | fentryexereadyrule | 资源就绪检查规则 | int8 | 64 |  | √ | 0 | [资源就绪检查规则 fmm_readyrule](../fmm_files/fmm_readyrule.md) |
 | 7 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 8 | fentryexefieldtransfer | 资源就绪匹配规则 | int8 | 64 |  | √ | 0 | 实体字段映射 mrp_billfieldtransfer |
+| 8 | fentryexefieldtransfer | 资源就绪匹配规则 | int8 | 64 |  | √ | 0 | [实体字段映射 mrp_billfieldtransfer](../msplan_files/mrp_billfieldtransfer.md) |
 
 ### 列规则定义
 
@@ -160,20 +160,20 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 6 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 7 | fresregisterdemand | 资源需求模型 | int8 | 64 |  | √ | 0 | 资源注册模型 mrp_resourceregister_cf |
-| 8 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 7 | fresregisterdemand | 资源需求模型 | int8 | 64 |  | √ | 0 | [资源注册模型 mrp_resourceregister_cf](../msplan_files/mrp_resourceregister_cf.md) |
+| 8 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 10 | fctrlstrategy | 控制策略 | varchar | 50 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
 | 11 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 12 | fresregistersupply | 资源供应模型 | int8 | 64 |  | √ | 0 | 资源注册模型 mrp_resourceregister_cf |
-| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fresregistersupply | 资源供应模型 | int8 | 64 |  | √ | 0 | [资源注册模型 mrp_resourceregister_cf](../msplan_files/mrp_resourceregister_cf.md) |
+| 13 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 14 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
-| 15 | freadylevelid | 就绪状态优先级 | int8 | 64 |  | √ | 0 | 就绪状态优先级定义 fmm_readylevel |
+| 15 | freadylevelid | 就绪状态优先级 | int8 | 64 |  | √ | 0 | [就绪状态优先级定义 fmm_readylevel](../fmm_files/fmm_readylevel.md) |
 | 16 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 17 | fbitindex | 位图 | int8 | 64 |  | √ | 0 | 位图 |
 | 18 | fenable | 使用状态 | varchar | 50 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |

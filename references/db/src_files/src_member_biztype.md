@@ -9,9 +9,9 @@
 
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fbasedataid | 参标类型 | int8 | 64 |  | √ | 0 | 招标辅助资料 pds_extdata |
+| 1 | fbasedataid | 参标类型 | int8 | 64 |  | √ | 0 | [招标辅助资料 pds_extdata](../pds_files/pds_extdata.md) |
 | 2 | fpkid | fpkid | int8 | 64 |  | √ | 0 |  |
-| 3 | fentryid | 我的任务 | int8 | 64 |  | √ | 0 | 我的任务 src_memberclarify |
+| 3 | fentryid | 我的任务 | int8 | 64 |  | √ | 0 | [我的任务 src_memberclarify](../src_files/src_memberclarify.md) |
 
 ### 列规则定义
 

@@ -14,12 +14,12 @@
 | 3 | fintervalenddate | 区间结束日期 | timestamp | 0 |  |  | null | 区间结束日期 |
 | 4 | fseq | fseq | int4 | 32 |  | √ | 0 |  |
 | 5 | ftaxbaseamount | 对应税基 | numeric | 23 | 10 | √ | 0 | 对应税基 |
-| 6 | ftaxcodetype | 税码结果类型 | int8 | 64 |  | √ | 0 | 税码明细结果类型 bastax_code_detailstype |
+| 6 | ftaxcodetype | 税码结果类型 | int8 | 64 |  | √ | 0 | [税码明细结果类型 bastax_code_detailstype](../bastax_files/bastax_code_detailstype.md) |
 | 7 | fresultsource | fresultsource | varchar | 36 |  | √ | ' ' |  |
 | 8 | fdays | 交集期间天数 | int8 | 64 |  | √ | 0 | 交集期间天数 |
 | 9 | fenddate | 失效日期 | timestamp | 0 |  |  | null | 失效日期 |
 | 10 | fsumintervalamount | 各区间税额合计 | numeric | 23 | 10 | √ | 0 | 各区间税额合计 |
-| 11 | ftaxratetype | 税率类型 | int8 | 64 |  | √ | 0 | 税率类型 bd_taxratetype |
+| 11 | ftaxratetype | 税率类型 | int8 | 64 |  | √ | 0 | [税率类型 bd_taxratetype](../basedata_files/bd_taxratetype.md) |
 | 12 | ftotaldays | 总天数 | int8 | 64 |  | √ | 0 | 总天数 |
 | 13 | fresultnumber | 结果编码 | varchar | 120 |  | √ | ' ' | 结果编码 |
 | 14 | fstartdate | 生效日期 | timestamp | 0 |  |  | null | 生效日期 |

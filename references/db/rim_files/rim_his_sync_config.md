@@ -12,7 +12,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fstatus | 同步结果 | varchar | 4 |  | √ | ' ' | 同步结果,枚举: 0 :不同步 1 :同步 |
 | 3 | fclientid | clientId | varchar | 30 |  | √ | ' ' | clientId |
-| 4 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | fcreate_time | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
 | 6 | ftax_no | 税号 | varchar | 30 |  | √ | ' ' | 税号 |
 | 7 | fcompany_name | 企业名称 | varchar | 150 |  | √ | ' ' | 企业名称 |

@@ -12,7 +12,7 @@
 | 1 | fid | 采购清单要求id | int8 | 64 |  | √ | 0 | 采购清单要求id |
 | 2 | freply | 供应商回复 | varchar | 510 |  | √ | ' ' | 供应商回复 |
 | 3 | fremark | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
-| 4 | fprojectid | 寻源项目 | int8 | 64 |  | √ | 0 | 招标项目F7 src_projectf7 |
+| 4 | fprojectid | 寻源项目 | int8 | 64 |  | √ | 0 | [招标项目F7 src_projectf7](../src_files/src_projectf7.md) |
 | 5 | fseq | fseq | int8 | 64 |  | √ | 0 |  |
 | 6 | fdemandvalue | fdemandvalue | varchar | 510 |  | √ | ' ' |  |
 | 7 | fsupplierid | 供应商 | int8 | 64 |  | √ | 0 | 注册供应商 src_supplier |

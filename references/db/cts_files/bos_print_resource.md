@@ -12,7 +12,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | filetype | 文件类型 | varchar | 20 |  | √ | ' ' | 文件类型 |
 | 3 | filename | 文件名 | varchar | 120 |  | √ | ' ' | 文件名 |
-| 4 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 5 | ftype | 资源类型 | bpchar | 1 |  | √ | ' ' | 资源类型,枚举: 0 :图片 1 :图标 2 :附件 3 :字体 |
 | 6 | fcreatetime | 创建日期 | timestamp | 0 |  | √ | LOCALTIMESTAMP | 创建日期 |
 | 7 | fprinttplid | 所属实体ID | varchar | 36 |  | √ | ' ' | 所属实体ID |

@@ -10,13 +10,13 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | finvorg | 库存组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | finvorg | 库存组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | flotnumber | 批号 | varchar | 50 |  | √ | ' ' | 批号 |
-| 4 | flocation | 仓位 | int8 | 64 |  | √ | 0 | 仓位 bd_location |
-| 5 | fmaterial | 物料 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 4 | flocation | 仓位 | int8 | 64 |  | √ | 0 | [仓位 bd_location](../sbd_files/bd_location.md) |
+| 5 | fmaterial | 物料 | int8 | 64 |  | √ | 0 | [物料 bd_material](../basedata_files/bd_material.md) |
 | 6 | fauxpty | 辅助属性 | int8 | 64 |  | √ | 0 | null 001 |
-| 7 | funit | 基本单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
-| 8 | fwarehouse | 仓库 | int8 | 64 |  | √ | 0 | 仓库 bd_warehouse |
+| 7 | funit | 基本单位 | int8 | 64 |  | √ | 0 | [计量单位 bd_measureunits](../base_files/bd_measureunits.md) |
+| 8 | fwarehouse | 仓库 | int8 | 64 |  | √ | 0 | [仓库 bd_warehouse](../sbd_files/bd_warehouse.md) |
 | 9 | finvaccid | 即时库存id | int8 | 64 |  | √ | 0 | 即时库存id |
 
 ### 列规则定义
@@ -49,7 +49,7 @@
 | 4 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 5 | fnote | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
 | 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 7 | fcreateorg | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 7 | fcreateorg | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 
 ### 列规则定义
 

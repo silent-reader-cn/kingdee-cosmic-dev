@@ -42,13 +42,13 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fname | 补助项目名称 | varchar | 50 |  | √ | ' ' | 补助项目名称 |
 | 4 | fljjzsyamount | 累计结转损益金额 | numeric | 23 | 10 | √ | 0.0000000000 | 累计结转损益金额 |
 | 5 | fbillstatus | 单据状态 | varchar | 50 |  | √ | ' ' | 单据状态,枚举: 0 :禁用 1 :可用 |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 7 | faccountingmethod | 核算方法 | varchar | 50 |  | √ | ' ' | 核算方法,枚举: 1 :总额法 2 :净额法 |
-| 8 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 8 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 9 | fcontractstart | 合同期间.开始 | timestamp | 0 |  |  | null | 合同期间.开始 |
 | 10 | fnote | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
 | 11 | fsywjzamount | 剩余未结转金额 | numeric | 23 | 10 | √ | 0.0000000000 | 剩余未结转金额 |
@@ -58,10 +58,10 @@
 | 15 | frelateassetcode | 关联资产编码 | varchar | 50 |  | √ | ' ' | 关联资产编码 |
 | 16 | ftotalamt | 合同总金额 | numeric | 23 | 10 | √ | 0.0000000000 | 合同总金额 |
 | 17 | fljsdbzamount | 累计收到补助金额 | numeric | 23 | 10 | √ | 0.0000000000 | 累计收到补助金额 |
-| 18 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 18 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 19 | fcontractend | 合同期间.结束 | timestamp | 0 |  |  | null | 合同期间.结束 |
 | 20 | fbillno | 项目编号 | varchar | 30 |  | √ | ' ' | 项目编号 |
-| 21 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 21 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 22 | fsubsidytype | 补助类型 | varchar | 50 |  | √ | ' ' | 补助类型,枚举: 1 :资产相关 2 :收益相关 3 :其他 |
 
 ### 列规则定义

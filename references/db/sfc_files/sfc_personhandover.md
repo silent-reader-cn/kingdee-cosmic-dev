@@ -127,8 +127,8 @@
 
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
-| 1 | idx_t_sfc_persho_entry_l |  | fentryid,flocaleid |
-| 2 | pk_t_sfc_persho_entry_l |  | fpkid |
+| 1 | pk_t_sfc_persho_entry_l |  | fpkid |
+| 2 | idx_t_sfc_persho_entry_l |  | fentryid,flocaleid |
 
 ---
 
@@ -176,19 +176,19 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fhopersmobile | 交接人联系方式 | varchar | 50 |  | √ | ' ' | 交接人联系方式 |
 | 4 | fbillstatus | 单据状态 | varchar | 50 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 5 | fhandoverpersonid | 交接人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | fhandoverpersonid | 交接人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 7 | forgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 7 | forgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
-| 9 | freceivedbyid | 接收人 | int8 | 64 |  | √ | 0 | 基础资料带组织模板 mpdm_manuperson |
+| 9 | freceivedbyid | 接收人 | int8 | 64 |  | √ | 0 | [基础资料带组织模板 mpdm_manuperson](../mpdm_files/mpdm_manuperson.md) |
 | 10 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 12 | fforwardtoid | 转交人 | int8 | 64 |  | √ | 0 | 基础资料带组织模板 mpdm_manuperson |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 12 | fforwardtoid | 转交人 | int8 | 64 |  | √ | 0 | [基础资料带组织模板 mpdm_manuperson](../mpdm_files/mpdm_manuperson.md) |
 | 13 | fbillno | 单据编号 | varchar | 30 |  | √ | ' ' | 单据编号 |
-| 14 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 14 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | fhandoverstatus | 交接状态 | varchar | 50 |  | √ | ' ' | 交接状态,枚举: A :接收 B :拒绝 C :转交 |
 | 16 | fhandovertime | 交接日期 | timestamp | 0 |  |  | null | 交接日期 |
 

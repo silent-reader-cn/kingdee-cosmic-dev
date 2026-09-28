@@ -16,7 +16,7 @@
 | 5 | fapplydate | 同步时间 | timestamp | 0 |  |  | null | 同步时间 |
 | 6 | fserialno | 批次号 | varchar | 50 |  | √ | ' ' | 批次号 |
 | 7 | fawsstarttime | aws同步起始日期 | timestamp | 0 |  |  | null | aws同步起始日期 |
-| 8 | forg | 核算组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 8 | forg | 核算组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 9 | fstatus | 同步状态 | varchar | 50 |  | √ | ' ' | 同步状态,枚举: 0 :失败 1 :成功 |
 | 10 | fisnewfinished | 是否最新完成同步批次 | varchar | 50 |  | √ | ' ' | 是否最新完成同步批次,枚举: 0 :否 1 :是 |
 | 11 | flastapplyenddate | 上次同步截止日期 | timestamp | 0 |  |  | null | 上次同步截止日期 |

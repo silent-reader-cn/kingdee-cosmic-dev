@@ -14,12 +14,12 @@
 | 3 | ftenant_no | 租户 | varchar | 30 |  | √ | ' ' | 租户 |
 | 4 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 5 | fserial_no | 发票流水号 | varchar | 36 |  | √ | ' ' | 发票流水号 |
-| 6 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 7 | fresource | 发票来源 | varchar | 50 |  | √ | ' ' | 发票来源 |
 | 8 | faccount_date | 会计属期 | timestamp | 0 |  |  | null | 会计属期 |
 | 9 | fbillno | 单据编号 | varchar | 36 |  | √ | ' ' | 单据编号 |
-| 10 | forg_id | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 11 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | forg_id | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 11 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | ftotal_amount | 合计金额 | numeric | 23 | 10 | √ | 0.0000000000 | 合计金额 |
 | 13 | faws_serial_no | AWS发票流水号 | varchar | 36 |  | √ | ' ' | AWS发票流水号 |
 | 14 | ftax_authority_name | 税务机关 | varchar | 100 |  | √ | ' ' | 税务机关 |
@@ -28,13 +28,13 @@
 | 17 | finvoice_date | 开票日期 | timestamp | 0 |  |  | null | 开票日期 |
 | 18 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
 | 19 | fbuyer_tax_no | 购买方税号 | varchar | 20 |  | √ | ' ' | 购买方税号 |
-| 20 | ftax_org | 纳税主体 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 20 | ftax_org | 纳税主体 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 21 | fdelete | 可用状态 | varchar | 4 |  | √ | '1' | 可用状态,枚举: 1 :可用 2 :作废 3 :删除 |
 | 22 | fexpense_status | 报销状态 | varchar | 2 |  | √ | ' ' | 报销状态,枚举: 1 :未报销 30 :审核中 60 :已报销 65 :已入账 |
 | 23 | foriginal_state | 原件签收状态 | varchar | 2 |  | √ | ' ' | 原件签收状态,枚举: 0 :未签收 1 :已签收 |
-| 24 | finvoice_type | 发票类型 | int8 | 64 |  | √ | 0 | 发票类型 bd_invoicetype |
-| 25 | fproject | 项目 | int8 | 64 |  | √ | 0 | 项目 bd_project |
-| 26 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 24 | finvoice_type | 发票类型 | int8 | 64 |  | √ | 0 | [发票种类 bd_invoicetype](../basedata_files/bd_invoicetype.md) |
+| 25 | fproject | 项目 | int8 | 64 |  | √ | 0 | [项目 bd_project](../basedata_files/bd_project.md) |
+| 26 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 27 | ftax_paid_proof_no | 完税证明号码 | varchar | 20 |  | √ | ' ' | 完税证明号码 |
 
 ### 列规则定义

@@ -75,17 +75,18 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
-| 4 | fcreatedate | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 5 | fisenable | 启用 | bpchar | 1 |  | √ | '0' | 启用 |
-| 6 | fmodifydate | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 7 | fissysinit | 系统预设 | bpchar | 1 |  | √ | '0' | 系统预设 |
-| 8 | ftargetobj | 目标业务实体 | varchar | 72 |  | √ | ' ' | 主实体对象 bos_entityobject |
-| 9 | fcreaterid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 10 | fnumber | 编码 | varchar | 120 |  | √ | ' ' | 编码 |
-| 11 | fsourcebill | 来源单据 | varchar | 72 |  | √ | ' ' | 主实体对象 bos_entityobject |
-| 12 | fbizappid | 所属应用 | varchar | 72 |  | √ | ' ' | 业务应用实体 bos_devportal_bizapp |
+| 4 | fissysinit | 系统预设 | bpchar | 1 |  | √ | '0' | 系统预设 |
+| 5 | ftargetobj | 目标业务实体 | varchar | 72 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
+| 6 | fcreaterid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 7 | fsourcebill | 来源单据 | varchar | 72 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
+| 8 | fbizappid | 所属应用 | varchar | 72 |  | √ | ' ' | [业务应用实体 bos_devportal_bizapp](../mdl_files/bos_devportal_bizapp.md) |
+| 9 | fcreatedate | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 10 | fisenable | 启用 | bpchar | 1 |  | √ | '0' | 启用 |
+| 11 | fmodifydate | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 12 | fmapuse | 映射用途 | varchar | 5 |  | √ | ' ' | 映射用途,枚举: 0 :通用 1 :预留查询 2 :返还件 |
+| 13 | fnumber | 编码 | varchar | 120 |  | √ | ' ' | 编码 |
 
 ### 列规则定义
 

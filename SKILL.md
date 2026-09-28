@@ -1,10 +1,10 @@
 ---
 name: kingdee-cosmic-dev
-summary: 金蝶云苍穹（Kingdee Cloud Cosmic）开发知识库 —— 22,769 张物理表结构 + 144 篇 OpenAPI 开放平台官方手册，内置统一全文检索。
+summary: 金蝶云苍穹（Kingdee Cloud Cosmic）开发知识库 —— 31,547 张物理表结构 + 144 篇 OpenAPI 开放平台官方手册，内置统一全文检索。
 description: >-
   金蝶云苍穹（Kingdee Cloud Cosmic / 金蝶AI苍穹）开发指南，覆盖两大块内容：
-  (1) 数据库 —— 22,769 张物理表结构（列名/中文名/类型/长度/精度/非空/默认值/备注枚举）、
-  列规则与索引定义，覆盖财务、供应链、制造、人力、基础资料、平台等 224 个模块；
+  (1) 数据库 —— 31,547 张物理表结构（列名/中文名/类型/长度/精度/非空/默认值/备注枚举）、
+  列规则与索引定义，覆盖财务、供应链、制造、人力、基础资料、平台等 267 个模块；
   (2) OpenAPI（开放平台）—— 144 篇官方手册，覆盖认证鉴权（AccessToken/JWT/摘要/基本/签名）、
   操作API、自定义API（Java插件/脚本/Servlet/文件流）、RESTful API、Webservice、
   开放事件、API 管理、限流与排错。
@@ -21,7 +21,7 @@ description: >-
 
 | 块 | 内容 | 规模 | 入口 |
 | :--- | :--- | :--- | :--- |
-| **块一 数据库** | 全量物理表结构（字段 / 列规则 / 索引） | 22,769 张表 / 224 模块 | [`references/db/`](./references/db/) |
+| **块一 数据库** | 全量物理表结构（字段 / 列规则 / 索引） | 31,547 张表 / 267 模块 | [`references/db/`](./references/db/) |
 | **块二 OpenAPI 手册** | 金蝶云社区开放平台官方手册 | 144 篇 / 8 分类 | [`references/openapi/`](./references/openapi/) |
 
 > 数据库目标版本 **PostgreSQL 12**；OpenAPI 内容抓取自金蝶云社区专题
@@ -171,13 +171,14 @@ kingdee-cosmic-dev/
 │   ├── search.py                  # 统一检索（块一 + 块二）
 │   └── build_index.py             # 从 Markdown 生成各级 _INDEX.md
 ├── tools/
-│   ├── html2md.py                 # HTML→Markdown 转换器（零依赖）
-│   ├── fetch_manual.py            # 抓取金蝶云社区专题手册
+│   ├── html2md.py                 # HTML→Markdown 转换器（零依赖，块二用）
+│   ├── fetch_manual.py            # 抓取金蝶云社区专题手册（块二）
+│   ├── build_db_from_dict.py      # 数据字典导出包 → 表结构 Markdown（块一）
 │   └── selftest.py                # 内容/检索完整性自检
 └── references/
     ├── _INDEX.md                  # 总索引
-    ├── db/                        # 【块一】数据库
-    │   ├── _INDEX.md              #   224 个模块统计概览
+    ├── db/                        # 【块一】数据库（来自官方数据字典导出 V5.0.011.0）
+    │   ├── _INDEX.md              #   267 个模块统计概览
     │   └── <模块>_files/
     │       ├── _INDEX.md          #   本模块表清单
     │       └── <对象>.md          #   一个文件可含主表/分录/多语言表多个 ## 块
@@ -189,29 +190,47 @@ kingdee-cosmic-dev/
 
 ---
 
-## 六、手册维护
+## 六、内容维护
 
-内容是从线上抓的，不是手写的。需要更新时：
+两块内容都是**从上游生成的，不是手写的**。
+
+### 6.1 块一 数据库（数据字典导出包）
+
+```bash
+python tools/build_db_from_dict.py <数据字典导出.zip>    # 转换（自动清理过期文件）
+python tools/build_db_from_dict.py <zip> --list          # 只看统计
+python tools/build_db_from_dict.py <zip> --keep-stale    # 保留旧文件
+python scripts/build_index.py                            # 重建索引
+```
+
+- 导出包结构：`<root>/<模块>_files/<对象>.html`（模块概览页 `index.html` 等会被忽略）。
+- 转换会把单元格里指向其它表的 `<a>` 转成 Markdown 链接，
+  例如 `[业务单元 bos_org](../base_files/bos_org.md)`，方便顺着关联摸过去。
+- 源包不在仓库里（几十 MB），需要时从金蝶导出。
+
+### 6.2 块二 OpenAPI 手册
 
 ```bash
 python tools/fetch_manual.py            # 重新抓取（已存在的跳过）
 python tools/fetch_manual.py --force    # 全部重抓
 python tools/fetch_manual.py --render   # 不联网，用 _source/ 存档重新渲染
-python scripts/build_index.py           # 重建全部索引
 ```
 
 `fetch_manual.py` 会把原始 JSON 存到 `references/openapi/_source/`，
 所以格式调整（改 `tools/html2md.py`）后可以直接 `--render` 离线重出，不必再联网。
 
-改完记得跑一遍完整性自检，确认没有悄悄丢内容：
+### 6.3 改完必须跑自检
 
 ```bash
-python tools/selftest.py            # 全量自检（约 20 秒）
-python tools/selftest.py --quick    # 跳过逐篇文本比对
+python tools/selftest.py                          # 基础 11 项（约 30 秒）
+python tools/selftest.py --quick                  # 跳过逐篇文本比对
+python tools/selftest.py --dict-zip <导出包>       # 额外校验块一 HTML→Markdown 保真
 ```
 
-它会校验「目录/存档/正文三方一致」「HTML 文本 100% 落在 Markdown 里」
-「`--full` 返回完整正文」「224 个模块索引与表定义逐条一致」等 11 项。
+基础项校验「目录/存档/正文三方一致」「HTML 文本 100% 落在 Markdown 里」
+「`--full` 返回完整正文」「267 个模块索引与表定义逐条一致」等。
+带 `--dict-zip` 时额外跑 A5/A6：全量比对每个文件的表数/小节数/表格数，
+并抽样**逐单元格**与源 HTML 对账。
 
 ---
 

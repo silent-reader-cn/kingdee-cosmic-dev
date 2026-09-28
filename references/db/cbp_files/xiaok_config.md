@@ -1,8 +1,8 @@
-# 小K配置项-xiaok_config
+# 智能配置项-xiaok_config
 
-## 小K配置项-主表 t_daxk_xiaok_config
+## 智能配置项-主表 t_daxk_xiaok_config
 
-- **表名称：** 小K配置项-主表
+- **表名称：** 智能配置项-主表
 - **表名：** t_daxk_xiaok_config
 
 ### 表格列定义

@@ -46,14 +46,14 @@
 | 3 | fisshare | fisshare | bpchar | 1 |  | √ | '0' |  |
 | 4 | fschemeid | fschemeid | varchar | 20 |  | √ | ' ' | id |
 | 5 | fseq | fseq | int8 | 64 |  | √ | 0 |  |
-| 6 | fuserid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | fuserid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 7 | fnextentryscheme | fnextentryscheme | bpchar | 1 |  | √ | '0' |  |
 | 8 | fmodifytime | fmodifytime | timestamp | 0 |  |  | null |  |
 | 9 | fisf7 | fisf7 | bpchar | 1 |  | √ | '0' |  |
 | 10 | fschemename | fschemename | varchar | 100 |  | √ | ' ' |  |
 | 11 | fisfixed | 全局方案 | bpchar | 1 |  | √ | '0' | 全局方案 |
 | 12 | fscheme | fscheme | text | 0 |  |  | null |  |
-| 13 | fformid | 表单 | varchar | 36 |  | √ | ' ' | 全局方案表单 globalscheme_form |
+| 13 | fformid | 表单 | varchar | 36 |  | √ | ' ' | [全局方案表单 globalscheme_form](../mdl_files/globalscheme_form.md) |
 | 14 | fisdefault | 默认方案 | bpchar | 1 |  | √ | '0' | 默认方案 |
 
 ### 列规则定义

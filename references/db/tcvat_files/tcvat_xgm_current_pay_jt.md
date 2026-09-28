@@ -18,7 +18,7 @@
 | 7 | fsalesexcludtax | 不含税销售额 | numeric | 23 | 10 | √ | 0 | 不含税销售额 |
 | 8 | fparentid | 父ID | int8 | 64 |  | √ | 0 | 父ID |
 | 9 | fserialno | 流水号 | varchar | 50 |  | √ | ' ' | 流水号 |
-| 10 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 10 | forgid | 税务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 11 | fdiffammount | 差额扣除额 | numeric | 23 | 10 | √ | 0 | 差额扣除额 |
 | 12 | ftaxfreeamount | 免税销售额 | numeric | 23 | 10 | √ | 0 | 免税销售额 |
 | 13 | fdescription | 业务名称 | varchar | 50 |  | √ | ' ' | 业务名称 |

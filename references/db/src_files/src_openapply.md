@@ -10,17 +10,17 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fprojectid | 寻源项目F7 | int8 | 64 |  | √ | 0 | 招标项目F7 src_projectf7 |
+| 2 | fprojectid | 寻源项目F7 | int8 | 64 |  | √ | 0 | [招标项目F7 src_projectf7](../src_files/src_projectf7.md) |
 | 3 | fparentid | 父单据ID | varchar | 50 |  | √ | ' ' | 父单据ID |
 | 4 | fbillstatus | 单据状态 | bpchar | 1 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 5 | forgid | 主业务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | forgid | 主业务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 6 | fsysnum | 制度供应商数量 | int8 | 64 |  | √ | 0 | 制度供应商数量 |
 | 7 | fentitykey | 组件标识 | varchar | 50 |  | √ | ' ' | 组件标识 |
 | 8 | ftender | 投标供应商数量 | int8 | 64 |  | √ | 0 | 投标供应商数量 |
 | 9 | fwinerqty | 中标供应商数量(原) | int8 | 64 |  | √ | 0 | 中标供应商数量(原) |
 | 10 | fpentitykey | 父单据标识 | varchar | 50 |  | √ | ' ' | 父单据标识 |
 | 11 | fnewwinerqty | 中标供应商数量(新) | int8 | 64 |  | √ | 0 | 中标供应商数量(新) |
-| 12 | fbidchangeid | 寻源项目变更F7 | int8 | 64 |  | √ | 0 | 寻源项目变更F7 src_bidchangef7 |
+| 12 | fbidchangeid | 寻源项目变更F7 | int8 | 64 |  | √ | 0 | [寻源项目变更F7 src_bidchangef7](../pds_files/src_bidchangef7.md) |
 | 13 | fchgsrcbillid | 变更源单ID | int8 | 64 |  | √ | 0 | 变更源单ID |
 | 14 | fcompbillno | 单据编号 | varchar | 30 |  | √ | ' ' | 单据编号 |
 

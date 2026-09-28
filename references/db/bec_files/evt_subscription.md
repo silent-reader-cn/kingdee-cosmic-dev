@@ -50,19 +50,19 @@
 | 9 | fsequence | 顺序号 | int8 | 64 |  | √ | 0 | 顺序号 |
 | 10 | fmodifydate | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 11 | fismodified | 可维护 | bpchar | 1 |  | √ | '1' | 可维护 |
-| 12 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fexecutorvalue | 操作执行人 | varchar | 2000 |  | √ | ' ' | 操作执行人 |
 | 14 | fcondition | 触发条件 | text | 0 |  |  | null | 触发条件 |
-| 15 | fevent | 绑定事件 | int8 | 64 |  | √ | 0 | 事件定义 evt_event |
-| 16 | fname | 订阅名称 | varchar | 100 |  | √ | ' ' | 订阅名称 |
-| 17 | fnotifytext | 失败时通知 | varchar | 100 |  | √ | ' ' | 失败时通知 |
+| 15 | fevent | 绑定事件 | int8 | 64 |  | √ | 0 | [事件定义 evt_event](../bec_files/evt_event.md) |
+| 16 | fname | 订阅名称 | varchar | 500 |  | √ | ' ' | 订阅名称 |
+| 17 | fnotifytext | 失败时通知 | varchar | 300 |  | √ | ' ' | 失败时通知 |
 | 18 | ftimingstrategy | 定时策略 | varchar | 100 |  | √ | ' ' | 定时策略 |
 | 19 | fexpression | 执行条件 | text | 0 |  |  | null | 执行条件 |
-| 20 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 20 | fmodifier | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 21 | fserviceconfig | 服务参数 | text | 0 |  |  | null | 服务参数 |
 | 22 | ferrorstrategy | 错误处理策略 | varchar | 30 |  | √ | ' ' | 错误处理策略,枚举: retry :重试三次挂起 ignore :直接挂起 donothing :忽略异常 |
 | 23 | fexecutor | 服务执行人 | varchar | 255 |  | √ | ' ' | 服务执行人 |
-| 24 | fservice | 执行服务 | int8 | 64 |  | √ | 0 | 服务目录 evt_service |
+| 24 | fservice | 执行服务 | int8 | 64 |  | √ | 0 | [服务目录 evt_service](../bec_files/evt_service.md) |
 | 25 | feventnumber | 事件编码 | varchar | 100 |  | √ | ' ' | 事件编码 |
 | 26 | fnumber | 订阅编码 | varchar | 500 |  | √ | ' ' | 订阅编码 |
 | 27 | feventsplitconfig | 事件拆分配置 | varchar | 1000 |  | √ | ' ' | 事件拆分配置 |

@@ -11,14 +11,14 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fwfseq | 匹配批号 | varchar | 80 |  | √ | ' ' | 匹配批号 |
-| 3 | fcreatorid | 匹配人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fcreatorid | 匹配人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 4 | fbillstatus | 单据状态 | varchar | 5 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 5 | fcreatetime | 匹配日期 | timestamp | 0 |  |  | null | 匹配日期 |
-| 6 | forgid | 销售组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 6 | forgid | 销售组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fheadwfinfo | 匹配详情 | varchar | 512 |  |  | null | 匹配详情 |
 | 8 | fwfnumber | 匹配编码 | varchar | 80 |  | √ | ' ' | 匹配编码 |
 | 9 | fheadwfinfo_tag | 匹配详情_详情 | text | 0 |  |  | null | 匹配详情_详情 |
-| 10 | fwriteofftypeid | 核销类别 | int8 | 64 |  | √ | 0 | 核销类别 msmod_writeofftype |
+| 10 | fwriteofftypeid | 核销类别 | int8 | 64 |  | √ | 0 | [核销类别 msmod_writeofftype](../mscommon_files/msmod_writeofftype.md) |
 
 ### 列规则定义
 
@@ -51,8 +51,8 @@
 | 5 | fassbizdate | 业务日期 | timestamp | 0 |  |  | null | 业务日期 |
 | 6 | fassamount | 收款单应收金额 | numeric | 23 | 10 | √ | 0 | 收款单应收金额 |
 | 7 | fassbillno | 收款单号 | varchar | 80 |  | √ | ' ' | 收款单号 |
-| 8 | fasscurrencyid | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
-| 9 | fassbilltype | 辅方单据 | varchar | 80 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 8 | fasscurrencyid | 币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
+| 9 | fassbilltype | 辅方单据 | varchar | 80 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 10 | fmainwfinfo_tag | 合同匹配详情_详情 | text | 0 |  |  | null | 合同匹配详情_详情 |
 | 11 | fbillno | 销售合同编号 | varchar | 80 |  | √ | ' ' | 销售合同编号 |
 | 12 | fqty | 合同本次匹配金额 | numeric | 23 | 10 | √ | 0 | 合同本次匹配金额 |
@@ -67,8 +67,8 @@
 | 21 | fbillid | 销售合同ID | int8 | 64 |  | √ | 0 | 销售合同ID |
 | 22 | fasswfinfo | 收款单匹配详情 | varchar | 512 |  |  | null | 收款单匹配详情 |
 | 23 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
-| 24 | fcurrencyid | 结算币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
-| 25 | fbilltype | 主方单据 | varchar | 80 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 24 | fcurrencyid | 结算币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
+| 25 | fbilltype | 主方单据 | varchar | 80 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 26 | fcustomerid | 付款客户 | int8 | 64 |  | √ | 0 | 客户 bd_customer |
 
 ### 列规则定义

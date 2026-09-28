@@ -14,12 +14,12 @@
 | 3 | fkeycode | 键码 | varchar | 255 |  | √ | ' ' | 键码 |
 | 4 | fdefaultkeycode | 默认快捷键键码 | varchar | 50 |  | √ | ' ' | 默认快捷键键码 |
 | 5 | fmulilang_type | 类型 | varchar | 50 |  | √ | ' ' | 类型 |
-| 6 | fmodifier | 修改人 | varchar | 50 |  | √ | ' ' | 人员 bos_user |
-| 7 | fcreatedate | 创建日期 | timestamp | 0 |  |  | LOCALTIMESTAMP | 创建日期 |
+| 6 | fmodifier | 修改人 | varchar | 50 |  | √ | ' ' | [人员 bos_user](../base_files/bos_user.md) |
+| 7 | fcreatedate | 创建时间 | timestamp | 0 |  |  | LOCALTIMESTAMP | 创建时间 |
 | 8 | ftype | 类型 | varchar | 50 |  | √ | ' ' | 类型 |
 | 9 | fdefaultshortcut | 默认快捷键 | varchar | 50 |  | √ | ' ' | 默认快捷键 |
 | 10 | foperationtype | 操作类型 | varchar | 50 |  | √ | ' ' | 操作类型 |
-| 11 | fmodifydate | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
+| 11 | fmodifydate | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 12 | fshortcut | 快捷键 | varchar | 50 |  | √ | ' ' | 快捷键 |
 | 13 | fissystem | 是否系统预设 | varchar | 10 |  | √ | ' ' | 是否系统预设 |
 | 14 | foperationnum | 操作编码 | varchar | 50 |  | √ | ' ' | 操作编码 |

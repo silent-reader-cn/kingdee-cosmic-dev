@@ -46,25 +46,25 @@
 | 5 | fmodifytime | 最后更新时间 | timestamp | 0 |  |  | null | 最后更新时间 |
 | 6 | fstatus | 数据状态 | varchar | 80 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 7 | fistransup | 启用上划策略 | bpchar | 1 |  | √ | '0' | 启用上划策略 |
-| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 10 | fsafetyamt | 留存金额 | numeric | 19 | 6 | √ | 0.000000 | 留存金额 |
-| 11 | fenablerid | 启用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 12 | fmodifierid | 最后更新人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fenablerid | 启用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 12 | fmodifierid | 最后更新人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 13 | fname | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
 | 14 | fcomment | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
 | 15 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 16 | fenabledate | 启用日期 | timestamp | 0 |  |  | null | 启用日期 |
 | 17 | fupquotaamt | 上划定额 | numeric | 19 | 6 | √ | 0.000000 | 上划定额 |
 | 18 | fsolidbal | 最小余额 | numeric | 19 | 6 | √ | 0.000000 | 最小余额 |
-| 19 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 19 | fdisablerid | 禁用人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 20 | fistransdown | 启用下拨策略 | bpchar | 1 |  | √ | '0' | 启用下拨策略 |
 | 21 | fmindownamt | 最小下拨金额 | numeric | 19 | 6 | √ | 0.000000 | 最小下拨金额 |
 | 22 | ftransint | 划拨取整基数 | varchar | 80 |  | √ | ' ' | 划拨取整基数,枚举: isnull :无 hundred :100 thousand :1,000 tenthousand :10,000 hunthousand :100,000 |
 | 23 | fdownway | 下拨方式 | varchar | 80 |  | √ | ' ' | 下拨方式,枚举: isdownquota :定额 ispolish :补齐 |
 | 24 | fenable | 使用状态 | varchar | 80 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 25 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
-| 26 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 26 | fcurrencyid | 币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 | 27 | fupway | 上划方式 | varchar | 80 |  | √ | ' ' | 上划方式,枚举: isfullamt :全额 isupquota :定额 isscale :按比例 issafety :留存 |
 | 28 | fdownquotaamt | 下拨定额 | numeric | 19 | 6 | √ | 0.000000 | 下拨定额 |
 

@@ -10,12 +10,12 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | 余额表元数据ID | varchar | 36 |  | √ | ' ' | 余额表元数据ID |
-| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 3 | fname | fname | varchar | 200 |  | √ | ' ' |  |
 | 4 | fsnapshottable | 快照表物理表 | varchar | 30 |  | √ | ' ' | 快照表物理表 |
 | 5 | fpluginclass | 插件 | text | 0 |  |  | null | 插件 |
 | 6 | fbalancetype | 余额类型 | varchar | 10 |  | √ | ' ' | 余额类型,枚举: realtime :即时余额 period :期间余额 |
-| 7 | fbizappid | 应用 | varchar | 36 |  | √ | ' ' | 业务应用实体 bos_devportal_bizapp |
+| 7 | fbizappid | 应用 | varchar | 36 |  | √ | ' ' | [业务应用实体 bos_devportal_bizapp](../mdl_files/bos_devportal_bizapp.md) |
 | 8 | fsysstatus | 出厂状态 | bpchar | 1 |  | √ | '0' | 出厂状态,枚举: 0 :正常 1 :禁用 |
 | 9 | fmodifydate | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 10 | fpkfieldname | 余额表主键字段 | varchar | 30 |  | √ | ' ' | 余额表主键字段 |

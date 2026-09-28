@@ -13,7 +13,7 @@
 | 2 | fqty | 数量 | numeric | 23 | 10 | √ | 0 | 数量 |
 | 3 | ftaxamount | 商品税额 | numeric | 23 | 10 | √ | 0 | 商品税额 |
 | 4 | fnakedamount | 商品裸价 | numeric | 23 | 10 | √ | 0 | 商品裸价 |
-| 5 | fgoodsid | 商品编码 | int8 | 64 |  | √ | 0 | 电商商品 pbd_mallgoods |
+| 5 | fgoodsid | 商品编码 | int8 | 64 |  | √ | 0 | [电商商品 pbd_mallgoods](../pbd_files/pbd_mallgoods.md) |
 | 6 | ftaxrate | 商品税率 | numeric | 23 | 10 | √ | 0 | 商品税率 |
 | 7 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 8 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
@@ -59,7 +59,7 @@
 | 13 | finvoicecode | 发票代码 | varchar | 80 |  | √ | ' ' | 发票代码 |
 | 14 | ffreight | 运费 | numeric | 23 | 10 | √ | 0 | 运费 |
 | 15 | fordernakedamount | 金额 | numeric | 23 | 10 | √ | 0 | 金额 |
-| 16 | fcurrid | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 16 | fcurrid | 币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 | 17 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 18 | fordertaxamount | 税额 | numeric | 23 | 10 | √ | 0 | 税额 |
 | 19 | forderstate | 订单状态 | bpchar | 1 |  | √ | ' ' | 订单状态,枚举: 0 :取消 1 :有效 |

@@ -13,7 +13,7 @@
 | 2 | fcaller | 调用方 | varchar | 512 |  | √ | ' ' | 调用方 |
 | 3 | foperator | 操作人 | int8 | 64 |  | √ | 0 | 操作人 |
 | 4 | fupdatetime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 5 | fuserid | 人员ID | int8 | 64 |  | √ | 0 | 人员ID |
+| 5 | fuserid | 人员id | int8 | 64 |  | √ | 0 | 人员id |
 | 6 | fcurrtimezone | 修改后时区 | varchar | 64 |  | √ | ' ' | 修改后时区 |
 | 7 | fpretimezone | 修改前时区 | varchar | 64 |  | √ | ' ' | 修改前时区 |
 

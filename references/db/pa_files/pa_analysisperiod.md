@@ -43,8 +43,8 @@
 | 2 | fsemiannual | 半年度 | int4 | 32 |  | √ | 0 | 半年度 |
 | 3 | fisleaf | 是否叶子 | bpchar | 1 |  | √ | ' ' | 是否叶子 |
 | 4 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 5 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 6 | fparentid | 上级 | int8 | 64 |  | √ | 0 | 分析期间 pa_analysisperiod |
+| 5 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 6 | fparentid | 上级 | int8 | 64 |  | √ | 0 | [分析期间 pa_analysisperiod](../pa_files/pa_analysisperiod.md) |
 | 7 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 8 | fymonth | 年月 | int4 | 32 |  | √ | 0 | 年月 |
 | 9 | flongnumber | 长编码 | varchar | 50 |  | √ | ' ' | 长编码 |
@@ -53,7 +53,7 @@
 | 12 | flevel | 级次 | int4 | 32 |  | √ | 0 | 级次 |
 | 13 | fenddate | 结束日期 | timestamp | 0 |  |  | null | 结束日期 |
 | 14 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
-| 15 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 15 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 16 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 17 | fstartdate | 开始日期 | timestamp | 0 |  |  | null | 开始日期 |
 | 18 | fyear | 年份 | int4 | 32 |  | √ | 0 | 年份 |

@@ -40,10 +40,10 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fname | 节点名称 | varchar | 255 |  | √ | ' ' | 节点名称 |
-| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 4 | fbusflowid | 业务流程 | int8 | 64 |  | √ | 0 | 可视化业务流程 xkbus_flow |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 4 | fbusflowid | 业务流程 | int8 | 64 |  | √ | 0 | [可视化业务流程 xkbus_flow](../xkbase_files/xkbus_flow.md) |
 | 5 | fconfig | 配置数据（json） | text | 0 |  |  | ' ' | 配置数据（json） |
-| 6 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 6 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 7 | ftype | 数据类型 | varchar | 50 |  | √ | ' ' | 数据类型,枚举: RPT :报表 BD :基础资料 |
 | 8 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 9 | fseq | 序号 | int4 | 32 |  | √ | 0 | 序号 |

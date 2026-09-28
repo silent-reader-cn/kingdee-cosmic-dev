@@ -1,50 +1,5 @@
 # 评估任务终止-srm_scoreend
 
-## 评估任务终止-分表 t_pur_score_a
-
-- **表名称：** 评估任务终止-分表
-- **表名：** t_pur_score_a
-
-### 表格列定义
-
-| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fapprovedate | fapprovedate | timestamp | 0 |  |  | null |  |
-| 3 | fmodifierid | fmodifierid | int8 | 64 |  | √ | 0 |  |
-| 4 | fapprover | fapprover | int8 | 64 |  | √ | 0 |  |
-| 5 | fcreatetime | fcreatetime | timestamp | 0 |  |  | null |  |
-| 6 | fterminatedate | 终止时间 | timestamp | 0 |  |  | null | 终止时间 |
-| 7 | fsuggestion | fsuggestion | varchar | 510 |  | √ | ' ' |  |
-| 8 | fauditdate | fauditdate | timestamp | 0 |  |  | null |  |
-| 9 | fcfmdate | fcfmdate | timestamp | 0 |  |  | null |  |
-| 10 | fauditopinion | fauditopinion | varchar | 510 |  | √ | ' ' |  |
-| 11 | freviewdate | freviewdate | timestamp | 0 |  |  | null |  |
-| 12 | fcfmid | fcfmid | int8 | 64 |  | √ | 0 |  |
-| 13 | fmodifytime | fmodifytime | timestamp | 0 |  |  | null |  |
-| 14 | forigin | forigin | bpchar | 1 |  | √ | ' ' |  |
-| 15 | ffeedback | ffeedback | varchar | 510 |  | √ | ' ' |  |
-| 16 | ftermination | 终止意见 | varchar | 510 |  | √ | ' ' | 终止意见 |
-| 17 | fcreatorid | fcreatorid | int8 | 64 |  | √ | 0 |  |
-| 18 | fterminaterid | 终止人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 19 | freviewer | freviewer | int8 | 64 |  | √ | 0 |  |
-| 20 | fauditorid | fauditorid | int8 | 64 |  | √ | 0 |  |
-
-### 列规则定义
-
-| 序号 | 键编码 | 列字段 |
-| :--- | :--- | :--- |
-| 1 | fid | fid |
-
-### 索引定义
-
-| 序号 | 索引名 | 唯一 | 列字段 |
-| :--- | :--- | :--- | :--- |
-| 1 | t_pur_score_a_pkey |  | fid |
-| 2 | idx_pur_score_a_fcreatetime |  | fcreatetime |
-
----
-
 ## 评估任务终止-主表 t_pur_score
 
 - **表名称：** 评估任务终止-主表
@@ -106,3 +61,48 @@
 | 2 | idx_pur_score_taskno |  | ftaskbillno |
 | 3 | idx_pur_score_fbillno |  | fbillno |
 | 4 | t_pur_score_pkey |  | fid |
+
+---
+
+## 评估任务终止-分表 t_pur_score_a
+
+- **表名称：** 评估任务终止-分表
+- **表名：** t_pur_score_a
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fapprovedate | fapprovedate | timestamp | 0 |  |  | null |  |
+| 3 | fmodifierid | fmodifierid | int8 | 64 |  | √ | 0 |  |
+| 4 | fapprover | fapprover | int8 | 64 |  | √ | 0 |  |
+| 5 | fcreatetime | fcreatetime | timestamp | 0 |  |  | null |  |
+| 6 | fterminatedate | 终止时间 | timestamp | 0 |  |  | null | 终止时间 |
+| 7 | fsuggestion | fsuggestion | varchar | 510 |  | √ | ' ' |  |
+| 8 | fauditdate | fauditdate | timestamp | 0 |  |  | null |  |
+| 9 | fcfmdate | fcfmdate | timestamp | 0 |  |  | null |  |
+| 10 | fauditopinion | fauditopinion | varchar | 510 |  | √ | ' ' |  |
+| 11 | freviewdate | freviewdate | timestamp | 0 |  |  | null |  |
+| 12 | fcfmid | fcfmid | int8 | 64 |  | √ | 0 |  |
+| 13 | fmodifytime | fmodifytime | timestamp | 0 |  |  | null |  |
+| 14 | forigin | forigin | bpchar | 1 |  | √ | ' ' |  |
+| 15 | ffeedback | ffeedback | varchar | 510 |  | √ | ' ' |  |
+| 16 | ftermination | 终止意见 | varchar | 510 |  | √ | ' ' | 终止意见 |
+| 17 | fcreatorid | fcreatorid | int8 | 64 |  | √ | 0 |  |
+| 18 | fterminaterid | 终止人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 19 | freviewer | freviewer | int8 | 64 |  | √ | 0 |  |
+| 20 | fauditorid | fauditorid | int8 | 64 |  | √ | 0 |  |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fid | fid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | t_pur_score_a_pkey |  | fid |
+| 2 | idx_pur_score_a_fcreatetime |  | fcreatetime |

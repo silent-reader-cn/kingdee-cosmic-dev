@@ -14,7 +14,7 @@
 | 3 | fk_ysq_rpa_user_name | RPA系统用户名 | varchar | 254 |  | √ | ' ' | RPA系统用户名 |
 | 4 | fk_ysq_rdp_port | RDP端口 | int8 | 64 |  |  | null | RDP端口 |
 | 5 | fk_ysq_conn_faile_msg_tag | 连接失败原因_详情 | text | 0 |  |  | null | 连接失败原因_详情 |
-| 6 | forgid | 组织 | int8 | 64 |  |  | null | 业务单元 bos_org |
+| 6 | forgid | 组织 | int8 | 64 |  |  | null | [业务单元 bos_org](../base_files/bos_org.md) |
 | 7 | fk_ysq_conn_faile_msg | 连接失败原因 | varchar | 255 |  | √ | ' ' | 连接失败原因 |
 | 8 | fk_ysq_agent_no | 实例号 | varchar | 128 |  | √ | ' ' | 实例号 |
 | 9 | fk_ysq_last_conn_time | 最近连接时间 | timestamp | 0 |  |  | null | 最近连接时间 |
@@ -23,7 +23,7 @@
 | 12 | fk_ysq_comm_token | 通信token | varchar | 64 |  | √ | ' ' | 通信token |
 | 13 | fk_ysq_user_domain | 终端系统域名 | varchar | 128 |  | √ | ' ' | 终端系统域名 |
 | 14 | fk_ysq_last_login_time | 上传登录时间 | timestamp | 0 |  |  | null | 上传登录时间 |
-| 15 | fcreatorid | 创建人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 15 | fcreatorid | 创建人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 16 | fk_ysq_data_status | 运行状态 | varchar | 50 |  | √ | ' ' | 运行状态,枚举: busy :运行 free :空闲 offline :离线 |
 | 17 | fk_ysq_agent_os | 终端操作系统 | varchar | 128 |  | √ | ' ' | 终端操作系统 |
 | 18 | fk_ysq_description | 描述信息 | varchar | 254 |  | √ | ' ' | 描述信息 |
@@ -36,7 +36,7 @@
 | 25 | fk_ysq_access_token | 终端登录后accesstoken | varchar | 512 |  | √ | ' ' | 终端登录后accesstoken |
 | 26 | fk_ysq_identity_desc | 当前身份描述 | varchar | 64 |  | √ | ' ' | 当前身份描述 |
 | 27 | fbillno | 单据编号 | varchar | 30 |  | √ | ' ' | 单据编号 |
-| 28 | fmodifierid | 修改人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 28 | fmodifierid | 修改人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 29 | fk_ysq_identity_fid | 当前身份ID | int8 | 64 |  |  | null | 当前身份ID |
 | 30 | fbillstatus | 单据状态 | varchar | 50 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 31 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
@@ -51,7 +51,7 @@
 | 40 | fk_ysq_agent_alias | 别名 | varchar | 128 |  | √ | ' ' | 别名 |
 | 41 | fk_ysq_status | 机器人状态 | varchar | 50 |  | √ | ' ' | 机器人状态,枚举: yes :启用 no :停用 |
 | 42 | fk_ysq_under_managerment | 是否绑定桌面管家 | varchar | 50 |  | √ | ' ' | 是否绑定桌面管家,枚举: yes :是 no :否 |
-| 43 | fauditorid | 审核人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 43 | fauditorid | 审核人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 44 | fk_ysq_auto_login | 是否自动登录 | varchar | 50 |  | √ | ' ' | 是否自动登录,枚举: yes :是 no :否 |
 
 ### 列规则定义

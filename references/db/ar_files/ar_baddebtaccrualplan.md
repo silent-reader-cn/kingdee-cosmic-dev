@@ -10,20 +10,20 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fcreateorgid | 创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 3 | faccrualfrequency | 计提频率 | varchar | 30 |  | √ | ' ' | 计提频率,枚举: month :月 quarter :季 semiannual :半年 year :年 |
 | 4 | fname | 名称 | varchar | 50 |  | √ | ' ' | 名称 |
-| 5 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
-| 7 | forgid | 组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 7 | forgid | 组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 8 | foffset | foffset | varchar | 30 |  | √ | ' ' |  |
-| 9 | faccrualagingid | 计提账龄分组 | int8 | 64 |  | √ | 0 | 应收账龄分组设置 ar_accrualaging |
-| 10 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 9 | faccrualagingid | 计提账龄分组 | int8 | 64 |  | √ | 0 | [应收账龄分组设置 ar_accrualaging](../ar_files/ar_accrualaging.md) |
+| 10 | fsrccreateorgid | 原创建组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 11 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 12 | fctrlstrategy | 控制策略 | bpchar | 1 |  | √ | ' ' | 控制策略,枚举: 2 :分配/局部共享 5 :全局共享 7 :私有 |
 | 13 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 14 | faccrualmethod | 计提方法 | varchar | 30 |  | √ | ' ' | 计提方法,枚举: 1 :账龄分析法 |
-| 15 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 15 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 16 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 17 | fsourcedataid | 原资料id | int8 | 64 |  | √ | 0 | 原资料id |
 | 18 | fbitindex | 位图 | int4 | 32 |  | √ | 0 | 位图 |
@@ -62,7 +62,7 @@
 | 3 | fcondition_tag | 计提条件_详情 | text | 0 |  |  | null | 计提条件_详情 |
 | 4 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 5 | foffset | 抵消规则 | varchar | 255 |  | √ | ' ' | 抵消规则 |
-| 6 | faccrualentityobjid | 计提对象 | int8 | 64 |  | √ | 0 | 计提对象 ar_accrualentityobj |
+| 6 | faccrualentityobjid | 计提对象 | int8 | 64 |  | √ | 0 | [计提对象 ar_accrualentityobj](../ar_files/ar_accrualentityobj.md) |
 | 7 | faccrualrate | 计提比率 | varchar | 255 |  | √ | ' ' | 计提比率 |
 | 8 | faccrualrate_tag | 计提比率_详情 | text | 0 |  |  | null | 计提比率_详情 |
 | 9 | fagingstartdatefield | 账龄起算日 | varchar | 30 |  | √ | ' ' | 账龄起算日 |
@@ -183,8 +183,8 @@
 | 1 | fid | fid | int8 | 64 |  | √ | null |  |
 | 2 | fname | 名称 | varchar | 100 |  | √ | ' ' | 名称 |
 | 3 | fenddate | 失效日期 | timestamp | 0 |  |  | null | 失效日期 |
-| 4 | fmodifierid | 修改人 | int8 | 64 |  |  | null | 人员 bos_user |
-| 5 | fcreatorid | 创建人 | int8 | 64 |  |  | null | 人员 bos_user |
+| 4 | fmodifierid | 修改人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
+| 5 | fcreatorid | 创建人 | int8 | 64 |  |  | null | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | fstartdate | 生效日期 | timestamp | 0 |  |  | null | 生效日期 |
 | 7 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 8 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |

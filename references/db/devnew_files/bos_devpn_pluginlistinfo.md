@@ -19,7 +19,7 @@
 | 8 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
 | 9 | fentryid | fentryid | varchar | 36 |  | √ | ' ' | id |
 | 10 | fref | 引用名称 | varchar | 36 |  | √ | ' ' | 引用名称 |
-| 11 | fappid | 所属应用 | varchar | 36 |  | √ | ' ' | 业务应用实体 bos_devportal_bizapp |
+| 11 | fappid | 所属应用 | varchar | 36 |  | √ | ' ' | [业务应用实体 bos_devportal_bizapp](../mdl_files/bos_devportal_bizapp.md) |
 
 ### 列规则定义
 

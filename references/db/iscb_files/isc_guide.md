@@ -77,7 +77,7 @@
 | 2 | foperationtype | 操作类型 | int8 | 64 |  | √ | 0 | 操作类型,枚举: 1 :同步数据 2 :仅变更状态 3 :删除目标单据 |
 | 3 | fpushtype | 推送类型 | int8 | 64 |  | √ | 1 | 推送类型,枚举: 0 :手动推送 1 :自动推送 |
 | 4 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
-| 5 | fregisterservice | 服务注册 | int8 | 64 |  | √ | 0 | 服务注册查询 isc_system_query |
+| 5 | fregisterservice | 服务注册 | int8 | 64 |  | √ | 0 | [服务注册查询 isc_system_query](../iscb_files/isc_system_query.md) |
 | 6 | foperation | 操作 | varchar | 100 |  | √ | ' ' | 操作,枚举: |
 | 7 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 
@@ -148,13 +148,13 @@
 | 8 | frequired | 必填 | bpchar | 1 |  | √ | '0' | 必填 |
 | 9 | fdefault | 默认值 | varchar | 100 |  | √ | ' ' | 默认值 |
 | 10 | fuserdefined | 自定义字段 | bpchar | 1 |  | √ | '0' | 自定义字段 |
-| 11 | fbdmapping | 基础资料映射 | int8 | 64 |  | √ | 0 | 基础资料映射（废弃） isc_basedatatype |
+| 11 | fbdmapping | 基础资料映射 | int8 | 64 |  | √ | 0 | [基础资料映射（废弃） isc_basedatatype](../iscb_files/isc_basedatatype.md) |
 | 12 | ffieldtype | 字段类型 | varchar | 30 |  | √ | ' ' | 字段类型,枚举: 0 :字符 1 :数值 2 :日期 3 :枚举 4 :当前时间 5 :基础数据 6 :布尔值 7 :图片 8 :多选基础资料 |
 | 13 | fexpfield | 公式 | varchar | 510 |  | √ | ' ' | 公式 |
 | 14 | fbaseentityid | 基础资料ID | varchar | 100 |  | √ | ' ' | 基础资料ID |
 | 15 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 16 | finterfield | 来源系统字段 | varchar | 200 |  | √ | ' ' | 来源系统字段 |
-| 17 | fbaseentity | 基础资料 | varchar | 100 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 17 | fbaseentity | 基础资料 | varchar | 100 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 
 ### 列规则定义
 
@@ -190,13 +190,13 @@
 | 8 | frequired | 必填 | bpchar | 1 |  | √ | '0' | 必填 |
 | 9 | fdefault | 默认值 | varchar | 100 |  | √ | ' ' | 默认值 |
 | 10 | fuserdefined | 自定义字段 | bpchar | 1 |  | √ | '0' | 自定义字段 |
-| 11 | fbdmapping | 基础资料映射 | int8 | 64 |  | √ | 0 | 基础资料映射（废弃） isc_basedatatype |
+| 11 | fbdmapping | 基础资料映射 | int8 | 64 |  | √ | 0 | [基础资料映射（废弃） isc_basedatatype](../iscb_files/isc_basedatatype.md) |
 | 12 | ffieldtype | 字段类型 | varchar | 30 |  | √ | ' ' | 字段类型,枚举: 0 :字符 1 :数值 2 :日期 3 :枚举 4 :当前时间 5 :基础数据 6 :布尔值 7 :图片 8 :多选基础资料 |
 | 13 | fexpfield | 公式 | varchar | 510 |  | √ | ' ' | 公式 |
 | 14 | fbaseentityid | 基础资料ID | varchar | 100 |  | √ | ' ' | 基础资料ID |
 | 15 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 16 | finterfield | 来源系统字段 | varchar | 200 |  | √ | ' ' | 来源系统字段 |
-| 17 | fbaseentity | 基础资料 | varchar | 100 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 17 | fbaseentity | 基础资料 | varchar | 100 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 
 ### 列规则定义
 
@@ -232,13 +232,13 @@
 | 8 | frequired | 必填 | bpchar | 1 |  | √ | '0' | 必填 |
 | 9 | fdefault | 默认值 | varchar | 100 |  | √ | ' ' | 默认值 |
 | 10 | fuserdefined | 自定义字段 | bpchar | 1 |  | √ | '0' | 自定义字段 |
-| 11 | fbdmapping | 基础资料映射 | int8 | 64 |  | √ | 0 | 基础资料映射（废弃） isc_basedatatype |
+| 11 | fbdmapping | 基础资料映射 | int8 | 64 |  | √ | 0 | [基础资料映射（废弃） isc_basedatatype](../iscb_files/isc_basedatatype.md) |
 | 12 | ffieldtype | 字段类型 | varchar | 30 |  | √ | ' ' | 字段类型,枚举: 0 :字符 1 :数值 2 :日期 3 :枚举 4 :当前时间 5 :基础数据 6 :布尔值 7 :图片 8 :多选基础资料 |
 | 13 | fexpfield | 公式 | varchar | 510 |  | √ | ' ' | 公式 |
 | 14 | fbaseentityid | 基础资料ID | varchar | 100 |  | √ | ' ' | 基础资料ID |
 | 15 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 16 | finterfield | 来源系统字段 | varchar | 200 |  | √ | ' ' | 来源系统字段 |
-| 17 | fbaseentity | 基础资料 | varchar | 100 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 17 | fbaseentity | 基础资料 | varchar | 100 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 
 ### 列规则定义
 
@@ -274,13 +274,13 @@
 | 8 | frequired | 必填 | bpchar | 1 |  | √ | '0' | 必填 |
 | 9 | fdefault | 默认值 | varchar | 100 |  | √ | ' ' | 默认值 |
 | 10 | fuserdefined | 自定义字段 | bpchar | 1 |  | √ | '0' | 自定义字段 |
-| 11 | fbdmapping | 基础资料映射 | int8 | 64 |  | √ | 0 | 基础资料映射（废弃） isc_basedatatype |
+| 11 | fbdmapping | 基础资料映射 | int8 | 64 |  | √ | 0 | [基础资料映射（废弃） isc_basedatatype](../iscb_files/isc_basedatatype.md) |
 | 12 | ffieldtype | 字段类型 | varchar | 30 |  | √ | ' ' | 字段类型,枚举: 0 :字符 1 :数值 2 :日期 3 :枚举 4 :当前时间 5 :基础数据 6 :布尔值 7 :图片 8 :多选基础资料 |
 | 13 | fexpfield | 公式 | varchar | 510 |  | √ | ' ' | 公式 |
 | 14 | fbaseentityid | 基础资料ID | varchar | 100 |  | √ | ' ' | 基础资料ID |
 | 15 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 16 | finterfield | 来源系统字段 | varchar | 200 |  | √ | ' ' | 来源系统字段 |
-| 17 | fbaseentity | 基础资料 | varchar | 100 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 17 | fbaseentity | 基础资料 | varchar | 100 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 
 ### 列规则定义
 
@@ -316,14 +316,14 @@
 | 8 | frequired | 必填 | bpchar | 1 |  | √ | '0' | 必填 |
 | 9 | fdefault | 默认值 | varchar | 100 |  | √ | ' ' | 默认值 |
 | 10 | fuserdefined | 自定义字段 | bpchar | 1 |  | √ | '0' | 自定义字段 |
-| 11 | fbdmapping | 基础资料映射 | int8 | 64 |  | √ | 0 | 基础资料映射（废弃） isc_basedatatype |
+| 11 | fbdmapping | 基础资料映射 | int8 | 64 |  | √ | 0 | [基础资料映射（废弃） isc_basedatatype](../iscb_files/isc_basedatatype.md) |
 | 12 | funique | 唯一性标识 | bpchar | 1 |  | √ | '0' | 唯一性标识 |
 | 13 | ffieldtype | 字段类型 | varchar | 30 |  | √ | ' ' | 字段类型,枚举: 0 :字符 1 :数值 2 :日期 3 :枚举 4 :当前时间 5 :基础数据 6 :布尔值 7 :图片 8 :多选基础资料 |
 | 14 | fexpfield | 公式 | varchar | 510 |  | √ | ' ' | 公式 |
 | 15 | fbaseentityid | 基础资料ID | varchar | 100 |  | √ | ' ' | 基础资料ID |
 | 16 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 17 | finterfield | 来源系统字段 | varchar | 200 |  | √ | ' ' | 来源系统字段 |
-| 18 | fbaseentity | 基础资料 | varchar | 100 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 18 | fbaseentity | 基础资料 | varchar | 100 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 
 ### 列规则定义
 
@@ -359,13 +359,13 @@
 | 8 | frequired | 必填 | bpchar | 1 |  | √ | '0' | 必填 |
 | 9 | fdefault | 默认值 | varchar | 100 |  | √ | ' ' | 默认值 |
 | 10 | fuserdefined | 自定义字段 | bpchar | 1 |  | √ | '0' | 自定义字段 |
-| 11 | fbdmapping | 基础资料映射 | int8 | 64 |  | √ | 0 | 基础资料映射（废弃） isc_basedatatype |
+| 11 | fbdmapping | 基础资料映射 | int8 | 64 |  | √ | 0 | [基础资料映射（废弃） isc_basedatatype](../iscb_files/isc_basedatatype.md) |
 | 12 | ffieldtype | 字段类型 | varchar | 30 |  | √ | ' ' | 字段类型,枚举: 0 :字符 1 :数值 2 :日期 3 :枚举 4 :当前时间 5 :基础数据 6 :布尔值 7 :图片 8 :多选基础资料 |
 | 13 | fexpfield | 公式 | varchar | 510 |  | √ | ' ' | 公式 |
 | 14 | fbaseentityid | 基础资料ID | varchar | 100 |  | √ | ' ' | 基础资料ID |
 | 15 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 16 | finterfield | 来源系统字段 | varchar | 200 |  | √ | ' ' | 来源系统字段 |
-| 17 | fbaseentity | 基础资料 | varchar | 100 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 17 | fbaseentity | 基础资料 | varchar | 100 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 
 ### 列规则定义
 
@@ -401,13 +401,13 @@
 | 8 | frequired | 必填 | bpchar | 1 |  | √ | '0' | 必填 |
 | 9 | fdefault | 默认值 | varchar | 100 |  | √ | ' ' | 默认值 |
 | 10 | fuserdefined | 自定义字段 | bpchar | 1 |  | √ | '0' | 自定义字段 |
-| 11 | fbdmapping | 基础资料映射 | int8 | 64 |  | √ | 0 | 基础资料映射（废弃） isc_basedatatype |
+| 11 | fbdmapping | 基础资料映射 | int8 | 64 |  | √ | 0 | [基础资料映射（废弃） isc_basedatatype](../iscb_files/isc_basedatatype.md) |
 | 12 | ffieldtype | 字段类型 | varchar | 30 |  | √ | ' ' | 字段类型,枚举: 0 :字符 1 :数值 2 :日期 3 :枚举 4 :当前时间 5 :基础数据 6 :布尔值 7 :图片 8 :多选基础资料 |
 | 13 | fexpfield | 公式 | varchar | 510 |  | √ | ' ' | 公式 |
 | 14 | fbaseentityid | 基础资料ID | varchar | 100 |  | √ | ' ' | 基础资料ID |
 | 15 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 16 | finterfield | 来源系统字段 | varchar | 200 |  | √ | ' ' | 来源系统字段 |
-| 17 | fbaseentity | 基础资料 | varchar | 100 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 17 | fbaseentity | 基础资料 | varchar | 100 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 
 ### 列规则定义
 
@@ -443,13 +443,13 @@
 | 8 | frequired | 必填 | bpchar | 1 |  | √ | '0' | 必填 |
 | 9 | fdefault | 默认值 | varchar | 100 |  | √ | ' ' | 默认值 |
 | 10 | fuserdefined | 自定义字段 | bpchar | 1 |  | √ | '0' | 自定义字段 |
-| 11 | fbdmapping | 基础资料映射 | int8 | 64 |  | √ | 0 | 基础资料映射（废弃） isc_basedatatype |
+| 11 | fbdmapping | 基础资料映射 | int8 | 64 |  | √ | 0 | [基础资料映射（废弃） isc_basedatatype](../iscb_files/isc_basedatatype.md) |
 | 12 | ffieldtype | 字段类型 | varchar | 30 |  | √ | ' ' | 字段类型,枚举: 0 :字符 1 :数值 2 :日期 3 :枚举 4 :当前时间 5 :基础数据 6 :布尔值 7 :图片 8 :多选基础资料 |
 | 13 | fexpfield | 公式 | varchar | 510 |  | √ | ' ' | 公式 |
 | 14 | fbaseentityid | 基础资料ID | varchar | 100 |  | √ | ' ' | 基础资料ID |
 | 15 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 16 | finterfield | 来源系统字段 | varchar | 200 |  | √ | ' ' | 来源系统字段 |
-| 17 | fbaseentity | 基础资料 | varchar | 100 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 17 | fbaseentity | 基础资料 | varchar | 100 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 
 ### 列规则定义
 
@@ -485,13 +485,13 @@
 | 8 | frequired | 必填 | bpchar | 1 |  | √ | '0' | 必填 |
 | 9 | fdefault | 默认值 | varchar | 100 |  | √ | ' ' | 默认值 |
 | 10 | fuserdefined | 自定义字段 | bpchar | 1 |  | √ | '0' | 自定义字段 |
-| 11 | fbdmapping | 基础资料映射 | int8 | 64 |  | √ | 0 | 基础资料映射（废弃） isc_basedatatype |
+| 11 | fbdmapping | 基础资料映射 | int8 | 64 |  | √ | 0 | [基础资料映射（废弃） isc_basedatatype](../iscb_files/isc_basedatatype.md) |
 | 12 | ffieldtype | 字段类型 | varchar | 30 |  | √ | ' ' | 字段类型,枚举: 0 :字符 1 :数值 2 :日期 3 :枚举 4 :当前时间 5 :基础数据 6 :布尔值 7 :图片 8 :多选基础资料 |
 | 13 | fexpfield | 公式 | varchar | 510 |  | √ | ' ' | 公式 |
 | 14 | fbaseentityid | 基础资料ID | varchar | 100 |  | √ | ' ' | 基础资料ID |
 | 15 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 16 | finterfield | 来源系统字段 | varchar | 200 |  | √ | ' ' | 来源系统字段 |
-| 17 | fbaseentity | 基础资料 | varchar | 100 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 17 | fbaseentity | 基础资料 | varchar | 100 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 
 ### 列规则定义
 
@@ -527,13 +527,13 @@
 | 8 | frequired | 必填 | bpchar | 1 |  | √ | '0' | 必填 |
 | 9 | fdefault | 默认值 | varchar | 100 |  | √ | ' ' | 默认值 |
 | 10 | fuserdefined | 自定义字段 | bpchar | 1 |  | √ | '0' | 自定义字段 |
-| 11 | fbdmapping | 基础资料映射 | int8 | 64 |  | √ | 0 | 基础资料映射（废弃） isc_basedatatype |
+| 11 | fbdmapping | 基础资料映射 | int8 | 64 |  | √ | 0 | [基础资料映射（废弃） isc_basedatatype](../iscb_files/isc_basedatatype.md) |
 | 12 | ffieldtype | 字段类型 | varchar | 30 |  | √ | ' ' | 字段类型,枚举: 0 :字符 1 :数值 2 :日期 3 :枚举 4 :当前时间 5 :基础数据 6 :布尔值 7 :图片 8 :多选基础资料 |
 | 13 | fexpfield | 公式 | varchar | 510 |  | √ | ' ' | 公式 |
 | 14 | fbaseentityid | 基础资料ID | varchar | 100 |  | √ | ' ' | 基础资料ID |
 | 15 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
 | 16 | finterfield | 来源系统字段 | varchar | 200 |  | √ | ' ' | 来源系统字段 |
-| 17 | fbaseentity | 基础资料 | varchar | 100 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 17 | fbaseentity | 基础资料 | varchar | 100 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 
 ### 列规则定义
 
@@ -562,7 +562,7 @@
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | finterfacename_1 | 接口名称 | varchar | 100 |  | √ | ' ' | 接口名称 |
 | 3 | finterfacename_2 | 接口名称 | varchar | 100 |  | √ | ' ' | 接口名称 |
-| 4 | fgroupid | 集成系统 | int8 | 64 |  | √ | 0 | 集成方案类别 isc_guidelefttree |
+| 4 | fgroupid | 集成系统 | int8 | 64 |  | √ | 0 | [集成方案类别 isc_guidelefttree](../iscb_files/isc_guidelefttree.md) |
 | 5 | finterfacename_3 | 接口名称 | varchar | 100 |  | √ | ' ' | 接口名称 |
 | 6 | finterfacename_4 | 接口名称 | varchar | 100 |  | √ | ' ' | 接口名称 |
 | 7 | finterfacename_5 | 接口名称 | varchar | 100 |  | √ | ' ' | 接口名称 |
@@ -571,28 +571,28 @@
 | 10 | fhandlerclass | 数据处理类： | varchar | 100 |  | √ | ' ' | 数据处理类： |
 | 11 | finterfacename_8 | 接口名称 | varchar | 100 |  | √ | ' ' | 接口名称 |
 | 12 | finterfacename_9 | 接口名称 | varchar | 100 |  | √ | ' ' | 接口名称 |
-| 13 | feasentity | 集成实体 | int8 | 64 |  | √ | 0 | 集成业务对象（废弃） isc_entity |
+| 13 | feasentity | 集成实体 | int8 | 64 |  | √ | 0 | [集成业务对象（废弃） isc_entity](../iscb_files/isc_entity.md) |
 | 14 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 15 | fstatus | 数据状态 | bpchar | 1 |  | √ | '0' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
 | 16 | fcreatedate | fcreatedate | timestamp | 0 |  |  | null |  |
-| 17 | fbizcloud | 金蝶云苍穹业务云 | varchar | 80 |  | √ | ' ' | 业务云 bos_devportal_bizcloud |
-| 18 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 17 | fbizcloud | 金蝶云苍穹业务云 | varchar | 80 |  | √ | ' ' | [业务云 bos_devportal_bizcloud](../mdl_files/bos_devportal_bizcloud.md) |
+| 18 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 19 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
 | 20 | fmodifydate | fmodifydate | timestamp | 0 |  |  | null |  |
-| 21 | flocalsystem | 目标系统 | int8 | 64 |  | √ | 0 | 外部集成信息（废弃） isc_sysconn |
+| 21 | flocalsystem | 目标系统 | int8 | 64 |  | √ | 0 | [外部集成信息（废弃） isc_sysconn](../iscb_files/isc_sysconn.md) |
 | 22 | fcreater | fcreater | int8 | 64 |  | √ | 0 |  |
-| 23 | fmqlinkscheme | MQ连接系统 | int8 | 64 |  | √ | 0 | 外部集成信息（废弃） isc_sysconn |
+| 23 | fmqlinkscheme | MQ连接系统 | int8 | 64 |  | √ | 0 | [外部集成信息（废弃） isc_sysconn](../iscb_files/isc_sysconn.md) |
 | 24 | fcustomeassolution | 通用接口服务名称 | varchar | 100 |  | √ | ' ' | 通用接口服务名称 |
-| 25 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 26 | fbizapp | 金蝶云苍穹业务应用 | varchar | 80 |  | √ | ' ' | 业务应用实体 bos_devportal_bizapp |
+| 25 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 26 | fbizapp | 金蝶云苍穹业务应用 | varchar | 80 |  | √ | ' ' | [业务应用实体 bos_devportal_bizapp](../mdl_files/bos_devportal_bizapp.md) |
 | 27 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 28 | frepushdata | 重复推送数据 | bpchar | 1 |  | √ | '0' | 重复推送数据 |
 | 29 | fmodifier | fmodifier | int8 | 64 |  | √ | 0 |  |
 | 30 | fdescription | fdescription | varchar | 100 |  | √ | ' ' |  |
 | 31 | feassolution | 通用接口服务名称 | varchar | 100 |  | √ | ' ' | 通用接口服务名称,枚举: |
-| 32 | fremotesystem | 源系统 | int8 | 64 |  | √ | 0 | 外部集成信息（废弃） isc_sysconn |
+| 32 | fremotesystem | 源系统 | int8 | 64 |  | √ | 0 | [外部集成信息（废弃） isc_sysconn](../iscb_files/isc_sysconn.md) |
 | 33 | fusemq | 是否使用MQ | int8 | 64 |  | √ | 1 | 是否使用MQ |
-| 34 | fbasedatafield | 金蝶云苍穹实体 | varchar | 80 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 34 | fbasedatafield | 金蝶云苍穹实体 | varchar | 80 |  | √ | ' ' | [主实体对象 bos_entityobject](../mdl_files/bos_entityobject.md) |
 | 35 | fenable | 使用状态 | int8 | 64 |  | √ | 1 | 使用状态,枚举: 0 :禁用 1 :可用 |
 | 36 | fnumber | 编码 | varchar | 100 |  | √ | ' ' | 编码 |
 | 37 | fvalueradio | 单选按钮组2 | int8 | 64 |  | √ | 0 | 单选按钮组2,枚举: 0 :字段为空时取默认值 1 :全取默认值 |

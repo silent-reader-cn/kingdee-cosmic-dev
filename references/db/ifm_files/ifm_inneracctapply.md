@@ -45,16 +45,16 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | fopenorgid | 开户公司 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 3 | fcenteracctdlftid | 默认中心账号 | int8 | 64 |  | √ | 0 | 银行账户 bd_accountbanks |
-| 4 | forgid | 主业务组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 2 | fopenorgid | 开户公司 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 3 | fcenteracctdlftid | 默认中心账号 | int8 | 64 |  | √ | 0 | [银行账户 bd_accountbanks](../basedata_files/bd_accountbanks.md) |
+| 4 | forgid | 主业务组织 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 | 5 | fmgrfee | 账户管理费 | numeric | 19 | 6 | √ | 0.000000 | 账户管理费 |
-| 6 | ffinorgid | 开户行 | int8 | 64 |  | √ | 0 | 金融机构 bd_finorginfo |
+| 6 | ffinorgid | 开户行 | int8 | 64 |  | √ | 0 | [金融机构 bd_finorginfo](../basedata_files/bd_finorginfo.md) |
 | 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
-| 8 | fcreatorid | 申请人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | fcreatorid | 申请人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 9 | faccttype | 账户类型 | varchar | 30 |  | √ | ' ' | 账户类型,枚举: basic :基本存款账户 normal :一般存款账户 temp :临时存款账户 spcl :专用存款账户 fgn_curr :经常项目外汇账户 fng_fin :资本项目外汇账户 |
 | 10 | fbillno | 单据编号 | varchar | 80 |  | √ | ' ' | 单据编号 |
-| 11 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fname | 账户名称 | varchar | 80 |  | √ | ' ' | 账户名称 |
 | 13 | fbillstatus | 单据状态 | varchar | 30 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 H :已受理 C :已审核 E :已生成 |
 | 14 | fcomment | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
@@ -63,15 +63,15 @@
 | 17 | fopendate | 开户日期 | timestamp | 0 |  |  | null | 开户日期 |
 | 18 | fauditdate | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
 | 19 | freason | 开户原因和其他开户要求 | varchar | 255 |  | √ | ' ' | 开户原因和其他开户要求 |
-| 20 | fcurrencymgrfeeid | 账户管理费币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
-| 21 | fmgrstratgid | 账户管理策略 | int8 | 64 |  | √ | 0 | 账户管理策略 am_strategy |
-| 22 | facctusageid | 账户用途 | int8 | 64 |  | √ | 0 | 账户用途 bd_acctpurpose |
+| 20 | fcurrencymgrfeeid | 账户管理费币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
+| 21 | fmgrstratgid | 账户管理策略 | int8 | 64 |  | √ | 0 | [账户管理策略 am_strategy](../am_files/am_strategy.md) |
+| 22 | facctusageid | 账户用途 | int8 | 64 |  | √ | 0 | [账户用途 bd_acctpurpose](../basedata_files/bd_acctpurpose.md) |
 | 23 | feasycode | 助记码 | varchar | 30 |  | √ | ' ' | 助记码 |
 | 24 | facctprop | 账户性质 | varchar | 30 |  | √ | ' ' | 账户性质,枚举: in_out :收支户 in :收入户 out :支出户 |
 | 25 | fnumber | 账号 | varchar | 80 |  | √ | ' ' | 账号 |
-| 26 | fcurrencydlftid | 默认币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
-| 27 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
-| 28 | fcompanyid | 申请公司 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 26 | fcurrencydlftid | 默认币种 | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
+| 27 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
+| 28 | fcompanyid | 申请公司 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
 
 ### 列规则定义
 
@@ -116,15 +116,15 @@
 | 序号 | 索引名 | 唯一 | 列字段 |
 | :--- | :--- | :--- | :--- |
 | 1 | idx_ifm_inneracctapply_tc_tbill |  | ftbillid |
-| 2 | idx_ifm_inneracctap_tc_fid |  | ftbillid |
-| 3 | t_ifm_inneracctapply_tc_pkey |  | fid |
+| 2 | t_ifm_inneracctapply_tc_pkey |  | fid |
+| 3 | idx_ifm_inneracctap_tc_fid |  | ftbillid |
 | 4 | idx_ifm_inneracctapply_tc_tid |  | ftid |
 
 ---
 
-## 币别-多选基础资料表 t_ifm_inneracctapply_cr
+## 币种-多选基础资料表 t_ifm_inneracctapply_cr
 
-- **表名称：** 币别-多选基础资料表
+- **表名称：** 币种-多选基础资料表
 - **表名：** t_ifm_inneracctapply_cr
 
 ### 表格列定义
@@ -132,7 +132,7 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
-| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | [币种 bd_currency](../base_files/bd_currency.md) |
 | 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
 
 ### 列规则定义

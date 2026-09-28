@@ -42,7 +42,7 @@
 | 2 | fdept | 部门 | varchar | 100 |  | √ | ' ' | 部门 |
 | 3 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
 | 4 | fposition | 职位 | varchar | 100 |  | √ | ' ' | 职位 |
-| 5 | fuserid | 用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | fuserid | 用户 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 | id |
 
 ### 列规则定义

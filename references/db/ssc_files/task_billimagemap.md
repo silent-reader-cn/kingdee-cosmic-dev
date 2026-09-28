@@ -13,20 +13,20 @@
 | 2 | fimagestate | 影像状态 | bpchar | 1 |  | √ | ' ' | 影像状态,枚举: 0 :无影像 1 :上传影像中 2 :影像已就绪 3 :退回重扫 4 :影像重传 5 :废弃 |
 | 3 | fscanclientip | 影像扫描客户端IP | varchar | 50 |  | √ | ' ' | 影像扫描客户端IP |
 | 4 | feasid | feasid | varchar | 50 |  | √ | ' ' |  |
-| 5 | fnextscanuserid | 下一代扫描员 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | fnextscanuserid | 下一代扫描员 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 6 | fscantime | 扫描时间 | timestamp | 0 |  |  | null | 扫描时间 |
 | 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
 | 8 | fupdateaccount | 修改人账号 | varchar | 50 |  | √ | ' ' | 修改人账号 |
 | 9 | fimageurl | 影像URL | varchar | 255 |  |  | null | 影像URL |
 | 10 | fpagecount | 影像张数 | int8 | 64 |  | √ | 0 | 影像张数 |
-| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 12 | fmaterialstate | 实物状态 | varchar | 2 |  | √ | ' ' | 实物状态,枚举: 0 :无 1 :共享中心接收 2 :稽核通过 3 :实物稽核通过 4 :实物稽核不通过 |
-| 13 | fsscid | 共享中心 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 14 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fsscid | 共享中心 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 14 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | [人员 bos_user](../base_files/bos_user.md) |
 | 15 | fcreatorname | 创建人姓名 | varchar | 50 |  | √ | ' ' | 创建人姓名 |
 | 16 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
 | 17 | fcreatororgid | 提单人公司id | varchar | 50 |  | √ | ' ' | 提单人公司id |
-| 18 | fsscunitid | 扫描点 | int8 | 64 |  | √ | 0 | 扫描点 bos_sscunitlist |
+| 18 | fsscunitid | 扫描点 | int8 | 64 |  | √ | 0 | [扫描点 bos_sscunitlist](../sys_files/bos_sscunitlist.md) |
 | 19 | fsourcesys | 来源系统 | varchar | 50 |  | √ | ' ' | 来源系统 |
 | 20 | fbillnumber | 单据编号 | varchar | 50 |  | √ | ' ' | 单据编号 |
 | 21 | fimagenumber | 影像编码 | varchar | 50 |  | √ | ' ' | 影像编码 |

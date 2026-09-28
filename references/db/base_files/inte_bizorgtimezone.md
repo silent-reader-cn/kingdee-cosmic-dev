@@ -10,8 +10,8 @@
 | 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
-| 2 | forgid | 职能单元 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
-| 3 | ftimezoneid | 时区 | int8 | 64 |  | √ | 0 | 时区 inte_timezone |
+| 2 | forgid | 职能单元 | int8 | 64 |  | √ | 0 | [业务单元 bos_org](../base_files/bos_org.md) |
+| 3 | ftimezoneid | 时区 | int8 | 64 |  | √ | 0 | [时区 inte_timezone](../base_files/inte_timezone.md) |
 | 4 | fviewid | fviewid | int8 | 64 |  | √ | 0 |  |
 
 ### 列规则定义

@@ -11,10 +11,10 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
 | 2 | fdisposed_time | 处理时间 | timestamp | 0 |  |  | null | 处理时间 |
-| 3 | fsubscriber | 订阅方案 | int8 | 64 |  | √ | 0 | 单据消息订阅 isc_mq_bill_data_sub |
+| 3 | fsubscriber | 订阅方案 | int8 | 64 |  | √ | 0 | [单据消息订阅 isc_mq_bill_data_sub](../iscb_files/isc_mq_bill_data_sub.md) |
 | 4 | fdata_tag | 数据_详情 | text | 0 |  |  | null | 数据_详情 |
 | 5 | fresult | 结果 | varchar | 510 |  | √ | ' ' | 结果 |
-| 6 | fdata_source | 目标系统 | int8 | 64 |  | √ | 0 | 数据源管理 isc_data_source |
+| 6 | fdata_source | 目标系统 | int8 | 64 |  | √ | 0 | [数据源管理 isc_data_source](../iscb_files/isc_data_source.md) |
 | 7 | fstack_trace_tag | 错误堆栈_详情 | text | 0 |  |  | null | 错误堆栈_详情 |
 | 8 | factions | 操作 | varchar | 510 |  | √ | ' ' | 操作 |
 | 9 | fcreated_time | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
