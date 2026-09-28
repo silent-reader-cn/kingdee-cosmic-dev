@@ -1,0 +1,142 @@
+# 特征定义_特征值F7-pdm_featuredefval_f7
+
+## 树形单据体-子表 t_pdm_featurevalue
+
+- **表名称：** 树形单据体-子表
+- **表名：** t_pdm_featurevalue
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fentryvalue | 特征值 | varchar | 50 |  | √ | ' ' | 特征值 |
+| 3 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
+| 4 | fparententryid | fparententryid | int8 | 64 |  | √ | 0 | pid |
+| 5 | fisdefaultvalue | 默认值 | bpchar | 1 |  | √ | '0' | 默认值 |
+| 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 7 | fentryvaluename | 特征值名称 | varchar | 50 |  | √ | ' ' | 特征值名称 |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fentryid | fentryid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_pdm_featue_fid |  | fid |
+| 2 | pk_pdm_featurevalue |  | fentryid |
+| 3 | idx_pdm_featue_fseq |  | fseq |
+
+---
+
+## 特征定义_特征值F7-多语言表 t_pdm_featuredefinition_l
+
+- **表名称：** 特征定义_特征值F7-多语言表
+- **表名：** t_pdm_featuredefinition_l
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fname | 特征名称 | varchar | 50 |  | √ | ' ' | 特征名称 |
+| 3 | flocaleid | flocaleid | varchar | 255 |  | √ | ' ' | localeid |
+| 4 | fpkid | fpkid | varchar | 255 |  | √ | ' ' | pkid |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fpkid | fpkid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | pk_pdm_featuredefinition_l |  | fpkid |
+| 2 | idx_pdm_featonl_fid |  | fid,flocaleid |
+| 3 | idx_pdm_featonl_fname |  | fname |
+
+---
+
+## 子单据体-子表 t_pdm_featurerule
+
+- **表名称：** 子单据体-子表
+- **表名：** t_pdm_featurerule
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | ffeatureruleid | 特征规则编码 | int8 | 64 |  | √ | 0 | 配置规则 pdm_chararule |
+| 2 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
+| 3 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 | id |
+| 4 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fdetailid | fdetailid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | pk_pdm_featurerule |  | fdetailid |
+| 2 | idx_pdm_featle_fentryid |  | fentryid |
+| 3 | idx_pdm_featle_fseq |  | fseq |
+
+---
+
+## 特征定义_特征值F7-主表 t_pdm_featuredefinition
+
+- **表名称：** 特征定义_特征值F7-主表
+- **表名：** t_pdm_featuredefinition
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fgroupid | 特征组 | int8 | 64 |  | √ | 0 | 特征组 pdm_featuredefgroup |
+| 4 | fisvalueshow | 特征值显示 | bpchar | 1 |  | √ | '1' | 特征值显示 |
+| 5 | fprecision | 精度 | int8 | 64 |  | √ | 0 | 精度 |
+| 6 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 7 | flength | 长度 | int8 | 64 |  | √ | 0 | 长度 |
+| 8 | fdisabletorid | 禁用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | ffieldname | 字段名 | varchar | 50 |  | √ | ' ' | 字段名 |
+| 10 | fentityobjectid | 业务对象 | varchar | 255 |  | √ | '0' | 主实体对象 bos_entityobject |
+| 11 | fenabletorid | 启用人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | faudittime | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
+| 13 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 14 | fdisabletime | 禁用时间 | timestamp | 0 |  |  | null | 禁用时间 |
+| 15 | fisvaluemust | 特征值必录 | bpchar | 1 |  | √ | '1' | 特征值必录 |
+| 16 | fenabletime | 启用时间 | timestamp | 0 |  |  | null | 启用时间 |
+| 17 | fstatus | 数据状态 | varchar | 1 |  | √ | 'A' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
+| 18 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 19 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
+| 20 | ffeaturetype | 特征值类型 | varchar | 5 |  | √ | ' ' | 特征值类型,枚举: A :字符 B :数值 C :辅助属性 D :业务对象 |
+| 21 | fenable | 使用状态 | varchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 22 | fnumber | 特征编码 | varchar | 30 |  | √ | ' ' | 特征编码 |
+| 23 | fauxpropertyid | 辅助属性 | int8 | 64 |  | √ | 0 | 辅助属性定义 bd_auxproperty |
+| 24 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fid | fid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_pdm_featon_fcreatetime |  | fcreatetime |
+| 2 | idx_pdm_featon_fnumber |  | fnumber |
+| 3 | pk_pdm_featuredefinition |  | fid |

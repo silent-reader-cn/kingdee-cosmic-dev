@@ -1,0 +1,110 @@
+# ocdpm 模块表清单
+
+> 本模块共收录 **98** 张表定义，来自 `ocdpm_files/`。
+
+> 索引由 `scripts/build_index.py` 从 Markdown 自动生成，请勿手工编辑。
+> 检索本模块表结构请用统一检索脚本（比翻本文件更快）：
+> ```bash
+> python scripts/search.py <关键词> --scope ocdpm
+> ```
+
+| 序号 | 数据库表名 | 中文名称 | 字段数 | 详细定义文件 |
+| :---: | :--- | :--- | :---: | :--- |
+| 1 | `t_ocdbd_channelscope` | 客户范围-子表 | 9 | [ocdbd_pricepolicy.md](./ocdbd_pricepolicy.md) |
+| 2 | `t_ocdbd_channelscope` | 客户范围-子表 | 9 | [ocdbd_pricepolicy_under.md](./ocdbd_pricepolicy_under.md) |
+| 3 | `t_ocdbd_item_biztype` | 商品经营方式-主表 | 16 | [ocdbd_item_businesstype.md](./ocdbd_item_businesstype.md) |
+| 4 | `t_ocdbd_item_biztype_l` | 商品经营方式-多语言表 | 4 | [ocdbd_item_businesstype.md](./ocdbd_item_businesstype.md) |
+| 5 | `t_ocdbd_item_price` | 商品价格-主表 | 17 | [ocdbd_item_price.md](./ocdbd_item_price.md) |
+| 6 | `t_ocdbd_itemprice_child` | 组合商品价格子件2-主表 | 10 | [ocdbd_itemprice_child.md](./ocdbd_itemprice_child.md) |
+| 7 | `t_ocdbd_mktpromote` | 节假日活动海报-主表 | 22 | [ocdbd_market_promote.md](./ocdbd_market_promote.md) |
+| 8 | `t_ocdbd_mktpromote_l` | 节假日活动海报-多语言表 | 5 | [ocdbd_market_promote.md](./ocdbd_market_promote.md) |
+| 9 | `t_ocdbd_mktpromotechan` | 渠道分类-多选基础资料表 | 3 | [ocdbd_market_promote.md](./ocdbd_market_promote.md) |
+| 10 | `t_ocdbd_mktpromoteorg` | 组织范围-多选基础资料表 | 3 | [ocdbd_market_promote.md](./ocdbd_market_promote.md) |
+| 11 | `t_ocdbd_mktpromotestore` | 适用门店范围-子表 | 7 | [ocdbd_market_promote.md](./ocdbd_market_promote.md) |
+| 12 | `t_ocdbd_price_type` | 渠道价格类型-主表 | 19 | [ocdbd_price_type.md](./ocdbd_price_type.md) |
+| 13 | `t_ocdbd_price_type_l` | 渠道价格类型-多语言表 | 4 | [ocdbd_price_type.md](./ocdbd_price_type.md) |
+| 14 | `t_ocdbd_price_type_u` | 渠道价格类型-使用范围表 | 3 | [ocdbd_price_type.md](./ocdbd_price_type.md) |
+| 15 | `t_ocdbd_priceplcentry` | 价格明细-子表 | 20 | [ocdbd_pricepolicy.md](./ocdbd_pricepolicy.md) |
+| 16 | `t_ocdbd_priceplcentry` | 价格明细-子表 | 20 | [ocdbd_pricepolicy_under.md](./ocdbd_pricepolicy_under.md) |
+| 17 | `t_ocdbd_priceplcsentry` | 子单据体-子表 | 13 | [ocdbd_pricepolicy.md](./ocdbd_pricepolicy.md) |
+| 18 | `t_ocdbd_priceplcsentry` | 子单据体-子表 | 13 | [ocdbd_pricepolicy_under.md](./ocdbd_pricepolicy_under.md) |
+| 19 | `t_ocdbd_pricepolicy` | 渠道价格政策-主表 | 24 | [ocdbd_pricepolicy.md](./ocdbd_pricepolicy.md) |
+| 20 | `t_ocdbd_pricepolicy` | 下级渠道价格政策-主表 | 24 | [ocdbd_pricepolicy_under.md](./ocdbd_pricepolicy_under.md) |
+| 21 | `t_ocdbd_pricepolicy_l` | 渠道价格政策-多语言表 | 4 | [ocdbd_pricepolicy.md](./ocdbd_pricepolicy.md) |
+| 22 | `t_ocdbd_pricepolicy_l` | 下级渠道价格政策-多语言表 | 4 | [ocdbd_pricepolicy_under.md](./ocdbd_pricepolicy_under.md) |
+| 23 | `t_ocdbd_promotetype` | 促销类型-主表 | 18 | [ocdbd_promotetype.md](./ocdbd_promotetype.md) |
+| 24 | `t_ocdbd_promotetype_l` | 促销类型-多语言表 | 5 | [ocdbd_promotetype.md](./ocdbd_promotetype.md) |
+| 25 | `t_ocdbd_promotion` | 促销活动-主表 | 17 | [ocdbd_promotion.md](./ocdbd_promotion.md) |
+| 26 | `t_ocdbd_promotion_l` | 促销活动-多语言表 | 5 | [ocdbd_promotion.md](./ocdbd_promotion.md) |
+| 27 | `t_ocdpm_chldeploy` | 渠道促销参数-主表 | 11 | [ocdpm_channeldeploy.md](./ocdpm_channeldeploy.md) |
+| 28 | `t_ocdpm_chldeploy_l` | 渠道促销参数-多语言表 | 4 | [ocdpm_channeldeploy.md](./ocdpm_channeldeploy.md) |
+| 29 | `t_ocdpm_chldeployent` | 参数配置-子表 | 8 | [ocdpm_channeldeploy.md](./ocdpm_channeldeploy.md) |
+| 30 | `t_ocdpm_deploystrategy` | 促销策略-多选基础资料表 | 3 | [ocdpm_promodeploy.md](./ocdpm_promodeploy.md) |
+| 31 | `t_ocdpm_inparams` | 促销匹配服务入参配置-主表 | 10 | [ocdpm_pmt_inparams.md](./ocdpm_pmt_inparams.md) |
+| 32 | `t_ocdpm_inparams_l` | 促销匹配服务入参配置-多语言表 | 4 | [ocdpm_pmt_inparams.md](./ocdpm_pmt_inparams.md) |
+| 33 | `t_ocdpm_itemprice` | 商品零售价目表-主表 | 32 | [ocdpm_retailpricelist.md](./ocdpm_retailpricelist.md) |
+| 34 | `t_ocdpm_itemprice_branch` | 树形单据体-子表 | 8 | [ocdpm_retailpricelist.md](./ocdpm_retailpricelist.md) |
+| 35 | `t_ocdpm_itemprice_brange` | 渠道分组-多选基础资料表 | 3 | [ocdpm_retailpricelist.md](./ocdpm_retailpricelist.md) |
+| 36 | `t_ocdpm_itemprice_dtl` | 价格明细-子表 | 15 | [ocdpm_retailpricelist.md](./ocdpm_retailpricelist.md) |
+| 37 | `t_ocdpm_itemprice_dtl_r` | 价格明细-分表 | 26 | [ocdpm_retailpricelist.md](./ocdpm_retailpricelist.md) |
+| 38 | `t_ocdpm_itemprice_org` | 组织范围-多选基础资料表 | 3 | [ocdpm_retailpricelist.md](./ocdpm_retailpricelist.md) |
+| 39 | `t_ocdpm_itemprice_record` | 调整明细-子表 | 11 | [ocdpm_retailpricelist.md](./ocdpm_retailpricelist.md) |
+| 40 | `t_ocdpm_itemprice_y` | 商品零售价目表-分表 | 11 | [ocdpm_retailpricelist.md](./ocdpm_retailpricelist.md) |
+| 41 | `t_ocdpm_limiteden` | 单据体-子表 | 10 | [ocdpm_limitedquantity.md](./ocdpm_limitedquantity.md) |
+| 42 | `t_ocdpm_limitedquantity` | 限量促销执行情况-主表 | 19 | [ocdpm_limitedquantity.md](./ocdpm_limitedquantity.md) |
+| 43 | `t_ocdpm_limitedquantity_l` | 限量促销执行情况-多语言表 | 5 | [ocdpm_limitedquantity.md](./ocdpm_limitedquantity.md) |
+| 44 | `t_ocdpm_limittype` | 限量方式-主表 | 10 | [ocdpm_limittype.md](./ocdpm_limittype.md) |
+| 45 | `t_ocdpm_limittype_l` | 限量方式-多语言表 | 4 | [ocdpm_limittype.md](./ocdpm_limittype.md) |
+| 46 | `t_ocdpm_pmplugin` | 渠道促销扩展插件配置-主表 | 14 | [ocdpm_promotionplugin.md](./ocdpm_promotionplugin.md) |
+| 47 | `t_ocdpm_pmplugin_l` | 渠道促销扩展插件配置-多语言表 | 4 | [ocdpm_promotionplugin.md](./ocdpm_promotionplugin.md) |
+| 48 | `t_ocdpm_pmtruleset` | 促销匹配规则-主表 | 24 | [ocdpm_pmt_rule.md](./ocdpm_pmt_rule.md) |
+| 49 | `t_ocdpm_pmtruleset_l` | 促销匹配规则-多语言表 | 4 | [ocdpm_pmt_rule.md](./ocdpm_pmt_rule.md) |
+| 50 | `t_ocdpm_pmtruleset_u` | 促销匹配规则-使用范围表 | 3 | [ocdpm_pmt_rule.md](./ocdpm_pmt_rule.md) |
+| 51 | `t_ocdpm_pp_excdetail` | 例外商品分录-子表 | 7 | [ocdpm_promotepolicy.md](./ocdpm_promotepolicy.md) |
+| 52 | `t_ocdpm_pp_excdetail` | 例外商品分录-子表 | 7 | [ocdpm_promotepolicy_ud.md](./ocdpm_promotepolicy_ud.md) |
+| 53 | `t_ocdpm_pp_order` | 订货范围单据体-子表 | 7 | [ocdpm_promotepolicy.md](./ocdpm_promotepolicy.md) |
+| 54 | `t_ocdpm_pp_order` | 订货范围单据体-子表 | 7 | [ocdpm_promotepolicy_ud.md](./ocdpm_promotepolicy_ud.md) |
+| 55 | `t_ocdpm_pp_policys` | 促销策略-多选基础资料表 | 3 | [ocdpm_promotepolicy.md](./ocdpm_promotepolicy.md) |
+| 56 | `t_ocdpm_pp_policys` | 促销策略-多选基础资料表 | 3 | [ocdpm_promotepolicy_ud.md](./ocdpm_promotepolicy_ud.md) |
+| 57 | `t_ocdpm_pp_rule` | 促销规则分录-子表 | 23 | [ocdpm_promotepolicy.md](./ocdpm_promotepolicy.md) |
+| 58 | `t_ocdpm_pp_rule` | 促销规则分录-子表 | 23 | [ocdpm_promotepolicy_ud.md](./ocdpm_promotepolicy_ud.md) |
+| 59 | `t_ocdpm_pp_rule_x` | 促销规则分录-分表 | 38 | [ocdpm_promotepolicy.md](./ocdpm_promotepolicy.md) |
+| 60 | `t_ocdpm_pp_rule_x` | 促销规则分录-分表 | 38 | [ocdpm_promotepolicy_ud.md](./ocdpm_promotepolicy_ud.md) |
+| 61 | `t_ocdpm_pp_sale` | 销售主体单据体-子表 | 7 | [ocdpm_promotepolicy.md](./ocdpm_promotepolicy.md) |
+| 62 | `t_ocdpm_pp_sale` | 销售主体单据体-子表 | 7 | [ocdpm_promotepolicy_ud.md](./ocdpm_promotepolicy_ud.md) |
+| 63 | `t_ocdpm_pparamdetail` | 入参配置明细-子表 | 8 | [ocdpm_pmt_inparams.md](./ocdpm_pmt_inparams.md) |
+| 64 | `t_ocdpm_pparamdetail` | 促销匹配服务入参-主表 | 8 | [ocdpm_pparamdetail.md](./ocdpm_pparamdetail.md) |
+| 65 | `t_ocdpm_pparamdetail_l` | 入参配置明细-多语言表 | 4 | [ocdpm_pmt_inparams.md](./ocdpm_pmt_inparams.md) |
+| 66 | `t_ocdpm_pparamdetail_l` | 促销匹配服务入参-多语言表 | 4 | [ocdpm_pparamdetail.md](./ocdpm_pparamdetail.md) |
+| 67 | `t_ocdpm_pr_fieldmap` | 促销匹配入参字段映射-子表 | 7 | [ocdpm_pmt_rule.md](./ocdpm_pmt_rule.md) |
+| 68 | `t_ocdpm_promodeploy` | 促销类型校验配置-主表 | 13 | [ocdpm_promodeploy.md](./ocdpm_promodeploy.md) |
+| 69 | `t_ocdpm_promodeploy_l` | 促销类型校验配置-多语言表 | 4 | [ocdpm_promodeploy.md](./ocdpm_promodeploy.md) |
+| 70 | `t_ocdpm_promoobject` | 渠道促销类别-主表 | 12 | [ocdpm_promotionobject.md](./ocdpm_promotionobject.md) |
+| 71 | `t_ocdpm_promoobject_l` | 渠道促销类别-多语言表 | 5 | [ocdpm_promotionobject.md](./ocdpm_promotionobject.md) |
+| 72 | `t_ocdpm_promostrategy` | 渠道促销策略-主表 | 13 | [ocdpm_promotionstrategy.md](./ocdpm_promotionstrategy.md) |
+| 73 | `t_ocdpm_promostrategy_l` | 渠道促销策略-多语言表 | 6 | [ocdpm_promotionstrategy.md](./ocdpm_promotionstrategy.md) |
+| 74 | `t_ocdpm_promote` | 促销方案-主表 | 24 | [ocdpm_promote.md](./ocdpm_promote.md) |
+| 75 | `t_ocdpm_promote_o` | 促销方案-分表 | 21 | [ocdpm_promote.md](./ocdpm_promote.md) |
+| 76 | `t_ocdpm_promoteattr` | 销售属性-多选基础资料表 | 3 | [ocdpm_promote.md](./ocdpm_promote.md) |
+| 77 | `t_ocdpm_promoteattro` | 销售属性-多选基础资料表 | 3 | [ocdpm_promote.md](./ocdpm_promote.md) |
+| 78 | `t_ocdpm_promotebranch` | 适用门店单据体-子表 | 7 | [ocdpm_promote.md](./ocdpm_promote.md) |
+| 79 | `t_ocdpm_promotechannel` | 渠道分类-多选基础资料表 | 3 | [ocdpm_promote.md](./ocdpm_promote.md) |
+| 80 | `t_ocdpm_promotecost` | 费用承担设置-子表 | 7 | [ocdpm_promote.md](./ocdpm_promote.md) |
+| 81 | `t_ocdpm_promotedate` | 适用日期单据体-子表 | 5 | [ocdpm_promote.md](./ocdpm_promote.md) |
+| 82 | `t_ocdpm_promoteexitem` | 商品除外清单-子表 | 11 | [ocdpm_promote.md](./ocdpm_promote.md) |
+| 83 | `t_ocdpm_promoteitem` | 商品清单单据体-子表 | 25 | [ocdpm_promote.md](./ocdpm_promote.md) |
+| 84 | `t_ocdpm_promotemember` | 适用会员单据体-子表 | 8 | [ocdpm_promote.md](./ocdpm_promote.md) |
+| 85 | `t_ocdpm_promoteorg` | 组织范围-多选基础资料表 | 3 | [ocdpm_promote.md](./ocdpm_promote.md) |
+| 86 | `t_ocdpm_promotepolicy` | 促销政策-主表 | 21 | [ocdpm_promotepolicy.md](./ocdpm_promotepolicy.md) |
+| 87 | `t_ocdpm_promotepolicy` | 促销政策-主表 | 21 | [ocdpm_promotepolicy_ud.md](./ocdpm_promotepolicy_ud.md) |
+| 88 | `t_ocdpm_promotepolicy` | 促销政策-主表 | 21 | [ocdpm_promotepolicyf7.md](./ocdpm_promotepolicyf7.md) |
+| 89 | `t_ocdpm_promotestype` | 除外库存类型-多选基础资料表 | 3 | [ocdpm_promote.md](./ocdpm_promote.md) |
+| 90 | `t_ocdpm_promotestypeo` | 库存类型-多选基础资料表 | 3 | [ocdpm_promote.md](./ocdpm_promote.md) |
+| 91 | `t_ocdpm_promotiontype` | 渠道促销类型-主表 | 24 | [ocdpm_promotiontype.md](./ocdpm_promotiontype.md) |
+| 92 | `t_ocdpm_promotiontype_l` | 渠道促销类型-多语言表 | 4 | [ocdpm_promotiontype.md](./ocdpm_promotiontype.md) |
+| 93 | `t_ocdpm_promotiontype_u` | 渠道促销类型-使用范围表 | 3 | [ocdpm_promotiontype.md](./ocdpm_promotiontype.md) |
+| 94 | `t_ocdpm_promotypeentry` | 单据体-子表 | 9 | [ocdpm_promotiontype.md](./ocdpm_promotiontype.md) |
+| 95 | `t_ocdpm_promotypeentry_l` | 单据体-多语言表 | 5 | [ocdpm_promotiontype.md](./ocdpm_promotiontype.md) |
+| 96 | `t_ocdpm_prostrategy` | 促销策略-多选基础资料表 | 3 | [ocdpm_promotiontype.md](./ocdpm_promotiontype.md) |
+| 97 | `t_ocdpm_rtpricetype` | 零售价格类型-主表 | 23 | [ocdpm_retailpricetype.md](./ocdpm_retailpricetype.md) |
+| 98 | `t_ocdpm_rtpricetype_l` | 零售价格类型-多语言表 | 4 | [ocdpm_retailpricetype.md](./ocdpm_retailpricetype.md) |

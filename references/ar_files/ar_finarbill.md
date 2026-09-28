@@ -1,0 +1,656 @@
+# 财务应收单-ar_finarbill
+
+## 明细-子表 t_ar_finarbillentry
+
+- **表名称：** 明细-子表
+- **表名：** t_ar_finarbillentry
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fdiscountrate | 单位折扣(率) | numeric | 23 | 10 | √ | 0.0000000000 | 单位折扣(率) |
+| 3 | ftaxrate | 税率(%) | numeric | 23 | 10 | √ | 0.0000000000 | 税率(%) |
+| 4 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
+| 5 | fbaseunit | 基本单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 6 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 7 | fconbillrownum | 合同行号 | varchar | 50 |  | √ | ' ' | 合同行号 |
+| 8 | fconbillnumber | 合同编号 | varchar | 255 |  | √ | ' ' | 合同编号 |
+| 9 | funitprice | 单价 | numeric | 23 | 10 | √ | 0.0000000000 | 单价 |
+| 10 | frecamount | 价税合计 | numeric | 23 | 10 | √ | 0.0000000000 | 价税合计 |
+| 11 | fsettledamt | 已核销金额 | numeric | 23 | 10 | √ | 0.0000000000 | 已核销金额 |
+| 12 | fdelivercustomerid | 收货客户 | int8 | 64 |  | √ | 0 | 客户 bd_customer |
+| 13 | fcorebilltype | 核心单据类型 | varchar | 30 |  | √ | ' ' | 核心单据类型,枚举: sm_salorder :销售订单 conm_salcontract :销售合同 ec_incomeapply :请款单 pm_purorderbill :采购订单 im_transapply :调拨申请单 amccsa_custschdorder :销售计划协议 amccsa_custschdorder_init :期初销售计划协议 |
+| 14 | ftaxlocalamt | 税额(本位币) | numeric | 23 | 10 | √ | 0 | 税额(本位币) |
+| 15 | fexpenseitemid | 费用项目 | int8 | 64 |  | √ | 0 | 费用项目 er_expenseitemedit |
+| 16 | fprojectid | 项目编码 | int8 | 64 |  | √ | 0 | 项目 bd_project |
+| 17 | fmpmtasknoid | 项目任务号 | int8 | 64 |  | √ | 0 | 项目任务F7 mpm_task_f7 |
+| 18 | funlockamt | 未锁定金额 | numeric | 23 | 10 | √ | 0.0000000000 | 未锁定金额 |
+| 19 | fcorebillid | 核心单据ID | int8 | 64 |  | √ | 0 | 核心单据ID |
+| 20 | facttaxunitprice | 实际含税单价 | numeric | 23 | 10 | √ | 0.0000000000 | 实际含税单价 |
+| 21 | funconfirmamt | 未确认金额 | numeric | 23 | 10 | √ | 0.0000000000 | 未确认金额 |
+| 22 | fispresent | 赠品 | bpchar | 1 |  | √ | '0' | 赠品 |
+| 23 | funsettleamt | 未核销金额 | numeric | 23 | 10 | √ | 0.0000000000 | 未核销金额 |
+| 24 | fadjustamount | 抵消金额 | numeric | 23 | 10 | √ | 0.0000000000 | 抵消金额 |
+| 25 | fparentrowid | 父项行ID | int8 | 64 |  | √ | 0 | 父项行ID |
+| 26 | fbaseunitqty | 基本数量 | numeric | 23 | 10 | √ | 0.0000000000 | 基本数量 |
+| 27 | ftaxcodeid | 税码 | int8 | 64 |  | √ | 0 | 税码 bastax_taxcode |
+| 28 | ftax | 税额 | numeric | 23 | 10 | √ | 0.0000000000 | 税额 |
+| 29 | fcorebillentryseq | 核心单据行号 | int8 | 64 |  | √ | 0 | 核心单据行号 |
+| 30 | funverifyqty | 未勾稽数量 | numeric | 23 | 10 | √ | 0.0000000000 | 未勾稽数量 |
+| 31 | freclocalamt | 价税合计(本位币) | numeric | 23 | 10 | √ | 0.0000000000 | 价税合计(本位币) |
+| 32 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 33 | flinetypeid | 行类型 | int8 | 64 |  | √ | 0 | 行类型 bd_linetype |
+| 34 | fmaterialname | 物料名称(预留字段) | varchar | 255 |  | √ | ' ' | 物料名称(预留字段) |
+| 35 | fcorebillentryid | 核心单据行ID | int8 | 64 |  | √ | 0 | 核心单据行ID |
+| 36 | fsrcid | 源单ID | int8 | 64 |  | √ | 0 | 源单ID |
+| 37 | fconbillid | 合同ID | int8 | 64 |  | √ | 0 | 合同ID |
+| 38 | fsrcentryid | 源单分录ID | int8 | 64 |  | √ | 0 | 源单分录ID |
+| 39 | fassistantattrid | 辅助属性 | int8 | 64 |  | √ | 0 | null 001 |
+| 40 | fconbillentity | 合同实体 | varchar | 50 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 41 | fmaterialid | 物料编码 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 42 | fdiscountamount | 折扣额 | numeric | 23 | 10 | √ | 0.0000000000 | 折扣额 |
+| 43 | fconbillentryid | 合同行ID | int8 | 64 |  | √ | 0 | 合同行ID |
+| 44 | fdiscountmode | 折扣方式 | varchar | 30 |  | √ | ' ' | 折扣方式,枚举: NULL :无 PERCENT :折扣率(%) PERUNIT :单位折扣额 TOTAL :固定折扣额 |
+| 45 | famount | 金额 | numeric | 23 | 10 | √ | 0.0000000000 | 金额 |
+| 46 | fconfiguredcodeid | 配置号 | int8 | 64 |  | √ | 0 | 配置号 bd_configuredcode |
+| 47 | fcorebillno | 核心单据号 | varchar | 255 |  | √ | ' ' | 核心单据号 |
+| 48 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 49 | funconfirmqty | 未确认数量 | numeric | 23 | 10 | √ | 0 | 未确认数量 |
+| 50 | funverifyamt | 未勾稽金额 | numeric | 23 | 10 | √ | 0.0000000000 | 未勾稽金额 |
+| 51 | ftaxrateid | 税率 | int8 | 64 |  | √ | 0 | 税率 bd_taxrate |
+| 52 | ftracknumberid | 跟踪号 | int8 | 64 |  | √ | 0 | 跟踪号 bd_tracknumber |
+| 53 | fsettledlocalamt | 已核销金额(本位币) | numeric | 23 | 10 | √ | 0.0000000000 | 已核销金额(本位币) |
+| 54 | fconfirmedqty | 已确认数量 | numeric | 23 | 10 | √ | 0 | 已确认数量 |
+| 55 | fquantity | 数量 | numeric | 23 | 10 | √ | 0.0000000000 | 数量 |
+| 56 | funsettlelocalamt | 未核销金额(本位币) | numeric | 23 | 10 | √ | 0.0000000000 | 未核销金额(本位币) |
+| 57 | factunitprice | 实际单价 | numeric | 23 | 10 | √ | 0.0000000000 | 实际单价 |
+| 58 | fremark | 备注 | varchar | 512 |  | √ | ' ' | 备注 |
+| 59 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 60 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 61 | fconfirmedamt | 已确认金额 | numeric | 23 | 10 | √ | 0.0000000000 | 已确认金额 |
+| 62 | fproducttype | 产品类别 | varchar | 30 |  | √ | ' ' | 产品类别,枚举: standard :标准产品 kitparent :套件父项 kitchild :套件子项 |
+| 63 | fverifiedqty | 已勾稽数量 | numeric | 23 | 10 | √ | 0.0000000000 | 已勾稽数量 |
+| 64 | ftaxunitprice | 含税单价 | numeric | 23 | 10 | √ | 0.0000000000 | 含税单价 |
+| 65 | fspectype | 规格型号 | varchar | 255 |  | √ | ' ' | 规格型号 |
+| 66 | flocalamt | 金额(本位币) | numeric | 23 | 10 | √ | 0.0000000000 | 金额(本位币) |
+| 67 | finvoicecustomerid | 订货客户 | int8 | 64 |  | √ | 0 | 客户 bd_customer |
+| 68 | fadjustlocalamt | 抵消金额(本位币) | numeric | 23 | 10 | √ | 0.0000000000 | 抵消金额(本位币) |
+| 69 | funitcoefficient | 单位转换系数 | numeric | 23 | 10 | √ | 0.0000000000 | 单位转换系数 |
+| 70 | fdiscountlocalamt | 折扣额(本位币) | numeric | 23 | 10 | √ | 0.0000000000 | 折扣额(本位币) |
+| 71 | flockedamt | 已锁定金额 | numeric | 23 | 10 | √ | 0.0000000000 | 已锁定金额 |
+| 72 | fmeasureunitid | 计量单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 73 | fverifiedamt | 已勾稽金额 | numeric | 23 | 10 | √ | 0.0000000000 | 已勾稽金额 |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fentryid | fentryid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_ar_find_sourcebillid |  | fsrcid |
+| 2 | idx_ar_find_pid |  | fid |
+| 3 | idx_ar_fine_corebill |  | fcorebillno,fcorebillentryseq |
+| 4 | t_ar_finarbillentry_pkey |  | fentryid |
+| 5 | idx_ar_find_srcentryid |  | fsrcentryid |
+| 6 | idx_ar_find_unsettle |  | funsettleamt |
+
+---
+
+## 预收信息-子表 t_ar_finarpreentry
+
+- **表名称：** 预收信息-子表
+- **表名：** t_ar_finarpreentry
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fbillid | 预收款单id | int8 | 64 |  | √ | 0 | 预收款单id |
+| 3 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
+| 4 | fsettleamt | 本次核销金额 | numeric | 23 | 10 | √ | 0 | 本次核销金额 |
+| 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 6 | fbillno | 预收款单 | varchar | 80 |  | √ | ' ' | 预收款单 |
+| 7 | fbilltype | 单据类型 | varchar | 30 |  | √ | ' ' | 单据类型,枚举: cas_recbill :收款单 ar_receivedbill :初始化预收单 |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fentryid | fentryid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | pk_t_ar_finarpreentry |  | fentryid |
+| 2 | idx_ar_pre_pid |  | fid |
+| 3 | idx_ar_pre_recid |  | fbillid |
+
+---
+
+## 关联子实体-子表 t_ar_finarbill_lk
+
+- **表名称：** 关联子实体-子表
+- **表名：** t_ar_finarbill_lk
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | null |  |
+| 2 | fsbillid | 源单内码 | int8 | 64 |  | √ | 0 | 源单内码 |
+| 3 | fstableid | 源单主实体编码 | int8 | 64 |  | √ | 0 | 源单主实体编码 |
+| 4 | fsid | 源单主实体内码 | int8 | 64 |  | √ | 0 | 源单主实体内码 |
+| 5 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
+| 6 | fpkid | fpkid | int8 | 64 |  | √ | null | id |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fpkid | fpkid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_ar_finarbill_lk_fk |  | fid |
+| 2 | t_ar_finarbill_lk_pkey |  | fpkid |
+
+---
+
+## 财务应收单-主表 t_ar_finarbill
+
+- **表名称：** 财务应收单-主表
+- **表名：** t_ar_finarbill
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
+| 2 | facctsysid | 会计核算体系 | int8 | 64 |  | √ | 0 | 核算体系 xkbd_accountingsys |
+| 3 | fsalesmanid | 销售员 | int8 | 64 |  | √ | 0 | 供应链业务员 bd_operator |
+| 4 | forgid | 结算组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | fsplitscheme | 拆分口径 | int8 | 64 |  | √ | 0 | 收款计划方案 ar_plansplit_scheme |
+| 6 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 7 | fexchangerate | 汇率 | numeric | 23 | 10 | √ | 0.0000000000 | 汇率 |
+| 8 | frecamount | 价税合计 | numeric | 23 | 10 | √ | 0.0000000000 | 价税合计 |
+| 9 | funsettleamount | 未核销金额 | numeric | 23 | 10 | √ | 0.0000000000 | 未核销金额 |
+| 10 | fbaddebtamt | 坏账金额 | numeric | 23 | 10 | √ | 0.0000000000 | 坏账金额 |
+| 11 | fispricetotal | 录入金额 | bpchar | 1 |  | √ | '0' | 录入金额 |
+| 12 | fpaymentcustomerid | 付款客户 | int8 | 64 |  | √ | 0 | 客户 bd_customer |
+| 13 | fsourcebillno | 源单编码 | varchar | 255 |  | √ | ' ' | 源单编码 |
+| 14 | fbillno | 单据编号 | varchar | 80 |  | √ | ' ' | 单据编号 |
+| 15 | fsourcebilltype | 源单类型 | varchar | 30 |  | √ | ' ' | 源单类型,枚举: ar_invoice :增值税发票 ar_finarbill :财务应收单 ap_finapbill :财务应付单 im_saloutbill :销售出库单 ar_busbill :暂估应收单 cas_paybill :付款单 cas_agentpaybill :代发单 conm_salcontract :销售合同 sm_salorder :销售订单 ism_arsettlebill :应收结算清单 mpm_projinvapply :项目开票申请单 fa_clearbill :资产清理单 |
+| 16 | fhadwrittenoff | 已被冲销 | bpchar | 1 |  | √ | '0' | 已被冲销 |
+| 17 | fbillstatus | 单据状态 | varchar | 30 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
+| 18 | fauditdate | 审核时间 | timestamp | 0 |  |  | null | 审核时间 |
+| 19 | funverifyamount | 未勾稽金额 | numeric | 23 | 10 | √ | 0.0000000000 | 未勾稽金额 |
+| 20 | fistransfer | 是否转销 | bpchar | 1 |  | √ | '0' | 是否转销 |
+| 21 | fadjustamount | 抵消金额 | numeric | 23 | 10 | √ | 0.0000000000 | 抵消金额 |
+| 22 | fimagenumber | 影像编号 | varchar | 80 |  | √ | ' ' | 影像编号 |
+| 23 | ftax | 税额 | numeric | 23 | 10 | √ | 0.0000000000 | 税额 |
+| 24 | fsalesorgid | 销售组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 25 | fisvoucher | 已生成凭证 | bpchar | 1 |  | √ | ' ' | 已生成凭证 |
+| 26 | fbookdate | 记账日期 | timestamp | 0 |  |  | null | 记账日期 |
+| 27 | freclocalamt | 价税合计(本位币) | numeric | 23 | 10 | √ | 0.0000000000 | 价税合计(本位币) |
+| 28 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 29 | fisperiod | 是否初始化 | bpchar | 1 |  | √ | '0' | 是否初始化 |
+| 30 | fbilltypeid | 单据类型 | int8 | 64 |  | √ | 0 | 单据类型 bos_billtype |
+| 31 | fiswrittenoff | 冲销单据 | bpchar | 1 |  | √ | '0' | 冲销单据 |
+| 32 | fasstacttype | 往来类型 | varchar | 30 |  | √ | ' ' | 往来类型,枚举: bd_customer :客户 bd_supplier :供应商 bos_user :人员 cas_othercontactunit :其他往来单位 |
+| 33 | fsettlestatus | 核销状态 | varchar | 30 |  | √ | ' ' | 核销状态,枚举: unsettle :未核销 partsettle :部分核销 settled :全部核销 |
+| 34 | famount | 金额 | numeric | 23 | 10 | √ | 0.0000000000 | 金额 |
+| 35 | fbiztype | 业务类型 | int8 | 64 |  | √ | 0 | 业务类型 bd_biztype |
+| 36 | fquotation | 换算方式 | varchar | 30 |  | √ | '0' | 换算方式,枚举: 0 :直接汇率 1 :间接汇率 |
+| 37 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 38 | ftaxlocamt | 税额(本位币) | numeric | 23 | 10 | √ | 0 | 税额(本位币) |
+| 39 | fpaypropertyid | 款项性质 | int8 | 64 |  | √ | 0 | 应收款项性质 ar_payproperty |
+| 40 | fadjusttype | 调整类型 | varchar | 30 |  | √ | ' ' | 调整类型,枚举: buckle :扣罚款 rebate :返利折扣 adjustinv :调整发票尾差 overdue :逾期利息 |
+| 41 | fisarchive | 是否归档 | bpchar | 1 |  | √ | '0' | 是否归档 |
+| 42 | fisbaddebt | 坏账 | bpchar | 1 |  | √ | '0' | 坏账 |
+| 43 | fsettlementtypeid | 结算方式 | int8 | 64 |  | √ | 0 | 结算方式 bd_settlementtype |
+| 44 | funsettlelocalamt | 未核销金额(本位币) | numeric | 23 | 10 | √ | 0.0000000000 | 未核销金额(本位币) |
+| 45 | fremark | 备注 | varchar | 512 |  | √ | ' ' | 备注 |
+| 46 | funitsrctype | 计量单位来源 | varchar | 30 |  | √ | ' ' | 计量单位来源,枚举: BIZUNIT :默认业务单位 MAINBILLUNIT :核心单据计量单位 |
+| 47 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 48 | fsalesdeptid | 销售部门 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 49 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 50 | fasstactid | 往来单位 | int8 | 64 |  | √ | 0 | 客户 bd_customer |
+| 51 | flastupdateuserid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 52 | fpaycond | 收款条件 | int8 | 64 |  | √ | 0 | 收款条件 bd_reccondition |
+| 53 | flastupdatetime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 54 | fduedate | 最后到期日 | timestamp | 0 |  |  | null | 最后到期日 |
+| 55 | fpaymode | 付款方式 | varchar | 30 |  | √ | ' ' | 付款方式,枚举: CASH :现销 CREDIT :赊销 |
+| 56 | fisincludetax | 录入含税单价 | bpchar | 1 |  | √ | '0' | 录入含税单价 |
+| 57 | fbasecurrencyid | 本位币 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 58 | flocalamt | 金额(本位币) | numeric | 23 | 10 | √ | 0.0000000000 | 金额(本位币) |
+| 59 | frecorgid | 收款组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 60 | fbizdate | 业务日期 | timestamp | 0 |  |  | null | 业务日期 |
+| 61 | fadjustlocalamt | 抵消金额(本位币) | numeric | 23 | 10 | √ | 0.0000000000 | 抵消金额(本位币) |
+| 62 | fsourcebillid | 源单ID | varchar | 255 |  | √ | ' ' | 源单ID |
+| 63 | fcurrencyid | 结算币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 64 | fsalesgroupid | 销售组 | int8 | 64 |  | √ | 0 | 供应链业务组 bd_operatorgroup |
+| 65 | fverifystatus | 勾稽状态 | varchar | 30 |  | √ | ' ' | 勾稽状态,枚举: unverify :未勾稽 partverify :部分勾稽 verified :全部勾稽 |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fid | fid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | t_ar_finarbill_pkey |  | fid |
+| 2 | idx_ar_fin_sourcebillid |  | fsourcebillid |
+| 3 | idx_ar_fin_createtime |  | fcreatetime,fisvoucher |
+| 4 | idx_ar_fin_bizdate |  | fbizdate |
+| 5 | idx_ar_fin_asstact |  | fasstactid |
+| 6 | idx_ar_fin_orgdate |  | forgid,fbizdate |
+| 7 | idx_ar_fin_fbillno |  | fbillno |
+
+---
+
+## 关联子实体-子表 t_ar_finarplanentry_lk
+
+- **表名称：** 关联子实体-子表
+- **表名：** t_ar_finarplanentry_lk
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fsbillid | 源单内码 | int8 | 64 |  |  | null | 源单内码 |
+| 2 | fstableid | 源单主实体编码 | int8 | 64 |  |  | null | 源单主实体编码 |
+| 3 | fsid | 源单主实体内码 | int8 | 64 |  |  | null | 源单主实体内码 |
+| 4 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
+| 5 | fentryid | fentryid | int8 | 64 |  | √ | null |  |
+| 6 | fpkid | fpkid | int8 | 64 |  | √ | null | id |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fpkid | fpkid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_ar_finarplanentry_lk_fk |  | fentryid |
+| 2 | pk_ar_finarplanentry_lk |  | fpkid |
+
+---
+
+## 收款计划-子表 t_ar_finarplanentry
+
+- **表名称：** 收款计划-子表
+- **表名：** t_ar_finarplanentry
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fplanmaterial | 物料编码 | int8 | 64 |  | √ | 0 | 物料 bd_material |
+| 3 | fplancorebillno | 核心单据号 | varchar | 255 |  | √ | ' ' | 核心单据号 |
+| 4 | fplanpricetaxlocal | 应收金额(本位币) | numeric | 23 | 10 | √ | 0.0000000000 | 应收金额(本位币) |
+| 5 | fplanpricerate | 应收比例(%) | numeric | 23 | 10 | √ | 0 | 应收比例(%) |
+| 6 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
+| 7 | fplansettledamt | 已核销金额 | numeric | 23 | 10 | √ | 0.0000000000 | 已核销金额 |
+| 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 9 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 10 | fsrcfinid | 源单id | int8 | 64 |  | √ | 0 | 源单id |
+| 11 | funplansettleamt | 未核销金额 | numeric | 23 | 10 | √ | 0.0000000000 | 未核销金额 |
+| 12 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fplancorebilltype | 核心单据类型 | varchar | 30 |  | √ | ' ' | 核心单据类型,枚举: sm_salorder :销售订单 conm_salcontract :销售合同 ec_incomeapply :请款单 pm_purorderbill :采购订单 im_transapply :调拨申请单 amccsa_custschdorder :销售计划协议 amccsa_custschdorder_init :期初销售计划协议 |
+| 14 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 15 | fplanduedate | 到期日 | timestamp | 0 |  |  | null | 到期日 |
+| 16 | fplanremark | 备注 | varchar | 512 |  | √ | ' ' | 备注 |
+| 17 | fplancorebillentryseq | 核心单据行号 | int4 | 32 |  | √ | 0 | 核心单据行号 |
+| 18 | fplanconbillnumber | 合同编号 | varchar | 255 |  | √ | ' ' | 合同编号 |
+| 19 | funplanlockamt | 未锁定金额 | numeric | 23 | 10 | √ | 0.0000000000 | 未锁定金额 |
+| 20 | fplanpricetax | 应收金额 | numeric | 23 | 10 | √ | 0.0000000000 | 应收金额 |
+| 21 | fplansettletype | 结算方式 | int8 | 64 |  | √ | 0 | 结算方式 bd_settlementtype |
+| 22 | fplansettledlocamt | 已核销金额(本位币) | numeric | 23 | 10 | √ | 0.0000000000 | 已核销金额(本位币) |
+| 23 | fsrcplanentryid | 源单收款计划id | int8 | 64 |  | √ | 0 | 源单收款计划id |
+| 24 | fplanlockedamt | 已锁定金额 | numeric | 23 | 10 | √ | 0.0000000000 | 已锁定金额 |
+| 25 | fplancontract | 合同 | varchar | 255 |  | √ | ' ' | 合同 |
+| 26 | fplanmpmtasknoid | 项目任务号 | int8 | 64 |  | √ | 0 | 项目任务F7 mpm_task_f7 |
+| 27 | funplansettlelocamt | 未核销金额(本位币) | numeric | 23 | 10 | √ | 0.0000000000 | 未核销金额(本位币) |
+| 28 | fplanproject | 项目编码 | int8 | 64 |  | √ | 0 | 项目 bd_project |
+| 29 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 30 | fplanexpenseitem | 费用项目 | int8 | 64 |  | √ | 0 | 费用项目 er_expenseitemedit |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fentryid | fentryid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_ar_finplan_duedate |  | fplanduedate |
+| 2 | idx_ar_finplan_srcfinid |  | fsrcfinid |
+| 3 | idx_ar_finplan_srcplanentryid |  | fsrcplanentryid |
+| 4 | index_finar_plan |  | fid |
+| 5 | t_ar_finarplanentry_pkey |  | fentryid |
+
+---
+
+## 明细-分表 t_ar_finarbillentry_e
+
+- **表名称：** 明细-分表
+- **表名：** t_ar_finarbillentry_e
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fcontract | 合同 | varchar | 255 |  | √ | ' ' | 合同 |
+| 3 | frectax | 收款时点税额(废弃) | numeric | 23 | 10 | √ | 0.0000000000 | 收款时点税额(废弃) |
+| 4 | fissueinvlocalamt | 已开票金额(不含税本位币) | numeric | 23 | 10 | √ | 0 | 已开票金额(不含税本位币) |
+| 5 | fissueinvreclocalamt | 已开票价税合计(本位币) | numeric | 23 | 10 | √ | 0 | 已开票价税合计(本位币) |
+| 6 | finvoicedamt | 已关联销售发票价税合计 | numeric | 23 | 10 | √ | 0.0000000000 | 已关联销售发票价税合计 |
+| 7 | fisinvoicefirst | 先开票 | bpchar | 1 |  | √ | '0' | 先开票 |
+| 8 | funinvoicedamt | 未关联销售发票价税合计 | numeric | 23 | 10 | √ | 0.0000000000 | 未关联销售发票价税合计 |
+| 9 | fisallverify | 完全勾稽 | bpchar | 1 |  | √ | '0' | 完全勾稽 |
+| 10 | funconfirmbaseqty | 未确认基本数量 | numeric | 23 | 10 | √ | 0 | 未确认基本数量 |
+| 11 | fissueinvtax | 已开票税额 | numeric | 23 | 10 | √ | 0.0000000000 | 已开票税额 |
+| 12 | fissueinvrecamt | 已开票价税合计 | numeric | 23 | 10 | √ | 0.0000000000 | 已开票价税合计 |
+| 13 | funinvoicedlocalamt | 未关联销售发票价税合计(本位币) | numeric | 23 | 10 | √ | 0 | 未关联销售发票价税合计(本位币) |
+| 14 | fmaterialversionid | 物料版本 | int8 | 64 |  | √ | 0 | 物料版本 bd_bomversion_new |
+| 15 | finvoicecode | 发票代码 | varchar | 2048 |  | √ | ' ' | 发票代码 |
+| 16 | finvoicedlocalamt | 已关联销售发票价税合计(本位币) | numeric | 23 | 10 | √ | 0 | 已关联销售发票价税合计(本位币) |
+| 17 | fissueinvqty | 已开票数量 | numeric | 23 | 10 | √ | 0.0000000000 | 已开票数量 |
+| 18 | funinvoicedqty | 未关联销售发票数量 | numeric | 23 | 10 | √ | 0.0000000000 | 未关联销售发票数量 |
+| 19 | finvoiceno | 发票号码 | varchar | 2048 |  | √ | ' ' | 发票号码 |
+| 20 | fe_invoicedbaseqty | 已关联销售发票基本数量 | numeric | 23 | 10 | √ | 0 | 已关联销售发票基本数量 |
+| 21 | fissueinvlocaltax | 已开票税额(本位币) | numeric | 23 | 10 | √ | 0 | 已开票税额(本位币) |
+| 22 | fe_iv_saleid | 关联销售发票内码 | int8 | 64 |  | √ | 0 | 关联销售发票内码 |
+| 23 | fe_iv_sale_entryid | 关联发票分录ID | int8 | 64 |  | √ | 0 | 关联发票分录ID |
+| 24 | fe_uninvoicedbaseqty | 未关联销售发票基本数量 | numeric | 23 | 10 | √ | 0 | 未关联销售发票基本数量 |
+| 25 | fissueinvamt | 已开票金额(不含税) | numeric | 23 | 10 | √ | 0.0000000000 | 已开票金额(不含税) |
+| 26 | fvattax | 增值税(废弃) | numeric | 23 | 10 | √ | 0.0000000000 | 增值税(废弃) |
+| 27 | finvoicedqty | 已关联销售发票数量 | numeric | 23 | 10 | √ | 0.0000000000 | 已关联销售发票数量 |
+| 28 | fconfirmedbaseqty | 已确认基本数量 | numeric | 23 | 10 | √ | 0 | 已确认基本数量 |
+| 29 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fentryid | fentryid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_ar_iv_enid |  | fe_iv_sale_entryid |
+| 2 | idx_ar_finentry_e_fid |  | fid |
+| 3 | t_ar_finarbillentry_e_pkey |  | fentryid |
+| 4 | idx_ar_fin_vattax |  | fvattax |
+
+---
+
+## 财务应收单-分表 t_ar_finarbill_e
+
+- **表名称：** 财务应收单-分表
+- **表名：** t_ar_finarbill_e
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fwritebackbill | 反写单据 | bpchar | 1 |  | √ | '0' | 反写单据 |
+| 3 | fwoffsourcebilltype | 冲销源单类型(废弃) | varchar | 30 |  | √ | ' ' | 冲销源单类型(废弃),枚举: |
+| 4 | fissueinvreclocalamt | 已开票价税合计(本位币) | numeric | 23 | 10 | √ | 0 | 已开票价税合计(本位币) |
+| 5 | fsrcasstactid | 源单往来单位（转销） | int8 | 64 |  | √ | 0 | 客户 bd_customer |
+| 6 | finvoicedamt | 已关联销售发票价税合计 | numeric | 23 | 10 | √ | 0.0000000000 | 已关联销售发票价税合计 |
+| 7 | fivsale_create_flag | 发票关联生成 | bpchar | 1 |  | √ | '0' | 发票关联生成 |
+| 8 | fprojectnumid | 项目编码 | int8 | 64 |  | √ | 0 | 项目 bd_project |
+| 9 | fsettlelocalamt | 已核销金额(本位币) | numeric | 23 | 10 | √ | 0.0000000000 | 已核销金额(本位币) |
+| 10 | funinvoicedamt | 未关联销售发票价税合计 | numeric | 23 | 10 | √ | 0.0000000000 | 未关联销售发票价税合计 |
+| 11 | facctagecalcdate | 账龄起算日 | timestamp | 0 |  |  | null | 账龄起算日 |
+| 12 | fissueinvrecamt | 已开票价税合计 | numeric | 23 | 10 | √ | 0.0000000000 | 已开票价税合计 |
+| 13 | funinvoicedlocalamt | 未关联销售发票价税合计(本位币) | numeric | 23 | 10 | √ | 0 | 未关联销售发票价税合计(本位币) |
+| 14 | finvoicedate | 发票日期 | timestamp | 0 |  |  | null | 发票日期 |
+| 15 | finvoicecode | 发票代码 | varchar | 2048 |  | √ | ' ' | 发票代码 |
+| 16 | finvoicedlocalamt | 已关联销售发票价税合计(本位币) | numeric | 23 | 10 | √ | 0 | 已关联销售发票价税合计(本位币) |
+| 17 | fexratetableid | 汇率表 | int8 | 64 |  | √ | 0 | 汇率表 bd_exratetable |
+| 18 | fbiztypeid | 业务类型(废弃) | int8 | 64 |  | √ | 0 | 业务类型 bd_biztype |
+| 19 | fsettleamount | 已核销金额 | numeric | 23 | 10 | √ | 0.0000000000 | 已核销金额 |
+| 20 | finvoiceno | 发票号码 | varchar | 2048 |  | √ | ' ' | 发票号码 |
+| 21 | frelationpay | 关联交易 | bpchar | 1 |  | √ | ' ' | 关联交易 |
+| 22 | fbillsrctype | 单据来源类型 | varchar | 30 |  | √ | ' ' | 单据来源类型,枚举: 0 :手工新增 1 :导入生成 2 :后台生成 3 :从总账引入 |
+| 23 | fbaddebtcause | 坏账原因 | varchar | 30 |  | √ | ' ' | 坏账原因,枚举: overdue :逾期未还并明显超过规定账龄 bankrupt :债务人破产和死亡 other :其他原因 |
+| 24 | fispayrate | 按比例(%) | bpchar | 1 |  | √ | '1' | 按比例(%) |
+| 25 | fisintertax | 国际税(废弃) | bpchar | 1 |  | √ | '0' | 国际税(废弃) |
+| 26 | fsettlerelations | 组织间结算 | int8 | 64 |  | √ | 0 | 结算路径 ism_settlerelations |
+| 27 | fdepartmentid | 申请部门 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 28 | ftaxroundrule | 先舍入后汇总(废弃) | bpchar | 1 |  | √ | '0' | 先舍入后汇总(废弃) |
+| 29 | ftransway | 转销版本 | varchar | 30 |  | √ | ' ' | 转销版本,枚举: normal :普通单据 trans_old :旧转销 trans_new :新转销 |
+| 30 | frevconfirmnode | 收入确认时点 | varchar | 30 |  | √ | ' ' | 收入确认时点,枚举: signIn :签收 saleOut :出库 |
+| 31 | ftranstype | 转销单据类型 | varchar | 30 |  | √ | ' ' | 转销单据类型,枚举: normal :普通单据 trans_red :新转销生成的红单 trans_blue :新转销生成的蓝单 |
+| 32 | fexratedate | 汇率日期 | timestamp | 0 |  |  | null | 汇率日期 |
+| 33 | fbookdate | fbookdate | timestamp | 0 |  |  | null |  |
+| 34 | fisplansplit | 计划按分组方案生成 | bpchar | 1 |  | √ | '1' | 计划按分组方案生成 |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fid | fid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | t_ar_finarbill_e_pkey |  | fid |
+| 2 | idx_ar_fin_e_cause |  | fbaddebtcause |
+
+---
+
+## 财务应收单-关联追踪表 t_ar_finarbill_tc
+
+- **表名称：** 财务应收单-关联追踪表
+- **表名：** t_ar_finarbill_tc
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | null |  |
+| 2 | ftbillid | ftbillid | int8 | 64 |  | √ | 0 |  |
+| 3 | fttableid | fttableid | int8 | 64 |  | √ | 0 |  |
+| 4 | fsbillid | fsbillid | int8 | 64 |  | √ | 0 |  |
+| 5 | fstableid | fstableid | int8 | 64 |  | √ | 0 |  |
+| 6 | fsid | fsid | int8 | 64 |  | √ | 0 |  |
+| 7 | ftid | ftid | int8 | 64 |  | √ | 0 |  |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fid | fid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_ar_finarbill_tc_tid |  | ftid |
+| 2 | t_ar_finarbill_tc_pkey |  | fid |
+| 3 | idx_ar_finarbill_tc_tbill |  | ftbillid |
+
+---
+
+## 开票结果详情-子表 t_ar_finarbill_inv_entry
+
+- **表名称：** 开票结果详情-子表
+- **表名：** t_ar_finarbill_inv_entry
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fpre_blue_number | 原蓝字发票号码 | varchar | 80 |  | √ | ' ' | 原蓝字发票号码 |
+| 3 | fred_blue | 红蓝字 | bpchar | 1 |  | √ | '0' | 红蓝字,枚举: 0 :蓝票 1 :红票 |
+| 4 | finvoice_code | 发票代码 | varchar | 80 |  | √ | ' ' | 发票代码 |
+| 5 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
+| 6 | famount | 不含税金额 | numeric | 23 | 10 | √ | 0 | 不含税金额 |
+| 7 | ffile_addr | 版式文件地址 | varchar | 255 |  | √ | ' ' | 版式文件地址 |
+| 8 | finvoice_status | 发票状态 | varchar | 30 |  | √ | ' ' | 发票状态,枚举: 0 :正常 3 :红冲 6 :作废 |
+| 9 | finvoice_number | 发票号码 | varchar | 80 |  | √ | ' ' | 发票号码 |
+| 10 | frecamount | 价税合计 | numeric | 23 | 10 | √ | 0 | 价税合计 |
+| 11 | ftax | 税额 | numeric | 23 | 10 | √ | 0 | 税额 |
+| 12 | finvoiceid | finvoiceid | int8 | 64 |  | √ | 0 | id |
+| 13 | fivdate | 发票日期 | timestamp | 0 |  |  | null | 发票日期 |
+| 14 | finvoice_type | 发票类型 | int8 | 64 |  | √ | 0 | 发票类型 bd_invoicetype |
+| 15 | fidentification | 清单标识 | bpchar | 1 |  | √ | '1' | 清单标识,枚举: 1 :清单 0 :非清单 |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | finvoiceid | finvoiceid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | pk_t_ar_finarbill_inv_entry |  | finvoiceid |
+| 2 | idx_inv_code_num_uni |  | fid,finvoice_code,finvoice_number |
+
+---
+
+## 子单据体-子表 t_ar_finarbilltaxentry
+
+- **表名称：** 子单据体-子表
+- **表名：** t_ar_finarbilltaxentry
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | ftaxrate | 税率(%) | numeric | 23 | 10 | √ | 0.0000000000 | 税率(%) |
+| 2 | fincludediscount | 含折扣(废弃) | bpchar | 1 |  | √ | ' ' | 含折扣(废弃) |
+| 3 | fpriority | 优先级 | int4 | 32 |  | √ | 0 | 优先级 |
+| 4 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
+| 5 | fdiscountamt | fdiscountamt | numeric | 23 | 10 | √ | 0.0000000000 |  |
+| 6 | ftaxbase | 税控金额(废弃) | numeric | 23 | 10 | √ | 0.0000000000 | 税控金额(废弃) |
+| 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 8 | ftaxassessamt | 评估计税金额(废弃) | numeric | 23 | 10 | √ | 0.0000000000 | 评估计税金额(废弃) |
+| 9 | ftaxbasetype | 税基类型(废弃) | bpchar | 1 |  | √ | ' ' | 税基类型(废弃),枚举: 1 :不含税金额 2 :含税金额 |
+| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fincludevat | 含增值税(废弃) | bpchar | 1 |  | √ | ' ' | 含增值税(废弃) |
+| 12 | ftaxcategoryid | 税种 | int8 | 64 |  | √ | 0 | 税种 bd_taxcategory |
+| 13 | ftaxrateid | 税率 | int8 | 64 |  | √ | 0 | 税率 bd_taxrate |
+| 14 | fisinpricetax | 价内税(废弃) | bpchar | 1 |  | √ | ' ' | 价内税(废弃) |
+| 15 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 | id |
+| 16 | fisoffset | 抵消标识 | bpchar | 1 |  | √ | '0' | 抵消标识 |
+| 17 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 18 | fnondeductible | 不可抵扣额(废弃) | numeric | 23 | 10 | √ | 0.0000000000 | 不可抵扣额(废弃) |
+| 19 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 20 | fincludetail | 含尾款(废弃) | bpchar | 1 |  | √ | ' ' | 含尾款(废弃) |
+| 21 | ftaxtime | 计税时点(废弃) | varchar | 255 |  | √ | ' ' | 计税时点(废弃),枚举: invoice :开票时点 receipt :收款时点 |
+| 22 | ftaxcodeid | 税码 | int8 | 64 |  | √ | 0 | 税码 bastax_taxcode |
+| 23 | ftax | 税额 | numeric | 23 | 10 | √ | 0.0000000000 | 税额 |
+| 24 | fdeductible | 抵扣额(废弃) | numeric | 23 | 10 | √ | 0.0000000000 | 抵扣额(废弃) |
+| 25 | fdeductionrate | 抵扣率(%)(废弃) | numeric | 23 | 10 | √ | 0.0000000000 | 抵扣率(%)(废弃) |
+| 26 | fisoutputtax | 销项税(废弃) | bpchar | 1 |  | √ | ' ' | 销项税(废弃) |
+| 27 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
+| 28 | fcandeductible | 可抵扣(废弃) | bpchar | 1 |  | √ | ' ' | 可抵扣(废弃) |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fdetailid | fdetailid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | t_ar_finarbilltaxentry_pkey |  | fdetailid |
+| 2 | idx_ar_fintaxe_pid |  | fentryid |
+
+---
+
+## 财务应收单-反写记录表 t_ar_finarbill_wb
+
+- **表名称：** 财务应收单-反写记录表
+- **表名：** t_ar_finarbill_wb
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | null |  |
+| 2 | foperate | foperate | varchar | 30 |  | √ | ' ' |  |
+| 3 | fruleverid | fruleverid | int8 | 64 |  | √ | 0 |  |
+| 4 | fsbillid | fsbillid | int8 | 64 |  | √ | 0 |  |
+| 5 | fstableid | fstableid | int8 | 64 |  | √ | 0 |  |
+| 6 | fsid | fsid | int8 | 64 |  | √ | 0 |  |
+| 7 | fwritevalue | fwritevalue | numeric | 23 | 10 | √ | 0.0000000000 |  |
+| 8 | fseq | fseq | int8 | 64 |  | √ | 0 |  |
+| 9 | fentryid | fentryid | int8 | 64 |  | √ | null |  |
+| 10 | fruleitemid | fruleitemid | int8 | 64 |  | √ | 0 |  |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fentryid | fentryid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | t_ar_finarbill_wb_pkey |  | fentryid |
+| 2 | idx_ar_finarbill_wb_fk |  | fid |
+
+---
+
+## 关联子实体-子表 t_ar_finarbillentry_lk
+
+- **表名称：** 关联子实体-子表
+- **表名：** t_ar_finarbillentry_lk
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fsbillid | 源单内码 | int8 | 64 |  | √ | 0 | 源单内码 |
+| 2 | fstableid | 源单主实体编码 | int8 | 64 |  | √ | 0 | 源单主实体编码 |
+| 3 | fsid | 源单主实体内码 | int8 | 64 |  | √ | 0 | 源单主实体内码 |
+| 4 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
+| 5 | fentryid | fentryid | int8 | 64 |  | √ | null |  |
+| 6 | fpkid | fpkid | int8 | 64 |  | √ | null | id |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fpkid | fpkid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_ar_finarbillentry_lk_fk |  | fentryid |
+| 2 | t_ar_finarbillentry_lk_pkey |  | fpkid |

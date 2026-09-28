@@ -1,0 +1,30 @@
+# 接受记录-idi_accept_log
+
+## 接受记录-主表 t_idi_accept_log
+
+- **表名称：** 接受记录-主表
+- **表名：** t_idi_accept_log
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
+| 2 | faccepttime | 接受时间 | timestamp | 0 |  |  | null | 接受时间 |
+| 3 | faccepttype | 接受类型 | varchar | 4 |  | √ | ' ' | 接受类型,枚举: 1 :免责声明 |
+| 4 | facceptor_id | 接受用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | fnumber | 编码 | varchar | 60 |  | √ | ' ' | 编码 |
+| 6 | fcontent | 内容 | varchar | 255 |  | √ | ' ' | 内容 |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fid | fid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | pk_t_idi_accept_log |  | fid |
+| 2 | idx_idi_acp |  | fnumber |

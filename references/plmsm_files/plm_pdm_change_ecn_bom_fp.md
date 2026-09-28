@@ -1,0 +1,1 @@
+# BOM变更通知单参数预置用-plm_pdm_change_ecn_bom_fp

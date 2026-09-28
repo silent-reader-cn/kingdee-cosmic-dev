@@ -1,0 +1,77 @@
+# 公路增值税普票-evp_invtlfreceiver
+
+## 公路增值税普票-主表 t_evp_invtlfreceiver
+
+- **表名称：** 公路增值税普票-主表
+- **表名：** t_evp_invtlfreceiver
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
+| 2 | fisintopool | 电子凭证入池 | bpchar | 1 |  | √ | '0' | 电子凭证入池 |
+| 3 | forgid | 核算组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 4 | fbeginperiod | 权责发生制下支出所属期起 | varchar | 50 |  | √ | ' ' | 权责发生制下支出所属期起 |
+| 5 | fhasbeenpaid | 已付款 | bpchar | 1 |  | √ | '0' | 已付款 |
+| 6 | ffileurl | 原文件地址 | varchar | 500 |  | √ | ' ' | 原文件地址 |
+| 7 | fendyear | 所得税税前扣除年度止 | varchar | 50 |  | √ | ' ' | 所得税税前扣除年度止 |
+| 8 | farchivebatchcode | 归档批次号 | varchar | 255 |  | √ | ' ' | 归档批次号 |
+| 9 | fcostcompany | 费用承担公司 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 10 | ffilename | 原文件名 | varchar | 2000 |  | √ | ' ' | 原文件名 |
+| 11 | finvoicenumber | 发票号 | varchar | 50 |  | √ | ' ' | 发票号 |
+| 12 | foriginsysid | 集成系统 | int8 | 64 |  | √ | 0 | 集成系统配置 evp_originsys |
+| 13 | ftotalamountexcludingtax | 不含税金额合计 | numeric | 23 | 10 | √ | 0 | 不含税金额合计 |
+| 14 | fbillno | 单据编号 | varchar | 50 |  | √ | ' ' | 单据编号 |
+| 15 | fdirectbillno | 关联单据编号 | varchar | 50 |  | √ | ' ' | 关联单据编号 |
+| 16 | fvoucherid | 关联凭证id | varchar | 50 |  | √ | ' ' | 关联凭证id |
+| 17 | fbeginyear | 所得税税前扣除年度起 | varchar | 50 |  | √ | ' ' | 所得税税前扣除年度起 |
+| 18 | fperiodid | 会计期间 | int8 | 64 |  | √ | 0 | 会计日历 bd_period |
+| 19 | fseqno | 票据流水号（唯一标识） | varchar | 255 |  | √ | ' ' | 票据流水号（唯一标识） |
+| 20 | fdirectbilltype | 关联单据类型 | varchar | 50 |  | √ | ' ' | 关联单据类型 |
+| 21 | fbasetext_tag | 原文件base64_详情 | text | 0 |  |  | null | 原文件base64_详情 |
+| 22 | ffileurl_tag | 原文件地址_详情 | text | 0 |  |  | null | 原文件地址_详情 |
+| 23 | fhasbeencompleted | 已所得税税前扣除 | bpchar | 1 |  | √ | '0' | 已所得税税前扣除 |
+| 24 | fishandle | 数据来源 | bpchar | 1 |  | √ | '0' | 数据来源,枚举: 0 :API导入 1 :手工新增 2 :系统抽取 |
+| 25 | fbillid | 单据编号 | varchar | 50 |  | √ | ' ' | 单据编号 |
+| 26 | fbookdate | 业务日期 | timestamp | 0 |  |  | null | 业务日期 |
+| 27 | fintopooldate | 入池时间 | timestamp | 0 |  |  | null | 入池时间 |
+| 28 | ftotaltaxamount | 税额合计 | numeric | 23 | 10 | √ | 0 | 税额合计 |
+| 29 | fistransferredout | 进项税额转出 | bpchar | 1 |  | √ | '0' | 进项税额转出 |
+| 30 | fisredinvoice | 红字发票 | bpchar | 1 |  | √ | '0' | 红字发票 |
+| 31 | foperatorid | 入池操作人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 32 | fdirectbillid | 关联单据ID | int8 | 64 |  | √ | 0 | 关联单据ID |
+| 33 | fusageconfirmation | 用途确认 | varchar | 50 |  | √ | ' ' | 用途确认 |
+| 34 | fisdelete | 已删除 | bpchar | 1 |  | √ | '0' | 已删除 |
+| 35 | fvoucherno | 凭证号 | varchar | 50 |  | √ | ' ' | 凭证号 |
+| 36 | fusageconfirmationperiod | 用途确认期间 | varchar | 50 |  | √ | ' ' | 用途确认期间 |
+| 37 | fcreatedate | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 38 | fbasetext | 原文件base64 | varchar | 500 |  | √ | ' ' | 原文件base64 |
+| 39 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 40 | fnameofseller | 销售方名称 | varchar | 255 |  | √ | ' ' | 销售方名称 |
+| 41 | fisarchive | 归档 | bpchar | 1 |  | √ | '0' | 归档 |
+| 42 | felectronicnumber | 银行回单编号 | varchar | 50 |  | √ | ' ' | 银行回单编号 |
+| 43 | fendperiod | 权责发生制下支出所属期止 | varchar | 50 |  | √ | ' ' | 权责发生制下支出所属期止 |
+| 44 | fdateofissue | 开票日期 | timestamp | 0 |  |  | null | 开票日期 |
+| 45 | ftransferredoutamount | 进项税额转出金额 | numeric | 23 | 10 | √ | 0 | 进项税额转出金额 |
+| 46 | ftaxsocialcreditcode | 销售方纳税人识别号（统一社会信用代码） | varchar | 50 |  | √ | ' ' | 销售方纳税人识别号（统一社会信用代码） |
+| 47 | fhasbeenconfirmed | 已用途确认 | bpchar | 1 |  | √ | '0' | 已用途确认 |
+| 48 | fxbrlurl | xbrl文件地址 | varchar | 255 |  | √ | ' ' | xbrl文件地址 |
+| 49 | fbatchcode | 批次号 | varchar | 255 |  | √ | ' ' | 批次号 |
+| 50 | fhasbeenchecked | 已验真 | bpchar | 1 |  | √ | '0' | 已验真 |
+| 51 | fhasbeenbooked | 已入账 | bpchar | 1 |  | √ | '0' | 已入账 |
+| 52 | ftaxincludedamountinfigur | 价税合计（小写） | numeric | 23 | 10 | √ | 0 | 价税合计（小写） |
+| 53 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fid | fid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | pk_t_evp_invtlfreceiver |  | fid |
+| 2 | idx_evp_invtlfreceiver |  | forgid,fbillid |

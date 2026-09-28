@@ -1,0 +1,60 @@
+# 场景配置操作记录-plm_rengine_scene_his
+
+## 场景配置操作记录-主表 t_plm_egn_scene_his
+
+- **表名称：** 场景配置操作记录-主表
+- **表名：** t_plm_egn_scene_his
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
+| 2 | foperate | 操作 | varchar | 20 |  | √ | ' ' | 操作,枚举: new :新增 modify :修改 delete :删除 disable :禁用 enable :启用 |
+| 3 | fname | 场景名称 | varchar | 100 |  | √ | ' ' | 场景名称 |
+| 4 | foperatorid | 操作人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | fsceneid | 场景id | int8 | 64 |  | √ | 0 | 场景id |
+| 6 | foperatetime | 操作时间 | timestamp | 0 |  |  | null | 操作时间 |
+| 7 | fnumber | 场景编码 | varchar | 50 |  | √ | ' ' | 场景编码 |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fid | fid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_plm_scene_his |  | fsceneid,fnumber |
+| 2 | pk_plm_egn_scene_his |  | fid |
+
+---
+
+## 场景配置操作记录-多语言表 t_plm_egn_scene_his_l
+
+- **表名称：** 场景配置操作记录-多语言表
+- **表名：** t_plm_egn_scene_his_l
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fname | 场景名称 | varchar | 100 |  | √ | ' ' | 场景名称 |
+| 3 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
+| 4 | fpkid | fpkid | varchar | 18 |  | √ | ' ' | pkid |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fpkid | fpkid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_plm_scene_his_l |  | fid,flocaleid |
+| 2 | pk_plm_egn_scene_his_l |  | fpkid |

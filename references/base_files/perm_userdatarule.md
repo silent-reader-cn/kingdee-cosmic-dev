@@ -1,0 +1,37 @@
+# 用户数据规则-perm_userdatarule
+
+## 用户数据规则-主表 t_perm_userdatarule
+
+- **表名称：** 用户数据规则-主表
+- **表名：** t_perm_userdatarule
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fentitynum | 业务对象 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 4 | fcreatetime | 创建日期 | timestamp | 0 |  |  | null | 创建日期 |
+| 5 | fpermitemid | 权限项 | varchar | 18 |  | √ | ' ' | 权限项 perm_permitem |
+| 6 | fdataruleid | 数据规则方案 | int8 | 64 |  | √ | 0 | 数据规则方案 perm_datarule |
+| 7 | fuserid | 用户 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 8 | fisincludesub | 是否包含下级 | bpchar | 1 |  | √ | '0' | 是否包含下级 |
+| 9 | fappid | 应用 | varchar | 36 |  | √ | ' ' | 业务应用实体 bos_devportal_bizapp |
+| 10 | fmodifytime | 修改日期 | timestamp | 0 |  |  | null | 修改日期 |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | fdimtype | 隔离维度类型 | varchar | 36 |  | √ | ' ' | 隔离维度类型,枚举: bos_org :业务单元 |
+| 13 | fdimid | 隔离维度对象 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fid | fid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_perm_usrdr_qry |  | fuserid,fappid,fentitynum,fpermitemid |
+| 2 | pk_t_perm_userdatarule |  | fid |

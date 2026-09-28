@@ -1,0 +1,111 @@
+# 制造费用分配-sco_mfgfeealloc
+
+## 单据体-子表 t_sco_mfgfeeallocentry
+
+- **表名称：** 单据体-子表
+- **表名：** t_sco_mfgfeeallocentry
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fsubelementid | 成本子要素 | int8 | 64 |  | √ | 0 | 成本子要素 cad_subelement |
+| 3 | fallocvalue | 分配标准值 | numeric | 23 | 10 | √ | 0 | 分配标准值 |
+| 4 | fallocamt | 分配金额 | numeric | 23 | 10 | √ | 0 | 分配金额 |
+| 5 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
+| 6 | felementid | 成本要素 | int8 | 64 |  | √ | 0 | 成本要素 cad_element |
+| 7 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 8 | fbenefcostcenterid | 受益成本中心 | int8 | 64 |  | √ | 0 | 成本中心 bos_costcenter |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fentryid | fentryid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | index_sco_mfgallocentry |  | fsubelementid,fbenefcostcenterid |
+| 2 | index_sco_mfgallocentry2 |  | fid |
+| 3 | pk_sco_mfgfeeallocentry |  | fentryid |
+
+---
+
+## 制造费用分配-主表 t_sco_mfgfeealloc
+
+- **表名称：** 制造费用分配-主表
+- **表名：** t_sco_mfgfeealloc
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
+| 2 | fallocstatus | 分配状态 | varchar | 30 |  | √ | ' ' | 分配状态,枚举: 0 :未分配 1 :已分配 2 :已确认 |
+| 3 | forgid | 核算组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 4 | famount | 金额 | numeric | 23 | 10 | √ | 0 | 金额 |
+| 5 | fappnum | 所属应用 | varchar | 10 |  | √ | ' ' | 所属应用,枚举: sco :标准成本 aca :实际成本 |
+| 6 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 7 | fcostaccountid | 成本主体 | int8 | 64 |  | √ | 0 | 成本主体 cal_bd_costaccount |
+| 8 | fbaseunitid | 计量单位 | int8 | 64 |  | √ | 0 | 计量单位 bd_measureunits |
+| 9 | fbillno | 编码 | varchar | 255 |  | √ | ' ' | 编码 |
+| 10 | fcostdriverid | 分配标准 | int8 | 64 |  | √ | 0 | 费用分配标准 cad_costdriver |
+| 11 | fexpenseitemid | 费用项目 | int8 | 64 |  | √ | 0 | 费用项目 er_expenseitemedit |
+| 12 | fcostcenterid | 成本中心 | int8 | 64 |  | √ | 0 | 成本中心 bos_costcenter |
+| 13 | fperiodid | 会计期间 | int8 | 64 |  | √ | 0 | 会计日历 bd_period |
+| 14 | fbillstatus | 单据状态 | varchar | 30 |  | √ | ' ' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
+| 15 | fsrcbillid | 源单ID | int8 | 64 |  | √ | 0 | 源单ID |
+| 16 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 17 | fvouchernum | 凭证号 | varchar | 80 |  | √ | ' ' | 凭证号 |
+| 18 | fnoalcsubelementid | 成本子要素 | int8 | 64 |  | √ | 0 | 成本子要素 cad_subelement |
+| 19 | falloctype | 分配方式 | varchar | 30 |  | √ | ' ' | 分配方式,枚举: 1 :自动分配 2 :手工分配 |
+| 20 | fusetype | 耗用类型 | varchar | 30 |  | √ | ' ' | 耗用类型,枚举: 1 :共耗 2 :直接 |
+| 21 | fallocorid | 分配人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 22 | fbizdate | 业务日期 | timestamp | 0 |  |  | null | 业务日期 |
+| 23 | fnoalcelementid | 成本要素 | int8 | 64 |  | √ | 0 | 成本要素 cad_element |
+| 24 | falloctime | 分配时间 | timestamp | 0 |  |  | null | 分配时间 |
+| 25 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fid | fid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | index_sco_mfgfeealloc |  | forgid,fcostcenterid |
+| 2 | pk_sco_mfgfeealloc |  | fid |
+
+---
+
+## 受益成本中心-多选基础资料表 t_sco_mfgfeeallocmcostc
+
+- **表名称：** 受益成本中心-多选基础资料表
+- **表名：** t_sco_mfgfeeallocmcostc
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fbasedataid | fbasedataid | int8 | 64 |  | √ | 0 | 成本中心 bos_costcenter |
+| 3 | fpkid | fpkid | int8 | 64 |  | √ | 0 | pkid |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fpkid | fpkid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | index_sco_mfgallocmcostc |  | fid,fbasedataid |
+| 2 | pk_sco_mfgfeeallocmcostc |  | fpkid |

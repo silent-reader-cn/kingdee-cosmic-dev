@@ -1,0 +1,62 @@
+# 外部数据引用声明-srm_declarationref
+
+## 外部数据引用声明-主表 t_pur_declarationref
+
+- **表名称：** 外部数据引用声明-主表
+- **表名：** t_pur_declarationref
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
+| 2 | fcfmstatus | 确认状态 | bpchar | 1 |  | √ | 'A' | 确认状态,枚举: A :未确认 B :已确认 |
+| 3 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
+| 4 | fisdisplay | 默认显示 | bpchar | 1 |  | √ | '1' | 默认显示 |
+| 5 | fcontent_tag | 文档内容_详情 | text | 0 |  |  | null | 文档内容_详情 |
+| 6 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
+| 7 | fcfmdate | 确认时间 | timestamp | 0 |  |  | null | 确认时间 |
+| 8 | fcontent | 文档内容 | varchar | 255 |  | √ | ' ' | 文档内容 |
+| 9 | fcfmid | 确认人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fid | fid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | pk_t_pur_declarationref |  | fid |
+| 2 | idx_t_pur_declarationref |  | fnumber |
+
+---
+
+## 外部数据引用声明-多语言表 t_pur_declarationref_l
+
+- **表名称：** 外部数据引用声明-多语言表
+- **表名：** t_pur_declarationref_l
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
+| 3 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
+| 4 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fpkid | fpkid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | pk_t_pur_declarationref_l |  | fpkid |
+| 2 | idx_t_pur_declarationref_l_fid |  | fid |

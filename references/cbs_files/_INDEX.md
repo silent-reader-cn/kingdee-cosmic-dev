@@ -1,0 +1,109 @@
+# cbs 模块表清单
+
+> 本模块共收录 **97** 张表定义，来自 `cbs_files/`。
+
+> 索引由 `scripts/build_index.py` 从 Markdown 自动生成，请勿手工编辑。
+> 检索本模块表结构请用统一检索脚本（比翻本文件更快）：
+> ```bash
+> python scripts/search.py <关键词> --scope cbs
+> ```
+
+| 序号 | 数据库表名 | 中文名称 | 字段数 | 详细定义文件 |
+| :---: | :--- | :--- | :---: | :--- |
+| 1 | `t_bas_shard_name_alias` | 别名映射表-主表 | 13 | [bos_shrad_name_alias.md](./bos_shrad_name_alias.md) |
+| 2 | `t_bas_shardplan` | 分片计划表-主表 | 15 | [bos_shard_plan.md](./bos_shard_plan.md) |
+| 3 | `t_bas_shardrecord` | 分片日志记录-主表 | 13 | [bos_sharding_record.md](./bos_sharding_record.md) |
+| 4 | `t_bas_shardset_entry` | 单据体-子表 | 8 | [bos_shard_strategy_set.md](./bos_shard_strategy_set.md) |
+| 5 | `t_bas_shardstrategy_set` | 设置分片表单-主表 | 33 | [bos_shard_strategy_set.md](./bos_shard_strategy_set.md) |
+| 6 | `t_bas_shardstrategy_set_l` | 设置分片表单-多语言表 | 4 | [bos_shard_strategy_set.md](./bos_shard_strategy_set.md) |
+| 7 | `t_cbs_algox_jobinst` | 计算任务监控-主表 | 14 | [cbs_algox_jobinst.md](./cbs_algox_jobinst.md) |
+| 8 | `t_cbs_algox_jobinst` | 分布式计算-主表 | 14 | [job_monitor.md](./job_monitor.md) |
+| 9 | `t_cbs_archi_basedata` | 已同步基础资料-主表 | 4 | [bos_cbs_archi_basedata.md](./bos_cbs_archi_basedata.md) |
+| 10 | `t_cbs_archi_billset` | 可归档单据范围-主表 | 8 | [bos_cbs_archi_billset.md](./bos_cbs_archi_billset.md) |
+| 11 | `t_cbs_archi_billset_l` | 可归档单据范围-多语言表 | 4 | [bos_cbs_archi_billset.md](./bos_cbs_archi_billset.md) |
+| 12 | `t_cbs_archi_cascade` | 单据归档级联配置-主表 | 19 | [bos_cbs_archi_cascade.md](./bos_cbs_archi_cascade.md) |
+| 13 | `t_cbs_archi_cascade_l` | 单据归档级联配置-多语言表 | 5 | [bos_cbs_archi_cascade.md](./bos_cbs_archi_cascade.md) |
+| 14 | `t_cbs_archi_config` | 单据清除规则-主表 | 23 | [bos_cbs_archi_clean.md](./bos_cbs_archi_clean.md) |
+| 15 | `t_cbs_archi_config` | 单据归档规则-主表 | 23 | [bos_cbs_archi_config.md](./bos_cbs_archi_config.md) |
+| 16 | `t_cbs_archi_config` | 单据归档规则（旧）-主表 | 23 | [bos_cbs_archi_config_old.md](./bos_cbs_archi_config_old.md) |
+| 17 | `t_cbs_archi_config` | 单据同步规则-主表 | 23 | [bos_cbs_archi_sync.md](./bos_cbs_archi_sync.md) |
+| 18 | `t_cbs_archi_config_l` | 单据清除规则-多语言表 | 4 | [bos_cbs_archi_clean.md](./bos_cbs_archi_clean.md) |
+| 19 | `t_cbs_archi_config_l` | 单据归档规则-多语言表 | 4 | [bos_cbs_archi_config.md](./bos_cbs_archi_config.md) |
+| 20 | `t_cbs_archi_config_l` | 单据归档规则（旧）-多语言表 | 4 | [bos_cbs_archi_config_old.md](./bos_cbs_archi_config_old.md) |
+| 21 | `t_cbs_archi_config_l` | 单据同步规则-多语言表 | 4 | [bos_cbs_archi_sync.md](./bos_cbs_archi_sync.md) |
+| 22 | `t_cbs_archi_config_refbd` | 单据体-子表 | 8 | [bos_cbs_archi_config.md](./bos_cbs_archi_config.md) |
+| 23 | `t_cbs_archi_config_refbd` | 单据体-子表 | 8 | [bos_cbs_archi_config_old.md](./bos_cbs_archi_config_old.md) |
+| 24 | `t_cbs_archi_cross_info` | 迁移信息（中间表）-主表 | 14 | [bos_cbs_archi_cross_info.md](./bos_cbs_archi_cross_info.md) |
+| 25 | `t_cbs_archi_cross_mvrcd` | 归档调度数据迁移记录-主表 | 3 | [bos_cbs_archi_cross_mvrcd.md](./bos_cbs_archi_cross_mvrcd.md) |
+| 26 | `t_cbs_archi_database` | 归档库管理-主表 | 16 | [bos_cbs_archi_database.md](./bos_cbs_archi_database.md) |
+| 27 | `t_cbs_archi_database_l` | 归档库管理-多语言表 | 4 | [bos_cbs_archi_database.md](./bos_cbs_archi_database.md) |
+| 28 | `t_cbs_archi_entity` | 已归档单据（反归档）-主表 | 7 | [bos_cbs_archi_entity.md](./bos_cbs_archi_entity.md) |
+| 29 | `t_cbs_archi_group_rule` | 归档库分组-主表 | 15 | [bos_cbs_archi_group_rule.md](./bos_cbs_archi_group_rule.md) |
+| 30 | `t_cbs_archi_group_rule_l` | 归档库分组-多语言表 | 5 | [bos_cbs_archi_group_rule.md](./bos_cbs_archi_group_rule.md) |
+| 31 | `t_cbs_archi_index` | 单据归档索引配置-主表 | 11 | [bos_cbs_archi_index.md](./bos_cbs_archi_index.md) |
+| 32 | `t_cbs_archi_index_l` | 单据归档索引配置-多语言表 | 4 | [bos_cbs_archi_index.md](./bos_cbs_archi_index.md) |
+| 33 | `t_cbs_archi_log` | 归档任务日志-主表 | 6 | [bos_cbs_archi_log.md](./bos_cbs_archi_log.md) |
+| 34 | `t_cbs_archi_param` | 参数-主表 | 3 | [bos_cbs_archi_param.md](./bos_cbs_archi_param.md) |
+| 35 | `t_cbs_archi_plan` | 归档方案-主表 | 16 | [bos_cbs_archi_plan.md](./bos_cbs_archi_plan.md) |
+| 36 | `t_cbs_archi_plan_l` | 归档方案-多语言表 | 5 | [bos_cbs_archi_plan.md](./bos_cbs_archi_plan.md) |
+| 37 | `t_cbs_archi_reverse_mvrcd` | 反归档数据迁移记录-主表 | 3 | [bos_cbs_archi_revmvrcd.md](./bos_cbs_archi_revmvrcd.md) |
+| 38 | `t_cbs_archi_reversercd` | 反归档记录-主表 | 6 | [bos_cbs_archi_reversercd.md](./bos_cbs_archi_reversercd.md) |
+| 39 | `t_cbs_archi_schedule` | 归档调度计划（旧）-主表 | 12 | [bos_cbs_archi_schedule.md](./bos_cbs_archi_schedule.md) |
+| 40 | `t_cbs_archi_scheduleentry` | 单据体-子表 | 4 | [bos_cbs_archi_schedule.md](./bos_cbs_archi_schedule.md) |
+| 41 | `t_cbs_archi_scheduleentry` | 单据体-子表 | 4 | [bos_cbs_archi_schema.md](./bos_cbs_archi_schema.md) |
+| 42 | `t_cbs_archi_scheduleentry` | 单据体-子表 | 4 | [bos_cbs_archi_schema_clr.md](./bos_cbs_archi_schema_clr.md) |
+| 43 | `t_cbs_archi_scheduleentry` | 单据体-子表 | 4 | [bos_cbs_archi_schema_sync.md](./bos_cbs_archi_schema_sync.md) |
+| 44 | `t_cbs_archi_schedulercd` | 调度记录-主表 | 6 | [bos_cbs_archi_schedulercd.md](./bos_cbs_archi_schedulercd.md) |
+| 45 | `t_cbs_archi_schema` | 归档调度计划-主表 | 16 | [bos_cbs_archi_schema.md](./bos_cbs_archi_schema.md) |
+| 46 | `t_cbs_archi_schema` | 清除调度计划-主表 | 16 | [bos_cbs_archi_schema_clr.md](./bos_cbs_archi_schema_clr.md) |
+| 47 | `t_cbs_archi_schema` | 同步调度计划-主表 | 16 | [bos_cbs_archi_schema_sync.md](./bos_cbs_archi_schema_sync.md) |
+| 48 | `t_cbs_archi_schema_l` | 归档调度计划-多语言表 | 4 | [bos_cbs_archi_schema.md](./bos_cbs_archi_schema.md) |
+| 49 | `t_cbs_archi_schema_l` | 清除调度计划-多语言表 | 4 | [bos_cbs_archi_schema_clr.md](./bos_cbs_archi_schema_clr.md) |
+| 50 | `t_cbs_archi_schema_l` | 同步调度计划-多语言表 | 4 | [bos_cbs_archi_schema_sync.md](./bos_cbs_archi_schema_sync.md) |
+| 51 | `t_cbs_archi_splittask` | 归档切分任务-主表 | 16 | [bos_cbs_archi_splittask.md](./bos_cbs_archi_splittask.md) |
+| 52 | `t_cbs_archi_subtask` | 归档子任务-主表 | 11 | [bos_cbs_archi_subtask.md](./bos_cbs_archi_subtask.md) |
+| 53 | `t_cbs_archi_sync_mvrcd` | 基础资料数据同步记录-主表 | 3 | [bos_cbs_archi_sync_mvrcd.md](./bos_cbs_archi_sync_mvrcd.md) |
+| 54 | `t_cbs_archi_task` | 调度任务-主表 | 29 | [bos_cbs_archi_task.md](./bos_cbs_archi_task.md) |
+| 55 | `t_cbs_archi_tbbak` | 中间表详情-主表 | 5 | [bos_cbs_archi_tbbak.md](./bos_cbs_archi_tbbak.md) |
+| 56 | `t_cbs_bdsyncconfig` | 基础资料同步配置-主表 | 7 | [cbs_bdsync_config.md](./cbs_bdsync_config.md) |
+| 57 | `t_cbs_dtx_alarm_user` | 告警通知人员-多选基础资料表 | 3 | [bos_kdtx_scenes.md](./bos_kdtx_scenes.md) |
+| 58 | `t_cbs_dtx_branch_scenes` | 单据体-子表 | 6 | [bos_kdtx_scenes.md](./bos_kdtx_scenes.md) |
+| 59 | `t_cbs_dtx_branch_scenes_l` | 单据体-多语言表 | 5 | [bos_kdtx_scenes.md](./bos_kdtx_scenes.md) |
+| 60 | `t_cbs_dtx_retry_detail` | 单据体-子表 | 5 | [dtx_compensate_strategy.md](./dtx_compensate_strategy.md) |
+| 61 | `t_cbs_dtx_retry_strategy` | 补偿策略-主表 | 16 | [dtx_compensate_strategy.md](./dtx_compensate_strategy.md) |
+| 62 | `t_cbs_dtx_retry_strategy_l` | 补偿策略-多语言表 | 4 | [dtx_compensate_strategy.md](./dtx_compensate_strategy.md) |
+| 63 | `t_cbs_dtx_tx_scenes` | 业务场景配置-主表 | 11 | [bos_kdtx_scenes.md](./bos_kdtx_scenes.md) |
+| 64 | `t_cbs_dtx_tx_scenes` | 场景基础资料-主表 | 11 | [dtx_scenes_base.md](./dtx_scenes_base.md) |
+| 65 | `t_cbs_dtx_tx_scenes_l` | 业务场景配置-多语言表 | 4 | [bos_kdtx_scenes.md](./bos_kdtx_scenes.md) |
+| 66 | `t_cbs_limit_scene` | 限流场景配置-主表 | 22 | [limit_scene_config.md](./limit_scene_config.md) |
+| 67 | `t_cbs_limit_scene_l` | 限流场景配置-多语言表 | 4 | [limit_scene_config.md](./limit_scene_config.md) |
+| 68 | `t_cbs_shard_config` | 分片配置-主表 | 13 | [bos_cbs_shard_config.md](./bos_cbs_shard_config.md) |
+| 69 | `t_cbs_shard_config_l` | 分片配置-多语言表 | 4 | [bos_cbs_shard_config.md](./bos_cbs_shard_config.md) |
+| 70 | `t_cbs_shard_config_tpl` | 分片配置模板-主表 | 8 | [bos_cbs_shard_config_tpl.md](./bos_cbs_shard_config_tpl.md) |
+| 71 | `t_cbs_shard_config_tpl_l` | 分片配置模板-多语言表 | 4 | [bos_cbs_shard_config_tpl.md](./bos_cbs_shard_config_tpl.md) |
+| 72 | `t_cbs_shard_detail` | 分片配置详情表-主表 | 16 | [bos_cbs_shard_detail.md](./bos_cbs_shard_detail.md) |
+| 73 | `t_cbs_shard_disperse_info` | 单据体-子表 | 6 | [bos_cbs_shard_dispersion.md](./bos_cbs_shard_dispersion.md) |
+| 74 | `t_cbs_shard_dispersion` | 离散度计算-主表 | 4 | [bos_cbs_shard_dispersion.md](./bos_cbs_shard_dispersion.md) |
+| 75 | `t_cbs_shard_fast_index` | 快速索引配置-主表 | 10 | [bos_cbs_shard_fast_index.md](./bos_cbs_shard_fast_index.md) |
+| 76 | `t_cbs_shard_log` | 分片操作日志-主表 | 6 | [bos_cbs_shard_log.md](./bos_cbs_shard_log.md) |
+| 77 | `t_cbs_shard_metric` | 分片指标采集-主表 | 6 | [bos_cbs_shard_metric.md](./bos_cbs_shard_metric.md) |
+| 78 | `t_cbs_shard_metric_bill` | 单据体-子表 | 4 | [bos_cbs_shard_metric_stat.md](./bos_cbs_shard_metric_stat.md) |
+| 79 | `t_cbs_shard_metric_info` | 子单据体-子表 | 6 | [bos_cbs_shard_metric_stat.md](./bos_cbs_shard_metric_stat.md) |
+| 80 | `t_cbs_shard_metric_main` | 分片主要堆栈采集-主表 | 10 | [bos_cbs_shard_metric_main.md](./bos_cbs_shard_metric_main.md) |
+| 81 | `t_cbs_shard_metric_stat` | 指标采集分类统计-主表 | 3 | [bos_cbs_shard_metric_stat.md](./bos_cbs_shard_metric_stat.md) |
+| 82 | `t_cbs_shard_name_map` | 别名映射表-主表 | 6 | [bos_cbs_shard_name_map.md](./bos_cbs_shard_name_map.md) |
+| 83 | `t_cbs_shard_progress` | 分片迁移进度表-主表 | 14 | [bos_cbs_shard_progress.md](./bos_cbs_shard_progress.md) |
+| 84 | `t_cbs_shard_runtimeinfo` | 分片配置运行时信息-主表 | 7 | [bos_cbs_shard_runtimeold.md](./bos_cbs_shard_runtimeold.md) |
+| 85 | `t_cbs_shard_splittask` | 分片切分任务-主表 | 14 | [bos_cbs_shard_splittask.md](./bos_cbs_shard_splittask.md) |
+| 86 | `t_cbs_shard_stat_det_ety` | 单据体-子表 | 7 | [bos_cbs_shard_stat_detail.md](./bos_cbs_shard_stat_detail.md) |
+| 87 | `t_cbs_shard_stat_detail` | 统计表单详情-主表 | 10 | [bos_cbs_shard_stat_detail.md](./bos_cbs_shard_stat_detail.md) |
+| 88 | `t_cbs_shard_statistic` | 数据量统计-主表 | 5 | [bos_cbs_shard_statistic.md](./bos_cbs_shard_statistic.md) |
+| 89 | `t_cbs_shard_task` | 分片任务-主表 | 27 | [bos_cbs_shard_task.md](./bos_cbs_shard_task.md) |
+| 90 | `t_dts_datasyncaddress` | 目标地址管理-主表 | 4 | [datasyncaddress.md](./datasyncaddress.md) |
+| 91 | `t_dts_datasyncconfig` | 数据同步配置-主表 | 18 | [data_sync_config.md](./data_sync_config.md) |
+| 92 | `t_dts_log` | 数据同步日志-主表 | 6 | [dts_datasycnlog.md](./dts_datasycnlog.md) |
+| 93 | `t_dts_table_config` | 基础资料关联表配置-主表 | 4 | [dts_tables_config.md](./dts_tables_config.md) |
+| 94 | `t_dts_table_config_entry` | 单据体-子表 | 11 | [dts_tables_config.md](./dts_tables_config.md) |
+| 95 | `t_ft_qs_config` | 快速搜索-主表 | 6 | [bos_cbs_qs_config.md](./bos_cbs_qs_config.md) |
+| 96 | `t_fulltext_custsync` | 全文索引自定义规则-主表 | 7 | [bos_fulltext_index.md](./bos_fulltext_index.md) |
+| 97 | `t_fulltext_custsync_detl` | 单据体-子表 | 9 | [bos_fulltext_index.md](./bos_fulltext_index.md) |

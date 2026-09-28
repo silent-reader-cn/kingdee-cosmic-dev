@@ -1,0 +1,101 @@
+# 许可分组明细查询-lic_license
+
+## 许可分组应用-子表 t_lic_licensegroupapps
+
+- **表名称：** 许可分组应用-子表
+- **表名：** t_lic_licensegroupapps
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
+| 2 | fdetailid | fdetailid | int8 | 64 |  | √ | 0 | id |
+| 3 | fentryid | fentryid | int8 | 64 |  | √ | 0 |  |
+| 4 | fmoduleid | 已购买模块 | int8 | 64 |  | √ | 0 | 许可模块 lic_module |
+| 5 | fbizappid | 已购买应用 | varchar | 36 |  | √ | ' ' | 业务应用实体 bos_devportal_bizapp |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fdetailid | fdetailid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_lic_licensegroupapps_entry |  | fentryid |
+| 2 | pk_t_lic_licensegroupapps |  | fdetailid |
+
+---
+
+## 许可分组明细查询-主表 t_lic_license
+
+- **表名称：** 许可分组明细查询-主表
+- **表名：** t_lic_license
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | null | id |
+| 2 | fproductversion | 产品版本 | varchar | 30 |  | √ | ' ' | 产品版本 |
+| 3 | factivedate | 激活日期 | timestamp | 0 |  |  | null | 激活日期 |
+| 4 | fname | 许可名称 | varchar | 255 |  | √ | ' ' | 许可名称 |
+| 5 | fsoftwarecode | 软件特征码 | varchar | 50 |  | √ | ' ' | 软件特征码 |
+| 6 | fscenetype | 场景 | varchar | 30 |  | √ | ' ' | 场景 |
+| 7 | fexpdate | 过期日期 | timestamp | 0 |  |  | null | 过期日期 |
+| 8 | fprodid | 所属产品 | varchar | 36 |  | √ | ' ' | ISV产品 lic_isvprod |
+| 9 | ftype | 类型 | varchar | 30 |  | √ | ' ' | 类型,枚举: 1 :正式许可 2 :临时许可 |
+| 10 | fproductid | 产品ID | varchar | 50 |  | √ | ' ' | 产品ID |
+| 11 | fproductno | 产品序列号 | varchar | 50 |  | √ | ' ' | 产品序列号 |
+| 12 | findustry | 行业 | varchar | 30 |  | √ | ' ' | 行业 |
+| 13 | fsoftwarename | 软件名称 | varchar | 255 |  | √ | ' ' | 软件名称 |
+| 14 | fprodinstcode | 产品实例码 | varchar | 50 |  | √ | ' ' | 产品实例码 |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fid | fid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | t_lic_license_pkey |  | fid |
+
+---
+
+## 许可分组明细-子表 t_lic_licensedetail
+
+- **表名称：** 许可分组明细-子表
+- **表名：** t_lic_licensedetail
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fgroupid | 许可分组 | int8 | 64 |  | √ | 0 | 许可分组 lic_group |
+| 3 | fenddate | 租赁结束日期 | timestamp | 0 |  |  | null | 租赁结束日期 |
+| 4 | fassignedcount | 已分配数 | int8 | 64 |  | √ | 0 | 已分配数 |
+| 5 | fremaincount | 剩余数 | int8 | 64 |  | √ | 0 | 剩余数 |
+| 6 | fbegindate | 租赁起始日期 | timestamp | 0 |  |  | null | 租赁起始日期 |
+| 7 | fseq | 分录行号 | int8 | 64 |  | √ | 0 | 分录行号 |
+| 8 | ftotalcount | 总数 | int8 | 64 |  | √ | 0 | 总数 |
+| 9 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fentryid | fentryid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | t_lic_licensedetail_pkey |  | fentryid |
+| 2 | idx_t_lic_licdetail_license |  | fid |

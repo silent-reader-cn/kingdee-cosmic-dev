@@ -1,0 +1,30 @@
+# 清理分录实体-fa_clearentry_entity
+
+## 清理分录实体-主表 t_fa_clrbillentry
+
+- **表名称：** 清理分录实体-主表
+- **表名：** t_fa_clrbillentry
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | FID | int8 | 64 |  | √ | 0 | FID |
+| 2 | fperiodid | 清理期间 | int8 | 64 |  | √ | 0 | 会计日历 bd_period |
+| 3 | fseq | 序号 | int8 | 64 |  | √ | 0 | 序号 |
+| 4 | fnumber | fnumber | varchar | 30 |  | √ | ' ' |  |
+| 5 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 6 | fassetbookid | 资产账簿 | int8 | 64 |  | √ | 0 | 启用期间设置 fa_assetbook |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fentryid | fentryid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_fa_clrbillentry_fid |  | fid |
+| 2 | t_fa_clrbillentry_pkey |  | fentryid |

@@ -1,0 +1,66 @@
+# 代码片段管理-openapi_script
+
+## 代码片段管理-主表 t_openapi_script
+
+- **表名称：** 代码片段管理-主表
+- **表名：** t_openapi_script
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
+| 2 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 3 | fname | 脚本名称 | varchar | 255 |  | √ | ' ' | 脚本名称 |
+| 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 5 | fscript_code | 脚本 | varchar | 255 |  | √ | ' ' | 脚本 |
+| 6 | fis_preset | 是否预置 | bpchar | 1 |  | √ | '0' | 是否预置 |
+| 7 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 8 | fscript_sort | 脚本分类 | int8 | 64 |  | √ | 0 | 代码片段分类管理 openapi_script_sort |
+| 9 | fstatus | 数据状态 | bpchar | 1 |  | √ | 'C' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
+| 10 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 11 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
+| 12 | fenable | 使用状态 | bpchar | 1 |  | √ | '1' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 13 | fscript_code_tag | 脚本_详情 | text | 0 |  |  | null | 脚本_详情 |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fid | fid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | pk_t_openapi_script |  | fid |
+| 2 | idx_t_openapi_fscript_sort |  | fscript_sort |
+
+---
+
+## 代码片段管理-多语言表 t_openapi_script_l
+
+- **表名称：** 代码片段管理-多语言表
+- **表名：** t_openapi_script_l
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fname | 脚本名称 | varchar | 255 |  | √ | ' ' | 脚本名称 |
+| 3 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
+| 4 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fpkid | fpkid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_script_l_fid |  | fid |
+| 2 | pk_t_openapi_script_l |  | fpkid |

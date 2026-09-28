@@ -1,0 +1,29 @@
+# 关账表-sca_closeaccounttable
+
+## 关账表-主表 t_sca_closeaccount
+
+- **表名称：** 关账表-主表
+- **表名：** t_sca_closeaccount
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
+| 2 | fmanuorgid | 生产组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 3 | fcloseperiodid | 关账期间 | int8 | 64 |  | √ | 0 | 会计日历 bd_period |
+| 4 | fcalorgid | 核算组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 5 | fcostaccountid | 成本主体 | int8 | 64 |  | √ | 0 | 成本主体 cal_bd_costaccount |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fid | fid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | pk_t_sca_closeaccount |  | fid |
+| 2 | idx_t_sca_closeaccount |  | fcalorgid,fcostaccountid |

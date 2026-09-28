@@ -1,0 +1,100 @@
+# 移动首页方案-mpdm_hpschemeconfig
+
+## 主页配置-子表 t_mpdm_schemecardset
+
+- **表名称：** 主页配置-子表
+- **表名：** t_mpdm_schemecardset
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fhomecardid | 移动首页卡片 | int8 | 64 |  | √ | 0 | 移动首页卡片 mpdm_homecardconfig |
+| 3 | fseqnumber | 默认顺序号 | int8 | 64 |  | √ | 0 | 默认顺序号 |
+| 4 | fcardispreset | 系统预设 | bpchar | 1 |  | √ | '0' | 系统预设 |
+| 5 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
+| 6 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fentryid | fentryid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | pk_mpdm_schemecardset |  | fentryid |
+| 2 | idx_mpdm_schemecard_fid |  | fid |
+
+---
+
+## 移动首页方案-主表 t_mpdm_hpscheme
+
+- **表名称：** 移动首页方案-主表
+- **表名：** t_mpdm_hpscheme
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
+| 2 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 5 | fmobhomebizobjid | 移动页面 | varchar | 80 |  | √ | ' ' | 业务对象 bos_objecttype |
+| 6 | fdescription | 应用说明 | varchar | 255 |  | √ | ' ' | 应用说明 |
+| 7 | fispreset | 系统预设 | bpchar | 1 |  | √ | '0' | 系统预设 |
+| 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 9 | ficonpath | 图标路径 | varchar | 1000 |  | √ | ' ' | 图标路径 |
+| 10 | fstatus | 数据状态 | bpchar | 1 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
+| 11 | fschemeseq | 应用列表序号 | int8 | 64 |  | √ | 0 | 应用列表序号 |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
+| 14 | fenable | 使用状态 | bpchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 15 | fnumber | 编码 | varchar | 80 |  | √ | ' ' | 编码 |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fid | fid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_mpdm_hpscheme_number |  | fnumber |
+| 2 | pk_mpdm_hpscheme |  | fid |
+
+---
+
+## 移动首页方案-多语言表 t_mpdm_hpscheme_l
+
+- **表名称：** 移动首页方案-多语言表
+- **表名：** t_mpdm_hpscheme_l
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fname | 名称 | varchar | 255 |  | √ | ' ' | 名称 |
+| 3 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
+| 4 | fdescription | 应用说明 | varchar | 255 |  | √ | ' ' | 应用说明 |
+| 5 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fpkid | fpkid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | pk_mpdm_hpscheme_l |  | fpkid |
+| 2 | idx_mpdm_hpscheme_l_flid |  | fid,flocaleid |

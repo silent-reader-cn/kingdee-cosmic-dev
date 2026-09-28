@@ -1,0 +1,79 @@
+# 管理员信息-adm_user
+
+## 管理员信息-主表 t_pur_user
+
+- **表名称：** 管理员信息-主表
+- **表名：** t_pur_user
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
+| 2 | fremark | 备注 | varchar | 255 |  | √ | ' ' | 备注 |
+| 3 | fmodifierid | fmodifierid | int8 | 64 |  | √ | 0 |  |
+| 4 | fphone | fphone | varchar | 20 |  | √ | ' ' |  |
+| 5 | fname | 姓名 | varchar | 255 |  | √ | ' ' | 姓名 |
+| 6 | fenterprise | 企业名称 | varchar | 255 |  | √ | ' ' | 企业名称 |
+| 7 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 8 | femail | 邮箱 | varchar | 50 |  | √ | ' ' | 邮箱 |
+| 9 | fidcard | fidcard | varchar | 20 |  | √ | ' ' |  |
+| 10 | fcreditno | 信用代码 | varchar | 60 |  | √ | ' ' | 信用代码 |
+| 11 | fauditdate | fauditdate | timestamp | 0 |  |  | null |  |
+| 12 | fpassword | 登录密码 | varchar | 50 |  | √ | ' ' | 登录密码 |
+| 13 | fbizpartnerid | fbizpartnerid | int8 | 64 |  | √ | 0 |  |
+| 14 | fsupplierid | fsupplierid | int8 | 64 |  | √ | 0 |  |
+| 15 | fmodifytime | fmodifytime | timestamp | 0 |  |  | null |  |
+| 16 | fstatus | 审核状态 | bpchar | 1 |  | √ | ' ' | 审核状态,枚举: A :保存 B :已提交 C :已审核 |
+| 17 | fmasterid | fmasterid | int8 | 64 |  | √ | 0 |  |
+| 18 | fcreatorid | fcreatorid | int8 | 64 |  | √ | 0 |  |
+| 19 | fsupplierregid | fsupplierregid | varchar | 50 |  | √ | ' ' |  |
+| 20 | fenable | 使用状态 | bpchar | 1 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 21 | fnumber | 账号（手机号/邮箱） | varchar | 50 |  | √ | ' ' | 账号（手机号/邮箱） |
+| 22 | fusertype | fusertype | varchar | 2 |  | √ | '1' |  |
+| 23 | fdeptduty | 部门及职务 | varchar | 50 |  | √ | ' ' | 部门及职务 |
+| 24 | fauditorid | fauditorid | int8 | 64 |  | √ | 0 |  |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fid | fid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_pur_user_fnumber |  | fnumber |
+| 2 | t_pur_user_pkey |  | fid |
+
+---
+
+## 管理员信息-多语言表 t_pur_user_l
+
+- **表名称：** 管理员信息-多语言表
+- **表名：** t_pur_user_l
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fname | 姓名 | varchar | 255 |  | √ | ' ' | 姓名 |
+| 3 | fenterprise | 企业名称 | varchar | 255 |  | √ | ' ' | 企业名称 |
+| 4 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
+| 5 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fpkid | fpkid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_pur_user_l_fid |  | fid,flocaleid |
+| 2 | idx_pur_user_enterprise |  | flocaleid,fenterprise |
+| 3 | t_pur_user_l_pkey |  | fpkid |

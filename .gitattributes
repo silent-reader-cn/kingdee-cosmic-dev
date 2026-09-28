@@ -1,0 +1,6 @@
+# 统一换行符，避免 Windows 检出后产生无意义的整文件 diff
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.ico binary
+*.zip binary

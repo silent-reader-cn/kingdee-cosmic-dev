@@ -1,0 +1,37 @@
+# 识别结果-rim_recognition_result
+
+## 识别结果-主表 t_rim_recognition_result
+
+- **表名称：** 识别结果-主表
+- **表名：** t_rim_recognition_result
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
+| 2 | ffile_url | 文件url | varchar | 200 |  | √ | ' ' | 文件url |
+| 3 | ffile_content | 识别结果 | varchar | 255 |  | √ | ' ' | 识别结果 |
+| 4 | ffile_hash | 文件hash | varchar | 100 |  | √ | ' ' | 文件hash |
+| 5 | ffile_name | 文件名 | varchar | 100 |  | √ | ' ' | 文件名 |
+| 6 | ftake_time | 识别耗时 | int8 | 64 |  | √ | 0 | 识别耗时 |
+| 7 | fcreate_time | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 8 | fcreater | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 9 | flocal_url | 原文件 | varchar | 200 |  | √ | ' ' | 原文件 |
+| 10 | fpage_no | 页码 | int8 | 64 |  | √ | 0 | 页码 |
+| 11 | ffile_content_tag | 识别结果_详情 | text | 0 |  |  | null | 识别结果_详情 |
+| 12 | finterface | 接口类型 | varchar | 20 |  | √ | ' ' | 接口类型 |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fid | fid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_rim_recognition_result |  | ffile_hash,fpage_no |
+| 2 | idx_rim_recognition_result2 |  | fcreate_time,fcreater |
+| 3 | pk_rim_recognition_result |  | fid |

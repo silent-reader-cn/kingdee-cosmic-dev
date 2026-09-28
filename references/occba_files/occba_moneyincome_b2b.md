@@ -1,0 +1,208 @@
+# 客户资金收入单-occba_moneyincome_b2b
+
+## 客户资金收入单-反写记录表 t_occba_moneyincome_wb
+
+- **表名称：** 客户资金收入单-反写记录表
+- **表名：** t_occba_moneyincome_wb
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | null |  |
+| 2 | foperate | foperate | varchar | 50 |  | √ | ' ' |  |
+| 3 | fruleverid | fruleverid | int8 | 64 |  |  | null |  |
+| 4 | fsbillid | fsbillid | int8 | 64 |  |  | null |  |
+| 5 | fstableid | fstableid | int8 | 64 |  |  | null |  |
+| 6 | fsid | fsid | int8 | 64 |  |  | null |  |
+| 7 | fwritevalue | fwritevalue | numeric | 23 | 10 |  | null |  |
+| 8 | fseq | fseq | int4 | 32 |  | √ | 0 |  |
+| 9 | fentryid | fentryid | int8 | 64 |  | √ | null |  |
+| 10 | fruleitemid | fruleitemid | int8 | 64 |  |  | null |  |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fentryid | fentryid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | pk_occba_moneyincome_wb |  | fentryid |
+| 2 | idx_occba_moneyincome_wb_fk |  | fid |
+
+---
+
+## 客户资金收入单-主表 t_occba_moneyincome
+
+- **表名称：** 客户资金收入单-主表
+- **表名：** t_occba_moneyincome
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
+| 2 | fsumrecamount | 收款总金额 | numeric | 23 | 10 | √ | 0 | 收款总金额 |
+| 3 | freaccountname | 付款账户名称 | varchar | 255 |  | √ | ' ' | 付款账户名称 |
+| 4 | fbilldate | 收款日期 | timestamp | 0 |  |  | null | 收款日期 |
+| 5 | freceivechannelid | 收入渠道 | int8 | 64 |  | √ | 0 | 渠道 ocdbd_channel |
+| 6 | faudittime | 审核日期 | timestamp | 0 |  |  | null | 审核日期 |
+| 7 | fmoneytypeid | 资金类型 | int8 | 64 |  | √ | 0 | 资金类型 occba_moneytype_b2b |
+| 8 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 9 | fsalesyearid | 所属年份 | int8 | 64 |  | √ | 0 | 营销周期 ocdbd_assess_period |
+| 10 | fpooltype | 付款类别 | bpchar | 1 |  | √ | 'A' | 付款类别,枚举: A :品牌商 B :渠道商 |
+| 11 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 12 | frecaccountid | 收款银行账户 | int8 | 64 |  | √ | 0 | 银行账户 bd_accountbanks |
+| 13 | fmoneyorgid | 资金组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 14 | fpayaccount | 付款账号 | varchar | 255 |  | √ | ' ' | 付款账号 |
+| 15 | fbillno | 单据编号 | varchar | 80 |  | √ | ' ' | 单据编号 |
+| 16 | frecbank | 收款银行 | varchar | 255 |  | √ | ' ' | 收款银行 |
+| 17 | forderremark | 备注 | varchar | 500 |  | √ | ' ' | 备注 |
+| 18 | fpaycustomerid | 付款客户 | int8 | 64 |  | √ | 0 | 客户 bd_customer |
+| 19 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 20 | fpayaccountid | 付款银行账户Id | int8 | 64 |  | √ | 0 | 付款银行账户Id |
+| 21 | fpayerbankid | 付款银行 | int8 | 64 |  | √ | 0 | 行名行号 bd_bebank |
+| 22 | fbillstatus | 单据状态 | bpchar | 1 |  | √ | 'A' | 单据状态,枚举: A :暂存 B :已提交 C :已审核 |
+| 23 | fmoneyaccountid | 资金账户 | int8 | 64 |  | √ | 0 | 资金账户 ocdbd_incentiveaccount |
+| 24 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 25 | fdatasources | 数据来源 | bpchar | 1 |  | √ | '2' | 数据来源,枚举: 0 :星瀚财务云 1 :EAS Cloud 2 :手工录入 3 :经销商提报 4 :星空旗舰版财务云 |
+| 26 | fjoinsumrecamount | fjoinsumrecamount | numeric | 23 | 10 | √ | 0 |  |
+| 27 | fpaytype | 支付方式 | bpchar | 1 |  | √ | '0' | 支付方式,枚举: 0 :银行转账 1 :现金 2 :微信 3 :支付宝 4 :其他 |
+| 28 | fpaybank | 付款银行 | varchar | 255 |  | √ | ' ' | 付款银行 |
+| 29 | fsalesmonthid | 所属月份 | int8 | 64 |  | √ | 0 | 营销周期 ocdbd_assess_entity |
+| 30 | fpaychannelid | 付款渠道 | int8 | 64 |  | √ | 0 | 渠道 ocdbd_channel |
+| 31 | frecaccount | 收款账号 | varchar | 255 |  | √ | ' ' | 收款账号 |
+| 32 | fcurrencyid | 币别 | int8 | 64 |  | √ | 0 | 币种 bd_currency |
+| 33 | fauditorid | 审核人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fid | fid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | pk_occba_moneyincome |  | fid |
+| 2 | idx_occba_moneyincome_bno |  | fbillno |
+| 3 | idx_occba_moneyincome_date |  | fbilldate |
+
+---
+
+## 客户资金收入单-关联追踪表 t_occba_moneyincome_tc
+
+- **表名称：** 客户资金收入单-关联追踪表
+- **表名：** t_occba_moneyincome_tc
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | null |  |
+| 2 | ftbillid | ftbillid | int8 | 64 |  |  | null |  |
+| 3 | fttableid | fttableid | int8 | 64 |  |  | null |  |
+| 4 | fsbillid | fsbillid | int8 | 64 |  |  | null |  |
+| 5 | fstableid | fstableid | int8 | 64 |  |  | null |  |
+| 6 | fsid | fsid | int8 | 64 |  |  | null |  |
+| 7 | ftid | ftid | int8 | 64 |  |  | null |  |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fid | fid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_occba_moneyincome_tc_tbill |  | ftbillid |
+| 2 | pk_occba_moneyincome_tc |  | fid |
+| 3 | idx_occba_moneyincome_tc_tid |  | ftid |
+
+---
+
+## 关联子实体-子表 t_occba_incomeentry_lk
+
+- **表名称：** 关联子实体-子表
+- **表名：** t_occba_incomeentry_lk
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fsbillid | 源单内码 | int8 | 64 |  |  | null | 源单内码 |
+| 2 | fstableid | 源单主实体编码 | int8 | 64 |  |  | null | 源单主实体编码 |
+| 3 | fsid | 源单主实体内码 | int8 | 64 |  |  | null | 源单主实体内码 |
+| 4 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
+| 5 | fentryid | fentryid | int8 | 64 |  | √ | null |  |
+| 6 | fpkid | fpkid | int8 | 64 |  | √ | null | id |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fpkid | fpkid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | pk_occba_incomeentry_lk |  | fpkid |
+| 2 | idx_occba_incomeentry_lk_fk |  | fentryid |
+
+---
+
+## 收款明细单据体-子表 t_occba_incomeentry
+
+- **表名称：** 收款明细单据体-子表
+- **表名：** t_occba_incomeentry
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fsettledintamt | 已结算利息 | numeric | 23 | 10 | √ | 0 | 已结算利息 |
+| 3 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
+| 4 | fsalerid | 业务员 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 5 | fjoinrecamount | 已生成收款单金额 | numeric | 23 | 10 | √ | 0 | 已生成收款单金额 |
+| 6 | fpredictintamt | 预计利息 | numeric | 23 | 10 | √ | 0 | 预计利息 |
+| 7 | fsrcbillentryseq | 来源单据分录序号 | int4 | 32 |  | √ | 0 | 来源单据分录序号 |
+| 8 | finterest | 利息（%） | numeric | 23 | 10 | √ | 0 | 利息（%） |
+| 9 | frecamount | 收款金额 | numeric | 23 | 10 | √ | 0 | 收款金额 |
+| 10 | fprovinceid | 所属省区 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 11 | fusedamount | 已使用金额 | numeric | 23 | 10 | √ | 0 | 已使用金额 |
+| 12 | funuseamount | 未使用金额 | numeric | 23 | 10 | √ | 0 | 未使用金额 |
+| 13 | fsrcbillentity | 来源单据实体 | varchar | 36 |  | √ | ' ' | 主实体对象 bos_entityobject |
+| 14 | fsrcbillnumber | 来源单据编号 | varchar | 80 |  | √ | ' ' | 来源单据编号 |
+| 15 | fsrcbillid | 来源单据ID | int8 | 64 |  | √ | 0 | 来源单据ID |
+| 16 | fintacctid | 利息账户 | int8 | 64 |  | √ | 0 | 资金账户 ocdbd_incentiveaccount |
+| 17 | fregionid | 所属大区 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 18 | fsaleorgid | 销售组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 19 | fdepartmentid | 销售部门 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 20 | fsrcbillentryid | 来源单据行ID | int8 | 64 |  | √ | 0 | 来源单据行ID |
+| 21 | fsettlechannelid | 收入渠道 | int8 | 64 |  | √ | 0 | 渠道 ocdbd_channel |
+| 22 | fcalcintway | 计息方式 | bpchar | 1 |  | √ | 'A' | 计息方式,枚举: A :一次性计息 |
+| 23 | fsettleorgid | 结算组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 24 | fentryremark | 行备注 | varchar | 500 |  | √ | ' ' | 行备注 |
+| 25 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 26 | fwinterpolicyid | 冬储政策 | int8 | 64 |  | √ | 0 | 冬储款计息政策 occba_winterpolicy |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fentryid | fentryid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_occba_incomeentry_fid |  | fid |
+| 2 | pk_occba_incomeentry |  | fentryid |

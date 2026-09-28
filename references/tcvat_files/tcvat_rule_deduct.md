@@ -1,0 +1,183 @@
+# 进项抵扣规则-tcvat_rule_deduct
+
+## 份数取数规则-子表 t_tcvat_deduct_num_entry
+
+- **表名称：** 份数取数规则-子表
+- **表名：** t_tcvat_deduct_num_entry
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | famountfield | 统计字段 | int8 | 64 |  | √ | 0 | 数据源字段配置 tctb_datasource_entry |
+| 3 | ftable | 数据源 | int8 | 64 |  | √ | 0 | 数据源配置 tctb_custom_datasource |
+| 4 | fabsolute | 绝对值 | bpchar | 1 |  | √ | '0' | 绝对值 |
+| 5 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
+| 6 | fbizname | 业务名称 | varchar | 800 |  | √ | ' ' | 业务名称 |
+| 7 | fconditionjson | 过滤条件 | varchar | 2000 |  | √ | ' ' | 过滤条件 |
+| 8 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 9 | ffiltercondition | 过滤条件 | varchar | 2000 |  | √ | ' ' | 过滤条件 |
+| 10 | fdatadirection | 取数方向 | varchar | 50 |  | √ | ' ' | 取数方向,枚举: positive :正向 reverse :反向 |
+| 11 | fdatatype | 取数方式 | varchar | 50 |  | √ | ' ' | 取数方式,枚举: zjqs :直接取数 zjjs :直接计数 |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fentryid | fentryid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_tcvat_deduct_num_entry_fk |  | fid |
+| 2 | pk_tcvat_deduct_num_entry |  | fentryid |
+
+---
+
+## 进项抵扣规则-多语言表 t_tcvat_rule_deduct_l
+
+- **表名称：** 进项抵扣规则-多语言表
+- **表名：** t_tcvat_rule_deduct_l
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fname | 名称 | varchar | 200 |  | √ | ' ' | 名称 |
+| 3 | flocaleid | flocaleid | varchar | 10 |  | √ | ' ' | localeid |
+| 4 | fpkid | fpkid | varchar | 36 |  | √ | ' ' | pkid |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fpkid | fpkid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_tcvat_rule_deduct_l_0 |  | fid,flocaleid |
+| 2 | pk_tcvat_rule_deduct_l |  | fpkid |
+
+---
+
+## 税额取数规则-子表 t_tcvat_deduct_tax_entry
+
+- **表名称：** 税额取数规则-子表
+- **表名：** t_tcvat_deduct_tax_entry
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | fentryentityconf | 取数逻辑 | varchar | 2000 |  | √ | ' ' | 取数逻辑 |
+| 3 | famountfield | 金额字段 | int8 | 64 |  | √ | 0 | 数据源字段配置 tctb_datasource_entry |
+| 4 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
+| 5 | fbizname | 业务名称 | varchar | 50 |  | √ | ' ' | 业务名称 |
+| 6 | fconditionjson | 过滤条件 | text | 0 |  |  | null | 过滤条件 |
+| 7 | fentryentityconfjson | 增值税税率/预征率 | varchar | 2000 |  | √ | ' ' | 增值税税率/预征率 |
+| 8 | ftable | 数据源 | int8 | 64 |  | √ | 0 | 数据源配置 tctb_custom_datasource |
+| 9 | fabsolute | 绝对值 | bpchar | 1 |  | √ | '0' | 绝对值 |
+| 10 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 11 | ffiltercondition | 过滤条件 | text | 0 |  |  | null | 过滤条件 |
+| 12 | fdatadirection | 取数方向 | varchar | 50 |  | √ | ' ' | 取数方向,枚举: positive :正向 reverse :反向 |
+| 13 | fdatatype | 取数方式 | varchar | 50 |  | √ | ' ' | 取数方式,枚举: zjqs :直接取数 jsflqs :含税价换算不含税价 cysldsqs :税额换算不含税价 hsjhsse :含税价换算税额 bhsjhsse :不含税价换算税额 |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fentryid | fentryid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | pk_tcvat_deduct_tax_entry |  | fentryid |
+| 2 | idx_tcvat_deduct_tax_entry_fk |  | fid |
+
+---
+
+## 金额取数规则-子表 t_tcvat_rule_deduct_entry
+
+- **表名称：** 金额取数规则-子表
+- **表名：** t_tcvat_rule_deduct_entry
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 |  |
+| 2 | ffconditionjson | 过滤条件 | text | 0 |  |  | '' | 过滤条件 |
+| 3 | fentryentityconf | 取数逻辑 | varchar | 2000 |  | √ | ' ' | 取数逻辑 |
+| 4 | famountfield | 金额字段 | int8 | 64 |  | √ | 0 | 数据源字段配置 tctb_datasource_entry |
+| 5 | fseq | 分录行号 | int4 | 32 |  | √ | 0 | 分录行号 |
+| 6 | fbizname | 业务名称 | varchar | 50 |  | √ | ' ' | 业务名称 |
+| 7 | fentryentityconfjson | 增值税税率/预征率 | varchar | 2000 |  | √ | ' ' | 增值税税率/预征率 |
+| 8 | ftable | 数据源 | int8 | 64 |  | √ | 0 | 数据源配置 tctb_custom_datasource |
+| 9 | fabsolute | 绝对值 | bpchar | 1 |  | √ | '0' | 绝对值 |
+| 10 | fentryid | fentryid | int8 | 64 |  | √ | 0 | id |
+| 11 | ffiltercondition | 过滤条件 | text | 0 |  |  | '' | 过滤条件 |
+| 12 | fdatadirection | 取数方向 | varchar | 50 |  | √ | ' ' | 取数方向,枚举: positive :正向 reverse :反向 |
+| 13 | fdatatype | 取数方式 | varchar | 50 |  | √ | ' ' | 取数方式,枚举: zjqs :直接取数 jsflqs :含税价换算不含税价 cysldsqs :税额换算不含税价 |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fentryid | fentryid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | pk_tcvat_rule_deduct_entry |  | fentryid |
+| 2 | idx_tcvat_rule_deduct_entry_fk |  | fid |
+
+---
+
+## 进项抵扣规则-主表 t_tcvat_rule_deduct
+
+- **表名称：** 进项抵扣规则-主表
+- **表名：** t_tcvat_rule_deduct
+
+### 表格列定义
+
+| 序号 | 列标题 | 列名称 | 类型 | 长度 | 精度 | 非空 | 默认值 | 备注 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | fid | fid | int8 | 64 |  | √ | 0 | id |
+| 2 | fname | fname | varchar | 50 |  | √ | ' ' |  |
+| 3 | fmodifierid | 修改人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 4 | fcreatetime | 创建时间 | timestamp | 0 |  |  | null | 创建时间 |
+| 5 | fdeducttype | 抵扣类型 | int8 | 64 |  | √ | 0 | 业务定义 tpo_tcvat_bizdef |
+| 6 | forgid | 创建组织 | int8 | 64 |  | √ | 0 | 业务单元 bos_org |
+| 7 | fruletype | 规则类型 | varchar | 50 |  | √ | ' ' | 规则类型,枚举: private :自用规则 public :可分配规则 |
+| 8 | finvoice | 是否发票池取数 | varchar | 50 |  | √ | ' ' | 是否发票池取数,枚举: 1 :是 0 :否 |
+| 9 | fmodifytime | 修改时间 | timestamp | 0 |  |  | null | 修改时间 |
+| 10 | fjzjt | 即征即退业务 | varchar | 50 |  | √ | ' ' | 即征即退业务,枚举: 0 :否 1 :是 |
+| 11 | fstatus | 数据状态 | varchar | 50 |  | √ | ' ' | 数据状态,枚举: A :暂存 B :已提交 C :已审核 |
+| 12 | fcreatorid | 创建人 | int8 | 64 |  | √ | 0 | 人员 bos_user |
+| 13 | fmasterid | 主数据内码 | int8 | 64 |  | √ | 0 | 主数据内码 |
+| 14 | fissystem | 系统预设 | varchar | 50 |  | √ | ' ' | 系统预设,枚举: 0 :否 1 :是 |
+| 15 | fenable | 使用状态 | varchar | 50 |  | √ | ' ' | 使用状态,枚举: 0 :禁用 1 :可用 |
+| 16 | ftaxpayertype | 适用纳税人类型 | varchar | 50 |  | √ | ' ' | 适用纳税人类型,枚举: ybnsr :一般纳税人 xgmnsr :小规模纳税人 |
+| 17 | fnumber | 编码 | varchar | 30 |  | √ | ' ' | 编码 |
+| 18 | frulepurpose | 规则用途 | varchar | 50 |  | √ | ' ' | 规则用途,枚举: nssb :纳税申报 sjjt :税金计提 |
+
+### 列规则定义
+
+| 序号 | 键编码 | 列字段 |
+| :--- | :--- | :--- |
+| 1 | fid | fid |
+
+### 索引定义
+
+| 序号 | 索引名 | 唯一 | 列字段 |
+| :--- | :--- | :--- | :--- |
+| 1 | idx_t_tcvat_rule_deduct_forgid |  | forgid,fnumber |
+| 2 | pk_tcvat_rule_deduct |  | fid |
