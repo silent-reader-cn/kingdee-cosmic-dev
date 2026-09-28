@@ -4,3 +4,6 @@ __pycache__/
 Thumbs.db
 .idea/
 .vscode/
+
+# 本地 AI 助手工作目录（内部笔记，不随仓库发布）
+.workbuddy-ai/
