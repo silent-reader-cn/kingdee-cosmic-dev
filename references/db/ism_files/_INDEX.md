@@ -1,0 +1,101 @@
+# ism 模块表清单
+
+> 本模块共收录 **89** 张表定义，来自 `ism_files/`。
+
+> 索引由 `scripts/build_index.py` 从 Markdown 自动生成，请勿手工编辑。
+> 检索本模块表结构请用统一检索脚本（比翻本文件更快）：
+> ```bash
+> python scripts/search.py <关键词> --scope db --category ism
+> ```
+
+| 序号 | 数据库表名 | 中文名称 | 字段数 | 详细定义文件 |
+| :---: | :--- | :--- | :---: | :--- |
+| 1 | `t_ism_apsettlebill` | 应付结算清单-主表 | 21 | [ism_apsettlebill.md](./ism_apsettlebill.md) |
+| 2 | `t_ism_apsettlebillentry` | 单据体-子表 | 64 | [ism_apsettlebill.md](./ism_apsettlebill.md) |
+| 3 | `t_ism_apsettlebillentry_b` | 单据体-分表 | 21 | [ism_apsettlebill.md](./ism_apsettlebill.md) |
+| 4 | `t_ism_arsettlebill` | 应收结算清单-主表 | 21 | [ism_arsettlebill.md](./ism_arsettlebill.md) |
+| 5 | `t_ism_arsettlebillentry` | 单据体-子表 | 60 | [ism_arsettlebill.md](./ism_arsettlebill.md) |
+| 6 | `t_ism_arsettlebillentry_b` | 单据体-分表 | 21 | [ism_arsettlebill.md](./ism_arsettlebill.md) |
+| 7 | `t_ism_billfieldrst` | 虚单字段重置规则-主表 | 14 | [ism_billfieldresetrule.md](./ism_billfieldresetrule.md) |
+| 8 | `t_ism_billfieldrst_e` | 字段转换配置-子表 | 7 | [ism_billfieldresetrule.md](./ism_billfieldresetrule.md) |
+| 9 | `t_ism_billfieldrst_l` | 虚单字段重置规则-多语言表 | 5 | [ism_billfieldresetrule.md](./ism_billfieldresetrule.md) |
+| 10 | `t_ism_billmodel` | 结算单据模型-主表 | 0 | [ism_billmapcfg.md](./ism_billmapcfg.md) |
+| 11 | `t_ism_billmodel_l` | 结算单据模型-多语言表 | 0 | [ism_billmapcfg.md](./ism_billmapcfg.md) |
+| 12 | `t_ism_billsettledata` | 单据结算路径匹配-主表 | 6 | [ism_billsettledata.md](./ism_billsettledata.md) |
+| 13 | `t_ism_bizdirectjudge` | 业务方向配置-主表 | 9 | [ism_bizdirectjudge.md](./ism_bizdirectjudge.md) |
+| 14 | `t_ism_bizdirectjudge_l` | 业务方向配置-多语言表 | 4 | [ism_bizdirectjudge.md](./ism_bizdirectjudge.md) |
+| 15 | `t_ism_botpconfig` | 内部单据生成方案-主表 | 14 | [ism_botpconfig.md](./ism_botpconfig.md) |
+| 16 | `t_ism_botpconfig_detail` | 生成配置-子表 | 9 | [ism_botpconfig.md](./ism_botpconfig.md) |
+| 17 | `t_ism_botpconfig_l` | 内部单据生成方案-多语言表 | 5 | [ism_botpconfig.md](./ism_botpconfig.md) |
+| 18 | `t_ism_cleardirtyset` | 清理结算垃圾数据设置-主表 | 5 | [ism_cleardirtyset.md](./ism_cleardirtyset.md) |
+| 19 | `t_ism_custfieldset` | 结算价目表自定义维度配置-主表 | 19 | [ism_pricelistcustfieldset.md](./ism_pricelistcustfieldset.md) |
+| 20 | `t_ism_custfieldset_l` | 结算价目表自定义维度配置-多语言表 | 4 | [ism_pricelistcustfieldset.md](./ism_pricelistcustfieldset.md) |
+| 21 | `t_ism_defaultorgwarehouse` | 内部交易单据默认仓库（存储）-主表 | 6 | [ism_defaultorgwarehouse.md](./ism_defaultorgwarehouse.md) |
+| 22 | `t_ism_generateconfig` | 组织间结算处理配置（暂不启用）-主表 | 12 | [ism_generateconfig.md](./ism_generateconfig.md) |
+| 23 | `t_ism_generateconfig_l` | 组织间结算处理配置（暂不启用）-多语言表 | 4 | [ism_generateconfig.md](./ism_generateconfig.md) |
+| 24 | `t_ism_generateconfig_tf` | 单据转换处理器-子表 | 6 | [ism_generateconfig.md](./ism_generateconfig.md) |
+| 25 | `t_ism_innerbillfielddata` | 内部交易单据字段设置-主表 | 12 | [ism_innerbillfielddata.md](./ism_innerbillfielddata.md) |
+| 26 | `t_ism_innersettle_botp` | 内部交易单据生成转换规则记录-主表 | 5 | [ism_innersettle_botp.md](./ism_innersettle_botp.md) |
+| 27 | `t_ism_interorgprice` | 结算取价规则-主表 | 19 | [ism_interorgsettlerule.md](./ism_interorgsettlerule.md) |
+| 28 | `t_ism_interorgprice_l` | 结算取价规则-多语言表 | 5 | [ism_interorgsettlerule.md](./ism_interorgsettlerule.md) |
+| 29 | `t_ism_interorgpriceinfo` | 取价信息-子表 | 23 | [ism_interorgsettlerule.md](./ism_interorgsettlerule.md) |
+| 30 | `t_ism_interorgsettlecfg` | 结算判定配置-主表 | 16 | [ism_interorgsettlecfg.md](./ism_interorgsettlecfg.md) |
+| 31 | `t_ism_interorgsettlecfg_l` | 结算判定配置-多语言表 | 5 | [ism_interorgsettlecfg.md](./ism_interorgsettlecfg.md) |
+| 32 | `t_ism_prclst_demorg` | 需求方结算组织-多选基础资料表 | 3 | [ism_settlepricelist.md](./ism_settlepricelist.md) |
+| 33 | `t_ism_pricelist_acct` | 适用范围-子表 | 5 | [ism_settlepricelist.md](./ism_settlepricelist.md) |
+| 34 | `t_ism_priceruleplan` | 匹配维度配置-主表 | 11 | [ism_priceruleplan.md](./ism_priceruleplan.md) |
+| 35 | `t_ism_priceruleplan_e` | 取价规则字段配置-子表 | 9 | [ism_priceruleplan.md](./ism_priceruleplan.md) |
+| 36 | `t_ism_priceruleplan_l` | 匹配维度配置-多语言表 | 4 | [ism_priceruleplan.md](./ism_priceruleplan.md) |
+| 37 | `t_ism_settlebatch` | 结算分批数据保存状态-主表 | 6 | [ism_settlebatchdata.md](./ism_settlebatchdata.md) |
+| 38 | `t_ism_settlebatchset` | 结算分批设置明细-主表 | 9 | [ism_createsettlebatchset.md](./ism_createsettlebatchset.md) |
+| 39 | `t_ism_settlebill_prc` | 组织间结算插件-主表 | 13 | [ism_settlebillprocessor.md](./ism_settlebillprocessor.md) |
+| 40 | `t_ism_settlebill_prc_l` | 组织间结算插件-多语言表 | 4 | [ism_settlebillprocessor.md](./ism_settlebillprocessor.md) |
+| 41 | `t_ism_settlebillrange` | 结算单据范围-子表 | 4 | [ism_settleplan.md](./ism_settleplan.md) |
+| 42 | `t_ism_settlelog` | 生成内部交易单据记录-主表 | 14 | [ism_settlelog.md](./ism_settlelog.md) |
+| 43 | `t_ism_settlelog_detail` | 单据体-子表 | 25 | [ism_settlelog.md](./ism_settlelog.md) |
+| 44 | `t_ism_settlemiddledata` | 结算中间结果数据-主表 | 85 | [ism_settlemiddledata.md](./ism_settlemiddledata.md) |
+| 45 | `t_ism_settlemiddledata_n` | 结算中间结果数据-分表 | 17 | [ism_settlemiddledata.md](./ism_settlemiddledata.md) |
+| 46 | `t_ism_settlemiddledata_p` | 结算中间结果数据-分表 | 30 | [ism_settlemiddledata.md](./ism_settlemiddledata.md) |
+| 47 | `t_ism_settlemiddledata_s` | 结算中间结果数据-分表 | 21 | [ism_settlemiddledata.md](./ism_settlemiddledata.md) |
+| 48 | `t_ism_settlenetrecord` | 组织间结算网控互斥-主表 | 8 | [ism_settlenetrecord.md](./ism_settlenetrecord.md) |
+| 49 | `t_ism_settleparam` | 内部单据字段重置-主表 | 13 | [ism_settleparam.md](./ism_settleparam.md) |
+| 50 | `t_ism_settleparam_e` | 业务参数信息-子表 | 10 | [ism_settleparam.md](./ism_settleparam.md) |
+| 51 | `t_ism_settleparam_l` | 内部单据字段重置-多语言表 | 5 | [ism_settleparam.md](./ism_settleparam.md) |
+| 52 | `t_ism_settleparam_mc` | 匹配条件单据体-子表 | 12 | [ism_settleparam.md](./ism_settleparam.md) |
+| 53 | `t_ism_settleplan` | 组织间结算方案配置（废弃）-主表 | 12 | [ism_settleplan.md](./ism_settleplan.md) |
+| 54 | `t_ism_settleplan_l` | 组织间结算方案配置（废弃）-多语言表 | 5 | [ism_settleplan.md](./ism_settleplan.md) |
+| 55 | `t_ism_settlepricedim` | 结算价目表取价维度设置-主表 | 13 | [ism_settlepricedim.md](./ism_settlepricedim.md) |
+| 56 | `t_ism_settlepricedim_e` | 单据体-子表 | 10 | [ism_settlepricedim.md](./ism_settlepricedim.md) |
+| 57 | `t_ism_settlepricedim_l` | 结算价目表取价维度设置-多语言表 | 4 | [ism_settlepricedim.md](./ism_settlepricedim.md) |
+| 58 | `t_ism_settlepricegroup` | 结算价目表分组-主表 | 14 | [ism_settlepricegroup.md](./ism_settlepricegroup.md) |
+| 59 | `t_ism_settlepricegroup_l` | 结算价目表分组-多语言表 | 5 | [ism_settlepricegroup.md](./ism_settlepricegroup.md) |
+| 60 | `t_ism_settlepricelist` | 组织间结算价目表-主表 | 19 | [ism_settlepricelist.md](./ism_settlepricelist.md) |
+| 61 | `t_ism_settlepricelist_e` | 单据体-子表 | 20 | [ism_settlepricelist.md](./ism_settlepricelist.md) |
+| 62 | `t_ism_settlepricelist_l` | 组织间结算价目表-多语言表 | 4 | [ism_settlepricelist.md](./ism_settlepricelist.md) |
+| 63 | `t_ism_settleproclog` | 创建结算清单过程日志-主表 | 6 | [ism_createsettleproclog.md](./ism_createsettleproclog.md) |
+| 64 | `t_ism_settlerelation_d` | 核算体系明细-子表 | 8 | [ism_settlerelations.md](./ism_settlerelations.md) |
+| 65 | `t_ism_settlerelation_e` | 结算路径明细-子表 | 19 | [ism_settlerelations.md](./ism_settlerelations.md) |
+| 66 | `t_ism_settlerelation_gmc` | 匹配条件.分类设置-子表 | 13 | [ism_settlerelations.md](./ism_settlerelations.md) |
+| 67 | `t_ism_settlerelation_mc` | 匹配条件.基本设置-子表 | 12 | [ism_settlerelations.md](./ism_settlerelations.md) |
+| 68 | `t_ism_settlerelations` | 结算路径-主表 | 28 | [ism_settlerelations.md](./ism_settlerelations.md) |
+| 69 | `t_ism_settlerelations_l` | 结算路径-多语言表 | 5 | [ism_settlerelations.md](./ism_settlerelations.md) |
+| 70 | `t_ism_settleresult` | 结算生成日志-主表 | 23 | [ism_settleresuldata.md](./ism_settleresuldata.md) |
+| 71 | `t_ism_settleresult_e` | 结算异常信息明细-主表 | 13 | [ism_settleexdetail.md](./ism_settleexdetail.md) |
+| 72 | `t_ism_settleresult_s` | 生成结果-子表 | 6 | [ism_settleresuldata.md](./ism_settleresuldata.md) |
+| 73 | `t_ism_settleresult_suborg` | 下级组织-多选基础资料表 | 3 | [ism_settleresuldata.md](./ism_settleresuldata.md) |
+| 74 | `t_ism_settleresult_sume` | 异常信息-子表 | 5 | [ism_settleresuldata.md](./ism_settleresuldata.md) |
+| 75 | `t_ism_sr_settlepricelist` | 结算价目表-多选基础资料表 | 3 | [ism_settlerelations.md](./ism_settlerelations.md) |
+| 76 | `t_ism_stc_botprule` | 转换规则-多选基础资料表 | 3 | [ism_timeshifting_config.md](./ism_timeshifting_config.md) |
+| 77 | `t_ism_sysparamdata` | 创建结算清单后台参数-主表 | 3 | [ism_sysparamdata.md](./ism_sysparamdata.md) |
+| 78 | `t_ism_timeshifting_config` | 时间偏移配置-主表 | 16 | [ism_timeshifting_config.md](./ism_timeshifting_config.md) |
+| 79 | `t_ism_timeshifting_config_l` | 时间偏移配置-多语言表 | 4 | [ism_timeshifting_config.md](./ism_timeshifting_config.md) |
+| 80 | `t_plat_quoteconentry` | 前置条件-子表 | 7 | [ism_quotestrategy.md](./ism_quotestrategy.md) |
+| 81 | `t_plat_quotescheme` | 结算取价方案-主表 | 26 | [ism_quotescheme.md](./ism_quotescheme.md) |
+| 82 | `t_plat_quotescheme_l` | 结算取价方案-多语言表 | 5 | [ism_quotescheme.md](./ism_quotescheme.md) |
+| 83 | `t_plat_quoteschemeentry` | 字段映射单据体-子表 | 11 | [ism_quotescheme.md](./ism_quotescheme.md) |
+| 84 | `t_plat_quotesortentry` | 价格排序-子表 | 6 | [ism_quotescheme.md](./ism_quotescheme.md) |
+| 85 | `t_plat_quotestentry` | 方案排序单据体-子表 | 11 | [ism_quotestrategy.md](./ism_quotestrategy.md) |
+| 86 | `t_plat_quotestrategy` | 结算取价策略-主表 | 25 | [ism_quotestrategy.md](./ism_quotestrategy.md) |
+| 87 | `t_plat_quotestrategy_l` | 结算取价策略-多语言表 | 5 | [ism_quotestrategy.md](./ism_quotestrategy.md) |
+| 88 | `t_plat_quotestrategy_m` | 结算取价策略-使用范围位图表 | 2 | [ism_quotestrategy.md](./ism_quotestrategy.md) |
+| 89 | `t_plat_quotestrategy_u` | 结算取价策略-使用范围表 | 3 | [ism_quotestrategy.md](./ism_quotestrategy.md) |

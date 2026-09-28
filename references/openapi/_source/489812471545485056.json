@@ -1,0 +1,651 @@
+{
+ "badNum": 0,
+ "identityTagIds": null,
+ "knowledgeId": "489812471545485056",
+ "createdAt": 1694588393000,
+ "collections": 34,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "489812471545485056",
+ "contentType": 1,
+ "updatedAt": 1766110370000,
+ "knowledgeUpdater": {
+  "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+  "department": null,
+  "id": "132488613174518784",
+  "name": "某个路易",
+  "nameSpell": "name"
+ },
+ "assessStatus": 0,
+ "knowledgeStatus": 2,
+ "assessHandleStatus": null,
+ "knowledgeCreatedAt": 1694588393000,
+ "version": 307,
+ "labels": [],
+ "editedAt": 1752800729000,
+ "identityTags": null,
+ "useful": 11,
+ "errors": [],
+ "isCollected": false,
+ "totalFeedBacks": 0,
+ "attachments": [],
+ "sources": [],
+ "editTitle": "金蝶AI苍穹OpenAPI增强型Token认证",
+ "title": "金蝶AI苍穹OpenAPI增强型Token认证",
+ "content": "<h2>变更记录</h2><p></p><table style=\"width: 741px\"><colgroup><col style=\"width: 141px\"><col style=\"width: 454px\"><col style=\"width: 146px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"141\" data-background-color=\"\" style=\"background-color: \"><p><strong>产品版本</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"454\" data-background-color=\"\" style=\"background-color: \"><p><strong>更新内容</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"146\" data-background-color=\"\" style=\"background-color: \"><p><strong>更新日期</strong></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"141\" data-background-color=\"\" style=\"background-color: \"><p>V6.0.1</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"454\" data-background-color=\"\" style=\"background-color: \"><p>新增增强型Token认证模式</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"146\" data-background-color=\"\" style=\"background-color: \"><p>2023年10月</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"141\" data-background-color=\"\" style=\"background-color: \"><p>V7.0.8</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"454\" data-background-color=\"\" style=\"background-color: \"><p>下架refreshToken接口</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"146\" data-background-color=\"\" style=\"background-color: \"><p>2025年04月</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"141\" data-background-color=\"\" style=\"background-color: \"><p>V7.0.13</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"454\" data-background-color=\"\" style=\"background-color: \"><p>增强型Token接口多时区优化，时间戳参数支持零时区格式</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"146\" data-background-color=\"\" style=\"background-color: \"><p>2025年06月</p></td></tr></tbody></table><p></p><p></p><hr><p></p><h2>1. 简介</h2><h3 style=\"text-align: justify\">1.1 背景介绍</h3><p>为优化产品体验，进一步提升安全性，并进行资源隔离，<span style=\"color: rgb(0, 0, 0)\">苍穹</span>V6.0版本新增了增强型Token认证模式，支持通过接口获取、刷新、验证及失效请求令牌，管理请求令牌的的全生命周期。</p><p></p><p></p><h3 style=\"text-align: justify\">1.2 注意事项</h3><ul><li><p>新增第三方应用时，默认打开增强型Token认证开关，若用户关闭开关，则仍可通过getAppToken.do和login.do接口获取access_token；</p></li><li><p><span style=\"color: rgb(0, 112, 192)\">若第三方系统需要免登调用附件相关接口</span>（如attachment/preview.do等）<span style=\"color: rgb(0, 112, 192)\">，此时不建议使用增强型Token认证。</span></p></li></ul><p></p><h3 style=\"text-align: justify\">1.3 优化内容</h3><ul><li><p>更规范：<span style=\"color: rgb(0, 112, 192)\">接口参考最新Oauth2.0认证方式，参数命名更加规范</span>；</p></li><li><p style=\"text-align: justify\">更易用：<span style=\"color: rgb(0, 112, 192)\">只需一次请求</span>，即可获取请求令牌access_token和JWT，简单易用；</p></li><li><p style=\"text-align: justify\">更安全：1）请求参数增加<span style=\"color: rgb(0, 112, 192)\">随机数和时间戳</span>，有效防止恶意重放攻击，提升整体安全性；</p><p style=\"text-align: justify\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2）增加限流和<span style=\"color: rgb(0, 112, 192)\">黑白名单检查功能，</span>并支持<span style=\"color: rgb(0, 112, 192)\">密钥错误锁定</span>；</p></li></ul><p style=\"text-align: justify\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 3）认证参数支持加密脱敏，并在<span style=\"color: rgb(0, 112, 192)\">打印日志时隐藏敏感信息</span>，防止信息泄露；</p><p style=\"text-align: justify\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 4）<span style=\"color: rgb(0, 112, 192)\">请求令牌</span>access_token<span style=\"color: rgb(0, 112, 192)\">只允许在请求头中传递</span>，不允许通过URL参数传递，避免造成资源权限外泄。</p><p style=\"text-align: justify\"></p><h3>1.4 使用场景</h3><p>在集成项目中，通过API接口进行集成时，需要首先调用getToken接口获取请求令牌，并缓存在调用端；在access_token过期（默认2小时有效）前，调用verifyToken验证access_token的有效性，并获取最新的过期时间。</p><p>在access_token即将过期时，支持通过refreshToken接口刷新access_token的有效期，从而在不换access_token的情况下继续访问OpenAPI资源。</p><p></p><h3 style=\"text-align: justify\"><span style=\"color: rgb(0, 0, 0)\">1.5&nbsp;</span><strong>接口列表</strong></h3><table style=\"width: 698px\"><colgroup><col style=\"width: 32px\"><col style=\"width: 149px\"><col style=\"width: 186px\"><col style=\"width: 331px\"></colgroup><tbody><tr><th colspan=\"1\" rowspan=\"1\" colwidth=\"32\" data-background-color=\"\" style=\"background-color: \"><p><strong>序号</strong></p></th><th colspan=\"1\" rowspan=\"1\" colwidth=\"149\" data-background-color=\"\" style=\"background-color: \"><p><strong>接口名称</strong></p></th><th colspan=\"1\" rowspan=\"1\" colwidth=\"186\" data-background-color=\"\" style=\"background-color: \"><p><strong>接口地址</strong></p></th><th colspan=\"1\" rowspan=\"1\" colwidth=\"331\" data-background-color=\"\" style=\"background-color: \"><p><strong>说明</strong></p></th></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"32\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(89, 89, 89)\">1</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"149\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0); font-size: 13px\">获取access_token令牌</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"186\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0); font-size: 13px\">/kapi/oauth2/getToken</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"331\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0); font-size: 13px\">获取请求令牌access_token，在第三方应用中启用JWT token后还会返回id_token，均可用于访问接口</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"32\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(89, 89, 89)\">2</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"149\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0); font-size: 13px\">检测令牌有效性</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"186\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0); font-size: 13px\">/kapi/oauth2/verifyToken&nbsp;</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"331\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0); font-size: 13px\">检测access_token/refresh_token有效性及过期时间，检测JWT token(id_token)有效性</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"32\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(89, 89, 89)\">3</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"149\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0); font-size: 13px\">撤回密钥令牌</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"186\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0); font-size: 13px\">/kapi/oauth2/withdrawToken</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"331\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0); font-size: 13px\">撤回access_token</span></p></td></tr></tbody></table><p style=\"text-align: justify\"><a href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=239331354741842688&amp;id=213309216805890816&amp;productLineId=29\" target=\"_blank\" title=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=239331354741842688&amp;id=213309216805890816&amp;productLineId=29\">开放平台OpenAPI调用流程参考</a></p><p></p><h2 style=\"text-align: justify\">2 特性详情</h2><h3>2.1&nbsp;<strong>getToken</strong></h3><p></p><ul><li><p><strong>功能描述</strong>：请求令牌（access_token）是第三方应用调用OpenAPI的调用凭证，客户端每次请求都需要在请求头中带上token，服务端以此来控制身份，当token过期后，服务端会销毁token，客户端需要重新请求获取token。</p></li></ul><p></p><ul><li><p><strong>请求 URL</strong>：http://{{localhost}}<span style=\"color: rgb(0, 112, 192)\">/kapi/oauth2/getToken</span></p></li><li><p><strong>调用方式</strong>：HTTP调用</p></li><li><p><strong>请求方式</strong>：POST</p></li><li><p><strong>请求类型</strong>：Content-Type:application/json</p></li><li><p><strong>调用频率</strong>：1分钟30次</p></li><li><p><strong>token有效期</strong>：2小时</p></li></ul><p></p><p><span style=\"color: rgb(227, 108, 9)\"><strong>注意事项：</strong></span></p><ul style=\"color: rgb(34, 34, 34);\"><li><p>获取请求令牌的次数是有限制的，同时，每个令牌的有效期为 2 小时，用户需要做好令牌的管理，在令牌快过期时（通过验证接口获取剩余过期时间比如1小时50分），可重新调用接口获取或调用刷新令牌接口延长有效期。</p></li><li><p>同时支持在Header和Body传输<span style=\"color: rgb(34, 34, 34)\">数据中心accountId</span>。</p></li><li><p>注册第三方应用是获取<span style=\"color: rgb(34, 34, 34)\">access_token的前提条件</span>，可点击查看<a href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=226337544983020032&amp;id=225286231527892224&amp;productLineId=29\" target=\"_blank\" title=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=226337544983020032&amp;id=225286231527892224&amp;productLineId=29\">第三方应用介绍</a>。</p></li></ul><p></p><p><a href=\"/tolink?target=https%3A%2F%2Fdevelopers.weixin.qq.com%2Fdoc%2Foplatform%2FopenApi%2FOpenApiDoc%2Fticket-token%2FgetComponentAccessToken.html%23%25E8%25B0%2583%25E7%2594%25A8%25E6%2596%25B9%25E5%25BC%258F\" target=\"_blank\"></a></p><p><strong>请求Body参数</strong></p><table style=\"width: 638px\"><colgroup><col style=\"width: 65px\"><col style=\"width: 67px\"><col style=\"width: 103px\"><col style=\"width: 403px\"></colgroup><tbody><tr><th colspan=\"1\" rowspan=\"1\" colwidth=\"65\" data-background-color=\"\" style=\"background-color: \"><p><strong>请求参数</strong></p></th><th colspan=\"1\" rowspan=\"1\" colwidth=\"67\" data-background-color=\"\" style=\"background-color: \"><p><strong>必传</strong></p></th><th colspan=\"1\" rowspan=\"1\" colwidth=\"103\" data-background-color=\"\" style=\"background-color: \"><p><strong>类型</strong></p></th><th colspan=\"1\" rowspan=\"1\" colwidth=\"403\" data-background-color=\"\" style=\"background-color: \"><p><strong>说明</strong></p></th></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"65\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">client_id</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"67\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">是</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"103\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"403\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">第三方应用系统编码，即appId</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"65\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">client_secret</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"67\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">是</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"103\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"403\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">第三方应用AccessToken认证密钥，即appSecret</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"65\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">username</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"67\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">是</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"103\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"403\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">第三方应用代理用户的用户名</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"65\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">accountId</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"67\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">是</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"103\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"403\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">数据中心id</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"65\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">language</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"67\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">否</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"103\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"403\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">语言字串： zh_CN，zh_TW、en_US等。 默认系统默认语言，查询接口会返回对应的多语言文本字段</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"65\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">nonce</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"67\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">是</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"103\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"403\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">随机数</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"65\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">timestamp</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"67\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">是</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"103\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"403\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">时间戳</span><a href=\"（兼容零时区格式，如：2025-06-12T00:00:10.009Z）\" target=\"_blank\">（兼容零时区格式，如：2025-06-12T00:00:10.009Z）</a><span style=\"color: rgb(0, 0, 0)\">，当前时间前后5分钟</span></p></td></tr></tbody></table><p></p><p><strong>请求参数示例</strong></p><pre><code class=\"language-plaintext\">{\n&nbsp;&nbsp;&nbsp;&nbsp;\"client_id\":&nbsp;\"thirdappunittest_003\",\n&nbsp;&nbsp;&nbsp;&nbsp;\"client_secret\":&nbsp;\"Abcdrty@1234567890#@2\",\n&nbsp;&nbsp;&nbsp;&nbsp;\"username\":\"zhangSan\",\n&nbsp;&nbsp;&nbsp;&nbsp;\"accountId\":&nbsp;\"1355633519610561531\",\n&nbsp;&nbsp;&nbsp;&nbsp;\"language\":&nbsp;\"zh_CN\",\n&nbsp;&nbsp;&nbsp;&nbsp;\"nonce\":&nbsp;\"123\",\n&nbsp;&nbsp;&nbsp;&nbsp;\"timestamp\":&nbsp;\"2023-09-08&nbsp;11:47:00\"\n}</code></pre><p></p><p><strong>返回参数</strong></p><table style=\"width: 710px\"><colgroup><col style=\"width: 155px\"><col style=\"width: 101px\"><col style=\"width: 454px\"></colgroup><tbody><tr><th colspan=\"1\" rowspan=\"1\" colwidth=\"155\" data-background-color=\"\" style=\"background-color: \"><p>返回参数</p></th><th colspan=\"1\" rowspan=\"1\" colwidth=\"101\" data-background-color=\"\" style=\"background-color: \"><p>类型</p></th><th colspan=\"1\" rowspan=\"1\" colwidth=\"454\" data-background-color=\"\" style=\"background-color: \"><p>说明</p></th></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"155\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">data</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"101\" data-background-color=\"\" style=\"background-color: \"><p></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"454\" data-background-color=\"\" style=\"background-color: \"><p></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"155\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">- access_token</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"101\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"454\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">请求令牌，第三方应用调用OpenAPI的凭证</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"155\" data-background-color=\"\" style=\"background-color: \"><p></p><p><span style=\"color: rgb(0, 0, 0)\">- token_type</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"101\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"454\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">令牌类型，默认为Bearer，即任何持有token的用户都可以访问对应的资源</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"155\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">- refresh_token</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"101\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"454\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">刷新令牌，暂不支持</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"155\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">- scope</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"101\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"454\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">作用域，用户授权给第三方的权限，默认为API</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"155\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">- expires_in</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"101\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">Int</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"454\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">access_token的有效期，即距离过期的剩余时长（单位：毫秒）</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"155\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">- id_token</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"101\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"454\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">JWT（Json Web Token）</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"155\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">- id_token_expires_in</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"101\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">Int</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"454\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">JWT的有效期，即距离过期的剩余时长（单位：毫秒）</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"155\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">- language</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"101\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"454\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">浏览器接收语言</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"155\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">errorCode</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"101\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"454\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">错误码，成功时为0</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"42\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">message</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"101\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"454\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">错误消息</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"42\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">status</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"101\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">Boolean</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"454\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">请求状态，true/false</span></p></td></tr></tbody></table><p></p><p><strong>返回参数示例</strong></p><pre><code class=\"language-plaintext\">{\n\"data\":&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;\"access_token\":\"OPENAPIAUTH_MTMzMTIwNDQ0NTk5NTc5NDQzMl9FZ3h4MXU1Zzd2Qk9kRjR4MzIxQXZKcXU5c2hpbzNCaTRtTGIzbEsyM3JnbmFJUUJEMEltZUt3UURYQmFFdDJIVnc3MWtyaTVUR01ZbTRDUGVETDVSamE2R0F1a2g5SGpVcmwx\",\n&nbsp;&nbsp;&nbsp;&nbsp;\"token_type\":&nbsp;\"Bearer\",\n&nbsp;&nbsp;&nbsp;&nbsp;\"refresh_token\":&nbsp;\"d367106c-de46-4fc4-9e1a-59cbcfc430d2\",\n&nbsp;&nbsp;&nbsp;&nbsp;\"scope\":&nbsp;\"API\",\n&nbsp;&nbsp;&nbsp;&nbsp;\"expires_in\":&nbsp;\"7199977\",\n&nbsp;&nbsp;&nbsp;&nbsp;\"id_token\":&nbsp;\"OPENAPIAUTH_ZXlKMGVYQWlPaUpLVjFRaUxDSmhiR2NpT2lKSVV6STFOaUo5LmV5Sm1hV1FpT2lJeE16UTJOamN6T1NJc0luTjFZaUk2SW10a2FuZDBJaXdpWm5Cb2IyNWxJam9pTVRjeU9UazVPVGs1T1RraUxDSmxhV1FpT2lJeE1UUTNOVFl4TnlJc0ltWjBjblZsYm1GdFpTSTZJa2xGVWxBaUxDSm1iM0puYVdRaU9pSXhJaXdpWm1WdFlXbHNJam9pYVdWeWNFQnJhVzVuWkdWbExtTnZiU0lzSW1semN5STZJbXRrSWl3aWRYTmxjbWxrSWpvaU1UTTBOalkzTXpraUxDSm1ZbWw2Y0dGeWRHNWxjbWxrSWpvaU1DSXNJbVpzWVhOMGJHOW5hVzVwY0NJNklqRTNNaTR5TUM0eE5DNDJOeUlzSW1acGMyRmpkR2wyWldRaU9pSXhJaXdpWm05d1pXNXBaQ0k2SWpWaE1tUmxabU5pWlRSaU1EazFOMlpoTURobU9HTTNNaUlzSW1ac1lYTjBiRzluYVc1MGFXMWxJam9pTWpBeU15MHdPQzB5T1NBd01Eb3dNRG93TUM0d0lpd2labVZ1WVdKc1pTSTZJakVpTENKbWRXbGtJam9pTVRNME5qWTNNemtpTENKMWMyVnlWSGx3WlNJNklqRWlMQ0psZUhBaU9qRTJPVFEyTURReU1UZ3NJbWxoZENJNk1UWTVORFU1TnpBeE9Dd2labWx6Y21WbmFYTjBaV1FpT2lJeElpd2labkJ6ZDNOMGNtRjBaV2Q1YVdRaU9pSTNOakk1TnpjM09UVTNOekl3TURVek56WWlMQ0oxYzJWeWIzQmxibWxrSWpvaU5XRXlaR1ZtWTJKbE5HSXdPVFUzWm1Fd09HWTRZemN5SWl3aWRYTmxjbTVoYldVaU9pSkpSVkpRSW4wLi1ZZEd1cWhIX25Mcm5ibURnQTlfU2FvQkZsTGJWTTJEUmp2cnR4NXZwckk=\",\n&nbsp;&nbsp;&nbsp;&nbsp;\"id_token_expires_in\":&nbsp;\"7199977\",\n&nbsp;&nbsp;&nbsp;&nbsp;\"language\":&nbsp;\"zh_CN\"\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},\n&nbsp;&nbsp;&nbsp;&nbsp;\"errorCode\":&nbsp;\"0\",\n&nbsp;&nbsp;&nbsp;&nbsp;\"message\":&nbsp;\"\",\n&nbsp;&nbsp;&nbsp;&nbsp;\"status\":&nbsp;true\n}</code></pre><p></p><p><strong>错误码说明</strong></p><table style=\"width: 752px\"><colgroup><col style=\"width: 126px\"><col style=\"width: 626px\"></colgroup><tbody><tr><th colspan=\"1\" rowspan=\"1\" colwidth=\"126\" data-background-color=\"\" style=\"background-color: \"><p><strong>错误码</strong></p></th><th colspan=\"1\" rowspan=\"1\" colwidth=\"626\" data-background-color=\"\" style=\"background-color: \"><p><strong>说明</strong></p></th></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"66\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">0</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"626\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">请求成功</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"126\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">401</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"626\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">不正确的第三方应用编码client_id或client_secret</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">603</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"626\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">请求参数错误</span></p></td></tr></tbody></table><p></p><p><a href=\"/tolink?target=https%3A%2F%2Fdevelopers.weixin.qq.com%2Fdoc%2Foplatform%2FopenApi%2FOpenApiDoc%2Fticket-token%2FgetComponentAccessToken.html%23%25E8%25AF%25B7%25E6%25B1%2582%25E5%258F%2582%25E6%2595%25B0\" target=\"_blank\"></a></p><h3>2.2&nbsp;<strong>verifyToken</strong></h3><p></p><ul><li><p><strong>功能描述</strong>：检测请求令牌的有效性。</p></li></ul><p></p><ul><li><p><strong>请求 URL</strong>：http://{{localhost}}<span style=\"color: rgb(0, 112, 192)\">/kapi/oauth2/verifyToken</span></p></li><li><p><strong>调用方式</strong>：HTTP调用</p></li><li><p><strong>请求方式</strong>：POST</p></li><li><p><strong>请求类型</strong>：Content-Type:application/json</p></li><li><p><strong>调用频率</strong>：1分钟30次</p></li><li><p><strong>token有效期</strong>：2小时</p></li></ul><p></p><p><strong>请求Body参数</strong></p><table style=\"width: 698px\"><colgroup><col style=\"width: 125px\"><col style=\"width: 67px\"><col style=\"width: 103px\"><col style=\"width: 403px\"></colgroup><tbody><tr><th colspan=\"1\" rowspan=\"1\" colwidth=\"125\" data-background-color=\"\" style=\"background-color: \"><p><strong>请求参数</strong></p></th><th colspan=\"1\" rowspan=\"1\" colwidth=\"67\" data-background-color=\"\" style=\"background-color: \"><p><strong>必传</strong></p></th><th colspan=\"1\" rowspan=\"1\" colwidth=\"103\" data-background-color=\"\" style=\"background-color: \"><p><strong>类型</strong></p></th><th colspan=\"1\" rowspan=\"1\" colwidth=\"403\" data-background-color=\"\" style=\"background-color: \"><p><strong>说明</strong></p></th></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"65\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">client_id</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"67\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">是</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"103\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"403\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">第三方应用系统编码，即appId</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"65\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">token_type_hint</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"67\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">是</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"103\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"403\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">令牌类型，access_token/id_token</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"6\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">token</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"67\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">是</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"103\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"403\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">令牌值</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"6\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">accountId</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"67\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">是</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"103\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"403\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">数据中心id</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"6\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">nonce</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"67\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">是</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"103\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"403\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">随机数</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">timestamp</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"67\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">是</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"103\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"79\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">时间戳，</span><span style=\"color: rgb(0, 112, 192)\">当前时间前后5分钟</span></p></td></tr></tbody></table><p></p><p><strong>请求参数示例</strong></p><pre><code class=\"language-plaintext\">{\n&nbsp;&nbsp;\"client_id\":&nbsp;\"thirdappunittest_003\",\n&nbsp;&nbsp;\"token_type_hint\":&nbsp;\"access_token\",\n&nbsp;&nbsp;&nbsp;&nbsp;\"token\":\"OPENAPIAUTH_MTMzMTIwNDQ0NTk5NTc5NDQzMl9peGdobmxERWluY1FpZDc2R2pjUDcyYlg0UTNwNDhpczZXM01NYTlsTDVhNEU2TFRkT0ZIWTlybUl5SDdvQUJ1ZGFSaGtWU0hGNlNRRTBjMjZ6MkxxQWRjbkNpTzBnd1ZzMW9P\",\n&nbsp;&nbsp;\"nonce\":&nbsp;\"1234\",\n&nbsp;&nbsp;\"timestamp\":&nbsp;\"2023-09-15&nbsp;16:14:00\",\n&nbsp;&nbsp;\"accountId\":&nbsp;\"1331204445995794432\"\n}</code></pre><p></p><p><strong>返回参数</strong></p><table style=\"width: 710px\"><colgroup><col style=\"width: 155px\"><col style=\"width: 101px\"><col style=\"width: 454px\"></colgroup><tbody><tr><th colspan=\"1\" rowspan=\"1\" colwidth=\"155\" data-background-color=\"\" style=\"background-color: \"><p>返回参数</p></th><th colspan=\"1\" rowspan=\"1\" colwidth=\"101\" data-background-color=\"\" style=\"background-color: \"><p>类型</p></th><th colspan=\"1\" rowspan=\"1\" colwidth=\"454\" data-background-color=\"\" style=\"background-color: \"><p>说明</p></th></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"155\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">data</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"101\" data-background-color=\"\" style=\"background-color: \"><p></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"454\" data-background-color=\"\" style=\"background-color: \"><p></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"155\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">- expires_in</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"101\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">Int</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"454\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">令牌的有效期，即距离过期的剩余时长（单位：毫秒）</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"155\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">- active</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"101\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">Boolean</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"454\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">是否有效，true/false</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"155\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">- scope</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"101\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"454\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">作用域，用户授权给第三方的权限，默认为API</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"155\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">errorCode</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"101\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"454\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">错误码，成功时为0</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"42\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">message</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"101\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"454\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">错误消息</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"42\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">status</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"101\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">Boolean</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"454\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">请求状态，true/false</span></p></td></tr></tbody></table><p></p><p><strong>返回参数示例</strong></p><pre><code class=\"language-plaintext\">{\n&nbsp;&nbsp;&nbsp;&nbsp;\"data\":&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;\"expires_in\":&nbsp;\"7133040\",\n&nbsp;&nbsp;&nbsp;&nbsp;\"active\":&nbsp;true,\n&nbsp;&nbsp;&nbsp;&nbsp;\"scope\":&nbsp;\"API\"\n&nbsp;&nbsp;&nbsp;&nbsp;},\n&nbsp;&nbsp;&nbsp;&nbsp;\"errorCode\":&nbsp;\"0\",\n&nbsp;&nbsp;&nbsp;&nbsp;\"message\":&nbsp;\"\",\n&nbsp;&nbsp;&nbsp;&nbsp;\"status\":&nbsp;true\n}</code></pre><p></p><p><strong>错误码说明</strong></p><table style=\"width: 745px\"><colgroup><col style=\"width: 125px\"><col style=\"width: 620px\"></colgroup><tbody><tr><th colspan=\"1\" rowspan=\"1\" colwidth=\"125\" data-background-color=\"\" style=\"background-color: \"><p><strong>错误码</strong></p></th><th colspan=\"1\" rowspan=\"1\" colwidth=\"620\" data-background-color=\"\" style=\"background-color: \"><p><strong>说明</strong></p></th></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"65\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">0</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"620\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">请求成功</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">603</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"217\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">请求参数错误</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">612</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"217\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">AccessToken verify failed/JWT(id_token) 验证失败：已过期</span></p></td></tr></tbody></table><p></p><p></p><h3>2.3 w<strong>ithdrawToken</strong></h3><p></p><p><a href=\"https://vip-admin.kingdee.com/tolink?target=https%3A%2F%2Fdevelopers.weixin.qq.com%2Fdoc%2Foplatform%2FopenApi%2FOpenApiDoc%2Fticket-token%2FgetAuthorizerRefreshToken.html%23%25E6%25B3%25A8%25E6%2584%258F%25E4%25BA%258B%25E9%25A1%25B9\" target=\"_blank\"></a></p><ul><li><p><strong>功能描述</strong>：撤回请求令牌（暂不支持JWT）。</p></li></ul><p></p><ul><li><p><strong>请求 URL</strong>：http://{{localhost}}<span style=\"color: rgb(0, 112, 192)\">/kapi/oauth2/withdrawToken</span></p></li><li><p><strong>调用方式</strong>：HTTP调用</p></li><li><p><strong>请求方式</strong>：POST</p></li><li><p><strong>请求类型</strong>：Content-Type:application/json</p></li><li><p><strong>调用频率</strong>：1分钟30次</p></li><li><p><strong>token有效期</strong>：2小时</p></li></ul><p></p><p><strong>请求Body参数</strong></p><table style=\"width: 638px\"><colgroup><col style=\"width: 65px\"><col style=\"width: 67px\"><col style=\"width: 103px\"><col style=\"width: 403px\"></colgroup><tbody><tr><th colspan=\"1\" rowspan=\"1\" colwidth=\"65\" data-background-color=\"\" style=\"background-color: \"><p><strong>请求参数</strong></p></th><th colspan=\"1\" rowspan=\"1\" colwidth=\"67\" data-background-color=\"\" style=\"background-color: \"><p><strong>必传</strong></p></th><th colspan=\"1\" rowspan=\"1\" colwidth=\"103\" data-background-color=\"\" style=\"background-color: \"><p><strong>类型</strong></p></th><th colspan=\"1\" rowspan=\"1\" colwidth=\"403\" data-background-color=\"\" style=\"background-color: \"><p><strong>说明</strong></p></th></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"65\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">client_id</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"67\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">是</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"103\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"403\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">第三方应用系统编码，即appId</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"65\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">client_secret</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"67\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">是</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"103\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"403\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">第三方应用AccessToken认证密钥，即appSecret</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"65\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">token_type_hint</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"67\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">是</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"103\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"403\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">令牌类型，access_token/refresh_token</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"65\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">token</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"67\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">是</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"103\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"403\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">令牌值</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"65\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">accountId</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"67\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">是</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"103\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"403\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">数据中心id</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"65\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">nonce</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"67\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">是</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"103\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"403\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">随机数</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"65\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">timestamp</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"67\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">是</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"103\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"403\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">时间戳，</span><span style=\"color: rgb(0, 112, 192)\">当前时间前后5分钟</span></p></td></tr></tbody></table><p></p><p><strong>请求参数示例</strong></p><pre><code class=\"language-plaintext\">{\n&nbsp;&nbsp;&nbsp;&nbsp;\"client_id\":&nbsp;\"thirdappunittest_003\",\n&nbsp;&nbsp;&nbsp;&nbsp;\"client_secret\":&nbsp;\"Abcdrty@1234567890#@2\",\n&nbsp;&nbsp;&nbsp;&nbsp;\"token_type_hint\":&nbsp;\"access_token\",\n&nbsp;&nbsp;&nbsp;&nbsp;\"token\":\"OPENAPIAUTH_MTMzMTIwNDQ0NTk5NTc5NDQzMl9peGdobmxERWluY1FpZDc2R2pjUDcyYlg0UTNwNDhpczZXM01NYTlsTDVhNEU2TFRkT0ZIWTlybUl5SDdvQUJ1ZGFSaGtWU0hGNlNRRTBjMjZ6MkxxQWRjbkNpTzBnd1ZzMW9P\",\n&nbsp;&nbsp;&nbsp;&nbsp;\"nonce\":&nbsp;\"12345\",\n&nbsp;&nbsp;&nbsp;&nbsp;\"timestamp\":&nbsp;\"2023-09-15&nbsp;16:29:00\",\n&nbsp;&nbsp;&nbsp;&nbsp;\"accountId\":&nbsp;\"1331204445995794432\"\n}</code></pre><p></p><p><strong>返回参数</strong></p><table style=\"width: 728px\"><colgroup><col style=\"width: 155px\"><col style=\"width: 101px\"><col style=\"width: 472px\"></colgroup><tbody><tr><th colspan=\"1\" rowspan=\"1\" colwidth=\"155\" data-background-color=\"\" style=\"background-color: \"><p>返回参数</p></th><th colspan=\"1\" rowspan=\"1\" colwidth=\"101\" data-background-color=\"\" style=\"background-color: \"><p>类型</p></th><th colspan=\"1\" rowspan=\"1\" colwidth=\"472\" data-background-color=\"\" style=\"background-color: \"><p>说明</p></th></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"155\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">data</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"101\" data-background-color=\"\" style=\"background-color: \"><p></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"472\" data-background-color=\"\" style=\"background-color: \"><p></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"155\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">errorCode</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"101\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"472\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">错误码，成功时为0</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"42\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">message</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"101\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"472\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">错误消息</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"42\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">status</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"101\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">Boolean</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"472\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">请求状态，true/false</span></p></td></tr></tbody></table><p></p><p><strong>返回参数示例</strong></p><pre><code class=\"language-plaintext\">{\n&nbsp;&nbsp;&nbsp;&nbsp;\"data\":&nbsp;true,\n&nbsp;&nbsp;&nbsp;&nbsp;\"errorCode\":&nbsp;\"0\",\n&nbsp;&nbsp;&nbsp;&nbsp;\"message\":&nbsp;\"true\",\n&nbsp;&nbsp;&nbsp;&nbsp;\"status\":&nbsp;true\n}</code></pre><p></p><p><strong>错误码说明</strong></p><table style=\"width: 752px\"><colgroup><col style=\"width: 125px\"><col style=\"width: 627px\"></colgroup><tbody><tr><th colspan=\"1\" rowspan=\"1\" colwidth=\"125\" data-background-color=\"\" style=\"background-color: \"><p><strong>错误码</strong></p></th><th colspan=\"1\" rowspan=\"1\" colwidth=\"627\" data-background-color=\"\" style=\"background-color: \"><p><strong>说明</strong></p></th></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"65\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">0</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"629\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">请求成功</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">401</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"224\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">不正确的第三方应用编码client_id或client_secret</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">603</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"224\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">请求参数错误</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">611</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"224\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">撤回失败</span></p></td></tr></tbody></table><p></p><p style=\"text-align: justify; font-size: 20px\"><strong>3 更多资讯</strong></p><p style=\"text-align: justify\">关于OpenAPI的更多资讯，请随时关注<a href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=226337371640594944&amp;id=226708319996323072&amp;productLineId=29\" target=\"_blank\">新特性公告</a>。</p><p style=\"text-align: justify\">认证相关信息，请查看<a href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=239331354741842688&amp;id=218694224487485696\" target=\"_blank\">金蝶AI苍穹OpenAPI开发认证指南</a></p><p></p>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 87,
+   "isOpen": 1,
+   "name": "金蝶AI苍穹",
+   "productLineId": 29,
+   "series": "developer01",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "489812471545485056",
+         "entityType": "Knowledge",
+         "id": "490566498872597760",
+         "isCategory": false,
+         "name": "OpenAPI增强型Token认证",
+         "parentId": "239331354741842688",
+         "sort": "5",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": null,
+       "id": "239331354741842688",
+       "isCategory": true,
+       "name": "开发指南",
+       "parentId": "226337544983020032",
+       "sort": "1",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": null,
+     "entityId": null,
+     "entityType": null,
+     "id": "226337544983020032",
+     "isCategory": true,
+     "name": "用户手册",
+     "parentId": "-1",
+     "sort": "6",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download/01010204d4b71b654a208006fa1004eac36a.png",
+  "department": null,
+  "id": "740211268992385024",
+  "name": "毛毛去哪儿",
+  "nameSpell": "name"
+ },
+ "totalAppraisalScore": 55,
+ "iflytekId": null,
+ "views": 84703,
+ "productLineId": 29,
+ "comments": 19,
+ "similarityCount": 0,
+ "totalAppraisalUsers": 11,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1766110370000,
+ "appraisalScore": 0,
+ "unuseful": 0,
+ "knowledgeCheckStatus": 2,
+ "otherProductLineIds": [],
+ "auditAt": 1752800739000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": null,
+       "code": "open",
+       "id": "5614",
+       "name": "开放平台",
+       "productLineId": null,
+       "sort": 2,
+       "type": "module"
+      },
+      "code": "DEV",
+      "id": "5576",
+      "name": "开发服务云",
+      "productLineId": null,
+      "sort": 11,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 0,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": null,
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 1,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapiapilistlayout",
+        "id": "344582232549528320",
+        "name": "API管理",
+        "productLineId": null,
+        "sort": 1,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "5614",
+       "name": "开放平台",
+       "productLineId": null,
+       "sort": 2,
+       "type": "module"
+      },
+      "code": "DEV",
+      "id": "5576",
+      "name": "开发服务云",
+      "productLineId": null,
+      "sort": 11,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 2,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapi_apilist_layout",
+        "id": "505686038019362304",
+        "name": "异步API",
+        "productLineId": null,
+        "sort": 1,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 3,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "thirdapp",
+        "id": "505686150007485696",
+        "name": "第三方应用",
+        "productLineId": null,
+        "sort": 2,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 4,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "thirdapp",
+        "id": "6254",
+        "name": "第三方应用",
+        "productLineId": null,
+        "sort": 2,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "5614",
+       "name": "开放平台",
+       "productLineId": null,
+       "sort": 2,
+       "type": "module"
+      },
+      "code": "DEV",
+      "id": "5576",
+      "name": "开发服务云",
+      "productLineId": null,
+      "sort": 11,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 5,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "rumen",
+     "createdAt": 1605667807000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "入门类的知识可使用此标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100d322b9282bcc438faa894f4eec029977.png",
+     "id": "202203081646",
+     "name": "基础入门",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download?fileName=0101ec1d6ce599b442dab7d0b794c1fce88d.png",
+      "department": null,
+      "id": "1009",
+      "name": "一颗小星星",
+      "nameSpell": "fengling"
+     },
+     "updatedAt": 1657872008000
+    },
+    {
+     "code": "NewFeatures",
+     "createdAt": 1558619051000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "新特性",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/01009c9898f919a24034b3b37b2ebf42931c.png",
+     "id": "202203081645",
+     "name": "新特性",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010145330b44d45a47ae9b8aac30617b6992.png",
+      "department": null,
+      "id": "2147443044",
+      "name": "Lucky_tiao",
+      "nameSpell": "laoli"
+     },
+     "updatedAt": 1668739541000
+    },
+    {
+     "code": "essencesummary",
+     "createdAt": 1606118073000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "精华汇总",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100402c6f8df169483db114f71043c19ec2.png",
+     "id": "202203081649",
+     "name": "精华汇总",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 2,
+     "updatePerson": {
+      "avatar": "/download?fileName=010162cfa9d5437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1129",
+      "name": "灏",
+      "nameSpell": "hao"
+     },
+     "updatedAt": 1606118073000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          {
+           "childCategory": [
+            null
+           ],
+           "code": null,
+           "description": "",
+           "entityId": "489812471545485056",
+           "entityType": "Knowledge",
+           "id": "490566498872597760",
+           "isCategory": false,
+           "name": "OpenAPI增强型Token认证",
+           "parentId": "239331354741842688",
+           "sort": "5",
+           "specialId": "226337046514476288",
+           "status": 1
+          }
+         ],
+         "code": null,
+         "description": "",
+         "entityId": null,
+         "entityType": null,
+         "id": "239331354741842688",
+         "isCategory": true,
+         "name": "开发指南",
+         "parentId": "226337544983020032",
+         "sort": "1",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": null,
+       "entityId": null,
+       "entityType": null,
+       "id": "226337544983020032",
+       "isCategory": true,
+       "name": "用户手册",
+       "parentId": "-1",
+       "sort": "6",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": "<h2>变更记录</h2><p></p><table style=\"width: 741px\"><colgroup><col style=\"width: 141px\"><col style=\"width: 454px\"><col style=\"width: 146px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"141\" data-background-color=\"\" style=\"background-color: \"><p><strong>产品版本</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"454\" data-background-color=\"\" style=\"background-color: \"><p><strong>更新内容</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"146\" data-background-color=\"\" style=\"background-color: \"><p><strong>更新日期</strong></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"141\" data-background-color=\"\" style=\"background-color: \"><p>V6.0.1</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"454\" data-background-color=\"\" style=\"background-color: \"><p>新增增强型Token认证模式</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"146\" data-background-color=\"\" style=\"background-color: \"><p>2023年10月</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"141\" data-background-color=\"\" style=\"background-color: \"><p>V7.0.8</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"454\" data-background-color=\"\" style=\"background-color: \"><p>下架refreshToken接口</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"146\" data-background-color=\"\" style=\"background-color: \"><p>2025年04月</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"141\" data-background-color=\"\" style=\"background-color: \"><p>V7.0.13</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"454\" data-background-color=\"\" style=\"background-color: \"><p>增强型Token接口多时区优化，时间戳参数支持零时区格式</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"146\" data-background-color=\"\" style=\"background-color: \"><p>2025年06月</p></td></tr></tbody></table><p></p><p></p><hr><p></p><h2>1. 简介</h2><h3 style=\"text-align: justify\">1.1 背景介绍</h3><p>为优化产品体验，进一步提升安全性，并进行资源隔离，<span style=\"color: rgb(0, 0, 0)\">苍穹</span>V6.0版本新增了增强型Token认证模式，支持通过接口获取、刷新、验证及失效请求令牌，管理请求令牌的的全生命周期。</p><p></p><p></p><h3 style=\"text-align: justify\">1.2 注意事项</h3><ul><li><p>新增第三方应用时，默认打开增强型Token认证开关，若用户关闭开关，则仍可通过getAppToken.do和login.do接口获取access_token；</p></li><li><p><span style=\"color: rgb(0, 112, 192)\">若第三方系统需要免登调用附件相关接口</span>（如attachment/preview.do等）<span style=\"color: rgb(0, 112, 192)\">，此时不建议使用增强型Token认证。</span></p></li></ul><p></p><h3 style=\"text-align: justify\">1.3 优化内容</h3><ul><li><p>更规范：<span style=\"color: rgb(0, 112, 192)\">接口参考最新Oauth2.0认证方式，参数命名更加规范</span>；</p></li><li><p style=\"text-align: justify\">更易用：<span style=\"color: rgb(0, 112, 192)\">只需一次请求</span>，即可获取请求令牌access_token和JWT，简单易用；</p></li><li><p style=\"text-align: justify\">更安全：1）请求参数增加<span style=\"color: rgb(0, 112, 192)\">随机数和时间戳</span>，有效防止恶意重放攻击，提升整体安全性；</p><p style=\"text-align: justify\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2）增加限流和<span style=\"color: rgb(0, 112, 192)\">黑白名单检查功能，</span>并支持<span style=\"color: rgb(0, 112, 192)\">密钥错误锁定</span>；</p></li></ul><p style=\"text-align: justify\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 3）认证参数支持加密脱敏，并在<span style=\"color: rgb(0, 112, 192)\">打印日志时隐藏敏感信息</span>，防止信息泄露；</p><p style=\"text-align: justify\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 4）<span style=\"color: rgb(0, 112, 192)\">请求令牌</span>access_token<span style=\"color: rgb(0, 112, 192)\">只允许在请求头中传递</span>，不允许通过URL参数传递，避免造成资源权限外泄。</p><p style=\"text-align: justify\"></p><h3>1.4 使用场景</h3><p>在集成项目中，通过API接口进行集成时，需要首先调用getToken接口获取请求令牌，并缓存在调用端；在access_token过期（默认2小时有效）前，调用verifyToken验证access_token的有效性，并获取最新的过期时间。</p><p>在access_token即将过期时，支持通过refreshToken接口刷新access_token的有效期，从而在不换access_token的情况下继续访问OpenAPI资源。</p><p></p><h3 style=\"text-align: justify\"><span style=\"color: rgb(0, 0, 0)\">1.5&nbsp;</span><strong>接口列表</strong></h3><table style=\"width: 698px\"><colgroup><col style=\"width: 32px\"><col style=\"width: 149px\"><col style=\"width: 186px\"><col style=\"width: 331px\"></colgroup><tbody><tr><th colspan=\"1\" rowspan=\"1\" colwidth=\"32\" data-background-color=\"\" style=\"background-color: \"><p><strong>序号</strong></p></th><th colspan=\"1\" rowspan=\"1\" colwidth=\"149\" data-background-color=\"\" style=\"background-color: \"><p><strong>接口名称</strong></p></th><th colspan=\"1\" rowspan=\"1\" colwidth=\"186\" data-background-color=\"\" style=\"background-color: \"><p><strong>接口地址</strong></p></th><th colspan=\"1\" rowspan=\"1\" colwidth=\"331\" data-background-color=\"\" style=\"background-color: \"><p><strong>说明</strong></p></th></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"32\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(89, 89, 89)\">1</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"149\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0); font-size: 13px\">获取access_token令牌</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"186\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0); font-size: 13px\">/kapi/oauth2/getToken</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"331\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0); font-size: 13px\">获取请求令牌access_token，在第三方应用中启用JWT token后还会返回id_token，均可用于访问接口</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"32\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(89, 89, 89)\">2</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"149\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0); font-size: 13px\">检测令牌有效性</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"186\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0); font-size: 13px\">/kapi/oauth2/verifyToken&nbsp;</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"331\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0); font-size: 13px\">检测access_token/refresh_token有效性及过期时间，检测JWT token(id_token)有效性</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"32\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(89, 89, 89)\">3</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"149\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0); font-size: 13px\">撤回密钥令牌</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"186\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0); font-size: 13px\">/kapi/oauth2/withdrawToken</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"331\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0); font-size: 13px\">撤回access_token</span></p></td></tr></tbody></table><p style=\"text-align: justify\"><a href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=239331354741842688&amp;id=213309216805890816&amp;productLineId=29\" target=\"_blank\" title=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=239331354741842688&amp;id=213309216805890816&amp;productLineId=29\">开放平台OpenAPI调用流程参考</a></p><p></p><h2 style=\"text-align: justify\">2 特性详情</h2><h3>2.1&nbsp;<strong>getToken</strong></h3><p></p><ul><li><p><strong>功能描述</strong>：请求令牌（access_token）是第三方应用调用OpenAPI的调用凭证，客户端每次请求都需要在请求头中带上token，服务端以此来控制身份，当token过期后，服务端会销毁token，客户端需要重新请求获取token。</p></li></ul><p></p><ul><li><p><strong>请求 URL</strong>：http://{{localhost}}<span style=\"color: rgb(0, 112, 192)\">/kapi/oauth2/getToken</span></p></li><li><p><strong>调用方式</strong>：HTTP调用</p></li><li><p><strong>请求方式</strong>：POST</p></li><li><p><strong>请求类型</strong>：Content-Type:application/json</p></li><li><p><strong>调用频率</strong>：1分钟30次</p></li><li><p><strong>token有效期</strong>：2小时</p></li></ul><p></p><p><span style=\"color: rgb(227, 108, 9)\"><strong>注意事项：</strong></span></p><ul style=\"color: rgb(34, 34, 34);\"><li><p>获取请求令牌的次数是有限制的，同时，每个令牌的有效期为 2 小时，用户需要做好令牌的管理，在令牌快过期时（通过验证接口获取剩余过期时间比如1小时50分），可重新调用接口获取或调用刷新令牌接口延长有效期。</p></li><li><p>同时支持在Header和Body传输<span style=\"color: rgb(34, 34, 34)\">数据中心accountId</span>。</p></li><li><p>注册第三方应用是获取<span style=\"color: rgb(34, 34, 34)\">access_token的前提条件</span>，可点击查看<a href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=226337544983020032&amp;id=225286231527892224&amp;productLineId=29\" target=\"_blank\" title=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=226337544983020032&amp;id=225286231527892224&amp;productLineId=29\">第三方应用介绍</a>。</p></li></ul><p></p><p><a href=\"/tolink?target=https%3A%2F%2Fdevelopers.weixin.qq.com%2Fdoc%2Foplatform%2FopenApi%2FOpenApiDoc%2Fticket-token%2FgetComponentAccessToken.html%23%25E8%25B0%2583%25E7%2594%25A8%25E6%2596%25B9%25E5%25BC%258F\" target=\"_blank\"></a></p><p><strong>请求Body参数</strong></p><table style=\"width: 638px\"><colgroup><col style=\"width: 65px\"><col style=\"width: 67px\"><col style=\"width: 103px\"><col style=\"width: 403px\"></colgroup><tbody><tr><th colspan=\"1\" rowspan=\"1\" colwidth=\"65\" data-background-color=\"\" style=\"background-color: \"><p><strong>请求参数</strong></p></th><th colspan=\"1\" rowspan=\"1\" colwidth=\"67\" data-background-color=\"\" style=\"background-color: \"><p><strong>必传</strong></p></th><th colspan=\"1\" rowspan=\"1\" colwidth=\"103\" data-background-color=\"\" style=\"background-color: \"><p><strong>类型</strong></p></th><th colspan=\"1\" rowspan=\"1\" colwidth=\"403\" data-background-color=\"\" style=\"background-color: \"><p><strong>说明</strong></p></th></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"65\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">client_id</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"67\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">是</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"103\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"403\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">第三方应用系统编码，即appId</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"65\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">client_secret</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"67\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">是</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"103\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"403\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">第三方应用AccessToken认证密钥，即appSecret</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"65\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">username</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"67\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">是</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"103\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"403\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">第三方应用代理用户的用户名</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"65\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">accountId</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"67\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">是</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"103\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"403\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">数据中心id</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"65\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">language</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"67\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">否</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"103\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"403\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">语言字串： zh_CN，zh_TW、en_US等。 默认系统默认语言，查询接口会返回对应的多语言文本字段</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"65\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">nonce</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"67\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">是</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"103\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"403\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">随机数</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"65\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">timestamp</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"67\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">是</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"103\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"403\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">时间戳</span><a href=\"（兼容零时区格式，如：2025-06-12T00:00:10.009Z）\" target=\"_blank\">（兼容零时区格式，如：2025-06-12T00:00:10.009Z）</a><span style=\"color: rgb(0, 0, 0)\">，当前时间前后5分钟</span></p></td></tr></tbody></table><p></p><p><strong>请求参数示例</strong></p><pre><code class=\"language-plaintext\">{\n&nbsp;&nbsp;&nbsp;&nbsp;\"client_id\":&nbsp;\"thirdappunittest_003\",\n&nbsp;&nbsp;&nbsp;&nbsp;\"client_secret\":&nbsp;\"Abcdrty@1234567890#@2\",\n&nbsp;&nbsp;&nbsp;&nbsp;\"username\":\"zhangSan\",\n&nbsp;&nbsp;&nbsp;&nbsp;\"accountId\":&nbsp;\"1355633519610561531\",\n&nbsp;&nbsp;&nbsp;&nbsp;\"language\":&nbsp;\"zh_CN\",\n&nbsp;&nbsp;&nbsp;&nbsp;\"nonce\":&nbsp;\"123\",\n&nbsp;&nbsp;&nbsp;&nbsp;\"timestamp\":&nbsp;\"2023-09-08&nbsp;11:47:00\"\n}</code></pre><p></p><p><strong>返回参数</strong></p><table style=\"width: 710px\"><colgroup><col style=\"width: 155px\"><col style=\"width: 101px\"><col style=\"width: 454px\"></colgroup><tbody><tr><th colspan=\"1\" rowspan=\"1\" colwidth=\"155\" data-background-color=\"\" style=\"background-color: \"><p>返回参数</p></th><th colspan=\"1\" rowspan=\"1\" colwidth=\"101\" data-background-color=\"\" style=\"background-color: \"><p>类型</p></th><th colspan=\"1\" rowspan=\"1\" colwidth=\"454\" data-background-color=\"\" style=\"background-color: \"><p>说明</p></th></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"155\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">data</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"101\" data-background-color=\"\" style=\"background-color: \"><p></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"454\" data-background-color=\"\" style=\"background-color: \"><p></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"155\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">- access_token</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"101\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"454\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">请求令牌，第三方应用调用OpenAPI的凭证</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"155\" data-background-color=\"\" style=\"background-color: \"><p></p><p><span style=\"color: rgb(0, 0, 0)\">- token_type</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"101\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"454\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">令牌类型，默认为Bearer，即任何持有token的用户都可以访问对应的资源</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"155\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">- refresh_token</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"101\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"454\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">刷新令牌，暂不支持</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"155\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">- scope</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"101\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"454\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">作用域，用户授权给第三方的权限，默认为API</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"155\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">- expires_in</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"101\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">Int</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"454\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">access_token的有效期，即距离过期的剩余时长（单位：毫秒）</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"155\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">- id_token</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"101\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"454\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">JWT（Json Web Token）</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"155\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">- id_token_expires_in</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"101\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">Int</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"454\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">JWT的有效期，即距离过期的剩余时长（单位：毫秒）</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"155\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">- language</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"101\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"454\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">浏览器接收语言</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"155\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">errorCode</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"101\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"454\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">错误码，成功时为0</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"42\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">message</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"101\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"454\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">错误消息</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"42\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">status</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"101\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">Boolean</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"454\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">请求状态，true/false</span></p></td></tr></tbody></table><p></p><p><strong>返回参数示例</strong></p><pre><code class=\"language-plaintext\">{\n\"data\":&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;\"access_token\":\"OPENAPIAUTH_MTMzMTIwNDQ0NTk5NTc5NDQzMl9FZ3h4MXU1Zzd2Qk9kRjR4MzIxQXZKcXU5c2hpbzNCaTRtTGIzbEsyM3JnbmFJUUJEMEltZUt3UURYQmFFdDJIVnc3MWtyaTVUR01ZbTRDUGVETDVSamE2R0F1a2g5SGpVcmwx\",\n&nbsp;&nbsp;&nbsp;&nbsp;\"token_type\":&nbsp;\"Bearer\",\n&nbsp;&nbsp;&nbsp;&nbsp;\"refresh_token\":&nbsp;\"d367106c-de46-4fc4-9e1a-59cbcfc430d2\",\n&nbsp;&nbsp;&nbsp;&nbsp;\"scope\":&nbsp;\"API\",\n&nbsp;&nbsp;&nbsp;&nbsp;\"expires_in\":&nbsp;\"7199977\",\n&nbsp;&nbsp;&nbsp;&nbsp;\"id_token\":&nbsp;\"OPENAPIAUTH_ZXlKMGVYQWlPaUpLVjFRaUxDSmhiR2NpT2lKSVV6STFOaUo5LmV5Sm1hV1FpT2lJeE16UTJOamN6T1NJc0luTjFZaUk2SW10a2FuZDBJaXdpWm5Cb2IyNWxJam9pTVRjeU9UazVPVGs1T1RraUxDSmxhV1FpT2lJeE1UUTNOVFl4TnlJc0ltWjBjblZsYm1GdFpTSTZJa2xGVWxBaUxDSm1iM0puYVdRaU9pSXhJaXdpWm1WdFlXbHNJam9pYVdWeWNFQnJhVzVuWkdWbExtTnZiU0lzSW1semN5STZJbXRrSWl3aWRYTmxjbWxrSWpvaU1UTTBOalkzTXpraUxDSm1ZbWw2Y0dGeWRHNWxjbWxrSWpvaU1DSXNJbVpzWVhOMGJHOW5hVzVwY0NJNklqRTNNaTR5TUM0eE5DNDJOeUlzSW1acGMyRmpkR2wyWldRaU9pSXhJaXdpWm05d1pXNXBaQ0k2SWpWaE1tUmxabU5pWlRSaU1EazFOMlpoTURobU9HTTNNaUlzSW1ac1lYTjBiRzluYVc1MGFXMWxJam9pTWpBeU15MHdPQzB5T1NBd01Eb3dNRG93TUM0d0lpd2labVZ1WVdKc1pTSTZJakVpTENKbWRXbGtJam9pTVRNME5qWTNNemtpTENKMWMyVnlWSGx3WlNJNklqRWlMQ0psZUhBaU9qRTJPVFEyTURReU1UZ3NJbWxoZENJNk1UWTVORFU1TnpBeE9Dd2labWx6Y21WbmFYTjBaV1FpT2lJeElpd2labkJ6ZDNOMGNtRjBaV2Q1YVdRaU9pSTNOakk1TnpjM09UVTNOekl3TURVek56WWlMQ0oxYzJWeWIzQmxibWxrSWpvaU5XRXlaR1ZtWTJKbE5HSXdPVFUzWm1Fd09HWTRZemN5SWl3aWRYTmxjbTVoYldVaU9pSkpSVkpRSW4wLi1ZZEd1cWhIX25Mcm5ibURnQTlfU2FvQkZsTGJWTTJEUmp2cnR4NXZwckk=\",\n&nbsp;&nbsp;&nbsp;&nbsp;\"id_token_expires_in\":&nbsp;\"7199977\",\n&nbsp;&nbsp;&nbsp;&nbsp;\"language\":&nbsp;\"zh_CN\"\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},\n&nbsp;&nbsp;&nbsp;&nbsp;\"errorCode\":&nbsp;\"0\",\n&nbsp;&nbsp;&nbsp;&nbsp;\"message\":&nbsp;\"\",\n&nbsp;&nbsp;&nbsp;&nbsp;\"status\":&nbsp;true\n}</code></pre><p></p><p><strong>错误码说明</strong></p><table style=\"width: 752px\"><colgroup><col style=\"width: 126px\"><col style=\"width: 626px\"></colgroup><tbody><tr><th colspan=\"1\" rowspan=\"1\" colwidth=\"126\" data-background-color=\"\" style=\"background-color: \"><p><strong>错误码</strong></p></th><th colspan=\"1\" rowspan=\"1\" colwidth=\"626\" data-background-color=\"\" style=\"background-color: \"><p><strong>说明</strong></p></th></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"66\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">0</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"626\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">请求成功</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"126\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">401</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"626\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">不正确的第三方应用编码client_id或client_secret</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">603</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"626\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">请求参数错误</span></p></td></tr></tbody></table><p></p><p><a href=\"/tolink?target=https%3A%2F%2Fdevelopers.weixin.qq.com%2Fdoc%2Foplatform%2FopenApi%2FOpenApiDoc%2Fticket-token%2FgetComponentAccessToken.html%23%25E8%25AF%25B7%25E6%25B1%2582%25E5%258F%2582%25E6%2595%25B0\" target=\"_blank\"></a></p><h3>2.2&nbsp;<strong>verifyToken</strong></h3><p></p><ul><li><p><strong>功能描述</strong>：检测请求令牌的有效性。</p></li></ul><p></p><ul><li><p><strong>请求 URL</strong>：http://{{localhost}}<span style=\"color: rgb(0, 112, 192)\">/kapi/oauth2/verifyToken</span></p></li><li><p><strong>调用方式</strong>：HTTP调用</p></li><li><p><strong>请求方式</strong>：POST</p></li><li><p><strong>请求类型</strong>：Content-Type:application/json</p></li><li><p><strong>调用频率</strong>：1分钟30次</p></li><li><p><strong>token有效期</strong>：2小时</p></li></ul><p></p><p><strong>请求Body参数</strong></p><table style=\"width: 698px\"><colgroup><col style=\"width: 125px\"><col style=\"width: 67px\"><col style=\"width: 103px\"><col style=\"width: 403px\"></colgroup><tbody><tr><th colspan=\"1\" rowspan=\"1\" colwidth=\"125\" data-background-color=\"\" style=\"background-color: \"><p><strong>请求参数</strong></p></th><th colspan=\"1\" rowspan=\"1\" colwidth=\"67\" data-background-color=\"\" style=\"background-color: \"><p><strong>必传</strong></p></th><th colspan=\"1\" rowspan=\"1\" colwidth=\"103\" data-background-color=\"\" style=\"background-color: \"><p><strong>类型</strong></p></th><th colspan=\"1\" rowspan=\"1\" colwidth=\"403\" data-background-color=\"\" style=\"background-color: \"><p><strong>说明</strong></p></th></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"65\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">client_id</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"67\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">是</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"103\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"403\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">第三方应用系统编码，即appId</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"65\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">token_type_hint</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"67\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">是</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"103\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"403\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">令牌类型，access_token/id_token</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"6\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">token</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"67\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">是</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"103\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"403\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">令牌值</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"6\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">accountId</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"67\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">是</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"103\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"403\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">数据中心id</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"6\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">nonce</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"67\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">是</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"103\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"403\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">随机数</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">timestamp</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"67\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">是</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"103\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"79\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">时间戳，</span><span style=\"color: rgb(0, 112, 192)\">当前时间前后5分钟</span></p></td></tr></tbody></table><p></p><p><strong>请求参数示例</strong></p><pre><code class=\"language-plaintext\">{\n&nbsp;&nbsp;\"client_id\":&nbsp;\"thirdappunittest_003\",\n&nbsp;&nbsp;\"token_type_hint\":&nbsp;\"access_token\",\n&nbsp;&nbsp;&nbsp;&nbsp;\"token\":\"OPENAPIAUTH_MTMzMTIwNDQ0NTk5NTc5NDQzMl9peGdobmxERWluY1FpZDc2R2pjUDcyYlg0UTNwNDhpczZXM01NYTlsTDVhNEU2TFRkT0ZIWTlybUl5SDdvQUJ1ZGFSaGtWU0hGNlNRRTBjMjZ6MkxxQWRjbkNpTzBnd1ZzMW9P\",\n&nbsp;&nbsp;\"nonce\":&nbsp;\"1234\",\n&nbsp;&nbsp;\"timestamp\":&nbsp;\"2023-09-15&nbsp;16:14:00\",\n&nbsp;&nbsp;\"accountId\":&nbsp;\"1331204445995794432\"\n}</code></pre><p></p><p><strong>返回参数</strong></p><table style=\"width: 710px\"><colgroup><col style=\"width: 155px\"><col style=\"width: 101px\"><col style=\"width: 454px\"></colgroup><tbody><tr><th colspan=\"1\" rowspan=\"1\" colwidth=\"155\" data-background-color=\"\" style=\"background-color: \"><p>返回参数</p></th><th colspan=\"1\" rowspan=\"1\" colwidth=\"101\" data-background-color=\"\" style=\"background-color: \"><p>类型</p></th><th colspan=\"1\" rowspan=\"1\" colwidth=\"454\" data-background-color=\"\" style=\"background-color: \"><p>说明</p></th></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"155\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">data</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"101\" data-background-color=\"\" style=\"background-color: \"><p></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"454\" data-background-color=\"\" style=\"background-color: \"><p></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"155\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">- expires_in</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"101\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">Int</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"454\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">令牌的有效期，即距离过期的剩余时长（单位：毫秒）</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"155\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">- active</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"101\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">Boolean</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"454\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">是否有效，true/false</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"155\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">- scope</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"101\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"454\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">作用域，用户授权给第三方的权限，默认为API</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"155\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">errorCode</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"101\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"454\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">错误码，成功时为0</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"42\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">message</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"101\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"454\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">错误消息</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"42\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">status</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"101\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">Boolean</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"454\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">请求状态，true/false</span></p></td></tr></tbody></table><p></p><p><strong>返回参数示例</strong></p><pre><code class=\"language-plaintext\">{\n&nbsp;&nbsp;&nbsp;&nbsp;\"data\":&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;\"expires_in\":&nbsp;\"7133040\",\n&nbsp;&nbsp;&nbsp;&nbsp;\"active\":&nbsp;true,\n&nbsp;&nbsp;&nbsp;&nbsp;\"scope\":&nbsp;\"API\"\n&nbsp;&nbsp;&nbsp;&nbsp;},\n&nbsp;&nbsp;&nbsp;&nbsp;\"errorCode\":&nbsp;\"0\",\n&nbsp;&nbsp;&nbsp;&nbsp;\"message\":&nbsp;\"\",\n&nbsp;&nbsp;&nbsp;&nbsp;\"status\":&nbsp;true\n}</code></pre><p></p><p><strong>错误码说明</strong></p><table style=\"width: 745px\"><colgroup><col style=\"width: 125px\"><col style=\"width: 620px\"></colgroup><tbody><tr><th colspan=\"1\" rowspan=\"1\" colwidth=\"125\" data-background-color=\"\" style=\"background-color: \"><p><strong>错误码</strong></p></th><th colspan=\"1\" rowspan=\"1\" colwidth=\"620\" data-background-color=\"\" style=\"background-color: \"><p><strong>说明</strong></p></th></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"65\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">0</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"620\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">请求成功</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">603</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"217\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">请求参数错误</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">612</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"217\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">AccessToken verify failed/JWT(id_token) 验证失败：已过期</span></p></td></tr></tbody></table><p></p><p></p><h3>2.3 w<strong>ithdrawToken</strong></h3><p></p><p><a href=\"https://vip-admin.kingdee.com/tolink?target=https%3A%2F%2Fdevelopers.weixin.qq.com%2Fdoc%2Foplatform%2FopenApi%2FOpenApiDoc%2Fticket-token%2FgetAuthorizerRefreshToken.html%23%25E6%25B3%25A8%25E6%2584%258F%25E4%25BA%258B%25E9%25A1%25B9\" target=\"_blank\"></a></p><ul><li><p><strong>功能描述</strong>：撤回请求令牌（暂不支持JWT）。</p></li></ul><p></p><ul><li><p><strong>请求 URL</strong>：http://{{localhost}}<span style=\"color: rgb(0, 112, 192)\">/kapi/oauth2/withdrawToken</span></p></li><li><p><strong>调用方式</strong>：HTTP调用</p></li><li><p><strong>请求方式</strong>：POST</p></li><li><p><strong>请求类型</strong>：Content-Type:application/json</p></li><li><p><strong>调用频率</strong>：1分钟30次</p></li><li><p><strong>token有效期</strong>：2小时</p></li></ul><p></p><p><strong>请求Body参数</strong></p><table style=\"width: 638px\"><colgroup><col style=\"width: 65px\"><col style=\"width: 67px\"><col style=\"width: 103px\"><col style=\"width: 403px\"></colgroup><tbody><tr><th colspan=\"1\" rowspan=\"1\" colwidth=\"65\" data-background-color=\"\" style=\"background-color: \"><p><strong>请求参数</strong></p></th><th colspan=\"1\" rowspan=\"1\" colwidth=\"67\" data-background-color=\"\" style=\"background-color: \"><p><strong>必传</strong></p></th><th colspan=\"1\" rowspan=\"1\" colwidth=\"103\" data-background-color=\"\" style=\"background-color: \"><p><strong>类型</strong></p></th><th colspan=\"1\" rowspan=\"1\" colwidth=\"403\" data-background-color=\"\" style=\"background-color: \"><p><strong>说明</strong></p></th></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"65\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">client_id</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"67\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">是</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"103\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"403\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">第三方应用系统编码，即appId</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"65\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">client_secret</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"67\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">是</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"103\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"403\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">第三方应用AccessToken认证密钥，即appSecret</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"65\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">token_type_hint</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"67\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">是</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"103\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"403\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">令牌类型，access_token/refresh_token</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"65\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">token</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"67\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">是</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"103\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"403\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">令牌值</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"65\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">accountId</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"67\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">是</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"103\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"403\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">数据中心id</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"65\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">nonce</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"67\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">是</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"103\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"403\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">随机数</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"65\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">timestamp</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"67\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">是</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"103\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"403\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">时间戳，</span><span style=\"color: rgb(0, 112, 192)\">当前时间前后5分钟</span></p></td></tr></tbody></table><p></p><p><strong>请求参数示例</strong></p><pre><code class=\"language-plaintext\">{\n&nbsp;&nbsp;&nbsp;&nbsp;\"client_id\":&nbsp;\"thirdappunittest_003\",\n&nbsp;&nbsp;&nbsp;&nbsp;\"client_secret\":&nbsp;\"Abcdrty@1234567890#@2\",\n&nbsp;&nbsp;&nbsp;&nbsp;\"token_type_hint\":&nbsp;\"access_token\",\n&nbsp;&nbsp;&nbsp;&nbsp;\"token\":\"OPENAPIAUTH_MTMzMTIwNDQ0NTk5NTc5NDQzMl9peGdobmxERWluY1FpZDc2R2pjUDcyYlg0UTNwNDhpczZXM01NYTlsTDVhNEU2TFRkT0ZIWTlybUl5SDdvQUJ1ZGFSaGtWU0hGNlNRRTBjMjZ6MkxxQWRjbkNpTzBnd1ZzMW9P\",\n&nbsp;&nbsp;&nbsp;&nbsp;\"nonce\":&nbsp;\"12345\",\n&nbsp;&nbsp;&nbsp;&nbsp;\"timestamp\":&nbsp;\"2023-09-15&nbsp;16:29:00\",\n&nbsp;&nbsp;&nbsp;&nbsp;\"accountId\":&nbsp;\"1331204445995794432\"\n}</code></pre><p></p><p><strong>返回参数</strong></p><table style=\"width: 728px\"><colgroup><col style=\"width: 155px\"><col style=\"width: 101px\"><col style=\"width: 472px\"></colgroup><tbody><tr><th colspan=\"1\" rowspan=\"1\" colwidth=\"155\" data-background-color=\"\" style=\"background-color: \"><p>返回参数</p></th><th colspan=\"1\" rowspan=\"1\" colwidth=\"101\" data-background-color=\"\" style=\"background-color: \"><p>类型</p></th><th colspan=\"1\" rowspan=\"1\" colwidth=\"472\" data-background-color=\"\" style=\"background-color: \"><p>说明</p></th></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"155\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">data</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"101\" data-background-color=\"\" style=\"background-color: \"><p></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"472\" data-background-color=\"\" style=\"background-color: \"><p></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"155\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">errorCode</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"101\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"472\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">错误码，成功时为0</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"42\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">message</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"101\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"472\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">错误消息</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"42\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">status</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"101\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">Boolean</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"472\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">请求状态，true/false</span></p></td></tr></tbody></table><p></p><p><strong>返回参数示例</strong></p><pre><code class=\"language-plaintext\">{\n&nbsp;&nbsp;&nbsp;&nbsp;\"data\":&nbsp;true,\n&nbsp;&nbsp;&nbsp;&nbsp;\"errorCode\":&nbsp;\"0\",\n&nbsp;&nbsp;&nbsp;&nbsp;\"message\":&nbsp;\"true\",\n&nbsp;&nbsp;&nbsp;&nbsp;\"status\":&nbsp;true\n}</code></pre><p></p><p><strong>错误码说明</strong></p><table style=\"width: 752px\"><colgroup><col style=\"width: 125px\"><col style=\"width: 627px\"></colgroup><tbody><tr><th colspan=\"1\" rowspan=\"1\" colwidth=\"125\" data-background-color=\"\" style=\"background-color: \"><p><strong>错误码</strong></p></th><th colspan=\"1\" rowspan=\"1\" colwidth=\"627\" data-background-color=\"\" style=\"background-color: \"><p><strong>说明</strong></p></th></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"65\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">0</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"629\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">请求成功</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">401</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"224\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">不正确的第三方应用编码client_id或client_secret</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">603</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"224\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">请求参数错误</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">611</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"224\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">撤回失败</span></p></td></tr></tbody></table><p></p><p style=\"text-align: justify; font-size: 20px\"><strong>3 更多资讯</strong></p><p style=\"text-align: justify\">关于OpenAPI的更多资讯，请随时关注<a href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=226337371640594944&amp;id=226708319996323072&amp;productLineId=29\" target=\"_blank\">新特性公告</a>。</p><p style=\"text-align: justify\">认证相关信息，请查看<a href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=239331354741842688&amp;id=218694224487485696\" target=\"_blank\">金蝶AI苍穹OpenAPI开发认证指南</a></p><p></p>"
+}

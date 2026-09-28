@@ -1,0 +1,831 @@
+{
+ "badNum": 0,
+ "identityTagIds": null,
+ "knowledgeId": "780845392861591040",
+ "createdAt": 1763976049000,
+ "collections": 4,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "780845392861591040",
+ "contentType": 1,
+ "updatedAt": 1785326102000,
+ "knowledgeUpdater": {
+  "avatar": "/download/0101d05fae7da1fb46ec9afde9c187ba6cda.png",
+  "department": null,
+  "id": "400313447986157568",
+  "name": "MartinTso",
+  "nameSpell": "caozhijun"
+ },
+ "assessStatus": 0,
+ "knowledgeStatus": 2,
+ "assessHandleStatus": null,
+ "knowledgeCreatedAt": 1763976049000,
+ "version": 16,
+ "labels": [],
+ "editedAt": 1785292535000,
+ "identityTags": null,
+ "useful": 0,
+ "errors": [],
+ "isCollected": false,
+ "totalFeedBacks": 0,
+ "attachments": [],
+ "sources": [],
+ "editTitle": "触发值更新出现数据被覆盖问题临时解决方案",
+ "title": "触发值更新出现数据被覆盖问题临时解决方案",
+ "content": "<h2><strong>1、问题描述</strong></h2><p><strong>示例场景一：</strong></p><p>完工入库单更新API开启的值更新，在请求参数里面给“仓库”，“仓位”赋值，值更新逻辑：当给仓库赋值时，会清空仓位，由于平台赋值是随机的，当先给仓位赋值时，再给仓库赋值时，就会出现这种情况，<span style=\"color: rgb(192, 0, 0)\"><strong>调用方明明传了仓库仓位，但是最终仓位为空，导致接口调用失败</strong></span>。</p><p></p><p><strong>示例场景二：</strong></p><p>新增接口里面如果参数里面设置了新增时触发值改变事件，业务单据如果仓库设置了仓位，新增时仓库填了值然后会提示仓位必填，<span style=\"color: rgb(192, 0, 0)\"><strong>但是接口请求参数里面仓位这个字段是有值的，再将新增时触发值改变事件改为false，那么同样的json调用接口就不报错了</strong></span>。</p><p></p><h2><strong>2、问题原因</strong></h2><p><strong>目前值更新赋值的处理是随机无序的，故可能出现先处理了B再处理A，导致B的值更新逻辑被覆盖问题。</strong></p><p></p><h2><strong>3、解决方案</strong></h2><h3><strong>3.1 长期解决方案：</strong></h3><p>待平台提供自定义操作参数保证原报文字段顺序，避免触发值更新时的无序问题。</p><h3><span style=\"color: rgb(255, 137, 38)\">3.2 临时解决方案</span></h3><p>采用<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/knowledge/specialDetail/272110040385964032?category=272111020880021504&amp;id=555710197700574720&amp;type=Knowledge&amp;productLineId=40&amp;lang=zh-CN\"><span style=\"color: rgb(0, 112, 192)\"><strong>扩展插件</strong></span></a>，干预数据格式转为linkhashmap进行处理，插件实现逻辑：</p><p><img src=\"/download/0100d62924bee7854f0ab810e302bbee9405.png\" alt=\"上传图片\"></p><pre><code class=\"language-java\">import kd.bos.openapi.api.plugin.ApiSavePlugin;\n\nimport java.util.ArrayList;\nimport java.util.LinkedHashMap;\nimport java.util.List;\nimport java.util.Map;\n\npublic class DemoApiSavePlugin implements ApiSavePlugin {\n\n\t@Override\n\tpublic List&lt;Map&lt;String, Object&gt;&gt; preHandleRequestData(List&lt;Map&lt;String, Object&gt;&gt; reqData) {\n\t\tList&lt;Map&lt;String, Object&gt;&gt; updatedData = new ArrayList&lt;&gt;(reqData.size());\n\t\tfor (Map&lt;String, Object&gt; entry : reqData) {\n\t\t\tMap&lt;String, Object&gt; newEntry = new LinkedHashMap&lt;&gt;(entry.size());\n\t\t\t// 先放入先触发的 字段\n\t\t\tObject checkboxfield = entry.remove(\"xxx\");\n\t\t\tif (checkboxfield != null) {\n\t\t\t\tnewEntry.put(\"xxx\", checkboxfield);\n\t\t\t}\n\t\t\tnewEntry.putAll(entry);\n\t\t\tupdatedData.add(newEntry);\n\t\t}\n\t\treturn updatedData;\n\t}\n}</code></pre>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 93,
+   "isOpen": 1,
+   "name": "金蝶AI套件",
+   "productLineId": 40,
+   "series": "S0361",
+   "sort": 1
+  },
+  {
+   "alias": null,
+   "code": null,
+   "id": 87,
+   "isOpen": 1,
+   "name": "金蝶AI苍穹",
+   "productLineId": 29,
+   "series": "developer01",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        null
+       ],
+       "code": null,
+       "description": "",
+       "entityId": "780845392861591040",
+       "entityType": "Knowledge",
+       "id": "780848663781269248",
+       "isCategory": false,
+       "name": "触发值更新出现数据被覆盖问题临时解决方案",
+       "parentId": "272111016937375744",
+       "sort": "28",
+       "specialId": "272110040385964032",
+       "status": 1
+      }
+     ],
+     "code": "",
+     "description": "",
+     "entityId": null,
+     "entityType": null,
+     "id": "272111016937375744",
+     "isCategory": true,
+     "name": "常见问题",
+     "parentId": "-1",
+     "sort": "9",
+     "specialId": "272110040385964032",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI套件",
+     "id": 93,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "OSC",
+      "name": "开放服务云",
+      "id": "563356589114194944",
+      "sort": 33,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "OpenAPI",
+       "id": "272103818790291456",
+       "sort": 1,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 40
+    }
+   ],
+   "collections": 120,
+   "createdAt": "2022-01-20T21:08:09.000+08:00",
+   "creator": {
+    "avatar": "/download?fileName=010162cfa9d5437711e8b441060400ef5315.png",
+    "department": null,
+    "id": "2147461337",
+    "name": "CorY",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了OpenAPI（开放平台）的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手开放平台。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "272110040385964032",
+   "identityTags": null,
+   "itemNum": 102,
+   "logo": "/download/0100c6656b9432084112bd16330c67cbb275.jpg",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "40",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 93,
+     "isOpen": 1,
+     "name": "金蝶AI套件",
+     "productLineId": 40,
+     "series": "S0361",
+     "sort": 1
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 0,
+   "totalAppraisalUsers": 0,
+   "updatedAt": "2026-04-17T12:41:32.000+08:00",
+   "updaterId": "429676515387511808",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 344749
+  },
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        null
+       ],
+       "code": null,
+       "description": "",
+       "entityId": "780845392861591040",
+       "entityType": "Knowledge",
+       "id": "780848663865155328",
+       "isCategory": false,
+       "name": "触发值更新出现数据被覆盖问题临时解决方案",
+       "parentId": "226337785987048960",
+       "sort": "30",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": "",
+     "entityId": null,
+     "entityType": null,
+     "id": "226337785987048960",
+     "isCategory": true,
+     "name": "常见问题",
+     "parentId": "-1",
+     "sort": "9",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download/0101d05fae7da1fb46ec9afde9c187ba6cda.png",
+  "department": null,
+  "id": "400313447986157568",
+  "name": "MartinTso",
+  "nameSpell": "caozhijun"
+ },
+ "totalAppraisalScore": 0,
+ "iflytekId": null,
+ "views": 1646,
+ "productLineId": 40,
+ "comments": 0,
+ "similarityCount": null,
+ "totalAppraisalUsers": 0,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1785326102000,
+ "appraisalScore": 0,
+ "unuseful": 0,
+ "knowledgeCheckStatus": 2,
+ "otherProductLineIds": [
+  29
+ ],
+ "auditAt": 1785292612000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": null,
+       "code": "open",
+       "id": "272103818790291456",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "563356589114194944",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 37,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "93",
+     "name": "金蝶AI套件",
+     "productLineId": 40,
+     "sort": 2,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "XKOpenFAQ",
+        "id": "522699438716894976",
+        "name": "常见问题",
+        "productLineId": null,
+        "sort": 18,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "272103818790291456",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "563356589114194944",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 37,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "93",
+     "name": "金蝶AI套件",
+     "productLineId": 40,
+     "sort": 3,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "XSRM",
+     "createdAt": 1726129666000,
+     "creator": {
+      "avatar": "/download?fileName=01014c2c1c8b203f4a8aaa1e18dce7725efa.png",
+      "department": null,
+      "id": "1155",
+      "name": "陈旭",
+      "nameSpell": "lansehuanxiang"
+     },
+     "description": "快速入门",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download?fileName=01007ab64f34c9004072ad021d226f8216fe.png",
+     "id": "622106158584431616",
+     "name": "快速入门",
+     "productLine": {
+      "active": true,
+      "appLogo": "金蝶云星空|旗舰版",
+      "categoryCode": "X04",
+      "courseLogo": "",
+      "domain": "",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": false,
+      "id": 40,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/01006d278204e9994fe9b4fc05bcdcf7ba45.png",
+      "name": "金蝶AI套件",
+      "rank": 3,
+      "seriesCode": "S0361"
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download?fileName=01011dc4dc4a745a4974a64ff09ab41e9eab.png",
+      "department": null,
+      "id": "1012",
+      "name": "angel",
+      "nameSpell": "angel"
+     },
+     "updatedAt": 1726129666000
+    },
+    {
+     "code": "changjianwenti",
+     "createdAt": 1726129148000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "常见问题",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download?fileName=0100ef2db45aa7524b70a990e7fd9d40db4a.png",
+     "id": "622103985280648192",
+     "name": "常见问题",
+     "productLine": {
+      "active": true,
+      "appLogo": "金蝶云星空|旗舰版",
+      "categoryCode": "X04",
+      "courseLogo": "",
+      "domain": "",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": false,
+      "id": 40,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/01006d278204e9994fe9b4fc05bcdcf7ba45.png",
+      "name": "金蝶AI套件",
+      "rank": 3,
+      "seriesCode": "S0361"
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download?fileName=01011dc4dc4a745a4974a64ff09ab41e9eab.png",
+      "department": null,
+      "id": "1012",
+      "name": "angel",
+      "nameSpell": "angel"
+     },
+     "updatedAt": 1726129148000
+    }
+   ],
+   "productLineId": 40,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "780845392861591040",
+         "entityType": "Knowledge",
+         "id": "780848663781269248",
+         "isCategory": false,
+         "name": "触发值更新出现数据被覆盖问题临时解决方案",
+         "parentId": "272111016937375744",
+         "sort": "28",
+         "specialId": "272110040385964032",
+         "status": 1
+        }
+       ],
+       "code": "",
+       "description": "",
+       "entityId": null,
+       "entityType": null,
+       "id": "272111016937375744",
+       "isCategory": true,
+       "name": "常见问题",
+       "parentId": "-1",
+       "sort": "9",
+       "specialId": "272110040385964032",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI套件",
+       "id": 93,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "OSC",
+        "name": "开放服务云",
+        "id": "563356589114194944",
+        "sort": 33,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "OpenAPI",
+         "id": "272103818790291456",
+         "sort": 1,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 40
+      }
+     ],
+     "collections": 120,
+     "createdAt": "2022-01-20T21:08:09.000+08:00",
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d5437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "2147461337",
+      "name": "CorY",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了OpenAPI（开放平台）的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手开放平台。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "272110040385964032",
+     "identityTags": null,
+     "itemNum": 102,
+     "logo": "/download/0100c6656b9432084112bd16330c67cbb275.jpg",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "40",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 93,
+       "isOpen": 1,
+       "name": "金蝶AI套件",
+       "productLineId": 40,
+       "series": "S0361",
+       "sort": 1
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 0,
+     "totalAppraisalUsers": 0,
+     "updatedAt": "2026-04-17T12:41:32.000+08:00",
+     "updaterId": "429676515387511808",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 344749
+    }
+   ]
+  },
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": null,
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 0,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapi_apilist_layout",
+        "id": "505686038019362304",
+        "name": "异步API",
+        "productLineId": null,
+        "sort": 1,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 1,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "HotIssues",
+     "createdAt": 1558618967000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "使用中经常遇到的应用类、报错类问题的解决方法",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/010046d15638963c4c388734601dd5f8ceec.png",
+     "id": "202203081644",
+     "name": "常见问题",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010176d38341668f44fdb94c95058a90e4b8.png",
+      "department": "云社区运营部",
+      "id": "2147406697",
+      "name": "多肉丸子",
+      "nameSpell": "kejuan"
+     },
+     "updatedAt": 1676857709000
+    },
+    {
+     "code": "rumen",
+     "createdAt": 1605667807000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "入门类的知识可使用此标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100d322b9282bcc438faa894f4eec029977.png",
+     "id": "202203081646",
+     "name": "基础入门",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download?fileName=0101ec1d6ce599b442dab7d0b794c1fce88d.png",
+      "department": null,
+      "id": "1009",
+      "name": "一颗小星星",
+      "nameSpell": "fengling"
+     },
+     "updatedAt": 1657872008000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "780845392861591040",
+         "entityType": "Knowledge",
+         "id": "780848663865155328",
+         "isCategory": false,
+         "name": "触发值更新出现数据被覆盖问题临时解决方案",
+         "parentId": "226337785987048960",
+         "sort": "30",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": null,
+       "id": "226337785987048960",
+       "isCategory": true,
+       "name": "常见问题",
+       "parentId": "-1",
+       "sort": "9",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": "<h2><strong>1、问题描述</strong></h2><p><strong>示例场景一：</strong></p><p>完工入库单更新API开启的值更新，在请求参数里面给“仓库”，“仓位”赋值，值更新逻辑：当给仓库赋值时，会清空仓位，由于平台赋值是随机的，当先给仓位赋值时，再给仓库赋值时，就会出现这种情况，<span style=\"color: rgb(192, 0, 0)\"><strong>调用方明明传了仓库仓位，但是最终仓位为空，导致接口调用失败</strong></span>。</p><p></p><p><strong>示例场景二：</strong></p><p>新增接口里面如果参数里面设置了新增时触发值改变事件，业务单据如果仓库设置了仓位，新增时仓库填了值然后会提示仓位必填，<span style=\"color: rgb(192, 0, 0)\"><strong>但是接口请求参数里面仓位这个字段是有值的，再将新增时触发值改变事件改为false，那么同样的json调用接口就不报错了</strong></span>。</p><p></p><h2><strong>2、问题原因</strong></h2><p><strong>目前值更新赋值的处理是随机无序的，故可能出现先处理了B再处理A，导致B的值更新逻辑被覆盖问题。</strong></p><p></p><h2><strong>3、解决方案</strong></h2><h3><strong>3.1 长期解决方案：</strong></h3><p>待平台提供自定义操作参数保证原报文字段顺序，避免触发值更新时的无序问题。</p><h3><span style=\"color: rgb(255, 137, 38)\">3.2 临时解决方案</span></h3><p>采用<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/knowledge/specialDetail/272110040385964032?category=272111020880021504&amp;id=555710197700574720&amp;type=Knowledge&amp;productLineId=40&amp;lang=zh-CN\"><span style=\"color: rgb(0, 112, 192)\"><strong>扩展插件</strong></span></a>，干预数据格式转为linkhashmap进行处理，插件实现逻辑：</p><p><img src=\"/download/0100d62924bee7854f0ab810e302bbee9405.png\" alt=\"上传图片\"></p><pre><code class=\"language-java\">import kd.bos.openapi.api.plugin.ApiSavePlugin;\n\nimport java.util.ArrayList;\nimport java.util.LinkedHashMap;\nimport java.util.List;\nimport java.util.Map;\n\npublic class DemoApiSavePlugin implements ApiSavePlugin {\n\n\t@Override\n\tpublic List&lt;Map&lt;String, Object&gt;&gt; preHandleRequestData(List&lt;Map&lt;String, Object&gt;&gt; reqData) {\n\t\tList&lt;Map&lt;String, Object&gt;&gt; updatedData = new ArrayList&lt;&gt;(reqData.size());\n\t\tfor (Map&lt;String, Object&gt; entry : reqData) {\n\t\t\tMap&lt;String, Object&gt; newEntry = new LinkedHashMap&lt;&gt;(entry.size());\n\t\t\t// 先放入先触发的 字段\n\t\t\tObject checkboxfield = entry.remove(\"xxx\");\n\t\t\tif (checkboxfield != null) {\n\t\t\t\tnewEntry.put(\"xxx\", checkboxfield);\n\t\t\t}\n\t\t\tnewEntry.putAll(entry);\n\t\t\tupdatedData.add(newEntry);\n\t\t}\n\t\treturn updatedData;\n\t}\n}</code></pre>"
+}

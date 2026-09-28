@@ -1,0 +1,489 @@
+{
+ "badNum": 1,
+ "identityTagIds": null,
+ "knowledgeId": "226032339657008640",
+ "createdAt": 1631698309000,
+ "collections": 12,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "226032339657008640",
+ "contentType": 1,
+ "updatedAt": 1766124526000,
+ "knowledgeUpdater": {
+  "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+  "department": null,
+  "id": "132488613174518784",
+  "name": "某个路易",
+  "nameSpell": "name"
+ },
+ "assessStatus": 0,
+ "knowledgeStatus": 2,
+ "assessHandleStatus": null,
+ "knowledgeCreatedAt": 1631698309000,
+ "version": 104,
+ "labels": [],
+ "editedAt": 1705023260000,
+ "identityTags": null,
+ "useful": 25,
+ "errors": [],
+ "isCollected": false,
+ "totalFeedBacks": 1,
+ "attachments": [],
+ "sources": [],
+ "editTitle": "OpenAPI整体介绍",
+ "title": "OpenAPI整体介绍",
+ "content": "<p label=\"一级标题\" style=\"font-size: 20px; font-weight: bold; line-height: 42px; margin: 0px;\">1 产品概述</p><p label=\"二级标题\" style=\"font-size: 18px; font-weight: bold; padding: 8px 0px; line-height: 42px; margin: 0px;\">1.1 产品介绍</p><p>苍穹平台的OpenAPI致力于提供符合Restful规范的接口，将企业数据及业务能力API化，全面覆盖各领域开放接口的使用场景，用户可以简单、安全、低成本地实现内外部系统集成和业务能力的开放。</p><p><br/></p><p><img src=\"/download/0109d17da49a5f974f5ea73a127b46a8cff4.png\"/></p><p><br/></p><p label=\"备注\" class=\"remark-text\" style=\"\"><strong style=\"\">概念介绍：</strong></p><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><p label=\"备注\" class=\"remark-text\" style=\"\"><strong>API：</strong>应用程序接口，是预先定义的函数，为程序之间数据交互和功能触发提供服务，调用者只需调用API，并输入预先约定的参数，即可实现开发者封装好的各种功能，无需访问功能源码或理解功能的具体实现机制。</p></li><li><p label=\"备注\" class=\"remark-text\"><strong>API组成元素：</strong>API主要由请求地址（URL）、请求类型、请求头（header）和请求体（body）组成。</p></li><li><p label=\"备注\" class=\"remark-text\"><strong>API主要用途：</strong>实现资源复用，避免重复“造轮子”；帮助开发人员，提高集成效率；解耦各系统，快速扩展功能。</p></li></ul><p><br/></p><p label=\"二级标题\" style=\"font-size: 18px; font-weight: bold; padding: 8px 0px; line-height: 42px; margin: 0px;\">1.2 产品结构图</p><p>苍穹OpenAPI主要功能包含API引擎、API安全、API服务、统计监控、在线测试等内容。通过金蝶AI苍穹平台的技术能力，支持无代码、低代码、高代码快速API，<span style=\"\">将企业的业务能力对外开放，</span>极大提升开发和集成效率。</p><p><br/></p><p><img src=\"/download/010998f20be2778e48a99d8dba370504d71d.png\"/></p><p><br/></p><p label=\"二级标题\" style=\"font-size: 18px; font-weight: bold; padding: 8px 0px; line-height: 42px; margin: 0px;\">1.3 业务场景</p><ol class=\" list-paddingleft-2\" style=\"list-style-type: decimal;\"><li><p>管理外部第三方应用接口调用权限：注册后的第三方应用能作为外部系统调用苍穹接口的身份标识，拥有登录认证、接口调用等功能，外部系统可通过第三方应用获取登录令牌或直接通过自动生成的密钥（基本认证）开始调用OpenAPI。</p></li><li><p>用户需要工具快速开发API：支持通过零代码配置、Java插件、脚本开发的模式发布API接口，接口的请求方式支持GET、POST。</p></li><li><p><span style=\"\">帮助客户快速对接异构系统：接口同时发布为Rest API和WebService，可对接不同类型的新老系统，<span style=\"\">入参类型支持：</span></span></p></li></ol><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><p label=\"正文\" style=\"\"><span style=\"color: rgb(36, 41, 46);\">application/json</span></p></li><li><p><span style=\"color: rgb(36, 41, 46);\">application/xml</span></p></li><li><p>text/xml</p></li><li><p label=\"正文\" style=\"\">application/soap+xml</p></li><li><p><span style=\"color: rgb(36, 41, 46);\">multipart/form-data</span></p></li><li><p>x-www-form-urlencoded</p></li></ul></ul><p>&nbsp; &nbsp;4. 帮助用户实时监控API调用情况：<span style=\"\">提供API日志和统计监控的功能，实时监控目标偏移情况。</span></p><p><br/></p><p label=\"一级标题\" style=\"font-size: 20px; font-weight: bold; line-height: 42px; margin: 0px;\">2 业务流程</p><p>OpenAPI调用主流程主要分为以下四个步骤：</p><ol class=\" list-paddingleft-2\" style=\"list-style-type: decimal;\"><li><p>注册第三方应用</p></li><li><p>发布API服务</p></li><li><p>获取请求令牌</p></li><li><p>调用API服务</p><p><br/></p></li></ol><p>详情请参考<a href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=239331354741842688&id=213309216805890816&productLineId=29\" target=\"_blank\">OpenAPI调用流程</a>。</p><p><br/></p><p><br/></p><p label=\"一级标题\" style=\"font-size: 20px; font-weight: bold; line-height: 42px; margin: 0px;\">3 亮点特性</p><p label=\"二级标题\" style=\"font-size: 18px; font-weight: bold; padding: 8px 0px; line-height: 42px; margin: 0px;\"><strong>3.1 零代码配置发布API</strong></p><p>OpenAPI基于元数据驱动，可通过零代码配置的模式开发API，<span style=\"\">如</span><strong style=\"\">查询、保存、提交</strong><span style=\"\">等操作API均可快速开发</span>并自动构建请求参数，让API发布和测试更便捷。</p><p label=\"二级标题\" style=\"font-size: 18px; font-weight: bold; padding: 8px 0px; line-height: 42px; margin: 0px;\"><strong>3.2 自定义API处理复杂场景</strong></p><p>自定义API使用<strong>Java代码插件</strong>解决复杂的业务场景，如调用微服务或对文件流、图像等进行处理。同时支持使用<strong>脚本开发自定义API</strong>，不需要部署插件便可实现多个API、微服务、函数库等之间的组合调用，开发便捷，部署灵活。</p><p label=\"二级标题\" style=\"font-size: 18px; font-weight: bold; padding: 8px 0px; line-height: 42px; margin: 0px;\"><strong>3.3 多维度权限管控</strong></p><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><p>操作API默认校验代理用户的组织和功能权限（自定义API在插件中自行处理权限校验）；</p></li><li><p><span style=\"\">基于第三方应用进行接口权限控制，</span>调用方只允许调用API授权清单范围内的接口；</p></li><li><p>支持配置IP黑白名单，只允许白名单内的IP段访问API，拒绝黑名单内的IP段访问API，提升系统安全性。</p></li></ul><p label=\"二级标题\" style=\"font-size: 18px; font-weight: bold; padding: 8px 0px; line-height: 42px; margin: 0px;\"><strong>3.4 接口认证方式安全可靠</strong></p><p>OpenAPI同时支持AccessToken认证、摘要认证、JWT认证、基本认证和签名认证共5种认证方式，用户可以根据实际需要选择不同的认证方式或扩展认证方式，满足企业安全方面的个性化需求。</p><p><br/></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\"><strong style=\"\">3.5 API在线测试</strong></h3><p><strong style=\"font-size: 18px;\"></strong></p><p>模拟真实数据调用API服务，无需配置Postman，即可完成<strong>一键调试</strong>。</p><p><br/><strong style=\"font-size: 18px;\"></strong></p><p><br/></p><p label=\"一级标题\" style=\"font-size: 20px; font-weight: bold; line-height: 42px; margin: 0px;\">4 功能清单</p><p><br/></p><table style=\"\" width=\"99%\"><colgroup style=\"\"><col width=\"61\" style=\"\"/><col width=\"141\" style=\"\"/><col width=\"148\" style=\"\"/><col width=\"181\" style=\"\"/><col width=\"758\" style=\"\"/></colgroup><tbody style=\"\"><tr style=\"\" class=\"firstRow\"><td class=\"et2 selectTdClass\" height=\"30\" width=\"61\" style=\"background-color: red;\"><span style=\"color: rgb(0, 0, 0);\">序号</span></td><td class=\"et2 selectTdClass\" width=\"141\" style=\"background-color: red;\"><span style=\"color: rgb(0, 0, 0);\">一级菜单</span></td><td class=\"et2 selectTdClass\" width=\"148\" style=\"background-color: red;\"><span style=\"color: rgb(0, 0, 0);\">二级菜单</span></td><td class=\"et2 selectTdClass\" width=\"181\" style=\"background-color: red;\"><span style=\"color: rgb(0, 0, 0);\">页面</span></td><td class=\"et2 selectTdClass\" width=\"306\" style=\"background-color: red;\"><span style=\"color: rgb(0, 0, 0);\">功能说明</span></td></tr><tr style=\"\"><td class=\"et3\" height=\"74\" style=\"\">1</td><td rowspan=\"2\" class=\"et4\" style=\"\">API管理</td><td rowspan=\"2\" class=\"et4\" style=\"\">/</td><td class=\"et5\" style=\"\">API服务维护</td><td class=\"et6\" width=\"306\" style=\"\">界面为左树右表结构，按<span style=\"\">按云、业务应用、业务对象（自定义分类）</span>三个维度分类；用户可以新增API服务，维护API的基本信息、Webservice信息、请求参数和响应参数、错误码等信息。</td></tr><tr style=\"\"><td class=\"et3\" height=\"65\" style=\"\">2</td><td class=\"et5\" style=\"\">API在线测试</td><td class=\"et6\" width=\"758\" style=\"\">API在线测试可模拟真实数据调用API服务，用户无需填写参数和url，自动获取token令牌，快速进行API测试，方便快捷。</td></tr><tr style=\"\"><td class=\"et3\" height=\"57\" style=\"\">3</td><td class=\"et4\" style=\"\">API文档</td><td class=\"et4\" style=\"\">/</td><td class=\"et5\" style=\"\">API服务清单</td><td class=\"et6\" width=\"306\" style=\"\">API文档按云、业务应用、业务对象（自定义分类）三个维度分类，展示API基本信息、请求参数、请求结构示例、返回参数和返回结构示例、错误码等信息；支持获取匿名链接，发送给外部人员，无需登录系统即可查看API文档。</td></tr><tr style=\"\"><td class=\"et3\" height=\"38\" style=\"\">4</td><td class=\"et4\" style=\"\">第三方应用</td><td class=\"et4\" style=\"\">/</td><td class=\"et5\" style=\"\">第三方应用维护</td><td class=\"et6\" width=\"306\" style=\"\">用于注册第三方应用，维护系统编码（appId)、系统密码(appSecret)、支持多种认证方式、API授权、访问策略等功能。</td></tr><tr style=\"\"><td class=\"et3\" height=\"38\" style=\"\">5</td><td class=\"et4\" style=\"\">API日志</td><td class=\"et4\" style=\"\">/</td><td class=\"et5\" style=\"\">API调用日志</td><td class=\"et7\" width=\"306\" style=\"\">记录OpenAPI调用日志，包括接口出入参，API处理时间，调用者IP及账号等信息，用于日志审计及故障分析。</td></tr><tr style=\"\"><td class=\"et3\" height=\"33\" style=\"\">6</td><td rowspan=\"2\" class=\"et4\" style=\"\">API统计</td><td class=\"et4\" style=\"\">统计信息</td><td class=\"et5\" style=\"\">API统计信息</td><td class=\"et8\" style=\"\" width=\"306\">API调用统计信息，按天、第三方应用、API三个维度展示具体的调用情况。</td></tr><tr style=\"\"><td class=\"et3\" height=\"36\" style=\"\">7</td><td class=\"et4\" style=\"\">统计看板</td><td class=\"et5\" style=\"\">API统计看板</td><td class=\"et8\" style=\"\">API统计看板支持让用户实时监控目标偏离情况。</td></tr><tr style=\"\"><td class=\"et3\" height=\"38\" style=\"\">8</td><td class=\"et4\" style=\"\">限流策略</td><td class=\"et4\" style=\"\">/</td><td class=\"et5\" style=\"\">限流策略</td><td class=\"et6\" width=\"306\" style=\"\">支持管理API限流策略，用户可维护策略描述、限流策略控制维度（API、第三方应用、匿名）、次数、流控效果等信息。</td></tr><tr style=\"\"><td class=\"et3\" height=\"64\" style=\"\">9</td><td rowspan=\"2\" class=\"et4\" style=\"\">第三方API</td><td class=\"et4\" style=\"\">连接配置</td><td class=\"et5\" style=\"\">连接器配置</td><td class=\"et6\" width=\"306\" style=\"\">用于配置第三方系统的连接信息，支持多种连接类型。例如：京东、钉钉、法大大等。苍穹平台可通过该连接配置获取第三方系统的鉴权信息，并进行API的调用和会话刷新等操作。</td></tr><tr style=\"\"><td class=\"et3\" height=\"42\" style=\"\">10</td><td class=\"et4\" style=\"\">第三方API</td><td class=\"et5\" style=\"\">自定义API</td><td class=\"et8\" style=\"\">把外部系统的API注册到开放平台中，以便苍穹平台内部应用通过微服务调用该API。</td></tr><tr style=\"\"><td class=\"et3\" height=\"30\" style=\"\">11</td><td rowspan=\"7\" class=\"et4\" style=\"\">其他</td><td rowspan=\"3\" class=\"et9\" width=\"148\" style=\"\">代码片段管理</td><td class=\"et5\" style=\"\">代码片段管理</td><td class=\"et8\" style=\"\" width=\"306\">用于维护自定义API中引用的代码片段。</td></tr><tr style=\"\"><td class=\"et3\" height=\"28\" style=\"\">12</td><td class=\"et5\" style=\"\">脚本调试</td><td class=\"et8\" style=\"\">提供了帮助开发人员调试脚本的工具。</td></tr><tr style=\"\"><td class=\"et3\" height=\"32\" style=\"\">13</td><td class=\"et5\" style=\"\">帮助手册</td><td class=\"et8\" style=\"\">对脚本和微服务帮助内容进行了整理，方便用户学习和使用。</td></tr><tr style=\"\"><td class=\"et3\" height=\"61\" style=\"\">14</td><td class=\"et9\" width=\"148\" style=\"\">基础资料</td><td class=\"et5\" style=\"\">自定义分类维护</td><td class=\"et8\" style=\"\">维护自定义API的所属分类。</td></tr><tr style=\"\"><td class=\"et3\" height=\"33\" style=\"\">15</td><td class=\"et4\" style=\"\">演示单据</td><td class=\"et5\" style=\"\">开放平台单据示例</td><td class=\"et8\" style=\"\">该示例单据可用于调试以及演示API接口。</td></tr><tr style=\"\"><td class=\"et3\" height=\"77\" style=\"\">16</td><td rowspan=\"2\" class=\"et9\" width=\"148\" style=\"\">API1.0</td><td class=\"et5\" style=\"\">API服务</td><td class=\"et6\" width=\"758\" style=\"\">历史版本接口引擎的API服务列表，包含操作服务、自定义服务和AI服务，界面为左树右表结构，按业务应用分类。</td></tr><tr style=\"\"><td class=\"et3\" height=\"86\" style=\"\">17</td><td class=\"et5\" style=\"\">服务清单</td><td class=\"et6\" width=\"758\" style=\"\"><span style=\"\">历史版本接口引擎的API</span>文档列表，左树结构，按业务应用分类，左树只展示有API服务的应用。<br/>服务清单提供了API的基本信息、请求参数、请求结构示例、返回参数和返回结构示例等信息。</td></tr></tbody></table><p><br/></p>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 87,
+   "isOpen": 1,
+   "name": "金蝶AI苍穹",
+   "productLineId": 29,
+   "series": "developer01",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        null
+       ],
+       "code": null,
+       "description": "",
+       "entityId": "226032339657008640",
+       "entityType": "Knowledge",
+       "id": "226339345933042176",
+       "isCategory": false,
+       "name": "OpenAPI整体介绍",
+       "parentId": "226337425143137024",
+       "sort": "1",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": null,
+     "entityId": null,
+     "entityType": null,
+     "id": "226337425143137024",
+     "isCategory": true,
+     "name": "整体介绍",
+     "parentId": "-1",
+     "sort": "4",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download/01010204d4b71b654a208006fa1004eac36a.png",
+  "department": null,
+  "id": "740211268992385024",
+  "name": "毛毛去哪儿",
+  "nameSpell": "name"
+ },
+ "totalAppraisalScore": 126,
+ "iflytekId": null,
+ "views": 35927,
+ "productLineId": 29,
+ "comments": 1,
+ "similarityCount": null,
+ "totalAppraisalUsers": 26,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1766124526000,
+ "appraisalScore": 0,
+ "unuseful": 1,
+ "knowledgeCheckStatus": 2,
+ "otherProductLineIds": [],
+ "auditAt": 1705023273000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": null,
+       "code": "open",
+       "id": "5614",
+       "name": "开放平台",
+       "productLineId": null,
+       "sort": 2,
+       "type": "module"
+      },
+      "code": "DEV",
+      "id": "5576",
+      "name": "开发服务云",
+      "productLineId": null,
+      "sort": 11,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 0,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": null,
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 1,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "AppIntroduction",
+     "createdAt": 1556519179000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "对具体应用/模块的总体介绍，包括理念与结构图、应用流程与特性、核心业务场景及主要功能清单",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/01001f68a0fa33b44a5aa48366fe29ffb7a8.png",
+     "id": "202203081640",
+     "name": "整体介绍",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010176d38341668f44fdb94c95058a90e4b8.png",
+      "department": "云社区运营部",
+      "id": "2147406697",
+      "name": "多肉丸子",
+      "nameSpell": "kejuan"
+     },
+     "updatedAt": 1676857656000
+    },
+    {
+     "code": "rumen",
+     "createdAt": 1605667807000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "入门类的知识可使用此标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100d322b9282bcc438faa894f4eec029977.png",
+     "id": "202203081646",
+     "name": "基础入门",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download?fileName=0101ec1d6ce599b442dab7d0b794c1fce88d.png",
+      "department": null,
+      "id": "1009",
+      "name": "一颗小星星",
+      "nameSpell": "fengling"
+     },
+     "updatedAt": 1657872008000
+    },
+    {
+     "code": "essencesummary",
+     "createdAt": 1606118073000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "精华汇总",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100402c6f8df169483db114f71043c19ec2.png",
+     "id": "202203081649",
+     "name": "精华汇总",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 2,
+     "updatePerson": {
+      "avatar": "/download?fileName=010162cfa9d5437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1129",
+      "name": "灏",
+      "nameSpell": "hao"
+     },
+     "updatedAt": 1606118073000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "226032339657008640",
+         "entityType": "Knowledge",
+         "id": "226339345933042176",
+         "isCategory": false,
+         "name": "OpenAPI整体介绍",
+         "parentId": "226337425143137024",
+         "sort": "1",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": null,
+       "entityId": null,
+       "entityType": null,
+       "id": "226337425143137024",
+       "isCategory": true,
+       "name": "整体介绍",
+       "parentId": "-1",
+       "sort": "4",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": "<p label=\"一级标题\" style=\"font-size: 20px; font-weight: bold; line-height: 42px; margin: 0px;\">1 产品概述</p><p label=\"二级标题\" style=\"font-size: 18px; font-weight: bold; padding: 8px 0px; line-height: 42px; margin: 0px;\">1.1 产品介绍</p><p>苍穹平台的OpenAPI致力于提供符合Restful规范的接口，将企业数据及业务能力API化，全面覆盖各领域开放接口的使用场景，用户可以简单、安全、低成本地实现内外部系统集成和业务能力的开放。</p><p><br/></p><p><img src=\"/download/0109d17da49a5f974f5ea73a127b46a8cff4.png\"/></p><p><br/></p><p label=\"备注\" class=\"remark-text\" style=\"\"><strong style=\"\">概念介绍：</strong></p><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><p label=\"备注\" class=\"remark-text\" style=\"\"><strong>API：</strong>应用程序接口，是预先定义的函数，为程序之间数据交互和功能触发提供服务，调用者只需调用API，并输入预先约定的参数，即可实现开发者封装好的各种功能，无需访问功能源码或理解功能的具体实现机制。</p></li><li><p label=\"备注\" class=\"remark-text\"><strong>API组成元素：</strong>API主要由请求地址（URL）、请求类型、请求头（header）和请求体（body）组成。</p></li><li><p label=\"备注\" class=\"remark-text\"><strong>API主要用途：</strong>实现资源复用，避免重复“造轮子”；帮助开发人员，提高集成效率；解耦各系统，快速扩展功能。</p></li></ul><p><br/></p><p label=\"二级标题\" style=\"font-size: 18px; font-weight: bold; padding: 8px 0px; line-height: 42px; margin: 0px;\">1.2 产品结构图</p><p>苍穹OpenAPI主要功能包含API引擎、API安全、API服务、统计监控、在线测试等内容。通过金蝶AI苍穹平台的技术能力，支持无代码、低代码、高代码快速API，<span style=\"\">将企业的业务能力对外开放，</span>极大提升开发和集成效率。</p><p><br/></p><p><img src=\"/download/010998f20be2778e48a99d8dba370504d71d.png\"/></p><p><br/></p><p label=\"二级标题\" style=\"font-size: 18px; font-weight: bold; padding: 8px 0px; line-height: 42px; margin: 0px;\">1.3 业务场景</p><ol class=\" list-paddingleft-2\" style=\"list-style-type: decimal;\"><li><p>管理外部第三方应用接口调用权限：注册后的第三方应用能作为外部系统调用苍穹接口的身份标识，拥有登录认证、接口调用等功能，外部系统可通过第三方应用获取登录令牌或直接通过自动生成的密钥（基本认证）开始调用OpenAPI。</p></li><li><p>用户需要工具快速开发API：支持通过零代码配置、Java插件、脚本开发的模式发布API接口，接口的请求方式支持GET、POST。</p></li><li><p><span style=\"\">帮助客户快速对接异构系统：接口同时发布为Rest API和WebService，可对接不同类型的新老系统，<span style=\"\">入参类型支持：</span></span></p></li></ol><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><p label=\"正文\" style=\"\"><span style=\"color: rgb(36, 41, 46);\">application/json</span></p></li><li><p><span style=\"color: rgb(36, 41, 46);\">application/xml</span></p></li><li><p>text/xml</p></li><li><p label=\"正文\" style=\"\">application/soap+xml</p></li><li><p><span style=\"color: rgb(36, 41, 46);\">multipart/form-data</span></p></li><li><p>x-www-form-urlencoded</p></li></ul></ul><p>&nbsp; &nbsp;4. 帮助用户实时监控API调用情况：<span style=\"\">提供API日志和统计监控的功能，实时监控目标偏移情况。</span></p><p><br/></p><p label=\"一级标题\" style=\"font-size: 20px; font-weight: bold; line-height: 42px; margin: 0px;\">2 业务流程</p><p>OpenAPI调用主流程主要分为以下四个步骤：</p><ol class=\" list-paddingleft-2\" style=\"list-style-type: decimal;\"><li><p>注册第三方应用</p></li><li><p>发布API服务</p></li><li><p>获取请求令牌</p></li><li><p>调用API服务</p><p><br/></p></li></ol><p>详情请参考<a href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=239331354741842688&id=213309216805890816&productLineId=29\" target=\"_blank\">OpenAPI调用流程</a>。</p><p><br/></p><p><br/></p><p label=\"一级标题\" style=\"font-size: 20px; font-weight: bold; line-height: 42px; margin: 0px;\">3 亮点特性</p><p label=\"二级标题\" style=\"font-size: 18px; font-weight: bold; padding: 8px 0px; line-height: 42px; margin: 0px;\"><strong>3.1 零代码配置发布API</strong></p><p>OpenAPI基于元数据驱动，可通过零代码配置的模式开发API，<span style=\"\">如</span><strong style=\"\">查询、保存、提交</strong><span style=\"\">等操作API均可快速开发</span>并自动构建请求参数，让API发布和测试更便捷。</p><p label=\"二级标题\" style=\"font-size: 18px; font-weight: bold; padding: 8px 0px; line-height: 42px; margin: 0px;\"><strong>3.2 自定义API处理复杂场景</strong></p><p>自定义API使用<strong>Java代码插件</strong>解决复杂的业务场景，如调用微服务或对文件流、图像等进行处理。同时支持使用<strong>脚本开发自定义API</strong>，不需要部署插件便可实现多个API、微服务、函数库等之间的组合调用，开发便捷，部署灵活。</p><p label=\"二级标题\" style=\"font-size: 18px; font-weight: bold; padding: 8px 0px; line-height: 42px; margin: 0px;\"><strong>3.3 多维度权限管控</strong></p><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><p>操作API默认校验代理用户的组织和功能权限（自定义API在插件中自行处理权限校验）；</p></li><li><p><span style=\"\">基于第三方应用进行接口权限控制，</span>调用方只允许调用API授权清单范围内的接口；</p></li><li><p>支持配置IP黑白名单，只允许白名单内的IP段访问API，拒绝黑名单内的IP段访问API，提升系统安全性。</p></li></ul><p label=\"二级标题\" style=\"font-size: 18px; font-weight: bold; padding: 8px 0px; line-height: 42px; margin: 0px;\"><strong>3.4 接口认证方式安全可靠</strong></p><p>OpenAPI同时支持AccessToken认证、摘要认证、JWT认证、基本认证和签名认证共5种认证方式，用户可以根据实际需要选择不同的认证方式或扩展认证方式，满足企业安全方面的个性化需求。</p><p><br/></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\"><strong style=\"\">3.5 API在线测试</strong></h3><p><strong style=\"font-size: 18px;\"></strong></p><p>模拟真实数据调用API服务，无需配置Postman，即可完成<strong>一键调试</strong>。</p><p><br/><strong style=\"font-size: 18px;\"></strong></p><p><br/></p><p label=\"一级标题\" style=\"font-size: 20px; font-weight: bold; line-height: 42px; margin: 0px;\">4 功能清单</p><p><br/></p><table style=\"\" width=\"99%\"><colgroup style=\"\"><col width=\"61\" style=\"\"/><col width=\"141\" style=\"\"/><col width=\"148\" style=\"\"/><col width=\"181\" style=\"\"/><col width=\"758\" style=\"\"/></colgroup><tbody style=\"\"><tr style=\"\" class=\"firstRow\"><td class=\"et2 selectTdClass\" height=\"30\" width=\"61\" style=\"background-color: red;\"><span style=\"color: rgb(0, 0, 0);\">序号</span></td><td class=\"et2 selectTdClass\" width=\"141\" style=\"background-color: red;\"><span style=\"color: rgb(0, 0, 0);\">一级菜单</span></td><td class=\"et2 selectTdClass\" width=\"148\" style=\"background-color: red;\"><span style=\"color: rgb(0, 0, 0);\">二级菜单</span></td><td class=\"et2 selectTdClass\" width=\"181\" style=\"background-color: red;\"><span style=\"color: rgb(0, 0, 0);\">页面</span></td><td class=\"et2 selectTdClass\" width=\"306\" style=\"background-color: red;\"><span style=\"color: rgb(0, 0, 0);\">功能说明</span></td></tr><tr style=\"\"><td class=\"et3\" height=\"74\" style=\"\">1</td><td rowspan=\"2\" class=\"et4\" style=\"\">API管理</td><td rowspan=\"2\" class=\"et4\" style=\"\">/</td><td class=\"et5\" style=\"\">API服务维护</td><td class=\"et6\" width=\"306\" style=\"\">界面为左树右表结构，按<span style=\"\">按云、业务应用、业务对象（自定义分类）</span>三个维度分类；用户可以新增API服务，维护API的基本信息、Webservice信息、请求参数和响应参数、错误码等信息。</td></tr><tr style=\"\"><td class=\"et3\" height=\"65\" style=\"\">2</td><td class=\"et5\" style=\"\">API在线测试</td><td class=\"et6\" width=\"758\" style=\"\">API在线测试可模拟真实数据调用API服务，用户无需填写参数和url，自动获取token令牌，快速进行API测试，方便快捷。</td></tr><tr style=\"\"><td class=\"et3\" height=\"57\" style=\"\">3</td><td class=\"et4\" style=\"\">API文档</td><td class=\"et4\" style=\"\">/</td><td class=\"et5\" style=\"\">API服务清单</td><td class=\"et6\" width=\"306\" style=\"\">API文档按云、业务应用、业务对象（自定义分类）三个维度分类，展示API基本信息、请求参数、请求结构示例、返回参数和返回结构示例、错误码等信息；支持获取匿名链接，发送给外部人员，无需登录系统即可查看API文档。</td></tr><tr style=\"\"><td class=\"et3\" height=\"38\" style=\"\">4</td><td class=\"et4\" style=\"\">第三方应用</td><td class=\"et4\" style=\"\">/</td><td class=\"et5\" style=\"\">第三方应用维护</td><td class=\"et6\" width=\"306\" style=\"\">用于注册第三方应用，维护系统编码（appId)、系统密码(appSecret)、支持多种认证方式、API授权、访问策略等功能。</td></tr><tr style=\"\"><td class=\"et3\" height=\"38\" style=\"\">5</td><td class=\"et4\" style=\"\">API日志</td><td class=\"et4\" style=\"\">/</td><td class=\"et5\" style=\"\">API调用日志</td><td class=\"et7\" width=\"306\" style=\"\">记录OpenAPI调用日志，包括接口出入参，API处理时间，调用者IP及账号等信息，用于日志审计及故障分析。</td></tr><tr style=\"\"><td class=\"et3\" height=\"33\" style=\"\">6</td><td rowspan=\"2\" class=\"et4\" style=\"\">API统计</td><td class=\"et4\" style=\"\">统计信息</td><td class=\"et5\" style=\"\">API统计信息</td><td class=\"et8\" style=\"\" width=\"306\">API调用统计信息，按天、第三方应用、API三个维度展示具体的调用情况。</td></tr><tr style=\"\"><td class=\"et3\" height=\"36\" style=\"\">7</td><td class=\"et4\" style=\"\">统计看板</td><td class=\"et5\" style=\"\">API统计看板</td><td class=\"et8\" style=\"\">API统计看板支持让用户实时监控目标偏离情况。</td></tr><tr style=\"\"><td class=\"et3\" height=\"38\" style=\"\">8</td><td class=\"et4\" style=\"\">限流策略</td><td class=\"et4\" style=\"\">/</td><td class=\"et5\" style=\"\">限流策略</td><td class=\"et6\" width=\"306\" style=\"\">支持管理API限流策略，用户可维护策略描述、限流策略控制维度（API、第三方应用、匿名）、次数、流控效果等信息。</td></tr><tr style=\"\"><td class=\"et3\" height=\"64\" style=\"\">9</td><td rowspan=\"2\" class=\"et4\" style=\"\">第三方API</td><td class=\"et4\" style=\"\">连接配置</td><td class=\"et5\" style=\"\">连接器配置</td><td class=\"et6\" width=\"306\" style=\"\">用于配置第三方系统的连接信息，支持多种连接类型。例如：京东、钉钉、法大大等。苍穹平台可通过该连接配置获取第三方系统的鉴权信息，并进行API的调用和会话刷新等操作。</td></tr><tr style=\"\"><td class=\"et3\" height=\"42\" style=\"\">10</td><td class=\"et4\" style=\"\">第三方API</td><td class=\"et5\" style=\"\">自定义API</td><td class=\"et8\" style=\"\">把外部系统的API注册到开放平台中，以便苍穹平台内部应用通过微服务调用该API。</td></tr><tr style=\"\"><td class=\"et3\" height=\"30\" style=\"\">11</td><td rowspan=\"7\" class=\"et4\" style=\"\">其他</td><td rowspan=\"3\" class=\"et9\" width=\"148\" style=\"\">代码片段管理</td><td class=\"et5\" style=\"\">代码片段管理</td><td class=\"et8\" style=\"\" width=\"306\">用于维护自定义API中引用的代码片段。</td></tr><tr style=\"\"><td class=\"et3\" height=\"28\" style=\"\">12</td><td class=\"et5\" style=\"\">脚本调试</td><td class=\"et8\" style=\"\">提供了帮助开发人员调试脚本的工具。</td></tr><tr style=\"\"><td class=\"et3\" height=\"32\" style=\"\">13</td><td class=\"et5\" style=\"\">帮助手册</td><td class=\"et8\" style=\"\">对脚本和微服务帮助内容进行了整理，方便用户学习和使用。</td></tr><tr style=\"\"><td class=\"et3\" height=\"61\" style=\"\">14</td><td class=\"et9\" width=\"148\" style=\"\">基础资料</td><td class=\"et5\" style=\"\">自定义分类维护</td><td class=\"et8\" style=\"\">维护自定义API的所属分类。</td></tr><tr style=\"\"><td class=\"et3\" height=\"33\" style=\"\">15</td><td class=\"et4\" style=\"\">演示单据</td><td class=\"et5\" style=\"\">开放平台单据示例</td><td class=\"et8\" style=\"\">该示例单据可用于调试以及演示API接口。</td></tr><tr style=\"\"><td class=\"et3\" height=\"77\" style=\"\">16</td><td rowspan=\"2\" class=\"et9\" width=\"148\" style=\"\">API1.0</td><td class=\"et5\" style=\"\">API服务</td><td class=\"et6\" width=\"758\" style=\"\">历史版本接口引擎的API服务列表，包含操作服务、自定义服务和AI服务，界面为左树右表结构，按业务应用分类。</td></tr><tr style=\"\"><td class=\"et3\" height=\"86\" style=\"\">17</td><td class=\"et5\" style=\"\">服务清单</td><td class=\"et6\" width=\"758\" style=\"\"><span style=\"\">历史版本接口引擎的API</span>文档列表，左树结构，按业务应用分类，左树只展示有API服务的应用。<br/>服务清单提供了API的基本信息、请求参数、请求结构示例、返回参数和返回结构示例等信息。</td></tr></tbody></table><p><br/></p>"
+}

@@ -1,0 +1,425 @@
+{
+ "badNum": 0,
+ "templateId": "335738408951726336",
+ "identityTagIds": null,
+ "knowledgeId": "632886672610140160",
+ "createdAt": 1728699941000,
+ "collections": 1,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "632886672610140160",
+ "contentType": 1,
+ "updatedAt": 1739778443000,
+ "knowledgeUpdater": {
+  "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+  "department": null,
+  "id": "132488613174518784",
+  "name": "某个路易",
+  "nameSpell": "name"
+ },
+ "assessStatus": 0,
+ "knowledgeStatus": 2,
+ "assessHandleStatus": null,
+ "knowledgeCreatedAt": 1728699941000,
+ "version": 24,
+ "labels": [],
+ "editedAt": 1739778436000,
+ "identityTags": null,
+ "useful": 0,
+ "errors": [],
+ "isCollected": false,
+ "template": "",
+ "totalFeedBacks": 0,
+ "attachments": [],
+ "sources": [],
+ "editTitle": "苍穹7.0的API导入低版本环境报错",
+ "title": "苍穹7.0的API导入低版本环境报错",
+ "content": "<p label=\"\" class=\"\" style=\"\"><span style=\"font-size: 20px; text-align: justify;\"></span></p><div style=\"\"><h2 label=\"一级标题\" class=\"first-title html-anchor-list0-1728699944164 html-anchor-list0-1728699944164\" id=\"html-anchor-list0-1728699944164\" style=\"background-color: rgb(255, 255, 255);\">问题描述</h2><p style=\"\">当用户通过OpenAPI 的导入功能，将苍穹7.0以上高版本的API（dts文件）导入到本地环境时，出现如下报错，提示字段插入表失败或长度超出限定范围。<br/></p></div><p style=\"color: rgb(0, 0, 0); text-align: justify;\"><br/></p><p style=\"color: rgb(0, 0, 0); text-align: justify;\"><img src=\"/download/0109f533603234a3408e93bab0398fa6d806.png\"/></p><p style=\"color: rgb(0, 0, 0); text-align: justify;\"><br/></p><p style=\"color: rgb(0, 0, 0); text-align: justify;\"><img src=\"/download/0109ee2b739da1ea4dd58d949c28b595ed4b.png\"/></p><p style=\"color: rgb(0, 0, 0); text-align: justify;\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"text-align: justify;\">原因分析</h2><ul class=\" list-paddingleft-2\" style=\"\"><li style=\"\"><p style=\"\">为满足全球化需求，从苍穹 7.0 版本开始，OpenAPI 接口增加了对国际化多语言的支持，API 信息如名称、描述、请求/返回参数说明及示例等均为多语言字段，与早期版本相比存储了更多字符（包含英文、繁体等多语言信息）。因此，在导入时，旧版本字段长度设置过短，可能导致导入失败。</p></li><li style=\"\"><p style=\"\">低版本 API 可导入到高版本环境，但支持多语言的 7.0 版本 API 在导入到不支持多语言的低版本环境时，可能会出现兼容性问题。</p></li></ul><p style=\"\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">解决方案<br/></h2><ul class=\" list-paddingleft-2\" style=\"\"><li style=\"\"><p label=\"正文\" style=\"\">建议用户进行 API 迁移时，选择相同版本的苍穹 API 进行导入导出操作，防止因版本元数据升级，导致数据无法迁移<span style=\"color: rgb(0, 112, 192);\">。</span></p></li><li style=\"\"><p style=\"\"><span style=\"color: rgb(0, 0, 0);\">若苍穹版本高于7.0.6，可使用API多语言文件转换工具，对高版本的API处理后，即可正常导入。参考</span><a href=\"https://developer.kingdee.com/knowledge/679319664643729152?productLineId=29&isKnowledge=2&lang=zh-CN\" target=\"_blank\"><span style=\"color: rgb(0, 112, 192);\">API多语言文件转换工具介绍</span></a><span style=\"color: rgb(0, 112, 192);\">。</span><br/></p></li></ul><p><br/></p>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 87,
+   "isOpen": 1,
+   "name": "金蝶AI苍穹",
+   "productLineId": 29,
+   "series": "developer01",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        null
+       ],
+       "code": null,
+       "description": "",
+       "entityId": "632886672610140160",
+       "entityType": "Knowledge",
+       "id": "632891495506491136",
+       "isCategory": false,
+       "name": "苍穹7.0的API导入低版本环境报错",
+       "parentId": "226337785987048960",
+       "sort": "21",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": "",
+     "entityId": null,
+     "entityType": null,
+     "id": "226337785987048960",
+     "isCategory": true,
+     "name": "常见问题",
+     "parentId": "-1",
+     "sort": "9",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download/01010204d4b71b654a208006fa1004eac36a.png",
+  "department": null,
+  "id": "740211268992385024",
+  "name": "毛毛去哪儿",
+  "nameSpell": "name"
+ },
+ "totalAppraisalScore": 0,
+ "iflytekId": null,
+ "views": 1033,
+ "productLineId": 29,
+ "comments": 0,
+ "similarityCount": 0,
+ "totalAppraisalUsers": 0,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1739778443000,
+ "appraisalScore": 0,
+ "unuseful": 0,
+ "knowledgeCheckStatus": 2,
+ "otherProductLineIds": [],
+ "auditAt": 1739778443000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapi_apilist_layout",
+        "id": "505686038019362304",
+        "name": "异步API",
+        "productLineId": null,
+        "sort": 1,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 0,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "OperatingGuide",
+     "createdAt": 1556519201000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "某一功能的具体说明介绍，包括应用场景、参数说明、具体操作步骤等",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/010037894174802d4b9f8782f1f0010a6ddd.png",
+     "id": "202203081641",
+     "name": "功能介绍",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010176d38341668f44fdb94c95058a90e4b8.png",
+      "department": "云社区运营部",
+      "id": "2147406697",
+      "name": "多肉丸子",
+      "nameSpell": "kejuan"
+     },
+     "updatedAt": 1676857681000
+    },
+    {
+     "code": "rumen",
+     "createdAt": 1605667807000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "入门类的知识可使用此标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100d322b9282bcc438faa894f4eec029977.png",
+     "id": "202203081646",
+     "name": "基础入门",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download?fileName=0101ec1d6ce599b442dab7d0b794c1fce88d.png",
+      "department": null,
+      "id": "1009",
+      "name": "一颗小星星",
+      "nameSpell": "fengling"
+     },
+     "updatedAt": 1657872008000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "632886672610140160",
+         "entityType": "Knowledge",
+         "id": "632891495506491136",
+         "isCategory": false,
+         "name": "苍穹7.0的API导入低版本环境报错",
+         "parentId": "226337785987048960",
+         "sort": "21",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": null,
+       "id": "226337785987048960",
+       "isCategory": true,
+       "name": "常见问题",
+       "parentId": "-1",
+       "sort": "9",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": "<p label=\"\" class=\"\" style=\"\"><span style=\"font-size: 20px; text-align: justify;\"></span></p><div style=\"\"><h2 label=\"一级标题\" class=\"first-title html-anchor-list0-1728699944164 html-anchor-list0-1728699944164\" id=\"html-anchor-list0-1728699944164\" style=\"background-color: rgb(255, 255, 255);\">问题描述</h2><p style=\"\">当用户通过OpenAPI 的导入功能，将苍穹7.0以上高版本的API（dts文件）导入到本地环境时，出现如下报错，提示字段插入表失败或长度超出限定范围。<br/></p></div><p style=\"color: rgb(0, 0, 0); text-align: justify;\"><br/></p><p style=\"color: rgb(0, 0, 0); text-align: justify;\"><img src=\"/download/0109f533603234a3408e93bab0398fa6d806.png\"/></p><p style=\"color: rgb(0, 0, 0); text-align: justify;\"><br/></p><p style=\"color: rgb(0, 0, 0); text-align: justify;\"><img src=\"/download/0109ee2b739da1ea4dd58d949c28b595ed4b.png\"/></p><p style=\"color: rgb(0, 0, 0); text-align: justify;\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"text-align: justify;\">原因分析</h2><ul class=\" list-paddingleft-2\" style=\"\"><li style=\"\"><p style=\"\">为满足全球化需求，从苍穹 7.0 版本开始，OpenAPI 接口增加了对国际化多语言的支持，API 信息如名称、描述、请求/返回参数说明及示例等均为多语言字段，与早期版本相比存储了更多字符（包含英文、繁体等多语言信息）。因此，在导入时，旧版本字段长度设置过短，可能导致导入失败。</p></li><li style=\"\"><p style=\"\">低版本 API 可导入到高版本环境，但支持多语言的 7.0 版本 API 在导入到不支持多语言的低版本环境时，可能会出现兼容性问题。</p></li></ul><p style=\"\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">解决方案<br/></h2><ul class=\" list-paddingleft-2\" style=\"\"><li style=\"\"><p label=\"正文\" style=\"\">建议用户进行 API 迁移时，选择相同版本的苍穹 API 进行导入导出操作，防止因版本元数据升级，导致数据无法迁移<span style=\"color: rgb(0, 112, 192);\">。</span></p></li><li style=\"\"><p style=\"\"><span style=\"color: rgb(0, 0, 0);\">若苍穹版本高于7.0.6，可使用API多语言文件转换工具，对高版本的API处理后，即可正常导入。参考</span><a href=\"https://developer.kingdee.com/knowledge/679319664643729152?productLineId=29&isKnowledge=2&lang=zh-CN\" target=\"_blank\"><span style=\"color: rgb(0, 112, 192);\">API多语言文件转换工具介绍</span></a><span style=\"color: rgb(0, 112, 192);\">。</span><br/></p></li></ul><p><br/></p>"
+}

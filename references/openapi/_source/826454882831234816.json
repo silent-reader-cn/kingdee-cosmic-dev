@@ -1,0 +1,502 @@
+{
+ "badNum": 0,
+ "identityTagIds": null,
+ "knowledgeId": "826454882831234816",
+ "createdAt": 1774850199000,
+ "collections": 1,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "826454882831234816",
+ "contentType": 1,
+ "updatedAt": 1774860522000,
+ "knowledgeUpdater": {
+  "avatar": "/download/01010204d4b71b654a208006fa1004eac36a.png",
+  "department": null,
+  "id": "740211268992385024",
+  "name": "毛毛去哪儿",
+  "nameSpell": "name"
+ },
+ "assessStatus": 0,
+ "knowledgeStatus": 2,
+ "assessHandleStatus": null,
+ "knowledgeCreatedAt": 1774850199000,
+ "version": 7,
+ "labels": [],
+ "editedAt": 1774860510000,
+ "identityTags": null,
+ "useful": 0,
+ "errors": [],
+ "isCollected": false,
+ "totalFeedBacks": 0,
+ "attachments": [],
+ "sources": [],
+ "editTitle": "OpenAPI2.0脚本API支持删除分录",
+ "title": "OpenAPI2.0脚本API支持删除分录",
+ "content": "<h3><strong>变更记录</strong></h3><table style=\"min-width: 75px\" class=\"md-table\"><colgroup><col style=\"min-width: 25px\"><col style=\"min-width: 25px\"><col style=\"min-width: 25px\"></colgroup><tbody><tr><th colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><strong>产品版本</strong></p></th><th colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><strong>更新内容</strong></p></th><th colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><strong>更新日期</strong></p></th></tr><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>8.0.7（初始版本）</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>OpenAPI2.0提供API删除分录微服务</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>2026.03.25</p></td></tr></tbody></table><p style=\"font-size: 16px\"></p><h3><strong>一、背景</strong></h3><p style=\"font-size: 16px\">目前OpenAPI2.0操作API删除分录只在保存操作里加上参数控制 OverrideEntry 为 true，此参数会将原表单分录数据清除后追加分录，不能指定某行分录来删除，为此提供了脚本里调微服务的方式来支持此场景。</p><p style=\"font-size: 16px\"></p><h3><strong>二、注意</strong></h3><ul style=\"box-sizing: border-box; margin: 0.8em 0px; padding-left: 30px; position: relative; caret-color: rgb(0, 122, 255); color: rgb(51, 51, 51); font-family: \"><li><p>目前不支持删除子分录行</p></li><li><p>仅支持根据主单ID和分录行ID删除，不支持候选键（请自行查出ID）</p></li></ul><p style=\"font-size: 16px\"></p><h3><strong>三、脚本API示例</strong></h3><h5><strong>3.1 创建脚本API</strong></h5><p style=\"font-size: 16px\">集成的脚本编写，参考帖子最下面<strong>附件dts文件</strong>，通过API列表导入API，只需修改请求入参直接测试。</p><p style=\"font-size: 16px\">实际场景可通过脚本自行修改入参出参，注意<strong>部分入参格式需固定</strong>。</p><h5></h5><p><img src=\"/download/0100f77229d88bba44e28c7bcf2a5924af31.png\" alt=\"上传图片\"></p><h5><strong>3.2 具体脚本编写</strong></h5><pre><code class=\"language-javascript\">//取上面请求体入参，按需取，或直接是具体的标识，这样就不需上方配置入参\n//如完全取入参的，下面四行固定不变（如果入参名称修改，需要同步修改这里的取值）\nvar entity_number=entity_number; //业务对象标识\nvar entry_key=entry_key; //需要删除分录的标识\nvar pk=pk;//主单ID\nvar entry_ids={entry_key+\"_id\":entry_ids};//分录行ID\n​\n//操作参数。（按需加，如：{\"WF\":\"false\"}不走工作流）\nvar option={};\n​\n//调微服务，此行固定不变\nvar res = MS.invokeService(\"kd.bos.openapi.servicehelper\",\"open\", \"RestApiSdkService\"\n , \"deleteEntry\",[entity_number, pk, entry_key, entry_ids, option]);\n​\n//构造需要的返回参数（需在下方返回参数配置）\n//取上面微服务方法的返回\ndelete_time=res.delete_time;\nid=res.id;</code></pre><h5><strong>3.3 测试</strong></h5><pre><code class=\"language-json\">//入参\n{\n  \"entity_number\":\"openapi_unittest\",\n  \"entry_key\":\"entryentity\",\n  \"pk\":\"2437121517801208832\",\n  \"entry_ids\":[\n    \"2437215221606027264\"\n  ]\n}\n//出参\n{\n  \"data\":{\n    \"delete_time\":\"2026-03-17 17:11:48\",\n    \"id\":[2437215221606027264]\n  },\n  \"errorCode\":\"0\",\n  \"message\":null,\n  \"status\":true\n}\n​</code></pre><p style=\"font-size: 16px\"></p><h3><strong>四、Java微服务调用示例</strong></h3><p style=\"font-size: 16px\">方法：<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"/tolink?target=http%3A%2F%2Fkd.bos.open\">kd.bos.open</a>.v3.core.service.impl.RestApiSdkServiceImpl#deleteEntry</p><pre><code class=\"language-java\">import kd.bos.servicehelper.DispatchServiceHelper;\n​\nimport java.util.ArrayList;\nimport java.util.HashMap;\nimport java.util.List;\nimport java.util.Map;\n​\npublic class Test {\n​\n  public static void main(String[] args) {\n    String entityNumber = \"openapi_unittest\"; //主单据标识\n    Object pk = 2442795748608396288L; //主单ID\n    Map&lt;String, Object&gt; body = new HashMap&lt;&gt;();//请求体\n    String entryKey=\"entryentity\"; //分录标识\n    List&lt;Object&gt; entryIds = new ArrayList&lt;&gt;();//删除的分录行ID\n    entryIds.add(2442795748613106688L);\n    body.put(entryKey + \"_id\", entryIds);//固定KEY勿修改\n    Map&lt;String,String&gt; option = new HashMap&lt;&gt;();//操作参数\n    Map&lt;String, Object&gt; result = DispatchServiceHelper.invokeService(\"kd.bos.openapi.servicehelper\", \"open\",\n        \"RestApiSdkService\", \"deleteEntry\", entityNumber,pk,entryKey, body, option);\n  }\n}</code></pre><p><button vid=\"826498118488070656\" id=\"826498118488070656\" class=\"kd-attachment-content\"><span class=\"name\" contenteditable=\"false\">脚本服务_删除分录demo(delete_entry_demo).zip</span></button></p>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 87,
+   "isOpen": 1,
+   "name": "金蝶AI苍穹",
+   "productLineId": 29,
+   "series": "developer01",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "826454882831234816",
+         "entityType": "Knowledge",
+         "id": "826456687875127040",
+         "isCategory": false,
+         "name": "OpenAPI2.0脚本API支持删除分录",
+         "parentId": "358247193897143040",
+         "sort": "6",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": null,
+       "id": "358247193897143040",
+       "isCategory": true,
+       "name": "自定义API",
+       "parentId": "226337544983020032",
+       "sort": "3",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": null,
+     "entityId": null,
+     "entityType": null,
+     "id": "226337544983020032",
+     "isCategory": true,
+     "name": "用户手册",
+     "parentId": "-1",
+     "sort": "6",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download/01010204d4b71b654a208006fa1004eac36a.png",
+  "department": null,
+  "id": "740211268992385024",
+  "name": "毛毛去哪儿",
+  "nameSpell": "name"
+ },
+ "totalAppraisalScore": 0,
+ "iflytekId": null,
+ "views": 655,
+ "productLineId": 29,
+ "comments": 0,
+ "similarityCount": null,
+ "totalAppraisalUsers": 0,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1774860522000,
+ "appraisalScore": 0,
+ "unuseful": 0,
+ "knowledgeCheckStatus": 2,
+ "otherProductLineIds": [],
+ "auditAt": 1774860522000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapi_apilist_layout",
+        "id": "505686038019362304",
+        "name": "异步API",
+        "productLineId": null,
+        "sort": 1,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 0,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "AdvancedSkills",
+     "createdAt": 1556519216000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "高阶技巧标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/01005cea40211bf14113a6004322e86a6780.png",
+     "id": "202203081642",
+     "name": "高级技巧",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download/010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "306913800727243776",
+      "name": "Paim",
+      "nameSpell": "name"
+     },
+     "updatedAt": 1657851500000
+    },
+    {
+     "code": "OperatingGuide",
+     "createdAt": 1556519201000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "某一功能的具体说明介绍，包括应用场景、参数说明、具体操作步骤等",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/010037894174802d4b9f8782f1f0010a6ddd.png",
+     "id": "202203081641",
+     "name": "功能介绍",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010176d38341668f44fdb94c95058a90e4b8.png",
+      "department": "云社区运营部",
+      "id": "2147406697",
+      "name": "多肉丸子",
+      "nameSpell": "kejuan"
+     },
+     "updatedAt": 1676857681000
+    },
+    {
+     "code": "essencesummary",
+     "createdAt": 1606118073000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "精华汇总",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100402c6f8df169483db114f71043c19ec2.png",
+     "id": "202203081649",
+     "name": "精华汇总",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 2,
+     "updatePerson": {
+      "avatar": "/download?fileName=010162cfa9d5437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1129",
+      "name": "灏",
+      "nameSpell": "hao"
+     },
+     "updatedAt": 1606118073000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          {
+           "childCategory": [
+            null
+           ],
+           "code": null,
+           "description": "",
+           "entityId": "826454882831234816",
+           "entityType": "Knowledge",
+           "id": "826456687875127040",
+           "isCategory": false,
+           "name": "OpenAPI2.0脚本API支持删除分录",
+           "parentId": "358247193897143040",
+           "sort": "6",
+           "specialId": "226337046514476288",
+           "status": 1
+          }
+         ],
+         "code": null,
+         "description": "",
+         "entityId": null,
+         "entityType": null,
+         "id": "358247193897143040",
+         "isCategory": true,
+         "name": "自定义API",
+         "parentId": "226337544983020032",
+         "sort": "3",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": null,
+       "entityId": null,
+       "entityType": null,
+       "id": "226337544983020032",
+       "isCategory": true,
+       "name": "用户手册",
+       "parentId": "-1",
+       "sort": "6",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": "<h3><strong>变更记录</strong></h3><table style=\"min-width: 75px\" class=\"md-table\"><colgroup><col style=\"min-width: 25px\"><col style=\"min-width: 25px\"><col style=\"min-width: 25px\"></colgroup><tbody><tr><th colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><strong>产品版本</strong></p></th><th colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><strong>更新内容</strong></p></th><th colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><strong>更新日期</strong></p></th></tr><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>8.0.7（初始版本）</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>OpenAPI2.0提供API删除分录微服务</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>2026.03.25</p></td></tr></tbody></table><p style=\"font-size: 16px\"></p><h3><strong>一、背景</strong></h3><p style=\"font-size: 16px\">目前OpenAPI2.0操作API删除分录只在保存操作里加上参数控制 OverrideEntry 为 true，此参数会将原表单分录数据清除后追加分录，不能指定某行分录来删除，为此提供了脚本里调微服务的方式来支持此场景。</p><p style=\"font-size: 16px\"></p><h3><strong>二、注意</strong></h3><ul style=\"box-sizing: border-box; margin: 0.8em 0px; padding-left: 30px; position: relative; caret-color: rgb(0, 122, 255); color: rgb(51, 51, 51); font-family: \"><li><p>目前不支持删除子分录行</p></li><li><p>仅支持根据主单ID和分录行ID删除，不支持候选键（请自行查出ID）</p></li></ul><p style=\"font-size: 16px\"></p><h3><strong>三、脚本API示例</strong></h3><h5><strong>3.1 创建脚本API</strong></h5><p style=\"font-size: 16px\">集成的脚本编写，参考帖子最下面<strong>附件dts文件</strong>，通过API列表导入API，只需修改请求入参直接测试。</p><p style=\"font-size: 16px\">实际场景可通过脚本自行修改入参出参，注意<strong>部分入参格式需固定</strong>。</p><h5></h5><p><img src=\"/download/0100f77229d88bba44e28c7bcf2a5924af31.png\" alt=\"上传图片\"></p><h5><strong>3.2 具体脚本编写</strong></h5><pre><code class=\"language-javascript\">//取上面请求体入参，按需取，或直接是具体的标识，这样就不需上方配置入参\n//如完全取入参的，下面四行固定不变（如果入参名称修改，需要同步修改这里的取值）\nvar entity_number=entity_number; //业务对象标识\nvar entry_key=entry_key; //需要删除分录的标识\nvar pk=pk;//主单ID\nvar entry_ids={entry_key+\"_id\":entry_ids};//分录行ID\n​\n//操作参数。（按需加，如：{\"WF\":\"false\"}不走工作流）\nvar option={};\n​\n//调微服务，此行固定不变\nvar res = MS.invokeService(\"kd.bos.openapi.servicehelper\",\"open\", \"RestApiSdkService\"\n , \"deleteEntry\",[entity_number, pk, entry_key, entry_ids, option]);\n​\n//构造需要的返回参数（需在下方返回参数配置）\n//取上面微服务方法的返回\ndelete_time=res.delete_time;\nid=res.id;</code></pre><h5><strong>3.3 测试</strong></h5><pre><code class=\"language-json\">//入参\n{\n  \"entity_number\":\"openapi_unittest\",\n  \"entry_key\":\"entryentity\",\n  \"pk\":\"2437121517801208832\",\n  \"entry_ids\":[\n    \"2437215221606027264\"\n  ]\n}\n//出参\n{\n  \"data\":{\n    \"delete_time\":\"2026-03-17 17:11:48\",\n    \"id\":[2437215221606027264]\n  },\n  \"errorCode\":\"0\",\n  \"message\":null,\n  \"status\":true\n}\n​</code></pre><p style=\"font-size: 16px\"></p><h3><strong>四、Java微服务调用示例</strong></h3><p style=\"font-size: 16px\">方法：<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"/tolink?target=http%3A%2F%2Fkd.bos.open\">kd.bos.open</a>.v3.core.service.impl.RestApiSdkServiceImpl#deleteEntry</p><pre><code class=\"language-java\">import kd.bos.servicehelper.DispatchServiceHelper;\n​\nimport java.util.ArrayList;\nimport java.util.HashMap;\nimport java.util.List;\nimport java.util.Map;\n​\npublic class Test {\n​\n  public static void main(String[] args) {\n    String entityNumber = \"openapi_unittest\"; //主单据标识\n    Object pk = 2442795748608396288L; //主单ID\n    Map&lt;String, Object&gt; body = new HashMap&lt;&gt;();//请求体\n    String entryKey=\"entryentity\"; //分录标识\n    List&lt;Object&gt; entryIds = new ArrayList&lt;&gt;();//删除的分录行ID\n    entryIds.add(2442795748613106688L);\n    body.put(entryKey + \"_id\", entryIds);//固定KEY勿修改\n    Map&lt;String,String&gt; option = new HashMap&lt;&gt;();//操作参数\n    Map&lt;String, Object&gt; result = DispatchServiceHelper.invokeService(\"kd.bos.openapi.servicehelper\", \"open\",\n        \"RestApiSdkService\", \"deleteEntry\", entityNumber,pk,entryKey, body, option);\n  }\n}</code></pre><p><button vid=\"826498118488070656\" id=\"826498118488070656\" class=\"kd-attachment-content\"><span class=\"name\" contenteditable=\"false\">脚本服务_删除分录demo(delete_entry_demo).zip</span></button></p>"
+}

@@ -1,0 +1,565 @@
+{
+ "badNum": 0,
+ "identityTagIds": null,
+ "knowledgeId": "223820299110513408",
+ "createdAt": 1631170918000,
+ "collections": 1,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "223820299110513408",
+ "contentType": 1,
+ "updatedAt": 1766040498000,
+ "knowledgeUpdater": {
+  "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+  "department": null,
+  "id": "132488613174518784",
+  "name": "某个路易",
+  "nameSpell": "name"
+ },
+ "assessStatus": 0,
+ "knowledgeStatus": 2,
+ "assessHandleStatus": null,
+ "knowledgeCreatedAt": 1631170918000,
+ "version": 4,
+ "labels": [],
+ "editedAt": 1713351447000,
+ "identityTags": null,
+ "useful": 2,
+ "errors": [],
+ "isCollected": false,
+ "totalFeedBacks": 0,
+ "attachments": [],
+ "sources": [],
+ "editTitle": "批量保存操作接口",
+ "title": "批量保存操作接口",
+ "content": "<p label=\"一级标题\" style=\"font-size: 20px; font-weight: bold; line-height: 42px; margin: 0px;\">1 接口介绍<br/></p><p>批量保存操作服务是指通过在请求体中按规范输入json格式的参数，再调用服务执行批量保存的操作。</p><p label=\"一级标题\" style=\"font-size: 20px; font-weight: bold; line-height: 42px; margin: 0px;\"><br/></p><p label=\"一级标题\" style=\"font-size: 20px; font-weight: bold; line-height: 42px; margin: 0px;\">2 注意事项</p><p>1）若请求体参数中携带有主键id，默认是修改操作，否则判断是新增操作；</p><p>2）可以在同一批数据中既执行新增又执行修改。</p><p><br/></p><p label=\"一级标题\" style=\"font-size: 20px; font-weight: bold; line-height: 42px; margin: 0px;\">3 接口示例</p><p label=\"二级标题\" style=\"font-size: 18px; font-weight: bold; padding: 8px 0px; line-height: 42px; margin: 0px;\"><span style=\"font-size: 18px;\">采购订单批量保存</span></p><table><tbody><tr class=\"firstRow\"><td width=\"655\" style=\"\"><p><strong>URL：<span style=\"text-align: justify;\"></span></strong><span style=\"text-align: justify;\">{{host}}/</span>kapi/sys/pm_purorderbill/batchsave</p><p><br/></p><p><strong>请求方式：</strong>POST</p><p><br/></p><p><strong>请求Header参数：</strong></p><p>Content-Type=application/json</p><p>accessToken: xxxxxxxxxxxxx</p></td></tr></tbody></table><p><br/></p><table><tbody><tr class=\"firstRow\"><td width=\"655\" style=\"\"><p><strong>请求Body：</strong></p><p>{</p><p>&nbsp; &nbsp;&quot;data&quot;: [</p><p>&nbsp; &nbsp; &nbsp; &nbsp;{</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;org&quot;: {</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;: &quot;xyd2024&quot;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;},</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;biztype&quot;: {</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;: &quot;110&quot;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; },</p><p>&quot;supplier&quot;: {</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;: &quot;sup-00122&quot;</p><p>},</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;comment&quot;:&quot;你好1&quot;,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;billentry&quot;: [</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;material&quot;: {</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;: &quot;ZH-00009257&quot;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;},</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;qty&quot;: &quot;3&quot;,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;unit&quot;: {</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;: &quot;ZH-TON&quot;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;},</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;entrysettleorg&quot;:{</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;:&quot;xyd2024&quot;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;},</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;entrycomment&quot;:&quot;111111&quot;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</p><p>&nbsp; &nbsp; &nbsp; &nbsp;},</p><p>&nbsp; &nbsp; &nbsp; &nbsp;{</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;org&quot;: {</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;: &quot;xyd2024&quot;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;},</p><p>&quot;supplier&quot;: {</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;: &quot;sup-00122&quot;</p><p>},</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;biztype&quot;: {</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;: &quot;110&quot;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; },</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;comment&quot;:&quot;你好2&quot;,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;billentry&quot;: [</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;material&quot;: {</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;: &quot;ZH-00009257&quot;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;},</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;qty&quot;: &quot;3&quot;,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;unit&quot;: {</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;: &quot;ZH-TON&quot;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;},</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &quot;entrysettleorg&quot;:{</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;:&quot;xyd2024&quot;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;},</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;entrycomment&quot;:&quot;222222&quot;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</p><p>&nbsp; &nbsp; &nbsp; &nbsp;},</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;org&quot;: {</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;: &quot;xyd2024&quot;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;},</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;biztype&quot;: {</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;: &quot;110&quot;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; },</p><p>&quot;supplier&quot;: {</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;: &quot;sup-00122&quot;</p><p>},</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;comment&quot;:&quot;你好3&quot;,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;billentry&quot;: [</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;material&quot;: {</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;: &quot;ZH-00009257&quot;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;},</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;qty&quot;: &quot;3&quot;,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;unit&quot;: {</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;: &quot;ZH-TON&quot;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;},</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &quot;entrysettleorg&quot;:{</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;:&quot;xyd2024&quot;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;},</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;entrycomment&quot;:&quot;3333&quot;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</p><p>&nbsp; &nbsp; &nbsp; &nbsp;}</p><p>&nbsp; &nbsp;]</p><p>}</p></td></tr></tbody></table><p><br/></p><table><tbody><tr class=\"firstRow\"><td width=\"655\" style=\"\"><p><strong>请求结果：</strong></p><p>{</p><p>&nbsp; &nbsp;&quot;data&quot;: [</p><p>&nbsp; &nbsp; &nbsp; &nbsp;{</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;dindex&quot;: 0,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;: &quot;CGDD-202109-152259&quot;,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;orgnumber&quot;: &quot;xyd2024&quot;,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;success&quot;: true,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;id&quot;: 1239689647475463168</p><p>&nbsp; &nbsp; &nbsp; &nbsp;},</p><p>&nbsp; &nbsp; &nbsp; &nbsp;{</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;dindex&quot;: 1,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;: &quot;CGDD-202109-152260&quot;,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;orgnumber&quot;: &quot;xyd2024&quot;,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;success&quot;: true,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;id&quot;: 1239689649320911872</p><p>&nbsp; &nbsp; &nbsp; &nbsp;},</p><p>&nbsp; &nbsp; &nbsp; &nbsp;{</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;dindex&quot;: 2,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;: &quot;CGDD-202109-152261&quot;,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;orgnumber&quot;: &quot;xyd2024&quot;,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;success&quot;: true,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;id&quot;: 1239689649765553152</p><p>&nbsp; &nbsp; &nbsp; &nbsp;}</p><p>&nbsp; &nbsp;],</p><p>&nbsp; &nbsp;&quot;success&quot;: true,</p><p>&nbsp; &nbsp;&quot;errorCode&quot;: &quot;success&quot;,</p><p>&nbsp; &nbsp;&quot;message&quot;: null</p><p>}</p></td></tr></tbody></table><p><br/></p><p label=\"一级标题\" style=\"font-size: 20px; font-weight: bold; line-height: 42px; margin: 0px;\">4 返回参数说明</p><table><tbody><tr class=\"firstRow\"><td width=\"33\" style=\"\"><p><strong>序号</strong></p></td><td width=\"69\" style=\"\"><p><strong>参数</strong></p></td><td width=\"94\" style=\"\"><p><strong>解释</strong></p></td><td width=\"411\" style=\"\"><p><strong>返回值实例</strong></p></td></tr><tr><td width=\"12\" style=\"\"><p>1</p></td><td width=\"69\" style=\"\"><p>success</p></td><td width=\"51\" style=\"\"><p>是否成功</p></td><td width=\"410\" style=\"\"><p>true/false</p></td></tr><tr><td width=\"12\" style=\"\"><p>2</p></td><td width=\"69\" style=\"\"><p>errorCode</p></td><td width=\"51\" style=\"\"><p>错误编码</p></td><td width=\"410\" style=\"\"><p>success/false</p></td></tr><tr><td width=\"12\" style=\"\"><p>3</p></td><td width=\"69\" style=\"\"><p>message</p></td><td width=\"51\" style=\"\"><p>提示信息</p></td><td width=\"410\" style=\"\"><p><span style=\"text-align: justify;\">成功时为null，失败时会返回错误信息</span></p></td></tr><tr><td width=\"12\" style=\"\"><p>4</p></td><td width=\"69\" style=\"\"><p>data</p></td><td width=\"51\" style=\"\"><p>业务对象数据</p></td><td width=\"410\" style=\"\"><p>{&quot;dindex&quot;: 0, &quot;number&quot;: &quot;CGDD-202109-152259&quot;, &quot;orgnumber&quot;: &quot;xyd2024&quot;, &quot;success&quot;: true, &quot;id&quot;: 1239689647475463168 },{&quot;dindex&quot;: 1,...}</p></td></tr></tbody></table><p><br/></p><p><br/></p>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 87,
+   "isOpen": 1,
+   "name": "金蝶AI苍穹",
+   "productLineId": 29,
+   "series": "developer01",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          {
+           "childCategory": [
+            null
+           ],
+           "code": null,
+           "description": null,
+           "entityId": "223820299110513408",
+           "entityType": "Knowledge",
+           "id": "322034670005718272",
+           "isCategory": false,
+           "name": "批量保存操作接口",
+           "parentId": "322033766435165696",
+           "sort": "9",
+           "specialId": "226337046514476288",
+           "status": 1
+          }
+         ],
+         "code": null,
+         "description": null,
+         "entityId": null,
+         "entityType": null,
+         "id": "322033766435165696",
+         "isCategory": true,
+         "name": "API服务管理",
+         "parentId": "322033541636710144",
+         "sort": "1",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": null,
+       "id": "322033541636710144",
+       "isCategory": true,
+       "name": "API1.0",
+       "parentId": "226337544983020032",
+       "sort": "26",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": null,
+     "entityId": null,
+     "entityType": null,
+     "id": "226337544983020032",
+     "isCategory": true,
+     "name": "用户手册",
+     "parentId": "-1",
+     "sort": "6",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download/01010204d4b71b654a208006fa1004eac36a.png",
+  "department": null,
+  "id": "740211268992385024",
+  "name": "毛毛去哪儿",
+  "nameSpell": "name"
+ },
+ "totalAppraisalScore": 10,
+ "iflytekId": null,
+ "views": 4993,
+ "productLineId": 29,
+ "comments": 6,
+ "similarityCount": null,
+ "totalAppraisalUsers": 2,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1766040498000,
+ "appraisalScore": 0,
+ "unuseful": 0,
+ "knowledgeCheckStatus": 2,
+ "otherProductLineIds": [],
+ "auditAt": 1698400901000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapiservicenew",
+        "id": "505687093087987200",
+        "name": "API服务管理1.0",
+        "productLineId": null,
+        "sort": 12,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 0,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapiservicenew",
+        "id": "344594257418019328",
+        "name": "API服务管理1.0",
+        "productLineId": null,
+        "sort": 13,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "5614",
+       "name": "开放平台",
+       "productLineId": null,
+       "sort": 2,
+       "type": "module"
+      },
+      "code": "DEV",
+      "id": "5576",
+      "name": "开发服务云",
+      "productLineId": null,
+      "sort": 11,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 1,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "rumen",
+     "createdAt": 1605667807000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "入门类的知识可使用此标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100d322b9282bcc438faa894f4eec029977.png",
+     "id": "202203081646",
+     "name": "基础入门",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download?fileName=0101ec1d6ce599b442dab7d0b794c1fce88d.png",
+      "department": null,
+      "id": "1009",
+      "name": "一颗小星星",
+      "nameSpell": "fengling"
+     },
+     "updatedAt": 1657872008000
+    },
+    {
+     "code": "typicalinstance",
+     "createdAt": 1605836164000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "基于典型客户的应用场景，介绍客户痛点，给出本应用/功能的解决方案",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100905e7651dcc940099286e9ee4a35cb2d.png",
+     "id": "202203081648",
+     "name": "最佳实践",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010176d38341668f44fdb94c95058a90e4b8.png",
+      "department": "云社区运营部",
+      "id": "2147406697",
+      "name": "多肉丸子",
+      "nameSpell": "kejuan"
+     },
+     "updatedAt": 1676857737000
+    },
+    {
+     "code": "essencesummary",
+     "createdAt": 1606118073000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "精华汇总",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100402c6f8df169483db114f71043c19ec2.png",
+     "id": "202203081649",
+     "name": "精华汇总",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 2,
+     "updatePerson": {
+      "avatar": "/download?fileName=010162cfa9d5437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1129",
+      "name": "灏",
+      "nameSpell": "hao"
+     },
+     "updatedAt": 1606118073000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          {
+           "childCategory": [
+            {
+             "childCategory": [
+              null
+             ],
+             "code": null,
+             "description": null,
+             "entityId": "223820299110513408",
+             "entityType": "Knowledge",
+             "id": "322034670005718272",
+             "isCategory": false,
+             "name": "批量保存操作接口",
+             "parentId": "322033766435165696",
+             "sort": "9",
+             "specialId": "226337046514476288",
+             "status": 1
+            }
+           ],
+           "code": null,
+           "description": null,
+           "entityId": null,
+           "entityType": null,
+           "id": "322033766435165696",
+           "isCategory": true,
+           "name": "API服务管理",
+           "parentId": "322033541636710144",
+           "sort": "1",
+           "specialId": "226337046514476288",
+           "status": 1
+          }
+         ],
+         "code": null,
+         "description": "",
+         "entityId": null,
+         "entityType": null,
+         "id": "322033541636710144",
+         "isCategory": true,
+         "name": "API1.0",
+         "parentId": "226337544983020032",
+         "sort": "26",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": null,
+       "entityId": null,
+       "entityType": null,
+       "id": "226337544983020032",
+       "isCategory": true,
+       "name": "用户手册",
+       "parentId": "-1",
+       "sort": "6",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": "<p label=\"一级标题\" style=\"font-size: 20px; font-weight: bold; line-height: 42px; margin: 0px;\">1 接口介绍<br/></p><p>批量保存操作服务是指通过在请求体中按规范输入json格式的参数，再调用服务执行批量保存的操作。</p><p label=\"一级标题\" style=\"font-size: 20px; font-weight: bold; line-height: 42px; margin: 0px;\"><br/></p><p label=\"一级标题\" style=\"font-size: 20px; font-weight: bold; line-height: 42px; margin: 0px;\">2 注意事项</p><p>1）若请求体参数中携带有主键id，默认是修改操作，否则判断是新增操作；</p><p>2）可以在同一批数据中既执行新增又执行修改。</p><p><br/></p><p label=\"一级标题\" style=\"font-size: 20px; font-weight: bold; line-height: 42px; margin: 0px;\">3 接口示例</p><p label=\"二级标题\" style=\"font-size: 18px; font-weight: bold; padding: 8px 0px; line-height: 42px; margin: 0px;\"><span style=\"font-size: 18px;\">采购订单批量保存</span></p><table><tbody><tr class=\"firstRow\"><td width=\"655\" style=\"\"><p><strong>URL：<span style=\"text-align: justify;\"></span></strong><span style=\"text-align: justify;\">{{host}}/</span>kapi/sys/pm_purorderbill/batchsave</p><p><br/></p><p><strong>请求方式：</strong>POST</p><p><br/></p><p><strong>请求Header参数：</strong></p><p>Content-Type=application/json</p><p>accessToken: xxxxxxxxxxxxx</p></td></tr></tbody></table><p><br/></p><table><tbody><tr class=\"firstRow\"><td width=\"655\" style=\"\"><p><strong>请求Body：</strong></p><p>{</p><p>&nbsp; &nbsp;&quot;data&quot;: [</p><p>&nbsp; &nbsp; &nbsp; &nbsp;{</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;org&quot;: {</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;: &quot;xyd2024&quot;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;},</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;biztype&quot;: {</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;: &quot;110&quot;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; },</p><p>&quot;supplier&quot;: {</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;: &quot;sup-00122&quot;</p><p>},</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;comment&quot;:&quot;你好1&quot;,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;billentry&quot;: [</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;material&quot;: {</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;: &quot;ZH-00009257&quot;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;},</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;qty&quot;: &quot;3&quot;,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;unit&quot;: {</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;: &quot;ZH-TON&quot;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;},</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;entrysettleorg&quot;:{</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;:&quot;xyd2024&quot;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;},</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;entrycomment&quot;:&quot;111111&quot;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</p><p>&nbsp; &nbsp; &nbsp; &nbsp;},</p><p>&nbsp; &nbsp; &nbsp; &nbsp;{</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;org&quot;: {</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;: &quot;xyd2024&quot;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;},</p><p>&quot;supplier&quot;: {</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;: &quot;sup-00122&quot;</p><p>},</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;biztype&quot;: {</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;: &quot;110&quot;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; },</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;comment&quot;:&quot;你好2&quot;,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;billentry&quot;: [</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;material&quot;: {</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;: &quot;ZH-00009257&quot;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;},</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;qty&quot;: &quot;3&quot;,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;unit&quot;: {</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;: &quot;ZH-TON&quot;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;},</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &quot;entrysettleorg&quot;:{</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;:&quot;xyd2024&quot;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;},</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;entrycomment&quot;:&quot;222222&quot;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</p><p>&nbsp; &nbsp; &nbsp; &nbsp;},</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;org&quot;: {</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;: &quot;xyd2024&quot;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;},</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;biztype&quot;: {</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;: &quot;110&quot;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; },</p><p>&quot;supplier&quot;: {</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;: &quot;sup-00122&quot;</p><p>},</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;comment&quot;:&quot;你好3&quot;,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;billentry&quot;: [</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;material&quot;: {</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;: &quot;ZH-00009257&quot;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;},</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;qty&quot;: &quot;3&quot;,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;unit&quot;: {</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;: &quot;ZH-TON&quot;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;},</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &quot;entrysettleorg&quot;:{</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;:&quot;xyd2024&quot;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;},</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;entrycomment&quot;:&quot;3333&quot;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</p><p>&nbsp; &nbsp; &nbsp; &nbsp;}</p><p>&nbsp; &nbsp;]</p><p>}</p></td></tr></tbody></table><p><br/></p><table><tbody><tr class=\"firstRow\"><td width=\"655\" style=\"\"><p><strong>请求结果：</strong></p><p>{</p><p>&nbsp; &nbsp;&quot;data&quot;: [</p><p>&nbsp; &nbsp; &nbsp; &nbsp;{</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;dindex&quot;: 0,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;: &quot;CGDD-202109-152259&quot;,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;orgnumber&quot;: &quot;xyd2024&quot;,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;success&quot;: true,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;id&quot;: 1239689647475463168</p><p>&nbsp; &nbsp; &nbsp; &nbsp;},</p><p>&nbsp; &nbsp; &nbsp; &nbsp;{</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;dindex&quot;: 1,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;: &quot;CGDD-202109-152260&quot;,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;orgnumber&quot;: &quot;xyd2024&quot;,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;success&quot;: true,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;id&quot;: 1239689649320911872</p><p>&nbsp; &nbsp; &nbsp; &nbsp;},</p><p>&nbsp; &nbsp; &nbsp; &nbsp;{</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;dindex&quot;: 2,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;: &quot;CGDD-202109-152261&quot;,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;orgnumber&quot;: &quot;xyd2024&quot;,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;success&quot;: true,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;id&quot;: 1239689649765553152</p><p>&nbsp; &nbsp; &nbsp; &nbsp;}</p><p>&nbsp; &nbsp;],</p><p>&nbsp; &nbsp;&quot;success&quot;: true,</p><p>&nbsp; &nbsp;&quot;errorCode&quot;: &quot;success&quot;,</p><p>&nbsp; &nbsp;&quot;message&quot;: null</p><p>}</p></td></tr></tbody></table><p><br/></p><p label=\"一级标题\" style=\"font-size: 20px; font-weight: bold; line-height: 42px; margin: 0px;\">4 返回参数说明</p><table><tbody><tr class=\"firstRow\"><td width=\"33\" style=\"\"><p><strong>序号</strong></p></td><td width=\"69\" style=\"\"><p><strong>参数</strong></p></td><td width=\"94\" style=\"\"><p><strong>解释</strong></p></td><td width=\"411\" style=\"\"><p><strong>返回值实例</strong></p></td></tr><tr><td width=\"12\" style=\"\"><p>1</p></td><td width=\"69\" style=\"\"><p>success</p></td><td width=\"51\" style=\"\"><p>是否成功</p></td><td width=\"410\" style=\"\"><p>true/false</p></td></tr><tr><td width=\"12\" style=\"\"><p>2</p></td><td width=\"69\" style=\"\"><p>errorCode</p></td><td width=\"51\" style=\"\"><p>错误编码</p></td><td width=\"410\" style=\"\"><p>success/false</p></td></tr><tr><td width=\"12\" style=\"\"><p>3</p></td><td width=\"69\" style=\"\"><p>message</p></td><td width=\"51\" style=\"\"><p>提示信息</p></td><td width=\"410\" style=\"\"><p><span style=\"text-align: justify;\">成功时为null，失败时会返回错误信息</span></p></td></tr><tr><td width=\"12\" style=\"\"><p>4</p></td><td width=\"69\" style=\"\"><p>data</p></td><td width=\"51\" style=\"\"><p>业务对象数据</p></td><td width=\"410\" style=\"\"><p>{&quot;dindex&quot;: 0, &quot;number&quot;: &quot;CGDD-202109-152259&quot;, &quot;orgnumber&quot;: &quot;xyd2024&quot;, &quot;success&quot;: true, &quot;id&quot;: 1239689647475463168 },{&quot;dindex&quot;: 1,...}</p></td></tr></tbody></table><p><br/></p><p><br/></p>"
+}

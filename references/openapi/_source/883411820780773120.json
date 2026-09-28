@@ -1,0 +1,409 @@
+{
+ "badNum": 0,
+ "templateId": "337600663419447040",
+ "identityTagIds": null,
+ "knowledgeId": "883411820780773120",
+ "createdAt": 1788429791076,
+ "collections": 1,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "883411820780773120",
+ "contentType": 1,
+ "updatedAt": 1789113643676,
+ "knowledgeUpdater": {
+  "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+  "department": null,
+  "id": "132488613174518784",
+  "name": "某个路易",
+  "nameSpell": "name"
+ },
+ "assessStatus": 0,
+ "knowledgeStatus": 2,
+ "assessHandleStatus": null,
+ "knowledgeCreatedAt": 1788429791076,
+ "version": 21,
+ "labels": [],
+ "editedAt": 1789113644000,
+ "identityTags": null,
+ "useful": 2,
+ "errors": [],
+ "isCollected": false,
+ "template": "",
+ "totalFeedBacks": 0,
+ "attachments": [],
+ "sources": [],
+ "editTitle": "OpenAPI查询受控基础资料权限控制",
+ "title": "OpenAPI查询受控基础资料权限控制",
+ "content": "<p></p><h2>1 问题描述</h2><p style=\"font-size: 14px\"><strong>场景一：数据越权</strong></p><p>通过 OpenAPI（API 2.0）查询受控基础资料（如供应商、客户等）时，返回结果未按管控策略进行过滤，可能导致用户查询到本不该有权限看到的数据。</p><p></p><p style=\"font-size: 14px\"><strong>场景二：参数缺失报错</strong></p><p>使用 RESTful API 查询受控基础资料时，提示以下错误：使用组织参数 [orgIds（bos_bdCtrl_useOrgIds）] 为空。</p><p></p><hr><p style=\"font-size: 14px\"><strong>补充说明：什么是受控基础资料？</strong></p><p style=\"font-size: 14px\">受控基础资料是指<strong>被管控策略约束、带有创建组织的</strong>基础资料。管控策略决定了哪些组织能使用哪些基础资料，以及以什么规则进行共享或分配。典型的受控基础资料包括：供应商、客户等。</p><p></p><p></p><h2>2 问题分析</h2><p>OpenAPI 查询权限默认校验<strong>组织权限、功能权限 、数据规则</strong>，<strong>不会自动校验管控策略</strong>。因此，即使已经为受控基础资料维护了管控策略，通过OpenAPI查询时也不会生效，导致查询结果不受管控策略约束。</p><p></p><h2>3 解决方案</h2><p><strong>步骤一：</strong>在公共设置中开启 \"<strong>数据查询权限全量校验</strong>\" 开关。</p><p>开启后，OpenAPI 查询数据时将同时校验：组织权限、数据规则、基础数据管控策略</p><p><strong>路径：基础服务云 - 公共设置 - 系统参数。</strong></p><p></p><p><img src=\"/download/0100ff35bc93e6dd41f2be565b7e1829ec5f.png\" alt=\"上传图片\"></p><p></p><p><strong>步骤二：调用时传入使用组织信息</strong></p><p>查询受控基础资料时，需要传入使用组织信息，方式如下：</p><table class=\"is-max\" style=\"min-width: auto; width: 1328px\"><colgroup><col style=\"width: 208px\"><col style=\"width: 627px\"><col style=\"width: 493px\"></colgroup><tbody><tr><th colspan=\"1\" rowspan=\"1\" colwidth=\"208\" data-background-color=\"\" class=\"\"><p><strong>传参位置</strong></p></th><th colspan=\"1\" rowspan=\"1\" colwidth=\"627\" data-background-color=\"\" class=\"\"><p><strong>参数名</strong></p></th><th colspan=\"1\" rowspan=\"1\" colwidth=\"493\" data-background-color=\"\" class=\"\"><p>数据类型</p></th></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"208\" data-background-color=\"\" class=\"\"><p>请求头</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"627\" data-background-color=\"\" class=\"\"><p><code>X-BD-CTRL-ORGIDS</code></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"493\" data-background-color=\"\" class=\"\"><p>数组</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"208\" data-background-color=\"\" class=\"\"><p>请求参数</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"627\" data-background-color=\"\" class=\"\"><p><code>bos_bdCtrl_useOrgIds</code></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"493\" data-background-color=\"\" class=\"\"><p>数组</p></td></tr></tbody></table><p>说明：<strong>RESTful API默认全量校验</strong>，无需额外开启开关，直接<strong>通过请求头传参</strong>即可。</p><p></p><p><img src=\"/download/0100708b6812dfc841a8a7196a4fd5239669.png\" alt=\"上传图片\"></p><p></p><p><img src=\"/download/0100de989d864205402485b29cd73fcbec81.png\" alt=\"上传图片\"></p><p></p><h2>4 常见问题</h2><p>Q：为什么之前没开开关也能正常查询？</p><p>A：关闭开关时，系统仅校验组织权限和数据规则，不校验管控策略。如果数据规则本身已覆盖了权限控制，查询结果可能看起来\"正常\"，但实际上管控策略并未生效。建议开启全量校验以确保权限控制完整。</p><p>Q：开关开启后，所有 API 查询都会受影响吗？</p><p>A：是的。开关开启后，所有 OpenAPI 查询都会同时校验管控策略。如果部分接口不需要管控策略校验，建议按需评估是否开启。</p><p>Q：RESTful API 和 API2.0 有什么区别？</p><p>A：RESTful API 默认全量校验，始终会校验管控策略；API2.0 需要通过上述开关来控制是否校验管控策略。</p><p></p><h2>5 操作总结</h2><ol start=\"NaN\" class=\"ol-list\"><li><p>进入公共设置，开启 \"数据查询权限全量校验\" 开关</p></li><li><p>调用查询接口时，通过请求头 X-BD-CTRL-ORGIDS 或请求参数 bos_bdCtrl_useOrgIds 传入使用组织信息</p></li><li><p>验证查询结果是否符合管控策略预期</p></li></ol>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 87,
+   "isOpen": 1,
+   "name": "金蝶AI苍穹",
+   "productLineId": 29,
+   "series": "developer01",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        null
+       ],
+       "code": null,
+       "description": "",
+       "entityId": "883411820780773120",
+       "entityType": "Knowledge",
+       "id": "883414472621560064",
+       "isCategory": false,
+       "name": "OpenAPI查询受控基础资料权限控制",
+       "parentId": "226337785987048960",
+       "sort": "33",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": "",
+     "entityId": null,
+     "entityType": null,
+     "id": "226337785987048960",
+     "isCategory": true,
+     "name": "常见问题",
+     "parentId": "-1",
+     "sort": "9",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+  "department": null,
+  "id": "132488613174518784",
+  "name": "某个路易",
+  "nameSpell": "name"
+ },
+ "totalAppraisalScore": 10,
+ "iflytekId": null,
+ "views": 152,
+ "productLineId": 29,
+ "comments": 0,
+ "similarityCount": null,
+ "totalAppraisalUsers": 2,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1789113643676,
+ "appraisalScore": 0,
+ "unuseful": 0,
+ "knowledgeCheckStatus": 2,
+ "otherProductLineIds": [],
+ "auditAt": 1789113663000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": null,
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 0,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "HotIssues",
+     "createdAt": 1558618967000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "使用中经常遇到的应用类、报错类问题的解决方法",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/010046d15638963c4c388734601dd5f8ceec.png",
+     "id": "202203081644",
+     "name": "常见问题",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010176d38341668f44fdb94c95058a90e4b8.png",
+      "department": "云社区运营部",
+      "id": "2147406697",
+      "name": "多肉丸子",
+      "nameSpell": "kejuan"
+     },
+     "updatedAt": 1676857709000
+    },
+    {
+     "code": "rumen",
+     "createdAt": 1605667807000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "入门类的知识可使用此标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100d322b9282bcc438faa894f4eec029977.png",
+     "id": "202203081646",
+     "name": "基础入门",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download?fileName=0101ec1d6ce599b442dab7d0b794c1fce88d.png",
+      "department": null,
+      "id": "1009",
+      "name": "一颗小星星",
+      "nameSpell": "fengling"
+     },
+     "updatedAt": 1657872008000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "883411820780773120",
+         "entityType": "Knowledge",
+         "id": "883414472621560064",
+         "isCategory": false,
+         "name": "OpenAPI查询受控基础资料权限控制",
+         "parentId": "226337785987048960",
+         "sort": "33",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": null,
+       "id": "226337785987048960",
+       "isCategory": true,
+       "name": "常见问题",
+       "parentId": "-1",
+       "sort": "9",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": "<p></p><h2>1 问题描述</h2><p style=\"font-size: 14px\"><strong>场景一：数据越权</strong></p><p>通过 OpenAPI（API 2.0）查询受控基础资料（如供应商、客户等）时，返回结果未按管控策略进行过滤，可能导致用户查询到本不该有权限看到的数据。</p><p></p><p style=\"font-size: 14px\"><strong>场景二：参数缺失报错</strong></p><p>使用 RESTful API 查询受控基础资料时，提示以下错误：使用组织参数 [orgIds（bos_bdCtrl_useOrgIds）] 为空。</p><p></p><hr><p style=\"font-size: 14px\"><strong>补充说明：什么是受控基础资料？</strong></p><p style=\"font-size: 14px\">受控基础资料是指<strong>被管控策略约束、带有创建组织的</strong>基础资料。管控策略决定了哪些组织能使用哪些基础资料，以及以什么规则进行共享或分配。典型的受控基础资料包括：供应商、客户等。</p><p></p><p></p><h2>2 问题分析</h2><p>OpenAPI 查询权限默认校验<strong>组织权限、功能权限 、数据规则</strong>，<strong>不会自动校验管控策略</strong>。因此，即使已经为受控基础资料维护了管控策略，通过OpenAPI查询时也不会生效，导致查询结果不受管控策略约束。</p><p></p><h2>3 解决方案</h2><p><strong>步骤一：</strong>在公共设置中开启 \"<strong>数据查询权限全量校验</strong>\" 开关。</p><p>开启后，OpenAPI 查询数据时将同时校验：组织权限、数据规则、基础数据管控策略</p><p><strong>路径：基础服务云 - 公共设置 - 系统参数。</strong></p><p></p><p><img src=\"/download/0100ff35bc93e6dd41f2be565b7e1829ec5f.png\" alt=\"上传图片\"></p><p></p><p><strong>步骤二：调用时传入使用组织信息</strong></p><p>查询受控基础资料时，需要传入使用组织信息，方式如下：</p><table class=\"is-max\" style=\"min-width: auto; width: 1328px\"><colgroup><col style=\"width: 208px\"><col style=\"width: 627px\"><col style=\"width: 493px\"></colgroup><tbody><tr><th colspan=\"1\" rowspan=\"1\" colwidth=\"208\" data-background-color=\"\" class=\"\"><p><strong>传参位置</strong></p></th><th colspan=\"1\" rowspan=\"1\" colwidth=\"627\" data-background-color=\"\" class=\"\"><p><strong>参数名</strong></p></th><th colspan=\"1\" rowspan=\"1\" colwidth=\"493\" data-background-color=\"\" class=\"\"><p>数据类型</p></th></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"208\" data-background-color=\"\" class=\"\"><p>请求头</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"627\" data-background-color=\"\" class=\"\"><p><code>X-BD-CTRL-ORGIDS</code></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"493\" data-background-color=\"\" class=\"\"><p>数组</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"208\" data-background-color=\"\" class=\"\"><p>请求参数</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"627\" data-background-color=\"\" class=\"\"><p><code>bos_bdCtrl_useOrgIds</code></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"493\" data-background-color=\"\" class=\"\"><p>数组</p></td></tr></tbody></table><p>说明：<strong>RESTful API默认全量校验</strong>，无需额外开启开关，直接<strong>通过请求头传参</strong>即可。</p><p></p><p><img src=\"/download/0100708b6812dfc841a8a7196a4fd5239669.png\" alt=\"上传图片\"></p><p></p><p><img src=\"/download/0100de989d864205402485b29cd73fcbec81.png\" alt=\"上传图片\"></p><p></p><h2>4 常见问题</h2><p>Q：为什么之前没开开关也能正常查询？</p><p>A：关闭开关时，系统仅校验组织权限和数据规则，不校验管控策略。如果数据规则本身已覆盖了权限控制，查询结果可能看起来\"正常\"，但实际上管控策略并未生效。建议开启全量校验以确保权限控制完整。</p><p>Q：开关开启后，所有 API 查询都会受影响吗？</p><p>A：是的。开关开启后，所有 OpenAPI 查询都会同时校验管控策略。如果部分接口不需要管控策略校验，建议按需评估是否开启。</p><p>Q：RESTful API 和 API2.0 有什么区别？</p><p>A：RESTful API 默认全量校验，始终会校验管控策略；API2.0 需要通过上述开关来控制是否校验管控策略。</p><p></p><h2>5 操作总结</h2><ol start=\"NaN\" class=\"ol-list\"><li><p>进入公共设置，开启 \"数据查询权限全量校验\" 开关</p></li><li><p>调用查询接口时，通过请求头 X-BD-CTRL-ORGIDS 或请求参数 bos_bdCtrl_useOrgIds 传入使用组织信息</p></li><li><p>验证查询结果是否符合管控策略预期</p></li></ol>"
+}

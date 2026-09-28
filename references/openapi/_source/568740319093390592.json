@@ -1,0 +1,474 @@
+{
+ "badNum": 0,
+ "templateId": "290071880827070208",
+ "identityTagIds": null,
+ "knowledgeId": "568740319093390592",
+ "createdAt": 1713406259000,
+ "collections": 0,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "568740319093390592",
+ "contentType": 1,
+ "updatedAt": 1713419118000,
+ "knowledgeUpdater": {
+  "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+  "department": null,
+  "id": "132488613174518784",
+  "name": "某个路易",
+  "nameSpell": "name"
+ },
+ "assessStatus": 0,
+ "knowledgeStatus": 2,
+ "assessHandleStatus": null,
+ "knowledgeCreatedAt": 1713406259000,
+ "version": 26,
+ "labels": [],
+ "editedAt": 1713419118000,
+ "identityTags": null,
+ "useful": 5,
+ "errors": [],
+ "isCollected": false,
+ "template": "",
+ "totalFeedBacks": 0,
+ "attachments": [],
+ "sources": [],
+ "editTitle": " API请求UTF8字符集乱码问题排查指南",
+ "title": " API请求UTF8字符集乱码问题排查指南",
+ "content": "<p style=\"color: rgb(0, 0, 0)\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">1 问题描述</h2><p label=\"正文\" style=\"\"><span style=\"color: rgb(0, 0, 0);\"></span></p><p style=\"text-align: justify;color: rgb(0, 0, 0)\">当第三方系统请求OpenAPI时，请求参数和返回参数中文字段出现乱码问题。</p><p style=\"text-align: justify;color: rgb(0, 0, 0)\"><br/><img src=\"/download/01091e248ca76ca443c58ba5a02696ec45ef.png\" width=\"732\" height=\"580\"/></p><p><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">2 问题分析</h2><p>乱码发生原因，一般是因为发送方与接收方编码不一致。比如发送方是GB2312，而苍穹接收统一要求为UTF-8。</p><p><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">3 解决方法</h2><p>那么如何才能保证不会乱码？</p><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><p>【可选】请求头中声明UTF-8编码 httpPost.setContentType(&quot;application/json;charset=&quot;UTF-8&quot;)；如果没设置则默认UTF-8。</p></li><li><p>【可选】如果没指定请求头则可以设置：httpPost.addHeader(&quot;Accept-Charset&quot;, &quot;UTF-8&quot;);</p></li><li><p>【必须】确保http请求中的报文body，传送的是真UTF-8编码报文。如果不是UTF-8编码，可以通过以下语句进行转换：</p></li></ul><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; StringEntity entity = new StringEntity(jsonData, &quot;UTF-8&quot;);//解决中文乱码问题</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; entity.setContentType(&quot;application/json;charset=&quot;UTF-8&quot;);</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; httpPost.setEntity(entity);</p><p><br/></p><p><span style=\"color: rgb(0, 112, 192);\">注意事项：</span>如果仅仅声明请求头中的utf-8编码，而正文body传送的编码不是UTF-8时不进行转换，还是会乱码。请求头只是声明编码格式，而真正传送的数据必须转换成相应的utf-8编码。</p><p><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">4 <span style=\"\">测试步骤</span></h2><p style=\"\"><span style=\"color: rgb(0, 0, 0); text-align: justify;\"></span></p><p style=\"\">&nbsp;&nbsp;&nbsp;&nbsp;1）示例代码见附件<span class=\"kd-attachment-content\" contenteditable=\"false\" id=\"\" vid=\"568794236116306432\"><span class=\"name\" contenteditable=\"false\">TestUTF8Java.zip</span></span>，resource下的gb2312json.txt是示例json报文，由gb2312进行编码。可以通过vscode或notepad++查看编码格式。</p><p style=\"\">&nbsp;&nbsp;&nbsp;&nbsp;2）测试时请更改静态变量URL环境地址以及token。</p><p style=\"\">&nbsp;&nbsp;&nbsp;&nbsp;3）打开开放平台的日志，路径：开放服务云 → OpenAPI&nbsp;<span style=\"\">→&nbsp;</span>监控统计&nbsp;<span style=\"\">→&nbsp;</span>API调用日志，看下入参是不是乱码。可以看到最近2条日志，一个是正常，一个是乱码。乱码的原因是：只是声明了请求头，报文body没有进行转码。</p><p style=\"\"><br/></p><p style=\"\"><img src=\"/download/0109e7148b53ab3e4692b1238c144c127f5d.png\"/></p><p style=\"\"><br/></p><p style=\"\"><br/></p><p style=\"\"><img src=\"/download/0109126470f46ece407199f2cd6d2cb8ec76.png\"/></p><p style=\"\"><br/></p><div></div>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 87,
+   "isOpen": 1,
+   "name": "金蝶AI苍穹",
+   "productLineId": 29,
+   "series": "developer01",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        null
+       ],
+       "code": null,
+       "description": "",
+       "entityId": "568740319093390592",
+       "entityType": "Knowledge",
+       "id": "568743018312563968",
+       "isCategory": false,
+       "name": " API请求UTF8字符集乱码问题排查指南",
+       "parentId": "226337785987048960",
+       "sort": "15",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": "",
+     "entityId": null,
+     "entityType": null,
+     "id": "226337785987048960",
+     "isCategory": true,
+     "name": "常见问题",
+     "parentId": "-1",
+     "sort": "9",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download/01010204d4b71b654a208006fa1004eac36a.png",
+  "department": null,
+  "id": "740211268992385024",
+  "name": "毛毛去哪儿",
+  "nameSpell": "name"
+ },
+ "totalAppraisalScore": 24,
+ "iflytekId": null,
+ "views": 1976,
+ "productLineId": 29,
+ "comments": 0,
+ "similarityCount": 0,
+ "totalAppraisalUsers": 5,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1713419118000,
+ "appraisalScore": 0,
+ "unuseful": 0,
+ "knowledgeCheckStatus": 2,
+ "otherProductLineIds": [],
+ "auditAt": 1713419141000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapi_apilist_layout",
+        "id": "505686038019362304",
+        "name": "异步API",
+        "productLineId": null,
+        "sort": 1,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 0,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "HotIssues",
+     "createdAt": 1558618967000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "使用中经常遇到的应用类、报错类问题的解决方法",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/010046d15638963c4c388734601dd5f8ceec.png",
+     "id": "202203081644",
+     "name": "常见问题",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010176d38341668f44fdb94c95058a90e4b8.png",
+      "department": "云社区运营部",
+      "id": "2147406697",
+      "name": "多肉丸子",
+      "nameSpell": "kejuan"
+     },
+     "updatedAt": 1676857709000
+    },
+    {
+     "code": "rumen",
+     "createdAt": 1605667807000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "入门类的知识可使用此标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100d322b9282bcc438faa894f4eec029977.png",
+     "id": "202203081646",
+     "name": "基础入门",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download?fileName=0101ec1d6ce599b442dab7d0b794c1fce88d.png",
+      "department": null,
+      "id": "1009",
+      "name": "一颗小星星",
+      "nameSpell": "fengling"
+     },
+     "updatedAt": 1657872008000
+    },
+    {
+     "code": "essencesummary",
+     "createdAt": 1606118073000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "精华汇总",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100402c6f8df169483db114f71043c19ec2.png",
+     "id": "202203081649",
+     "name": "精华汇总",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 2,
+     "updatePerson": {
+      "avatar": "/download?fileName=010162cfa9d5437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1129",
+      "name": "灏",
+      "nameSpell": "hao"
+     },
+     "updatedAt": 1606118073000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "568740319093390592",
+         "entityType": "Knowledge",
+         "id": "568743018312563968",
+         "isCategory": false,
+         "name": " API请求UTF8字符集乱码问题排查指南",
+         "parentId": "226337785987048960",
+         "sort": "15",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": null,
+       "id": "226337785987048960",
+       "isCategory": true,
+       "name": "常见问题",
+       "parentId": "-1",
+       "sort": "9",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": "<p style=\"color: rgb(0, 0, 0)\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">1 问题描述</h2><p label=\"正文\" style=\"\"><span style=\"color: rgb(0, 0, 0);\"></span></p><p style=\"text-align: justify;color: rgb(0, 0, 0)\">当第三方系统请求OpenAPI时，请求参数和返回参数中文字段出现乱码问题。</p><p style=\"text-align: justify;color: rgb(0, 0, 0)\"><br/><img src=\"/download/01091e248ca76ca443c58ba5a02696ec45ef.png\" width=\"732\" height=\"580\"/></p><p><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">2 问题分析</h2><p>乱码发生原因，一般是因为发送方与接收方编码不一致。比如发送方是GB2312，而苍穹接收统一要求为UTF-8。</p><p><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">3 解决方法</h2><p>那么如何才能保证不会乱码？</p><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><p>【可选】请求头中声明UTF-8编码 httpPost.setContentType(&quot;application/json;charset=&quot;UTF-8&quot;)；如果没设置则默认UTF-8。</p></li><li><p>【可选】如果没指定请求头则可以设置：httpPost.addHeader(&quot;Accept-Charset&quot;, &quot;UTF-8&quot;);</p></li><li><p>【必须】确保http请求中的报文body，传送的是真UTF-8编码报文。如果不是UTF-8编码，可以通过以下语句进行转换：</p></li></ul><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; StringEntity entity = new StringEntity(jsonData, &quot;UTF-8&quot;);//解决中文乱码问题</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; entity.setContentType(&quot;application/json;charset=&quot;UTF-8&quot;);</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; httpPost.setEntity(entity);</p><p><br/></p><p><span style=\"color: rgb(0, 112, 192);\">注意事项：</span>如果仅仅声明请求头中的utf-8编码，而正文body传送的编码不是UTF-8时不进行转换，还是会乱码。请求头只是声明编码格式，而真正传送的数据必须转换成相应的utf-8编码。</p><p><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">4 <span style=\"\">测试步骤</span></h2><p style=\"\"><span style=\"color: rgb(0, 0, 0); text-align: justify;\"></span></p><p style=\"\">&nbsp;&nbsp;&nbsp;&nbsp;1）示例代码见附件<span class=\"kd-attachment-content\" contenteditable=\"false\" id=\"\" vid=\"568794236116306432\"><span class=\"name\" contenteditable=\"false\">TestUTF8Java.zip</span></span>，resource下的gb2312json.txt是示例json报文，由gb2312进行编码。可以通过vscode或notepad++查看编码格式。</p><p style=\"\">&nbsp;&nbsp;&nbsp;&nbsp;2）测试时请更改静态变量URL环境地址以及token。</p><p style=\"\">&nbsp;&nbsp;&nbsp;&nbsp;3）打开开放平台的日志，路径：开放服务云 → OpenAPI&nbsp;<span style=\"\">→&nbsp;</span>监控统计&nbsp;<span style=\"\">→&nbsp;</span>API调用日志，看下入参是不是乱码。可以看到最近2条日志，一个是正常，一个是乱码。乱码的原因是：只是声明了请求头，报文body没有进行转码。</p><p style=\"\"><br/></p><p style=\"\"><img src=\"/download/0109e7148b53ab3e4692b1238c144c127f5d.png\"/></p><p style=\"\"><br/></p><p style=\"\"><br/></p><p style=\"\"><img src=\"/download/0109126470f46ece407199f2cd6d2cb8ec76.png\"/></p><p style=\"\"><br/></p><div></div>"
+}

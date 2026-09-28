@@ -1,0 +1,568 @@
+{
+ "badNum": 0,
+ "identityTagIds": null,
+ "knowledgeId": "341958917577817856",
+ "createdAt": 1659337359000,
+ "collections": 14,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "341958917577817856",
+ "contentType": 1,
+ "updatedAt": 1724291532000,
+ "knowledgeUpdater": {
+  "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+  "department": null,
+  "id": "132488613174518784",
+  "name": "某个路易",
+  "nameSpell": "name"
+ },
+ "assessStatus": 0,
+ "knowledgeStatus": 2,
+ "assessHandleStatus": null,
+ "knowledgeCreatedAt": 1659337359000,
+ "version": 25,
+ "labels": [],
+ "editedAt": 1724291103000,
+ "identityTags": null,
+ "useful": 3,
+ "errors": [],
+ "isCollected": false,
+ "totalFeedBacks": 0,
+ "attachments": [],
+ "sources": [],
+ "editTitle": "OpenAPI防止接口重复调用",
+ "title": "OpenAPI防止接口重复调用",
+ "content": "<div style=\"\"><div style=\"\"><div style=\"\"><div style=\"background-color: rgb(255, 255, 255);\"><h2 label=\"一级标题\" class=\"first-title html-anchor-list0-1712129000423 html-anchor-list0-1724290671552 html-anchor-list0-1724290671552\" id=\"html-anchor-list0-1712129000423\" style=\"\">变更记录<br/></h2></div><p style=\"background-color: rgb(255, 255, 255);\"><br/></p><table width=\"100%\"><tbody style=\"\"><tr class=\"firstRow\" style=\"\"><td valign=\"middle\" width=\"116\" align=\"left\" style=\"\"><p style=\"text-align: inherit;\"><span style=\"font-weight: 700;\">产品版本</span></p></td><td valign=\"middle\" width=\"359\" align=\"left\" style=\"\"><span style=\"font-weight: 700;\">更新内容</span></td><td valign=\"middle\" width=\"146.33333333333334\" align=\"left\" style=\"\"><span style=\"font-weight: 700;\">更新日期</span></td></tr><tr style=\"\"><td width=\"92\" valign=\"top\" style=\"\">V5.0.005</td><td width=\"498\" valign=\"top\" style=\"\">初始版本</td><td width=\"150\" valign=\"top\" style=\"\">2022年6月</td></tr><tr style=\"\"><td width=\"92\" valign=\"top\" style=\"\">V6.0.12</td><td width=\"498\" valign=\"top\" style=\"\"><p style=\"text-align: inherit;\">允许自定义<span style=\"text-align: justify;\">防重复参数的校验时间</span></p></td><td width=\"150\" valign=\"top\" style=\"\">2024年4月</td></tr></tbody></table><p style=\"background-color: rgb(255, 255, 255);\"><br/></p><p style=\"background-color: rgb(255, 255, 255);\"><span style=\"font-size: 20px; text-align: justify;\"></span></p><hr/><p style=\"background-color: rgb(255, 255, 255);\"><span style=\"font-size: 20px; font-weight: bold; text-align: justify;\"><br/></span></p><p style=\"background-color: rgb(255, 255, 255);\"><span style=\"font-size: 20px; font-weight: bold; text-align: justify;\">1 简介</span><br/></p><div style=\"\"><p label=\"二级标题\" style=\"text-align: justify; font-size: 18px; font-weight: bold; line-height: 42px;\">1.1 功能介绍</p><p style=\"text-align: justify;\"><span style=\"color: rgb(0, 0, 0);\">为防止API重复请求<span style=\"color: rgb(33, 33, 33); text-align: justify;\">及</span><span style=\"text-align: justify; color: rgb(84, 141, 212);\">网络问题导致网关重复发送请求包问题</span>，可通过请求头参数控制：</span></p><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><p style=\"text-align: justify;\"><span style=\"color: rgb(0, 0, 0);\"><span style=\"color: rgb(0, 0, 0); text-align: justify;\">Idempotency-Key: 请求ID，客户端可指定随机数或业务单号；</span></span></p></li><li><p style=\"text-align: justify;\"><span style=\"color: rgb(0, 0, 0);\"><span style=\"color: rgb(0, 0, 0); text-align: justify;\">Idempotency-Timeout：超时时间（秒）- V<span style=\"color: rgb(0, 0, 0); text-align: justify;\">6.0.12以上。</span></span></span></p></li></ul><p style=\"text-align: justify;\"><span style=\"color: rgb(0, 0, 0);\">一定时间内同一API携带相同请求头参数的调用，只有第一次请求执行，其余请求皆不执行，接口<span style=\"color: rgb(0, 0, 0); text-align: justify;\">返回604-重复请求。</span></span></p><p label=\"正文\" style=\"text-align: justify;\"><span style=\"color: rgb(0, 0, 0);\">&nbsp;</span></p><p label=\"正文\" style=\"text-align: justify;\"><span style=\"color: rgb(0, 0, 0);\">* 限制：超时时间最大只支持90天，过期的数据会被清理，超过90天的数据不会再校验重复，<span style=\"text-align: justify; color: rgb(84, 141, 212);\">在并发极高时，建议在数据库建立唯一索引</span><span style=\"text-align: justify; color: rgb(84, 141, 212);\">。</span></span></p><p style=\"text-align: justify;\"><br/></p><p label=\"二级标题\" style=\"text-align: justify; font-size: 18px; font-weight: bold; line-height: 42px;\">1.2 应用场景</p><p style=\"text-align: justify;\">接口安全性要求较高，涉及到付款等操作，必须要进行重复调用校验。</p><p style=\"text-align: justify;\"><br/></p><p label=\"二级标题\" style=\"text-align: justify; font-size: 18px; font-weight: bold; line-height: 42px;\">1.3 系统路径</p><p style=\"text-align: justify;\">【开发服务云】→【开放平台】→【API管理】&nbsp;</p><p style=\"text-align: justify;\"><br/></p><p label=\"一级标题\" style=\"text-align: justify; font-size: 20px; font-weight: bold; line-height: 42px;\">2 主要操作<br/></p><p label=\"二级标题\" style=\"text-align: justify; font-size: 18px; font-weight: bold; line-height: 42px;\">2.1 调用API服务</p><p label=\"二级标题\" style=\"text-align: justify; font-size: 18px; font-weight: bold; line-height: 42px;\"><span style=\"font-size: 15px;\">操作步骤</span></p><p style=\"text-align: justify;\">步骤1： 请求头增加防止重复调用参数：&nbsp;<span style=\"color: rgb(33, 33, 33);\">Idempotency-Key ，并传一个唯一值，通过POSTMAN调用接口。</span></p><p style=\"text-align: justify;\"><br/></p><p style=\"text-align: justify;\"><img src=\"/download/0109c226cf9aa1a24b7da5c0fc3017b47663.png\"/></p><p style=\"text-align: center;\"><br/></p><p style=\"text-align: justify;\">步骤2： 再次调用接口，触发重复调用校验。</p><p style=\"text-align: justify;\"><br/></p><p style=\"text-align: justify;\"><img src=\"/download/01093c6214965c724b8eb5c378dfeaf6433d.png\"/></p><p style=\"text-align: justify;\"><br/></p><p style=\"text-align: justify;\"><br/></p></div></div></div><h1 label=\"一级标题\" class=\" html-anchor-list1 html-anchor-list8 html-anchor-list7 html-anchor-list6 html-anchor-list6\" style=\"\">3. 更多资讯</h1><p style=\"text-align: justify;\">请关注<a href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=226337371640594944&id=226708319996323072\" title=\"\" target=\"_blank\" class=\"\" style=\"\">开放平台新特性公告</a>的最新特性。</p><p style=\"\"><br/></p></div><p style=\"\"><br/></p><p style=\"\"><span class=\"kd-attachment-content\" contenteditable=\"false\" id=\"\" vid=\"341958879426765568\"><span class=\"name\" contenteditable=\"false\">OpenAPI幂等性（API防止重复请求）使用说明.pdf</span></span></p><p><br/></p>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 87,
+   "isOpen": 1,
+   "name": "金蝶AI苍穹",
+   "productLineId": 29,
+   "series": "developer01",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "341958917577817856",
+         "entityType": "Knowledge",
+         "id": "341959078907908864",
+         "isCategory": false,
+         "name": "OpenAPI防止接口重复调用",
+         "parentId": "226337340351087360",
+         "sort": "13",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": null,
+       "id": "226337340351087360",
+       "isCategory": true,
+       "name": "重要通知",
+       "parentId": "226337280724861696",
+       "sort": "1",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": "",
+     "entityId": null,
+     "entityType": null,
+     "id": "226337280724861696",
+     "isCategory": true,
+     "name": "动态与公告",
+     "parentId": "-1",
+     "sort": "1",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download/01010204d4b71b654a208006fa1004eac36a.png",
+  "department": null,
+  "id": "740211268992385024",
+  "name": "毛毛去哪儿",
+  "nameSpell": "name"
+ },
+ "totalAppraisalScore": 15,
+ "iflytekId": null,
+ "views": 6804,
+ "productLineId": 29,
+ "comments": 0,
+ "similarityCount": 0,
+ "totalAppraisalUsers": 3,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1724291532000,
+ "appraisalScore": 0,
+ "unuseful": 0,
+ "knowledgeCheckStatus": 2,
+ "otherProductLineIds": [],
+ "auditAt": 1724291532000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": null,
+       "code": "open",
+       "id": "5614",
+       "name": "开放平台",
+       "productLineId": null,
+       "sort": 2,
+       "type": "module"
+      },
+      "code": "DEV",
+      "id": "5576",
+      "name": "开发服务云",
+      "productLineId": null,
+      "sort": 11,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 0,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": null,
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 1,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "AdvancedSkills",
+     "createdAt": 1556519216000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "高阶技巧标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/01005cea40211bf14113a6004322e86a6780.png",
+     "id": "202203081642",
+     "name": "高级技巧",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download/010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "306913800727243776",
+      "name": "Paim",
+      "nameSpell": "name"
+     },
+     "updatedAt": 1657851500000
+    },
+    {
+     "code": "OperatingGuide",
+     "createdAt": 1556519201000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "某一功能的具体说明介绍，包括应用场景、参数说明、具体操作步骤等",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/010037894174802d4b9f8782f1f0010a6ddd.png",
+     "id": "202203081641",
+     "name": "功能介绍",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010176d38341668f44fdb94c95058a90e4b8.png",
+      "department": "云社区运营部",
+      "id": "2147406697",
+      "name": "多肉丸子",
+      "nameSpell": "kejuan"
+     },
+     "updatedAt": 1676857681000
+    },
+    {
+     "code": "GettingStarted",
+     "createdAt": 1556519230000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "推送至苍穹帮助中心",
+     "hasSpecifyUser": false,
+     "hide": true,
+     "icon": "/download/01001f079866652f4a68a71361a9509d404c.png",
+     "id": "202203081643",
+     "name": "推送至苍穹帮助中心",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 1,
+     "type": 2,
+     "updatePerson": {
+      "avatar": "/download?fileName=010162cfa9d5437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1129",
+      "name": "灏",
+      "nameSpell": "hao"
+     },
+     "updatedAt": 1605688859000
+    },
+    {
+     "code": "NewFeatures",
+     "createdAt": 1558619051000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "新特性",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/01009c9898f919a24034b3b37b2ebf42931c.png",
+     "id": "202203081645",
+     "name": "新特性",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010145330b44d45a47ae9b8aac30617b6992.png",
+      "department": null,
+      "id": "2147443044",
+      "name": "Lucky_tiao",
+      "nameSpell": "laoli"
+     },
+     "updatedAt": 1668739541000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          {
+           "childCategory": [
+            null
+           ],
+           "code": null,
+           "description": "",
+           "entityId": "341958917577817856",
+           "entityType": "Knowledge",
+           "id": "341959078907908864",
+           "isCategory": false,
+           "name": "OpenAPI防止接口重复调用",
+           "parentId": "226337340351087360",
+           "sort": "13",
+           "specialId": "226337046514476288",
+           "status": 1
+          }
+         ],
+         "code": null,
+         "description": "",
+         "entityId": null,
+         "entityType": null,
+         "id": "226337340351087360",
+         "isCategory": true,
+         "name": "重要通知",
+         "parentId": "226337280724861696",
+         "sort": "1",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": null,
+       "id": "226337280724861696",
+       "isCategory": true,
+       "name": "动态与公告",
+       "parentId": "-1",
+       "sort": "1",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": "<div style=\"\"><div style=\"\"><div style=\"\"><div style=\"background-color: rgb(255, 255, 255);\"><h2 label=\"一级标题\" class=\"first-title html-anchor-list0-1712129000423 html-anchor-list0-1724290671552 html-anchor-list0-1724290671552\" id=\"html-anchor-list0-1712129000423\" style=\"\">变更记录<br/></h2></div><p style=\"background-color: rgb(255, 255, 255);\"><br/></p><table width=\"100%\"><tbody style=\"\"><tr class=\"firstRow\" style=\"\"><td valign=\"middle\" width=\"116\" align=\"left\" style=\"\"><p style=\"text-align: inherit;\"><span style=\"font-weight: 700;\">产品版本</span></p></td><td valign=\"middle\" width=\"359\" align=\"left\" style=\"\"><span style=\"font-weight: 700;\">更新内容</span></td><td valign=\"middle\" width=\"146.33333333333334\" align=\"left\" style=\"\"><span style=\"font-weight: 700;\">更新日期</span></td></tr><tr style=\"\"><td width=\"92\" valign=\"top\" style=\"\">V5.0.005</td><td width=\"498\" valign=\"top\" style=\"\">初始版本</td><td width=\"150\" valign=\"top\" style=\"\">2022年6月</td></tr><tr style=\"\"><td width=\"92\" valign=\"top\" style=\"\">V6.0.12</td><td width=\"498\" valign=\"top\" style=\"\"><p style=\"text-align: inherit;\">允许自定义<span style=\"text-align: justify;\">防重复参数的校验时间</span></p></td><td width=\"150\" valign=\"top\" style=\"\">2024年4月</td></tr></tbody></table><p style=\"background-color: rgb(255, 255, 255);\"><br/></p><p style=\"background-color: rgb(255, 255, 255);\"><span style=\"font-size: 20px; text-align: justify;\"></span></p><hr/><p style=\"background-color: rgb(255, 255, 255);\"><span style=\"font-size: 20px; font-weight: bold; text-align: justify;\"><br/></span></p><p style=\"background-color: rgb(255, 255, 255);\"><span style=\"font-size: 20px; font-weight: bold; text-align: justify;\">1 简介</span><br/></p><div style=\"\"><p label=\"二级标题\" style=\"text-align: justify; font-size: 18px; font-weight: bold; line-height: 42px;\">1.1 功能介绍</p><p style=\"text-align: justify;\"><span style=\"color: rgb(0, 0, 0);\">为防止API重复请求<span style=\"color: rgb(33, 33, 33); text-align: justify;\">及</span><span style=\"text-align: justify; color: rgb(84, 141, 212);\">网络问题导致网关重复发送请求包问题</span>，可通过请求头参数控制：</span></p><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><p style=\"text-align: justify;\"><span style=\"color: rgb(0, 0, 0);\"><span style=\"color: rgb(0, 0, 0); text-align: justify;\">Idempotency-Key: 请求ID，客户端可指定随机数或业务单号；</span></span></p></li><li><p style=\"text-align: justify;\"><span style=\"color: rgb(0, 0, 0);\"><span style=\"color: rgb(0, 0, 0); text-align: justify;\">Idempotency-Timeout：超时时间（秒）- V<span style=\"color: rgb(0, 0, 0); text-align: justify;\">6.0.12以上。</span></span></span></p></li></ul><p style=\"text-align: justify;\"><span style=\"color: rgb(0, 0, 0);\">一定时间内同一API携带相同请求头参数的调用，只有第一次请求执行，其余请求皆不执行，接口<span style=\"color: rgb(0, 0, 0); text-align: justify;\">返回604-重复请求。</span></span></p><p label=\"正文\" style=\"text-align: justify;\"><span style=\"color: rgb(0, 0, 0);\">&nbsp;</span></p><p label=\"正文\" style=\"text-align: justify;\"><span style=\"color: rgb(0, 0, 0);\">* 限制：超时时间最大只支持90天，过期的数据会被清理，超过90天的数据不会再校验重复，<span style=\"text-align: justify; color: rgb(84, 141, 212);\">在并发极高时，建议在数据库建立唯一索引</span><span style=\"text-align: justify; color: rgb(84, 141, 212);\">。</span></span></p><p style=\"text-align: justify;\"><br/></p><p label=\"二级标题\" style=\"text-align: justify; font-size: 18px; font-weight: bold; line-height: 42px;\">1.2 应用场景</p><p style=\"text-align: justify;\">接口安全性要求较高，涉及到付款等操作，必须要进行重复调用校验。</p><p style=\"text-align: justify;\"><br/></p><p label=\"二级标题\" style=\"text-align: justify; font-size: 18px; font-weight: bold; line-height: 42px;\">1.3 系统路径</p><p style=\"text-align: justify;\">【开发服务云】→【开放平台】→【API管理】&nbsp;</p><p style=\"text-align: justify;\"><br/></p><p label=\"一级标题\" style=\"text-align: justify; font-size: 20px; font-weight: bold; line-height: 42px;\">2 主要操作<br/></p><p label=\"二级标题\" style=\"text-align: justify; font-size: 18px; font-weight: bold; line-height: 42px;\">2.1 调用API服务</p><p label=\"二级标题\" style=\"text-align: justify; font-size: 18px; font-weight: bold; line-height: 42px;\"><span style=\"font-size: 15px;\">操作步骤</span></p><p style=\"text-align: justify;\">步骤1： 请求头增加防止重复调用参数：&nbsp;<span style=\"color: rgb(33, 33, 33);\">Idempotency-Key ，并传一个唯一值，通过POSTMAN调用接口。</span></p><p style=\"text-align: justify;\"><br/></p><p style=\"text-align: justify;\"><img src=\"/download/0109c226cf9aa1a24b7da5c0fc3017b47663.png\"/></p><p style=\"text-align: center;\"><br/></p><p style=\"text-align: justify;\">步骤2： 再次调用接口，触发重复调用校验。</p><p style=\"text-align: justify;\"><br/></p><p style=\"text-align: justify;\"><img src=\"/download/01093c6214965c724b8eb5c378dfeaf6433d.png\"/></p><p style=\"text-align: justify;\"><br/></p><p style=\"text-align: justify;\"><br/></p></div></div></div><h1 label=\"一级标题\" class=\" html-anchor-list1 html-anchor-list8 html-anchor-list7 html-anchor-list6 html-anchor-list6\" style=\"\">3. 更多资讯</h1><p style=\"text-align: justify;\">请关注<a href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=226337371640594944&id=226708319996323072\" title=\"\" target=\"_blank\" class=\"\" style=\"\">开放平台新特性公告</a>的最新特性。</p><p style=\"\"><br/></p></div><p style=\"\"><br/></p><p style=\"\"><span class=\"kd-attachment-content\" contenteditable=\"false\" id=\"\" vid=\"341958879426765568\"><span class=\"name\" contenteditable=\"false\">OpenAPI幂等性（API防止重复请求）使用说明.pdf</span></span></p><p><br/></p>"
+}

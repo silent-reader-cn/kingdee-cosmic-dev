@@ -1,0 +1,599 @@
+{
+ "badNum": 0,
+ "identityTagIds": null,
+ "knowledgeId": "654991151715398912",
+ "createdAt": 1733970060000,
+ "collections": 4,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "654991151715398912",
+ "contentType": 1,
+ "updatedAt": 1733996320000,
+ "knowledgeUpdater": {
+  "avatar": "/download/0101ef5a0631c8f3403fbe5fac59f28b5865.png",
+  "department": null,
+  "id": "229002221680596224",
+  "name": "别雁小同学",
+  "nameSpell": "name"
+ },
+ "assessStatus": 0,
+ "knowledgeStatus": 2,
+ "assessHandleStatus": null,
+ "knowledgeCreatedAt": 1733970060000,
+ "version": 41,
+ "labels": [],
+ "editedAt": 1733996320000,
+ "identityTags": null,
+ "useful": 1,
+ "errors": [],
+ "isCollected": false,
+ "totalFeedBacks": 0,
+ "attachments": [],
+ "sources": [],
+ "editTitle": "开放平台/OpenAPI苍穹附件集合贴",
+ "title": "开放平台/OpenAPI苍穹附件集合贴",
+ "content": "<p><span style=\"color: rgb(0, 0, 0);\"></span></p><p style=\"color: rgb(0, 0, 0)\"><strong><em><span style=\"color: rgb(227, 108, 9)\"></span></em></strong></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">1 概述</h2><p>OpenAPI是自研的企业级API接口服务引擎，平台基于OpenAPI提供丰富的符合Restful 规范的API接口，全面覆盖各领域开放接口的使用场景，帮助企业快速接入外部第三方应用，连接用户、员工和上下游伙伴。目前第三方想要对苍穹附件进行增删改查，需要通过开放平台对外提供接口（<span style=\"\">自定义api</span>）；OpenAPI分为V1.0和V2.0版本，不通版本处理方式也不一样</p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">2 知识贴</h2><p><span style=\"\">OpenAPI2.0：</span></p><p><span style=\"\"><a href=\"https://vip.kingdee.com/link/s/lDywK\" target=\"_blank\" style=\"background-color: rgb(255, 255, 255); color: rgb(23, 81, 153); text-align: justify;\">自定义API（文件流处理）</a></span></p><p><a href=\"https://vip.kingdee.com/article/652511650938959104\" target=\"_blank\" style=\"\"><span style=\"color: rgb(33, 33, 33); background-color: rgb(255, 255, 255);\">OpenAPI2.0实现上传附件到指定单据（附件面板和附件字段）</span></a></p><p><a href=\"https://vip.kingdee.com/article/652511650938959104\" target=\"_blank\" style=\"\"><span style=\"color: rgb(33, 33, 33); background-color: rgb(255, 255, 255);\">OpenAPI2.0实现获取单据的附件信息（附件面板和附件字段）</span></a></p><p><a href=\"https://vip.kingdee.com/article/654734901064776960\" target=\"_blank\">OpenAPI2.0实现获取（下载）附件并返回OpenApiFile</a><br/></p><p><br/></p><p><span style=\"\">OpenAPI1.0：</span></p><p><a href=\"https://vip.kingdee.com/article/163327702105903872?productLineId=29\" title=\"\" target=\"_blank\" class=\"\">如何实现第三方系统远程查询苍穹系统内指定单据的附件信息</a></p><p style=\"\"><a href=\"https://vip.kingdee.com/article/279250909165777664?productLineId=29\" title=\"\" target=\"_blank\" class=\"\" style=\"\">如何实现第三方系统远程下载苍穹系统内指定单据的所有附件</a></p><p style=\"\"><a href=\"https://vip.kingdee.com/article/271698499203693056?productLineId=29\" title=\"\" target=\"_blank\" class=\"\" style=\"\">如何实现第三方系统远程上传业务单据&amp;多个附件至苍穹系统</a></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">3 注意事项</h2><p label=\"正文\" style=\"text-align: left;\">1、以上实现都是通过自定义API（JAVA）实现，也可以通过自定义API（Servlet）实现，业务代码都是一样的，只是开发部署的形式不一样；<span style=\"color: rgb(0, 0, 0); font-size: 13px; background-color: rgb(255, 255, 255);\">Servlet还支持批量上传附件，</span><a href=\"https://vip.kingdee.com/link/s/lDD10\" target=\"_blank\" style=\"\">自定义Servlet开发API接口</a><br/></p><p label=\"正文\" style=\"\">2、<a href=\"https://vip.kingdee.com/link/s/lKyPK\" target=\"_blank\" style=\"\">【附件】AttachmentAction--API接口介绍</a>提供的.do接口（例如：preview.do、download.do），只能用login.do返回token进行认证调用，<strong>增强型token不适用这些接<span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">口</span></strong></p><p>3、第三方想对苍穹附件进行处理，无特殊情况（苍穹版本过低、已上线使用登），推荐用<span style=\"\">OpenAPI2.0的方式进行附件的处理</span></p><h2 label=\"一级标题\" class=\"first-title\" style=\"text-align: left;\"><strong style=\"\"><span style=\"color: rgb(26, 26, 26);\">4 </span></strong><strong style=\"\"><span style=\"color: rgb(26, 26, 26);\">相关文档</span></strong></h2><p><strong style=\"\"><span style=\"color: rgb(26, 26, 26);\"></span></strong></p><p style=\"\"><a href=\"https://dev.kingdee.com/open/detail/sdk/2077750775919948800\" target=\"_blank\" style=\"\">SDK（附件介绍）</a></p><p style=\"\"><a href=\"https://vip.kingdee.com/knowledge/specialDetail/294832938980257024?productLineId=29&lang=zh-CN\" target=\"_blank\">附件图片水印官网文档</a></p><p label=\"正文\" style=\"\"><a href=\"https://vip.kingdee.com/link/s/leNzj\" target=\"_blank\" style=\"\">如何根据单据获取附件信息</a><br/></p><p label=\"正文\"><a href=\"https://vip.kingdee.com/link/s/ljxFC\" target=\"_blank\">附件字段如何删除和引用某个附件</a></p><p label=\"正文\"><a href=\"https://vip.kingdee.com/link/s/lUtoR\" target=\"_blank\">如何在单据列表批量上传附件</a><strong style=\"\"><span style=\"color: rgb(26, 26, 26);\"><br/></span></strong></p><p><a href=\"https://vip.kingdee.com/link/s/leNz5\" target=\"_blank\">如何二开实现批量下载附件</a><br/></p><p><br/></p><p><br/><span style=\"color: rgb(255, 0, 0);\"></span></p><p style=\"text-align: center;\"><br/></p>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 87,
+   "isOpen": 1,
+   "name": "金蝶AI苍穹",
+   "productLineId": 29,
+   "series": "developer01",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "654991151715398912",
+         "entityType": "Knowledge",
+         "id": "655001610799561984",
+         "isCategory": false,
+         "name": "开放平台/OpenAPI苍穹附件集合贴",
+         "parentId": "345932396790733568",
+         "sort": "4",
+         "specialId": "331847316925691648",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": null,
+       "id": "345932396790733568",
+       "isCategory": true,
+       "name": "常见问题",
+       "parentId": "334021439940446720",
+       "sort": "1",
+       "specialId": "331847316925691648",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": "",
+     "entityId": null,
+     "entityType": null,
+     "id": "334021439940446720",
+     "isCategory": true,
+     "name": "开放服务",
+     "parentId": "-1",
+     "sort": "10",
+     "specialId": "331847316925691648",
+     "status": 1
+    }
+   ],
+   "classifies": null,
+   "collections": 371,
+   "createdAt": "2022-07-04T17:22:45.000+08:00",
+   "creator": {
+    "avatar": "/download/01018b00f45fe4f245a9a102410a9682bb28.png",
+    "department": null,
+    "id": "430437059824456704",
+    "name": "Pennyzz",
+    "nameSpell": "name"
+   },
+   "description": "苍穹常见问题和案例库的总结",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "331847316925691648",
+   "identityTags": null,
+   "itemNum": 949,
+   "logo": "/download/0100e50341f3167a42c682bb623222947d0e.png",
+   "name": "常见问题和案例库",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 1,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 689,
+   "totalAppraisalUsers": 138,
+   "updatedAt": "2026-04-27T15:40:49.000+08:00",
+   "updaterId": "134653368529347584",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 5213174
+  },
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        null
+       ],
+       "code": null,
+       "description": "",
+       "entityId": "654991151715398912",
+       "entityType": "Knowledge",
+       "id": "655454985416914176",
+       "isCategory": false,
+       "name": "开放平台/OpenAPI苍穹附件集合贴",
+       "parentId": "226337785987048960",
+       "sort": "22",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": "",
+     "entityId": null,
+     "entityType": null,
+     "id": "226337785987048960",
+     "isCategory": true,
+     "name": "常见问题",
+     "parentId": "-1",
+     "sort": "9",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download/0101ef5a0631c8f3403fbe5fac59f28b5865.png",
+  "department": null,
+  "id": "229002221680596224",
+  "name": "别雁小同学",
+  "nameSpell": "name"
+ },
+ "totalAppraisalScore": 5,
+ "iflytekId": null,
+ "views": 3523,
+ "productLineId": 29,
+ "comments": 0,
+ "similarityCount": 0,
+ "totalAppraisalUsers": 1,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1733996320000,
+ "appraisalScore": 0,
+ "unuseful": 0,
+ "knowledgeCheckStatus": 2,
+ "otherProductLineIds": [],
+ "auditAt": 1733996320000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": null,
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 0,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "AdvancedSkills",
+     "createdAt": 1556519216000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "高阶技巧标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/01005cea40211bf14113a6004322e86a6780.png",
+     "id": "202203081642",
+     "name": "高级技巧",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download/010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "306913800727243776",
+      "name": "Paim",
+      "nameSpell": "name"
+     },
+     "updatedAt": 1657851500000
+    },
+    {
+     "code": "HotIssues",
+     "createdAt": 1558618967000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "使用中经常遇到的应用类、报错类问题的解决方法",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/010046d15638963c4c388734601dd5f8ceec.png",
+     "id": "202203081644",
+     "name": "常见问题",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010176d38341668f44fdb94c95058a90e4b8.png",
+      "department": "云社区运营部",
+      "id": "2147406697",
+      "name": "多肉丸子",
+      "nameSpell": "kejuan"
+     },
+     "updatedAt": 1676857709000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          {
+           "childCategory": [
+            null
+           ],
+           "code": null,
+           "description": "",
+           "entityId": "654991151715398912",
+           "entityType": "Knowledge",
+           "id": "655001610799561984",
+           "isCategory": false,
+           "name": "开放平台/OpenAPI苍穹附件集合贴",
+           "parentId": "345932396790733568",
+           "sort": "4",
+           "specialId": "331847316925691648",
+           "status": 1
+          }
+         ],
+         "code": null,
+         "description": "",
+         "entityId": null,
+         "entityType": null,
+         "id": "345932396790733568",
+         "isCategory": true,
+         "name": "常见问题",
+         "parentId": "334021439940446720",
+         "sort": "1",
+         "specialId": "331847316925691648",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": null,
+       "id": "334021439940446720",
+       "isCategory": true,
+       "name": "开放服务",
+       "parentId": "-1",
+       "sort": "10",
+       "specialId": "331847316925691648",
+       "status": 1
+      }
+     ],
+     "classifies": null,
+     "collections": 371,
+     "createdAt": "2022-07-04T17:22:45.000+08:00",
+     "creator": {
+      "avatar": "/download/01018b00f45fe4f245a9a102410a9682bb28.png",
+      "department": null,
+      "id": "430437059824456704",
+      "name": "Pennyzz",
+      "nameSpell": "name"
+     },
+     "description": "苍穹常见问题和案例库的总结",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "331847316925691648",
+     "identityTags": null,
+     "itemNum": 949,
+     "logo": "/download/0100e50341f3167a42c682bb623222947d0e.png",
+     "name": "常见问题和案例库",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 1,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 689,
+     "totalAppraisalUsers": 138,
+     "updatedAt": "2026-04-27T15:40:49.000+08:00",
+     "updaterId": "134653368529347584",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 5213174
+    },
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "654991151715398912",
+         "entityType": "Knowledge",
+         "id": "655454985416914176",
+         "isCategory": false,
+         "name": "开放平台/OpenAPI苍穹附件集合贴",
+         "parentId": "226337785987048960",
+         "sort": "22",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": null,
+       "id": "226337785987048960",
+       "isCategory": true,
+       "name": "常见问题",
+       "parentId": "-1",
+       "sort": "9",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": "<p><span style=\"color: rgb(0, 0, 0);\"></span></p><p style=\"color: rgb(0, 0, 0)\"><strong><em><span style=\"color: rgb(227, 108, 9)\"></span></em></strong></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">1 概述</h2><p>OpenAPI是自研的企业级API接口服务引擎，平台基于OpenAPI提供丰富的符合Restful 规范的API接口，全面覆盖各领域开放接口的使用场景，帮助企业快速接入外部第三方应用，连接用户、员工和上下游伙伴。目前第三方想要对苍穹附件进行增删改查，需要通过开放平台对外提供接口（<span style=\"\">自定义api</span>）；OpenAPI分为V1.0和V2.0版本，不通版本处理方式也不一样</p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">2 知识贴</h2><p><span style=\"\">OpenAPI2.0：</span></p><p><span style=\"\"><a href=\"https://vip.kingdee.com/link/s/lDywK\" target=\"_blank\" style=\"background-color: rgb(255, 255, 255); color: rgb(23, 81, 153); text-align: justify;\">自定义API（文件流处理）</a></span></p><p><a href=\"https://vip.kingdee.com/article/652511650938959104\" target=\"_blank\" style=\"\"><span style=\"color: rgb(33, 33, 33); background-color: rgb(255, 255, 255);\">OpenAPI2.0实现上传附件到指定单据（附件面板和附件字段）</span></a></p><p><a href=\"https://vip.kingdee.com/article/652511650938959104\" target=\"_blank\" style=\"\"><span style=\"color: rgb(33, 33, 33); background-color: rgb(255, 255, 255);\">OpenAPI2.0实现获取单据的附件信息（附件面板和附件字段）</span></a></p><p><a href=\"https://vip.kingdee.com/article/654734901064776960\" target=\"_blank\">OpenAPI2.0实现获取（下载）附件并返回OpenApiFile</a><br/></p><p><br/></p><p><span style=\"\">OpenAPI1.0：</span></p><p><a href=\"https://vip.kingdee.com/article/163327702105903872?productLineId=29\" title=\"\" target=\"_blank\" class=\"\">如何实现第三方系统远程查询苍穹系统内指定单据的附件信息</a></p><p style=\"\"><a href=\"https://vip.kingdee.com/article/279250909165777664?productLineId=29\" title=\"\" target=\"_blank\" class=\"\" style=\"\">如何实现第三方系统远程下载苍穹系统内指定单据的所有附件</a></p><p style=\"\"><a href=\"https://vip.kingdee.com/article/271698499203693056?productLineId=29\" title=\"\" target=\"_blank\" class=\"\" style=\"\">如何实现第三方系统远程上传业务单据&amp;多个附件至苍穹系统</a></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">3 注意事项</h2><p label=\"正文\" style=\"text-align: left;\">1、以上实现都是通过自定义API（JAVA）实现，也可以通过自定义API（Servlet）实现，业务代码都是一样的，只是开发部署的形式不一样；<span style=\"color: rgb(0, 0, 0); font-size: 13px; background-color: rgb(255, 255, 255);\">Servlet还支持批量上传附件，</span><a href=\"https://vip.kingdee.com/link/s/lDD10\" target=\"_blank\" style=\"\">自定义Servlet开发API接口</a><br/></p><p label=\"正文\" style=\"\">2、<a href=\"https://vip.kingdee.com/link/s/lKyPK\" target=\"_blank\" style=\"\">【附件】AttachmentAction--API接口介绍</a>提供的.do接口（例如：preview.do、download.do），只能用login.do返回token进行认证调用，<strong>增强型token不适用这些接<span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">口</span></strong></p><p>3、第三方想对苍穹附件进行处理，无特殊情况（苍穹版本过低、已上线使用登），推荐用<span style=\"\">OpenAPI2.0的方式进行附件的处理</span></p><h2 label=\"一级标题\" class=\"first-title\" style=\"text-align: left;\"><strong style=\"\"><span style=\"color: rgb(26, 26, 26);\">4 </span></strong><strong style=\"\"><span style=\"color: rgb(26, 26, 26);\">相关文档</span></strong></h2><p><strong style=\"\"><span style=\"color: rgb(26, 26, 26);\"></span></strong></p><p style=\"\"><a href=\"https://dev.kingdee.com/open/detail/sdk/2077750775919948800\" target=\"_blank\" style=\"\">SDK（附件介绍）</a></p><p style=\"\"><a href=\"https://vip.kingdee.com/knowledge/specialDetail/294832938980257024?productLineId=29&lang=zh-CN\" target=\"_blank\">附件图片水印官网文档</a></p><p label=\"正文\" style=\"\"><a href=\"https://vip.kingdee.com/link/s/leNzj\" target=\"_blank\" style=\"\">如何根据单据获取附件信息</a><br/></p><p label=\"正文\"><a href=\"https://vip.kingdee.com/link/s/ljxFC\" target=\"_blank\">附件字段如何删除和引用某个附件</a></p><p label=\"正文\"><a href=\"https://vip.kingdee.com/link/s/lUtoR\" target=\"_blank\">如何在单据列表批量上传附件</a><strong style=\"\"><span style=\"color: rgb(26, 26, 26);\"><br/></span></strong></p><p><a href=\"https://vip.kingdee.com/link/s/leNz5\" target=\"_blank\">如何二开实现批量下载附件</a><br/></p><p><br/></p><p><br/><span style=\"color: rgb(255, 0, 0);\"></span></p><p style=\"text-align: center;\"><br/></p>"
+}

@@ -1,0 +1,505 @@
+{
+ "badNum": 0,
+ "identityTagIds": null,
+ "knowledgeId": "322444102627254016",
+ "createdAt": 1654684665000,
+ "collections": 2,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "322444102627254016",
+ "contentType": 1,
+ "updatedAt": 1766110216000,
+ "knowledgeUpdater": {
+  "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+  "department": null,
+  "id": "132488613174518784",
+  "name": "某个路易",
+  "nameSpell": "name"
+ },
+ "assessStatus": 0,
+ "knowledgeStatus": 2,
+ "assessHandleStatus": null,
+ "knowledgeCreatedAt": 1654684665000,
+ "version": 54,
+ "labels": [],
+ "editedAt": 1713352837000,
+ "identityTags": null,
+ "useful": 10,
+ "errors": [],
+ "isCollected": false,
+ "totalFeedBacks": 0,
+ "attachments": [],
+ "sources": [],
+ "editTitle": "限流策略介绍",
+ "title": "限流策略介绍",
+ "content": "<div style=\"\"><h2 label=\"一级标题\" class=\"first-title html-anchor-list0-1712129000423\" id=\"html-anchor-list0-1712129000423\" style=\"\">变更记录<br/></h2></div><p style=\"\"><br/></p><table width=\"100%\"><tbody style=\"\"><tr class=\"firstRow\" style=\"\"><td valign=\"middle\" width=\"116\" align=\"left\" style=\"\"><p style=\"\"><strong style=\"\">产品版本</strong></p></td><td valign=\"middle\" width=\"359\" align=\"left\" style=\"\"><strong style=\"\">更新内容</strong></td><td valign=\"middle\" width=\"146.33333333333334\" align=\"left\" style=\"\"><strong style=\"\">更新日期</strong></td></tr><tr style=\"\"><td valign=\"middle\" width=\"117\" align=\"left\" style=\"\"><span style=\"color: rgb(0, 0, 0);\">V5.0.001</span></td><td valign=\"middle\" width=\"359\" align=\"left\" style=\"\">初始版本</td><td valign=\"middle\" width=\"146.33333333333334\" align=\"left\" style=\"\">2022年6月</td></tr></tbody></table><p style=\"\"><br/></p><p style=\"\"><span style=\"font-size: 20px; text-align: justify;\"></span></p><hr/><p style=\"\"><br/><span style=\"font-size: 20px; text-align: justify;\"></span></p><h2 label=\"一级标题\" class=\"first-title html-anchor-list1-1712129000423\" id=\"html-anchor-list1-1712129000423\" style=\"\"></h2><p label=\"一级标题\" class=\" html-anchor-list0\" id=\"html-anchor-list0\" style=\"text-align: justify; font-size: 20px; font-weight: bold; line-height: 42px;\">1 简介<br/></p><p label=\"二级标题\" class=\" html-anchor-list1\" id=\"html-anchor-list1\" style=\"text-align: justify; font-size: 18px; font-weight: bold; line-height: 42px;\">1.1 功能介绍</p><p>OpenAPI支持对第三方应用、API、匿名三种维度进行限流控制<span style=\"\">，</span>防止第三方频繁调用接口，影响系统稳定性。</p><p style=\"text-align: justify;\"><br/></p><p label=\"二级标题\" class=\" html-anchor-list2\" id=\"html-anchor-list2\" style=\"text-align: justify; font-size: 18px; font-weight: bold; line-height: 42px;\">1.2 应用场景</p><p label=\"正文\" style=\"text-align: justify;\"><span style=\"color: rgb(61, 61, 61);\">在高并发场景下，如促销活动期间，通过限流策略处理瞬间高峰接口请求，避免压垮系统服务，从而保障系统稳定性</span>。</p><p style=\"text-align: justify;\"><br/></p><p label=\"二级标题\" class=\" html-anchor-list3\" id=\"html-anchor-list3\" style=\"text-align: justify; font-size: 18px; font-weight: bold; line-height: 42px;\">1.3 操作路径</p><p label=\"正文\" style=\"text-align: justify;\">【开放服务云】-【OpenAPI】→【安全策略】→【限流策略】。<br/></p><p><br/></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\">1.4 字段/按钮说明</h3><p style=\"text-align: justify;\"><span style=\"font-weight: 700;\">字段说明：</span></p><table><tbody style=\"\"><tr class=\"firstRow\" style=\"\"><td width=\"120.33333333333333\" valign=\"center\" style=\"\"><p style=\"text-align: initial;\"><span style=\"font-weight: 700;\">字段名称</span></p></td><td width=\"523\" valign=\"center\" style=\"\"><p style=\"text-align: initial;\"><span style=\"font-weight: 700;\">详细解释</span></p></td></tr><tr><td valign=\"center\" colspan=\"1\" rowspan=\"1\" style=\"\">基本信息</td><td valign=\"center\" colspan=\"1\" rowspan=\"1\" style=\"\"><br/></td></tr><tr style=\"\"><td width=\"120.33333333333333\" valign=\"center\" style=\"\"><p style=\"text-align: initial;\">策略编码</p></td><td width=\"523\" valign=\"center\" style=\"\"><p style=\"text-align: initial;\"><span style=\"\">限流策略编码</span></p></td></tr><tr style=\"\"><td width=\"120.33333333333333\" valign=\"center\" style=\"\"><p style=\"text-align: initial;\">策略名称</p></td><td width=\"523\" valign=\"center\" style=\"\"><p style=\"text-align: initial;\"><span style=\"\">限流策略名称</span></p></td></tr><tr style=\"\"><td valign=\"center\" colspan=\"1\" rowspan=\"1\" style=\"\">限流维度</td><td valign=\"center\" colspan=\"1\" rowspan=\"1\" style=\"\">限流维度，第三方应用/API</td></tr><tr><td valign=\"center\" colspan=\"1\" rowspan=\"1\" style=\"\">限流次数</td><td valign=\"center\" colspan=\"1\" rowspan=\"1\" style=\"\">限制单位时间内调用次数</td></tr><tr><td valign=\"center\" colspan=\"1\" rowspan=\"1\" style=\"\">限流效果</td><td valign=\"center\" colspan=\"1\" rowspan=\"1\" style=\"\">限流效果</td></tr><tr><td valign=\"center\" colspan=\"1\" rowspan=\"1\" style=\"\">描述</td><td valign=\"center\" colspan=\"1\" rowspan=\"1\" style=\"\">限流策略描述</td></tr><tr><td valign=\"center\" colspan=\"1\" rowspan=\"1\" style=\"\"><p label=\"正文\" style=\"\">开启流控</p></td><td valign=\"center\" colspan=\"1\" rowspan=\"1\" style=\"\">展示流控策略的前提条件：monitor中的流控开关状态<br/></td></tr><tr><td valign=\"center\" colspan=\"1\" rowspan=\"1\" style=\"\">限流清单</td><td valign=\"center\" colspan=\"1\" rowspan=\"1\" style=\"\"><br/></td></tr><tr><td valign=\"center\" colspan=\"1\" rowspan=\"1\" style=\"\">第三方应用编码</td><td valign=\"center\" colspan=\"1\" rowspan=\"1\" style=\"\">第三方应用编码</td></tr><tr><td valign=\"center\" colspan=\"1\" rowspan=\"1\" style=\"\"><span style=\"\">第三方应用名称</span></td><td valign=\"center\" colspan=\"1\" rowspan=\"1\" style=\"\"><span style=\"\">第三方应用名称</span></td></tr><tr><td valign=\"center\" colspan=\"1\" rowspan=\"1\" style=\"\">API编码<br/></td><td valign=\"center\" colspan=\"1\" rowspan=\"1\" style=\"\"><span style=\"\">API编码</span></td></tr><tr><td valign=\"center\" colspan=\"1\" rowspan=\"1\" style=\"\">API名称</td><td valign=\"center\" colspan=\"1\" rowspan=\"1\" style=\"\"><span style=\"\">API名称</span></td></tr><tr><td valign=\"center\" colspan=\"1\" rowspan=\"1\" style=\"\">URL</td><td valign=\"center\" colspan=\"1\" rowspan=\"1\" style=\"\"><span style=\"\">API请求地址</span></td></tr></tbody></table><p style=\"text-align: justify;\"><span style=\"font-weight: 700;\">&nbsp;</span></p><p style=\"text-align: justify;\"><span style=\"font-weight: 700;\">按钮说明：</span></p><table><tbody style=\"\"><tr class=\"firstRow\" style=\"\"><td width=\"120.33333333333333\" valign=\"center\" style=\"\"><p style=\"text-align: initial;\"><span style=\"font-weight: 700;\">按钮名称</span></p></td><td width=\"523\" valign=\"center\" style=\"\"><p style=\"text-align: initial;\"><span style=\"font-weight: 700;\">详细解释</span></p></td></tr><tr style=\"\"><td width=\"120.33333333333333\" valign=\"center\" style=\"\"><p style=\"text-align: initial;\">保存</p></td><td width=\"523\" valign=\"center\" style=\"\"><p style=\"text-align: initial;\">点击按钮，保存当前代码片段。</p></td></tr><tr style=\"\"><td width=\"120.33333333333333\" valign=\"center\" style=\"\"><p style=\"text-align: initial;\">退出</p></td><td width=\"523\" valign=\"center\" style=\"\"><p style=\"text-align: initial;\">点击退出按钮，退出当前页面。</p></td></tr></tbody></table><p style=\"text-align: justify;\"><span style=\"font-weight: 700;\">&nbsp;</span></p><p label=\"一级标题\" class=\" html-anchor-list5 html-anchor-list5\" id=\"html-anchor-list5\" style=\"text-align: justify; font-size: 20px; font-weight: bold; line-height: 42px;\">2 主要操作</p><h3 label=\"二级标题\" class=\"second-title\" style=\"\">2.1 打开限流开关</h3><p><span style=\"text-align: justify;\">路径：【monitor后台】&nbsp;<span style=\"text-align: justify;\">→<span style=\"text-align: justify;\">【微服务治理】<span style=\"text-align: justify;\">→【功能开关】，开启苍穹限流熔断开关。</span></span></span></span></p><p>&nbsp;<img src=\"/download/0109c2c41efc0b534b30a93a822af640942f.png\"/></p><p><br/></p><p><span style=\"color: rgb(127, 127, 127)\"><span style=\"font-family:微软雅黑\">备注：如果开启可以忽略这步。如果</span><span style=\"font-family:微软雅黑\">monitor没有初始化，请先初始化后再开启限流熔断。</span></span></p><p><br/></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\">2.2 维护限流策略</h3><p style=\"text-align: justify;\">在限流策略列表中，用户可点击新增按钮来创建或修改具体的限流策略。</p><p style=\"text-align: justify;\"><br/></p><p><img src=\"/download/010903f7cc22a40b44a1bb505753c8335184.png\"/></p><p><br/></p><p><img src=\"/download/0109f97579cc41584157883b7ffbfd1d5512.png\"/></p><p><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">3 更多资讯</h2><p style=\"text-align: justify;\"><span style=\"text-align: justify;\">关于OpenAPI的更多资讯，请随时关注</span><a href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=226337371640594944&id=226708319996323072&productLineId=29\" target=\"_blank\" style=\"text-align: justify;\">新特性公告</a><span style=\"text-align: justify;\">。</span></p>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 87,
+   "isOpen": 1,
+   "name": "金蝶AI苍穹",
+   "productLineId": 29,
+   "series": "developer01",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        null
+       ],
+       "code": null,
+       "description": "",
+       "entityId": "322444102627254016",
+       "entityType": "Knowledge",
+       "id": "322446490981960960",
+       "isCategory": false,
+       "name": "限流策略介绍",
+       "parentId": "226337544983020032",
+       "sort": "18",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": null,
+     "entityId": null,
+     "entityType": null,
+     "id": "226337544983020032",
+     "isCategory": true,
+     "name": "用户手册",
+     "parentId": "-1",
+     "sort": "6",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download/01010204d4b71b654a208006fa1004eac36a.png",
+  "department": null,
+  "id": "740211268992385024",
+  "name": "毛毛去哪儿",
+  "nameSpell": "name"
+ },
+ "totalAppraisalScore": 50,
+ "iflytekId": null,
+ "views": 6932,
+ "productLineId": 29,
+ "comments": 0,
+ "similarityCount": 0,
+ "totalAppraisalUsers": 10,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1766110216000,
+ "appraisalScore": 0,
+ "unuseful": 0,
+ "knowledgeCheckStatus": 2,
+ "otherProductLineIds": [],
+ "auditAt": 1712131578000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapilimitstrategy",
+        "id": "505686299357898240",
+        "name": "限流策略",
+        "productLineId": null,
+        "sort": 3,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 0,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapilimitstrategy",
+        "id": "344584842228779264",
+        "name": "限流策略",
+        "productLineId": null,
+        "sort": 3,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "5614",
+       "name": "开放平台",
+       "productLineId": null,
+       "sort": 2,
+       "type": "module"
+      },
+      "code": "DEV",
+      "id": "5576",
+      "name": "开发服务云",
+      "productLineId": null,
+      "sort": 11,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 1,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "OperatingGuide",
+     "createdAt": 1556519201000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "某一功能的具体说明介绍，包括应用场景、参数说明、具体操作步骤等",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/010037894174802d4b9f8782f1f0010a6ddd.png",
+     "id": "202203081641",
+     "name": "功能介绍",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010176d38341668f44fdb94c95058a90e4b8.png",
+      "department": "云社区运营部",
+      "id": "2147406697",
+      "name": "多肉丸子",
+      "nameSpell": "kejuan"
+     },
+     "updatedAt": 1676857681000
+    },
+    {
+     "code": "rumen",
+     "createdAt": 1605667807000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "入门类的知识可使用此标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100d322b9282bcc438faa894f4eec029977.png",
+     "id": "202203081646",
+     "name": "基础入门",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download?fileName=0101ec1d6ce599b442dab7d0b794c1fce88d.png",
+      "department": null,
+      "id": "1009",
+      "name": "一颗小星星",
+      "nameSpell": "fengling"
+     },
+     "updatedAt": 1657872008000
+    },
+    {
+     "code": "NewFeatures",
+     "createdAt": 1558619051000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "新特性",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/01009c9898f919a24034b3b37b2ebf42931c.png",
+     "id": "202203081645",
+     "name": "新特性",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010145330b44d45a47ae9b8aac30617b6992.png",
+      "department": null,
+      "id": "2147443044",
+      "name": "Lucky_tiao",
+      "nameSpell": "laoli"
+     },
+     "updatedAt": 1668739541000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "322444102627254016",
+         "entityType": "Knowledge",
+         "id": "322446490981960960",
+         "isCategory": false,
+         "name": "限流策略介绍",
+         "parentId": "226337544983020032",
+         "sort": "18",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": null,
+       "entityId": null,
+       "entityType": null,
+       "id": "226337544983020032",
+       "isCategory": true,
+       "name": "用户手册",
+       "parentId": "-1",
+       "sort": "6",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": "<div style=\"\"><h2 label=\"一级标题\" class=\"first-title html-anchor-list0-1712129000423\" id=\"html-anchor-list0-1712129000423\" style=\"\">变更记录<br/></h2></div><p style=\"\"><br/></p><table width=\"100%\"><tbody style=\"\"><tr class=\"firstRow\" style=\"\"><td valign=\"middle\" width=\"116\" align=\"left\" style=\"\"><p style=\"\"><strong style=\"\">产品版本</strong></p></td><td valign=\"middle\" width=\"359\" align=\"left\" style=\"\"><strong style=\"\">更新内容</strong></td><td valign=\"middle\" width=\"146.33333333333334\" align=\"left\" style=\"\"><strong style=\"\">更新日期</strong></td></tr><tr style=\"\"><td valign=\"middle\" width=\"117\" align=\"left\" style=\"\"><span style=\"color: rgb(0, 0, 0);\">V5.0.001</span></td><td valign=\"middle\" width=\"359\" align=\"left\" style=\"\">初始版本</td><td valign=\"middle\" width=\"146.33333333333334\" align=\"left\" style=\"\">2022年6月</td></tr></tbody></table><p style=\"\"><br/></p><p style=\"\"><span style=\"font-size: 20px; text-align: justify;\"></span></p><hr/><p style=\"\"><br/><span style=\"font-size: 20px; text-align: justify;\"></span></p><h2 label=\"一级标题\" class=\"first-title html-anchor-list1-1712129000423\" id=\"html-anchor-list1-1712129000423\" style=\"\"></h2><p label=\"一级标题\" class=\" html-anchor-list0\" id=\"html-anchor-list0\" style=\"text-align: justify; font-size: 20px; font-weight: bold; line-height: 42px;\">1 简介<br/></p><p label=\"二级标题\" class=\" html-anchor-list1\" id=\"html-anchor-list1\" style=\"text-align: justify; font-size: 18px; font-weight: bold; line-height: 42px;\">1.1 功能介绍</p><p>OpenAPI支持对第三方应用、API、匿名三种维度进行限流控制<span style=\"\">，</span>防止第三方频繁调用接口，影响系统稳定性。</p><p style=\"text-align: justify;\"><br/></p><p label=\"二级标题\" class=\" html-anchor-list2\" id=\"html-anchor-list2\" style=\"text-align: justify; font-size: 18px; font-weight: bold; line-height: 42px;\">1.2 应用场景</p><p label=\"正文\" style=\"text-align: justify;\"><span style=\"color: rgb(61, 61, 61);\">在高并发场景下，如促销活动期间，通过限流策略处理瞬间高峰接口请求，避免压垮系统服务，从而保障系统稳定性</span>。</p><p style=\"text-align: justify;\"><br/></p><p label=\"二级标题\" class=\" html-anchor-list3\" id=\"html-anchor-list3\" style=\"text-align: justify; font-size: 18px; font-weight: bold; line-height: 42px;\">1.3 操作路径</p><p label=\"正文\" style=\"text-align: justify;\">【开放服务云】-【OpenAPI】→【安全策略】→【限流策略】。<br/></p><p><br/></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\">1.4 字段/按钮说明</h3><p style=\"text-align: justify;\"><span style=\"font-weight: 700;\">字段说明：</span></p><table><tbody style=\"\"><tr class=\"firstRow\" style=\"\"><td width=\"120.33333333333333\" valign=\"center\" style=\"\"><p style=\"text-align: initial;\"><span style=\"font-weight: 700;\">字段名称</span></p></td><td width=\"523\" valign=\"center\" style=\"\"><p style=\"text-align: initial;\"><span style=\"font-weight: 700;\">详细解释</span></p></td></tr><tr><td valign=\"center\" colspan=\"1\" rowspan=\"1\" style=\"\">基本信息</td><td valign=\"center\" colspan=\"1\" rowspan=\"1\" style=\"\"><br/></td></tr><tr style=\"\"><td width=\"120.33333333333333\" valign=\"center\" style=\"\"><p style=\"text-align: initial;\">策略编码</p></td><td width=\"523\" valign=\"center\" style=\"\"><p style=\"text-align: initial;\"><span style=\"\">限流策略编码</span></p></td></tr><tr style=\"\"><td width=\"120.33333333333333\" valign=\"center\" style=\"\"><p style=\"text-align: initial;\">策略名称</p></td><td width=\"523\" valign=\"center\" style=\"\"><p style=\"text-align: initial;\"><span style=\"\">限流策略名称</span></p></td></tr><tr style=\"\"><td valign=\"center\" colspan=\"1\" rowspan=\"1\" style=\"\">限流维度</td><td valign=\"center\" colspan=\"1\" rowspan=\"1\" style=\"\">限流维度，第三方应用/API</td></tr><tr><td valign=\"center\" colspan=\"1\" rowspan=\"1\" style=\"\">限流次数</td><td valign=\"center\" colspan=\"1\" rowspan=\"1\" style=\"\">限制单位时间内调用次数</td></tr><tr><td valign=\"center\" colspan=\"1\" rowspan=\"1\" style=\"\">限流效果</td><td valign=\"center\" colspan=\"1\" rowspan=\"1\" style=\"\">限流效果</td></tr><tr><td valign=\"center\" colspan=\"1\" rowspan=\"1\" style=\"\">描述</td><td valign=\"center\" colspan=\"1\" rowspan=\"1\" style=\"\">限流策略描述</td></tr><tr><td valign=\"center\" colspan=\"1\" rowspan=\"1\" style=\"\"><p label=\"正文\" style=\"\">开启流控</p></td><td valign=\"center\" colspan=\"1\" rowspan=\"1\" style=\"\">展示流控策略的前提条件：monitor中的流控开关状态<br/></td></tr><tr><td valign=\"center\" colspan=\"1\" rowspan=\"1\" style=\"\">限流清单</td><td valign=\"center\" colspan=\"1\" rowspan=\"1\" style=\"\"><br/></td></tr><tr><td valign=\"center\" colspan=\"1\" rowspan=\"1\" style=\"\">第三方应用编码</td><td valign=\"center\" colspan=\"1\" rowspan=\"1\" style=\"\">第三方应用编码</td></tr><tr><td valign=\"center\" colspan=\"1\" rowspan=\"1\" style=\"\"><span style=\"\">第三方应用名称</span></td><td valign=\"center\" colspan=\"1\" rowspan=\"1\" style=\"\"><span style=\"\">第三方应用名称</span></td></tr><tr><td valign=\"center\" colspan=\"1\" rowspan=\"1\" style=\"\">API编码<br/></td><td valign=\"center\" colspan=\"1\" rowspan=\"1\" style=\"\"><span style=\"\">API编码</span></td></tr><tr><td valign=\"center\" colspan=\"1\" rowspan=\"1\" style=\"\">API名称</td><td valign=\"center\" colspan=\"1\" rowspan=\"1\" style=\"\"><span style=\"\">API名称</span></td></tr><tr><td valign=\"center\" colspan=\"1\" rowspan=\"1\" style=\"\">URL</td><td valign=\"center\" colspan=\"1\" rowspan=\"1\" style=\"\"><span style=\"\">API请求地址</span></td></tr></tbody></table><p style=\"text-align: justify;\"><span style=\"font-weight: 700;\">&nbsp;</span></p><p style=\"text-align: justify;\"><span style=\"font-weight: 700;\">按钮说明：</span></p><table><tbody style=\"\"><tr class=\"firstRow\" style=\"\"><td width=\"120.33333333333333\" valign=\"center\" style=\"\"><p style=\"text-align: initial;\"><span style=\"font-weight: 700;\">按钮名称</span></p></td><td width=\"523\" valign=\"center\" style=\"\"><p style=\"text-align: initial;\"><span style=\"font-weight: 700;\">详细解释</span></p></td></tr><tr style=\"\"><td width=\"120.33333333333333\" valign=\"center\" style=\"\"><p style=\"text-align: initial;\">保存</p></td><td width=\"523\" valign=\"center\" style=\"\"><p style=\"text-align: initial;\">点击按钮，保存当前代码片段。</p></td></tr><tr style=\"\"><td width=\"120.33333333333333\" valign=\"center\" style=\"\"><p style=\"text-align: initial;\">退出</p></td><td width=\"523\" valign=\"center\" style=\"\"><p style=\"text-align: initial;\">点击退出按钮，退出当前页面。</p></td></tr></tbody></table><p style=\"text-align: justify;\"><span style=\"font-weight: 700;\">&nbsp;</span></p><p label=\"一级标题\" class=\" html-anchor-list5 html-anchor-list5\" id=\"html-anchor-list5\" style=\"text-align: justify; font-size: 20px; font-weight: bold; line-height: 42px;\">2 主要操作</p><h3 label=\"二级标题\" class=\"second-title\" style=\"\">2.1 打开限流开关</h3><p><span style=\"text-align: justify;\">路径：【monitor后台】&nbsp;<span style=\"text-align: justify;\">→<span style=\"text-align: justify;\">【微服务治理】<span style=\"text-align: justify;\">→【功能开关】，开启苍穹限流熔断开关。</span></span></span></span></p><p>&nbsp;<img src=\"/download/0109c2c41efc0b534b30a93a822af640942f.png\"/></p><p><br/></p><p><span style=\"color: rgb(127, 127, 127)\"><span style=\"font-family:微软雅黑\">备注：如果开启可以忽略这步。如果</span><span style=\"font-family:微软雅黑\">monitor没有初始化，请先初始化后再开启限流熔断。</span></span></p><p><br/></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\">2.2 维护限流策略</h3><p style=\"text-align: justify;\">在限流策略列表中，用户可点击新增按钮来创建或修改具体的限流策略。</p><p style=\"text-align: justify;\"><br/></p><p><img src=\"/download/010903f7cc22a40b44a1bb505753c8335184.png\"/></p><p><br/></p><p><img src=\"/download/0109f97579cc41584157883b7ffbfd1d5512.png\"/></p><p><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">3 更多资讯</h2><p style=\"text-align: justify;\"><span style=\"text-align: justify;\">关于OpenAPI的更多资讯，请随时关注</span><a href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=226337371640594944&id=226708319996323072&productLineId=29\" target=\"_blank\" style=\"text-align: justify;\">新特性公告</a><span style=\"text-align: justify;\">。</span></p>"
+}

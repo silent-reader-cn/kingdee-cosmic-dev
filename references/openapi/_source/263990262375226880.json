@@ -1,0 +1,505 @@
+{
+ "badNum": 0,
+ "identityTagIds": null,
+ "knowledgeId": "263990262375226880",
+ "createdAt": 1640748183000,
+ "collections": 8,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "263990262375226880",
+ "contentType": 1,
+ "updatedAt": 1766109977000,
+ "knowledgeUpdater": {
+  "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+  "department": null,
+  "id": "132488613174518784",
+  "name": "某个路易",
+  "nameSpell": "name"
+ },
+ "assessStatus": 0,
+ "knowledgeStatus": 2,
+ "assessHandleStatus": null,
+ "knowledgeCreatedAt": 1640748183000,
+ "version": 117,
+ "labels": [],
+ "editedAt": 1755228159000,
+ "identityTags": null,
+ "useful": 14,
+ "errors": [],
+ "isCollected": false,
+ "totalFeedBacks": 0,
+ "attachments": [],
+ "sources": [],
+ "editTitle": "API日志介绍",
+ "title": "API日志介绍",
+ "content": "<h2></h2><h2>变更记录</h2><p></p><table style=\"width: 740px\"><colgroup><col style=\"width: 92px\"><col style=\"width: 498px\"><col style=\"width: 150px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"92\" style=\"background-color: \"><p><strong>产品版本</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"498\" style=\"background-color: \"><p><strong>更新内容</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"150\" style=\"background-color: \"><p><strong>更新日期</strong></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"92\" style=\"background-color: \"><p>V5.0.001</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"498\" style=\"background-color: \"><p>初始版本</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"150\" style=\"background-color: \"><p>2022年6月</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"92\" style=\"background-color: \"><p>V6.0.3</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"498\" style=\"background-color: \"><p><span style=\"color: #000000\">权限增强控制， 仅管理员有权限在公共设置中维护OpenAPI参数</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"150\" style=\"background-color: \"><p>2023年11月</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"92\" style=\"background-color: \"><p>V6.0.4</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"498\" style=\"background-color: \"><p>API日志记录API名称字段，同时支持自定义日志关键字段（出入参摘要）</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"150\" style=\"background-color: \"><p>2023年12月</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"92\" style=\"background-color: \"><p>V6.0.5</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"498\" style=\"background-color: \"><p>应用场景增加API日志归档</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"150\" style=\"background-color: \"><p><span>2024年1月</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"92\" style=\"background-color: \"><p><span>V7.0.13</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"498\" style=\"background-color: \"><p>私有云租户支持记录完整OpenAPI大文本日志</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"150\" style=\"background-color: \"><p>2025年6月</p></td></tr></tbody></table><p></p><p></p><hr><p></p><h2></h2><h2><strong>1 简介</strong></h2><h3><strong>1.1 功能介绍</strong></h3><p style=\"font-size: 15px\"></p><ul><li><p>API日志用于记录OpenAPI调用过程中的请求参数、执行过程、响应结果、错误码等信息，便于开发与运维人员<span style=\"color: rgb(0, 0, 0)\">查询</span>实时日志，对接口调用进行故障定位和日志审计等操作。<span style=\"color: rgb(0, 0, 0)\">用户可以根据实际使用情况，配置API日志记录的详细程度，详见</span><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=226337544983020032&amp;id=264031111959674368&amp;productLineId=29&amp;lang=zh-CN\"><span style=\"color: rgb(0, 112, 192)\">参数配置</span></a><span style=\"color: rgb(0, 0, 0)\">。</span></p></li><li><p><span style=\"color: rgb(0, 0, 0)\">支持单独记录请求出入参中的关键业务字段，方便快速定位API日志。同时</span><span style=\"color: rgb(26, 26, 26)\">还支持ES存储，提升查询效率。</span></p></li></ul><p><span style=\"color: rgb(153, 153, 153)\">注意：API调用日志仅记录OpenAPI日志，即URL中含kapi标识的接口，不会记录登录接口如api/login.do等的调用日志。</span></p><p></p><h3><strong>1.2 应用场景</strong></h3><ul><li><p><span><strong>API日志监控</strong>：当系统参数中“API调用日志”的值为记录详细日志或记录摘要日志时，用户可以在该界面查看具体的调用日志。</span></p></li><li><p><span><strong>API日志清理：</strong></span><span style=\"color: rgb(0, 0, 0)\">若日志量较大，建议定期清理日志。清理指南见附件<button vid=\"581428265726610688\" id=\"581428265726610688\" class=\"kd-attachment-content\" contenteditable=\"false\"><span class=\"name\">金蝶AI苍穹V5.0_开放平台-日志清理配置指南-20231130.pdf</span></button>。</span></p></li><li><p><span><strong>API日志归档</strong></span>：若日志需要定期归档备份留作审计，建议使用苍穹平台数据归档功能，可归档单据分别为 API调用日志（<span>openapi_log_data</span>）和 API调用详细日志（<span>openapi_log_detail</span>），归档指南详见<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/article/344790275899953920?productLineId=29&amp;isKnowledge=2&amp;lang=zh-CN\"><span style=\"color: rgb(0, 112, 192)\">大表冷热数据分离之数据归档</span></a>。</p></li></ul><p></p><h3><strong>1.3 系统路径</strong></h3><p><span>【开放服务云】→【OpenAPI】→【监控统计】→【API日志】</span></p><p></p><h3><strong>1.4 字段说明</strong></h3><table style=\"width: 644px\"><colgroup><col style=\"width: 139px\"><col style=\"width: 505px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p><strong>字段名称</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"505\" style=\"background-color: \"><p><strong>详细解释</strong></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p>URL</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"505\" style=\"background-color: \"><p><span>API的</span>url地址</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p>请求参数</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"505\" style=\"background-color: \"><p><span>API请求参数</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p>响应结果</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"505\" style=\"background-color: \"><p><span>API响应结果</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p>错误信息</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"505\" style=\"background-color: \"><p><span>当请求出现异常返回时，显示的错误信息</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p>ApiId</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"505\" style=\"background-color: \"><p><span>API的主键ID</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p>API编码</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"505\" style=\"background-color: \"><p>API编码</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" style=\"background-color: \"><p>API名称</p></td><td colspan=\"1\" rowspan=\"1\" style=\"background-color: \"><p><span>API名称</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p>调用状态</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"505\" style=\"background-color: \"><p>API调用状态</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p>调用时间</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"505\" style=\"background-color: \"><p><span>调用</span>API的时间</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p>第三方应用</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"505\" style=\"background-color: \"><p><span>调用</span>API的第三方应用</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p>调用者</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"505\" style=\"background-color: \"><p><span>调用</span>API的用户名称</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p><span>调用者</span>ID</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"505\" style=\"background-color: \"><p><span>调用</span>API的用户ID</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p><span>调用客户端</span>IP</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"505\" style=\"background-color: \"><p><span>调用</span>API的<span>客户端</span>IP</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p>云</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"505\" style=\"background-color: \"><p><span>API所属云</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p>应用</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"505\" style=\"background-color: \"><p><span>API所属应用</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p>业务对象</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"505\" style=\"background-color: \"><p><span>API具体操作的业务对象</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p>API耗时（ms）</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"505\" style=\"background-color: \"><p><span>API调用耗时</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p><span>操作服务耗时</span>(ms)</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"505\" style=\"background-color: \"><p><span>操作服务耗时</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p>TraceId</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"505\" style=\"background-color: \"><p><span>接口调用的</span>TraceId，日志记录的主键</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" style=\"background-color: \"><p>入参摘要</p></td><td colspan=\"1\" rowspan=\"1\" style=\"background-color: \"><p>记录API配置中的请求参数关键字段值</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" style=\"background-color: \"><p><span>出参摘要</span></p></td><td colspan=\"1\" rowspan=\"1\" style=\"background-color: \"><p><span>记录API配置中的响应内容关键字段值</span></p></td></tr></tbody></table><p></p><h3><strong>1.5 按钮说明</strong></h3><table style=\"width: 644px\"><colgroup><col style=\"width: 139px\"><col style=\"width: 505px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p><strong>按钮名称</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"505\" style=\"background-color: \"><p><strong>详细解释</strong></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p>退出</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"505\" style=\"background-color: \"><p><span>点击退出按钮，退出</span>API日志详情界面</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" style=\"background-color: \"><p>导出详细日志</p></td><td colspan=\"1\" rowspan=\"1\" style=\"background-color: \"><p>导出大文本日志</p></td></tr></tbody></table><p></p><h2><strong>2 主要操作</strong></h2><h3 style=\"text-align: justify\"><span><strong>2.1 自定义API日志级别</strong></span></h3><p><span>管理员可以通过OpenAPI系统参数，来定义记录不同级别的API日志和日志保留天数。</span></p><p style=\"text-align: justify\">&nbsp;</p><p style=\"text-align: justify\"><strong>1）配置API日志级别</strong></p><p><span>路径：基础服务云&nbsp;→&nbsp;公共设置</span><span style=\"color: rgb(0, 0, 0)\">&nbsp;→&nbsp;</span><span>参数配置</span><span style=\"color: rgb(0, 0, 0)\">&nbsp;→&nbsp;</span><span>系统参数，在OpenAPI参数中，可以配置不同的API日志级别，包含基本日志、详细日志和大文本日志等。用户按需勾选需要的日志级别，并维护日志保存天数。</span></p><p><span style=\"color: rgb(0, 112, 192)\">备注：大文本日志默认截取请求参数和返回参数前10000字符，私有云租户可通过MC参数“api_fullPayloadLog”（默认false），将该参数设为true后，即可完整记录日志请求和返回参数。</span></p><p style=\"text-align: justify\"></p><p style=\"text-align: justify\"><span style=\"color: rgb(0, 0, 0); font-size: 13px\">特别声明：若MC配置了记录全部入参数据参数，可能会导致系统API调用缓慢，并且日志量暴增，极端场景下会有OOM的风险，用户需严格控制相关接口的并发调用。</span></p><p style=\"text-align: justify\">&nbsp;</p><p style=\"text-align: justify\"><img src=\"/download/01090f4cc64d03354a41a41025a0989aa2d3.png\"></p><p style=\"text-align: justify\">&nbsp;</p><p style=\"text-align: justify\"><strong>2）查看API调用日志</strong></p><p><span>路径：开放服务云</span><span style=\"color: rgb(0, 0, 0)\">&nbsp;→&nbsp;</span><span>OpenAPI</span><span style=\"color: rgb(0, 0, 0)\">&nbsp;→&nbsp;</span><span>监控统计</span><span style=\"color: rgb(0, 0, 0)\">&nbsp;→&nbsp;</span><span>API日志，打开API调用日志列表界面，在这里可以看到API日志调用记录，包含API编码、名称、请求参数、错误消息、调用状态、调用时间、traceid等信息。</span></p><p><span>备注：日志默认保留30天，到期自动清理。</span></p><p><span style=\"color: rgb(0, 0, 255)\">&nbsp;</span></p><p><span style=\"color: rgb(0, 0, 255)\"><img src=\"/download/010930343e8cae374d9d8160e8173148450f.jpg\"></span></p><p style=\"text-align: center\"></p><p><span style=\"color: rgb(0, 0, 255)\">&nbsp;</span></p><p><img src=\"/download/0109ff17daf4cf3340d396ff1290a33cb174.jpg\"></p><p style=\"text-align: center\"></p><p>&nbsp;</p><p style=\"text-align: justify\"><strong>3）查看API大文本日志</strong></p><p><span>若在OpenAPI参数中，配置了记录“大文本日志”，在调用接口（特别是批量保存或列表查询API）后，用户可以在</span><span style=\"color: rgb(0, 0, 0)\">API日志中</span><span>点击“导出详细日志”，系统会生成一个txt文件，展示完整的请求参数和响应结果。</span></p><p></p><p><span style=\"color: rgb(127, 127, 127)\"><img src=\"/download/010937efd62460994ac9b2b2eb7680df1d73.jpg\"></span></p><p style=\"text-align: center\"></p><p>&nbsp;</p><p>&nbsp;</p><h3><strong>2.2 自定义日志关键字段</strong></h3><p><span>用户可以通过简单配置，即可在API日志中单独记录请求出入参中的的关键字段，如单据编码、创建组织等，从而过滤对应的日志记录，快速定位问题或审计日志。</span></p><p style=\"text-align: justify\"><strong>1）配置日志记录模板</strong></p><p><span>路径：开放服务云</span><span style=\"color: rgb(0, 0, 0)\">&nbsp;→&nbsp;</span><span>OpenAPI</span><span style=\"color: rgb(0, 0, 0)\">&nbsp;→&nbsp;</span><span>API管理</span><span style=\"color: rgb(0, 0, 0)\">&nbsp;→&nbsp;</span><span>API开发，通过零代码配置快速开发一个API，在配置项中维护入参日志记录模板和出参日志记录模板。</span></p><p></p><p><img src=\"/download/01098c9413851f794be68d721ad033ff78d9.jpg\"></p><p style=\"text-align: center\">&nbsp;</p><p><span>紧接着，通过脚本维护关键字段，例如将采购订单编码和分录中物料编码作为入参关键字段，单据id作为出参关键字段。</span></p><p></p><p><span style=\"color: rgb(84, 141, 212)\">注意：若接口为操作API同时请求方式为POST，由于请求参数和返回参数默认返回参数“data”，所以在维护脚本时，需要增加一层data参数，例如#{$data.data.billno}。</span></p><p>&nbsp;<img src=\"/download/0109b336c452add34b42b20c109ddf4312a6.jpg\"></p><p style=\"text-align: center\"><span style=\"color: rgb(127, 127, 127)\">&nbsp;</span></p><p style=\"text-align: center\"><img src=\"/download/01096e0699615e4647df9e842f45674598eb.jpg\">&nbsp;</p><p>&nbsp;</p><p style=\"text-align: justify\"><strong>2）调用接口生成日志</strong></p><p><span>在维护完API基本信息、日志记录模板和请求参数后，点击“保存”按钮，接下来就可以调试API了。</span></p><p>&nbsp;</p><p><img src=\"/download/0109cb589676829b427799efac7b31884068.jpg\"></p><p>&nbsp;</p><p><span>点击“API测试”按钮，发送请求，生成调用记录。</span></p><p><img src=\"/download/01094241805f580e47749ac62c86ff5b3a22.jpg\">&nbsp;</p><p>&nbsp;&nbsp;</p><p style=\"text-align: justify\"><strong>3）查看API调用日志</strong></p><p><span>路径：开放服务云</span><span style=\"color: rgb(0, 0, 0)\">&nbsp;→&nbsp;</span><span>OpenAPI</span><span style=\"color: rgb(0, 0, 0)\">&nbsp;→&nbsp;</span><span>监控统计</span><span style=\"color: rgb(0, 0, 0)\">&nbsp;→&nbsp;</span><span>API日志，此时可以看到API日志的入参摘要和出参摘要中，记录了上一步配置的关键字段，若存在多条数据通过逗号分隔。</span></p><p></p><p><img src=\"/download/0109ba6e64e7972f40ebaf337578e2b7bbaf.jpg\"></p><p></p><h2>3 注意事项</h2><ul><li><p><span>若苍穹版本高于V6.0.3，只能由管理员维护</span><span style=\"color: rgb(0, 0, 0)\">API调用日志记录级别</span><span>。</span></p></li><li><p style=\"text-align: justify\"><span>维护API日志记录模板时，需要注意请求参数和响应参数的层级，否则可能无法记录到正确的数据。</span></p></li></ul><p style=\"text-align: justify\"></p><h2>4 更多资讯</h2><p style=\"text-align: justify\"><span>关于OpenAPI的更多资讯，请随时关注</span><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=226337371640594944&amp;id=226708319996323072&amp;productLineId=29\">新特性公告</a><span>。</span></p>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 87,
+   "isOpen": 1,
+   "name": "金蝶AI苍穹",
+   "productLineId": 29,
+   "series": "developer01",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        null
+       ],
+       "code": null,
+       "description": "",
+       "entityId": "263990262375226880",
+       "entityType": "Knowledge",
+       "id": "322036869733048064",
+       "isCategory": false,
+       "name": "API日志介绍",
+       "parentId": "226337544983020032",
+       "sort": "13",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": null,
+     "entityId": null,
+     "entityType": null,
+     "id": "226337544983020032",
+     "isCategory": true,
+     "name": "用户手册",
+     "parentId": "-1",
+     "sort": "6",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download/01010204d4b71b654a208006fa1004eac36a.png",
+  "department": null,
+  "id": "740211268992385024",
+  "name": "毛毛去哪儿",
+  "nameSpell": "name"
+ },
+ "totalAppraisalScore": 70,
+ "iflytekId": null,
+ "views": 14942,
+ "productLineId": 29,
+ "comments": 1,
+ "similarityCount": 0,
+ "totalAppraisalUsers": 14,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1766109977000,
+ "appraisalScore": 0,
+ "unuseful": 0,
+ "knowledgeCheckStatus": 2,
+ "otherProductLineIds": [],
+ "auditAt": 1755228174000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapilogdata",
+        "id": "505686382472559872",
+        "name": "API调用日志",
+        "productLineId": null,
+        "sort": 4,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 0,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapilogdata",
+        "id": "344592117601683968",
+        "name": "API日志",
+        "productLineId": null,
+        "sort": 11,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "5614",
+       "name": "开放平台",
+       "productLineId": null,
+       "sort": 2,
+       "type": "module"
+      },
+      "code": "DEV",
+      "id": "5576",
+      "name": "开发服务云",
+      "productLineId": null,
+      "sort": 11,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 1,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "AdvancedSkills",
+     "createdAt": 1556519216000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "高阶技巧标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/01005cea40211bf14113a6004322e86a6780.png",
+     "id": "202203081642",
+     "name": "高级技巧",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download/010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "306913800727243776",
+      "name": "Paim",
+      "nameSpell": "name"
+     },
+     "updatedAt": 1657851500000
+    },
+    {
+     "code": "OperatingGuide",
+     "createdAt": 1556519201000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "某一功能的具体说明介绍，包括应用场景、参数说明、具体操作步骤等",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/010037894174802d4b9f8782f1f0010a6ddd.png",
+     "id": "202203081641",
+     "name": "功能介绍",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010176d38341668f44fdb94c95058a90e4b8.png",
+      "department": "云社区运营部",
+      "id": "2147406697",
+      "name": "多肉丸子",
+      "nameSpell": "kejuan"
+     },
+     "updatedAt": 1676857681000
+    },
+    {
+     "code": "NewFeatures",
+     "createdAt": 1558619051000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "新特性",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/01009c9898f919a24034b3b37b2ebf42931c.png",
+     "id": "202203081645",
+     "name": "新特性",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010145330b44d45a47ae9b8aac30617b6992.png",
+      "department": null,
+      "id": "2147443044",
+      "name": "Lucky_tiao",
+      "nameSpell": "laoli"
+     },
+     "updatedAt": 1668739541000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "263990262375226880",
+         "entityType": "Knowledge",
+         "id": "322036869733048064",
+         "isCategory": false,
+         "name": "API日志介绍",
+         "parentId": "226337544983020032",
+         "sort": "13",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": null,
+       "entityId": null,
+       "entityType": null,
+       "id": "226337544983020032",
+       "isCategory": true,
+       "name": "用户手册",
+       "parentId": "-1",
+       "sort": "6",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": "<h2></h2><h2>变更记录</h2><p></p><table style=\"width: 740px\"><colgroup><col style=\"width: 92px\"><col style=\"width: 498px\"><col style=\"width: 150px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"92\" style=\"background-color: \"><p><strong>产品版本</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"498\" style=\"background-color: \"><p><strong>更新内容</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"150\" style=\"background-color: \"><p><strong>更新日期</strong></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"92\" style=\"background-color: \"><p>V5.0.001</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"498\" style=\"background-color: \"><p>初始版本</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"150\" style=\"background-color: \"><p>2022年6月</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"92\" style=\"background-color: \"><p>V6.0.3</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"498\" style=\"background-color: \"><p><span style=\"color: #000000\">权限增强控制， 仅管理员有权限在公共设置中维护OpenAPI参数</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"150\" style=\"background-color: \"><p>2023年11月</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"92\" style=\"background-color: \"><p>V6.0.4</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"498\" style=\"background-color: \"><p>API日志记录API名称字段，同时支持自定义日志关键字段（出入参摘要）</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"150\" style=\"background-color: \"><p>2023年12月</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"92\" style=\"background-color: \"><p>V6.0.5</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"498\" style=\"background-color: \"><p>应用场景增加API日志归档</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"150\" style=\"background-color: \"><p><span>2024年1月</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"92\" style=\"background-color: \"><p><span>V7.0.13</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"498\" style=\"background-color: \"><p>私有云租户支持记录完整OpenAPI大文本日志</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"150\" style=\"background-color: \"><p>2025年6月</p></td></tr></tbody></table><p></p><p></p><hr><p></p><h2></h2><h2><strong>1 简介</strong></h2><h3><strong>1.1 功能介绍</strong></h3><p style=\"font-size: 15px\"></p><ul><li><p>API日志用于记录OpenAPI调用过程中的请求参数、执行过程、响应结果、错误码等信息，便于开发与运维人员<span style=\"color: rgb(0, 0, 0)\">查询</span>实时日志，对接口调用进行故障定位和日志审计等操作。<span style=\"color: rgb(0, 0, 0)\">用户可以根据实际使用情况，配置API日志记录的详细程度，详见</span><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=226337544983020032&amp;id=264031111959674368&amp;productLineId=29&amp;lang=zh-CN\"><span style=\"color: rgb(0, 112, 192)\">参数配置</span></a><span style=\"color: rgb(0, 0, 0)\">。</span></p></li><li><p><span style=\"color: rgb(0, 0, 0)\">支持单独记录请求出入参中的关键业务字段，方便快速定位API日志。同时</span><span style=\"color: rgb(26, 26, 26)\">还支持ES存储，提升查询效率。</span></p></li></ul><p><span style=\"color: rgb(153, 153, 153)\">注意：API调用日志仅记录OpenAPI日志，即URL中含kapi标识的接口，不会记录登录接口如api/login.do等的调用日志。</span></p><p></p><h3><strong>1.2 应用场景</strong></h3><ul><li><p><span><strong>API日志监控</strong>：当系统参数中“API调用日志”的值为记录详细日志或记录摘要日志时，用户可以在该界面查看具体的调用日志。</span></p></li><li><p><span><strong>API日志清理：</strong></span><span style=\"color: rgb(0, 0, 0)\">若日志量较大，建议定期清理日志。清理指南见附件<button vid=\"581428265726610688\" id=\"581428265726610688\" class=\"kd-attachment-content\" contenteditable=\"false\"><span class=\"name\">金蝶AI苍穹V5.0_开放平台-日志清理配置指南-20231130.pdf</span></button>。</span></p></li><li><p><span><strong>API日志归档</strong></span>：若日志需要定期归档备份留作审计，建议使用苍穹平台数据归档功能，可归档单据分别为 API调用日志（<span>openapi_log_data</span>）和 API调用详细日志（<span>openapi_log_detail</span>），归档指南详见<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/article/344790275899953920?productLineId=29&amp;isKnowledge=2&amp;lang=zh-CN\"><span style=\"color: rgb(0, 112, 192)\">大表冷热数据分离之数据归档</span></a>。</p></li></ul><p></p><h3><strong>1.3 系统路径</strong></h3><p><span>【开放服务云】→【OpenAPI】→【监控统计】→【API日志】</span></p><p></p><h3><strong>1.4 字段说明</strong></h3><table style=\"width: 644px\"><colgroup><col style=\"width: 139px\"><col style=\"width: 505px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p><strong>字段名称</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"505\" style=\"background-color: \"><p><strong>详细解释</strong></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p>URL</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"505\" style=\"background-color: \"><p><span>API的</span>url地址</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p>请求参数</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"505\" style=\"background-color: \"><p><span>API请求参数</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p>响应结果</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"505\" style=\"background-color: \"><p><span>API响应结果</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p>错误信息</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"505\" style=\"background-color: \"><p><span>当请求出现异常返回时，显示的错误信息</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p>ApiId</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"505\" style=\"background-color: \"><p><span>API的主键ID</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p>API编码</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"505\" style=\"background-color: \"><p>API编码</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" style=\"background-color: \"><p>API名称</p></td><td colspan=\"1\" rowspan=\"1\" style=\"background-color: \"><p><span>API名称</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p>调用状态</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"505\" style=\"background-color: \"><p>API调用状态</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p>调用时间</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"505\" style=\"background-color: \"><p><span>调用</span>API的时间</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p>第三方应用</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"505\" style=\"background-color: \"><p><span>调用</span>API的第三方应用</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p>调用者</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"505\" style=\"background-color: \"><p><span>调用</span>API的用户名称</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p><span>调用者</span>ID</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"505\" style=\"background-color: \"><p><span>调用</span>API的用户ID</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p><span>调用客户端</span>IP</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"505\" style=\"background-color: \"><p><span>调用</span>API的<span>客户端</span>IP</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p>云</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"505\" style=\"background-color: \"><p><span>API所属云</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p>应用</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"505\" style=\"background-color: \"><p><span>API所属应用</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p>业务对象</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"505\" style=\"background-color: \"><p><span>API具体操作的业务对象</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p>API耗时（ms）</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"505\" style=\"background-color: \"><p><span>API调用耗时</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p><span>操作服务耗时</span>(ms)</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"505\" style=\"background-color: \"><p><span>操作服务耗时</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p>TraceId</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"505\" style=\"background-color: \"><p><span>接口调用的</span>TraceId，日志记录的主键</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" style=\"background-color: \"><p>入参摘要</p></td><td colspan=\"1\" rowspan=\"1\" style=\"background-color: \"><p>记录API配置中的请求参数关键字段值</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" style=\"background-color: \"><p><span>出参摘要</span></p></td><td colspan=\"1\" rowspan=\"1\" style=\"background-color: \"><p><span>记录API配置中的响应内容关键字段值</span></p></td></tr></tbody></table><p></p><h3><strong>1.5 按钮说明</strong></h3><table style=\"width: 644px\"><colgroup><col style=\"width: 139px\"><col style=\"width: 505px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p><strong>按钮名称</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"505\" style=\"background-color: \"><p><strong>详细解释</strong></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p>退出</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"505\" style=\"background-color: \"><p><span>点击退出按钮，退出</span>API日志详情界面</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" style=\"background-color: \"><p>导出详细日志</p></td><td colspan=\"1\" rowspan=\"1\" style=\"background-color: \"><p>导出大文本日志</p></td></tr></tbody></table><p></p><h2><strong>2 主要操作</strong></h2><h3 style=\"text-align: justify\"><span><strong>2.1 自定义API日志级别</strong></span></h3><p><span>管理员可以通过OpenAPI系统参数，来定义记录不同级别的API日志和日志保留天数。</span></p><p style=\"text-align: justify\">&nbsp;</p><p style=\"text-align: justify\"><strong>1）配置API日志级别</strong></p><p><span>路径：基础服务云&nbsp;→&nbsp;公共设置</span><span style=\"color: rgb(0, 0, 0)\">&nbsp;→&nbsp;</span><span>参数配置</span><span style=\"color: rgb(0, 0, 0)\">&nbsp;→&nbsp;</span><span>系统参数，在OpenAPI参数中，可以配置不同的API日志级别，包含基本日志、详细日志和大文本日志等。用户按需勾选需要的日志级别，并维护日志保存天数。</span></p><p><span style=\"color: rgb(0, 112, 192)\">备注：大文本日志默认截取请求参数和返回参数前10000字符，私有云租户可通过MC参数“api_fullPayloadLog”（默认false），将该参数设为true后，即可完整记录日志请求和返回参数。</span></p><p style=\"text-align: justify\"></p><p style=\"text-align: justify\"><span style=\"color: rgb(0, 0, 0); font-size: 13px\">特别声明：若MC配置了记录全部入参数据参数，可能会导致系统API调用缓慢，并且日志量暴增，极端场景下会有OOM的风险，用户需严格控制相关接口的并发调用。</span></p><p style=\"text-align: justify\">&nbsp;</p><p style=\"text-align: justify\"><img src=\"/download/01090f4cc64d03354a41a41025a0989aa2d3.png\"></p><p style=\"text-align: justify\">&nbsp;</p><p style=\"text-align: justify\"><strong>2）查看API调用日志</strong></p><p><span>路径：开放服务云</span><span style=\"color: rgb(0, 0, 0)\">&nbsp;→&nbsp;</span><span>OpenAPI</span><span style=\"color: rgb(0, 0, 0)\">&nbsp;→&nbsp;</span><span>监控统计</span><span style=\"color: rgb(0, 0, 0)\">&nbsp;→&nbsp;</span><span>API日志，打开API调用日志列表界面，在这里可以看到API日志调用记录，包含API编码、名称、请求参数、错误消息、调用状态、调用时间、traceid等信息。</span></p><p><span>备注：日志默认保留30天，到期自动清理。</span></p><p><span style=\"color: rgb(0, 0, 255)\">&nbsp;</span></p><p><span style=\"color: rgb(0, 0, 255)\"><img src=\"/download/010930343e8cae374d9d8160e8173148450f.jpg\"></span></p><p style=\"text-align: center\"></p><p><span style=\"color: rgb(0, 0, 255)\">&nbsp;</span></p><p><img src=\"/download/0109ff17daf4cf3340d396ff1290a33cb174.jpg\"></p><p style=\"text-align: center\"></p><p>&nbsp;</p><p style=\"text-align: justify\"><strong>3）查看API大文本日志</strong></p><p><span>若在OpenAPI参数中，配置了记录“大文本日志”，在调用接口（特别是批量保存或列表查询API）后，用户可以在</span><span style=\"color: rgb(0, 0, 0)\">API日志中</span><span>点击“导出详细日志”，系统会生成一个txt文件，展示完整的请求参数和响应结果。</span></p><p></p><p><span style=\"color: rgb(127, 127, 127)\"><img src=\"/download/010937efd62460994ac9b2b2eb7680df1d73.jpg\"></span></p><p style=\"text-align: center\"></p><p>&nbsp;</p><p>&nbsp;</p><h3><strong>2.2 自定义日志关键字段</strong></h3><p><span>用户可以通过简单配置，即可在API日志中单独记录请求出入参中的的关键字段，如单据编码、创建组织等，从而过滤对应的日志记录，快速定位问题或审计日志。</span></p><p style=\"text-align: justify\"><strong>1）配置日志记录模板</strong></p><p><span>路径：开放服务云</span><span style=\"color: rgb(0, 0, 0)\">&nbsp;→&nbsp;</span><span>OpenAPI</span><span style=\"color: rgb(0, 0, 0)\">&nbsp;→&nbsp;</span><span>API管理</span><span style=\"color: rgb(0, 0, 0)\">&nbsp;→&nbsp;</span><span>API开发，通过零代码配置快速开发一个API，在配置项中维护入参日志记录模板和出参日志记录模板。</span></p><p></p><p><img src=\"/download/01098c9413851f794be68d721ad033ff78d9.jpg\"></p><p style=\"text-align: center\">&nbsp;</p><p><span>紧接着，通过脚本维护关键字段，例如将采购订单编码和分录中物料编码作为入参关键字段，单据id作为出参关键字段。</span></p><p></p><p><span style=\"color: rgb(84, 141, 212)\">注意：若接口为操作API同时请求方式为POST，由于请求参数和返回参数默认返回参数“data”，所以在维护脚本时，需要增加一层data参数，例如#{$data.data.billno}。</span></p><p>&nbsp;<img src=\"/download/0109b336c452add34b42b20c109ddf4312a6.jpg\"></p><p style=\"text-align: center\"><span style=\"color: rgb(127, 127, 127)\">&nbsp;</span></p><p style=\"text-align: center\"><img src=\"/download/01096e0699615e4647df9e842f45674598eb.jpg\">&nbsp;</p><p>&nbsp;</p><p style=\"text-align: justify\"><strong>2）调用接口生成日志</strong></p><p><span>在维护完API基本信息、日志记录模板和请求参数后，点击“保存”按钮，接下来就可以调试API了。</span></p><p>&nbsp;</p><p><img src=\"/download/0109cb589676829b427799efac7b31884068.jpg\"></p><p>&nbsp;</p><p><span>点击“API测试”按钮，发送请求，生成调用记录。</span></p><p><img src=\"/download/01094241805f580e47749ac62c86ff5b3a22.jpg\">&nbsp;</p><p>&nbsp;&nbsp;</p><p style=\"text-align: justify\"><strong>3）查看API调用日志</strong></p><p><span>路径：开放服务云</span><span style=\"color: rgb(0, 0, 0)\">&nbsp;→&nbsp;</span><span>OpenAPI</span><span style=\"color: rgb(0, 0, 0)\">&nbsp;→&nbsp;</span><span>监控统计</span><span style=\"color: rgb(0, 0, 0)\">&nbsp;→&nbsp;</span><span>API日志，此时可以看到API日志的入参摘要和出参摘要中，记录了上一步配置的关键字段，若存在多条数据通过逗号分隔。</span></p><p></p><p><img src=\"/download/0109ba6e64e7972f40ebaf337578e2b7bbaf.jpg\"></p><p></p><h2>3 注意事项</h2><ul><li><p><span>若苍穹版本高于V6.0.3，只能由管理员维护</span><span style=\"color: rgb(0, 0, 0)\">API调用日志记录级别</span><span>。</span></p></li><li><p style=\"text-align: justify\"><span>维护API日志记录模板时，需要注意请求参数和响应参数的层级，否则可能无法记录到正确的数据。</span></p></li></ul><p style=\"text-align: justify\"></p><h2>4 更多资讯</h2><p style=\"text-align: justify\"><span>关于OpenAPI的更多资讯，请随时关注</span><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=226337371640594944&amp;id=226708319996323072&amp;productLineId=29\">新特性公告</a><span>。</span></p>"
+}

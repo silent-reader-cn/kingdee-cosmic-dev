@@ -1,0 +1,772 @@
+{
+ "badNum": 0,
+ "identityTagIds": null,
+ "knowledgeId": "374930468375911680",
+ "createdAt": 1667198390000,
+ "collections": 25,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "374930468375911680",
+ "contentType": 1,
+ "updatedAt": 1670900063000,
+ "knowledgeUpdater": {
+  "avatar": "/download/010104bacd48431d4e6cbc2bcc1422c675c7.png",
+  "department": null,
+  "id": "225557710304306176",
+  "name": "产品运营官_阿杜",
+  "nameSpell": "name"
+ },
+ "assessStatus": 2,
+ "knowledgeStatus": 2,
+ "assessHandleStatus": 1,
+ "knowledgeCreatedAt": 1667198390000,
+ "version": 4,
+ "labels": [],
+ "editedAt": 1670900063000,
+ "identityTags": null,
+ "useful": 42,
+ "errors": [],
+ "isCollected": false,
+ "totalFeedBacks": 0,
+ "attachments": [],
+ "sources": [],
+ "editTitle": "实践案例 | OpenAPI助力企业业财一体化",
+ "title": "实践案例 | OpenAPI助力企业业财一体化",
+ "content": "<section><section><section><section><section><h1 label=\"一级标题\" class=\"first-title\" style=\"\"><strong style=\"\">1 小编推荐</strong></h1></section></section><section><section><section></section></section></section></section></section></section><p></p><section><section><section><p style=\"\"><br/></p><p style=\"\">集团型公司往往面临着<strong style=\"\">“各子公司独立运营、<span style=\"\">数据在业财系统相互独立存储、独立维护，彼此间相互孤立”</span></strong><span style=\"\">的情况，导致集团<strong style=\"\">管理效率低下、</strong><strong style=\"\">决策分析滞后</strong>等问题。</span></p><p style=\"\"><span style=\"\"><br/></span></p><p style=\"\"><span style=\"\">那么，今天就为大家带来<strong style=\"\">“OpenAPI助力企业业财一体化”</strong>的案例实践，一线真实案例，亲测有效~</span></p><p style=\"\"><span style=\"text-align: left;\"><br/></span></p><p style=\"\"><span style=\"text-align: left;\">撰稿人：金蝶—张博。</span></p></section></section></section><p></p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><br/></p><p></p><section><section><section><section><section><section><h1 label=\"一级标题\" class=\"first-title\" style=\"\"><strong style=\"\">2&nbsp;</strong><strong style=\"\">业务背景</strong></h1></section></section></section></section></section><section><section><section></section></section></section></section><p></p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><br/></p><p></p><section><section><section><section><section></section></section></section></section><section><section><section><h2 label=\"二级标题\" class=\"second-title\" style=\"\"><strong style=\"\">2.1 产品相关的业务现状</strong></h2></section></section></section></section><p></p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><br/></p><p></p><section><p style=\"\">客户为大型央企，主营业务包含先进制造与技术服务、医药医疗健康、贸易与工程服务等。由于业务不断扩张，企业内部业务系统日益增加，需要对常用数据进行<strong style=\"\">集中化管理</strong>，以<strong style=\"\">统一数据标准和口径</strong>，对服务进行<strong style=\"\">统一治理</strong>。</p><p style=\"\"><br/></p><p style=\"\">依据<strong style=\"\">财务一体化建设目标</strong>及系统集成需要，我们和客户共同梳理出<strong style=\"\">45项</strong>通用数据，涵盖了总账、应收应付、资金等模块的常用业务场景。对接系统包括客户方的主数据系统，以及成员公司多种异构系统，大部分接口对接数据均达到了<strong style=\"\">百万量级</strong>。</p></section><p></p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><br/></p><p></p><section><section><img src=\"/download/010930bf217862864a0b8d5ad93413be643b.png\"/></section></section><section><p style=\"text-align: center;\">业务现状图<br/></p></section><p></p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><br/></p><p></p><section><section><section><section><section></section></section></section></section><section><section><section><h2 label=\"二级标题\" class=\"second-title\" style=\"\"><strong style=\"\">2.2 客户痛点分析</strong></h2></section></section></section></section><p></p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><br/></p><p></p><section><p style=\"\"><strong style=\"\">业财数据缺乏关联性。</strong>数据在企业内部各业财系统<strong style=\"\">独<strong style=\"\">立</strong></strong><strong style=\"\">存储、独立维护、彼此间相互孤立</strong>，系统间数据<strong style=\"\">“同名不同码，同码不同名”</strong>的情况大量存在，数据连贯性差，跨部门协作效率低。</p><p style=\"\"><br/></p><p style=\"\">在建设财务一体化平台过程中，共涉及集团和成员公司至少<strong style=\"\">26套</strong>系统，且除客商主数据外，基本没有统一的数据管理系统支撑，各成员单位系统间各自为政，其中，数据定义、数据准入规则、校验机制、管控流程等无统一标准。</p></section><p></p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><br/></p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><strong style=\"\">数据统一管控类型有限。</strong>目前实现统一标准化的数据类型有限，大多数数据按需分散维护管理。</p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><br/></p><p></p><section><section><section><section><section></section></section></section></section><section><section><section><h2 label=\"二级标题\" class=\"second-title\" style=\"\"><strong style=\"\">2.3 客户诉求</strong></h2></section></section></section></section><p></p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><br/></p><p></p><section><ul class=\" list-paddingleft-2\" style=\"\"><li><p style=\"\">受财务视角对主数据<strong style=\"\">需求场景</strong>、<strong style=\"\">范围</strong>的限制，需进一步扩展数据信息的完整性管理；</p></li><li><p style=\"\">需要统一考虑并建立数据标准，加强对业务财务一体化应用及<strong style=\"\">统一经营决策分析</strong>的支撑作用；</p></li><li><p style=\"\">需要统一考虑主数据管理体系，构建<strong style=\"\">特色数据管理体系</strong>、<strong style=\"\">统一数据管理平台</strong>，并实现数据管理有效协同；</p></li><li><p style=\"\">需要统一考虑数据集成方案，实现数据的<strong style=\"\">线上集成交互</strong>， 为<strong style=\"\">数</strong><strong style=\"\">据集中化管理</strong>奠定基础；</p></li><li><p style=\"\">拓展技术平台功能，以支撑集团内数据<strong style=\"\">高并发</strong>，提升系统性能，实现数据治理，提高用户满意度。</p></li></ul></section><p></p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><br/></p><p></p><section><section><section><section><section><section><h1 label=\"一级标题\" class=\"first-title\" style=\"\"><strong style=\"\">3 解决方案</strong></h1></section></section></section></section></section><section><section><section></section></section></section></section><p></p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><br/></p><p style=\"color: rgb(34, 34, 34); text-align: justify;\">金蝶AI苍穹开放API标准服务，可以整合<strong style=\"\">端到端业务循环</strong>及外围系统集成需求、实现相关业务链上<strong style=\"\">17个</strong>系统间的集成、融合方案将满足<strong style=\"\">171项</strong>业务接口(未包含多版本情况)，并按<strong style=\"\">“1+4”模式</strong>进行集成域的分类划分。</p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><br/></p><p></p><section><section><img src=\"/download/01092156624c9448428297eda9b0a8490dc5.png\"/></section></section><section><p style=\"text-align: center;\">项目方案图</p></section><p></p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><br/></p><p style=\"color: rgb(34, 34, 34); text-align: justify;\">该方案使用到金蝶AI苍穹开放API，主要体现在以下<strong style=\"\">4个</strong>方面：</p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><br/></p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><strong style=\"\">1、权限管控。</strong></p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><br/></p><p></p><section><p style=\"\">对接不同系统采用不同的鉴权方式以及不同颗粒度的权限管控：</p><p style=\"\"><br/></p><p style=\"\">对于与<strong style=\"\">主数据集成</strong>，是<strong style=\"\">系统与系统间</strong>的集成方式，主数据系统需要对接多种异构系统。所以，以主数据对接标准为主，采用苍穹的<strong style=\"\">【基本认证】</strong>方式与主数据平台进行对接。通过对<strong style=\"\">API授权</strong>和<strong style=\"\">IP白名单</strong>的形式保证接口的安全性。</p></section><p></p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><br/></p><p></p><section><section><img src=\"/download/010943c02d0b8c5d4681a46933e0129a0c4e.png\"/></section></section><section><p style=\"text-align: center;\">【基本认证】-API授权和IP白名单配置</p></section><p></p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><br/></p><p style=\"color: rgb(34, 34, 34); text-align: justify;\">对于和<strong style=\"\">成员公司</strong>对接，苍穹作为接口的提供方，采用的是<strong style=\"\">“AccessToken认证”</strong>的认证方式。通过对<strong style=\"\">API授权</strong>和<strong style=\"\">IP白名单</strong>的形式保证接口的安全性。另外，对每家二级公司单独分配应用，做到每家公司的密钥独立更加安全。</p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><br/></p><p></p><section><section><img src=\"/download/0109359b4c8b0e8d4d3da5c619ab465c0b07.png\"/></section></section><section><p style=\"text-align: center;\">苍穹注册的外部第三方应用列表</p></section><p></p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><br/></p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><strong style=\"\">2、中间表。</strong></p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><br/></p><p></p><section><p style=\"\">和<strong style=\"\">外部系统</strong>对接是<strong style=\"\">http协议</strong>，接口交互形式即使用<strong style=\"\">restful接口对接</strong>，相互调用对方的接口，以<strong style=\"\">ip+端口号+方法路由形式</strong>构建一个url。客户对数据安全性要求较高、数据交互需要有记录，并要求接口对接以<strong style=\"\">中间表形式</strong>进行系统对接，即<strong style=\"\">下发上报不直接走接口通信</strong>，而是对<strong style=\"\">数据库</strong>进行读写操作。</p><p style=\"\"><br/></p><p style=\"\">当任务完成时候，上报将此任务状态改为<strong style=\"\">“已经完成”</strong>。中间表机制<strong style=\"\">既能保证数据安全性</strong>，又能对异<strong style=\"\">常接口报文进行重试补偿</strong>。</p></section><p></p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><br/></p><p></p><section><section><img src=\"/download/010953a335baa1764780a728c3d809e92af5.png\"/></section></section><section><p style=\"text-align: center;\">中间表流程图</p></section><p></p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><br/></p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><strong style=\"\">3、管理API。</strong><br/></p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><br/></p><p style=\"color: rgb(34, 34, 34); text-align: justify;\">通过开放平台OpenAPI管理接口，从接口创建→测试→发布→禁用→下架的全生命周期管理。不同阶段的接口可通过API状态进行区分，如下图所示：</p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><br/></p><p></p><section><section><img src=\"/download/01099341a571a89d49d58c31944e492d125b.png\"/></section></section><section><p style=\"text-align: center;\">接口的全生命周期管理</p></section><p></p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><br/></p><p></p><section><section><img src=\"/download/0109daf55251eddc41a7aaa4bef5a04ed8bb.png\"/></section></section><section><p style=\"text-align: center;\">不同阶段的接口API状态</p></section><p></p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><br/></p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><strong style=\"\">4、自定义API开发。</strong></p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><br/></p><p></p><section><p style=\"\">通过Java插件开发，并在开放平台通过简单的接口配置后，系统<strong style=\"\">自动解析出入参数</strong>，可以快速、便捷地生成自定义API，并用于处理复杂业务场景。</p><p style=\"\"><br/></p><p style=\"\">用户可预先定义<strong style=\"\">类</strong>和<strong style=\"\">方法</strong>，在开放平台通过简单的接口配置后，系统自动解析定义好的<strong style=\"\">请求参数</strong>和<strong style=\"\">返回参数</strong>，快速生成自定义接口。</p></section><p></p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><br/></p><p></p><section><section><img src=\"/download/0109ac0b22220c5b4283883bf67bb2c04230.png\"/></section></section><section><p style=\"text-align: center;\">自定义API接口</p></section><p></p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><br/></p><p></p><section><section><section><section><section><section><h1 label=\"一级标题\" class=\"first-title\" style=\"\"><strong style=\"\">4 方案的可推广价值</strong></h1></section></section></section></section></section></section><p></p><p></p><section><p style=\"\"><br/></p><p style=\"\">1、<strong style=\"\">灵活、易用</strong>。API2.0自定义注解API，支持复杂业务自定义逻辑，Spring主流注解时校验，通过不同的鉴权方式，可以适配更多的异构系统，丰富的报文格式：支持<strong style=\"\">JSON/XML，RestFul</strong>及<strong style=\"\">WebService Soap协议</strong>。</p><p style=\"\"><br/></p><p style=\"\">2、<strong style=\"\">安全</strong>。通过分配第三方应用将<strong style=\"\">21家</strong>二级成员公司的API访问权限和访问安全得以管控，保护企业数据安全。</p><p style=\"\"><br/></p><p style=\"\">3、<strong style=\"\">监控</strong>。日志（故障定位）、统计分析可以对集成结果和异常进行分析。</p><p style=\"\"><br/></p><p style=\"\">通过金蝶AI苍穹开放平台OpenAPI服务解决方案，客户将<strong style=\"\">业务数据与财务数据完成打通</strong>，<strong style=\"\">数据流实现了闭环</strong>。从应收到付款等多方面提升<strong style=\"\">企业不同部门的协作效率</strong>和<strong style=\"\">管理水平</strong>，<strong style=\"\">降低跨部门协作难度</strong>，为企业<strong style=\"\">积累核心数据资产</strong>，以及未来管理的优化提供了<strong style=\"\">基础数据</strong>。</p></section><p></p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><br/></p><hr/><p></p><section><section><section><section></section></section></section></section><p></p><p></p><section><section><section><section><section><section></section></section></section><section><section><section><section><section><p style=\"\"><strong style=\"\"><br/></strong></p><p style=\"\"><strong style=\"\">#往期推荐#</strong></p><p style=\"\"><strong style=\"\"><br/></strong></p></section></section></section></section></section></section><section><section><section><section><section><section><section><section><p style=\"\"><span style=\"color: rgb(255, 164, 30);\">#</span>&nbsp;<a href=\"https://developer.kingdee.com/knowledge/specialDetail/371310653380080128?category=371336232476632832&id=371342547471675904&productLineId=29\" title=\"\" target=\"_blank\" class=\"\">实践案例 | 多异构系统间的数据集成</a></p></section></section></section></section><section><section><section><section></section></section></section></section><section><section><section><section><p style=\"\"><span style=\"color: rgb(255, 164, 30);\">#&nbsp;<a href=\"https://developer.kingdee.com/knowledge/specialDetail/371310653380080128?category=371336392497719040&id=369902593835442944&productLineId=29\" title=\"\" target=\"_blank\" class=\"\">实践案例 | 零代码配置API接口，打破信息孤岛</a></span></p></section></section><section><section></section></section></section></section><section><section><section><section><p style=\"\"><span style=\"color: rgb(255, 164, 30);\">#</span>&nbsp;<a href=\"https://vip.kingdee.com/knowledge/specialDetail/282527627108140288?category=283972955728903680&id=358181128073232896&productLineId=29\" title=\"\" target=\"_blank\" class=\"\">苍穹OpenAPI新体验 之 保存接口</a></p></section></section></section></section></section></section></section></section></section></section><p></p><p><br/></p><section><section><section><section><p style=\"\">更多精彩内容，“码”上了解！↓</p></section></section></section></section><p style=\"text-align: justify; color: rgb(34, 34, 34);\"><br/></p><p style=\"text-align: justify; color: rgb(34, 34, 34);\"><br/></p><p style=\"text-align: justify; color: rgb(34, 34, 34);\"><img src=\"https://vip.kingdee.com/download/010957218dc557b04a7bac3b58596dd5a81d.png\"/></p><p><br/></p>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 87,
+   "isOpen": 1,
+   "name": "金蝶AI苍穹",
+   "productLineId": 29,
+   "series": "developer01",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        null
+       ],
+       "code": null,
+       "description": "",
+       "entityId": "374930468375911680",
+       "entityType": "Knowledge",
+       "id": "374930678762876928",
+       "isCategory": false,
+       "name": "实践案例 | OpenAPI助力企业业财一体化",
+       "parentId": "371336392497719040",
+       "sort": "2",
+       "specialId": "371310653380080128",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": "",
+     "entityId": null,
+     "entityType": null,
+     "id": "371336392497719040",
+     "isCategory": true,
+     "name": "开放服务云",
+     "parentId": "-1",
+     "sort": "7",
+     "specialId": "371310653380080128",
+     "status": 1
+    }
+   ],
+   "classifies": null,
+   "collections": 71,
+   "createdAt": "2022-10-21T14:55:58.000+08:00",
+   "creator": {
+    "avatar": "/download/01018b00f45fe4f245a9a102410a9682bb28.png",
+    "department": null,
+    "id": "430437059824456704",
+    "name": "Pennyzz",
+    "nameSpell": "name"
+   },
+   "description": "带你了解苍穹产品在不同项目上的运用，一线案例，亲测有效~",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "371310653380080128",
+   "identityTags": null,
+   "itemNum": 127,
+   "logo": "/download/0100dd256adc04984b949b0b12d0d00ecf97.png",
+   "name": "一线项目实践案例",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 1,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 20,
+   "totalAppraisalUsers": 4,
+   "updatedAt": "2025-01-06T16:15:05.000+08:00",
+   "updaterId": "430437059824456704",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1369072
+  },
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        null
+       ],
+       "code": null,
+       "description": "",
+       "entityId": "374930468375911680",
+       "entityType": "Knowledge",
+       "id": "374930678762876929",
+       "isCategory": false,
+       "name": "实践案例 | OpenAPI助力企业业财一体化",
+       "parentId": "283972955728903680",
+       "sort": "13",
+       "specialId": "282527627108140288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": "",
+     "entityId": null,
+     "entityType": null,
+     "id": "283972955728903680",
+     "isCategory": true,
+     "name": "开放服务OpenAPI",
+     "parentId": "-1",
+     "sort": "10",
+     "specialId": "282527627108140288",
+     "status": 1
+    }
+   ],
+   "classifies": null,
+   "collections": 358,
+   "createdAt": "2022-02-18T15:03:55.000+08:00",
+   "creator": {
+    "avatar": "/download/0101c9e21267d75b4786863ee0d53d74d4a6.png",
+    "department": null,
+    "id": "281005769653540096",
+    "name": "PaaS平台那些事",
+    "nameSpell": "name"
+   },
+   "description": "分享苍穹平台新功能、新特性、开发技巧，做苍穹用户、开发者的知心朋友。有它，玩转苍穹不用愁！",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "282527627108140288",
+   "identityTags": null,
+   "itemNum": 706,
+   "logo": "/download/0100b5c220fe7d884e38834487eddcc5815d.png",
+   "name": "苍穹平台那些事",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 1,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 6,
+   "totalAppraisalUsers": 2,
+   "updatedAt": "2025-11-27T20:05:58.000+08:00",
+   "updaterId": "430437059824456704",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 6631050
+  },
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        null
+       ],
+       "code": null,
+       "description": "",
+       "entityId": "374930468375911680",
+       "entityType": "Knowledge",
+       "id": "376366344612614656",
+       "isCategory": false,
+       "name": "OpenAPI助力企业业财一体化",
+       "parentId": "376365761788406272",
+       "sort": "2",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": "",
+     "entityId": null,
+     "entityType": null,
+     "id": "376365761788406272",
+     "isCategory": true,
+     "name": "优秀实践",
+     "parentId": "-1",
+     "sort": "8",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download/01018b00f45fe4f245a9a102410a9682bb28.png",
+  "department": null,
+  "id": "430437059824456704",
+  "name": "Pennyzz",
+  "nameSpell": "name"
+ },
+ "totalAppraisalScore": 208,
+ "iflytekId": null,
+ "views": 7333,
+ "productLineId": 29,
+ "comments": 0,
+ "similarityCount": null,
+ "totalAppraisalUsers": 42,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1670900063000,
+ "appraisalScore": 0,
+ "unuseful": 0,
+ "knowledgeCheckStatus": 2,
+ "otherProductLineIds": [],
+ "auditAt": 1670900323000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": null,
+       "code": "open",
+       "id": "5614",
+       "name": "开放平台",
+       "productLineId": null,
+       "sort": 2,
+       "type": "module"
+      },
+      "code": "DEV",
+      "id": "5576",
+      "name": "开发服务云",
+      "productLineId": null,
+      "sort": 11,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 0,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "AdvancedSkills",
+     "createdAt": 1556519216000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "高阶技巧标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/01005cea40211bf14113a6004322e86a6780.png",
+     "id": "202203081642",
+     "name": "高级技巧",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download/010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "306913800727243776",
+      "name": "Paim",
+      "nameSpell": "name"
+     },
+     "updatedAt": 1657851500000
+    },
+    {
+     "code": "GettingStarted",
+     "createdAt": 1556519230000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "推送至苍穹帮助中心",
+     "hasSpecifyUser": false,
+     "hide": true,
+     "icon": "/download/01001f079866652f4a68a71361a9509d404c.png",
+     "id": "202203081643",
+     "name": "推送至苍穹帮助中心",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 1,
+     "type": 2,
+     "updatePerson": {
+      "avatar": "/download?fileName=010162cfa9d5437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1129",
+      "name": "灏",
+      "nameSpell": "hao"
+     },
+     "updatedAt": 1605688859000
+    },
+    {
+     "code": "typicalinstance",
+     "createdAt": 1605836164000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "基于典型客户的应用场景，介绍客户痛点，给出本应用/功能的解决方案",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100905e7651dcc940099286e9ee4a35cb2d.png",
+     "id": "202203081648",
+     "name": "最佳实践",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010176d38341668f44fdb94c95058a90e4b8.png",
+      "department": "云社区运营部",
+      "id": "2147406697",
+      "name": "多肉丸子",
+      "nameSpell": "kejuan"
+     },
+     "updatedAt": 1676857737000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "374930468375911680",
+         "entityType": "Knowledge",
+         "id": "374930678762876928",
+         "isCategory": false,
+         "name": "实践案例 | OpenAPI助力企业业财一体化",
+         "parentId": "371336392497719040",
+         "sort": "2",
+         "specialId": "371310653380080128",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": null,
+       "id": "371336392497719040",
+       "isCategory": true,
+       "name": "开放服务云",
+       "parentId": "-1",
+       "sort": "7",
+       "specialId": "371310653380080128",
+       "status": 1
+      }
+     ],
+     "classifies": null,
+     "collections": 71,
+     "createdAt": "2022-10-21T14:55:58.000+08:00",
+     "creator": {
+      "avatar": "/download/01018b00f45fe4f245a9a102410a9682bb28.png",
+      "department": null,
+      "id": "430437059824456704",
+      "name": "Pennyzz",
+      "nameSpell": "name"
+     },
+     "description": "带你了解苍穹产品在不同项目上的运用，一线案例，亲测有效~",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "371310653380080128",
+     "identityTags": null,
+     "itemNum": 127,
+     "logo": "/download/0100dd256adc04984b949b0b12d0d00ecf97.png",
+     "name": "一线项目实践案例",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 1,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 20,
+     "totalAppraisalUsers": 4,
+     "updatedAt": "2025-01-06T16:15:05.000+08:00",
+     "updaterId": "430437059824456704",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1369072
+    },
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "374930468375911680",
+         "entityType": "Knowledge",
+         "id": "374930678762876929",
+         "isCategory": false,
+         "name": "实践案例 | OpenAPI助力企业业财一体化",
+         "parentId": "283972955728903680",
+         "sort": "13",
+         "specialId": "282527627108140288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": null,
+       "id": "283972955728903680",
+       "isCategory": true,
+       "name": "开放服务OpenAPI",
+       "parentId": "-1",
+       "sort": "10",
+       "specialId": "282527627108140288",
+       "status": 1
+      }
+     ],
+     "classifies": null,
+     "collections": 358,
+     "createdAt": "2022-02-18T15:03:55.000+08:00",
+     "creator": {
+      "avatar": "/download/0101c9e21267d75b4786863ee0d53d74d4a6.png",
+      "department": null,
+      "id": "281005769653540096",
+      "name": "PaaS平台那些事",
+      "nameSpell": "name"
+     },
+     "description": "分享苍穹平台新功能、新特性、开发技巧，做苍穹用户、开发者的知心朋友。有它，玩转苍穹不用愁！",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "282527627108140288",
+     "identityTags": null,
+     "itemNum": 706,
+     "logo": "/download/0100b5c220fe7d884e38834487eddcc5815d.png",
+     "name": "苍穹平台那些事",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 1,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 6,
+     "totalAppraisalUsers": 2,
+     "updatedAt": "2025-11-27T20:05:58.000+08:00",
+     "updaterId": "430437059824456704",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 6631050
+    },
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "374930468375911680",
+         "entityType": "Knowledge",
+         "id": "376366344612614656",
+         "isCategory": false,
+         "name": "OpenAPI助力企业业财一体化",
+         "parentId": "376365761788406272",
+         "sort": "2",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": null,
+       "id": "376365761788406272",
+       "isCategory": true,
+       "name": "优秀实践",
+       "parentId": "-1",
+       "sort": "8",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": "<section><section><section><section><section><h1 label=\"一级标题\" class=\"first-title\" style=\"\"><strong style=\"\">1 小编推荐</strong></h1></section></section><section><section><section></section></section></section></section></section></section><p></p><section><section><section><p style=\"\"><br/></p><p style=\"\">集团型公司往往面临着<strong style=\"\">“各子公司独立运营、<span style=\"\">数据在业财系统相互独立存储、独立维护，彼此间相互孤立”</span></strong><span style=\"\">的情况，导致集团<strong style=\"\">管理效率低下、</strong><strong style=\"\">决策分析滞后</strong>等问题。</span></p><p style=\"\"><span style=\"\"><br/></span></p><p style=\"\"><span style=\"\">那么，今天就为大家带来<strong style=\"\">“OpenAPI助力企业业财一体化”</strong>的案例实践，一线真实案例，亲测有效~</span></p><p style=\"\"><span style=\"text-align: left;\"><br/></span></p><p style=\"\"><span style=\"text-align: left;\">撰稿人：金蝶—张博。</span></p></section></section></section><p></p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><br/></p><p></p><section><section><section><section><section><section><h1 label=\"一级标题\" class=\"first-title\" style=\"\"><strong style=\"\">2&nbsp;</strong><strong style=\"\">业务背景</strong></h1></section></section></section></section></section><section><section><section></section></section></section></section><p></p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><br/></p><p></p><section><section><section><section><section></section></section></section></section><section><section><section><h2 label=\"二级标题\" class=\"second-title\" style=\"\"><strong style=\"\">2.1 产品相关的业务现状</strong></h2></section></section></section></section><p></p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><br/></p><p></p><section><p style=\"\">客户为大型央企，主营业务包含先进制造与技术服务、医药医疗健康、贸易与工程服务等。由于业务不断扩张，企业内部业务系统日益增加，需要对常用数据进行<strong style=\"\">集中化管理</strong>，以<strong style=\"\">统一数据标准和口径</strong>，对服务进行<strong style=\"\">统一治理</strong>。</p><p style=\"\"><br/></p><p style=\"\">依据<strong style=\"\">财务一体化建设目标</strong>及系统集成需要，我们和客户共同梳理出<strong style=\"\">45项</strong>通用数据，涵盖了总账、应收应付、资金等模块的常用业务场景。对接系统包括客户方的主数据系统，以及成员公司多种异构系统，大部分接口对接数据均达到了<strong style=\"\">百万量级</strong>。</p></section><p></p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><br/></p><p></p><section><section><img src=\"/download/010930bf217862864a0b8d5ad93413be643b.png\"/></section></section><section><p style=\"text-align: center;\">业务现状图<br/></p></section><p></p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><br/></p><p></p><section><section><section><section><section></section></section></section></section><section><section><section><h2 label=\"二级标题\" class=\"second-title\" style=\"\"><strong style=\"\">2.2 客户痛点分析</strong></h2></section></section></section></section><p></p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><br/></p><p></p><section><p style=\"\"><strong style=\"\">业财数据缺乏关联性。</strong>数据在企业内部各业财系统<strong style=\"\">独<strong style=\"\">立</strong></strong><strong style=\"\">存储、独立维护、彼此间相互孤立</strong>，系统间数据<strong style=\"\">“同名不同码，同码不同名”</strong>的情况大量存在，数据连贯性差，跨部门协作效率低。</p><p style=\"\"><br/></p><p style=\"\">在建设财务一体化平台过程中，共涉及集团和成员公司至少<strong style=\"\">26套</strong>系统，且除客商主数据外，基本没有统一的数据管理系统支撑，各成员单位系统间各自为政，其中，数据定义、数据准入规则、校验机制、管控流程等无统一标准。</p></section><p></p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><br/></p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><strong style=\"\">数据统一管控类型有限。</strong>目前实现统一标准化的数据类型有限，大多数数据按需分散维护管理。</p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><br/></p><p></p><section><section><section><section><section></section></section></section></section><section><section><section><h2 label=\"二级标题\" class=\"second-title\" style=\"\"><strong style=\"\">2.3 客户诉求</strong></h2></section></section></section></section><p></p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><br/></p><p></p><section><ul class=\" list-paddingleft-2\" style=\"\"><li><p style=\"\">受财务视角对主数据<strong style=\"\">需求场景</strong>、<strong style=\"\">范围</strong>的限制，需进一步扩展数据信息的完整性管理；</p></li><li><p style=\"\">需要统一考虑并建立数据标准，加强对业务财务一体化应用及<strong style=\"\">统一经营决策分析</strong>的支撑作用；</p></li><li><p style=\"\">需要统一考虑主数据管理体系，构建<strong style=\"\">特色数据管理体系</strong>、<strong style=\"\">统一数据管理平台</strong>，并实现数据管理有效协同；</p></li><li><p style=\"\">需要统一考虑数据集成方案，实现数据的<strong style=\"\">线上集成交互</strong>， 为<strong style=\"\">数</strong><strong style=\"\">据集中化管理</strong>奠定基础；</p></li><li><p style=\"\">拓展技术平台功能，以支撑集团内数据<strong style=\"\">高并发</strong>，提升系统性能，实现数据治理，提高用户满意度。</p></li></ul></section><p></p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><br/></p><p></p><section><section><section><section><section><section><h1 label=\"一级标题\" class=\"first-title\" style=\"\"><strong style=\"\">3 解决方案</strong></h1></section></section></section></section></section><section><section><section></section></section></section></section><p></p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><br/></p><p style=\"color: rgb(34, 34, 34); text-align: justify;\">金蝶AI苍穹开放API标准服务，可以整合<strong style=\"\">端到端业务循环</strong>及外围系统集成需求、实现相关业务链上<strong style=\"\">17个</strong>系统间的集成、融合方案将满足<strong style=\"\">171项</strong>业务接口(未包含多版本情况)，并按<strong style=\"\">“1+4”模式</strong>进行集成域的分类划分。</p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><br/></p><p></p><section><section><img src=\"/download/01092156624c9448428297eda9b0a8490dc5.png\"/></section></section><section><p style=\"text-align: center;\">项目方案图</p></section><p></p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><br/></p><p style=\"color: rgb(34, 34, 34); text-align: justify;\">该方案使用到金蝶AI苍穹开放API，主要体现在以下<strong style=\"\">4个</strong>方面：</p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><br/></p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><strong style=\"\">1、权限管控。</strong></p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><br/></p><p></p><section><p style=\"\">对接不同系统采用不同的鉴权方式以及不同颗粒度的权限管控：</p><p style=\"\"><br/></p><p style=\"\">对于与<strong style=\"\">主数据集成</strong>，是<strong style=\"\">系统与系统间</strong>的集成方式，主数据系统需要对接多种异构系统。所以，以主数据对接标准为主，采用苍穹的<strong style=\"\">【基本认证】</strong>方式与主数据平台进行对接。通过对<strong style=\"\">API授权</strong>和<strong style=\"\">IP白名单</strong>的形式保证接口的安全性。</p></section><p></p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><br/></p><p></p><section><section><img src=\"/download/010943c02d0b8c5d4681a46933e0129a0c4e.png\"/></section></section><section><p style=\"text-align: center;\">【基本认证】-API授权和IP白名单配置</p></section><p></p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><br/></p><p style=\"color: rgb(34, 34, 34); text-align: justify;\">对于和<strong style=\"\">成员公司</strong>对接，苍穹作为接口的提供方，采用的是<strong style=\"\">“AccessToken认证”</strong>的认证方式。通过对<strong style=\"\">API授权</strong>和<strong style=\"\">IP白名单</strong>的形式保证接口的安全性。另外，对每家二级公司单独分配应用，做到每家公司的密钥独立更加安全。</p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><br/></p><p></p><section><section><img src=\"/download/0109359b4c8b0e8d4d3da5c619ab465c0b07.png\"/></section></section><section><p style=\"text-align: center;\">苍穹注册的外部第三方应用列表</p></section><p></p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><br/></p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><strong style=\"\">2、中间表。</strong></p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><br/></p><p></p><section><p style=\"\">和<strong style=\"\">外部系统</strong>对接是<strong style=\"\">http协议</strong>，接口交互形式即使用<strong style=\"\">restful接口对接</strong>，相互调用对方的接口，以<strong style=\"\">ip+端口号+方法路由形式</strong>构建一个url。客户对数据安全性要求较高、数据交互需要有记录，并要求接口对接以<strong style=\"\">中间表形式</strong>进行系统对接，即<strong style=\"\">下发上报不直接走接口通信</strong>，而是对<strong style=\"\">数据库</strong>进行读写操作。</p><p style=\"\"><br/></p><p style=\"\">当任务完成时候，上报将此任务状态改为<strong style=\"\">“已经完成”</strong>。中间表机制<strong style=\"\">既能保证数据安全性</strong>，又能对异<strong style=\"\">常接口报文进行重试补偿</strong>。</p></section><p></p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><br/></p><p></p><section><section><img src=\"/download/010953a335baa1764780a728c3d809e92af5.png\"/></section></section><section><p style=\"text-align: center;\">中间表流程图</p></section><p></p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><br/></p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><strong style=\"\">3、管理API。</strong><br/></p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><br/></p><p style=\"color: rgb(34, 34, 34); text-align: justify;\">通过开放平台OpenAPI管理接口，从接口创建→测试→发布→禁用→下架的全生命周期管理。不同阶段的接口可通过API状态进行区分，如下图所示：</p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><br/></p><p></p><section><section><img src=\"/download/01099341a571a89d49d58c31944e492d125b.png\"/></section></section><section><p style=\"text-align: center;\">接口的全生命周期管理</p></section><p></p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><br/></p><p></p><section><section><img src=\"/download/0109daf55251eddc41a7aaa4bef5a04ed8bb.png\"/></section></section><section><p style=\"text-align: center;\">不同阶段的接口API状态</p></section><p></p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><br/></p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><strong style=\"\">4、自定义API开发。</strong></p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><br/></p><p></p><section><p style=\"\">通过Java插件开发，并在开放平台通过简单的接口配置后，系统<strong style=\"\">自动解析出入参数</strong>，可以快速、便捷地生成自定义API，并用于处理复杂业务场景。</p><p style=\"\"><br/></p><p style=\"\">用户可预先定义<strong style=\"\">类</strong>和<strong style=\"\">方法</strong>，在开放平台通过简单的接口配置后，系统自动解析定义好的<strong style=\"\">请求参数</strong>和<strong style=\"\">返回参数</strong>，快速生成自定义接口。</p></section><p></p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><br/></p><p></p><section><section><img src=\"/download/0109ac0b22220c5b4283883bf67bb2c04230.png\"/></section></section><section><p style=\"text-align: center;\">自定义API接口</p></section><p></p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><br/></p><p></p><section><section><section><section><section><section><h1 label=\"一级标题\" class=\"first-title\" style=\"\"><strong style=\"\">4 方案的可推广价值</strong></h1></section></section></section></section></section></section><p></p><p></p><section><p style=\"\"><br/></p><p style=\"\">1、<strong style=\"\">灵活、易用</strong>。API2.0自定义注解API，支持复杂业务自定义逻辑，Spring主流注解时校验，通过不同的鉴权方式，可以适配更多的异构系统，丰富的报文格式：支持<strong style=\"\">JSON/XML，RestFul</strong>及<strong style=\"\">WebService Soap协议</strong>。</p><p style=\"\"><br/></p><p style=\"\">2、<strong style=\"\">安全</strong>。通过分配第三方应用将<strong style=\"\">21家</strong>二级成员公司的API访问权限和访问安全得以管控，保护企业数据安全。</p><p style=\"\"><br/></p><p style=\"\">3、<strong style=\"\">监控</strong>。日志（故障定位）、统计分析可以对集成结果和异常进行分析。</p><p style=\"\"><br/></p><p style=\"\">通过金蝶AI苍穹开放平台OpenAPI服务解决方案，客户将<strong style=\"\">业务数据与财务数据完成打通</strong>，<strong style=\"\">数据流实现了闭环</strong>。从应收到付款等多方面提升<strong style=\"\">企业不同部门的协作效率</strong>和<strong style=\"\">管理水平</strong>，<strong style=\"\">降低跨部门协作难度</strong>，为企业<strong style=\"\">积累核心数据资产</strong>，以及未来管理的优化提供了<strong style=\"\">基础数据</strong>。</p></section><p></p><p style=\"color: rgb(34, 34, 34); text-align: justify;\"><br/></p><hr/><p></p><section><section><section><section></section></section></section></section><p></p><p></p><section><section><section><section><section><section></section></section></section><section><section><section><section><section><p style=\"\"><strong style=\"\"><br/></strong></p><p style=\"\"><strong style=\"\">#往期推荐#</strong></p><p style=\"\"><strong style=\"\"><br/></strong></p></section></section></section></section></section></section><section><section><section><section><section><section><section><section><p style=\"\"><span style=\"color: rgb(255, 164, 30);\">#</span>&nbsp;<a href=\"https://developer.kingdee.com/knowledge/specialDetail/371310653380080128?category=371336232476632832&id=371342547471675904&productLineId=29\" title=\"\" target=\"_blank\" class=\"\">实践案例 | 多异构系统间的数据集成</a></p></section></section></section></section><section><section><section><section></section></section></section></section><section><section><section><section><p style=\"\"><span style=\"color: rgb(255, 164, 30);\">#&nbsp;<a href=\"https://developer.kingdee.com/knowledge/specialDetail/371310653380080128?category=371336392497719040&id=369902593835442944&productLineId=29\" title=\"\" target=\"_blank\" class=\"\">实践案例 | 零代码配置API接口，打破信息孤岛</a></span></p></section></section><section><section></section></section></section></section><section><section><section><section><p style=\"\"><span style=\"color: rgb(255, 164, 30);\">#</span>&nbsp;<a href=\"https://vip.kingdee.com/knowledge/specialDetail/282527627108140288?category=283972955728903680&id=358181128073232896&productLineId=29\" title=\"\" target=\"_blank\" class=\"\">苍穹OpenAPI新体验 之 保存接口</a></p></section></section></section></section></section></section></section></section></section></section><p></p><p><br/></p><section><section><section><section><p style=\"\">更多精彩内容，“码”上了解！↓</p></section></section></section></section><p style=\"text-align: justify; color: rgb(34, 34, 34);\"><br/></p><p style=\"text-align: justify; color: rgb(34, 34, 34);\"><br/></p><p style=\"text-align: justify; color: rgb(34, 34, 34);\"><img src=\"https://vip.kingdee.com/download/010957218dc557b04a7bac3b58596dd5a81d.png\"/></p><p><br/></p>"
+}

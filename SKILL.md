@@ -1,42 +1,49 @@
 ---
-name: kingdee-sql-expert
-summary: 金蝶云苍穹（Kingdee Cloud Cosmic）数据库知识库 —— 22,769 张物理表结构，内置统一全文检索。
+name: kingdee-cosmic-dev
+summary: 金蝶云苍穹（Kingdee Cloud Cosmic）开发知识库 —— 22,769 张物理表结构 + 144 篇 OpenAPI 开放平台官方手册，内置统一全文检索。
 description: >-
-  金蝶云苍穹数据库专家。用于查询业务对象、表结构、字段含义、表间关联关系，
-  以及编写符合金蝶标准的 SQL 语句。覆盖财务、供应链、制造、人力、基础资料、
-  平台等 224 个模块，共 22,769 张表的详细字段定义（列名/中文名/类型/长度/精度/
-  非空/默认值/备注枚举）、列规则与索引定义。
-  当需要定位业务对象对应的物理表（如「销售订单」→ t_sm_salorder）、
-  解释字段业务含义与枚举值、梳理主子表与多语言表关联路径、
-  或编写兼容 PostgreSQL 12 的金蝶规范 SQL 时使用。
-  库表定位与字段查询可用内置统一检索脚本按关键词完成，无需逐个打开文档。
+  金蝶云苍穹（Kingdee Cloud Cosmic / 金蝶AI苍穹）开发指南，覆盖两大块内容：
+  (1) 数据库 —— 22,769 张物理表结构（列名/中文名/类型/长度/精度/非空/默认值/备注枚举）、
+  列规则与索引定义，覆盖财务、供应链、制造、人力、基础资料、平台等 224 个模块；
+  (2) OpenAPI（开放平台）—— 144 篇官方手册，覆盖认证鉴权（AccessToken/JWT/摘要/基本/签名）、
+  操作API、自定义API（Java插件/脚本/Servlet/文件流）、RESTful API、Webservice、
+  开放事件、API 管理、限流与排错。
+  当需要定位业务对象对应的物理表（如「销售订单」→ t_sm_salorder）、解释字段业务含义与枚举值、
+  梳理主子表与多语言表关联、编写兼容 PostgreSQL 12 的金蝶规范 SQL；
+  或对接/开发金蝶云苍穹 OpenAPI、获取 access_token、排查接口报错、
+  开发自定义API插件、配置开放事件回调、使用 KingScript 时使用。
+  全部内容可用内置统一检索脚本按关键词定位，无需逐个打开文档。
 ---
 
-# 金蝶 SQL 专家 (Kingdee SQL Expert)
+# 金蝶云苍穹开发指南
 
-你是金蝶云苍穹数据库架构与查询专家。你拥有对金蝶云苍穹底层 **22,769 张数据表**的深度了解，
-涵盖财务、供应链、制造、人力等 **224 个模块**。
+本 skill 由两大块构成，**全部内容都可用同一个检索脚本定位**：
 
-> 目标数据库：**PostgreSQL 12**。表定义导出自金蝶云苍穹数据字典。
+| 块 | 内容 | 规模 | 入口 |
+| :--- | :--- | :--- | :--- |
+| **块一 数据库** | 全量物理表结构（字段 / 列规则 / 索引） | 22,769 张表 / 224 模块 | [`references/db/`](./references/db/) |
+| **块二 OpenAPI 手册** | 金蝶云社区开放平台官方手册 | 144 篇 / 8 分类 | [`references/openapi/`](./references/openapi/) |
+
+> 数据库目标版本 **PostgreSQL 12**；OpenAPI 内容抓取自金蝶云社区专题
+> 「OpenAPI（开放平台）」，原文链接保留在每篇文档的 frontmatter 中。
 
 ---
 
 ## 一、何时用本 skill
 
-| 场景 | 怎么做 |
+| 场景 | 去哪一块 |
 |---|---|
-| 业务术语 → 物理表名（「销售订单」是哪张表） | 统一检索：`search.py 销售订单` |
-| 已知表名 → 字段清单与含义 | `search.py t_sm_salorder --table --full` |
-| 字段中文名/枚举值反查表 | `search.py <关键词>` |
-| 梳理主子表、多语言表关联 | 检索到表后读 `### 表格列定义` 与 `### 列规则定义` |
-| 写业务 SQL | 检索定位 → 取字段与枚举 → 按第三节约定编写 |
+| 业务术语 → 物理表名（「销售订单」是哪张表） | 块一：`search.py 销售订单` |
+| 已知表名 → 字段清单、类型、枚举值 | 块一：`search.py t_sm_salorder --table --full` |
+| 主子表 / 多语言表怎么关联 | 块一：检索到表后看 `### 表格列定义` |
+| 写业务 SQL | 块一：检索定位 → 取字段与枚举 → 按第三节约定编写 |
+| 调 OpenAPI 报错、拿不到 token | 块二：`search.py access_token --scope openapi` |
+| 自定义API 插件怎么写 | 块二：`search.py 自定义API --scope openapi` |
+| 开放事件 / 回调怎么配 | 块二：`search.py 回调 --scope openapi --category 开放事件` |
 
 ---
 
 ## 二、统一检索（核心用法）
-
-**全部 22,769 张表用同一个脚本检索**，直接返回命中表定义的完整正文（含字段表），
-无需再打开 `.md` 文件。
 
 ```bash
 PY="<你的 python3 路径>"
@@ -46,36 +53,33 @@ PY="<你的 python3 路径>"
 `$SKILL_DIR` 指本 skill 根目录。常用示例：
 
 ```bash
-# —— 按业务术语定位表 ——
-"$PY" scripts/search.py 销售订单                              # 全模块检索
-"$PY" scripts/search.py 销售订单 --scope sm                    # 只搜销售管理模块
-"$PY" scripts/search.py 物料 库存 --scope inv --all            # 多词全命中
-"$PY" scripts/search.py 凭证 --brief --limit 30                # 只要一行摘要
+# —— 块一 数据库 ——
+"$PY" scripts/search.py 销售订单                              # 全库检索
+"$PY" scripts/search.py t_sm_salorder --table --full           # 精确取完整字段表
+"$PY" scripts/search.py 凭证 --scope db --category gl          # 只搜总账模块
+"$PY" scripts/search.py 结算方式 --brief --limit 30            # 按字段中文名反查
 
-# —— 已知表名，取完整字段定义 ——
-"$PY" scripts/search.py t_sm_salorder --table                  # 精确按表名定位
-"$PY" scripts/search.py t_gl_voucher --table --full            # 完整字段表
+# —— 块二 OpenAPI 手册 ——
+"$PY" scripts/search.py 认证 --scope openapi                   # 搜开发手册
+"$PY" scripts/search.py 自定义API --scope openapi --brief
+"$PY" scripts/search.py 回调 --scope openapi --category 开放事件
+"$PY" scripts/search.py getToken --scope openapi --full
 
-# —— 找字段 / 枚举 ——
-"$PY" scripts/search.py 结算方式                               # 按字段中文名反查
-"$PY" scripts/search.py 分录 --scope sm                        # 找分录子表
-
-# —— 模块导航 ——
-"$PY" scripts/search.py --list-modules                         # 列出 224 个模块及表数量
+# —— 导航 ——
+"$PY" scripts/search.py --list                                 # 列出全部模块与分类
 ```
 
-**选项**：`--scope S`（模块名，可逗号组合如 `gl,som,inv`；默认 `all`）·
-`--table`（关键词按表名精确匹配）· `--brief`（精简一行）· `--full` / `-d`（完整正文，不截断）·
-`--all`（多词全命中）· `--limit N`（默认 20）· `--max N`（非 `--full` 时每条正文上限，默认 1600）·
-`--list-modules`
+**选项**：`--scope db|openapi|all`（默认 `all`）· `--category C`（块一按模块、块二按分类过滤）·
+`--table`（按表名精确匹配，仅块一）· `--brief`（精简一行）· `--full` / `-d`（完整正文）·
+`--all`（多词全命中）· `--limit N`（默认 20）· `--max N`（非 `--full` 时正文上限，默认 1600）· `--list`
 
 > 检索**直接读 Markdown**，不依赖预生成字典，因此不存在「改了文档忘了重建索引导致搜不到」的漂移问题。
-> 全库检索约 1–2 秒。
-> 修改过文档后，可用 `python scripts/build_index.py` 重新生成各模块 `_INDEX.md` 与总索引。
+> 正文超长时，截取的是**关键词命中位置附近的片段**（不是从头截断），所以答案在文末也看得到。
+> 全库检索约 1–3 秒。修改文档后跑 `python scripts/build_index.py` 重建索引。
 
 ---
 
-## 三、金蝶库表约定（写 SQL 前必读）
+## 三、块一 数据库：写 SQL 前必读
 
 1. **多语言表**：以 `_l` 结尾（如 `t_bd_account_l`），关联时需过滤 `flocaleid`
    （通常取当前语言，如 `WHERE flocaleid = 'zh_CN'`）。
@@ -85,77 +89,133 @@ PY="<你的 python3 路径>"
    编写 SQL 时应据此取值，不要臆造。
 4. **通用字段**：`fid`、`fnumber`（编码）、`fname`（名称）、`fcreatetime`、`fmodifytime`、
    `fcreatorid`、`fmodifierid`、`flastupdatetime` 等在绝大多数业务表出现。
-5. **表名前缀**：`t_<模块前缀>_<对象>`，模块前缀与 `references/<模块>_files/` 对应
+5. **表名前缀**：`t_<模块前缀>_<对象>`，模块前缀与 `references/db/<模块>_files/` 对应
    （如 `sm_` 销售、`pm_` 采购、`gl_` 总账、`bd_` 基础资料）。
 6. **分表**：部分大表有 `_r` 后缀的分表（如 `t_pm_purorderbillentry_r`），注意与主表区分。
 
 ---
 
-## 四、参考资源 (References)
+## 四、块二 OpenAPI：开发要点速查
 
-完整库表定义按模块分类存放于 `references/`：
+> 以下为速查，细节以 `search.py --scope openapi --full` 返回的原文为准。
+
+### 4.1 调用流程（三步）
 
 ```
-references/
-├── _INDEX.md                 # 总索引：224 个模块统计概览 + 模块入口
-├── gl_files/                 # 总账（含 _INDEX.md 与各表 .md）
-├── sm_files/                 # 销售管理
-├── pm_files/                 # 采购管理
-├── ...                       # 共 224 个模块文件夹
-└── <模块>_files/
-    ├── _INDEX.md             # 本模块表清单（表名/中文名/字段数/文件）
-    └── <对象>.md             # 一个文件可含主表 + 分录 + 多语言表等多个 ## 块
+注册第三方应用 → 获取 access_token → 携带 access_token 调业务接口
 ```
 
-一个 `.md` 文件内的每个 `## <中文名> t_<表名>` 块即一张表，包含：
+- **注册**：`【开放服务云】→【OpenAPI】→【第三方应用】`，填写系统编码、加密认证密钥。
+- **取 token**：`POST /kapi/oauth2/getToken`（另有 `/kapi/oauth2/verifyToken`、`/kapi/oauth2/withdrawToken`）。
+- **access_token 默认有效期 2 小时**，建议调用方定时缓存、快过期时刷新。
+- 请求头携带：`access_token: {token}`、`Content-Type: application/json`、`charset: utf-8`。
 
-- `### 表格列定义` —— 序号 / 列标题 / 列名称 / 类型 / 长度 / 精度 / 非空 / 默认值 / 备注
-- `### 列规则定义` —— 键编码与列字段映射
-- `### 索引定义` —— 索引名 / 唯一 / 列字段
+### 4.2 五种认证方式
 
-> 若不确定模块，用 `--list-modules` 查看模块清单，或直接全模块检索（默认行为）。
+`AccessToken`（最广泛）· `JWT` · `摘要认证` · `基本认证`（最方便）· `签名认证`。
+在【第三方应用】中为外部系统选择其中一种。
 
----
+> V7.0.13 起增强型 Token / 摘要 / 签名认证支持多时区，时间戳传零时区。
 
-## 五、示例流程
+### 4.3 业务接口地址规范
 
-**用户问**：「我想查一下销售订单的表结构和它的分录表。」
-
-**你的操作**：
-
-1. 检索定位：`python scripts/search.py 销售订单 --scope sm --brief`
-   → 命中 `t_sm_salorder`（销售订单-主表）等。
-2. 取完整定义：`python scripts/search.py t_sm_salorder --table --full`
-   → 得到主表字段、分录表 `t_sm_salorderentry`、多语言表 `t_sm_salorder_l`。
-3. 向用户展示核心字段及关联关系（`fid` ↔ `fentryid`）。
-4. 提供示例 SQL：
-
-```sql
--- 销售订单主表 + 分录（字段以实际检索结果为准）
-SELECT a.fbillno, a.fbizdate, b.fmaterialid, b.fqty
-FROM   t_sm_salorder a
-JOIN   t_sm_salorderentry b ON a.fid = b.fid
-WHERE  a.fbizdate >= '2026-01-01'
-ORDER  BY a.fbillno;
+```
+/kapi/v2/{isv}/{appId}/{serviceName}
 ```
 
-> ⚠️ 上述 SQL 为**结构示意**，字段名请以 `search.py --full` 返回的真实定义为准后再交付用户。
+- `isv`：开发商标识，**金蝶标准接口为空**
+- `appId`：业务对象所属的应用编码
+- `serviceName`：API 编码（自定义 API 由类中定义）
 
----
+例：`http://{host}/kapi/v2/kdtest/basedata/bd_supplier/save`
 
-## 六、常见坑
+### 4.4 服务类型
 
-| 现象 | 原因与处理 |
+| 类型 | 说明 |
 |---|---|
-| 检索不到某张表 | 换用中文业务名而非英文名检索；或该对象在别的模块（用 `--list-modules` 确认） |
-| 关联查不到数据 | 多语言表未过滤 `flocaleid`；或误把分表 `_r` 当主表 |
-| 枚举值对不上 | 以字段**备注**列为准，金蝶不同版本枚举可能不同 |
-| 表名疑似重复 | 同名表存在于多个文件/模块（如不同单据共用主表名），用 `--full` 看所属模块与字段区分 |
-| 字段数与预期不符 | 用 `--full` 看完整定义；索引中的「字段数」为文档收录行数 |
+| **操作服务（操作API）** | 把单据/基础资料的查询、保存、删除、审核等操作快速发布为 API |
+| **自定义服务** | 不依附业务对象，出入参完全自定义，逻辑用 Java 插件 / 脚本 / Servlet 实现 |
+| **AI 服务** | 对接金蝶 AI 平台，把 AI 平台命令与插件适配 |
+| **RESTful API** | 按 REST 风格设计与管理，支持 POST/DELETE 标准方法与自定义方法 |
+| **Webservice** | SOAP 协议对接 |
+
+### 4.5 统一响应契约
+
+```json
+{ "data": {}, "errorCode": "", "message": null, "status": true }
+```
+
+成功判定看 `status === true`；失败时看 `errorCode` 与 `message`。
+
+### 4.6 常见坑
+
+| 现象 | 处理 |
+|---|---|
+| `access_token` 调用失败但 `accesstoken` 成功 | Nginx 版本较低，需设 `underscores_in_headers on` |
+| 基础资料关联拿到的是内码不是编码 | 基础资料引用**默认使用 number 而非内码** |
+| 接口超时 | 批量数据过大，参考「批量处理数据时接口超时问题」 |
+| 高并发产生重复数据 | 参考「高并发时接口生成重复数据问题」与 API 幂等性规范 |
+| 权限相关报错 | 操作API 按用户权限管控；**自定义API 需在插件中自行处理权限控制** |
+
+---
+
+## 五、目录结构
+
+```
+kingdee-cosmic-dev/
+├── SKILL.md                       # 本文件
+├── README.md
+├── LICENSE
+├── scripts/
+│   ├── search.py                  # 统一检索（块一 + 块二）
+│   └── build_index.py             # 从 Markdown 生成各级 _INDEX.md
+├── tools/
+│   ├── html2md.py                 # HTML→Markdown 转换器（零依赖）
+│   ├── fetch_manual.py            # 抓取金蝶云社区专题手册
+│   └── selftest.py                # 内容/检索完整性自检
+└── references/
+    ├── _INDEX.md                  # 总索引
+    ├── db/                        # 【块一】数据库
+    │   ├── _INDEX.md              #   224 个模块统计概览
+    │   └── <模块>_files/
+    │       ├── _INDEX.md          #   本模块表清单
+    │       └── <对象>.md          #   一个文件可含主表/分录/多语言表多个 ## 块
+    └── openapi/                   # 【块二】OpenAPI 手册
+        ├── _INDEX.md              #   分类目录
+        ├── _source/               #   原始 JSON 存档 + 目录缓存
+        └── <分类>/…/<标题>.md     #   144 篇手册正文（含 frontmatter 与原文链接）
+```
+
+---
+
+## 六、手册维护
+
+内容是从线上抓的，不是手写的。需要更新时：
+
+```bash
+python tools/fetch_manual.py            # 重新抓取（已存在的跳过）
+python tools/fetch_manual.py --force    # 全部重抓
+python tools/fetch_manual.py --render   # 不联网，用 _source/ 存档重新渲染
+python scripts/build_index.py           # 重建全部索引
+```
+
+`fetch_manual.py` 会把原始 JSON 存到 `references/openapi/_source/`，
+所以格式调整（改 `tools/html2md.py`）后可以直接 `--render` 离线重出，不必再联网。
+
+改完记得跑一遍完整性自检，确认没有悄悄丢内容：
+
+```bash
+python tools/selftest.py            # 全量自检（约 20 秒）
+python tools/selftest.py --quick    # 跳过逐篇文本比对
+```
+
+它会校验「目录/存档/正文三方一致」「HTML 文本 100% 落在 Markdown 里」
+「`--full` 返回完整正文」「224 个模块索引与表定义逐条一致」等 11 项。
 
 ---
 
 ## 七、免责声明
 
-本 skill 内容整理自金蝶云苍穹数据字典导出，仅供学习、开发与运维参考。
-表结构、字段与枚举的最终解释权归金蝶所有，请以你所在环境的实际数据库为准。
+- **块一**：表结构整理自金蝶云苍穹数据字典导出，最终解释权归金蝶所有，请以实际数据库为准。
+- **块二**：手册内容抓取自金蝶云社区公开专题，版权归金蝶所有，仅供学习与开发参考；
+  文档内所有外链均指向原站，请以线上最新版本为准。

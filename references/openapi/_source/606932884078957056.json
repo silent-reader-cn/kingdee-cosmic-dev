@@ -1,0 +1,453 @@
+{
+ "badNum": 0,
+ "identityTagIds": null,
+ "knowledgeId": "606932884078957056",
+ "createdAt": 1722512076000,
+ "collections": 3,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "606932884078957056",
+ "contentType": 1,
+ "updatedAt": 1741575934000,
+ "knowledgeUpdater": {
+  "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+  "department": null,
+  "id": "132488613174518784",
+  "name": "某个路易",
+  "nameSpell": "name"
+ },
+ "assessStatus": 0,
+ "knowledgeStatus": 2,
+ "assessHandleStatus": null,
+ "knowledgeCreatedAt": 1722512076000,
+ "version": 10,
+ "labels": [],
+ "editedAt": 1741575924000,
+ "identityTags": null,
+ "useful": 2,
+ "errors": [],
+ "isCollected": false,
+ "totalFeedBacks": 0,
+ "attachments": [],
+ "sources": [],
+ "editTitle": "操作API请求量数据限制规范",
+ "title": "操作API请求量数据限制规范",
+ "content": "<p style=\"\">尊敬的用户：</p><p style=\"\">为了保障公有云集群服务的稳定性和性能，我们对API使用规范进行了更新，请您在使用API时遵循以下规范：</p><ol style=\"\" class=\" list-paddingleft-2\"><li style=\"\"><p style=\"\"><strong style=\"\">查询类操作API</strong>：</p></li><ul style=\"\" class=\" list-paddingleft-2\"><li style=\"\"><p style=\"\">默认每次查询不超过2000条数据。</p></li><li style=\"\"><p style=\"\">最多查询量不得超过100,000条数据。</p></li></ul><li style=\"\"><p style=\"\"><strong style=\"\">保存类操作API</strong>：</p></li><ul style=\"\" class=\" list-paddingleft-2\"><li style=\"\"><p style=\"\">默认每次批量保存数据不超过10,000条（含分录）。</p></li><li style=\"\"><p style=\"\">最多保存量不得超过100,000条数据。</p></li></ul><li style=\"\"><p style=\"\"><strong style=\"\">状态变更类（提交、审核等）操作API</strong>：</p></li><ul style=\"\" class=\" list-paddingleft-2\"><li style=\"\"><p style=\"\">默认每次操作不超过2000条数据。</p></li><li style=\"\"><p style=\"\">最多操作量不得超过5000条数据。</p><p style=\"\"><br/></p></li></ul><li style=\"\"><p style=\"\">所有OpenAPI：为保障系统安全和稳定性，API请求参数和返回参数最大不允许超过<strong style=\"\"><span style=\"color: rgb(31, 73, 125);\">30M</span></strong>。</p><p style=\"\"><br/></p></li></ol><p style=\"\">请您务必遵守上述规范，以免对系统性能和稳定性造成影响。若有任何疑问或需要进一步的技术支持，请随时联系OpenAPI产品团队。</p><p style=\"\">感谢您的理解与配合。</p><p style=\"\">祝使用愉快！</p><p style=\"\"><br/></p>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 87,
+   "isOpen": 1,
+   "name": "金蝶AI苍穹",
+   "productLineId": 29,
+   "series": "developer01",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "606932884078957056",
+         "entityType": "Knowledge",
+         "id": "606934240080663040",
+         "isCategory": false,
+         "name": "操作API请求量数据限制规范",
+         "parentId": "226337340351087360",
+         "sort": "2",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": null,
+       "id": "226337340351087360",
+       "isCategory": true,
+       "name": "重要通知",
+       "parentId": "226337280724861696",
+       "sort": "1",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": "",
+     "entityId": null,
+     "entityType": null,
+     "id": "226337280724861696",
+     "isCategory": true,
+     "name": "动态与公告",
+     "parentId": "-1",
+     "sort": "1",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download/01010204d4b71b654a208006fa1004eac36a.png",
+  "department": null,
+  "id": "740211268992385024",
+  "name": "毛毛去哪儿",
+  "nameSpell": "name"
+ },
+ "totalAppraisalScore": 10,
+ "iflytekId": null,
+ "views": 2971,
+ "productLineId": 29,
+ "comments": 0,
+ "similarityCount": 0,
+ "totalAppraisalUsers": 2,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1741575934000,
+ "appraisalScore": 0,
+ "unuseful": 0,
+ "knowledgeCheckStatus": 2,
+ "otherProductLineIds": [],
+ "auditAt": 1741575934000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapi_apilist_layout",
+        "id": "505686038019362304",
+        "name": "异步API",
+        "productLineId": null,
+        "sort": 1,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 0,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "OperatingGuide",
+     "createdAt": 1556519201000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "某一功能的具体说明介绍，包括应用场景、参数说明、具体操作步骤等",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/010037894174802d4b9f8782f1f0010a6ddd.png",
+     "id": "202203081641",
+     "name": "功能介绍",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010176d38341668f44fdb94c95058a90e4b8.png",
+      "department": "云社区运营部",
+      "id": "2147406697",
+      "name": "多肉丸子",
+      "nameSpell": "kejuan"
+     },
+     "updatedAt": 1676857681000
+    },
+    {
+     "code": "rumen",
+     "createdAt": 1605667807000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "入门类的知识可使用此标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100d322b9282bcc438faa894f4eec029977.png",
+     "id": "202203081646",
+     "name": "基础入门",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download?fileName=0101ec1d6ce599b442dab7d0b794c1fce88d.png",
+      "department": null,
+      "id": "1009",
+      "name": "一颗小星星",
+      "nameSpell": "fengling"
+     },
+     "updatedAt": 1657872008000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          {
+           "childCategory": [
+            null
+           ],
+           "code": null,
+           "description": "",
+           "entityId": "606932884078957056",
+           "entityType": "Knowledge",
+           "id": "606934240080663040",
+           "isCategory": false,
+           "name": "操作API请求量数据限制规范",
+           "parentId": "226337340351087360",
+           "sort": "2",
+           "specialId": "226337046514476288",
+           "status": 1
+          }
+         ],
+         "code": null,
+         "description": "",
+         "entityId": null,
+         "entityType": null,
+         "id": "226337340351087360",
+         "isCategory": true,
+         "name": "重要通知",
+         "parentId": "226337280724861696",
+         "sort": "1",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": null,
+       "id": "226337280724861696",
+       "isCategory": true,
+       "name": "动态与公告",
+       "parentId": "-1",
+       "sort": "1",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": "<p style=\"\">尊敬的用户：</p><p style=\"\">为了保障公有云集群服务的稳定性和性能，我们对API使用规范进行了更新，请您在使用API时遵循以下规范：</p><ol style=\"\" class=\" list-paddingleft-2\"><li style=\"\"><p style=\"\"><strong style=\"\">查询类操作API</strong>：</p></li><ul style=\"\" class=\" list-paddingleft-2\"><li style=\"\"><p style=\"\">默认每次查询不超过2000条数据。</p></li><li style=\"\"><p style=\"\">最多查询量不得超过100,000条数据。</p></li></ul><li style=\"\"><p style=\"\"><strong style=\"\">保存类操作API</strong>：</p></li><ul style=\"\" class=\" list-paddingleft-2\"><li style=\"\"><p style=\"\">默认每次批量保存数据不超过10,000条（含分录）。</p></li><li style=\"\"><p style=\"\">最多保存量不得超过100,000条数据。</p></li></ul><li style=\"\"><p style=\"\"><strong style=\"\">状态变更类（提交、审核等）操作API</strong>：</p></li><ul style=\"\" class=\" list-paddingleft-2\"><li style=\"\"><p style=\"\">默认每次操作不超过2000条数据。</p></li><li style=\"\"><p style=\"\">最多操作量不得超过5000条数据。</p><p style=\"\"><br/></p></li></ul><li style=\"\"><p style=\"\">所有OpenAPI：为保障系统安全和稳定性，API请求参数和返回参数最大不允许超过<strong style=\"\"><span style=\"color: rgb(31, 73, 125);\">30M</span></strong>。</p><p style=\"\"><br/></p></li></ol><p style=\"\">请您务必遵守上述规范，以免对系统性能和稳定性造成影响。若有任何疑问或需要进一步的技术支持，请随时联系OpenAPI产品团队。</p><p style=\"\">感谢您的理解与配合。</p><p style=\"\">祝使用愉快！</p><p style=\"\"><br/></p>"
+}

@@ -1,0 +1,505 @@
+{
+ "badNum": 0,
+ "identityTagIds": null,
+ "knowledgeId": "264031111959674368",
+ "createdAt": 1640757923000,
+ "collections": 4,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "264031111959674368",
+ "contentType": 1,
+ "updatedAt": 1766110027000,
+ "knowledgeUpdater": {
+  "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+  "department": null,
+  "id": "132488613174518784",
+  "name": "某个路易",
+  "nameSpell": "name"
+ },
+ "assessStatus": 0,
+ "knowledgeStatus": 2,
+ "assessHandleStatus": null,
+ "knowledgeCreatedAt": 1640757923000,
+ "version": 105,
+ "labels": [],
+ "editedAt": 1758620563000,
+ "identityTags": null,
+ "useful": 12,
+ "errors": [],
+ "isCollected": false,
+ "totalFeedBacks": 0,
+ "attachments": [],
+ "sources": [],
+ "editTitle": "参数配置介绍",
+ "title": "参数配置介绍",
+ "content": "<p style=\"font-size: 20px\"><strong>变更记录</strong></p><p></p><table style=\"width: 740px\"><colgroup><col style=\"width: 92px\"><col style=\"width: 498px\"><col style=\"width: 150px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"92\" style=\"background-color: \"><p><strong>产品版本</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"498\" style=\"background-color: \"><p><strong>更新内容</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"150\" style=\"background-color: \"><p><strong>更新日期</strong></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"92\" style=\"background-color: \"><p>V5.0.011</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"498\" style=\"background-color: \"><p>初始版本</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"150\" style=\"background-color: \"><p>2022年6月</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"92\" style=\"background-color: \"><p><span>V6.0.4</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"498\" style=\"background-color: \"><p><span>参数配置菜单路径调整，请管理员前往公共设置维护系统参数</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"150\" style=\"background-color: \"><p><span>2023年12月</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"92\" style=\"background-color: \"><p>V7.0.1</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"498\" style=\"background-color: \"><p>新增个性化导出参数，用户自定义导出API时需忽略的字段</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"150\" style=\"background-color: \"><p>2024年10月</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"92\" style=\"background-color: \"><p>V7.0.3</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"498\" style=\"background-color: \"><p>新增是否记录完整请求头参数</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"150\" style=\"background-color: \"><p>2024年12月</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"92\" style=\"background-color: null\"><p>V7.0.13</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"498\" style=\"background-color: null\"><p>新增多时区转换参数，开启后，API支持自动转换并返回带时区信息的时间</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"150\" style=\"background-color: null\"><p>2025年6月</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"92\" style=\"background-color: \"><p>V8.0.1</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"498\" style=\"background-color: \"><p>新增禁止上传附件类型参数，支持定义自定义API上传附件时禁止的附件类型</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"150\" style=\"background-color: \"><p>2025年10月</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"92\" style=\"background-color: null\"><p>V8.0.1</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"498\" style=\"background-color: null\"><p>新增MCP服务URL参数，维护MCP服务实例</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"150\" style=\"background-color: null\"><p>2025年10月</p></td></tr></tbody></table><p></p><hr><p></p><h2></h2><p style=\"font-size: 20px\"><strong>1 简介</strong></p><p style=\"font-size: 18px\"><strong>1.1&nbsp;功能介绍</strong></p><p style=\"font-size: 15px\">OpenAPI系统参数允许用户设置日志记录级别、显示异常stack、查询接口的最大查询数量<span>等选项，提升OpenAPI应用的灵活性</span>。</p><p></p><p style=\"font-size: 18px\"><strong>1.2 应用场景</strong></p><p style=\"text-align: justify\">通过可视化的参数配置，匹配用户在不同场景下的个性化需求<span>。</span></p><p style=\"text-align: justify\">&nbsp;</p><p style=\"font-size: 18px\"><strong>1.3 系统路径</strong></p><p style=\"text-align: justify\">【基础服务云<span>】</span>→【公共设置<span>】</span>→<span>【参数配置】→</span>【系统参数】</p><p style=\"text-align: justify\"></p><p style=\"font-size: 18px\"><strong>1.4&nbsp;字段说明</strong></p><table style=\"width: 644px\"><colgroup><col style=\"width: 169px\"><col style=\"width: 475px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"169\" style=\"background-color: \"><p><strong>字段名称</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"475\" style=\"background-color: \"><p><strong>详细解释</strong></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"169\" style=\"background-color: \"><p><span>显示异常</span>Stack</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"475\" style=\"background-color: \"><p>当API服务调用失败时，是否在返回结果中展示stack堆栈信息<span style=\"color: rgb(153, 153, 153)\">。</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"169\" style=\"background-color: \"><p><span>大文本日志保存天数</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"475\" style=\"background-color: \"><p><span>大文本日志保存的时间，默认为5天，取值范围是[1,25]</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"169\" style=\"background-color: \"><p><span>选择API调用日志级别</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"475\" style=\"background-color: \"><p><span>设置日志记录级别，根据实际需要选择合适的级别记录API日志</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"169\" style=\"background-color: null\"><p>是否记录完整请求头</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"475\" style=\"background-color: null\"><p>开启后，API调用日志会记录完整的请求头参数</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"169\" style=\"background-color: \"><p>是否统计API调用次数</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"475\" style=\"background-color: \"><p>控制是否统计API调用次数</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"169\" style=\"background-color: \"><p>查询参数-最大查询数量</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"475\" style=\"background-color: \"><p>控制查询操作接口的返回数量。当查询数据过大时，建议分页查询</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"169\" style=\"background-color: \"><p>慢接口阈值(ms)</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"475\" style=\"background-color: \"><p>配置慢接口统计的阈值，默认10000ms，配置范围：3000~60000。如果配置为0，则不统计</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"169\" style=\"background-color: \"><p>自定义servlet功能</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"475\" style=\"background-color: \"><p>开启参数后，可以在API开发中新建自定义Servlet接口</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"169\" style=\"background-color: \"><p>扩展参数</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"475\" style=\"background-color: \"><p>通过特定的扩展参数启用OpenAPI的灰度功能</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"169\" style=\"background-color: null\"><p>个性化导出API设置</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"475\" style=\"background-color: null\"><p>维护导出API时需要忽略的字段，适用于导出时忽略敏感字段或高版本中新增的字段，确保数据平滑迁移。</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"169\" style=\"background-color: null\"><p>多时区转换</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"475\" style=\"background-color: null\"><p>开启后，API支持自动转换并返回带时区信息的时间。</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"169\" style=\"background-color: null\"><p>返回UTC基准时间</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"475\" style=\"background-color: null\"><p>开启后，API查询返回的时间将统一为UTC基准时间</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"169\" style=\"background-color: null\"><p>禁止上传附件类型</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"475\" style=\"background-color: null\"><p>通过自定义API上传附件时，禁止的附件类型</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"169\" style=\"background-color: \"><p>插件应用</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"475\" style=\"background-color: \"><p>插件所在应用</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"169\" style=\"background-color: \"><p>接口鉴权插件</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"475\" style=\"background-color: \"><p>接口鉴权插件</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"169\" style=\"background-color: \"><p>API测试弹窗样式</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"475\" style=\"background-color: \"><p>分屏/模态</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"169\" style=\"background-color: null\"><p>服务URL</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"475\" style=\"background-color: null\"><p>维护MCP服务实例</p></td></tr></tbody></table><p style=\"text-align: justify\"><strong>&nbsp;</strong></p><p style=\"font-size: 18px\"><strong>1.5 按钮说明</strong></p><table style=\"width: 644px\"><colgroup><col style=\"width: 139px\"><col style=\"width: 505px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p><strong>按钮名称</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"505\" style=\"background-color: \"><p><strong>详细解释</strong></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p>保存</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"505\" style=\"background-color: \"><p>保存当前系统参数信息。</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p>刷新</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"505\" style=\"background-color: \"><p>刷新当前页面。</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p>退出</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"505\" style=\"background-color: \"><p>点击退出按钮，退出当前页面。</p></td></tr></tbody></table><p style=\"text-align: justify\"><strong>&nbsp;</strong></p><p style=\"font-size: 20px\"><strong>2 主要操作</strong></p><p style=\"text-align: justify\"><span>本节主要介绍每个参数的详细操作和功能。</span></p><p style=\"text-align: justify\"></p><p style=\"text-align: justify\"><span><img src=\"https://vip-admin.kingdee.com/download/01096cd8f65f7730407aadd01256d805ad19.png\"></span></p><p style=\"text-align: justify\"></p><p style=\"font-size: 18px\"><strong>2.1&nbsp;</strong><span><strong>显示异常</strong></span><strong>Stack</strong></p><p style=\"text-align: justify\"><span>当</span>API服务调用报错时，可以使用参数控制是否显示异常堆栈信息。</p><p style=\"text-align: justify\"></p><p style=\"text-align: justify\"><img src=\"https://vip-admin.kingdee.com/download/0100933898d16970487c8a78fc28c75d325a.jpg\"></p><p style=\"text-align: justify\"></p><p style=\"text-align: justify\"></p><h3 style=\"text-align: justify\"><strong>2.2 API调用日志</strong></h3><p>API默认记录摘要日志，可以通过参数配置，选择其他的日志级别，如不记录日志、<span>记录摘要日志、记录详细日志、记录详细日志（大文本）</span>。<span>当选择不记录时，系统不会记录</span><span style=\"color: rgb(255, 0, 0)\">API的调用日志，请谨慎设置。</span></p><p></p><p></p><ul style=\"list-style-type: disc;\"><li><p>当记录摘要日志时，日志不会记录API的请求参数和返回参数。</p></li></ul><p></p><p><img src=\"https://vip-admin.kingdee.com/download/0109d9d528ddccb14293a176b905ee188245.png\"></p><p></p><ul style=\"list-style-type: disc;\"><li><p>当记录详细日志时，日志<span>会记录API的请求参数和返回参数，但最多只会存2000字符</span>。</p></li></ul><p></p><p><img src=\"/download/0109dec2416e9f5f46e7a8f2aa1028222414.png\"></p><p></p><ul><li><p>当记录大文本日志时，日志会记录全量的API请求参数和返回参数。</p></li></ul><p></p><p><span><img src=\"/download/0109981f5438fefd4de3ad84b3b7cf12d931.png\"></span></p><h3><strong>2.3&nbsp;</strong><span><strong>是否统计</strong></span><strong>API调用次数</strong></h3><p style=\"text-align: justify\"><span>该参数可控制是否统计</span>API得调用次数，默认打开，当开关关闭时，系统不会继续记录API 统计信息，<span>也不再更新OpenAPI</span>内的统计看板。</p><p style=\"text-align: justify\"></p><p style=\"text-align: justify\"><img src=\"/download/0100cd6b5778dafc4aa8add26d1e0b92033f.jpg\"></p><p style=\"text-align: justify\"></p><h3><strong>2.4&nbsp;</strong><span><strong>查询参数</strong></span><strong>-最大查询数量</strong></h3><p>通过该参数来控制查询操作的最大返回数据，接口单次返回数据量不超过参数值，当<strong>数量过大时建议分页查询</strong>。当最大查询数量参数<span>设为X</span>时，即使有数万条数据，最终接口也只返回符合条件的X条数据。</p><p></p><p><img src=\"/download/01008677ea96b97e42df81ef8648ef6d2232.jpg\"></p><p></p><p></p><h2>3 更多资讯</h2><p style=\"text-align: justify\"><span>关于OpenAPI的更多资讯，请随时关注</span><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=226337371640594944&amp;id=226708319996323072&amp;productLineId=29\">新特性公告</a><span>。</span></p><p></p><p></p>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 87,
+   "isOpen": 1,
+   "name": "金蝶AI苍穹",
+   "productLineId": 29,
+   "series": "developer01",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        null
+       ],
+       "code": null,
+       "description": "",
+       "entityId": "264031111959674368",
+       "entityType": "Knowledge",
+       "id": "322037376606297856",
+       "isCategory": false,
+       "name": "参数配置介绍",
+       "parentId": "226337544983020032",
+       "sort": "19",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": null,
+     "entityId": null,
+     "entityType": null,
+     "id": "226337544983020032",
+     "isCategory": true,
+     "name": "用户手册",
+     "parentId": "-1",
+     "sort": "6",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download/01010204d4b71b654a208006fa1004eac36a.png",
+  "department": null,
+  "id": "740211268992385024",
+  "name": "毛毛去哪儿",
+  "nameSpell": "name"
+ },
+ "totalAppraisalScore": 60,
+ "iflytekId": null,
+ "views": 9986,
+ "productLineId": 29,
+ "comments": 5,
+ "similarityCount": 0,
+ "totalAppraisalUsers": 12,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1766110027000,
+ "appraisalScore": 0,
+ "unuseful": 0,
+ "knowledgeCheckStatus": 2,
+ "otherProductLineIds": [],
+ "auditAt": 1758625783000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "open_parameter_show",
+        "id": "505686594385399296",
+        "name": "参数配置",
+        "productLineId": null,
+        "sort": 7,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 0,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "bosparameterconsole",
+        "id": "344585186178779648",
+        "name": "参数配置",
+        "productLineId": null,
+        "sort": 6,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "5614",
+       "name": "开放平台",
+       "productLineId": null,
+       "sort": 2,
+       "type": "module"
+      },
+      "code": "DEV",
+      "id": "5576",
+      "name": "开发服务云",
+      "productLineId": null,
+      "sort": 11,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 1,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "AdvancedSkills",
+     "createdAt": 1556519216000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "高阶技巧标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/01005cea40211bf14113a6004322e86a6780.png",
+     "id": "202203081642",
+     "name": "高级技巧",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download/010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "306913800727243776",
+      "name": "Paim",
+      "nameSpell": "name"
+     },
+     "updatedAt": 1657851500000
+    },
+    {
+     "code": "OperatingGuide",
+     "createdAt": 1556519201000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "某一功能的具体说明介绍，包括应用场景、参数说明、具体操作步骤等",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/010037894174802d4b9f8782f1f0010a6ddd.png",
+     "id": "202203081641",
+     "name": "功能介绍",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010176d38341668f44fdb94c95058a90e4b8.png",
+      "department": "云社区运营部",
+      "id": "2147406697",
+      "name": "多肉丸子",
+      "nameSpell": "kejuan"
+     },
+     "updatedAt": 1676857681000
+    },
+    {
+     "code": "NewFeatures",
+     "createdAt": 1558619051000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "新特性",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/01009c9898f919a24034b3b37b2ebf42931c.png",
+     "id": "202203081645",
+     "name": "新特性",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010145330b44d45a47ae9b8aac30617b6992.png",
+      "department": null,
+      "id": "2147443044",
+      "name": "Lucky_tiao",
+      "nameSpell": "laoli"
+     },
+     "updatedAt": 1668739541000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "264031111959674368",
+         "entityType": "Knowledge",
+         "id": "322037376606297856",
+         "isCategory": false,
+         "name": "参数配置介绍",
+         "parentId": "226337544983020032",
+         "sort": "19",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": null,
+       "entityId": null,
+       "entityType": null,
+       "id": "226337544983020032",
+       "isCategory": true,
+       "name": "用户手册",
+       "parentId": "-1",
+       "sort": "6",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": "<p style=\"font-size: 20px\"><strong>变更记录</strong></p><p></p><table style=\"width: 740px\"><colgroup><col style=\"width: 92px\"><col style=\"width: 498px\"><col style=\"width: 150px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"92\" style=\"background-color: \"><p><strong>产品版本</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"498\" style=\"background-color: \"><p><strong>更新内容</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"150\" style=\"background-color: \"><p><strong>更新日期</strong></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"92\" style=\"background-color: \"><p>V5.0.011</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"498\" style=\"background-color: \"><p>初始版本</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"150\" style=\"background-color: \"><p>2022年6月</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"92\" style=\"background-color: \"><p><span>V6.0.4</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"498\" style=\"background-color: \"><p><span>参数配置菜单路径调整，请管理员前往公共设置维护系统参数</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"150\" style=\"background-color: \"><p><span>2023年12月</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"92\" style=\"background-color: \"><p>V7.0.1</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"498\" style=\"background-color: \"><p>新增个性化导出参数，用户自定义导出API时需忽略的字段</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"150\" style=\"background-color: \"><p>2024年10月</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"92\" style=\"background-color: \"><p>V7.0.3</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"498\" style=\"background-color: \"><p>新增是否记录完整请求头参数</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"150\" style=\"background-color: \"><p>2024年12月</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"92\" style=\"background-color: null\"><p>V7.0.13</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"498\" style=\"background-color: null\"><p>新增多时区转换参数，开启后，API支持自动转换并返回带时区信息的时间</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"150\" style=\"background-color: null\"><p>2025年6月</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"92\" style=\"background-color: \"><p>V8.0.1</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"498\" style=\"background-color: \"><p>新增禁止上传附件类型参数，支持定义自定义API上传附件时禁止的附件类型</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"150\" style=\"background-color: \"><p>2025年10月</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"92\" style=\"background-color: null\"><p>V8.0.1</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"498\" style=\"background-color: null\"><p>新增MCP服务URL参数，维护MCP服务实例</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"150\" style=\"background-color: null\"><p>2025年10月</p></td></tr></tbody></table><p></p><hr><p></p><h2></h2><p style=\"font-size: 20px\"><strong>1 简介</strong></p><p style=\"font-size: 18px\"><strong>1.1&nbsp;功能介绍</strong></p><p style=\"font-size: 15px\">OpenAPI系统参数允许用户设置日志记录级别、显示异常stack、查询接口的最大查询数量<span>等选项，提升OpenAPI应用的灵活性</span>。</p><p></p><p style=\"font-size: 18px\"><strong>1.2 应用场景</strong></p><p style=\"text-align: justify\">通过可视化的参数配置，匹配用户在不同场景下的个性化需求<span>。</span></p><p style=\"text-align: justify\">&nbsp;</p><p style=\"font-size: 18px\"><strong>1.3 系统路径</strong></p><p style=\"text-align: justify\">【基础服务云<span>】</span>→【公共设置<span>】</span>→<span>【参数配置】→</span>【系统参数】</p><p style=\"text-align: justify\"></p><p style=\"font-size: 18px\"><strong>1.4&nbsp;字段说明</strong></p><table style=\"width: 644px\"><colgroup><col style=\"width: 169px\"><col style=\"width: 475px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"169\" style=\"background-color: \"><p><strong>字段名称</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"475\" style=\"background-color: \"><p><strong>详细解释</strong></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"169\" style=\"background-color: \"><p><span>显示异常</span>Stack</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"475\" style=\"background-color: \"><p>当API服务调用失败时，是否在返回结果中展示stack堆栈信息<span style=\"color: rgb(153, 153, 153)\">。</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"169\" style=\"background-color: \"><p><span>大文本日志保存天数</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"475\" style=\"background-color: \"><p><span>大文本日志保存的时间，默认为5天，取值范围是[1,25]</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"169\" style=\"background-color: \"><p><span>选择API调用日志级别</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"475\" style=\"background-color: \"><p><span>设置日志记录级别，根据实际需要选择合适的级别记录API日志</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"169\" style=\"background-color: null\"><p>是否记录完整请求头</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"475\" style=\"background-color: null\"><p>开启后，API调用日志会记录完整的请求头参数</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"169\" style=\"background-color: \"><p>是否统计API调用次数</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"475\" style=\"background-color: \"><p>控制是否统计API调用次数</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"169\" style=\"background-color: \"><p>查询参数-最大查询数量</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"475\" style=\"background-color: \"><p>控制查询操作接口的返回数量。当查询数据过大时，建议分页查询</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"169\" style=\"background-color: \"><p>慢接口阈值(ms)</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"475\" style=\"background-color: \"><p>配置慢接口统计的阈值，默认10000ms，配置范围：3000~60000。如果配置为0，则不统计</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"169\" style=\"background-color: \"><p>自定义servlet功能</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"475\" style=\"background-color: \"><p>开启参数后，可以在API开发中新建自定义Servlet接口</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"169\" style=\"background-color: \"><p>扩展参数</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"475\" style=\"background-color: \"><p>通过特定的扩展参数启用OpenAPI的灰度功能</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"169\" style=\"background-color: null\"><p>个性化导出API设置</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"475\" style=\"background-color: null\"><p>维护导出API时需要忽略的字段，适用于导出时忽略敏感字段或高版本中新增的字段，确保数据平滑迁移。</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"169\" style=\"background-color: null\"><p>多时区转换</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"475\" style=\"background-color: null\"><p>开启后，API支持自动转换并返回带时区信息的时间。</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"169\" style=\"background-color: null\"><p>返回UTC基准时间</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"475\" style=\"background-color: null\"><p>开启后，API查询返回的时间将统一为UTC基准时间</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"169\" style=\"background-color: null\"><p>禁止上传附件类型</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"475\" style=\"background-color: null\"><p>通过自定义API上传附件时，禁止的附件类型</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"169\" style=\"background-color: \"><p>插件应用</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"475\" style=\"background-color: \"><p>插件所在应用</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"169\" style=\"background-color: \"><p>接口鉴权插件</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"475\" style=\"background-color: \"><p>接口鉴权插件</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"169\" style=\"background-color: \"><p>API测试弹窗样式</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"475\" style=\"background-color: \"><p>分屏/模态</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"169\" style=\"background-color: null\"><p>服务URL</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"475\" style=\"background-color: null\"><p>维护MCP服务实例</p></td></tr></tbody></table><p style=\"text-align: justify\"><strong>&nbsp;</strong></p><p style=\"font-size: 18px\"><strong>1.5 按钮说明</strong></p><table style=\"width: 644px\"><colgroup><col style=\"width: 139px\"><col style=\"width: 505px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p><strong>按钮名称</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"505\" style=\"background-color: \"><p><strong>详细解释</strong></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p>保存</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"505\" style=\"background-color: \"><p>保存当前系统参数信息。</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p>刷新</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"505\" style=\"background-color: \"><p>刷新当前页面。</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p>退出</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"505\" style=\"background-color: \"><p>点击退出按钮，退出当前页面。</p></td></tr></tbody></table><p style=\"text-align: justify\"><strong>&nbsp;</strong></p><p style=\"font-size: 20px\"><strong>2 主要操作</strong></p><p style=\"text-align: justify\"><span>本节主要介绍每个参数的详细操作和功能。</span></p><p style=\"text-align: justify\"></p><p style=\"text-align: justify\"><span><img src=\"https://vip-admin.kingdee.com/download/01096cd8f65f7730407aadd01256d805ad19.png\"></span></p><p style=\"text-align: justify\"></p><p style=\"font-size: 18px\"><strong>2.1&nbsp;</strong><span><strong>显示异常</strong></span><strong>Stack</strong></p><p style=\"text-align: justify\"><span>当</span>API服务调用报错时，可以使用参数控制是否显示异常堆栈信息。</p><p style=\"text-align: justify\"></p><p style=\"text-align: justify\"><img src=\"https://vip-admin.kingdee.com/download/0100933898d16970487c8a78fc28c75d325a.jpg\"></p><p style=\"text-align: justify\"></p><p style=\"text-align: justify\"></p><h3 style=\"text-align: justify\"><strong>2.2 API调用日志</strong></h3><p>API默认记录摘要日志，可以通过参数配置，选择其他的日志级别，如不记录日志、<span>记录摘要日志、记录详细日志、记录详细日志（大文本）</span>。<span>当选择不记录时，系统不会记录</span><span style=\"color: rgb(255, 0, 0)\">API的调用日志，请谨慎设置。</span></p><p></p><p></p><ul style=\"list-style-type: disc;\"><li><p>当记录摘要日志时，日志不会记录API的请求参数和返回参数。</p></li></ul><p></p><p><img src=\"https://vip-admin.kingdee.com/download/0109d9d528ddccb14293a176b905ee188245.png\"></p><p></p><ul style=\"list-style-type: disc;\"><li><p>当记录详细日志时，日志<span>会记录API的请求参数和返回参数，但最多只会存2000字符</span>。</p></li></ul><p></p><p><img src=\"/download/0109dec2416e9f5f46e7a8f2aa1028222414.png\"></p><p></p><ul><li><p>当记录大文本日志时，日志会记录全量的API请求参数和返回参数。</p></li></ul><p></p><p><span><img src=\"/download/0109981f5438fefd4de3ad84b3b7cf12d931.png\"></span></p><h3><strong>2.3&nbsp;</strong><span><strong>是否统计</strong></span><strong>API调用次数</strong></h3><p style=\"text-align: justify\"><span>该参数可控制是否统计</span>API得调用次数，默认打开，当开关关闭时，系统不会继续记录API 统计信息，<span>也不再更新OpenAPI</span>内的统计看板。</p><p style=\"text-align: justify\"></p><p style=\"text-align: justify\"><img src=\"/download/0100cd6b5778dafc4aa8add26d1e0b92033f.jpg\"></p><p style=\"text-align: justify\"></p><h3><strong>2.4&nbsp;</strong><span><strong>查询参数</strong></span><strong>-最大查询数量</strong></h3><p>通过该参数来控制查询操作的最大返回数据，接口单次返回数据量不超过参数值，当<strong>数量过大时建议分页查询</strong>。当最大查询数量参数<span>设为X</span>时，即使有数万条数据，最终接口也只返回符合条件的X条数据。</p><p></p><p><img src=\"/download/01008677ea96b97e42df81ef8648ef6d2232.jpg\"></p><p></p><p></p><h2>3 更多资讯</h2><p style=\"text-align: justify\"><span>关于OpenAPI的更多资讯，请随时关注</span><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=226337371640594944&amp;id=226708319996323072&amp;productLineId=29\">新特性公告</a><span>。</span></p><p></p><p></p>"
+}

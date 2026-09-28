@@ -1,0 +1,474 @@
+{
+ "badNum": 1,
+ "templateId": "335738408951726336",
+ "identityTagIds": null,
+ "knowledgeId": "563359453068652288",
+ "createdAt": 1712123360000,
+ "collections": 8,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "563359453068652288",
+ "contentType": 1,
+ "updatedAt": 1730947617000,
+ "knowledgeUpdater": {
+  "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+  "department": null,
+  "id": "132488613174518784",
+  "name": "某个路易",
+  "nameSpell": "name"
+ },
+ "assessStatus": 0,
+ "knowledgeStatus": 2,
+ "assessHandleStatus": null,
+ "knowledgeCreatedAt": 1712123360000,
+ "version": 30,
+ "labels": [],
+ "editedAt": 1730947550000,
+ "identityTags": null,
+ "useful": 6,
+ "errors": [],
+ "isCollected": false,
+ "template": "",
+ "totalFeedBacks": 1,
+ "attachments": [],
+ "sources": [],
+ "editTitle": "操作API支持自动提交并审核",
+ "title": "操作API支持自动提交并审核",
+ "content": "<p label=\"\" class=\"\" style=\"\"><span style=\"font-size: 20px; text-align: justify;\"></span></p><div style=\"\"><h2 label=\"一级标题\" class=\"first-title\" style=\"\"><span style=\"\">变更记录</span><br/></h2></div><p><br/></p><table width=\"100%\"><tbody style=\"\"><tr class=\"firstRow\" style=\"\"><td valign=\"middle\" width=\"116\" align=\"left\" style=\"\"><p style=\"\"><strong style=\"\">产品版本</strong></p></td><td valign=\"middle\" width=\"359\" align=\"left\" style=\"\"><strong style=\"\">更新内容</strong></td><td valign=\"middle\" width=\"146.33333333333334\" align=\"left\" style=\"\"><strong style=\"\">更新日期</strong></td></tr><tr style=\"\"><td valign=\"middle\" width=\"117\" style=\"\" align=\"left\"><span style=\"color: rgb(0, 0, 0);\">V6.0.8</span></td><td valign=\"middle\" width=\"359\" style=\"\" align=\"left\">初始版本</td><td valign=\"middle\" width=\"146.33333333333334\" style=\"\" align=\"left\">2024年3月</td></tr><tr><td valign=\"middle\" align=\"left\" colspan=\"1\" rowspan=\"1\"><span style=\"color: rgb(0, 0, 0);\">V6.0.8</span></td><td valign=\"middle\" align=\"left\" colspan=\"1\" rowspan=\"1\">新增工作流参数，支持自动审核时，不进入工作流</td><td valign=\"middle\" align=\"left\" colspan=\"1\" rowspan=\"1\"><span style=\"\">2024年6月</span></td></tr></tbody></table><p><br/></p><p><span style=\"font-size: 20px; text-align: justify;\"></span></p><hr/><p><br/><span style=\"font-size: 20px; text-align: justify;\"></span></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\"><span style=\"text-align: justify;\">1 简介</span><br/></h2><div style=\"\"><p label=\"二级标题\" style=\"text-align: justify; font-size: 18px; font-weight: bold; line-height: 42px;\">1.1 功能介绍</p><p style=\"color: rgb(0, 0, 0); text-align: justify;\">苍穹平台<span style=\"background-color: rgb(255, 255, 255);\">保存操作API，支持使用用户级操作参数，数据会直接提交并自动审核。</span></p><p style=\"text-align: justify;\"><br/></p><p label=\"二级标题\" style=\"text-align: justify; font-size: 18px; font-weight: bold; line-height: 42px;\">1.2 应用场景</p><p label=\"正文\" style=\"background-color: rgb(255, 255, 255);\">当发生API集成时，若在异构系统中单据已审核通过，<span style=\"color: rgb(0, 112, 192);\">新增同步</span>到苍穹平台后，希望单据或基础资料状态同样为已审核，而不需要再进行人为干预，此时可以通过该功能，将单据或基础资料自动提交并保存。</p><p label=\"正文\" style=\"background-color: rgb(255, 255, 255);\">若单据保存插件中含有复杂的单据金额计算逻辑，不推荐使用该功能，建议使用脚本API，分别对保存、提交、审核操作API，进行组合封装。</p><p><br/></p><p><span style=\"color: rgb(0, 112, 192);\">注意事项：</span></p><p>1. 配置forcedAudit 或forcedSubmit参数后<span style=\"color: rgb(0, 112, 192);\">，接口会</span><span style=\"color: rgb(0, 112, 192);\">将</span><span style=\"color: rgb(0, 112, 192);\">请求数据直接提交</span>，<span style=\"color: rgb(0, 112, 192);\">而不是执行保存操作</span><span style=\"color: rgb(0, 112, 192);\">，若保存操作save插件中有额外的自动计算逻辑，此时不会触发！请谨慎使用并严格测试！！！</span></p><p><span style=\"color: rgb(0, 112, 192);\"><span style=\"\">2. 配置forcedAudit参数后</span><span style=\"\">，</span><span style=\"\">接口只支持新增数据提交，</span><span style=\"color: rgb(0, 112, 192);\">不支持更新数据。</span></span></p><p style=\"\">3. 若单据或基础资料配置了<a class=\"add-link-key-word\" href=\"https://www.kingdee.com/products/cosmic_process_service.html?utm_source=shequ\" target=\"_blank\">流程服务</a>云的工作流，只审核人通过消息中心手工审核，此时，若接口需要直接审核成功，那么在保存操作API的操作参数中，用户可手工新增参数“<span style=\"color: rgb(0, 112, 192);\">WF</span>”，该参数可控制OpenAPI是否进入工作流，将该值设为<span style=\"color: rgb(0, 112, 192);\">false</span>后，即可直接审核成功。<br/></p><p style=\"\">4. 由于是分两个事务执行操作，<span style=\"color: rgb(255, 0, 0);\">若单据审核失败，单据仍然会以提交状态，存在系统中，用户需要手工进行补偿，请慎重使用！如果需要自动补偿推荐使用脚本API和集成服务云服务流程</span>。</p><p style=\"color: rgb(0, 0, 0); text-align: justify;\"><br/></p><p label=\"二级标题\" style=\"text-align: justify; font-size: 18px; font-weight: bold; line-height: 42px;\">1.3 系统路径</p><p style=\"text-align: justify;\">【开放服务云云】→【OpenAPI】→【API管理】 →【API开发】</p><p style=\"text-align: justify;\"><br/></p><p label=\"一级标题\" style=\"text-align: justify; font-size: 20px; font-weight: bold; line-height: 42px;\">2 主要操作</p><p style=\"text-align: justify;\"><span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">打开API管理列表，维护一个零代码配置的保存操作API。</span></p></div><p style=\"\"><br/></p><p style=\"\"><img src=\"https://vip-admin.kingdee.com/download/0109762aac39bce24edca93d324e08ecf65a.png\"/></p><p style=\"\"><br/></p><p style=\"\"><span style=\"color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);\">维护完API基本信息、请求参数等信息后，需要用户手工维护操作参数，点击新增按钮，参数：forcedAudit，当值为 true 时，新增保存时会自动提交并审核单据。</span></p><p style=\"\"><span style=\"color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);\"><br/></span></p><p style=\"\"><img src=\"https://vip-admin.kingdee.com/download/0109b2a487c207234af6bec2a16a2b58986d.png\"/></p><p style=\"\"><br/></p><p style=\"\">维护完成后点击API测试按钮，用户可以在线调试参数效果，单据在通过接口保存后，状态会自动变为已审核状态。</p><p style=\"\"><br/></p><p style=\"\"><img src=\"https://vip-admin.kingdee.com/download/010998981515bd694058b41e0c8d0a23ef2b.png\"/></p><p style=\"\"><br/></p><p style=\"\"><img src=\"https://vip-admin.kingdee.com/download/0109d5cd3d0fd8704049835e7cb2f05ff29b.png\"/></p><p style=\"\"><br/></p><h2 label=\"一级标题\" class=\"first-title html-anchor-list7-1711594652131 html-anchor-list5-1712123441639\" id=\"html-anchor-list7-1711594652131\" style=\"background-color: rgb(255, 255, 255); text-align: justify;\">3 更多资讯</h2><p style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\"><span style=\"text-align: justify;\">关于OpenAPI的更多资讯，请随时关注</span><a href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=226337371640594944&id=226708319996323072&productLineId=29\" target=\"_blank\" style=\"text-align: justify;\">新特性公告</a><span style=\"text-align: justify;\">。</span></p><p><br/><br/></p>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 87,
+   "isOpen": 1,
+   "name": "金蝶AI苍穹",
+   "productLineId": 29,
+   "series": "developer01",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        null
+       ],
+       "code": null,
+       "description": "",
+       "entityId": "563359453068652288",
+       "entityType": "Knowledge",
+       "id": "563361126143064064",
+       "isCategory": false,
+       "name": "操作API支持自动提交并审核",
+       "parentId": "226337785987048960",
+       "sort": "16",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": "",
+     "entityId": null,
+     "entityType": null,
+     "id": "226337785987048960",
+     "isCategory": true,
+     "name": "常见问题",
+     "parentId": "-1",
+     "sort": "9",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download/01010204d4b71b654a208006fa1004eac36a.png",
+  "department": null,
+  "id": "740211268992385024",
+  "name": "毛毛去哪儿",
+  "nameSpell": "name"
+ },
+ "totalAppraisalScore": 30,
+ "iflytekId": null,
+ "views": 6312,
+ "productLineId": 29,
+ "comments": 6,
+ "similarityCount": 0,
+ "totalAppraisalUsers": 7,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1730947617000,
+ "appraisalScore": 0,
+ "unuseful": 1,
+ "knowledgeCheckStatus": 2,
+ "otherProductLineIds": [],
+ "auditAt": 1730947617000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapi_apilist_layout",
+        "id": "505686038019362304",
+        "name": "异步API",
+        "productLineId": null,
+        "sort": 1,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 0,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "AdvancedSkills",
+     "createdAt": 1556519216000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "高阶技巧标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/01005cea40211bf14113a6004322e86a6780.png",
+     "id": "202203081642",
+     "name": "高级技巧",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download/010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "306913800727243776",
+      "name": "Paim",
+      "nameSpell": "name"
+     },
+     "updatedAt": 1657851500000
+    },
+    {
+     "code": "OperatingGuide",
+     "createdAt": 1556519201000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "某一功能的具体说明介绍，包括应用场景、参数说明、具体操作步骤等",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/010037894174802d4b9f8782f1f0010a6ddd.png",
+     "id": "202203081641",
+     "name": "功能介绍",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010176d38341668f44fdb94c95058a90e4b8.png",
+      "department": "云社区运营部",
+      "id": "2147406697",
+      "name": "多肉丸子",
+      "nameSpell": "kejuan"
+     },
+     "updatedAt": 1676857681000
+    },
+    {
+     "code": "essencesummary",
+     "createdAt": 1606118073000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "精华汇总",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100402c6f8df169483db114f71043c19ec2.png",
+     "id": "202203081649",
+     "name": "精华汇总",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 2,
+     "updatePerson": {
+      "avatar": "/download?fileName=010162cfa9d5437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1129",
+      "name": "灏",
+      "nameSpell": "hao"
+     },
+     "updatedAt": 1606118073000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "563359453068652288",
+         "entityType": "Knowledge",
+         "id": "563361126143064064",
+         "isCategory": false,
+         "name": "操作API支持自动提交并审核",
+         "parentId": "226337785987048960",
+         "sort": "16",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": null,
+       "id": "226337785987048960",
+       "isCategory": true,
+       "name": "常见问题",
+       "parentId": "-1",
+       "sort": "9",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": "<p label=\"\" class=\"\" style=\"\"><span style=\"font-size: 20px; text-align: justify;\"></span></p><div style=\"\"><h2 label=\"一级标题\" class=\"first-title\" style=\"\"><span style=\"\">变更记录</span><br/></h2></div><p><br/></p><table width=\"100%\"><tbody style=\"\"><tr class=\"firstRow\" style=\"\"><td valign=\"middle\" width=\"116\" align=\"left\" style=\"\"><p style=\"\"><strong style=\"\">产品版本</strong></p></td><td valign=\"middle\" width=\"359\" align=\"left\" style=\"\"><strong style=\"\">更新内容</strong></td><td valign=\"middle\" width=\"146.33333333333334\" align=\"left\" style=\"\"><strong style=\"\">更新日期</strong></td></tr><tr style=\"\"><td valign=\"middle\" width=\"117\" style=\"\" align=\"left\"><span style=\"color: rgb(0, 0, 0);\">V6.0.8</span></td><td valign=\"middle\" width=\"359\" style=\"\" align=\"left\">初始版本</td><td valign=\"middle\" width=\"146.33333333333334\" style=\"\" align=\"left\">2024年3月</td></tr><tr><td valign=\"middle\" align=\"left\" colspan=\"1\" rowspan=\"1\"><span style=\"color: rgb(0, 0, 0);\">V6.0.8</span></td><td valign=\"middle\" align=\"left\" colspan=\"1\" rowspan=\"1\">新增工作流参数，支持自动审核时，不进入工作流</td><td valign=\"middle\" align=\"left\" colspan=\"1\" rowspan=\"1\"><span style=\"\">2024年6月</span></td></tr></tbody></table><p><br/></p><p><span style=\"font-size: 20px; text-align: justify;\"></span></p><hr/><p><br/><span style=\"font-size: 20px; text-align: justify;\"></span></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\"><span style=\"text-align: justify;\">1 简介</span><br/></h2><div style=\"\"><p label=\"二级标题\" style=\"text-align: justify; font-size: 18px; font-weight: bold; line-height: 42px;\">1.1 功能介绍</p><p style=\"color: rgb(0, 0, 0); text-align: justify;\">苍穹平台<span style=\"background-color: rgb(255, 255, 255);\">保存操作API，支持使用用户级操作参数，数据会直接提交并自动审核。</span></p><p style=\"text-align: justify;\"><br/></p><p label=\"二级标题\" style=\"text-align: justify; font-size: 18px; font-weight: bold; line-height: 42px;\">1.2 应用场景</p><p label=\"正文\" style=\"background-color: rgb(255, 255, 255);\">当发生API集成时，若在异构系统中单据已审核通过，<span style=\"color: rgb(0, 112, 192);\">新增同步</span>到苍穹平台后，希望单据或基础资料状态同样为已审核，而不需要再进行人为干预，此时可以通过该功能，将单据或基础资料自动提交并保存。</p><p label=\"正文\" style=\"background-color: rgb(255, 255, 255);\">若单据保存插件中含有复杂的单据金额计算逻辑，不推荐使用该功能，建议使用脚本API，分别对保存、提交、审核操作API，进行组合封装。</p><p><br/></p><p><span style=\"color: rgb(0, 112, 192);\">注意事项：</span></p><p>1. 配置forcedAudit 或forcedSubmit参数后<span style=\"color: rgb(0, 112, 192);\">，接口会</span><span style=\"color: rgb(0, 112, 192);\">将</span><span style=\"color: rgb(0, 112, 192);\">请求数据直接提交</span>，<span style=\"color: rgb(0, 112, 192);\">而不是执行保存操作</span><span style=\"color: rgb(0, 112, 192);\">，若保存操作save插件中有额外的自动计算逻辑，此时不会触发！请谨慎使用并严格测试！！！</span></p><p><span style=\"color: rgb(0, 112, 192);\"><span style=\"\">2. 配置forcedAudit参数后</span><span style=\"\">，</span><span style=\"\">接口只支持新增数据提交，</span><span style=\"color: rgb(0, 112, 192);\">不支持更新数据。</span></span></p><p style=\"\">3. 若单据或基础资料配置了<a class=\"add-link-key-word\" href=\"https://www.kingdee.com/products/cosmic_process_service.html?utm_source=shequ\" target=\"_blank\">流程服务</a>云的工作流，只审核人通过消息中心手工审核，此时，若接口需要直接审核成功，那么在保存操作API的操作参数中，用户可手工新增参数“<span style=\"color: rgb(0, 112, 192);\">WF</span>”，该参数可控制OpenAPI是否进入工作流，将该值设为<span style=\"color: rgb(0, 112, 192);\">false</span>后，即可直接审核成功。<br/></p><p style=\"\">4. 由于是分两个事务执行操作，<span style=\"color: rgb(255, 0, 0);\">若单据审核失败，单据仍然会以提交状态，存在系统中，用户需要手工进行补偿，请慎重使用！如果需要自动补偿推荐使用脚本API和集成服务云服务流程</span>。</p><p style=\"color: rgb(0, 0, 0); text-align: justify;\"><br/></p><p label=\"二级标题\" style=\"text-align: justify; font-size: 18px; font-weight: bold; line-height: 42px;\">1.3 系统路径</p><p style=\"text-align: justify;\">【开放服务云云】→【OpenAPI】→【API管理】 →【API开发】</p><p style=\"text-align: justify;\"><br/></p><p label=\"一级标题\" style=\"text-align: justify; font-size: 20px; font-weight: bold; line-height: 42px;\">2 主要操作</p><p style=\"text-align: justify;\"><span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">打开API管理列表，维护一个零代码配置的保存操作API。</span></p></div><p style=\"\"><br/></p><p style=\"\"><img src=\"https://vip-admin.kingdee.com/download/0109762aac39bce24edca93d324e08ecf65a.png\"/></p><p style=\"\"><br/></p><p style=\"\"><span style=\"color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);\">维护完API基本信息、请求参数等信息后，需要用户手工维护操作参数，点击新增按钮，参数：forcedAudit，当值为 true 时，新增保存时会自动提交并审核单据。</span></p><p style=\"\"><span style=\"color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);\"><br/></span></p><p style=\"\"><img src=\"https://vip-admin.kingdee.com/download/0109b2a487c207234af6bec2a16a2b58986d.png\"/></p><p style=\"\"><br/></p><p style=\"\">维护完成后点击API测试按钮，用户可以在线调试参数效果，单据在通过接口保存后，状态会自动变为已审核状态。</p><p style=\"\"><br/></p><p style=\"\"><img src=\"https://vip-admin.kingdee.com/download/010998981515bd694058b41e0c8d0a23ef2b.png\"/></p><p style=\"\"><br/></p><p style=\"\"><img src=\"https://vip-admin.kingdee.com/download/0109d5cd3d0fd8704049835e7cb2f05ff29b.png\"/></p><p style=\"\"><br/></p><h2 label=\"一级标题\" class=\"first-title html-anchor-list7-1711594652131 html-anchor-list5-1712123441639\" id=\"html-anchor-list7-1711594652131\" style=\"background-color: rgb(255, 255, 255); text-align: justify;\">3 更多资讯</h2><p style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\"><span style=\"text-align: justify;\">关于OpenAPI的更多资讯，请随时关注</span><a href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=226337371640594944&id=226708319996323072&productLineId=29\" target=\"_blank\" style=\"text-align: justify;\">新特性公告</a><span style=\"text-align: justify;\">。</span></p><p><br/><br/></p>"
+}

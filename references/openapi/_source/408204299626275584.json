@@ -1,0 +1,537 @@
+{
+ "badNum": 0,
+ "templateId": null,
+ "identityTagIds": null,
+ "knowledgeId": "408204299626275584",
+ "createdAt": 1675131489000,
+ "collections": 1,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "408204299626275584",
+ "contentType": 1,
+ "updatedAt": 1766110315000,
+ "knowledgeUpdater": {
+  "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+  "department": null,
+  "id": "132488613174518784",
+  "name": "某个路易",
+  "nameSpell": "name"
+ },
+ "assessStatus": 0,
+ "knowledgeStatus": 2,
+ "assessHandleStatus": null,
+ "knowledgeCreatedAt": 1675131489000,
+ "version": 63,
+ "labels": [],
+ "editedAt": 1713353133000,
+ "identityTags": null,
+ "useful": 6,
+ "errors": [],
+ "isCollected": false,
+ "template": "{\"token\":0,\"title\":\"OpenAPI新特性：操作API敏感数据脱敏\",\"version\":\"苍穹V5.0\",\"range\":\"为保护苍穹平台个人数据的隐私安全，开放平台查询和保存操作API对接隐私中心，支持在调用API接口时，对入参和出参中的敏感数据进行脱敏。\",\"date\":\"2023-01-12\",\"patch\":\"V5.0.014（BOS）\",\"knowledgeContent\":\"<h2 label=\\\"一级标题\\\" class=\\\"first-title\\\" style=\\\"\\\">1. 应用场景</h2><p>外部系统调用苍穹操作API时，数据脱敏的需求集中在查询和保存API的使用过程中。OpenAPI可对查询API返回数据中的敏感数据进行脱敏；同时，还可以对保存API请求参数中的敏感数据进行脱敏。最终打印出的API日志也是脱敏后的效果，来保障企业的数据隐私安全。</p><h2 label=\\\"一级标题\\\" class=\\\"first-title\\\" style=\\\"\\\">2. 功能介绍</h2><h3 label=\\\"二级标题\\\" class=\\\"second-title\\\" style=\\\"\\\">2.1&nbsp;<span style=\\\"\\\">隐私中心配置</span></h3><p>路径：系统服务云 → 隐私中心 ，为需要脱敏的业务对象字段，分别配置数据安全标签和脱敏规则，配置完成后发布。<br/></p><p><br/></p><p><img src=\\\"/download/0109288214e69cbd4de0af299f1a0a62ad39.png\\\"/></p><p><br/></p><p><img src=\\\"/download/010927b33d1638be4617a7ef708e73f2f6c3.png\\\"/></p><p><br/></p><h3 label=\\\"二级标题\\\" class=\\\"second-title\\\" style=\\\"\\\">2.2 打开API脱敏开关</h3><p>路径：开放服务云 → OpenAPI → API管理 → API开发。打开API管理列表。找到通过零代码配置生成的查询API，并在配置项中勾选上“是否脱敏”。</p><p><br/></p><p><img src=\\\"/download/0109d89dd48a89cd4d42a0333e18442e2ce6.png\\\"/></p><p><br/></p><p><img src=\\\"/download/0109bfc73a1cc0704ca690e4e2006e988d4d.png\\\"/></p><p><br/></p><h3 label=\\\"二级标题\\\" class=\\\"second-title\\\" style=\\\"\\\">2.3 API在线测试</h3><p>点击“API测试”按钮，可以在系统中实时调试，查看API脱敏效果。</p><p><br/></p><p><img src=\\\"/download/01091d41476f86734fad8dd9ceeee775889a.png\\\"/></p><p><br/></p><h3 label=\\\"二级标题\\\" class=\\\"second-title\\\" style=\\\"\\\">2.4 API日志脱敏</h3><p>无论是调用查询或保存操作API，<span style=\\\"\\\">API调用日志中记录的都是</span>脱敏后的日志信息。</p><p style=\\\"\\\"><br/></p><p><img src=\\\"/download/0109dbe3ab32854e4eb7b9de6f8ae470d698.png\\\"/></p><p><br/></p><p><br/></p><p><img src=\\\"/download/010994a63d5a964e4a349c9eb4e13f6443ec.png\\\"/></p><p><br/></p><h2 label=\\\"一级标题\\\" class=\\\"first-title\\\" style=\\\"\\\"><strong style=\\\"\\\"><span style=\\\"\\\">3.常见问题</span></strong></h2><p style=\\\"\\\"><span style=\\\"\\\">Q：</span><span style=\\\"\\\">所有表单都能够支持隐私方案配置吗？</span></p><p style=\\\"\\\"><span style=\\\"\\\">A：</span><span style=\\\"\\\">当前版本仅支持单据和基础资料两种表单类型的隐私配置，动态表单、报表等表单需要二开接口完成特殊类表单的处理。</span></p><p><br/></p><p style=\\\"\\\">Q：为什么配置了隐私中心并打开了API脱敏开关后，仍然无法实现数据脱敏？</p><p style=\\\"\\\">A：请检查是否满足了API脱敏的前提条件，如租户级MC参数“privacycenter.enable”，值是否为true，以及是够配置了数据安全标签和脱敏规则等。</p><p><br/></p>\",\"collection\":[\"前提条件1：开启租户级参数“privacycenter.enable”，启用隐私中心\",\"前提条件2：为需要脱敏的业务对象，配置数据安全标签和隐私方案，路径：基础服务云 → 安全管理 → 隐私管理 \",\"前提条件3：在操作API详情界面，打开脱敏开关，路径：开放服务云 → OpenAPI → API管理 → API开发\"],\"more\":[\"\"]}",
+ "totalFeedBacks": 0,
+ "attachments": [],
+ "sources": [],
+ "editTitle": "OpenAPI新特性：操作API敏感数据脱敏",
+ "title": "OpenAPI新特性：操作API敏感数据脱敏",
+ "content": "<p class=\"title-b title-font\"><span class=\"span-b span-font\">为保护苍穹平台个人数据的隐私安全，开放平台查询和保存操作API对接隐私中心，支持在调用API接口时，对入参和出参中的敏感数据进行脱敏。</span></p><p class=\"title-b\"><span class=\"span-b\">发布版本：</span><span class=\"span-nor\">苍穹V5.0</span></p><p class=\"title-b\"><span class=\"span-b\">上线日期：</span><span class=\"span-nor\">2023-01-12</span></p><p class=\"title-b\"><span class=\"span-b\">补丁号：</span><span class=\"span-nor margin-patch\">V5.0.014（BOS）</span></p>\n              <p class=\"table-title\"><span class=\"span-line\">操作指引</span><span class=\"line\"></span></p>\n              <p class=\"more\"><span class=\"more-border\">1</span>前提条件1：开启租户级参数“privacycenter.enable”，启用隐私中心</p><p class=\"more\"><span class=\"more-border\">2</span>前提条件2：为需要脱敏的业务对象，配置数据安全标签和隐私方案，路径：基础服务云 → 安全管理 → 隐私管理 </p><p class=\"more\"><span class=\"more-border\">3</span>前提条件3：在操作API详情界面，打开脱敏开关，路径：开放服务云 → OpenAPI → API管理 → API开发</p>\n              <p class=\"table-title title-detail\"><span class=\"span-line\">特性效果展示</span><span class=\"line\"></span></p>\n              <h2 label=\"一级标题\" class=\"first-title\" style=\"\">1. 应用场景</h2><p>外部系统调用苍穹操作API时，数据脱敏的需求集中在查询和保存API的使用过程中。OpenAPI可对查询API返回数据中的敏感数据进行脱敏；同时，还可以对保存API请求参数中的敏感数据进行脱敏。最终打印出的API日志也是脱敏后的效果，来保障企业的数据隐私安全。</p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">2. 功能介绍</h2><h3 label=\"二级标题\" class=\"second-title\" style=\"\">2.1&nbsp;<span style=\"\">隐私中心配置</span></h3><p>路径：系统服务云 → 隐私中心 ，为需要脱敏的业务对象字段，分别配置数据安全标签和脱敏规则，配置完成后发布。<br/></p><p><br/></p><p><img src=\"/download/0109288214e69cbd4de0af299f1a0a62ad39.png\"/></p><p><br/></p><p><img src=\"/download/010927b33d1638be4617a7ef708e73f2f6c3.png\"/></p><p><br/></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\">2.2 打开API脱敏开关</h3><p>路径：开放服务云 → OpenAPI → API管理 → API开发。打开API管理列表。找到通过零代码配置生成的查询API，并在配置项中勾选上“是否脱敏”。</p><p><br/></p><p><img src=\"/download/0109d89dd48a89cd4d42a0333e18442e2ce6.png\"/></p><p><br/></p><p><img src=\"/download/0109bfc73a1cc0704ca690e4e2006e988d4d.png\"/></p><p><br/></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\">2.3 API在线测试</h3><p>点击“API测试”按钮，可以在系统中实时调试，查看API脱敏效果。</p><p><br/></p><p><img src=\"/download/01091d41476f86734fad8dd9ceeee775889a.png\"/></p><p><br/></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\">2.4 API日志脱敏</h3><p>无论是调用查询或保存操作API，<span style=\"\">API调用日志中记录的都是</span>脱敏后的日志信息。</p><p style=\"\"><br/></p><p><img src=\"/download/0109dbe3ab32854e4eb7b9de6f8ae470d698.png\"/></p><p><br/></p><p><br/></p><p><img src=\"/download/010994a63d5a964e4a349c9eb4e13f6443ec.png\"/></p><p><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\"><strong style=\"\"><span style=\"\">3.常见问题</span></strong></h2><p style=\"\"><span style=\"\">Q：</span><span style=\"\">所有表单都能够支持隐私方案配置吗？</span></p><p style=\"\"><span style=\"\">A：</span><span style=\"\">当前版本仅支持单据和基础资料两种表单类型的隐私配置，动态表单、报表等表单需要二开接口完成特殊类表单的处理。</span></p><p><br/></p><p style=\"\">Q：为什么配置了隐私中心并打开了API脱敏开关后，仍然无法实现数据脱敏？</p><p style=\"\">A：请检查是否满足了API脱敏的前提条件，如租户级MC参数“privacycenter.enable”，值是否为true，以及是够配置了数据安全标签和脱敏规则等。</p><p><br/></p>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 87,
+   "isOpen": 1,
+   "name": "金蝶AI苍穹",
+   "productLineId": 29,
+   "series": "developer01",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "408204299626275584",
+         "entityType": "Knowledge",
+         "id": "408215213037708544",
+         "isCategory": false,
+         "name": "API数据脱敏",
+         "parentId": "322414926260669696",
+         "sort": "11",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": null,
+       "entityId": null,
+       "entityType": null,
+       "id": "322414926260669696",
+       "isCategory": true,
+       "name": "操作API",
+       "parentId": "226337544983020032",
+       "sort": "2",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": null,
+     "entityId": null,
+     "entityType": null,
+     "id": "226337544983020032",
+     "isCategory": true,
+     "name": "用户手册",
+     "parentId": "-1",
+     "sort": "6",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download/01010204d4b71b654a208006fa1004eac36a.png",
+  "department": null,
+  "id": "740211268992385024",
+  "name": "毛毛去哪儿",
+  "nameSpell": "name"
+ },
+ "totalAppraisalScore": 30,
+ "iflytekId": null,
+ "views": 7986,
+ "productLineId": 29,
+ "comments": 0,
+ "similarityCount": 0,
+ "totalAppraisalUsers": 6,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1766110315000,
+ "appraisalScore": 0,
+ "unuseful": 0,
+ "knowledgeCheckStatus": 2,
+ "otherProductLineIds": [],
+ "auditAt": 1709620046000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapiapilistlayout",
+        "id": "344582232549528320",
+        "name": "API管理",
+        "productLineId": null,
+        "sort": 1,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "5614",
+       "name": "开放平台",
+       "productLineId": null,
+       "sort": 2,
+       "type": "module"
+      },
+      "code": "DEV",
+      "id": "5576",
+      "name": "开发服务云",
+      "productLineId": null,
+      "sort": 11,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 0,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapi_apilist_layout",
+        "id": "505686038019362304",
+        "name": "异步API",
+        "productLineId": null,
+        "sort": 1,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 1,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "AdvancedSkills",
+     "createdAt": 1556519216000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "高阶技巧标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/01005cea40211bf14113a6004322e86a6780.png",
+     "id": "202203081642",
+     "name": "高级技巧",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download/010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "306913800727243776",
+      "name": "Paim",
+      "nameSpell": "name"
+     },
+     "updatedAt": 1657851500000
+    },
+    {
+     "code": "NewFeatures",
+     "createdAt": 1558619051000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "新特性",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/01009c9898f919a24034b3b37b2ebf42931c.png",
+     "id": "202203081645",
+     "name": "新特性",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010145330b44d45a47ae9b8aac30617b6992.png",
+      "department": null,
+      "id": "2147443044",
+      "name": "Lucky_tiao",
+      "nameSpell": "laoli"
+     },
+     "updatedAt": 1668739541000
+    },
+    {
+     "code": "essencesummary",
+     "createdAt": 1606118073000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "精华汇总",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100402c6f8df169483db114f71043c19ec2.png",
+     "id": "202203081649",
+     "name": "精华汇总",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 2,
+     "updatePerson": {
+      "avatar": "/download?fileName=010162cfa9d5437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1129",
+      "name": "灏",
+      "nameSpell": "hao"
+     },
+     "updatedAt": 1606118073000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          {
+           "childCategory": [
+            null
+           ],
+           "code": null,
+           "description": "",
+           "entityId": "408204299626275584",
+           "entityType": "Knowledge",
+           "id": "408215213037708544",
+           "isCategory": false,
+           "name": "API数据脱敏",
+           "parentId": "322414926260669696",
+           "sort": "11",
+           "specialId": "226337046514476288",
+           "status": 1
+          }
+         ],
+         "code": null,
+         "description": null,
+         "entityId": null,
+         "entityType": null,
+         "id": "322414926260669696",
+         "isCategory": true,
+         "name": "操作API",
+         "parentId": "226337544983020032",
+         "sort": "2",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": null,
+       "entityId": null,
+       "entityType": null,
+       "id": "226337544983020032",
+       "isCategory": true,
+       "name": "用户手册",
+       "parentId": "-1",
+       "sort": "6",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": "<p class=\"title-b title-font\"><span class=\"span-b span-font\">为保护苍穹平台个人数据的隐私安全，开放平台查询和保存操作API对接隐私中心，支持在调用API接口时，对入参和出参中的敏感数据进行脱敏。</span></p><p class=\"title-b\"><span class=\"span-b\">发布版本：</span><span class=\"span-nor\">苍穹V5.0</span></p><p class=\"title-b\"><span class=\"span-b\">上线日期：</span><span class=\"span-nor\">2023-01-12</span></p><p class=\"title-b\"><span class=\"span-b\">补丁号：</span><span class=\"span-nor margin-patch\">V5.0.014（BOS）</span></p>\n              <p class=\"table-title\"><span class=\"span-line\">操作指引</span><span class=\"line\"></span></p>\n              <p class=\"more\"><span class=\"more-border\">1</span>前提条件1：开启租户级参数“privacycenter.enable”，启用隐私中心</p><p class=\"more\"><span class=\"more-border\">2</span>前提条件2：为需要脱敏的业务对象，配置数据安全标签和隐私方案，路径：基础服务云 → 安全管理 → 隐私管理 </p><p class=\"more\"><span class=\"more-border\">3</span>前提条件3：在操作API详情界面，打开脱敏开关，路径：开放服务云 → OpenAPI → API管理 → API开发</p>\n              <p class=\"table-title title-detail\"><span class=\"span-line\">特性效果展示</span><span class=\"line\"></span></p>\n              <h2 label=\"一级标题\" class=\"first-title\" style=\"\">1. 应用场景</h2><p>外部系统调用苍穹操作API时，数据脱敏的需求集中在查询和保存API的使用过程中。OpenAPI可对查询API返回数据中的敏感数据进行脱敏；同时，还可以对保存API请求参数中的敏感数据进行脱敏。最终打印出的API日志也是脱敏后的效果，来保障企业的数据隐私安全。</p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">2. 功能介绍</h2><h3 label=\"二级标题\" class=\"second-title\" style=\"\">2.1&nbsp;<span style=\"\">隐私中心配置</span></h3><p>路径：系统服务云 → 隐私中心 ，为需要脱敏的业务对象字段，分别配置数据安全标签和脱敏规则，配置完成后发布。<br/></p><p><br/></p><p><img src=\"/download/0109288214e69cbd4de0af299f1a0a62ad39.png\"/></p><p><br/></p><p><img src=\"/download/010927b33d1638be4617a7ef708e73f2f6c3.png\"/></p><p><br/></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\">2.2 打开API脱敏开关</h3><p>路径：开放服务云 → OpenAPI → API管理 → API开发。打开API管理列表。找到通过零代码配置生成的查询API，并在配置项中勾选上“是否脱敏”。</p><p><br/></p><p><img src=\"/download/0109d89dd48a89cd4d42a0333e18442e2ce6.png\"/></p><p><br/></p><p><img src=\"/download/0109bfc73a1cc0704ca690e4e2006e988d4d.png\"/></p><p><br/></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\">2.3 API在线测试</h3><p>点击“API测试”按钮，可以在系统中实时调试，查看API脱敏效果。</p><p><br/></p><p><img src=\"/download/01091d41476f86734fad8dd9ceeee775889a.png\"/></p><p><br/></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\">2.4 API日志脱敏</h3><p>无论是调用查询或保存操作API，<span style=\"\">API调用日志中记录的都是</span>脱敏后的日志信息。</p><p style=\"\"><br/></p><p><img src=\"/download/0109dbe3ab32854e4eb7b9de6f8ae470d698.png\"/></p><p><br/></p><p><br/></p><p><img src=\"/download/010994a63d5a964e4a349c9eb4e13f6443ec.png\"/></p><p><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\"><strong style=\"\"><span style=\"\">3.常见问题</span></strong></h2><p style=\"\"><span style=\"\">Q：</span><span style=\"\">所有表单都能够支持隐私方案配置吗？</span></p><p style=\"\"><span style=\"\">A：</span><span style=\"\">当前版本仅支持单据和基础资料两种表单类型的隐私配置，动态表单、报表等表单需要二开接口完成特殊类表单的处理。</span></p><p><br/></p><p style=\"\">Q：为什么配置了隐私中心并打开了API脱敏开关后，仍然无法实现数据脱敏？</p><p style=\"\">A：请检查是否满足了API脱敏的前提条件，如租户级MC参数“privacycenter.enable”，值是否为true，以及是够配置了数据安全标签和脱敏规则等。</p><p><br/></p>"
+}

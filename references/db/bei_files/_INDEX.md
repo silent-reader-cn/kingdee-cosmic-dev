@@ -1,0 +1,114 @@
+# bei 模块表清单
+
+> 本模块共收录 **102** 张表定义，来自 `bei_files/`。
+
+> 索引由 `scripts/build_index.py` 从 Markdown 自动生成，请勿手工编辑。
+> 检索本模块表结构请用统一检索脚本（比翻本文件更快）：
+> ```bash
+> python scripts/search.py <关键词> --scope db --category bei
+> ```
+
+| 序号 | 数据库表名 | 中文名称 | 字段数 | 详细定义文件 |
+| :---: | :--- | :--- | :---: | :--- |
+| 1 | `t_bei_appscopeentity` | 适用范围单据体-子表 | 6 | [bei_serviceconfig.md](./bei_serviceconfig.md) |
+| 2 | `t_bei_bankagentpay_entry` | 分录-子表 | 33 | [bei_bankagentpay.md](./bei_bankagentpay.md) |
+| 3 | `t_bei_bankagentpaybill` | 银行代发单-主表 | 57 | [bei_bankagentpay.md](./bei_bankagentpay.md) |
+| 4 | `t_bei_bankagentpaybill_l` | 银行代发单-多语言表 | 4 | [bei_bankagentpay.md](./bei_bankagentpay.md) |
+| 5 | `t_bei_bankagentpayconfig` | 打包代发规则-主表 | 0 | [bei_packrule.md](./bei_packrule.md) |
+| 6 | `t_bei_bankagentpayconfig_l` | 打包代发规则-多语言表 | 0 | [bei_packrule.md](./bei_packrule.md) |
+| 7 | `t_bei_bankbalance` | 余额查询-主表 | 30 | [bei_bankbalance.md](./bei_bankbalance.md) |
+| 8 | `t_bei_bankbalance_l` | 余额查询-多语言表 | 4 | [bei_bankbalance.md](./bei_bankbalance.md) |
+| 9 | `t_bei_banklog` | 银企日志查询-主表 | 49 | [bei_banklog.md](./bei_banklog.md) |
+| 10 | `t_bei_banklog_h` | 银企日志查询_归档-主表 | 44 | [bei_banklog_h.md](./bei_banklog_h.md) |
+| 11 | `t_bei_banklog_h_l` | 银企日志查询_归档-多语言表 | 5 | [bei_banklog_h.md](./bei_banklog_h.md) |
+| 12 | `t_bei_banklog_l` | 银企日志查询-多语言表 | 5 | [bei_banklog.md](./bei_banklog.md) |
+| 13 | `t_bei_banklog_lk` | 关联子实体-子表 | 6 | [bei_banklog.md](./bei_banklog.md) |
+| 14 | `t_bei_banklog_lk` | 关联子实体-子表 | 6 | [bei_banklog_h.md](./bei_banklog_h.md) |
+| 15 | `t_bei_banklogentry` | 业务信息-子表 | 13 | [bei_banklog.md](./bei_banklog.md) |
+| 16 | `t_bei_banklogentry_h` | 业务信息-子表 | 13 | [bei_banklog_h.md](./bei_banklog_h.md) |
+| 17 | `t_bei_bankpayingbill` | 银行付款单-主表 | 65 | [bei_bankpaybill.md](./bei_bankpaybill.md) |
+| 18 | `t_bei_bankpayingbill_e` | 银行付款单-分表 | 50 | [bei_bankpaybill.md](./bei_bankpaybill.md) |
+| 19 | `t_bei_bankpayingbill_l` | 银行付款单-多语言表 | 4 | [bei_bankpaybill.md](./bei_bankpaybill.md) |
+| 20 | `t_bei_bankpayingbill_lk` | 关联子实体-子表 | 6 | [bei_bankpaybill.md](./bei_bankpaybill.md) |
+| 21 | `t_bei_bankpayingbill_tc` | 银行付款单-关联追踪表 | 7 | [bei_bankpaybill.md](./bei_bankpaybill.md) |
+| 22 | `t_bei_bankpayingbill_wb` | 银行付款单-反写记录表 | 10 | [bei_bankpaybill.md](./bei_bankpaybill.md) |
+| 23 | `t_bei_banktransdown_entry` | 分录-子表 | 19 | [bei_banktransdownbill.md](./bei_banktransdownbill.md) |
+| 24 | `t_bei_banktransdownbill` | 银行下拨单-主表 | 40 | [bei_banktransdownbill.md](./bei_banktransdownbill.md) |
+| 25 | `t_bei_banktransdownbill_l` | 银行下拨单-多语言表 | 4 | [bei_banktransdownbill.md](./bei_banktransdownbill.md) |
+| 26 | `t_bei_banktransup_entry` | 分录-子表 | 20 | [bei_banktransupbill.md](./bei_banktransupbill.md) |
+| 27 | `t_bei_banktransupbill` | 银行上划单-主表 | 39 | [bei_banktransupbill.md](./bei_banktransupbill.md) |
+| 28 | `t_bei_banktransupbill_l` | 银行上划单-多语言表 | 4 | [bei_banktransupbill.md](./bei_banktransupbill.md) |
+| 29 | `t_bei_crosstranfield` | 跨境交易字段-主表 | 20 | [bei_crosstranfield.md](./bei_crosstranfield.md) |
+| 30 | `t_bei_crosstranfield_l` | 跨境交易字段-多语言表 | 6 | [bei_crosstranfield.md](./bei_crosstranfield.md) |
+| 31 | `t_bei_crosstrantype` | 银行交易类型-主表 | 23 | [bei_crosstrantype.md](./bei_crosstrantype.md) |
+| 32 | `t_bei_crosstrantype_cou` | 支持收款方国家地区范围-多选基础资料表 | 3 | [bei_crosstrantype.md](./bei_crosstrantype.md) |
+| 33 | `t_bei_crosstrantype_cur` | 支持付款币种-多选基础资料表 | 3 | [bei_crosstrantype.md](./bei_crosstrantype.md) |
+| 34 | `t_bei_crosstrantype_entry` | 单据体-子表 | 16 | [bei_crosstrantype.md](./bei_crosstrantype.md) |
+| 35 | `t_bei_crosstrantype_l` | 银行交易类型-多语言表 | 5 | [bei_crosstrantype.md](./bei_crosstrantype.md) |
+| 36 | `t_bei_ecom_account` | 银行账户-多选基础资料表 | 3 | [bei_ecommerce.md](./bei_ecommerce.md) |
+| 37 | `t_bei_ecommerce` | 电商流水入账方案-主表 | 17 | [bei_ecommerce.md](./bei_ecommerce.md) |
+| 38 | `t_bei_elecreceipt` | 电子回单查询-主表 | 52 | [bei_elecreceipt.md](./bei_elecreceipt.md) |
+| 39 | `t_bei_elecreceipt_e` | 电子回单查询-分表 | 5 | [bei_elecreceipt.md](./bei_elecreceipt.md) |
+| 40 | `t_bei_elecreceipt_l` | 电子回单查询-多语言表 | 4 | [bei_elecreceipt.md](./bei_elecreceipt.md) |
+| 41 | `t_bei_elecstatement` | 电子对账单查询-主表 | 42 | [bei_elecstatement.md](./bei_elecstatement.md) |
+| 42 | `t_bei_elecstatement_entry` | 单据体-子表 | 28 | [bei_elecstatement.md](./bei_elecstatement.md) |
+| 43 | `t_bei_elecstatement_l` | 电子对账单查询-多语言表 | 4 | [bei_elecstatement.md](./bei_elecstatement.md) |
+| 44 | `t_bei_elecstatement_url` | 文件路径信息-子表 | 5 | [bei_elecstatement.md](./bei_elecstatement.md) |
+| 45 | `t_bei_electicdirconset` | 电票直连设置-主表 | 20 | [bei_electicdirconset.md](./bei_electicdirconset.md) |
+| 46 | `t_bei_electicdirconset_l` | 电票直连设置-多语言表 | 5 | [bei_electicdirconset.md](./bei_electicdirconset.md) |
+| 47 | `t_bei_entry_ecommerce` | 单据体-子表 | 26 | [bei_ecommerce.md](./bei_ecommerce.md) |
+| 48 | `t_bei_fundbilltype` | 资金收付单据类型-主表 | 15 | [bei_fundbilltype.md](./bei_fundbilltype.md) |
+| 49 | `t_bei_fundbilltype_l` | 资金收付单据类型-多语言表 | 5 | [bei_fundbilltype.md](./bei_fundbilltype.md) |
+| 50 | `t_bei_intelpayentry` | 单据体-子表 | 20 | [bei_intelpay.md](./bei_intelpay.md) |
+| 51 | `t_bei_intelrecentry` | 单据体-子表 | 33 | [bei_intelrec.md](./bei_intelrec.md) |
+| 52 | `t_bei_ocrbankstate_set` | 文件识别配置-主表 | 17 | [bei_ocrbankstate_set.md](./bei_ocrbankstate_set.md) |
+| 53 | `t_bei_ocrbankstate_set_l` | 文件识别配置-多语言表 | 5 | [bei_ocrbankstate_set.md](./bei_ocrbankstate_set.md) |
+| 54 | `t_bei_proxybank` | 代理行-主表 | 21 | [bei_proxybank.md](./bei_proxybank.md) |
+| 55 | `t_bei_proxybank_l` | 代理行-多语言表 | 5 | [bei_proxybank.md](./bei_proxybank.md) |
+| 56 | `t_bei_receiptqueryscheme` | 电子回单联查方案-主表 | 20 | [bei_receiptqueryscheme.md](./bei_receiptqueryscheme.md) |
+| 57 | `t_bei_receiptqueryscheme_l` | 电子回单联查方案-多语言表 | 5 | [bei_receiptqueryscheme.md](./bei_receiptqueryscheme.md) |
+| 58 | `t_bei_receiptscheme_e` | 查询链路单据体-子表 | 11 | [bei_receiptqueryscheme.md](./bei_receiptqueryscheme.md) |
+| 59 | `t_bei_receivablehandle` | 收票处理-主表 | 50 | [bei_receivablehandle.md](./bei_receivablehandle.md) |
+| 60 | `t_bei_receivablehandle_e` | 收票处理-分表 | 50 | [bei_receivablehandle.md](./bei_receivablehandle.md) |
+| 61 | `t_bei_receivablehandle_f` | 收票处理-分表 | 12 | [bei_receivablehandle.md](./bei_receivablehandle.md) |
+| 62 | `t_bei_receivablehandle_l` | 收票处理-多语言表 | 4 | [bei_receivablehandle.md](./bei_receivablehandle.md) |
+| 63 | `t_bei_receivablehandleent` | 单据体-子表 | 48 | [bei_receivablehandle.md](./bei_receivablehandle.md) |
+| 64 | `t_bei_responseruleset` | 应答规则设置-主表 | 26 | [bei_responseruleset.md](./bei_responseruleset.md) |
+| 65 | `t_bei_responseruleset_l` | 应答规则设置-多语言表 | 5 | [bei_responseruleset.md](./bei_responseruleset.md) |
+| 66 | `t_bei_resprulesetentry` | 单据体-子表 | 4 | [bei_responseruleset.md](./bei_responseruleset.md) |
+| 67 | `t_bei_serviceconfig` | 银企服务配置-主表 | 45 | [bei_serviceconfig.md](./bei_serviceconfig.md) |
+| 68 | `t_bei_serviceconfig_l` | 银企服务配置-多语言表 | 5 | [bei_serviceconfig.md](./bei_serviceconfig.md) |
+| 69 | `t_bei_template` | 套打模板-主表 | 15 | [bei_template.md](./bei_template.md) |
+| 70 | `t_bei_template_l` | 套打模板-多语言表 | 5 | [bei_template.md](./bei_template.md) |
+| 71 | `t_bei_templateassign` | 回单模板指定-主表 | 18 | [bei_templateassign.md](./bei_templateassign.md) |
+| 72 | `t_bei_templateassign_l` | 回单模板指定-多语言表 | 5 | [bei_templateassign.md](./bei_templateassign.md) |
+| 73 | `t_bei_transdetail` | 离线明细引入-主表 | 57 | [bei_betransdetail_imp.md](./bei_betransdetail_imp.md) |
+| 74 | `t_bei_transdetail` | 付款入账中心-主表 | 57 | [bei_intelpay.md](./bei_intelpay.md) |
+| 75 | `t_bei_transdetail` | 收款入账中心-主表 | 57 | [bei_intelrec.md](./bei_intelrec.md) |
+| 76 | `t_bei_transdetail` | 交易明细-主表 | 57 | [bei_transdetail.md](./bei_transdetail.md) |
+| 77 | `t_bei_transdetail` | 银行收付处理-主表 | 57 | [bei_transdetail_cas.md](./bei_transdetail_cas.md) |
+| 78 | `t_bei_transdetail` | 异常交易明细处理-主表 | 57 | [bei_transdetail_error.md](./bei_transdetail_error.md) |
+| 79 | `t_bei_transdetail` | 交易明细(非多语言)-主表 | 57 | [bei_transdetail_nonlang.md](./bei_transdetail_nonlang.md) |
+| 80 | `t_bei_transdetail_e` | 离线明细引入-分表 | 58 | [bei_betransdetail_imp.md](./bei_betransdetail_imp.md) |
+| 81 | `t_bei_transdetail_e` | 付款入账中心-分表 | 58 | [bei_intelpay.md](./bei_intelpay.md) |
+| 82 | `t_bei_transdetail_e` | 收款入账中心-分表 | 58 | [bei_intelrec.md](./bei_intelrec.md) |
+| 83 | `t_bei_transdetail_e` | 交易明细-分表 | 58 | [bei_transdetail.md](./bei_transdetail.md) |
+| 84 | `t_bei_transdetail_e` | 银行收付处理-分表 | 58 | [bei_transdetail_cas.md](./bei_transdetail_cas.md) |
+| 85 | `t_bei_transdetail_e` | 异常交易明细处理-分表 | 58 | [bei_transdetail_error.md](./bei_transdetail_error.md) |
+| 86 | `t_bei_transdetail_e` | 交易明细(非多语言)-分表 | 58 | [bei_transdetail_nonlang.md](./bei_transdetail_nonlang.md) |
+| 87 | `t_bei_transdetail_filereg` | 文件识别-主表 | 0 | [bei_transdetail_file_rec.md](./bei_transdetail_file_rec.md) |
+| 88 | `t_bei_transdetail_flog` | 文件识别引入日志-主表 | 0 | [bei_transdetail_file_log.md](./bei_transdetail_file_log.md) |
+| 89 | `t_bei_transdetailfr_entry` | 单据体-子表 | 0 | [bei_transdetail_file_rec.md](./bei_transdetail_file_rec.md) |
+| 90 | `t_bei_transtype` | 交易种类-主表 | 20 | [bei_transtype.md](./bei_transtype.md) |
+| 91 | `t_bei_transtype_l` | 交易种类-多语言表 | 5 | [bei_transtype.md](./bei_transtype.md) |
+| 92 | `t_bei_transtypebankcg` | 适用银行类别-多选基础资料表 | 3 | [bei_transtype.md](./bei_transtype.md) |
+| 93 | `t_bei_transtypecurrency` | 适用币别-多选基础资料表 | 3 | [bei_transtype.md](./bei_transtype.md) |
+| 94 | `t_bei_updatepaystat` | 付款状态变更单-主表 | 24 | [bei_paybillupdatestatus.md](./bei_paybillupdatestatus.md) |
+| 95 | `t_bei_updatepaystat_entry` | 分录-子表 | 18 | [bei_paybillupdatestatus.md](./bei_paybillupdatestatus.md) |
+| 96 | `t_bei_updatepaystat_entry_lk` | 关联子实体-子表 | 6 | [bei_paybillupdatestatus.md](./bei_paybillupdatestatus.md) |
+| 97 | `t_bei_updatepaystat_l` | 付款状态变更单-多语言表 | 4 | [bei_paybillupdatestatus.md](./bei_paybillupdatestatus.md) |
+| 98 | `t_bei_updatepaystat_lk` | 关联子实体-子表 | 6 | [bei_paybillupdatestatus.md](./bei_paybillupdatestatus.md) |
+| 99 | `t_bei_updatepaystat_tc` | 付款状态变更单-关联追踪表 | 7 | [bei_paybillupdatestatus.md](./bei_paybillupdatestatus.md) |
+| 100 | `t_bei_updatepaystat_wb` | 付款状态变更单-反写记录表 | 10 | [bei_paybillupdatestatus.md](./bei_paybillupdatestatus.md) |
+| 101 | `t_bei_zhcbsconfig` | 招行CBS连接配置-主表 | 19 | [bei_zhcbsconfig.md](./bei_zhcbsconfig.md) |
+| 102 | `t_bei_zhcbsconfig_l` | 招行CBS连接配置-多语言表 | 4 | [bei_zhcbsconfig.md](./bei_zhcbsconfig.md) |

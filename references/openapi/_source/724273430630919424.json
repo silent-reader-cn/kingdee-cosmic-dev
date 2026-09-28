@@ -1,0 +1,423 @@
+{
+ "badNum": 0,
+ "identityTagIds": null,
+ "knowledgeId": "724273430630919424",
+ "createdAt": 1750488242000,
+ "collections": 2,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "724273430630919424",
+ "contentType": 1,
+ "updatedAt": 1750489434000,
+ "knowledgeUpdater": {
+  "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+  "department": null,
+  "id": "132488613174518784",
+  "name": "某个路易",
+  "nameSpell": "name"
+ },
+ "assessStatus": 0,
+ "knowledgeStatus": 2,
+ "assessHandleStatus": null,
+ "knowledgeCreatedAt": 1750488242000,
+ "version": 14,
+ "labels": [],
+ "editedAt": 1750489425000,
+ "identityTags": null,
+ "useful": 1,
+ "errors": [],
+ "isCollected": false,
+ "totalFeedBacks": 0,
+ "attachments": [],
+ "sources": [],
+ "editTitle": "查询操作API请求参数无法选到分录字段",
+ "title": "查询操作API请求参数无法选到分录字段",
+ "content": "<h2 label=\"一级标题\" class=\"first-title html-anchor-list0-1705284815334 html-anchor-list0-1750488225805 html-anchor-list0-1750488225805\" id=\"html-anchor-list0-1705284815334\" style=\"background-color: rgb(255, 255, 255);\">问题描述</h2><p label=\"正文\" style=\"background-color: rgb(255, 255, 255);\">通过开放平台OpenAPI新增查询操作接口，请求参数添加属性时，为什么选不到分录字段？</p><p style=\"\"><br/></p><p style=\"\"><img src=\"/download/01096073ef7b4d1e40f7970281645e2c0559.png\"/></p><p style=\"\"><br/></p><p style=\"\"><br/></p><h2 label=\"一级标题\" class=\"first-title html-anchor-list0-1705284815334 html-anchor-list1-1750488225805 html-anchor-list1-1750488225805\" id=\"html-anchor-list0-1705284815334\" style=\"background-color: rgb(255, 255, 255);\">原因分析</h2><div class=\"auto-hide-last-sibling-br paragraph-Oc488D paragraph-element br-paragraph-space\" style=\"background-color: rgb(255, 255, 255); color: rgba(0, 0, 0, 0.85);\">在系统中，查询操作API 与保存操作 API 在数据处理逻辑上存在差异，所以用户在配置请求参数时需采用不同的方式。具体如下：</div><p style=\"\"><br/></p><ul class=\" list-paddingleft-2\" style=\"\"><li style=\"\"><div class=\"auto-hide-last-sibling-br paragraph-Oc488D paragraph-element br-paragraph-space\" style=\"background-color: rgb(255, 255, 255); color: rgba(0, 0, 0, 0.85);\">保存操作 API 在写入数据时，用户要在请求参数中明确指定单据头和分录字段，系统会自动将这些参数与对应对象属性建立关联。</div><p style=\"\"><br/></p></li><li style=\"\"><div class=\"auto-hide-last-sibling-br paragraph-Oc488D paragraph-element br-paragraph-space\" style=\"background-color: rgb(255, 255, 255); color: rgba(0, 0, 0, 0.85);\">而查询操作 API 则通过参数控制中的查询条件，将实体的单据头和分录字段与传入的请求头参数进行动态关联。因此，用户在配置查询请求参数时，无需直接选择分录字段，只需将查询条件中的条件字段，与请求参数进行逻辑关联即可。</div></li></ul><p style=\"\"><br/></p><div class=\"auto-hide-last-sibling-br paragraph-Oc488D paragraph-element br-paragraph-space\" style=\"background-color: rgb(255, 255, 255); color: rgba(0, 0, 0, 0.85);\">具体操作建议：</div><p style=\"\"><br/></p><ol class=\"auto-hide-last-sibling-br list-paddingleft-2\" style=\"color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);\"><li style=\"\"><p style=\"\">对于单据头字段：可通过 &quot;添加属性&quot; 功能快速完成配置</p></li><li style=\"\"><p style=\"\">对于单据体或子单据体字段：</p></li><ul class=\"auto-hide-last-sibling-br list-paddingleft-2\" style=\"\"><li style=\"\"><p style=\"\">点击【增行】按钮自定义参数（用户可随意命名，如aa或customkey）</p></li><li style=\"\"><p style=\"\">在查询条件配置中将该自定义参数与目标分录字段建立比较关系</p></li></ul></ol><div class=\"auto-hide-last-sibling-br paragraph-Oc488D paragraph-element br-paragraph-space\" style=\"background-color: rgb(255, 255, 255); color: rgba(0, 0, 0, 0.85);\">这种查询操作更加灵活高效，用户可以根据实际需求动态组合查询条件，而无需预先定义固定的字段映射关系。</div><p style=\"\"><br/></p><p style=\"\"><img src=\"/download/0109f875b6d320424248ae4ac9d33d60aa92.png\"/></p><p style=\"\"><br/></p><p><br/></p>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 87,
+   "isOpen": 1,
+   "name": "金蝶AI苍穹",
+   "productLineId": 29,
+   "series": "developer01",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        null
+       ],
+       "code": null,
+       "description": "",
+       "entityId": "724273430630919424",
+       "entityType": "Knowledge",
+       "id": "724276480410293760",
+       "isCategory": false,
+       "name": "查询操作API请求参数无法选到分录字段",
+       "parentId": "226337785987048960",
+       "sort": "25",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": "",
+     "entityId": null,
+     "entityType": null,
+     "id": "226337785987048960",
+     "isCategory": true,
+     "name": "常见问题",
+     "parentId": "-1",
+     "sort": "9",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download/01010204d4b71b654a208006fa1004eac36a.png",
+  "department": null,
+  "id": "740211268992385024",
+  "name": "毛毛去哪儿",
+  "nameSpell": "name"
+ },
+ "totalAppraisalScore": 5,
+ "iflytekId": null,
+ "views": 874,
+ "productLineId": 29,
+ "comments": 1,
+ "similarityCount": 0,
+ "totalAppraisalUsers": 1,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1750489434000,
+ "appraisalScore": 0,
+ "unuseful": 0,
+ "knowledgeCheckStatus": 2,
+ "otherProductLineIds": [],
+ "auditAt": 1750489434000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapi_apilist_layout",
+        "id": "505686038019362304",
+        "name": "异步API",
+        "productLineId": null,
+        "sort": 1,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 0,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "HotIssues",
+     "createdAt": 1558618967000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "使用中经常遇到的应用类、报错类问题的解决方法",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/010046d15638963c4c388734601dd5f8ceec.png",
+     "id": "202203081644",
+     "name": "常见问题",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010176d38341668f44fdb94c95058a90e4b8.png",
+      "department": "云社区运营部",
+      "id": "2147406697",
+      "name": "多肉丸子",
+      "nameSpell": "kejuan"
+     },
+     "updatedAt": 1676857709000
+    },
+    {
+     "code": "rumen",
+     "createdAt": 1605667807000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "入门类的知识可使用此标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100d322b9282bcc438faa894f4eec029977.png",
+     "id": "202203081646",
+     "name": "基础入门",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download?fileName=0101ec1d6ce599b442dab7d0b794c1fce88d.png",
+      "department": null,
+      "id": "1009",
+      "name": "一颗小星星",
+      "nameSpell": "fengling"
+     },
+     "updatedAt": 1657872008000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "724273430630919424",
+         "entityType": "Knowledge",
+         "id": "724276480410293760",
+         "isCategory": false,
+         "name": "查询操作API请求参数无法选到分录字段",
+         "parentId": "226337785987048960",
+         "sort": "25",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": null,
+       "id": "226337785987048960",
+       "isCategory": true,
+       "name": "常见问题",
+       "parentId": "-1",
+       "sort": "9",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": "<h2 label=\"一级标题\" class=\"first-title html-anchor-list0-1705284815334 html-anchor-list0-1750488225805 html-anchor-list0-1750488225805\" id=\"html-anchor-list0-1705284815334\" style=\"background-color: rgb(255, 255, 255);\">问题描述</h2><p label=\"正文\" style=\"background-color: rgb(255, 255, 255);\">通过开放平台OpenAPI新增查询操作接口，请求参数添加属性时，为什么选不到分录字段？</p><p style=\"\"><br/></p><p style=\"\"><img src=\"/download/01096073ef7b4d1e40f7970281645e2c0559.png\"/></p><p style=\"\"><br/></p><p style=\"\"><br/></p><h2 label=\"一级标题\" class=\"first-title html-anchor-list0-1705284815334 html-anchor-list1-1750488225805 html-anchor-list1-1750488225805\" id=\"html-anchor-list0-1705284815334\" style=\"background-color: rgb(255, 255, 255);\">原因分析</h2><div class=\"auto-hide-last-sibling-br paragraph-Oc488D paragraph-element br-paragraph-space\" style=\"background-color: rgb(255, 255, 255); color: rgba(0, 0, 0, 0.85);\">在系统中，查询操作API 与保存操作 API 在数据处理逻辑上存在差异，所以用户在配置请求参数时需采用不同的方式。具体如下：</div><p style=\"\"><br/></p><ul class=\" list-paddingleft-2\" style=\"\"><li style=\"\"><div class=\"auto-hide-last-sibling-br paragraph-Oc488D paragraph-element br-paragraph-space\" style=\"background-color: rgb(255, 255, 255); color: rgba(0, 0, 0, 0.85);\">保存操作 API 在写入数据时，用户要在请求参数中明确指定单据头和分录字段，系统会自动将这些参数与对应对象属性建立关联。</div><p style=\"\"><br/></p></li><li style=\"\"><div class=\"auto-hide-last-sibling-br paragraph-Oc488D paragraph-element br-paragraph-space\" style=\"background-color: rgb(255, 255, 255); color: rgba(0, 0, 0, 0.85);\">而查询操作 API 则通过参数控制中的查询条件，将实体的单据头和分录字段与传入的请求头参数进行动态关联。因此，用户在配置查询请求参数时，无需直接选择分录字段，只需将查询条件中的条件字段，与请求参数进行逻辑关联即可。</div></li></ul><p style=\"\"><br/></p><div class=\"auto-hide-last-sibling-br paragraph-Oc488D paragraph-element br-paragraph-space\" style=\"background-color: rgb(255, 255, 255); color: rgba(0, 0, 0, 0.85);\">具体操作建议：</div><p style=\"\"><br/></p><ol class=\"auto-hide-last-sibling-br list-paddingleft-2\" style=\"color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);\"><li style=\"\"><p style=\"\">对于单据头字段：可通过 &quot;添加属性&quot; 功能快速完成配置</p></li><li style=\"\"><p style=\"\">对于单据体或子单据体字段：</p></li><ul class=\"auto-hide-last-sibling-br list-paddingleft-2\" style=\"\"><li style=\"\"><p style=\"\">点击【增行】按钮自定义参数（用户可随意命名，如aa或customkey）</p></li><li style=\"\"><p style=\"\">在查询条件配置中将该自定义参数与目标分录字段建立比较关系</p></li></ul></ol><div class=\"auto-hide-last-sibling-br paragraph-Oc488D paragraph-element br-paragraph-space\" style=\"background-color: rgb(255, 255, 255); color: rgba(0, 0, 0, 0.85);\">这种查询操作更加灵活高效，用户可以根据实际需求动态组合查询条件，而无需预先定义固定的字段映射关系。</div><p style=\"\"><br/></p><p style=\"\"><img src=\"/download/0109f875b6d320424248ae4ac9d33d60aa92.png\"/></p><p style=\"\"><br/></p><p><br/></p>"
+}

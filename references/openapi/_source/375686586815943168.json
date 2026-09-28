@@ -1,0 +1,489 @@
+{
+ "badNum": 0,
+ "identityTagIds": null,
+ "knowledgeId": "375686586815943168",
+ "createdAt": 1667378662000,
+ "collections": 9,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "375686586815943168",
+ "contentType": 1,
+ "updatedAt": 1767942395000,
+ "knowledgeUpdater": {
+  "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+  "department": null,
+  "id": "132488613174518784",
+  "name": "某个路易",
+  "nameSpell": "name"
+ },
+ "assessStatus": 0,
+ "knowledgeStatus": 2,
+ "assessHandleStatus": null,
+ "knowledgeCreatedAt": 1667378662000,
+ "version": 31,
+ "labels": [],
+ "editedAt": 1767942385000,
+ "identityTags": null,
+ "useful": 1,
+ "errors": [],
+ "isCollected": false,
+ "totalFeedBacks": 0,
+ "attachments": [],
+ "sources": [],
+ "editTitle": "大批量数据时接口超时问题",
+ "title": "大批量数据时接口超时问题",
+ "content": "<h2>问题分析</h2><p><span style=\"color: rgb(0, 0, 0)\">由于苍穹OpenAPI是同步接口，最长执行时长是10分钟，所以接口在批量处理大量数据如一次查询或保存10w条以上数据时，可能会出现数据库或接口超时的情况，这其中可能还有公有云限制（华为云的WAF到客户源站的连接超时时长默认为30秒）。</span></p><p></p><h2>问题描述</h2><p><span style=\"color: rgb(0, 0, 0)\">使用苍穹OpenAPI接口执行查询或保存大批量数据时，调用失败，提示接口超时。</span></p><ul style=\"list-style-type: disc;\"><li><p><span style=\"color: rgb(0, 0, 0)\">典型查询接口超时提示：</span></p></li></ul><pre><code class=\"language-plaintext\">kd.bos.openapi.servicehelper.ServiceFactory,QueryApiService,execute</code></pre><p></p><p><img src=\"/download/0109c00659151f2f47dcb8a9c184a2cc4e1e.png\"></p><ul style=\"list-style-type: disc;\"><li><p>典型保存接口超时提示：</p></li></ul><pre><code class=\"language-plaintext\">Connection&nbsp;is&nbsp;not&nbsp;available,request&nbsp;timed&nbsp;out&nbsp;after&nbsp;60000ms</code></pre><p></p><p><img src=\"/download/01090f02d86c79a7429da9f0512d7201a5db.png\"></p><h2>解决方法</h2><ul><li><p style=\"text-align: justify\"><span style=\"color: rgb(0, 0, 0)\">一次API请求数据量不要太大（例如建议</span><span style=\"color: rgb(0, 112, 192)\">单次请求含分录数2000条/次，最大不超过1万条/次</span><span style=\"color: rgb(0, 0, 0)\">），可以对查询做</span><span style=\"color: rgb(0, 112, 192)\">分页处理</span><span style=\"color: rgb(0, 0, 0)\">；</span></p></li><li><p><span style=\"color: rgb(0, 0, 0)\">实体操作查询API的</span><span style=\"color: rgb(0, 112, 192)\">查询条件</span><span style=\"color: rgb(0, 0, 0)\">或 实体保存API的</span><span style=\"color: rgb(0, 112, 192)\">候选键</span><span style=\"color: rgb(0, 0, 0)\">，必须</span><span style=\"color: rgb(0, 112, 192)\">建立索引</span><span style=\"color: rgb(0, 0, 0)\">，否则执行全表扫描性能极差。</span></p><p></p></li></ul><h2>注意事项</h2><ul><li><p><span style=\"color: rgb(0, 0, 0)\">慢查询可以通过监控Monitor或数据库慢查询日志。（运维</span><span style=\"color: rgb(0, 0, 0); font-size: 13px\">）</span></p></li><li><p>开放平台作为接口服务方，有以下相关项：</p><p><span style=\"color: rgb(0, 112, 192)\">1. 微服务间调用，dubbo默认超时时间是580秒</span></p><p><span style=\"color: rgb(0, 112, 192)\">2. 苍穹nginx，可配置超时时间 proxy_read_timeout/proxy_send_timeout/proxy_connect_timeout （默认60s）</span></p><p><span style=\"color: rgb(0, 112, 192)\">3. 客户端调用方 httpClient请求时，注意代码设置好 read/conn...timeout相关参数。</span></p><p>4. monitor系统属性 org.eclipse.jetty.http.timeout默认超时150s</p><p></p></li></ul><p><img src=\"/download/0100e67a060f0129477bbe54ac24c5b467a7.png\" alt=\"上传图片\"></p><h2>参考资料</h2><ul><li><p><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"/tolink?target=https%3A%2F%2Fsupport.huaweicloud.com%2Fproductdesc-waf%2Fwaf_01_0094.html\">华为云Web防火墙WAF连接超时时间</a></p></li></ul><p></p><p style=\"text-align: center\"></p><p></p>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 87,
+   "isOpen": 1,
+   "name": "金蝶AI苍穹",
+   "productLineId": 29,
+   "series": "developer01",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        null
+       ],
+       "code": null,
+       "description": "",
+       "entityId": "375686586815943168",
+       "entityType": "Knowledge",
+       "id": "375686762356191232",
+       "isCategory": false,
+       "name": "批量处理数据时接口超时问题",
+       "parentId": "226337785987048960",
+       "sort": "8",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": "",
+     "entityId": null,
+     "entityType": null,
+     "id": "226337785987048960",
+     "isCategory": true,
+     "name": "常见问题",
+     "parentId": "-1",
+     "sort": "9",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download/01010204d4b71b654a208006fa1004eac36a.png",
+  "department": null,
+  "id": "740211268992385024",
+  "name": "毛毛去哪儿",
+  "nameSpell": "name"
+ },
+ "totalAppraisalScore": 5,
+ "iflytekId": null,
+ "views": 7184,
+ "productLineId": 29,
+ "comments": 0,
+ "similarityCount": 0,
+ "totalAppraisalUsers": 1,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1767942395000,
+ "appraisalScore": 0,
+ "unuseful": 0,
+ "knowledgeCheckStatus": 2,
+ "otherProductLineIds": [],
+ "auditAt": 1767942395000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": null,
+       "code": "open",
+       "id": "5614",
+       "name": "开放平台",
+       "productLineId": null,
+       "sort": 2,
+       "type": "module"
+      },
+      "code": "DEV",
+      "id": "5576",
+      "name": "开发服务云",
+      "productLineId": null,
+      "sort": 11,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 0,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": null,
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 1,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "HotIssues",
+     "createdAt": 1558618967000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "使用中经常遇到的应用类、报错类问题的解决方法",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/010046d15638963c4c388734601dd5f8ceec.png",
+     "id": "202203081644",
+     "name": "常见问题",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010176d38341668f44fdb94c95058a90e4b8.png",
+      "department": "云社区运营部",
+      "id": "2147406697",
+      "name": "多肉丸子",
+      "nameSpell": "kejuan"
+     },
+     "updatedAt": 1676857709000
+    },
+    {
+     "code": "rumen",
+     "createdAt": 1605667807000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "入门类的知识可使用此标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100d322b9282bcc438faa894f4eec029977.png",
+     "id": "202203081646",
+     "name": "基础入门",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download?fileName=0101ec1d6ce599b442dab7d0b794c1fce88d.png",
+      "department": null,
+      "id": "1009",
+      "name": "一颗小星星",
+      "nameSpell": "fengling"
+     },
+     "updatedAt": 1657872008000
+    },
+    {
+     "code": "essencesummary",
+     "createdAt": 1606118073000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "精华汇总",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100402c6f8df169483db114f71043c19ec2.png",
+     "id": "202203081649",
+     "name": "精华汇总",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 2,
+     "updatePerson": {
+      "avatar": "/download?fileName=010162cfa9d5437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1129",
+      "name": "灏",
+      "nameSpell": "hao"
+     },
+     "updatedAt": 1606118073000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "375686586815943168",
+         "entityType": "Knowledge",
+         "id": "375686762356191232",
+         "isCategory": false,
+         "name": "批量处理数据时接口超时问题",
+         "parentId": "226337785987048960",
+         "sort": "8",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": null,
+       "id": "226337785987048960",
+       "isCategory": true,
+       "name": "常见问题",
+       "parentId": "-1",
+       "sort": "9",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": "<h2>问题分析</h2><p><span style=\"color: rgb(0, 0, 0)\">由于苍穹OpenAPI是同步接口，最长执行时长是10分钟，所以接口在批量处理大量数据如一次查询或保存10w条以上数据时，可能会出现数据库或接口超时的情况，这其中可能还有公有云限制（华为云的WAF到客户源站的连接超时时长默认为30秒）。</span></p><p></p><h2>问题描述</h2><p><span style=\"color: rgb(0, 0, 0)\">使用苍穹OpenAPI接口执行查询或保存大批量数据时，调用失败，提示接口超时。</span></p><ul style=\"list-style-type: disc;\"><li><p><span style=\"color: rgb(0, 0, 0)\">典型查询接口超时提示：</span></p></li></ul><pre><code class=\"language-plaintext\">kd.bos.openapi.servicehelper.ServiceFactory,QueryApiService,execute</code></pre><p></p><p><img src=\"/download/0109c00659151f2f47dcb8a9c184a2cc4e1e.png\"></p><ul style=\"list-style-type: disc;\"><li><p>典型保存接口超时提示：</p></li></ul><pre><code class=\"language-plaintext\">Connection&nbsp;is&nbsp;not&nbsp;available,request&nbsp;timed&nbsp;out&nbsp;after&nbsp;60000ms</code></pre><p></p><p><img src=\"/download/01090f02d86c79a7429da9f0512d7201a5db.png\"></p><h2>解决方法</h2><ul><li><p style=\"text-align: justify\"><span style=\"color: rgb(0, 0, 0)\">一次API请求数据量不要太大（例如建议</span><span style=\"color: rgb(0, 112, 192)\">单次请求含分录数2000条/次，最大不超过1万条/次</span><span style=\"color: rgb(0, 0, 0)\">），可以对查询做</span><span style=\"color: rgb(0, 112, 192)\">分页处理</span><span style=\"color: rgb(0, 0, 0)\">；</span></p></li><li><p><span style=\"color: rgb(0, 0, 0)\">实体操作查询API的</span><span style=\"color: rgb(0, 112, 192)\">查询条件</span><span style=\"color: rgb(0, 0, 0)\">或 实体保存API的</span><span style=\"color: rgb(0, 112, 192)\">候选键</span><span style=\"color: rgb(0, 0, 0)\">，必须</span><span style=\"color: rgb(0, 112, 192)\">建立索引</span><span style=\"color: rgb(0, 0, 0)\">，否则执行全表扫描性能极差。</span></p><p></p></li></ul><h2>注意事项</h2><ul><li><p><span style=\"color: rgb(0, 0, 0)\">慢查询可以通过监控Monitor或数据库慢查询日志。（运维</span><span style=\"color: rgb(0, 0, 0); font-size: 13px\">）</span></p></li><li><p>开放平台作为接口服务方，有以下相关项：</p><p><span style=\"color: rgb(0, 112, 192)\">1. 微服务间调用，dubbo默认超时时间是580秒</span></p><p><span style=\"color: rgb(0, 112, 192)\">2. 苍穹nginx，可配置超时时间 proxy_read_timeout/proxy_send_timeout/proxy_connect_timeout （默认60s）</span></p><p><span style=\"color: rgb(0, 112, 192)\">3. 客户端调用方 httpClient请求时，注意代码设置好 read/conn...timeout相关参数。</span></p><p>4. monitor系统属性 org.eclipse.jetty.http.timeout默认超时150s</p><p></p></li></ul><p><img src=\"/download/0100e67a060f0129477bbe54ac24c5b467a7.png\" alt=\"上传图片\"></p><h2>参考资料</h2><ul><li><p><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"/tolink?target=https%3A%2F%2Fsupport.huaweicloud.com%2Fproductdesc-waf%2Fwaf_01_0094.html\">华为云Web防火墙WAF连接超时时间</a></p></li></ul><p></p><p style=\"text-align: center\"></p><p></p>"
+}

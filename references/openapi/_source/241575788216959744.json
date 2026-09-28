@@ -1,0 +1,1627 @@
+{
+ "badNum": 1,
+ "identityTagIds": null,
+ "knowledgeId": "241575788216959744",
+ "createdAt": 1635404156000,
+ "collections": 15,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "241575788216959744",
+ "contentType": 1,
+ "updatedAt": 1766456656000,
+ "knowledgeUpdater": {
+  "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+  "department": null,
+  "id": "132488613174518784",
+  "name": "某个路易",
+  "nameSpell": "name"
+ },
+ "assessStatus": 0,
+ "knowledgeStatus": 2,
+ "assessHandleStatus": null,
+ "knowledgeCreatedAt": 1635404156000,
+ "version": 181,
+ "labels": [],
+ "editedAt": 1766456646000,
+ "identityTags": null,
+ "useful": 9,
+ "errors": [],
+ "isCollected": false,
+ "totalFeedBacks": 1,
+ "attachments": [],
+ "sources": [],
+ "editTitle": "常见问题合集",
+ "title": "常见问题合集",
+ "content": "<p style=\"font-size: 20px\"><span style=\"color: rgb(54, 96, 146)\"><strong>【重要】</strong></span><strong>开放平台常见问题合集</strong></p><p></p><h3><span style=\"color: rgb(0, 0, 0)\">1.&nbsp;如何获取到租户id和数据中心id？</span></h3><ul><li><p><span>参考：</span><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/article/376304364408826368\"><span>https://vip.kingdee.com/article/376304364408826368</span></a></p></li></ul><p></p><h3><span style=\"color: rgb(0, 0, 0)\">2. 获取access_token报错问题合辑</span></h3><ul><li><p><span>参考：</span><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/article/473850934762799616\"><span>https://vip.kingdee.com/article/473850934762799616</span></a></p><p></p></li></ul><h3><span style=\"color: rgb(0, 0, 0)\">3. 如何通过固定密钥调用OpenAPI？</span></h3><ul><li><p><span>参考：</span><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/article/376375102319538688\"><span>https://vip.kingdee.com/article/376375102319538688</span></a></p></li></ul><p></p><h3><span style=\"color: rgb(0, 0, 0)\">4. 操作API可以修改已审核的单据或基础资料吗</span>？</h3><ul><li><p style=\"text-align: justify\">可以，<span>参考：</span><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/article/534676557541720576\">https://vip.kingdee.com/article/534676557541720576</a>。</p></li><li><p><span style=\"color: rgb(0, 112, 192)\">注意事项：</span><span>缺省状态为暂存且带组织和控制策略的基础资料，在已审核状态下，默认就能通过接口修改；若不带组织和控制策略，默认是无法通过接口修改的，要结合OpenAPI操作参数\"rmStatusControl\"修改。</span></p></li></ul><p style=\"text-align: justify\"></p><h3><span style=\"color: rgb(0, 0, 0)\">5. 操作API会触发哪些事件，什么时候触发值更新事件</span>？</h3><ul><li><p style=\"text-align: justify\">保存操作API默认不触发值更新事件，可通过勾选操作参数\"firePropChanged\"，将值设为true，进行触发。新增保存不支持，因为当批量新增数据时，若均触发值更新事件，极其影响系统性能，也可能导致某些值被重复覆盖。</p></li><li><p style=\"text-align: justify\">参考：<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/article/376385674549309952\">https://vip.kingdee.com/article/376385674549309952</a>。</p></li></ul><p style=\"text-align: justify\"></p><h3><span style=\"color: rgb(0, 0, 0)\">6. OpenAPI执行查询或保存大批量数据时，调用提示接口超时，应如何处理？</span></h3><ul><li><p style=\"text-align: justify\"><span>参考：</span><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/article/375686586782388736\"><span>https://vip.kingdee.com/article/375686586782388736</span></a></p></li></ul><p style=\"text-align: justify\"></p><h3 style=\"text-align: justify\"><span style=\"color: rgb(0, 0, 0)\">7. 调用API接口保存数据时，系统内生成重复数据，应该怎么处理？</span></h3><p></p><ul><li><p style=\"text-align: justify\">参考：<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/article/442690476898791424\">https://vip.kingdee.com/article/442690476898791424</a></p></li></ul><p></p><h3><span style=\"color: rgb(0, 0, 0)\">8. API请求UTF8字符集乱码问题排查指南</span></h3><ul><li><p>参考：<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/article/568740319076613376\">https://vip.kingdee.com/article/568740319076613376</a></p></li></ul><p></p><h3><span style=\"color: rgb(0, 0, 0)\">9.&nbsp;保存操作接口，希望保存自动提交并审核，如何处理？</span></h3><ul><li><p>参考：<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/article/563359453035097856\">https://vip.kingdee.com/article/563359453035097856</a></p></li></ul><p></p><h3><span style=\"color: rgb(0, 0, 0)\">10. OpenAPI引入单据或基础资料时，可以控制是否触发基础资料字段的权限校验吗</span>？</h3><ul><li><p>路径：系统服务云 - 配置工具 - 系统参数，在公共参数中增加“<span style=\"color: rgb(0, 112, 192)\">引入数据时校验基础资料权限</span>”配置。</p></li><li><p>不开启时，API引入只会校验基础资料的编码与名称是否存在。开启时，则会按照基础资料F7过滤条件，数据权限以及管控策略进行校验，是否满足条件。</p><p></p></li></ul><p><img src=\"/download/01094528c15a010a4df2b7595f0241f31821.png\" width=\"735\"></p><p style=\"text-align: justify\"></p><h3><span style=\"color: rgb(0, 0, 0)\">11. 如何修改V2版本OpenAPI的返回参数格式？</span></h3><ul><li><p>参考：<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/article/506782654352585472\">https://vip.kingdee.com/article/506782654352585472</a></p></li></ul><p></p><h3><span style=\"color: rgb(0, 0, 0)\">12. 调用OpenAPI，报错提示：该接口运行时应用-XX已被禁止访问，应如何解决？</span></h3><p></p><p><img src=\"/download/01093b40ea4c20b54489abf8cd49807fe717.png\"></p><p>&nbsp;</p><ul><li><p>应用授权默认是允许用户调用的，若管理员误操作，禁用了该应用，则接口调用会报错。</p></li><li><p>路径：开放服务云 - OpenAPI - API管理- API开发，在列表左树中找到XX应用，如总账，找到应用授权按钮，确认应用权限是否被禁用了。若开关为打开状态，则将其关闭即可。</p><p></p></li></ul><p><img src=\"/download/010965b6e1d1f35f448198e060264956f462.png\"></p><p></p><h3><span style=\"color: rgb(0, 0, 0)\">13. 自定义API插件部署问题排查指南</span></h3><ul><li><p>参考：<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/article/453492067302414336\">https://vip.kingdee.com/article/453492067302414336</a></p><p></p></li></ul><h3><span style=\"color: rgb(0, 0, 0)\">14. 部分API服务，不需要注册第三方应用为什么也能直接访问？</span></h3><ul><li><p>需要确认这部分API服务是否开启了<span style=\"color: rgb(0, 112, 192)\">匿名访问</span>，若开启了，则不需要经过第三方应用登录便能直接访问，该行为存在数据泄露风险，不推荐使用。</p></li></ul><p></p><h3><span style=\"color: rgb(0, 0, 0)\">15. 打开API匿名访问开关后，匿名调用仍不生效？</span></h3><ul><li><p>当租户有多个数据中心时，如果默认数据中心和当前匿名API所在数据中心不一致，则必须在<span style=\"color: rgb(0, 112, 192)\">请求头或URL中添加参数accountId</span>才能访问到指定数据中心的API服务。</p></li></ul><p></p><h3><span style=\"color: rgb(0, 0, 0)\">16. 匿名访问调用POST请求，为什么提示error:oAuth认证失败，guest用户没有访问权限？</span></h3><ul><li><p>参考：<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/article/376072785862352128\">https://vip.kingdee.com/article/376072785862352128</a></p></li></ul><p style=\"text-align: justify\"></p><h3><span style=\"color: rgb(0, 0, 0)\">17. API1.0查询操作接口，返回的数据字段名和值是分开的，不是map的形式，开发要取某个字段的值怎么取呢？</span></h3><ul><li><p><span>在</span>URL中添加参数：<span style=\"color: rgb(0, 112, 192)\">api.resulttype=json</span>，此时支持返回标准json格式。V2版本标准查询接口，默认返回键值对。</p></li></ul><p></p><h3><span style=\"color: rgb(0, 0, 0)\">18. API1.0保存操作接口，执行成功后，返回数据中输出的id与数据库中的id不相等是什么原因？</span></h3><ul><li><p>使<span>用浏览器测试会让</span>long类型的字段输出时存在精度丢失问题，建议<span>使用</span>postman客户端测试，新版本接口（v2）已优化处理，<span>将</span>long类型转换成string类型输出。</p></li></ul><p></p><h3><span style=\"color: rgb(0, 0, 0)\">19.&nbsp;</span>API1.0保存操作接口，希望保存自动提交，在请求体中添加了参数\"forcedsubmit\":\"submit\"，但仍不生效，是什么原因？</h3><ul><li><p><span>参数</span><span style=\"color: rgb(0, 112, 192)\">\"forcedsubmit\":\"submit\"</span>不应放在data域里，而是要和<span style=\"color: rgb(0, 112, 192)\">data参数在同一级</span>。</p></li></ul><p></p><h3><span style=\"color: rgb(0, 0, 0)\">20. API1.0操作接口，会自动封装code、success、data之类的数据格式。若不想要这种格式应该怎么自定义返回信息？</span></h3><ul><li><p>参考：<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://developer.kingdee.com/questions/302772500381668608\">https://developer.kingdee.com/questions/302772500381668608</a>。</p><p></p></li></ul><h3><span style=\"color: rgb(0, 0, 0)\">21. API1.0自定义接口， 如何开发并注册java插件？</span></h3><ul><li><p>参考：<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/article/154241666411380736\">https://vip.kingdee.com/article/154241666411380736</a></p></li></ul><p></p><h3><span style=\"color: rgb(0, 0, 0)\">22. API1.0接口， 如何使用API插件？</span></h3><p></p><ul><li><p>使用说明：<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/article/154241666411380736\">https://vip.kingdee.com/article/226288074844832512</a></p></li><li><p>踩坑指南：<a target=\"_self\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/article/158244323199077376\">https://vip.kingdee.com/article/158244323199077376</a></p></li></ul><p></p><h3><span style=\"color: rgb(0, 0, 0)\">23. API1.0自定义接口，调用时提示“实例化插件异常”？</span></h3><ul><li><p>原因1：系统正在升级中或容器异常，服务部署失败，建议检查环境是否正常。</p></li><li><p>原因2：自定义接口的插件路径不正确或缺失，建议检查插件路径。</p></li></ul><p></p>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 87,
+   "isOpen": 1,
+   "name": "金蝶AI苍穹",
+   "productLineId": 29,
+   "series": "developer01",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        null
+       ],
+       "code": null,
+       "description": "",
+       "entityId": "241575788216959744",
+       "entityType": "Knowledge",
+       "id": "241577121217388544",
+       "isCategory": false,
+       "name": "常见问题合集",
+       "parentId": "226337785987048960",
+       "sort": "1",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": "",
+     "entityId": null,
+     "entityType": null,
+     "id": "226337785987048960",
+     "isCategory": true,
+     "name": "常见问题",
+     "parentId": "-1",
+     "sort": "9",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download/01010204d4b71b654a208006fa1004eac36a.png",
+  "department": null,
+  "id": "740211268992385024",
+  "name": "毛毛去哪儿",
+  "nameSpell": "name"
+ },
+ "totalAppraisalScore": 46,
+ "iflytekId": null,
+ "views": 10101,
+ "productLineId": 29,
+ "comments": 0,
+ "similarityCount": 0,
+ "totalAppraisalUsers": 10,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1766456656000,
+ "appraisalScore": 0,
+ "unuseful": 1,
+ "knowledgeCheckStatus": 2,
+ "otherProductLineIds": [],
+ "auditAt": 1766456656000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapistatdatareport",
+        "id": "344584967017250560",
+        "name": "API统计信息",
+        "productLineId": null,
+        "sort": 5,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "5614",
+       "name": "开放平台",
+       "productLineId": null,
+       "sort": 2,
+       "type": "module"
+      },
+      "code": "DEV",
+      "id": "5576",
+      "name": "开发服务云",
+      "productLineId": null,
+      "sort": 11,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 0,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapilogdata",
+        "id": "505686382472559872",
+        "name": "API调用日志",
+        "productLineId": null,
+        "sort": 4,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 1,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapicostdata",
+        "id": "561134059955610624",
+        "name": "慢接口统计",
+        "productLineId": null,
+        "sort": 17,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 2,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapialarmlog",
+        "id": "561134266516653056",
+        "name": "预警日志",
+        "productLineId": null,
+        "sort": 19,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 3,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "kemsubopen",
+        "id": "535465136673529600",
+        "name": "事件推送订阅",
+        "productLineId": null,
+        "sort": 15,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 4,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapiscript",
+        "id": "505686662652067072",
+        "name": "代码片段管理",
+        "productLineId": null,
+        "sort": 8,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 5,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "kem_open_log_bill",
+        "id": "535465236397262592",
+        "name": "推送日志",
+        "productLineId": null,
+        "sort": 16,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 6,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapialarmconfig",
+        "id": "561134198971728896",
+        "name": "预警配置",
+        "productLineId": null,
+        "sort": 18,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 7,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapi_apilist_layout",
+        "id": "505686038019362304",
+        "name": "异步API",
+        "productLineId": null,
+        "sort": 1,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 8,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "open_parameter_show",
+        "id": "505686594385399296",
+        "name": "参数配置",
+        "productLineId": null,
+        "sort": 7,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 9,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapilogdata",
+        "id": "344592117601683968",
+        "name": "API日志",
+        "productLineId": null,
+        "sort": 11,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "5614",
+       "name": "开放平台",
+       "productLineId": null,
+       "sort": 2,
+       "type": "module"
+      },
+      "code": "DEV",
+      "id": "5576",
+      "name": "开发服务云",
+      "productLineId": null,
+      "sort": 11,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 10,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapidoctable",
+        "id": "505685717440494848",
+        "name": "API文档",
+        "productLineId": null,
+        "sort": 0,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 11,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapiscripthelper",
+        "id": "344585435118815488",
+        "name": "帮助手册",
+        "productLineId": null,
+        "sort": 9,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "5614",
+       "name": "开放平台",
+       "productLineId": null,
+       "sort": 2,
+       "type": "module"
+      },
+      "code": "DEV",
+      "id": "5576",
+      "name": "开发服务云",
+      "productLineId": null,
+      "sort": 11,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 12,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapilimitstrategy",
+        "id": "344584842228779264",
+        "name": "限流策略",
+        "productLineId": null,
+        "sort": 3,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "5614",
+       "name": "开放平台",
+       "productLineId": null,
+       "sort": 2,
+       "type": "module"
+      },
+      "code": "DEV",
+      "id": "5576",
+      "name": "开发服务云",
+      "productLineId": null,
+      "sort": 11,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 13,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "thirdapp",
+        "id": "505686150007485696",
+        "name": "第三方应用",
+        "productLineId": null,
+        "sort": 2,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 14,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapi_report_table",
+        "id": "505686536856269568",
+        "name": "统计看板",
+        "productLineId": null,
+        "sort": 6,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 15,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapicustomsort",
+        "id": "505686982711016704",
+        "name": "自定义分类",
+        "productLineId": null,
+        "sort": 10,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 16,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "thirdapp",
+        "id": "6254",
+        "name": "第三方应用",
+        "productLineId": null,
+        "sort": 2,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "5614",
+       "name": "开放平台",
+       "productLineId": null,
+       "sort": 2,
+       "type": "module"
+      },
+      "code": "DEV",
+      "id": "5576",
+      "name": "开发服务云",
+      "productLineId": null,
+      "sort": 11,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 17,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapilimitstrategy",
+        "id": "505686299357898240",
+        "name": "限流策略",
+        "productLineId": null,
+        "sort": 3,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 18,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": null,
+       "code": "open",
+       "id": "5614",
+       "name": "开放平台",
+       "productLineId": null,
+       "sort": 2,
+       "type": "module"
+      },
+      "code": "DEV",
+      "id": "5576",
+      "name": "开发服务云",
+      "productLineId": null,
+      "sort": 11,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 19,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapiservicenew",
+        "id": "344594257418019328",
+        "name": "API服务管理1.0",
+        "productLineId": null,
+        "sort": 13,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "5614",
+       "name": "开放平台",
+       "productLineId": null,
+       "sort": 2,
+       "type": "module"
+      },
+      "code": "DEV",
+      "id": "5576",
+      "name": "开发服务云",
+      "productLineId": null,
+      "sort": 11,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 20,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapiscript",
+        "id": "344585285701100032",
+        "name": "代码片段管理",
+        "productLineId": null,
+        "sort": 7,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "5614",
+       "name": "开放平台",
+       "productLineId": null,
+       "sort": 2,
+       "type": "module"
+      },
+      "code": "DEV",
+      "id": "5576",
+      "name": "开发服务云",
+      "productLineId": null,
+      "sort": 11,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 21,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": null,
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 22,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapiscriptdebug",
+        "id": "505691055799399168",
+        "name": "脚本调试",
+        "productLineId": null,
+        "sort": 9,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 23,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapiunittest",
+        "id": "344592450260322816",
+        "name": "开放平台示例",
+        "productLineId": null,
+        "sort": 12,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "5614",
+       "name": "开放平台",
+       "productLineId": null,
+       "sort": 2,
+       "type": "module"
+      },
+      "code": "DEV",
+      "id": "5576",
+      "name": "开发服务云",
+      "productLineId": null,
+      "sort": 11,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 24,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "kemeventopen",
+        "id": "535464126735421440",
+        "name": "开放事件定义",
+        "productLineId": null,
+        "sort": 14,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 25,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapicustomsort",
+        "id": "344585738685761792",
+        "name": "自定义分类",
+        "productLineId": null,
+        "sort": 10,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "5614",
+       "name": "开放平台",
+       "productLineId": null,
+       "sort": 2,
+       "type": "module"
+      },
+      "code": "DEV",
+      "id": "5576",
+      "name": "开发服务云",
+      "productLineId": null,
+      "sort": 11,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 26,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "bosparameterconsole",
+        "id": "344585186178779648",
+        "name": "参数配置",
+        "productLineId": null,
+        "sort": 6,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "5614",
+       "name": "开放平台",
+       "productLineId": null,
+       "sort": 2,
+       "type": "module"
+      },
+      "code": "DEV",
+      "id": "5576",
+      "name": "开发服务云",
+      "productLineId": null,
+      "sort": 11,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 27,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapiservicedoc",
+        "id": "505687145231938816",
+        "name": "API清单",
+        "productLineId": null,
+        "sort": 13,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 28,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapiservicenew",
+        "id": "505687093087987200",
+        "name": "API服务管理1.0",
+        "productLineId": null,
+        "sort": 12,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 29,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapiunittest",
+        "id": "505687033629897984",
+        "name": "开放示例单据",
+        "productLineId": null,
+        "sort": 11,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 30,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapiscriptdebug",
+        "id": "344585366751955456",
+        "name": "脚本调试",
+        "productLineId": null,
+        "sort": 8,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "5614",
+       "name": "开放平台",
+       "productLineId": null,
+       "sort": 2,
+       "type": "module"
+      },
+      "code": "DEV",
+      "id": "5576",
+      "name": "开发服务云",
+      "productLineId": null,
+      "sort": 11,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 31,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapiapilistlayout",
+        "id": "344582232549528320",
+        "name": "API管理",
+        "productLineId": null,
+        "sort": 1,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "5614",
+       "name": "开放平台",
+       "productLineId": null,
+       "sort": 2,
+       "type": "module"
+      },
+      "code": "DEV",
+      "id": "5576",
+      "name": "开发服务云",
+      "productLineId": null,
+      "sort": 11,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 32,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapi_statdata_report",
+        "id": "505686475435144448",
+        "name": "统计信息",
+        "productLineId": null,
+        "sort": 5,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 33,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapireporttable",
+        "id": "344585077059010304",
+        "name": "API统计看板",
+        "productLineId": null,
+        "sort": 4,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "5614",
+       "name": "开放平台",
+       "productLineId": null,
+       "sort": 2,
+       "type": "module"
+      },
+      "code": "DEV",
+      "id": "5576",
+      "name": "开发服务云",
+      "productLineId": null,
+      "sort": 11,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 34,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "HotIssues",
+     "createdAt": 1558618967000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "使用中经常遇到的应用类、报错类问题的解决方法",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/010046d15638963c4c388734601dd5f8ceec.png",
+     "id": "202203081644",
+     "name": "常见问题",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010176d38341668f44fdb94c95058a90e4b8.png",
+      "department": "云社区运营部",
+      "id": "2147406697",
+      "name": "多肉丸子",
+      "nameSpell": "kejuan"
+     },
+     "updatedAt": 1676857709000
+    },
+    {
+     "code": "GettingStarted",
+     "createdAt": 1556519230000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "推送至苍穹帮助中心",
+     "hasSpecifyUser": false,
+     "hide": true,
+     "icon": "/download/01001f079866652f4a68a71361a9509d404c.png",
+     "id": "202203081643",
+     "name": "推送至苍穹帮助中心",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 1,
+     "type": 2,
+     "updatePerson": {
+      "avatar": "/download?fileName=010162cfa9d5437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1129",
+      "name": "灏",
+      "nameSpell": "hao"
+     },
+     "updatedAt": 1605688859000
+    },
+    {
+     "code": "rumen",
+     "createdAt": 1605667807000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "入门类的知识可使用此标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100d322b9282bcc438faa894f4eec029977.png",
+     "id": "202203081646",
+     "name": "基础入门",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download?fileName=0101ec1d6ce599b442dab7d0b794c1fce88d.png",
+      "department": null,
+      "id": "1009",
+      "name": "一颗小星星",
+      "nameSpell": "fengling"
+     },
+     "updatedAt": 1657872008000
+    },
+    {
+     "code": "essencesummary",
+     "createdAt": 1606118073000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "精华汇总",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100402c6f8df169483db114f71043c19ec2.png",
+     "id": "202203081649",
+     "name": "精华汇总",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 2,
+     "updatePerson": {
+      "avatar": "/download?fileName=010162cfa9d5437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1129",
+      "name": "灏",
+      "nameSpell": "hao"
+     },
+     "updatedAt": 1606118073000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "241575788216959744",
+         "entityType": "Knowledge",
+         "id": "241577121217388544",
+         "isCategory": false,
+         "name": "常见问题合集",
+         "parentId": "226337785987048960",
+         "sort": "1",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": null,
+       "id": "226337785987048960",
+       "isCategory": true,
+       "name": "常见问题",
+       "parentId": "-1",
+       "sort": "9",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": "<p style=\"font-size: 20px\"><span style=\"color: rgb(54, 96, 146)\"><strong>【重要】</strong></span><strong>开放平台常见问题合集</strong></p><p></p><h3><span style=\"color: rgb(0, 0, 0)\">1.&nbsp;如何获取到租户id和数据中心id？</span></h3><ul><li><p><span>参考：</span><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/article/376304364408826368\"><span>https://vip.kingdee.com/article/376304364408826368</span></a></p></li></ul><p></p><h3><span style=\"color: rgb(0, 0, 0)\">2. 获取access_token报错问题合辑</span></h3><ul><li><p><span>参考：</span><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/article/473850934762799616\"><span>https://vip.kingdee.com/article/473850934762799616</span></a></p><p></p></li></ul><h3><span style=\"color: rgb(0, 0, 0)\">3. 如何通过固定密钥调用OpenAPI？</span></h3><ul><li><p><span>参考：</span><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/article/376375102319538688\"><span>https://vip.kingdee.com/article/376375102319538688</span></a></p></li></ul><p></p><h3><span style=\"color: rgb(0, 0, 0)\">4. 操作API可以修改已审核的单据或基础资料吗</span>？</h3><ul><li><p style=\"text-align: justify\">可以，<span>参考：</span><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/article/534676557541720576\">https://vip.kingdee.com/article/534676557541720576</a>。</p></li><li><p><span style=\"color: rgb(0, 112, 192)\">注意事项：</span><span>缺省状态为暂存且带组织和控制策略的基础资料，在已审核状态下，默认就能通过接口修改；若不带组织和控制策略，默认是无法通过接口修改的，要结合OpenAPI操作参数\"rmStatusControl\"修改。</span></p></li></ul><p style=\"text-align: justify\"></p><h3><span style=\"color: rgb(0, 0, 0)\">5. 操作API会触发哪些事件，什么时候触发值更新事件</span>？</h3><ul><li><p style=\"text-align: justify\">保存操作API默认不触发值更新事件，可通过勾选操作参数\"firePropChanged\"，将值设为true，进行触发。新增保存不支持，因为当批量新增数据时，若均触发值更新事件，极其影响系统性能，也可能导致某些值被重复覆盖。</p></li><li><p style=\"text-align: justify\">参考：<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/article/376385674549309952\">https://vip.kingdee.com/article/376385674549309952</a>。</p></li></ul><p style=\"text-align: justify\"></p><h3><span style=\"color: rgb(0, 0, 0)\">6. OpenAPI执行查询或保存大批量数据时，调用提示接口超时，应如何处理？</span></h3><ul><li><p style=\"text-align: justify\"><span>参考：</span><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/article/375686586782388736\"><span>https://vip.kingdee.com/article/375686586782388736</span></a></p></li></ul><p style=\"text-align: justify\"></p><h3 style=\"text-align: justify\"><span style=\"color: rgb(0, 0, 0)\">7. 调用API接口保存数据时，系统内生成重复数据，应该怎么处理？</span></h3><p></p><ul><li><p style=\"text-align: justify\">参考：<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/article/442690476898791424\">https://vip.kingdee.com/article/442690476898791424</a></p></li></ul><p></p><h3><span style=\"color: rgb(0, 0, 0)\">8. API请求UTF8字符集乱码问题排查指南</span></h3><ul><li><p>参考：<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/article/568740319076613376\">https://vip.kingdee.com/article/568740319076613376</a></p></li></ul><p></p><h3><span style=\"color: rgb(0, 0, 0)\">9.&nbsp;保存操作接口，希望保存自动提交并审核，如何处理？</span></h3><ul><li><p>参考：<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/article/563359453035097856\">https://vip.kingdee.com/article/563359453035097856</a></p></li></ul><p></p><h3><span style=\"color: rgb(0, 0, 0)\">10. OpenAPI引入单据或基础资料时，可以控制是否触发基础资料字段的权限校验吗</span>？</h3><ul><li><p>路径：系统服务云 - 配置工具 - 系统参数，在公共参数中增加“<span style=\"color: rgb(0, 112, 192)\">引入数据时校验基础资料权限</span>”配置。</p></li><li><p>不开启时，API引入只会校验基础资料的编码与名称是否存在。开启时，则会按照基础资料F7过滤条件，数据权限以及管控策略进行校验，是否满足条件。</p><p></p></li></ul><p><img src=\"/download/01094528c15a010a4df2b7595f0241f31821.png\" width=\"735\"></p><p style=\"text-align: justify\"></p><h3><span style=\"color: rgb(0, 0, 0)\">11. 如何修改V2版本OpenAPI的返回参数格式？</span></h3><ul><li><p>参考：<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/article/506782654352585472\">https://vip.kingdee.com/article/506782654352585472</a></p></li></ul><p></p><h3><span style=\"color: rgb(0, 0, 0)\">12. 调用OpenAPI，报错提示：该接口运行时应用-XX已被禁止访问，应如何解决？</span></h3><p></p><p><img src=\"/download/01093b40ea4c20b54489abf8cd49807fe717.png\"></p><p>&nbsp;</p><ul><li><p>应用授权默认是允许用户调用的，若管理员误操作，禁用了该应用，则接口调用会报错。</p></li><li><p>路径：开放服务云 - OpenAPI - API管理- API开发，在列表左树中找到XX应用，如总账，找到应用授权按钮，确认应用权限是否被禁用了。若开关为打开状态，则将其关闭即可。</p><p></p></li></ul><p><img src=\"/download/010965b6e1d1f35f448198e060264956f462.png\"></p><p></p><h3><span style=\"color: rgb(0, 0, 0)\">13. 自定义API插件部署问题排查指南</span></h3><ul><li><p>参考：<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/article/453492067302414336\">https://vip.kingdee.com/article/453492067302414336</a></p><p></p></li></ul><h3><span style=\"color: rgb(0, 0, 0)\">14. 部分API服务，不需要注册第三方应用为什么也能直接访问？</span></h3><ul><li><p>需要确认这部分API服务是否开启了<span style=\"color: rgb(0, 112, 192)\">匿名访问</span>，若开启了，则不需要经过第三方应用登录便能直接访问，该行为存在数据泄露风险，不推荐使用。</p></li></ul><p></p><h3><span style=\"color: rgb(0, 0, 0)\">15. 打开API匿名访问开关后，匿名调用仍不生效？</span></h3><ul><li><p>当租户有多个数据中心时，如果默认数据中心和当前匿名API所在数据中心不一致，则必须在<span style=\"color: rgb(0, 112, 192)\">请求头或URL中添加参数accountId</span>才能访问到指定数据中心的API服务。</p></li></ul><p></p><h3><span style=\"color: rgb(0, 0, 0)\">16. 匿名访问调用POST请求，为什么提示error:oAuth认证失败，guest用户没有访问权限？</span></h3><ul><li><p>参考：<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/article/376072785862352128\">https://vip.kingdee.com/article/376072785862352128</a></p></li></ul><p style=\"text-align: justify\"></p><h3><span style=\"color: rgb(0, 0, 0)\">17. API1.0查询操作接口，返回的数据字段名和值是分开的，不是map的形式，开发要取某个字段的值怎么取呢？</span></h3><ul><li><p><span>在</span>URL中添加参数：<span style=\"color: rgb(0, 112, 192)\">api.resulttype=json</span>，此时支持返回标准json格式。V2版本标准查询接口，默认返回键值对。</p></li></ul><p></p><h3><span style=\"color: rgb(0, 0, 0)\">18. API1.0保存操作接口，执行成功后，返回数据中输出的id与数据库中的id不相等是什么原因？</span></h3><ul><li><p>使<span>用浏览器测试会让</span>long类型的字段输出时存在精度丢失问题，建议<span>使用</span>postman客户端测试，新版本接口（v2）已优化处理，<span>将</span>long类型转换成string类型输出。</p></li></ul><p></p><h3><span style=\"color: rgb(0, 0, 0)\">19.&nbsp;</span>API1.0保存操作接口，希望保存自动提交，在请求体中添加了参数\"forcedsubmit\":\"submit\"，但仍不生效，是什么原因？</h3><ul><li><p><span>参数</span><span style=\"color: rgb(0, 112, 192)\">\"forcedsubmit\":\"submit\"</span>不应放在data域里，而是要和<span style=\"color: rgb(0, 112, 192)\">data参数在同一级</span>。</p></li></ul><p></p><h3><span style=\"color: rgb(0, 0, 0)\">20. API1.0操作接口，会自动封装code、success、data之类的数据格式。若不想要这种格式应该怎么自定义返回信息？</span></h3><ul><li><p>参考：<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://developer.kingdee.com/questions/302772500381668608\">https://developer.kingdee.com/questions/302772500381668608</a>。</p><p></p></li></ul><h3><span style=\"color: rgb(0, 0, 0)\">21. API1.0自定义接口， 如何开发并注册java插件？</span></h3><ul><li><p>参考：<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/article/154241666411380736\">https://vip.kingdee.com/article/154241666411380736</a></p></li></ul><p></p><h3><span style=\"color: rgb(0, 0, 0)\">22. API1.0接口， 如何使用API插件？</span></h3><p></p><ul><li><p>使用说明：<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/article/154241666411380736\">https://vip.kingdee.com/article/226288074844832512</a></p></li><li><p>踩坑指南：<a target=\"_self\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/article/158244323199077376\">https://vip.kingdee.com/article/158244323199077376</a></p></li></ul><p></p><h3><span style=\"color: rgb(0, 0, 0)\">23. API1.0自定义接口，调用时提示“实例化插件异常”？</span></h3><ul><li><p>原因1：系统正在升级中或容器异常，服务部署失败，建议检查环境是否正常。</p></li><li><p>原因2：自定义接口的插件路径不正确或缺失，建议检查插件路径。</p></li></ul><p></p>"
+}

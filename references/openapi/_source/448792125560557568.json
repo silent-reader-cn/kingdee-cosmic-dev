@@ -1,0 +1,505 @@
+{
+ "badNum": 0,
+ "identityTagIds": null,
+ "knowledgeId": "448792125560557568",
+ "createdAt": 1684808381000,
+ "collections": 25,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "448792125560557568",
+ "contentType": 1,
+ "updatedAt": 1756177176000,
+ "knowledgeUpdater": {
+  "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+  "department": null,
+  "id": "132488613174518784",
+  "name": "某个路易",
+  "nameSpell": "name"
+ },
+ "assessStatus": 0,
+ "knowledgeStatus": 2,
+ "assessHandleStatus": null,
+ "knowledgeCreatedAt": 1684808381000,
+ "version": 89,
+ "labels": [],
+ "editedAt": 1756177168000,
+ "identityTags": null,
+ "useful": 11,
+ "errors": [],
+ "isCollected": false,
+ "totalFeedBacks": 0,
+ "attachments": [],
+ "sources": [],
+ "editTitle": "金蝶AI苍穹OpenAPI接口规范",
+ "title": "金蝶AI苍穹OpenAPI接口规范",
+ "content": "<h2>1. 接口规范</h2><p><span>传输协议支持</span>&nbsp;HTTPS /HTTP 协议，主要<span>采用</span> JSON 格式作为传输规范，报文格式由具体服务接口定义。</p><p><button vid=\"644951616453094656\" id=\"644951616453094656\" class=\"kd-attachment-content\" contenteditable=\"false\"><span class=\"name\">苍穹平台OpenAPI接口规范.pdf</span></button></p><p></p><p></p><h3><strong>1.1 协议标准</strong></h3><p><span>&nbsp; &nbsp; 1）数据传输支持</span>&nbsp;HTTPS/HTTP 协议标准。</p><p>&nbsp; &nbsp; 2）<span>基于</span> GET、POST标准<span>通过O</span>penAPI进行数据请求交互，支持JSON、XML、文件流等报文格式。</p><p style=\"text-align: justify\">&nbsp; &nbsp; 3）主要采用Token认证方式进行权限校验<span>，同时也支持其他认证方式，如摘要认证、基本</span>认证等。</p><p style=\"text-align: justify\"></p><h3 style=\"text-align: justify\"><strong>1.2 报文限制</strong></h3><ul><li><p style=\"text-align: justify\">OpenAPI报文出入参报文最大限制为20M ，同时文件流限制为50M。 - 适用于苍穹V6.0.14以上。</p></li></ul><p>&nbsp;&nbsp;&nbsp;<span style=\"color: rgb(0, 176, 240)\">&nbsp; </span><span style=\"color: rgb(84, 141, 212)\">&nbsp;备注：</span><span>苍穹V7.0版本统一调整为30M。</span></p><ul><li><p style=\"text-align: justify\">私有云租户可通过MC参数调整报文限制（<span style=\"color: rgb(84, 141, 212)\">公有云不支持调整</span>）：</p><p style=\"text-align: justify\">OpenApi.MaxBodySize&nbsp; &nbsp; &nbsp; &nbsp;修改默认最大请求报文大小（<span style=\"color: rgb(255, 0, 0)\">单位：字节</span>），<span style=\"color: rgb(0, 112, 192)\">若调整为40M，则参数value为&nbsp;</span><span>41943040</span></p><p style=\"text-align: justify\">OpenApi.MaxOutBodySize&nbsp; 修改默认最大返回报文大小（<span style=\"color: rgb(255, 0, 0)\">单位：字节</span>）- 苍穹V7.0版本以上</p><p style=\"text-align: justify\">OpenApi.FileItem.MaxSize&nbsp; 修改默认文件流最大报文大小（<span style=\"color: rgb(255, 0, 0)\">单位：字节</span>）</p></li></ul><p style=\"text-align: justify\"></p><p style=\"text-align: justify\">特别注意：<span style=\"color: rgba(0, 0, 0, 0.85); font-size: 16px\">私有云用户遇到报文超过限制问题，建议优先通过</span><strong>分批处理</strong><span style=\"color: rgba(0, 0, 0, 0.85); font-size: 16px\">的方式解决；若需调整 MC 参数，务必严格控制调整幅度，避免设置过高，否则在高并发场景下，可能引发内存占用异常飙升，进而导致进程内存溢出（OOM）故障，影响系统稳定性。</span></p><h3 style=\"text-align: justify\"><strong>1.3 公共请求参数</strong></h3><p></p><p><span>公共参数是每个接口都要携带的参数，描述每个接口的基本信息，用于统计或其他用途，放在</span>header<span>或url参数中。</span></p><p><strong>Query参数</strong> url?<span>后面的参数，存放请求接口的参数数据。</span></p><p><strong>请求Header</strong> <span>请求头，存放以下公共参数、</span>APP<span>端公共参数等，也可以存放一些特殊加密字段。</span></p><p><strong>请求Body</strong> Body<span>体，存放请求接口的参数数据。</span></p><p></p><p><strong>请求头</strong></p><table style=\"width: 659px\"><colgroup><col style=\"width: 102px\"><col style=\"width: 63px\"><col style=\"width: 53px\"><col style=\"width: 150px\"><col style=\"width: 291px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"102\" style=\"background-color: \"><p style=\"text-align: center\"><span style=\"color: rgb(61, 70, 74)\">参数名称</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"63\" style=\"background-color: \"><p style=\"text-align: center\"><span style=\"color: rgb(61, 70, 74)\">参数类型</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"53\" style=\"background-color: \"><p style=\"text-align: center\"><span style=\"color: rgb(61, 70, 74)\">必填</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"150\" style=\"background-color: \"><p style=\"text-align: center\"><span style=\"color: rgb(61, 70, 74)\">描述</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"291\" style=\"background-color: \"><p style=\"text-align: center\"><span style=\"color: rgb(61, 70, 74)\">详细说明</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"90\" style=\"background-color: \"><p>Content-Type</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"63\" style=\"background-color: \"><p>string</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"53\" style=\"background-color: \"><p>是</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"150\" style=\"background-color: \"><p>内容格式</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"291\" style=\"background-color: \"><p>请求报文的入参格式，如application/json、application/xml&nbsp;等</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"90\" style=\"background-color: \"><p>accesstoken</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"63\" style=\"background-color: \"><p>string</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"53\" style=\"background-color: \"><p>是</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"150\" style=\"background-color: \"><p>请求令牌</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"291\" style=\"background-color: \"><p><span>获取的accesstoken值</span>，用于接口访问鉴权</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"90\" style=\"background-color: \"><p>Idempotency-Key</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"63\" style=\"background-color: \"><p>long</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"53\" style=\"background-color: \"><p>否</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"150\" style=\"background-color: \"><p>非必传参数，防止接口被重复调用</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"291\" style=\"background-color: \"><p style=\"text-align: left\"><span>唯一的requestId</span>，有效时间30分钟<span>。当调用接口时，系统识别到重复的</span>&nbsp;Idempotency-Key，会拒绝请求</p></td></tr></tbody></table><p></p><p><strong>分页查询请求参数</strong></p><table style=\"width: 663px\"><colgroup><col style=\"width: 103px\"><col style=\"width: 67px\"><col style=\"width: 48px\"><col style=\"width: 157px\"><col style=\"width: 288px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"103\" style=\"background-color: \"><p style=\"text-align: center\"><span style=\"color: rgb(61, 70, 74)\">参数名称</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"67\" style=\"background-color: \"><p style=\"text-align: center\"><span style=\"color: rgb(61, 70, 74)\">参数类型</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"48\" style=\"background-color: \"><p style=\"text-align: center\"><span style=\"color: rgb(61, 70, 74)\">必填</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"157\" style=\"background-color: \"><p style=\"text-align: center\"><span style=\"color: rgb(61, 70, 74)\">描述</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"288\" style=\"background-color: \"><p style=\"text-align: center\"><span style=\"color: rgb(61, 70, 74)\">详细说明</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"103\" style=\"background-color: \"><p>pageNo</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"63\" style=\"background-color: \"><p>Integer</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"48\" style=\"background-color: \"><p>否</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"157\" style=\"background-color: \"><p>分页参数，查询页码</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"288\" style=\"background-color: \"><p>查询接口分页时填写，如查第1页，则传入1</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"103\" style=\"background-color: \"><p>pageSize</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"63\" style=\"background-color: \"><p>Integer</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"48\" style=\"background-color: \"><p>是</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"157\" style=\"background-color: \"><p>分页参数，分页数量</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"288\" style=\"background-color: \"><p>查询接口分页时填写，如每页返回10条数据，则传入10</p></td></tr></tbody></table><p><strong>&nbsp;</strong></p><h3><strong>1.4 公共返回参数</strong></h3><p></p><p><span>为了方便给客户端响应，响应数据会包含</span>四<span>个属性，</span>结果<span>数据（</span>data<span>）、</span>错误<span>码（error</span>Code<span>）、信息描述（message）和状态（S</span>tatus）<span>。客户端根据</span>status和<span>信息描述可快速知道接口</span>是否调用成功以及具体的错误信息。</p><p></p><p><strong>通用返回数据结构</strong></p><table style=\"width: 683px\"><colgroup><col style=\"width: 102px\"><col style=\"width: 134px\"><col style=\"width: 162px\"><col style=\"width: 285px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"102\" style=\"background-color: \"><p style=\"text-align: center\"><span style=\"color: rgb(61, 70, 74)\">参数名称</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"134\" style=\"background-color: \"><p style=\"text-align: center\"><span style=\"color: rgb(61, 70, 74)\">参数类型</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"162\" style=\"background-color: \"><p style=\"text-align: center\"><span style=\"color: rgb(61, 70, 74)\">描述</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"285\" style=\"background-color: \"><p style=\"text-align: center\"><span style=\"color: rgb(61, 70, 74)\">详细说明</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"102\" style=\"background-color: \"><p>data</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"134\" style=\"background-color: \"><p>Object</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"162\" style=\"background-color: \"><p>结果数据</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"285\" style=\"background-color: \"><p>{}</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"102\" style=\"background-color: \"><p>errorCode</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"134\" style=\"background-color: \"><p>String</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"162\" style=\"background-color: \"><p>错误码</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"285\" style=\"background-color: \"><p><span>成功时为0，失败时会返回错误码如400</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"102\" style=\"background-color: \"><p>message</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"134\" style=\"background-color: \"><p>String</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"162\" style=\"background-color: \"><p>接口调用错误信息</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"285\" style=\"background-color: \"><p><span>成功时为空，失败时会返回错误信息如“操作失败”</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"102\" style=\"background-color: \"><p>status</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"134\" style=\"background-color: \"><p>Boolean</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"162\" style=\"background-color: \"><p>接口访问是否成功</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"285\" style=\"background-color: \"><p>true/false</p></td></tr></tbody></table><p><strong>&nbsp;</strong></p><p><strong>分页对象</strong></p><table style=\"width: 682px\"><colgroup><col style=\"width: 99px\"><col style=\"width: 135px\"><col style=\"width: 162px\"><col style=\"width: 286px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"99\" style=\"background-color: \"><p style=\"text-align: center\"><span style=\"color: rgb(61, 70, 74)\">参数名称</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"135\" style=\"background-color: \"><p style=\"text-align: center\"><span style=\"color: rgb(61, 70, 74)\">参数类型</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"162\" style=\"background-color: \"><p style=\"text-align: center\"><span style=\"color: rgb(61, 70, 74)\">描述</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"286\" style=\"background-color: \"><p style=\"text-align: center\"><span style=\"color: rgb(61, 70, 74)\">详细说明</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"99\" style=\"background-color: \"><p>rows</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"135\" style=\"background-color: \"><p>List</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"162\" style=\"background-color: \"><p>结果数据列表</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"286\" style=\"background-color: \"><p>[]</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"99\" style=\"background-color: \"><p>pageNo</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"135\" style=\"background-color: \"><p>Integer</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"162\" style=\"background-color: \"><p>分页参数，查询页码</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"286\" style=\"background-color: \"><p>若为1，则查询的是第1页</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"99\" style=\"background-color: \"><p>pageSize</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"135\" style=\"background-color: \"><p>Integer</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"162\" style=\"background-color: \"><p>分页参数，分页数量</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"286\" style=\"background-color: \"><p>若为10，则每页返回10条数据</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"99\" style=\"background-color: \"><p>filter</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"135\" style=\"background-color: \"><p>string</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"162\" style=\"background-color: \"><p>过滤条件</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"286\" style=\"background-color: \"><p>查询接口的过滤条件，既执行逻辑</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"99\" style=\"background-color: \"><p>lastPage</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"135\" style=\"background-color: \"><p>Boolean</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"162\" style=\"background-color: \"><p>是否最后一页</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"286\" style=\"background-color: \"><p>true/false</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"99\" style=\"background-color: \"><p>totalCount</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"135\" style=\"background-color: \"><p>Integer</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"162\" style=\"background-color: \"><p>总记录数</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"286\" style=\"background-color: \"><p style=\"text-align: left\">接口查询总条数</p></td></tr></tbody></table><p><strong>&nbsp;</strong></p><p><strong>错误码说明</strong></p><table style=\"width: 705px\"><colgroup><col style=\"width: 99px\"><col style=\"width: 167px\"><col style=\"width: 439px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"99\" style=\"background-color: \"><p style=\"text-align: center\"><span style=\"color: rgb(61, 70, 74)\">错误码</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"167\" style=\"background-color: \"><p style=\"text-align: center\"><span style=\"color: rgb(61, 70, 74)\">描述</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"439\" style=\"background-color: \"><p style=\"text-align: center\"><span style=\"color: rgb(61, 70, 74)\">详细说明</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"99\" style=\"background-color: \"><p>0</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"167\" style=\"background-color: \"><p>OK</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"439\" style=\"background-color: \"><p>请求成功</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"99\" style=\"background-color: \"><p>999</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"167\" style=\"background-color: \"><p>未知错误</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"439\" style=\"background-color: \"><p>发生业务异常但未指定错误码</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"99\" style=\"background-color: \"><p>400</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"167\" style=\"background-color: \"><p>参数无效</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"439\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">客户端请求中的参数无效或语法错误</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"99\" style=\"background-color: \"><p>401</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"167\" style=\"background-color: \"><p><span>未授权访问（Token无效）</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"439\" style=\"background-color: \"><p style=\"text-align: left\"><span style=\"color: rgb(0, 0, 0)\">身份验证失败、token错误或已失效&nbsp;</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"99\" style=\"background-color: \"><p>403</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"167\" style=\"background-color: \"><p><span>禁止访问（IP限制或该API没有授权）</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"439\" style=\"background-color: \"><p style=\"text-align: left\"><span style=\"color: rgb(0, 0, 0)\">无法访问未授权的服务，请联系管理员授权</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"99\" style=\"background-color: \"><p>404</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"167\" style=\"background-color: \"><p>API不存在</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"439\" style=\"background-color: \"><p style=\"text-align: left\"><span style=\"color: rgb(0, 0, 0)\">请求路径有误或地址无法找到任何资源</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"99\" style=\"background-color: \"><p>405</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"167\" style=\"background-color: \"><p>Http方法不允许</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"439\" style=\"background-color: \"><p style=\"text-align: left\"><span>请求方法(GET, POST)对某些特定的资源</span><span style=\"color: rgb(0, 0, 0)\">不适用，请确认接口的请求方法是否有误</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"99\" style=\"background-color: \"><p>406</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"167\" style=\"background-color: \"><p>API无法解晰或处理数据</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"439\" style=\"background-color: \"><p style=\"text-align: left\"><span style=\"color: rgb(0, 0, 0)\">客户端无法解析服务端返回的内容</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"99\" style=\"background-color: \"><p>415</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"167\" style=\"background-color: \"><p><span>不能支持的MediaType</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"439\" style=\"background-color: \"><p style=\"text-align: left\"><span>服务器无法处理请求附带的媒体格式, 解决方法就是在请求头中加入Content-Type指定</span><span style=\"color: rgb(0, 0, 0)\">内容格式</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"99\" style=\"background-color: \"><p>429</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"167\" style=\"background-color: \"><p>API被限流</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"439\" style=\"background-color: \"><p><span>请求频率超过了所请求的服务设置频率</span> <span>控制条件，请降频请求或联系管理员提高请求频率</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"99\" style=\"background-color: \"><p>500</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"167\" style=\"background-color: \"><p>服务异常，服务内部错误</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"439\" style=\"background-color: \"><p>未知异常，需联系系统管理员排查确认</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"99\" style=\"background-color: \"><p>601</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"167\" style=\"background-color: \"><p>数据重复</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"439\" style=\"background-color: \"><p>请求数据重复，可能由于网络波动或高并发生成重复数据</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"99\" style=\"background-color: \"><p>602</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"167\" style=\"background-color: \"><p>找不到数据</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"439\" style=\"background-color: \"><p>数据不存在，比如更新数据时找不到相应的分录</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"99\" style=\"background-color: \"><p>603</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"167\" style=\"background-color: \"><p>数据无效</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"439\" style=\"background-color: \"><p>必填字段数据为空/数据校验无效/请求数据量超出最大限制</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"99\" style=\"background-color: \"><p>604</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"167\" style=\"background-color: \"><p>不允许重复执行</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"439\" style=\"background-color: \"><p>幂等性控制时不允许重复请求，防止数据重复</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"99\" style=\"background-color: \"><p>611</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"167\" style=\"background-color: \"><p>更新数据失败</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"439\" style=\"background-color: \"><p>数据更新失败（逻辑校验没通过或数据不合法）</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"99\" style=\"background-color: \"><p>612</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"167\" style=\"background-color: \"><p>没有数据操作权限</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"439\" style=\"background-color: \"><p>没有相应的数据获取权限</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"99\" style=\"background-color: \"><p>701</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"167\" style=\"background-color: \"><p>脚本执行错误</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"439\" style=\"background-color: \"><p>接口脚本执行时发生错误，请联系管理员检查脚本</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"99\" style=\"background-color: \"><p>702</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"167\" style=\"background-color: \"><p>插件执行时发生异常</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"439\" style=\"background-color: \"><p><span>执行J</span>ava插件时发生错误</p></td></tr></tbody></table><p><strong>&nbsp;</strong></p><p></p><h3 style=\"text-align: justify\"><strong>1.5 调用示例</strong></h3><p>调用接口分为以下几步:</p><p>&nbsp;&nbsp;&nbsp;&nbsp;1）带上参数请求具体的接口地址，开放平台注册的接口地址为URI，拼接域名/kapi 组成完整请求地址；</p><p><span style=\"color: rgb(0, 0, 0)\">&nbsp;&nbsp;&nbsp;&nbsp;2）在请求头加入认证信息如accesstoken；</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;3）如http<span>状态码为</span>&nbsp;200&nbsp;<span>且返回参数中</span>errorCode&nbsp;<span>为</span>&nbsp;0，表示请求成功，可读取公共返回结果数据。</p><p></p><p><strong>POSTMAN</strong><span><strong>调用示例</strong></span></p><p style=\"text-align: justify\"><strong>&nbsp;</strong></p><p><strong><img src=\"/download/0109ee95559c2dc84a02988a8525c683d480.png\"></strong></p><p><strong>&nbsp;</strong></p><p><strong>分页查询</strong></p><p>&nbsp;&nbsp;&nbsp;&nbsp;公共返回参数说明详见分页查询</p><p>&nbsp;&nbsp;&nbsp;&nbsp;详细返回示例</p><p></p><table style=\"width: 765px\"><colgroup><col style=\"width: 765px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"765\" style=\"background-color: \"><p><span style=\"color: rgb(127, 127, 127)\"><em>&nbsp;</em></span></p><p><span><em>{</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"data\": {</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"filter\": \"[biztime &gt;= '2023-04-24 00:00:00' AND biztime &lt; '2023-05-23 00:00:00']\",</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"lastPage\": true,</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"pageNo\": 1,</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"pageSize\": 10,</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"rows\": [</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>{</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"billno\": \"2023041801\",</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"billentry\": [</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>{</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"qty\": 2.0000000000,</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"material_masterid_name\": \"采购单测（一次性）\",</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"material_masterid_number\": \"unitMatpm-002\"</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>},</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>{</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"qty\": 3.0000000000,</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"material_masterid_name\": \"采购单测（一次性）\",</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"material_masterid_number\": \"unitMatpm-002\"</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>}</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>],</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"biztime\": \"2023-04-26 00:00:00\",</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"org_name\": \"环宇国际集团有限公司\",</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"org_number\": \"00\"</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>},</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>{</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"billno\": \"2023041802\",</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"billentry\": [</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>{</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"qty\": 3.0000000000,</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"material_masterid_name\": \"采购单测（一次性）\",</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"material_masterid_number\": \"unitMatpm-002\"</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>},</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>{</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"qty\": 3.0000000000,</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"material_masterid_name\": \"采购单测（一次性）\",</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"material_masterid_number\": \"unitMatpm-002\"</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>}</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>],</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"biztime\": \"2023-04-26 00:00:00\",</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"org_name\": \"环宇国际集团有限公司\",</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"org_number\": \"00\"</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>},</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>{</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"billno\": \"20230508001\",</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"billentry\": [</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>{</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"qty\": 10.0000000000,</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"material_masterid_name\": \"采购单测（一次性）\",</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"material_masterid_number\": \"unitMatpm-002\"</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>}</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>],</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"biztime\": \"2023-05-08 00:00:00\",</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"org_name\": \"环宇国际集团有限公司\",</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"org_number\": \"00\"</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>}</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>],</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"totalCount\": 3</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>},</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"errorCode\": \"0\",</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"message\": null,</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"status\": true</em></span></p><p><span><em>}</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;</em></span></p></td></tr></tbody></table><p style=\"text-align: justify\">&nbsp;</p><h2>2. 更多资讯</h2><p style=\"text-align: justify\">&nbsp;&nbsp;&nbsp;&nbsp;<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"\" href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=239331354741842688&amp;id=213309216805890816&amp;productLineId=29\">金蝶AI苍穹开放平台OpenAPI调用流程</a></p><p>&nbsp;&nbsp;&nbsp;&nbsp;<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"\" href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=239331354741842688&amp;id=218694224487485696&amp;productLineId=29\">金蝶AI苍穹开放平台OpenAPI开发认证指南</a></p>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 87,
+   "isOpen": 1,
+   "name": "金蝶AI苍穹",
+   "productLineId": 29,
+   "series": "developer01",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        null
+       ],
+       "code": null,
+       "description": "",
+       "entityId": "448792125560557568",
+       "entityType": "Knowledge",
+       "id": "450969537446273536",
+       "isCategory": false,
+       "name": "金蝶云苍穹OpenAPI接口规范",
+       "parentId": "450969352477588480",
+       "sort": "2",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": "",
+     "entityId": null,
+     "entityType": null,
+     "id": "450969352477588480",
+     "isCategory": true,
+     "name": "接口规范",
+     "parentId": "-1",
+     "sort": "5",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download/01010204d4b71b654a208006fa1004eac36a.png",
+  "department": null,
+  "id": "740211268992385024",
+  "name": "毛毛去哪儿",
+  "nameSpell": "name"
+ },
+ "totalAppraisalScore": 54,
+ "iflytekId": null,
+ "views": 19356,
+ "productLineId": 29,
+ "comments": 6,
+ "similarityCount": 0,
+ "totalAppraisalUsers": 11,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1756177176000,
+ "appraisalScore": 0,
+ "unuseful": 0,
+ "knowledgeCheckStatus": 2,
+ "otherProductLineIds": [],
+ "auditAt": 1756177176000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapiapilistlayout",
+        "id": "344582232549528320",
+        "name": "API管理",
+        "productLineId": null,
+        "sort": 1,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "5614",
+       "name": "开放平台",
+       "productLineId": null,
+       "sort": 2,
+       "type": "module"
+      },
+      "code": "DEV",
+      "id": "5576",
+      "name": "开发服务云",
+      "productLineId": null,
+      "sort": 11,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 0,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapi_apilist_layout",
+        "id": "505686038019362304",
+        "name": "异步API",
+        "productLineId": null,
+        "sort": 1,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 1,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "AdvancedSkills",
+     "createdAt": 1556519216000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "高阶技巧标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/01005cea40211bf14113a6004322e86a6780.png",
+     "id": "202203081642",
+     "name": "高级技巧",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download/010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "306913800727243776",
+      "name": "Paim",
+      "nameSpell": "name"
+     },
+     "updatedAt": 1657851500000
+    },
+    {
+     "code": "KFZN",
+     "createdAt": 1657854097000,
+     "creator": {
+      "avatar": "/download/010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "306913800727243776",
+      "name": "Paim",
+      "nameSpell": "name"
+     },
+     "description": "对开发的使用实例、应用技巧、基本知识点及注意事项等进行总结， 用于指导和规范相应模块的开发过程",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/01007702def2b9454c5983d3d2ff24919094.png",
+     "id": "335737665134146048",
+     "name": "开发指南",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010176d38341668f44fdb94c95058a90e4b8.png",
+      "department": "云社区运营部",
+      "id": "2147406697",
+      "name": "多肉丸子",
+      "nameSpell": "kejuan"
+     },
+     "updatedAt": 1676857749000
+    },
+    {
+     "code": "essencesummary",
+     "createdAt": 1606118073000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "精华汇总",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100402c6f8df169483db114f71043c19ec2.png",
+     "id": "202203081649",
+     "name": "精华汇总",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 2,
+     "updatePerson": {
+      "avatar": "/download?fileName=010162cfa9d5437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1129",
+      "name": "灏",
+      "nameSpell": "hao"
+     },
+     "updatedAt": 1606118073000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "448792125560557568",
+         "entityType": "Knowledge",
+         "id": "450969537446273536",
+         "isCategory": false,
+         "name": "金蝶云苍穹OpenAPI接口规范",
+         "parentId": "450969352477588480",
+         "sort": "2",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": null,
+       "id": "450969352477588480",
+       "isCategory": true,
+       "name": "接口规范",
+       "parentId": "-1",
+       "sort": "5",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": "<h2>1. 接口规范</h2><p><span>传输协议支持</span>&nbsp;HTTPS /HTTP 协议，主要<span>采用</span> JSON 格式作为传输规范，报文格式由具体服务接口定义。</p><p><button vid=\"644951616453094656\" id=\"644951616453094656\" class=\"kd-attachment-content\" contenteditable=\"false\"><span class=\"name\">苍穹平台OpenAPI接口规范.pdf</span></button></p><p></p><p></p><h3><strong>1.1 协议标准</strong></h3><p><span>&nbsp; &nbsp; 1）数据传输支持</span>&nbsp;HTTPS/HTTP 协议标准。</p><p>&nbsp; &nbsp; 2）<span>基于</span> GET、POST标准<span>通过O</span>penAPI进行数据请求交互，支持JSON、XML、文件流等报文格式。</p><p style=\"text-align: justify\">&nbsp; &nbsp; 3）主要采用Token认证方式进行权限校验<span>，同时也支持其他认证方式，如摘要认证、基本</span>认证等。</p><p style=\"text-align: justify\"></p><h3 style=\"text-align: justify\"><strong>1.2 报文限制</strong></h3><ul><li><p style=\"text-align: justify\">OpenAPI报文出入参报文最大限制为20M ，同时文件流限制为50M。 - 适用于苍穹V6.0.14以上。</p></li></ul><p>&nbsp;&nbsp;&nbsp;<span style=\"color: rgb(0, 176, 240)\">&nbsp; </span><span style=\"color: rgb(84, 141, 212)\">&nbsp;备注：</span><span>苍穹V7.0版本统一调整为30M。</span></p><ul><li><p style=\"text-align: justify\">私有云租户可通过MC参数调整报文限制（<span style=\"color: rgb(84, 141, 212)\">公有云不支持调整</span>）：</p><p style=\"text-align: justify\">OpenApi.MaxBodySize&nbsp; &nbsp; &nbsp; &nbsp;修改默认最大请求报文大小（<span style=\"color: rgb(255, 0, 0)\">单位：字节</span>），<span style=\"color: rgb(0, 112, 192)\">若调整为40M，则参数value为&nbsp;</span><span>41943040</span></p><p style=\"text-align: justify\">OpenApi.MaxOutBodySize&nbsp; 修改默认最大返回报文大小（<span style=\"color: rgb(255, 0, 0)\">单位：字节</span>）- 苍穹V7.0版本以上</p><p style=\"text-align: justify\">OpenApi.FileItem.MaxSize&nbsp; 修改默认文件流最大报文大小（<span style=\"color: rgb(255, 0, 0)\">单位：字节</span>）</p></li></ul><p style=\"text-align: justify\"></p><p style=\"text-align: justify\">特别注意：<span style=\"color: rgba(0, 0, 0, 0.85); font-size: 16px\">私有云用户遇到报文超过限制问题，建议优先通过</span><strong>分批处理</strong><span style=\"color: rgba(0, 0, 0, 0.85); font-size: 16px\">的方式解决；若需调整 MC 参数，务必严格控制调整幅度，避免设置过高，否则在高并发场景下，可能引发内存占用异常飙升，进而导致进程内存溢出（OOM）故障，影响系统稳定性。</span></p><h3 style=\"text-align: justify\"><strong>1.3 公共请求参数</strong></h3><p></p><p><span>公共参数是每个接口都要携带的参数，描述每个接口的基本信息，用于统计或其他用途，放在</span>header<span>或url参数中。</span></p><p><strong>Query参数</strong> url?<span>后面的参数，存放请求接口的参数数据。</span></p><p><strong>请求Header</strong> <span>请求头，存放以下公共参数、</span>APP<span>端公共参数等，也可以存放一些特殊加密字段。</span></p><p><strong>请求Body</strong> Body<span>体，存放请求接口的参数数据。</span></p><p></p><p><strong>请求头</strong></p><table style=\"width: 659px\"><colgroup><col style=\"width: 102px\"><col style=\"width: 63px\"><col style=\"width: 53px\"><col style=\"width: 150px\"><col style=\"width: 291px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"102\" style=\"background-color: \"><p style=\"text-align: center\"><span style=\"color: rgb(61, 70, 74)\">参数名称</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"63\" style=\"background-color: \"><p style=\"text-align: center\"><span style=\"color: rgb(61, 70, 74)\">参数类型</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"53\" style=\"background-color: \"><p style=\"text-align: center\"><span style=\"color: rgb(61, 70, 74)\">必填</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"150\" style=\"background-color: \"><p style=\"text-align: center\"><span style=\"color: rgb(61, 70, 74)\">描述</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"291\" style=\"background-color: \"><p style=\"text-align: center\"><span style=\"color: rgb(61, 70, 74)\">详细说明</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"90\" style=\"background-color: \"><p>Content-Type</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"63\" style=\"background-color: \"><p>string</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"53\" style=\"background-color: \"><p>是</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"150\" style=\"background-color: \"><p>内容格式</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"291\" style=\"background-color: \"><p>请求报文的入参格式，如application/json、application/xml&nbsp;等</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"90\" style=\"background-color: \"><p>accesstoken</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"63\" style=\"background-color: \"><p>string</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"53\" style=\"background-color: \"><p>是</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"150\" style=\"background-color: \"><p>请求令牌</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"291\" style=\"background-color: \"><p><span>获取的accesstoken值</span>，用于接口访问鉴权</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"90\" style=\"background-color: \"><p>Idempotency-Key</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"63\" style=\"background-color: \"><p>long</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"53\" style=\"background-color: \"><p>否</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"150\" style=\"background-color: \"><p>非必传参数，防止接口被重复调用</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"291\" style=\"background-color: \"><p style=\"text-align: left\"><span>唯一的requestId</span>，有效时间30分钟<span>。当调用接口时，系统识别到重复的</span>&nbsp;Idempotency-Key，会拒绝请求</p></td></tr></tbody></table><p></p><p><strong>分页查询请求参数</strong></p><table style=\"width: 663px\"><colgroup><col style=\"width: 103px\"><col style=\"width: 67px\"><col style=\"width: 48px\"><col style=\"width: 157px\"><col style=\"width: 288px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"103\" style=\"background-color: \"><p style=\"text-align: center\"><span style=\"color: rgb(61, 70, 74)\">参数名称</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"67\" style=\"background-color: \"><p style=\"text-align: center\"><span style=\"color: rgb(61, 70, 74)\">参数类型</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"48\" style=\"background-color: \"><p style=\"text-align: center\"><span style=\"color: rgb(61, 70, 74)\">必填</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"157\" style=\"background-color: \"><p style=\"text-align: center\"><span style=\"color: rgb(61, 70, 74)\">描述</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"288\" style=\"background-color: \"><p style=\"text-align: center\"><span style=\"color: rgb(61, 70, 74)\">详细说明</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"103\" style=\"background-color: \"><p>pageNo</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"63\" style=\"background-color: \"><p>Integer</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"48\" style=\"background-color: \"><p>否</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"157\" style=\"background-color: \"><p>分页参数，查询页码</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"288\" style=\"background-color: \"><p>查询接口分页时填写，如查第1页，则传入1</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"103\" style=\"background-color: \"><p>pageSize</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"63\" style=\"background-color: \"><p>Integer</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"48\" style=\"background-color: \"><p>是</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"157\" style=\"background-color: \"><p>分页参数，分页数量</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"288\" style=\"background-color: \"><p>查询接口分页时填写，如每页返回10条数据，则传入10</p></td></tr></tbody></table><p><strong>&nbsp;</strong></p><h3><strong>1.4 公共返回参数</strong></h3><p></p><p><span>为了方便给客户端响应，响应数据会包含</span>四<span>个属性，</span>结果<span>数据（</span>data<span>）、</span>错误<span>码（error</span>Code<span>）、信息描述（message）和状态（S</span>tatus）<span>。客户端根据</span>status和<span>信息描述可快速知道接口</span>是否调用成功以及具体的错误信息。</p><p></p><p><strong>通用返回数据结构</strong></p><table style=\"width: 683px\"><colgroup><col style=\"width: 102px\"><col style=\"width: 134px\"><col style=\"width: 162px\"><col style=\"width: 285px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"102\" style=\"background-color: \"><p style=\"text-align: center\"><span style=\"color: rgb(61, 70, 74)\">参数名称</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"134\" style=\"background-color: \"><p style=\"text-align: center\"><span style=\"color: rgb(61, 70, 74)\">参数类型</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"162\" style=\"background-color: \"><p style=\"text-align: center\"><span style=\"color: rgb(61, 70, 74)\">描述</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"285\" style=\"background-color: \"><p style=\"text-align: center\"><span style=\"color: rgb(61, 70, 74)\">详细说明</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"102\" style=\"background-color: \"><p>data</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"134\" style=\"background-color: \"><p>Object</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"162\" style=\"background-color: \"><p>结果数据</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"285\" style=\"background-color: \"><p>{}</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"102\" style=\"background-color: \"><p>errorCode</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"134\" style=\"background-color: \"><p>String</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"162\" style=\"background-color: \"><p>错误码</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"285\" style=\"background-color: \"><p><span>成功时为0，失败时会返回错误码如400</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"102\" style=\"background-color: \"><p>message</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"134\" style=\"background-color: \"><p>String</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"162\" style=\"background-color: \"><p>接口调用错误信息</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"285\" style=\"background-color: \"><p><span>成功时为空，失败时会返回错误信息如“操作失败”</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"102\" style=\"background-color: \"><p>status</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"134\" style=\"background-color: \"><p>Boolean</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"162\" style=\"background-color: \"><p>接口访问是否成功</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"285\" style=\"background-color: \"><p>true/false</p></td></tr></tbody></table><p><strong>&nbsp;</strong></p><p><strong>分页对象</strong></p><table style=\"width: 682px\"><colgroup><col style=\"width: 99px\"><col style=\"width: 135px\"><col style=\"width: 162px\"><col style=\"width: 286px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"99\" style=\"background-color: \"><p style=\"text-align: center\"><span style=\"color: rgb(61, 70, 74)\">参数名称</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"135\" style=\"background-color: \"><p style=\"text-align: center\"><span style=\"color: rgb(61, 70, 74)\">参数类型</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"162\" style=\"background-color: \"><p style=\"text-align: center\"><span style=\"color: rgb(61, 70, 74)\">描述</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"286\" style=\"background-color: \"><p style=\"text-align: center\"><span style=\"color: rgb(61, 70, 74)\">详细说明</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"99\" style=\"background-color: \"><p>rows</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"135\" style=\"background-color: \"><p>List</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"162\" style=\"background-color: \"><p>结果数据列表</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"286\" style=\"background-color: \"><p>[]</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"99\" style=\"background-color: \"><p>pageNo</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"135\" style=\"background-color: \"><p>Integer</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"162\" style=\"background-color: \"><p>分页参数，查询页码</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"286\" style=\"background-color: \"><p>若为1，则查询的是第1页</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"99\" style=\"background-color: \"><p>pageSize</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"135\" style=\"background-color: \"><p>Integer</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"162\" style=\"background-color: \"><p>分页参数，分页数量</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"286\" style=\"background-color: \"><p>若为10，则每页返回10条数据</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"99\" style=\"background-color: \"><p>filter</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"135\" style=\"background-color: \"><p>string</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"162\" style=\"background-color: \"><p>过滤条件</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"286\" style=\"background-color: \"><p>查询接口的过滤条件，既执行逻辑</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"99\" style=\"background-color: \"><p>lastPage</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"135\" style=\"background-color: \"><p>Boolean</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"162\" style=\"background-color: \"><p>是否最后一页</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"286\" style=\"background-color: \"><p>true/false</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"99\" style=\"background-color: \"><p>totalCount</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"135\" style=\"background-color: \"><p>Integer</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"162\" style=\"background-color: \"><p>总记录数</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"286\" style=\"background-color: \"><p style=\"text-align: left\">接口查询总条数</p></td></tr></tbody></table><p><strong>&nbsp;</strong></p><p><strong>错误码说明</strong></p><table style=\"width: 705px\"><colgroup><col style=\"width: 99px\"><col style=\"width: 167px\"><col style=\"width: 439px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"99\" style=\"background-color: \"><p style=\"text-align: center\"><span style=\"color: rgb(61, 70, 74)\">错误码</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"167\" style=\"background-color: \"><p style=\"text-align: center\"><span style=\"color: rgb(61, 70, 74)\">描述</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"439\" style=\"background-color: \"><p style=\"text-align: center\"><span style=\"color: rgb(61, 70, 74)\">详细说明</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"99\" style=\"background-color: \"><p>0</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"167\" style=\"background-color: \"><p>OK</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"439\" style=\"background-color: \"><p>请求成功</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"99\" style=\"background-color: \"><p>999</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"167\" style=\"background-color: \"><p>未知错误</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"439\" style=\"background-color: \"><p>发生业务异常但未指定错误码</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"99\" style=\"background-color: \"><p>400</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"167\" style=\"background-color: \"><p>参数无效</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"439\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">客户端请求中的参数无效或语法错误</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"99\" style=\"background-color: \"><p>401</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"167\" style=\"background-color: \"><p><span>未授权访问（Token无效）</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"439\" style=\"background-color: \"><p style=\"text-align: left\"><span style=\"color: rgb(0, 0, 0)\">身份验证失败、token错误或已失效&nbsp;</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"99\" style=\"background-color: \"><p>403</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"167\" style=\"background-color: \"><p><span>禁止访问（IP限制或该API没有授权）</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"439\" style=\"background-color: \"><p style=\"text-align: left\"><span style=\"color: rgb(0, 0, 0)\">无法访问未授权的服务，请联系管理员授权</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"99\" style=\"background-color: \"><p>404</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"167\" style=\"background-color: \"><p>API不存在</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"439\" style=\"background-color: \"><p style=\"text-align: left\"><span style=\"color: rgb(0, 0, 0)\">请求路径有误或地址无法找到任何资源</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"99\" style=\"background-color: \"><p>405</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"167\" style=\"background-color: \"><p>Http方法不允许</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"439\" style=\"background-color: \"><p style=\"text-align: left\"><span>请求方法(GET, POST)对某些特定的资源</span><span style=\"color: rgb(0, 0, 0)\">不适用，请确认接口的请求方法是否有误</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"99\" style=\"background-color: \"><p>406</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"167\" style=\"background-color: \"><p>API无法解晰或处理数据</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"439\" style=\"background-color: \"><p style=\"text-align: left\"><span style=\"color: rgb(0, 0, 0)\">客户端无法解析服务端返回的内容</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"99\" style=\"background-color: \"><p>415</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"167\" style=\"background-color: \"><p><span>不能支持的MediaType</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"439\" style=\"background-color: \"><p style=\"text-align: left\"><span>服务器无法处理请求附带的媒体格式, 解决方法就是在请求头中加入Content-Type指定</span><span style=\"color: rgb(0, 0, 0)\">内容格式</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"99\" style=\"background-color: \"><p>429</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"167\" style=\"background-color: \"><p>API被限流</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"439\" style=\"background-color: \"><p><span>请求频率超过了所请求的服务设置频率</span> <span>控制条件，请降频请求或联系管理员提高请求频率</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"99\" style=\"background-color: \"><p>500</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"167\" style=\"background-color: \"><p>服务异常，服务内部错误</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"439\" style=\"background-color: \"><p>未知异常，需联系系统管理员排查确认</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"99\" style=\"background-color: \"><p>601</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"167\" style=\"background-color: \"><p>数据重复</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"439\" style=\"background-color: \"><p>请求数据重复，可能由于网络波动或高并发生成重复数据</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"99\" style=\"background-color: \"><p>602</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"167\" style=\"background-color: \"><p>找不到数据</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"439\" style=\"background-color: \"><p>数据不存在，比如更新数据时找不到相应的分录</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"99\" style=\"background-color: \"><p>603</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"167\" style=\"background-color: \"><p>数据无效</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"439\" style=\"background-color: \"><p>必填字段数据为空/数据校验无效/请求数据量超出最大限制</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"99\" style=\"background-color: \"><p>604</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"167\" style=\"background-color: \"><p>不允许重复执行</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"439\" style=\"background-color: \"><p>幂等性控制时不允许重复请求，防止数据重复</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"99\" style=\"background-color: \"><p>611</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"167\" style=\"background-color: \"><p>更新数据失败</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"439\" style=\"background-color: \"><p>数据更新失败（逻辑校验没通过或数据不合法）</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"99\" style=\"background-color: \"><p>612</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"167\" style=\"background-color: \"><p>没有数据操作权限</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"439\" style=\"background-color: \"><p>没有相应的数据获取权限</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"99\" style=\"background-color: \"><p>701</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"167\" style=\"background-color: \"><p>脚本执行错误</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"439\" style=\"background-color: \"><p>接口脚本执行时发生错误，请联系管理员检查脚本</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"99\" style=\"background-color: \"><p>702</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"167\" style=\"background-color: \"><p>插件执行时发生异常</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"439\" style=\"background-color: \"><p><span>执行J</span>ava插件时发生错误</p></td></tr></tbody></table><p><strong>&nbsp;</strong></p><p></p><h3 style=\"text-align: justify\"><strong>1.5 调用示例</strong></h3><p>调用接口分为以下几步:</p><p>&nbsp;&nbsp;&nbsp;&nbsp;1）带上参数请求具体的接口地址，开放平台注册的接口地址为URI，拼接域名/kapi 组成完整请求地址；</p><p><span style=\"color: rgb(0, 0, 0)\">&nbsp;&nbsp;&nbsp;&nbsp;2）在请求头加入认证信息如accesstoken；</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;3）如http<span>状态码为</span>&nbsp;200&nbsp;<span>且返回参数中</span>errorCode&nbsp;<span>为</span>&nbsp;0，表示请求成功，可读取公共返回结果数据。</p><p></p><p><strong>POSTMAN</strong><span><strong>调用示例</strong></span></p><p style=\"text-align: justify\"><strong>&nbsp;</strong></p><p><strong><img src=\"/download/0109ee95559c2dc84a02988a8525c683d480.png\"></strong></p><p><strong>&nbsp;</strong></p><p><strong>分页查询</strong></p><p>&nbsp;&nbsp;&nbsp;&nbsp;公共返回参数说明详见分页查询</p><p>&nbsp;&nbsp;&nbsp;&nbsp;详细返回示例</p><p></p><table style=\"width: 765px\"><colgroup><col style=\"width: 765px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"765\" style=\"background-color: \"><p><span style=\"color: rgb(127, 127, 127)\"><em>&nbsp;</em></span></p><p><span><em>{</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"data\": {</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"filter\": \"[biztime &gt;= '2023-04-24 00:00:00' AND biztime &lt; '2023-05-23 00:00:00']\",</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"lastPage\": true,</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"pageNo\": 1,</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"pageSize\": 10,</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"rows\": [</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>{</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"billno\": \"2023041801\",</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"billentry\": [</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>{</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"qty\": 2.0000000000,</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"material_masterid_name\": \"采购单测（一次性）\",</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"material_masterid_number\": \"unitMatpm-002\"</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>},</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>{</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"qty\": 3.0000000000,</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"material_masterid_name\": \"采购单测（一次性）\",</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"material_masterid_number\": \"unitMatpm-002\"</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>}</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>],</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"biztime\": \"2023-04-26 00:00:00\",</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"org_name\": \"环宇国际集团有限公司\",</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"org_number\": \"00\"</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>},</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>{</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"billno\": \"2023041802\",</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"billentry\": [</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>{</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"qty\": 3.0000000000,</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"material_masterid_name\": \"采购单测（一次性）\",</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"material_masterid_number\": \"unitMatpm-002\"</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>},</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>{</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"qty\": 3.0000000000,</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"material_masterid_name\": \"采购单测（一次性）\",</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"material_masterid_number\": \"unitMatpm-002\"</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>}</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>],</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"biztime\": \"2023-04-26 00:00:00\",</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"org_name\": \"环宇国际集团有限公司\",</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"org_number\": \"00\"</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>},</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>{</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"billno\": \"20230508001\",</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"billentry\": [</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>{</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"qty\": 10.0000000000,</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"material_masterid_name\": \"采购单测（一次性）\",</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"material_masterid_number\": \"unitMatpm-002\"</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>}</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>],</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"biztime\": \"2023-05-08 00:00:00\",</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"org_name\": \"环宇国际集团有限公司\",</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"org_number\": \"00\"</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>}</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>],</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"totalCount\": 3</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>},</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"errorCode\": \"0\",</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"message\": null,</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;&nbsp;&nbsp;&nbsp;</em></span><span><em>\"status\": true</em></span></p><p><span><em>}</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;</em></span></p><p><span style=\"color: rgb(43, 135, 243)\"><em>&nbsp;</em></span></p></td></tr></tbody></table><p style=\"text-align: justify\">&nbsp;</p><h2>2. 更多资讯</h2><p style=\"text-align: justify\">&nbsp;&nbsp;&nbsp;&nbsp;<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"\" href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=239331354741842688&amp;id=213309216805890816&amp;productLineId=29\">金蝶AI苍穹开放平台OpenAPI调用流程</a></p><p>&nbsp;&nbsp;&nbsp;&nbsp;<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"\" href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=239331354741842688&amp;id=218694224487485696&amp;productLineId=29\">金蝶AI苍穹开放平台OpenAPI开发认证指南</a></p>"
+}

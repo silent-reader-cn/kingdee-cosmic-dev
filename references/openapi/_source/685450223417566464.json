@@ -1,0 +1,502 @@
+{
+ "badNum": 0,
+ "identityTagIds": null,
+ "knowledgeId": "685450223417566464",
+ "createdAt": 1741232068000,
+ "collections": 0,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "685450223417566464",
+ "contentType": 1,
+ "updatedAt": 1741575934000,
+ "knowledgeUpdater": {
+  "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+  "department": null,
+  "id": "132488613174518784",
+  "name": "某个路易",
+  "nameSpell": "name"
+ },
+ "assessStatus": 0,
+ "knowledgeStatus": 2,
+ "assessHandleStatus": null,
+ "knowledgeCreatedAt": 1741232068000,
+ "version": 29,
+ "labels": [],
+ "editedAt": 1741575907000,
+ "identityTags": null,
+ "useful": 1,
+ "errors": [],
+ "isCollected": false,
+ "totalFeedBacks": 0,
+ "attachments": [],
+ "sources": [],
+ "editTitle": "保存操作API权限增强校验",
+ "title": "保存操作API权限增强校验",
+ "content": "<h2 label=\"一级标题\" class=\"first-title html-anchor-list0-1694481588318 html-anchor-list0-1741231897408 html-anchor-list0-1741231897408\" id=\"html-anchor-list0-1694481588318\" style=\"background-color: rgb(255, 255, 255);\"></h2><h2 label=\"一级标题\" class=\"first-title\" style=\"\"><span style=\"background-color: rgb(255, 255, 255);\">变更记录</span></h2><table width=\"100%\" style=\"\"><tbody style=\"\"><tr class=\"firstRow ueditor-new-first-row\" style=\"\"><td valign=\"top\" width=\"87.33333333333333\" style=\"\">产品版本<br/></td><td valign=\"top\" width=\"488.33333333333337\" style=\"\">更新内容</td><td valign=\"top\" width=\"213.07462686567163\" style=\"\">更新日期</td></tr><tr style=\"\"><td valign=\"top\" width=\"92.33333333333331\" style=\"\">V7.0.7</td><td valign=\"top\" width=\"453.3333333333333\" style=\"\">保存操作API增加“保存权限项自动校验”开关，提升API安全性</td><td valign=\"top\" width=\"146.33333333333334\" style=\"\">2025年03月11日</td></tr></tbody></table><p style=\"background-color: rgb(255, 255, 255);\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\"><span style=\"\"></span>1 背景说明</h2><p style=\"color: rgba(0, 0, 0, 0.87); background-color: rgb(255, 255, 255);\">此前，通过OpenAPI 执行单据或基础资料的新增、修改操作时，<span style=\"color: rgb(0, 112, 192);\">若元数据保存操作没绑定权限项</span>，则即使用户未被授予相关权限，在注册第三方应用并授权API接口权限后，仍可通过 API 执行新增或修改操作。</p><p style=\"color: rgba(0, 0, 0, 0.87); background-color: rgb(255, 255, 255);\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\"><span style=\"\">2 功能升级</span></h2><ul style=\"color: rgba(0, 0, 0, 0.87); background-color: rgb(255, 255, 255);\" class=\" list-paddingleft-2\"><li style=\"\"><p style=\"\"><span style=\"font-weight: 700;\">新增API级权限开关</span>：在 API 配置界面中，增加 【<strong style=\"\">保存权限项自动</strong><span style=\"font-weight: 700;\">校验】开关，</span>&nbsp;新增时开关默认打开。</p></li><li style=\"\"><p style=\"\"><span style=\"font-weight: 700;\">开启后生效规则</span>：</p></li><ul style=\"list-style-type: disclosure-closed;\" class=\" list-paddingleft-2\"><li style=\"\"><p style=\"\"><span style=\"font-weight: 700;\">新增数据</span>：调用 OpenAPI 时，系统将校验用户是否拥有该单据类型的&nbsp;<span style=\"font-weight: 700;\">“新增”权限</span>。</p></li><li style=\"\"><p style=\"\"><span style=\"font-weight: 700;\">修改数据</span>：调用 OpenAPI 时，系统将校验用户是否拥有该单据类型的&nbsp;<span style=\"font-weight: 700;\">“修改”权限</span>。</p></li><li style=\"\"><p style=\"\"><span style=\"font-weight: 700;\">权限缺失拦截</span>：若用户无对应权限，API 将返回错误码 603，并提示无“XXX”的“新增”或“修改”权限。</p></li></ul></ul><h4 style=\"color: rgba(0, 0, 0, 0.87); background-color: rgb(255, 255, 255);\"><span style=\"font-size: 18px; color: rgb(26, 26, 26);\"><br/></span></h4><h2 label=\"一级标题\" class=\"first-title\" style=\"\"><span style=\"\">3 操作指引</span></h2><h3 label=\"二级标题\" class=\"second-title\" style=\"\">3.1 操作路径</h3><ul class=\" list-paddingleft-2\" style=\"\"><li style=\"\"><p style=\"\">开放服务云 → OpenAPI → API管理 → API开发，在API详情界面配置项中，开启 【保存权限项自动校验】。</p></li></ul><p style=\"\"><br/></p><p style=\"\"><img src=\"/download/01097f02acf63fe74553a04f765fb40a92c2.png\"/></p><p style=\"\"><br/></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\">3.2 启用建议</h3><ul class=\" list-paddingleft-2\" style=\"color: rgba(0, 0, 0, 0.87); background-color: rgb(255, 255, 255);\"><li style=\"\"><p style=\"\"><span style=\"font-weight: 700;\">建议开启场景</span>：</p></li><ul class=\" list-paddingleft-2\" style=\"list-style-type: disclosure-closed;\"><li style=\"\"><p style=\"\">您的业务对数据操作权限有严格管控要求。</p></li><li style=\"\"><p style=\"\">API 涉及财务、库存、客户信息等敏感单据。</p></li></ul><li style=\"\"><p style=\"\"><span style=\"font-weight: 700;\">暂不建议开启场景</span>：</p></li><ul class=\" list-paddingleft-2\" style=\"list-style-type: disclosure-closed;\"><li style=\"\"><p style=\"\">存在历史遗留 API 依赖原有逻辑（需先评估权限适配性）。</p></li></ul></ul><p style=\"\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">4 核心价值</h2><ul class=\" list-paddingleft-2\" style=\"color: rgba(0, 0, 0, 0.87); background-color: rgb(255, 255, 255);\"><li style=\"\"><p style=\"\"><span style=\"font-weight: 700;\">安全性提升</span>：杜绝未授权用户通过 API 越权操作关键业务数据。</p></li><li style=\"\"><p style=\"\"><span style=\"font-weight: 700;\">合规性完善</span>：满足企业内部审计或外部监管对数据权限的强制要求。</p></li><li style=\"\"><p style=\"\"><span style=\"font-weight: 700;\">灵活性可控</span>：您可根据业务需求自主选择是否启用此功能。</p></li></ul><p style=\"\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\"><span style=\"\">5 注意事项</span></h2><ul class=\" list-paddingleft-2\" style=\"\"><li style=\"\"><p style=\"\"><span style=\"font-weight: 700;\">影响范围</span>：此功能仅对配置后新发起的 API 请求生效，不影响已发布的历史 API。</p></li><li style=\"\"><p style=\"\"><span style=\"font-weight: 700;\">兼容性</span>：开启后，请确保调用 API 的终端用户已配置正确的功能权限（通过安全管理模块检查）。</p></li><li style=\"\"><p style=\"\"><span style=\"font-weight: 700;\">回滚操作</span>：关闭开关即可恢复至原有逻辑，无需重启服务。</p><p style=\"\"><br/></p></li></ul><hr/><p style=\"\"><span style=\"\"><br/></span></p><p style=\"\"><strong style=\"\"><span style=\"\">安全无小事，建议您尽快评估并启用此功能！</span></strong></p><p style=\"\"><span style=\"\">感谢您对我们产品的持续信任与支持！</span></p><p style=\"\"><span style=\"\"><br/></span></p><p style=\"\"><span style=\"\">集成开放产品团队</span></p><p style=\"\"><span style=\"\">2025年03月07日</span></p><p><br/></p>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 87,
+   "isOpen": 1,
+   "name": "金蝶AI苍穹",
+   "productLineId": 29,
+   "series": "developer01",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "685450223417566464",
+         "entityType": "Knowledge",
+         "id": "686890964442481664",
+         "isCategory": false,
+         "name": "保存操作API权限增强校验",
+         "parentId": "226337340351087360",
+         "sort": "1",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": null,
+       "id": "226337340351087360",
+       "isCategory": true,
+       "name": "重要通知",
+       "parentId": "226337280724861696",
+       "sort": "1",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": "",
+     "entityId": null,
+     "entityType": null,
+     "id": "226337280724861696",
+     "isCategory": true,
+     "name": "动态与公告",
+     "parentId": "-1",
+     "sort": "1",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download/01010204d4b71b654a208006fa1004eac36a.png",
+  "department": null,
+  "id": "740211268992385024",
+  "name": "毛毛去哪儿",
+  "nameSpell": "name"
+ },
+ "totalAppraisalScore": 5,
+ "iflytekId": null,
+ "views": 1651,
+ "productLineId": 29,
+ "comments": 0,
+ "similarityCount": 0,
+ "totalAppraisalUsers": 1,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1741575934000,
+ "appraisalScore": 0,
+ "unuseful": 0,
+ "knowledgeCheckStatus": 2,
+ "otherProductLineIds": [],
+ "auditAt": 1741575934000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapi_apilist_layout",
+        "id": "505686038019362304",
+        "name": "异步API",
+        "productLineId": null,
+        "sort": 1,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 0,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "OperatingGuide",
+     "createdAt": 1556519201000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "某一功能的具体说明介绍，包括应用场景、参数说明、具体操作步骤等",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/010037894174802d4b9f8782f1f0010a6ddd.png",
+     "id": "202203081641",
+     "name": "功能介绍",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010176d38341668f44fdb94c95058a90e4b8.png",
+      "department": "云社区运营部",
+      "id": "2147406697",
+      "name": "多肉丸子",
+      "nameSpell": "kejuan"
+     },
+     "updatedAt": 1676857681000
+    },
+    {
+     "code": "GettingStarted",
+     "createdAt": 1556519230000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "推送至苍穹帮助中心",
+     "hasSpecifyUser": false,
+     "hide": true,
+     "icon": "/download/01001f079866652f4a68a71361a9509d404c.png",
+     "id": "202203081643",
+     "name": "推送至苍穹帮助中心",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 1,
+     "type": 2,
+     "updatePerson": {
+      "avatar": "/download?fileName=010162cfa9d5437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1129",
+      "name": "灏",
+      "nameSpell": "hao"
+     },
+     "updatedAt": 1605688859000
+    },
+    {
+     "code": "rumen",
+     "createdAt": 1605667807000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "入门类的知识可使用此标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100d322b9282bcc438faa894f4eec029977.png",
+     "id": "202203081646",
+     "name": "基础入门",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download?fileName=0101ec1d6ce599b442dab7d0b794c1fce88d.png",
+      "department": null,
+      "id": "1009",
+      "name": "一颗小星星",
+      "nameSpell": "fengling"
+     },
+     "updatedAt": 1657872008000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          {
+           "childCategory": [
+            null
+           ],
+           "code": null,
+           "description": "",
+           "entityId": "685450223417566464",
+           "entityType": "Knowledge",
+           "id": "686890964442481664",
+           "isCategory": false,
+           "name": "保存操作API权限增强校验",
+           "parentId": "226337340351087360",
+           "sort": "1",
+           "specialId": "226337046514476288",
+           "status": 1
+          }
+         ],
+         "code": null,
+         "description": "",
+         "entityId": null,
+         "entityType": null,
+         "id": "226337340351087360",
+         "isCategory": true,
+         "name": "重要通知",
+         "parentId": "226337280724861696",
+         "sort": "1",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": null,
+       "id": "226337280724861696",
+       "isCategory": true,
+       "name": "动态与公告",
+       "parentId": "-1",
+       "sort": "1",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": "<h2 label=\"一级标题\" class=\"first-title html-anchor-list0-1694481588318 html-anchor-list0-1741231897408 html-anchor-list0-1741231897408\" id=\"html-anchor-list0-1694481588318\" style=\"background-color: rgb(255, 255, 255);\"></h2><h2 label=\"一级标题\" class=\"first-title\" style=\"\"><span style=\"background-color: rgb(255, 255, 255);\">变更记录</span></h2><table width=\"100%\" style=\"\"><tbody style=\"\"><tr class=\"firstRow ueditor-new-first-row\" style=\"\"><td valign=\"top\" width=\"87.33333333333333\" style=\"\">产品版本<br/></td><td valign=\"top\" width=\"488.33333333333337\" style=\"\">更新内容</td><td valign=\"top\" width=\"213.07462686567163\" style=\"\">更新日期</td></tr><tr style=\"\"><td valign=\"top\" width=\"92.33333333333331\" style=\"\">V7.0.7</td><td valign=\"top\" width=\"453.3333333333333\" style=\"\">保存操作API增加“保存权限项自动校验”开关，提升API安全性</td><td valign=\"top\" width=\"146.33333333333334\" style=\"\">2025年03月11日</td></tr></tbody></table><p style=\"background-color: rgb(255, 255, 255);\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\"><span style=\"\"></span>1 背景说明</h2><p style=\"color: rgba(0, 0, 0, 0.87); background-color: rgb(255, 255, 255);\">此前，通过OpenAPI 执行单据或基础资料的新增、修改操作时，<span style=\"color: rgb(0, 112, 192);\">若元数据保存操作没绑定权限项</span>，则即使用户未被授予相关权限，在注册第三方应用并授权API接口权限后，仍可通过 API 执行新增或修改操作。</p><p style=\"color: rgba(0, 0, 0, 0.87); background-color: rgb(255, 255, 255);\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\"><span style=\"\">2 功能升级</span></h2><ul style=\"color: rgba(0, 0, 0, 0.87); background-color: rgb(255, 255, 255);\" class=\" list-paddingleft-2\"><li style=\"\"><p style=\"\"><span style=\"font-weight: 700;\">新增API级权限开关</span>：在 API 配置界面中，增加 【<strong style=\"\">保存权限项自动</strong><span style=\"font-weight: 700;\">校验】开关，</span>&nbsp;新增时开关默认打开。</p></li><li style=\"\"><p style=\"\"><span style=\"font-weight: 700;\">开启后生效规则</span>：</p></li><ul style=\"list-style-type: disclosure-closed;\" class=\" list-paddingleft-2\"><li style=\"\"><p style=\"\"><span style=\"font-weight: 700;\">新增数据</span>：调用 OpenAPI 时，系统将校验用户是否拥有该单据类型的&nbsp;<span style=\"font-weight: 700;\">“新增”权限</span>。</p></li><li style=\"\"><p style=\"\"><span style=\"font-weight: 700;\">修改数据</span>：调用 OpenAPI 时，系统将校验用户是否拥有该单据类型的&nbsp;<span style=\"font-weight: 700;\">“修改”权限</span>。</p></li><li style=\"\"><p style=\"\"><span style=\"font-weight: 700;\">权限缺失拦截</span>：若用户无对应权限，API 将返回错误码 603，并提示无“XXX”的“新增”或“修改”权限。</p></li></ul></ul><h4 style=\"color: rgba(0, 0, 0, 0.87); background-color: rgb(255, 255, 255);\"><span style=\"font-size: 18px; color: rgb(26, 26, 26);\"><br/></span></h4><h2 label=\"一级标题\" class=\"first-title\" style=\"\"><span style=\"\">3 操作指引</span></h2><h3 label=\"二级标题\" class=\"second-title\" style=\"\">3.1 操作路径</h3><ul class=\" list-paddingleft-2\" style=\"\"><li style=\"\"><p style=\"\">开放服务云 → OpenAPI → API管理 → API开发，在API详情界面配置项中，开启 【保存权限项自动校验】。</p></li></ul><p style=\"\"><br/></p><p style=\"\"><img src=\"/download/01097f02acf63fe74553a04f765fb40a92c2.png\"/></p><p style=\"\"><br/></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\">3.2 启用建议</h3><ul class=\" list-paddingleft-2\" style=\"color: rgba(0, 0, 0, 0.87); background-color: rgb(255, 255, 255);\"><li style=\"\"><p style=\"\"><span style=\"font-weight: 700;\">建议开启场景</span>：</p></li><ul class=\" list-paddingleft-2\" style=\"list-style-type: disclosure-closed;\"><li style=\"\"><p style=\"\">您的业务对数据操作权限有严格管控要求。</p></li><li style=\"\"><p style=\"\">API 涉及财务、库存、客户信息等敏感单据。</p></li></ul><li style=\"\"><p style=\"\"><span style=\"font-weight: 700;\">暂不建议开启场景</span>：</p></li><ul class=\" list-paddingleft-2\" style=\"list-style-type: disclosure-closed;\"><li style=\"\"><p style=\"\">存在历史遗留 API 依赖原有逻辑（需先评估权限适配性）。</p></li></ul></ul><p style=\"\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">4 核心价值</h2><ul class=\" list-paddingleft-2\" style=\"color: rgba(0, 0, 0, 0.87); background-color: rgb(255, 255, 255);\"><li style=\"\"><p style=\"\"><span style=\"font-weight: 700;\">安全性提升</span>：杜绝未授权用户通过 API 越权操作关键业务数据。</p></li><li style=\"\"><p style=\"\"><span style=\"font-weight: 700;\">合规性完善</span>：满足企业内部审计或外部监管对数据权限的强制要求。</p></li><li style=\"\"><p style=\"\"><span style=\"font-weight: 700;\">灵活性可控</span>：您可根据业务需求自主选择是否启用此功能。</p></li></ul><p style=\"\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\"><span style=\"\">5 注意事项</span></h2><ul class=\" list-paddingleft-2\" style=\"\"><li style=\"\"><p style=\"\"><span style=\"font-weight: 700;\">影响范围</span>：此功能仅对配置后新发起的 API 请求生效，不影响已发布的历史 API。</p></li><li style=\"\"><p style=\"\"><span style=\"font-weight: 700;\">兼容性</span>：开启后，请确保调用 API 的终端用户已配置正确的功能权限（通过安全管理模块检查）。</p></li><li style=\"\"><p style=\"\"><span style=\"font-weight: 700;\">回滚操作</span>：关闭开关即可恢复至原有逻辑，无需重启服务。</p><p style=\"\"><br/></p></li></ul><hr/><p style=\"\"><span style=\"\"><br/></span></p><p style=\"\"><strong style=\"\"><span style=\"\">安全无小事，建议您尽快评估并启用此功能！</span></strong></p><p style=\"\"><span style=\"\">感谢您对我们产品的持续信任与支持！</span></p><p style=\"\"><span style=\"\"><br/></span></p><p style=\"\"><span style=\"\">集成开放产品团队</span></p><p style=\"\"><span style=\"\">2025年03月07日</span></p><p><br/></p>"
+}

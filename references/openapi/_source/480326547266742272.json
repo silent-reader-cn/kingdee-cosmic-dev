@@ -1,0 +1,442 @@
+{
+ "badNum": 0,
+ "templateId": "290071880827070208",
+ "identityTagIds": null,
+ "knowledgeId": "480326547266742272",
+ "createdAt": 1692326773000,
+ "collections": 3,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "480326547266742272",
+ "contentType": 1,
+ "updatedAt": 1698397723000,
+ "knowledgeUpdater": {
+  "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+  "department": null,
+  "id": "132488613174518784",
+  "name": "某个路易",
+  "nameSpell": "name"
+ },
+ "assessStatus": 0,
+ "knowledgeStatus": 2,
+ "assessHandleStatus": null,
+ "knowledgeCreatedAt": 1692326773000,
+ "version": 5,
+ "labels": [],
+ "editedAt": 1698397723000,
+ "identityTags": null,
+ "useful": 0,
+ "errors": [],
+ "isCollected": false,
+ "template": "",
+ "totalFeedBacks": 0,
+ "attachments": [],
+ "sources": [],
+ "editTitle": "接口需第三方应用授权",
+ "title": "接口需第三方应用授权",
+ "content": "<p label=\"正文\" style=\"\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">问题描述</h2><p label=\"正文\" style=\"\">通过集成服务云、事件中心或SDK调用开放平台OpenAPI时，报错提示“该接口需第三方应用授权”。</p><p><br/></p><p><img src=\"/download/0109280fc7d23e144b6d86f1557f36191ed1.png\"/></p><p><br/></p><p style=\"\"><span style=\"color: rgb(0, 0, 0);\"></span></p><p style=\"\"><span style=\"color: rgb(0, 0, 0);\"></span></p><p><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">解决方法</h2><ul class=\" list-paddingleft-2\" style=\"\"><li><p style=\"\">原因分析：通过上述方法可能会导致获取到的令牌中，没有第三方应用信息，所以被系统拦截。</p></li><li><p style=\"text-align: justify;\"><span style=\"color: rgb(0, 0, 0);\">解决方法：关闭API配置项“第三方应用授权”，路径：<span style=\"color: rgb(0, 0, 0); text-align: justify;\">【<span style=\"color: rgb(0, 0, 0); text-align: justify;\">开发服务云&nbsp;</span>】→<span style=\"color: rgb(0, 0, 0); text-align: justify;\">【</span><span style=\"color: rgb(0, 0, 0); text-align: justify;\">开放平台</span><span style=\"color: rgb(0, 0, 0); text-align: justify;\">】<span style=\"color: rgb(0, 0, 0); text-align: justify;\">→</span><span style=\"color: rgb(0, 0, 0); text-align: justify;\">【</span><span style=\"color: rgb(0, 0, 0); text-align: justify;\">API管理&nbsp;</span><span style=\"color: rgb(0, 0, 0); text-align: justify;\">】<span style=\"color: rgb(0, 0, 0); text-align: justify;\">→</span><span style=\"color: rgb(0, 0, 0); text-align: justify;\">【</span><span style=\"color: rgb(0, 0, 0); text-align: justify;\">API开发</span><span style=\"color: rgb(0, 0, 0); text-align: justify;\">】，找到需要调用的接口，关闭配置项。</span></span></span></span></span></p></li></ul><p style=\"text-align: justify;\"><br/></p><p style=\"text-align: justify;\"><span style=\"color: rgb(0, 0, 0);\"><span style=\"color: rgb(0, 0, 0); text-align: justify;\"><span style=\"color: rgb(0, 0, 0); text-align: justify;\"><span style=\"color: rgb(0, 0, 0); text-align: justify;\"><span style=\"color: rgb(0, 0, 0); text-align: justify;\"><img src=\"/download/0109a36fa7af6e6c47a3a3fe42325f1ffa1c.png\"/></span></span></span></span></span></p><p style=\"text-align: justify;\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">适用版本</h2><p style=\"\">&nbsp; &nbsp; V5.0.012（BOS）</p><p style=\"\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">注意事项（可选）</h2><ul class=\" list-paddingleft-2\" style=\"\"><li><p style=\"\">若要严格管理外部系统的接口调用，建议严格注册第三方应用，并获取access_token的方式调用接口。</p></li></ul><p style=\"\"><br/></p><p><br/></p><p style=\"\"><br/></p><p style=\"text-align: center;\"><br/></p><p><br/></p>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 87,
+   "isOpen": 1,
+   "name": "金蝶AI苍穹",
+   "productLineId": 29,
+   "series": "developer01",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        null
+       ],
+       "code": null,
+       "description": "",
+       "entityId": "480326547266742272",
+       "entityType": "Knowledge",
+       "id": "480326798958625280",
+       "isCategory": false,
+       "name": "接口需第三方应用授权",
+       "parentId": "226337785987048960",
+       "sort": "3",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": "",
+     "entityId": null,
+     "entityType": null,
+     "id": "226337785987048960",
+     "isCategory": true,
+     "name": "常见问题",
+     "parentId": "-1",
+     "sort": "9",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download/01010204d4b71b654a208006fa1004eac36a.png",
+  "department": null,
+  "id": "740211268992385024",
+  "name": "毛毛去哪儿",
+  "nameSpell": "name"
+ },
+ "totalAppraisalScore": 0,
+ "iflytekId": null,
+ "views": 4418,
+ "productLineId": 29,
+ "comments": 1,
+ "similarityCount": null,
+ "totalAppraisalUsers": 0,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1698397723000,
+ "appraisalScore": 0,
+ "unuseful": 0,
+ "knowledgeCheckStatus": 2,
+ "otherProductLineIds": [],
+ "auditAt": 1698400901000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": null,
+       "code": "open",
+       "id": "5614",
+       "name": "开放平台",
+       "productLineId": null,
+       "sort": 2,
+       "type": "module"
+      },
+      "code": "DEV",
+      "id": "5576",
+      "name": "开发服务云",
+      "productLineId": null,
+      "sort": 11,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 0,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": null,
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 1,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "HotIssues",
+     "createdAt": 1558618967000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "使用中经常遇到的应用类、报错类问题的解决方法",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/010046d15638963c4c388734601dd5f8ceec.png",
+     "id": "202203081644",
+     "name": "常见问题",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010176d38341668f44fdb94c95058a90e4b8.png",
+      "department": "云社区运营部",
+      "id": "2147406697",
+      "name": "多肉丸子",
+      "nameSpell": "kejuan"
+     },
+     "updatedAt": 1676857709000
+    },
+    {
+     "code": "rumen",
+     "createdAt": 1605667807000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "入门类的知识可使用此标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100d322b9282bcc438faa894f4eec029977.png",
+     "id": "202203081646",
+     "name": "基础入门",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download?fileName=0101ec1d6ce599b442dab7d0b794c1fce88d.png",
+      "department": null,
+      "id": "1009",
+      "name": "一颗小星星",
+      "nameSpell": "fengling"
+     },
+     "updatedAt": 1657872008000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "480326547266742272",
+         "entityType": "Knowledge",
+         "id": "480326798958625280",
+         "isCategory": false,
+         "name": "接口需第三方应用授权",
+         "parentId": "226337785987048960",
+         "sort": "3",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": null,
+       "id": "226337785987048960",
+       "isCategory": true,
+       "name": "常见问题",
+       "parentId": "-1",
+       "sort": "9",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": "<p label=\"正文\" style=\"\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">问题描述</h2><p label=\"正文\" style=\"\">通过集成服务云、事件中心或SDK调用开放平台OpenAPI时，报错提示“该接口需第三方应用授权”。</p><p><br/></p><p><img src=\"/download/0109280fc7d23e144b6d86f1557f36191ed1.png\"/></p><p><br/></p><p style=\"\"><span style=\"color: rgb(0, 0, 0);\"></span></p><p style=\"\"><span style=\"color: rgb(0, 0, 0);\"></span></p><p><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">解决方法</h2><ul class=\" list-paddingleft-2\" style=\"\"><li><p style=\"\">原因分析：通过上述方法可能会导致获取到的令牌中，没有第三方应用信息，所以被系统拦截。</p></li><li><p style=\"text-align: justify;\"><span style=\"color: rgb(0, 0, 0);\">解决方法：关闭API配置项“第三方应用授权”，路径：<span style=\"color: rgb(0, 0, 0); text-align: justify;\">【<span style=\"color: rgb(0, 0, 0); text-align: justify;\">开发服务云&nbsp;</span>】→<span style=\"color: rgb(0, 0, 0); text-align: justify;\">【</span><span style=\"color: rgb(0, 0, 0); text-align: justify;\">开放平台</span><span style=\"color: rgb(0, 0, 0); text-align: justify;\">】<span style=\"color: rgb(0, 0, 0); text-align: justify;\">→</span><span style=\"color: rgb(0, 0, 0); text-align: justify;\">【</span><span style=\"color: rgb(0, 0, 0); text-align: justify;\">API管理&nbsp;</span><span style=\"color: rgb(0, 0, 0); text-align: justify;\">】<span style=\"color: rgb(0, 0, 0); text-align: justify;\">→</span><span style=\"color: rgb(0, 0, 0); text-align: justify;\">【</span><span style=\"color: rgb(0, 0, 0); text-align: justify;\">API开发</span><span style=\"color: rgb(0, 0, 0); text-align: justify;\">】，找到需要调用的接口，关闭配置项。</span></span></span></span></span></p></li></ul><p style=\"text-align: justify;\"><br/></p><p style=\"text-align: justify;\"><span style=\"color: rgb(0, 0, 0);\"><span style=\"color: rgb(0, 0, 0); text-align: justify;\"><span style=\"color: rgb(0, 0, 0); text-align: justify;\"><span style=\"color: rgb(0, 0, 0); text-align: justify;\"><span style=\"color: rgb(0, 0, 0); text-align: justify;\"><img src=\"/download/0109a36fa7af6e6c47a3a3fe42325f1ffa1c.png\"/></span></span></span></span></span></p><p style=\"text-align: justify;\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">适用版本</h2><p style=\"\">&nbsp; &nbsp; V5.0.012（BOS）</p><p style=\"\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">注意事项（可选）</h2><ul class=\" list-paddingleft-2\" style=\"\"><li><p style=\"\">若要严格管理外部系统的接口调用，建议严格注册第三方应用，并获取access_token的方式调用接口。</p></li></ul><p style=\"\"><br/></p><p><br/></p><p style=\"\"><br/></p><p style=\"text-align: center;\"><br/></p><p><br/></p>"
+}

@@ -1,0 +1,521 @@
+{
+ "badNum": 0,
+ "templateId": null,
+ "identityTagIds": null,
+ "knowledgeId": "321672729252894208",
+ "createdAt": 1654500755000,
+ "collections": 1,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "321672729252894208",
+ "contentType": 1,
+ "updatedAt": 1698400347000,
+ "knowledgeUpdater": {
+  "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+  "department": null,
+  "id": "132488613174518784",
+  "name": "某个路易",
+  "nameSpell": "name"
+ },
+ "assessStatus": 0,
+ "knowledgeStatus": 2,
+ "assessHandleStatus": null,
+ "knowledgeCreatedAt": 1654500755000,
+ "version": 55,
+ "labels": [],
+ "editedAt": 1698400347000,
+ "identityTags": null,
+ "useful": 8,
+ "errors": [],
+ "isCollected": false,
+ "template": "{\"token\":2,\"title\":\"API菜单迁移及版本升级通知\",\"version\":\"苍穹V5.0\",\"range\":\"苍穹开放平台所有用户\",\"date\":\"2022-06-18\",\"patch\":\"V5.0.002（BOS）\",\"collection\":[\"\"],\"collectionNext\":[[]],\"collectionHref\":[[]],\"knowledgeContent\":\"<h2 label=\\\"一级标题\\\" class=\\\"first-title\\\" style=\\\"text-align: justify;\\\"><span style=\\\"text-align: justify;\\\">重要通知</span></h2><p><span style=\\\"text-align: justify;\\\"><br/></span></p><p label=\\\"正文\\\" style=\\\"text-align: justify;\\\">致金蝶云苍穹开放平台所有用户：</p><p><br/></p><p label=\\\"正文\\\">&nbsp;&nbsp;&nbsp;&nbsp;在金蝶云苍穹V5.0版本中，开放平台推出了全新的OpenAPI引擎（v2）。因此，为了<span style=\\\"\\\">分开管理</span>不同版本的接口，<span style=\\\"color: rgb(255, 0, 0);\\\"><strong>API1.0菜单迁移到【其他】-【API1.0】</strong></span>下。历史版本的接口和API清单统一在这里进行管理，并且仍然能正常使用。<span style=\\\"font-weight: bold;\\\"></span></p><p><br/></p><p>OpenAPI新版本增强了API的安全性以及易用性，能以更低成本将实体对象快速配置出符合OpenAPI规范的API，支持使用自定义API处理更复杂的业务逻辑。<strong><span style=\\\"color: rgb(255, 0, 0);\\\">同时针对历史已发布的API，产品会支持接口一直兼容，以保障业务的连续性</span></strong>。</p><p label=\\\"正文\\\" style=\\\"text-align: justify;\\\"><br/></p><p label=\\\"正文\\\" style=\\\"text-align: justify;\\\"><strong>菜单路径：</strong></p><p style=\\\"text-align: justify;\\\"><br/></p><p style=\\\"text-align: justify;\\\"><img src=\\\"/download/010964c70f50e38246dd9a80a5e8d4e7b7c6.png\\\"/></p><p><br/></p><p>菜单【API管理】和【API文档】中，<span style=\\\"color: rgb(255, 0, 0);\\\"><strong>仅展示最新版本（v2）</strong></span>的接口信息。</p><p><br/></p><p><img src=\\\"/download/010977469bab174e47dcacc81fbf9f1df55c.png\\\"/></p>\"}",
+ "totalFeedBacks": 0,
+ "attachments": [],
+ "sources": [],
+ "editTitle": "API菜单迁移及版本升级通知",
+ "title": "API菜单迁移及版本升级通知",
+ "content": " <p class=\"table-title table-margin\"><span class=\"span-line\">发布说明</span><span class=\"line\"></span></p><p class=\"title-b\"><span class=\"span-b\">发布版本：</span><span class=\"span-nor\">苍穹V5.0</span></p><p class=\"title-b\"><span class=\"span-b\">适用范围：</span><span class=\"span-nor\">苍穹开放平台所有用户</span></p><p class=\"title-b\"><span class=\"span-b\">上线日期：</span><span class=\"span-nor\">2022-06-18</span></p><p class=\"title-b\"><span class=\"span-b\">补丁号：</span><span class=\"span-nor margin-patch\">V5.0.002（BOS）</span></p>\n              <p class=\"table-title title-detail\"><span class=\"span-line\">更多内容</span><span class=\"line\"></span></p>\n              <h2 label=\"一级标题\" class=\"first-title\" style=\"text-align: justify;\"><span style=\"text-align: justify;\">重要通知</span></h2><p><span style=\"text-align: justify;\"><br/></span></p><p label=\"正文\" style=\"text-align: justify;\">致金蝶AI苍穹开放平台所有用户：</p><p><br/></p><p label=\"正文\">&nbsp;&nbsp;&nbsp;&nbsp;在金蝶AI苍穹V5.0版本中，开放平台推出了全新的OpenAPI引擎（v2）。因此，为了<span style=\"\">分开管理</span>不同版本的接口，<span style=\"color: rgb(255, 0, 0);\"><strong>API1.0菜单迁移到【其他】-【API1.0】</strong></span>下。历史版本的接口和API清单统一在这里进行管理，并且仍然能正常使用。<span style=\"font-weight: bold;\"></span></p><p><br/></p><p>OpenAPI新版本增强了API的安全性以及易用性，能以更低成本将实体对象快速配置出符合OpenAPI规范的API，支持使用自定义API处理更复杂的业务逻辑。<strong><span style=\"color: rgb(255, 0, 0);\">同时针对历史已发布的API，产品会支持接口一直兼容，以保障业务的连续性</span></strong>。</p><p label=\"正文\" style=\"text-align: justify;\"><br/></p><p label=\"正文\" style=\"text-align: justify;\"><strong>菜单路径：</strong></p><p style=\"text-align: justify;\"><br/></p><p style=\"text-align: justify;\"><img src=\"/download/010964c70f50e38246dd9a80a5e8d4e7b7c6.png\"/></p><p><br/></p><p>菜单【API管理】和【API文档】中，<span style=\"color: rgb(255, 0, 0);\"><strong>仅展示最新版本（v2）</strong></span>的接口信息。</p><p><br/></p><p><img src=\"/download/010977469bab174e47dcacc81fbf9f1df55c.png\"/></p>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 87,
+   "isOpen": 1,
+   "name": "金蝶AI苍穹",
+   "productLineId": 29,
+   "series": "developer01",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "321672729252894208",
+         "entityType": "Knowledge",
+         "id": "321699622610048512",
+         "isCategory": false,
+         "name": "API菜单迁移及版本升级通知",
+         "parentId": "226337340351087360",
+         "sort": "10",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": null,
+       "id": "226337340351087360",
+       "isCategory": true,
+       "name": "重要通知",
+       "parentId": "226337280724861696",
+       "sort": "1",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": "",
+     "entityId": null,
+     "entityType": null,
+     "id": "226337280724861696",
+     "isCategory": true,
+     "name": "动态与公告",
+     "parentId": "-1",
+     "sort": "1",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download/01010204d4b71b654a208006fa1004eac36a.png",
+  "department": null,
+  "id": "740211268992385024",
+  "name": "毛毛去哪儿",
+  "nameSpell": "name"
+ },
+ "totalAppraisalScore": 40,
+ "iflytekId": null,
+ "views": 3451,
+ "productLineId": 29,
+ "comments": 0,
+ "similarityCount": null,
+ "totalAppraisalUsers": 8,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1698400347000,
+ "appraisalScore": 0,
+ "unuseful": 0,
+ "knowledgeCheckStatus": 2,
+ "otherProductLineIds": [],
+ "auditAt": 1698400877000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": null,
+       "code": "open",
+       "id": "5614",
+       "name": "开放平台",
+       "productLineId": null,
+       "sort": 2,
+       "type": "module"
+      },
+      "code": "DEV",
+      "id": "5576",
+      "name": "开发服务云",
+      "productLineId": null,
+      "sort": 11,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 0,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": null,
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 1,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "OperatingGuide",
+     "createdAt": 1556519201000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "某一功能的具体说明介绍，包括应用场景、参数说明、具体操作步骤等",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/010037894174802d4b9f8782f1f0010a6ddd.png",
+     "id": "202203081641",
+     "name": "功能介绍",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010176d38341668f44fdb94c95058a90e4b8.png",
+      "department": "云社区运营部",
+      "id": "2147406697",
+      "name": "多肉丸子",
+      "nameSpell": "kejuan"
+     },
+     "updatedAt": 1676857681000
+    },
+    {
+     "code": "rumen",
+     "createdAt": 1605667807000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "入门类的知识可使用此标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100d322b9282bcc438faa894f4eec029977.png",
+     "id": "202203081646",
+     "name": "基础入门",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download?fileName=0101ec1d6ce599b442dab7d0b794c1fce88d.png",
+      "department": null,
+      "id": "1009",
+      "name": "一颗小星星",
+      "nameSpell": "fengling"
+     },
+     "updatedAt": 1657872008000
+    },
+    {
+     "code": "NewFeatures",
+     "createdAt": 1558619051000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "新特性",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/01009c9898f919a24034b3b37b2ebf42931c.png",
+     "id": "202203081645",
+     "name": "新特性",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010145330b44d45a47ae9b8aac30617b6992.png",
+      "department": null,
+      "id": "2147443044",
+      "name": "Lucky_tiao",
+      "nameSpell": "laoli"
+     },
+     "updatedAt": 1668739541000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          {
+           "childCategory": [
+            null
+           ],
+           "code": null,
+           "description": "",
+           "entityId": "321672729252894208",
+           "entityType": "Knowledge",
+           "id": "321699622610048512",
+           "isCategory": false,
+           "name": "API菜单迁移及版本升级通知",
+           "parentId": "226337340351087360",
+           "sort": "10",
+           "specialId": "226337046514476288",
+           "status": 1
+          }
+         ],
+         "code": null,
+         "description": "",
+         "entityId": null,
+         "entityType": null,
+         "id": "226337340351087360",
+         "isCategory": true,
+         "name": "重要通知",
+         "parentId": "226337280724861696",
+         "sort": "1",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": null,
+       "id": "226337280724861696",
+       "isCategory": true,
+       "name": "动态与公告",
+       "parentId": "-1",
+       "sort": "1",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": " <p class=\"table-title table-margin\"><span class=\"span-line\">发布说明</span><span class=\"line\"></span></p><p class=\"title-b\"><span class=\"span-b\">发布版本：</span><span class=\"span-nor\">苍穹V5.0</span></p><p class=\"title-b\"><span class=\"span-b\">适用范围：</span><span class=\"span-nor\">苍穹开放平台所有用户</span></p><p class=\"title-b\"><span class=\"span-b\">上线日期：</span><span class=\"span-nor\">2022-06-18</span></p><p class=\"title-b\"><span class=\"span-b\">补丁号：</span><span class=\"span-nor margin-patch\">V5.0.002（BOS）</span></p>\n              <p class=\"table-title title-detail\"><span class=\"span-line\">更多内容</span><span class=\"line\"></span></p>\n              <h2 label=\"一级标题\" class=\"first-title\" style=\"text-align: justify;\"><span style=\"text-align: justify;\">重要通知</span></h2><p><span style=\"text-align: justify;\"><br/></span></p><p label=\"正文\" style=\"text-align: justify;\">致金蝶AI苍穹开放平台所有用户：</p><p><br/></p><p label=\"正文\">&nbsp;&nbsp;&nbsp;&nbsp;在金蝶AI苍穹V5.0版本中，开放平台推出了全新的OpenAPI引擎（v2）。因此，为了<span style=\"\">分开管理</span>不同版本的接口，<span style=\"color: rgb(255, 0, 0);\"><strong>API1.0菜单迁移到【其他】-【API1.0】</strong></span>下。历史版本的接口和API清单统一在这里进行管理，并且仍然能正常使用。<span style=\"font-weight: bold;\"></span></p><p><br/></p><p>OpenAPI新版本增强了API的安全性以及易用性，能以更低成本将实体对象快速配置出符合OpenAPI规范的API，支持使用自定义API处理更复杂的业务逻辑。<strong><span style=\"color: rgb(255, 0, 0);\">同时针对历史已发布的API，产品会支持接口一直兼容，以保障业务的连续性</span></strong>。</p><p label=\"正文\" style=\"text-align: justify;\"><br/></p><p label=\"正文\" style=\"text-align: justify;\"><strong>菜单路径：</strong></p><p style=\"text-align: justify;\"><br/></p><p style=\"text-align: justify;\"><img src=\"/download/010964c70f50e38246dd9a80a5e8d4e7b7c6.png\"/></p><p><br/></p><p>菜单【API管理】和【API文档】中，<span style=\"color: rgb(255, 0, 0);\"><strong>仅展示最新版本（v2）</strong></span>的接口信息。</p><p><br/></p><p><img src=\"/download/010977469bab174e47dcacc81fbf9f1df55c.png\"/></p>"
+}

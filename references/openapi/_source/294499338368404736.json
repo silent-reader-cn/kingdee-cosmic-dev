@@ -1,0 +1,617 @@
+{
+ "badNum": 3,
+ "identityTagIds": null,
+ "knowledgeId": "294499338368404736",
+ "createdAt": 1648022114000,
+ "collections": 46,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "294499338368404736",
+ "contentType": 1,
+ "updatedAt": 1774863712000,
+ "knowledgeUpdater": {
+  "avatar": "/download/01010204d4b71b654a208006fa1004eac36a.png",
+  "department": null,
+  "id": "740211268992385024",
+  "name": "毛毛去哪儿",
+  "nameSpell": "name"
+ },
+ "assessStatus": 0,
+ "knowledgeStatus": 2,
+ "assessHandleStatus": null,
+ "knowledgeCreatedAt": 1648022114000,
+ "version": 107,
+ "labels": [],
+ "editedAt": 1782964698000,
+ "identityTags": null,
+ "useful": 25,
+ "errors": [],
+ "isCollected": false,
+ "totalFeedBacks": 3,
+ "attachments": [
+  {
+   "createdAt": 1774863698000,
+   "fileSize": 380597,
+   "id": "826511502395316224",
+   "name": "自定义API Java插件开发指南(8.0.8).pdf",
+   "path": "/download/0106af6954951424475bbf3145b6fdbc85ad/自定义API Java插件开发指南(8.0.8).pdf",
+   "productLineId": 0,
+   "scanResult": 0,
+   "scanStatus": 2,
+   "scene": 0,
+   "sourceUrl": null,
+   "status": 2,
+   "violationKeywords": null,
+   "violationSubtype": null,
+   "violationType": null
+  },
+  {
+   "createdAt": 1661923954000,
+   "fileSize": 18879374,
+   "id": "352807883165080320",
+   "name": "Hibernate-Validator-6.2.0中文参考文档.pdf",
+   "path": "/download/0106107a2b20414142578c0af664b75603d4/Hibernate-Validator-6.2.0中文参考文档.pdf",
+   "productLineId": null,
+   "scanResult": 0,
+   "scanStatus": 0,
+   "scene": 0,
+   "sourceUrl": null,
+   "status": 2,
+   "violationKeywords": null,
+   "violationSubtype": null,
+   "violationType": null
+  }
+ ],
+ "sources": [],
+ "editTitle": "自定义API（Java插件）",
+ "title": "自定义API（Java插件）",
+ "content": "<p></p><h2><span style=\"color: rgb(26, 26, 26)\">变更记录</span></h2><p></p><table style=\"min-width: auto; width: 621px\" class=\"\"><colgroup><col style=\"width: 116px\"><col style=\"width: 359px\"><col style=\"width: 146px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"116\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><strong>产品版本</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"359\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><strong>更新内容</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"146\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><strong>更新日期</strong></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"92\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>V5.0.011</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"498\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>初始版本</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"150\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>2022年6月</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"92\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>V6.0.1</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"498\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p style=\"font-size: 15px\">应用开放平台更名为OpenAPI，迁移至开放服务云</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"150\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>2023年9月</p></td></tr></tbody></table><p></p><p></p><hr><p></p><h2></h2><h2>1.&nbsp;简介</h2><h3>1.1 功能介绍</h3><p style=\"text-align: justify\">自定义API主要通过<span>Java</span>插件来解决复杂的API集成场景，如调用微服务或对文件流、图像等进行处理。用户预先定义类和方法，通过简单配置，快速生成自定义API，<span style=\"color: rgb(79, 129, 189)\">开发案例参考 </span><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://dev.kingdee.com/open/detail/sdk/2000919573355839488\"><span style=\"color: rgb(79, 129, 189)\">自定义API开发</span></a><span style=\"color: rgb(79, 129, 189)\">。</span></p><p style=\"text-align: justify\"></p><h3>1.2 应用场景</h3><p style=\"text-align: justify\">发布API接口供第三方应用调用，帮助用户快速完成苍穹平台与异构系统间的数据集成。</p><p style=\"text-align: justify\"></p><h3>1.3 系统路径</h3><p style=\"text-align: justify\"><span>【开放服务云】</span>→【OpenAPI】→<span>【API管理】<strong>→</strong>【API开发】</span></p><p style=\"text-align: justify\"></p><h3>1.4 字段说明</h3><p style=\"text-align: justify\"></p><table style=\"min-width: auto; width: 720px\" class=\"\"><colgroup><col style=\"width: 121px\"><col style=\"width: 599px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"121\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><span><strong>字段名称</strong></span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"599\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><span><strong>详细解释</strong></span></p></td></tr><tr><td colspan=\"2\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>API基本信息</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"121\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>所属应用</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"599\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>所属应用</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"121\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>API编码</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"599\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>不允许编辑，根据自定义类的方法名生成</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"121\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>API名称</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"599\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><span>手工录入，建议创建有实际业务语义的名称</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"121\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>请求方式</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"599\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>API请求方法，自动生成</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"121\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>自定义分类</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"599\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>手工录入，自定义API的所属分类</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"121\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>所属应用</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"599\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>API所属应用</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"121\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><span>API状态</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"599\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><span>API使用状态共有四种：</span></p><ul style=\"list-style-type: disc;\"><li><p><span>内测：接口仍在内部测试中；</span></p></li><li><p><span>发布：正式对外开放；</span></p></li><li><p><span>维护：将要废弃，不推荐使用；</span></p></li><li><p><span>禁用：禁止使用。</span></p></li></ul></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"121\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>类名</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"599\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>自定义类名</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"121\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>方法名</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"599\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><span>自定义方法名</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>请求地址</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"75\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><span>请求</span>url地址，自动生成<span>格式为：</span>/kapi/v2/{isv}/{appId}/{serviceName}</p><p><span>{isv}：开发商标识，金蝶标准接口的开发商标识为空</span></p><p><span>{appid}：业务对象所属的应用编码</span></p><p><span>{</span>serviceName<span>}：类中定义好的</span>API编码</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"121\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>详细描述</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"599\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>API详细描述及功能场景用途</p></td></tr><tr><td colspan=\"2\" rowspan=\"1\" colwidth=\"75\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><span>配置项</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><span style=\"color: rgb(0, 0, 0)\">第三方应用授权</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"75\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>开关打开，代表该API不允许通过cookies、匿名等非第三方应用认证的方式访问。</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><span style=\"color: rgb(0, 0, 0)\">匿名访问</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"75\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><span>开关打开，接口允许匿名访问</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><span style=\"color: rgb(0, 0, 0)\">出参仅返回Data域</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"75\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>出参仅返回Data域（不包括Status）</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>防止重复请求</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"75\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>开关打开后，相同请求参数的请求在30秒内只能调用一次</p></td></tr><tr><td colspan=\"2\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>WebSevice信息</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"121\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>命名空间</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"599\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>Webservice接口的命名空间，建议以http或https开头</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"121\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>输入参数名</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"599\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><span>输入参数名</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"121\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>输出参数名</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"599\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><span>输出参数名</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>WSDL方法名称</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"75\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><span>WSDL方法名称</span></p></td></tr><tr><td colspan=\"2\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>请求头部</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"121\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>参数名称</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"599\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><span>请求头参数名称，系统已默认预置</span>content_type和access_token，无需重复添加</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"121\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>参数值</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"599\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>请求头参数值</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"121\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>说明</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"599\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>请求头参数说明</p></td></tr><tr><td colspan=\"2\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>请求体</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"121\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>参数名称</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"599\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>参数名称</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"121\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>参数类型</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"599\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>参数类型</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"121\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>多值</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"599\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>是否多值</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>必填</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"75\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>是否必填</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"121\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>说明</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"599\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>参数说明</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"121\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>层级</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"599\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><span>参数在业务对象中所在层级，如：若参数为分录中的参数，则层级为</span>2</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"121\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>示例</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"599\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>参数示例</p></td></tr><tr><td colspan=\"2\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>返回参数</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"121\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>参数名称</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"599\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>返回参数名称</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"121\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>参数类型</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"599\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>返回参数类型</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"121\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>多值</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"599\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>是否多值</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"121\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>说明</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"599\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>参数说明</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"121\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>层级</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"599\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><span>参数在业务对象中所在层级</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"121\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>示例</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"599\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><span>参数示例</span></p></td></tr><tr><td colspan=\"2\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>错误码</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>错误码</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"75\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><span>API接口错误码</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><span>描述</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"75\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><span>错误码描述</span></p></td></tr></tbody></table><p style=\"text-align: justify\"></p><h3>1.5 按钮说明</h3><table style=\"min-width: auto; width: 656px\" class=\"is-max\"><colgroup><col style=\"width: 126px\"><col style=\"width: 530px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"126\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><span><strong>按钮名称</strong></span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"530\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><span><strong>详细解释</strong></span></p></td></tr><tr><td colspan=\"2\" rowspan=\"1\" colwidth=\"126,530\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>单据头</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"126\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>保存</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"530\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><span>保存当前</span>API服务信息</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"126\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>重载方法信息</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"530\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>当自定义类及方法修改后，需要点击同步按钮，同步最新的请求参数</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"126\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>API测试</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"530\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><span>打开</span>API在线测试弹窗界面</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"126\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>退出</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"530\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>退出当前界面</p></td></tr><tr><td colspan=\"2\" rowspan=\"1\" colwidth=\"126,530\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>请求头</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"126\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>增行</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"530\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>列表新增空白行</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"126\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>删行</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"530\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>点击按钮，删除勾选行数据，支持多条数据批量删除</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"126\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>上移</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"530\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>勾选请求头数据，点击按钮，行数据会上移一行</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"126\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>下移</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"530\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>勾选请求头数据，点击按钮，行数据会下移一行</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"126\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>参数示例</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"530\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>弹出请求参数示例弹窗</p></td></tr><tr><td colspan=\"2\" rowspan=\"1\" colwidth=\"126,530\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>请求体</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"126\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>参数示例</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"530\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>弹出请求参数示例弹窗</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"126\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>返回参数</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"530\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"126\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>参数示例</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"530\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>弹出返回参数示例弹窗</p></td></tr><tr><td colspan=\"2\" rowspan=\"1\" colwidth=\"126,530\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>错误码</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"126\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>增行</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"530\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><span>列表新增空白行</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"126\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>删行</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"530\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><span>点击按钮，删除勾选行数据，支持多条数据批量删除</span></p></td></tr></tbody></table><p style=\"text-align: justify\"></p><h2>2. 主要操作</h2><h3>2.1&nbsp;<span>打开</span>API服务管理列表</h3><p style=\"text-align: justify\">路径：【开放服务云】→【OpenAPI】 → 【API管理】 ，点击“新增”按钮，创建自定义API（Java插件）。</p><p></p><p><span style=\"color: rgb(0, 0, 0); font-size: 13px\"><img src=\"/download/010038f082539f824d2a8a032a9b604118d1.png\"></span></p><p></p><h2></h2><h3>2.2&nbsp;维护自定义API信息</h3><p style=\"text-align: justify\">维护所属应用、类及方法名，系统<span>自动加载</span>请求参数和返回参数。若需发布为webservice接口，还可以维护webservice信息。</p><p></p><p><img src=\"https://vip.kingdee.com/download/0100a40ff95e81ef4fe6a81bf46fb88981b1.png\"></p><p></p><p><span style=\"color: rgb(0, 0, 0); font-size: 13px\"><img src=\"https://vip.kingdee.com/download/0100a08972c0ce9c486d9e12f4ad691e774e.png\"></span></p><h2></h2><h3>2.3 API在线测试</h3><p style=\"text-align: justify\">点击“API测试”按钮，打开API测试弹窗，在系统中实时调试API功能，测试完成后，将接口状态改为发布。</p><p></p><p><span style=\"color: rgb(0, 0, 0); font-size: 13px\"><img src=\"https://vip.kingdee.com/download/01000c0bdb7987784ca08489f3bfd1ce8bb3.png\"></span></p><p></p><p style=\"text-align: justify\"></p><h2><span><strong>3 更多资讯</strong></span></h2><p style=\"text-align: justify\">更多详细的自定义API开发代码案例，请前往开发者门户，参考<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://dev.kingdee.com/open/detail/sdk/2000919573951429632\"><span style=\"color: rgb(0, 0, 0)\">自定义API案例</span></a></p><p style=\"text-align: justify\">关于OpenAPI的更多资讯，请随时关注<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=226337371640594944&amp;id=226708319996323072&amp;productLineId=29\">新特性公告</a>。</p>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 87,
+   "isOpen": 1,
+   "name": "金蝶AI苍穹",
+   "productLineId": 29,
+   "series": "developer01",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "294499338368404736",
+         "entityType": "Knowledge",
+         "id": "358247530565536512",
+         "isCategory": false,
+         "name": "自定义API（Java插件）",
+         "parentId": "358247193897143040",
+         "sort": "1",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": null,
+       "id": "358247193897143040",
+       "isCategory": true,
+       "name": "自定义API",
+       "parentId": "226337544983020032",
+       "sort": "3",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": null,
+     "entityId": null,
+     "entityType": null,
+     "id": "226337544983020032",
+     "isCategory": true,
+     "name": "用户手册",
+     "parentId": "-1",
+     "sort": "6",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download/01010204d4b71b654a208006fa1004eac36a.png",
+  "department": null,
+  "id": "740211268992385024",
+  "name": "毛毛去哪儿",
+  "nameSpell": "name"
+ },
+ "totalAppraisalScore": 129,
+ "iflytekId": null,
+ "views": 64037,
+ "productLineId": 29,
+ "comments": 28,
+ "similarityCount": 0,
+ "totalAppraisalUsers": 28,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1774863712000,
+ "appraisalScore": 0,
+ "unuseful": 3,
+ "knowledgeCheckStatus": 0,
+ "otherProductLineIds": [],
+ "auditAt": 1774863712000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapiapilistlayout",
+        "id": "344582232549528320",
+        "name": "API管理",
+        "productLineId": null,
+        "sort": 1,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "5614",
+       "name": "开放平台",
+       "productLineId": null,
+       "sort": 2,
+       "type": "module"
+      },
+      "code": "DEV",
+      "id": "5576",
+      "name": "开发服务云",
+      "productLineId": null,
+      "sort": 11,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 0,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapi_apilist_layout",
+        "id": "505686038019362304",
+        "name": "异步API",
+        "productLineId": null,
+        "sort": 1,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 1,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "OperatingGuide",
+     "createdAt": 1556519201000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "某一功能的具体说明介绍，包括应用场景、参数说明、具体操作步骤等",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/010037894174802d4b9f8782f1f0010a6ddd.png",
+     "id": "202203081641",
+     "name": "功能介绍",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010176d38341668f44fdb94c95058a90e4b8.png",
+      "department": "云社区运营部",
+      "id": "2147406697",
+      "name": "多肉丸子",
+      "nameSpell": "kejuan"
+     },
+     "updatedAt": 1676857681000
+    },
+    {
+     "code": "GettingStarted",
+     "createdAt": 1556519230000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "推送至苍穹帮助中心",
+     "hasSpecifyUser": false,
+     "hide": true,
+     "icon": "/download/01001f079866652f4a68a71361a9509d404c.png",
+     "id": "202203081643",
+     "name": "推送至苍穹帮助中心",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 1,
+     "type": 2,
+     "updatePerson": {
+      "avatar": "/download?fileName=010162cfa9d5437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1129",
+      "name": "灏",
+      "nameSpell": "hao"
+     },
+     "updatedAt": 1605688859000
+    },
+    {
+     "code": "rumen",
+     "createdAt": 1605667807000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "入门类的知识可使用此标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100d322b9282bcc438faa894f4eec029977.png",
+     "id": "202203081646",
+     "name": "基础入门",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download?fileName=0101ec1d6ce599b442dab7d0b794c1fce88d.png",
+      "department": null,
+      "id": "1009",
+      "name": "一颗小星星",
+      "nameSpell": "fengling"
+     },
+     "updatedAt": 1657872008000
+    },
+    {
+     "code": "essencesummary",
+     "createdAt": 1606118073000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "精华汇总",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100402c6f8df169483db114f71043c19ec2.png",
+     "id": "202203081649",
+     "name": "精华汇总",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 2,
+     "updatePerson": {
+      "avatar": "/download?fileName=010162cfa9d5437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1129",
+      "name": "灏",
+      "nameSpell": "hao"
+     },
+     "updatedAt": 1606118073000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          {
+           "childCategory": [
+            null
+           ],
+           "code": null,
+           "description": "",
+           "entityId": "294499338368404736",
+           "entityType": "Knowledge",
+           "id": "358247530565536512",
+           "isCategory": false,
+           "name": "自定义API（Java插件）",
+           "parentId": "358247193897143040",
+           "sort": "1",
+           "specialId": "226337046514476288",
+           "status": 1
+          }
+         ],
+         "code": null,
+         "description": "",
+         "entityId": null,
+         "entityType": null,
+         "id": "358247193897143040",
+         "isCategory": true,
+         "name": "自定义API",
+         "parentId": "226337544983020032",
+         "sort": "3",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": null,
+       "entityId": null,
+       "entityType": null,
+       "id": "226337544983020032",
+       "isCategory": true,
+       "name": "用户手册",
+       "parentId": "-1",
+       "sort": "6",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": "<p></p><h2><span style=\"color: rgb(26, 26, 26)\">变更记录</span></h2><p></p><table style=\"min-width: auto; width: 621px\" class=\"\"><colgroup><col style=\"width: 116px\"><col style=\"width: 359px\"><col style=\"width: 146px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"116\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><strong>产品版本</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"359\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><strong>更新内容</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"146\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><strong>更新日期</strong></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"92\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>V5.0.011</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"498\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>初始版本</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"150\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>2022年6月</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"92\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>V6.0.1</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"498\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p style=\"font-size: 15px\">应用开放平台更名为OpenAPI，迁移至开放服务云</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"150\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>2023年9月</p></td></tr></tbody></table><p></p><p></p><hr><p></p><h2></h2><h2>1.&nbsp;简介</h2><h3>1.1 功能介绍</h3><p style=\"text-align: justify\">自定义API主要通过<span>Java</span>插件来解决复杂的API集成场景，如调用微服务或对文件流、图像等进行处理。用户预先定义类和方法，通过简单配置，快速生成自定义API，<span style=\"color: rgb(79, 129, 189)\">开发案例参考 </span><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://dev.kingdee.com/open/detail/sdk/2000919573355839488\"><span style=\"color: rgb(79, 129, 189)\">自定义API开发</span></a><span style=\"color: rgb(79, 129, 189)\">。</span></p><p style=\"text-align: justify\"></p><h3>1.2 应用场景</h3><p style=\"text-align: justify\">发布API接口供第三方应用调用，帮助用户快速完成苍穹平台与异构系统间的数据集成。</p><p style=\"text-align: justify\"></p><h3>1.3 系统路径</h3><p style=\"text-align: justify\"><span>【开放服务云】</span>→【OpenAPI】→<span>【API管理】<strong>→</strong>【API开发】</span></p><p style=\"text-align: justify\"></p><h3>1.4 字段说明</h3><p style=\"text-align: justify\"></p><table style=\"min-width: auto; width: 720px\" class=\"\"><colgroup><col style=\"width: 121px\"><col style=\"width: 599px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"121\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><span><strong>字段名称</strong></span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"599\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><span><strong>详细解释</strong></span></p></td></tr><tr><td colspan=\"2\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>API基本信息</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"121\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>所属应用</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"599\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>所属应用</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"121\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>API编码</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"599\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>不允许编辑，根据自定义类的方法名生成</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"121\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>API名称</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"599\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><span>手工录入，建议创建有实际业务语义的名称</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"121\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>请求方式</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"599\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>API请求方法，自动生成</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"121\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>自定义分类</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"599\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>手工录入，自定义API的所属分类</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"121\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>所属应用</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"599\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>API所属应用</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"121\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><span>API状态</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"599\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><span>API使用状态共有四种：</span></p><ul style=\"list-style-type: disc;\"><li><p><span>内测：接口仍在内部测试中；</span></p></li><li><p><span>发布：正式对外开放；</span></p></li><li><p><span>维护：将要废弃，不推荐使用；</span></p></li><li><p><span>禁用：禁止使用。</span></p></li></ul></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"121\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>类名</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"599\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>自定义类名</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"121\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>方法名</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"599\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><span>自定义方法名</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>请求地址</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"75\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><span>请求</span>url地址，自动生成<span>格式为：</span>/kapi/v2/{isv}/{appId}/{serviceName}</p><p><span>{isv}：开发商标识，金蝶标准接口的开发商标识为空</span></p><p><span>{appid}：业务对象所属的应用编码</span></p><p><span>{</span>serviceName<span>}：类中定义好的</span>API编码</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"121\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>详细描述</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"599\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>API详细描述及功能场景用途</p></td></tr><tr><td colspan=\"2\" rowspan=\"1\" colwidth=\"75\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><span>配置项</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><span style=\"color: rgb(0, 0, 0)\">第三方应用授权</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"75\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>开关打开，代表该API不允许通过cookies、匿名等非第三方应用认证的方式访问。</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><span style=\"color: rgb(0, 0, 0)\">匿名访问</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"75\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><span>开关打开，接口允许匿名访问</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><span style=\"color: rgb(0, 0, 0)\">出参仅返回Data域</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"75\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>出参仅返回Data域（不包括Status）</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>防止重复请求</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"75\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>开关打开后，相同请求参数的请求在30秒内只能调用一次</p></td></tr><tr><td colspan=\"2\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>WebSevice信息</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"121\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>命名空间</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"599\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>Webservice接口的命名空间，建议以http或https开头</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"121\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>输入参数名</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"599\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><span>输入参数名</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"121\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>输出参数名</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"599\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><span>输出参数名</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>WSDL方法名称</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"75\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><span>WSDL方法名称</span></p></td></tr><tr><td colspan=\"2\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>请求头部</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"121\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>参数名称</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"599\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><span>请求头参数名称，系统已默认预置</span>content_type和access_token，无需重复添加</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"121\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>参数值</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"599\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>请求头参数值</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"121\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>说明</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"599\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>请求头参数说明</p></td></tr><tr><td colspan=\"2\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>请求体</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"121\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>参数名称</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"599\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>参数名称</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"121\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>参数类型</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"599\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>参数类型</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"121\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>多值</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"599\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>是否多值</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>必填</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"75\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>是否必填</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"121\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>说明</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"599\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>参数说明</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"121\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>层级</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"599\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><span>参数在业务对象中所在层级，如：若参数为分录中的参数，则层级为</span>2</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"121\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>示例</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"599\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>参数示例</p></td></tr><tr><td colspan=\"2\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>返回参数</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"121\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>参数名称</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"599\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>返回参数名称</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"121\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>参数类型</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"599\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>返回参数类型</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"121\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>多值</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"599\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>是否多值</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"121\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>说明</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"599\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>参数说明</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"121\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>层级</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"599\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><span>参数在业务对象中所在层级</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"121\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>示例</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"599\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><span>参数示例</span></p></td></tr><tr><td colspan=\"2\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>错误码</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>错误码</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"75\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><span>API接口错误码</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><span>描述</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"75\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><span>错误码描述</span></p></td></tr></tbody></table><p style=\"text-align: justify\"></p><h3>1.5 按钮说明</h3><table style=\"min-width: auto; width: 656px\" class=\"is-max\"><colgroup><col style=\"width: 126px\"><col style=\"width: 530px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"126\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><span><strong>按钮名称</strong></span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"530\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><span><strong>详细解释</strong></span></p></td></tr><tr><td colspan=\"2\" rowspan=\"1\" colwidth=\"126,530\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>单据头</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"126\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>保存</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"530\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><span>保存当前</span>API服务信息</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"126\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>重载方法信息</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"530\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>当自定义类及方法修改后，需要点击同步按钮，同步最新的请求参数</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"126\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>API测试</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"530\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><span>打开</span>API在线测试弹窗界面</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"126\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>退出</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"530\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>退出当前界面</p></td></tr><tr><td colspan=\"2\" rowspan=\"1\" colwidth=\"126,530\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>请求头</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"126\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>增行</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"530\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>列表新增空白行</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"126\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>删行</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"530\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>点击按钮，删除勾选行数据，支持多条数据批量删除</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"126\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>上移</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"530\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>勾选请求头数据，点击按钮，行数据会上移一行</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"126\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>下移</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"530\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>勾选请求头数据，点击按钮，行数据会下移一行</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"126\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>参数示例</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"530\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>弹出请求参数示例弹窗</p></td></tr><tr><td colspan=\"2\" rowspan=\"1\" colwidth=\"126,530\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>请求体</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"126\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>参数示例</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"530\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>弹出请求参数示例弹窗</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"126\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>返回参数</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"530\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"126\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>参数示例</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"530\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>弹出返回参数示例弹窗</p></td></tr><tr><td colspan=\"2\" rowspan=\"1\" colwidth=\"126,530\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>错误码</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"126\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>增行</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"530\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><span>列表新增空白行</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"126\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>删行</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"530\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><span>点击按钮，删除勾选行数据，支持多条数据批量删除</span></p></td></tr></tbody></table><p style=\"text-align: justify\"></p><h2>2. 主要操作</h2><h3>2.1&nbsp;<span>打开</span>API服务管理列表</h3><p style=\"text-align: justify\">路径：【开放服务云】→【OpenAPI】 → 【API管理】 ，点击“新增”按钮，创建自定义API（Java插件）。</p><p></p><p><span style=\"color: rgb(0, 0, 0); font-size: 13px\"><img src=\"/download/010038f082539f824d2a8a032a9b604118d1.png\"></span></p><p></p><h2></h2><h3>2.2&nbsp;维护自定义API信息</h3><p style=\"text-align: justify\">维护所属应用、类及方法名，系统<span>自动加载</span>请求参数和返回参数。若需发布为webservice接口，还可以维护webservice信息。</p><p></p><p><img src=\"https://vip.kingdee.com/download/0100a40ff95e81ef4fe6a81bf46fb88981b1.png\"></p><p></p><p><span style=\"color: rgb(0, 0, 0); font-size: 13px\"><img src=\"https://vip.kingdee.com/download/0100a08972c0ce9c486d9e12f4ad691e774e.png\"></span></p><h2></h2><h3>2.3 API在线测试</h3><p style=\"text-align: justify\">点击“API测试”按钮，打开API测试弹窗，在系统中实时调试API功能，测试完成后，将接口状态改为发布。</p><p></p><p><span style=\"color: rgb(0, 0, 0); font-size: 13px\"><img src=\"https://vip.kingdee.com/download/01000c0bdb7987784ca08489f3bfd1ce8bb3.png\"></span></p><p></p><p style=\"text-align: justify\"></p><h2><span><strong>3 更多资讯</strong></span></h2><p style=\"text-align: justify\">更多详细的自定义API开发代码案例，请前往开发者门户，参考<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://dev.kingdee.com/open/detail/sdk/2000919573951429632\"><span style=\"color: rgb(0, 0, 0)\">自定义API案例</span></a></p><p style=\"text-align: justify\">关于OpenAPI的更多资讯，请随时关注<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=226337371640594944&amp;id=226708319996323072&amp;productLineId=29\">新特性公告</a>。</p>"
+}

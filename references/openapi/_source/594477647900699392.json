@@ -1,0 +1,521 @@
+{
+ "badNum": 0,
+ "identityTagIds": null,
+ "knowledgeId": "594477647900699392",
+ "createdAt": 1719542516000,
+ "collections": 9,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "594477647900699392",
+ "contentType": 1,
+ "updatedAt": 1745993302000,
+ "knowledgeUpdater": {
+  "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+  "department": null,
+  "id": "132488613174518784",
+  "name": "某个路易",
+  "nameSpell": "name"
+ },
+ "assessStatus": 0,
+ "knowledgeStatus": 2,
+ "assessHandleStatus": null,
+ "knowledgeCreatedAt": 1719542516000,
+ "version": 42,
+ "labels": [],
+ "editedAt": 1745993291000,
+ "identityTags": null,
+ "useful": 6,
+ "errors": [],
+ "isCollected": false,
+ "totalFeedBacks": 0,
+ "attachments": [],
+ "sources": [],
+ "editTitle": "保存API引入问题排查指南",
+ "title": "保存API引入问题排查指南",
+ "content": "<h2 label=\"一级标题\" class=\"first-title\" style=\"\"><span class=\"md-plain\" style=\"\">1 前言</span></h2><p class=\"md-end-block md-p\" style=\"color: rgb(51, 51, 51); background-color: rgb(255, 255, 255);\"><span class=\"md-plain\" style=\"\">本文档适用解决以下问题：</span></p><ul class=\"ul-list list-paddingleft-2\" style=\"color: rgb(51, 51, 51); background-color: rgb(255, 255, 255);\"><li style=\"\"><p class=\"md-end-block md-p\" style=\"\"><span class=\"md-plain\" style=\"\">保存操作API会触发什么事件？</span></p></li><li style=\"\"><p class=\"md-end-block md-p\" style=\"\"><span class=\"md-plain\" style=\"\">保存操作API，若API传了<span style=\"color: rgb(51, 51, 51); background-color: rgb(255, 255, 255);\">某个字段的</span>值，但实际单据里为空或者其他值。</span></p></li><li style=\"\"><p class=\"md-end-block md-p\" style=\"\"><span class=\"md-plain md-expand\" style=\"\">如何在代码里区分API的保存引入还是表单页面的保存引入？</span></p></li></ul><p class=\"md-end-block md-p\" style=\"color: rgb(51, 51, 51); background-color: rgb(255, 255, 255);\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">2 保存操作API触发事件</h2><h4 class=\"md-end-block md-heading\" style=\"color: rgb(51, 51, 51); background-color: rgb(255, 255, 255);\"><br/></h4><h4 class=\"md-end-block md-heading\" style=\"color: rgb(51, 51, 51); background-color: rgb(255, 255, 255);\">保存操作API属于数据引入，类似在页面上直接点保存按钮，引入时会触发以下事件：</h4><h4 class=\"md-end-block md-heading\" style=\"color: rgb(51, 51, 51); background-color: rgb(255, 255, 255);\"><br/></h4><p style=\"\"><strong style=\"\"><span style=\"color: rgb(0, 112, 192);\">2.1 保存按钮的操作插件或者配置的校验规则</span></strong></p><p style=\"\"><strong style=\"\"><span style=\"color: rgb(0, 112, 192);\"><br/></span></strong></p><p label=\"\" class=\"\" style=\"\"><span class=\"md-plain\" style=\"\"></span></p><p label=\"\" class=\"\" style=\"\"><span class=\"md-plain\" style=\"\"><img src=\"/download/01095b33d898713e420ea787b9077ca9180d.png\"/></span></p><p class=\"md-end-block md-p\" style=\"\"><span class=\"md-plain\" style=\"\"><br/></span></p><p style=\"\"><span style=\"color: rgb(0, 112, 192);\"><strong style=\"\">2.2 单据表单或者单据体分录的业务规则</strong></span></p><p style=\"\"><br/></p><p style=\"\"><img src=\"/download/010931051ab7953a427ca2a3238e22632c19.png\"/></p><p style=\"\"><span style=\"color: rgb(0, 112, 192);\"><strong style=\"\"><br/></strong></span></p><p style=\"\"><span style=\"color: rgb(0, 112, 192);\"><strong style=\"\">2.3 表单插件里的initImportData、beforeImportData、afterImportData方法；</strong></span></p><p style=\"\"><span class=\"md-plain\" style=\"\"><br/></span></p><p class=\"md-end-block md-p\" style=\"\"><span class=\"md-plain\" style=\"\"></span></p><p class=\"md-end-block md-p\" style=\"\"><span class=\"md-plain\" style=\"\"></span></p><p class=\"md-end-block md-p\" style=\"\"><span class=\"md-plain\" style=\"\"></span></p><p class=\"md-end-block md-p\" style=\"\"><span class=\"md-plain\" style=\"\"><img src=\"/download/0109b9cf7ae5036e4c03b62daa0e2452b012.png\"/></span></p><p class=\"md-end-block md-p\" style=\"\"><span class=\"md-plain\" style=\"\"></span></p><p class=\"md-end-block md-p\" style=\"\"><span class=\"md-plain\" style=\"\"></span></p><p label=\"正文\" style=\"\"><span style=\"color: rgb(0, 112, 192);\">&nbsp;&nbsp;</span></p><p style=\"\"><strong style=\"\"><span style=\"color: rgb(0, 112, 192);\">2.4 API是否绑定了扩展插件</span></strong></p><p class=\"md-end-block md-p\" style=\"\"><br/></p><p class=\"md-end-block md-p\" style=\"\"><img src=\"/download/0109604772e86fc74a69929270753f5b6bb5.png\"/></p><p class=\"md-end-block md-p\" style=\"\"><br/></p><p style=\"\"><strong style=\"\"><span style=\"color: rgb(0, 112, 192);\">2.5 若在V2版本的保存操作API中，配置了参数firePropChanged为true，那么在更新数据时，会触发表单插件的值更新propertyChanged事件。</span></strong></p><p class=\"md-end-block md-p\" style=\"\"><br/></p><p class=\"md-end-block md-p\" style=\"\"><img src=\"/download/010979427862400449e0af62bb05d8c5a543.png\"/></p><p class=\"md-end-block md-p\" style=\"color: rgb(51, 51, 51); background-color: rgb(255, 255, 255);\"><span contenteditable=\"false\" class=\"md-image md-img-loaded\" style=\"\"></span></p><p style=\"\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\"><span class=\"md-plain\" style=\"\">3 字段引入后，单据里字段却为空或者其他值时</span></h2><p style=\"\"><span class=\"md-plain\" style=\"\"><br/></span></p><h4 class=\"md-end-block md-heading\" style=\"color: rgb(51, 51, 51); background-color: rgb(255, 255, 255);\">首先有一个确定的前提，开放平台OpenAPI不会对原入参进行任何干预，已知保存操作API会触发的事件，那么建议按以下方法排查。</h4><ul class=\" list-paddingleft-2\" style=\"\"><li style=\"\"><p style=\"\"><span style=\"color: rgb(0, 112, 192);\">保存按钮的操作插件或者配置的校验规则 </span>——<span style=\"color: rgb(0, 112, 192);\">&nbsp;<span style=\"color: rgb(0, 0, 0);\">查看是否跟引入的字段有关处理逻辑，或直接先禁用掉。</span></span></p></li><li style=\"\"><p label=\"正文\" style=\"\"><span style=\"color: rgb(0, 112, 192);\">单据表单或者单据体分录的业务规则 </span>——<span style=\"color: rgb(0, 0, 0);\"> 查看是否跟引入的字段有关处理逻辑，或直接先禁用掉。</span></p></li><li style=\"\"><p label=\"正文\" style=\"\"><span style=\"color: rgb(0, 112, 192);\">表单插件里的initImportData、beforeImportData、afterImportData方</span><span style=\"color: rgb(0, 0, 0);\">法 —— </span><span style=\"color: rgb(0, 0, 0);\">查看是否跟引入的字段有关处理逻辑或可先配置保存参数is_importinit为false，此时不会触发这三个引入方法（适用版本BOS V6.0.1），再进行调用API。</span></p></li><li style=\"\"><p style=\"\"><span style=\"color: rgb(0, 112, 192);\">触发表单插件的值更新propertyChanged事</span><span style=\"color: rgb(0, 0, 0);\">件 —— 查看</span><span style=\"color: rgb(0, 0, 0);\">是否配置了保存参数firePropChanged为true。</span></p></li><li style=\"\"><p label=\"正文\" style=\"\"><span style=\"color: rgb(0, 112, 192);\">API绑定了扩展插件 </span>——&nbsp;查<span style=\"color: rgb(0, 0, 0);\">看是否跟引入的字段有关处理逻辑，或直接先禁用掉。</span></p></li><li style=\"\"><p class=\"md-end-block md-p\" style=\"color: rgb(51, 51, 51); background-color: rgb(255, 255, 255);\"><span style=\"color: rgb(0, 112, 192);\">若在API引入时会触发的插件里对某个字段进行了赋值，表单页面可以正常触发赋值，但API引入时不生效，<span class=\"md-meta md-before\" style=\"color: var(--md-char-color);\"></span><strong style=\"\">此时建议本地调试下，是否在赋值前方法就已经返回了。</strong><span class=\"md-meta md-after\" style=\"color: var(--md-char-color);\"></span></span></p></li><li style=\"\"><p class=\"md-end-block md-p\" style=\"color: rgb(51, 51, 51); background-color: rgb(255, 255, 255);\"><span style=\"color: rgb(0, 112, 192);\">查看表单该字段是否有对应的<span class=\"md-meta md-before\" style=\"color: var(--md-char-color);\"></span><strong style=\"\">数据库字段。</strong></span></p></li><li style=\"\"><p label=\"正文\" style=\"\"><span style=\"color: rgb(0, 112, 192);\">通过字段的**字段标识**查看传的字段是否正确，避免**同名**的字段引入。</span></p></li><li style=\"\"><p label=\"正文\" style=\"\">查看API配置页面的请求参数是否配置了需要引入的字段，若无配置，即使传了也不生效。</p></li><li style=\"\"><p label=\"正文\" style=\"\">设计器查看该字段功能控制-允许导入开关是否打开。<br/></p></li><li style=\"\"><p label=\"正文\" style=\"\"><span style=\"color: rgb(0, 112, 192);\">若该表单已经被扩展，那么扩展后的表单按上述方法都排查一遍。</span><span class=\"md-plain\" style=\"\"><strong style=\"\"><span class=\"md-plain\" style=\"\"></span></strong><span class=\"md-meta md-after\" style=\"color: var(--md-char-color);\"></span></span></p></li></ul><p class=\"md-end-block md-p\" style=\"color: rgb(51, 51, 51); background-color: rgb(255, 255, 255);\"><br/></p><p style=\"\"><br/></p><p><br/></p>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 87,
+   "isOpen": 1,
+   "name": "金蝶AI苍穹",
+   "productLineId": 29,
+   "series": "developer01",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        null
+       ],
+       "code": null,
+       "description": "",
+       "entityId": "594477647900699392",
+       "entityType": "Knowledge",
+       "id": "594485011940488192",
+       "isCategory": false,
+       "name": "保存API引入问题排查指南",
+       "parentId": "226337785987048960",
+       "sort": "12",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": "",
+     "entityId": null,
+     "entityType": null,
+     "id": "226337785987048960",
+     "isCategory": true,
+     "name": "常见问题",
+     "parentId": "-1",
+     "sort": "9",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download/01010204d4b71b654a208006fa1004eac36a.png",
+  "department": null,
+  "id": "740211268992385024",
+  "name": "毛毛去哪儿",
+  "nameSpell": "name"
+ },
+ "totalAppraisalScore": 29,
+ "iflytekId": null,
+ "views": 3206,
+ "productLineId": 29,
+ "comments": 1,
+ "similarityCount": 0,
+ "totalAppraisalUsers": 6,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1745993302000,
+ "appraisalScore": 0,
+ "unuseful": 0,
+ "knowledgeCheckStatus": 2,
+ "otherProductLineIds": [],
+ "auditAt": 1745993302000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapi_apilist_layout",
+        "id": "505686038019362304",
+        "name": "异步API",
+        "productLineId": null,
+        "sort": 1,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 0,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "AdvancedSkills",
+     "createdAt": 1556519216000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "高阶技巧标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/01005cea40211bf14113a6004322e86a6780.png",
+     "id": "202203081642",
+     "name": "高级技巧",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download/010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "306913800727243776",
+      "name": "Paim",
+      "nameSpell": "name"
+     },
+     "updatedAt": 1657851500000
+    },
+    {
+     "code": "HotIssues",
+     "createdAt": 1558618967000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "使用中经常遇到的应用类、报错类问题的解决方法",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/010046d15638963c4c388734601dd5f8ceec.png",
+     "id": "202203081644",
+     "name": "常见问题",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010176d38341668f44fdb94c95058a90e4b8.png",
+      "department": "云社区运营部",
+      "id": "2147406697",
+      "name": "多肉丸子",
+      "nameSpell": "kejuan"
+     },
+     "updatedAt": 1676857709000
+    },
+    {
+     "code": "GettingStarted",
+     "createdAt": 1556519230000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "推送至苍穹帮助中心",
+     "hasSpecifyUser": false,
+     "hide": true,
+     "icon": "/download/01001f079866652f4a68a71361a9509d404c.png",
+     "id": "202203081643",
+     "name": "推送至苍穹帮助中心",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 1,
+     "type": 2,
+     "updatePerson": {
+      "avatar": "/download?fileName=010162cfa9d5437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1129",
+      "name": "灏",
+      "nameSpell": "hao"
+     },
+     "updatedAt": 1605688859000
+    },
+    {
+     "code": "essencesummary",
+     "createdAt": 1606118073000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "精华汇总",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100402c6f8df169483db114f71043c19ec2.png",
+     "id": "202203081649",
+     "name": "精华汇总",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 2,
+     "updatePerson": {
+      "avatar": "/download?fileName=010162cfa9d5437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1129",
+      "name": "灏",
+      "nameSpell": "hao"
+     },
+     "updatedAt": 1606118073000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "594477647900699392",
+         "entityType": "Knowledge",
+         "id": "594485011940488192",
+         "isCategory": false,
+         "name": "保存API引入问题排查指南",
+         "parentId": "226337785987048960",
+         "sort": "12",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": null,
+       "id": "226337785987048960",
+       "isCategory": true,
+       "name": "常见问题",
+       "parentId": "-1",
+       "sort": "9",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": "<h2 label=\"一级标题\" class=\"first-title\" style=\"\"><span class=\"md-plain\" style=\"\">1 前言</span></h2><p class=\"md-end-block md-p\" style=\"color: rgb(51, 51, 51); background-color: rgb(255, 255, 255);\"><span class=\"md-plain\" style=\"\">本文档适用解决以下问题：</span></p><ul class=\"ul-list list-paddingleft-2\" style=\"color: rgb(51, 51, 51); background-color: rgb(255, 255, 255);\"><li style=\"\"><p class=\"md-end-block md-p\" style=\"\"><span class=\"md-plain\" style=\"\">保存操作API会触发什么事件？</span></p></li><li style=\"\"><p class=\"md-end-block md-p\" style=\"\"><span class=\"md-plain\" style=\"\">保存操作API，若API传了<span style=\"color: rgb(51, 51, 51); background-color: rgb(255, 255, 255);\">某个字段的</span>值，但实际单据里为空或者其他值。</span></p></li><li style=\"\"><p class=\"md-end-block md-p\" style=\"\"><span class=\"md-plain md-expand\" style=\"\">如何在代码里区分API的保存引入还是表单页面的保存引入？</span></p></li></ul><p class=\"md-end-block md-p\" style=\"color: rgb(51, 51, 51); background-color: rgb(255, 255, 255);\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">2 保存操作API触发事件</h2><h4 class=\"md-end-block md-heading\" style=\"color: rgb(51, 51, 51); background-color: rgb(255, 255, 255);\"><br/></h4><h4 class=\"md-end-block md-heading\" style=\"color: rgb(51, 51, 51); background-color: rgb(255, 255, 255);\">保存操作API属于数据引入，类似在页面上直接点保存按钮，引入时会触发以下事件：</h4><h4 class=\"md-end-block md-heading\" style=\"color: rgb(51, 51, 51); background-color: rgb(255, 255, 255);\"><br/></h4><p style=\"\"><strong style=\"\"><span style=\"color: rgb(0, 112, 192);\">2.1 保存按钮的操作插件或者配置的校验规则</span></strong></p><p style=\"\"><strong style=\"\"><span style=\"color: rgb(0, 112, 192);\"><br/></span></strong></p><p label=\"\" class=\"\" style=\"\"><span class=\"md-plain\" style=\"\"></span></p><p label=\"\" class=\"\" style=\"\"><span class=\"md-plain\" style=\"\"><img src=\"/download/01095b33d898713e420ea787b9077ca9180d.png\"/></span></p><p class=\"md-end-block md-p\" style=\"\"><span class=\"md-plain\" style=\"\"><br/></span></p><p style=\"\"><span style=\"color: rgb(0, 112, 192);\"><strong style=\"\">2.2 单据表单或者单据体分录的业务规则</strong></span></p><p style=\"\"><br/></p><p style=\"\"><img src=\"/download/010931051ab7953a427ca2a3238e22632c19.png\"/></p><p style=\"\"><span style=\"color: rgb(0, 112, 192);\"><strong style=\"\"><br/></strong></span></p><p style=\"\"><span style=\"color: rgb(0, 112, 192);\"><strong style=\"\">2.3 表单插件里的initImportData、beforeImportData、afterImportData方法；</strong></span></p><p style=\"\"><span class=\"md-plain\" style=\"\"><br/></span></p><p class=\"md-end-block md-p\" style=\"\"><span class=\"md-plain\" style=\"\"></span></p><p class=\"md-end-block md-p\" style=\"\"><span class=\"md-plain\" style=\"\"></span></p><p class=\"md-end-block md-p\" style=\"\"><span class=\"md-plain\" style=\"\"></span></p><p class=\"md-end-block md-p\" style=\"\"><span class=\"md-plain\" style=\"\"><img src=\"/download/0109b9cf7ae5036e4c03b62daa0e2452b012.png\"/></span></p><p class=\"md-end-block md-p\" style=\"\"><span class=\"md-plain\" style=\"\"></span></p><p class=\"md-end-block md-p\" style=\"\"><span class=\"md-plain\" style=\"\"></span></p><p label=\"正文\" style=\"\"><span style=\"color: rgb(0, 112, 192);\">&nbsp;&nbsp;</span></p><p style=\"\"><strong style=\"\"><span style=\"color: rgb(0, 112, 192);\">2.4 API是否绑定了扩展插件</span></strong></p><p class=\"md-end-block md-p\" style=\"\"><br/></p><p class=\"md-end-block md-p\" style=\"\"><img src=\"/download/0109604772e86fc74a69929270753f5b6bb5.png\"/></p><p class=\"md-end-block md-p\" style=\"\"><br/></p><p style=\"\"><strong style=\"\"><span style=\"color: rgb(0, 112, 192);\">2.5 若在V2版本的保存操作API中，配置了参数firePropChanged为true，那么在更新数据时，会触发表单插件的值更新propertyChanged事件。</span></strong></p><p class=\"md-end-block md-p\" style=\"\"><br/></p><p class=\"md-end-block md-p\" style=\"\"><img src=\"/download/010979427862400449e0af62bb05d8c5a543.png\"/></p><p class=\"md-end-block md-p\" style=\"color: rgb(51, 51, 51); background-color: rgb(255, 255, 255);\"><span contenteditable=\"false\" class=\"md-image md-img-loaded\" style=\"\"></span></p><p style=\"\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\"><span class=\"md-plain\" style=\"\">3 字段引入后，单据里字段却为空或者其他值时</span></h2><p style=\"\"><span class=\"md-plain\" style=\"\"><br/></span></p><h4 class=\"md-end-block md-heading\" style=\"color: rgb(51, 51, 51); background-color: rgb(255, 255, 255);\">首先有一个确定的前提，开放平台OpenAPI不会对原入参进行任何干预，已知保存操作API会触发的事件，那么建议按以下方法排查。</h4><ul class=\" list-paddingleft-2\" style=\"\"><li style=\"\"><p style=\"\"><span style=\"color: rgb(0, 112, 192);\">保存按钮的操作插件或者配置的校验规则 </span>——<span style=\"color: rgb(0, 112, 192);\">&nbsp;<span style=\"color: rgb(0, 0, 0);\">查看是否跟引入的字段有关处理逻辑，或直接先禁用掉。</span></span></p></li><li style=\"\"><p label=\"正文\" style=\"\"><span style=\"color: rgb(0, 112, 192);\">单据表单或者单据体分录的业务规则 </span>——<span style=\"color: rgb(0, 0, 0);\"> 查看是否跟引入的字段有关处理逻辑，或直接先禁用掉。</span></p></li><li style=\"\"><p label=\"正文\" style=\"\"><span style=\"color: rgb(0, 112, 192);\">表单插件里的initImportData、beforeImportData、afterImportData方</span><span style=\"color: rgb(0, 0, 0);\">法 —— </span><span style=\"color: rgb(0, 0, 0);\">查看是否跟引入的字段有关处理逻辑或可先配置保存参数is_importinit为false，此时不会触发这三个引入方法（适用版本BOS V6.0.1），再进行调用API。</span></p></li><li style=\"\"><p style=\"\"><span style=\"color: rgb(0, 112, 192);\">触发表单插件的值更新propertyChanged事</span><span style=\"color: rgb(0, 0, 0);\">件 —— 查看</span><span style=\"color: rgb(0, 0, 0);\">是否配置了保存参数firePropChanged为true。</span></p></li><li style=\"\"><p label=\"正文\" style=\"\"><span style=\"color: rgb(0, 112, 192);\">API绑定了扩展插件 </span>——&nbsp;查<span style=\"color: rgb(0, 0, 0);\">看是否跟引入的字段有关处理逻辑，或直接先禁用掉。</span></p></li><li style=\"\"><p class=\"md-end-block md-p\" style=\"color: rgb(51, 51, 51); background-color: rgb(255, 255, 255);\"><span style=\"color: rgb(0, 112, 192);\">若在API引入时会触发的插件里对某个字段进行了赋值，表单页面可以正常触发赋值，但API引入时不生效，<span class=\"md-meta md-before\" style=\"color: var(--md-char-color);\"></span><strong style=\"\">此时建议本地调试下，是否在赋值前方法就已经返回了。</strong><span class=\"md-meta md-after\" style=\"color: var(--md-char-color);\"></span></span></p></li><li style=\"\"><p class=\"md-end-block md-p\" style=\"color: rgb(51, 51, 51); background-color: rgb(255, 255, 255);\"><span style=\"color: rgb(0, 112, 192);\">查看表单该字段是否有对应的<span class=\"md-meta md-before\" style=\"color: var(--md-char-color);\"></span><strong style=\"\">数据库字段。</strong></span></p></li><li style=\"\"><p label=\"正文\" style=\"\"><span style=\"color: rgb(0, 112, 192);\">通过字段的**字段标识**查看传的字段是否正确，避免**同名**的字段引入。</span></p></li><li style=\"\"><p label=\"正文\" style=\"\">查看API配置页面的请求参数是否配置了需要引入的字段，若无配置，即使传了也不生效。</p></li><li style=\"\"><p label=\"正文\" style=\"\">设计器查看该字段功能控制-允许导入开关是否打开。<br/></p></li><li style=\"\"><p label=\"正文\" style=\"\"><span style=\"color: rgb(0, 112, 192);\">若该表单已经被扩展，那么扩展后的表单按上述方法都排查一遍。</span><span class=\"md-plain\" style=\"\"><strong style=\"\"><span class=\"md-plain\" style=\"\"></span></strong><span class=\"md-meta md-after\" style=\"color: var(--md-char-color);\"></span></span></p></li></ul><p class=\"md-end-block md-p\" style=\"color: rgb(51, 51, 51); background-color: rgb(255, 255, 255);\"><br/></p><p style=\"\"><br/></p><p><br/></p>"
+}

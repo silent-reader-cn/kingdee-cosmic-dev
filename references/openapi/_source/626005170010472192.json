@@ -1,0 +1,474 @@
+{
+ "badNum": 0,
+ "templateId": "335738408951726336",
+ "identityTagIds": null,
+ "knowledgeId": "626005170010472192",
+ "createdAt": 1727059263000,
+ "collections": 1,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "626005170010472192",
+ "contentType": 1,
+ "updatedAt": 1766124501000,
+ "knowledgeUpdater": {
+  "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+  "department": null,
+  "id": "132488613174518784",
+  "name": "某个路易",
+  "nameSpell": "name"
+ },
+ "assessStatus": 0,
+ "knowledgeStatus": 2,
+ "assessHandleStatus": null,
+ "knowledgeCreatedAt": 1727059263000,
+ "version": 35,
+ "labels": [],
+ "editedAt": 1727339982000,
+ "identityTags": null,
+ "useful": 7,
+ "errors": [],
+ "isCollected": false,
+ "template": "",
+ "totalFeedBacks": 0,
+ "attachments": [],
+ "sources": [],
+ "editTitle": "API测试",
+ "title": "API测试",
+ "content": "<p label=\"\" class=\"\" style=\"\"><span style=\"font-size: 20px; text-align: justify;\"></span></p><div style=\"\"><h2 label=\"一级标题\" class=\"first-title\" style=\"\">变更记录<br/></h2></div><div style=\"\"><p style=\"\"><br/></p></div><table width=\"100%\"><tbody style=\"\"><tr class=\"firstRow\" style=\"\"><td valign=\"middle\" width=\"230.73684210526315\" align=\"left\" style=\"\"><p style=\"text-align: inherit;\"><span style=\"font-weight: 700;\">产品版本</span></p></td><td valign=\"middle\" width=\"638.3157894736842\" align=\"left\" style=\"\"><span style=\"font-weight: 700;\">更新内容</span></td><td valign=\"middle\" width=\"279.57894736842104\" align=\"left\" style=\"\"><span style=\"font-weight: 700;\">更新日期</span></td></tr><tr style=\"\"><td valign=\"middle\" width=\"117\" align=\"left\" style=\"\"><span style=\"font-weight: 700; color: rgb(0, 0, 0);\">V4.0.013</span></td><td valign=\"middle\" width=\"359\" align=\"left\" style=\"\">初始版本</td><td valign=\"middle\" width=\"146.33333333333334\" align=\"left\" style=\"\">2021年12月</td></tr><tr><td width=\"117\" valign=\"middle\" align=\"left\"><span style=\"font-weight: 700; color: rgb(0, 0, 0);\">V7.0.1</span></td><td width=\"359\" valign=\"middle\" align=\"left\">增加Mock业务数据功能，支持将业务数据填充到参数示例</td><td width=\"146.33333333333334\" valign=\"middle\" align=\"left\">2024年10月</td></tr></tbody></table><p style=\"\"><br/></p><p style=\"\"><span style=\"font-size: 20px; text-align: justify;\"></span></p><hr/><p style=\"\"><br/></p><h2 label=\"一级标题\" class=\"first-title html-anchor-list1-1727059256691 html-anchor-list1-1727059256691\" id=\"html-anchor-list1-1727059256691\" style=\"text-align: justify;\">1&nbsp;功能介绍<br/></h2><p style=\"color: rgb(0, 0, 0); text-align: justify;\"><span style=\"\">OpenAPI支持</span>在线测试，模拟真实数据调用API服务。无需填写参数、URL，实动构造测试数据，一键进行测试，实时调试，方便快捷。</p><p style=\"color: rgb(0, 0, 0); text-align: justify;\"><br/></p><h2 label=\"一级标题\" class=\"first-title html-anchor-list2-1727059256691 html-anchor-list2-1727059256691\" id=\"html-anchor-list2-1727059256691\" style=\"text-align: justify;\">2 应用场景</h2><p>开发人员在除生产外的环境使用在线API测试来快速测试和调试正在开发的API，帮助发现并修复代码中的错误和问题。当API出现问题或故障时，在线API测试工具可用于重现问题，帮助开发团队更快地找到问题的根本原因。</p><p style=\"color: rgb(0, 0, 0);text-align: justify\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"text-align: justify;\">3 系统路径</h2><p label=\"正文\" style=\"text-align: justify;\">【开放服务云】 → 【OpenAPI】 → 【API管理】<span style=\"text-align: justify;\">&nbsp;→ 【API开发】</span><br/><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"text-align: justify;\">4 关键按钮说明</h2><table width=\"90%\"><tbody style=\"\"><tr class=\"firstRow\" style=\"\"><td valign=\"top\" style=\"\" width=\"111\">按钮名称</td><td valign=\"top\" style=\"\" width=\"572\">详细解释</td></tr><tr style=\"\"><td valign=\"top\" style=\"\" width=\"111\">API测试</td><td valign=\"top\" style=\"\" width=\"572\">点击按钮，弹出API测试弹窗，<span style=\"color: rgb(0, 112, 192);\">只有测试环境展示该按钮<span style=\"color: rgb(0, 0, 0);\">（MC管理中集群类型为测试环境）</span></span>，生产环境不允许进行在线测试。<br/></td></tr><tr style=\"\"><td valign=\"top\" style=\"\" width=\"111\">填充示例数据</td><td valign=\"top\" style=\"\" width=\"572\">点击按钮，弹出弹框，选择手工录入参数实例数据或选单填充参数示例数据</td></tr></tbody></table><p style=\"text-align: justify;\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">5 主要操作</h2><h3 label=\"二级标题\" class=\"second-title\" style=\"\">5.1 在线测试<br/></h3><p label=\"正文\" style=\"\">创建API服务，维护API基本信息、请求参数等信息后保存，点击“API测试”按钮，即可打开在线测试弹窗。点击“Send”按钮，即可实时调试API，支持JSON、XML、SOAP1.1、SOAP1.2四种报文格式。</p><p><br/></p><p><img src=\"/download/0109befc16aad45649aeae4510216f1eb0a7.png\"/></p><p style=\"text-align: center;\"><br/></p><p><br/></p><p>若请求方式为Get，此时会将请求参数自动拼接在URL中。</p><p><br/></p><p><img src=\"/download/010944b98cd3aa854bb590f709d54a24b989.png\"/></p><p label=\"\" class=\"\" style=\"\"><br/></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\">5.2 Mock数据</h3><p>用于测试的请求参数数据，需要用户进行手工维护，但是当参数数量较多时，维护工作量较大，如保存操作API，动则近百个请求参数，此时可以使用填充示例数据，方便快速进入调试并生成准确的API文档。<br/></p><p>点击“填充示例数据”按钮，点击“手工录单”。</p><p><br/></p><p><img src=\"/download/01094845bd39fd3d4847985cc1c9b69b8357.png\"/></p><p><br/></p><p>即可打开实体录入界面，快速录入数据，并将页面录入的数据，通过“返回数据”按钮，填充到接口的参数示例中。</p><p><br/></p><p><img src=\"/download/010979cdad646c6a4fa29330b8bf802f52eb.png\"/></p><p><br/></p><p>同时，也可直接勾选“选单”按钮，从已存在的业务数据中，选择一条，进行填充。</p><p><br/></p><p><img src=\"/download/0109e52c1c8751f649e3afdc4909026c6fe6.png\"/><br/></p><p><br/></p><p><img src=\"/download/01098d01f05edb6c4b28bf89165d9cb9abc5.png\"/></p><p><br/></p><h3 label=\"二级标题\" class=\"second-title\"><strong style=\"font-size: 20px;\"><span style=\"color: rgb(0, 0, 0);\">5.3 参数控制</span></strong></h3><p style=\"\">由于API在线测试会对环境中数据造成影响，所以不允许用户在生产环境进行在线测试。用户可在MC管理中心的集群管理中，维护集群的类型，若为测试环境和开发环境，可以直接进行在线测试。</p><p style=\"\"><br/></p><p><img src=\"/download/01093b0227b07e1443baa2d6b790fc241085.png\"/></p><p><br/></p><p>同时API测试支持模态和分屏两种模式，管理员可通过参数配置进行设置。路径：【基础服务云】 → 【公共设置】&nbsp;<span style=\"\">→</span>&nbsp;【参数配置】&nbsp;<span style=\"\">→</span>&nbsp;【系统参数】。</p><p><br/></p><p><img src=\"/download/01093d18798e2c374b77a2d4d56e7406a10f.png\"/></p><p><br/></p><h2 label=\"一级标题\" class=\"first-title html-anchor-list10-1727058487058 html-anchor-list10-1727058487059\" id=\"html-anchor-list10-1727058487058\" style=\"background-color: rgb(255, 255, 255);\">6 更多资讯</h2><p style=\"background-color: rgb(255, 255, 255);\"><span style=\"text-align: justify;\">关于OpenAPI的更多资讯，请随时关注</span><a href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=226337371640594944&id=226708319996323072&productLineId=29\" target=\"_blank\" style=\"text-align: justify;\">新特性公告</a><span style=\"text-align: justify;\">。</span></p><p><br/></p>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 87,
+   "isOpen": 1,
+   "name": "金蝶AI苍穹",
+   "productLineId": 29,
+   "series": "developer01",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        null
+       ],
+       "code": null,
+       "description": "",
+       "entityId": "626005170010472192",
+       "entityType": "Knowledge",
+       "id": "626015073282309888",
+       "isCategory": false,
+       "name": "API测试",
+       "parentId": "226337544983020032",
+       "sort": "6",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": null,
+     "entityId": null,
+     "entityType": null,
+     "id": "226337544983020032",
+     "isCategory": true,
+     "name": "用户手册",
+     "parentId": "-1",
+     "sort": "6",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download/01010204d4b71b654a208006fa1004eac36a.png",
+  "department": null,
+  "id": "740211268992385024",
+  "name": "毛毛去哪儿",
+  "nameSpell": "name"
+ },
+ "totalAppraisalScore": 33,
+ "iflytekId": null,
+ "views": 7719,
+ "productLineId": 29,
+ "comments": 0,
+ "similarityCount": 0,
+ "totalAppraisalUsers": 7,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1766124501000,
+ "appraisalScore": 0,
+ "unuseful": 0,
+ "knowledgeCheckStatus": 2,
+ "otherProductLineIds": [],
+ "auditAt": 1727401291000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapi_apilist_layout",
+        "id": "505686038019362304",
+        "name": "异步API",
+        "productLineId": null,
+        "sort": 1,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 0,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "OperatingGuide",
+     "createdAt": 1556519201000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "某一功能的具体说明介绍，包括应用场景、参数说明、具体操作步骤等",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/010037894174802d4b9f8782f1f0010a6ddd.png",
+     "id": "202203081641",
+     "name": "功能介绍",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010176d38341668f44fdb94c95058a90e4b8.png",
+      "department": "云社区运营部",
+      "id": "2147406697",
+      "name": "多肉丸子",
+      "nameSpell": "kejuan"
+     },
+     "updatedAt": 1676857681000
+    },
+    {
+     "code": "GettingStarted",
+     "createdAt": 1556519230000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "推送至苍穹帮助中心",
+     "hasSpecifyUser": false,
+     "hide": true,
+     "icon": "/download/01001f079866652f4a68a71361a9509d404c.png",
+     "id": "202203081643",
+     "name": "推送至苍穹帮助中心",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 1,
+     "type": 2,
+     "updatePerson": {
+      "avatar": "/download?fileName=010162cfa9d5437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1129",
+      "name": "灏",
+      "nameSpell": "hao"
+     },
+     "updatedAt": 1605688859000
+    },
+    {
+     "code": "rumen",
+     "createdAt": 1605667807000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "入门类的知识可使用此标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100d322b9282bcc438faa894f4eec029977.png",
+     "id": "202203081646",
+     "name": "基础入门",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download?fileName=0101ec1d6ce599b442dab7d0b794c1fce88d.png",
+      "department": null,
+      "id": "1009",
+      "name": "一颗小星星",
+      "nameSpell": "fengling"
+     },
+     "updatedAt": 1657872008000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "626005170010472192",
+         "entityType": "Knowledge",
+         "id": "626015073282309888",
+         "isCategory": false,
+         "name": "API测试",
+         "parentId": "226337544983020032",
+         "sort": "6",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": null,
+       "entityId": null,
+       "entityType": null,
+       "id": "226337544983020032",
+       "isCategory": true,
+       "name": "用户手册",
+       "parentId": "-1",
+       "sort": "6",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": "<p label=\"\" class=\"\" style=\"\"><span style=\"font-size: 20px; text-align: justify;\"></span></p><div style=\"\"><h2 label=\"一级标题\" class=\"first-title\" style=\"\">变更记录<br/></h2></div><div style=\"\"><p style=\"\"><br/></p></div><table width=\"100%\"><tbody style=\"\"><tr class=\"firstRow\" style=\"\"><td valign=\"middle\" width=\"230.73684210526315\" align=\"left\" style=\"\"><p style=\"text-align: inherit;\"><span style=\"font-weight: 700;\">产品版本</span></p></td><td valign=\"middle\" width=\"638.3157894736842\" align=\"left\" style=\"\"><span style=\"font-weight: 700;\">更新内容</span></td><td valign=\"middle\" width=\"279.57894736842104\" align=\"left\" style=\"\"><span style=\"font-weight: 700;\">更新日期</span></td></tr><tr style=\"\"><td valign=\"middle\" width=\"117\" align=\"left\" style=\"\"><span style=\"font-weight: 700; color: rgb(0, 0, 0);\">V4.0.013</span></td><td valign=\"middle\" width=\"359\" align=\"left\" style=\"\">初始版本</td><td valign=\"middle\" width=\"146.33333333333334\" align=\"left\" style=\"\">2021年12月</td></tr><tr><td width=\"117\" valign=\"middle\" align=\"left\"><span style=\"font-weight: 700; color: rgb(0, 0, 0);\">V7.0.1</span></td><td width=\"359\" valign=\"middle\" align=\"left\">增加Mock业务数据功能，支持将业务数据填充到参数示例</td><td width=\"146.33333333333334\" valign=\"middle\" align=\"left\">2024年10月</td></tr></tbody></table><p style=\"\"><br/></p><p style=\"\"><span style=\"font-size: 20px; text-align: justify;\"></span></p><hr/><p style=\"\"><br/></p><h2 label=\"一级标题\" class=\"first-title html-anchor-list1-1727059256691 html-anchor-list1-1727059256691\" id=\"html-anchor-list1-1727059256691\" style=\"text-align: justify;\">1&nbsp;功能介绍<br/></h2><p style=\"color: rgb(0, 0, 0); text-align: justify;\"><span style=\"\">OpenAPI支持</span>在线测试，模拟真实数据调用API服务。无需填写参数、URL，实动构造测试数据，一键进行测试，实时调试，方便快捷。</p><p style=\"color: rgb(0, 0, 0); text-align: justify;\"><br/></p><h2 label=\"一级标题\" class=\"first-title html-anchor-list2-1727059256691 html-anchor-list2-1727059256691\" id=\"html-anchor-list2-1727059256691\" style=\"text-align: justify;\">2 应用场景</h2><p>开发人员在除生产外的环境使用在线API测试来快速测试和调试正在开发的API，帮助发现并修复代码中的错误和问题。当API出现问题或故障时，在线API测试工具可用于重现问题，帮助开发团队更快地找到问题的根本原因。</p><p style=\"color: rgb(0, 0, 0);text-align: justify\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"text-align: justify;\">3 系统路径</h2><p label=\"正文\" style=\"text-align: justify;\">【开放服务云】 → 【OpenAPI】 → 【API管理】<span style=\"text-align: justify;\">&nbsp;→ 【API开发】</span><br/><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"text-align: justify;\">4 关键按钮说明</h2><table width=\"90%\"><tbody style=\"\"><tr class=\"firstRow\" style=\"\"><td valign=\"top\" style=\"\" width=\"111\">按钮名称</td><td valign=\"top\" style=\"\" width=\"572\">详细解释</td></tr><tr style=\"\"><td valign=\"top\" style=\"\" width=\"111\">API测试</td><td valign=\"top\" style=\"\" width=\"572\">点击按钮，弹出API测试弹窗，<span style=\"color: rgb(0, 112, 192);\">只有测试环境展示该按钮<span style=\"color: rgb(0, 0, 0);\">（MC管理中集群类型为测试环境）</span></span>，生产环境不允许进行在线测试。<br/></td></tr><tr style=\"\"><td valign=\"top\" style=\"\" width=\"111\">填充示例数据</td><td valign=\"top\" style=\"\" width=\"572\">点击按钮，弹出弹框，选择手工录入参数实例数据或选单填充参数示例数据</td></tr></tbody></table><p style=\"text-align: justify;\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">5 主要操作</h2><h3 label=\"二级标题\" class=\"second-title\" style=\"\">5.1 在线测试<br/></h3><p label=\"正文\" style=\"\">创建API服务，维护API基本信息、请求参数等信息后保存，点击“API测试”按钮，即可打开在线测试弹窗。点击“Send”按钮，即可实时调试API，支持JSON、XML、SOAP1.1、SOAP1.2四种报文格式。</p><p><br/></p><p><img src=\"/download/0109befc16aad45649aeae4510216f1eb0a7.png\"/></p><p style=\"text-align: center;\"><br/></p><p><br/></p><p>若请求方式为Get，此时会将请求参数自动拼接在URL中。</p><p><br/></p><p><img src=\"/download/010944b98cd3aa854bb590f709d54a24b989.png\"/></p><p label=\"\" class=\"\" style=\"\"><br/></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\">5.2 Mock数据</h3><p>用于测试的请求参数数据，需要用户进行手工维护，但是当参数数量较多时，维护工作量较大，如保存操作API，动则近百个请求参数，此时可以使用填充示例数据，方便快速进入调试并生成准确的API文档。<br/></p><p>点击“填充示例数据”按钮，点击“手工录单”。</p><p><br/></p><p><img src=\"/download/01094845bd39fd3d4847985cc1c9b69b8357.png\"/></p><p><br/></p><p>即可打开实体录入界面，快速录入数据，并将页面录入的数据，通过“返回数据”按钮，填充到接口的参数示例中。</p><p><br/></p><p><img src=\"/download/010979cdad646c6a4fa29330b8bf802f52eb.png\"/></p><p><br/></p><p>同时，也可直接勾选“选单”按钮，从已存在的业务数据中，选择一条，进行填充。</p><p><br/></p><p><img src=\"/download/0109e52c1c8751f649e3afdc4909026c6fe6.png\"/><br/></p><p><br/></p><p><img src=\"/download/01098d01f05edb6c4b28bf89165d9cb9abc5.png\"/></p><p><br/></p><h3 label=\"二级标题\" class=\"second-title\"><strong style=\"font-size: 20px;\"><span style=\"color: rgb(0, 0, 0);\">5.3 参数控制</span></strong></h3><p style=\"\">由于API在线测试会对环境中数据造成影响，所以不允许用户在生产环境进行在线测试。用户可在MC管理中心的集群管理中，维护集群的类型，若为测试环境和开发环境，可以直接进行在线测试。</p><p style=\"\"><br/></p><p><img src=\"/download/01093b0227b07e1443baa2d6b790fc241085.png\"/></p><p><br/></p><p>同时API测试支持模态和分屏两种模式，管理员可通过参数配置进行设置。路径：【基础服务云】 → 【公共设置】&nbsp;<span style=\"\">→</span>&nbsp;【参数配置】&nbsp;<span style=\"\">→</span>&nbsp;【系统参数】。</p><p><br/></p><p><img src=\"/download/01093d18798e2c374b77a2d4d56e7406a10f.png\"/></p><p><br/></p><h2 label=\"一级标题\" class=\"first-title html-anchor-list10-1727058487058 html-anchor-list10-1727058487059\" id=\"html-anchor-list10-1727058487058\" style=\"background-color: rgb(255, 255, 255);\">6 更多资讯</h2><p style=\"background-color: rgb(255, 255, 255);\"><span style=\"text-align: justify;\">关于OpenAPI的更多资讯，请随时关注</span><a href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=226337371640594944&id=226708319996323072&productLineId=29\" target=\"_blank\" style=\"text-align: justify;\">新特性公告</a><span style=\"text-align: justify;\">。</span></p><p><br/></p>"
+}

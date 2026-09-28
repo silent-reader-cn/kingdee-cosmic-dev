@@ -1,0 +1,586 @@
+{
+ "badNum": 0,
+ "templateId": null,
+ "identityTagIds": null,
+ "knowledgeId": "418791066016674816",
+ "createdAt": 1677655571000,
+ "collections": 3,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "418791066016674816",
+ "contentType": 1,
+ "updatedAt": 1702516204000,
+ "knowledgeUpdater": {
+  "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+  "department": null,
+  "id": "132488613174518784",
+  "name": "某个路易",
+  "nameSpell": "name"
+ },
+ "assessStatus": 0,
+ "knowledgeStatus": 2,
+ "assessHandleStatus": null,
+ "knowledgeCreatedAt": 1677655571000,
+ "version": 33,
+ "labels": [],
+ "editedAt": 1702516204000,
+ "identityTags": null,
+ "useful": 7,
+ "errors": [],
+ "isCollected": false,
+ "template": "{\"token\":2,\"title\":\"开放平台API日志默认保存30天\",\"version\":\"苍穹V5.0\",\"range\":\"苍穹开放平台所有用户\",\"date\":\"2023-04-27\",\"patch\":\"V5.0.020（BOS）\",\"collection\":[\"\"],\"collectionNext\":[[]],\"collectionHref\":[[]],\"knowledgeContent\":\"<p label=\\\"正文\\\" style=\\\"text-align: justify; color: rgb(73, 80, 96);\\\"><br/></p><p label=\\\"一级标题\\\" style=\\\"font-size: 20px; font-weight: bold; line-height: 42px;\\\" class=\\\" html-anchor-list0-1682473248350 html-anchor-list0-1682473253136\\\" id=\\\"html-anchor-list0-1682473253136\\\">变更记录</p><table width=\\\"100%\\\"><tbody style=\\\"\\\"><tr class=\\\"firstRow\\\" style=\\\"\\\"><td valign=\\\"top\\\" width=\\\"247\\\" style=\\\"\\\">产品版本</td><td valign=\\\"top\\\" width=\\\"247\\\" style=\\\"\\\">更新内容</td><td valign=\\\"top\\\" width=\\\"247\\\" style=\\\"\\\">更新日期</td></tr><tr style=\\\"\\\"><td valign=\\\"top\\\" width=\\\"247\\\" style=\\\"\\\">V5.0.020</td><td valign=\\\"top\\\" width=\\\"247\\\" style=\\\"\\\">开放平台API日志定时清理</td><td valign=\\\"top\\\" width=\\\"247\\\" style=\\\"\\\">2023年4月27日</td></tr></tbody></table><p style=\\\"\\\"><br/></p><p><br/></p><p>&nbsp;&nbsp;&nbsp;&nbsp;开放平台提供了API调用日志功能，用于分析及审计API调用情况。 为提升用户使用体验及存储性能，自5.0.020补丁开始，<span style=\\\"color: rgb(84, 141, 212);\\\">开放平台对API调用日志默认只保存30天，且最多保留500万行</span>。 用户可在开放平台参数设置菜单，配置日志保留天数最长至90天。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;如果您需要保留更长时间的API调用日志，您可以参考下述文档配置 API日志转储归档策略。&nbsp;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;帮助文档<span class=\\\"kd-attachment-content\\\" contenteditable=\\\"false\\\" id=\\\"\\\" vid=\\\"522838550576782592\\\"><span class=\\\"name\\\" contenteditable=\\\"false\\\">金蝶云·苍穹V5.0_开放平台-日志清理配置指南.pdf</span></span></p><p label=\\\"正文\\\" style=\\\"text-align: justify; color: rgb(73, 80, 96);\\\"><br/></p>\"}",
+ "totalFeedBacks": 0,
+ "attachments": [],
+ "sources": [],
+ "editTitle": "开放平台API日志默认保存30天",
+ "title": "开放平台API日志默认保存30天",
+ "content": " <p class=\"table-title table-margin\"><span class=\"span-line\">发布说明</span><span class=\"line\"></span></p><p class=\"title-b\"><span class=\"span-b\">发布版本：</span><span class=\"span-nor\">苍穹V5.0</span></p><p class=\"title-b\"><span class=\"span-b\">适用范围：</span><span class=\"span-nor\">苍穹开放平台所有用户</span></p><p class=\"title-b\"><span class=\"span-b\">上线日期：</span><span class=\"span-nor\">2023-04-27</span></p><p class=\"title-b\"><span class=\"span-b\">补丁号：</span><span class=\"span-nor margin-patch\">V5.0.020（BOS）</span></p>\n              <p class=\"table-title title-detail\"><span class=\"span-line\">更多内容</span><span class=\"line\"></span></p>\n              <p label=\"正文\" style=\"text-align: justify; color: rgb(73, 80, 96);\"><br/></p><p label=\"一级标题\" style=\"font-size: 20px; font-weight: bold; line-height: 42px;\" class=\" html-anchor-list0-1682473248350 html-anchor-list0-1682473253136\" id=\"html-anchor-list0-1682473253136\">变更记录</p><table width=\"100%\"><tbody style=\"\"><tr class=\"firstRow\" style=\"\"><td valign=\"top\" width=\"247\" style=\"\">产品版本</td><td valign=\"top\" width=\"247\" style=\"\">更新内容</td><td valign=\"top\" width=\"247\" style=\"\">更新日期</td></tr><tr style=\"\"><td valign=\"top\" width=\"247\" style=\"\">V5.0.020</td><td valign=\"top\" width=\"247\" style=\"\">开放平台API日志定时清理</td><td valign=\"top\" width=\"247\" style=\"\">2023年4月27日</td></tr></tbody></table><p style=\"\"><br/></p><p><br/></p><p>&nbsp;&nbsp;&nbsp;&nbsp;开放平台提供了API调用日志功能，用于分析及审计API调用情况。 为提升用户使用体验及存储性能，自5.0.020补丁开始，<span style=\"color: rgb(84, 141, 212);\">开放平台对API调用日志默认只保存30天，且最多保留500万行</span>。 用户可在开放平台参数设置菜单，配置日志保留天数最长至90天。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;如果您需要保留更长时间的API调用日志，您可以参考下述文档配置 API日志转储归档策略。&nbsp;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;帮助文档<span class=\"kd-attachment-content\" contenteditable=\"false\" id=\"\" vid=\"522838550576782592\"><span class=\"name\" contenteditable=\"false\">金蝶AI苍穹V5.0_开放平台-日志清理配置指南.pdf</span></span></p><p label=\"正文\" style=\"text-align: justify; color: rgb(73, 80, 96);\"><br/></p>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 87,
+   "isOpen": 1,
+   "name": "金蝶AI苍穹",
+   "productLineId": 29,
+   "series": "developer01",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "418791066016674816",
+         "entityType": "Knowledge",
+         "id": "418791988343905792",
+         "isCategory": false,
+         "name": "开放平台API日志默认保存30天",
+         "parentId": "226337340351087360",
+         "sort": "15",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": null,
+       "id": "226337340351087360",
+       "isCategory": true,
+       "name": "重要通知",
+       "parentId": "226337280724861696",
+       "sort": "1",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": "",
+     "entityId": null,
+     "entityType": null,
+     "id": "226337280724861696",
+     "isCategory": true,
+     "name": "动态与公告",
+     "parentId": "-1",
+     "sort": "1",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download/01010204d4b71b654a208006fa1004eac36a.png",
+  "department": null,
+  "id": "740211268992385024",
+  "name": "毛毛去哪儿",
+  "nameSpell": "name"
+ },
+ "totalAppraisalScore": 35,
+ "iflytekId": null,
+ "views": 3359,
+ "productLineId": 29,
+ "comments": 0,
+ "similarityCount": null,
+ "totalAppraisalUsers": 7,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1702516204000,
+ "appraisalScore": 0,
+ "unuseful": 0,
+ "knowledgeCheckStatus": 2,
+ "otherProductLineIds": [],
+ "auditAt": 1702516225000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapilogdata",
+        "id": "505686382472559872",
+        "name": "API调用日志",
+        "productLineId": null,
+        "sort": 4,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 0,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapilogdata",
+        "id": "344592117601683968",
+        "name": "API日志",
+        "productLineId": null,
+        "sort": 11,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "5614",
+       "name": "开放平台",
+       "productLineId": null,
+       "sort": 2,
+       "type": "module"
+      },
+      "code": "DEV",
+      "id": "5576",
+      "name": "开发服务云",
+      "productLineId": null,
+      "sort": 11,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 1,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "GettingStarted",
+     "createdAt": 1556519230000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "推送至苍穹帮助中心",
+     "hasSpecifyUser": false,
+     "hide": true,
+     "icon": "/download/01001f079866652f4a68a71361a9509d404c.png",
+     "id": "202203081643",
+     "name": "推送至苍穹帮助中心",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 1,
+     "type": 2,
+     "updatePerson": {
+      "avatar": "/download?fileName=010162cfa9d5437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1129",
+      "name": "灏",
+      "nameSpell": "hao"
+     },
+     "updatedAt": 1605688859000
+    },
+    {
+     "code": "rumen",
+     "createdAt": 1605667807000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "入门类的知识可使用此标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100d322b9282bcc438faa894f4eec029977.png",
+     "id": "202203081646",
+     "name": "基础入门",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download?fileName=0101ec1d6ce599b442dab7d0b794c1fce88d.png",
+      "department": null,
+      "id": "1009",
+      "name": "一颗小星星",
+      "nameSpell": "fengling"
+     },
+     "updatedAt": 1657872008000
+    },
+    {
+     "code": "NewFeatures",
+     "createdAt": 1558619051000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "新特性",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/01009c9898f919a24034b3b37b2ebf42931c.png",
+     "id": "202203081645",
+     "name": "新特性",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010145330b44d45a47ae9b8aac30617b6992.png",
+      "department": null,
+      "id": "2147443044",
+      "name": "Lucky_tiao",
+      "nameSpell": "laoli"
+     },
+     "updatedAt": 1668739541000
+    },
+    {
+     "code": "essencesummary",
+     "createdAt": 1606118073000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "精华汇总",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100402c6f8df169483db114f71043c19ec2.png",
+     "id": "202203081649",
+     "name": "精华汇总",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 2,
+     "updatePerson": {
+      "avatar": "/download?fileName=010162cfa9d5437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1129",
+      "name": "灏",
+      "nameSpell": "hao"
+     },
+     "updatedAt": 1606118073000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          {
+           "childCategory": [
+            null
+           ],
+           "code": null,
+           "description": "",
+           "entityId": "418791066016674816",
+           "entityType": "Knowledge",
+           "id": "418791988343905792",
+           "isCategory": false,
+           "name": "开放平台API日志默认保存30天",
+           "parentId": "226337340351087360",
+           "sort": "15",
+           "specialId": "226337046514476288",
+           "status": 1
+          }
+         ],
+         "code": null,
+         "description": "",
+         "entityId": null,
+         "entityType": null,
+         "id": "226337340351087360",
+         "isCategory": true,
+         "name": "重要通知",
+         "parentId": "226337280724861696",
+         "sort": "1",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": null,
+       "id": "226337280724861696",
+       "isCategory": true,
+       "name": "动态与公告",
+       "parentId": "-1",
+       "sort": "1",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": " <p class=\"table-title table-margin\"><span class=\"span-line\">发布说明</span><span class=\"line\"></span></p><p class=\"title-b\"><span class=\"span-b\">发布版本：</span><span class=\"span-nor\">苍穹V5.0</span></p><p class=\"title-b\"><span class=\"span-b\">适用范围：</span><span class=\"span-nor\">苍穹开放平台所有用户</span></p><p class=\"title-b\"><span class=\"span-b\">上线日期：</span><span class=\"span-nor\">2023-04-27</span></p><p class=\"title-b\"><span class=\"span-b\">补丁号：</span><span class=\"span-nor margin-patch\">V5.0.020（BOS）</span></p>\n              <p class=\"table-title title-detail\"><span class=\"span-line\">更多内容</span><span class=\"line\"></span></p>\n              <p label=\"正文\" style=\"text-align: justify; color: rgb(73, 80, 96);\"><br/></p><p label=\"一级标题\" style=\"font-size: 20px; font-weight: bold; line-height: 42px;\" class=\" html-anchor-list0-1682473248350 html-anchor-list0-1682473253136\" id=\"html-anchor-list0-1682473253136\">变更记录</p><table width=\"100%\"><tbody style=\"\"><tr class=\"firstRow\" style=\"\"><td valign=\"top\" width=\"247\" style=\"\">产品版本</td><td valign=\"top\" width=\"247\" style=\"\">更新内容</td><td valign=\"top\" width=\"247\" style=\"\">更新日期</td></tr><tr style=\"\"><td valign=\"top\" width=\"247\" style=\"\">V5.0.020</td><td valign=\"top\" width=\"247\" style=\"\">开放平台API日志定时清理</td><td valign=\"top\" width=\"247\" style=\"\">2023年4月27日</td></tr></tbody></table><p style=\"\"><br/></p><p><br/></p><p>&nbsp;&nbsp;&nbsp;&nbsp;开放平台提供了API调用日志功能，用于分析及审计API调用情况。 为提升用户使用体验及存储性能，自5.0.020补丁开始，<span style=\"color: rgb(84, 141, 212);\">开放平台对API调用日志默认只保存30天，且最多保留500万行</span>。 用户可在开放平台参数设置菜单，配置日志保留天数最长至90天。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;如果您需要保留更长时间的API调用日志，您可以参考下述文档配置 API日志转储归档策略。&nbsp;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;帮助文档<span class=\"kd-attachment-content\" contenteditable=\"false\" id=\"\" vid=\"522838550576782592\"><span class=\"name\" contenteditable=\"false\">金蝶AI苍穹V5.0_开放平台-日志清理配置指南.pdf</span></span></p><p label=\"正文\" style=\"text-align: justify; color: rgb(73, 80, 96);\"><br/></p>"
+}

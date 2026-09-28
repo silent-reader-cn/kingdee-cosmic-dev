@@ -1,0 +1,453 @@
+{
+ "badNum": 0,
+ "identityTagIds": null,
+ "knowledgeId": "755467282905756672",
+ "createdAt": 1757925436000,
+ "collections": 0,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "755467282905756672",
+ "contentType": 1,
+ "updatedAt": 1766022778000,
+ "knowledgeUpdater": {
+  "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+  "department": null,
+  "id": "132488613174518784",
+  "name": "某个路易",
+  "nameSpell": "name"
+ },
+ "assessStatus": 0,
+ "knowledgeStatus": 2,
+ "assessHandleStatus": null,
+ "knowledgeCreatedAt": 1757925436000,
+ "version": 5,
+ "labels": [],
+ "editedAt": 1757925637000,
+ "identityTags": null,
+ "useful": 0,
+ "errors": [],
+ "isCollected": false,
+ "totalFeedBacks": 0,
+ "attachments": [],
+ "sources": [],
+ "editTitle": "RESTful API 日志",
+ "title": "RESTful API 日志",
+ "content": "<h1><span style=\"font-size: 16ptpx\"><strong>1 简介</strong></span></h1><h2><span style=\"font-size: 14ptpx\"><strong>1.1 功能介绍</strong></span></h2><p><span style=\"font-size: 10.5ptpx\">RESTful API 日志功能用于记录 API 调用全链路信息，支持日志查看、筛选与导出，核心功能包括：</span></p><ul><li><p><span style=\"font-size: 10.5ptpx\">多维度日志记录：记录 API 调用的基础信息（调用时间、调用者、客户端 IP）、请求信息（请求方法、资源路径、请求参数）、响应信息（HTTP 状态码、响应参数、错误信息）及性能信息（API 耗时、业务处理耗时），日志级别分为 “不记录”“基本日志”“详细日志”“大文本日志”（控制出入参截取长度）；</span></p></li><li><p><span style=\"font-size: 10.5ptpx\">精准筛选能力：支持按 “调用时间”（如过去 1 小时、自定义日期范围）、“API 编码 / 名称 / URL”、“调用状态”（成功 / 失败）、“HTTP 状态码”（如 200、400）筛选日志，快速定位目标记录；</span></p></li><li><p><span style=\"font-size: 10.5ptpx\">日志详情查看：点击单条日志可查看完整信息。</span></p></li></ul><p><span style=\"font-size: 10.5ptpx\">&nbsp;</span></p><h2><span style=\"font-size: 14ptpx\"><strong>1.2 应用场景</strong></span></h2><ul><li><p><span style=\"font-size: 10.5ptpx\">故障溯源：API 调用失败时（如生产环境中采购订单创建 API 返回 500 错误），通过日志查看详细错误信息（如 “数据库连接超时”）与调用上下文（如调用者 IP、传入的billno），快速定位故障原因；</span></p></li><li><p><span style=\"font-size: 10.5ptpx\">审计合规：金融、政务等对数据合规性要求高的行业，通过日志记录 API 调用的 “谁（调用者）、何时（调用时间）、做了什么（操作类型）、结果如何（响应状态）”，满足审计要求（如追溯某笔订单的创建操作记录）；</span></p></li><li><p><span style=\"font-size: 10.5ptpx\">性能优化：通过日志中的 “API 耗时” 字段，统计耗时较长的 API，分析是否因参数设计（如未分页）或业务逻辑（如关联表过多）导致性能问题，辅助优化。</span></p></li></ul><h2><span style=\"font-size: 14ptpx\"><strong>1.3 系统路径</strong></span></h2><p><span style=\"font-size: 10.5ptpx\">【开放服务云】→【OpenAPI】→【RESTful API】→【RESTful API 日志】</span></p><p><span style=\"font-size: 10.5ptpx\">关联入口：在 RESTful API 管理列表中，选中目标 API，点击操作列的【日志】按钮，自动跳转至该 API 的专属日志列表页（已筛选该 API 的调用记录）。</span></p><h2><span style=\"font-size: 14ptpx\"><strong>1.4 字段 / 按钮说明</strong></span></h2><h3><span style=\"font-size: 14ptpx\"><strong>1.4.1 字段说明</strong></span></h3><table style=\"min-width: 164px\"><colgroup><col style=\"width: 139px\"><col style=\"min-width: 25px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: rgb(255, 204, 0)\"><p style=\"text-align: center\"><span style=\"font-size: 8ptpx\"><strong>字段名</strong></span></p></td><td colspan=\"1\" rowspan=\"1\" style=\"background-color: rgb(255, 204, 0)\"><p style=\"text-align: center\"><span style=\"font-size: 8ptpx\"><strong>字段说明</strong></span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p style=\"text-align: left\"><span style=\"color: rgb(0, 0, 0); font-size: 8ptpx\">调用状态</span></p></td><td colspan=\"1\" rowspan=\"1\" style=\"background-color: \"><p style=\"text-align: left\"><span style=\"color: rgb(0, 0, 0); font-size: 8ptpx\">RESTful API 调用最终状态</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p style=\"text-align: left\"><span style=\"color: rgb(0, 0, 0); font-size: 8ptpx\">HTTP 状态码</span></p></td><td colspan=\"1\" rowspan=\"1\" style=\"background-color: \"><p style=\"text-align: left\"><span style=\"color: rgb(0, 0, 0); font-size: 8ptpx\">API 返回的 HTTP 状态码，如 “400”</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p style=\"text-align: left\"><span style=\"color: rgb(0, 0, 0); font-size: 8ptpx\">URL</span></p></td><td colspan=\"1\" rowspan=\"1\" style=\"background-color: \"><p style=\"text-align: left\"><span style=\"color: rgb(0, 0, 0); font-size: 8ptpx\">RESTful API 调用的统一资源定位符</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p style=\"text-align: left\"><span style=\"color: rgb(0, 0, 0); font-size: 8ptpx\">编码</span></p></td><td colspan=\"1\" rowspan=\"1\" style=\"background-color: \"><p style=\"text-align: left\"><span style=\"color: rgb(0, 0, 0); font-size: 8ptpx\">API 编码</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p style=\"text-align: left\"><span style=\"color: rgb(0, 0, 0); font-size: 8ptpx\">名称</span></p></td><td colspan=\"1\" rowspan=\"1\" style=\"background-color: \"><p style=\"text-align: left\"><span style=\"color: rgb(0, 0, 0); font-size: 8ptpx\">API 名称</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p style=\"text-align: left\"><span style=\"color: rgb(0, 0, 0); font-size: 8ptpx\">请求方法</span></p></td><td colspan=\"1\" rowspan=\"1\" style=\"background-color: \"><p style=\"text-align: left\"><span style=\"color: rgb(0, 0, 0); font-size: 8ptpx\">HTTP 方法，如GET/ POST/PUT /PATCH/DELETE</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p style=\"text-align: left\"><span style=\"color: rgb(0, 0, 0); font-size: 8ptpx\">调用时间</span></p></td><td colspan=\"1\" rowspan=\"1\" style=\"background-color: \"><p style=\"text-align: left\"><span style=\"color: rgb(0, 0, 0); font-size: 8ptpx\">API 开始调用的时间</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p style=\"text-align: left\"><span style=\"color: rgb(0, 0, 0); font-size: 8ptpx\">结束时间</span></p></td><td colspan=\"1\" rowspan=\"1\" style=\"background-color: \"><p style=\"text-align: left\"><span style=\"color: rgb(0, 0, 0); font-size: 8ptpx\">API 调用结束的时间</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p style=\"text-align: left\"><span style=\"color: rgb(0, 0, 0); font-size: 8ptpx\">API 耗时 (ms)</span></p></td><td colspan=\"1\" rowspan=\"1\" style=\"background-color: \"><p style=\"text-align: left\"><span style=\"font-size: 8ptpx\">API 调用所花费的时间</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p style=\"text-align: left\"><span style=\"color: rgb(0, 0, 0); font-size: 8ptpx\">调用客户端 IP</span></p></td><td colspan=\"1\" rowspan=\"1\" style=\"background-color: \"><p style=\"text-align: left\"><span style=\"font-size: 8ptpx\">发起 API 调用的客户端 IP 地址</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p style=\"text-align: left\"><span style=\"color: rgb(0, 0, 0); font-size: 8ptpx\">TraceId</span></p></td><td colspan=\"1\" rowspan=\"1\" style=\"background-color: \"><p style=\"text-align: left\"><span style=\"color: rgb(0, 0, 0); font-size: 8ptpx\">用于链路追踪的唯一标识</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p style=\"text-align: left\"><span style=\"color: rgb(0, 0, 0); font-size: 8ptpx\">第三方应用</span></p></td><td colspan=\"1\" rowspan=\"1\" style=\"background-color: \"><p style=\"text-align: left\"><span style=\"color: rgb(0, 0, 0); font-size: 8ptpx\">调用 API 的第三方应用名称</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p style=\"text-align: left\"><span style=\"color: rgb(0, 0, 0); font-size: 8ptpx\">调用者</span></p></td><td colspan=\"1\" rowspan=\"1\" style=\"background-color: \"><p style=\"text-align: left\"><span style=\"color: rgb(0, 0, 0); font-size: 8ptpx\">发起 API 调用的用户</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p style=\"text-align: left\"><span style=\"color: rgb(0, 0, 0); font-size: 8ptpx\">请求参数</span></p></td><td colspan=\"1\" rowspan=\"1\" style=\"background-color: \"><p style=\"text-align: left\"><span style=\"color: rgb(0, 0, 0); font-size: 8ptpx\">API 调用时传入的参数，包含路径参数、查询参数、请求体参数、请求头参数等，可点击 “查看” 查看完整内容</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p style=\"text-align: left\"><span style=\"color: rgb(0, 0, 0); font-size: 8ptpx\">响应参数</span></p></td><td colspan=\"1\" rowspan=\"1\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0); font-size: 8ptpx\">API 调用返回的响应数据，包含错误类、错误码、错误信息等，可点击 “查看” 查看完整内容</span></p></td></tr></tbody></table><p><span style=\"font-size: 14ptpx\"><strong>&nbsp;</strong></span></p><h3><span style=\"font-size: 14ptpx\"><strong>1.4.2 操作按钮</strong></span></h3><p><span style=\"font-size: 10.5ptpx\">【导出日志】：点击按钮，导出当前RESTful API日志。</span></p><p></p><h1><span style=\"font-size: 16ptpx\"><strong>2 主要操作</strong></span></h1><h2><span style=\"font-size: 14ptpx\"><strong>2.1 自定义API日志级别</strong></span></h2><p><span style=\"font-size: 10.5ptpx\">管理员可以通过OpenAPI系统参数，来定义记录不同级别的API日志和日志保留天数。</span></p><p style=\"text-align: justify\"><span style=\"font-size: 10.5ptpx\">1）配置API日志级别</span></p><p><span style=\"font-size: 10.5ptpx\">路径：基础服务云&nbsp;→&nbsp;公共设置&nbsp;→&nbsp;参数配置&nbsp;→&nbsp;系统参数，在OpenAPI参数中，可以配置不同的API日志级别，包含基本日志、详细日志和大文本日志等。用户按需勾选需要的日志级别，并维护日志保存天数。</span></p><p><span style=\"font-size: 10.5ptpx\">备注：大文本日志默认截取请求参数和返回参数前10000字符，私有云租户可通过MC参数“api_fullPayloadLog”（默认false），将该参数设为true后，即可完整记录日志请求和返回参数。</span></p><p style=\"text-align: justify\"><span style=\"font-size: 10.5ptpx\">特别声明：若MC配置了记录全部入参数据参数，可能会导致系统API调用缓慢，并且日志量暴增，极端场景下会有OOM的风险，用户需严格控制相关接口的并发调用。</span></p><p style=\"text-align: justify\"></p><p><img src=\"/download/01004c776371cce8434fb6d0a623b8fa8568.png\" alt=\"上传图片\"></p><p style=\"text-align: justify\"></p><h2><span style=\"font-size: 14ptpx\"><strong>2.2 查看RESTful API调用日志</strong></span></h2><p><span style=\"font-size: 10.5ptpx\">打开RESTful API日志列表界面，在这里可以看到RESTful API日志调用记录，包含调用状态、HTTP状态码、URL、编码、名称、请求参数、响应参数、调用时间、traceid等信息。</span></p><p><span style=\"font-size: 10.5ptpx\">备注：日志默认保留30天，到期自动清理。</span></p><p style=\"text-align: justify\"></p><p><img src=\"/download/01005c8808ad28bb410e8a44d8eb59e89c74.png\" alt=\"上传图片\"></p><p><img src=\"/download/0100482a14edfedc4d3da47ab1ea521cc24d.png\" alt=\"上传图片\"></p><p></p><h2><span style=\"font-size: 14ptpx\"><strong>2.3 导出API日志</strong></span></h2><p><span style=\"font-size: 10.5ptpx\">若需留存该失败日志用于汇报或分析，勾选目标日志，点击列表页顶部的【导出日志】按钮，查看txt 格式的API日志。</span></p><p></p><p><img src=\"/download/010094acbb161bcb4373a4c077605c262f31.png\" alt=\"上传图片\"></p><p></p><h1><strong>3 更多资讯</strong></h1><p style=\"font-size: 15px\"><span>关于OpenAPI的更多资讯，请随时关注</span><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=226337371640594944&amp;id=226708319996323072&amp;productLineId=29\">新特性公告</a><span>。</span></p>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 87,
+   "isOpen": 1,
+   "name": "金蝶AI苍穹",
+   "productLineId": 29,
+   "series": "developer01",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "755467282905756672",
+         "entityType": "Knowledge",
+         "id": "755471120660376327",
+         "isCategory": false,
+         "name": "RESTful API 日志",
+         "parentId": "755471013420411648",
+         "sort": "9",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": "",
+       "id": "755471013420411648",
+       "isCategory": true,
+       "name": "RESTful API",
+       "parentId": "226337544983020032",
+       "sort": "24",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": null,
+     "entityId": null,
+     "entityType": null,
+     "id": "226337544983020032",
+     "isCategory": true,
+     "name": "用户手册",
+     "parentId": "-1",
+     "sort": "6",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download/01010204d4b71b654a208006fa1004eac36a.png",
+  "department": null,
+  "id": "740211268992385024",
+  "name": "毛毛去哪儿",
+  "nameSpell": "name"
+ },
+ "totalAppraisalScore": 0,
+ "iflytekId": null,
+ "views": 1699,
+ "productLineId": 29,
+ "comments": 0,
+ "similarityCount": null,
+ "totalAppraisalUsers": 0,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1766022778000,
+ "appraisalScore": 0,
+ "unuseful": 0,
+ "knowledgeCheckStatus": 2,
+ "otherProductLineIds": [],
+ "auditAt": 1759052328000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "open_rest_api_log_new",
+        "id": "760141693499999232",
+        "name": "RESTful API日志",
+        "productLineId": null,
+        "sort": 24,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 0,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "OperatingGuide",
+     "createdAt": 1556519201000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "某一功能的具体说明介绍，包括应用场景、参数说明、具体操作步骤等",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/010037894174802d4b9f8782f1f0010a6ddd.png",
+     "id": "202203081641",
+     "name": "功能介绍",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010176d38341668f44fdb94c95058a90e4b8.png",
+      "department": "云社区运营部",
+      "id": "2147406697",
+      "name": "多肉丸子",
+      "nameSpell": "kejuan"
+     },
+     "updatedAt": 1676857681000
+    },
+    {
+     "code": "rumen",
+     "createdAt": 1605667807000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "入门类的知识可使用此标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100d322b9282bcc438faa894f4eec029977.png",
+     "id": "202203081646",
+     "name": "基础入门",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download?fileName=0101ec1d6ce599b442dab7d0b794c1fce88d.png",
+      "department": null,
+      "id": "1009",
+      "name": "一颗小星星",
+      "nameSpell": "fengling"
+     },
+     "updatedAt": 1657872008000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          {
+           "childCategory": [
+            null
+           ],
+           "code": null,
+           "description": "",
+           "entityId": "755467282905756672",
+           "entityType": "Knowledge",
+           "id": "755471120660376327",
+           "isCategory": false,
+           "name": "RESTful API 日志",
+           "parentId": "755471013420411648",
+           "sort": "9",
+           "specialId": "226337046514476288",
+           "status": 1
+          }
+         ],
+         "code": null,
+         "description": "",
+         "entityId": null,
+         "entityType": "",
+         "id": "755471013420411648",
+         "isCategory": true,
+         "name": "RESTful API",
+         "parentId": "226337544983020032",
+         "sort": "24",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": null,
+       "entityId": null,
+       "entityType": null,
+       "id": "226337544983020032",
+       "isCategory": true,
+       "name": "用户手册",
+       "parentId": "-1",
+       "sort": "6",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": "<h1><span style=\"font-size: 16ptpx\"><strong>1 简介</strong></span></h1><h2><span style=\"font-size: 14ptpx\"><strong>1.1 功能介绍</strong></span></h2><p><span style=\"font-size: 10.5ptpx\">RESTful API 日志功能用于记录 API 调用全链路信息，支持日志查看、筛选与导出，核心功能包括：</span></p><ul><li><p><span style=\"font-size: 10.5ptpx\">多维度日志记录：记录 API 调用的基础信息（调用时间、调用者、客户端 IP）、请求信息（请求方法、资源路径、请求参数）、响应信息（HTTP 状态码、响应参数、错误信息）及性能信息（API 耗时、业务处理耗时），日志级别分为 “不记录”“基本日志”“详细日志”“大文本日志”（控制出入参截取长度）；</span></p></li><li><p><span style=\"font-size: 10.5ptpx\">精准筛选能力：支持按 “调用时间”（如过去 1 小时、自定义日期范围）、“API 编码 / 名称 / URL”、“调用状态”（成功 / 失败）、“HTTP 状态码”（如 200、400）筛选日志，快速定位目标记录；</span></p></li><li><p><span style=\"font-size: 10.5ptpx\">日志详情查看：点击单条日志可查看完整信息。</span></p></li></ul><p><span style=\"font-size: 10.5ptpx\">&nbsp;</span></p><h2><span style=\"font-size: 14ptpx\"><strong>1.2 应用场景</strong></span></h2><ul><li><p><span style=\"font-size: 10.5ptpx\">故障溯源：API 调用失败时（如生产环境中采购订单创建 API 返回 500 错误），通过日志查看详细错误信息（如 “数据库连接超时”）与调用上下文（如调用者 IP、传入的billno），快速定位故障原因；</span></p></li><li><p><span style=\"font-size: 10.5ptpx\">审计合规：金融、政务等对数据合规性要求高的行业，通过日志记录 API 调用的 “谁（调用者）、何时（调用时间）、做了什么（操作类型）、结果如何（响应状态）”，满足审计要求（如追溯某笔订单的创建操作记录）；</span></p></li><li><p><span style=\"font-size: 10.5ptpx\">性能优化：通过日志中的 “API 耗时” 字段，统计耗时较长的 API，分析是否因参数设计（如未分页）或业务逻辑（如关联表过多）导致性能问题，辅助优化。</span></p></li></ul><h2><span style=\"font-size: 14ptpx\"><strong>1.3 系统路径</strong></span></h2><p><span style=\"font-size: 10.5ptpx\">【开放服务云】→【OpenAPI】→【RESTful API】→【RESTful API 日志】</span></p><p><span style=\"font-size: 10.5ptpx\">关联入口：在 RESTful API 管理列表中，选中目标 API，点击操作列的【日志】按钮，自动跳转至该 API 的专属日志列表页（已筛选该 API 的调用记录）。</span></p><h2><span style=\"font-size: 14ptpx\"><strong>1.4 字段 / 按钮说明</strong></span></h2><h3><span style=\"font-size: 14ptpx\"><strong>1.4.1 字段说明</strong></span></h3><table style=\"min-width: 164px\"><colgroup><col style=\"width: 139px\"><col style=\"min-width: 25px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: rgb(255, 204, 0)\"><p style=\"text-align: center\"><span style=\"font-size: 8ptpx\"><strong>字段名</strong></span></p></td><td colspan=\"1\" rowspan=\"1\" style=\"background-color: rgb(255, 204, 0)\"><p style=\"text-align: center\"><span style=\"font-size: 8ptpx\"><strong>字段说明</strong></span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p style=\"text-align: left\"><span style=\"color: rgb(0, 0, 0); font-size: 8ptpx\">调用状态</span></p></td><td colspan=\"1\" rowspan=\"1\" style=\"background-color: \"><p style=\"text-align: left\"><span style=\"color: rgb(0, 0, 0); font-size: 8ptpx\">RESTful API 调用最终状态</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p style=\"text-align: left\"><span style=\"color: rgb(0, 0, 0); font-size: 8ptpx\">HTTP 状态码</span></p></td><td colspan=\"1\" rowspan=\"1\" style=\"background-color: \"><p style=\"text-align: left\"><span style=\"color: rgb(0, 0, 0); font-size: 8ptpx\">API 返回的 HTTP 状态码，如 “400”</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p style=\"text-align: left\"><span style=\"color: rgb(0, 0, 0); font-size: 8ptpx\">URL</span></p></td><td colspan=\"1\" rowspan=\"1\" style=\"background-color: \"><p style=\"text-align: left\"><span style=\"color: rgb(0, 0, 0); font-size: 8ptpx\">RESTful API 调用的统一资源定位符</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p style=\"text-align: left\"><span style=\"color: rgb(0, 0, 0); font-size: 8ptpx\">编码</span></p></td><td colspan=\"1\" rowspan=\"1\" style=\"background-color: \"><p style=\"text-align: left\"><span style=\"color: rgb(0, 0, 0); font-size: 8ptpx\">API 编码</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p style=\"text-align: left\"><span style=\"color: rgb(0, 0, 0); font-size: 8ptpx\">名称</span></p></td><td colspan=\"1\" rowspan=\"1\" style=\"background-color: \"><p style=\"text-align: left\"><span style=\"color: rgb(0, 0, 0); font-size: 8ptpx\">API 名称</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p style=\"text-align: left\"><span style=\"color: rgb(0, 0, 0); font-size: 8ptpx\">请求方法</span></p></td><td colspan=\"1\" rowspan=\"1\" style=\"background-color: \"><p style=\"text-align: left\"><span style=\"color: rgb(0, 0, 0); font-size: 8ptpx\">HTTP 方法，如GET/ POST/PUT /PATCH/DELETE</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p style=\"text-align: left\"><span style=\"color: rgb(0, 0, 0); font-size: 8ptpx\">调用时间</span></p></td><td colspan=\"1\" rowspan=\"1\" style=\"background-color: \"><p style=\"text-align: left\"><span style=\"color: rgb(0, 0, 0); font-size: 8ptpx\">API 开始调用的时间</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p style=\"text-align: left\"><span style=\"color: rgb(0, 0, 0); font-size: 8ptpx\">结束时间</span></p></td><td colspan=\"1\" rowspan=\"1\" style=\"background-color: \"><p style=\"text-align: left\"><span style=\"color: rgb(0, 0, 0); font-size: 8ptpx\">API 调用结束的时间</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p style=\"text-align: left\"><span style=\"color: rgb(0, 0, 0); font-size: 8ptpx\">API 耗时 (ms)</span></p></td><td colspan=\"1\" rowspan=\"1\" style=\"background-color: \"><p style=\"text-align: left\"><span style=\"font-size: 8ptpx\">API 调用所花费的时间</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p style=\"text-align: left\"><span style=\"color: rgb(0, 0, 0); font-size: 8ptpx\">调用客户端 IP</span></p></td><td colspan=\"1\" rowspan=\"1\" style=\"background-color: \"><p style=\"text-align: left\"><span style=\"font-size: 8ptpx\">发起 API 调用的客户端 IP 地址</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p style=\"text-align: left\"><span style=\"color: rgb(0, 0, 0); font-size: 8ptpx\">TraceId</span></p></td><td colspan=\"1\" rowspan=\"1\" style=\"background-color: \"><p style=\"text-align: left\"><span style=\"color: rgb(0, 0, 0); font-size: 8ptpx\">用于链路追踪的唯一标识</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p style=\"text-align: left\"><span style=\"color: rgb(0, 0, 0); font-size: 8ptpx\">第三方应用</span></p></td><td colspan=\"1\" rowspan=\"1\" style=\"background-color: \"><p style=\"text-align: left\"><span style=\"color: rgb(0, 0, 0); font-size: 8ptpx\">调用 API 的第三方应用名称</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p style=\"text-align: left\"><span style=\"color: rgb(0, 0, 0); font-size: 8ptpx\">调用者</span></p></td><td colspan=\"1\" rowspan=\"1\" style=\"background-color: \"><p style=\"text-align: left\"><span style=\"color: rgb(0, 0, 0); font-size: 8ptpx\">发起 API 调用的用户</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p style=\"text-align: left\"><span style=\"color: rgb(0, 0, 0); font-size: 8ptpx\">请求参数</span></p></td><td colspan=\"1\" rowspan=\"1\" style=\"background-color: \"><p style=\"text-align: left\"><span style=\"color: rgb(0, 0, 0); font-size: 8ptpx\">API 调用时传入的参数，包含路径参数、查询参数、请求体参数、请求头参数等，可点击 “查看” 查看完整内容</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"139\" style=\"background-color: \"><p style=\"text-align: left\"><span style=\"color: rgb(0, 0, 0); font-size: 8ptpx\">响应参数</span></p></td><td colspan=\"1\" rowspan=\"1\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0); font-size: 8ptpx\">API 调用返回的响应数据，包含错误类、错误码、错误信息等，可点击 “查看” 查看完整内容</span></p></td></tr></tbody></table><p><span style=\"font-size: 14ptpx\"><strong>&nbsp;</strong></span></p><h3><span style=\"font-size: 14ptpx\"><strong>1.4.2 操作按钮</strong></span></h3><p><span style=\"font-size: 10.5ptpx\">【导出日志】：点击按钮，导出当前RESTful API日志。</span></p><p></p><h1><span style=\"font-size: 16ptpx\"><strong>2 主要操作</strong></span></h1><h2><span style=\"font-size: 14ptpx\"><strong>2.1 自定义API日志级别</strong></span></h2><p><span style=\"font-size: 10.5ptpx\">管理员可以通过OpenAPI系统参数，来定义记录不同级别的API日志和日志保留天数。</span></p><p style=\"text-align: justify\"><span style=\"font-size: 10.5ptpx\">1）配置API日志级别</span></p><p><span style=\"font-size: 10.5ptpx\">路径：基础服务云&nbsp;→&nbsp;公共设置&nbsp;→&nbsp;参数配置&nbsp;→&nbsp;系统参数，在OpenAPI参数中，可以配置不同的API日志级别，包含基本日志、详细日志和大文本日志等。用户按需勾选需要的日志级别，并维护日志保存天数。</span></p><p><span style=\"font-size: 10.5ptpx\">备注：大文本日志默认截取请求参数和返回参数前10000字符，私有云租户可通过MC参数“api_fullPayloadLog”（默认false），将该参数设为true后，即可完整记录日志请求和返回参数。</span></p><p style=\"text-align: justify\"><span style=\"font-size: 10.5ptpx\">特别声明：若MC配置了记录全部入参数据参数，可能会导致系统API调用缓慢，并且日志量暴增，极端场景下会有OOM的风险，用户需严格控制相关接口的并发调用。</span></p><p style=\"text-align: justify\"></p><p><img src=\"/download/01004c776371cce8434fb6d0a623b8fa8568.png\" alt=\"上传图片\"></p><p style=\"text-align: justify\"></p><h2><span style=\"font-size: 14ptpx\"><strong>2.2 查看RESTful API调用日志</strong></span></h2><p><span style=\"font-size: 10.5ptpx\">打开RESTful API日志列表界面，在这里可以看到RESTful API日志调用记录，包含调用状态、HTTP状态码、URL、编码、名称、请求参数、响应参数、调用时间、traceid等信息。</span></p><p><span style=\"font-size: 10.5ptpx\">备注：日志默认保留30天，到期自动清理。</span></p><p style=\"text-align: justify\"></p><p><img src=\"/download/01005c8808ad28bb410e8a44d8eb59e89c74.png\" alt=\"上传图片\"></p><p><img src=\"/download/0100482a14edfedc4d3da47ab1ea521cc24d.png\" alt=\"上传图片\"></p><p></p><h2><span style=\"font-size: 14ptpx\"><strong>2.3 导出API日志</strong></span></h2><p><span style=\"font-size: 10.5ptpx\">若需留存该失败日志用于汇报或分析，勾选目标日志，点击列表页顶部的【导出日志】按钮，查看txt 格式的API日志。</span></p><p></p><p><img src=\"/download/010094acbb161bcb4373a4c077605c262f31.png\" alt=\"上传图片\"></p><p></p><h1><strong>3 更多资讯</strong></h1><p style=\"font-size: 15px\"><span>关于OpenAPI的更多资讯，请随时关注</span><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=226337371640594944&amp;id=226708319996323072&amp;productLineId=29\">新特性公告</a><span>。</span></p>"
+}

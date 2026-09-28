@@ -1,0 +1,458 @@
+{
+ "badNum": 0,
+ "templateId": null,
+ "identityTagIds": null,
+ "knowledgeId": "292625960673645824",
+ "createdAt": 1647575466000,
+ "collections": 18,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "292625960673645824",
+ "contentType": 1,
+ "updatedAt": 1766124540000,
+ "knowledgeUpdater": {
+  "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+  "department": null,
+  "id": "132488613174518784",
+  "name": "某个路易",
+  "nameSpell": "name"
+ },
+ "assessStatus": 0,
+ "knowledgeStatus": 2,
+ "assessHandleStatus": null,
+ "knowledgeCreatedAt": 1647575466000,
+ "version": 42,
+ "labels": [],
+ "editedAt": 1726625264000,
+ "identityTags": null,
+ "useful": 11,
+ "errors": [],
+ "isCollected": false,
+ "template": "{\"token\":2,\"title\":\"OpenAPI支持快速发布webservice接口\",\"version\":\"苍穹V4.0\",\"range\":\"苍穹开放平台所有用户\",\"date\":\"2021-03-10\",\"patch\":\"V4.0.017（BOS）\",\"collection\":[\"\"],\"collectionNext\":[[]],\"collectionHref\":[[]],\"knowledgeContent\":\"<p style=\\\"\\\"><span style=\\\"color: rgb(0, 0, 0); font-weight: bold;\\\"></span></p><p style=\\\"color: rgb(36, 41, 46);\\\"><span style=\\\"font-weight: 600;\\\">变更记录</span><br/></p><table width=\\\"99%\\\"><thead style=\\\"\\\"><tr style=\\\"background-color: rgb(255, 255, 255);\\\" class=\\\"firstRow\\\"><th style=\\\"\\\" width=\\\"95.33333333333333\\\">产品版本</th><th style=\\\"\\\" width=\\\"523.3333333333334\\\">更新内容</th><th style=\\\"\\\" width=\\\"128.33333333333334\\\">更新日期</th></tr></thead><tbody style=\\\"\\\"><tr style=\\\"background-color: rgb(255, 255, 255);\\\"><td style=\\\"\\\" width=\\\"35\\\">V4.0.017</td><td style=\\\"\\\" width=\\\"523.3333333333334\\\">初始版本</td><td style=\\\"\\\" width=\\\"128.33333333333334\\\">2021年3月</td></tr><tr style=\\\"background-color: rgb(246, 248, 250);\\\"><td style=\\\"\\\" width=\\\"35\\\">V6.0.1</td><td style=\\\"\\\" width=\\\"523.3333333333334\\\">应用更名为OpenAPI，迁移至开放服务云</td><td style=\\\"\\\" width=\\\"128.33333333333334\\\">2023年10月</td></tr><tr><td colspan=\\\"1\\\" rowspan=\\\"1\\\"><span style=\\\"background-color: rgb(246, 248, 250);\\\">V7.0.1</span><br/></td><td colspan=\\\"1\\\" rowspan=\\\"1\\\" width=\\\"523.3333333333334\\\">WebService支持urn=http://openapi.kingdee.com格式配置命名空间，生成wsdl中namespace的tag以urn开头</td><td colspan=\\\"1\\\" rowspan=\\\"1\\\" width=\\\"128.33333333333334\\\">2024年10月</td></tr></tbody></table><hr/><h2 id=\\\"html-anchor-list0-1726278331321\\\" class=\\\" html-anchor-list0-1726278331321 html-anchor-list0-1726278331322\\\" style=\\\"font-size: 18px; color: rgb(36, 41, 46);\\\"><br/></h2><h2 label=\\\"一级标题\\\" class=\\\"first-title\\\" style=\\\"\\\"><a style=\\\"color: inherit;\\\" target=\\\"_blank\\\"></a>1 适用范围</h2><p label=\\\"正文\\\" style=\\\"\\\"><span style=\\\"color: rgb(0, 0, 0);\\\">OpenAPI支持将接口发布为WebService协议，支持SOAP1.1、SOAP1.2 协</span><span style=\\\"color: rgb(0, 0, 0);\\\">议标准。</span></p><p style=\\\"\\\"><span style=\\\"color: rgb(0, 0, 0);\\\">服务发布方式如下</span><span style=\\\"color: rgb(0, 0, 0);\\\">：</span></p><ul class=\\\" list-paddingleft-2\\\" style=\\\"list-style-type: disc;\\\"><li><p style=\\\"\\\"><span style=\\\"color: rgb(0, 0, 0);\\\">低代码开发：使用配置的方式将操作对象发布操作API；</span></p></li><li><div style=\\\"\\\"><span style=\\\"color: rgb(0, 0, 0);\\\">高代码开发：用 JAVA</span><span style=\\\"color: rgb(0, 0, 0);\\\">代码可开发复杂的接口逻辑，并发布为自定义API。</span></div></li></ul><p style=\\\"\\\"><br/></p><h2 label=\\\"一级标题\\\" class=\\\"first-title\\\" style=\\\"\\\">2 操作API发布WebService</h2><h3 label=\\\"二级标题\\\" class=\\\"second-title\\\" style=\\\"\\\">2.1 零代码配置操作API</h3><p>以采购订单保存接口为例，维护API基本信息和请求参数等信息。<br/></p><p style=\\\"\\\"><br/></p><p style=\\\"\\\"><img src=\\\"/download/0109ea3f3b28676c4f618553059f7f734bb7.png\\\"/></p><p style=\\\"\\\"><br/></p><h3 label=\\\"二级标题\\\" class=\\\"second-title\\\">2.2 维护WebService信息</h3><ul style=\\\"color: rgb(51, 51, 51); background-color: rgb(255, 255, 255);\\\" class=\\\" list-paddingleft-2\\\"><li><p>‌<span style=\\\"font-weight: var(--cos-font-medium); background-color: initial;\\\">命名空间（targetNamespace）</span>‌：指定Web服务的命名空间，是Web服务的一个全局唯一标识符，用于确保Web服务的唯一性和可寻址性。</p></li><li><p>‌输入参数名‌：用于标识WebService接口的输入参数。</p></li><li><p><span style=\\\"color: rgb(51, 51, 51); background-color: rgb(255, 255, 255);\\\">输出参数名</span><span style=\\\"color: rgb(51, 51, 51); background-color: rgb(255, 255, 255);\\\">‌</span><span style=\\\"font-weight: var(--cos-font-medium); background-color: initial;\\\"></span>‌：<span style=\\\"color: rgb(51, 51, 51); background-color: rgb(255, 255, 255);\\\">用于标识WebService接口的输出参数。</span></p></li><li><p>‌WSDL方法名‌：<span style=\\\"color: rgb(51, 51, 51); background-color: rgb(255, 255, 255);\\\">根据业务需求、功能描述定义</span>Web服务的具体方法名，方便进行测试和管理。</p></li></ul><p style=\\\"\\\"><img src=\\\"/download/010941f07387a5ad425da241c8d2bb5c45f2.png\\\"/></p><p style=\\\"\\\"><br/></p><h3 label=\\\"二级标题\\\" class=\\\"second-title\\\" style=\\\"\\\">2.3 测试WebService接口</h3><p style=\\\"\\\">点击API测试按钮，即可快速测试接口。也可以导出WSDL，在接口测试工具如SOAPUI中进行测试。</p><p style=\\\"\\\"><img src=\\\"/download/010915be7a18bc7a4cd88a730c98c97576f0.png\\\"/></p><p style=\\\"\\\"><br/></p><h2 label=\\\"一级标题\\\" class=\\\"first-title\\\" style=\\\"\\\">3 自定义API发布WebService</h2><h3 label=\\\"二级标题\\\" class=\\\"second-title\\\" style=\\\"\\\"><span style=\\\"color: rgb(0, 0, 0);\\\">3.1 定义出入参实体类</span></h3><p>为出入参定义 Java 实体类，可使用相应的注解标识字段描述及校检参数取数范围、是否必填等。</p><p label=\\\"正文\\\">注：Java 实体类应继承 Serializable 接口</p><p style=\\\"\\\"><br/></p><p style=\\\"\\\"><img src=\\\"https://vip.kingdee.com/download/01003e868b730783429d968be883c079e5a4.png\\\"/></p><p style=\\\"\\\"><span style=\\\"color: rgb(0, 0, 0);\\\"><br/></span></p><h3 label=\\\"二级标题\\\" class=\\\"second-title\\\" style=\\\"\\\"><span style=\\\"color: rgb(0, 0, 0);\\\">3.2 开发控制类 APIController</span></h3><div style=\\\"\\\"><span style=\\\"color: rgb(0, 0, 0);\\\">开发 XXController 类，并为类添加 ApiController 注解，为方法添加 ApiPostMapping</span><span style=\\\"color: rgb(0, 0, 0);\\\">或 ApiGetMapping 注解。控制类中可以调用苍穹微服务接口或业务服务逻辑。</span></div><p style=\\\"\\\"><br/></p><p style=\\\"\\\"><img src=\\\"https://vip.kingdee.com/download/0100bcd1ad758a934a74a2f3739d08cc3834.png\\\"/></p><p style=\\\"\\\"><br/></p><h3 label=\\\"二级标题\\\" class=\\\"second-title\\\" style=\\\"\\\">3.3 配置自定义&nbsp;API</h3><p label=\\\"正文\\\" style=\\\"\\\"><span style=\\\"color: rgb(0, 0, 0);\\\">路径：【开放服务云】&nbsp;→【OpenAPI】 →【API管理】→&nbsp;【API开发】，</span><span style=\\\"color: rgb(0, 0, 0);\\\">点击“新增”按钮，添加 “自定义API”。</span></p><p style=\\\"\\\"><span style=\\\"color: rgb(0, 0, 0); font-weight: bold;\\\">操作步骤：</span></p><p style=\\\"\\\"><span style=\\\"color: rgb(0, 0, 0);\\\">&nbsp;&nbsp;&nbsp;&nbsp;1）选择所属应用，填写 API 编码及名称，API 分类。</span></p><p style=\\\"\\\"><span style=\\\"color: rgb(0, 0, 0);\\\">&nbsp;&nbsp;&nbsp;&nbsp;2）在“类名”处输入你</span><span style=\\\"color: rgb(0, 0, 0);\\\">的控制类全路径名称，如：kd.bos.openapi.base.custom.demo.CustomDemoTestController 。</span></p><p style=\\\"\\\"><span style=\\\"color: rgb(0, 0, 0);\\\">&nbsp;&nbsp;&nbsp;&nbsp;3）选择方法名（</span><span style=\\\"color: rgb(0, 0, 0);\\\">在 WebService 信息一节可以修改其命名空间）。</span></p><div style=\\\"\\\"><span style=\\\"color: rgb(0, 0, 0);\\\">至此已将此 JAVA 代码发布为自定义 API。此时可以直接使用 Postman 测试 REST 协议的</span><span style=\\\"color: rgb(0, 0, 0);\\\">API。或使用 SOAP UI 测试 WebService 协议。</span></div><p style=\\\"\\\"><br/></p><p style=\\\"\\\"><img src=\\\"/download/0109eba8ee260a3842c1af39e9d8d7a0c43b.png\\\"/></p><p style=\\\"\\\"><br/></p><h3 label=\\\"二级标题\\\" class=\\\"second-title\\\" style=\\\"\\\"><span style=\\\"color: rgb(0, 0, 0); font-weight: bold;\\\">3.4 测试&nbsp;</span><span style=\\\"color: rgb(0, 0, 0); font-weight: bold;\\\">API</span></h3><p style=\\\"\\\"><span style=\\\"color: rgb(0, 0, 0);\\\">点击API测试按钮，可快速调试、验证 API 逻辑是否正确。</span></p><p style=\\\"\\\"><span style=\\\"color: rgb(0, 0, 0);\\\"><br/></span></p><p style=\\\"\\\"><img src=\\\"https://vip.kingdee.com/download/010004bd221b04a54e08a6d323a791ebe420.png\\\"/></p><p style=\\\"\\\"><br/></p><p style=\\\"\\\"><br/></p><h3 label=\\\"二级标题\\\" class=\\\"second-title\\\" style=\\\"\\\"><span style=\\\"color: rgb(0, 0, 0); font-weight: bold;\\\">3.5 使用&nbsp;</span><span style=\\\"color: rgb(0, 0, 0); font-weight: bold;\\\">SoapUI&nbsp;</span><span style=\\\"color: rgb(0, 0, 0); font-weight: bold;\\\">测试&nbsp;</span><span style=\\\"color: rgb(0, 0, 0); font-weight: bold;\\\">WebService</span></h3><div style=\\\"\\\">a) 查看WSDL</div><div style=\\\"\\\"><span style=\\\"color: rgb(0, 0, 0);\\\">可点击 API 详情页的“测试”按钮获取完整 API 地址，API 完整地址为：http://苍穹服</span></div><p style=\\\"\\\"><span style=\\\"color: rgb(0, 0, 0);\\\">务 URL/kapi/API 请求地址。如：</span><span style=\\\"color: rgb(0, 0, 255);\\\">http://localhost:8080/ierp/kapi/v2/ai/openapi/test2/getCustomTest</span></p><p style=\\\"\\\"><br/></p><p style=\\\"\\\"><img src=\\\"https://vip.kingdee.com/download/0100efdf0f11ef9a4f1f8faca2148a530ca2.png\\\"/></p><p style=\\\"\\\"><br/></p><div style=\\\"\\\"><span style=\\\"color: rgb(255, 0, 0);\\\">WSDL 地址为 API 地址后添加字符串“?wsdl”。但在浏览器中测试或在 SoapUI 添加 WSDL</span></div><div style=\\\"\\\"><span style=\\\"color: rgb(255, 0, 0);\\\">时要先获取 token，请在 URL 后面添加：“&amp;access_token=你的 token”。</span><span style=\\\"color: rgb(0, 0, 0);\\\">如：</span></div><div style=\\\"\\\"><span style=\\\"color: rgb(0, 0, 255);\\\">http://localhost:8080/ierp/kapi/v2/ai/openapi/test2/getCustomTest?wsdl&amp;acces</span></div><p style=\\\"\\\"><span style=\\\"color: rgb(0, 0, 255);\\\">s_token=1134768014277739520_3gBxxxxx</span></p><p style=\\\"\\\"><span style=\\\"color: rgb(0, 0, 255);\\\"><br/></span></p><p style=\\\"\\\"><span style=\\\"color: rgb(0, 0, 255);\\\"></span></p><div style=\\\"\\\">b) 在SoapUI中添加Webservice 接口</div><p style=\\\"\\\"><span style=\\\"color: rgb(0, 0, 0);\\\">将上一步带有 accesstoken 的 URL 添加为 WSDL。</span></p><p style=\\\"\\\"><span style=\\\"color: rgb(0, 0, 0);\\\"><br/></span></p><p style=\\\"\\\"><span style=\\\"color: rgb(0, 0, 255);\\\"><img src=\\\"https://vip.kingdee.com/download/01000cab9fab1e274f7da9ad7b010eee8966.png\\\"/></span><br/></p><p style=\\\"\\\"><br/></p><p style=\\\"\\\">c) 在SoapUI中测试Webservice 接口</p><div style=\\\"\\\"><span style=\\\"color: rgb(0, 0, 0);\\\">设置相应的请求参数，注意参数值的类型及值的合法性，并添加请求 Headers：</span></div><div style=\\\"\\\"><span style=\\\"color: rgb(0, 0, 0);\\\">accessToken。点击测试按钮，测试是否返回正确的 SOAP 报文。</span></div><p style=\\\"\\\"><br/></p><p style=\\\"\\\"><img src=\\\"https://vip.kingdee.com/download/010009842cbf8d0d41a39e9379e49c592768.png\\\"/></p><p><br/></p><div class=\\\"edit-css\\\" style=\\\"background-color: rgb(255, 255, 255);\\\"><h2 label=\\\"一级标题\\\" class=\\\"first-title html-anchor-list11-1726281429823 html-anchor-list11-1726281429824\\\" id=\\\"html-anchor-list11-1726281429823\\\" style=\\\"\\\">4 更多资讯</h2><p style=\\\"text-align: justify;\\\">关于OpenAPI的更多资讯，请随时关注<a href=\\\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=226337371640594944&id=226708319996323072&productLineId=29\\\" target=\\\"_blank\\\">新特性公告</a>。</p></div>\"}",
+ "totalFeedBacks": 0,
+ "attachments": [],
+ "sources": [],
+ "editTitle": "OpenAPI支持快速发布webservice接口",
+ "title": "OpenAPI支持快速发布webservice接口",
+ "content": " <p class=\"table-title table-margin\"><span class=\"span-line\">发布说明</span><span class=\"line\"></span></p><p class=\"title-b\"><span class=\"span-b\">发布版本：</span><span class=\"span-nor\">苍穹V4.0</span></p><p class=\"title-b\"><span class=\"span-b\">适用范围：</span><span class=\"span-nor\">苍穹开放平台所有用户</span></p><p class=\"title-b\"><span class=\"span-b\">上线日期：</span><span class=\"span-nor\">2021-03-10</span></p><p class=\"title-b\"><span class=\"span-b\">补丁号：</span><span class=\"span-nor margin-patch\">V4.0.017（BOS）</span></p>\n              <p class=\"table-title title-detail\"><span class=\"span-line\">更多内容</span><span class=\"line\"></span></p>\n              <p style=\"\"><span style=\"color: rgb(0, 0, 0); font-weight: bold;\"></span></p><p style=\"color: rgb(36, 41, 46);\"><span style=\"font-weight: 600;\">变更记录</span><br/></p><table width=\"99%\"><thead style=\"\"><tr style=\"background-color: rgb(255, 255, 255);\" class=\"firstRow\"><th style=\"\" width=\"95.33333333333333\">产品版本</th><th style=\"\" width=\"523.3333333333334\">更新内容</th><th style=\"\" width=\"128.33333333333334\">更新日期</th></tr></thead><tbody style=\"\"><tr style=\"background-color: rgb(255, 255, 255);\"><td style=\"\" width=\"35\">V4.0.017</td><td style=\"\" width=\"523.3333333333334\">初始版本</td><td style=\"\" width=\"128.33333333333334\">2021年3月</td></tr><tr style=\"background-color: rgb(246, 248, 250);\"><td style=\"\" width=\"35\">V6.0.1</td><td style=\"\" width=\"523.3333333333334\">应用更名为OpenAPI，迁移至开放服务云</td><td style=\"\" width=\"128.33333333333334\">2023年10月</td></tr><tr><td colspan=\"1\" rowspan=\"1\"><span style=\"background-color: rgb(246, 248, 250);\">V7.0.1</span><br/></td><td colspan=\"1\" rowspan=\"1\" width=\"523.3333333333334\">WebService支持urn=http://openapi.kingdee.com格式配置命名空间，生成wsdl中namespace的tag以urn开头</td><td colspan=\"1\" rowspan=\"1\" width=\"128.33333333333334\">2024年10月</td></tr></tbody></table><hr/><h2 id=\"html-anchor-list0-1726278331321\" class=\" html-anchor-list0-1726278331321 html-anchor-list0-1726278331322\" style=\"font-size: 18px; color: rgb(36, 41, 46);\"><br/></h2><h2 label=\"一级标题\" class=\"first-title\" style=\"\"><a style=\"color: inherit;\" target=\"_blank\"></a>1 适用范围</h2><p label=\"正文\" style=\"\"><span style=\"color: rgb(0, 0, 0);\">OpenAPI支持将接口发布为WebService协议，支持SOAP1.1、SOAP1.2 协</span><span style=\"color: rgb(0, 0, 0);\">议标准。</span></p><p style=\"\"><span style=\"color: rgb(0, 0, 0);\">服务发布方式如下</span><span style=\"color: rgb(0, 0, 0);\">：</span></p><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><p style=\"\"><span style=\"color: rgb(0, 0, 0);\">低代码开发：使用配置的方式将操作对象发布操作API；</span></p></li><li><div style=\"\"><span style=\"color: rgb(0, 0, 0);\">高代码开发：用 JAVA</span><span style=\"color: rgb(0, 0, 0);\">代码可开发复杂的接口逻辑，并发布为自定义API。</span></div></li></ul><p style=\"\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">2 操作API发布WebService</h2><h3 label=\"二级标题\" class=\"second-title\" style=\"\">2.1 零代码配置操作API</h3><p>以采购订单保存接口为例，维护API基本信息和请求参数等信息。<br/></p><p style=\"\"><br/></p><p style=\"\"><img src=\"/download/0109ea3f3b28676c4f618553059f7f734bb7.png\"/></p><p style=\"\"><br/></p><h3 label=\"二级标题\" class=\"second-title\">2.2 维护WebService信息</h3><ul style=\"color: rgb(51, 51, 51); background-color: rgb(255, 255, 255);\" class=\" list-paddingleft-2\"><li><p>‌<span style=\"font-weight: var(--cos-font-medium); background-color: initial;\">命名空间（targetNamespace）</span>‌：指定Web服务的命名空间，是Web服务的一个全局唯一标识符，用于确保Web服务的唯一性和可寻址性。</p></li><li><p>‌输入参数名‌：用于标识WebService接口的输入参数。</p></li><li><p><span style=\"color: rgb(51, 51, 51); background-color: rgb(255, 255, 255);\">输出参数名</span><span style=\"color: rgb(51, 51, 51); background-color: rgb(255, 255, 255);\">‌</span><span style=\"font-weight: var(--cos-font-medium); background-color: initial;\"></span>‌：<span style=\"color: rgb(51, 51, 51); background-color: rgb(255, 255, 255);\">用于标识WebService接口的输出参数。</span></p></li><li><p>‌WSDL方法名‌：<span style=\"color: rgb(51, 51, 51); background-color: rgb(255, 255, 255);\">根据业务需求、功能描述定义</span>Web服务的具体方法名，方便进行测试和管理。</p></li></ul><p style=\"\"><img src=\"/download/010941f07387a5ad425da241c8d2bb5c45f2.png\"/></p><p style=\"\"><br/></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\">2.3 测试WebService接口</h3><p style=\"\">点击API测试按钮，即可快速测试接口。也可以导出WSDL，在接口测试工具如SOAPUI中进行测试。</p><p style=\"\"><img src=\"/download/010915be7a18bc7a4cd88a730c98c97576f0.png\"/></p><p style=\"\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">3 自定义API发布WebService</h2><h3 label=\"二级标题\" class=\"second-title\" style=\"\"><span style=\"color: rgb(0, 0, 0);\">3.1 定义出入参实体类</span></h3><p>为出入参定义 Java 实体类，可使用相应的注解标识字段描述及校检参数取数范围、是否必填等。</p><p label=\"正文\">注：Java 实体类应继承 Serializable 接口</p><p style=\"\"><br/></p><p style=\"\"><img src=\"https://vip.kingdee.com/download/01003e868b730783429d968be883c079e5a4.png\"/></p><p style=\"\"><span style=\"color: rgb(0, 0, 0);\"><br/></span></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\"><span style=\"color: rgb(0, 0, 0);\">3.2 开发控制类 APIController</span></h3><div style=\"\"><span style=\"color: rgb(0, 0, 0);\">开发 XXController 类，并为类添加 ApiController 注解，为方法添加 ApiPostMapping</span><span style=\"color: rgb(0, 0, 0);\">或 ApiGetMapping 注解。控制类中可以调用苍穹微服务接口或业务服务逻辑。</span></div><p style=\"\"><br/></p><p style=\"\"><img src=\"https://vip.kingdee.com/download/0100bcd1ad758a934a74a2f3739d08cc3834.png\"/></p><p style=\"\"><br/></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\">3.3 配置自定义&nbsp;API</h3><p label=\"正文\" style=\"\"><span style=\"color: rgb(0, 0, 0);\">路径：【开放服务云】&nbsp;→【OpenAPI】 →【API管理】→&nbsp;【API开发】，</span><span style=\"color: rgb(0, 0, 0);\">点击“新增”按钮，添加 “自定义API”。</span></p><p style=\"\"><span style=\"color: rgb(0, 0, 0); font-weight: bold;\">操作步骤：</span></p><p style=\"\"><span style=\"color: rgb(0, 0, 0);\">&nbsp;&nbsp;&nbsp;&nbsp;1）选择所属应用，填写 API 编码及名称，API 分类。</span></p><p style=\"\"><span style=\"color: rgb(0, 0, 0);\">&nbsp;&nbsp;&nbsp;&nbsp;2）在“类名”处输入你</span><span style=\"color: rgb(0, 0, 0);\">的控制类全路径名称，如：kd.bos.openapi.base.custom.demo.CustomDemoTestController 。</span></p><p style=\"\"><span style=\"color: rgb(0, 0, 0);\">&nbsp;&nbsp;&nbsp;&nbsp;3）选择方法名（</span><span style=\"color: rgb(0, 0, 0);\">在 WebService 信息一节可以修改其命名空间）。</span></p><div style=\"\"><span style=\"color: rgb(0, 0, 0);\">至此已将此 JAVA 代码发布为自定义 API。此时可以直接使用 Postman 测试 REST 协议的</span><span style=\"color: rgb(0, 0, 0);\">API。或使用 SOAP UI 测试 WebService 协议。</span></div><p style=\"\"><br/></p><p style=\"\"><img src=\"/download/0109eba8ee260a3842c1af39e9d8d7a0c43b.png\"/></p><p style=\"\"><br/></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\"><span style=\"color: rgb(0, 0, 0); font-weight: bold;\">3.4 测试&nbsp;</span><span style=\"color: rgb(0, 0, 0); font-weight: bold;\">API</span></h3><p style=\"\"><span style=\"color: rgb(0, 0, 0);\">点击API测试按钮，可快速调试、验证 API 逻辑是否正确。</span></p><p style=\"\"><span style=\"color: rgb(0, 0, 0);\"><br/></span></p><p style=\"\"><img src=\"https://vip.kingdee.com/download/010004bd221b04a54e08a6d323a791ebe420.png\"/></p><p style=\"\"><br/></p><p style=\"\"><br/></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\"><span style=\"color: rgb(0, 0, 0); font-weight: bold;\">3.5 使用&nbsp;</span><span style=\"color: rgb(0, 0, 0); font-weight: bold;\">SoapUI&nbsp;</span><span style=\"color: rgb(0, 0, 0); font-weight: bold;\">测试&nbsp;</span><span style=\"color: rgb(0, 0, 0); font-weight: bold;\">WebService</span></h3><div style=\"\">a) 查看WSDL</div><div style=\"\"><span style=\"color: rgb(0, 0, 0);\">可点击 API 详情页的“测试”按钮获取完整 API 地址，API 完整地址为：http://苍穹服</span></div><p style=\"\"><span style=\"color: rgb(0, 0, 0);\">务 URL/kapi/API 请求地址。如：</span><span style=\"color: rgb(0, 0, 255);\">http://localhost:8080/ierp/kapi/v2/ai/openapi/test2/getCustomTest</span></p><p style=\"\"><br/></p><p style=\"\"><img src=\"https://vip.kingdee.com/download/0100efdf0f11ef9a4f1f8faca2148a530ca2.png\"/></p><p style=\"\"><br/></p><div style=\"\"><span style=\"color: rgb(255, 0, 0);\">WSDL 地址为 API 地址后添加字符串“?wsdl”。但在浏览器中测试或在 SoapUI 添加 WSDL</span></div><div style=\"\"><span style=\"color: rgb(255, 0, 0);\">时要先获取 token，请在 URL 后面添加：“&amp;access_token=你的 token”。</span><span style=\"color: rgb(0, 0, 0);\">如：</span></div><div style=\"\"><span style=\"color: rgb(0, 0, 255);\">http://localhost:8080/ierp/kapi/v2/ai/openapi/test2/getCustomTest?wsdl&amp;acces</span></div><p style=\"\"><span style=\"color: rgb(0, 0, 255);\">s_token=1134768014277739520_3gBxxxxx</span></p><p style=\"\"><span style=\"color: rgb(0, 0, 255);\"><br/></span></p><p style=\"\"><span style=\"color: rgb(0, 0, 255);\"></span></p><div style=\"\">b) 在SoapUI中添加Webservice 接口</div><p style=\"\"><span style=\"color: rgb(0, 0, 0);\">将上一步带有 accesstoken 的 URL 添加为 WSDL。</span></p><p style=\"\"><span style=\"color: rgb(0, 0, 0);\"><br/></span></p><p style=\"\"><span style=\"color: rgb(0, 0, 255);\"><img src=\"https://vip.kingdee.com/download/01000cab9fab1e274f7da9ad7b010eee8966.png\"/></span><br/></p><p style=\"\"><br/></p><p style=\"\">c) 在SoapUI中测试Webservice 接口</p><div style=\"\"><span style=\"color: rgb(0, 0, 0);\">设置相应的请求参数，注意参数值的类型及值的合法性，并添加请求 Headers：</span></div><div style=\"\"><span style=\"color: rgb(0, 0, 0);\">accessToken。点击测试按钮，测试是否返回正确的 SOAP 报文。</span></div><p style=\"\"><br/></p><p style=\"\"><img src=\"https://vip.kingdee.com/download/010009842cbf8d0d41a39e9379e49c592768.png\"/></p><p><br/></p><div class=\"edit-css\" style=\"background-color: rgb(255, 255, 255);\"><h2 label=\"一级标题\" class=\"first-title html-anchor-list11-1726281429823 html-anchor-list11-1726281429824\" id=\"html-anchor-list11-1726281429823\" style=\"\">4 更多资讯</h2><p style=\"text-align: justify;\">关于OpenAPI的更多资讯，请随时关注<a href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=226337371640594944&id=226708319996323072&productLineId=29\" target=\"_blank\">新特性公告</a>。</p></div>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 87,
+   "isOpen": 1,
+   "name": "金蝶AI苍穹",
+   "productLineId": 29,
+   "series": "developer01",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        null
+       ],
+       "code": null,
+       "description": "",
+       "entityId": "292625960673645824",
+       "entityType": "Knowledge",
+       "id": "622728145547746816",
+       "isCategory": false,
+       "name": "Webservice接口",
+       "parentId": "226337544983020032",
+       "sort": "4",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": null,
+     "entityId": null,
+     "entityType": null,
+     "id": "226337544983020032",
+     "isCategory": true,
+     "name": "用户手册",
+     "parentId": "-1",
+     "sort": "6",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download/01010204d4b71b654a208006fa1004eac36a.png",
+  "department": null,
+  "id": "740211268992385024",
+  "name": "毛毛去哪儿",
+  "nameSpell": "name"
+ },
+ "totalAppraisalScore": 54,
+ "iflytekId": null,
+ "views": 13603,
+ "productLineId": 29,
+ "comments": 0,
+ "similarityCount": 0,
+ "totalAppraisalUsers": 11,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1766124540000,
+ "appraisalScore": 0,
+ "unuseful": 0,
+ "knowledgeCheckStatus": 2,
+ "otherProductLineIds": [],
+ "auditAt": 1726625307000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapiapilistlayout",
+        "id": "344582232549528320",
+        "name": "API管理",
+        "productLineId": null,
+        "sort": 1,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "5614",
+       "name": "开放平台",
+       "productLineId": null,
+       "sort": 2,
+       "type": "module"
+      },
+      "code": "DEV",
+      "id": "5576",
+      "name": "开发服务云",
+      "productLineId": null,
+      "sort": 11,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 0,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapi_apilist_layout",
+        "id": "505686038019362304",
+        "name": "异步API",
+        "productLineId": null,
+        "sort": 1,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 1,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "AdvancedSkills",
+     "createdAt": 1556519216000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "高阶技巧标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/01005cea40211bf14113a6004322e86a6780.png",
+     "id": "202203081642",
+     "name": "高级技巧",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download/010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "306913800727243776",
+      "name": "Paim",
+      "nameSpell": "name"
+     },
+     "updatedAt": 1657851500000
+    },
+    {
+     "code": "OperatingGuide",
+     "createdAt": 1556519201000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "某一功能的具体说明介绍，包括应用场景、参数说明、具体操作步骤等",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/010037894174802d4b9f8782f1f0010a6ddd.png",
+     "id": "202203081641",
+     "name": "功能介绍",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010176d38341668f44fdb94c95058a90e4b8.png",
+      "department": "云社区运营部",
+      "id": "2147406697",
+      "name": "多肉丸子",
+      "nameSpell": "kejuan"
+     },
+     "updatedAt": 1676857681000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "292625960673645824",
+         "entityType": "Knowledge",
+         "id": "622728145547746816",
+         "isCategory": false,
+         "name": "Webservice接口",
+         "parentId": "226337544983020032",
+         "sort": "4",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": null,
+       "entityId": null,
+       "entityType": null,
+       "id": "226337544983020032",
+       "isCategory": true,
+       "name": "用户手册",
+       "parentId": "-1",
+       "sort": "6",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": " <p class=\"table-title table-margin\"><span class=\"span-line\">发布说明</span><span class=\"line\"></span></p><p class=\"title-b\"><span class=\"span-b\">发布版本：</span><span class=\"span-nor\">苍穹V4.0</span></p><p class=\"title-b\"><span class=\"span-b\">适用范围：</span><span class=\"span-nor\">苍穹开放平台所有用户</span></p><p class=\"title-b\"><span class=\"span-b\">上线日期：</span><span class=\"span-nor\">2021-03-10</span></p><p class=\"title-b\"><span class=\"span-b\">补丁号：</span><span class=\"span-nor margin-patch\">V4.0.017（BOS）</span></p>\n              <p class=\"table-title title-detail\"><span class=\"span-line\">更多内容</span><span class=\"line\"></span></p>\n              <p style=\"\"><span style=\"color: rgb(0, 0, 0); font-weight: bold;\"></span></p><p style=\"color: rgb(36, 41, 46);\"><span style=\"font-weight: 600;\">变更记录</span><br/></p><table width=\"99%\"><thead style=\"\"><tr style=\"background-color: rgb(255, 255, 255);\" class=\"firstRow\"><th style=\"\" width=\"95.33333333333333\">产品版本</th><th style=\"\" width=\"523.3333333333334\">更新内容</th><th style=\"\" width=\"128.33333333333334\">更新日期</th></tr></thead><tbody style=\"\"><tr style=\"background-color: rgb(255, 255, 255);\"><td style=\"\" width=\"35\">V4.0.017</td><td style=\"\" width=\"523.3333333333334\">初始版本</td><td style=\"\" width=\"128.33333333333334\">2021年3月</td></tr><tr style=\"background-color: rgb(246, 248, 250);\"><td style=\"\" width=\"35\">V6.0.1</td><td style=\"\" width=\"523.3333333333334\">应用更名为OpenAPI，迁移至开放服务云</td><td style=\"\" width=\"128.33333333333334\">2023年10月</td></tr><tr><td colspan=\"1\" rowspan=\"1\"><span style=\"background-color: rgb(246, 248, 250);\">V7.0.1</span><br/></td><td colspan=\"1\" rowspan=\"1\" width=\"523.3333333333334\">WebService支持urn=http://openapi.kingdee.com格式配置命名空间，生成wsdl中namespace的tag以urn开头</td><td colspan=\"1\" rowspan=\"1\" width=\"128.33333333333334\">2024年10月</td></tr></tbody></table><hr/><h2 id=\"html-anchor-list0-1726278331321\" class=\" html-anchor-list0-1726278331321 html-anchor-list0-1726278331322\" style=\"font-size: 18px; color: rgb(36, 41, 46);\"><br/></h2><h2 label=\"一级标题\" class=\"first-title\" style=\"\"><a style=\"color: inherit;\" target=\"_blank\"></a>1 适用范围</h2><p label=\"正文\" style=\"\"><span style=\"color: rgb(0, 0, 0);\">OpenAPI支持将接口发布为WebService协议，支持SOAP1.1、SOAP1.2 协</span><span style=\"color: rgb(0, 0, 0);\">议标准。</span></p><p style=\"\"><span style=\"color: rgb(0, 0, 0);\">服务发布方式如下</span><span style=\"color: rgb(0, 0, 0);\">：</span></p><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><p style=\"\"><span style=\"color: rgb(0, 0, 0);\">低代码开发：使用配置的方式将操作对象发布操作API；</span></p></li><li><div style=\"\"><span style=\"color: rgb(0, 0, 0);\">高代码开发：用 JAVA</span><span style=\"color: rgb(0, 0, 0);\">代码可开发复杂的接口逻辑，并发布为自定义API。</span></div></li></ul><p style=\"\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">2 操作API发布WebService</h2><h3 label=\"二级标题\" class=\"second-title\" style=\"\">2.1 零代码配置操作API</h3><p>以采购订单保存接口为例，维护API基本信息和请求参数等信息。<br/></p><p style=\"\"><br/></p><p style=\"\"><img src=\"/download/0109ea3f3b28676c4f618553059f7f734bb7.png\"/></p><p style=\"\"><br/></p><h3 label=\"二级标题\" class=\"second-title\">2.2 维护WebService信息</h3><ul style=\"color: rgb(51, 51, 51); background-color: rgb(255, 255, 255);\" class=\" list-paddingleft-2\"><li><p>‌<span style=\"font-weight: var(--cos-font-medium); background-color: initial;\">命名空间（targetNamespace）</span>‌：指定Web服务的命名空间，是Web服务的一个全局唯一标识符，用于确保Web服务的唯一性和可寻址性。</p></li><li><p>‌输入参数名‌：用于标识WebService接口的输入参数。</p></li><li><p><span style=\"color: rgb(51, 51, 51); background-color: rgb(255, 255, 255);\">输出参数名</span><span style=\"color: rgb(51, 51, 51); background-color: rgb(255, 255, 255);\">‌</span><span style=\"font-weight: var(--cos-font-medium); background-color: initial;\"></span>‌：<span style=\"color: rgb(51, 51, 51); background-color: rgb(255, 255, 255);\">用于标识WebService接口的输出参数。</span></p></li><li><p>‌WSDL方法名‌：<span style=\"color: rgb(51, 51, 51); background-color: rgb(255, 255, 255);\">根据业务需求、功能描述定义</span>Web服务的具体方法名，方便进行测试和管理。</p></li></ul><p style=\"\"><img src=\"/download/010941f07387a5ad425da241c8d2bb5c45f2.png\"/></p><p style=\"\"><br/></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\">2.3 测试WebService接口</h3><p style=\"\">点击API测试按钮，即可快速测试接口。也可以导出WSDL，在接口测试工具如SOAPUI中进行测试。</p><p style=\"\"><img src=\"/download/010915be7a18bc7a4cd88a730c98c97576f0.png\"/></p><p style=\"\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">3 自定义API发布WebService</h2><h3 label=\"二级标题\" class=\"second-title\" style=\"\"><span style=\"color: rgb(0, 0, 0);\">3.1 定义出入参实体类</span></h3><p>为出入参定义 Java 实体类，可使用相应的注解标识字段描述及校检参数取数范围、是否必填等。</p><p label=\"正文\">注：Java 实体类应继承 Serializable 接口</p><p style=\"\"><br/></p><p style=\"\"><img src=\"https://vip.kingdee.com/download/01003e868b730783429d968be883c079e5a4.png\"/></p><p style=\"\"><span style=\"color: rgb(0, 0, 0);\"><br/></span></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\"><span style=\"color: rgb(0, 0, 0);\">3.2 开发控制类 APIController</span></h3><div style=\"\"><span style=\"color: rgb(0, 0, 0);\">开发 XXController 类，并为类添加 ApiController 注解，为方法添加 ApiPostMapping</span><span style=\"color: rgb(0, 0, 0);\">或 ApiGetMapping 注解。控制类中可以调用苍穹微服务接口或业务服务逻辑。</span></div><p style=\"\"><br/></p><p style=\"\"><img src=\"https://vip.kingdee.com/download/0100bcd1ad758a934a74a2f3739d08cc3834.png\"/></p><p style=\"\"><br/></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\">3.3 配置自定义&nbsp;API</h3><p label=\"正文\" style=\"\"><span style=\"color: rgb(0, 0, 0);\">路径：【开放服务云】&nbsp;→【OpenAPI】 →【API管理】→&nbsp;【API开发】，</span><span style=\"color: rgb(0, 0, 0);\">点击“新增”按钮，添加 “自定义API”。</span></p><p style=\"\"><span style=\"color: rgb(0, 0, 0); font-weight: bold;\">操作步骤：</span></p><p style=\"\"><span style=\"color: rgb(0, 0, 0);\">&nbsp;&nbsp;&nbsp;&nbsp;1）选择所属应用，填写 API 编码及名称，API 分类。</span></p><p style=\"\"><span style=\"color: rgb(0, 0, 0);\">&nbsp;&nbsp;&nbsp;&nbsp;2）在“类名”处输入你</span><span style=\"color: rgb(0, 0, 0);\">的控制类全路径名称，如：kd.bos.openapi.base.custom.demo.CustomDemoTestController 。</span></p><p style=\"\"><span style=\"color: rgb(0, 0, 0);\">&nbsp;&nbsp;&nbsp;&nbsp;3）选择方法名（</span><span style=\"color: rgb(0, 0, 0);\">在 WebService 信息一节可以修改其命名空间）。</span></p><div style=\"\"><span style=\"color: rgb(0, 0, 0);\">至此已将此 JAVA 代码发布为自定义 API。此时可以直接使用 Postman 测试 REST 协议的</span><span style=\"color: rgb(0, 0, 0);\">API。或使用 SOAP UI 测试 WebService 协议。</span></div><p style=\"\"><br/></p><p style=\"\"><img src=\"/download/0109eba8ee260a3842c1af39e9d8d7a0c43b.png\"/></p><p style=\"\"><br/></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\"><span style=\"color: rgb(0, 0, 0); font-weight: bold;\">3.4 测试&nbsp;</span><span style=\"color: rgb(0, 0, 0); font-weight: bold;\">API</span></h3><p style=\"\"><span style=\"color: rgb(0, 0, 0);\">点击API测试按钮，可快速调试、验证 API 逻辑是否正确。</span></p><p style=\"\"><span style=\"color: rgb(0, 0, 0);\"><br/></span></p><p style=\"\"><img src=\"https://vip.kingdee.com/download/010004bd221b04a54e08a6d323a791ebe420.png\"/></p><p style=\"\"><br/></p><p style=\"\"><br/></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\"><span style=\"color: rgb(0, 0, 0); font-weight: bold;\">3.5 使用&nbsp;</span><span style=\"color: rgb(0, 0, 0); font-weight: bold;\">SoapUI&nbsp;</span><span style=\"color: rgb(0, 0, 0); font-weight: bold;\">测试&nbsp;</span><span style=\"color: rgb(0, 0, 0); font-weight: bold;\">WebService</span></h3><div style=\"\">a) 查看WSDL</div><div style=\"\"><span style=\"color: rgb(0, 0, 0);\">可点击 API 详情页的“测试”按钮获取完整 API 地址，API 完整地址为：http://苍穹服</span></div><p style=\"\"><span style=\"color: rgb(0, 0, 0);\">务 URL/kapi/API 请求地址。如：</span><span style=\"color: rgb(0, 0, 255);\">http://localhost:8080/ierp/kapi/v2/ai/openapi/test2/getCustomTest</span></p><p style=\"\"><br/></p><p style=\"\"><img src=\"https://vip.kingdee.com/download/0100efdf0f11ef9a4f1f8faca2148a530ca2.png\"/></p><p style=\"\"><br/></p><div style=\"\"><span style=\"color: rgb(255, 0, 0);\">WSDL 地址为 API 地址后添加字符串“?wsdl”。但在浏览器中测试或在 SoapUI 添加 WSDL</span></div><div style=\"\"><span style=\"color: rgb(255, 0, 0);\">时要先获取 token，请在 URL 后面添加：“&amp;access_token=你的 token”。</span><span style=\"color: rgb(0, 0, 0);\">如：</span></div><div style=\"\"><span style=\"color: rgb(0, 0, 255);\">http://localhost:8080/ierp/kapi/v2/ai/openapi/test2/getCustomTest?wsdl&amp;acces</span></div><p style=\"\"><span style=\"color: rgb(0, 0, 255);\">s_token=1134768014277739520_3gBxxxxx</span></p><p style=\"\"><span style=\"color: rgb(0, 0, 255);\"><br/></span></p><p style=\"\"><span style=\"color: rgb(0, 0, 255);\"></span></p><div style=\"\">b) 在SoapUI中添加Webservice 接口</div><p style=\"\"><span style=\"color: rgb(0, 0, 0);\">将上一步带有 accesstoken 的 URL 添加为 WSDL。</span></p><p style=\"\"><span style=\"color: rgb(0, 0, 0);\"><br/></span></p><p style=\"\"><span style=\"color: rgb(0, 0, 255);\"><img src=\"https://vip.kingdee.com/download/01000cab9fab1e274f7da9ad7b010eee8966.png\"/></span><br/></p><p style=\"\"><br/></p><p style=\"\">c) 在SoapUI中测试Webservice 接口</p><div style=\"\"><span style=\"color: rgb(0, 0, 0);\">设置相应的请求参数，注意参数值的类型及值的合法性，并添加请求 Headers：</span></div><div style=\"\"><span style=\"color: rgb(0, 0, 0);\">accessToken。点击测试按钮，测试是否返回正确的 SOAP 报文。</span></div><p style=\"\"><br/></p><p style=\"\"><img src=\"https://vip.kingdee.com/download/010009842cbf8d0d41a39e9379e49c592768.png\"/></p><p><br/></p><div class=\"edit-css\" style=\"background-color: rgb(255, 255, 255);\"><h2 label=\"一级标题\" class=\"first-title html-anchor-list11-1726281429823 html-anchor-list11-1726281429824\" id=\"html-anchor-list11-1726281429823\" style=\"\">4 更多资讯</h2><p style=\"text-align: justify;\">关于OpenAPI的更多资讯，请随时关注<a href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=226337371640594944&id=226708319996323072&productLineId=29\" target=\"_blank\">新特性公告</a>。</p></div>"
+}

@@ -1,0 +1,582 @@
+{
+ "badNum": 0,
+ "identityTagIds": null,
+ "knowledgeId": "221321752805764352",
+ "createdAt": 1630575218000,
+ "collections": 15,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "221321752805764352",
+ "contentType": 1,
+ "updatedAt": 1766040409000,
+ "knowledgeUpdater": {
+  "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+  "department": null,
+  "id": "132488613174518784",
+  "name": "某个路易",
+  "nameSpell": "name"
+ },
+ "assessStatus": 0,
+ "knowledgeStatus": 2,
+ "assessHandleStatus": null,
+ "knowledgeCreatedAt": 1630575218000,
+ "version": 16,
+ "labels": [],
+ "editedAt": 1713351152000,
+ "identityTags": null,
+ "useful": 6,
+ "errors": [],
+ "isCollected": false,
+ "totalFeedBacks": 0,
+ "attachments": [
+  {
+   "createdAt": 1648019909000,
+   "fileSize": 807332,
+   "id": "294490089155897856",
+   "name": "玩转开放平台自定义接口返回格式.pdf",
+   "path": "/download/01066be0c65d3bbd4a37ba5f0995f6395ead/玩转开放平台自定义接口返回格式.pdf",
+   "productLineId": null,
+   "scanResult": 0,
+   "scanStatus": 2,
+   "scene": 0,
+   "sourceUrl": null,
+   "status": 2,
+   "violationKeywords": null,
+   "violationSubtype": null,
+   "violationType": null
+  }
+ ],
+ "sources": [],
+ "editTitle": "自定义服务介绍",
+ "title": "自定义服务介绍",
+ "content": "<p label=\"一级标题\" style=\"font-size: 20px; font-weight: bold; line-height: 42px; margin: 0px;\">1 简介</p><p label=\"二级标题\" style=\"font-size: 18px; font-weight: bold; padding: 8px 0px; line-height: 42px; margin: 0px;\">1.1 功能介绍</p><p>自定义服务可以将任何功能开发出来，这类服务不依附任何业务对象，出入参数可以完全自定义。通过自定义服务，可以拓展平台的API，满足一些个性化的需求。<br/></p><p><br/></p><p label=\"二级标题\" style=\"font-size: 18px; font-weight: bold; padding: 8px 0px; line-height: 42px; margin: 0px;\">1.2 应用场景</p><p>1）当标准操作服务无法满足接口需求时，用户可通过注册插件的方式发布自定义接口，自定义接口逻辑和返回参数；</p><p>2）预置自定义接口，提供给苍穹其他模块调用。</p><p>3）标准接口功能不满足时，我们会进行自定义接口的开发，并自定义返回格式（<strong>操作见附件</strong>）<span style=\"\">。</span></p><p><br/></p><p label=\"二级标题\" style=\"font-size: 18px; font-weight: bold; padding: 8px 0px; line-height: 42px; margin: 0px;\">1.3 操作路径</p><p>路径：【开发服务云】→【开放平台】→<span style=\"\">【其他】</span><span style=\"\">→【API1.0】<span style=\"\">→</span></span>【API服务管理1.0】</p><p><br/></p><p label=\"二级标题\" style=\"font-size: 18px; font-weight: bold; padding: 8px 0px; line-height: 42px; margin: 0px;\">1.4 字段/按钮说明</p><p><strong>字段说明：</strong><br/></p><table><colgroup><col/><col/></colgroup><tbody><tr class=\"firstRow\"><td width=\"132.33333333333334\" style=\"\"><strong>字段名称</strong></td><td width=\"489.3333333333333\" style=\"\"><strong>详细解释</strong></td></tr><tr><td style=\"\" width=\"22.000000000000014\">API基本信息</td><td style=\"\" width=\"489.3333333333333\"><br/></td></tr><tr><td width=\"22.000000000000014\" style=\"\">API编码</td><td width=\"489.3333333333333\" style=\"\">API服务编码</td></tr><tr><td width=\"22.000000000000014\" style=\"\">API名称</td><td width=\"489.3333333333333\" style=\"\">API服务名称</td></tr><tr><td width=\"22.000000000000014\" style=\"\">请求方式</td><td width=\"489.3333333333333\" style=\"\">API请求方法，支持GET/POST</td></tr><tr><td width=\"22.000000000000014\" style=\"\">所属应用</td><td width=\"489.3333333333333\" style=\"\">业务对象所属应用</td></tr><tr><td width=\"22.000000000000014\" style=\"\">授权用户</td><td width=\"489.3333333333333\" style=\"\">若仅指定用户可调用该API，可选择授权用户；若为空，则不限制</td></tr><tr><td style=\"\" width=\"22.000000000000014\">请求地址</td><td width=\"489.3333333333333\" style=\"\"><p>请求url地址<a href=\"http://localhost:8080/ierp/kapi/app/\">/app/&nbsp;</a>{appId}/{servicename}，自动生成</p><p>appId：应用id，Servicename：API编码</p></td></tr><tr><td width=\"22.000000000000014\" style=\"\">内容格式</td><td width=\"489.3333333333333\" style=\"\">请求参数的内容格式，默认为application/json</td></tr><tr><td style=\"\" width=\"22.000000000000014\">自定义方法</td><td style=\"\" width=\"489.3333333333333\">预先注册的自定义插件的方法名称</td></tr><tr><td width=\"22.000000000000014\" style=\"\">匿名访问</td><td width=\"489.3333333333333\" style=\"\">设置API匿名，API不需要通过认证即可调用，但存在数据泄露风险，谨慎使用</td></tr><tr><td width=\"22.000000000000014\" style=\"\">详细描述</td><td width=\"489.3333333333333\" style=\"\">API详细描述及功能用途</td></tr><tr><td style=\"\" width=\"22.000000000000014\">请求头部</td><td style=\"\" width=\"489.3333333333333\"><br/></td></tr><tr><td width=\"22.000000000000014\" style=\"\">参数名称</td><td width=\"489.3333333333333\" style=\"\">请求头参数名称</td></tr><tr><td width=\"22.000000000000014\" style=\"\">参数值</td><td width=\"489.3333333333333\" style=\"\">请求头参数值</td></tr><tr><td width=\"22.000000000000014\" style=\"\">说明</td><td width=\"489.3333333333333\" style=\"\">请求头参数说明</td></tr><tr><td style=\"\" width=\"22.000000000000014\">Query参数</td><td style=\"\" width=\"489.3333333333333\"><br/></td></tr><tr><td width=\"22.000000000000014\" style=\"\">参数名称</td><td width=\"489.3333333333333\" style=\"\">Query参数名称</td></tr><tr><td width=\"22.000000000000014\" style=\"\">参数类型</td><td width=\"489.3333333333333\" style=\"\">Query参数类型</td></tr><tr><td width=\"22.000000000000014\" style=\"\">必填</td><td width=\"489.3333333333333\" style=\"\">默认为是</td></tr><tr><td width=\"22.000000000000014\" style=\"\">示例</td><td width=\"489.3333333333333\" style=\"\">Query参数示例</td></tr><tr><td width=\"22.000000000000014\" style=\"\">说明</td><td width=\"489.3333333333333\" style=\"\">Query参数说明</td></tr><tr><td width=\"22.000000000000014\" style=\"\">请求体/返回参数</td><td width=\"489.3333333333333\" style=\"\"><br/></td></tr><tr><td width=\"22.000000000000014\" style=\"\">参数名称</td><td width=\"489.3333333333333\" style=\"\">请求体/返回参数名称</td></tr><tr><td width=\"22.000000000000014\" style=\"\">参数类型</td><td width=\"489.3333333333333\" style=\"\">请求体/返回参数类型</td></tr><tr><td width=\"22.000000000000014\" style=\"\">必填</td><td width=\"489.3333333333333\" style=\"\">默认为是</td></tr><tr><td width=\"22.000000000000014\" style=\"\">示例</td><td width=\"489.3333333333333\" style=\"\">请求体/返回参数示例</td></tr><tr><td width=\"22.000000000000014\" style=\"\">说明</td><td width=\"489.3333333333333\" style=\"\">请求体/返回参数说明</td></tr><tr><td width=\"22.000000000000014\" style=\"\">插件</td><td width=\"489.3333333333333\" style=\"\"><br/></td></tr><tr><td width=\"22.000000000000014\" style=\"\">是否启用</td><td width=\"489.3333333333333\" style=\"\">插件开关，选择是否启用插件</td></tr><tr><td width=\"22.000000000000014\" style=\"\">插件名称</td><td width=\"489.3333333333333\" style=\"\">预先注册的插件名称</td></tr><tr><td width=\"22.000000000000014\" style=\"\">本单插件</td><td width=\"489.3333333333333\" style=\"\">默认为是</td></tr><tr><td width=\"22.000000000000014\" style=\"\">插件路径</td><td width=\"489.3333333333333\" style=\"\">预先注册的插件路径</td></tr><tr><td width=\"22.000000000000014\" style=\"\">描述说明</td><td width=\"489.3333333333333\" style=\"\">预先注册的插件说明</td></tr></tbody></table><p><br/></p><p><strong>按钮说明：</strong></p><table><colgroup><col/><col/></colgroup><tbody><tr class=\"firstRow\"><td width=\"138.33333333333334\" style=\"\"><strong>按钮名称</strong></td><td width=\"484.3333333333333\" style=\"\"><strong>详细解释</strong></td></tr><tr><td style=\"\" width=\"38.000000000000014\">单据头</td><td style=\"\" width=\"484.3333333333333\"><br/></td></tr><tr><td width=\"38.000000000000014\" style=\"\">保存</td><td width=\"484.3333333333333\" style=\"\">保存当前API服务信息</td></tr><tr><td width=\"38.000000000000014\" style=\"\">保存并新增</td><td width=\"484.3333333333333\" style=\"\">保存当前API服务信息，并打开新建API服务的弹窗</td></tr><tr><td width=\"38.000000000000014\" style=\"\">退出</td><td width=\"484.3333333333333\" style=\"\">退出当前界面</td></tr><tr><td style=\"\" width=\"38.000000000000014\">请求头</td><td style=\"\" width=\"484.3333333333333\"><br/></td></tr><tr><td width=\"38.000000000000014\" style=\"\">增行</td><td width=\"484.3333333333333\" style=\"\">列表新增空白行</td></tr><tr><td width=\"38.000000000000014\" style=\"\">删行</td><td width=\"484.3333333333333\" style=\"\">删除勾选行数据，支持多条数据批量删除</td></tr><tr><td width=\"38.000000000000014\" style=\"\">上移</td><td width=\"484.3333333333333\" style=\"\">勾选请求头数据，点击按钮，行数据会上移一行</td></tr><tr><td width=\"38.000000000000014\" style=\"\">下移</td><td width=\"484.3333333333333\" style=\"\">勾选请求头数据，点击按钮，行数据会下移一行</td></tr><tr><td width=\"38.000000000000014\" style=\"\">请求结构示例</td><td width=\"484.3333333333333\" style=\"\">弹出请求结构体示例弹窗</td></tr><tr><td style=\"\" width=\"38.000000000000014\">Query参数</td><td style=\"\" width=\"484.3333333333333\"><br/></td></tr><tr><td width=\"38.000000000000014\" style=\"\">增行</td><td width=\"484.3333333333333\" style=\"\">列表新增空白行</td></tr><tr><td width=\"38.000000000000014\" style=\"\">删行</td><td width=\"484.3333333333333\" style=\"\">点除勾选行数据，支持多条数据批量删除</td></tr><tr><td width=\"38.000000000000014\" style=\"\">从对象中添加</td><td width=\"484.3333333333333\" style=\"\">弹出对象选择弹窗，支持批量勾选，点击确定后会自动填充数据到query参数列表中</td></tr><tr><td width=\"38.000000000000014\" style=\"\">上移</td><td width=\"484.3333333333333\" style=\"\">勾选query参数数据，点击按钮，行数据会上移一行</td></tr><tr><td width=\"38.000000000000014\" style=\"\">下移</td><td width=\"484.3333333333333\" style=\"\">勾选query参数数据，点击按钮，行数据会下移一行</td></tr><tr><td width=\"38.000000000000014\" style=\"\">请求结构示例</td><td width=\"484.3333333333333\" style=\"\">弹出请求结构体示例弹窗</td></tr><tr><td width=\"38.000000000000014\" style=\"\">请求体/返回参数</td><td width=\"484.3333333333333\" style=\"\"><br/></td></tr><tr><td width=\"38.000000000000014\" style=\"\">增行</td><td width=\"484.3333333333333\" style=\"\">列表新增空白行</td></tr><tr><td width=\"38.000000000000014\" style=\"\">增子行</td><td width=\"484.3333333333333\" style=\"\">勾选某行数据，点击按钮，会在该行参数下增加子行。当选择多行数据时，只会在勾选的第一条数据下增加子行</td></tr><tr><td width=\"38.000000000000014\" style=\"\">从对象中添加</td><td width=\"484.3333333333333\" style=\"\">点击按钮，弹出对象选择弹窗，支持批量勾选，点击确定后会自动填充数据到请求体/返回参数列表中</td></tr><tr><td width=\"38.000000000000014\" style=\"\">请求/返回结构示例</td><td width=\"484.3333333333333\" style=\"\">点击按钮，弹出请求结构体/返回结构体示例弹窗</td></tr><tr><td width=\"38.000000000000014\" style=\"\">删行</td><td width=\"484.3333333333333\" style=\"\">点击按钮，删除勾选行数据，支持多条数据批量删除</td></tr><tr><td width=\"38.000000000000014\" style=\"\">上移</td><td width=\"484.3333333333333\" style=\"\">勾选请求体数据，点击按钮，行数据会上移一行</td></tr><tr><td width=\"38.000000000000014\" style=\"\">下移</td><td width=\"484.3333333333333\" style=\"\">勾选请求体数据，点击按钮，行数据会下移一行</td></tr></tbody></table><p><br/></p><p label=\"一级标题\" style=\"font-size: 20px; font-weight: bold; line-height: 42px; margin: 0px;\">2 主要操作</p><p label=\"二级标题\" style=\"font-size: 18px; font-weight: bold; padding: 8px 0px; line-height: 42px; margin: 0px;\">2.1 注册自定义插件</p><p label=\"正文\" style=\"font-size: 15px;\">自定义服务与操作服务的使用方式不同，自定义服务需要先开发插件，然后发布API，插件可以使用自定义的java插件或脚本插件，下面介绍自定义服务的调用流程。</p><p>首先需要开发人员创建一个类，实现IBillWebApiPlugin接口，并重写doCustomService()方法，在方法内实现自定义的相关逻辑。</p><p><br/></p><p><strong>自定义服务插件代码示例：</strong></p><table><tbody><tr class=\"firstRow\"><td style=\"\"><p><br/></p><p>import kd.bos.bill.IBillWebApiPlugin;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p><p>import kd.bos.entity.api.ApiResult;</p><p>import java.util.Map;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p><p><br/></p><p>public class HelloWorldPlugin implements IBillWebApiPlugin {</p><p><br/></p><p>@Override</p><p>public ApiResult doCustomService(Map&lt;String, Object&gt; params) {</p><p><br/></p><p>//实现业务逻辑。。。&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p><p><br/></p><p>ApiResult apiResult = new ApiResult();</p><p>apiResult.setSuccess(true);</p><p>apiResult.setErrorCode(&quot;success&quot;);</p><p>apiResult.setMessage(&quot;HelloWorld Success&quot;);</p><p>apiResult.setData(null);</p><p>return apiResult;</p><p>}</p><p>}</p><p><br/></p></td></tr></tbody></table><p><br/></p><p label=\"二级标题\" style=\"font-size: 18px; font-weight: bold; padding: 8px 0px; line-height: 42px; margin: 0px;\">2.2 维护API基本信息</p><p>打开【API服务管理】菜单，点击“新增”按钮，选择操作服务，进入到操作服务新增界面，录入API基本信息等字段，API请求地址自动生成。</p><p><br/></p><p><img src=\"/download/0100f2fc1deb93cc4f0bb247332a158c4501.png\"/></p><p><br/></p><p><img src=\"/download/010973edc07317c14eaa92419e4a6e78e118.png\"/></p><p><br/></p><p label=\"二级标题\" style=\"font-size: 18px; font-weight: bold; padding: 8px 0px; line-height: 42px; margin: 0px;\">2.3&nbsp;维护请求/返回参数（非必填）</p><p>在页面上维护请求参数，请求头部默认包含参数 Content-type和 assesstoken。若为get类请求，可维护Query参数及示例，若为POST类请求，可维护请求体参数及示例。<br/></p><p><br/></p><p><img src=\"/download/0109faa3409adcd84fbbb442afc80fe42dec.png\"/></p><p><br/></p><p>同样的方式在页面上维护接口返回参数，上一步维护的请求参数和<strong>返回参数示例</strong><strong>仅作为参考</strong>，实际返回的数据会自定义插件代码逻辑返回<strong>。</strong></p><p><br/></p><p><img src=\"/download/0109400e95876b7e478b8606ea41ac1c00ab.png\"/></p><p><br/></p><p label=\"二级标题\" style=\"font-size: 18px; font-weight: bold; padding: 8px 0px; line-height: 42px; margin: 0px;\"><span style=\"font-size: 20px; font-weight: bold;\">2.4 注册插件</span></p><p>在最下方插件栏，注册上一步开发的插件等信息，点击保存即可。<br/></p><p><img src=\"/download/010043f3045b040d4b9bacba45192e373832.png\"/></p><p label=\"一级标题\" style=\"font-size: 20px; font-weight: bold; line-height: 42px; margin: 0px;\"><br/></p><p label=\"一级标题\" style=\"font-size: 20px; font-weight: bold; line-height: 42px; margin: 0px;\">3 自定义插件方法</p><p>当开发注册自定义插件时，系统预置了两个版本的 ApiResult doCustomService 方法，分别为1.0和2.0版本，如果用户不去重写方法，会默认使用1.0版本的方法。</p><p><strong>版本差异</strong>：</p><p label=\"正文\" style=\"font-size: 15px;\">1.0 ：当为get请求时，客户端只传querystring给服务端；当为post请求时，客户端只传请求体中的data给服务端。</p><p><br/></p><p><img src=\"https://vip.kingdee.com/download/0100506fdfa785eb414e854ebd909ca55ba2.png\"/></p><p><br/></p><p>2.0 ：不论请求方式为get或post，客户端传给服务端的参数比1.0版本增加了requestURL、appId和Cookie。当为post请求时，客户端会同时传querystring和请求体中的data给服务端。</p><p><br/></p><p><img src=\"https://vip.kingdee.com/download/0100cb7fe1f9827b40efb553a2eb74d519d8.png\"/></p><p><br/></p><p><strong>代码示例：</strong></p><table><tbody><tr class=\"firstRow\"><td style=\"\"><p><br/></p><p><strong>版本控制方法：</strong></p><p>@Override</p><p>&nbsp;&nbsp;&nbsp;&nbsp;public String getVersion() {</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// TODO Auto-generated method stub</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return &quot;abc&quot;; &nbsp; &nbsp; // 当return值为空或”1.0”时 ，使用1.0版本；当Return值为其他非”1.0”文本字段，使用2.0版本</p><p>&nbsp;&nbsp;&nbsp;&nbsp;}</p><p><br/></p><p><strong>方法一（1.0版本）：</strong></p><p>&nbsp;&nbsp;&nbsp;&nbsp;@Override</p><p>&nbsp;&nbsp;&nbsp;&nbsp;public ApiResult doCustomService(Map&lt;String, Object&gt; params) {</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// TODO Auto-generated method stub</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String iobj = &quot;这是返回&quot;;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return IBillWebApiPlugin.super.doCustomService(params);</p><p>&nbsp;&nbsp;&nbsp;&nbsp;}</p><p><br/></p><p><strong>方法二（2.0版本）：</strong></p><p><br/></p><p>&nbsp;&nbsp;&nbsp;&nbsp;@Override</p><p>&nbsp;&nbsp;&nbsp;&nbsp;public ApiResult doCustomService(WebApiContext ctx) {</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// TODO Auto-generated method stub</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return IBillWebApiPlugin.super.doCustomService(ctx);</p><p>&nbsp;&nbsp;&nbsp;&nbsp;}</p><p><br/></p><p><br/></p></td></tr></tbody></table><p><br/></p><p><br/></p><p>在标准接口功能不满足时，我们会进行自定义接口的开发，<strong>如何自定义接口返回格式见附件。</strong></p><p><br/></p><p label=\"一级标题\" style=\"font-size: 20px; font-weight: bold; line-height: 42px; margin: 0px;\">更多</p><p><a href=\"/tolink?target=https%3A%2F%2Fclub.kdcloud.com%2Farticle%2F213309216688450304\" title=\"\" target=\"_blank\" class=\"\">金蝶AI苍穹开放平台API调用流程</a></p><p><a href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=239331354741842688&id=218694224487485696\" title=\"\" target=\"_blank\" class=\"\">金蝶AI苍穹OpenAPI开发认证指南</a></p><p><a href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=226337680139592960&id=220941231520321792\" title=\"\" target=\"_blank\" class=\"\">操作服务介绍</a></p><p><br/></p>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 87,
+   "isOpen": 1,
+   "name": "金蝶AI苍穹",
+   "productLineId": 29,
+   "series": "developer01",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          {
+           "childCategory": [
+            null
+           ],
+           "code": null,
+           "description": "",
+           "entityId": "221321752805764352",
+           "entityType": "Knowledge",
+           "id": "322034489482843648",
+           "isCategory": false,
+           "name": "自定义服务介绍",
+           "parentId": "322033766435165696",
+           "sort": "2",
+           "specialId": "226337046514476288",
+           "status": 1
+          }
+         ],
+         "code": null,
+         "description": null,
+         "entityId": null,
+         "entityType": null,
+         "id": "322033766435165696",
+         "isCategory": true,
+         "name": "API服务管理",
+         "parentId": "322033541636710144",
+         "sort": "1",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": null,
+       "id": "322033541636710144",
+       "isCategory": true,
+       "name": "API1.0",
+       "parentId": "226337544983020032",
+       "sort": "26",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": null,
+     "entityId": null,
+     "entityType": null,
+     "id": "226337544983020032",
+     "isCategory": true,
+     "name": "用户手册",
+     "parentId": "-1",
+     "sort": "6",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download/01010204d4b71b654a208006fa1004eac36a.png",
+  "department": null,
+  "id": "740211268992385024",
+  "name": "毛毛去哪儿",
+  "nameSpell": "name"
+ },
+ "totalAppraisalScore": 30,
+ "iflytekId": null,
+ "views": 8160,
+ "productLineId": 29,
+ "comments": 0,
+ "similarityCount": null,
+ "totalAppraisalUsers": 6,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1766040409000,
+ "appraisalScore": 0,
+ "unuseful": 0,
+ "knowledgeCheckStatus": 2,
+ "otherProductLineIds": [],
+ "auditAt": 1698400877000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapiservicenew",
+        "id": "505687093087987200",
+        "name": "API服务管理1.0",
+        "productLineId": null,
+        "sort": 12,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 0,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapiservicenew",
+        "id": "344594257418019328",
+        "name": "API服务管理1.0",
+        "productLineId": null,
+        "sort": 13,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "5614",
+       "name": "开放平台",
+       "productLineId": null,
+       "sort": 2,
+       "type": "module"
+      },
+      "code": "DEV",
+      "id": "5576",
+      "name": "开发服务云",
+      "productLineId": null,
+      "sort": 11,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 1,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "OperatingGuide",
+     "createdAt": 1556519201000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "某一功能的具体说明介绍，包括应用场景、参数说明、具体操作步骤等",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/010037894174802d4b9f8782f1f0010a6ddd.png",
+     "id": "202203081641",
+     "name": "功能介绍",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010176d38341668f44fdb94c95058a90e4b8.png",
+      "department": "云社区运营部",
+      "id": "2147406697",
+      "name": "多肉丸子",
+      "nameSpell": "kejuan"
+     },
+     "updatedAt": 1676857681000
+    },
+    {
+     "code": "rumen",
+     "createdAt": 1605667807000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "入门类的知识可使用此标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100d322b9282bcc438faa894f4eec029977.png",
+     "id": "202203081646",
+     "name": "基础入门",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download?fileName=0101ec1d6ce599b442dab7d0b794c1fce88d.png",
+      "department": null,
+      "id": "1009",
+      "name": "一颗小星星",
+      "nameSpell": "fengling"
+     },
+     "updatedAt": 1657872008000
+    },
+    {
+     "code": "essencesummary",
+     "createdAt": 1606118073000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "精华汇总",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100402c6f8df169483db114f71043c19ec2.png",
+     "id": "202203081649",
+     "name": "精华汇总",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 2,
+     "updatePerson": {
+      "avatar": "/download?fileName=010162cfa9d5437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1129",
+      "name": "灏",
+      "nameSpell": "hao"
+     },
+     "updatedAt": 1606118073000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          {
+           "childCategory": [
+            {
+             "childCategory": [
+              null
+             ],
+             "code": null,
+             "description": "",
+             "entityId": "221321752805764352",
+             "entityType": "Knowledge",
+             "id": "322034489482843648",
+             "isCategory": false,
+             "name": "自定义服务介绍",
+             "parentId": "322033766435165696",
+             "sort": "2",
+             "specialId": "226337046514476288",
+             "status": 1
+            }
+           ],
+           "code": null,
+           "description": null,
+           "entityId": null,
+           "entityType": null,
+           "id": "322033766435165696",
+           "isCategory": true,
+           "name": "API服务管理",
+           "parentId": "322033541636710144",
+           "sort": "1",
+           "specialId": "226337046514476288",
+           "status": 1
+          }
+         ],
+         "code": null,
+         "description": "",
+         "entityId": null,
+         "entityType": null,
+         "id": "322033541636710144",
+         "isCategory": true,
+         "name": "API1.0",
+         "parentId": "226337544983020032",
+         "sort": "26",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": null,
+       "entityId": null,
+       "entityType": null,
+       "id": "226337544983020032",
+       "isCategory": true,
+       "name": "用户手册",
+       "parentId": "-1",
+       "sort": "6",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": "<p label=\"一级标题\" style=\"font-size: 20px; font-weight: bold; line-height: 42px; margin: 0px;\">1 简介</p><p label=\"二级标题\" style=\"font-size: 18px; font-weight: bold; padding: 8px 0px; line-height: 42px; margin: 0px;\">1.1 功能介绍</p><p>自定义服务可以将任何功能开发出来，这类服务不依附任何业务对象，出入参数可以完全自定义。通过自定义服务，可以拓展平台的API，满足一些个性化的需求。<br/></p><p><br/></p><p label=\"二级标题\" style=\"font-size: 18px; font-weight: bold; padding: 8px 0px; line-height: 42px; margin: 0px;\">1.2 应用场景</p><p>1）当标准操作服务无法满足接口需求时，用户可通过注册插件的方式发布自定义接口，自定义接口逻辑和返回参数；</p><p>2）预置自定义接口，提供给苍穹其他模块调用。</p><p>3）标准接口功能不满足时，我们会进行自定义接口的开发，并自定义返回格式（<strong>操作见附件</strong>）<span style=\"\">。</span></p><p><br/></p><p label=\"二级标题\" style=\"font-size: 18px; font-weight: bold; padding: 8px 0px; line-height: 42px; margin: 0px;\">1.3 操作路径</p><p>路径：【开发服务云】→【开放平台】→<span style=\"\">【其他】</span><span style=\"\">→【API1.0】<span style=\"\">→</span></span>【API服务管理1.0】</p><p><br/></p><p label=\"二级标题\" style=\"font-size: 18px; font-weight: bold; padding: 8px 0px; line-height: 42px; margin: 0px;\">1.4 字段/按钮说明</p><p><strong>字段说明：</strong><br/></p><table><colgroup><col/><col/></colgroup><tbody><tr class=\"firstRow\"><td width=\"132.33333333333334\" style=\"\"><strong>字段名称</strong></td><td width=\"489.3333333333333\" style=\"\"><strong>详细解释</strong></td></tr><tr><td style=\"\" width=\"22.000000000000014\">API基本信息</td><td style=\"\" width=\"489.3333333333333\"><br/></td></tr><tr><td width=\"22.000000000000014\" style=\"\">API编码</td><td width=\"489.3333333333333\" style=\"\">API服务编码</td></tr><tr><td width=\"22.000000000000014\" style=\"\">API名称</td><td width=\"489.3333333333333\" style=\"\">API服务名称</td></tr><tr><td width=\"22.000000000000014\" style=\"\">请求方式</td><td width=\"489.3333333333333\" style=\"\">API请求方法，支持GET/POST</td></tr><tr><td width=\"22.000000000000014\" style=\"\">所属应用</td><td width=\"489.3333333333333\" style=\"\">业务对象所属应用</td></tr><tr><td width=\"22.000000000000014\" style=\"\">授权用户</td><td width=\"489.3333333333333\" style=\"\">若仅指定用户可调用该API，可选择授权用户；若为空，则不限制</td></tr><tr><td style=\"\" width=\"22.000000000000014\">请求地址</td><td width=\"489.3333333333333\" style=\"\"><p>请求url地址<a href=\"http://localhost:8080/ierp/kapi/app/\">/app/&nbsp;</a>{appId}/{servicename}，自动生成</p><p>appId：应用id，Servicename：API编码</p></td></tr><tr><td width=\"22.000000000000014\" style=\"\">内容格式</td><td width=\"489.3333333333333\" style=\"\">请求参数的内容格式，默认为application/json</td></tr><tr><td style=\"\" width=\"22.000000000000014\">自定义方法</td><td style=\"\" width=\"489.3333333333333\">预先注册的自定义插件的方法名称</td></tr><tr><td width=\"22.000000000000014\" style=\"\">匿名访问</td><td width=\"489.3333333333333\" style=\"\">设置API匿名，API不需要通过认证即可调用，但存在数据泄露风险，谨慎使用</td></tr><tr><td width=\"22.000000000000014\" style=\"\">详细描述</td><td width=\"489.3333333333333\" style=\"\">API详细描述及功能用途</td></tr><tr><td style=\"\" width=\"22.000000000000014\">请求头部</td><td style=\"\" width=\"489.3333333333333\"><br/></td></tr><tr><td width=\"22.000000000000014\" style=\"\">参数名称</td><td width=\"489.3333333333333\" style=\"\">请求头参数名称</td></tr><tr><td width=\"22.000000000000014\" style=\"\">参数值</td><td width=\"489.3333333333333\" style=\"\">请求头参数值</td></tr><tr><td width=\"22.000000000000014\" style=\"\">说明</td><td width=\"489.3333333333333\" style=\"\">请求头参数说明</td></tr><tr><td style=\"\" width=\"22.000000000000014\">Query参数</td><td style=\"\" width=\"489.3333333333333\"><br/></td></tr><tr><td width=\"22.000000000000014\" style=\"\">参数名称</td><td width=\"489.3333333333333\" style=\"\">Query参数名称</td></tr><tr><td width=\"22.000000000000014\" style=\"\">参数类型</td><td width=\"489.3333333333333\" style=\"\">Query参数类型</td></tr><tr><td width=\"22.000000000000014\" style=\"\">必填</td><td width=\"489.3333333333333\" style=\"\">默认为是</td></tr><tr><td width=\"22.000000000000014\" style=\"\">示例</td><td width=\"489.3333333333333\" style=\"\">Query参数示例</td></tr><tr><td width=\"22.000000000000014\" style=\"\">说明</td><td width=\"489.3333333333333\" style=\"\">Query参数说明</td></tr><tr><td width=\"22.000000000000014\" style=\"\">请求体/返回参数</td><td width=\"489.3333333333333\" style=\"\"><br/></td></tr><tr><td width=\"22.000000000000014\" style=\"\">参数名称</td><td width=\"489.3333333333333\" style=\"\">请求体/返回参数名称</td></tr><tr><td width=\"22.000000000000014\" style=\"\">参数类型</td><td width=\"489.3333333333333\" style=\"\">请求体/返回参数类型</td></tr><tr><td width=\"22.000000000000014\" style=\"\">必填</td><td width=\"489.3333333333333\" style=\"\">默认为是</td></tr><tr><td width=\"22.000000000000014\" style=\"\">示例</td><td width=\"489.3333333333333\" style=\"\">请求体/返回参数示例</td></tr><tr><td width=\"22.000000000000014\" style=\"\">说明</td><td width=\"489.3333333333333\" style=\"\">请求体/返回参数说明</td></tr><tr><td width=\"22.000000000000014\" style=\"\">插件</td><td width=\"489.3333333333333\" style=\"\"><br/></td></tr><tr><td width=\"22.000000000000014\" style=\"\">是否启用</td><td width=\"489.3333333333333\" style=\"\">插件开关，选择是否启用插件</td></tr><tr><td width=\"22.000000000000014\" style=\"\">插件名称</td><td width=\"489.3333333333333\" style=\"\">预先注册的插件名称</td></tr><tr><td width=\"22.000000000000014\" style=\"\">本单插件</td><td width=\"489.3333333333333\" style=\"\">默认为是</td></tr><tr><td width=\"22.000000000000014\" style=\"\">插件路径</td><td width=\"489.3333333333333\" style=\"\">预先注册的插件路径</td></tr><tr><td width=\"22.000000000000014\" style=\"\">描述说明</td><td width=\"489.3333333333333\" style=\"\">预先注册的插件说明</td></tr></tbody></table><p><br/></p><p><strong>按钮说明：</strong></p><table><colgroup><col/><col/></colgroup><tbody><tr class=\"firstRow\"><td width=\"138.33333333333334\" style=\"\"><strong>按钮名称</strong></td><td width=\"484.3333333333333\" style=\"\"><strong>详细解释</strong></td></tr><tr><td style=\"\" width=\"38.000000000000014\">单据头</td><td style=\"\" width=\"484.3333333333333\"><br/></td></tr><tr><td width=\"38.000000000000014\" style=\"\">保存</td><td width=\"484.3333333333333\" style=\"\">保存当前API服务信息</td></tr><tr><td width=\"38.000000000000014\" style=\"\">保存并新增</td><td width=\"484.3333333333333\" style=\"\">保存当前API服务信息，并打开新建API服务的弹窗</td></tr><tr><td width=\"38.000000000000014\" style=\"\">退出</td><td width=\"484.3333333333333\" style=\"\">退出当前界面</td></tr><tr><td style=\"\" width=\"38.000000000000014\">请求头</td><td style=\"\" width=\"484.3333333333333\"><br/></td></tr><tr><td width=\"38.000000000000014\" style=\"\">增行</td><td width=\"484.3333333333333\" style=\"\">列表新增空白行</td></tr><tr><td width=\"38.000000000000014\" style=\"\">删行</td><td width=\"484.3333333333333\" style=\"\">删除勾选行数据，支持多条数据批量删除</td></tr><tr><td width=\"38.000000000000014\" style=\"\">上移</td><td width=\"484.3333333333333\" style=\"\">勾选请求头数据，点击按钮，行数据会上移一行</td></tr><tr><td width=\"38.000000000000014\" style=\"\">下移</td><td width=\"484.3333333333333\" style=\"\">勾选请求头数据，点击按钮，行数据会下移一行</td></tr><tr><td width=\"38.000000000000014\" style=\"\">请求结构示例</td><td width=\"484.3333333333333\" style=\"\">弹出请求结构体示例弹窗</td></tr><tr><td style=\"\" width=\"38.000000000000014\">Query参数</td><td style=\"\" width=\"484.3333333333333\"><br/></td></tr><tr><td width=\"38.000000000000014\" style=\"\">增行</td><td width=\"484.3333333333333\" style=\"\">列表新增空白行</td></tr><tr><td width=\"38.000000000000014\" style=\"\">删行</td><td width=\"484.3333333333333\" style=\"\">点除勾选行数据，支持多条数据批量删除</td></tr><tr><td width=\"38.000000000000014\" style=\"\">从对象中添加</td><td width=\"484.3333333333333\" style=\"\">弹出对象选择弹窗，支持批量勾选，点击确定后会自动填充数据到query参数列表中</td></tr><tr><td width=\"38.000000000000014\" style=\"\">上移</td><td width=\"484.3333333333333\" style=\"\">勾选query参数数据，点击按钮，行数据会上移一行</td></tr><tr><td width=\"38.000000000000014\" style=\"\">下移</td><td width=\"484.3333333333333\" style=\"\">勾选query参数数据，点击按钮，行数据会下移一行</td></tr><tr><td width=\"38.000000000000014\" style=\"\">请求结构示例</td><td width=\"484.3333333333333\" style=\"\">弹出请求结构体示例弹窗</td></tr><tr><td width=\"38.000000000000014\" style=\"\">请求体/返回参数</td><td width=\"484.3333333333333\" style=\"\"><br/></td></tr><tr><td width=\"38.000000000000014\" style=\"\">增行</td><td width=\"484.3333333333333\" style=\"\">列表新增空白行</td></tr><tr><td width=\"38.000000000000014\" style=\"\">增子行</td><td width=\"484.3333333333333\" style=\"\">勾选某行数据，点击按钮，会在该行参数下增加子行。当选择多行数据时，只会在勾选的第一条数据下增加子行</td></tr><tr><td width=\"38.000000000000014\" style=\"\">从对象中添加</td><td width=\"484.3333333333333\" style=\"\">点击按钮，弹出对象选择弹窗，支持批量勾选，点击确定后会自动填充数据到请求体/返回参数列表中</td></tr><tr><td width=\"38.000000000000014\" style=\"\">请求/返回结构示例</td><td width=\"484.3333333333333\" style=\"\">点击按钮，弹出请求结构体/返回结构体示例弹窗</td></tr><tr><td width=\"38.000000000000014\" style=\"\">删行</td><td width=\"484.3333333333333\" style=\"\">点击按钮，删除勾选行数据，支持多条数据批量删除</td></tr><tr><td width=\"38.000000000000014\" style=\"\">上移</td><td width=\"484.3333333333333\" style=\"\">勾选请求体数据，点击按钮，行数据会上移一行</td></tr><tr><td width=\"38.000000000000014\" style=\"\">下移</td><td width=\"484.3333333333333\" style=\"\">勾选请求体数据，点击按钮，行数据会下移一行</td></tr></tbody></table><p><br/></p><p label=\"一级标题\" style=\"font-size: 20px; font-weight: bold; line-height: 42px; margin: 0px;\">2 主要操作</p><p label=\"二级标题\" style=\"font-size: 18px; font-weight: bold; padding: 8px 0px; line-height: 42px; margin: 0px;\">2.1 注册自定义插件</p><p label=\"正文\" style=\"font-size: 15px;\">自定义服务与操作服务的使用方式不同，自定义服务需要先开发插件，然后发布API，插件可以使用自定义的java插件或脚本插件，下面介绍自定义服务的调用流程。</p><p>首先需要开发人员创建一个类，实现IBillWebApiPlugin接口，并重写doCustomService()方法，在方法内实现自定义的相关逻辑。</p><p><br/></p><p><strong>自定义服务插件代码示例：</strong></p><table><tbody><tr class=\"firstRow\"><td style=\"\"><p><br/></p><p>import kd.bos.bill.IBillWebApiPlugin;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p><p>import kd.bos.entity.api.ApiResult;</p><p>import java.util.Map;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p><p><br/></p><p>public class HelloWorldPlugin implements IBillWebApiPlugin {</p><p><br/></p><p>@Override</p><p>public ApiResult doCustomService(Map&lt;String, Object&gt; params) {</p><p><br/></p><p>//实现业务逻辑。。。&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p><p><br/></p><p>ApiResult apiResult = new ApiResult();</p><p>apiResult.setSuccess(true);</p><p>apiResult.setErrorCode(&quot;success&quot;);</p><p>apiResult.setMessage(&quot;HelloWorld Success&quot;);</p><p>apiResult.setData(null);</p><p>return apiResult;</p><p>}</p><p>}</p><p><br/></p></td></tr></tbody></table><p><br/></p><p label=\"二级标题\" style=\"font-size: 18px; font-weight: bold; padding: 8px 0px; line-height: 42px; margin: 0px;\">2.2 维护API基本信息</p><p>打开【API服务管理】菜单，点击“新增”按钮，选择操作服务，进入到操作服务新增界面，录入API基本信息等字段，API请求地址自动生成。</p><p><br/></p><p><img src=\"/download/0100f2fc1deb93cc4f0bb247332a158c4501.png\"/></p><p><br/></p><p><img src=\"/download/010973edc07317c14eaa92419e4a6e78e118.png\"/></p><p><br/></p><p label=\"二级标题\" style=\"font-size: 18px; font-weight: bold; padding: 8px 0px; line-height: 42px; margin: 0px;\">2.3&nbsp;维护请求/返回参数（非必填）</p><p>在页面上维护请求参数，请求头部默认包含参数 Content-type和 assesstoken。若为get类请求，可维护Query参数及示例，若为POST类请求，可维护请求体参数及示例。<br/></p><p><br/></p><p><img src=\"/download/0109faa3409adcd84fbbb442afc80fe42dec.png\"/></p><p><br/></p><p>同样的方式在页面上维护接口返回参数，上一步维护的请求参数和<strong>返回参数示例</strong><strong>仅作为参考</strong>，实际返回的数据会自定义插件代码逻辑返回<strong>。</strong></p><p><br/></p><p><img src=\"/download/0109400e95876b7e478b8606ea41ac1c00ab.png\"/></p><p><br/></p><p label=\"二级标题\" style=\"font-size: 18px; font-weight: bold; padding: 8px 0px; line-height: 42px; margin: 0px;\"><span style=\"font-size: 20px; font-weight: bold;\">2.4 注册插件</span></p><p>在最下方插件栏，注册上一步开发的插件等信息，点击保存即可。<br/></p><p><img src=\"/download/010043f3045b040d4b9bacba45192e373832.png\"/></p><p label=\"一级标题\" style=\"font-size: 20px; font-weight: bold; line-height: 42px; margin: 0px;\"><br/></p><p label=\"一级标题\" style=\"font-size: 20px; font-weight: bold; line-height: 42px; margin: 0px;\">3 自定义插件方法</p><p>当开发注册自定义插件时，系统预置了两个版本的 ApiResult doCustomService 方法，分别为1.0和2.0版本，如果用户不去重写方法，会默认使用1.0版本的方法。</p><p><strong>版本差异</strong>：</p><p label=\"正文\" style=\"font-size: 15px;\">1.0 ：当为get请求时，客户端只传querystring给服务端；当为post请求时，客户端只传请求体中的data给服务端。</p><p><br/></p><p><img src=\"https://vip.kingdee.com/download/0100506fdfa785eb414e854ebd909ca55ba2.png\"/></p><p><br/></p><p>2.0 ：不论请求方式为get或post，客户端传给服务端的参数比1.0版本增加了requestURL、appId和Cookie。当为post请求时，客户端会同时传querystring和请求体中的data给服务端。</p><p><br/></p><p><img src=\"https://vip.kingdee.com/download/0100cb7fe1f9827b40efb553a2eb74d519d8.png\"/></p><p><br/></p><p><strong>代码示例：</strong></p><table><tbody><tr class=\"firstRow\"><td style=\"\"><p><br/></p><p><strong>版本控制方法：</strong></p><p>@Override</p><p>&nbsp;&nbsp;&nbsp;&nbsp;public String getVersion() {</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// TODO Auto-generated method stub</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return &quot;abc&quot;; &nbsp; &nbsp; // 当return值为空或”1.0”时 ，使用1.0版本；当Return值为其他非”1.0”文本字段，使用2.0版本</p><p>&nbsp;&nbsp;&nbsp;&nbsp;}</p><p><br/></p><p><strong>方法一（1.0版本）：</strong></p><p>&nbsp;&nbsp;&nbsp;&nbsp;@Override</p><p>&nbsp;&nbsp;&nbsp;&nbsp;public ApiResult doCustomService(Map&lt;String, Object&gt; params) {</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// TODO Auto-generated method stub</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String iobj = &quot;这是返回&quot;;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return IBillWebApiPlugin.super.doCustomService(params);</p><p>&nbsp;&nbsp;&nbsp;&nbsp;}</p><p><br/></p><p><strong>方法二（2.0版本）：</strong></p><p><br/></p><p>&nbsp;&nbsp;&nbsp;&nbsp;@Override</p><p>&nbsp;&nbsp;&nbsp;&nbsp;public ApiResult doCustomService(WebApiContext ctx) {</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// TODO Auto-generated method stub</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return IBillWebApiPlugin.super.doCustomService(ctx);</p><p>&nbsp;&nbsp;&nbsp;&nbsp;}</p><p><br/></p><p><br/></p></td></tr></tbody></table><p><br/></p><p><br/></p><p>在标准接口功能不满足时，我们会进行自定义接口的开发，<strong>如何自定义接口返回格式见附件。</strong></p><p><br/></p><p label=\"一级标题\" style=\"font-size: 20px; font-weight: bold; line-height: 42px; margin: 0px;\">更多</p><p><a href=\"/tolink?target=https%3A%2F%2Fclub.kdcloud.com%2Farticle%2F213309216688450304\" title=\"\" target=\"_blank\" class=\"\">金蝶AI苍穹开放平台API调用流程</a></p><p><a href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=239331354741842688&id=218694224487485696\" title=\"\" target=\"_blank\" class=\"\">金蝶AI苍穹OpenAPI开发认证指南</a></p><p><a href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=226337680139592960&id=220941231520321792\" title=\"\" target=\"_blank\" class=\"\">操作服务介绍</a></p><p><br/></p>"
+}

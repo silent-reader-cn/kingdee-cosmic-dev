@@ -1,0 +1,453 @@
+{
+ "badNum": 0,
+ "identityTagIds": null,
+ "knowledgeId": "754667702886790144",
+ "createdAt": 1757734801000,
+ "collections": 1,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "754667702886790144",
+ "contentType": 1,
+ "updatedAt": 1765452269000,
+ "knowledgeUpdater": {
+  "avatar": "/download/010162cfa9d7437711e8b441060400ef5315.png",
+  "department": null,
+  "id": "730768158021232896",
+  "name": "Weijie_Ou",
+  "nameSpell": "name"
+ },
+ "assessStatus": 0,
+ "knowledgeStatus": 2,
+ "assessHandleStatus": null,
+ "knowledgeCreatedAt": 1757734801000,
+ "version": 11,
+ "labels": [],
+ "editedAt": 1765451184000,
+ "identityTags": null,
+ "useful": 0,
+ "errors": [],
+ "isCollected": false,
+ "totalFeedBacks": 0,
+ "attachments": [],
+ "sources": [],
+ "editTitle": "脚本开发RESTful API",
+ "title": "脚本开发RESTful API",
+ "content": "<h2><strong>1.&nbsp;简介</strong></h2><h2><strong>1.1 功能介绍</strong></h2><p>脚本开发RESTful API用于处理复杂业务场景（如多系统数据联动、自定义业务逻辑计算、调用 Java 插件方法），适用于实体服务 API 无法满足的个性化需求（如查询物料可用量时需联动库存系统与采购系统数据，或自定义数据校验规则）。此类 API 不依附任何业务对象，请求/响应参数可完全自定义，灵活性更高。</p><p>注意：脚本开发RESTful API 虽然灵活度更高，但开发人员一定要遵循RESTful 规范，即资源导向和HTTP动作语义化，详见<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://developer.kingdee.com/knowledge/743509706684845824\">RESTful API 设计指南</a>。</p><h2><strong>1.2 应用场景</strong></h2><p style=\"text-align: justify; font-size: 15px\">使用脚本开发API，供外部第三方应用调用，解决复杂的API集成场景。</p><p style=\"font-size: 15px\"></p><h2><strong>1.3 系统路径</strong></h2><p style=\"text-align: justify; font-size: 15px\">【开放服务云】→【OpenAPI】→【RESTful API】<strong>→</strong>【RESTful API管理】</p><p style=\"text-align: justify; font-size: 15px\"></p><h2><strong>2. 主要操作</strong></h2><p>在 RESTful API 管理列表点击 “新增自定义脚本API”，进入自定义脚本 API 编辑页。</p><ol class=\"custom_num2\"><li><p>维护基本信息：如名称、编码、所属应用、自定义分组、创建人、服务类型、请求/响应参数摘要模板、日志级别、详细描述等。</p></li><li><p>请求端点配置：方法、资源路径、路由唯一标识、完整请求地址。</p><p>注意：自定义脚本API灵活性较高，开发人员一定要遵循RESTful 规范设计API，并在脚本中自行保障API安全性。</p></li><li><p>维护请求参数：用户可完全自定义Path路径参数、Query参数、请求体参数或请求头参数，遵循RESTful API成熟度规范，定义好的参数可以在自定义脚本中进行引用。</p></li><li><p>编写自定义脚本：结合实际业务场景，维护API脚本，开发对应逻辑。产品中有脚本帮助手册提供参考。</p></li><li><p>维护响应参数：展示不同HTTP状态码下的响应示例。请求成功时状态码为200-OK，返回参数根据需要，手工添加或通过Json导入。</p><p></p></li></ol><h3>2.1 新增自定义脚本API</h3><p><img src=\"/download/0100ee5662afc0754cdfb25b0daaee27d810.png\" alt=\"上传图片\"></p><p style=\"text-align: justify\"></p><p style=\"text-align: justify\">在自定义脚本API开发页面，输入资源路径，页面会生成API的完整请求路径。</p><p>&nbsp;</p><p><img src=\"/download/010014f01172539746558472c5581be9e73d.png\" alt=\"上传图片\"></p><p><img src=\"/download/01008a826b25577f43c9937dfb152c0382d3.png\" alt=\"上传图片\"></p><p></p><h3>2.2 &nbsp;POST请求（用户通过请求体传递参数）</h3><p style=\"text-align: justify\">请求体参数分录可以直接通过JSON导入，如入参示例JSON为：</p><pre><code class=\"language-java\">{\n    \"order_id\": \"ORD202410230001\",\n    \"order_status\": \"paid\",\n    \"customer_info\": {\n        \"customer_id\": \"CUST10086\",\n        \"name\": \"张三\",\n        \"phone\": \"13800138000\",\n        \"email\": \"zhangsan@example.com\",\n        \"vip_level\": 2\n    },\n    \"order_items\": [\n        {\n            \"product_id\": \"P1001\",\n            \"product_name\": \"iPhone 15 Pro\",\n            \"unit_price\": 7999.00,\n            \"quantity\": 1,\n            \"subtotal\": 7999.00,\n            \"in_stock\": true\n        },\n        {\n            \"product_id\": \"P2005\",\n            \"product_name\": \"AirPods Pro\",\n            \"unit_price\": 1899.00,\n            \"quantity\": 2,\n            \"subtotal\": 3798.00,\n            \"in_stock\": true\n        }\n    ]\n}</code></pre><p style=\"text-align: justify\">导入后即能生成所有参数分录：</p><p style=\"text-align: justify\"></p><p><img src=\"/download/010067d01e9c4fa64cd09235b82303009492.png\" alt=\"上传图片\"></p><p></p><h3>2.3 &nbsp;GET请求（用户通过query传递参数）</h3><p>可在请求参数中，新增query参数id</p><p><img src=\"/download/01001262b1a6e8514bb3b1bc2a1b58237522.png\" alt=\"上传图片\"></p><p></p><p>则后续调用openapi时使用 ?id=xxx 传递。</p><p></p><h3>2.4 维护成功响应体模型</h3><p>响应体参数跟请求体参数模型一样，也可以通过JSON导入自动生成。也可以自行新增分录维护。</p><p><img src=\"/download/01003b362479bb0e47629e7de7f737ce0560.png\" alt=\"上传图片\"></p><h3>2.5 编写脚本业务逻辑</h3><ul><li><p>脚本上下文预置变量：Path参数（$path_params）、Query参数（$query_params）、请求体（$body_params）&nbsp;，可通过这些变量取值使用。</p></li><li><p>脚本上下文预置调用微服务函数：invokeMicroService2(cloudid, appid, servicename, method, params, proxyuser);</p></li></ul><p>函数参数说明：</p><table style=\"min-width: 549px\"><colgroup><col style=\"width: 106px\"><col style=\"width: 393px\"><col style=\"min-width: 25px\"><col style=\"min-width: 25px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"106\" data-background-color=\"rgb(219, 229, 241)\" style=\"background-color: rgb(219, 229, 241)\"><p><strong>参数名</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"393\" data-background-color=\"rgb(219, 229, 241)\" style=\"background-color: rgb(219, 229, 241)\"><p><strong>参数描述</strong></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"rgb(219, 229, 241)\" style=\"background-color: rgb(219, 229, 241)\"><p><strong>参数类型</strong></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"rgb(219, 229, 241)\" style=\"background-color: rgb(219, 229, 241)\"><p><strong>必填</strong></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"106\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">cloudid</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"393\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">云ID</span></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">是</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"106\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">appid</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"393\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">应用ID</span></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">是</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"106\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">servicename</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"393\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">服务接口名称</span></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">是</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"106\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">method</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"393\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">方法名称</span></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">是</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"106\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">params</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"393\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">参数</span></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">List</span></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">是</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"106\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">proxyuser</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"393\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">代理用户（用户id或编码，调用微服务时会优先使用该值构造上下文</span></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">String/Long</span></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">否</span></p></td></tr></tbody></table><p></p><ul><li><p>编写自定义脚本逻辑，组装结果返回。如下图脚本所示，返回map结构，结构中包含id entry。</p></li></ul><p></p><p><img src=\"/download/01008442d842007942a6ae7b1d68f7a29927.png\" alt=\"上传图片\"></p><p></p><p>标准微服务调用示例：</p><p>var result = invokeMicroService2(\"isc\", \"iscb\", \"IscTestService\", \"targetHandle\", [$body_params], null);</p><p>&nbsp;</p><p><span style=\"color: rgb(227, 108, 9)\">注意：二开微服务的cloudid为二开工厂类的部署包路径，并以@isv结尾。</span></p><p><span style=\"color: rgb(227, 108, 9)\">如示例脚本中登记的二开微服务工厂为</span></p><p><span style=\"color: rgb(227, 108, 9)\">kd.isc.iscb.platform.core.isv.ServiceFactory</span></p><p><span style=\"color: rgb(227, 108, 9)\">则调用脚本应该为</span></p><p><span style=\"color: rgb(227, 108, 9)\">var result =</span></p><p><span style=\"color: rgb(227, 108, 9)\">invokeMicroService2(\"kd.isc.iscb.platform.core.isv@isv\",\"iscb\",\"IscTestService\", \"targetHandle\", [$body_params], null);</span></p><p></p><h3>2.6 测试验证</h3><p><img src=\"/download/01003dbdc26f51c84d398d4d9a7c8f9c8410.png\" alt=\"上传图片\"></p><p></p><p></p><p></p>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 87,
+   "isOpen": 1,
+   "name": "金蝶AI苍穹",
+   "productLineId": 29,
+   "series": "developer01",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "754667702886790144",
+         "entityType": "Knowledge",
+         "id": "755471120660376329",
+         "isCategory": false,
+         "name": "脚本开发RESTful API",
+         "parentId": "755471013420411648",
+         "sort": "7",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": "",
+       "id": "755471013420411648",
+       "isCategory": true,
+       "name": "RESTful API",
+       "parentId": "226337544983020032",
+       "sort": "24",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": null,
+     "entityId": null,
+     "entityType": null,
+     "id": "226337544983020032",
+     "isCategory": true,
+     "name": "用户手册",
+     "parentId": "-1",
+     "sort": "6",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download/01010204d4b71b654a208006fa1004eac36a.png",
+  "department": null,
+  "id": "740211268992385024",
+  "name": "毛毛去哪儿",
+  "nameSpell": "name"
+ },
+ "totalAppraisalScore": 0,
+ "iflytekId": null,
+ "views": 1252,
+ "productLineId": 29,
+ "comments": 0,
+ "similarityCount": null,
+ "totalAppraisalUsers": 0,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1765452269000,
+ "appraisalScore": 0,
+ "unuseful": 0,
+ "knowledgeCheckStatus": 2,
+ "otherProductLineIds": [],
+ "auditAt": 1765452269000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "open_rest_api",
+        "id": "760141571462408192",
+        "name": "RESTful API管理",
+        "productLineId": null,
+        "sort": 22,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 0,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "OperatingGuide",
+     "createdAt": 1556519201000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "某一功能的具体说明介绍，包括应用场景、参数说明、具体操作步骤等",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/010037894174802d4b9f8782f1f0010a6ddd.png",
+     "id": "202203081641",
+     "name": "功能介绍",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010176d38341668f44fdb94c95058a90e4b8.png",
+      "department": "云社区运营部",
+      "id": "2147406697",
+      "name": "多肉丸子",
+      "nameSpell": "kejuan"
+     },
+     "updatedAt": 1676857681000
+    },
+    {
+     "code": "rumen",
+     "createdAt": 1605667807000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "入门类的知识可使用此标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100d322b9282bcc438faa894f4eec029977.png",
+     "id": "202203081646",
+     "name": "基础入门",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download?fileName=0101ec1d6ce599b442dab7d0b794c1fce88d.png",
+      "department": null,
+      "id": "1009",
+      "name": "一颗小星星",
+      "nameSpell": "fengling"
+     },
+     "updatedAt": 1657872008000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          {
+           "childCategory": [
+            null
+           ],
+           "code": null,
+           "description": "",
+           "entityId": "754667702886790144",
+           "entityType": "Knowledge",
+           "id": "755471120660376329",
+           "isCategory": false,
+           "name": "脚本开发RESTful API",
+           "parentId": "755471013420411648",
+           "sort": "7",
+           "specialId": "226337046514476288",
+           "status": 1
+          }
+         ],
+         "code": null,
+         "description": "",
+         "entityId": null,
+         "entityType": "",
+         "id": "755471013420411648",
+         "isCategory": true,
+         "name": "RESTful API",
+         "parentId": "226337544983020032",
+         "sort": "24",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": null,
+       "entityId": null,
+       "entityType": null,
+       "id": "226337544983020032",
+       "isCategory": true,
+       "name": "用户手册",
+       "parentId": "-1",
+       "sort": "6",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": "<h2><strong>1.&nbsp;简介</strong></h2><h2><strong>1.1 功能介绍</strong></h2><p>脚本开发RESTful API用于处理复杂业务场景（如多系统数据联动、自定义业务逻辑计算、调用 Java 插件方法），适用于实体服务 API 无法满足的个性化需求（如查询物料可用量时需联动库存系统与采购系统数据，或自定义数据校验规则）。此类 API 不依附任何业务对象，请求/响应参数可完全自定义，灵活性更高。</p><p>注意：脚本开发RESTful API 虽然灵活度更高，但开发人员一定要遵循RESTful 规范，即资源导向和HTTP动作语义化，详见<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://developer.kingdee.com/knowledge/743509706684845824\">RESTful API 设计指南</a>。</p><h2><strong>1.2 应用场景</strong></h2><p style=\"text-align: justify; font-size: 15px\">使用脚本开发API，供外部第三方应用调用，解决复杂的API集成场景。</p><p style=\"font-size: 15px\"></p><h2><strong>1.3 系统路径</strong></h2><p style=\"text-align: justify; font-size: 15px\">【开放服务云】→【OpenAPI】→【RESTful API】<strong>→</strong>【RESTful API管理】</p><p style=\"text-align: justify; font-size: 15px\"></p><h2><strong>2. 主要操作</strong></h2><p>在 RESTful API 管理列表点击 “新增自定义脚本API”，进入自定义脚本 API 编辑页。</p><ol class=\"custom_num2\"><li><p>维护基本信息：如名称、编码、所属应用、自定义分组、创建人、服务类型、请求/响应参数摘要模板、日志级别、详细描述等。</p></li><li><p>请求端点配置：方法、资源路径、路由唯一标识、完整请求地址。</p><p>注意：自定义脚本API灵活性较高，开发人员一定要遵循RESTful 规范设计API，并在脚本中自行保障API安全性。</p></li><li><p>维护请求参数：用户可完全自定义Path路径参数、Query参数、请求体参数或请求头参数，遵循RESTful API成熟度规范，定义好的参数可以在自定义脚本中进行引用。</p></li><li><p>编写自定义脚本：结合实际业务场景，维护API脚本，开发对应逻辑。产品中有脚本帮助手册提供参考。</p></li><li><p>维护响应参数：展示不同HTTP状态码下的响应示例。请求成功时状态码为200-OK，返回参数根据需要，手工添加或通过Json导入。</p><p></p></li></ol><h3>2.1 新增自定义脚本API</h3><p><img src=\"/download/0100ee5662afc0754cdfb25b0daaee27d810.png\" alt=\"上传图片\"></p><p style=\"text-align: justify\"></p><p style=\"text-align: justify\">在自定义脚本API开发页面，输入资源路径，页面会生成API的完整请求路径。</p><p>&nbsp;</p><p><img src=\"/download/010014f01172539746558472c5581be9e73d.png\" alt=\"上传图片\"></p><p><img src=\"/download/01008a826b25577f43c9937dfb152c0382d3.png\" alt=\"上传图片\"></p><p></p><h3>2.2 &nbsp;POST请求（用户通过请求体传递参数）</h3><p style=\"text-align: justify\">请求体参数分录可以直接通过JSON导入，如入参示例JSON为：</p><pre><code class=\"language-java\">{\n    \"order_id\": \"ORD202410230001\",\n    \"order_status\": \"paid\",\n    \"customer_info\": {\n        \"customer_id\": \"CUST10086\",\n        \"name\": \"张三\",\n        \"phone\": \"13800138000\",\n        \"email\": \"zhangsan@example.com\",\n        \"vip_level\": 2\n    },\n    \"order_items\": [\n        {\n            \"product_id\": \"P1001\",\n            \"product_name\": \"iPhone 15 Pro\",\n            \"unit_price\": 7999.00,\n            \"quantity\": 1,\n            \"subtotal\": 7999.00,\n            \"in_stock\": true\n        },\n        {\n            \"product_id\": \"P2005\",\n            \"product_name\": \"AirPods Pro\",\n            \"unit_price\": 1899.00,\n            \"quantity\": 2,\n            \"subtotal\": 3798.00,\n            \"in_stock\": true\n        }\n    ]\n}</code></pre><p style=\"text-align: justify\">导入后即能生成所有参数分录：</p><p style=\"text-align: justify\"></p><p><img src=\"/download/010067d01e9c4fa64cd09235b82303009492.png\" alt=\"上传图片\"></p><p></p><h3>2.3 &nbsp;GET请求（用户通过query传递参数）</h3><p>可在请求参数中，新增query参数id</p><p><img src=\"/download/01001262b1a6e8514bb3b1bc2a1b58237522.png\" alt=\"上传图片\"></p><p></p><p>则后续调用openapi时使用 ?id=xxx 传递。</p><p></p><h3>2.4 维护成功响应体模型</h3><p>响应体参数跟请求体参数模型一样，也可以通过JSON导入自动生成。也可以自行新增分录维护。</p><p><img src=\"/download/01003b362479bb0e47629e7de7f737ce0560.png\" alt=\"上传图片\"></p><h3>2.5 编写脚本业务逻辑</h3><ul><li><p>脚本上下文预置变量：Path参数（$path_params）、Query参数（$query_params）、请求体（$body_params）&nbsp;，可通过这些变量取值使用。</p></li><li><p>脚本上下文预置调用微服务函数：invokeMicroService2(cloudid, appid, servicename, method, params, proxyuser);</p></li></ul><p>函数参数说明：</p><table style=\"min-width: 549px\"><colgroup><col style=\"width: 106px\"><col style=\"width: 393px\"><col style=\"min-width: 25px\"><col style=\"min-width: 25px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"106\" data-background-color=\"rgb(219, 229, 241)\" style=\"background-color: rgb(219, 229, 241)\"><p><strong>参数名</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"393\" data-background-color=\"rgb(219, 229, 241)\" style=\"background-color: rgb(219, 229, 241)\"><p><strong>参数描述</strong></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"rgb(219, 229, 241)\" style=\"background-color: rgb(219, 229, 241)\"><p><strong>参数类型</strong></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"rgb(219, 229, 241)\" style=\"background-color: rgb(219, 229, 241)\"><p><strong>必填</strong></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"106\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">cloudid</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"393\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">云ID</span></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">是</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"106\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">appid</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"393\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">应用ID</span></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">是</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"106\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">servicename</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"393\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">服务接口名称</span></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">是</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"106\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">method</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"393\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">方法名称</span></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">String</span></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">是</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"106\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">params</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"393\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">参数</span></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">List</span></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">是</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"106\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">proxyuser</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"393\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">代理用户（用户id或编码，调用微服务时会优先使用该值构造上下文</span></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">String/Long</span></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">否</span></p></td></tr></tbody></table><p></p><ul><li><p>编写自定义脚本逻辑，组装结果返回。如下图脚本所示，返回map结构，结构中包含id entry。</p></li></ul><p></p><p><img src=\"/download/01008442d842007942a6ae7b1d68f7a29927.png\" alt=\"上传图片\"></p><p></p><p>标准微服务调用示例：</p><p>var result = invokeMicroService2(\"isc\", \"iscb\", \"IscTestService\", \"targetHandle\", [$body_params], null);</p><p>&nbsp;</p><p><span style=\"color: rgb(227, 108, 9)\">注意：二开微服务的cloudid为二开工厂类的部署包路径，并以@isv结尾。</span></p><p><span style=\"color: rgb(227, 108, 9)\">如示例脚本中登记的二开微服务工厂为</span></p><p><span style=\"color: rgb(227, 108, 9)\">kd.isc.iscb.platform.core.isv.ServiceFactory</span></p><p><span style=\"color: rgb(227, 108, 9)\">则调用脚本应该为</span></p><p><span style=\"color: rgb(227, 108, 9)\">var result =</span></p><p><span style=\"color: rgb(227, 108, 9)\">invokeMicroService2(\"kd.isc.iscb.platform.core.isv@isv\",\"iscb\",\"IscTestService\", \"targetHandle\", [$body_params], null);</span></p><p></p><h3>2.6 测试验证</h3><p><img src=\"/download/01003dbdc26f51c84d398d4d9a7c8f9c8410.png\" alt=\"上传图片\"></p><p></p><p></p><p></p>"
+}

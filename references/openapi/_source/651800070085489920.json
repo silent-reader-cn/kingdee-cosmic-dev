@@ -1,0 +1,781 @@
+{
+ "badNum": 0,
+ "identityTagIds": null,
+ "knowledgeId": "651800070085489920",
+ "createdAt": 1733209247000,
+ "collections": 10,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "651800070085489920",
+ "contentType": 1,
+ "updatedAt": 1785349490000,
+ "knowledgeUpdater": {
+  "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+  "department": null,
+  "id": "132488613174518784",
+  "name": "某个路易",
+  "nameSpell": "name"
+ },
+ "assessStatus": 0,
+ "knowledgeStatus": 2,
+ "assessHandleStatus": null,
+ "knowledgeCreatedAt": 1733209247000,
+ "version": 13,
+ "labels": [],
+ "editedAt": 1757064960000,
+ "identityTags": null,
+ "useful": 3,
+ "errors": [],
+ "isCollected": false,
+ "totalFeedBacks": 0,
+ "attachments": [],
+ "sources": [],
+ "editTitle": "审核接口提示“单据已在流程中流转，不能审核”",
+ "title": "审核接口提示“单据已在流程中流转，不能审核”",
+ "content": "<h2 label=\"一级标题\" class=\"first-title html-anchor-list0-1733207245436 html-anchor-list0-1733207245436\" style=\"\">1 问题描述</h2><p label=\"正文\" style=\"\"><span style=\"color: rgb(0, 0, 0);\"></span></p><p label=\"正文\" style=\"\"><span style=\"color: black;\">使用零代码配置的审核操作API，提示报错：单据已在流程中流转，不能审核</span><span style=\"color: black;\">，实际这个单据不应该进入工作流</span><strong style=\"color: black;\">。</strong></p><p style=\"\"><span style=\"color: rgb(0, 0, 0);\"></span></p><p style=\"\"><span style=\"color: rgb(0, 0, 0);\"></span></p><p style=\"\"><br></p><p style=\"\"><img src=\"/download/010926e513d76cab48a9ac7cb60452e7cdb6.png\"></p><h2 label=\"一级标题\" class=\"first-title html-anchor-list1-1733207245436 html-anchor-list1-1733207245436\" style=\"\">2 <strong style=\"\">原因分析</strong></h2><p style=\"\"><span style=\"color: black;\">会出现上面的场景都是因为这个单据配置了部分单据走工作流审批，部分单据不需要走工作流审批，当单据提交后，系统会逐一匹配工作流的启动条件，直到所有条件都匹配不上，寻址结束后才能进行审核。但是上面场景是提交后立马执行审核，寻址没有结束就会报如上的错误。</span></p><p style=\"\"><span style=\"color: black;\"><br></span></p><p style=\"\"><span style=\"color: black;\"></span></p><h2 label=\"一级标题\" class=\"first-title html-anchor-list1-1733207245436 html-anchor-list1-1733207245436\" style=\"\">3 解决方案</h2><p>若遇到上述场景，流程服务和OpenAPI均有提供解决方案，详细参考如下：</p><p><br></p><p>方案一：流程服务工作流解决方案，详见<a href=\"https://developer.kingdee.com/article/553647116485340928?productLineId=29&amp;isKnowledge=2&amp;lang=zh-CN\" target=\"_blank\" style=\"color: rgb(0, 112, 192);\"><span style=\"color: rgb(0, 112, 192);\">审核操作提示“单据已在流程中流转，不能审核”的解决方案</span></a>；</p><p><br></p><p>方案二：OpenAPI自定义参数解决方案，通过参数跳过工作流，调用方在审核接口的请求body中，传入自定义参数WF，设为false ，即不进入工作流。示例：</p><p><br></p><p>{</p><p>&nbsp; &nbsp; \"data\": {</p><p>&nbsp; &nbsp; &nbsp; &nbsp; \"billno\": \"unittest-20004124\"</p><p>&nbsp; &nbsp; },</p><p>&nbsp; &nbsp; \"optionvariables\": {</p><p>&nbsp; &nbsp; &nbsp; &nbsp; \"WF\": \"false\"</p><p>&nbsp; &nbsp; }</p><p>}</p><p style=\"\"><span style=\"color: black;\"><br></span></p><p style=\"\"><span style=\"color: black;\"><img src=\"/download/0109105911f4e84b47b2af5d58868fffe640.png\"></span></p><p><br></p>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 93,
+   "isOpen": 1,
+   "name": "金蝶AI套件",
+   "productLineId": 40,
+   "series": "S0361",
+   "sort": 1
+  },
+  {
+   "alias": null,
+   "code": null,
+   "id": 87,
+   "isOpen": 1,
+   "name": "金蝶AI苍穹",
+   "productLineId": 29,
+   "series": "developer01",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        null
+       ],
+       "code": null,
+       "description": "",
+       "entityId": "651800070085489920",
+       "entityType": "Knowledge",
+       "id": "651806375080703232",
+       "isCategory": false,
+       "name": "审核接口提示“单据已在流程中流转，不能审核”",
+       "parentId": "226337785987048960",
+       "sort": "17",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": "",
+     "entityId": null,
+     "entityType": null,
+     "id": "226337785987048960",
+     "isCategory": true,
+     "name": "常见问题",
+     "parentId": "-1",
+     "sort": "9",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  },
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        null
+       ],
+       "code": null,
+       "description": "",
+       "entityId": "651800070085489920",
+       "entityType": "Knowledge",
+       "id": "751858184020581888",
+       "isCategory": false,
+       "name": "审核接口提示“单据已在流程中流转，不能审核”",
+       "parentId": "272111016937375744",
+       "sort": "27",
+       "specialId": "272110040385964032",
+       "status": 1
+      }
+     ],
+     "code": "",
+     "description": "",
+     "entityId": null,
+     "entityType": null,
+     "id": "272111016937375744",
+     "isCategory": true,
+     "name": "常见问题",
+     "parentId": "-1",
+     "sort": "9",
+     "specialId": "272110040385964032",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI套件",
+     "id": 93,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "OSC",
+      "name": "开放服务云",
+      "id": "563356589114194944",
+      "sort": 33,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "OpenAPI",
+       "id": "272103818790291456",
+       "sort": 1,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 40
+    }
+   ],
+   "collections": 120,
+   "createdAt": "2022-01-20T21:08:09.000+08:00",
+   "creator": {
+    "avatar": "/download?fileName=010162cfa9d5437711e8b441060400ef5315.png",
+    "department": null,
+    "id": "2147461337",
+    "name": "CorY",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了OpenAPI（开放平台）的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手开放平台。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "272110040385964032",
+   "identityTags": null,
+   "itemNum": 102,
+   "logo": "/download/0100c6656b9432084112bd16330c67cbb275.jpg",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "40",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 93,
+     "isOpen": 1,
+     "name": "金蝶AI套件",
+     "productLineId": 40,
+     "series": "S0361",
+     "sort": 1
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 0,
+   "totalAppraisalUsers": 0,
+   "updatedAt": "2026-04-17T12:41:32.000+08:00",
+   "updaterId": "429676515387511808",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 344749
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download/01010204d4b71b654a208006fa1004eac36a.png",
+  "department": null,
+  "id": "740211268992385024",
+  "name": "毛毛去哪儿",
+  "nameSpell": "name"
+ },
+ "totalAppraisalScore": 15,
+ "iflytekId": null,
+ "views": 5144,
+ "productLineId": 29,
+ "comments": 1,
+ "similarityCount": 0,
+ "totalAppraisalUsers": 3,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1785349490000,
+ "appraisalScore": 0,
+ "unuseful": 0,
+ "knowledgeCheckStatus": 2,
+ "otherProductLineIds": [
+  40
+ ],
+ "auditAt": 1757064972000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "XKOpenFAQ",
+        "id": "522699438716894976",
+        "name": "常见问题",
+        "productLineId": null,
+        "sort": 18,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "272103818790291456",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "563356589114194944",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 37,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "93",
+     "name": "金蝶AI套件",
+     "productLineId": 40,
+     "sort": 1,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "XSRM",
+     "createdAt": 1726129666000,
+     "creator": {
+      "avatar": "/download?fileName=01014c2c1c8b203f4a8aaa1e18dce7725efa.png",
+      "department": null,
+      "id": "1155",
+      "name": "陈旭",
+      "nameSpell": "lansehuanxiang"
+     },
+     "description": "快速入门",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download?fileName=01007ab64f34c9004072ad021d226f8216fe.png",
+     "id": "622106158584431616",
+     "name": "快速入门",
+     "productLine": {
+      "active": true,
+      "appLogo": "金蝶云星空|旗舰版",
+      "categoryCode": "X04",
+      "courseLogo": "",
+      "domain": "",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": false,
+      "id": 40,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/01006d278204e9994fe9b4fc05bcdcf7ba45.png",
+      "name": "金蝶AI套件",
+      "rank": 3,
+      "seriesCode": "S0361"
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download?fileName=01011dc4dc4a745a4974a64ff09ab41e9eab.png",
+      "department": null,
+      "id": "1012",
+      "name": "angel",
+      "nameSpell": "angel"
+     },
+     "updatedAt": 1726129666000
+    },
+    {
+     "code": "changjianwenti",
+     "createdAt": 1726129148000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "常见问题",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download?fileName=0100ef2db45aa7524b70a990e7fd9d40db4a.png",
+     "id": "622103985280648192",
+     "name": "常见问题",
+     "productLine": {
+      "active": true,
+      "appLogo": "金蝶云星空|旗舰版",
+      "categoryCode": "X04",
+      "courseLogo": "",
+      "domain": "",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": false,
+      "id": 40,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/01006d278204e9994fe9b4fc05bcdcf7ba45.png",
+      "name": "金蝶AI套件",
+      "rank": 3,
+      "seriesCode": "S0361"
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download?fileName=01011dc4dc4a745a4974a64ff09ab41e9eab.png",
+      "department": null,
+      "id": "1012",
+      "name": "angel",
+      "nameSpell": "angel"
+     },
+     "updatedAt": 1726129148000
+    }
+   ],
+   "productLineId": 40,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "651800070085489920",
+         "entityType": "Knowledge",
+         "id": "751858184020581888",
+         "isCategory": false,
+         "name": "审核接口提示“单据已在流程中流转，不能审核”",
+         "parentId": "272111016937375744",
+         "sort": "27",
+         "specialId": "272110040385964032",
+         "status": 1
+        }
+       ],
+       "code": "",
+       "description": "",
+       "entityId": null,
+       "entityType": null,
+       "id": "272111016937375744",
+       "isCategory": true,
+       "name": "常见问题",
+       "parentId": "-1",
+       "sort": "9",
+       "specialId": "272110040385964032",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI套件",
+       "id": 93,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "OSC",
+        "name": "开放服务云",
+        "id": "563356589114194944",
+        "sort": 33,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "OpenAPI",
+         "id": "272103818790291456",
+         "sort": 1,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 40
+      }
+     ],
+     "collections": 120,
+     "createdAt": "2022-01-20T21:08:09.000+08:00",
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d5437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "2147461337",
+      "name": "CorY",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了OpenAPI（开放平台）的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手开放平台。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "272110040385964032",
+     "identityTags": null,
+     "itemNum": 102,
+     "logo": "/download/0100c6656b9432084112bd16330c67cbb275.jpg",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "40",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 93,
+       "isOpen": 1,
+       "name": "金蝶AI套件",
+       "productLineId": 40,
+       "series": "S0361",
+       "sort": 1
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 0,
+     "totalAppraisalUsers": 0,
+     "updatedAt": "2026-04-17T12:41:32.000+08:00",
+     "updaterId": "429676515387511808",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 344749
+    }
+   ]
+  },
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapi_apilist_layout",
+        "id": "505686038019362304",
+        "name": "异步API",
+        "productLineId": null,
+        "sort": 1,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 0,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "HotIssues",
+     "createdAt": 1558618967000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "使用中经常遇到的应用类、报错类问题的解决方法",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/010046d15638963c4c388734601dd5f8ceec.png",
+     "id": "202203081644",
+     "name": "常见问题",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010176d38341668f44fdb94c95058a90e4b8.png",
+      "department": "云社区运营部",
+      "id": "2147406697",
+      "name": "多肉丸子",
+      "nameSpell": "kejuan"
+     },
+     "updatedAt": 1676857709000
+    },
+    {
+     "code": "rumen",
+     "createdAt": 1605667807000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "入门类的知识可使用此标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100d322b9282bcc438faa894f4eec029977.png",
+     "id": "202203081646",
+     "name": "基础入门",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download?fileName=0101ec1d6ce599b442dab7d0b794c1fce88d.png",
+      "department": null,
+      "id": "1009",
+      "name": "一颗小星星",
+      "nameSpell": "fengling"
+     },
+     "updatedAt": 1657872008000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "651800070085489920",
+         "entityType": "Knowledge",
+         "id": "651806375080703232",
+         "isCategory": false,
+         "name": "审核接口提示“单据已在流程中流转，不能审核”",
+         "parentId": "226337785987048960",
+         "sort": "17",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": null,
+       "id": "226337785987048960",
+       "isCategory": true,
+       "name": "常见问题",
+       "parentId": "-1",
+       "sort": "9",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": "<h2 label=\"一级标题\" class=\"first-title html-anchor-list0-1733207245436 html-anchor-list0-1733207245436\" style=\"\">1 问题描述</h2><p label=\"正文\" style=\"\"><span style=\"color: rgb(0, 0, 0);\"></span></p><p label=\"正文\" style=\"\"><span style=\"color: black;\">使用零代码配置的审核操作API，提示报错：单据已在流程中流转，不能审核</span><span style=\"color: black;\">，实际这个单据不应该进入工作流</span><strong style=\"color: black;\">。</strong></p><p style=\"\"><span style=\"color: rgb(0, 0, 0);\"></span></p><p style=\"\"><span style=\"color: rgb(0, 0, 0);\"></span></p><p style=\"\"><br></p><p style=\"\"><img src=\"/download/010926e513d76cab48a9ac7cb60452e7cdb6.png\"></p><h2 label=\"一级标题\" class=\"first-title html-anchor-list1-1733207245436 html-anchor-list1-1733207245436\" style=\"\">2 <strong style=\"\">原因分析</strong></h2><p style=\"\"><span style=\"color: black;\">会出现上面的场景都是因为这个单据配置了部分单据走工作流审批，部分单据不需要走工作流审批，当单据提交后，系统会逐一匹配工作流的启动条件，直到所有条件都匹配不上，寻址结束后才能进行审核。但是上面场景是提交后立马执行审核，寻址没有结束就会报如上的错误。</span></p><p style=\"\"><span style=\"color: black;\"><br></span></p><p style=\"\"><span style=\"color: black;\"></span></p><h2 label=\"一级标题\" class=\"first-title html-anchor-list1-1733207245436 html-anchor-list1-1733207245436\" style=\"\">3 解决方案</h2><p>若遇到上述场景，流程服务和OpenAPI均有提供解决方案，详细参考如下：</p><p><br></p><p>方案一：流程服务工作流解决方案，详见<a href=\"https://developer.kingdee.com/article/553647116485340928?productLineId=29&amp;isKnowledge=2&amp;lang=zh-CN\" target=\"_blank\" style=\"color: rgb(0, 112, 192);\"><span style=\"color: rgb(0, 112, 192);\">审核操作提示“单据已在流程中流转，不能审核”的解决方案</span></a>；</p><p><br></p><p>方案二：OpenAPI自定义参数解决方案，通过参数跳过工作流，调用方在审核接口的请求body中，传入自定义参数WF，设为false ，即不进入工作流。示例：</p><p><br></p><p>{</p><p>&nbsp; &nbsp; \"data\": {</p><p>&nbsp; &nbsp; &nbsp; &nbsp; \"billno\": \"unittest-20004124\"</p><p>&nbsp; &nbsp; },</p><p>&nbsp; &nbsp; \"optionvariables\": {</p><p>&nbsp; &nbsp; &nbsp; &nbsp; \"WF\": \"false\"</p><p>&nbsp; &nbsp; }</p><p>}</p><p style=\"\"><span style=\"color: black;\"><br></span></p><p style=\"\"><span style=\"color: black;\"><img src=\"/download/0109105911f4e84b47b2af5d58868fffe640.png\"></span></p><p><br></p>"
+}

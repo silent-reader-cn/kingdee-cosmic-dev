@@ -1,0 +1,423 @@
+{
+ "badNum": 0,
+ "identityTagIds": null,
+ "knowledgeId": "478934973433530368",
+ "createdAt": 1691994996000,
+ "collections": 0,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "478934973433530368",
+ "contentType": 1,
+ "updatedAt": 1691996280000,
+ "knowledgeUpdater": {
+  "avatar": "/download/01013198de68572f4d8fac481f10ce8e2eb2.png",
+  "department": null,
+  "id": "290478",
+  "name": "吕品㗊",
+  "nameSpell": "name"
+ },
+ "assessStatus": 1,
+ "knowledgeStatus": 2,
+ "assessHandleStatus": null,
+ "knowledgeCreatedAt": 1691994996000,
+ "version": 23,
+ "labels": [],
+ "editedAt": 1691996280000,
+ "identityTags": null,
+ "useful": 4,
+ "errors": [],
+ "isCollected": false,
+ "totalFeedBacks": 0,
+ "attachments": [],
+ "sources": [],
+ "editTitle": "OpenAPI通过指定编码处理请求和响应数据",
+ "title": "OpenAPI通过指定编码处理请求和响应数据",
+ "content": "<h2 label=\"一级标题\" class=\"first-title\" style=\"\"><strong style=\"\">1 </strong><strong style=\"\">业务场景</strong></h2><ul class=\" list-paddingleft-2\"><li><p>对于一些特定环境不支持UTF-8编码方式</p></li><li><p>一些环境使用的不是UTF-8编码格式，而且不能随意修改编码<span style=\"\">方式</span></p></li></ul><p>&nbsp;&nbsp;&nbsp;&nbsp;针对以上场景，调用API会出现乱码情况（API默认编码格式是UTF-8）</p><h2 label=\"一级标题\" class=\"first-title\" style=\"\"><strong style=\"\">2 </strong><strong style=\"\">解决方案</strong></h2><ul class=\" list-paddingleft-2\"><li><p>API可以通过请求头 <strong>Accept-Charset</strong>&nbsp;设置使用那种编码<span style=\"\">方式</span>处理请求和响应数据</p><p><br/></p></li></ul><h2 label=\"一级标题\" class=\"first-title\" style=\"\"><strong style=\"\">3 关键</strong><strong style=\"\">操作</strong></h2><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;请求头通过<span style=\"\">&nbsp;</span><strong style=\"\">Accept-Charset </strong>设置要使用的编码格式，多个编码<span style=\"\">方式</span>用英文逗号分隔。API请求会按照顺序找到支持的编码<span style=\"\">方式</span>，如果第一个支持就用第一个编码<span style=\"\">方式</span>，如果第一个不支持就检查第二个编码<span style=\"\">方式</span>是否支持，以此类推找到支持的编码<span style=\"\">方式</span>为止，如果都不支持则抛出异常</p><p><img src=\"/download/0109d950b77988d54103858461671e61e2c8.png\"/><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\"><strong style=\"\">4 注意事项</strong></h2><p><strong style=\"\"></strong></p><ul class=\" list-paddingleft-2\" style=\"\"><li><p style=\"\">不配置Accept-Charset默认按照UTF-8方式处理出入参<br/></p></li><li><p style=\"\"><span style=\"\">配置了就按照顺序找到可用的编码方式处理</span></p></li><li><p style=\"\"><span style=\"\">如果配置的都不支持则抛出异常</span></p></li></ul><p><strong style=\"\"></strong><br/></p><p>&nbsp;</p><p><br/></p>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 87,
+   "isOpen": 1,
+   "name": "金蝶AI苍穹",
+   "productLineId": 29,
+   "series": "developer01",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        null
+       ],
+       "code": null,
+       "description": "",
+       "entityId": "478934973433530368",
+       "entityType": "Knowledge",
+       "id": "478941862779415296",
+       "isCategory": false,
+       "name": "OpenAPI如何指定字符集编码如UTF-8",
+       "parentId": "226337785987048960",
+       "sort": "14",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": "",
+     "entityId": null,
+     "entityType": null,
+     "id": "226337785987048960",
+     "isCategory": true,
+     "name": "常见问题",
+     "parentId": "-1",
+     "sort": "9",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download/01013198de68572f4d8fac481f10ce8e2eb2.png",
+  "department": null,
+  "id": "290478",
+  "name": "吕品㗊",
+  "nameSpell": "name"
+ },
+ "totalAppraisalScore": 19,
+ "iflytekId": null,
+ "views": 1235,
+ "productLineId": 29,
+ "comments": 0,
+ "similarityCount": null,
+ "totalAppraisalUsers": 4,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1691996280000,
+ "appraisalScore": 0,
+ "unuseful": 0,
+ "knowledgeCheckStatus": 2,
+ "otherProductLineIds": [],
+ "auditAt": 1691996358000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapiapilistlayout",
+        "id": "344582232549528320",
+        "name": "API管理",
+        "productLineId": null,
+        "sort": 1,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "5614",
+       "name": "开放平台",
+       "productLineId": null,
+       "sort": 2,
+       "type": "module"
+      },
+      "code": "DEV",
+      "id": "5576",
+      "name": "开发服务云",
+      "productLineId": null,
+      "sort": 11,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 0,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "AdvancedSkills",
+     "createdAt": 1556519216000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "高阶技巧标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/01005cea40211bf14113a6004322e86a6780.png",
+     "id": "202203081642",
+     "name": "高级技巧",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download/010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "306913800727243776",
+      "name": "Paim",
+      "nameSpell": "name"
+     },
+     "updatedAt": 1657851500000
+    },
+    {
+     "code": "ScenarioBasedGuidance",
+     "createdAt": 1676978333000,
+     "creator": {
+      "avatar": "/download/010176d38341668f44fdb94c95058a90e4b8.png",
+      "department": "云社区运营部",
+      "id": "2147406697",
+      "name": "多肉丸子",
+      "nameSpell": "kejuan"
+     },
+     "description": "基于标准产品，按使用场景指引操作，包含一个或多个功能的组合应用",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/01006b7b8ed9461b4d0e9670ec0d4cb7e48f.png",
+     "id": "415950525675139584",
+     "name": "场景指引",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010176d38341668f44fdb94c95058a90e4b8.png",
+      "department": "云社区运营部",
+      "id": "2147406697",
+      "name": "多肉丸子",
+      "nameSpell": "kejuan"
+     },
+     "updatedAt": 1676978333000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "478934973433530368",
+         "entityType": "Knowledge",
+         "id": "478941862779415296",
+         "isCategory": false,
+         "name": "OpenAPI如何指定字符集编码如UTF-8",
+         "parentId": "226337785987048960",
+         "sort": "14",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": null,
+       "id": "226337785987048960",
+       "isCategory": true,
+       "name": "常见问题",
+       "parentId": "-1",
+       "sort": "9",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": "<h2 label=\"一级标题\" class=\"first-title\" style=\"\"><strong style=\"\">1 </strong><strong style=\"\">业务场景</strong></h2><ul class=\" list-paddingleft-2\"><li><p>对于一些特定环境不支持UTF-8编码方式</p></li><li><p>一些环境使用的不是UTF-8编码格式，而且不能随意修改编码<span style=\"\">方式</span></p></li></ul><p>&nbsp;&nbsp;&nbsp;&nbsp;针对以上场景，调用API会出现乱码情况（API默认编码格式是UTF-8）</p><h2 label=\"一级标题\" class=\"first-title\" style=\"\"><strong style=\"\">2 </strong><strong style=\"\">解决方案</strong></h2><ul class=\" list-paddingleft-2\"><li><p>API可以通过请求头 <strong>Accept-Charset</strong>&nbsp;设置使用那种编码<span style=\"\">方式</span>处理请求和响应数据</p><p><br/></p></li></ul><h2 label=\"一级标题\" class=\"first-title\" style=\"\"><strong style=\"\">3 关键</strong><strong style=\"\">操作</strong></h2><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;请求头通过<span style=\"\">&nbsp;</span><strong style=\"\">Accept-Charset </strong>设置要使用的编码格式，多个编码<span style=\"\">方式</span>用英文逗号分隔。API请求会按照顺序找到支持的编码<span style=\"\">方式</span>，如果第一个支持就用第一个编码<span style=\"\">方式</span>，如果第一个不支持就检查第二个编码<span style=\"\">方式</span>是否支持，以此类推找到支持的编码<span style=\"\">方式</span>为止，如果都不支持则抛出异常</p><p><img src=\"/download/0109d950b77988d54103858461671e61e2c8.png\"/><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\"><strong style=\"\">4 注意事项</strong></h2><p><strong style=\"\"></strong></p><ul class=\" list-paddingleft-2\" style=\"\"><li><p style=\"\">不配置Accept-Charset默认按照UTF-8方式处理出入参<br/></p></li><li><p style=\"\"><span style=\"\">配置了就按照顺序找到可用的编码方式处理</span></p></li><li><p style=\"\"><span style=\"\">如果配置的都不支持则抛出异常</span></p></li></ul><p><strong style=\"\"></strong><br/></p><p>&nbsp;</p><p><br/></p>"
+}

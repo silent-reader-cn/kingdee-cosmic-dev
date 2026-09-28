@@ -1,0 +1,519 @@
+{
+ "badNum": 0,
+ "identityTagIds": null,
+ "knowledgeId": "755468720763499520",
+ "createdAt": 1757925779000,
+ "collections": 0,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "755468720763499520",
+ "contentType": 1,
+ "updatedAt": 1779069133000,
+ "knowledgeUpdater": {
+  "avatar": "/download/01010204d4b71b654a208006fa1004eac36a.png",
+  "department": null,
+  "id": "740211268992385024",
+  "name": "毛毛去哪儿",
+  "nameSpell": "name"
+ },
+ "assessStatus": 0,
+ "knowledgeStatus": 2,
+ "assessHandleStatus": null,
+ "knowledgeCreatedAt": 1757925779000,
+ "version": 5,
+ "labels": [],
+ "editedAt": 1758013052000,
+ "identityTags": null,
+ "useful": 0,
+ "errors": [],
+ "isCollected": false,
+ "totalFeedBacks": 0,
+ "attachments": [],
+ "sources": [],
+ "editTitle": "RESTful API 统计看板",
+ "title": "RESTful API 统计看板",
+ "content": "<h2><strong>变更记录</strong></h2><table style=\"min-width: 75px\"><colgroup><col style=\"min-width: 25px\"><col style=\"min-width: 25px\"><col style=\"min-width: 25px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" style=\"background-color: \"><p style=\"font-size: 15px\"><strong>产品版本</strong></p></td><td colspan=\"1\" rowspan=\"1\" style=\"background-color: \"><p><strong>更新内容</strong></p></td><td colspan=\"1\" rowspan=\"1\" style=\"background-color: \"><p><strong>更新日期</strong></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">V8.0.1</span></p></td><td colspan=\"1\" rowspan=\"1\" style=\"background-color: \"><p>初始版本</p></td><td colspan=\"1\" rowspan=\"1\" style=\"background-color: \"><p>2025年10月</p></td></tr></tbody></table><p style=\"font-size: 15px\"></p><hr><p style=\"font-size: 15px\"></p><p style=\"text-align: justify; font-size: 20px\"></p><h1><span><strong>1 简介</strong></span></h1><h2><span><strong>1.1 功能介绍</strong></span></h2><ul><li><p><span>为 API 运维及开发人员提供直观监控看板，可实时查看调用量、失败数、成功率、平均响应时间等核心指标；</span></p></li><li><p><span>支持按第三方应用、RESTful API、时间筛选，通过趋势图和排行直观呈现API运行状态，帮助快速发现异常与性能问题。</span></p></li></ul><h2><span><strong>1.2 应用场景</strong></span></h2><p><span>实时监控RESTful API调用量、响应时间等，及时发现异常流量等问题。 帮助用户定位慢接口、高错误率接口，针对性优化，同时识别热门或异常调用的客户端。</span></p><p><span>&nbsp;</span></p><h2><span><strong>1.3 系统路径</strong></span></h2><p><span>【开放服务云】→【OpenAPI】→【RESTful API】→【RESTful API 统计看板】</span></p><p><span>&nbsp;</span></p><h1><span><strong>2 主要操作</strong></span></h1><h2><span><strong>2.1 查看RESTful API统计看板</strong></span></h2><p><span>以 “查看与第三方系统‘OA系统’对接过程中，RESTful API 一段时间的运行情况，定位失败率高、响应慢的 API 并分析原因” 为例，演示看板查看与分析流程。</span></p><p><span>默认展示全量 API 的统计数据。</span></p><ul><li><p><span>设置筛选条件：</span></p><p><span>筛选应用相关 API：点击 “RESTful API 筛选框”→选择 “按第三方应用筛选”→在弹窗中勾选 “OA”→点击 “确定”，仅展示该外部系统调用的RESTful API；</span></p><p><span>选择时间范围：在 “调用时间” 下拉框中选择自定义，并选择日期范围；</span></p><p><span>执行筛选：点击 “查询” 按钮，看板数据刷新为 “第三方应用OA下所有 API 在一段时间范围” 的统计结果。</span></p></li><li><p><span>查看核心指标，初步判断健康度：</span></p><p>①　<span>查看 “API 调用成功率”：若成功率低于 90%（如显示 “82%”），说明存在较多调用失败问题；</span></p><p>②　<span>查看 “状态码类型卡片”：若 “4xx - 客户端错误” 次数较多（如 50 次），可能是第三方调用参数错误；若 “5xx - 服务端错误” 较多（如 30 次），需排查服务端问题；</span></p><p>③　<span>查看 “平均响应时间”：若平均耗时超过 1500ms（如 “1800ms”），需关注性能瓶颈。</span></p><p>④　<span>分析趋势图，识别异常时段：</span></p><p>⑤　<span>查看 “API 调用趋势图”：重点关注失败次数曲线的波动（如某一天 14 点失败次数突然上升至 10次），记录异常时段；</span></p><p>⑥　<span>关联响应时间：若异常时段内平均响应时间同步上升（如从 800ms 升至 3000ms），可能是该时段调用量激增导致服务过载。</span></p><p>⑦　<span>通过排行表定位问题 API：</span></p><p>⑧　<span>查看 “API 失败率排行表”：找到失败率最高的 API，记录其名称与资源路径；</span></p><p>⑨　<span>查看 “API 响应时长排行表”：找到平均耗时最长的 API，标记为性能优化重点；</span></p><p>⑩　<span>钻取详情，定位具体原因：</span></p><p>⑪　<span>分析失败 API：点击API名称，可跳转至该 API 的日志，查看 日志响应参数中的具体“失败原因”，并判断是否可以优化接口逻辑；若日志耗时过长，需要查看更详细日志信息，可以进入到Monitor环境，根据RESTful API日志中记录的traceid，去查询更明细的日志信息。</span></p></li></ul><p></p><p><img src=\"/download/0100a56544af8cf8485b9bf14376c5ba507e.png\" alt=\"上传图片\"></p><p><img src=\"/download/01007575e712f688456aba0bb4a0a6131312.png\" alt=\"上传图片\"></p><p></p><p><img src=\"/download/0100ebfba5136a4c4d649b951edd44391ed0.png\" alt=\"上传图片\"></p><p></p><h1><strong>3 更多资讯</strong></h1><p style=\"font-size: 15px\">关于OpenAPI的更多资讯，请随时关注<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=226337371640594944&amp;id=226708319996323072&amp;productLineId=29\">新特性公告</a>。</p>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 87,
+   "isOpen": 1,
+   "name": "金蝶AI苍穹",
+   "productLineId": 29,
+   "series": "developer01",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "755468720763499520",
+         "entityType": "Knowledge",
+         "id": "755471120660376326",
+         "isCategory": false,
+         "name": "RESTful API 统计看板",
+         "parentId": "755471013420411648",
+         "sort": "10",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": "",
+       "id": "755471013420411648",
+       "isCategory": true,
+       "name": "RESTful API",
+       "parentId": "226337544983020032",
+       "sort": "24",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": null,
+     "entityId": null,
+     "entityType": null,
+     "id": "226337544983020032",
+     "isCategory": true,
+     "name": "用户手册",
+     "parentId": "-1",
+     "sort": "6",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download/01010204d4b71b654a208006fa1004eac36a.png",
+  "department": null,
+  "id": "740211268992385024",
+  "name": "毛毛去哪儿",
+  "nameSpell": "name"
+ },
+ "totalAppraisalScore": 0,
+ "iflytekId": null,
+ "views": 764,
+ "productLineId": 29,
+ "comments": 0,
+ "similarityCount": null,
+ "totalAppraisalUsers": 0,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1779069133000,
+ "appraisalScore": 0,
+ "unuseful": 0,
+ "knowledgeCheckStatus": 2,
+ "otherProductLineIds": [],
+ "auditAt": 1759051498000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "open_rest_stat_board",
+        "id": "760141738915705600",
+        "name": "RESTful API统计看板",
+        "productLineId": null,
+        "sort": 25,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 0,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapi_statdata_report",
+        "id": "505686475435144448",
+        "name": "统计信息",
+        "productLineId": null,
+        "sort": 5,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 1,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapi_report_table",
+        "id": "505686536856269568",
+        "name": "统计看板",
+        "productLineId": null,
+        "sort": 6,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 2,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "OperatingGuide",
+     "createdAt": 1556519201000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "某一功能的具体说明介绍，包括应用场景、参数说明、具体操作步骤等",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/010037894174802d4b9f8782f1f0010a6ddd.png",
+     "id": "202203081641",
+     "name": "功能介绍",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010176d38341668f44fdb94c95058a90e4b8.png",
+      "department": "云社区运营部",
+      "id": "2147406697",
+      "name": "多肉丸子",
+      "nameSpell": "kejuan"
+     },
+     "updatedAt": 1676857681000
+    },
+    {
+     "code": "rumen",
+     "createdAt": 1605667807000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "入门类的知识可使用此标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100d322b9282bcc438faa894f4eec029977.png",
+     "id": "202203081646",
+     "name": "基础入门",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download?fileName=0101ec1d6ce599b442dab7d0b794c1fce88d.png",
+      "department": null,
+      "id": "1009",
+      "name": "一颗小星星",
+      "nameSpell": "fengling"
+     },
+     "updatedAt": 1657872008000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          {
+           "childCategory": [
+            null
+           ],
+           "code": null,
+           "description": "",
+           "entityId": "755468720763499520",
+           "entityType": "Knowledge",
+           "id": "755471120660376326",
+           "isCategory": false,
+           "name": "RESTful API 统计看板",
+           "parentId": "755471013420411648",
+           "sort": "10",
+           "specialId": "226337046514476288",
+           "status": 1
+          }
+         ],
+         "code": null,
+         "description": "",
+         "entityId": null,
+         "entityType": "",
+         "id": "755471013420411648",
+         "isCategory": true,
+         "name": "RESTful API",
+         "parentId": "226337544983020032",
+         "sort": "24",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": null,
+       "entityId": null,
+       "entityType": null,
+       "id": "226337544983020032",
+       "isCategory": true,
+       "name": "用户手册",
+       "parentId": "-1",
+       "sort": "6",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": "<h2><strong>变更记录</strong></h2><table style=\"min-width: 75px\"><colgroup><col style=\"min-width: 25px\"><col style=\"min-width: 25px\"><col style=\"min-width: 25px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" style=\"background-color: \"><p style=\"font-size: 15px\"><strong>产品版本</strong></p></td><td colspan=\"1\" rowspan=\"1\" style=\"background-color: \"><p><strong>更新内容</strong></p></td><td colspan=\"1\" rowspan=\"1\" style=\"background-color: \"><p><strong>更新日期</strong></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">V8.0.1</span></p></td><td colspan=\"1\" rowspan=\"1\" style=\"background-color: \"><p>初始版本</p></td><td colspan=\"1\" rowspan=\"1\" style=\"background-color: \"><p>2025年10月</p></td></tr></tbody></table><p style=\"font-size: 15px\"></p><hr><p style=\"font-size: 15px\"></p><p style=\"text-align: justify; font-size: 20px\"></p><h1><span><strong>1 简介</strong></span></h1><h2><span><strong>1.1 功能介绍</strong></span></h2><ul><li><p><span>为 API 运维及开发人员提供直观监控看板，可实时查看调用量、失败数、成功率、平均响应时间等核心指标；</span></p></li><li><p><span>支持按第三方应用、RESTful API、时间筛选，通过趋势图和排行直观呈现API运行状态，帮助快速发现异常与性能问题。</span></p></li></ul><h2><span><strong>1.2 应用场景</strong></span></h2><p><span>实时监控RESTful API调用量、响应时间等，及时发现异常流量等问题。 帮助用户定位慢接口、高错误率接口，针对性优化，同时识别热门或异常调用的客户端。</span></p><p><span>&nbsp;</span></p><h2><span><strong>1.3 系统路径</strong></span></h2><p><span>【开放服务云】→【OpenAPI】→【RESTful API】→【RESTful API 统计看板】</span></p><p><span>&nbsp;</span></p><h1><span><strong>2 主要操作</strong></span></h1><h2><span><strong>2.1 查看RESTful API统计看板</strong></span></h2><p><span>以 “查看与第三方系统‘OA系统’对接过程中，RESTful API 一段时间的运行情况，定位失败率高、响应慢的 API 并分析原因” 为例，演示看板查看与分析流程。</span></p><p><span>默认展示全量 API 的统计数据。</span></p><ul><li><p><span>设置筛选条件：</span></p><p><span>筛选应用相关 API：点击 “RESTful API 筛选框”→选择 “按第三方应用筛选”→在弹窗中勾选 “OA”→点击 “确定”，仅展示该外部系统调用的RESTful API；</span></p><p><span>选择时间范围：在 “调用时间” 下拉框中选择自定义，并选择日期范围；</span></p><p><span>执行筛选：点击 “查询” 按钮，看板数据刷新为 “第三方应用OA下所有 API 在一段时间范围” 的统计结果。</span></p></li><li><p><span>查看核心指标，初步判断健康度：</span></p><p>①　<span>查看 “API 调用成功率”：若成功率低于 90%（如显示 “82%”），说明存在较多调用失败问题；</span></p><p>②　<span>查看 “状态码类型卡片”：若 “4xx - 客户端错误” 次数较多（如 50 次），可能是第三方调用参数错误；若 “5xx - 服务端错误” 较多（如 30 次），需排查服务端问题；</span></p><p>③　<span>查看 “平均响应时间”：若平均耗时超过 1500ms（如 “1800ms”），需关注性能瓶颈。</span></p><p>④　<span>分析趋势图，识别异常时段：</span></p><p>⑤　<span>查看 “API 调用趋势图”：重点关注失败次数曲线的波动（如某一天 14 点失败次数突然上升至 10次），记录异常时段；</span></p><p>⑥　<span>关联响应时间：若异常时段内平均响应时间同步上升（如从 800ms 升至 3000ms），可能是该时段调用量激增导致服务过载。</span></p><p>⑦　<span>通过排行表定位问题 API：</span></p><p>⑧　<span>查看 “API 失败率排行表”：找到失败率最高的 API，记录其名称与资源路径；</span></p><p>⑨　<span>查看 “API 响应时长排行表”：找到平均耗时最长的 API，标记为性能优化重点；</span></p><p>⑩　<span>钻取详情，定位具体原因：</span></p><p>⑪　<span>分析失败 API：点击API名称，可跳转至该 API 的日志，查看 日志响应参数中的具体“失败原因”，并判断是否可以优化接口逻辑；若日志耗时过长，需要查看更详细日志信息，可以进入到Monitor环境，根据RESTful API日志中记录的traceid，去查询更明细的日志信息。</span></p></li></ul><p></p><p><img src=\"/download/0100a56544af8cf8485b9bf14376c5ba507e.png\" alt=\"上传图片\"></p><p><img src=\"/download/01007575e712f688456aba0bb4a0a6131312.png\" alt=\"上传图片\"></p><p></p><p><img src=\"/download/0100ebfba5136a4c4d649b951edd44391ed0.png\" alt=\"上传图片\"></p><p></p><h1><strong>3 更多资讯</strong></h1><p style=\"font-size: 15px\">关于OpenAPI的更多资讯，请随时关注<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=226337371640594944&amp;id=226708319996323072&amp;productLineId=29\">新特性公告</a>。</p>"
+}

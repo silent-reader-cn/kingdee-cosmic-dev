@@ -1,0 +1,880 @@
+{
+ "badNum": 0,
+ "identityTagIds": null,
+ "knowledgeId": "699901600827142400",
+ "createdAt": 1744677545000,
+ "collections": 35,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "699901600827142400",
+ "contentType": 1,
+ "updatedAt": 1785326181000,
+ "knowledgeUpdater": {
+  "avatar": "/download/0101d05fae7da1fb46ec9afde9c187ba6cda.png",
+  "department": null,
+  "id": "400313447986157568",
+  "name": "MartinTso",
+  "nameSpell": "caozhijun"
+ },
+ "assessStatus": 0,
+ "knowledgeStatus": 2,
+ "assessHandleStatus": null,
+ "knowledgeCreatedAt": 1744677545000,
+ "version": 78,
+ "labels": [],
+ "editedAt": 1763534403000,
+ "identityTags": null,
+ "useful": 16,
+ "errors": [],
+ "isCollected": false,
+ "totalFeedBacks": 0,
+ "attachments": [],
+ "sources": [],
+ "editTitle": "如何创建单据/分录的关联关系",
+ "title": "如何创建单据/分录的关联关系",
+ "content": "<h2>1、问题描述</h2><p>通过OpenAPI进行单据集成对接时，若单据存在上下游关系，特别是上游或下游单据是由第三方系统生成的情况下，应该如何产生关联？</p><p></p><h2>2、解决方案</h2><h3>2.1、方案一：【下推】</h3><p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;方案描述</strong>：通过调用下推的API实现单据创建及自动关联</p><h4>2.1.1 调用对应单据提供的下推API：</h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;API管理列表检索下推，优先选择已提供指定下推场景的API使用</p><p><img src=\"https://vip-admin.kingdee.com/download/0109162de67f56074cfd8b2b23eaecd1b10b.png\"></p><p></p><h4>2.1.2 通用下推并保存API</h4><p>&nbsp;&nbsp;&nbsp;&nbsp;若对应单据，未单独开放对应下推API，可调用通用的下推并保存API，<span style=\"color: rgb(0, 0, 0)\">通过第三方应用中的服务授权，授权使用&lt;</span><span style=\"color: rgb(255, 137, 38)\">基础数据服务API服务</span><span style=\"color: rgb(0, 0, 0)\">&gt;后即可调用</span><span style=\"color: rgb(227, 108, 9)\">：</span></p><p><span style=\"color: rgb(227, 108, 9)\">&nbsp;&nbsp;&nbsp;&nbsp;</span></p><p><span style=\"color: rgb(0, 0, 0)\"><strong>&nbsp;&nbsp;&nbsp;&nbsp;通用下推并保存API特征：</strong></span></p><p><span style=\"color: rgb(0, 0, 0)\">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"color: rgb(227, 108, 9)\">1. 支持：相同转换规则的批量下推、单个下推；</span></p><p><span style=\"color: rgb(227, 108, 9)\">&nbsp;&nbsp;&nbsp;&nbsp;2. 支持：合并下推、整单下推，指定分录下推；</span></p><p><span style=\"color: rgb(227, 108, 9)\">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"color: rgb(192, 0, 0)\">3. 不支持：拆单下推、下推同时修改数据。</span></p><p><span style=\"color: rgb(0, 0, 0)\">&nbsp;&nbsp;&nbsp;&nbsp;注：拆单下推、下推同时修改数据，可采用2.1.3，下推同时修改数据可在下推完成后调用更新API满足。</span></p><p><img src=\"/download/0109e32d1404d852494aa2506f355136f821.png\"></p><p><img src=\"/download/010925c679513fe049c59142fd864387c800.png\"></p><p></p><h4>2.1.3 自定义下推并保存API</h4><p>&nbsp;&nbsp;若以上下推未能满足项目需求，项目可自行通过Java插件进行封装BOTP的服务，实现所需的下推。</p><p>【自定义API介绍】：<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/knowledge/555460360946494464\">https://vip.kingdee.com/knowledge/555460360946494464</a></p><p></p><h3>2.2、方案二：【关联子实体】</h3><h4><strong>2.2.1 方案说明</strong></h4><p>操作API支持在新增或更新数据时，通过关联子实体属性对单据或分录进行关联关系处理。</p><p></p><p><span style=\"color: rgb(255, 0, 0); font-size: 18px\"><strong>注意事项：</strong></span></p><p><span style=\"color: rgb(0, 0, 0); font-size: 18px\"><strong>由于该方案是高度依赖API调用方传入正确的参数及关联关系，若无法保证确认正确传入业务所需参数及关联关系，请采用下推方案；</strong></span></p><p><span style=\"color: rgb(255, 0, 0); font-size: 20px\"><strong>因一旦参数漏传或关系错误</strong>，将会<strong>导致后续的业务操作报错或者出现数据问题</strong></span><span style=\"color: rgb(255, 137, 38); font-size: 20px\">；</span></p><p><span style=\"color: rgb(41, 114, 244); font-size: 18px\"><strong>故请采用此方案的项目，先在沙箱（或测试）环境进行充分测试并验证全流程后再进行生产启用对接！！！</strong></span></p><p></p><h4>2.2.2 方案描述</h4><ol class=\" list-paddingleft-2\"><li><p>操作API中，新增关联子实体属性，注意：图示为单据的关联子实体属性，如若是分录需要进行关联，则在对应分录下选择新增关联子实体属性</p><p><img src=\"/download/01090442c747c8cb49348aa9d58d7e64c00f.png\"></p></li><li><p>按所需关联关系，正确入参，实现在新增或更新时添加上下游关联关系。</p><p></p></li></ol><h4>2.2.3 字段说明：</h4><table style=\"width: 1312px\"><colgroup><col style=\"width: 343px\"><col style=\"width: 969px\"></colgroup><tbody><tr><th colspan=\"1\" rowspan=\"1\" colwidth=\"343\" data-background-color=\"\" style=\"background-color: \"><p>字段</p></th><th colspan=\"1\" rowspan=\"1\" colwidth=\"969\" data-background-color=\"\" style=\"background-color: \"><p>说明</p></th></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"93\" data-background-color=\"\" style=\"background-color: \"><p>xxxx_lk_sbillid</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"242\" data-background-color=\"\" style=\"background-color: \"><p>关联子实体.源单内码：上游单据id</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"93\" data-background-color=\"\" style=\"background-color: \"><p>xxxx_lk_sid</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"242\" data-background-color=\"\" style=\"background-color: \"><p>关联子实体.源单主实体内码：看关联关系关联的是单头还是分录, 如果是单头则值为上游单据id，关联的分录则值为：上游单据关联分录对应行分录id</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"93\" data-background-color=\"\" style=\"background-color: \"><p>xxxx_lk_stableid</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"242\" data-background-color=\"\" style=\"background-color: \"><p>关联子实体.源单主实体编码：可以在sys.meta库查 select ftableid,ftablename from T_META_EntityInfo where fid='pm_purplanbill'，固定值 ，看关联关系关联的是单头还是分录，然后根据ftablename对应表决定ftableid</p></td></tr></tbody></table><h4>2.2.4 其它说明</h4><p>1. 关联子实体社区参考帖子：<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/article/444445234173120000?productLineId=29&amp;isKnowledge=2&amp;lang=zh-CN\">https://vip.kingdee.com/article/444445234173120000?productLineId=29&amp;isKnowledge=2&amp;lang=zh-CN</a></p><p><span style=\"color: rgb(227, 108, 9)\">2. billentry_lk_stableid的获取方式：</span></p><ol class=\" list-paddingleft-2\"><li><p>进入查询分析器；</p></li><li><p>选择元数据库；</p></li><li><p>执行sql（单据标识需要修改）：select * from T_META_EntityInfo where fid like '%单据标识%';&nbsp;</p></li><li><p>取entitykey为分录的tableid</p><p><img src=\"/download/0109ba5a9fda1b8841eeae03942a9077b9c4.png\"></p></li></ol><h4>2.2.5 业务补充说明</h4><p><span style=\"color: rgb(255, 137, 38)\"><strong>一、供应链的单据如果使用【关联子实体】，需要额外给这10个字段赋值</strong></span></p><table style=\"min-width: 50px\"><colgroup><col style=\"min-width: 25px\"><col style=\"min-width: 25px\"></colgroup><tbody><tr><th colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p>序号</p></th><th colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p>&nbsp;&nbsp;字段</p></th></tr><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p>1</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p>物料明细.来源单据实体</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p>2</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p>物料明细.来源单据ID</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p>3</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p>物料明细.来源单据行ID</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p>4</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p>物料明细.来源单据编号</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p>5</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p>物料明细.来源单据分录序号</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p>6</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p>物料明细.核心单据编号</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p>7</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p>物料明细.核心单据ID</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p>8</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p>物料明细.核心单据行ID</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p>9</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p>物料明细.核心单据实体</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p>10</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p>物料明细.核心单据分录序号</p></td></tr></tbody></table><p><span style=\"color: rgb(255, 137, 38)\"><strong>二、来源单据相关的字段，取源单信息</strong></span></p><p><img src=\"/download/0100620f7b34313f4592b45e7918280346d2.png\" alt=\"上传图片\"></p><p><span style=\"color: rgb(255, 137, 38)\"><strong>三、核心单据相关的字段，从源单携带（如销售出库-销售退货），或者是取源单信息（如销售订单-销售出库），具体参考转换规则的字段映射配置</strong></span></p><p><img src=\"/download/0100b9dd91780dfa4794b0dada94462cd844.png\" alt=\"上传图片\"></p><p><img src=\"/download/01005f384e39685741388d6883f802fba28e.png\" alt=\"上传图片\"></p>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 93,
+   "isOpen": 1,
+   "name": "金蝶AI套件",
+   "productLineId": 40,
+   "series": "S0361",
+   "sort": 1
+  },
+  {
+   "alias": null,
+   "code": null,
+   "id": 87,
+   "isOpen": 1,
+   "name": "金蝶AI苍穹",
+   "productLineId": 29,
+   "series": "developer01",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        null
+       ],
+       "code": null,
+       "description": "",
+       "entityId": "699901600827142400",
+       "entityType": "Knowledge",
+       "id": "699916033846721792",
+       "isCategory": false,
+       "name": "如何创建单据/分录的关联关系",
+       "parentId": "272111016937375744",
+       "sort": "25",
+       "specialId": "272110040385964032",
+       "status": 1
+      }
+     ],
+     "code": "",
+     "description": "",
+     "entityId": null,
+     "entityType": null,
+     "id": "272111016937375744",
+     "isCategory": true,
+     "name": "常见问题",
+     "parentId": "-1",
+     "sort": "9",
+     "specialId": "272110040385964032",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI套件",
+     "id": 93,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "OSC",
+      "name": "开放服务云",
+      "id": "563356589114194944",
+      "sort": 33,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "OpenAPI",
+       "id": "272103818790291456",
+       "sort": 1,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 40
+    }
+   ],
+   "collections": 120,
+   "createdAt": "2022-01-20T21:08:09.000+08:00",
+   "creator": {
+    "avatar": "/download?fileName=010162cfa9d5437711e8b441060400ef5315.png",
+    "department": null,
+    "id": "2147461337",
+    "name": "CorY",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了OpenAPI（开放平台）的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手开放平台。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "272110040385964032",
+   "identityTags": null,
+   "itemNum": 102,
+   "logo": "/download/0100c6656b9432084112bd16330c67cbb275.jpg",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "40",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 93,
+     "isOpen": 1,
+     "name": "金蝶AI套件",
+     "productLineId": 40,
+     "series": "S0361",
+     "sort": 1
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 0,
+   "totalAppraisalUsers": 0,
+   "updatedAt": "2026-04-17T12:41:32.000+08:00",
+   "updaterId": "429676515387511808",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 344749
+  },
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        null
+       ],
+       "code": null,
+       "description": "",
+       "entityId": "699901600827142400",
+       "entityType": "Knowledge",
+       "id": "704289863889049856",
+       "isCategory": false,
+       "name": "如何创建单据/分录的关联关系",
+       "parentId": "226337785987048960",
+       "sort": "24",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": "",
+     "entityId": null,
+     "entityType": null,
+     "id": "226337785987048960",
+     "isCategory": true,
+     "name": "常见问题",
+     "parentId": "-1",
+     "sort": "9",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download/0101d05fae7da1fb46ec9afde9c187ba6cda.png",
+  "department": null,
+  "id": "400313447986157568",
+  "name": "MartinTso",
+  "nameSpell": "caozhijun"
+ },
+ "totalAppraisalScore": 78,
+ "iflytekId": null,
+ "views": 11148,
+ "productLineId": 40,
+ "comments": 9,
+ "similarityCount": 0,
+ "totalAppraisalUsers": 16,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1785326181000,
+ "appraisalScore": 0,
+ "unuseful": 0,
+ "knowledgeCheckStatus": 2,
+ "otherProductLineIds": [
+  29
+ ],
+ "auditAt": 1763534413000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": null,
+       "code": "open",
+       "id": "272103818790291456",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "563356589114194944",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 37,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "93",
+     "name": "金蝶AI套件",
+     "productLineId": 40,
+     "sort": 2,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "XKOpenFAQ",
+        "id": "522699438716894976",
+        "name": "常见问题",
+        "productLineId": null,
+        "sort": 18,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "272103818790291456",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "563356589114194944",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 37,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "93",
+     "name": "金蝶AI套件",
+     "productLineId": 40,
+     "sort": 3,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "AdvancedSkills",
+     "createdAt": 1726129691000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "高级技巧",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/01005cea40211bf14113a6004322e86a6780.png",
+     "id": "622106263106487296",
+     "name": "高级技巧",
+     "productLine": {
+      "active": true,
+      "appLogo": "金蝶云星空|旗舰版",
+      "categoryCode": "X04",
+      "courseLogo": "",
+      "domain": "",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": false,
+      "id": 40,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/01006d278204e9994fe9b4fc05bcdcf7ba45.png",
+      "name": "金蝶AI套件",
+      "rank": 3,
+      "seriesCode": "S0361"
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download?fileName=01011dc4dc4a745a4974a64ff09ab41e9eab.png",
+      "department": null,
+      "id": "1012",
+      "name": "angel",
+      "nameSpell": "angel"
+     },
+     "updatedAt": 1726129691000
+    },
+    {
+     "code": "JHHZ",
+     "createdAt": 1726129637000,
+     "creator": {
+      "avatar": "/download?fileName=01014c2c1c8b203f4a8aaa1e18dce7725efa.png",
+      "department": null,
+      "id": "1155",
+      "name": "陈旭",
+      "nameSpell": "lansehuanxiang"
+     },
+     "description": "精华汇总",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download?fileName=0100ee298f758f6b4ac9ad48850206492b47.png",
+     "id": "622106035674547200",
+     "name": "精华汇总",
+     "productLine": {
+      "active": true,
+      "appLogo": "金蝶云星空|旗舰版",
+      "categoryCode": "X04",
+      "courseLogo": "",
+      "domain": "",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": false,
+      "id": 40,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/01006d278204e9994fe9b4fc05bcdcf7ba45.png",
+      "name": "金蝶AI套件",
+      "rank": 3,
+      "seriesCode": "S0361"
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 2,
+     "updatePerson": {
+      "avatar": "/download?fileName=01011dc4dc4a745a4974a64ff09ab41e9eab.png",
+      "department": null,
+      "id": "1012",
+      "name": "angel",
+      "nameSpell": "angel"
+     },
+     "updatedAt": 1726129637000
+    },
+    {
+     "code": "changjianwenti",
+     "createdAt": 1726129148000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "常见问题",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download?fileName=0100ef2db45aa7524b70a990e7fd9d40db4a.png",
+     "id": "622103985280648192",
+     "name": "常见问题",
+     "productLine": {
+      "active": true,
+      "appLogo": "金蝶云星空|旗舰版",
+      "categoryCode": "X04",
+      "courseLogo": "",
+      "domain": "",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": false,
+      "id": 40,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/01006d278204e9994fe9b4fc05bcdcf7ba45.png",
+      "name": "金蝶AI套件",
+      "rank": 3,
+      "seriesCode": "S0361"
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download?fileName=01011dc4dc4a745a4974a64ff09ab41e9eab.png",
+      "department": null,
+      "id": "1012",
+      "name": "angel",
+      "nameSpell": "angel"
+     },
+     "updatedAt": 1726129148000
+    }
+   ],
+   "productLineId": 40,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "699901600827142400",
+         "entityType": "Knowledge",
+         "id": "699916033846721792",
+         "isCategory": false,
+         "name": "如何创建单据/分录的关联关系",
+         "parentId": "272111016937375744",
+         "sort": "25",
+         "specialId": "272110040385964032",
+         "status": 1
+        }
+       ],
+       "code": "",
+       "description": "",
+       "entityId": null,
+       "entityType": null,
+       "id": "272111016937375744",
+       "isCategory": true,
+       "name": "常见问题",
+       "parentId": "-1",
+       "sort": "9",
+       "specialId": "272110040385964032",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI套件",
+       "id": 93,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "OSC",
+        "name": "开放服务云",
+        "id": "563356589114194944",
+        "sort": 33,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "OpenAPI",
+         "id": "272103818790291456",
+         "sort": 1,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 40
+      }
+     ],
+     "collections": 120,
+     "createdAt": "2022-01-20T21:08:09.000+08:00",
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d5437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "2147461337",
+      "name": "CorY",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了OpenAPI（开放平台）的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手开放平台。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "272110040385964032",
+     "identityTags": null,
+     "itemNum": 102,
+     "logo": "/download/0100c6656b9432084112bd16330c67cbb275.jpg",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "40",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 93,
+       "isOpen": 1,
+       "name": "金蝶AI套件",
+       "productLineId": 40,
+       "series": "S0361",
+       "sort": 1
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 0,
+     "totalAppraisalUsers": 0,
+     "updatedAt": "2026-04-17T12:41:32.000+08:00",
+     "updaterId": "429676515387511808",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 344749
+    }
+   ]
+  },
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": null,
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 0,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapi_apilist_layout",
+        "id": "505686038019362304",
+        "name": "异步API",
+        "productLineId": null,
+        "sort": 1,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 1,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "AdvancedSkills",
+     "createdAt": 1556519216000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "高阶技巧标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/01005cea40211bf14113a6004322e86a6780.png",
+     "id": "202203081642",
+     "name": "高级技巧",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download/010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "306913800727243776",
+      "name": "Paim",
+      "nameSpell": "name"
+     },
+     "updatedAt": 1657851500000
+    },
+    {
+     "code": "HotIssues",
+     "createdAt": 1558618967000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "使用中经常遇到的应用类、报错类问题的解决方法",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/010046d15638963c4c388734601dd5f8ceec.png",
+     "id": "202203081644",
+     "name": "常见问题",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010176d38341668f44fdb94c95058a90e4b8.png",
+      "department": "云社区运营部",
+      "id": "2147406697",
+      "name": "多肉丸子",
+      "nameSpell": "kejuan"
+     },
+     "updatedAt": 1676857709000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "699901600827142400",
+         "entityType": "Knowledge",
+         "id": "704289863889049856",
+         "isCategory": false,
+         "name": "如何创建单据/分录的关联关系",
+         "parentId": "226337785987048960",
+         "sort": "24",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": null,
+       "id": "226337785987048960",
+       "isCategory": true,
+       "name": "常见问题",
+       "parentId": "-1",
+       "sort": "9",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": "<h2>1、问题描述</h2><p>通过OpenAPI进行单据集成对接时，若单据存在上下游关系，特别是上游或下游单据是由第三方系统生成的情况下，应该如何产生关联？</p><p></p><h2>2、解决方案</h2><h3>2.1、方案一：【下推】</h3><p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;方案描述</strong>：通过调用下推的API实现单据创建及自动关联</p><h4>2.1.1 调用对应单据提供的下推API：</h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;API管理列表检索下推，优先选择已提供指定下推场景的API使用</p><p><img src=\"https://vip-admin.kingdee.com/download/0109162de67f56074cfd8b2b23eaecd1b10b.png\"></p><p></p><h4>2.1.2 通用下推并保存API</h4><p>&nbsp;&nbsp;&nbsp;&nbsp;若对应单据，未单独开放对应下推API，可调用通用的下推并保存API，<span style=\"color: rgb(0, 0, 0)\">通过第三方应用中的服务授权，授权使用&lt;</span><span style=\"color: rgb(255, 137, 38)\">基础数据服务API服务</span><span style=\"color: rgb(0, 0, 0)\">&gt;后即可调用</span><span style=\"color: rgb(227, 108, 9)\">：</span></p><p><span style=\"color: rgb(227, 108, 9)\">&nbsp;&nbsp;&nbsp;&nbsp;</span></p><p><span style=\"color: rgb(0, 0, 0)\"><strong>&nbsp;&nbsp;&nbsp;&nbsp;通用下推并保存API特征：</strong></span></p><p><span style=\"color: rgb(0, 0, 0)\">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"color: rgb(227, 108, 9)\">1. 支持：相同转换规则的批量下推、单个下推；</span></p><p><span style=\"color: rgb(227, 108, 9)\">&nbsp;&nbsp;&nbsp;&nbsp;2. 支持：合并下推、整单下推，指定分录下推；</span></p><p><span style=\"color: rgb(227, 108, 9)\">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"color: rgb(192, 0, 0)\">3. 不支持：拆单下推、下推同时修改数据。</span></p><p><span style=\"color: rgb(0, 0, 0)\">&nbsp;&nbsp;&nbsp;&nbsp;注：拆单下推、下推同时修改数据，可采用2.1.3，下推同时修改数据可在下推完成后调用更新API满足。</span></p><p><img src=\"/download/0109e32d1404d852494aa2506f355136f821.png\"></p><p><img src=\"/download/010925c679513fe049c59142fd864387c800.png\"></p><p></p><h4>2.1.3 自定义下推并保存API</h4><p>&nbsp;&nbsp;若以上下推未能满足项目需求，项目可自行通过Java插件进行封装BOTP的服务，实现所需的下推。</p><p>【自定义API介绍】：<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/knowledge/555460360946494464\">https://vip.kingdee.com/knowledge/555460360946494464</a></p><p></p><h3>2.2、方案二：【关联子实体】</h3><h4><strong>2.2.1 方案说明</strong></h4><p>操作API支持在新增或更新数据时，通过关联子实体属性对单据或分录进行关联关系处理。</p><p></p><p><span style=\"color: rgb(255, 0, 0); font-size: 18px\"><strong>注意事项：</strong></span></p><p><span style=\"color: rgb(0, 0, 0); font-size: 18px\"><strong>由于该方案是高度依赖API调用方传入正确的参数及关联关系，若无法保证确认正确传入业务所需参数及关联关系，请采用下推方案；</strong></span></p><p><span style=\"color: rgb(255, 0, 0); font-size: 20px\"><strong>因一旦参数漏传或关系错误</strong>，将会<strong>导致后续的业务操作报错或者出现数据问题</strong></span><span style=\"color: rgb(255, 137, 38); font-size: 20px\">；</span></p><p><span style=\"color: rgb(41, 114, 244); font-size: 18px\"><strong>故请采用此方案的项目，先在沙箱（或测试）环境进行充分测试并验证全流程后再进行生产启用对接！！！</strong></span></p><p></p><h4>2.2.2 方案描述</h4><ol class=\" list-paddingleft-2\"><li><p>操作API中，新增关联子实体属性，注意：图示为单据的关联子实体属性，如若是分录需要进行关联，则在对应分录下选择新增关联子实体属性</p><p><img src=\"/download/01090442c747c8cb49348aa9d58d7e64c00f.png\"></p></li><li><p>按所需关联关系，正确入参，实现在新增或更新时添加上下游关联关系。</p><p></p></li></ol><h4>2.2.3 字段说明：</h4><table style=\"width: 1312px\"><colgroup><col style=\"width: 343px\"><col style=\"width: 969px\"></colgroup><tbody><tr><th colspan=\"1\" rowspan=\"1\" colwidth=\"343\" data-background-color=\"\" style=\"background-color: \"><p>字段</p></th><th colspan=\"1\" rowspan=\"1\" colwidth=\"969\" data-background-color=\"\" style=\"background-color: \"><p>说明</p></th></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"93\" data-background-color=\"\" style=\"background-color: \"><p>xxxx_lk_sbillid</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"242\" data-background-color=\"\" style=\"background-color: \"><p>关联子实体.源单内码：上游单据id</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"93\" data-background-color=\"\" style=\"background-color: \"><p>xxxx_lk_sid</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"242\" data-background-color=\"\" style=\"background-color: \"><p>关联子实体.源单主实体内码：看关联关系关联的是单头还是分录, 如果是单头则值为上游单据id，关联的分录则值为：上游单据关联分录对应行分录id</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"93\" data-background-color=\"\" style=\"background-color: \"><p>xxxx_lk_stableid</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"242\" data-background-color=\"\" style=\"background-color: \"><p>关联子实体.源单主实体编码：可以在sys.meta库查 select ftableid,ftablename from T_META_EntityInfo where fid='pm_purplanbill'，固定值 ，看关联关系关联的是单头还是分录，然后根据ftablename对应表决定ftableid</p></td></tr></tbody></table><h4>2.2.4 其它说明</h4><p>1. 关联子实体社区参考帖子：<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/article/444445234173120000?productLineId=29&amp;isKnowledge=2&amp;lang=zh-CN\">https://vip.kingdee.com/article/444445234173120000?productLineId=29&amp;isKnowledge=2&amp;lang=zh-CN</a></p><p><span style=\"color: rgb(227, 108, 9)\">2. billentry_lk_stableid的获取方式：</span></p><ol class=\" list-paddingleft-2\"><li><p>进入查询分析器；</p></li><li><p>选择元数据库；</p></li><li><p>执行sql（单据标识需要修改）：select * from T_META_EntityInfo where fid like '%单据标识%';&nbsp;</p></li><li><p>取entitykey为分录的tableid</p><p><img src=\"/download/0109ba5a9fda1b8841eeae03942a9077b9c4.png\"></p></li></ol><h4>2.2.5 业务补充说明</h4><p><span style=\"color: rgb(255, 137, 38)\"><strong>一、供应链的单据如果使用【关联子实体】，需要额外给这10个字段赋值</strong></span></p><table style=\"min-width: 50px\"><colgroup><col style=\"min-width: 25px\"><col style=\"min-width: 25px\"></colgroup><tbody><tr><th colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p>序号</p></th><th colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p>&nbsp;&nbsp;字段</p></th></tr><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p>1</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p>物料明细.来源单据实体</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p>2</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p>物料明细.来源单据ID</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p>3</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p>物料明细.来源单据行ID</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p>4</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p>物料明细.来源单据编号</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p>5</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p>物料明细.来源单据分录序号</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p>6</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p>物料明细.核心单据编号</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p>7</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p>物料明细.核心单据ID</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p>8</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p>物料明细.核心单据行ID</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p>9</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p>物料明细.核心单据实体</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p>10</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p>物料明细.核心单据分录序号</p></td></tr></tbody></table><p><span style=\"color: rgb(255, 137, 38)\"><strong>二、来源单据相关的字段，取源单信息</strong></span></p><p><img src=\"/download/0100620f7b34313f4592b45e7918280346d2.png\" alt=\"上传图片\"></p><p><span style=\"color: rgb(255, 137, 38)\"><strong>三、核心单据相关的字段，从源单携带（如销售出库-销售退货），或者是取源单信息（如销售订单-销售出库），具体参考转换规则的字段映射配置</strong></span></p><p><img src=\"/download/0100b9dd91780dfa4794b0dada94462cd844.png\" alt=\"上传图片\"></p><p><img src=\"/download/01005f384e39685741388d6883f802fba28e.png\" alt=\"上传图片\"></p>"
+}

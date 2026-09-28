@@ -1,0 +1,423 @@
+{
+ "badNum": 0,
+ "identityTagIds": null,
+ "knowledgeId": "535419636511416064",
+ "createdAt": 1705461989000,
+ "collections": 2,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "535419636511416064",
+ "contentType": 1,
+ "updatedAt": 1733815922000,
+ "knowledgeUpdater": {
+  "avatar": "/download/0101d484c5557ed54c72bb0b1a6318f0121d.png",
+  "department": null,
+  "id": "118688",
+  "name": "郭玲_流程集成开放",
+  "nameSpell": "name"
+ },
+ "assessStatus": 0,
+ "knowledgeStatus": 2,
+ "assessHandleStatus": null,
+ "knowledgeCreatedAt": 1705461989000,
+ "version": 64,
+ "labels": [],
+ "editedAt": 1733815917000,
+ "identityTags": null,
+ "useful": 3,
+ "errors": [],
+ "isCollected": false,
+ "totalFeedBacks": 0,
+ "attachments": [],
+ "sources": [],
+ "editTitle": "使用限制说明",
+ "title": "使用限制说明",
+ "content": "<h2 label=\"一级标题\" class=\"first-title\" style=\"\"><span style=\"\">变更记录</span></h2><p><span style=\"\"></span></p><table width=\"100%\"><tbody style=\"\"><tr class=\"firstRow\" style=\"\"><td valign=\"middle\" width=\"116\" align=\"left\" style=\"\"><p style=\"\"><strong style=\"\">产品版本</strong></p></td><td valign=\"middle\" width=\"359\" align=\"left\" style=\"\"><strong style=\"\">更新内容</strong></td><td valign=\"middle\" width=\"146.33333333333334\" align=\"left\" style=\"\"><strong style=\"\">更新日期</strong></td></tr><tr><td valign=\"middle\" align=\"left\" colspan=\"1\" rowspan=\"1\"><span style=\"color: rgb(0, 0, 0);\">V6.0.6</span></td><td valign=\"middle\" align=\"left\" colspan=\"1\" rowspan=\"1\">初始版本</td><td valign=\"middle\" align=\"left\" colspan=\"1\" rowspan=\"1\">2024年1月17日</td></tr><tr style=\"\"><td valign=\"middle\" width=\"117\" align=\"left\" style=\"\"><span style=\"color: rgb(0, 0, 0);\">V6.0.13</span></td><td valign=\"middle\" width=\"359\" align=\"left\" style=\"\">暂时去掉日志保留天数控制</td><td valign=\"middle\" width=\"146.33333333333334\" align=\"left\" style=\"\">2024年6月26日</td></tr><tr><td valign=\"middle\" align=\"left\" colspan=\"1\" rowspan=\"1\">V7.0.0</td><td valign=\"middle\" align=\"left\" colspan=\"1\" rowspan=\"1\">事件消息大小可配置，且默认限制为<span style=\"\">10240字节</span></td><td valign=\"middle\" align=\"left\" colspan=\"1\" rowspan=\"1\">2024年9月10日</td></tr><tr><td valign=\"middle\" align=\"left\" colspan=\"1\" rowspan=\"1\">V7.0.3</td><td valign=\"middle\" align=\"left\" colspan=\"1\" rowspan=\"1\"><span style=\"\">事件消息大小增加MC参数设置，支持自定义大小</span></td><td valign=\"middle\" align=\"left\" colspan=\"1\" rowspan=\"1\">2024年12月10日</td></tr></tbody></table><p style=\"\"><br/></p><p style=\"\"><span style=\"font-size: 20px; text-align: justify;\"></span></p><hr/><p style=\"\"><span style=\"font-size: 20px; text-align: justify;\"></span><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\"><span style=\"\">1 系统限制说明</span></h2><p><br/></p><table width=\"99%\"><colgroup style=\"\"><col width=\"72\" span=\"2\" style=\"\"/><col width=\"493\" style=\"\"/></colgroup><tbody style=\"\"><tr style=\"\" class=\"firstRow\"><td height=\"23\" class=\"xl65\" width=\"107.33333333333333\" style=\"\">限制项</td><td class=\"xl65\" width=\"76.33333333333333\" style=\"\">默认值</td><td class=\"xl65\" width=\"547.3333333333334\" style=\"\">说明</td></tr><tr style=\"\"><td height=\"68\" class=\"xl66\" width=\"108\" style=\"\">事件消息大小</td><td class=\"xl66\" width=\"78.33333333333333\" style=\"\" height=\"68\"><span style=\"\">10240字节</span></td><td class=\"xl66\" width=\"506.33333333333337\" style=\"\" height=\"68\"><p>单条事件消息大小限制，V7.0版本后默认<span style=\"\">10240字节</span>，超出此大小的事件消息会被系统自动丢弃，无法入队。用户可以通过以下两种方式调整大小：</p><p>1. 用户可前往【公共设置】-【系统参数】-【应用-集成服务云-事件网格】中配置“事件消息大小限制(字节)”的参数值，默认设置为10240字节，单条事件消息不允许超过1,048,576字节。</p><p>2. 私有云支持MC配置参数<span style=\"color: rgb(0, 0, 0); font-size: 13px; background-color: rgb(255, 255, 255);\">kem.event.MaxBodySize，现场可以根据需要设置，</span><span style=\"color: rgb(227, 108, 9);\"><em>注意过大可能会有OOM风险</em></span><span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); font-size: 13px;\">，请谨慎。</span></p></td></tr><tr style=\"\"><td height=\"41\" class=\"xl67\" width=\"108\" style=\"\">回调连接超时</td><td class=\"xl67\" width=\"78.33333333333333\" style=\"\">3秒</td><td class=\"xl67\" width=\"507.33333333333337\" style=\"\">系统调用回调地址的连接时间，超过3秒会判定为连接超时，记录推送失败日志。</td></tr><tr style=\"\"><td height=\"79\" class=\"xl66\" width=\"108\" style=\"\">回调请求超时</td><td class=\"xl66\" width=\"78.33333333333333\" style=\"\" height=\"79\">3秒</td><td class=\"xl66\" width=\"508.33333333333337\" style=\"\" height=\"79\">系统调用回调地址的等待响应时间，超过3秒会判定为请求超时，记录推送失败日志。</td></tr><tr style=\"\"><td rowspan=\"1\" height=\"143\" class=\"xl68\" width=\"108\" style=\"\">日志存储长度</td><td rowspan=\"1\" class=\"xl68\" width=\"78.33333333333333\" style=\"\" height=\"143\">2000字符</td><td class=\"xl68\" width=\"509.33333333333337\" style=\"\" height=\"143\"><p>推送日志消息存储最大长度，默认为2000个字符，系统自动从前往后按此长度截取后存储。</p><p>日志存储长度可前往【公共设置】-【系统参数】-【应用-集成服务云-事件网格】中配置“事件日志长度(字符)”的参数值，最大可设置为5000字符，最小可设置为0。</p></td></tr></tbody></table><p><br/></p><p><span style=\"\"></span></p><p><br/></p><p><br/></p>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 87,
+   "isOpen": 1,
+   "name": "金蝶AI苍穹",
+   "productLineId": 29,
+   "series": "developer01",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        null
+       ],
+       "code": null,
+       "description": "",
+       "entityId": "535419636511416064",
+       "entityType": "Knowledge",
+       "id": "535480010614740480",
+       "isCategory": false,
+       "name": "使用限制说明",
+       "parentId": "535466471703678976",
+       "sort": "3",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": "",
+     "entityId": null,
+     "entityType": null,
+     "id": "535466471703678976",
+     "isCategory": true,
+     "name": "开放事件",
+     "parentId": "-1",
+     "sort": "7",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+  "department": null,
+  "id": "132488613174518784",
+  "name": "某个路易",
+  "nameSpell": "name"
+ },
+ "totalAppraisalScore": 14,
+ "iflytekId": null,
+ "views": 2034,
+ "productLineId": 29,
+ "comments": 0,
+ "similarityCount": 0,
+ "totalAppraisalUsers": 3,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1733815922000,
+ "appraisalScore": 0,
+ "unuseful": 0,
+ "knowledgeCheckStatus": 2,
+ "otherProductLineIds": [],
+ "auditAt": 1733815922000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "kemeventopen",
+        "id": "535464126735421440",
+        "name": "开放事件定义",
+        "productLineId": null,
+        "sort": 14,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 0,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "KFZN",
+     "createdAt": 1657854097000,
+     "creator": {
+      "avatar": "/download/010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "306913800727243776",
+      "name": "Paim",
+      "nameSpell": "name"
+     },
+     "description": "对开发的使用实例、应用技巧、基本知识点及注意事项等进行总结， 用于指导和规范相应模块的开发过程",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/01007702def2b9454c5983d3d2ff24919094.png",
+     "id": "335737665134146048",
+     "name": "开发指南",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010176d38341668f44fdb94c95058a90e4b8.png",
+      "department": "云社区运营部",
+      "id": "2147406697",
+      "name": "多肉丸子",
+      "nameSpell": "kejuan"
+     },
+     "updatedAt": 1676857749000
+    },
+    {
+     "code": "rumen",
+     "createdAt": 1605667807000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "入门类的知识可使用此标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100d322b9282bcc438faa894f4eec029977.png",
+     "id": "202203081646",
+     "name": "基础入门",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download?fileName=0101ec1d6ce599b442dab7d0b794c1fce88d.png",
+      "department": null,
+      "id": "1009",
+      "name": "一颗小星星",
+      "nameSpell": "fengling"
+     },
+     "updatedAt": 1657872008000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "535419636511416064",
+         "entityType": "Knowledge",
+         "id": "535480010614740480",
+         "isCategory": false,
+         "name": "使用限制说明",
+         "parentId": "535466471703678976",
+         "sort": "3",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": null,
+       "id": "535466471703678976",
+       "isCategory": true,
+       "name": "开放事件",
+       "parentId": "-1",
+       "sort": "7",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": "<h2 label=\"一级标题\" class=\"first-title\" style=\"\"><span style=\"\">变更记录</span></h2><p><span style=\"\"></span></p><table width=\"100%\"><tbody style=\"\"><tr class=\"firstRow\" style=\"\"><td valign=\"middle\" width=\"116\" align=\"left\" style=\"\"><p style=\"\"><strong style=\"\">产品版本</strong></p></td><td valign=\"middle\" width=\"359\" align=\"left\" style=\"\"><strong style=\"\">更新内容</strong></td><td valign=\"middle\" width=\"146.33333333333334\" align=\"left\" style=\"\"><strong style=\"\">更新日期</strong></td></tr><tr><td valign=\"middle\" align=\"left\" colspan=\"1\" rowspan=\"1\"><span style=\"color: rgb(0, 0, 0);\">V6.0.6</span></td><td valign=\"middle\" align=\"left\" colspan=\"1\" rowspan=\"1\">初始版本</td><td valign=\"middle\" align=\"left\" colspan=\"1\" rowspan=\"1\">2024年1月17日</td></tr><tr style=\"\"><td valign=\"middle\" width=\"117\" align=\"left\" style=\"\"><span style=\"color: rgb(0, 0, 0);\">V6.0.13</span></td><td valign=\"middle\" width=\"359\" align=\"left\" style=\"\">暂时去掉日志保留天数控制</td><td valign=\"middle\" width=\"146.33333333333334\" align=\"left\" style=\"\">2024年6月26日</td></tr><tr><td valign=\"middle\" align=\"left\" colspan=\"1\" rowspan=\"1\">V7.0.0</td><td valign=\"middle\" align=\"left\" colspan=\"1\" rowspan=\"1\">事件消息大小可配置，且默认限制为<span style=\"\">10240字节</span></td><td valign=\"middle\" align=\"left\" colspan=\"1\" rowspan=\"1\">2024年9月10日</td></tr><tr><td valign=\"middle\" align=\"left\" colspan=\"1\" rowspan=\"1\">V7.0.3</td><td valign=\"middle\" align=\"left\" colspan=\"1\" rowspan=\"1\"><span style=\"\">事件消息大小增加MC参数设置，支持自定义大小</span></td><td valign=\"middle\" align=\"left\" colspan=\"1\" rowspan=\"1\">2024年12月10日</td></tr></tbody></table><p style=\"\"><br/></p><p style=\"\"><span style=\"font-size: 20px; text-align: justify;\"></span></p><hr/><p style=\"\"><span style=\"font-size: 20px; text-align: justify;\"></span><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\"><span style=\"\">1 系统限制说明</span></h2><p><br/></p><table width=\"99%\"><colgroup style=\"\"><col width=\"72\" span=\"2\" style=\"\"/><col width=\"493\" style=\"\"/></colgroup><tbody style=\"\"><tr style=\"\" class=\"firstRow\"><td height=\"23\" class=\"xl65\" width=\"107.33333333333333\" style=\"\">限制项</td><td class=\"xl65\" width=\"76.33333333333333\" style=\"\">默认值</td><td class=\"xl65\" width=\"547.3333333333334\" style=\"\">说明</td></tr><tr style=\"\"><td height=\"68\" class=\"xl66\" width=\"108\" style=\"\">事件消息大小</td><td class=\"xl66\" width=\"78.33333333333333\" style=\"\" height=\"68\"><span style=\"\">10240字节</span></td><td class=\"xl66\" width=\"506.33333333333337\" style=\"\" height=\"68\"><p>单条事件消息大小限制，V7.0版本后默认<span style=\"\">10240字节</span>，超出此大小的事件消息会被系统自动丢弃，无法入队。用户可以通过以下两种方式调整大小：</p><p>1. 用户可前往【公共设置】-【系统参数】-【应用-集成服务云-事件网格】中配置“事件消息大小限制(字节)”的参数值，默认设置为10240字节，单条事件消息不允许超过1,048,576字节。</p><p>2. 私有云支持MC配置参数<span style=\"color: rgb(0, 0, 0); font-size: 13px; background-color: rgb(255, 255, 255);\">kem.event.MaxBodySize，现场可以根据需要设置，</span><span style=\"color: rgb(227, 108, 9);\"><em>注意过大可能会有OOM风险</em></span><span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); font-size: 13px;\">，请谨慎。</span></p></td></tr><tr style=\"\"><td height=\"41\" class=\"xl67\" width=\"108\" style=\"\">回调连接超时</td><td class=\"xl67\" width=\"78.33333333333333\" style=\"\">3秒</td><td class=\"xl67\" width=\"507.33333333333337\" style=\"\">系统调用回调地址的连接时间，超过3秒会判定为连接超时，记录推送失败日志。</td></tr><tr style=\"\"><td height=\"79\" class=\"xl66\" width=\"108\" style=\"\">回调请求超时</td><td class=\"xl66\" width=\"78.33333333333333\" style=\"\" height=\"79\">3秒</td><td class=\"xl66\" width=\"508.33333333333337\" style=\"\" height=\"79\">系统调用回调地址的等待响应时间，超过3秒会判定为请求超时，记录推送失败日志。</td></tr><tr style=\"\"><td rowspan=\"1\" height=\"143\" class=\"xl68\" width=\"108\" style=\"\">日志存储长度</td><td rowspan=\"1\" class=\"xl68\" width=\"78.33333333333333\" style=\"\" height=\"143\">2000字符</td><td class=\"xl68\" width=\"509.33333333333337\" style=\"\" height=\"143\"><p>推送日志消息存储最大长度，默认为2000个字符，系统自动从前往后按此长度截取后存储。</p><p>日志存储长度可前往【公共设置】-【系统参数】-【应用-集成服务云-事件网格】中配置“事件日志长度(字符)”的参数值，最大可设置为5000字符，最小可设置为0。</p></td></tr></tbody></table><p><br/></p><p><span style=\"\"></span></p><p><br/></p><p><br/></p>"
+}

@@ -1,0 +1,455 @@
+{
+ "badNum": 0,
+ "templateId": "415951269493009664",
+ "identityTagIds": null,
+ "knowledgeId": "644193911996299264",
+ "createdAt": 1731395797000,
+ "collections": 11,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "644193911996299264",
+ "contentType": 1,
+ "updatedAt": 1766125395000,
+ "knowledgeUpdater": {
+  "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+  "department": null,
+  "id": "132488613174518784",
+  "name": "某个路易",
+  "nameSpell": "name"
+ },
+ "assessStatus": 0,
+ "knowledgeStatus": 2,
+ "assessHandleStatus": null,
+ "knowledgeCreatedAt": 1731395797000,
+ "version": 33,
+ "labels": [],
+ "editedAt": 1739857970000,
+ "identityTags": null,
+ "useful": 2,
+ "errors": [],
+ "isCollected": false,
+ "template": "",
+ "totalFeedBacks": 0,
+ "attachments": [],
+ "sources": [],
+ "editTitle": "自定义API（文件流处理）",
+ "title": "自定义API（文件流处理）",
+ "content": "<h2 label=\"一级标题\" class=\"first-title\" style=\"text-align: left;\"><strong style=\"\"><span style=\"color: rgb(26, 26, 26);\"></span></strong></h2><h2 label=\"一级标题\" class=\"first-title html-anchor-list0-1694481588318 html-anchor-list0-1694506451024 html-anchor-list0-1695015348964 html-anchor-list0-1695035216156 html-anchor-list0-1739857107937 html-anchor-list0-1739857107937\" id=\"html-anchor-list0-1694481588318\" style=\"color: rgb(73, 80, 96);\"><span style=\"color: rgb(26, 26, 26);\">变更记录</span><br/></h2><p style=\"\"><br/></p><table width=\"100%\" style=\"\"><tbody style=\"\"><tr class=\"firstRow ueditor-new-first-row\" style=\"\"><td valign=\"middle\" width=\"189.67554479418885\" align=\"left\" style=\"\"><p style=\"text-align: inherit;\"><span style=\"font-weight: 700;\">产品版本</span></p></td><td valign=\"middle\" width=\"722.4406779661017\" align=\"left\" style=\"\"><span style=\"font-weight: 700;\">更新内容</span></td><td valign=\"middle\" width=\"237.09443099273608\" align=\"left\" style=\"\"><span style=\"font-weight: 700;\">更新日期</span></td></tr><tr style=\"\"><td width=\"92\" valign=\"top\" style=\"\">V5.0.011</td><td width=\"498\" valign=\"top\" style=\"\">初始版本</td><td width=\"150\" valign=\"top\" style=\"\">2022年6月</td></tr><tr style=\"\"><td width=\"92\" valign=\"top\" style=\"\">V7.0.6</td><td width=\"498\" valign=\"top\" style=\"\"><p style=\"text-align: inherit;\"><span style=\"color: rgb(51, 51, 51); background-color: rgb(255, 255, 255);\">自定义Java插件API支持单个参数接收多个文件</span></p></td><td width=\"150\" valign=\"top\" style=\"\">2025年2月</td></tr></tbody></table><p style=\"\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"text-align: left;\"><strong style=\"\"><span style=\"color: rgb(26, 26, 26);\"></span></strong></h2><hr/><p style=\"background-color: rgb(255, 255, 255);\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"text-align: left;\"><strong style=\"\"><span style=\"color: rgb(26, 26, 26);\">1 </span></strong><strong style=\"\"><span style=\"color: rgb(26, 26, 26);\">业务场景</span></strong></h2><p style=\"color: rgb(36, 41, 46); background-color: rgb(255, 255, 255);\">OpenAPI支持处理文件流，适用于以下业务场景：</p><ul class=\" list-paddingleft-2\" style=\"\"><li style=\"\"><p style=\"\">对文件流进行处理；</p></li><li style=\"\"><p style=\"\">对图像、证书、文档、附件等进行处理；</p></li><li style=\"\"><p style=\"\"><span style=\"color: rgb(79, 129, 189);\">文件的上传及下载</span>。</p></li></ul><p style=\"\">&nbsp;</p><h2 label=\"一级标题\" class=\"first-title\" style=\"text-align: left;\"><strong style=\"\"><span style=\"color: rgb(26, 26, 26);\">2 </span></strong><strong style=\"\"><span style=\"color: rgb(26, 26, 26);\">解决方案</span></strong></h2><ol class=\"custom_num2 list-paddingleft-1\" style=\"\"><li class=\"list-num-3-1 list-num2-paddingleft-1\" style=\"\"><p style=\"\">使用自定义Java插件开发API接口，并在开放平台注册此自定义API。</p></li><li class=\"list-num-3-2 list-num2-paddingleft-1\" style=\"\"><p style=\"\">上传文件时请求消息格式应设置为：multipart/form-data。</p></li><li class=\"list-num-3-3 list-num2-paddingleft-1\" style=\"\"><p style=\"\">定义一个OpenApiFile类型的入参（可以定义多个)，插件中可以获取到上传的文件名/类型/文件流(byte[])</p></li><li class=\"list-num-3-4 list-num2-paddingleft-1\" style=\"\"><p style=\"\">其他参数（如业务单号、ID）按正常的参数定义即可。</p></li><li class=\"list-num-3-5 list-num2-paddingleft-1\" style=\"\"><p style=\"\">如果要返回文件流或下载文件请设置http头的AcceptType为：application/octet-stream，</p></li><li class=\"list-num-3-6 list-num2-paddingleft-1\" style=\"\"><p style=\"\">如果只返回文件处理结果信息可以设置http头ContentType为：application/json。</p></li><li class=\"list-num-3-7 list-num2-paddingleft-1\" style=\"\"><p style=\"\">性能考虑单次文件传输大小最多为30M，可通过MC参数修改默认文件流最大报文大小：OpenApi.FileItem.MaxSize，单位是<span style=\"\">字节b</span>。</p></li></ol><p style=\"text-align: justify;\"><br/><span style=\"color: rgb(5, 7, 59); background-color: rgb(253, 253, 254);\"></span></p><h3 label=\"二级标题\" class=\"second-title\" style=\"text-align: justify;\"><strong style=\"\">2.1 </strong><strong style=\"\">代码示例</strong></h3><p style=\"\"><span style=\"color: rgb(227, 108, 9);\"><span style=\"color: rgb(36, 41, 46); background-color: rgb(255, 255, 255);\">下面的示例插件代码演示：</span></span></p><p style=\"\"><span style=\"color: rgb(227, 108, 9);\"><span style=\"color: rgb(36, 41, 46); background-color: rgb(255, 255, 255);\">&nbsp;&nbsp;&nbsp;&nbsp;1)如何上传文件；</span></span></p><p style=\"\"><span style=\"color: rgb(227, 108, 9);\"><span style=\"color: rgb(36, 41, 46); background-color: rgb(255, 255, 255);\">&nbsp;&nbsp;&nbsp;&nbsp;2)如何处理文件并下载。</span></span></p><p style=\"\"><span style=\"color: rgb(227, 108, 9);\"><span style=\"color: rgb(36, 41, 46); background-color: rgb(255, 255, 255);\"><br/></span></span></p><pre class=\"ueditor-code-area brush:java;toolbar:false\" style=\"\">@ApiController(value&nbsp;=&nbsp;&quot;dev&quot;,&nbsp;desc&nbsp;=&nbsp;&quot;自定义API&nbsp;Demo样例2&quot;)\n@ApiMapping(value&nbsp;=&nbsp;&quot;/openapi/test2&quot;)\npublic&nbsp;class&nbsp;CustomDemoTestController&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;@ApiPostMapping(value&nbsp;=&nbsp;&quot;/uploadFile&quot;,&nbsp;desc&nbsp;=&nbsp;&quot;上传文件流&quot;)\n&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;CustomApiResult&lt;String&gt;&nbsp;uploadFile(@NotNull&nbsp;@ApiParam(&quot;订单号&quot;)&nbsp;String&nbsp;billNo,&nbsp;@ApiParam(&quot;文件流&quot;)&nbsp;OpenApiFile&nbsp;file1)&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/*\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如何开发API支持文件流处理：\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;==============================\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.&nbsp;上传文件时请求消息格式应设置为：multipart/form-data。\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.&nbsp;定义一个OpenApiFile类型的入参（可以定义多个)，插件中可以获取到上传的文件名/类型/文件流(byte[])\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.&nbsp;其他参数（如业务单号、ID）按正常的参数定义即可。\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.&nbsp;如果要返回文件流或下载文件请设置http头的AcceptType为：application/octet-stream，\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如果只返回文件处理结果信息可以设置http头ContentType为：application/json。\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注：由于性能考虑单次文件传输大小最多为30M。\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/\n\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(StringUtil.isEmpty(billNo)&nbsp;||&nbsp;file1&nbsp;==&nbsp;null&nbsp;||&nbsp;file1.getFileData()&nbsp;==&nbsp;null)&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//手动设置http状态码406\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ServiceApiContext.getResponse().setHttpStatus(HttpStatus.NOT_ACCEPTABLE.getStatusCode());\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//返回失败错误码：errorCode：900101（业务自行约定）&nbsp;&nbsp;&amp;&nbsp;status=false\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;CustomApiResult.fail(&quot;900101&quot;,&nbsp;&quot;订单号billNo及文件流file1不能为空。&quot;);\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String&nbsp;msg&nbsp;=&nbsp;&quot;您的订单号：&quot;&nbsp;+&nbsp;billNo&nbsp;+&nbsp;&quot;，上传的文件名是：&quot;&nbsp;+&nbsp;file1.getFileName()&nbsp;+&nbsp;&quot;，类型是：&quot;&nbsp;+&nbsp;file1.getContentType()\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+&nbsp;&quot;，文件长度为（Bytes）：&quot;&nbsp;+&nbsp;file1.getFileData().length;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;CustomApiResult.success(msg);\n&nbsp;&nbsp;&nbsp;&nbsp;}\n\n&nbsp;&nbsp;&nbsp;&nbsp;@ApiPostMapping(value&nbsp;=&nbsp;&quot;/processFile&quot;,&nbsp;desc&nbsp;=&nbsp;&quot;处理文件流&quot;)\n&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;CustomApiResult&lt;OpenApiFile&gt;&nbsp;processFile(@NotNull&nbsp;@ApiParam(&quot;订单号&quot;)&nbsp;String&nbsp;billNo,&nbsp;@ApiParam(&quot;文件流&quot;)&nbsp;OpenApiFile&nbsp;file1)&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(StringUtil.isEmpty(billNo)&nbsp;||&nbsp;file1&nbsp;==&nbsp;null&nbsp;||&nbsp;file1.getFileData()&nbsp;==&nbsp;null)&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//手动设置http状态码406\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ServiceApiContext.getResponse().setHttpStatus(HttpStatus.NOT_ACCEPTABLE.getStatusCode());\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//返回失败错误码：errorCode：900101（业务自行约定）&nbsp;&nbsp;&amp;&nbsp;status=false\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;CustomApiResult.fail(&quot;900101&quot;,&nbsp;&quot;订单号billNo及文件流file1不能为空。&quot;);\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}\n\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(!file1.getFileName().contains(&quot;.txt&quot;))&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//手动设置http状态码406\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ServiceApiContext.getResponse().setHttpStatus(HttpStatus.NOT_ACCEPTABLE.getStatusCode());\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//返回失败错误码：errorCode：900102（业务自行约定）&nbsp;&nbsp;&amp;&nbsp;status=false\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;CustomApiResult.fail(&quot;900102&quot;,&nbsp;&quot;此演示案例只能处理文本文件，你可以编写用例处理图像/EXCEL等文件。&quot;);\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}\n\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;try&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//demo代码，请替换成实际业务逻辑。下面演示对输入的文档文件进行加工，在头部添加了加工信息。\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;byte[]&nbsp;message&nbsp;=&nbsp;(&quot;此文件已被OpenAPI插件处理，订单号：&quot;&nbsp;+&nbsp;billNo&nbsp;+&nbsp;&quot;，处理时间：&quot;&nbsp;+&nbsp;(new&nbsp;Date()).toString()&nbsp;+&nbsp;&quot;&nbsp;\\n\\r&quot;).getBytes(Charset.forName(&quot;UTF-8&quot;));\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;byte[]&nbsp;resultFileData&nbsp;=&nbsp;new&nbsp;byte[file1.getFileData().length&nbsp;+&nbsp;message.length];\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.arraycopy(message,&nbsp;0,&nbsp;resultFileData,&nbsp;0,&nbsp;message.length);\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.arraycopy(file1.getFileData(),&nbsp;0,&nbsp;resultFileData,&nbsp;message.length,&nbsp;file1.getFileData().length);\n\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//返回的文件流处理参数：\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;1.&nbsp;fileName:文件名；&nbsp;&nbsp;&nbsp;&nbsp;2.&nbsp;fileType:如：application/vnd.ms-excel,text/plain\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;3.&nbsp;downloadStream：true-下载文件；false-输出文件流；4.&nbsp;data：文件流\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OpenApiFile&nbsp;result&nbsp;=&nbsp;new&nbsp;OpenApiFile(&quot;New&quot;&nbsp;+&nbsp;file1.getFileName(),&nbsp;MediaType.TEXT_PLAIN,&nbsp;true,&nbsp;resultFileData);\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;CustomApiResult.success(result);\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;catch&nbsp;(Exception&nbsp;ex)&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//手动设置http状态码\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ServiceApiContext.getResponse().setHttpStatus(HttpStatus.BAD_REQUEST.getStatusCode());\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//返回失败错误码：errorCode：400&nbsp;&nbsp;&amp;&nbsp;status=false\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;CustomApiResult.fail(&quot;400&quot;,&nbsp;&quot;处理时发生错误：&quot;&nbsp;+&nbsp;ex.getMessage());\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}\n&nbsp;&nbsp;&nbsp;&nbsp;}\n}</pre><p style=\"\"><br/></p><p id=\"t_4\" style=\"\" class=\"\" label=\"\"><br/></p><h3 id=\"t_4\" style=\"\" class=\"second-title\" label=\"二级标题\">2.2 注册自定义API</h3><p style=\"color: rgb(36, 41, 46); background-color: rgb(255, 255, 255);\">菜单：开放服务云 - OpenAPI - API开发，新增 “自定义API”。</p><p style=\"color: rgb(36, 41, 46); background-color: rgb(255, 255, 255);\"><span style=\"color: rgb(26, 26, 26);\">选择所属应用，填写API编码及名称，API分类。</span><span style=\"color: rgb(26, 26, 26);\">在“类名”处输入你的API插件类全路径名称，例如：kd.bos.openapi.service.custom.demo.CustomDemoTestController。</span></p><p style=\"color: rgb(36, 41, 46); background-color: rgb(255, 255, 255);\"><span style=\"color: rgb(26, 26, 26);\">选择方法名。</span>已将此JAVA代码发布为自定义API。此时可以直接使用Postman测试REST协议的API。</p><p style=\"color: rgb(36, 41, 46); background-color: rgb(255, 255, 255);\"><br/></p><p style=\"color: rgb(36, 41, 46); background-color: rgb(255, 255, 255);\"><img src=\"/download/0109b35cb6e2be7f4d079e0477cda4954d67.png\"/></p><p id=\"t_5\" style=\"\" class=\"\" label=\"\"><br/></p><p style=\"\"><img src=\"/download/0109638f3af288d34cb08fb04ea9612776ce.png\"/></p><p id=\"t_5\" style=\"\" class=\"\" label=\"\"><br/></p><h3 id=\"t_5\" style=\"\" class=\"second-title\" label=\"二级标题\">2.3 测试API</h3><p style=\"color: rgb(36, 41, 46); background-color: rgb(255, 255, 255);\">使用Postman测试。请求方式选择POST，请求消息格式应设置为：multipart/form-data，填写相应的参数，并选择一个文件。注：在选择文件时请选择类型File。</p><p style=\"color: rgb(36, 41, 46); background-color: rgb(255, 255, 255);\"><span style=\"font-weight: 600;\">1）</span>&nbsp;<span style=\"font-weight: 600;\">测试上传</span></p><p style=\"color: rgb(36, 41, 46); background-color: rgb(255, 255, 255);\">如果只返回文件处理结果信息可以设置http头ContentType为：application/json</p><p style=\"color: rgb(36, 41, 46); background-color: rgb(255, 255, 255);\"><br/></p><p style=\"color: rgb(36, 41, 46); background-color: rgb(255, 255, 255);\">注：由于性能考虑单次文件传输大小最多为30M。一个file参数只支持上传1个附件，用户可以定义多个file参数或多次调用实现上传多个附件。</p><p style=\"color: rgb(36, 41, 46); background-color: rgb(255, 255, 255);\"><br/></p><p style=\"color: rgb(36, 41, 46); background-color: rgb(255, 255, 255);\"><img src=\"/download/0109c0ca6f0a1d7447f3b862ed7daa8a4119.png\"/></p><p style=\"color: rgb(36, 41, 46); background-color: rgb(255, 255, 255);\"><span style=\"font-weight: 600;\"><br/></span></p><p style=\"color: rgb(36, 41, 46); background-color: rgb(255, 255, 255);\"><span style=\"font-weight: 600;\">2）</span>&nbsp;<span style=\"font-weight: 600;\">测试下载</span></p><p style=\"color: rgb(36, 41, 46); background-color: rgb(255, 255, 255);\">如果要返回文件流或下载文件请设置http头的Accept-Type为：application/octet-stream。</p><p style=\"color: rgb(36, 41, 46); background-color: rgb(255, 255, 255);\">注：如果要测试文件下载，请点击Postman的“Send and download”，而不是“Send”按钮。</p><p style=\"color: rgb(36, 41, 46); background-color: rgb(255, 255, 255);\"><br/></p><p style=\"color: rgb(36, 41, 46); background-color: rgb(255, 255, 255);\"><img src=\"/download/01098d38daef5d554d35b02d9322d9ca8925.png\"/></p><p style=\"color: rgb(36, 41, 46); background-color: rgb(255, 255, 255);\"><br/></p><p style=\"color: rgb(36, 41, 46); background-color: rgb(255, 255, 255);\"><br/></p><p style=\"color: rgb(36, 41, 46); background-color: rgb(255, 255, 255);\">此Demo演示的文件在我的电脑中可以找到被下载的文件，示例代码是对一个文本文件做出了相应的处理，可以根据业务需要对图像或EXCEL等文件进行按需加工。</p><p style=\"color: rgb(36, 41, 46); background-color: rgb(255, 255, 255);\"><br/></p><p style=\"\"><img src=\"/download/010931ba63c5c87e490287a8d1bb186bced8.png\"/>&nbsp;</p><p style=\"\"><br/></p><p style=\"\"><br/></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\"><strong style=\"\"><span style=\"color: rgb(26, 26, 26);\">2.4 多文件处理</span></strong></h3><p style=\"\"><span style=\"\">苍穹平台OpenAPI（<span style=\"color: rgb(31, 73, 125);\">7.0.6以上），</span></span>支持单个参数传入多个文件，在<span class=\"md-plain md-expand\" style=\"color: rgb(51, 51, 51);\">方法参数中写成List</span><span class=\"md-tag md-raw-inline\" style=\"color: rgb(167, 167, 167);\">&lt;OpenApiFile&gt;</span><span class=\"md-plain\" style=\"color: rgb(51, 51, 51);\">即可接收到多个文件，也可定义多个List</span><span class=\"md-tag md-raw-inline\" style=\"color: rgb(167, 167, 167);\">&lt;OpenApiFile&gt;</span><span class=\"md-plain md-expand\" style=\"color: rgb(51, 51, 51);\">的参数，</span>接口代码示例如下。</p><p style=\"\"><br/></p><p style=\"\"><br/></p><pre class=\"ueditor-code-area brush:java;toolbar:false\" style=\"\">\t@ApiPostMapping(value&nbsp;=&nbsp;&quot;/fileHandle&quot;,&nbsp;desc&nbsp;=&nbsp;&quot;多文件处理&quot;)\n&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;CustomApiResult&lt;String&gt;&nbsp;fileHandle(@ApiParam(&quot;billno&quot;)&nbsp;String&nbsp;billno\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;@ApiParam(&quot;file&quot;)&nbsp;OpenApiFile&nbsp;file\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;@ApiParam(&quot;file1&quot;)&nbsp;OpenApiFile&nbsp;file1\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;@ApiParam(&quot;fileList&quot;)&nbsp;List&lt;OpenApiFile&gt;&nbsp;fileList\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;@ApiParam(&quot;fileList1&quot;)&nbsp;List&lt;OpenApiFile&gt;&nbsp;fileList1)&nbsp;{\n\t\treturn&nbsp;CustomApiResult.success(&quot;&quot;);\n\t}</pre><p style=\"\"><br/></p><p style=\"\"><img src=\"/download/0109c68528908d0f4a52aac858d57175b644.png\"/></p><p style=\"\"><br/></p><p style=\"\"><br/></p><p style=\"\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\"><span class=\"md-plain\" style=\"\">3 注意事项</span></h2><ul class=\"ul-list list-paddingleft-2\" style=\"color: rgb(51, 51, 51); background-color: rgb(255, 255, 255);\"><li style=\"\"><p class=\"md-end-block md-p\" style=\"\"><span class=\"md-plain\" style=\"\">OpenAPI只处理小文件，大文件的处理建议使用文件上传接口（uploadFile.do）。</span></p></li><li style=\"\"><p class=\"md-end-block md-p md-focus\" style=\"\"><span class=\"md-plain\" style=\"\">性能考虑单次所有文件传输大小最多为50M，可通过MC租户级参数修改默认文件流最大报文大小：OpenApi.FileItem.MaxSize，单位为字节b。</span></p></li></ul><p style=\"\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\"><strong style=\"\"><span style=\"color: rgb(26, 26, 26);\">4&nbsp;</span></strong>更多资讯</h2><p style=\"text-align: justify;\">&nbsp;&nbsp;&nbsp;&nbsp;<a href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=239331354741842688&id=213309216805890816&productLineId=29\" title=\"\" target=\"_blank\" class=\"\" style=\"\">金蝶AI苍穹开放平台OpenAPI调用流程</a></p><p style=\"\">&nbsp;&nbsp;&nbsp;&nbsp;<a href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=239331354741842688&id=218694224487485696&productLineId=29\" title=\"\" target=\"_blank\" class=\"\" style=\"\">金蝶AI苍穹开放平台OpenAPI开发认证指南</a></p><p style=\"\"><strong style=\"\"><span style=\"color: rgb(26, 26, 26);\"><br/></span></strong></p>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 87,
+   "isOpen": 1,
+   "name": "金蝶AI苍穹",
+   "productLineId": 29,
+   "series": "developer01",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "644193911996299264",
+         "entityType": "Knowledge",
+         "id": "644217369497151488",
+         "isCategory": false,
+         "name": "自定义API（文件流处理）",
+         "parentId": "358247193897143040",
+         "sort": "4",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": null,
+       "id": "358247193897143040",
+       "isCategory": true,
+       "name": "自定义API",
+       "parentId": "226337544983020032",
+       "sort": "3",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": null,
+     "entityId": null,
+     "entityType": null,
+     "id": "226337544983020032",
+     "isCategory": true,
+     "name": "用户手册",
+     "parentId": "-1",
+     "sort": "6",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download/01010204d4b71b654a208006fa1004eac36a.png",
+  "department": null,
+  "id": "740211268992385024",
+  "name": "毛毛去哪儿",
+  "nameSpell": "name"
+ },
+ "totalAppraisalScore": 9,
+ "iflytekId": null,
+ "views": 6114,
+ "productLineId": 29,
+ "comments": 0,
+ "similarityCount": 0,
+ "totalAppraisalUsers": 2,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1766125395000,
+ "appraisalScore": 0,
+ "unuseful": 0,
+ "knowledgeCheckStatus": 2,
+ "otherProductLineIds": [],
+ "auditAt": 1739857977000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapi_apilist_layout",
+        "id": "505686038019362304",
+        "name": "异步API",
+        "productLineId": null,
+        "sort": 1,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 0,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "rumen",
+     "createdAt": 1605667807000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "入门类的知识可使用此标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100d322b9282bcc438faa894f4eec029977.png",
+     "id": "202203081646",
+     "name": "基础入门",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download?fileName=0101ec1d6ce599b442dab7d0b794c1fce88d.png",
+      "department": null,
+      "id": "1009",
+      "name": "一颗小星星",
+      "nameSpell": "fengling"
+     },
+     "updatedAt": 1657872008000
+    },
+    {
+     "code": "ScenarioBasedGuidance",
+     "createdAt": 1676978333000,
+     "creator": {
+      "avatar": "/download/010176d38341668f44fdb94c95058a90e4b8.png",
+      "department": "云社区运营部",
+      "id": "2147406697",
+      "name": "多肉丸子",
+      "nameSpell": "kejuan"
+     },
+     "description": "基于标准产品，按使用场景指引操作，包含一个或多个功能的组合应用",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/01006b7b8ed9461b4d0e9670ec0d4cb7e48f.png",
+     "id": "415950525675139584",
+     "name": "场景指引",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010176d38341668f44fdb94c95058a90e4b8.png",
+      "department": "云社区运营部",
+      "id": "2147406697",
+      "name": "多肉丸子",
+      "nameSpell": "kejuan"
+     },
+     "updatedAt": 1676978333000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          {
+           "childCategory": [
+            null
+           ],
+           "code": null,
+           "description": "",
+           "entityId": "644193911996299264",
+           "entityType": "Knowledge",
+           "id": "644217369497151488",
+           "isCategory": false,
+           "name": "自定义API（文件流处理）",
+           "parentId": "358247193897143040",
+           "sort": "4",
+           "specialId": "226337046514476288",
+           "status": 1
+          }
+         ],
+         "code": null,
+         "description": "",
+         "entityId": null,
+         "entityType": null,
+         "id": "358247193897143040",
+         "isCategory": true,
+         "name": "自定义API",
+         "parentId": "226337544983020032",
+         "sort": "3",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": null,
+       "entityId": null,
+       "entityType": null,
+       "id": "226337544983020032",
+       "isCategory": true,
+       "name": "用户手册",
+       "parentId": "-1",
+       "sort": "6",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": "<h2 label=\"一级标题\" class=\"first-title\" style=\"text-align: left;\"><strong style=\"\"><span style=\"color: rgb(26, 26, 26);\"></span></strong></h2><h2 label=\"一级标题\" class=\"first-title html-anchor-list0-1694481588318 html-anchor-list0-1694506451024 html-anchor-list0-1695015348964 html-anchor-list0-1695035216156 html-anchor-list0-1739857107937 html-anchor-list0-1739857107937\" id=\"html-anchor-list0-1694481588318\" style=\"color: rgb(73, 80, 96);\"><span style=\"color: rgb(26, 26, 26);\">变更记录</span><br/></h2><p style=\"\"><br/></p><table width=\"100%\" style=\"\"><tbody style=\"\"><tr class=\"firstRow ueditor-new-first-row\" style=\"\"><td valign=\"middle\" width=\"189.67554479418885\" align=\"left\" style=\"\"><p style=\"text-align: inherit;\"><span style=\"font-weight: 700;\">产品版本</span></p></td><td valign=\"middle\" width=\"722.4406779661017\" align=\"left\" style=\"\"><span style=\"font-weight: 700;\">更新内容</span></td><td valign=\"middle\" width=\"237.09443099273608\" align=\"left\" style=\"\"><span style=\"font-weight: 700;\">更新日期</span></td></tr><tr style=\"\"><td width=\"92\" valign=\"top\" style=\"\">V5.0.011</td><td width=\"498\" valign=\"top\" style=\"\">初始版本</td><td width=\"150\" valign=\"top\" style=\"\">2022年6月</td></tr><tr style=\"\"><td width=\"92\" valign=\"top\" style=\"\">V7.0.6</td><td width=\"498\" valign=\"top\" style=\"\"><p style=\"text-align: inherit;\"><span style=\"color: rgb(51, 51, 51); background-color: rgb(255, 255, 255);\">自定义Java插件API支持单个参数接收多个文件</span></p></td><td width=\"150\" valign=\"top\" style=\"\">2025年2月</td></tr></tbody></table><p style=\"\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"text-align: left;\"><strong style=\"\"><span style=\"color: rgb(26, 26, 26);\"></span></strong></h2><hr/><p style=\"background-color: rgb(255, 255, 255);\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"text-align: left;\"><strong style=\"\"><span style=\"color: rgb(26, 26, 26);\">1 </span></strong><strong style=\"\"><span style=\"color: rgb(26, 26, 26);\">业务场景</span></strong></h2><p style=\"color: rgb(36, 41, 46); background-color: rgb(255, 255, 255);\">OpenAPI支持处理文件流，适用于以下业务场景：</p><ul class=\" list-paddingleft-2\" style=\"\"><li style=\"\"><p style=\"\">对文件流进行处理；</p></li><li style=\"\"><p style=\"\">对图像、证书、文档、附件等进行处理；</p></li><li style=\"\"><p style=\"\"><span style=\"color: rgb(79, 129, 189);\">文件的上传及下载</span>。</p></li></ul><p style=\"\">&nbsp;</p><h2 label=\"一级标题\" class=\"first-title\" style=\"text-align: left;\"><strong style=\"\"><span style=\"color: rgb(26, 26, 26);\">2 </span></strong><strong style=\"\"><span style=\"color: rgb(26, 26, 26);\">解决方案</span></strong></h2><ol class=\"custom_num2 list-paddingleft-1\" style=\"\"><li class=\"list-num-3-1 list-num2-paddingleft-1\" style=\"\"><p style=\"\">使用自定义Java插件开发API接口，并在开放平台注册此自定义API。</p></li><li class=\"list-num-3-2 list-num2-paddingleft-1\" style=\"\"><p style=\"\">上传文件时请求消息格式应设置为：multipart/form-data。</p></li><li class=\"list-num-3-3 list-num2-paddingleft-1\" style=\"\"><p style=\"\">定义一个OpenApiFile类型的入参（可以定义多个)，插件中可以获取到上传的文件名/类型/文件流(byte[])</p></li><li class=\"list-num-3-4 list-num2-paddingleft-1\" style=\"\"><p style=\"\">其他参数（如业务单号、ID）按正常的参数定义即可。</p></li><li class=\"list-num-3-5 list-num2-paddingleft-1\" style=\"\"><p style=\"\">如果要返回文件流或下载文件请设置http头的AcceptType为：application/octet-stream，</p></li><li class=\"list-num-3-6 list-num2-paddingleft-1\" style=\"\"><p style=\"\">如果只返回文件处理结果信息可以设置http头ContentType为：application/json。</p></li><li class=\"list-num-3-7 list-num2-paddingleft-1\" style=\"\"><p style=\"\">性能考虑单次文件传输大小最多为30M，可通过MC参数修改默认文件流最大报文大小：OpenApi.FileItem.MaxSize，单位是<span style=\"\">字节b</span>。</p></li></ol><p style=\"text-align: justify;\"><br/><span style=\"color: rgb(5, 7, 59); background-color: rgb(253, 253, 254);\"></span></p><h3 label=\"二级标题\" class=\"second-title\" style=\"text-align: justify;\"><strong style=\"\">2.1 </strong><strong style=\"\">代码示例</strong></h3><p style=\"\"><span style=\"color: rgb(227, 108, 9);\"><span style=\"color: rgb(36, 41, 46); background-color: rgb(255, 255, 255);\">下面的示例插件代码演示：</span></span></p><p style=\"\"><span style=\"color: rgb(227, 108, 9);\"><span style=\"color: rgb(36, 41, 46); background-color: rgb(255, 255, 255);\">&nbsp;&nbsp;&nbsp;&nbsp;1)如何上传文件；</span></span></p><p style=\"\"><span style=\"color: rgb(227, 108, 9);\"><span style=\"color: rgb(36, 41, 46); background-color: rgb(255, 255, 255);\">&nbsp;&nbsp;&nbsp;&nbsp;2)如何处理文件并下载。</span></span></p><p style=\"\"><span style=\"color: rgb(227, 108, 9);\"><span style=\"color: rgb(36, 41, 46); background-color: rgb(255, 255, 255);\"><br/></span></span></p><pre class=\"ueditor-code-area brush:java;toolbar:false\" style=\"\">@ApiController(value&nbsp;=&nbsp;&quot;dev&quot;,&nbsp;desc&nbsp;=&nbsp;&quot;自定义API&nbsp;Demo样例2&quot;)\n@ApiMapping(value&nbsp;=&nbsp;&quot;/openapi/test2&quot;)\npublic&nbsp;class&nbsp;CustomDemoTestController&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;@ApiPostMapping(value&nbsp;=&nbsp;&quot;/uploadFile&quot;,&nbsp;desc&nbsp;=&nbsp;&quot;上传文件流&quot;)\n&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;CustomApiResult&lt;String&gt;&nbsp;uploadFile(@NotNull&nbsp;@ApiParam(&quot;订单号&quot;)&nbsp;String&nbsp;billNo,&nbsp;@ApiParam(&quot;文件流&quot;)&nbsp;OpenApiFile&nbsp;file1)&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/*\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如何开发API支持文件流处理：\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;==============================\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.&nbsp;上传文件时请求消息格式应设置为：multipart/form-data。\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.&nbsp;定义一个OpenApiFile类型的入参（可以定义多个)，插件中可以获取到上传的文件名/类型/文件流(byte[])\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.&nbsp;其他参数（如业务单号、ID）按正常的参数定义即可。\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.&nbsp;如果要返回文件流或下载文件请设置http头的AcceptType为：application/octet-stream，\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如果只返回文件处理结果信息可以设置http头ContentType为：application/json。\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注：由于性能考虑单次文件传输大小最多为30M。\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/\n\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(StringUtil.isEmpty(billNo)&nbsp;||&nbsp;file1&nbsp;==&nbsp;null&nbsp;||&nbsp;file1.getFileData()&nbsp;==&nbsp;null)&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//手动设置http状态码406\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ServiceApiContext.getResponse().setHttpStatus(HttpStatus.NOT_ACCEPTABLE.getStatusCode());\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//返回失败错误码：errorCode：900101（业务自行约定）&nbsp;&nbsp;&amp;&nbsp;status=false\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;CustomApiResult.fail(&quot;900101&quot;,&nbsp;&quot;订单号billNo及文件流file1不能为空。&quot;);\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String&nbsp;msg&nbsp;=&nbsp;&quot;您的订单号：&quot;&nbsp;+&nbsp;billNo&nbsp;+&nbsp;&quot;，上传的文件名是：&quot;&nbsp;+&nbsp;file1.getFileName()&nbsp;+&nbsp;&quot;，类型是：&quot;&nbsp;+&nbsp;file1.getContentType()\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+&nbsp;&quot;，文件长度为（Bytes）：&quot;&nbsp;+&nbsp;file1.getFileData().length;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;CustomApiResult.success(msg);\n&nbsp;&nbsp;&nbsp;&nbsp;}\n\n&nbsp;&nbsp;&nbsp;&nbsp;@ApiPostMapping(value&nbsp;=&nbsp;&quot;/processFile&quot;,&nbsp;desc&nbsp;=&nbsp;&quot;处理文件流&quot;)\n&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;CustomApiResult&lt;OpenApiFile&gt;&nbsp;processFile(@NotNull&nbsp;@ApiParam(&quot;订单号&quot;)&nbsp;String&nbsp;billNo,&nbsp;@ApiParam(&quot;文件流&quot;)&nbsp;OpenApiFile&nbsp;file1)&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(StringUtil.isEmpty(billNo)&nbsp;||&nbsp;file1&nbsp;==&nbsp;null&nbsp;||&nbsp;file1.getFileData()&nbsp;==&nbsp;null)&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//手动设置http状态码406\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ServiceApiContext.getResponse().setHttpStatus(HttpStatus.NOT_ACCEPTABLE.getStatusCode());\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//返回失败错误码：errorCode：900101（业务自行约定）&nbsp;&nbsp;&amp;&nbsp;status=false\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;CustomApiResult.fail(&quot;900101&quot;,&nbsp;&quot;订单号billNo及文件流file1不能为空。&quot;);\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}\n\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(!file1.getFileName().contains(&quot;.txt&quot;))&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//手动设置http状态码406\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ServiceApiContext.getResponse().setHttpStatus(HttpStatus.NOT_ACCEPTABLE.getStatusCode());\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//返回失败错误码：errorCode：900102（业务自行约定）&nbsp;&nbsp;&amp;&nbsp;status=false\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;CustomApiResult.fail(&quot;900102&quot;,&nbsp;&quot;此演示案例只能处理文本文件，你可以编写用例处理图像/EXCEL等文件。&quot;);\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}\n\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;try&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//demo代码，请替换成实际业务逻辑。下面演示对输入的文档文件进行加工，在头部添加了加工信息。\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;byte[]&nbsp;message&nbsp;=&nbsp;(&quot;此文件已被OpenAPI插件处理，订单号：&quot;&nbsp;+&nbsp;billNo&nbsp;+&nbsp;&quot;，处理时间：&quot;&nbsp;+&nbsp;(new&nbsp;Date()).toString()&nbsp;+&nbsp;&quot;&nbsp;\\n\\r&quot;).getBytes(Charset.forName(&quot;UTF-8&quot;));\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;byte[]&nbsp;resultFileData&nbsp;=&nbsp;new&nbsp;byte[file1.getFileData().length&nbsp;+&nbsp;message.length];\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.arraycopy(message,&nbsp;0,&nbsp;resultFileData,&nbsp;0,&nbsp;message.length);\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.arraycopy(file1.getFileData(),&nbsp;0,&nbsp;resultFileData,&nbsp;message.length,&nbsp;file1.getFileData().length);\n\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//返回的文件流处理参数：\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;1.&nbsp;fileName:文件名；&nbsp;&nbsp;&nbsp;&nbsp;2.&nbsp;fileType:如：application/vnd.ms-excel,text/plain\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;3.&nbsp;downloadStream：true-下载文件；false-输出文件流；4.&nbsp;data：文件流\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OpenApiFile&nbsp;result&nbsp;=&nbsp;new&nbsp;OpenApiFile(&quot;New&quot;&nbsp;+&nbsp;file1.getFileName(),&nbsp;MediaType.TEXT_PLAIN,&nbsp;true,&nbsp;resultFileData);\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;CustomApiResult.success(result);\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;catch&nbsp;(Exception&nbsp;ex)&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//手动设置http状态码\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ServiceApiContext.getResponse().setHttpStatus(HttpStatus.BAD_REQUEST.getStatusCode());\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//返回失败错误码：errorCode：400&nbsp;&nbsp;&amp;&nbsp;status=false\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;CustomApiResult.fail(&quot;400&quot;,&nbsp;&quot;处理时发生错误：&quot;&nbsp;+&nbsp;ex.getMessage());\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}\n&nbsp;&nbsp;&nbsp;&nbsp;}\n}</pre><p style=\"\"><br/></p><p id=\"t_4\" style=\"\" class=\"\" label=\"\"><br/></p><h3 id=\"t_4\" style=\"\" class=\"second-title\" label=\"二级标题\">2.2 注册自定义API</h3><p style=\"color: rgb(36, 41, 46); background-color: rgb(255, 255, 255);\">菜单：开放服务云 - OpenAPI - API开发，新增 “自定义API”。</p><p style=\"color: rgb(36, 41, 46); background-color: rgb(255, 255, 255);\"><span style=\"color: rgb(26, 26, 26);\">选择所属应用，填写API编码及名称，API分类。</span><span style=\"color: rgb(26, 26, 26);\">在“类名”处输入你的API插件类全路径名称，例如：kd.bos.openapi.service.custom.demo.CustomDemoTestController。</span></p><p style=\"color: rgb(36, 41, 46); background-color: rgb(255, 255, 255);\"><span style=\"color: rgb(26, 26, 26);\">选择方法名。</span>已将此JAVA代码发布为自定义API。此时可以直接使用Postman测试REST协议的API。</p><p style=\"color: rgb(36, 41, 46); background-color: rgb(255, 255, 255);\"><br/></p><p style=\"color: rgb(36, 41, 46); background-color: rgb(255, 255, 255);\"><img src=\"/download/0109b35cb6e2be7f4d079e0477cda4954d67.png\"/></p><p id=\"t_5\" style=\"\" class=\"\" label=\"\"><br/></p><p style=\"\"><img src=\"/download/0109638f3af288d34cb08fb04ea9612776ce.png\"/></p><p id=\"t_5\" style=\"\" class=\"\" label=\"\"><br/></p><h3 id=\"t_5\" style=\"\" class=\"second-title\" label=\"二级标题\">2.3 测试API</h3><p style=\"color: rgb(36, 41, 46); background-color: rgb(255, 255, 255);\">使用Postman测试。请求方式选择POST，请求消息格式应设置为：multipart/form-data，填写相应的参数，并选择一个文件。注：在选择文件时请选择类型File。</p><p style=\"color: rgb(36, 41, 46); background-color: rgb(255, 255, 255);\"><span style=\"font-weight: 600;\">1）</span>&nbsp;<span style=\"font-weight: 600;\">测试上传</span></p><p style=\"color: rgb(36, 41, 46); background-color: rgb(255, 255, 255);\">如果只返回文件处理结果信息可以设置http头ContentType为：application/json</p><p style=\"color: rgb(36, 41, 46); background-color: rgb(255, 255, 255);\"><br/></p><p style=\"color: rgb(36, 41, 46); background-color: rgb(255, 255, 255);\">注：由于性能考虑单次文件传输大小最多为30M。一个file参数只支持上传1个附件，用户可以定义多个file参数或多次调用实现上传多个附件。</p><p style=\"color: rgb(36, 41, 46); background-color: rgb(255, 255, 255);\"><br/></p><p style=\"color: rgb(36, 41, 46); background-color: rgb(255, 255, 255);\"><img src=\"/download/0109c0ca6f0a1d7447f3b862ed7daa8a4119.png\"/></p><p style=\"color: rgb(36, 41, 46); background-color: rgb(255, 255, 255);\"><span style=\"font-weight: 600;\"><br/></span></p><p style=\"color: rgb(36, 41, 46); background-color: rgb(255, 255, 255);\"><span style=\"font-weight: 600;\">2）</span>&nbsp;<span style=\"font-weight: 600;\">测试下载</span></p><p style=\"color: rgb(36, 41, 46); background-color: rgb(255, 255, 255);\">如果要返回文件流或下载文件请设置http头的Accept-Type为：application/octet-stream。</p><p style=\"color: rgb(36, 41, 46); background-color: rgb(255, 255, 255);\">注：如果要测试文件下载，请点击Postman的“Send and download”，而不是“Send”按钮。</p><p style=\"color: rgb(36, 41, 46); background-color: rgb(255, 255, 255);\"><br/></p><p style=\"color: rgb(36, 41, 46); background-color: rgb(255, 255, 255);\"><img src=\"/download/01098d38daef5d554d35b02d9322d9ca8925.png\"/></p><p style=\"color: rgb(36, 41, 46); background-color: rgb(255, 255, 255);\"><br/></p><p style=\"color: rgb(36, 41, 46); background-color: rgb(255, 255, 255);\"><br/></p><p style=\"color: rgb(36, 41, 46); background-color: rgb(255, 255, 255);\">此Demo演示的文件在我的电脑中可以找到被下载的文件，示例代码是对一个文本文件做出了相应的处理，可以根据业务需要对图像或EXCEL等文件进行按需加工。</p><p style=\"color: rgb(36, 41, 46); background-color: rgb(255, 255, 255);\"><br/></p><p style=\"\"><img src=\"/download/010931ba63c5c87e490287a8d1bb186bced8.png\"/>&nbsp;</p><p style=\"\"><br/></p><p style=\"\"><br/></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\"><strong style=\"\"><span style=\"color: rgb(26, 26, 26);\">2.4 多文件处理</span></strong></h3><p style=\"\"><span style=\"\">苍穹平台OpenAPI（<span style=\"color: rgb(31, 73, 125);\">7.0.6以上），</span></span>支持单个参数传入多个文件，在<span class=\"md-plain md-expand\" style=\"color: rgb(51, 51, 51);\">方法参数中写成List</span><span class=\"md-tag md-raw-inline\" style=\"color: rgb(167, 167, 167);\">&lt;OpenApiFile&gt;</span><span class=\"md-plain\" style=\"color: rgb(51, 51, 51);\">即可接收到多个文件，也可定义多个List</span><span class=\"md-tag md-raw-inline\" style=\"color: rgb(167, 167, 167);\">&lt;OpenApiFile&gt;</span><span class=\"md-plain md-expand\" style=\"color: rgb(51, 51, 51);\">的参数，</span>接口代码示例如下。</p><p style=\"\"><br/></p><p style=\"\"><br/></p><pre class=\"ueditor-code-area brush:java;toolbar:false\" style=\"\">\t@ApiPostMapping(value&nbsp;=&nbsp;&quot;/fileHandle&quot;,&nbsp;desc&nbsp;=&nbsp;&quot;多文件处理&quot;)\n&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;CustomApiResult&lt;String&gt;&nbsp;fileHandle(@ApiParam(&quot;billno&quot;)&nbsp;String&nbsp;billno\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;@ApiParam(&quot;file&quot;)&nbsp;OpenApiFile&nbsp;file\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;@ApiParam(&quot;file1&quot;)&nbsp;OpenApiFile&nbsp;file1\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;@ApiParam(&quot;fileList&quot;)&nbsp;List&lt;OpenApiFile&gt;&nbsp;fileList\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;@ApiParam(&quot;fileList1&quot;)&nbsp;List&lt;OpenApiFile&gt;&nbsp;fileList1)&nbsp;{\n\t\treturn&nbsp;CustomApiResult.success(&quot;&quot;);\n\t}</pre><p style=\"\"><br/></p><p style=\"\"><img src=\"/download/0109c68528908d0f4a52aac858d57175b644.png\"/></p><p style=\"\"><br/></p><p style=\"\"><br/></p><p style=\"\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\"><span class=\"md-plain\" style=\"\">3 注意事项</span></h2><ul class=\"ul-list list-paddingleft-2\" style=\"color: rgb(51, 51, 51); background-color: rgb(255, 255, 255);\"><li style=\"\"><p class=\"md-end-block md-p\" style=\"\"><span class=\"md-plain\" style=\"\">OpenAPI只处理小文件，大文件的处理建议使用文件上传接口（uploadFile.do）。</span></p></li><li style=\"\"><p class=\"md-end-block md-p md-focus\" style=\"\"><span class=\"md-plain\" style=\"\">性能考虑单次所有文件传输大小最多为50M，可通过MC租户级参数修改默认文件流最大报文大小：OpenApi.FileItem.MaxSize，单位为字节b。</span></p></li></ul><p style=\"\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\"><strong style=\"\"><span style=\"color: rgb(26, 26, 26);\">4&nbsp;</span></strong>更多资讯</h2><p style=\"text-align: justify;\">&nbsp;&nbsp;&nbsp;&nbsp;<a href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=239331354741842688&id=213309216805890816&productLineId=29\" title=\"\" target=\"_blank\" class=\"\" style=\"\">金蝶AI苍穹开放平台OpenAPI调用流程</a></p><p style=\"\">&nbsp;&nbsp;&nbsp;&nbsp;<a href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=239331354741842688&id=218694224487485696&productLineId=29\" title=\"\" target=\"_blank\" class=\"\" style=\"\">金蝶AI苍穹开放平台OpenAPI开发认证指南</a></p><p style=\"\"><strong style=\"\"><span style=\"color: rgb(26, 26, 26);\"><br/></span></strong></p>"
+}

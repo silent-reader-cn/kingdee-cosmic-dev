@@ -1,0 +1,903 @@
+{
+ "badNum": 0,
+ "templateId": "335738408951726336",
+ "identityTagIds": null,
+ "knowledgeId": "788778229871437568",
+ "createdAt": 1765867385000,
+ "collections": 1,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "788778229871437568",
+ "contentType": 1,
+ "updatedAt": 1785465488000,
+ "knowledgeUpdater": {
+  "avatar": "/download/01010204d4b71b654a208006fa1004eac36a.png",
+  "department": null,
+  "id": "740211268992385024",
+  "name": "毛毛去哪儿",
+  "nameSpell": "name"
+ },
+ "assessStatus": 0,
+ "knowledgeStatus": 2,
+ "assessHandleStatus": null,
+ "knowledgeCreatedAt": 1765867385000,
+ "version": 95,
+ "labels": [],
+ "editedAt": 1772181127000,
+ "identityTags": null,
+ "useful": 1,
+ "errors": [],
+ "isCollected": false,
+ "template": "",
+ "totalFeedBacks": 0,
+ "attachments": [],
+ "sources": [],
+ "editTitle": "查询操作API支持权限全量校验",
+ "title": "查询操作API支持权限全量校验",
+ "content": "<p></p><h2>变更记录</h2><table style=\"width: 1023px\"><colgroup><col style=\"width: 176px\"><col style=\"width: 551px\"><col style=\"width: 296px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"176\" data-background-color=\"\" style=\"background-color: \"><p><strong>产品版本</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"551\" data-background-color=\"\" style=\"background-color: \"><p><strong>更新内容</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"296\" data-background-color=\"\" style=\"background-color: \"><p><strong>更新时间</strong></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"176\" data-background-color=\"\" style=\"background-color: \"><p><strong>V8.0.4</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"551\" data-background-color=\"\" style=\"background-color: \"><p>提升查询操作API安全权限校验能力，增加受控基础资料权限控制和特殊数据权限</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"296\" data-background-color=\"\" style=\"background-color: \"><p>2025年12月</p></td></tr></tbody></table><p></p><h2 style=\"text-align: justify\">1&nbsp;功能介绍</h2><p style=\"text-align: justify\">当前操作 API 在查询数据时，会默认校验用户的组织权限与数据规则，避免用户查询到权限范围外的数据。</p><p>本次我们对API权限控制能力进行了优化升级，使其安全机制更完善。优化后，查询过程可同时校验代理用户的<span style=\"color: rgb(0, 112, 192)\">组织权限、数据规则（含受控基础资料）及特殊数据权限</span>。</p><p><strong>注意</strong>：查询受控基础资料时，可通过请求头<code>X-BD-CTRL-ORGIDS</code>或请求参数<code>bos_bdCtrl_useOrgIds</code>传入使用组织信息。</p><p></p><p style=\"text-align: justify\"></p><h2 style=\"text-align: justify\">2 应用场景</h2><ul><li><p style=\"text-align: justify\">当用户想要OpenAPI具备更严格的实体查询权限控制，同时确保受控基础资料的数据规则可正常生效时，可开启该开关。</p></li><li><p>第三方客户端希望通过 API 查询受控基础资料时，能像前端页面操作一样指定业务组织，接口精准返回该组织下用户有权限查看的业务数据，如客户、供应商等。</p></li></ul><p></p><h2 style=\"text-align: justify\">3 系统路径</h2><p style=\"text-align: justify\">基础服务云 &gt;公共设置 &gt;参数设置 &gt;系统参数</p><h2 style=\"text-align: justify\"></h2><h2>4 主要操作</h2><h3>4.1 打开查询API权限全量校验开关</h3><p style=\"text-align: justify\">路径：基础服务云 &gt;公共设置 &gt;参数设置 &gt;系统参数。</p><p style=\"text-align: justify\">在OpenAPI参数中，勾选开关【数据查询权限权利校验】，开关开启后，查询操作API的默认执行新的权限校验规则，将同时校验接口代理用户的<span style=\"color: rgb(0, 112, 192)\">组织权限、数据规则（含受控基础资料）及特殊数据权限</span>。</p><p style=\"text-align: justify\"></p><p><img src=\"/download/010067f5a642c51c49b39093184cf8e1aba4.png\" alt=\"上传图片\"></p><p style=\"text-align: justify\"></p><h3>4.2 列表查询受控基础资料</h3><p style=\"text-align: justify\"><span style=\"color: rgb(26, 26, 26); font-size: 15px\">路径：基础服务云 </span>&gt;<span style=\"color: rgb(26, 26, 26); font-size: 15px\">基础资料 </span>&gt;<span style=\"color: rgb(26, 26, 26); font-size: 15px\">客户，</span><span style=\"color: rgba(0, 0, 0, 0.85); font-size: 16px\">进入客户列表页面，当前测试用户拥有两个业务组的权限，在不同组织下可查看的客户数据量存在差异。</span></p><p style=\"text-align: justify\"></p><p><img src=\"/download/010008d8e01554c742c8a885f559704d195a.png\" alt=\"上传图片\"></p><p></p><p><img src=\"/download/010013cd368f339a45bcbd56194930f5ef1f.png\" alt=\"上传图片\"></p><p style=\"text-align: justify\"></p><h3>4.3 API查询受控基础资料</h3><p style=\"text-align: justify\"><span style=\"color: rgb(26, 26, 26); font-size: 15px\">路径：开放服务云 </span>&gt;<span style=\"color: rgb(26, 26, 26); font-size: 15px\">OpenAPI </span>&gt;<span style=\"color: rgb(26, 26, 26); font-size: 15px\">API管理 </span>&gt;<span style=\"color: rgb(26, 26, 26); font-size: 15px\">API开发。</span></p><p style=\"text-align: justify\"><span style=\"color: rgb(26, 26, 26); font-size: 15px\">接下来以客户为例，在OpenAPI应用下，</span>新增一个查询客户<span style=\"color: rgb(26, 26, 26); font-size: 15px\">列表接口。</span></p><p style=\"text-align: justify\"></p><p><img src=\"/download/0100a3d699de841c4f7999aafaa2787d1b92.png\" alt=\"上传图片\"></p><p style=\"text-align: justify\"></p><p style=\"text-align: justify\"><span style=\"color: rgb(26, 26, 26); font-size: 15px\">维护完成后，点击API测试，接口提示：“<strong>使用组织参数[orgIds（bos_bdCtrl_useOrgIds）]为空</strong>”，这是因为前面开启了公共设置的</span>【数据查询权限权利校验】<span style=\"color: rgb(26, 26, 26); font-size: 15px\">开关，调用方必须传入指定的业务组织。</span></p><p style=\"text-align: justify\"></p><p><img src=\"/download/0100faea18541cae46fa84fb57292bc299a9.png\" alt=\"上传图片\"></p><p style=\"text-align: justify\"></p><p style=\"text-align: justify\">由于使用组织（业务组织）属于<strong>虚字段</strong>，未在实际业务对象中定义，因此无法在请求参数的【添加属性】面板中直接选中。针对这一情况，系统已做特殊处理，支持用户通过请求头（<code>X-BD-CTRL-ORGIDS</code>）、query 参数（<code>bos_bdCtrl_useOrgIds</code>）或请求体参数的方式传入该字段。用户也可通过手工新增的方式，在 API 中维护该字段，以便生成完整的 API 文档。</p><p style=\"text-align: justify\"></p><p style=\"text-align: justify\">注意：通过POST进行查询时，请求体参数中将<code>bos_bdCtrl_useOrgIds&nbsp;</code>参数放在data对象中传入即可。</p><p style=\"text-align: justify\"></p><p><img src=\"/download/01009d187b2e332f4bcb8785dc064426cbb4.png\" alt=\"上传图片\"></p><p style=\"text-align: justify\"></p><p style=\"text-align: justify\"><span style=\"color: rgb(26, 26, 26); font-size: 15px\">传入后，即可模拟页面查询的方式，分别查看对应组织下的受控基础资料。</span></p><p style=\"text-align: justify\"></p><p><img src=\"/download/0100f1f67d27aa474be3977954e089e02dec.png\" alt=\"上传图片\"></p><p style=\"text-align: justify\"></p><p><img src=\"/download/0100f600c317db124875832b5989a45c6667.png\" alt=\"上传图片\"></p><p style=\"text-align: justify\"></p><h3 style=\"text-align: justify\">4.4 获取有基础资料查询权的组织</h3><p style=\"text-align: justify\"><span style=\"color: rgb(26, 26, 26); font-size: 15px\">路径：开放服务云</span>&gt;<span style=\"color: rgb(26, 26, 26); font-size: 15px\">OpenAPI </span>&gt;<span style=\"color: rgb(26, 26, 26); font-size: 15px\">RESTful API </span>&gt;<span style=\"color: rgb(26, 26, 26); font-size: 15px\">RESTful API管理。</span></p><p style=\"text-align: justify\"><span style=\"color: rgb(26, 26, 26); font-size: 15px\">标准产品在提供了获取用户有权使用的组织的接口，方便第三方根据用户ID和应用ID，获取该用户对于特定的基础资料，有查询权的组织ID集合。</span></p><p style=\"text-align: justify\"><span style=\"color: rgb(26, 26, 26); font-size: 15px\">接口地址为：GET /ctrl_bd/query_perm/org</span></p><p style=\"text-align: justify\"></p><p><img src=\"/download/0100238b8e27320841ab959fca0792e488a0.png\" alt=\"上传图片\"></p><p style=\"text-align: justify\"></p><p style=\"text-align: justify\">其中userId为接口代理用户的唯一标识id，entityId为业务对象的标识，appId为应用id，当用户传入任意值时，系统会按原始应用处理。</p><p style=\"text-align: justify\"></p><p><img src=\"/download/0100c0d7a421c9ca45d08ffc62afc7ff780a.png\" alt=\"上传图片\"></p><h3 style=\"text-align: justify\">4.5 API测试特殊数据权限控制</h3><p style=\"text-align: justify\"><span style=\"color: rgb(26, 26, 26); font-size: 15px\">路径：基础服务云 </span>&gt;<span style=\"color: rgb(26, 26, 26); font-size: 15px\">安全管理 </span>&gt;<span style=\"color: rgb(26, 26, 26); font-size: 15px\">权限管理 </span>&gt;<span style=\"color: rgb(26, 26, 26); font-size: 15px\">特殊数据权限。</span></p><p style=\"text-align: justify\"><span style=\"color: rgb(26, 26, 26); font-size: 15px\">管理员为客户维护并启用特殊数据规则，仅创建人能查看客户基础资料。</span></p><p style=\"text-align: justify\"></p><p><img src=\"/download/010078657761822a4064bb5b8e0dd44c3207.png\" alt=\"上传图片\"></p><p></p><p>此时通过相同的接口，再次查询指定业务组织的客户，由于当前用户未创建任何客户资料，所以查询结果为空。</p><p></p><p><img src=\"/download/01005264d44e90c8495ca495325d46fc9059.png\" alt=\"上传图片\"></p><p style=\"text-align: justify\"></p><h2><strong>5 注意事项</strong></h2><ul><li><p>当查询受控基础资料时，若当前用户要查询的受控基础资料有维护数据规则，则只允许传入一个业务组织。</p></li><li><p style=\"font-size: 15px\"><span style=\"color: rgba(0, 0, 0, 0.85); font-size: 16px\">新版 RESTful API 引擎，默认校验代理用户的组织权限、数据规则（含受控基础资料）及特殊数据权限。</span></p></li><li><p style=\"font-size: 15px\"><span style=\"color: rgba(0, 0, 0, 0.85); font-size: 16px\">RESTful API仅支持通过请求头参数（</span><code>X-BD-CTRL-ORGIDS</code><span style=\"color: rgba(0, 0, 0, 0.85); font-size: 16px\">）传入业务组织，不支持 query 参数或请求体参数的传入方式。</span></p></li></ul><p style=\"text-align: justify\"></p><h2><strong>6 更多资讯</strong></h2><p style=\"text-align: justify; font-size: 15px\">关于OpenAPI的更多资讯，请随时关注<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=226337371640594944&amp;id=226708319996323072&amp;type=Knowledge&amp;productLineId=29&amp;lang=zh-CN\">新特性公告</a>以及<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=386536775126291968&amp;id=448792125560557568&amp;productLineId=29\">金蝶AI苍穹OpenAPI接口规范</a>。</p>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 93,
+   "isOpen": 1,
+   "name": "金蝶AI套件",
+   "productLineId": 40,
+   "series": "S0361",
+   "sort": 1
+  },
+  {
+   "alias": null,
+   "code": null,
+   "id": 87,
+   "isOpen": 1,
+   "name": "金蝶AI苍穹",
+   "productLineId": 29,
+   "series": "developer01",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          {
+           "childCategory": [
+            null
+           ],
+           "code": null,
+           "description": "",
+           "entityId": "788778229871437568",
+           "entityType": "Knowledge",
+           "id": "788810632547228928",
+           "isCategory": false,
+           "name": "查询操作API支持权限全量校验",
+           "parentId": "408200984532495104",
+           "sort": "2",
+           "specialId": "226337046514476288",
+           "status": 1
+          }
+         ],
+         "code": null,
+         "description": "",
+         "entityId": null,
+         "entityType": null,
+         "id": "408200984532495104",
+         "isCategory": true,
+         "name": "API实例",
+         "parentId": "322414926260669696",
+         "sort": "12",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": null,
+       "entityId": null,
+       "entityType": null,
+       "id": "322414926260669696",
+       "isCategory": true,
+       "name": "操作API",
+       "parentId": "226337544983020032",
+       "sort": "2",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": null,
+     "entityId": null,
+     "entityType": null,
+     "id": "226337544983020032",
+     "isCategory": true,
+     "name": "用户手册",
+     "parentId": "-1",
+     "sort": "6",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  },
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          {
+           "childCategory": [
+            null
+           ],
+           "code": null,
+           "description": "",
+           "entityId": "788778229871437568",
+           "entityType": "Knowledge",
+           "id": "797482037937975040",
+           "isCategory": false,
+           "name": "查询操作API支持权限全量校验",
+           "parentId": "523055446224027392",
+           "sort": "2",
+           "specialId": "272110040385964032",
+           "status": 1
+          }
+         ],
+         "code": null,
+         "description": "",
+         "entityId": null,
+         "entityType": null,
+         "id": "523055446224027392",
+         "isCategory": true,
+         "name": "操作API实例",
+         "parentId": "523055410186547456",
+         "sort": "4",
+         "specialId": "272110040385964032",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": null,
+       "id": "523055410186547456",
+       "isCategory": true,
+       "name": "操作API",
+       "parentId": "272111015695861760",
+       "sort": "3",
+       "specialId": "272110040385964032",
+       "status": 1
+      }
+     ],
+     "code": "",
+     "description": "",
+     "entityId": null,
+     "entityType": null,
+     "id": "272111015695861760",
+     "isCategory": true,
+     "name": "用户手册",
+     "parentId": "-1",
+     "sort": "7",
+     "specialId": "272110040385964032",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI套件",
+     "id": 93,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "OSC",
+      "name": "开放服务云",
+      "id": "563356589114194944",
+      "sort": 33,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "OpenAPI",
+       "id": "272103818790291456",
+       "sort": 1,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 40
+    }
+   ],
+   "collections": 120,
+   "createdAt": "2022-01-20T21:08:09.000+08:00",
+   "creator": {
+    "avatar": "/download?fileName=010162cfa9d5437711e8b441060400ef5315.png",
+    "department": null,
+    "id": "2147461337",
+    "name": "CorY",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了OpenAPI（开放平台）的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手开放平台。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "272110040385964032",
+   "identityTags": null,
+   "itemNum": 102,
+   "logo": "/download/0100c6656b9432084112bd16330c67cbb275.jpg",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "40",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 93,
+     "isOpen": 1,
+     "name": "金蝶AI套件",
+     "productLineId": 40,
+     "series": "S0361",
+     "sort": 1
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 0,
+   "totalAppraisalUsers": 0,
+   "updatedAt": "2026-04-17T12:41:32.000+08:00",
+   "updaterId": "429676515387511808",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 344749
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download/01010204d4b71b654a208006fa1004eac36a.png",
+  "department": null,
+  "id": "740211268992385024",
+  "name": "毛毛去哪儿",
+  "nameSpell": "name"
+ },
+ "totalAppraisalScore": 5,
+ "iflytekId": null,
+ "views": 2303,
+ "productLineId": 29,
+ "comments": 0,
+ "similarityCount": null,
+ "totalAppraisalUsers": 1,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1785465488000,
+ "appraisalScore": 0,
+ "unuseful": 0,
+ "knowledgeCheckStatus": 2,
+ "otherProductLineIds": [
+  40
+ ],
+ "auditAt": 1772181280000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "XKOpenAPIService",
+        "id": "556043007401947136",
+        "name": "API服务",
+        "productLineId": null,
+        "sort": 7,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "272103818790291456",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "563356589114194944",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 37,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "93",
+     "name": "金蝶AI套件",
+     "productLineId": 40,
+     "sort": 0,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "AdvancedSkills",
+     "createdAt": 1726129691000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "高级技巧",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/01005cea40211bf14113a6004322e86a6780.png",
+     "id": "622106263106487296",
+     "name": "高级技巧",
+     "productLine": {
+      "active": true,
+      "appLogo": "金蝶云星空|旗舰版",
+      "categoryCode": "X04",
+      "courseLogo": "",
+      "domain": "",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": false,
+      "id": 40,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/01006d278204e9994fe9b4fc05bcdcf7ba45.png",
+      "name": "金蝶AI套件",
+      "rank": 3,
+      "seriesCode": "S0361"
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download?fileName=01011dc4dc4a745a4974a64ff09ab41e9eab.png",
+      "department": null,
+      "id": "1012",
+      "name": "angel",
+      "nameSpell": "angel"
+     },
+     "updatedAt": 1726129691000
+    },
+    {
+     "code": "OperatingGuide",
+     "createdAt": 1726129117000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "功能介绍",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/010067c2eb39e20946d0a9c9adc55eb5f864.png",
+     "id": "622103852958745600",
+     "name": "功能介绍",
+     "productLine": {
+      "active": true,
+      "appLogo": "金蝶云星空|旗舰版",
+      "categoryCode": "X04",
+      "courseLogo": "",
+      "domain": "",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": false,
+      "id": 40,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/01006d278204e9994fe9b4fc05bcdcf7ba45.png",
+      "name": "金蝶AI套件",
+      "rank": 3,
+      "seriesCode": "S0361"
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download?fileName=01011dc4dc4a745a4974a64ff09ab41e9eab.png",
+      "department": null,
+      "id": "1012",
+      "name": "angel",
+      "nameSpell": "angel"
+     },
+     "updatedAt": 1726129117000
+    }
+   ],
+   "productLineId": 40,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          {
+           "childCategory": [
+            {
+             "childCategory": [
+              null
+             ],
+             "code": null,
+             "description": "",
+             "entityId": "788778229871437568",
+             "entityType": "Knowledge",
+             "id": "797482037937975040",
+             "isCategory": false,
+             "name": "查询操作API支持权限全量校验",
+             "parentId": "523055446224027392",
+             "sort": "2",
+             "specialId": "272110040385964032",
+             "status": 1
+            }
+           ],
+           "code": null,
+           "description": "",
+           "entityId": null,
+           "entityType": null,
+           "id": "523055446224027392",
+           "isCategory": true,
+           "name": "操作API实例",
+           "parentId": "523055410186547456",
+           "sort": "4",
+           "specialId": "272110040385964032",
+           "status": 1
+          }
+         ],
+         "code": null,
+         "description": "",
+         "entityId": null,
+         "entityType": null,
+         "id": "523055410186547456",
+         "isCategory": true,
+         "name": "操作API",
+         "parentId": "272111015695861760",
+         "sort": "3",
+         "specialId": "272110040385964032",
+         "status": 1
+        }
+       ],
+       "code": "",
+       "description": "",
+       "entityId": null,
+       "entityType": null,
+       "id": "272111015695861760",
+       "isCategory": true,
+       "name": "用户手册",
+       "parentId": "-1",
+       "sort": "7",
+       "specialId": "272110040385964032",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI套件",
+       "id": 93,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "OSC",
+        "name": "开放服务云",
+        "id": "563356589114194944",
+        "sort": 33,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "OpenAPI",
+         "id": "272103818790291456",
+         "sort": 1,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 40
+      }
+     ],
+     "collections": 120,
+     "createdAt": "2022-01-20T21:08:09.000+08:00",
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d5437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "2147461337",
+      "name": "CorY",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了OpenAPI（开放平台）的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手开放平台。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "272110040385964032",
+     "identityTags": null,
+     "itemNum": 102,
+     "logo": "/download/0100c6656b9432084112bd16330c67cbb275.jpg",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "40",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 93,
+       "isOpen": 1,
+       "name": "金蝶AI套件",
+       "productLineId": 40,
+       "series": "S0361",
+       "sort": 1
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 0,
+     "totalAppraisalUsers": 0,
+     "updatedAt": "2026-04-17T12:41:32.000+08:00",
+     "updaterId": "429676515387511808",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 344749
+    }
+   ]
+  },
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapi_apilist_layout",
+        "id": "505686038019362304",
+        "name": "异步API",
+        "productLineId": null,
+        "sort": 1,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 1,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "OperatingGuide",
+     "createdAt": 1556519201000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "某一功能的具体说明介绍，包括应用场景、参数说明、具体操作步骤等",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/010037894174802d4b9f8782f1f0010a6ddd.png",
+     "id": "202203081641",
+     "name": "功能介绍",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010176d38341668f44fdb94c95058a90e4b8.png",
+      "department": "云社区运营部",
+      "id": "2147406697",
+      "name": "多肉丸子",
+      "nameSpell": "kejuan"
+     },
+     "updatedAt": 1676857681000
+    },
+    {
+     "code": "rumen",
+     "createdAt": 1605667807000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "入门类的知识可使用此标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100d322b9282bcc438faa894f4eec029977.png",
+     "id": "202203081646",
+     "name": "基础入门",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download?fileName=0101ec1d6ce599b442dab7d0b794c1fce88d.png",
+      "department": null,
+      "id": "1009",
+      "name": "一颗小星星",
+      "nameSpell": "fengling"
+     },
+     "updatedAt": 1657872008000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          {
+           "childCategory": [
+            {
+             "childCategory": [
+              null
+             ],
+             "code": null,
+             "description": "",
+             "entityId": "788778229871437568",
+             "entityType": "Knowledge",
+             "id": "788810632547228928",
+             "isCategory": false,
+             "name": "查询操作API支持权限全量校验",
+             "parentId": "408200984532495104",
+             "sort": "2",
+             "specialId": "226337046514476288",
+             "status": 1
+            }
+           ],
+           "code": null,
+           "description": "",
+           "entityId": null,
+           "entityType": null,
+           "id": "408200984532495104",
+           "isCategory": true,
+           "name": "API实例",
+           "parentId": "322414926260669696",
+           "sort": "12",
+           "specialId": "226337046514476288",
+           "status": 1
+          }
+         ],
+         "code": null,
+         "description": null,
+         "entityId": null,
+         "entityType": null,
+         "id": "322414926260669696",
+         "isCategory": true,
+         "name": "操作API",
+         "parentId": "226337544983020032",
+         "sort": "2",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": null,
+       "entityId": null,
+       "entityType": null,
+       "id": "226337544983020032",
+       "isCategory": true,
+       "name": "用户手册",
+       "parentId": "-1",
+       "sort": "6",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": "<p></p><h2>变更记录</h2><table style=\"width: 1023px\"><colgroup><col style=\"width: 176px\"><col style=\"width: 551px\"><col style=\"width: 296px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"176\" data-background-color=\"\" style=\"background-color: \"><p><strong>产品版本</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"551\" data-background-color=\"\" style=\"background-color: \"><p><strong>更新内容</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"296\" data-background-color=\"\" style=\"background-color: \"><p><strong>更新时间</strong></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"176\" data-background-color=\"\" style=\"background-color: \"><p><strong>V8.0.4</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"551\" data-background-color=\"\" style=\"background-color: \"><p>提升查询操作API安全权限校验能力，增加受控基础资料权限控制和特殊数据权限</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"296\" data-background-color=\"\" style=\"background-color: \"><p>2025年12月</p></td></tr></tbody></table><p></p><h2 style=\"text-align: justify\">1&nbsp;功能介绍</h2><p style=\"text-align: justify\">当前操作 API 在查询数据时，会默认校验用户的组织权限与数据规则，避免用户查询到权限范围外的数据。</p><p>本次我们对API权限控制能力进行了优化升级，使其安全机制更完善。优化后，查询过程可同时校验代理用户的<span style=\"color: rgb(0, 112, 192)\">组织权限、数据规则（含受控基础资料）及特殊数据权限</span>。</p><p><strong>注意</strong>：查询受控基础资料时，可通过请求头<code>X-BD-CTRL-ORGIDS</code>或请求参数<code>bos_bdCtrl_useOrgIds</code>传入使用组织信息。</p><p></p><p style=\"text-align: justify\"></p><h2 style=\"text-align: justify\">2 应用场景</h2><ul><li><p style=\"text-align: justify\">当用户想要OpenAPI具备更严格的实体查询权限控制，同时确保受控基础资料的数据规则可正常生效时，可开启该开关。</p></li><li><p>第三方客户端希望通过 API 查询受控基础资料时，能像前端页面操作一样指定业务组织，接口精准返回该组织下用户有权限查看的业务数据，如客户、供应商等。</p></li></ul><p></p><h2 style=\"text-align: justify\">3 系统路径</h2><p style=\"text-align: justify\">基础服务云 &gt;公共设置 &gt;参数设置 &gt;系统参数</p><h2 style=\"text-align: justify\"></h2><h2>4 主要操作</h2><h3>4.1 打开查询API权限全量校验开关</h3><p style=\"text-align: justify\">路径：基础服务云 &gt;公共设置 &gt;参数设置 &gt;系统参数。</p><p style=\"text-align: justify\">在OpenAPI参数中，勾选开关【数据查询权限权利校验】，开关开启后，查询操作API的默认执行新的权限校验规则，将同时校验接口代理用户的<span style=\"color: rgb(0, 112, 192)\">组织权限、数据规则（含受控基础资料）及特殊数据权限</span>。</p><p style=\"text-align: justify\"></p><p><img src=\"/download/010067f5a642c51c49b39093184cf8e1aba4.png\" alt=\"上传图片\"></p><p style=\"text-align: justify\"></p><h3>4.2 列表查询受控基础资料</h3><p style=\"text-align: justify\"><span style=\"color: rgb(26, 26, 26); font-size: 15px\">路径：基础服务云 </span>&gt;<span style=\"color: rgb(26, 26, 26); font-size: 15px\">基础资料 </span>&gt;<span style=\"color: rgb(26, 26, 26); font-size: 15px\">客户，</span><span style=\"color: rgba(0, 0, 0, 0.85); font-size: 16px\">进入客户列表页面，当前测试用户拥有两个业务组的权限，在不同组织下可查看的客户数据量存在差异。</span></p><p style=\"text-align: justify\"></p><p><img src=\"/download/010008d8e01554c742c8a885f559704d195a.png\" alt=\"上传图片\"></p><p></p><p><img src=\"/download/010013cd368f339a45bcbd56194930f5ef1f.png\" alt=\"上传图片\"></p><p style=\"text-align: justify\"></p><h3>4.3 API查询受控基础资料</h3><p style=\"text-align: justify\"><span style=\"color: rgb(26, 26, 26); font-size: 15px\">路径：开放服务云 </span>&gt;<span style=\"color: rgb(26, 26, 26); font-size: 15px\">OpenAPI </span>&gt;<span style=\"color: rgb(26, 26, 26); font-size: 15px\">API管理 </span>&gt;<span style=\"color: rgb(26, 26, 26); font-size: 15px\">API开发。</span></p><p style=\"text-align: justify\"><span style=\"color: rgb(26, 26, 26); font-size: 15px\">接下来以客户为例，在OpenAPI应用下，</span>新增一个查询客户<span style=\"color: rgb(26, 26, 26); font-size: 15px\">列表接口。</span></p><p style=\"text-align: justify\"></p><p><img src=\"/download/0100a3d699de841c4f7999aafaa2787d1b92.png\" alt=\"上传图片\"></p><p style=\"text-align: justify\"></p><p style=\"text-align: justify\"><span style=\"color: rgb(26, 26, 26); font-size: 15px\">维护完成后，点击API测试，接口提示：“<strong>使用组织参数[orgIds（bos_bdCtrl_useOrgIds）]为空</strong>”，这是因为前面开启了公共设置的</span>【数据查询权限权利校验】<span style=\"color: rgb(26, 26, 26); font-size: 15px\">开关，调用方必须传入指定的业务组织。</span></p><p style=\"text-align: justify\"></p><p><img src=\"/download/0100faea18541cae46fa84fb57292bc299a9.png\" alt=\"上传图片\"></p><p style=\"text-align: justify\"></p><p style=\"text-align: justify\">由于使用组织（业务组织）属于<strong>虚字段</strong>，未在实际业务对象中定义，因此无法在请求参数的【添加属性】面板中直接选中。针对这一情况，系统已做特殊处理，支持用户通过请求头（<code>X-BD-CTRL-ORGIDS</code>）、query 参数（<code>bos_bdCtrl_useOrgIds</code>）或请求体参数的方式传入该字段。用户也可通过手工新增的方式，在 API 中维护该字段，以便生成完整的 API 文档。</p><p style=\"text-align: justify\"></p><p style=\"text-align: justify\">注意：通过POST进行查询时，请求体参数中将<code>bos_bdCtrl_useOrgIds&nbsp;</code>参数放在data对象中传入即可。</p><p style=\"text-align: justify\"></p><p><img src=\"/download/01009d187b2e332f4bcb8785dc064426cbb4.png\" alt=\"上传图片\"></p><p style=\"text-align: justify\"></p><p style=\"text-align: justify\"><span style=\"color: rgb(26, 26, 26); font-size: 15px\">传入后，即可模拟页面查询的方式，分别查看对应组织下的受控基础资料。</span></p><p style=\"text-align: justify\"></p><p><img src=\"/download/0100f1f67d27aa474be3977954e089e02dec.png\" alt=\"上传图片\"></p><p style=\"text-align: justify\"></p><p><img src=\"/download/0100f600c317db124875832b5989a45c6667.png\" alt=\"上传图片\"></p><p style=\"text-align: justify\"></p><h3 style=\"text-align: justify\">4.4 获取有基础资料查询权的组织</h3><p style=\"text-align: justify\"><span style=\"color: rgb(26, 26, 26); font-size: 15px\">路径：开放服务云</span>&gt;<span style=\"color: rgb(26, 26, 26); font-size: 15px\">OpenAPI </span>&gt;<span style=\"color: rgb(26, 26, 26); font-size: 15px\">RESTful API </span>&gt;<span style=\"color: rgb(26, 26, 26); font-size: 15px\">RESTful API管理。</span></p><p style=\"text-align: justify\"><span style=\"color: rgb(26, 26, 26); font-size: 15px\">标准产品在提供了获取用户有权使用的组织的接口，方便第三方根据用户ID和应用ID，获取该用户对于特定的基础资料，有查询权的组织ID集合。</span></p><p style=\"text-align: justify\"><span style=\"color: rgb(26, 26, 26); font-size: 15px\">接口地址为：GET /ctrl_bd/query_perm/org</span></p><p style=\"text-align: justify\"></p><p><img src=\"/download/0100238b8e27320841ab959fca0792e488a0.png\" alt=\"上传图片\"></p><p style=\"text-align: justify\"></p><p style=\"text-align: justify\">其中userId为接口代理用户的唯一标识id，entityId为业务对象的标识，appId为应用id，当用户传入任意值时，系统会按原始应用处理。</p><p style=\"text-align: justify\"></p><p><img src=\"/download/0100c0d7a421c9ca45d08ffc62afc7ff780a.png\" alt=\"上传图片\"></p><h3 style=\"text-align: justify\">4.5 API测试特殊数据权限控制</h3><p style=\"text-align: justify\"><span style=\"color: rgb(26, 26, 26); font-size: 15px\">路径：基础服务云 </span>&gt;<span style=\"color: rgb(26, 26, 26); font-size: 15px\">安全管理 </span>&gt;<span style=\"color: rgb(26, 26, 26); font-size: 15px\">权限管理 </span>&gt;<span style=\"color: rgb(26, 26, 26); font-size: 15px\">特殊数据权限。</span></p><p style=\"text-align: justify\"><span style=\"color: rgb(26, 26, 26); font-size: 15px\">管理员为客户维护并启用特殊数据规则，仅创建人能查看客户基础资料。</span></p><p style=\"text-align: justify\"></p><p><img src=\"/download/010078657761822a4064bb5b8e0dd44c3207.png\" alt=\"上传图片\"></p><p></p><p>此时通过相同的接口，再次查询指定业务组织的客户，由于当前用户未创建任何客户资料，所以查询结果为空。</p><p></p><p><img src=\"/download/01005264d44e90c8495ca495325d46fc9059.png\" alt=\"上传图片\"></p><p style=\"text-align: justify\"></p><h2><strong>5 注意事项</strong></h2><ul><li><p>当查询受控基础资料时，若当前用户要查询的受控基础资料有维护数据规则，则只允许传入一个业务组织。</p></li><li><p style=\"font-size: 15px\"><span style=\"color: rgba(0, 0, 0, 0.85); font-size: 16px\">新版 RESTful API 引擎，默认校验代理用户的组织权限、数据规则（含受控基础资料）及特殊数据权限。</span></p></li><li><p style=\"font-size: 15px\"><span style=\"color: rgba(0, 0, 0, 0.85); font-size: 16px\">RESTful API仅支持通过请求头参数（</span><code>X-BD-CTRL-ORGIDS</code><span style=\"color: rgba(0, 0, 0, 0.85); font-size: 16px\">）传入业务组织，不支持 query 参数或请求体参数的传入方式。</span></p></li></ul><p style=\"text-align: justify\"></p><h2><strong>6 更多资讯</strong></h2><p style=\"text-align: justify; font-size: 15px\">关于OpenAPI的更多资讯，请随时关注<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=226337371640594944&amp;id=226708319996323072&amp;type=Knowledge&amp;productLineId=29&amp;lang=zh-CN\">新特性公告</a>以及<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=386536775126291968&amp;id=448792125560557568&amp;productLineId=29\">金蝶AI苍穹OpenAPI接口规范</a>。</p>"
+}

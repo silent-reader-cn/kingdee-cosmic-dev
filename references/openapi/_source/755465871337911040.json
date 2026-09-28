@@ -1,0 +1,453 @@
+{
+ "badNum": 0,
+ "identityTagIds": null,
+ "knowledgeId": "755465871337911040",
+ "createdAt": 1757925100000,
+ "collections": 1,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "755465871337911040",
+ "contentType": 1,
+ "updatedAt": 1789723114927,
+ "knowledgeUpdater": {
+  "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+  "department": null,
+  "id": "132488613174518784",
+  "name": "某个路易",
+  "nameSpell": "name"
+ },
+ "assessStatus": 0,
+ "knowledgeStatus": 2,
+ "assessHandleStatus": null,
+ "knowledgeCreatedAt": 1757925100000,
+ "version": 17,
+ "labels": [],
+ "editedAt": 1789723115000,
+ "identityTags": null,
+ "useful": 0,
+ "errors": [],
+ "isCollected": false,
+ "totalFeedBacks": 0,
+ "attachments": [],
+ "sources": [],
+ "editTitle": "RESTful API 文档&测试",
+ "title": "RESTful API 文档&测试",
+ "content": "<p></p><h1><strong>1 简介</strong></h1><h2><strong>1.1 功能介绍</strong></h2><p>RESTful API 文档是基于 Swagger 格式生成的标准化接口说明文档，核心功能包括：</p><ul><li><p>接口信息展示：完整呈现 API 的基本信息（名称、编码、所属应用）、请求配置（请求方法、资源路径、参数说明）、响应配置（HTTP 状态码、返回字段、示例值）及错误码说明，确保开发者清晰了解接口用法；文档与 API 模型实时同步，API 配置变更后文档自动更新，确保开发者获取最新接口信息。</p></li><li><p>在线测试支持：集成 Swagger 在线测试功能，开发者可直接在文档页面输入参数、发起模拟请求，查看实时响应结果，无需额外工具。</p><p></p></li></ul><h2><strong>1.2 应用场景</strong></h2><p>为开发者提供清晰的接口说明（如 ERP 系统开发者对接采购 API 时，通过文档了解参数格式与响应逻辑），并快速完成接口调试。</p><p></p><h2><strong>1.3 系统路径</strong></h2><p>【开放服务云】→【OpenAPI】→【RESTful API】→【RESTful API文档】；</p><p>关联路径：在 RESTful API 管理列表，选中目标 API 后点击 “API 测试” 按钮，自动跳转至该 API 的 Swagger 文档页面。</p><h2><strong>1.4 按钮说明</strong></h2><p>【Authorize】：点击按钮，打开鉴权弹窗，在弹窗中输入获取的accesstoken值和x-acgw-identity（网关认证参数），方便在swagger文档页面快速进行API测试。</p><p>【try it out】：点击按钮，进入API调试模式，支持传入请求参数直接执行API。</p><p>&nbsp;</p><h1><strong>2 主要操作</strong></h1><h2><strong>2.1 查看RESTful API文档</strong></h2><p>开发者需了解 API 的参数格式、响应逻辑或进行快速调试时，通过查看文档获取必要信息，确保接口对接效率与正确性。</p><ul><li><p>单 API 文档：在 RESTful API 管理列表中，找到目标 API（如 “查询采购订单详情”），点击操作列的 “API 测试” 按钮，自动跳转至该 API 的 Swagger 文档页面；</p></li><li><p>全量文档：通过路径【开放服务云】→【OpenAPI】→【RESTful API】→【API 文档中心】，进入全量 API 文档页面，默认展示所有 “启用” 状态的 API。</p></li></ul><p>首先筛选目标 API，若进入全量文档页面，通过顶部 “Select a definition” 下拉选择分组（如 “采购管理”），或在 “Filter by tag” 输入框中输入 API 名称 / 编码（如 “查询采购订单详情”），快速定位目标 API。点击 API 名称（如 “GET /pm_purorder/{id}”），展开查看详细文档内容。</p><p>核心信息：</p><ul><li><p>基本信息：确认 API 的名称、所属应用及详细描述，判断是否为所需接口；</p></li><li><p>请求参数：查看 “Parameters” 区域，明确参数类型（Path/Query/Request body）、必填性及示例值；</p></li><li><p>响应参数：查看 “Responses” 区域，了解不同状态码下的返回字段。</p></li></ul><p></p><p><img src=\"/download/0100ec3e29d433c54e1898bf197fd894193e.png\" alt=\"上传图片\"></p><p></p><h2><strong>2.2 在线测试</strong></h2><p><strong>1）维护Authorize认证相关参数</strong></p><p>点击 “Authorize” 按钮，在弹窗中输入有效的 access_token，点击 “Authorize” 维护认证参数。（若有接入网关，还需维护x-acgw-identity）。</p><p><img src=\"/download/0100f88df5145c464726938fdbcd315676e9.png\" alt=\"上传图片\"></p><p></p><p><strong>2）快速获取access_token和x-acgw-identity</strong></p><p><strong>路径：OpenAPI - 安全策略 - 第三方应用，</strong>打开第三方应用清单，在列表勾选测试用的第三方应用，然后点击按钮【获取token】，维护第三方应用的Accesstoken认证密钥（即appSecret）,即可快速获取access_token。</p><p></p><p><img src=\"/download/0100485de5cd85f94cf780edc2dca5bceaa8.png\" alt=\"上传图片\"></p><p></p><p>同时可以<strong>进入第三方应用详情</strong>中，查看具体的网关认证参数：<strong>x-acgw-identity的详细值</strong>。</p><p></p><p><strong>3）测试RESTful API</strong></p><p>点击 “Try it out” 按钮，激活参数输入框，录入测试参数（如 Path 参数id输入 “2184074116397546496”）；</p><p>点击 “Execute” 按钮发起请求，查看 “Responses” 区域的实时响应结果（如响应状态码 200、返回采购订单的billno“org” 等数据），验证接口可用性。</p><p><img src=\"/download/0100b2d0a44b85404e3f80215d5be6d1d867.png\" alt=\"上传图片\"></p><p></p><h1><strong>3 更多资讯</strong></h1><p style=\"font-size: 15px\">关于OpenAPI的更多资讯，请随时关注<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=226337371640594944&amp;id=226708319996323072&amp;productLineId=29\">新特性公告</a>。</p>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 87,
+   "isOpen": 1,
+   "name": "金蝶AI苍穹",
+   "productLineId": 29,
+   "series": "developer01",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "755465871337911040",
+         "entityType": "Knowledge",
+         "id": "755471120660376328",
+         "isCategory": false,
+         "name": "RESTful API 文档&测试",
+         "parentId": "755471013420411648",
+         "sort": "8",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": "",
+       "id": "755471013420411648",
+       "isCategory": true,
+       "name": "RESTful API",
+       "parentId": "226337544983020032",
+       "sort": "24",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": null,
+     "entityId": null,
+     "entityType": null,
+     "id": "226337544983020032",
+     "isCategory": true,
+     "name": "用户手册",
+     "parentId": "-1",
+     "sort": "6",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download/01010204d4b71b654a208006fa1004eac36a.png",
+  "department": null,
+  "id": "740211268992385024",
+  "name": "毛毛去哪儿",
+  "nameSpell": "name"
+ },
+ "totalAppraisalScore": 0,
+ "iflytekId": null,
+ "views": 1533,
+ "productLineId": 29,
+ "comments": 0,
+ "similarityCount": null,
+ "totalAppraisalUsers": 0,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1789723114927,
+ "appraisalScore": 0,
+ "unuseful": 0,
+ "knowledgeCheckStatus": 2,
+ "otherProductLineIds": [],
+ "auditAt": 1789723124000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "open_rest_swagger_ui",
+        "id": "760141637262267392",
+        "name": "RESTful API文档",
+        "productLineId": null,
+        "sort": 23,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 0,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "OperatingGuide",
+     "createdAt": 1556519201000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "某一功能的具体说明介绍，包括应用场景、参数说明、具体操作步骤等",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/010037894174802d4b9f8782f1f0010a6ddd.png",
+     "id": "202203081641",
+     "name": "功能介绍",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010176d38341668f44fdb94c95058a90e4b8.png",
+      "department": "云社区运营部",
+      "id": "2147406697",
+      "name": "多肉丸子",
+      "nameSpell": "kejuan"
+     },
+     "updatedAt": 1676857681000
+    },
+    {
+     "code": "rumen",
+     "createdAt": 1605667807000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "入门类的知识可使用此标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100d322b9282bcc438faa894f4eec029977.png",
+     "id": "202203081646",
+     "name": "基础入门",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download?fileName=0101ec1d6ce599b442dab7d0b794c1fce88d.png",
+      "department": null,
+      "id": "1009",
+      "name": "一颗小星星",
+      "nameSpell": "fengling"
+     },
+     "updatedAt": 1657872008000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          {
+           "childCategory": [
+            null
+           ],
+           "code": null,
+           "description": "",
+           "entityId": "755465871337911040",
+           "entityType": "Knowledge",
+           "id": "755471120660376328",
+           "isCategory": false,
+           "name": "RESTful API 文档&测试",
+           "parentId": "755471013420411648",
+           "sort": "8",
+           "specialId": "226337046514476288",
+           "status": 1
+          }
+         ],
+         "code": null,
+         "description": "",
+         "entityId": null,
+         "entityType": "",
+         "id": "755471013420411648",
+         "isCategory": true,
+         "name": "RESTful API",
+         "parentId": "226337544983020032",
+         "sort": "24",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": null,
+       "entityId": null,
+       "entityType": null,
+       "id": "226337544983020032",
+       "isCategory": true,
+       "name": "用户手册",
+       "parentId": "-1",
+       "sort": "6",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": "<p></p><h1><strong>1 简介</strong></h1><h2><strong>1.1 功能介绍</strong></h2><p>RESTful API 文档是基于 Swagger 格式生成的标准化接口说明文档，核心功能包括：</p><ul><li><p>接口信息展示：完整呈现 API 的基本信息（名称、编码、所属应用）、请求配置（请求方法、资源路径、参数说明）、响应配置（HTTP 状态码、返回字段、示例值）及错误码说明，确保开发者清晰了解接口用法；文档与 API 模型实时同步，API 配置变更后文档自动更新，确保开发者获取最新接口信息。</p></li><li><p>在线测试支持：集成 Swagger 在线测试功能，开发者可直接在文档页面输入参数、发起模拟请求，查看实时响应结果，无需额外工具。</p><p></p></li></ul><h2><strong>1.2 应用场景</strong></h2><p>为开发者提供清晰的接口说明（如 ERP 系统开发者对接采购 API 时，通过文档了解参数格式与响应逻辑），并快速完成接口调试。</p><p></p><h2><strong>1.3 系统路径</strong></h2><p>【开放服务云】→【OpenAPI】→【RESTful API】→【RESTful API文档】；</p><p>关联路径：在 RESTful API 管理列表，选中目标 API 后点击 “API 测试” 按钮，自动跳转至该 API 的 Swagger 文档页面。</p><h2><strong>1.4 按钮说明</strong></h2><p>【Authorize】：点击按钮，打开鉴权弹窗，在弹窗中输入获取的accesstoken值和x-acgw-identity（网关认证参数），方便在swagger文档页面快速进行API测试。</p><p>【try it out】：点击按钮，进入API调试模式，支持传入请求参数直接执行API。</p><p>&nbsp;</p><h1><strong>2 主要操作</strong></h1><h2><strong>2.1 查看RESTful API文档</strong></h2><p>开发者需了解 API 的参数格式、响应逻辑或进行快速调试时，通过查看文档获取必要信息，确保接口对接效率与正确性。</p><ul><li><p>单 API 文档：在 RESTful API 管理列表中，找到目标 API（如 “查询采购订单详情”），点击操作列的 “API 测试” 按钮，自动跳转至该 API 的 Swagger 文档页面；</p></li><li><p>全量文档：通过路径【开放服务云】→【OpenAPI】→【RESTful API】→【API 文档中心】，进入全量 API 文档页面，默认展示所有 “启用” 状态的 API。</p></li></ul><p>首先筛选目标 API，若进入全量文档页面，通过顶部 “Select a definition” 下拉选择分组（如 “采购管理”），或在 “Filter by tag” 输入框中输入 API 名称 / 编码（如 “查询采购订单详情”），快速定位目标 API。点击 API 名称（如 “GET /pm_purorder/{id}”），展开查看详细文档内容。</p><p>核心信息：</p><ul><li><p>基本信息：确认 API 的名称、所属应用及详细描述，判断是否为所需接口；</p></li><li><p>请求参数：查看 “Parameters” 区域，明确参数类型（Path/Query/Request body）、必填性及示例值；</p></li><li><p>响应参数：查看 “Responses” 区域，了解不同状态码下的返回字段。</p></li></ul><p></p><p><img src=\"/download/0100ec3e29d433c54e1898bf197fd894193e.png\" alt=\"上传图片\"></p><p></p><h2><strong>2.2 在线测试</strong></h2><p><strong>1）维护Authorize认证相关参数</strong></p><p>点击 “Authorize” 按钮，在弹窗中输入有效的 access_token，点击 “Authorize” 维护认证参数。（若有接入网关，还需维护x-acgw-identity）。</p><p><img src=\"/download/0100f88df5145c464726938fdbcd315676e9.png\" alt=\"上传图片\"></p><p></p><p><strong>2）快速获取access_token和x-acgw-identity</strong></p><p><strong>路径：OpenAPI - 安全策略 - 第三方应用，</strong>打开第三方应用清单，在列表勾选测试用的第三方应用，然后点击按钮【获取token】，维护第三方应用的Accesstoken认证密钥（即appSecret）,即可快速获取access_token。</p><p></p><p><img src=\"/download/0100485de5cd85f94cf780edc2dca5bceaa8.png\" alt=\"上传图片\"></p><p></p><p>同时可以<strong>进入第三方应用详情</strong>中，查看具体的网关认证参数：<strong>x-acgw-identity的详细值</strong>。</p><p></p><p><strong>3）测试RESTful API</strong></p><p>点击 “Try it out” 按钮，激活参数输入框，录入测试参数（如 Path 参数id输入 “2184074116397546496”）；</p><p>点击 “Execute” 按钮发起请求，查看 “Responses” 区域的实时响应结果（如响应状态码 200、返回采购订单的billno“org” 等数据），验证接口可用性。</p><p><img src=\"/download/0100b2d0a44b85404e3f80215d5be6d1d867.png\" alt=\"上传图片\"></p><p></p><h1><strong>3 更多资讯</strong></h1><p style=\"font-size: 15px\">关于OpenAPI的更多资讯，请随时关注<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=226337371640594944&amp;id=226708319996323072&amp;productLineId=29\">新特性公告</a>。</p>"
+}

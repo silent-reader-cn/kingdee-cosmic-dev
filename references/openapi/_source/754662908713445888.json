@@ -1,0 +1,453 @@
+{
+ "badNum": 0,
+ "identityTagIds": null,
+ "knowledgeId": "754662908713445888",
+ "createdAt": 1757733658000,
+ "collections": 0,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "754662908713445888",
+ "contentType": 1,
+ "updatedAt": 1766022719000,
+ "knowledgeUpdater": {
+  "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+  "department": null,
+  "id": "132488613174518784",
+  "name": "某个路易",
+  "nameSpell": "name"
+ },
+ "assessStatus": 0,
+ "knowledgeStatus": 2,
+ "assessHandleStatus": null,
+ "knowledgeCreatedAt": 1757733658000,
+ "version": 7,
+ "labels": [],
+ "editedAt": 1757734000000,
+ "identityTags": null,
+ "useful": 0,
+ "errors": [],
+ "isCollected": false,
+ "totalFeedBacks": 0,
+ "attachments": [],
+ "sources": [],
+ "editTitle": "标准POST方法 - 新增分录",
+ "title": "标准POST方法 - 新增分录",
+ "content": "<h2><strong>1 接口介绍</strong></h2><p><span style=\"font-size: 10.5ptpx\">为主资源（如采购订单）新增子资源（如物料明细分录）的操作发布为 RESTful API，适用于外部系统补充主资源关联子资源的场景（如为采购订单添加新的物料明细）。</span></p><p></p><h2><strong>2 接口示例</strong></h2><p><span style=\"font-size: 10.5ptpx\">列表点击“新增”按钮，新增RESTful API，“操作类型选择“新增”，“操作选择“新增分录”。</span></p><ul><li><p><span style=\"font-size: 10.5ptpx\"><strong>实体信息：</strong>业务对象、操作类型和操作会根据创建向导中的配置自动带出，手工选择需要新增的实体对象的分录标识，如物料明细（billentry）；</span></p><p></p></li><li><p><span style=\"font-size: 10.5ptpx\"><strong>维护基本信息：</strong></span></p><p><span style=\"font-size: 10.5ptpx\">名称：录入“新增采购订单物料明细分录信息（需体现业务语义）”；</span></p><p><span style=\"font-size: 10.5ptpx\">编码：系统自动生成，支持手工修改；</span></p><p><span style=\"font-size: 10.5ptpx\">所属应用：按业务对象关联自动带出；</span></p><p><span style=\"font-size: 10.5ptpx\">日志级别：默认记录基本日志，可选择 “详细日志”（记录出入参，便于故障排查）；</span></p><p><span style=\"font-size: 10.5ptpx\">详细描述：手工录入，如“新增采购订单物料明细分录信息”。</span></p><p></p></li><li><p><span style=\"font-size: 10.5ptpx\"><strong>请求端点配置：</strong></span></p><p><span style=\"font-size: 10.5ptpx\">方法：默认POST</span></p><p><span style=\"font-size: 10.5ptpx\">资源路径：系统自动生成，支持修改；</span></p><p><span style=\"font-size: 10.5ptpx\">路由唯一标识：系统自动拼接。</span></p><p><span style=\"font-size: 10.5ptpx\">完整请求地址：系统自动拼接。</span></p><p></p></li><li><p><span style=\"font-size: 10.5ptpx\"><strong>维护请求参数：</strong></span></p><p><span style=\"font-size: 10.5ptpx\">Path 参数：默认为资源的唯一标识，也就是主键“id”，字段类型为 “long”，系统自动生成示例值。</span></p><p><span style=\"font-size: 10.5ptpx\">请求体：根类型 “对象”，仅支持勾选分录标识（物料明细）关联的字段，如物料分录id，物料编码、单价等。</span></p><p></p></li><li><p><span style=\"font-size: 10.5ptpx\"><strong>维护响应参数：</strong></span></p><p><span style=\"font-size: 10.5ptpx\">成功返回 “201-Created”，包含子资源id和create_time；</span></p><p><span style=\"font-size: 10.5ptpx\">异常返回 404（主资源 / 分录不存在）。</span></p></li></ul><p></p><p><img src=\"/download/0100effa821d146b499a93e1ff57864b318f.png\" alt=\"上传图片\"></p><p></p><p><img src=\"/download/0100a0d4bcccfb8047799dc1e579a28b3905.png\" alt=\"上传图片\"></p><p></p><p><span style=\"font-size: 10.5ptpx\">保存并启用后，用户在获取到请求令牌后，可通过完整请求地址，传入分录信息，完成订单的追加分录操作。</span></p><p><span style=\"font-size: 10.5ptpx\">注意：若需批量新增分录，在 “数据模式” 选择 “批量”，请求方式改为“POST”，请求体根类型变为 “数组”，在请求Path参数中传入主资源id，请求体传入多条子资源对象。</span></p>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 87,
+   "isOpen": 1,
+   "name": "金蝶AI苍穹",
+   "productLineId": 29,
+   "series": "developer01",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "754662908713445888",
+         "entityType": "Knowledge",
+         "id": "755471120660376331",
+         "isCategory": false,
+         "name": "标准POST方法 - 新增分录",
+         "parentId": "755471013420411648",
+         "sort": "4",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": "",
+       "id": "755471013420411648",
+       "isCategory": true,
+       "name": "RESTful API",
+       "parentId": "226337544983020032",
+       "sort": "24",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": null,
+     "entityId": null,
+     "entityType": null,
+     "id": "226337544983020032",
+     "isCategory": true,
+     "name": "用户手册",
+     "parentId": "-1",
+     "sort": "6",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download/01010204d4b71b654a208006fa1004eac36a.png",
+  "department": null,
+  "id": "740211268992385024",
+  "name": "毛毛去哪儿",
+  "nameSpell": "name"
+ },
+ "totalAppraisalScore": 0,
+ "iflytekId": null,
+ "views": 965,
+ "productLineId": 29,
+ "comments": 0,
+ "similarityCount": null,
+ "totalAppraisalUsers": 0,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1766022719000,
+ "appraisalScore": 0,
+ "unuseful": 0,
+ "knowledgeCheckStatus": 2,
+ "otherProductLineIds": [],
+ "auditAt": 1759052189000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "open_rest_api",
+        "id": "760141571462408192",
+        "name": "RESTful API管理",
+        "productLineId": null,
+        "sort": 22,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 0,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "OperatingGuide",
+     "createdAt": 1556519201000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "某一功能的具体说明介绍，包括应用场景、参数说明、具体操作步骤等",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/010037894174802d4b9f8782f1f0010a6ddd.png",
+     "id": "202203081641",
+     "name": "功能介绍",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010176d38341668f44fdb94c95058a90e4b8.png",
+      "department": "云社区运营部",
+      "id": "2147406697",
+      "name": "多肉丸子",
+      "nameSpell": "kejuan"
+     },
+     "updatedAt": 1676857681000
+    },
+    {
+     "code": "rumen",
+     "createdAt": 1605667807000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "入门类的知识可使用此标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100d322b9282bcc438faa894f4eec029977.png",
+     "id": "202203081646",
+     "name": "基础入门",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download?fileName=0101ec1d6ce599b442dab7d0b794c1fce88d.png",
+      "department": null,
+      "id": "1009",
+      "name": "一颗小星星",
+      "nameSpell": "fengling"
+     },
+     "updatedAt": 1657872008000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          {
+           "childCategory": [
+            null
+           ],
+           "code": null,
+           "description": "",
+           "entityId": "754662908713445888",
+           "entityType": "Knowledge",
+           "id": "755471120660376331",
+           "isCategory": false,
+           "name": "标准POST方法 - 新增分录",
+           "parentId": "755471013420411648",
+           "sort": "4",
+           "specialId": "226337046514476288",
+           "status": 1
+          }
+         ],
+         "code": null,
+         "description": "",
+         "entityId": null,
+         "entityType": "",
+         "id": "755471013420411648",
+         "isCategory": true,
+         "name": "RESTful API",
+         "parentId": "226337544983020032",
+         "sort": "24",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": null,
+       "entityId": null,
+       "entityType": null,
+       "id": "226337544983020032",
+       "isCategory": true,
+       "name": "用户手册",
+       "parentId": "-1",
+       "sort": "6",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": "<h2><strong>1 接口介绍</strong></h2><p><span style=\"font-size: 10.5ptpx\">为主资源（如采购订单）新增子资源（如物料明细分录）的操作发布为 RESTful API，适用于外部系统补充主资源关联子资源的场景（如为采购订单添加新的物料明细）。</span></p><p></p><h2><strong>2 接口示例</strong></h2><p><span style=\"font-size: 10.5ptpx\">列表点击“新增”按钮，新增RESTful API，“操作类型选择“新增”，“操作选择“新增分录”。</span></p><ul><li><p><span style=\"font-size: 10.5ptpx\"><strong>实体信息：</strong>业务对象、操作类型和操作会根据创建向导中的配置自动带出，手工选择需要新增的实体对象的分录标识，如物料明细（billentry）；</span></p><p></p></li><li><p><span style=\"font-size: 10.5ptpx\"><strong>维护基本信息：</strong></span></p><p><span style=\"font-size: 10.5ptpx\">名称：录入“新增采购订单物料明细分录信息（需体现业务语义）”；</span></p><p><span style=\"font-size: 10.5ptpx\">编码：系统自动生成，支持手工修改；</span></p><p><span style=\"font-size: 10.5ptpx\">所属应用：按业务对象关联自动带出；</span></p><p><span style=\"font-size: 10.5ptpx\">日志级别：默认记录基本日志，可选择 “详细日志”（记录出入参，便于故障排查）；</span></p><p><span style=\"font-size: 10.5ptpx\">详细描述：手工录入，如“新增采购订单物料明细分录信息”。</span></p><p></p></li><li><p><span style=\"font-size: 10.5ptpx\"><strong>请求端点配置：</strong></span></p><p><span style=\"font-size: 10.5ptpx\">方法：默认POST</span></p><p><span style=\"font-size: 10.5ptpx\">资源路径：系统自动生成，支持修改；</span></p><p><span style=\"font-size: 10.5ptpx\">路由唯一标识：系统自动拼接。</span></p><p><span style=\"font-size: 10.5ptpx\">完整请求地址：系统自动拼接。</span></p><p></p></li><li><p><span style=\"font-size: 10.5ptpx\"><strong>维护请求参数：</strong></span></p><p><span style=\"font-size: 10.5ptpx\">Path 参数：默认为资源的唯一标识，也就是主键“id”，字段类型为 “long”，系统自动生成示例值。</span></p><p><span style=\"font-size: 10.5ptpx\">请求体：根类型 “对象”，仅支持勾选分录标识（物料明细）关联的字段，如物料分录id，物料编码、单价等。</span></p><p></p></li><li><p><span style=\"font-size: 10.5ptpx\"><strong>维护响应参数：</strong></span></p><p><span style=\"font-size: 10.5ptpx\">成功返回 “201-Created”，包含子资源id和create_time；</span></p><p><span style=\"font-size: 10.5ptpx\">异常返回 404（主资源 / 分录不存在）。</span></p></li></ul><p></p><p><img src=\"/download/0100effa821d146b499a93e1ff57864b318f.png\" alt=\"上传图片\"></p><p></p><p><img src=\"/download/0100a0d4bcccfb8047799dc1e579a28b3905.png\" alt=\"上传图片\"></p><p></p><p><span style=\"font-size: 10.5ptpx\">保存并启用后，用户在获取到请求令牌后，可通过完整请求地址，传入分录信息，完成订单的追加分录操作。</span></p><p><span style=\"font-size: 10.5ptpx\">注意：若需批量新增分录，在 “数据模式” 选择 “批量”，请求方式改为“POST”，请求体根类型变为 “数组”，在请求Path参数中传入主资源id，请求体传入多条子资源对象。</span></p>"
+}

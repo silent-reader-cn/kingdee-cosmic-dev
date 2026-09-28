@@ -1,0 +1,474 @@
+{
+ "badNum": 0,
+ "templateId": "601083996289850624",
+ "identityTagIds": null,
+ "knowledgeId": "676001635843466240",
+ "createdAt": 1738979349000,
+ "collections": 9,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "676001635843466240",
+ "contentType": 1,
+ "updatedAt": 1752487255000,
+ "knowledgeUpdater": {
+  "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+  "department": null,
+  "id": "132488613174518784",
+  "name": "某个路易",
+  "nameSpell": "name"
+ },
+ "assessStatus": 0,
+ "knowledgeStatus": 2,
+ "assessHandleStatus": null,
+ "knowledgeCreatedAt": 1738979349000,
+ "version": 45,
+ "labels": [],
+ "editedAt": 1752487206000,
+ "identityTags": null,
+ "useful": 2,
+ "errors": [],
+ "isCollected": false,
+ "template": "",
+ "totalFeedBacks": 0,
+ "attachments": [],
+ "sources": [],
+ "editTitle": "调用OpenAPI示例代码",
+ "title": "调用OpenAPI示例代码",
+ "content": "<h2><span style=\"color: rgb(26, 26, 26)\"><strong>1&nbsp;前言</strong></span></h2><p><span style=\"color: windowtext\">文档列举了Java、JavaScript、python等常用语言http调用API的示例 ，代码仅供参考，具体实现逻辑可根据实际业务需求自行调整。</span></p><p></p><h2><strong>2 调用示例</strong></h2><h3><strong>2.1 Java</strong></h3><h4><span>2.1.1 概述</span></h4><p><span>Java常见的http调用方式有Java自带的HttpURLConnection、OkHttp、Apache的httpclient等， 以下使用Apache的httpclient工具进行http调用参考示例。</span></p><p></p><h4><span>2.1.2 环境要求</span></h4><p><span>Java 8、maven</span></p><p></p><h4><span>2.1.3 示例代码</span></h4><p><span>1. 添加依赖</span></p><pre><code class=\"language-plaintext\">&lt;dependencies&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&lt;dependency&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;groupId&gt;org.apache.httpcomponents&lt;/groupId&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;artifactId&gt;httpclient&lt;/artifactId&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;version&gt;4.5.13&lt;/version&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&lt;/dependency&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&lt;dependency&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;groupId&gt;org.apache.httpcomponents&lt;/groupId&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;artifactId&gt;httpmime&lt;/artifactId&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;version&gt;4.5.13&lt;/version&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&lt;/dependency&gt;\n&lt;/dependencies&gt;</code></pre><p><span style=\"color: rgb(26, 26, 26)\"><strong>&nbsp;</strong></span></p><p></p><p><span style=\"color: windowtext\">2. 编写公共方法</span></p><pre><code class=\"language-plaintext\">import&nbsp;org.apache.http.HttpEntity;\nimport&nbsp;org.apache.http.HttpResponse;\nimport&nbsp;org.apache.http.client.HttpClient;\nimport&nbsp;org.apache.http.client.config.RequestConfig;\nimport&nbsp;org.apache.http.client.methods.HttpEntityEnclosingRequestBase;\nimport&nbsp;org.apache.http.client.methods.HttpGet;\nimport&nbsp;org.apache.http.client.methods.HttpPost;\nimport&nbsp;org.apache.http.client.methods.HttpUriRequest;\nimport&nbsp;org.apache.http.entity.ContentType;\nimport&nbsp;org.apache.http.entity.StringEntity;\nimport&nbsp;org.apache.http.entity.mime.MultipartEntityBuilder;\nimport&nbsp;org.apache.http.impl.client.HttpClients;\nimport&nbsp;org.apache.http.util.EntityUtils;\n\nimport&nbsp;java.io.File;\nimport&nbsp;java.io.IOException;\nimport&nbsp;java.nio.charset.StandardCharsets;\nimport&nbsp;java.util.List;\nimport&nbsp;java.util.Map;\n\npublic&nbsp;class&nbsp;HttpClientUtils&nbsp;{\n\n&nbsp;&nbsp;&nbsp;&nbsp;/**\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;发送&nbsp;HTTP&nbsp;请求的公共方法\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;url&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;请求的&nbsp;URL\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;method&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;请求方法，如&nbsp;\"GET\",&nbsp;\"POST\"\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;contentType&nbsp;&nbsp;&nbsp;&nbsp;请求内容类型，如&nbsp;\"application/json\",&nbsp;\"application/xml\",&nbsp;\"multipart/form-data\"\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;body&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;请求体&nbsp;json、xml...\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;headers&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;自定义请求头\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;connectTimeout&nbsp;连接超时时间（毫秒）\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;socketTimeout&nbsp;&nbsp;套接字超时时间（毫秒）\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;requestTimeout&nbsp;请求超时时间（毫秒）\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@return&nbsp;响应结果字符串\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@throws&nbsp;IOException&nbsp;网络请求异常\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/\n&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;static&nbsp;String&nbsp;sendRequest(String&nbsp;url,&nbsp;String&nbsp;method,&nbsp;String&nbsp;contentType,&nbsp;String&nbsp;body,&nbsp;Map&lt;String,&nbsp;String&gt;&nbsp;headers,&nbsp;int&nbsp;connectTimeout,&nbsp;int&nbsp;socketTimeout,&nbsp;int&nbsp;requestTimeout)&nbsp;throws&nbsp;IOException&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RequestConfig&nbsp;config&nbsp;=&nbsp;getRequestConfig(connectTimeout,&nbsp;socketTimeout,&nbsp;requestTimeout);\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HttpClient&nbsp;httpClient&nbsp;=&nbsp;HttpClients.custom()\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.setDefaultRequestConfig(config)\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.build();\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HttpUriRequest&nbsp;request;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;根据请求方法创建对应的请求对象\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;switch&nbsp;(method.toUpperCase())&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case&nbsp;\"GET\":\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;request&nbsp;=&nbsp;new&nbsp;HttpGet(url);\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case&nbsp;\"POST\":\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HttpPost&nbsp;httpPost&nbsp;=&nbsp;new&nbsp;HttpPost(url);\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;setRequestBody(httpPost,&nbsp;contentType,&nbsp;body);\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;request&nbsp;=&nbsp;httpPost;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;default:\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;throw&nbsp;new&nbsp;IllegalArgumentException(\"Unsupported&nbsp;HTTP&nbsp;method:&nbsp;\"&nbsp;+&nbsp;method);\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}\n\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;设置请求头\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(headers&nbsp;!=&nbsp;null)&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;(Map.Entry&lt;String,&nbsp;String&gt;&nbsp;entry&nbsp;:&nbsp;headers.entrySet())&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;request.setHeader(entry.getKey(),&nbsp;entry.getValue());\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}\n\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;发送请求\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HttpResponse&nbsp;response&nbsp;=&nbsp;httpClient.execute(request);\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HttpEntity&nbsp;entity&nbsp;=&nbsp;response.getEntity();\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;entity&nbsp;!=&nbsp;null&nbsp;?&nbsp;EntityUtils.toString(entity,&nbsp;StandardCharsets.UTF_8)&nbsp;:&nbsp;null;\n&nbsp;&nbsp;&nbsp;&nbsp;}\n\n\n&nbsp;&nbsp;&nbsp;&nbsp;/**\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;获取请求配置&nbsp;设置请求超时配置&nbsp;毫秒\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;connectTimeout\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;socketTimeout\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;requestTimeout\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@return\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/\n&nbsp;&nbsp;&nbsp;&nbsp;private&nbsp;static&nbsp;RequestConfig&nbsp;getRequestConfig(int&nbsp;connectTimeout,&nbsp;int&nbsp;socketTimeout,&nbsp;int&nbsp;requestTimeout)&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;RequestConfig.custom()\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.setConnectTimeout(connectTimeout)\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.setSocketTimeout(socketTimeout)\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.setConnectionRequestTimeout(requestTimeout)\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.build();\n&nbsp;&nbsp;&nbsp;&nbsp;}\n\n&nbsp;&nbsp;&nbsp;&nbsp;/**\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;设置请求体\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;request&nbsp;&nbsp;请求对象\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;contentType&nbsp;请求体类型\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;body&nbsp;请求体\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/\n&nbsp;&nbsp;&nbsp;&nbsp;private&nbsp;static&nbsp;void&nbsp;setRequestBody(HttpEntityEnclosingRequestBase&nbsp;request,&nbsp;String&nbsp;contentType,&nbsp;String&nbsp;body)&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(\"application/json\".equals(contentType))&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;request.setEntity(new&nbsp;StringEntity(body,&nbsp;ContentType.APPLICATION_JSON));\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;else&nbsp;if&nbsp;(\"application/xml\".equals(contentType))&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;request.setEntity(new&nbsp;StringEntity(body,&nbsp;ContentType.APPLICATION_XML));\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//...&nbsp;其他报文格式添加\n&nbsp;&nbsp;&nbsp;&nbsp;}\n\n&nbsp;&nbsp;&nbsp;&nbsp;/**\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;发送带文件上传的请求\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;url&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;请求url\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;textParams&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text类型参数\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;filesMap&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;文件类型参数\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;headers&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;请求头\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;connectTimeout&nbsp;连接超时时间（毫秒）\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;socketTimeout&nbsp;&nbsp;套接字超时时间（毫秒）\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;requestTimeout&nbsp;请求超时时间（毫秒）\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@return&nbsp;响应结果字符串\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@throws&nbsp;IOException&nbsp;网络请求异常\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/\n&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;static&nbsp;String&nbsp;sendRequest(String&nbsp;url,&nbsp;Map&lt;String,&nbsp;String&gt;&nbsp;textParams,&nbsp;Map&lt;String,&nbsp;List&lt;File&gt;&gt;&nbsp;filesMap,&nbsp;Map&lt;String,&nbsp;String&gt;&nbsp;headers,int&nbsp;connectTimeout,&nbsp;int&nbsp;socketTimeout,&nbsp;int&nbsp;requestTimeout)&nbsp;throws&nbsp;IOException&nbsp;{\n\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RequestConfig&nbsp;config&nbsp;=&nbsp;getRequestConfig(connectTimeout,&nbsp;socketTimeout,&nbsp;requestTimeout);\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HttpClient&nbsp;httpClient&nbsp;=&nbsp;HttpClients.custom()\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.setDefaultRequestConfig(config)\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.build();\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HttpUriRequest&nbsp;request;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HttpPost&nbsp;httpPost&nbsp;=&nbsp;new&nbsp;HttpPost(url);\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MultipartEntityBuilder&nbsp;builder&nbsp;=&nbsp;MultipartEntityBuilder.create();\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;添加文件\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(filesMap&nbsp;!=&nbsp;null&nbsp;&amp;&amp;&nbsp;!filesMap.isEmpty())&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;(Map.Entry&lt;String,&nbsp;List&lt;File&gt;&gt;&nbsp;entry&nbsp;:&nbsp;filesMap.entrySet())&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;List&lt;File&gt;&nbsp;files&nbsp;=&nbsp;entry.getValue();\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String&nbsp;key&nbsp;=&nbsp;entry.getKey();\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;(File&nbsp;file&nbsp;:&nbsp;files)&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(file&nbsp;!=&nbsp;null&nbsp;&amp;&amp;&nbsp;file.exists())&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;builder.addBinaryBody(key,&nbsp;file,&nbsp;ContentType.APPLICATION_OCTET_STREAM,&nbsp;file.getName());\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;添加文本参数\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(textParams&nbsp;!=&nbsp;null&nbsp;&amp;&amp;&nbsp;!textParams.isEmpty())&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;(Map.Entry&lt;String,&nbsp;String&gt;&nbsp;entry&nbsp;:&nbsp;textParams.entrySet())&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;builder.addTextBody(entry.getKey(),&nbsp;entry.getValue());\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;httpPost.setEntity(builder.build());\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;request&nbsp;=&nbsp;httpPost;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;设置请求头\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(headers&nbsp;!=&nbsp;null)&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;(Map.Entry&lt;String,&nbsp;String&gt;&nbsp;entry&nbsp;:&nbsp;headers.entrySet())&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;request.setHeader(entry.getKey(),&nbsp;entry.getValue());\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;发送请求\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HttpResponse&nbsp;response&nbsp;=&nbsp;httpClient.execute(request);\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HttpEntity&nbsp;entity&nbsp;=&nbsp;response.getEntity();\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;entity&nbsp;!=&nbsp;null&nbsp;?&nbsp;EntityUtils.toString(entity,&nbsp;StandardCharsets.UTF_8)&nbsp;:&nbsp;null;\n&nbsp;&nbsp;&nbsp;&nbsp;}\n\n\n}</code></pre><p></p><p>3. 测试</p><pre><code class=\"language-plaintext\">//get请求\nprivate&nbsp;static&nbsp;void&nbsp;getExample()&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;try&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String&nbsp;url&nbsp;=&nbsp;\"https://xxxxx?billno=unittest-00000025&amp;pageSize=10&amp;pageNo=1\";\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String&nbsp;method&nbsp;=&nbsp;\"GET\";\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String&nbsp;contentType&nbsp;=&nbsp;\"application/json\";\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String&nbsp;body&nbsp;=&nbsp;\"\";\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Map&lt;String,&nbsp;String&gt;&nbsp;headers&nbsp;=&nbsp;new&nbsp;HashMap&lt;&gt;();\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;headers.put(\"accesstoken\",&nbsp;\"your&nbsp;token\");\n\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;设置超时时间（毫秒）\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;connectTimeout&nbsp;=&nbsp;5000;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;socketTimeout&nbsp;=&nbsp;5000;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;requestTimeout&nbsp;=&nbsp;5000;\n\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String&nbsp;response&nbsp;=&nbsp;HttpClientUtils.sendRequest(url,&nbsp;method,&nbsp;contentType,&nbsp;body,&nbsp;headers,&nbsp;connectTimeout,&nbsp;socketTimeout,&nbsp;requestTimeout);\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(\"Response:&nbsp;\"&nbsp;+&nbsp;response);\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;catch&nbsp;(IOException&nbsp;e)&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//异常处理，切勿直接忽略异常\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}\n&nbsp;&nbsp;&nbsp;&nbsp;}\n\n//post请求\nprivate&nbsp;static&nbsp;void&nbsp;postExample()&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;try&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String&nbsp;url&nbsp;=&nbsp;\"https://xxx\";\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String&nbsp;method&nbsp;=&nbsp;\"POST\";\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String&nbsp;contentType&nbsp;=&nbsp;\"application/json\";\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String&nbsp;body&nbsp;=&nbsp;\"{\\n\"&nbsp;+\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"\\t\\\"data\\\":{\\n\"&nbsp;+\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"\\t\\t\\\"billno\\\":\\\"unittest-00000025\\\"\\n\"&nbsp;+\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"\\t},\\n\"&nbsp;+\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"\\t\\\"pageSize\\\":10,\\n\"&nbsp;+\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"\\t\\\"pageNo\\\":1\\n\"&nbsp;+\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"}\";\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Map&lt;String,&nbsp;String&gt;&nbsp;headers&nbsp;=&nbsp;new&nbsp;HashMap&lt;&gt;();\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;headers.put(\"accesstoken\",&nbsp;\"your&nbsp;token\");\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;设置超时时间（毫秒）\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;connectTimeout&nbsp;=&nbsp;5000;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;socketTimeout&nbsp;=&nbsp;5000;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;requestTimeout&nbsp;=&nbsp;5000;\n\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String&nbsp;response&nbsp;=&nbsp;HttpClientUtils.sendRequest(url,&nbsp;method,&nbsp;contentType,&nbsp;body,&nbsp;headers,&nbsp;connectTimeout,&nbsp;socketTimeout,&nbsp;requestTimeout);\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(\"Response:&nbsp;\"&nbsp;+&nbsp;response);\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;catch&nbsp;(IOException&nbsp;e)&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//异常处理，切勿直接忽略异常\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}\n&nbsp;&nbsp;&nbsp;&nbsp;}\n\n\n//传输文件\nprivate&nbsp;static&nbsp;void&nbsp;fileExample()&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;try&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String&nbsp;url&nbsp;=&nbsp;\"https://feature.kingdee.com:1026/deviai/kapi/v2/kdtest/open/openapi/test2/fileHandle\";\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Map&lt;String,&nbsp;String&gt;&nbsp;headers&nbsp;=&nbsp;new&nbsp;HashMap&lt;&gt;();\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;headers.put(\"accesstoken\",&nbsp;\"your&nbsp;token\");\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Map&lt;String,&nbsp;List&lt;File&gt;&gt;&nbsp;fileMap&nbsp;=&nbsp;new&nbsp;HashMap&lt;&gt;();\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;File&nbsp;file&nbsp;=&nbsp;new&nbsp;File(\"C:\\\\Users\\\\HP\\\\Desktop\\\\test.txt\");\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fileMap.put(\"fileList\",&nbsp;Arrays.asList(file));\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Map&lt;String,&nbsp;String&gt;&nbsp;textParams&nbsp;&nbsp;=&nbsp;new&nbsp;HashMap&lt;&gt;();\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;textParams.put(\"str\",\"this&nbsp;is&nbsp;a&nbsp;test\");\n\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;设置超时时间（毫秒）\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;connectTimeout&nbsp;=&nbsp;5000;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;socketTimeout&nbsp;=&nbsp;5000;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;requestTimeout&nbsp;=&nbsp;5000;\n\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String&nbsp;response&nbsp;=&nbsp;HttpClientUtils.sendRequest(url,textParams,fileMap,&nbsp;headers,&nbsp;connectTimeout,&nbsp;socketTimeout,&nbsp;requestTimeout);\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(\"Response:&nbsp;\"&nbsp;+&nbsp;response);\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;catch&nbsp;(IOException&nbsp;e)&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//异常处理，切勿直接忽略异常\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}\n&nbsp;&nbsp;&nbsp;&nbsp;}</code></pre><h2></h2><p></p><h3><span>2.2 JavaScript</span></h3><h4><span>2.2.1 概述</span></h4><p><span>JavaScript常见http调用方式有 Fetch API、axios 、jQuery 等等。 以下是使用 axios 进行 HTTP 请求的示例，包括 GET、POST、文件处理等常见操作。</span></p><p></p><p></p><h4><span>2.2.2 环境要求</span></h4><pre><code class=\"language-plaintext\">#&nbsp;在Node.js&nbsp;环境下\nnpm&nbsp;install&nbsp;axios\n#&nbsp;或者\nyarn&nbsp;add&nbsp;axios</code></pre><p></p><h4>2.2.3 示例代码</h4><pre><code class=\"language-plaintext\">//get请求\nvar&nbsp;axios&nbsp;=&nbsp;require('axios');\n\nvar&nbsp;config&nbsp;=&nbsp;{\n&nbsp;&nbsp;&nbsp;method:&nbsp;'get',\n&nbsp;&nbsp;&nbsp;url:&nbsp;'https://xxx?billno=unittest-00000025&amp;pageSize=10&amp;pageNo=1',\n&nbsp;&nbsp;&nbsp;headers:&nbsp;{&nbsp;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'accesstoken':&nbsp;'your&nbsp;token'\n&nbsp;&nbsp;&nbsp;}\n};\naxios(config)\n.then(function&nbsp;(response)&nbsp;{\n&nbsp;&nbsp;&nbsp;console.log(JSON.stringify(response.data));\n})\n.catch(function&nbsp;(error)&nbsp;{\n&nbsp;&nbsp;&nbsp;console.log(error);\n});\n\n\n//post请求\nvar&nbsp;axios&nbsp;=&nbsp;require('axios');\nvar&nbsp;data&nbsp;=&nbsp;JSON.stringify({\n&nbsp;&nbsp;&nbsp;\"data\":&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"billno\":&nbsp;\"unittest-00000025\"\n&nbsp;&nbsp;&nbsp;},\n&nbsp;&nbsp;&nbsp;\"pageSize\":&nbsp;10,\n&nbsp;&nbsp;&nbsp;\"pageNo\":&nbsp;1\n});\nvar&nbsp;config&nbsp;=&nbsp;{\n&nbsp;&nbsp;&nbsp;method:&nbsp;'post',\n&nbsp;&nbsp;&nbsp;url:&nbsp;'https://xxxx',\n&nbsp;&nbsp;&nbsp;headers:&nbsp;{&nbsp;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'accesstoken':&nbsp;'your&nbsp;token',&nbsp;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'Content-Type':&nbsp;'application/json'\n&nbsp;&nbsp;&nbsp;},\n&nbsp;&nbsp;&nbsp;data&nbsp;:&nbsp;data\n};\n\naxios(config)\n.then(function&nbsp;(response)&nbsp;{\n&nbsp;&nbsp;&nbsp;console.log(JSON.stringify(response.data));\n})\n.catch(function&nbsp;(error)&nbsp;{\n&nbsp;&nbsp;&nbsp;console.log(error);\n});\n\n\n//传输文件\nvar&nbsp;axios&nbsp;=&nbsp;require('axios');\nvar&nbsp;FormData&nbsp;=&nbsp;require('form-data');\nvar&nbsp;fs&nbsp;=&nbsp;require('fs');\nvar&nbsp;data&nbsp;=&nbsp;new&nbsp;FormData();\ndata.append('fileList',&nbsp;fs.createReadStream('C:\\Users\\HP\\Desktop\\test.txt'));\nvar&nbsp;config&nbsp;=&nbsp;{\n&nbsp;&nbsp;&nbsp;method:&nbsp;'post',\n&nbsp;&nbsp;&nbsp;url:&nbsp;'https://xxxxx',\n&nbsp;&nbsp;&nbsp;headers:&nbsp;{&nbsp;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'accesstoken':&nbsp;'your&nbsp;token',&nbsp;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...data.getHeaders()\n&nbsp;&nbsp;&nbsp;},\n&nbsp;&nbsp;&nbsp;data&nbsp;:&nbsp;data\n};\n\naxios(config)\n.then(function&nbsp;(response)&nbsp;{\n&nbsp;&nbsp;&nbsp;console.log(JSON.stringify(response.data));\n})\n.catch(function&nbsp;(error)&nbsp;{\n&nbsp;&nbsp;&nbsp;console.log(error);\n});</code></pre><h3></h3><h3><strong>2.3&nbsp;</strong>PHP</h3><h4>2.3.1 概述</h4><p><span style=\"color: rgb(51, 51, 51)\">PHP 常见HTTP调用方法有内置的file_get_contents、cURL等。下面以cURL库为例</span><span>。</span></p><p></p><h4>2.3.2 环境要求</h4><p>建议PHP 7.x 以上 ，并根据需求配置网络、SSL/TLS</p><p></p><p></p><h4>2.3.3 示例代码</h4><p>1. get请求</p><pre><code class=\"language-plaintext\">&lt;?php\n//&nbsp;目标&nbsp;URL\n$url&nbsp;=&nbsp;'https://xxx';\n\n//&nbsp;准备请求头，包含认证信息\n$headers&nbsp;=&nbsp;[\n&nbsp;&nbsp;&nbsp;&nbsp;'accesstoken:&nbsp;your&nbsp;token',\n&nbsp;&nbsp;&nbsp;&nbsp;'Content-Type:&nbsp;application/json'\n];\n\n//&nbsp;初始化&nbsp;cURL&nbsp;会话\n$ch&nbsp;=&nbsp;curl_init($url);\n\n//&nbsp;设置&nbsp;cURL&nbsp;选项\n//&nbsp;将响应结果作为字符串返回，而不是直接输出\ncurl_setopt($ch,&nbsp;CURLOPT_RETURNTRANSFER,&nbsp;true);\n//&nbsp;设置请求头\ncurl_setopt($ch,&nbsp;CURLOPT_HTTPHEADER,&nbsp;$headers);\n\n//&nbsp;执行&nbsp;cURL&nbsp;请求并获取响应\n$response&nbsp;=&nbsp;curl_exec($ch);\n\n//&nbsp;检查请求过程中是否出现错误\nif&nbsp;(curl_errno($ch))&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;'cURL&nbsp;请求错误:&nbsp;'.&nbsp;curl_error($ch);\n}&nbsp;else&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;解析&nbsp;JSON&nbsp;格式的响应数据\n&nbsp;&nbsp;&nbsp;&nbsp;$data&nbsp;=&nbsp;json_decode($response,&nbsp;true);\n&nbsp;&nbsp;&nbsp;&nbsp;print_r($data);\n}\n\n//&nbsp;关闭&nbsp;cURL&nbsp;会话，释放资源\ncurl_close($ch);\n?&gt;</code></pre><p></p><p><span style=\"color: rgb(51, 51, 51)\">2. post请求</span></p><pre><code class=\"language-plaintext\">&lt;?php\n//&nbsp;目标&nbsp;URL，需替换为实际的接口地址\n$url&nbsp;=&nbsp;'https://xxx';\n\n//&nbsp;报文数据\n$data&nbsp;=&nbsp;[\n&nbsp;&nbsp;&nbsp;&nbsp;\"data\"&nbsp;=&gt;&nbsp;[\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"billno\"&nbsp;=&gt;&nbsp;\"unittest-00000025\"\n&nbsp;&nbsp;&nbsp;&nbsp;],\n&nbsp;&nbsp;&nbsp;&nbsp;\"pageSize\"&nbsp;=&gt;&nbsp;10,\n&nbsp;&nbsp;&nbsp;&nbsp;\"pageNo\"&nbsp;=&gt;&nbsp;1\n];\n\n//&nbsp;设置请求头，包含&nbsp;token&nbsp;和内容类型\n$headers&nbsp;=&nbsp;[\n&nbsp;&nbsp;&nbsp;&nbsp;'accesstoken:&nbsp;your&nbsp;token',\n&nbsp;&nbsp;&nbsp;&nbsp;'Content-Type:&nbsp;application/json'\n];\n\n//&nbsp;将数据编码为&nbsp;JSON&nbsp;格式\n$jsonData&nbsp;=&nbsp;json_encode($data);\n\n//&nbsp;初始化&nbsp;cURL&nbsp;会话\n$ch&nbsp;=&nbsp;curl_init($url);\n\n//&nbsp;设置&nbsp;cURL&nbsp;选项\n//&nbsp;设置请求方法为&nbsp;POST\ncurl_setopt($ch,&nbsp;CURLOPT_POST,&nbsp;true);\n//&nbsp;设置&nbsp;POST&nbsp;请求的主体数据\ncurl_setopt($ch,&nbsp;CURLOPT_POSTFIELDS,&nbsp;$jsonData);\n//&nbsp;设置请求头\ncurl_setopt($ch,&nbsp;CURLOPT_HTTPHEADER,&nbsp;$headers);\n//&nbsp;将响应结果作为字符串返回\ncurl_setopt($ch,&nbsp;CURLOPT_RETURNTRANSFER,&nbsp;true);\n\n//&nbsp;执行&nbsp;cURL&nbsp;请求并获取响应\n$response&nbsp;=&nbsp;curl_exec($ch);\n\n//&nbsp;检查请求过程中是否出现错误\nif&nbsp;(curl_errno($ch))&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;'cURL&nbsp;请求错误:&nbsp;'.&nbsp;curl_error($ch);\n}&nbsp;else&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;解析&nbsp;JSON&nbsp;格式的响应数据\n&nbsp;&nbsp;&nbsp;&nbsp;$data&nbsp;=&nbsp;json_decode($response,&nbsp;true);\n&nbsp;&nbsp;&nbsp;&nbsp;print_r($data);\n}\n\n//&nbsp;关闭&nbsp;cURL&nbsp;会话，释放资源\ncurl_close($ch);\n?&gt;</code></pre><h2></h2><p></p><h3><strong>2.4&nbsp;</strong>Go</h3><h4>2.4.1 概述</h4><p><span style=\"color: rgb(51, 51, 51)\">在 Go 语言中进行 HTTP 调用可以使用标准库中的 net/http 包</span><span>。</span></p><p></p><h4>2.4.2 环境要求</h4><p><span style=\"color: rgb(51, 51, 51)\">Go 环境，并根据需求配置网络、SSL/TLS</span></p><p></p><h4>2.4.3 示例代码</h4><p></p><p>1. get请求</p><pre><code class=\"language-plaintext\">package&nbsp;main\n\nimport&nbsp;(\n\t\"encoding/json\"\n\t\"fmt\"\n\t\"io/ioutil\"\n\t\"net/http\"\n)\n\nfunc&nbsp;main()&nbsp;{\n\t//&nbsp;目标&nbsp;URL\n&nbsp;&nbsp;&nbsp;&nbsp;url&nbsp;:=&nbsp;\"https://xxx\"\n\n\t//&nbsp;发送&nbsp;GET&nbsp;请求\n\tresp,&nbsp;err&nbsp;:=&nbsp;http.Get(url)\n\tif&nbsp;err&nbsp;!=&nbsp;nil&nbsp;{\n\t\tfmt.Printf(\"HTTP&nbsp;GET&nbsp;请求失败:&nbsp;%v\\n\",&nbsp;err)\n\t\treturn\n\t}\n\tdefer&nbsp;resp.Body.Close()\n\n\t//&nbsp;检查响应状态码\n\tif&nbsp;resp.StatusCode&nbsp;!=&nbsp;http.StatusOK&nbsp;{\n\t\tfmt.Printf(\"请求失败，状态码:&nbsp;%d\\n\",&nbsp;resp.StatusCode)\n\t\treturn\n\t}\n\n\t//&nbsp;读取响应体\n\tbody,&nbsp;err&nbsp;:=&nbsp;ioutil.ReadAll(resp.Body)\n\tif&nbsp;err&nbsp;!=&nbsp;nil&nbsp;{\n\t\tfmt.Printf(\"读取响应体失败:&nbsp;%v\\n\",&nbsp;err)\n\t\treturn\n\t}\n\n\t//&nbsp;解析&nbsp;JSON&nbsp;响应\n\tvar&nbsp;data&nbsp;[]map[string]interface{}\n\terr&nbsp;=&nbsp;json.Unmarshal(body,&nbsp;&amp;data)\n\tif&nbsp;err&nbsp;!=&nbsp;nil&nbsp;{\n\t\tfmt.Printf(\"JSON&nbsp;解析失败:&nbsp;%v\\n\",&nbsp;err)\n\t\treturn\n\t}\n\n\t//&nbsp;打印解析后的数据\n\tfmt.Println(data)\n}</code></pre><p></p><p><span style=\"color: rgb(51, 51, 51)\">2. post请求</span></p><pre><code class=\"language-plaintext\">package&nbsp;main\n\nimport&nbsp;(\n\t\"bytes\"\n\t\"encoding/json\"\n\t\"fmt\"\n\t\"io/ioutil\"\n\t\"net/http\"\n)\n\nfunc&nbsp;main()&nbsp;{\n\t//&nbsp;目标&nbsp;URL\n\turl&nbsp;:=&nbsp;\"https://xxx\"\n\n\t//&nbsp;构建请求数据\n\tdata&nbsp;:=&nbsp;map[string]interface{}{\n\t\t\"data\":&nbsp;map[string]string{\n\t\t\t\"billno\":&nbsp;\"unittest-00000025\",\n\t\t},\n\t\t\"pageSize\":&nbsp;10,\n\t\t\"pageNo\":&nbsp;&nbsp;&nbsp;1,\n\t}\n\n\t//&nbsp;将数据编码为&nbsp;JSON\n\tjsonData,&nbsp;err&nbsp;:=&nbsp;json.Marshal(data)\n\tif&nbsp;err&nbsp;!=&nbsp;nil&nbsp;{\n\t\tfmt.Printf(\"JSON&nbsp;编码失败:&nbsp;%v\\n\",&nbsp;err)\n\t\treturn\n\t}\n\n\t//&nbsp;创建&nbsp;POST&nbsp;请求\n\treq,&nbsp;err&nbsp;:=&nbsp;http.NewRequest(\"POST\",&nbsp;url,&nbsp;bytes.NewBuffer(jsonData))\n\tif&nbsp;err&nbsp;!=&nbsp;nil&nbsp;{\n\t\tfmt.Printf(\"创建请求失败:&nbsp;%v\\n\",&nbsp;err)\n\t\treturn\n\t}\n\n\t//&nbsp;设置请求头\n\treq.Header.Set(\"Content-Type\",&nbsp;\"application/json\")\n\treq.Header.Set(\"accesstoken\",&nbsp;\"your&nbsp;token\")\n\n\t//&nbsp;发送请求\n\tclient&nbsp;:=&nbsp;&amp;http.Client{}\n\tresp,&nbsp;err&nbsp;:=&nbsp;client.Do(req)\n\tif&nbsp;err&nbsp;!=&nbsp;nil&nbsp;{\n\t\tfmt.Printf(\"HTTP&nbsp;POST&nbsp;请求失败:&nbsp;%v\\n\",&nbsp;err)\n\t\treturn\n\t}\n\tdefer&nbsp;resp.Body.Close()\n\n\t//&nbsp;检查响应状态码\n\tif&nbsp;resp.StatusCode&nbsp;!=&nbsp;http.StatusOK&nbsp;{\n\t\tfmt.Printf(\"请求失败，状态码:&nbsp;%d\\n\",&nbsp;resp.StatusCode)\n\t\treturn\n\t}\n\n\t//&nbsp;读取响应体\n\tbody,&nbsp;err&nbsp;:=&nbsp;ioutil.ReadAll(resp.Body)\n\tif&nbsp;err&nbsp;!=&nbsp;nil&nbsp;{\n\t\tfmt.Printf(\"读取响应体失败:&nbsp;%v\\n\",&nbsp;err)\n\t\treturn\n\t}\n\n\t//&nbsp;解析&nbsp;JSON&nbsp;响应\n\tvar&nbsp;responseData&nbsp;map[string]interface{}\n\terr&nbsp;=&nbsp;json.Unmarshal(body,&nbsp;&amp;responseData)\n\tif&nbsp;err&nbsp;!=&nbsp;nil&nbsp;{\n\t\tfmt.Printf(\"JSON&nbsp;解析失败:&nbsp;%v\\n\",&nbsp;err)\n\t\treturn\n\t}\n\n\t//&nbsp;打印解析后的数据\n\tfmt.Println(responseData)\n}</code></pre><p></p><h2><span style=\"color: rgb(26, 26, 26)\"><strong>3 更多</strong></span></h2><p><span style=\"color: rgb(51, 51, 51)\">更多编程语言的实例调用可根据postman、apifox等工具中提供的生成代码功能作为参考。</span></p><p></p><p><span style=\"color: rgb(51, 51, 51)\"><img src=\"/download/0109e512895d1639477fb320c6b592d056cc.png\"></span></p><p><span style=\"color: rgb(26, 26, 26)\"><strong>&nbsp;</strong></span></p><p></p><p></p>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 87,
+   "isOpen": 1,
+   "name": "金蝶AI苍穹",
+   "productLineId": 29,
+   "series": "developer01",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        null
+       ],
+       "code": null,
+       "description": "",
+       "entityId": "676001635843466240",
+       "entityType": "Knowledge",
+       "id": "676006182284159232",
+       "isCategory": false,
+       "name": "调用OpenAPI示例代码",
+       "parentId": "386536775126291968",
+       "sort": "2",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": "",
+     "entityId": null,
+     "entityType": null,
+     "id": "386536775126291968",
+     "isCategory": true,
+     "name": "新手指引",
+     "parentId": "-1",
+     "sort": "2",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download/01010204d4b71b654a208006fa1004eac36a.png",
+  "department": null,
+  "id": "740211268992385024",
+  "name": "毛毛去哪儿",
+  "nameSpell": "name"
+ },
+ "totalAppraisalScore": 10,
+ "iflytekId": null,
+ "views": 7485,
+ "productLineId": 29,
+ "comments": 2,
+ "similarityCount": 0,
+ "totalAppraisalUsers": 2,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1752487255000,
+ "appraisalScore": 0,
+ "unuseful": 0,
+ "knowledgeCheckStatus": 2,
+ "otherProductLineIds": [],
+ "auditAt": 1752487255000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapi_apilist_layout",
+        "id": "505686038019362304",
+        "name": "异步API",
+        "productLineId": null,
+        "sort": 1,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 0,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "KFZN",
+     "createdAt": 1657854097000,
+     "creator": {
+      "avatar": "/download/010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "306913800727243776",
+      "name": "Paim",
+      "nameSpell": "name"
+     },
+     "description": "对开发的使用实例、应用技巧、基本知识点及注意事项等进行总结， 用于指导和规范相应模块的开发过程",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/01007702def2b9454c5983d3d2ff24919094.png",
+     "id": "335737665134146048",
+     "name": "开发指南",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010176d38341668f44fdb94c95058a90e4b8.png",
+      "department": "云社区运营部",
+      "id": "2147406697",
+      "name": "多肉丸子",
+      "nameSpell": "kejuan"
+     },
+     "updatedAt": 1676857749000
+    },
+    {
+     "code": "rumen",
+     "createdAt": 1605667807000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "入门类的知识可使用此标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100d322b9282bcc438faa894f4eec029977.png",
+     "id": "202203081646",
+     "name": "基础入门",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download?fileName=0101ec1d6ce599b442dab7d0b794c1fce88d.png",
+      "department": null,
+      "id": "1009",
+      "name": "一颗小星星",
+      "nameSpell": "fengling"
+     },
+     "updatedAt": 1657872008000
+    },
+    {
+     "code": "essencesummary",
+     "createdAt": 1606118073000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "精华汇总",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100402c6f8df169483db114f71043c19ec2.png",
+     "id": "202203081649",
+     "name": "精华汇总",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 2,
+     "updatePerson": {
+      "avatar": "/download?fileName=010162cfa9d5437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1129",
+      "name": "灏",
+      "nameSpell": "hao"
+     },
+     "updatedAt": 1606118073000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "676001635843466240",
+         "entityType": "Knowledge",
+         "id": "676006182284159232",
+         "isCategory": false,
+         "name": "调用OpenAPI示例代码",
+         "parentId": "386536775126291968",
+         "sort": "2",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": null,
+       "id": "386536775126291968",
+       "isCategory": true,
+       "name": "新手指引",
+       "parentId": "-1",
+       "sort": "2",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": "<h2><span style=\"color: rgb(26, 26, 26)\"><strong>1&nbsp;前言</strong></span></h2><p><span style=\"color: windowtext\">文档列举了Java、JavaScript、python等常用语言http调用API的示例 ，代码仅供参考，具体实现逻辑可根据实际业务需求自行调整。</span></p><p></p><h2><strong>2 调用示例</strong></h2><h3><strong>2.1 Java</strong></h3><h4><span>2.1.1 概述</span></h4><p><span>Java常见的http调用方式有Java自带的HttpURLConnection、OkHttp、Apache的httpclient等， 以下使用Apache的httpclient工具进行http调用参考示例。</span></p><p></p><h4><span>2.1.2 环境要求</span></h4><p><span>Java 8、maven</span></p><p></p><h4><span>2.1.3 示例代码</span></h4><p><span>1. 添加依赖</span></p><pre><code class=\"language-plaintext\">&lt;dependencies&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&lt;dependency&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;groupId&gt;org.apache.httpcomponents&lt;/groupId&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;artifactId&gt;httpclient&lt;/artifactId&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;version&gt;4.5.13&lt;/version&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&lt;/dependency&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&lt;dependency&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;groupId&gt;org.apache.httpcomponents&lt;/groupId&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;artifactId&gt;httpmime&lt;/artifactId&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;version&gt;4.5.13&lt;/version&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&lt;/dependency&gt;\n&lt;/dependencies&gt;</code></pre><p><span style=\"color: rgb(26, 26, 26)\"><strong>&nbsp;</strong></span></p><p></p><p><span style=\"color: windowtext\">2. 编写公共方法</span></p><pre><code class=\"language-plaintext\">import&nbsp;org.apache.http.HttpEntity;\nimport&nbsp;org.apache.http.HttpResponse;\nimport&nbsp;org.apache.http.client.HttpClient;\nimport&nbsp;org.apache.http.client.config.RequestConfig;\nimport&nbsp;org.apache.http.client.methods.HttpEntityEnclosingRequestBase;\nimport&nbsp;org.apache.http.client.methods.HttpGet;\nimport&nbsp;org.apache.http.client.methods.HttpPost;\nimport&nbsp;org.apache.http.client.methods.HttpUriRequest;\nimport&nbsp;org.apache.http.entity.ContentType;\nimport&nbsp;org.apache.http.entity.StringEntity;\nimport&nbsp;org.apache.http.entity.mime.MultipartEntityBuilder;\nimport&nbsp;org.apache.http.impl.client.HttpClients;\nimport&nbsp;org.apache.http.util.EntityUtils;\n\nimport&nbsp;java.io.File;\nimport&nbsp;java.io.IOException;\nimport&nbsp;java.nio.charset.StandardCharsets;\nimport&nbsp;java.util.List;\nimport&nbsp;java.util.Map;\n\npublic&nbsp;class&nbsp;HttpClientUtils&nbsp;{\n\n&nbsp;&nbsp;&nbsp;&nbsp;/**\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;发送&nbsp;HTTP&nbsp;请求的公共方法\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;url&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;请求的&nbsp;URL\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;method&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;请求方法，如&nbsp;\"GET\",&nbsp;\"POST\"\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;contentType&nbsp;&nbsp;&nbsp;&nbsp;请求内容类型，如&nbsp;\"application/json\",&nbsp;\"application/xml\",&nbsp;\"multipart/form-data\"\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;body&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;请求体&nbsp;json、xml...\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;headers&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;自定义请求头\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;connectTimeout&nbsp;连接超时时间（毫秒）\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;socketTimeout&nbsp;&nbsp;套接字超时时间（毫秒）\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;requestTimeout&nbsp;请求超时时间（毫秒）\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@return&nbsp;响应结果字符串\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@throws&nbsp;IOException&nbsp;网络请求异常\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/\n&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;static&nbsp;String&nbsp;sendRequest(String&nbsp;url,&nbsp;String&nbsp;method,&nbsp;String&nbsp;contentType,&nbsp;String&nbsp;body,&nbsp;Map&lt;String,&nbsp;String&gt;&nbsp;headers,&nbsp;int&nbsp;connectTimeout,&nbsp;int&nbsp;socketTimeout,&nbsp;int&nbsp;requestTimeout)&nbsp;throws&nbsp;IOException&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RequestConfig&nbsp;config&nbsp;=&nbsp;getRequestConfig(connectTimeout,&nbsp;socketTimeout,&nbsp;requestTimeout);\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HttpClient&nbsp;httpClient&nbsp;=&nbsp;HttpClients.custom()\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.setDefaultRequestConfig(config)\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.build();\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HttpUriRequest&nbsp;request;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;根据请求方法创建对应的请求对象\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;switch&nbsp;(method.toUpperCase())&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case&nbsp;\"GET\":\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;request&nbsp;=&nbsp;new&nbsp;HttpGet(url);\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case&nbsp;\"POST\":\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HttpPost&nbsp;httpPost&nbsp;=&nbsp;new&nbsp;HttpPost(url);\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;setRequestBody(httpPost,&nbsp;contentType,&nbsp;body);\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;request&nbsp;=&nbsp;httpPost;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;default:\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;throw&nbsp;new&nbsp;IllegalArgumentException(\"Unsupported&nbsp;HTTP&nbsp;method:&nbsp;\"&nbsp;+&nbsp;method);\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}\n\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;设置请求头\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(headers&nbsp;!=&nbsp;null)&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;(Map.Entry&lt;String,&nbsp;String&gt;&nbsp;entry&nbsp;:&nbsp;headers.entrySet())&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;request.setHeader(entry.getKey(),&nbsp;entry.getValue());\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}\n\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;发送请求\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HttpResponse&nbsp;response&nbsp;=&nbsp;httpClient.execute(request);\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HttpEntity&nbsp;entity&nbsp;=&nbsp;response.getEntity();\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;entity&nbsp;!=&nbsp;null&nbsp;?&nbsp;EntityUtils.toString(entity,&nbsp;StandardCharsets.UTF_8)&nbsp;:&nbsp;null;\n&nbsp;&nbsp;&nbsp;&nbsp;}\n\n\n&nbsp;&nbsp;&nbsp;&nbsp;/**\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;获取请求配置&nbsp;设置请求超时配置&nbsp;毫秒\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;connectTimeout\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;socketTimeout\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;requestTimeout\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@return\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/\n&nbsp;&nbsp;&nbsp;&nbsp;private&nbsp;static&nbsp;RequestConfig&nbsp;getRequestConfig(int&nbsp;connectTimeout,&nbsp;int&nbsp;socketTimeout,&nbsp;int&nbsp;requestTimeout)&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;RequestConfig.custom()\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.setConnectTimeout(connectTimeout)\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.setSocketTimeout(socketTimeout)\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.setConnectionRequestTimeout(requestTimeout)\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.build();\n&nbsp;&nbsp;&nbsp;&nbsp;}\n\n&nbsp;&nbsp;&nbsp;&nbsp;/**\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;设置请求体\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;request&nbsp;&nbsp;请求对象\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;contentType&nbsp;请求体类型\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;body&nbsp;请求体\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/\n&nbsp;&nbsp;&nbsp;&nbsp;private&nbsp;static&nbsp;void&nbsp;setRequestBody(HttpEntityEnclosingRequestBase&nbsp;request,&nbsp;String&nbsp;contentType,&nbsp;String&nbsp;body)&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(\"application/json\".equals(contentType))&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;request.setEntity(new&nbsp;StringEntity(body,&nbsp;ContentType.APPLICATION_JSON));\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;else&nbsp;if&nbsp;(\"application/xml\".equals(contentType))&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;request.setEntity(new&nbsp;StringEntity(body,&nbsp;ContentType.APPLICATION_XML));\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//...&nbsp;其他报文格式添加\n&nbsp;&nbsp;&nbsp;&nbsp;}\n\n&nbsp;&nbsp;&nbsp;&nbsp;/**\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;发送带文件上传的请求\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;url&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;请求url\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;textParams&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text类型参数\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;filesMap&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;文件类型参数\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;headers&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;请求头\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;connectTimeout&nbsp;连接超时时间（毫秒）\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;socketTimeout&nbsp;&nbsp;套接字超时时间（毫秒）\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;requestTimeout&nbsp;请求超时时间（毫秒）\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@return&nbsp;响应结果字符串\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@throws&nbsp;IOException&nbsp;网络请求异常\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/\n&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;static&nbsp;String&nbsp;sendRequest(String&nbsp;url,&nbsp;Map&lt;String,&nbsp;String&gt;&nbsp;textParams,&nbsp;Map&lt;String,&nbsp;List&lt;File&gt;&gt;&nbsp;filesMap,&nbsp;Map&lt;String,&nbsp;String&gt;&nbsp;headers,int&nbsp;connectTimeout,&nbsp;int&nbsp;socketTimeout,&nbsp;int&nbsp;requestTimeout)&nbsp;throws&nbsp;IOException&nbsp;{\n\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RequestConfig&nbsp;config&nbsp;=&nbsp;getRequestConfig(connectTimeout,&nbsp;socketTimeout,&nbsp;requestTimeout);\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HttpClient&nbsp;httpClient&nbsp;=&nbsp;HttpClients.custom()\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.setDefaultRequestConfig(config)\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.build();\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HttpUriRequest&nbsp;request;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HttpPost&nbsp;httpPost&nbsp;=&nbsp;new&nbsp;HttpPost(url);\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MultipartEntityBuilder&nbsp;builder&nbsp;=&nbsp;MultipartEntityBuilder.create();\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;添加文件\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(filesMap&nbsp;!=&nbsp;null&nbsp;&amp;&amp;&nbsp;!filesMap.isEmpty())&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;(Map.Entry&lt;String,&nbsp;List&lt;File&gt;&gt;&nbsp;entry&nbsp;:&nbsp;filesMap.entrySet())&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;List&lt;File&gt;&nbsp;files&nbsp;=&nbsp;entry.getValue();\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String&nbsp;key&nbsp;=&nbsp;entry.getKey();\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;(File&nbsp;file&nbsp;:&nbsp;files)&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(file&nbsp;!=&nbsp;null&nbsp;&amp;&amp;&nbsp;file.exists())&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;builder.addBinaryBody(key,&nbsp;file,&nbsp;ContentType.APPLICATION_OCTET_STREAM,&nbsp;file.getName());\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;添加文本参数\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(textParams&nbsp;!=&nbsp;null&nbsp;&amp;&amp;&nbsp;!textParams.isEmpty())&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;(Map.Entry&lt;String,&nbsp;String&gt;&nbsp;entry&nbsp;:&nbsp;textParams.entrySet())&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;builder.addTextBody(entry.getKey(),&nbsp;entry.getValue());\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;httpPost.setEntity(builder.build());\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;request&nbsp;=&nbsp;httpPost;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;设置请求头\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(headers&nbsp;!=&nbsp;null)&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;(Map.Entry&lt;String,&nbsp;String&gt;&nbsp;entry&nbsp;:&nbsp;headers.entrySet())&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;request.setHeader(entry.getKey(),&nbsp;entry.getValue());\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;发送请求\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HttpResponse&nbsp;response&nbsp;=&nbsp;httpClient.execute(request);\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HttpEntity&nbsp;entity&nbsp;=&nbsp;response.getEntity();\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;entity&nbsp;!=&nbsp;null&nbsp;?&nbsp;EntityUtils.toString(entity,&nbsp;StandardCharsets.UTF_8)&nbsp;:&nbsp;null;\n&nbsp;&nbsp;&nbsp;&nbsp;}\n\n\n}</code></pre><p></p><p>3. 测试</p><pre><code class=\"language-plaintext\">//get请求\nprivate&nbsp;static&nbsp;void&nbsp;getExample()&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;try&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String&nbsp;url&nbsp;=&nbsp;\"https://xxxxx?billno=unittest-00000025&amp;pageSize=10&amp;pageNo=1\";\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String&nbsp;method&nbsp;=&nbsp;\"GET\";\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String&nbsp;contentType&nbsp;=&nbsp;\"application/json\";\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String&nbsp;body&nbsp;=&nbsp;\"\";\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Map&lt;String,&nbsp;String&gt;&nbsp;headers&nbsp;=&nbsp;new&nbsp;HashMap&lt;&gt;();\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;headers.put(\"accesstoken\",&nbsp;\"your&nbsp;token\");\n\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;设置超时时间（毫秒）\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;connectTimeout&nbsp;=&nbsp;5000;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;socketTimeout&nbsp;=&nbsp;5000;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;requestTimeout&nbsp;=&nbsp;5000;\n\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String&nbsp;response&nbsp;=&nbsp;HttpClientUtils.sendRequest(url,&nbsp;method,&nbsp;contentType,&nbsp;body,&nbsp;headers,&nbsp;connectTimeout,&nbsp;socketTimeout,&nbsp;requestTimeout);\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(\"Response:&nbsp;\"&nbsp;+&nbsp;response);\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;catch&nbsp;(IOException&nbsp;e)&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//异常处理，切勿直接忽略异常\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}\n&nbsp;&nbsp;&nbsp;&nbsp;}\n\n//post请求\nprivate&nbsp;static&nbsp;void&nbsp;postExample()&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;try&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String&nbsp;url&nbsp;=&nbsp;\"https://xxx\";\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String&nbsp;method&nbsp;=&nbsp;\"POST\";\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String&nbsp;contentType&nbsp;=&nbsp;\"application/json\";\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String&nbsp;body&nbsp;=&nbsp;\"{\\n\"&nbsp;+\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"\\t\\\"data\\\":{\\n\"&nbsp;+\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"\\t\\t\\\"billno\\\":\\\"unittest-00000025\\\"\\n\"&nbsp;+\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"\\t},\\n\"&nbsp;+\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"\\t\\\"pageSize\\\":10,\\n\"&nbsp;+\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"\\t\\\"pageNo\\\":1\\n\"&nbsp;+\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"}\";\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Map&lt;String,&nbsp;String&gt;&nbsp;headers&nbsp;=&nbsp;new&nbsp;HashMap&lt;&gt;();\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;headers.put(\"accesstoken\",&nbsp;\"your&nbsp;token\");\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;设置超时时间（毫秒）\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;connectTimeout&nbsp;=&nbsp;5000;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;socketTimeout&nbsp;=&nbsp;5000;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;requestTimeout&nbsp;=&nbsp;5000;\n\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String&nbsp;response&nbsp;=&nbsp;HttpClientUtils.sendRequest(url,&nbsp;method,&nbsp;contentType,&nbsp;body,&nbsp;headers,&nbsp;connectTimeout,&nbsp;socketTimeout,&nbsp;requestTimeout);\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(\"Response:&nbsp;\"&nbsp;+&nbsp;response);\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;catch&nbsp;(IOException&nbsp;e)&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//异常处理，切勿直接忽略异常\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}\n&nbsp;&nbsp;&nbsp;&nbsp;}\n\n\n//传输文件\nprivate&nbsp;static&nbsp;void&nbsp;fileExample()&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;try&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String&nbsp;url&nbsp;=&nbsp;\"https://feature.kingdee.com:1026/deviai/kapi/v2/kdtest/open/openapi/test2/fileHandle\";\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Map&lt;String,&nbsp;String&gt;&nbsp;headers&nbsp;=&nbsp;new&nbsp;HashMap&lt;&gt;();\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;headers.put(\"accesstoken\",&nbsp;\"your&nbsp;token\");\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Map&lt;String,&nbsp;List&lt;File&gt;&gt;&nbsp;fileMap&nbsp;=&nbsp;new&nbsp;HashMap&lt;&gt;();\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;File&nbsp;file&nbsp;=&nbsp;new&nbsp;File(\"C:\\\\Users\\\\HP\\\\Desktop\\\\test.txt\");\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fileMap.put(\"fileList\",&nbsp;Arrays.asList(file));\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Map&lt;String,&nbsp;String&gt;&nbsp;textParams&nbsp;&nbsp;=&nbsp;new&nbsp;HashMap&lt;&gt;();\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;textParams.put(\"str\",\"this&nbsp;is&nbsp;a&nbsp;test\");\n\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;设置超时时间（毫秒）\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;connectTimeout&nbsp;=&nbsp;5000;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;socketTimeout&nbsp;=&nbsp;5000;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;requestTimeout&nbsp;=&nbsp;5000;\n\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String&nbsp;response&nbsp;=&nbsp;HttpClientUtils.sendRequest(url,textParams,fileMap,&nbsp;headers,&nbsp;connectTimeout,&nbsp;socketTimeout,&nbsp;requestTimeout);\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(\"Response:&nbsp;\"&nbsp;+&nbsp;response);\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;catch&nbsp;(IOException&nbsp;e)&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//异常处理，切勿直接忽略异常\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}\n&nbsp;&nbsp;&nbsp;&nbsp;}</code></pre><h2></h2><p></p><h3><span>2.2 JavaScript</span></h3><h4><span>2.2.1 概述</span></h4><p><span>JavaScript常见http调用方式有 Fetch API、axios 、jQuery 等等。 以下是使用 axios 进行 HTTP 请求的示例，包括 GET、POST、文件处理等常见操作。</span></p><p></p><p></p><h4><span>2.2.2 环境要求</span></h4><pre><code class=\"language-plaintext\">#&nbsp;在Node.js&nbsp;环境下\nnpm&nbsp;install&nbsp;axios\n#&nbsp;或者\nyarn&nbsp;add&nbsp;axios</code></pre><p></p><h4>2.2.3 示例代码</h4><pre><code class=\"language-plaintext\">//get请求\nvar&nbsp;axios&nbsp;=&nbsp;require('axios');\n\nvar&nbsp;config&nbsp;=&nbsp;{\n&nbsp;&nbsp;&nbsp;method:&nbsp;'get',\n&nbsp;&nbsp;&nbsp;url:&nbsp;'https://xxx?billno=unittest-00000025&amp;pageSize=10&amp;pageNo=1',\n&nbsp;&nbsp;&nbsp;headers:&nbsp;{&nbsp;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'accesstoken':&nbsp;'your&nbsp;token'\n&nbsp;&nbsp;&nbsp;}\n};\naxios(config)\n.then(function&nbsp;(response)&nbsp;{\n&nbsp;&nbsp;&nbsp;console.log(JSON.stringify(response.data));\n})\n.catch(function&nbsp;(error)&nbsp;{\n&nbsp;&nbsp;&nbsp;console.log(error);\n});\n\n\n//post请求\nvar&nbsp;axios&nbsp;=&nbsp;require('axios');\nvar&nbsp;data&nbsp;=&nbsp;JSON.stringify({\n&nbsp;&nbsp;&nbsp;\"data\":&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"billno\":&nbsp;\"unittest-00000025\"\n&nbsp;&nbsp;&nbsp;},\n&nbsp;&nbsp;&nbsp;\"pageSize\":&nbsp;10,\n&nbsp;&nbsp;&nbsp;\"pageNo\":&nbsp;1\n});\nvar&nbsp;config&nbsp;=&nbsp;{\n&nbsp;&nbsp;&nbsp;method:&nbsp;'post',\n&nbsp;&nbsp;&nbsp;url:&nbsp;'https://xxxx',\n&nbsp;&nbsp;&nbsp;headers:&nbsp;{&nbsp;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'accesstoken':&nbsp;'your&nbsp;token',&nbsp;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'Content-Type':&nbsp;'application/json'\n&nbsp;&nbsp;&nbsp;},\n&nbsp;&nbsp;&nbsp;data&nbsp;:&nbsp;data\n};\n\naxios(config)\n.then(function&nbsp;(response)&nbsp;{\n&nbsp;&nbsp;&nbsp;console.log(JSON.stringify(response.data));\n})\n.catch(function&nbsp;(error)&nbsp;{\n&nbsp;&nbsp;&nbsp;console.log(error);\n});\n\n\n//传输文件\nvar&nbsp;axios&nbsp;=&nbsp;require('axios');\nvar&nbsp;FormData&nbsp;=&nbsp;require('form-data');\nvar&nbsp;fs&nbsp;=&nbsp;require('fs');\nvar&nbsp;data&nbsp;=&nbsp;new&nbsp;FormData();\ndata.append('fileList',&nbsp;fs.createReadStream('C:\\Users\\HP\\Desktop\\test.txt'));\nvar&nbsp;config&nbsp;=&nbsp;{\n&nbsp;&nbsp;&nbsp;method:&nbsp;'post',\n&nbsp;&nbsp;&nbsp;url:&nbsp;'https://xxxxx',\n&nbsp;&nbsp;&nbsp;headers:&nbsp;{&nbsp;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'accesstoken':&nbsp;'your&nbsp;token',&nbsp;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...data.getHeaders()\n&nbsp;&nbsp;&nbsp;},\n&nbsp;&nbsp;&nbsp;data&nbsp;:&nbsp;data\n};\n\naxios(config)\n.then(function&nbsp;(response)&nbsp;{\n&nbsp;&nbsp;&nbsp;console.log(JSON.stringify(response.data));\n})\n.catch(function&nbsp;(error)&nbsp;{\n&nbsp;&nbsp;&nbsp;console.log(error);\n});</code></pre><h3></h3><h3><strong>2.3&nbsp;</strong>PHP</h3><h4>2.3.1 概述</h4><p><span style=\"color: rgb(51, 51, 51)\">PHP 常见HTTP调用方法有内置的file_get_contents、cURL等。下面以cURL库为例</span><span>。</span></p><p></p><h4>2.3.2 环境要求</h4><p>建议PHP 7.x 以上 ，并根据需求配置网络、SSL/TLS</p><p></p><p></p><h4>2.3.3 示例代码</h4><p>1. get请求</p><pre><code class=\"language-plaintext\">&lt;?php\n//&nbsp;目标&nbsp;URL\n$url&nbsp;=&nbsp;'https://xxx';\n\n//&nbsp;准备请求头，包含认证信息\n$headers&nbsp;=&nbsp;[\n&nbsp;&nbsp;&nbsp;&nbsp;'accesstoken:&nbsp;your&nbsp;token',\n&nbsp;&nbsp;&nbsp;&nbsp;'Content-Type:&nbsp;application/json'\n];\n\n//&nbsp;初始化&nbsp;cURL&nbsp;会话\n$ch&nbsp;=&nbsp;curl_init($url);\n\n//&nbsp;设置&nbsp;cURL&nbsp;选项\n//&nbsp;将响应结果作为字符串返回，而不是直接输出\ncurl_setopt($ch,&nbsp;CURLOPT_RETURNTRANSFER,&nbsp;true);\n//&nbsp;设置请求头\ncurl_setopt($ch,&nbsp;CURLOPT_HTTPHEADER,&nbsp;$headers);\n\n//&nbsp;执行&nbsp;cURL&nbsp;请求并获取响应\n$response&nbsp;=&nbsp;curl_exec($ch);\n\n//&nbsp;检查请求过程中是否出现错误\nif&nbsp;(curl_errno($ch))&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;'cURL&nbsp;请求错误:&nbsp;'.&nbsp;curl_error($ch);\n}&nbsp;else&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;解析&nbsp;JSON&nbsp;格式的响应数据\n&nbsp;&nbsp;&nbsp;&nbsp;$data&nbsp;=&nbsp;json_decode($response,&nbsp;true);\n&nbsp;&nbsp;&nbsp;&nbsp;print_r($data);\n}\n\n//&nbsp;关闭&nbsp;cURL&nbsp;会话，释放资源\ncurl_close($ch);\n?&gt;</code></pre><p></p><p><span style=\"color: rgb(51, 51, 51)\">2. post请求</span></p><pre><code class=\"language-plaintext\">&lt;?php\n//&nbsp;目标&nbsp;URL，需替换为实际的接口地址\n$url&nbsp;=&nbsp;'https://xxx';\n\n//&nbsp;报文数据\n$data&nbsp;=&nbsp;[\n&nbsp;&nbsp;&nbsp;&nbsp;\"data\"&nbsp;=&gt;&nbsp;[\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"billno\"&nbsp;=&gt;&nbsp;\"unittest-00000025\"\n&nbsp;&nbsp;&nbsp;&nbsp;],\n&nbsp;&nbsp;&nbsp;&nbsp;\"pageSize\"&nbsp;=&gt;&nbsp;10,\n&nbsp;&nbsp;&nbsp;&nbsp;\"pageNo\"&nbsp;=&gt;&nbsp;1\n];\n\n//&nbsp;设置请求头，包含&nbsp;token&nbsp;和内容类型\n$headers&nbsp;=&nbsp;[\n&nbsp;&nbsp;&nbsp;&nbsp;'accesstoken:&nbsp;your&nbsp;token',\n&nbsp;&nbsp;&nbsp;&nbsp;'Content-Type:&nbsp;application/json'\n];\n\n//&nbsp;将数据编码为&nbsp;JSON&nbsp;格式\n$jsonData&nbsp;=&nbsp;json_encode($data);\n\n//&nbsp;初始化&nbsp;cURL&nbsp;会话\n$ch&nbsp;=&nbsp;curl_init($url);\n\n//&nbsp;设置&nbsp;cURL&nbsp;选项\n//&nbsp;设置请求方法为&nbsp;POST\ncurl_setopt($ch,&nbsp;CURLOPT_POST,&nbsp;true);\n//&nbsp;设置&nbsp;POST&nbsp;请求的主体数据\ncurl_setopt($ch,&nbsp;CURLOPT_POSTFIELDS,&nbsp;$jsonData);\n//&nbsp;设置请求头\ncurl_setopt($ch,&nbsp;CURLOPT_HTTPHEADER,&nbsp;$headers);\n//&nbsp;将响应结果作为字符串返回\ncurl_setopt($ch,&nbsp;CURLOPT_RETURNTRANSFER,&nbsp;true);\n\n//&nbsp;执行&nbsp;cURL&nbsp;请求并获取响应\n$response&nbsp;=&nbsp;curl_exec($ch);\n\n//&nbsp;检查请求过程中是否出现错误\nif&nbsp;(curl_errno($ch))&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;'cURL&nbsp;请求错误:&nbsp;'.&nbsp;curl_error($ch);\n}&nbsp;else&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;解析&nbsp;JSON&nbsp;格式的响应数据\n&nbsp;&nbsp;&nbsp;&nbsp;$data&nbsp;=&nbsp;json_decode($response,&nbsp;true);\n&nbsp;&nbsp;&nbsp;&nbsp;print_r($data);\n}\n\n//&nbsp;关闭&nbsp;cURL&nbsp;会话，释放资源\ncurl_close($ch);\n?&gt;</code></pre><h2></h2><p></p><h3><strong>2.4&nbsp;</strong>Go</h3><h4>2.4.1 概述</h4><p><span style=\"color: rgb(51, 51, 51)\">在 Go 语言中进行 HTTP 调用可以使用标准库中的 net/http 包</span><span>。</span></p><p></p><h4>2.4.2 环境要求</h4><p><span style=\"color: rgb(51, 51, 51)\">Go 环境，并根据需求配置网络、SSL/TLS</span></p><p></p><h4>2.4.3 示例代码</h4><p></p><p>1. get请求</p><pre><code class=\"language-plaintext\">package&nbsp;main\n\nimport&nbsp;(\n\t\"encoding/json\"\n\t\"fmt\"\n\t\"io/ioutil\"\n\t\"net/http\"\n)\n\nfunc&nbsp;main()&nbsp;{\n\t//&nbsp;目标&nbsp;URL\n&nbsp;&nbsp;&nbsp;&nbsp;url&nbsp;:=&nbsp;\"https://xxx\"\n\n\t//&nbsp;发送&nbsp;GET&nbsp;请求\n\tresp,&nbsp;err&nbsp;:=&nbsp;http.Get(url)\n\tif&nbsp;err&nbsp;!=&nbsp;nil&nbsp;{\n\t\tfmt.Printf(\"HTTP&nbsp;GET&nbsp;请求失败:&nbsp;%v\\n\",&nbsp;err)\n\t\treturn\n\t}\n\tdefer&nbsp;resp.Body.Close()\n\n\t//&nbsp;检查响应状态码\n\tif&nbsp;resp.StatusCode&nbsp;!=&nbsp;http.StatusOK&nbsp;{\n\t\tfmt.Printf(\"请求失败，状态码:&nbsp;%d\\n\",&nbsp;resp.StatusCode)\n\t\treturn\n\t}\n\n\t//&nbsp;读取响应体\n\tbody,&nbsp;err&nbsp;:=&nbsp;ioutil.ReadAll(resp.Body)\n\tif&nbsp;err&nbsp;!=&nbsp;nil&nbsp;{\n\t\tfmt.Printf(\"读取响应体失败:&nbsp;%v\\n\",&nbsp;err)\n\t\treturn\n\t}\n\n\t//&nbsp;解析&nbsp;JSON&nbsp;响应\n\tvar&nbsp;data&nbsp;[]map[string]interface{}\n\terr&nbsp;=&nbsp;json.Unmarshal(body,&nbsp;&amp;data)\n\tif&nbsp;err&nbsp;!=&nbsp;nil&nbsp;{\n\t\tfmt.Printf(\"JSON&nbsp;解析失败:&nbsp;%v\\n\",&nbsp;err)\n\t\treturn\n\t}\n\n\t//&nbsp;打印解析后的数据\n\tfmt.Println(data)\n}</code></pre><p></p><p><span style=\"color: rgb(51, 51, 51)\">2. post请求</span></p><pre><code class=\"language-plaintext\">package&nbsp;main\n\nimport&nbsp;(\n\t\"bytes\"\n\t\"encoding/json\"\n\t\"fmt\"\n\t\"io/ioutil\"\n\t\"net/http\"\n)\n\nfunc&nbsp;main()&nbsp;{\n\t//&nbsp;目标&nbsp;URL\n\turl&nbsp;:=&nbsp;\"https://xxx\"\n\n\t//&nbsp;构建请求数据\n\tdata&nbsp;:=&nbsp;map[string]interface{}{\n\t\t\"data\":&nbsp;map[string]string{\n\t\t\t\"billno\":&nbsp;\"unittest-00000025\",\n\t\t},\n\t\t\"pageSize\":&nbsp;10,\n\t\t\"pageNo\":&nbsp;&nbsp;&nbsp;1,\n\t}\n\n\t//&nbsp;将数据编码为&nbsp;JSON\n\tjsonData,&nbsp;err&nbsp;:=&nbsp;json.Marshal(data)\n\tif&nbsp;err&nbsp;!=&nbsp;nil&nbsp;{\n\t\tfmt.Printf(\"JSON&nbsp;编码失败:&nbsp;%v\\n\",&nbsp;err)\n\t\treturn\n\t}\n\n\t//&nbsp;创建&nbsp;POST&nbsp;请求\n\treq,&nbsp;err&nbsp;:=&nbsp;http.NewRequest(\"POST\",&nbsp;url,&nbsp;bytes.NewBuffer(jsonData))\n\tif&nbsp;err&nbsp;!=&nbsp;nil&nbsp;{\n\t\tfmt.Printf(\"创建请求失败:&nbsp;%v\\n\",&nbsp;err)\n\t\treturn\n\t}\n\n\t//&nbsp;设置请求头\n\treq.Header.Set(\"Content-Type\",&nbsp;\"application/json\")\n\treq.Header.Set(\"accesstoken\",&nbsp;\"your&nbsp;token\")\n\n\t//&nbsp;发送请求\n\tclient&nbsp;:=&nbsp;&amp;http.Client{}\n\tresp,&nbsp;err&nbsp;:=&nbsp;client.Do(req)\n\tif&nbsp;err&nbsp;!=&nbsp;nil&nbsp;{\n\t\tfmt.Printf(\"HTTP&nbsp;POST&nbsp;请求失败:&nbsp;%v\\n\",&nbsp;err)\n\t\treturn\n\t}\n\tdefer&nbsp;resp.Body.Close()\n\n\t//&nbsp;检查响应状态码\n\tif&nbsp;resp.StatusCode&nbsp;!=&nbsp;http.StatusOK&nbsp;{\n\t\tfmt.Printf(\"请求失败，状态码:&nbsp;%d\\n\",&nbsp;resp.StatusCode)\n\t\treturn\n\t}\n\n\t//&nbsp;读取响应体\n\tbody,&nbsp;err&nbsp;:=&nbsp;ioutil.ReadAll(resp.Body)\n\tif&nbsp;err&nbsp;!=&nbsp;nil&nbsp;{\n\t\tfmt.Printf(\"读取响应体失败:&nbsp;%v\\n\",&nbsp;err)\n\t\treturn\n\t}\n\n\t//&nbsp;解析&nbsp;JSON&nbsp;响应\n\tvar&nbsp;responseData&nbsp;map[string]interface{}\n\terr&nbsp;=&nbsp;json.Unmarshal(body,&nbsp;&amp;responseData)\n\tif&nbsp;err&nbsp;!=&nbsp;nil&nbsp;{\n\t\tfmt.Printf(\"JSON&nbsp;解析失败:&nbsp;%v\\n\",&nbsp;err)\n\t\treturn\n\t}\n\n\t//&nbsp;打印解析后的数据\n\tfmt.Println(responseData)\n}</code></pre><p></p><h2><span style=\"color: rgb(26, 26, 26)\"><strong>3 更多</strong></span></h2><p><span style=\"color: rgb(51, 51, 51)\">更多编程语言的实例调用可根据postman、apifox等工具中提供的生成代码功能作为参考。</span></p><p></p><p><span style=\"color: rgb(51, 51, 51)\"><img src=\"/download/0109e512895d1639477fb320c6b592d056cc.png\"></span></p><p><span style=\"color: rgb(26, 26, 26)\"><strong>&nbsp;</strong></span></p><p></p><p></p>"
+}

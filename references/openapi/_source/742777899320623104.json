@@ -1,0 +1,453 @@
+{
+ "badNum": 0,
+ "identityTagIds": null,
+ "knowledgeId": "742777899320623104",
+ "createdAt": 1754900051000,
+ "collections": 1,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "742777899320623104",
+ "contentType": 1,
+ "updatedAt": 1768985975000,
+ "knowledgeUpdater": {
+  "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+  "department": null,
+  "id": "132488613174518784",
+  "name": "某个路易",
+  "nameSpell": "name"
+ },
+ "assessStatus": 0,
+ "knowledgeStatus": 2,
+ "assessHandleStatus": null,
+ "knowledgeCreatedAt": 1754900051000,
+ "version": 55,
+ "labels": [],
+ "editedAt": 1768985965000,
+ "identityTags": null,
+ "useful": 0,
+ "errors": [],
+ "isCollected": false,
+ "totalFeedBacks": 0,
+ "attachments": [],
+ "sources": [],
+ "editTitle": "RESTful API管理",
+ "title": "RESTful API管理",
+ "content": "<h2><strong>变更记录</strong></h2><table style=\"min-width: 725px\"><colgroup><col style=\"width: 124px\"><col style=\"width: 576px\"><col style=\"min-width: 25px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"124\" data-background-color=\"\" style=\"background-color: \"><p style=\"font-size: 15px\"><strong>产品版本</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"576\" data-background-color=\"\" style=\"background-color: \"><p><strong>更新内容</strong></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><strong>更新日期</strong></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"124\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">V8.0.1</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"576\" data-background-color=\"\" style=\"background-color: \"><p>初始版本</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p>2025年10月</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"124\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">V8.0.2</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"576\" data-background-color=\"\" style=\"background-color: \"><p>增加RESTful API 代理用户许可校验</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p>2025年11月</p></td></tr></tbody></table><p style=\"font-size: 15px\"></p><hr><p style=\"font-size: 15px\"></p><p style=\"text-align: justify; font-size: 20px\"></p><h1><strong>1 简介</strong></h1><h2><strong>1.1 功能介绍</strong></h2><p>RESTful API 是金蝶AI苍穹开平台基于 REST 规范打造的新版 API 开发引擎，核心功能覆盖全生命周期管控与标准化设计，具体包含：</p><ul><li><p>全生命周期管理：支持从 API 设计、创建、测试、发布到禁用的一站式管控，内置 RESTful API 规范校验，确保接口设计合规。</p></li><li><p>标准化操作支持：遵循 RESTful规范，通过 GET/POST/PUT/PATCH/DELETE 等标准化 HTTP 方法实现资源的CURD操作，统一资源路径、请求/响应格式及 HTTP 状态码。</p></li><li><p>两种开发模式：支持 “实体服务”（基于业务对象零代码配置）和 “自定义脚本”（脚本调用插件方法，处理复杂业务场景）。</p></li><li><p>安全与兼容性保障：支持权限管控、日志脱敏，并发量与请求/返回数据量大小控制；保障API向后兼容，业务逻辑变动不影响接口调用，适配全球化业务需求。</p></li></ul><p>&nbsp;</p><h2><strong>1.2 应用场景</strong></h2><ul><li><p>企业内部系统集成：实现 ERP 与 CRM、库存管理等系统间的数据交互，如通过 API 同步采购订单、客户信息等数据。</p></li><li><p>第三方开发者对接：为外部应用提供标准化接口，如电商平台调用采购 API 创建订单、财务软件调用凭证 API 生成财务凭证等。</p></li><li><p>全球化业务对接：符合国际通用 REST 规范，降低海外开发者接入门槛，适配不同地区技术生态与用户习惯，助力企业出海。</p></li></ul><h2><strong>1.3 系统路径</strong></h2><p>路径：【开放服务云】→【OpenAPI】→【RESTful API】→【RESTful API 管理】</p><p>&nbsp;</p><h2><strong>1.4 字段 / 按钮说明</strong></h2><h3><strong>1.4.1 字段说明</strong></h3><table style=\"min-width: 200px\"><colgroup><col style=\"width: 79px\"><col style=\"width: 96px\"><col style=\"min-width: 25px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"79\" data-background-color=\"rgb(255, 204, 0)\" style=\"background-color: rgb(255, 204, 0)\"><p style=\"text-align: center\"><span style=\"font-size: 12px\"><strong>字段分类</strong></span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"96\" data-background-color=\"rgb(255, 204, 0)\" style=\"background-color: rgb(255, 204, 0)\"><p style=\"text-align: center\"><span style=\"font-size: 12px\"><strong>字段名</strong></span></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"rgb(255, 204, 0)\" style=\"background-color: rgb(255, 204, 0)\"><p style=\"text-align: center\"><span style=\"font-size: 12px\"><strong>字段说明</strong></span></p></td></tr><tr><td colspan=\"1\" rowspan=\"4\" colwidth=\"79\" data-background-color=\"rgb(255, 255, 255)\" style=\"background-color: rgb(255, 255, 255)\"><p><span style=\"font-size: 12px\">实体信息</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"96\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">业务对象</span></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">实体服务 API 关联的业务对象（如 “采购订单”“客户”“物料”）</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"96\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">操作类型</span></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">系统预置，包括 “查询”“新增”“更新”“删除”“状态变更”</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"96\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">操作</span></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">具体功能操作，如 “详情查询”“列表查询”“全量更新”“部分更新”“提交”“审核”等</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"96\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">分录标识</span></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">新增/删除分录时关联的子资源（如 “物料明细”“费用明细”），从业务对象自动带出</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"6\" colwidth=\"79\" data-background-color=\"rgb(255, 255, 255)\" style=\"background-color: rgb(255, 255, 255)\"><p><span style=\"font-size: 12px\">基本信息</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"96\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">名称</span></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">手工录入，描述 API 功能（如 “查询采购订单详情”“新增采购订单”）</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"96\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">编码</span></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">系统自动生成，支持手工修改</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"96\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">所属应用</span></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">根据关联业务对象自动带出（如 “采购管理”“总账”）</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"96\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">服务类型</span></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">分为 “实体服务”（基于业务对象）和 “自定义脚本”（手工开发脚本）</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"96\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">日志级别</span></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">可选 “不记录”“基本日志”（无出入参）“详细日志”（出入参截取 2000 字符）“大文本日志”（出入参截取 10000 字符），默认使用系统配置</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"96\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">自定义分组</span></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">按业务场景归类 API（如 “电商集成API”“财务同步 API”），支持手工创建与调整</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"4\" colwidth=\"79\" data-background-color=\"rgb(255, 255, 255)\" style=\"background-color: rgb(255, 255, 255)\"><p><span style=\"font-size: 12px\">请求端点配置</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"96\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">请求方法</span></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">遵循 HTTP 语义：GET（查询）、POST（新增 / 状态变更）、PUT（全量更新）、PATCH（部分更新）、DELETE（删除）</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"96\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">资源路径</span></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">系统自动生成，格式如 “/pm_purorderbill/{id}”，支持手工修改</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"96\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">路由唯一标识</span></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">由 “请求方式 + 开发商标识 + 所属应用 + 资源路径模式串” 组成（路径参数转为 p0、p1...），确保路由唯一性</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"96\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">完整请求地址</span></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">包含环境地址的完整 URL，如 “</span><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://feature.kingdee.com:1026/deviai/kapi/v3/kdtest/pm/pm_purorderbill”\"><span style=\"font-size: 12px\">https://feature.kingdee.com:1026/deviai/kapi/v3/kdtest/pm/pm_purorderbill”</span></a></p></td></tr><tr><td colspan=\"1\" rowspan=\"4\" colwidth=\"79\" data-background-color=\"rgb(255, 255, 255)\" style=\"background-color: rgb(255, 255, 255)\"><p><span style=\"font-size: 12px\">请求参数</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"96\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">Path 参数</span></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">路径参数，用于定位资源（如“{id}”为资源唯一标识、“{billentry_id}” 为分录唯一标识）</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"96\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">Query 参数</span></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">查询参数，用于过滤、分页（如 “offset=0”（起始位置）、“limit=10”（每页条数）、“createtime=2025-06-01”（创建时间过滤））</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"96\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">请求体</span></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">POST/PUT/PATCH 请求的入参，JSON 格式，可从业务对象选择字段或手工添加</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"96\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">操作参数</span></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">如 “是否触发引入方法”，用于配置 API 调用特殊规则，支持选择默认参数</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"3\" colwidth=\"79\" data-background-color=\"rgb(255, 255, 255)\" style=\"background-color: rgb(255, 255, 255)\"><p><span style=\"font-size: 12px\">响应参数</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"96\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">HTTP 状态码</span></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">系统预置：200-OK（成功）、201-Created（创建成功）、400-Bad Request（参数错误）、404-Not Found（资源不存在）、500-Internal Server Error（服务错误）</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"96\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">参数名称 / 类型</span></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">响应字段名与数据类型（如 “id” 为 long 型、“create_time” 为 datetime 型、“billno” 为 string 型）</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"96\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">示例值</span></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">字段示例数据，长日期 datetime 类型示例值为零时区日期（如 “2025-04-08T07:16:45.750Z”）</span></p></td></tr></tbody></table><p><strong>&nbsp;</strong></p><h3><strong>1.4.2操作按钮</strong></h3><p>【快速创建】：点击按钮，弹出快速创建窗口，支持快速将业务对象发布成为RESTful API；</p><p>【新增】：点击按钮，弹出新增向导窗口，选择业务对象、操作类型、数据模式和操作；</p><p>【新增自定义脚本API】：点击按钮，打开自定义脚本API维护页面；</p><p>【升级】：点击按钮，支持勾选存量接口，升级为符合REST规范的RESTful API；</p><p>【删除】：仅支持勾选单条或多条API，点击按钮，删除API；</p><p>【启用】：点击按钮，启用API；</p><p>【禁用】：点击按钮，禁用API；</p><p>【API测试】：点击按钮，弹出API文档页面（Swagger),支持进行在线测试；</p><p>【导出API】：导出API信息，合并为一个dts文件。</p><p>【导出ZIP】：支持勾选多条API文件导出生成压缩包，每条API信息为一个dts文件。</p><p>【导入API】：打开导入API弹窗，支持批量导入API信息。</p><p>【云更新】：支持从资源云环境同步最新的原厂标准RESTful API。</p><p>【日志】：点击按钮，自动跳转到API日志界面，展示所选API的日志信息。</p><p>【刷新】：刷新当前列表页面。</p><p><strong>&nbsp;</strong></p><h1><strong>2 主要操作</strong></h1><h2><strong>2.1 打开RESTful API 管理列表</strong></h2><p>进入RESTful API管理列表，路径：【开放服务云】→【OpenAPI】→【RESTful API】→【RESTful API 管理】，列表默认按 “云 - 应用” 分组展示 API（如 “供应链云 - 采购管理”“基础服务云 - 企业建模”）。</p><ul><li><p>筛选与搜索：</p><p>按时间筛选：顶部 “调用时间” 默认筛选 “过去三个月” 的 API，可自定义时间范围缩小范围；</p><p>精准搜索：在搜索框输入 “API 编码 / 名称 / URL”，快速定位目标 API；</p><p>高级过滤：点击 “展开过滤”，可按 “API 状态”（启用 / 禁用 / 内测）、“所属应用”（如 “采购管理”“总账”）进一步筛选。</p></li><li><p>自定义分组：点击左侧树 “自定义分组”→“新增”，输入分组名称（如 “2025 电商对接 API”）；勾选目标 API，选择自定义分组，点击确认完成归类，方便按业务场景管理 API。</p></li><li><p>批量操作：批量启用 / 禁用：勾选多条 API，点击 “启用” 或 “禁用”，批量修改 API 状态；</p></li><li><p>导入 / 导出：点击 “导出 ZIP”，批量导出多条 API 为 ZIP 包（每条 API 为 dts 文件）；点击 “导入 API”，选择本地 dts 文件或 ZIP 包，批量导入 API 配置。</p></li></ul><p>&nbsp;</p><p><img src=\"/download/0100a072becb974a4eaa9d389063f495e865.png\" alt=\"上传图片\"></p><p></p><h2><strong>2.2 RESTful API 最佳实践</strong></h2><p>产品可以基于预置模板快速生成符合 REST 规范的 CRUD 接口（如详情查询、列表查询、新增资源），大幅缩短 API 开发周期，确保全平台 API 风格统一、文档规范可维护。打开快速创建弹窗，在 RESTful API 管理列表点击 “快速创建”，弹出 “RESTful API 最佳实践”。</p><p></p><p><img src=\"/download/01006e7e9065f09f47a4b5e2d5af70a95139.png\" alt=\"上传图片\"></p><p>&nbsp;</p><p>基于最佳实践模板，为用户自动生成符合 RESTful 规范的 CRUD 接口（如 GET /user/{id}、POST /order）</p><p>自动生成 API 基本信息（如名称、描述）、请求端点（Endpoint）、请求/响应参数示例，用户仅需微调即可发布，提升标准接口开发效率。同时接口天然支持国际化多语言和跨时区调用，快速实现异构系统间跨地域集成对接。</p><p></p><p>注意：<span style=\"color: #0070c0\">基于业务对象快速生成的 RESTful API，在第三方系统持 token 发起请求时，除基础的组织权限、数据规则控制外，系统将自动校验token中的代理用户，是否包含对应业务对象的访问许可，以此强化接口安全防护。</span></p><h2><strong>2.3 新增 RESTful API</strong></h2><p>在 RESTful API 管理列表点击 “新增”按钮，弹出弹出 “RESTful API 创建向导”页面。</p><p>选择配置项：</p><ul><li><p>业务对象：通过弹窗 F7 选择目标业务对象（如 “采购订单”“客户”等）；</p></li><li><p>操作类型：选择 “查询”“新增”“更新”“删除”“状态变更”（如 “查询”、新增等）；</p></li><li><p>数据模式：选择 “单条” 或 “批量”；</p></li><li><p>操作：选择具体功能（如 “详情查询”、“列表查询”）。</p></li></ul><p>确认后，跳转至 API 编辑页，用户可编辑API 基本信息（如名称、描述）、请求端点（Endpoint）、请求/响应参数等详细信息，然后点击 “保存”，API 创建完成。</p><p></p><p><img src=\"/download/01005368001f614b4deeaba83e705d74334d.png\" alt=\"上传图片\"></p><p>&nbsp;&nbsp;</p><h2>2.4 最佳实践</h2><h3>2.4.1 标准方法</h3><p><span style=\"font-size: 15px\">如需了解标准方法的最佳实践，请参考以下 AIP示例：</span></p><p><span style=\"font-size: 15px\">对于 GET 方法，请参考</span><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://developer.kingdee.com/knowledge/754643845081672448\"><span style=\"color: rgb(85, 130, 243); font-size: 15px\">标准GET方法 - 查询资源详情</span></a><span style=\"color: rgb(85, 130, 243); font-size: 15px\">、</span><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://developer.kingdee.com/knowledge/754649104336220928\"><span style=\"color: rgb(85, 130, 243); font-size: 15px\">标准GET方法 - 查询资源列表</span></a></p><p><span style=\"font-size: 15px\">对于 POST 新增资源，请参考</span><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://developer.kingdee.com/knowledge/754650218427263488\"><span style=\"color: rgb(85, 130, 243); font-size: 15px\">标准POST方法 - 新增资源</span></a></p><p><span style=\"font-size: 15px\">对于 PUT 全量更新资源，请参考</span><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://developer.kingdee.com/knowledge/754651581559286272\"><span style=\"color: rgb(85, 130, 243); font-size: 15px\">标准PUT方法 - 全量更新资源</span></a></p><p><span style=\"font-size: 15px\">对于 PATCH 部分更新资源，请参考</span><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://developer.kingdee.com/knowledge/754652944724863744\"><span style=\"color: rgb(85, 130, 243); font-size: 15px\">标准PATCH方法 - 部分更新资源</span></a></p><p><span style=\"font-size: 15px\">对于 DELETE 删除资源，请参考</span><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://developer.kingdee.com/knowledge/754655738114550528\"><span style=\"color: rgb(85, 130, 243); font-size: 15px\">标准DELETE方法 - 删除资源</span></a></p><p></p><h3>2.4.2 自定义方法</h3><p style=\"font-size: 16px\"><span style=\"font-size: 15px\">如需了解自定义方法，请参考</span><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://developer.kingdee.com/knowledge/754660607567262720\"><span style=\"color: rgb(85, 130, 243); font-size: 15px\">自定义方法 - 提交、审核资源</span></a></p><p style=\"font-size: 16px\"></p><h1><strong>3&nbsp;更多资讯</strong></h1><p style=\"text-align: justify; font-size: 15px\">关于OpenAPI的更多资讯，请随时关注<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=226337371640594944&amp;id=226708319996323072&amp;productLineId=29\">新特性公告</a>。</p><p></p><p></p><p></p><p></p><p></p><p></p><p></p>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 87,
+   "isOpen": 1,
+   "name": "金蝶AI苍穹",
+   "productLineId": 29,
+   "series": "developer01",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "742777899320623104",
+         "entityType": "Knowledge",
+         "id": "758330467371395840",
+         "isCategory": false,
+         "name": "RESTful API管理",
+         "parentId": "755471013420411648",
+         "sort": "2",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": "",
+       "id": "755471013420411648",
+       "isCategory": true,
+       "name": "RESTful API",
+       "parentId": "226337544983020032",
+       "sort": "24",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": null,
+     "entityId": null,
+     "entityType": null,
+     "id": "226337544983020032",
+     "isCategory": true,
+     "name": "用户手册",
+     "parentId": "-1",
+     "sort": "6",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download/01010204d4b71b654a208006fa1004eac36a.png",
+  "department": null,
+  "id": "740211268992385024",
+  "name": "毛毛去哪儿",
+  "nameSpell": "name"
+ },
+ "totalAppraisalScore": 0,
+ "iflytekId": null,
+ "views": 1971,
+ "productLineId": 29,
+ "comments": 0,
+ "similarityCount": null,
+ "totalAppraisalUsers": 0,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1768985975000,
+ "appraisalScore": 0,
+ "unuseful": 0,
+ "knowledgeCheckStatus": 2,
+ "otherProductLineIds": [],
+ "auditAt": 1768985975000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "open_rest_api",
+        "id": "760141571462408192",
+        "name": "RESTful API管理",
+        "productLineId": null,
+        "sort": 22,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 0,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "OperatingGuide",
+     "createdAt": 1556519201000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "某一功能的具体说明介绍，包括应用场景、参数说明、具体操作步骤等",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/010037894174802d4b9f8782f1f0010a6ddd.png",
+     "id": "202203081641",
+     "name": "功能介绍",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010176d38341668f44fdb94c95058a90e4b8.png",
+      "department": "云社区运营部",
+      "id": "2147406697",
+      "name": "多肉丸子",
+      "nameSpell": "kejuan"
+     },
+     "updatedAt": 1676857681000
+    },
+    {
+     "code": "rumen",
+     "createdAt": 1605667807000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "入门类的知识可使用此标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100d322b9282bcc438faa894f4eec029977.png",
+     "id": "202203081646",
+     "name": "基础入门",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download?fileName=0101ec1d6ce599b442dab7d0b794c1fce88d.png",
+      "department": null,
+      "id": "1009",
+      "name": "一颗小星星",
+      "nameSpell": "fengling"
+     },
+     "updatedAt": 1657872008000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          {
+           "childCategory": [
+            null
+           ],
+           "code": null,
+           "description": "",
+           "entityId": "742777899320623104",
+           "entityType": "Knowledge",
+           "id": "758330467371395840",
+           "isCategory": false,
+           "name": "RESTful API管理",
+           "parentId": "755471013420411648",
+           "sort": "2",
+           "specialId": "226337046514476288",
+           "status": 1
+          }
+         ],
+         "code": null,
+         "description": "",
+         "entityId": null,
+         "entityType": "",
+         "id": "755471013420411648",
+         "isCategory": true,
+         "name": "RESTful API",
+         "parentId": "226337544983020032",
+         "sort": "24",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": null,
+       "entityId": null,
+       "entityType": null,
+       "id": "226337544983020032",
+       "isCategory": true,
+       "name": "用户手册",
+       "parentId": "-1",
+       "sort": "6",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": "<h2><strong>变更记录</strong></h2><table style=\"min-width: 725px\"><colgroup><col style=\"width: 124px\"><col style=\"width: 576px\"><col style=\"min-width: 25px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"124\" data-background-color=\"\" style=\"background-color: \"><p style=\"font-size: 15px\"><strong>产品版本</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"576\" data-background-color=\"\" style=\"background-color: \"><p><strong>更新内容</strong></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><strong>更新日期</strong></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"124\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">V8.0.1</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"576\" data-background-color=\"\" style=\"background-color: \"><p>初始版本</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p>2025年10月</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"124\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">V8.0.2</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"576\" data-background-color=\"\" style=\"background-color: \"><p>增加RESTful API 代理用户许可校验</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p>2025年11月</p></td></tr></tbody></table><p style=\"font-size: 15px\"></p><hr><p style=\"font-size: 15px\"></p><p style=\"text-align: justify; font-size: 20px\"></p><h1><strong>1 简介</strong></h1><h2><strong>1.1 功能介绍</strong></h2><p>RESTful API 是金蝶AI苍穹开平台基于 REST 规范打造的新版 API 开发引擎，核心功能覆盖全生命周期管控与标准化设计，具体包含：</p><ul><li><p>全生命周期管理：支持从 API 设计、创建、测试、发布到禁用的一站式管控，内置 RESTful API 规范校验，确保接口设计合规。</p></li><li><p>标准化操作支持：遵循 RESTful规范，通过 GET/POST/PUT/PATCH/DELETE 等标准化 HTTP 方法实现资源的CURD操作，统一资源路径、请求/响应格式及 HTTP 状态码。</p></li><li><p>两种开发模式：支持 “实体服务”（基于业务对象零代码配置）和 “自定义脚本”（脚本调用插件方法，处理复杂业务场景）。</p></li><li><p>安全与兼容性保障：支持权限管控、日志脱敏，并发量与请求/返回数据量大小控制；保障API向后兼容，业务逻辑变动不影响接口调用，适配全球化业务需求。</p></li></ul><p>&nbsp;</p><h2><strong>1.2 应用场景</strong></h2><ul><li><p>企业内部系统集成：实现 ERP 与 CRM、库存管理等系统间的数据交互，如通过 API 同步采购订单、客户信息等数据。</p></li><li><p>第三方开发者对接：为外部应用提供标准化接口，如电商平台调用采购 API 创建订单、财务软件调用凭证 API 生成财务凭证等。</p></li><li><p>全球化业务对接：符合国际通用 REST 规范，降低海外开发者接入门槛，适配不同地区技术生态与用户习惯，助力企业出海。</p></li></ul><h2><strong>1.3 系统路径</strong></h2><p>路径：【开放服务云】→【OpenAPI】→【RESTful API】→【RESTful API 管理】</p><p>&nbsp;</p><h2><strong>1.4 字段 / 按钮说明</strong></h2><h3><strong>1.4.1 字段说明</strong></h3><table style=\"min-width: 200px\"><colgroup><col style=\"width: 79px\"><col style=\"width: 96px\"><col style=\"min-width: 25px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"79\" data-background-color=\"rgb(255, 204, 0)\" style=\"background-color: rgb(255, 204, 0)\"><p style=\"text-align: center\"><span style=\"font-size: 12px\"><strong>字段分类</strong></span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"96\" data-background-color=\"rgb(255, 204, 0)\" style=\"background-color: rgb(255, 204, 0)\"><p style=\"text-align: center\"><span style=\"font-size: 12px\"><strong>字段名</strong></span></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"rgb(255, 204, 0)\" style=\"background-color: rgb(255, 204, 0)\"><p style=\"text-align: center\"><span style=\"font-size: 12px\"><strong>字段说明</strong></span></p></td></tr><tr><td colspan=\"1\" rowspan=\"4\" colwidth=\"79\" data-background-color=\"rgb(255, 255, 255)\" style=\"background-color: rgb(255, 255, 255)\"><p><span style=\"font-size: 12px\">实体信息</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"96\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">业务对象</span></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">实体服务 API 关联的业务对象（如 “采购订单”“客户”“物料”）</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"96\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">操作类型</span></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">系统预置，包括 “查询”“新增”“更新”“删除”“状态变更”</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"96\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">操作</span></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">具体功能操作，如 “详情查询”“列表查询”“全量更新”“部分更新”“提交”“审核”等</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"96\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">分录标识</span></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">新增/删除分录时关联的子资源（如 “物料明细”“费用明细”），从业务对象自动带出</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"6\" colwidth=\"79\" data-background-color=\"rgb(255, 255, 255)\" style=\"background-color: rgb(255, 255, 255)\"><p><span style=\"font-size: 12px\">基本信息</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"96\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">名称</span></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">手工录入，描述 API 功能（如 “查询采购订单详情”“新增采购订单”）</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"96\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">编码</span></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">系统自动生成，支持手工修改</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"96\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">所属应用</span></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">根据关联业务对象自动带出（如 “采购管理”“总账”）</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"96\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">服务类型</span></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">分为 “实体服务”（基于业务对象）和 “自定义脚本”（手工开发脚本）</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"96\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">日志级别</span></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">可选 “不记录”“基本日志”（无出入参）“详细日志”（出入参截取 2000 字符）“大文本日志”（出入参截取 10000 字符），默认使用系统配置</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"96\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">自定义分组</span></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">按业务场景归类 API（如 “电商集成API”“财务同步 API”），支持手工创建与调整</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"4\" colwidth=\"79\" data-background-color=\"rgb(255, 255, 255)\" style=\"background-color: rgb(255, 255, 255)\"><p><span style=\"font-size: 12px\">请求端点配置</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"96\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">请求方法</span></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">遵循 HTTP 语义：GET（查询）、POST（新增 / 状态变更）、PUT（全量更新）、PATCH（部分更新）、DELETE（删除）</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"96\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">资源路径</span></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">系统自动生成，格式如 “/pm_purorderbill/{id}”，支持手工修改</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"96\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">路由唯一标识</span></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">由 “请求方式 + 开发商标识 + 所属应用 + 资源路径模式串” 组成（路径参数转为 p0、p1...），确保路由唯一性</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"96\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">完整请求地址</span></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">包含环境地址的完整 URL，如 “</span><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://feature.kingdee.com:1026/deviai/kapi/v3/kdtest/pm/pm_purorderbill”\"><span style=\"font-size: 12px\">https://feature.kingdee.com:1026/deviai/kapi/v3/kdtest/pm/pm_purorderbill”</span></a></p></td></tr><tr><td colspan=\"1\" rowspan=\"4\" colwidth=\"79\" data-background-color=\"rgb(255, 255, 255)\" style=\"background-color: rgb(255, 255, 255)\"><p><span style=\"font-size: 12px\">请求参数</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"96\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">Path 参数</span></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">路径参数，用于定位资源（如“{id}”为资源唯一标识、“{billentry_id}” 为分录唯一标识）</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"96\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">Query 参数</span></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">查询参数，用于过滤、分页（如 “offset=0”（起始位置）、“limit=10”（每页条数）、“createtime=2025-06-01”（创建时间过滤））</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"96\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">请求体</span></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">POST/PUT/PATCH 请求的入参，JSON 格式，可从业务对象选择字段或手工添加</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"96\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">操作参数</span></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">如 “是否触发引入方法”，用于配置 API 调用特殊规则，支持选择默认参数</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"3\" colwidth=\"79\" data-background-color=\"rgb(255, 255, 255)\" style=\"background-color: rgb(255, 255, 255)\"><p><span style=\"font-size: 12px\">响应参数</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"96\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">HTTP 状态码</span></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">系统预置：200-OK（成功）、201-Created（创建成功）、400-Bad Request（参数错误）、404-Not Found（资源不存在）、500-Internal Server Error（服务错误）</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"96\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">参数名称 / 类型</span></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">响应字段名与数据类型（如 “id” 为 long 型、“create_time” 为 datetime 型、“billno” 为 string 型）</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"96\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">示例值</span></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"font-size: 12px\">字段示例数据，长日期 datetime 类型示例值为零时区日期（如 “2025-04-08T07:16:45.750Z”）</span></p></td></tr></tbody></table><p><strong>&nbsp;</strong></p><h3><strong>1.4.2操作按钮</strong></h3><p>【快速创建】：点击按钮，弹出快速创建窗口，支持快速将业务对象发布成为RESTful API；</p><p>【新增】：点击按钮，弹出新增向导窗口，选择业务对象、操作类型、数据模式和操作；</p><p>【新增自定义脚本API】：点击按钮，打开自定义脚本API维护页面；</p><p>【升级】：点击按钮，支持勾选存量接口，升级为符合REST规范的RESTful API；</p><p>【删除】：仅支持勾选单条或多条API，点击按钮，删除API；</p><p>【启用】：点击按钮，启用API；</p><p>【禁用】：点击按钮，禁用API；</p><p>【API测试】：点击按钮，弹出API文档页面（Swagger),支持进行在线测试；</p><p>【导出API】：导出API信息，合并为一个dts文件。</p><p>【导出ZIP】：支持勾选多条API文件导出生成压缩包，每条API信息为一个dts文件。</p><p>【导入API】：打开导入API弹窗，支持批量导入API信息。</p><p>【云更新】：支持从资源云环境同步最新的原厂标准RESTful API。</p><p>【日志】：点击按钮，自动跳转到API日志界面，展示所选API的日志信息。</p><p>【刷新】：刷新当前列表页面。</p><p><strong>&nbsp;</strong></p><h1><strong>2 主要操作</strong></h1><h2><strong>2.1 打开RESTful API 管理列表</strong></h2><p>进入RESTful API管理列表，路径：【开放服务云】→【OpenAPI】→【RESTful API】→【RESTful API 管理】，列表默认按 “云 - 应用” 分组展示 API（如 “供应链云 - 采购管理”“基础服务云 - 企业建模”）。</p><ul><li><p>筛选与搜索：</p><p>按时间筛选：顶部 “调用时间” 默认筛选 “过去三个月” 的 API，可自定义时间范围缩小范围；</p><p>精准搜索：在搜索框输入 “API 编码 / 名称 / URL”，快速定位目标 API；</p><p>高级过滤：点击 “展开过滤”，可按 “API 状态”（启用 / 禁用 / 内测）、“所属应用”（如 “采购管理”“总账”）进一步筛选。</p></li><li><p>自定义分组：点击左侧树 “自定义分组”→“新增”，输入分组名称（如 “2025 电商对接 API”）；勾选目标 API，选择自定义分组，点击确认完成归类，方便按业务场景管理 API。</p></li><li><p>批量操作：批量启用 / 禁用：勾选多条 API，点击 “启用” 或 “禁用”，批量修改 API 状态；</p></li><li><p>导入 / 导出：点击 “导出 ZIP”，批量导出多条 API 为 ZIP 包（每条 API 为 dts 文件）；点击 “导入 API”，选择本地 dts 文件或 ZIP 包，批量导入 API 配置。</p></li></ul><p>&nbsp;</p><p><img src=\"/download/0100a072becb974a4eaa9d389063f495e865.png\" alt=\"上传图片\"></p><p></p><h2><strong>2.2 RESTful API 最佳实践</strong></h2><p>产品可以基于预置模板快速生成符合 REST 规范的 CRUD 接口（如详情查询、列表查询、新增资源），大幅缩短 API 开发周期，确保全平台 API 风格统一、文档规范可维护。打开快速创建弹窗，在 RESTful API 管理列表点击 “快速创建”，弹出 “RESTful API 最佳实践”。</p><p></p><p><img src=\"/download/01006e7e9065f09f47a4b5e2d5af70a95139.png\" alt=\"上传图片\"></p><p>&nbsp;</p><p>基于最佳实践模板，为用户自动生成符合 RESTful 规范的 CRUD 接口（如 GET /user/{id}、POST /order）</p><p>自动生成 API 基本信息（如名称、描述）、请求端点（Endpoint）、请求/响应参数示例，用户仅需微调即可发布，提升标准接口开发效率。同时接口天然支持国际化多语言和跨时区调用，快速实现异构系统间跨地域集成对接。</p><p></p><p>注意：<span style=\"color: #0070c0\">基于业务对象快速生成的 RESTful API，在第三方系统持 token 发起请求时，除基础的组织权限、数据规则控制外，系统将自动校验token中的代理用户，是否包含对应业务对象的访问许可，以此强化接口安全防护。</span></p><h2><strong>2.3 新增 RESTful API</strong></h2><p>在 RESTful API 管理列表点击 “新增”按钮，弹出弹出 “RESTful API 创建向导”页面。</p><p>选择配置项：</p><ul><li><p>业务对象：通过弹窗 F7 选择目标业务对象（如 “采购订单”“客户”等）；</p></li><li><p>操作类型：选择 “查询”“新增”“更新”“删除”“状态变更”（如 “查询”、新增等）；</p></li><li><p>数据模式：选择 “单条” 或 “批量”；</p></li><li><p>操作：选择具体功能（如 “详情查询”、“列表查询”）。</p></li></ul><p>确认后，跳转至 API 编辑页，用户可编辑API 基本信息（如名称、描述）、请求端点（Endpoint）、请求/响应参数等详细信息，然后点击 “保存”，API 创建完成。</p><p></p><p><img src=\"/download/01005368001f614b4deeaba83e705d74334d.png\" alt=\"上传图片\"></p><p>&nbsp;&nbsp;</p><h2>2.4 最佳实践</h2><h3>2.4.1 标准方法</h3><p><span style=\"font-size: 15px\">如需了解标准方法的最佳实践，请参考以下 AIP示例：</span></p><p><span style=\"font-size: 15px\">对于 GET 方法，请参考</span><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://developer.kingdee.com/knowledge/754643845081672448\"><span style=\"color: rgb(85, 130, 243); font-size: 15px\">标准GET方法 - 查询资源详情</span></a><span style=\"color: rgb(85, 130, 243); font-size: 15px\">、</span><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://developer.kingdee.com/knowledge/754649104336220928\"><span style=\"color: rgb(85, 130, 243); font-size: 15px\">标准GET方法 - 查询资源列表</span></a></p><p><span style=\"font-size: 15px\">对于 POST 新增资源，请参考</span><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://developer.kingdee.com/knowledge/754650218427263488\"><span style=\"color: rgb(85, 130, 243); font-size: 15px\">标准POST方法 - 新增资源</span></a></p><p><span style=\"font-size: 15px\">对于 PUT 全量更新资源，请参考</span><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://developer.kingdee.com/knowledge/754651581559286272\"><span style=\"color: rgb(85, 130, 243); font-size: 15px\">标准PUT方法 - 全量更新资源</span></a></p><p><span style=\"font-size: 15px\">对于 PATCH 部分更新资源，请参考</span><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://developer.kingdee.com/knowledge/754652944724863744\"><span style=\"color: rgb(85, 130, 243); font-size: 15px\">标准PATCH方法 - 部分更新资源</span></a></p><p><span style=\"font-size: 15px\">对于 DELETE 删除资源，请参考</span><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://developer.kingdee.com/knowledge/754655738114550528\"><span style=\"color: rgb(85, 130, 243); font-size: 15px\">标准DELETE方法 - 删除资源</span></a></p><p></p><h3>2.4.2 自定义方法</h3><p style=\"font-size: 16px\"><span style=\"font-size: 15px\">如需了解自定义方法，请参考</span><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://developer.kingdee.com/knowledge/754660607567262720\"><span style=\"color: rgb(85, 130, 243); font-size: 15px\">自定义方法 - 提交、审核资源</span></a></p><p style=\"font-size: 16px\"></p><h1><strong>3&nbsp;更多资讯</strong></h1><p style=\"text-align: justify; font-size: 15px\">关于OpenAPI的更多资讯，请随时关注<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=226337371640594944&amp;id=226708319996323072&amp;productLineId=29\">新特性公告</a>。</p><p></p><p></p><p></p><p></p><p></p><p></p><p></p>"
+}

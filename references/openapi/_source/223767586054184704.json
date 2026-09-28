@@ -1,0 +1,565 @@
+{
+ "badNum": 0,
+ "identityTagIds": null,
+ "knowledgeId": "223767586054184704",
+ "createdAt": 1631158350000,
+ "collections": 6,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "223767586054184704",
+ "contentType": 1,
+ "updatedAt": 1766040438000,
+ "knowledgeUpdater": {
+  "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+  "department": null,
+  "id": "132488613174518784",
+  "name": "某个路易",
+  "nameSpell": "name"
+ },
+ "assessStatus": 0,
+ "knowledgeStatus": 2,
+ "assessHandleStatus": null,
+ "knowledgeCreatedAt": 1631158350000,
+ "version": 16,
+ "labels": [],
+ "editedAt": 1713351295000,
+ "identityTags": null,
+ "useful": 2,
+ "errors": [],
+ "isCollected": false,
+ "totalFeedBacks": 0,
+ "attachments": [],
+ "sources": [],
+ "editTitle": "查询操作接口",
+ "title": "查询操作接口",
+ "content": "<div class=\"import-attachment-loading\"><p label=\"一级标题\" style=\"font-size: 20px; font-weight: bold; line-height: 42px; margin: 0px;\">1 接口介绍</p><p>查询操作服务是通过在url参数中指定返回字段及过滤条件等参数，调用服务查询业务对象中的数据，返回结果同时支持分页查询和排序。</p><p><br/></p><p label=\"一级标题\" style=\"font-size: 20px; font-weight: bold; line-height: 42px; margin: 0px;\">2 注意事项</p><p>1）查询服务支持大批量业务数据查询，返回数据时先展示字段信息（header），再统一将值在rows中返回；</p><p>2）查询时通过url携带的select参数和过滤条件表达式，指定需要返回的数据。</p><p>3）当存在多个<span style=\"color: rgb(255, 0, 0);\">同级的filter条件</span>时，建议在条件中<span style=\"color: rgb(255, 0, 0);\">添加括号</span>来保障优先级，否则系统会按先后顺序解析filter条件并进行拼接。</p><div style=\"\"><span style=\"color: rgb(0, 0, 0); font-size: 13px;\"><br/></span></div><p><strong>查询类API参数说明：</strong></p><table><tbody><tr class=\"firstRow\"><td width=\"100\" style=\"background-color: rgb(198, 217, 240);\"><p><strong>参数名称</strong></p></td><td width=\"534\" style=\"background-color: rgb(198, 217, 240);\"><p><strong>参数说明</strong></p></td></tr><tr><td width=\"11\"><p>select</p></td><td width=\"532\"><p>输出的字段列表，以英文逗号分隔,如：number,name</p></td></tr><tr><td width=\"11\"><p>accessToken</p></td><td width=\"533\"><p>用户认证后的访问令牌</p></td></tr><tr><td width=\"11\"><p>orderby</p></td><td width=\"534\"><p>排序表达式，默认升序，若在排序字段后添加 DESC，则返回结果倒序</p></td></tr><tr><td width=\"11\"><p>page_no</p></td><td width=\"534\"><p>分页参数，查询页码</p></td></tr><tr><td width=\"11\"><p>page_size</p></td><td width=\"534\"><p>分页参数，分页数量</p></td></tr><tr><td width=\"11\"><p>filter</p></td><td width=\"534\" style=\"word-break: break-all;\"><p>过滤表达式，样式：{exp} and/or ({exp} and/or {exp})<br/>{exp}：基本表达式，格式是 {field} {op} {value}<br/>{field}：字段名<br/>{op}:比较符，不区分大小写，支持的比较符如下：<br/> &nbsp; &nbsp; &nbsp; EQ //等于&nbsp; &nbsp; &nbsp; &nbsp; 例：billno EQ &#39;CGDD-20210303&#39;<br/> &nbsp; &nbsp; &nbsp; NQ //不等 &nbsp; &nbsp; &nbsp; 例：billtype.number NQ &#39;100&#39;<br/> &nbsp; &nbsp; &nbsp; LT //小于&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;例：createtime LT &#39;2021-02-05&#39;<br/> &nbsp; &nbsp; &nbsp; BT //大于&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;例：billentity.qty BT &#39;500&#39;<br/> &nbsp; &nbsp; &nbsp; LQ //小于等于<br/> &nbsp; &nbsp; &nbsp; BQ //大于等于 <br/> &nbsp; &nbsp; &nbsp; IN //包含&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 例：number IN <span style=\"\">(&#39;demo1&#39;,&#39;demo2&#39;)</span></p><p>&nbsp; &nbsp; &nbsp; NI //不包含 &nbsp; &nbsp; &nbsp; 例：number NI (&#39;demo1&#39;,&#39;demo2&#39;)</p><p>&nbsp; &nbsp; &nbsp; CS //字符串的模糊匹配&nbsp; &nbsp; &nbsp; &nbsp; 例：billno CS &#39;demo%25&#39;<br/> &nbsp; &nbsp; &nbsp; BG //字符串开始位置匹配&nbsp; &nbsp; 例：billno BG &#39;demo%25&#39;<br/>{value}：比较值。当比较符为‘IN’、‘NI’，比较值可用‘,’分隔。</p></td></tr></tbody></table><p><br/></p><p><br/></p><p label=\"一级标题\" style=\"font-size: 20px; font-weight: bold; line-height: 42px; margin: 0px;\">3 接口示例</p><p label=\"二级标题\" style=\"font-size: 18px; font-weight: bold; padding: 8px 0px; line-height: 42px; margin: 0px;\"><strong>采购订单查询</strong></p><table style=\"\"><tbody><tr class=\"firstRow\"><td style=\"word-break: break-all; background-color: rgb(242, 242, 242);\" width=\"655\"><p><strong>URL：</strong>{{host}}/kapi/sys/pm_purorderbill/query?select=org,org.number,billno,billtype.name,comment,billentry.id,billentry.entrycomment&amp;<span style=\"color: rgb(33, 33, 33);\"><span style=\"\">filter=billno eq &#39;<span style=\"\">CGDD-202109-152232</span>&#39; &nbsp;and billstatus in (&#39;A&#39;,&#39;B&#39;,&#39;C&#39;) and createtime LT &#39;2021-09-25&#39;</span></span><span class=\"wf__sp\" style=\"color: rgb(33, 33, 33);\"><span style=\"\"> </span></span></p><p><br/></p><p><strong>请求方式</strong>：GET</p><p><br/></p><p><strong>请求Header参数：</strong><br/></p><p>Content-Type=application/json</p><p>accessToken: xxxxxxxxxxxxx</p></td></tr></tbody></table><p><br/></p><table style=\"\"><tbody><tr class=\"firstRow\"><td style=\"word-break: break-all; background-color: rgb(242, 242, 242);\" width=\"655\"><p><strong>请求结果（<span style=\"color: rgb(0, 176, 80);\">成功</span>）</strong>：</p><p>{</p><p>&nbsp; &nbsp;&quot;success&quot;: &quot;true&quot;,</p><p>&nbsp; &nbsp;&quot;data&quot;: {</p><p>&nbsp; &nbsp; &nbsp; &nbsp;&quot;count&quot;: 1,</p><p>&nbsp; &nbsp; &nbsp; &nbsp;&quot;header&quot;: [</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;name&quot;: &quot;org&quot;,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;caption&quot;: &quot;采购组织&quot;,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;type&quot;: &quot;long&quot;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;},</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;name&quot;: &quot;org.number&quot;,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;caption&quot;: &quot;编码&quot;,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;type&quot;: &quot;String&quot;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;},</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;name&quot;: &quot;billno&quot;,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;caption&quot;: &quot;单据编号&quot;,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;type&quot;: &quot;String&quot;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;},</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;name&quot;: &quot;billtype.name&quot;,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;caption&quot;: &quot;名称&quot;,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;type&quot;: &quot;ILocaleString&quot;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;},</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;name&quot;: &quot;comment&quot;,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;caption&quot;: &quot;备注&quot;,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;type&quot;: &quot;ILocaleString&quot;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;},</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;name&quot;: &quot;billentry.id&quot;,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;caption&quot;: &quot;&quot;,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;type&quot;: &quot;long&quot;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;},</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;name&quot;: &quot;billentry.entrycomment&quot;,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;caption&quot;: &quot;备注&quot;,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;type&quot;: &quot;String&quot;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</p><p>&nbsp; &nbsp; &nbsp; &nbsp;],</p><p>&nbsp; &nbsp; &nbsp; &nbsp;&quot;rows&quot;: [</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;100000&quot;,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;xyd2024&quot;,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;CGDD-202109-152232&quot;,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;标准采购订单&quot;,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;测试订单备注&quot;,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;1238933359292343296&quot;,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;分录备注&quot;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</p><p>&nbsp; &nbsp; &nbsp; &nbsp;]</p><p>&nbsp; &nbsp;}</p><p>}</p><p><br/></p><p><strong>请求结果（<span style=\"color: rgb(255, 0, 0);\">失败</span>）</strong>：</p><p>{</p><p>&nbsp; &nbsp;&quot;success&quot;: &quot;false&quot;,</p><p>&nbsp; &nbsp;&quot;errorCode&quot;: &quot;fail&quot;,</p><p>&nbsp; &nbsp;&quot;message&quot;: &quot;条件比较符不正确:null&quot;,</p><p>&nbsp; &nbsp;&quot;stack&quot;: &quot;&quot;</p><p>}</p></td></tr></tbody></table><p label=\"一级标题\" style=\"font-size: 20px; font-weight: bold; line-height: 42px; margin: 0px;\"><br/></p><p label=\"一级标题\" style=\"font-size: 20px; font-weight: bold; line-height: 42px; margin: 0px;\">4 返回参数说明</p><table><tbody><tr class=\"firstRow\"><td width=\"34\" style=\"background-color: rgb(198, 217, 240);\"><p><strong>序号</strong></p></td><td width=\"83\" style=\"background-color: rgb(198, 217, 240);\"><p><strong>参数</strong></p></td><td width=\"98\" style=\"background-color: rgb(198, 217, 240);\"><p><strong>解释</strong></p></td><td width=\"385\" style=\"background-color: rgb(198, 217, 240);\"><p><strong>返回值实例</strong></p></td></tr><tr><td width=\"14\"><p>1</p></td><td width=\"75\"><p>success</p></td><td width=\"98\"><p>是否成功</p></td><td width=\"385\"><p>true/false</p></td></tr><tr><td width=\"14\"><p>2</p></td><td width=\"75\"><p>errorCode</p></td><td width=\"98\"><p>错误编码</p></td><td width=\"385\"><p>success/false</p></td></tr><tr><td width=\"14\"><p>3</p></td><td width=\"75\"><p>message</p></td><td width=\"98\"><p>提示信息</p></td><td width=\"385\" style=\"word-break: break-all;\"><p><span style=\"\">成功时为null，失败时会返回错误信息</span></p></td></tr><tr><td width=\"14\"><p>4</p></td><td width=\"75\"><p>data</p></td><td width=\"98\"><p>业务对象数据</p></td><td width=\"385\"><p>{&quot;count&quot;: 1,&quot;header&quot;: [{&quot;name&quot;: &quot;org&quot;,&quot;caption&quot;: &quot;采购组织&quot;, &quot;type&quot;: &quot;long&quot;},...],&quot;rows&quot;: [[ &quot;100000&quot;, &quot;xyd2024&quot;,&quot;CGDD-202109-152232&quot;...,]] }}</p></td></tr></tbody></table></div>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 87,
+   "isOpen": 1,
+   "name": "金蝶AI苍穹",
+   "productLineId": 29,
+   "series": "developer01",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          {
+           "childCategory": [
+            null
+           ],
+           "code": null,
+           "description": "",
+           "entityId": "223767586054184704",
+           "entityType": "Knowledge",
+           "id": "322034545619408384",
+           "isCategory": false,
+           "name": "查询操作接口",
+           "parentId": "322033766435165696",
+           "sort": "5",
+           "specialId": "226337046514476288",
+           "status": 1
+          }
+         ],
+         "code": null,
+         "description": null,
+         "entityId": null,
+         "entityType": null,
+         "id": "322033766435165696",
+         "isCategory": true,
+         "name": "API服务管理",
+         "parentId": "322033541636710144",
+         "sort": "1",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": null,
+       "id": "322033541636710144",
+       "isCategory": true,
+       "name": "API1.0",
+       "parentId": "226337544983020032",
+       "sort": "26",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": null,
+     "entityId": null,
+     "entityType": null,
+     "id": "226337544983020032",
+     "isCategory": true,
+     "name": "用户手册",
+     "parentId": "-1",
+     "sort": "6",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download/01010204d4b71b654a208006fa1004eac36a.png",
+  "department": null,
+  "id": "740211268992385024",
+  "name": "毛毛去哪儿",
+  "nameSpell": "name"
+ },
+ "totalAppraisalScore": 10,
+ "iflytekId": null,
+ "views": 11816,
+ "productLineId": 29,
+ "comments": 3,
+ "similarityCount": null,
+ "totalAppraisalUsers": 2,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1766040438000,
+ "appraisalScore": 0,
+ "unuseful": 0,
+ "knowledgeCheckStatus": 2,
+ "otherProductLineIds": [],
+ "auditAt": 1698400876000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapiservicenew",
+        "id": "505687093087987200",
+        "name": "API服务管理1.0",
+        "productLineId": null,
+        "sort": 12,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 0,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapiunittest",
+        "id": "344592450260322816",
+        "name": "开放平台示例",
+        "productLineId": null,
+        "sort": 12,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "5614",
+       "name": "开放平台",
+       "productLineId": null,
+       "sort": 2,
+       "type": "module"
+      },
+      "code": "DEV",
+      "id": "5576",
+      "name": "开发服务云",
+      "productLineId": null,
+      "sort": 11,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 1,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "rumen",
+     "createdAt": 1605667807000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "入门类的知识可使用此标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100d322b9282bcc438faa894f4eec029977.png",
+     "id": "202203081646",
+     "name": "基础入门",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download?fileName=0101ec1d6ce599b442dab7d0b794c1fce88d.png",
+      "department": null,
+      "id": "1009",
+      "name": "一颗小星星",
+      "nameSpell": "fengling"
+     },
+     "updatedAt": 1657872008000
+    },
+    {
+     "code": "typicalinstance",
+     "createdAt": 1605836164000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "基于典型客户的应用场景，介绍客户痛点，给出本应用/功能的解决方案",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100905e7651dcc940099286e9ee4a35cb2d.png",
+     "id": "202203081648",
+     "name": "最佳实践",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010176d38341668f44fdb94c95058a90e4b8.png",
+      "department": "云社区运营部",
+      "id": "2147406697",
+      "name": "多肉丸子",
+      "nameSpell": "kejuan"
+     },
+     "updatedAt": 1676857737000
+    },
+    {
+     "code": "essencesummary",
+     "createdAt": 1606118073000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "精华汇总",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100402c6f8df169483db114f71043c19ec2.png",
+     "id": "202203081649",
+     "name": "精华汇总",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 2,
+     "updatePerson": {
+      "avatar": "/download?fileName=010162cfa9d5437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1129",
+      "name": "灏",
+      "nameSpell": "hao"
+     },
+     "updatedAt": 1606118073000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          {
+           "childCategory": [
+            {
+             "childCategory": [
+              null
+             ],
+             "code": null,
+             "description": "",
+             "entityId": "223767586054184704",
+             "entityType": "Knowledge",
+             "id": "322034545619408384",
+             "isCategory": false,
+             "name": "查询操作接口",
+             "parentId": "322033766435165696",
+             "sort": "5",
+             "specialId": "226337046514476288",
+             "status": 1
+            }
+           ],
+           "code": null,
+           "description": null,
+           "entityId": null,
+           "entityType": null,
+           "id": "322033766435165696",
+           "isCategory": true,
+           "name": "API服务管理",
+           "parentId": "322033541636710144",
+           "sort": "1",
+           "specialId": "226337046514476288",
+           "status": 1
+          }
+         ],
+         "code": null,
+         "description": "",
+         "entityId": null,
+         "entityType": null,
+         "id": "322033541636710144",
+         "isCategory": true,
+         "name": "API1.0",
+         "parentId": "226337544983020032",
+         "sort": "26",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": null,
+       "entityId": null,
+       "entityType": null,
+       "id": "226337544983020032",
+       "isCategory": true,
+       "name": "用户手册",
+       "parentId": "-1",
+       "sort": "6",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": "<div class=\"import-attachment-loading\"><p label=\"一级标题\" style=\"font-size: 20px; font-weight: bold; line-height: 42px; margin: 0px;\">1 接口介绍</p><p>查询操作服务是通过在url参数中指定返回字段及过滤条件等参数，调用服务查询业务对象中的数据，返回结果同时支持分页查询和排序。</p><p><br/></p><p label=\"一级标题\" style=\"font-size: 20px; font-weight: bold; line-height: 42px; margin: 0px;\">2 注意事项</p><p>1）查询服务支持大批量业务数据查询，返回数据时先展示字段信息（header），再统一将值在rows中返回；</p><p>2）查询时通过url携带的select参数和过滤条件表达式，指定需要返回的数据。</p><p>3）当存在多个<span style=\"color: rgb(255, 0, 0);\">同级的filter条件</span>时，建议在条件中<span style=\"color: rgb(255, 0, 0);\">添加括号</span>来保障优先级，否则系统会按先后顺序解析filter条件并进行拼接。</p><div style=\"\"><span style=\"color: rgb(0, 0, 0); font-size: 13px;\"><br/></span></div><p><strong>查询类API参数说明：</strong></p><table><tbody><tr class=\"firstRow\"><td width=\"100\" style=\"background-color: rgb(198, 217, 240);\"><p><strong>参数名称</strong></p></td><td width=\"534\" style=\"background-color: rgb(198, 217, 240);\"><p><strong>参数说明</strong></p></td></tr><tr><td width=\"11\"><p>select</p></td><td width=\"532\"><p>输出的字段列表，以英文逗号分隔,如：number,name</p></td></tr><tr><td width=\"11\"><p>accessToken</p></td><td width=\"533\"><p>用户认证后的访问令牌</p></td></tr><tr><td width=\"11\"><p>orderby</p></td><td width=\"534\"><p>排序表达式，默认升序，若在排序字段后添加 DESC，则返回结果倒序</p></td></tr><tr><td width=\"11\"><p>page_no</p></td><td width=\"534\"><p>分页参数，查询页码</p></td></tr><tr><td width=\"11\"><p>page_size</p></td><td width=\"534\"><p>分页参数，分页数量</p></td></tr><tr><td width=\"11\"><p>filter</p></td><td width=\"534\" style=\"word-break: break-all;\"><p>过滤表达式，样式：{exp} and/or ({exp} and/or {exp})<br/>{exp}：基本表达式，格式是 {field} {op} {value}<br/>{field}：字段名<br/>{op}:比较符，不区分大小写，支持的比较符如下：<br/> &nbsp; &nbsp; &nbsp; EQ //等于&nbsp; &nbsp; &nbsp; &nbsp; 例：billno EQ &#39;CGDD-20210303&#39;<br/> &nbsp; &nbsp; &nbsp; NQ //不等 &nbsp; &nbsp; &nbsp; 例：billtype.number NQ &#39;100&#39;<br/> &nbsp; &nbsp; &nbsp; LT //小于&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;例：createtime LT &#39;2021-02-05&#39;<br/> &nbsp; &nbsp; &nbsp; BT //大于&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;例：billentity.qty BT &#39;500&#39;<br/> &nbsp; &nbsp; &nbsp; LQ //小于等于<br/> &nbsp; &nbsp; &nbsp; BQ //大于等于 <br/> &nbsp; &nbsp; &nbsp; IN //包含&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 例：number IN <span style=\"\">(&#39;demo1&#39;,&#39;demo2&#39;)</span></p><p>&nbsp; &nbsp; &nbsp; NI //不包含 &nbsp; &nbsp; &nbsp; 例：number NI (&#39;demo1&#39;,&#39;demo2&#39;)</p><p>&nbsp; &nbsp; &nbsp; CS //字符串的模糊匹配&nbsp; &nbsp; &nbsp; &nbsp; 例：billno CS &#39;demo%25&#39;<br/> &nbsp; &nbsp; &nbsp; BG //字符串开始位置匹配&nbsp; &nbsp; 例：billno BG &#39;demo%25&#39;<br/>{value}：比较值。当比较符为‘IN’、‘NI’，比较值可用‘,’分隔。</p></td></tr></tbody></table><p><br/></p><p><br/></p><p label=\"一级标题\" style=\"font-size: 20px; font-weight: bold; line-height: 42px; margin: 0px;\">3 接口示例</p><p label=\"二级标题\" style=\"font-size: 18px; font-weight: bold; padding: 8px 0px; line-height: 42px; margin: 0px;\"><strong>采购订单查询</strong></p><table style=\"\"><tbody><tr class=\"firstRow\"><td style=\"word-break: break-all; background-color: rgb(242, 242, 242);\" width=\"655\"><p><strong>URL：</strong>{{host}}/kapi/sys/pm_purorderbill/query?select=org,org.number,billno,billtype.name,comment,billentry.id,billentry.entrycomment&amp;<span style=\"color: rgb(33, 33, 33);\"><span style=\"\">filter=billno eq &#39;<span style=\"\">CGDD-202109-152232</span>&#39; &nbsp;and billstatus in (&#39;A&#39;,&#39;B&#39;,&#39;C&#39;) and createtime LT &#39;2021-09-25&#39;</span></span><span class=\"wf__sp\" style=\"color: rgb(33, 33, 33);\"><span style=\"\"> </span></span></p><p><br/></p><p><strong>请求方式</strong>：GET</p><p><br/></p><p><strong>请求Header参数：</strong><br/></p><p>Content-Type=application/json</p><p>accessToken: xxxxxxxxxxxxx</p></td></tr></tbody></table><p><br/></p><table style=\"\"><tbody><tr class=\"firstRow\"><td style=\"word-break: break-all; background-color: rgb(242, 242, 242);\" width=\"655\"><p><strong>请求结果（<span style=\"color: rgb(0, 176, 80);\">成功</span>）</strong>：</p><p>{</p><p>&nbsp; &nbsp;&quot;success&quot;: &quot;true&quot;,</p><p>&nbsp; &nbsp;&quot;data&quot;: {</p><p>&nbsp; &nbsp; &nbsp; &nbsp;&quot;count&quot;: 1,</p><p>&nbsp; &nbsp; &nbsp; &nbsp;&quot;header&quot;: [</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;name&quot;: &quot;org&quot;,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;caption&quot;: &quot;采购组织&quot;,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;type&quot;: &quot;long&quot;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;},</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;name&quot;: &quot;org.number&quot;,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;caption&quot;: &quot;编码&quot;,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;type&quot;: &quot;String&quot;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;},</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;name&quot;: &quot;billno&quot;,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;caption&quot;: &quot;单据编号&quot;,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;type&quot;: &quot;String&quot;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;},</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;name&quot;: &quot;billtype.name&quot;,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;caption&quot;: &quot;名称&quot;,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;type&quot;: &quot;ILocaleString&quot;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;},</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;name&quot;: &quot;comment&quot;,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;caption&quot;: &quot;备注&quot;,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;type&quot;: &quot;ILocaleString&quot;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;},</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;name&quot;: &quot;billentry.id&quot;,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;caption&quot;: &quot;&quot;,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;type&quot;: &quot;long&quot;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;},</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;name&quot;: &quot;billentry.entrycomment&quot;,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;caption&quot;: &quot;备注&quot;,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;type&quot;: &quot;String&quot;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</p><p>&nbsp; &nbsp; &nbsp; &nbsp;],</p><p>&nbsp; &nbsp; &nbsp; &nbsp;&quot;rows&quot;: [</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;100000&quot;,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;xyd2024&quot;,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;CGDD-202109-152232&quot;,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;标准采购订单&quot;,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;测试订单备注&quot;,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;1238933359292343296&quot;,</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;分录备注&quot;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</p><p>&nbsp; &nbsp; &nbsp; &nbsp;]</p><p>&nbsp; &nbsp;}</p><p>}</p><p><br/></p><p><strong>请求结果（<span style=\"color: rgb(255, 0, 0);\">失败</span>）</strong>：</p><p>{</p><p>&nbsp; &nbsp;&quot;success&quot;: &quot;false&quot;,</p><p>&nbsp; &nbsp;&quot;errorCode&quot;: &quot;fail&quot;,</p><p>&nbsp; &nbsp;&quot;message&quot;: &quot;条件比较符不正确:null&quot;,</p><p>&nbsp; &nbsp;&quot;stack&quot;: &quot;&quot;</p><p>}</p></td></tr></tbody></table><p label=\"一级标题\" style=\"font-size: 20px; font-weight: bold; line-height: 42px; margin: 0px;\"><br/></p><p label=\"一级标题\" style=\"font-size: 20px; font-weight: bold; line-height: 42px; margin: 0px;\">4 返回参数说明</p><table><tbody><tr class=\"firstRow\"><td width=\"34\" style=\"background-color: rgb(198, 217, 240);\"><p><strong>序号</strong></p></td><td width=\"83\" style=\"background-color: rgb(198, 217, 240);\"><p><strong>参数</strong></p></td><td width=\"98\" style=\"background-color: rgb(198, 217, 240);\"><p><strong>解释</strong></p></td><td width=\"385\" style=\"background-color: rgb(198, 217, 240);\"><p><strong>返回值实例</strong></p></td></tr><tr><td width=\"14\"><p>1</p></td><td width=\"75\"><p>success</p></td><td width=\"98\"><p>是否成功</p></td><td width=\"385\"><p>true/false</p></td></tr><tr><td width=\"14\"><p>2</p></td><td width=\"75\"><p>errorCode</p></td><td width=\"98\"><p>错误编码</p></td><td width=\"385\"><p>success/false</p></td></tr><tr><td width=\"14\"><p>3</p></td><td width=\"75\"><p>message</p></td><td width=\"98\"><p>提示信息</p></td><td width=\"385\" style=\"word-break: break-all;\"><p><span style=\"\">成功时为null，失败时会返回错误信息</span></p></td></tr><tr><td width=\"14\"><p>4</p></td><td width=\"75\"><p>data</p></td><td width=\"98\"><p>业务对象数据</p></td><td width=\"385\"><p>{&quot;count&quot;: 1,&quot;header&quot;: [{&quot;name&quot;: &quot;org&quot;,&quot;caption&quot;: &quot;采购组织&quot;, &quot;type&quot;: &quot;long&quot;},...],&quot;rows&quot;: [[ &quot;100000&quot;, &quot;xyd2024&quot;,&quot;CGDD-202109-152232&quot;...,]] }}</p></td></tr></tbody></table></div>"
+}

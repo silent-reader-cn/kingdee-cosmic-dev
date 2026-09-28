@@ -1,0 +1,516 @@
+{
+ "badNum": 0,
+ "identityTagIds": null,
+ "knowledgeId": "439503562712934144",
+ "createdAt": 1682593815000,
+ "collections": 3,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "439503562712934144",
+ "contentType": 1,
+ "updatedAt": 1766110328000,
+ "knowledgeUpdater": {
+  "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+  "department": null,
+  "id": "132488613174518784",
+  "name": "某个路易",
+  "nameSpell": "name"
+ },
+ "assessStatus": 0,
+ "knowledgeStatus": 2,
+ "assessHandleStatus": null,
+ "knowledgeCreatedAt": 1682593815000,
+ "version": 43,
+ "labels": [],
+ "editedAt": 1713353174000,
+ "identityTags": null,
+ "useful": 5,
+ "errors": [],
+ "isCollected": false,
+ "totalFeedBacks": 0,
+ "attachments": [],
+ "sources": [],
+ "editTitle": "下推操作API",
+ "title": "下推操作API",
+ "content": "<h2 label=\"一级标题\" class=\"first-title\" style=\"\">1 接口介绍</h2><p style=\"\">下推操作API是通过在系统中维护接口基本信息、配置请求参数、查询条件来定义接口具体的功能。</p><p style=\"\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">2 注意事项</h2><p style=\"\"><span style=\"\">由于可以通过查询条件批量下推数据，开发人员新增接口时一定要谨慎定义查询条件，充分测试，避免因数据误下推对业务产生影响。</span></p><p label=\"备注\" class=\"remark-text\" style=\"\">注意：下推操作API暂时只支持整单下推，如需要按分录下推以及合并下推，请使用自定义API。</p><p style=\"\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">3 接口示例</h2><h3 label=\"二级标题\" class=\"second-title\" style=\"\"><span style=\"\">3.1 维护</span><strong style=\"text-align: justify;\">API基本信息</strong></h3><p style=\"text-align: justify;\"><span style=\"\"></span><span style=\"text-align: justify;\">录入</span><span style=\"text-align: justify;\">API编码、API名称、业务对象、操作方式、详细描述等信息，请求方式为“POST”，系统自动生成API请求地址。</span></p><p style=\"text-align: justify;\"><br/></p><p style=\"\"><img src=\"/download/01098e796302579c4dc7a47ccb631f555b3c.png\"/></p><p style=\"\"><br/></p><h3 label=\"二级标题\" class=\"second-title\" style=\"text-align: justify;\"><span style=\"\">3.2 维护请求体参数/查询条件</span></h3><p style=\"text-align: justify;\">请求头无需维护，<span style=\"text-align: justify;\">点击“增行”或</span><span style=\"text-align: justify;\">“添加属性”按钮，快速添加请求参数</span>。通过参数控制，将单据字段和请求参数进行比较，生成查询条件。</p><p label=\"备注\" class=\"remark-text\" style=\"\">备注：<span style=\"color: rgb(153, 153, 153); font-size: 13px; text-align: justify;\">当查询条件比较方式为“在...中”或“不在...中”时，对应比较变量的参数类型必须为Array数组。此时可以选择Array&lt;Integer&gt;、Array&lt;String&gt;、Array&lt;Long&gt;、Array&lt;Date&gt;这四种数组类型。</span></p><p style=\"\"><br/></p><p style=\"\"><img src=\"/download/01092f57ac5c21ce40d0b1d7dccdf4e60395.png\"/></p><p style=\"\"><br/></p><p style=\"\"><span style=\"\">下推操作服务的返回参数目前不允许用户自定义，统一按平台规范返回。</span></p><p style=\"\"><span style=\"color: rgb(36, 41, 46);\"><span style=\"\"></span></span></p><p style=\"text-align: justify; color: rgb(73, 80, 96);\"><span style=\"color: rgb(36, 41, 46);\">&nbsp;API Response契约统一为:</span><span style=\"color: rgb(36, 41, 46);\"><br/></span><span style=\"color: rgb(36, 41, 46);\"></span></p><p style=\"text-align: justify; color: rgb(73, 80, 96);\"><span style=\"color: rgb(36, 41, 46);\"></span></p><p style=\"text-align: justify; color: rgb(73, 80, 96);\"><span style=\"color: rgb(36, 41, 46);\">{</span></p><p style=\"text-align: justify; color: rgb(73, 80, 96);\"><span style=\"color: rgb(36, 41, 46);\">&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“data”: {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //结果数据</span></p><p style=\"text-align: justify; color: rgb(73, 80, 96);\"><span style=\"color: rgb(36, 41, 46);\">&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot; filter&quot;:&quot;&quot;,&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;//过滤条件</span></p><p style=\"text-align: justify; color: rgb(73, 80, 96);\"><span style=\"color: rgb(36, 41, 46);\">&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;result&quot;: [],&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;//返回结果详细信息</span></p><p style=\"text-align: justify; color: rgb(73, 80, 96);\"><span style=\"color: rgb(36, 41, 46);\">&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;totalCount&quot;:&quot;&quot;,&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;//总数</span></p><p style=\"text-align: justify; color: rgb(73, 80, 96);\"><span style=\"color: rgb(36, 41, 46);\">　&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;“</span><span style=\"color: rgb(36, 41, 46);\">failcount</span><span style=\"color: rgb(36, 41, 46);\">”:&nbsp;</span><span style=\"color: rgb(36, 41, 46);\">“”,&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span style=\"color: rgb(36, 41, 46);\">//</span><span style=\"color: rgb(36, 41, 46);\">操作失败数量</span></p><p style=\"text-align: justify; color: rgb(73, 80, 96);\"><span style=\"color: rgb(36, 41, 46);\">　&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;“</span><span style=\"color: rgb(36, 41, 46);\">successcount</span><span style=\"color: rgb(36, 41, 46);\">”:&nbsp;</span><span style=\"color: rgb(36, 41, 46);\">“”</span><span style=\"color: rgb(36, 41, 46);\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;//</span><span style=\"color: rgb(36, 41, 46);\">操作成功数量</span></p><p style=\"text-align: justify; color: rgb(73, 80, 96);\"><span style=\"color: rgb(36, 41, 46);\">&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p><p style=\"text-align: justify; color: rgb(73, 80, 96);\"><span style=\"color: rgb(36, 41, 46);\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;“</span><span style=\"color: rgb(36, 41, 46);\">errorCode</span><span style=\"color: rgb(36, 41, 46);\">”:&nbsp;</span><span style=\"color: rgb(36, 41, 46);\">“”,</span><span style=\"color: rgb(36, 41, 46);\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;//</span><span style=\"color: rgb(36, 41, 46);\">错误码</span><span style=\"color: rgb(36, 41, 46);\"><br/></span><span style=\"color: rgb(36, 41, 46);\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;“message”: null,&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;//失败时的提示信息</span></p><p style=\"text-align: justify; color: rgb(73, 80, 96);\"><span style=\"color: rgb(36, 41, 46);\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;“</span><span style=\"color: rgb(36, 41, 46);\">status</span><span style=\"color: rgb(36, 41, 46);\">”:&nbsp;</span><span style=\"color: rgb(36, 41, 46);\">t</span><span style=\"color: rgb(36, 41, 46);\">rue/false&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //是否成功</span></p><p style=\"text-align: justify; color: rgb(73, 80, 96);\"><span style=\"color: rgb(36, 41, 46);\">}</span></p><p style=\"text-align: justify; color: rgb(73, 80, 96);\"><br/><span style=\"color: rgb(36, 41, 46);\"></span></p><p style=\"\"><span style=\"color: rgb(36, 41, 46);\"></span></p><h3 label=\"二级标题\" class=\"second-title\" style=\"text-align: justify;\"><strong style=\"\"><span style=\"\">3.3 </span>API测试</strong></h3><p style=\"text-align: justify;\"><span style=\"\"></span><span style=\"text-align: justify;\">点击</span><span style=\"text-align: justify;\">“API测试”按钮，开始调试API。若测试结果符合功能需求，接口就可以正式</span><span style=\"text-align: justify;\">发布了</span><span style=\"text-align: justify;\">。</span></p><p style=\"\"><br/></p><p style=\"\"><img src=\"/download/01098082b017430e45d78b46ac3ff231ef20.png\"/></p><p style=\"\">接口调用成功后，可以打开费用报销单列表，路径：<span style=\"\">【财务云】<span style=\"\">→&nbsp;</span><span style=\"\">【费用核算】</span><span style=\"\">→<span style=\"\">【单据中心】<span style=\"\">→&nbsp;</span></span></span><span style=\"\">【费用报销单】，</span></span>点击列表中的【下查】按钮，能联查到接口下推生成的付款单。</p><p style=\"\"><br/></p><p style=\"\"><img src=\"/download/01097240603ea6bd4dcdaba14a0510cb47b1.png\"/></p><p style=\"\"><br/></p><p style=\"\"><img src=\"/download/0109962278a4c6894ce8856f2f970bb67631.png\"/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\"><br/></h2><h2 label=\"一级标题\" class=\"first-title\" style=\"\">4 更多资讯</h2><p style=\"text-align: justify;\"><span style=\"text-align: justify;\">关于OpenAPI的更多资讯，请随时关注</span><a href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=226337371640594944&id=226708319996323072&productLineId=29\" target=\"_blank\" style=\"text-align: justify;\">新特性公告</a><span style=\"text-align: justify;\">。</span></p><p style=\"\"><br/></p><p><br/></p>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 87,
+   "isOpen": 1,
+   "name": "金蝶AI苍穹",
+   "productLineId": 29,
+   "series": "developer01",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          {
+           "childCategory": [
+            null
+           ],
+           "code": null,
+           "description": "",
+           "entityId": "439503562712934144",
+           "entityType": "Knowledge",
+           "id": "439508471206177536",
+           "isCategory": false,
+           "name": "下推操作API",
+           "parentId": "408200984532495104",
+           "sort": "11",
+           "specialId": "226337046514476288",
+           "status": 1
+          }
+         ],
+         "code": null,
+         "description": "",
+         "entityId": null,
+         "entityType": null,
+         "id": "408200984532495104",
+         "isCategory": true,
+         "name": "API实例",
+         "parentId": "322414926260669696",
+         "sort": "12",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": null,
+       "entityId": null,
+       "entityType": null,
+       "id": "322414926260669696",
+       "isCategory": true,
+       "name": "操作API",
+       "parentId": "226337544983020032",
+       "sort": "2",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": null,
+     "entityId": null,
+     "entityType": null,
+     "id": "226337544983020032",
+     "isCategory": true,
+     "name": "用户手册",
+     "parentId": "-1",
+     "sort": "6",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download/01010204d4b71b654a208006fa1004eac36a.png",
+  "department": null,
+  "id": "740211268992385024",
+  "name": "毛毛去哪儿",
+  "nameSpell": "name"
+ },
+ "totalAppraisalScore": 25,
+ "iflytekId": null,
+ "views": 6064,
+ "productLineId": 29,
+ "comments": 9,
+ "similarityCount": 0,
+ "totalAppraisalUsers": 5,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1766110328000,
+ "appraisalScore": 0,
+ "unuseful": 0,
+ "knowledgeCheckStatus": 2,
+ "otherProductLineIds": [],
+ "auditAt": 1711616440000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapiapilistlayout",
+        "id": "344582232549528320",
+        "name": "API管理",
+        "productLineId": null,
+        "sort": 1,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "5614",
+       "name": "开放平台",
+       "productLineId": null,
+       "sort": 2,
+       "type": "module"
+      },
+      "code": "DEV",
+      "id": "5576",
+      "name": "开发服务云",
+      "productLineId": null,
+      "sort": 11,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 0,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapi_apilist_layout",
+        "id": "505686038019362304",
+        "name": "异步API",
+        "productLineId": null,
+        "sort": 1,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 1,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "OperatingGuide",
+     "createdAt": 1556519201000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "某一功能的具体说明介绍，包括应用场景、参数说明、具体操作步骤等",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/010037894174802d4b9f8782f1f0010a6ddd.png",
+     "id": "202203081641",
+     "name": "功能介绍",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010176d38341668f44fdb94c95058a90e4b8.png",
+      "department": "云社区运营部",
+      "id": "2147406697",
+      "name": "多肉丸子",
+      "nameSpell": "kejuan"
+     },
+     "updatedAt": 1676857681000
+    },
+    {
+     "code": "rumen",
+     "createdAt": 1605667807000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "入门类的知识可使用此标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100d322b9282bcc438faa894f4eec029977.png",
+     "id": "202203081646",
+     "name": "基础入门",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download?fileName=0101ec1d6ce599b442dab7d0b794c1fce88d.png",
+      "department": null,
+      "id": "1009",
+      "name": "一颗小星星",
+      "nameSpell": "fengling"
+     },
+     "updatedAt": 1657872008000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          {
+           "childCategory": [
+            {
+             "childCategory": [
+              null
+             ],
+             "code": null,
+             "description": "",
+             "entityId": "439503562712934144",
+             "entityType": "Knowledge",
+             "id": "439508471206177536",
+             "isCategory": false,
+             "name": "下推操作API",
+             "parentId": "408200984532495104",
+             "sort": "11",
+             "specialId": "226337046514476288",
+             "status": 1
+            }
+           ],
+           "code": null,
+           "description": "",
+           "entityId": null,
+           "entityType": null,
+           "id": "408200984532495104",
+           "isCategory": true,
+           "name": "API实例",
+           "parentId": "322414926260669696",
+           "sort": "12",
+           "specialId": "226337046514476288",
+           "status": 1
+          }
+         ],
+         "code": null,
+         "description": null,
+         "entityId": null,
+         "entityType": null,
+         "id": "322414926260669696",
+         "isCategory": true,
+         "name": "操作API",
+         "parentId": "226337544983020032",
+         "sort": "2",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": null,
+       "entityId": null,
+       "entityType": null,
+       "id": "226337544983020032",
+       "isCategory": true,
+       "name": "用户手册",
+       "parentId": "-1",
+       "sort": "6",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": "<h2 label=\"一级标题\" class=\"first-title\" style=\"\">1 接口介绍</h2><p style=\"\">下推操作API是通过在系统中维护接口基本信息、配置请求参数、查询条件来定义接口具体的功能。</p><p style=\"\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">2 注意事项</h2><p style=\"\"><span style=\"\">由于可以通过查询条件批量下推数据，开发人员新增接口时一定要谨慎定义查询条件，充分测试，避免因数据误下推对业务产生影响。</span></p><p label=\"备注\" class=\"remark-text\" style=\"\">注意：下推操作API暂时只支持整单下推，如需要按分录下推以及合并下推，请使用自定义API。</p><p style=\"\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">3 接口示例</h2><h3 label=\"二级标题\" class=\"second-title\" style=\"\"><span style=\"\">3.1 维护</span><strong style=\"text-align: justify;\">API基本信息</strong></h3><p style=\"text-align: justify;\"><span style=\"\"></span><span style=\"text-align: justify;\">录入</span><span style=\"text-align: justify;\">API编码、API名称、业务对象、操作方式、详细描述等信息，请求方式为“POST”，系统自动生成API请求地址。</span></p><p style=\"text-align: justify;\"><br/></p><p style=\"\"><img src=\"/download/01098e796302579c4dc7a47ccb631f555b3c.png\"/></p><p style=\"\"><br/></p><h3 label=\"二级标题\" class=\"second-title\" style=\"text-align: justify;\"><span style=\"\">3.2 维护请求体参数/查询条件</span></h3><p style=\"text-align: justify;\">请求头无需维护，<span style=\"text-align: justify;\">点击“增行”或</span><span style=\"text-align: justify;\">“添加属性”按钮，快速添加请求参数</span>。通过参数控制，将单据字段和请求参数进行比较，生成查询条件。</p><p label=\"备注\" class=\"remark-text\" style=\"\">备注：<span style=\"color: rgb(153, 153, 153); font-size: 13px; text-align: justify;\">当查询条件比较方式为“在...中”或“不在...中”时，对应比较变量的参数类型必须为Array数组。此时可以选择Array&lt;Integer&gt;、Array&lt;String&gt;、Array&lt;Long&gt;、Array&lt;Date&gt;这四种数组类型。</span></p><p style=\"\"><br/></p><p style=\"\"><img src=\"/download/01092f57ac5c21ce40d0b1d7dccdf4e60395.png\"/></p><p style=\"\"><br/></p><p style=\"\"><span style=\"\">下推操作服务的返回参数目前不允许用户自定义，统一按平台规范返回。</span></p><p style=\"\"><span style=\"color: rgb(36, 41, 46);\"><span style=\"\"></span></span></p><p style=\"text-align: justify; color: rgb(73, 80, 96);\"><span style=\"color: rgb(36, 41, 46);\">&nbsp;API Response契约统一为:</span><span style=\"color: rgb(36, 41, 46);\"><br/></span><span style=\"color: rgb(36, 41, 46);\"></span></p><p style=\"text-align: justify; color: rgb(73, 80, 96);\"><span style=\"color: rgb(36, 41, 46);\"></span></p><p style=\"text-align: justify; color: rgb(73, 80, 96);\"><span style=\"color: rgb(36, 41, 46);\">{</span></p><p style=\"text-align: justify; color: rgb(73, 80, 96);\"><span style=\"color: rgb(36, 41, 46);\">&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“data”: {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //结果数据</span></p><p style=\"text-align: justify; color: rgb(73, 80, 96);\"><span style=\"color: rgb(36, 41, 46);\">&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot; filter&quot;:&quot;&quot;,&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;//过滤条件</span></p><p style=\"text-align: justify; color: rgb(73, 80, 96);\"><span style=\"color: rgb(36, 41, 46);\">&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;result&quot;: [],&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;//返回结果详细信息</span></p><p style=\"text-align: justify; color: rgb(73, 80, 96);\"><span style=\"color: rgb(36, 41, 46);\">&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;totalCount&quot;:&quot;&quot;,&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;//总数</span></p><p style=\"text-align: justify; color: rgb(73, 80, 96);\"><span style=\"color: rgb(36, 41, 46);\">　&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;“</span><span style=\"color: rgb(36, 41, 46);\">failcount</span><span style=\"color: rgb(36, 41, 46);\">”:&nbsp;</span><span style=\"color: rgb(36, 41, 46);\">“”,&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span style=\"color: rgb(36, 41, 46);\">//</span><span style=\"color: rgb(36, 41, 46);\">操作失败数量</span></p><p style=\"text-align: justify; color: rgb(73, 80, 96);\"><span style=\"color: rgb(36, 41, 46);\">　&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;“</span><span style=\"color: rgb(36, 41, 46);\">successcount</span><span style=\"color: rgb(36, 41, 46);\">”:&nbsp;</span><span style=\"color: rgb(36, 41, 46);\">“”</span><span style=\"color: rgb(36, 41, 46);\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;//</span><span style=\"color: rgb(36, 41, 46);\">操作成功数量</span></p><p style=\"text-align: justify; color: rgb(73, 80, 96);\"><span style=\"color: rgb(36, 41, 46);\">&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p><p style=\"text-align: justify; color: rgb(73, 80, 96);\"><span style=\"color: rgb(36, 41, 46);\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;“</span><span style=\"color: rgb(36, 41, 46);\">errorCode</span><span style=\"color: rgb(36, 41, 46);\">”:&nbsp;</span><span style=\"color: rgb(36, 41, 46);\">“”,</span><span style=\"color: rgb(36, 41, 46);\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;//</span><span style=\"color: rgb(36, 41, 46);\">错误码</span><span style=\"color: rgb(36, 41, 46);\"><br/></span><span style=\"color: rgb(36, 41, 46);\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;“message”: null,&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;//失败时的提示信息</span></p><p style=\"text-align: justify; color: rgb(73, 80, 96);\"><span style=\"color: rgb(36, 41, 46);\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;“</span><span style=\"color: rgb(36, 41, 46);\">status</span><span style=\"color: rgb(36, 41, 46);\">”:&nbsp;</span><span style=\"color: rgb(36, 41, 46);\">t</span><span style=\"color: rgb(36, 41, 46);\">rue/false&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //是否成功</span></p><p style=\"text-align: justify; color: rgb(73, 80, 96);\"><span style=\"color: rgb(36, 41, 46);\">}</span></p><p style=\"text-align: justify; color: rgb(73, 80, 96);\"><br/><span style=\"color: rgb(36, 41, 46);\"></span></p><p style=\"\"><span style=\"color: rgb(36, 41, 46);\"></span></p><h3 label=\"二级标题\" class=\"second-title\" style=\"text-align: justify;\"><strong style=\"\"><span style=\"\">3.3 </span>API测试</strong></h3><p style=\"text-align: justify;\"><span style=\"\"></span><span style=\"text-align: justify;\">点击</span><span style=\"text-align: justify;\">“API测试”按钮，开始调试API。若测试结果符合功能需求，接口就可以正式</span><span style=\"text-align: justify;\">发布了</span><span style=\"text-align: justify;\">。</span></p><p style=\"\"><br/></p><p style=\"\"><img src=\"/download/01098082b017430e45d78b46ac3ff231ef20.png\"/></p><p style=\"\">接口调用成功后，可以打开费用报销单列表，路径：<span style=\"\">【财务云】<span style=\"\">→&nbsp;</span><span style=\"\">【费用核算】</span><span style=\"\">→<span style=\"\">【单据中心】<span style=\"\">→&nbsp;</span></span></span><span style=\"\">【费用报销单】，</span></span>点击列表中的【下查】按钮，能联查到接口下推生成的付款单。</p><p style=\"\"><br/></p><p style=\"\"><img src=\"/download/01097240603ea6bd4dcdaba14a0510cb47b1.png\"/></p><p style=\"\"><br/></p><p style=\"\"><img src=\"/download/0109962278a4c6894ce8856f2f970bb67631.png\"/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\"><br/></h2><h2 label=\"一级标题\" class=\"first-title\" style=\"\">4 更多资讯</h2><p style=\"text-align: justify;\"><span style=\"text-align: justify;\">关于OpenAPI的更多资讯，请随时关注</span><a href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=226337371640594944&id=226708319996323072&productLineId=29\" target=\"_blank\" style=\"text-align: justify;\">新特性公告</a><span style=\"text-align: justify;\">。</span></p><p style=\"\"><br/></p><p><br/></p>"
+}

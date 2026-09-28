@@ -1,0 +1,565 @@
+{
+ "badNum": 0,
+ "identityTagIds": null,
+ "knowledgeId": "305337130916664064",
+ "createdAt": 1650606045000,
+ "collections": 9,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "305337130916664064",
+ "contentType": 1,
+ "updatedAt": 1766110149000,
+ "knowledgeUpdater": {
+  "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+  "department": null,
+  "id": "132488613174518784",
+  "name": "某个路易",
+  "nameSpell": "name"
+ },
+ "assessStatus": 0,
+ "knowledgeStatus": 2,
+ "assessHandleStatus": null,
+ "knowledgeCreatedAt": 1650606045000,
+ "version": 102,
+ "labels": [],
+ "editedAt": 1721027867000,
+ "identityTags": null,
+ "useful": 14,
+ "errors": [],
+ "isCollected": false,
+ "totalFeedBacks": 0,
+ "attachments": [],
+ "sources": [],
+ "editTitle": "保存操作API（弹性域）",
+ "title": "保存操作API（弹性域）",
+ "content": "<h2 label=\"一级标题\" class=\"first-title\" style=\"\">1 接口介绍</h2><p>保存操作API是通过在系统中维护接口基本信息、配置请求参数来定义接口具体的功能。</p><p>弹性域：金蝶AI苍穹表单中的特殊字段，包括核算维度和辅助属性。</p><p><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">2 接口示例</h2><h3 label=\"二级标题\" class=\"second-title\" style=\"text-align: justify;\"><strong style=\"\"><span style=\"\">2.1 零代码配置</span><span style=\"\">API</span></strong></h3><p label=\"正文\" style=\"\"><span style=\"\">以凭证</span><span style=\"\">为例，维护API基本信息及请求参数，点击“添加属性”可快速添加请求参数，<span style=\"\">其中核算维度为弹性域字段</span>。</span></p><p><br/></p><p><img src=\"/download/01095ac22b9a54ac41688efa97e0c6d4caee.png\"/></p><p><br/></p><p style=\"text-align: justify\"><span style=\"font-family:微软雅黑\"><span style=\"text-align: justify;\"><span style=\"\">返回参数目前不允许用户自定义，统一按平台规范返回。</span></span>点击“保存”按钮，接口创建完成。</span></p><p style=\"text-align: justify\"><span style=\"font-family:微软雅黑\"><br/></span></p><p><img src=\"/download/01093305be232c2147e699f7b67c66ff1a86.png\"/></p><p><br/></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\"><strong style=\"\"><span style=\"\">2.2 API测试</span></strong></h3><p style=\"text-align: justify\"><span style=\"font-family:微软雅黑\">用户可以点击“参数示例”按钮，查看数据结构示例，</span>如某科目核算维度为供应商（基础资料）、地址类型（辅助资料）和手工输入维度（其他类型），入参如下：</p><p label=\"正文\" style=\"\"><br/></p><p label=\"正文\"><span style=\"font-family:微软雅黑\"></span></p><table width=\"98%\"><tbody><tr class=\"firstRow\"><td valign=\"top\" width=\"768\" style=\"\"><p label=\"正文\" style=\"\">&nbsp; &nbsp; &nbsp;</p><p><span style=\"color: rgb(163, 21, 21);\">&nbsp;&nbsp;&quot;assgrp&quot;</span><span style=\"\">: {</span></p><p label=\"正文\" style=\"\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"color: rgb(163, 21, 21);\">&nbsp;&nbsp;&quot;id&quot;</span><span style=\"color: rgb(4, 81, 165);\">: 84452282738744729</span><span style=\"\">60,&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //核算维度id，若传参，则以下所有核算维度可不填</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"color: rgb(163, 21, 21);\">&nbsp;&nbsp;&quot;供应商&quot;</span><span style=\"\">: { &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span style=\"\">//核算维度名称-基础资料类型（支持id<span style=\"\">或</span>number）</span></p><p label=\"正文\" style=\"\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"color: rgb(163, 21, 21);\">&nbsp;&nbsp;&nbsp;&quot;number&quot;</span><span style=\"color: rgb(4, 81, 165);\">: &quot;SUP000001&quot;</span><span style=\"\">,</span></p><p label=\"正文\" style=\"\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"\">},</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"color: rgb(163, 21, 21);\">&nbsp;&nbsp;&quot;地址类型&quot;</span><span style=\"\">: {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //核算维度名称-辅助资料类型,（<span style=\"\">支持id或number</span>）</span></p><p label=\"正文\" style=\"\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"color: rgb(163, 21, 21);\">&nbsp;&nbsp;&nbsp;&quot;number&quot;</span><span style=\"color: rgb(4, 81, 165);\">: &quot;Address01&quot;</span><span style=\"\">,</span></p><p label=\"正文\" style=\"\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"\">},</span></p><p label=\"正文\" style=\"\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"color: rgb(163, 21, 21);\">&nbsp;&nbsp;&nbsp;&quot;手工输入维度&quot;</span><span style=\"color: rgb(4, 81, 165);\">: &quot;自定义文本&quot;</span><span style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;//核算维度名称-其他类型</span></p><p label=\"正文\" style=\"\"><span style=\"\"><br/></span></p></td></tr></tbody></table><p label=\"正文\"><br/></p><p label=\"正文\"><span style=\"font-family:微软雅黑\">点击“</span><span style=\"font-family:微软雅黑\">API测试”按钮，开始调试API。<span style=\"\">按规范传入</span>弹性域并构造请求参数，调用API批量保存凭证</span><span style=\"font-family: 微软雅黑; text-align: justify;\">。</span></p><p><br/></p><p><img src=\"/download/0109bfdef3d7f4764a92a09f75c1c526f497.png\"/></p><p><br/></p><p><br/></p><p>当第三方系统不支持传入核算维度的中文名称时（<span style=\"\">如使用ABAP开发语言</span>），金蝶AI苍穹OpenAPI也支持按核算维度编码赋值，此时<span style=\"text-align: justify;\">入参格式如下：</span></p><p><br/></p><p label=\"正文\" style=\"\"><span style=\"\"></span></p><table width=\"98%\"><tbody style=\"\"><tr class=\"firstRow\" style=\"\"><td valign=\"top\" width=\"768\" style=\"\"><p label=\"正文\" style=\"\">&nbsp; &nbsp; &nbsp;</p><div style=\"color: rgb(0, 0, 0);\"><span style=\"color: rgb(163, 21, 21);\">&nbsp; &nbsp; &quot;assgrp&quot;</span>:{</div><div style=\"color: rgb(0, 0, 0);\"><span style=\"color: rgb(163, 21, 21);\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;flextype&quot;</span>:<span style=\"color: rgb(4, 81, 165);\">&quot;number&quot;</span>,</div><div style=\"color: rgb(0, 0, 0);\"><span style=\"color: rgb(163, 21, 21);\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;103&quot;</span>:{</div><div style=\"color: rgb(0, 0, 0);\"><span style=\"color: rgb(163, 21, 21);\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;number&quot;</span>:<span style=\"color: rgb(4, 81, 165);\">&quot;00&quot;</span></div><div style=\"color: rgb(0, 0, 0);\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;}</div><div style=\"color: rgb(0, 0, 0);\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; }</div><p label=\"正文\" style=\"\"><br/></p></td></tr></tbody></table><p><br/></p><p><img src=\"/download/01099dfe1f41ed934af2aac9ff3431d2d340.png\"/></p><p><br/></p><p><img src=\"/download/01095bc632ca6f834fb19f6147f4edba1cf0.png\"/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\"><strong style=\"\"><span style=\"\"><br/></span></strong></h2><p><strong style=\"\"><span style=\"\"><br/></span></strong></p><p style=\"text-align: start; \"><strong style=\"\"><span style=\"\"><span style=\"text-align: justify;\">保存操作API同时支持维护默认值（两种格式），当弹性域不传值或传空值时，自动按默认值保存凭证。</span></span></strong></p><p style=\"text-align: start; \"><strong style=\"\"><span style=\"\"><span style=\"text-align: justify;\"><br/></span></span></strong></p><p><img src=\"/download/010986981231c50146909d3259c92bebf7e0.png\"/></p><p><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\"><strong style=\"\">3 注意事项</strong></h2><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><p>核算维度若同时传入了基础资料id、number和name时，保存优先级是id &gt; number &gt; name。</p></li><li><p><span style=\"\">若弹性域需要按编码保存，assgrp<span style=\"\">参数中需传入</span><strong style=\"\">&nbsp;&quot;flextype&quot;:&quot;number&quot;</strong></span>。</p><p><br/></p></li></ul><h2 label=\"一级标题\" class=\"first-title\" style=\"\"><strong style=\"\"><span style=\"\">4 更多资讯</span></strong></h2><p style=\"text-align: justify\"><span style=\"text-align: justify;\">关于OpenAPI的更多资讯，请随时关注</span><a href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=226337371640594944&id=226708319996323072&productLineId=29\" target=\"_blank\" style=\"text-align: justify;\">新特性公告</a><span style=\"text-align: justify;\">。</span></p><p><br/></p>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 87,
+   "isOpen": 1,
+   "name": "金蝶AI苍穹",
+   "productLineId": 29,
+   "series": "developer01",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          {
+           "childCategory": [
+            null
+           ],
+           "code": null,
+           "description": "",
+           "entityId": "305337130916664064",
+           "entityType": "Knowledge",
+           "id": "322415070427286784",
+           "isCategory": false,
+           "name": "保存操作API（弹性域）",
+           "parentId": "408200984532495104",
+           "sort": "4",
+           "specialId": "226337046514476288",
+           "status": 1
+          }
+         ],
+         "code": null,
+         "description": "",
+         "entityId": null,
+         "entityType": null,
+         "id": "408200984532495104",
+         "isCategory": true,
+         "name": "API实例",
+         "parentId": "322414926260669696",
+         "sort": "12",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": null,
+       "entityId": null,
+       "entityType": null,
+       "id": "322414926260669696",
+       "isCategory": true,
+       "name": "操作API",
+       "parentId": "226337544983020032",
+       "sort": "2",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": null,
+     "entityId": null,
+     "entityType": null,
+     "id": "226337544983020032",
+     "isCategory": true,
+     "name": "用户手册",
+     "parentId": "-1",
+     "sort": "6",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download/01010204d4b71b654a208006fa1004eac36a.png",
+  "department": null,
+  "id": "740211268992385024",
+  "name": "毛毛去哪儿",
+  "nameSpell": "name"
+ },
+ "totalAppraisalScore": 68,
+ "iflytekId": null,
+ "views": 7805,
+ "productLineId": 29,
+ "comments": 1,
+ "similarityCount": 0,
+ "totalAppraisalUsers": 14,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1766110149000,
+ "appraisalScore": 0,
+ "unuseful": 0,
+ "knowledgeCheckStatus": 2,
+ "otherProductLineIds": [],
+ "auditAt": 1721027929000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapiapilistlayout",
+        "id": "344582232549528320",
+        "name": "API管理",
+        "productLineId": null,
+        "sort": 1,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "5614",
+       "name": "开放平台",
+       "productLineId": null,
+       "sort": 2,
+       "type": "module"
+      },
+      "code": "DEV",
+      "id": "5576",
+      "name": "开发服务云",
+      "productLineId": null,
+      "sort": 11,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 0,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapi_apilist_layout",
+        "id": "505686038019362304",
+        "name": "异步API",
+        "productLineId": null,
+        "sort": 1,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 1,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "rumen",
+     "createdAt": 1605667807000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "入门类的知识可使用此标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100d322b9282bcc438faa894f4eec029977.png",
+     "id": "202203081646",
+     "name": "基础入门",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download?fileName=0101ec1d6ce599b442dab7d0b794c1fce88d.png",
+      "department": null,
+      "id": "1009",
+      "name": "一颗小星星",
+      "nameSpell": "fengling"
+     },
+     "updatedAt": 1657872008000
+    },
+    {
+     "code": "NewFeatures",
+     "createdAt": 1558619051000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "新特性",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/01009c9898f919a24034b3b37b2ebf42931c.png",
+     "id": "202203081645",
+     "name": "新特性",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010145330b44d45a47ae9b8aac30617b6992.png",
+      "department": null,
+      "id": "2147443044",
+      "name": "Lucky_tiao",
+      "nameSpell": "laoli"
+     },
+     "updatedAt": 1668739541000
+    },
+    {
+     "code": "typicalinstance",
+     "createdAt": 1605836164000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "基于典型客户的应用场景，介绍客户痛点，给出本应用/功能的解决方案",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100905e7651dcc940099286e9ee4a35cb2d.png",
+     "id": "202203081648",
+     "name": "最佳实践",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010176d38341668f44fdb94c95058a90e4b8.png",
+      "department": "云社区运营部",
+      "id": "2147406697",
+      "name": "多肉丸子",
+      "nameSpell": "kejuan"
+     },
+     "updatedAt": 1676857737000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          {
+           "childCategory": [
+            {
+             "childCategory": [
+              null
+             ],
+             "code": null,
+             "description": "",
+             "entityId": "305337130916664064",
+             "entityType": "Knowledge",
+             "id": "322415070427286784",
+             "isCategory": false,
+             "name": "保存操作API（弹性域）",
+             "parentId": "408200984532495104",
+             "sort": "4",
+             "specialId": "226337046514476288",
+             "status": 1
+            }
+           ],
+           "code": null,
+           "description": "",
+           "entityId": null,
+           "entityType": null,
+           "id": "408200984532495104",
+           "isCategory": true,
+           "name": "API实例",
+           "parentId": "322414926260669696",
+           "sort": "12",
+           "specialId": "226337046514476288",
+           "status": 1
+          }
+         ],
+         "code": null,
+         "description": null,
+         "entityId": null,
+         "entityType": null,
+         "id": "322414926260669696",
+         "isCategory": true,
+         "name": "操作API",
+         "parentId": "226337544983020032",
+         "sort": "2",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": null,
+       "entityId": null,
+       "entityType": null,
+       "id": "226337544983020032",
+       "isCategory": true,
+       "name": "用户手册",
+       "parentId": "-1",
+       "sort": "6",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": "<h2 label=\"一级标题\" class=\"first-title\" style=\"\">1 接口介绍</h2><p>保存操作API是通过在系统中维护接口基本信息、配置请求参数来定义接口具体的功能。</p><p>弹性域：金蝶AI苍穹表单中的特殊字段，包括核算维度和辅助属性。</p><p><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">2 接口示例</h2><h3 label=\"二级标题\" class=\"second-title\" style=\"text-align: justify;\"><strong style=\"\"><span style=\"\">2.1 零代码配置</span><span style=\"\">API</span></strong></h3><p label=\"正文\" style=\"\"><span style=\"\">以凭证</span><span style=\"\">为例，维护API基本信息及请求参数，点击“添加属性”可快速添加请求参数，<span style=\"\">其中核算维度为弹性域字段</span>。</span></p><p><br/></p><p><img src=\"/download/01095ac22b9a54ac41688efa97e0c6d4caee.png\"/></p><p><br/></p><p style=\"text-align: justify\"><span style=\"font-family:微软雅黑\"><span style=\"text-align: justify;\"><span style=\"\">返回参数目前不允许用户自定义，统一按平台规范返回。</span></span>点击“保存”按钮，接口创建完成。</span></p><p style=\"text-align: justify\"><span style=\"font-family:微软雅黑\"><br/></span></p><p><img src=\"/download/01093305be232c2147e699f7b67c66ff1a86.png\"/></p><p><br/></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\"><strong style=\"\"><span style=\"\">2.2 API测试</span></strong></h3><p style=\"text-align: justify\"><span style=\"font-family:微软雅黑\">用户可以点击“参数示例”按钮，查看数据结构示例，</span>如某科目核算维度为供应商（基础资料）、地址类型（辅助资料）和手工输入维度（其他类型），入参如下：</p><p label=\"正文\" style=\"\"><br/></p><p label=\"正文\"><span style=\"font-family:微软雅黑\"></span></p><table width=\"98%\"><tbody><tr class=\"firstRow\"><td valign=\"top\" width=\"768\" style=\"\"><p label=\"正文\" style=\"\">&nbsp; &nbsp; &nbsp;</p><p><span style=\"color: rgb(163, 21, 21);\">&nbsp;&nbsp;&quot;assgrp&quot;</span><span style=\"\">: {</span></p><p label=\"正文\" style=\"\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"color: rgb(163, 21, 21);\">&nbsp;&nbsp;&quot;id&quot;</span><span style=\"color: rgb(4, 81, 165);\">: 84452282738744729</span><span style=\"\">60,&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //核算维度id，若传参，则以下所有核算维度可不填</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"color: rgb(163, 21, 21);\">&nbsp;&nbsp;&quot;供应商&quot;</span><span style=\"\">: { &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span style=\"\">//核算维度名称-基础资料类型（支持id<span style=\"\">或</span>number）</span></p><p label=\"正文\" style=\"\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"color: rgb(163, 21, 21);\">&nbsp;&nbsp;&nbsp;&quot;number&quot;</span><span style=\"color: rgb(4, 81, 165);\">: &quot;SUP000001&quot;</span><span style=\"\">,</span></p><p label=\"正文\" style=\"\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"\">},</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"color: rgb(163, 21, 21);\">&nbsp;&nbsp;&quot;地址类型&quot;</span><span style=\"\">: {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //核算维度名称-辅助资料类型,（<span style=\"\">支持id或number</span>）</span></p><p label=\"正文\" style=\"\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"color: rgb(163, 21, 21);\">&nbsp;&nbsp;&nbsp;&quot;number&quot;</span><span style=\"color: rgb(4, 81, 165);\">: &quot;Address01&quot;</span><span style=\"\">,</span></p><p label=\"正文\" style=\"\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"\">},</span></p><p label=\"正文\" style=\"\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"color: rgb(163, 21, 21);\">&nbsp;&nbsp;&nbsp;&quot;手工输入维度&quot;</span><span style=\"color: rgb(4, 81, 165);\">: &quot;自定义文本&quot;</span><span style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;//核算维度名称-其他类型</span></p><p label=\"正文\" style=\"\"><span style=\"\"><br/></span></p></td></tr></tbody></table><p label=\"正文\"><br/></p><p label=\"正文\"><span style=\"font-family:微软雅黑\">点击“</span><span style=\"font-family:微软雅黑\">API测试”按钮，开始调试API。<span style=\"\">按规范传入</span>弹性域并构造请求参数，调用API批量保存凭证</span><span style=\"font-family: 微软雅黑; text-align: justify;\">。</span></p><p><br/></p><p><img src=\"/download/0109bfdef3d7f4764a92a09f75c1c526f497.png\"/></p><p><br/></p><p><br/></p><p>当第三方系统不支持传入核算维度的中文名称时（<span style=\"\">如使用ABAP开发语言</span>），金蝶AI苍穹OpenAPI也支持按核算维度编码赋值，此时<span style=\"text-align: justify;\">入参格式如下：</span></p><p><br/></p><p label=\"正文\" style=\"\"><span style=\"\"></span></p><table width=\"98%\"><tbody style=\"\"><tr class=\"firstRow\" style=\"\"><td valign=\"top\" width=\"768\" style=\"\"><p label=\"正文\" style=\"\">&nbsp; &nbsp; &nbsp;</p><div style=\"color: rgb(0, 0, 0);\"><span style=\"color: rgb(163, 21, 21);\">&nbsp; &nbsp; &quot;assgrp&quot;</span>:{</div><div style=\"color: rgb(0, 0, 0);\"><span style=\"color: rgb(163, 21, 21);\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;flextype&quot;</span>:<span style=\"color: rgb(4, 81, 165);\">&quot;number&quot;</span>,</div><div style=\"color: rgb(0, 0, 0);\"><span style=\"color: rgb(163, 21, 21);\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;103&quot;</span>:{</div><div style=\"color: rgb(0, 0, 0);\"><span style=\"color: rgb(163, 21, 21);\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;number&quot;</span>:<span style=\"color: rgb(4, 81, 165);\">&quot;00&quot;</span></div><div style=\"color: rgb(0, 0, 0);\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;}</div><div style=\"color: rgb(0, 0, 0);\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; }</div><p label=\"正文\" style=\"\"><br/></p></td></tr></tbody></table><p><br/></p><p><img src=\"/download/01099dfe1f41ed934af2aac9ff3431d2d340.png\"/></p><p><br/></p><p><img src=\"/download/01095bc632ca6f834fb19f6147f4edba1cf0.png\"/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\"><strong style=\"\"><span style=\"\"><br/></span></strong></h2><p><strong style=\"\"><span style=\"\"><br/></span></strong></p><p style=\"text-align: start; \"><strong style=\"\"><span style=\"\"><span style=\"text-align: justify;\">保存操作API同时支持维护默认值（两种格式），当弹性域不传值或传空值时，自动按默认值保存凭证。</span></span></strong></p><p style=\"text-align: start; \"><strong style=\"\"><span style=\"\"><span style=\"text-align: justify;\"><br/></span></span></strong></p><p><img src=\"/download/010986981231c50146909d3259c92bebf7e0.png\"/></p><p><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\"><strong style=\"\">3 注意事项</strong></h2><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><p>核算维度若同时传入了基础资料id、number和name时，保存优先级是id &gt; number &gt; name。</p></li><li><p><span style=\"\">若弹性域需要按编码保存，assgrp<span style=\"\">参数中需传入</span><strong style=\"\">&nbsp;&quot;flextype&quot;:&quot;number&quot;</strong></span>。</p><p><br/></p></li></ul><h2 label=\"一级标题\" class=\"first-title\" style=\"\"><strong style=\"\"><span style=\"\">4 更多资讯</span></strong></h2><p style=\"text-align: justify\"><span style=\"text-align: justify;\">关于OpenAPI的更多资讯，请随时关注</span><a href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=226337371640594944&id=226708319996323072&productLineId=29\" target=\"_blank\" style=\"text-align: justify;\">新特性公告</a><span style=\"text-align: justify;\">。</span></p><p><br/></p>"
+}

@@ -1,0 +1,102 @@
+# ococic 模块表清单
+
+> 本模块共收录 **90** 张表定义，来自 `ococic_files/`。
+
+> 索引由 `scripts/build_index.py` 从 Markdown 自动生成，请勿手工编辑。
+> 检索本模块表结构请用统一检索脚本（比翻本文件更快）：
+> ```bash
+> python scripts/search.py <关键词> --scope db --category ococic
+> ```
+
+| 序号 | 数据库表名 | 中文名称 | 字段数 | 详细定义文件 |
+| :---: | :--- | :--- | :---: | :--- |
+| 1 | `t_ocdbd_deliverstatus` | 发货状态-主表 | 20 | [ococic_deliverstatus.md](./ococic_deliverstatus.md) |
+| 2 | `t_ocdbd_deliverstatus_l` | 发货状态-多语言表 | 5 | [ococic_deliverstatus.md](./ococic_deliverstatus.md) |
+| 3 | `t_ocdbd_distributionmode` | 配送模式-主表 | 6 | [ocdbd_distributionmode.md](./ocdbd_distributionmode.md) |
+| 4 | `t_ocdbd_distributionrule` | 全网库存共享规则-主表 | 20 | [ocdbd_distributionrules.md](./ocdbd_distributionrules.md) |
+| 5 | `t_ocdbd_location` | 渠道仓位-主表 | 9 | [ococic_location.md](./ococic_location.md) |
+| 6 | `t_ocdbd_location` | 仓位单据体-子表 | 9 | [ococic_warehouse.md](./ococic_warehouse.md) |
+| 7 | `t_ocdbd_location` | 仓位单据体-子表 | 9 | [ococic_warehouse_b2b.md](./ococic_warehouse_b2b.md) |
+| 8 | `t_ocdbd_location_l` | 渠道仓位-多语言表 | 5 | [ococic_location.md](./ococic_location.md) |
+| 9 | `t_ocdbd_location_l` | 仓位单据体-多语言表 | 5 | [ococic_warehouse.md](./ococic_warehouse.md) |
+| 10 | `t_ocdbd_location_l` | 仓位单据体-多语言表 | 5 | [ococic_warehouse_b2b.md](./ococic_warehouse_b2b.md) |
+| 11 | `t_ocdbd_lot` | 商品批号-主表 | 14 | [ococic_lot.md](./ococic_lot.md) |
+| 12 | `t_ocdbd_lotdate` | 有效期分录-子表 | 5 | [ococic_lot.md](./ococic_lot.md) |
+| 13 | `t_ocdbd_lotinfo` | 商品批号信息-主表 | 10 | [ocdbd_lotinfo.md](./ocdbd_lotinfo.md) |
+| 14 | `t_ocdbd_lotinfo_l` | 商品批号信息-多语言表 | 4 | [ocdbd_lotinfo.md](./ocdbd_lotinfo.md) |
+| 15 | `t_ocdbd_lotmovetrack` | 渠道批号主档移动轨迹-主表 | 20 | [ococic_lotmovetrack.md](./ococic_lotmovetrack.md) |
+| 16 | `t_ocdbd_res_stock` | 库存资源-主表 | 30 | [ococic_resourcestock.md](./ococic_resourcestock.md) |
+| 17 | `t_ocdbd_res_stock_l` | 库存资源-多语言表 | 4 | [ococic_resourcestock.md](./ococic_resourcestock.md) |
+| 18 | `t_ocdbd_res_stock_u` | 库存资源-使用范围表 | 3 | [ococic_resourcestock.md](./ococic_resourcestock.md) |
+| 19 | `t_ocdbd_resourceclass` | 库存资源类别-主表 | 12 | [ococic_resourceclass.md](./ococic_resourceclass.md) |
+| 20 | `t_ocdbd_resourceclass_l` | 库存资源类别-多语言表 | 4 | [ococic_resourceclass.md](./ococic_resourceclass.md) |
+| 21 | `t_ocdbd_resourceperm` | 资源查询授权-主表 | 14 | [ocdbd_resourceperm.md](./ocdbd_resourceperm.md) |
+| 22 | `t_ocdbd_resourceperm_l` | 资源查询授权-多语言表 | 4 | [ocdbd_resourceperm.md](./ocdbd_resourceperm.md) |
+| 23 | `t_ocdbd_resourceperme` | 资源授权排除-子表 | 6 | [ocdbd_resourceperm.md](./ocdbd_resourceperm.md) |
+| 24 | `t_ocdbd_scanparamset` | 扫码参数设置-主表 | 12 | [ocdbd_scanparamset.md](./ocdbd_scanparamset.md) |
+| 25 | `t_ocdbd_scanparamset_l` | 扫码参数设置-多语言表 | 4 | [ocdbd_scanparamset.md](./ocdbd_scanparamset.md) |
+| 26 | `t_ocdbd_snmainfile` | 商品序列号-主表 | 34 | [ococic_snmainfile.md](./ococic_snmainfile.md) |
+| 27 | `t_ocdbd_snmainfile` | 商品序列号-主表 | 34 | [ococic_snmainfile_b2b.md](./ococic_snmainfile_b2b.md) |
+| 28 | `t_ocdbd_snmainfile` | 补录序列号-主表 | 34 | [ococic_snmainfile_supply.md](./ococic_snmainfile_supply.md) |
+| 29 | `t_ocdbd_snmovetrack` | 商品序列号移动轨迹-主表 | 29 | [ococic_snmovetrack.md](./ococic_snmovetrack.md) |
+| 30 | `t_ocdbd_stockstatus` | 渠道库存状态-主表 | 15 | [ococic_stockstatus.md](./ococic_stockstatus.md) |
+| 31 | `t_ocdbd_stockstatus_l` | 渠道库存状态-多语言表 | 5 | [ococic_stockstatus.md](./ococic_stockstatus.md) |
+| 32 | `t_ocdbd_stocktype` | 渠道库存类型-主表 | 15 | [ococic_stocktype.md](./ococic_stocktype.md) |
+| 33 | `t_ocdbd_stocktype_l` | 渠道库存类型-多语言表 | 5 | [ococic_stocktype.md](./ococic_stocktype.md) |
+| 34 | `t_ocdbd_vehicle` | 车辆信息-主表 | 12 | [ocdbd_vehicle.md](./ocdbd_vehicle.md) |
+| 35 | `t_ocdbd_vehicle_l` | 车辆信息-多语言表 | 4 | [ocdbd_vehicle.md](./ocdbd_vehicle.md) |
+| 36 | `t_ocdbd_vehicleentry` | 渠道信息-子表 | 5 | [ocdbd_vehicle.md](./ocdbd_vehicle.md) |
+| 37 | `t_ocdbd_warehouse` | 渠道仓库-主表 | 40 | [ococic_warehouse.md](./ococic_warehouse.md) |
+| 38 | `t_ocdbd_warehouse` | 我的仓库-主表 | 40 | [ococic_warehouse_b2b.md](./ococic_warehouse_b2b.md) |
+| 39 | `t_ocdbd_warehouse_l` | 渠道仓库-多语言表 | 5 | [ococic_warehouse.md](./ococic_warehouse.md) |
+| 40 | `t_ocdbd_warehouse_l` | 我的仓库-多语言表 | 5 | [ococic_warehouse_b2b.md](./ococic_warehouse_b2b.md) |
+| 41 | `t_ocdbd_warehouse_u` | 渠道仓库-使用范围表 | 3 | [ococic_warehouse.md](./ococic_warehouse.md) |
+| 42 | `t_ocdbd_warehouse_u` | 我的仓库-使用范围表 | 3 | [ococic_warehouse_b2b.md](./ococic_warehouse_b2b.md) |
+| 43 | `t_ococic_allotbill` | 可销量分配单-主表 | 13 | [ococic_allotbill.md](./ococic_allotbill.md) |
+| 44 | `t_ococic_allotentry` | 分配单单据体-子表 | 19 | [ococic_allotbill.md](./ococic_allotbill.md) |
+| 45 | `t_ococic_allotresult` | 可销量分配结果表-主表 | 21 | [ococic_allotresult.md](./ococic_allotresult.md) |
+| 46 | `t_ococic_allotresult_wb` | 可销量分配结果反写表-主表 | 8 | [ococic_allotresult_wb.md](./ococic_allotresult_wb.md) |
+| 47 | `t_ococic_allotresult_wbe` | 占用明细-子表 | 5 | [ococic_allotresult_wb.md](./ococic_allotresult_wb.md) |
+| 48 | `t_ococic_allotresultlog` | 可销量结果表操作日志-主表 | 18 | [ococic_allotresultlog.md](./ococic_allotresultlog.md) |
+| 49 | `t_ococic_allotresultqty` | 可销量-主表 | 7 | [ococic_allotresultqty.md](./ococic_allotresultqty.md) |
+| 50 | `t_ococic_allotsubentry` | 分配单子单体-子表 | 4 | [ococic_allotbill.md](./ococic_allotbill.md) |
+| 51 | `t_ococic_channelinbill_tc` | 渠道入库-关联追踪表 | 7 | [ococic_channelinbill.md](./ococic_channelinbill.md) |
+| 52 | `t_ococic_channelinbill_wb` | 渠道入库-反写记录表 | 10 | [ococic_channelinbill.md](./ococic_channelinbill.md) |
+| 53 | `t_ococic_channelinlist` | 渠道库存初始化-主表 | 29 | [ococic_channelinlist.md](./ococic_channelinlist.md) |
+| 54 | `t_ococic_channelinvacc` | 渠道即时库存-主表 | 34 | [ococic_channelinvacc.md](./ococic_channelinvacc.md) |
+| 55 | `t_ococic_channelinvacc` | 库存查询-主表 | 34 | [ococic_channelinvacc_b2b.md](./ococic_channelinvacc_b2b.md) |
+| 56 | `t_ococic_chlinvacclog` | 渠道即时库存更新日志2-主表 | 32 | [ococic_channelinvacclog.md](./ococic_channelinvacclog.md) |
+| 57 | `t_ococic_chnlout` | 渠道出库-主表 | 21 | [ococic_channeloutbill.md](./ococic_channeloutbill.md) |
+| 58 | `t_ococic_chnlout_entry` | 单据体-子表 | 30 | [ococic_channeloutbill.md](./ococic_channeloutbill.md) |
+| 59 | `t_ococic_chnlout_entry_f` | 单据体-分表 | 10 | [ococic_channeloutbill.md](./ococic_channeloutbill.md) |
+| 60 | `t_ococic_chnlout_entry_lk` | 关联子实体-子表 | 6 | [ococic_channeloutbill.md](./ococic_channeloutbill.md) |
+| 61 | `t_ococic_chnlout_entry_r` | 单据体-分表 | 15 | [ococic_channeloutbill.md](./ococic_channeloutbill.md) |
+| 62 | `t_ococic_chnlout_lk` | 关联子实体-子表 | 6 | [ococic_channeloutbill.md](./ococic_channeloutbill.md) |
+| 63 | `t_ococic_chnlout_sn` | 子单据体-子表 | 6 | [ococic_channeloutbill.md](./ococic_channeloutbill.md) |
+| 64 | `t_ococic_chnlout_sn_lk` | 关联子实体-子表 | 6 | [ococic_channeloutbill.md](./ococic_channeloutbill.md) |
+| 65 | `t_ococic_chnlout_tc` | 渠道出库-关联追踪表 | 7 | [ococic_channeloutbill.md](./ococic_channeloutbill.md) |
+| 66 | `t_ococic_chnlout_wb` | 渠道出库-反写记录表 | 10 | [ococic_channeloutbill.md](./ococic_channeloutbill.md) |
+| 67 | `t_ococic_entityinv` | 实体库存-主表 | 19 | [ococic_entityinventory.md](./ococic_entityinventory.md) |
+| 68 | `t_ococic_inbill` | 渠道入库-主表 | 23 | [ococic_channelinbill.md](./ococic_channelinbill.md) |
+| 69 | `t_ococic_inbill_lk` | 关联子实体-子表 | 6 | [ococic_channelinbill.md](./ococic_channelinbill.md) |
+| 70 | `t_ococic_inbillentry` | 单据体-子表 | 16 | [ococic_channelinbill.md](./ococic_channelinbill.md) |
+| 71 | `t_ococic_inbillentry_f` | 单据体-分表 | 9 | [ococic_channelinbill.md](./ococic_channelinbill.md) |
+| 72 | `t_ococic_inbillentry_lk` | 关联子实体-子表 | 6 | [ococic_channelinbill.md](./ococic_channelinbill.md) |
+| 73 | `t_ococic_inbillentry_s` | 单据体-分表 | 15 | [ococic_channelinbill.md](./ococic_channelinbill.md) |
+| 74 | `t_ococic_inbillentry_w` | 单据体-分表 | 12 | [ococic_channelinbill.md](./ococic_channelinbill.md) |
+| 75 | `t_ococic_inbillseria` | 子单据体-子表 | 10 | [ococic_channelinbill.md](./ococic_channelinbill.md) |
+| 76 | `t_ococic_inbillseria_lk` | 关联子实体-子表 | 6 | [ococic_channelinbill.md](./ococic_channelinbill.md) |
+| 77 | `t_ococic_inven_report` | 渠道库存上报-主表 | 15 | [ococic_inventoryreport.md](./ococic_inventoryreport.md) |
+| 78 | `t_ococic_invenreport_e` | 单据体-子表 | 25 | [ococic_inventoryreport.md](./ococic_inventoryreport.md) |
+| 79 | `t_ococic_invenreport_sn` | 子单据体-子表 | 6 | [ococic_inventoryreport.md](./ococic_inventoryreport.md) |
+| 80 | `t_ococic_occupyrecords` | 负卖占用记录-主表 | 22 | [ococic_occupyrecords.md](./ococic_occupyrecords.md) |
+| 81 | `t_ococic_transbill` | 渠道调拨单-主表 | 45 | [ococic_transbill.md](./ococic_transbill.md) |
+| 82 | `t_ococic_transdirbill_tc` | 渠道调拨单-关联追踪表 | 7 | [ococic_transbill.md](./ococic_transbill.md) |
+| 83 | `t_ococic_transdirbill_wb` | 渠道调拨单-反写记录表 | 10 | [ococic_transbill.md](./ococic_transbill.md) |
+| 84 | `t_ococic_transdirentry_lk` | 关联子实体-子表 | 8 | [ococic_transbill.md](./ococic_transbill.md) |
+| 85 | `t_ococic_transentry` | 商品明细-子表 | 20 | [ococic_transbill.md](./ococic_transbill.md) |
+| 86 | `t_ococic_transentry_f` | 商品明细-分表 | 18 | [ococic_transbill.md](./ococic_transbill.md) |
+| 87 | `t_ococic_transentry_r` | 商品明细-分表 | 30 | [ococic_transbill.md](./ococic_transbill.md) |
+| 88 | `t_ococic_transentry_t` | 商品明细-分表 | 20 | [ococic_transbill.md](./ococic_transbill.md) |
+| 89 | `t_ococic_transrecentry` | 源单收款抵扣-子表 | 14 | [ococic_transbill.md](./ococic_transbill.md) |
+| 90 | `t_ococic_transserial` | 序列号单体-子表 | 6 | [ococic_transbill.md](./ococic_transbill.md) |

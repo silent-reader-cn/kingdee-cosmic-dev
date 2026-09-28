@@ -1,0 +1,115 @@
+# om 模块表清单
+
+> 本模块共收录 **103** 张表定义，来自 `om_files/`。
+
+> 索引由 `scripts/build_index.py` 从 Markdown 自动生成，请勿手工编辑。
+> 检索本模块表结构请用统一检索脚本（比翻本文件更快）：
+> ```bash
+> python scripts/search.py <关键词> --scope db --category om
+> ```
+
+| 序号 | 数据库表名 | 中文名称 | 字段数 | 详细定义文件 |
+| :---: | :--- | :--- | :---: | :--- |
+| 1 | `t_om_component` | 简单委外组件清单（废弃）-主表 | 37 | [om_componentlist.md](./om_componentlist.md) |
+| 2 | `t_om_component_l` | 简单委外组件清单（废弃）-多语言表 | 3 | [om_componentlist.md](./om_componentlist.md) |
+| 3 | `t_om_component_lk` | 关联子实体-子表 | 6 | [om_componentlist.md](./om_componentlist.md) |
+| 4 | `t_om_component_lk` | 关联子实体-子表 | 6 | [om_xxcomponentlist.md](./om_xxcomponentlist.md) |
+| 5 | `t_om_component_tc` | 简单委外组件清单（废弃）-关联追踪表 | 7 | [om_componentlist.md](./om_componentlist.md) |
+| 6 | `t_om_component_wb` | 简单委外组件清单（废弃）-反写记录表 | 10 | [om_componentlist.md](./om_componentlist.md) |
+| 7 | `t_om_componententry` | 组件明细-子表 | 52 | [om_componentlist.md](./om_componentlist.md) |
+| 8 | `t_om_componententry_a` | 组件明细-分表 | 24 | [om_componentlist.md](./om_componentlist.md) |
+| 9 | `t_om_componententry_l` | 组件明细-多语言表 | 5 | [om_componentlist.md](./om_componentlist.md) |
+| 10 | `t_om_componententry_lk` | 关联子实体-子表 | 6 | [om_componentlist.md](./om_componentlist.md) |
+| 11 | `t_om_componententry_lk` | 关联子实体-子表 | 6 | [om_xxcomponentlist.md](./om_xxcomponentlist.md) |
+| 12 | `t_om_initresult` | 结束委外初始化-主表 | 14 | [om_init_result.md](./om_init_result.md) |
+| 13 | `t_om_inprocess` | 期初委外在制材料-主表 | 14 | [om_init_inprocess.md](./om_init_inprocess.md) |
+| 14 | `t_om_inprocess_l` | 期初委外在制材料-多语言表 | 4 | [om_init_inprocess.md](./om_init_inprocess.md) |
+| 15 | `t_om_inprocess_lk` | 关联子实体-子表 | 6 | [om_init_inprocess.md](./om_init_inprocess.md) |
+| 16 | `t_om_inprocess_tc` | 期初委外在制材料-关联追踪表 | 7 | [om_init_inprocess.md](./om_init_inprocess.md) |
+| 17 | `t_om_inprocess_wb` | 期初委外在制材料-反写记录表 | 10 | [om_init_inprocess.md](./om_init_inprocess.md) |
+| 18 | `t_om_inprocessentry` | 期初在制材料-子表 | 18 | [om_init_inprocess.md](./om_init_inprocess.md) |
+| 19 | `t_om_inpstockentry` | 期初生产用料清单-子表 | 13 | [om_init_inprocess.md](./om_init_inprocess.md) |
+| 20 | `t_om_inpstockentry_lk` | 关联子实体-子表 | 6 | [om_init_inprocess.md](./om_init_inprocess.md) |
+| 21 | `t_om_mftorder` | 委外工单-主表 | 19 | [om_mftorder.md](./om_mftorder.md) |
+| 22 | `t_om_mftorder_tc` | 委外工单-关联追踪表 | 7 | [om_mftorder.md](./om_mftorder.md) |
+| 23 | `t_om_mftorder_tc` | 委外工单变更单-关联追踪表 | 7 | [om_xmftorder.md](./om_xmftorder.md) |
+| 24 | `t_om_mftorder_wb` | 委外工单-反写记录表 | 10 | [om_mftorder.md](./om_mftorder.md) |
+| 25 | `t_om_mftorder_wb` | 委外工单变更单-反写记录表 | 10 | [om_xmftorder.md](./om_xmftorder.md) |
+| 26 | `t_om_mftorderentry` | 产品明细-子表 | 80 | [om_mftorder.md](./om_mftorder.md) |
+| 27 | `t_om_mftorderentry` | 委外工单分录F7-主表 | 80 | [om_mftorder_f7.md](./om_mftorder_f7.md) |
+| 28 | `t_om_mftorderentry_e` | 产品明细-分表 | 71 | [om_mftorder.md](./om_mftorder.md) |
+| 29 | `t_om_mftorderentry_e` | 委外工单分录F7-分表 | 71 | [om_mftorder_f7.md](./om_mftorder_f7.md) |
+| 30 | `t_om_mftorderentry_lk` | 关联子实体-子表 | 8 | [om_mftorder.md](./om_mftorder.md) |
+| 31 | `t_om_mftorderentry_lk` | 关联子实体-子表 | 8 | [om_xmftorder.md](./om_xmftorder.md) |
+| 32 | `t_om_mftorderentry_s` | 委外用料清单-主表 | 41 | [om_mftstock.md](./om_mftstock.md) |
+| 33 | `t_om_mftorderentry_s` | 委外组件清单f7-主表 | 41 | [om_mftstock_headf7.md](./om_mftstock_headf7.md) |
+| 34 | `t_om_mftorderentry_s_l` | 委外用料清单-多语言表 | 3 | [om_mftstock.md](./om_mftstock.md) |
+| 35 | `t_om_mftstock_lk` | 关联子实体-子表 | 6 | [om_mftstock.md](./om_mftstock.md) |
+| 36 | `t_om_mftstock_lk` | 关联子实体-子表 | 6 | [om_xmftstock.md](./om_xmftstock.md) |
+| 37 | `t_om_mftstock_tc` | 委外用料清单-关联追踪表 | 7 | [om_mftstock.md](./om_mftstock.md) |
+| 38 | `t_om_mftstock_tc` | 委外用料清单变更单-关联追踪表 | 7 | [om_xmftstock.md](./om_xmftstock.md) |
+| 39 | `t_om_mftstock_wb` | 委外用料清单-反写记录表 | 10 | [om_mftstock.md](./om_mftstock.md) |
+| 40 | `t_om_mftstock_wb` | 委外用料清单变更单-反写记录表 | 10 | [om_xmftstock.md](./om_xmftstock.md) |
+| 41 | `t_om_mftstockentry` | 物料明细-子表 | 81 | [om_mftstock.md](./om_mftstock.md) |
+| 42 | `t_om_mftstockentry` | 委外用料清单分录f7-主表 | 81 | [om_mftstockf7.md](./om_mftstockf7.md) |
+| 43 | `t_om_mftstockentry_a` | 物料明细-分表 | 33 | [om_mftstock.md](./om_mftstock.md) |
+| 44 | `t_om_mftstockentry_a` | 委外用料清单分录f7-分表 | 33 | [om_mftstockf7.md](./om_mftstockf7.md) |
+| 45 | `t_om_mftstockentry_b` | 物料明细-分表 | 26 | [om_mftstock.md](./om_mftstock.md) |
+| 46 | `t_om_mftstockentry_b` | 委外用料清单分录f7-分表 | 26 | [om_mftstockf7.md](./om_mftstockf7.md) |
+| 47 | `t_om_mftstockentry_l` | 物料明细-多语言表 | 5 | [om_mftstock.md](./om_mftstock.md) |
+| 48 | `t_om_mftstockentry_lk` | 关联子实体-子表 | 6 | [om_mftstock.md](./om_mftstock.md) |
+| 49 | `t_om_mftstockentry_lk` | 关联子实体-子表 | 6 | [om_xmftstock.md](./om_xmftstock.md) |
+| 50 | `t_om_mftstockplan` | 委外用料计划处理-主表 | 34 | [om_mftstockplan.md](./om_mftstockplan.md) |
+| 51 | `t_om_mftstockplan_l` | 委外用料计划处理-多语言表 | 3 | [om_mftstockplan.md](./om_mftstockplan.md) |
+| 52 | `t_om_osreceipt` | 委外收货单-主表 | 28 | [om_outsourcereceipt.md](./om_outsourcereceipt.md) |
+| 53 | `t_om_osreceipt_l` | 委外收货单-多语言表 | 4 | [om_outsourcereceipt.md](./om_outsourcereceipt.md) |
+| 54 | `t_om_osreceipt_tc` | 委外收货单-关联追踪表 | 7 | [om_outsourcereceipt.md](./om_outsourcereceipt.md) |
+| 55 | `t_om_osreceipt_wb` | 委外收货单-反写记录表 | 10 | [om_outsourcereceipt.md](./om_outsourcereceipt.md) |
+| 56 | `t_om_osreceiptsummary` | 物料明细-子表 | 66 | [om_outsourcereceipt.md](./om_outsourcereceipt.md) |
+| 57 | `t_om_osreceiptsummary_a` | 物料明细-分表 | 15 | [om_outsourcereceipt.md](./om_outsourcereceipt.md) |
+| 58 | `t_om_osreceiptsummary_l` | 物料明细-多语言表 | 3 | [om_outsourcereceipt.md](./om_outsourcereceipt.md) |
+| 59 | `t_om_osreceiptsummary_lk` | 关联子实体-子表 | 6 | [om_outsourcereceipt.md](./om_outsourcereceipt.md) |
+| 60 | `t_om_osreceiptsummary_x` | 物料明细-分表 | 65 | [om_outsourcereceipt.md](./om_outsourcereceipt.md) |
+| 61 | `t_om_osreportreturntask` | 项目任务-多选基础资料表 | 3 | [om_outsourcereturn.md](./om_outsourcereturn.md) |
+| 62 | `t_om_osreportreturnwbs` | WBS-多选基础资料表 | 3 | [om_outsourcereturn.md](./om_outsourcereturn.md) |
+| 63 | `t_om_osreporttask` | 项目任务-多选基础资料表 | 3 | [om_outsourcereceipt.md](./om_outsourcereceipt.md) |
+| 64 | `t_om_osreportwbs` | WBS-多选基础资料表 | 3 | [om_outsourcereceipt.md](./om_outsourcereceipt.md) |
+| 65 | `t_om_osreturn` | 委外退货单-主表 | 28 | [om_outsourcereturn.md](./om_outsourcereturn.md) |
+| 66 | `t_om_osreturn_l` | 委外退货单-多语言表 | 4 | [om_outsourcereturn.md](./om_outsourcereturn.md) |
+| 67 | `t_om_osreturn_tc` | 委外退货单-关联追踪表 | 7 | [om_outsourcereturn.md](./om_outsourcereturn.md) |
+| 68 | `t_om_osreturn_wb` | 委外退货单-反写记录表 | 10 | [om_outsourcereturn.md](./om_outsourcereturn.md) |
+| 69 | `t_om_osreturnsummary` | 物料明细-子表 | 62 | [om_outsourcereturn.md](./om_outsourcereturn.md) |
+| 70 | `t_om_osreturnsummary_a` | 物料明细-分表 | 13 | [om_outsourcereturn.md](./om_outsourcereturn.md) |
+| 71 | `t_om_osreturnsummary_l` | 物料明细-多语言表 | 3 | [om_outsourcereturn.md](./om_outsourcereturn.md) |
+| 72 | `t_om_osreturnsummary_lk` | 关联子实体-子表 | 6 | [om_outsourcereturn.md](./om_outsourcereturn.md) |
+| 73 | `t_om_osreturnsummary_x` | 物料明细-分表 | 55 | [om_outsourcereturn.md](./om_outsourcereturn.md) |
+| 74 | `t_om_splitentry` | 单据体-子表 | 15 | [om_mftorder_splitlog.md](./om_mftorder_splitlog.md) |
+| 75 | `t_om_splitlog` | 委外工单拆分日志-主表 | 30 | [om_mftorder_splitlog.md](./om_mftorder_splitlog.md) |
+| 76 | `t_om_stockchglogdetail` | 单据体-子表 | 39 | [om_xmfstockchangelog.md](./om_xmfstockchangelog.md) |
+| 77 | `t_om_stockplanentry` | 组件明细-子表 | 46 | [om_mftstockplan.md](./om_mftstockplan.md) |
+| 78 | `t_om_stockplanentry_l` | 组件明细-多语言表 | 5 | [om_mftstockplan.md](./om_mftstockplan.md) |
+| 79 | `t_om_warehouseset` | 委外仓库设置-主表 | 18 | [om_warehouseset.md](./om_warehouseset.md) |
+| 80 | `t_om_warehouseset_l` | 委外仓库设置-多语言表 | 4 | [om_warehouseset.md](./om_warehouseset.md) |
+| 81 | `t_om_xmfstockchangelog` | 委外用料明细变更日志-主表 | 21 | [om_xmfstockchangelog.md](./om_xmfstockchangelog.md) |
+| 82 | `t_om_xmftorder` | 委外工单变更单-主表 | 23 | [om_xmftorder.md](./om_xmftorder.md) |
+| 83 | `t_om_xmftorderentry` | 产品明细-子表 | 81 | [om_xmftorder.md](./om_xmftorder.md) |
+| 84 | `t_om_xmftorderentry_e` | 产品明细-分表 | 70 | [om_xmftorder.md](./om_xmftorder.md) |
+| 85 | `t_om_xmftorderentry_s` | 委外用料清单变更单-主表 | 43 | [om_xmftstock.md](./om_xmftstock.md) |
+| 86 | `t_om_xmftorderentry_s_l` | 委外用料清单变更单-多语言表 | 3 | [om_xmftstock.md](./om_xmftstock.md) |
+| 87 | `t_om_xmftordermlog` | 委外工单变更日志-主表 | 28 | [om_xmftorderlog.md](./om_xmftorderlog.md) |
+| 88 | `t_om_xmftordermlogentry` | 单据体-子表 | 25 | [om_xmftorderlog.md](./om_xmftorderlog.md) |
+| 89 | `t_om_xmftstockentry` | 物料明细-子表 | 65 | [om_xmftstock.md](./om_xmftstock.md) |
+| 90 | `t_om_xmftstockentry_a` | 物料明细-分表 | 45 | [om_xmftstock.md](./om_xmftstock.md) |
+| 91 | `t_om_xmftstockentry_b` | 物料明细-分表 | 44 | [om_xmftstock.md](./om_xmftstock.md) |
+| 92 | `t_om_xmftstockentry_l` | 物料明细-多语言表 | 5 | [om_xmftstock.md](./om_xmftstock.md) |
+| 93 | `t_om_xxcomponententry` | 组件明细-子表 | 54 | [om_xxcomponentlist.md](./om_xxcomponentlist.md) |
+| 94 | `t_om_xxcomponententry_a` | 组件明细-分表 | 26 | [om_xxcomponentlist.md](./om_xxcomponentlist.md) |
+| 95 | `t_om_xxcomponententry_b` | 组件明细-分表 | 17 | [om_xxcomponentlist.md](./om_xxcomponentlist.md) |
+| 96 | `t_om_xxcomponententry_l` | 组件明细-多语言表 | 5 | [om_xxcomponentlist.md](./om_xxcomponentlist.md) |
+| 97 | `t_om_xxcomponentlist` | 简单委外组件清单变更单（废弃）-主表 | 39 | [om_xxcomponentlist.md](./om_xxcomponentlist.md) |
+| 98 | `t_om_xxcomponentlist_l` | 简单委外组件清单变更单（废弃）-多语言表 | 3 | [om_xxcomponentlist.md](./om_xxcomponentlist.md) |
+| 99 | `t_om_xxcomponentlist_tc` | 简单委外组件清单变更单（废弃）-关联追踪表 | 7 | [om_xxcomponentlist.md](./om_xxcomponentlist.md) |
+| 100 | `t_om_xxcomponentlist_wb` | 简单委外组件清单变更单（废弃）-反写记录表 | 10 | [om_xxcomponentlist.md](./om_xxcomponentlist.md) |
+| 101 | `t_pm_om_purbillentry` | 委外订单分录f7-主表 | 97 | [om_outsourcef7.md](./om_outsourcef7.md) |
+| 102 | `t_pm_om_purbillentry_r` | 委外订单分录f7-分表 | 59 | [om_outsourcef7.md](./om_outsourcef7.md) |
+| 103 | `t_pm_purapplybill` | 委外采购申请单f7-主表 | 37 | [om_outpurapplybill_f7.md](./om_outpurapplybill_f7.md) |

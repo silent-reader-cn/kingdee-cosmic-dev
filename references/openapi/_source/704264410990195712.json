@@ -1,0 +1,811 @@
+{
+ "badNum": 0,
+ "identityTagIds": null,
+ "knowledgeId": "704264410990195712",
+ "createdAt": 1745717720000,
+ "collections": 9,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "704264410990195712",
+ "contentType": 1,
+ "updatedAt": 1766125376000,
+ "knowledgeUpdater": {
+  "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+  "department": null,
+  "id": "132488613174518784",
+  "name": "某个路易",
+  "nameSpell": "name"
+ },
+ "assessStatus": 0,
+ "knowledgeStatus": 2,
+ "assessHandleStatus": null,
+ "knowledgeCreatedAt": 1745717720000,
+ "version": 44,
+ "labels": [],
+ "editedAt": 1745722427000,
+ "identityTags": null,
+ "useful": 2,
+ "errors": [],
+ "isCollected": false,
+ "totalFeedBacks": 0,
+ "attachments": [],
+ "sources": [],
+ "editTitle": "OpenAPI扩展插件：KingScript使用说明",
+ "title": "OpenAPI扩展插件：KingScript使用说明",
+ "content": "<h2 label=\"一级标题\" class=\"first-title html-anchor-list0-1745717691751 html-anchor-list0-1745717691752\" id=\"html-anchor-list0-1745717691751\" style=\"background-color: rgb(255, 255, 255);\">变更记录<br/></h2><p style=\"background-color: rgb(255, 255, 255);\"><br/></p><table width=\"100%\" style=\"\"><tbody style=\"\"><tr class=\"firstRow ueditor-new-first-row\" style=\"\"><td valign=\"middle\" width=\"198.64676616915423\" align=\"left\" style=\"\"><p style=\"text-align: inherit;\"><span style=\"font-weight: 700;\">产品版本</span></p></td><td valign=\"middle\" width=\"584.8358208955224\" align=\"left\" style=\"\"><span style=\"font-weight: 700;\">更新内容</span></td><td valign=\"middle\" width=\"204.81592039800995\" align=\"left\" style=\"\"><span style=\"font-weight: 700;\">更新日期</span></td></tr><tr style=\"\"><td width=\"141.33333333333334\" valign=\"top\" style=\"\">V7.0.9</td><td width=\"454\" valign=\"top\" style=\"\">初始版本</td><td width=\"146.33333333333334\" valign=\"top\" style=\"\">2025年3月</td></tr></tbody></table><p style=\"background-color: rgb(255, 255, 255);\"><br/></p><p style=\"background-color: rgb(255, 255, 255);\"><span style=\"font-size: 20px; text-align: justify;\"></span></p><hr/><p style=\"background-color: rgb(255, 255, 255);\"><br/><span style=\"font-size: 20px; text-align: justify;\"></span></p><h2 label=\"一级标题\" class=\"first-title html-anchor-list1-1712124079062\" id=\"html-anchor-list1-1712124079062\" style=\"background-color: rgb(255, 255, 255);\"></h2><p label=\"一级标题\" id=\"html-anchor-list1-1745717691751\" class=\" html-anchor-list1-1745717691751 html-anchor-list1-1745717691752\" style=\"font-size: 20px; background-color: rgb(255, 255, 255); text-align: justify; font-weight: bold; line-height: 42px;\">1 简介</p><h3 label=\"二级标题\" class=\"second-title\" style=\"text-align: justify;\">1.1 使用须知</h3><div style=\"\"><p style=\"\">自苍穹7.0.9版本起，OpenAPI扩展插件已全面支持KingScript脚本引擎。若需了解原插件的编写及使用方法，请参阅以下指南：</p><ul style=\"color: rgba(0, 0, 0, 0.9); background-color: rgb(255, 255, 255);\" class=\" list-paddingleft-2\"><li style=\"\"><p style=\"\"><a target=\"_blank\" href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=239331354741842688&id=512935531722959360&type=Knowledge&productLineId=29&lang=zh-CN\" class=\"\" style=\"font-weight: inherit; color: rgb(23, 131, 255);\">API参数预处理</a></p></li><li style=\"\"><p style=\"\"><a target=\"_blank\" href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=239331354741842688&id=512929770527401216&type=Knowledge&productLineId=29&lang=zh-CN\" class=\"\" style=\"font-weight: inherit; color: rgb(23, 131, 255);\">序列化出入参</a></p></li></ul><p style=\"\">在开始使用KingScript之前，请确保阅读了以下资源：</p><ul style=\"color: rgba(0, 0, 0, 0.9); background-color: rgb(255, 255, 255);\" class=\" list-paddingleft-2\"><li style=\"\"><p style=\"\"><a target=\"_blank\" href=\"https://vip.kingdee.com/knowledge/474603833067386624?productLineId=29&isKnowledge=2&lang=zh-CN&extInfo=%7B%7D#0\" class=\"\" style=\"font-weight: inherit; color: rgb(23, 131, 255);\">KingScript 脚本使用手册</a></p></li><li style=\"\"><p style=\"\"><a target=\"_blank\" href=\"https://vip.kingdee.com/knowledge/611949903778113792?productLineId=29&isKnowledge=2&lang=zh-CN\" class=\"\" style=\"font-weight: inherit; color: rgb(23, 131, 255);\">KingScript开发助手 VScode插件用户手册</a></p><p style=\"\"><a target=\"_blank\" href=\"https://vip.kingdee.com/knowledge/611949903778113792?productLineId=29&isKnowledge=2&lang=zh-CN\" class=\"\" style=\"font-weight: inherit; color: rgb(23, 131, 255);\"></a></p></li></ul><p style=\"\"><a target=\"_blank\" href=\"https://vip.kingdee.com/knowledge/611949903778113792?productLineId=29&isKnowledge=2&lang=zh-CN\" class=\"\" style=\"font-weight: inherit; color: rgb(23, 131, 255);\"></a></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\">1.2 功能介绍</h3><p style=\"background-color: rgb(255, 255, 255);\"><span style=\"color: rgba(0, 0, 0, 0.9); background-color: rgb(255, 255, 255);\">OpenAPI现在允许用户在操作API、自定义API、脚本API中注册KingScript插件。通过编写这些插件，用户可以自定义API的入参和出参的序列化与反序列化过程，以适应特定的业务需求。</span></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\">1.3 系统路径</h3><p style=\"background-color: rgb(255, 255, 255); text-align: justify;\">【开放服务云】→【OpenAPI】→【API管理】 →【API开发】</p><p style=\"\"><br/></p><p style=\"\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"text-align: justify;\"><span style=\"text-align: justify; background-color: rgb(255, 255, 255);\">2 主要操作</span></h2><h3 label=\"二级标题\" class=\"second-title\" id=\"html-anchor-list5-1745717691751\" style=\"\">2.1 配置扩展插件</h3><p style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\"><span style=\"color: rgba(0, 0, 0, 0.9); background-color: rgb(255, 255, 255);\">在OpenAPI中完成API的开发和注册后，用户可以点击“扩展插件”来进行配置。</span></p><p style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\"><br/></p><p style=\"\"><span style=\"font-size: 20px; font-weight: 700; text-align: justify; background-color: rgb(255, 255, 255);\"><img src=\"/download/01095c5c4307a04b464a920c741fbe656d93.png\"/></span><br/></p><p style=\"\"><br/></p><h3 label=\"二级标题\" class=\"second-title\" id=\"html-anchor-list5-1745717691751\" style=\"\">2.2 选择注册脚本</h3><p style=\"\"><span style=\"color: rgba(0, 0, 0, 0.9); background-color: rgb(255, 255, 255);\">在脚本编辑器界面，点击“注册脚本”按钮创建新的脚本。</span></p><p style=\"\"><br/></p><p style=\"\"><img src=\"/download/01094a206b6f7cab42df9f2effb156ce3ecb.png\"/></p><p label=\"\" class=\"\" style=\"\"><span style=\"color: rgb(106, 115, 125); font-weight: 600; background-color: rgb(255, 255, 255);\"></span><br/></p><h3 label=\"二级标题\" class=\"second-title\" id=\"html-anchor-list5-1745717691751\" style=\"\">2.3 维护脚本信息</h3><p style=\"\"><span style=\"color: rgba(0, 0, 0, 0.9); background-color: rgb(255, 255, 255);\">在弹出的窗口中，填写脚本的编码、名称及描述等基本信息。</span></p><p style=\"\"><br/></p><p style=\"\"><img src=\"/download/010986a67c2a65144053b61ab1faa5492d83.png\"/></p><p style=\"\"><span style=\"color: rgb(106, 115, 125); font-weight: 600; background-color: rgb(255, 255, 255);\"></span><br/></p><h3 label=\"二级标题\" class=\"second-title\" id=\"html-anchor-list5-1745717691751\" style=\"\">2.4 编写脚本</h3><p style=\"\"><span style=\"color: rgba(0, 0, 0, 0.9); background-color: rgb(255, 255, 255);\">利用开发平台提供的编辑器编写插件脚本，以实现对API请求的入参和出参的干预。</span></p><p style=\"\"><br/></p><p style=\"\"><img src=\"/download/0109b036f95ea86e4b4fb84a872f507500ea.png\"/><br/></p><p style=\"\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"text-align: justify;\"><span style=\"text-align: justify; background-color: rgb(255, 255, 255);\">3 插件脚本示例</span></h2><p style=\"\"><br/></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\">3.1 查询操作API</h3><p label=\"正文\" style=\"\">备注：状态变更类如提交、审核等操作API也可参考。</p><pre style=\"\" class=\"ueditor-code-area brush:java;toolbar:false\">import&nbsp;{&nbsp;ApiQueryPlugin&nbsp;}&nbsp;from&nbsp;&quot;@cosmic/bos-core/kd/bos/openapi/api/plugin&quot;;\nimport&nbsp;{&nbsp;ApiQueryOrderByModel&nbsp;}&nbsp;from&nbsp;&quot;@cosmic/bos-core/kd/bos/openapi/api/model&quot;;\nimport&nbsp;{&nbsp;QCP,&nbsp;QFilter&nbsp;}&nbsp;from&nbsp;&quot;@cosmic/bos-core/kd/bos/orm/query&quot;;\nimport&nbsp;{&nbsp;HashMap&nbsp;}&nbsp;from&nbsp;&quot;@cosmic/bos-script/java/util&quot;;\n\nclass&nbsp;MyQuery&nbsp;implements&nbsp;ApiQueryPlugin&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;\n\n//自定义查询过滤条件\n&nbsp;&nbsp;&nbsp;&nbsp;getFilter(qfilter:&nbsp;QFilter,&nbsp;map:&nbsp;HashMap):&nbsp;QFilter&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;new&nbsp;QFilter(&quot;billstatus&quot;,&nbsp;QCP.equals,&nbsp;&quot;A&quot;).and(qfilter);\n&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;\n&nbsp;&nbsp;&nbsp;&nbsp;//自定义排序\n&nbsp;&nbsp;&nbsp;&nbsp;getOrderBy(model:&nbsp;ApiQueryOrderByModel):&nbsp;string&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;odb&nbsp;=&nbsp;model.getOrderBy();&nbsp;//原排序规则\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;reqData&nbsp;=&nbsp;model.getReqData();&nbsp;//请求入参\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;header&nbsp;=&nbsp;model.getReqHeaders();&nbsp;//请求头\n\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;&quot;id&nbsp;desc&quot;;\n&nbsp;&nbsp;&nbsp;&nbsp;}\n\n}\nlet&nbsp;plugin&nbsp;=&nbsp;new&nbsp;MyQuery();\nexport&nbsp;{&nbsp;plugin&nbsp;};</pre><h6 style=\"color: var(--color-text-tertiary);\"><br/></h6><h3 label=\"二级标题\" class=\"second-title\" style=\"\">3.2 保存操作API</h3><pre style=\"\" class=\"ueditor-code-area brush:java;toolbar:false\">import&nbsp;{&nbsp;ApiSavePlugin&nbsp;}&nbsp;from&nbsp;&quot;@cosmic/bos-core/kd/bos/openapi/api/plugin&quot;;\nimport&nbsp;{&nbsp;List&nbsp;}&nbsp;from&nbsp;&quot;@cosmic/bos-script/java/util&quot;;\n\nclass&nbsp;MySave&nbsp;implements&nbsp;ApiSavePlugin&nbsp;{\n\n&nbsp;&nbsp;&nbsp;&nbsp;preHandleRequestData(list:&nbsp;List):&nbsp;List&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//业务逻辑处理\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;map&nbsp;=&nbsp;list.get(0);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;usage&nbsp;=&nbsp;map.get(&quot;usage&quot;);\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;map.put(&quot;usage&quot;,&nbsp;usage+&quot;-经过MySave插件干预&quot;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;list;\n&nbsp;&nbsp;&nbsp;&nbsp;}\n\n}let&nbsp;plugin&nbsp;=&nbsp;new&nbsp;MySave();\nexport&nbsp;{&nbsp;plugin&nbsp;};</pre><h6 style=\"color: var(--color-text-tertiary);\"><br/></h6><h3 label=\"二级标题\" class=\"second-title\" style=\"\">3.3 反序列化入参插件</h3><pre style=\"\" class=\"ueditor-code-area brush:java;toolbar:false\">import&nbsp;{&nbsp;ApiDeserializerPlugin&nbsp;}&nbsp;from&nbsp;&quot;@cosmic/bos-core/kd/bos/openapi/api/plugin&quot;;\nimport&nbsp;{&nbsp;JSONUtils&nbsp;}&nbsp;from&nbsp;&quot;@cosmic/bos-core/kd/bos/util&quot;;\nimport&nbsp;{&nbsp;HashMap&nbsp;}&nbsp;from&nbsp;&quot;@cosmic/bos-script/java/util&quot;;\n//反序列化\nclass&nbsp;MyDeSerializerPlugin&nbsp;implements&nbsp;ApiDeserializerPlugin&nbsp;{\n\n&nbsp;&nbsp;&nbsp;&nbsp;deserializer(request:&nbsp;string,&nbsp;contentType:&nbsp;string):&nbsp;HashMap&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;reqMap&nbsp;=&nbsp;JSONUtils.cast(request,HashMap);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//以下为业务逻辑处理\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;data&nbsp;=&nbsp;reqMap.get(&quot;data&quot;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;param&nbsp;=&nbsp;data.get(0);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;usage&nbsp;=&nbsp;param.get(&quot;usage&quot;);\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;param.put(&quot;usage&quot;,usage+&quot;-经过反序列化处理&quot;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;reqMap;\n&nbsp;&nbsp;&nbsp;&nbsp;}\n\n}let&nbsp;plugin&nbsp;=&nbsp;new&nbsp;MyDeSerializerPlugin();\nexport&nbsp;{&nbsp;plugin&nbsp;};</pre><h6 style=\"color: var(--color-text-tertiary);\"><br/></h6><h3 label=\"二级标题\" class=\"second-title\" style=\"\">3.4 序列化出参插件</h3><pre style=\"\" class=\"ueditor-code-area brush:java;toolbar:false\">import&nbsp;{&nbsp;ApiSerializerPlugin&nbsp;}&nbsp;from&nbsp;&quot;@cosmic/bos-core/kd/bos/openapi/api/plugin&quot;;\nimport&nbsp;{&nbsp;SerializerResult&nbsp;}&nbsp;from&nbsp;&quot;@cosmic/bos-core/kd/bos/openapi/api/plugin&quot;;\nimport&nbsp;{&nbsp;ApiSerializerVersion&nbsp;}&nbsp;from&nbsp;&quot;@cosmic/bos-core/kd/bos/openapi/api/model&quot;;\nimport&nbsp;{&nbsp;ApiSerializerModel&nbsp;}&nbsp;from&nbsp;&quot;@cosmic/bos-core/kd/bos/openapi/api/model&quot;;\nimport&nbsp;{&nbsp;OpenApiResult&nbsp;}&nbsp;from&nbsp;&quot;@cosmic/bos-core/kd/bos/openapi/common/result&quot;;\nimport&nbsp;{&nbsp;JSONUtils&nbsp;}&nbsp;from&nbsp;&quot;@cosmic/bos-core/kd/bos/util&quot;;\n//序列化出参插件\nclass&nbsp;MySerializerPlugin&nbsp;implements&nbsp;ApiSerializerPlugin&nbsp;{\n\n&nbsp;&nbsp;&nbsp;&nbsp;\n&nbsp;&nbsp;&nbsp;&nbsp;serialize(response:&nbsp;object,&nbsp;accept:&nbsp;string,&nbsp;contentType:&nbsp;string):&nbsp;SerializerResult&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//取原出参信息\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;resp=&nbsp;&lt;OpenApiResult&gt;&nbsp;response;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;message=resp.getMessage();\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;status=resp.isStatus();&nbsp;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;data=resp.getData();&nbsp;&nbsp;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;errorcode=resp.getErrorCode();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//...业务逻辑处理\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;new&nbsp;SerializerResult(&quot;application/json&quot;,&nbsp;JSONUtils.toString(resp));\n&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;//serializeByModel&nbsp;方法，可以取到入参相关信息\n&nbsp;&nbsp;&nbsp;&nbsp;serializeByModel(model:ApiSerializerModel):&nbsp;SerializerResult&nbsp;{\t\t//取入参信息\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;contentType&nbsp;=&nbsp;model.getContentType();//报文格式&nbsp;json、xml、text\n\tlet&nbsp;accept&nbsp;=&nbsp;model.getAccept();&nbsp;//响应报文格式\n\tlet&nbsp;reqData&nbsp;=&nbsp;model.getReqData();&nbsp;//请求参数\n\tlet&nbsp;response&nbsp;=&nbsp;model.getResponse();//返回参数\n\t//取原出参信息\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;resp=&nbsp;&lt;OpenApiResult&gt;&nbsp;response;&nbsp;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;message=resp.getMessage();&nbsp;//出参message\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;status=resp.isStatus();&nbsp;//出参status\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;data=resp.getData();&nbsp;//出参data域\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;errorcode=resp.getErrorCode();&nbsp;//出参errorcode\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//...业务逻辑处理\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;new&nbsp;SerializerResult(&quot;application/json&quot;,&nbsp;JSONUtils.toString(resp));\n&nbsp;&nbsp;&nbsp;&nbsp;}\n\n&nbsp;&nbsp;&nbsp;&nbsp;getVersion():ApiSerializerVersion{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n&nbsp;&nbsp;&nbsp;&nbsp;//return&nbsp;ApiSerializerVersion.MODEL;&nbsp;//使用serializeByModel(model:ApiSerializerModel)方法返回\n&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;ApiSerializerVersion.DEFAULT;&nbsp;//使用serialize(response:&nbsp;object,&nbsp;accept:&nbsp;string,&nbsp;contentType:&nbsp;string)方法返回\n&nbsp;&nbsp;&nbsp;&nbsp;}\n\n}\nlet&nbsp;plugin&nbsp;=&nbsp;new&nbsp;MySerializerPlugin();export&nbsp;{&nbsp;plugin&nbsp;};</pre><p style=\"\"><span style=\"font-size: 20px; font-weight: 700; text-align: justify; background-color: rgb(255, 255, 255);\"><br/></span></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">4 更多资讯</h2><p style=\"background-color: rgb(255, 255, 255); text-align: justify;\"><a href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=386536775126291968&id=448792125560557568&productLineId=29\" title=\"\" target=\"_blank\" class=\"\" style=\"color: rgb(0, 112, 192);\"></a>关于OpenAPI的更多资讯，请随时关注<a href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=226337371640594944&id=226708319996323072&productLineId=29\" target=\"_blank\" style=\"\">新特性公告</a>。</p><p style=\"\"><br/></p></div>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 93,
+   "isOpen": 1,
+   "name": "金蝶AI套件",
+   "productLineId": 40,
+   "series": "S0361",
+   "sort": 1
+  },
+  {
+   "alias": null,
+   "code": null,
+   "id": 87,
+   "isOpen": 1,
+   "name": "金蝶AI苍穹",
+   "productLineId": 29,
+   "series": "developer01",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "704264410990195712",
+         "entityType": "Knowledge",
+         "id": "704274858800044288",
+         "isCategory": false,
+         "name": "OpenAPI扩展插件：KingScript使用说明",
+         "parentId": "239331354741842688",
+         "sort": "9",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": null,
+       "id": "239331354741842688",
+       "isCategory": true,
+       "name": "开发指南",
+       "parentId": "226337544983020032",
+       "sort": "1",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": null,
+     "entityId": null,
+     "entityType": null,
+     "id": "226337544983020032",
+     "isCategory": true,
+     "name": "用户手册",
+     "parentId": "-1",
+     "sort": "6",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  },
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        null
+       ],
+       "code": null,
+       "description": "",
+       "entityId": "704264410990195712",
+       "entityType": "Knowledge",
+       "id": "704284175959841024",
+       "isCategory": false,
+       "name": "OpenAPI扩展插件：KingScript使用说明",
+       "parentId": "272111020880021504",
+       "sort": "16",
+       "specialId": "272110040385964032",
+       "status": 1
+      }
+     ],
+     "code": "",
+     "description": "",
+     "entityId": null,
+     "entityType": null,
+     "id": "272111020880021504",
+     "isCategory": true,
+     "name": "开发指南",
+     "parentId": "-1",
+     "sort": "6",
+     "specialId": "272110040385964032",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI套件",
+     "id": 93,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "OSC",
+      "name": "开放服务云",
+      "id": "563356589114194944",
+      "sort": 33,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "OpenAPI",
+       "id": "272103818790291456",
+       "sort": 1,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 40
+    }
+   ],
+   "collections": 120,
+   "createdAt": "2022-01-20T21:08:09.000+08:00",
+   "creator": {
+    "avatar": "/download?fileName=010162cfa9d5437711e8b441060400ef5315.png",
+    "department": null,
+    "id": "2147461337",
+    "name": "CorY",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了OpenAPI（开放平台）的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手开放平台。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "272110040385964032",
+   "identityTags": null,
+   "itemNum": 102,
+   "logo": "/download/0100c6656b9432084112bd16330c67cbb275.jpg",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "40",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 93,
+     "isOpen": 1,
+     "name": "金蝶AI套件",
+     "productLineId": 40,
+     "series": "S0361",
+     "sort": 1
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 0,
+   "totalAppraisalUsers": 0,
+   "updatedAt": "2026-04-17T12:41:32.000+08:00",
+   "updaterId": "429676515387511808",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 344749
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download/01010204d4b71b654a208006fa1004eac36a.png",
+  "department": null,
+  "id": "740211268992385024",
+  "name": "毛毛去哪儿",
+  "nameSpell": "name"
+ },
+ "totalAppraisalScore": 10,
+ "iflytekId": null,
+ "views": 5046,
+ "productLineId": 29,
+ "comments": 1,
+ "similarityCount": 0,
+ "totalAppraisalUsers": 2,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1766125376000,
+ "appraisalScore": 0,
+ "unuseful": 0,
+ "knowledgeCheckStatus": 2,
+ "otherProductLineIds": [
+  40
+ ],
+ "auditAt": 1745722446000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "XKOpenDev",
+        "id": "272104069861328896",
+        "name": "开发指南",
+        "productLineId": null,
+        "sort": 4,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "272103818790291456",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "563356589114194944",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 37,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "93",
+     "name": "金蝶AI套件",
+     "productLineId": 40,
+     "sort": 1,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "AdvancedSkills",
+     "createdAt": 1726129691000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "高级技巧",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/01005cea40211bf14113a6004322e86a6780.png",
+     "id": "622106263106487296",
+     "name": "高级技巧",
+     "productLine": {
+      "active": true,
+      "appLogo": "金蝶云星空|旗舰版",
+      "categoryCode": "X04",
+      "courseLogo": "",
+      "domain": "",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": false,
+      "id": 40,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/01006d278204e9994fe9b4fc05bcdcf7ba45.png",
+      "name": "金蝶AI套件",
+      "rank": 3,
+      "seriesCode": "S0361"
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download?fileName=01011dc4dc4a745a4974a64ff09ab41e9eab.png",
+      "department": null,
+      "id": "1012",
+      "name": "angel",
+      "nameSpell": "angel"
+     },
+     "updatedAt": 1726129691000
+    },
+    {
+     "code": "KFZN",
+     "createdAt": 1726129398000,
+     "creator": {
+      "avatar": "/download/010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "306913800727243776",
+      "name": "Paim",
+      "nameSpell": "name"
+     },
+     "description": "开发指南",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100d7e322898da841ed85fe736e568ff202.png",
+     "id": "622105031390397440",
+     "name": "开发指南",
+     "productLine": {
+      "active": true,
+      "appLogo": "金蝶云星空|旗舰版",
+      "categoryCode": "X04",
+      "courseLogo": "",
+      "domain": "",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": false,
+      "id": 40,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/01006d278204e9994fe9b4fc05bcdcf7ba45.png",
+      "name": "金蝶AI套件",
+      "rank": 3,
+      "seriesCode": "S0361"
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download?fileName=01011dc4dc4a745a4974a64ff09ab41e9eab.png",
+      "department": null,
+      "id": "1012",
+      "name": "angel",
+      "nameSpell": "angel"
+     },
+     "updatedAt": 1726129398000
+    }
+   ],
+   "productLineId": 40,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "704264410990195712",
+         "entityType": "Knowledge",
+         "id": "704284175959841024",
+         "isCategory": false,
+         "name": "OpenAPI扩展插件：KingScript使用说明",
+         "parentId": "272111020880021504",
+         "sort": "16",
+         "specialId": "272110040385964032",
+         "status": 1
+        }
+       ],
+       "code": "",
+       "description": "",
+       "entityId": null,
+       "entityType": null,
+       "id": "272111020880021504",
+       "isCategory": true,
+       "name": "开发指南",
+       "parentId": "-1",
+       "sort": "6",
+       "specialId": "272110040385964032",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI套件",
+       "id": 93,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "OSC",
+        "name": "开放服务云",
+        "id": "563356589114194944",
+        "sort": 33,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "OpenAPI",
+         "id": "272103818790291456",
+         "sort": 1,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 40
+      }
+     ],
+     "collections": 120,
+     "createdAt": "2022-01-20T21:08:09.000+08:00",
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d5437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "2147461337",
+      "name": "CorY",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了OpenAPI（开放平台）的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手开放平台。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "272110040385964032",
+     "identityTags": null,
+     "itemNum": 102,
+     "logo": "/download/0100c6656b9432084112bd16330c67cbb275.jpg",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "40",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 93,
+       "isOpen": 1,
+       "name": "金蝶AI套件",
+       "productLineId": 40,
+       "series": "S0361",
+       "sort": 1
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 0,
+     "totalAppraisalUsers": 0,
+     "updatedAt": "2026-04-17T12:41:32.000+08:00",
+     "updaterId": "429676515387511808",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 344749
+    }
+   ]
+  },
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapi_apilist_layout",
+        "id": "505686038019362304",
+        "name": "异步API",
+        "productLineId": null,
+        "sort": 1,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 0,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "AdvancedSkills",
+     "createdAt": 1556519216000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "高阶技巧标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/01005cea40211bf14113a6004322e86a6780.png",
+     "id": "202203081642",
+     "name": "高级技巧",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download/010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "306913800727243776",
+      "name": "Paim",
+      "nameSpell": "name"
+     },
+     "updatedAt": 1657851500000
+    },
+    {
+     "code": "OperatingGuide",
+     "createdAt": 1556519201000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "某一功能的具体说明介绍，包括应用场景、参数说明、具体操作步骤等",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/010037894174802d4b9f8782f1f0010a6ddd.png",
+     "id": "202203081641",
+     "name": "功能介绍",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010176d38341668f44fdb94c95058a90e4b8.png",
+      "department": "云社区运营部",
+      "id": "2147406697",
+      "name": "多肉丸子",
+      "nameSpell": "kejuan"
+     },
+     "updatedAt": 1676857681000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          {
+           "childCategory": [
+            null
+           ],
+           "code": null,
+           "description": "",
+           "entityId": "704264410990195712",
+           "entityType": "Knowledge",
+           "id": "704274858800044288",
+           "isCategory": false,
+           "name": "OpenAPI扩展插件：KingScript使用说明",
+           "parentId": "239331354741842688",
+           "sort": "9",
+           "specialId": "226337046514476288",
+           "status": 1
+          }
+         ],
+         "code": null,
+         "description": "",
+         "entityId": null,
+         "entityType": null,
+         "id": "239331354741842688",
+         "isCategory": true,
+         "name": "开发指南",
+         "parentId": "226337544983020032",
+         "sort": "1",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": null,
+       "entityId": null,
+       "entityType": null,
+       "id": "226337544983020032",
+       "isCategory": true,
+       "name": "用户手册",
+       "parentId": "-1",
+       "sort": "6",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": "<h2 label=\"一级标题\" class=\"first-title html-anchor-list0-1745717691751 html-anchor-list0-1745717691752\" id=\"html-anchor-list0-1745717691751\" style=\"background-color: rgb(255, 255, 255);\">变更记录<br/></h2><p style=\"background-color: rgb(255, 255, 255);\"><br/></p><table width=\"100%\" style=\"\"><tbody style=\"\"><tr class=\"firstRow ueditor-new-first-row\" style=\"\"><td valign=\"middle\" width=\"198.64676616915423\" align=\"left\" style=\"\"><p style=\"text-align: inherit;\"><span style=\"font-weight: 700;\">产品版本</span></p></td><td valign=\"middle\" width=\"584.8358208955224\" align=\"left\" style=\"\"><span style=\"font-weight: 700;\">更新内容</span></td><td valign=\"middle\" width=\"204.81592039800995\" align=\"left\" style=\"\"><span style=\"font-weight: 700;\">更新日期</span></td></tr><tr style=\"\"><td width=\"141.33333333333334\" valign=\"top\" style=\"\">V7.0.9</td><td width=\"454\" valign=\"top\" style=\"\">初始版本</td><td width=\"146.33333333333334\" valign=\"top\" style=\"\">2025年3月</td></tr></tbody></table><p style=\"background-color: rgb(255, 255, 255);\"><br/></p><p style=\"background-color: rgb(255, 255, 255);\"><span style=\"font-size: 20px; text-align: justify;\"></span></p><hr/><p style=\"background-color: rgb(255, 255, 255);\"><br/><span style=\"font-size: 20px; text-align: justify;\"></span></p><h2 label=\"一级标题\" class=\"first-title html-anchor-list1-1712124079062\" id=\"html-anchor-list1-1712124079062\" style=\"background-color: rgb(255, 255, 255);\"></h2><p label=\"一级标题\" id=\"html-anchor-list1-1745717691751\" class=\" html-anchor-list1-1745717691751 html-anchor-list1-1745717691752\" style=\"font-size: 20px; background-color: rgb(255, 255, 255); text-align: justify; font-weight: bold; line-height: 42px;\">1 简介</p><h3 label=\"二级标题\" class=\"second-title\" style=\"text-align: justify;\">1.1 使用须知</h3><div style=\"\"><p style=\"\">自苍穹7.0.9版本起，OpenAPI扩展插件已全面支持KingScript脚本引擎。若需了解原插件的编写及使用方法，请参阅以下指南：</p><ul style=\"color: rgba(0, 0, 0, 0.9); background-color: rgb(255, 255, 255);\" class=\" list-paddingleft-2\"><li style=\"\"><p style=\"\"><a target=\"_blank\" href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=239331354741842688&id=512935531722959360&type=Knowledge&productLineId=29&lang=zh-CN\" class=\"\" style=\"font-weight: inherit; color: rgb(23, 131, 255);\">API参数预处理</a></p></li><li style=\"\"><p style=\"\"><a target=\"_blank\" href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=239331354741842688&id=512929770527401216&type=Knowledge&productLineId=29&lang=zh-CN\" class=\"\" style=\"font-weight: inherit; color: rgb(23, 131, 255);\">序列化出入参</a></p></li></ul><p style=\"\">在开始使用KingScript之前，请确保阅读了以下资源：</p><ul style=\"color: rgba(0, 0, 0, 0.9); background-color: rgb(255, 255, 255);\" class=\" list-paddingleft-2\"><li style=\"\"><p style=\"\"><a target=\"_blank\" href=\"https://vip.kingdee.com/knowledge/474603833067386624?productLineId=29&isKnowledge=2&lang=zh-CN&extInfo=%7B%7D#0\" class=\"\" style=\"font-weight: inherit; color: rgb(23, 131, 255);\">KingScript 脚本使用手册</a></p></li><li style=\"\"><p style=\"\"><a target=\"_blank\" href=\"https://vip.kingdee.com/knowledge/611949903778113792?productLineId=29&isKnowledge=2&lang=zh-CN\" class=\"\" style=\"font-weight: inherit; color: rgb(23, 131, 255);\">KingScript开发助手 VScode插件用户手册</a></p><p style=\"\"><a target=\"_blank\" href=\"https://vip.kingdee.com/knowledge/611949903778113792?productLineId=29&isKnowledge=2&lang=zh-CN\" class=\"\" style=\"font-weight: inherit; color: rgb(23, 131, 255);\"></a></p></li></ul><p style=\"\"><a target=\"_blank\" href=\"https://vip.kingdee.com/knowledge/611949903778113792?productLineId=29&isKnowledge=2&lang=zh-CN\" class=\"\" style=\"font-weight: inherit; color: rgb(23, 131, 255);\"></a></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\">1.2 功能介绍</h3><p style=\"background-color: rgb(255, 255, 255);\"><span style=\"color: rgba(0, 0, 0, 0.9); background-color: rgb(255, 255, 255);\">OpenAPI现在允许用户在操作API、自定义API、脚本API中注册KingScript插件。通过编写这些插件，用户可以自定义API的入参和出参的序列化与反序列化过程，以适应特定的业务需求。</span></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\">1.3 系统路径</h3><p style=\"background-color: rgb(255, 255, 255); text-align: justify;\">【开放服务云】→【OpenAPI】→【API管理】 →【API开发】</p><p style=\"\"><br/></p><p style=\"\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"text-align: justify;\"><span style=\"text-align: justify; background-color: rgb(255, 255, 255);\">2 主要操作</span></h2><h3 label=\"二级标题\" class=\"second-title\" id=\"html-anchor-list5-1745717691751\" style=\"\">2.1 配置扩展插件</h3><p style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\"><span style=\"color: rgba(0, 0, 0, 0.9); background-color: rgb(255, 255, 255);\">在OpenAPI中完成API的开发和注册后，用户可以点击“扩展插件”来进行配置。</span></p><p style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\"><br/></p><p style=\"\"><span style=\"font-size: 20px; font-weight: 700; text-align: justify; background-color: rgb(255, 255, 255);\"><img src=\"/download/01095c5c4307a04b464a920c741fbe656d93.png\"/></span><br/></p><p style=\"\"><br/></p><h3 label=\"二级标题\" class=\"second-title\" id=\"html-anchor-list5-1745717691751\" style=\"\">2.2 选择注册脚本</h3><p style=\"\"><span style=\"color: rgba(0, 0, 0, 0.9); background-color: rgb(255, 255, 255);\">在脚本编辑器界面，点击“注册脚本”按钮创建新的脚本。</span></p><p style=\"\"><br/></p><p style=\"\"><img src=\"/download/01094a206b6f7cab42df9f2effb156ce3ecb.png\"/></p><p label=\"\" class=\"\" style=\"\"><span style=\"color: rgb(106, 115, 125); font-weight: 600; background-color: rgb(255, 255, 255);\"></span><br/></p><h3 label=\"二级标题\" class=\"second-title\" id=\"html-anchor-list5-1745717691751\" style=\"\">2.3 维护脚本信息</h3><p style=\"\"><span style=\"color: rgba(0, 0, 0, 0.9); background-color: rgb(255, 255, 255);\">在弹出的窗口中，填写脚本的编码、名称及描述等基本信息。</span></p><p style=\"\"><br/></p><p style=\"\"><img src=\"/download/010986a67c2a65144053b61ab1faa5492d83.png\"/></p><p style=\"\"><span style=\"color: rgb(106, 115, 125); font-weight: 600; background-color: rgb(255, 255, 255);\"></span><br/></p><h3 label=\"二级标题\" class=\"second-title\" id=\"html-anchor-list5-1745717691751\" style=\"\">2.4 编写脚本</h3><p style=\"\"><span style=\"color: rgba(0, 0, 0, 0.9); background-color: rgb(255, 255, 255);\">利用开发平台提供的编辑器编写插件脚本，以实现对API请求的入参和出参的干预。</span></p><p style=\"\"><br/></p><p style=\"\"><img src=\"/download/0109b036f95ea86e4b4fb84a872f507500ea.png\"/><br/></p><p style=\"\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"text-align: justify;\"><span style=\"text-align: justify; background-color: rgb(255, 255, 255);\">3 插件脚本示例</span></h2><p style=\"\"><br/></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\">3.1 查询操作API</h3><p label=\"正文\" style=\"\">备注：状态变更类如提交、审核等操作API也可参考。</p><pre style=\"\" class=\"ueditor-code-area brush:java;toolbar:false\">import&nbsp;{&nbsp;ApiQueryPlugin&nbsp;}&nbsp;from&nbsp;&quot;@cosmic/bos-core/kd/bos/openapi/api/plugin&quot;;\nimport&nbsp;{&nbsp;ApiQueryOrderByModel&nbsp;}&nbsp;from&nbsp;&quot;@cosmic/bos-core/kd/bos/openapi/api/model&quot;;\nimport&nbsp;{&nbsp;QCP,&nbsp;QFilter&nbsp;}&nbsp;from&nbsp;&quot;@cosmic/bos-core/kd/bos/orm/query&quot;;\nimport&nbsp;{&nbsp;HashMap&nbsp;}&nbsp;from&nbsp;&quot;@cosmic/bos-script/java/util&quot;;\n\nclass&nbsp;MyQuery&nbsp;implements&nbsp;ApiQueryPlugin&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;\n\n//自定义查询过滤条件\n&nbsp;&nbsp;&nbsp;&nbsp;getFilter(qfilter:&nbsp;QFilter,&nbsp;map:&nbsp;HashMap):&nbsp;QFilter&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;new&nbsp;QFilter(&quot;billstatus&quot;,&nbsp;QCP.equals,&nbsp;&quot;A&quot;).and(qfilter);\n&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;\n&nbsp;&nbsp;&nbsp;&nbsp;//自定义排序\n&nbsp;&nbsp;&nbsp;&nbsp;getOrderBy(model:&nbsp;ApiQueryOrderByModel):&nbsp;string&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;odb&nbsp;=&nbsp;model.getOrderBy();&nbsp;//原排序规则\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;reqData&nbsp;=&nbsp;model.getReqData();&nbsp;//请求入参\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;header&nbsp;=&nbsp;model.getReqHeaders();&nbsp;//请求头\n\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;&quot;id&nbsp;desc&quot;;\n&nbsp;&nbsp;&nbsp;&nbsp;}\n\n}\nlet&nbsp;plugin&nbsp;=&nbsp;new&nbsp;MyQuery();\nexport&nbsp;{&nbsp;plugin&nbsp;};</pre><h6 style=\"color: var(--color-text-tertiary);\"><br/></h6><h3 label=\"二级标题\" class=\"second-title\" style=\"\">3.2 保存操作API</h3><pre style=\"\" class=\"ueditor-code-area brush:java;toolbar:false\">import&nbsp;{&nbsp;ApiSavePlugin&nbsp;}&nbsp;from&nbsp;&quot;@cosmic/bos-core/kd/bos/openapi/api/plugin&quot;;\nimport&nbsp;{&nbsp;List&nbsp;}&nbsp;from&nbsp;&quot;@cosmic/bos-script/java/util&quot;;\n\nclass&nbsp;MySave&nbsp;implements&nbsp;ApiSavePlugin&nbsp;{\n\n&nbsp;&nbsp;&nbsp;&nbsp;preHandleRequestData(list:&nbsp;List):&nbsp;List&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//业务逻辑处理\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;map&nbsp;=&nbsp;list.get(0);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;usage&nbsp;=&nbsp;map.get(&quot;usage&quot;);\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;map.put(&quot;usage&quot;,&nbsp;usage+&quot;-经过MySave插件干预&quot;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;list;\n&nbsp;&nbsp;&nbsp;&nbsp;}\n\n}let&nbsp;plugin&nbsp;=&nbsp;new&nbsp;MySave();\nexport&nbsp;{&nbsp;plugin&nbsp;};</pre><h6 style=\"color: var(--color-text-tertiary);\"><br/></h6><h3 label=\"二级标题\" class=\"second-title\" style=\"\">3.3 反序列化入参插件</h3><pre style=\"\" class=\"ueditor-code-area brush:java;toolbar:false\">import&nbsp;{&nbsp;ApiDeserializerPlugin&nbsp;}&nbsp;from&nbsp;&quot;@cosmic/bos-core/kd/bos/openapi/api/plugin&quot;;\nimport&nbsp;{&nbsp;JSONUtils&nbsp;}&nbsp;from&nbsp;&quot;@cosmic/bos-core/kd/bos/util&quot;;\nimport&nbsp;{&nbsp;HashMap&nbsp;}&nbsp;from&nbsp;&quot;@cosmic/bos-script/java/util&quot;;\n//反序列化\nclass&nbsp;MyDeSerializerPlugin&nbsp;implements&nbsp;ApiDeserializerPlugin&nbsp;{\n\n&nbsp;&nbsp;&nbsp;&nbsp;deserializer(request:&nbsp;string,&nbsp;contentType:&nbsp;string):&nbsp;HashMap&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;reqMap&nbsp;=&nbsp;JSONUtils.cast(request,HashMap);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//以下为业务逻辑处理\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;data&nbsp;=&nbsp;reqMap.get(&quot;data&quot;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;param&nbsp;=&nbsp;data.get(0);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;usage&nbsp;=&nbsp;param.get(&quot;usage&quot;);\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;param.put(&quot;usage&quot;,usage+&quot;-经过反序列化处理&quot;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;reqMap;\n&nbsp;&nbsp;&nbsp;&nbsp;}\n\n}let&nbsp;plugin&nbsp;=&nbsp;new&nbsp;MyDeSerializerPlugin();\nexport&nbsp;{&nbsp;plugin&nbsp;};</pre><h6 style=\"color: var(--color-text-tertiary);\"><br/></h6><h3 label=\"二级标题\" class=\"second-title\" style=\"\">3.4 序列化出参插件</h3><pre style=\"\" class=\"ueditor-code-area brush:java;toolbar:false\">import&nbsp;{&nbsp;ApiSerializerPlugin&nbsp;}&nbsp;from&nbsp;&quot;@cosmic/bos-core/kd/bos/openapi/api/plugin&quot;;\nimport&nbsp;{&nbsp;SerializerResult&nbsp;}&nbsp;from&nbsp;&quot;@cosmic/bos-core/kd/bos/openapi/api/plugin&quot;;\nimport&nbsp;{&nbsp;ApiSerializerVersion&nbsp;}&nbsp;from&nbsp;&quot;@cosmic/bos-core/kd/bos/openapi/api/model&quot;;\nimport&nbsp;{&nbsp;ApiSerializerModel&nbsp;}&nbsp;from&nbsp;&quot;@cosmic/bos-core/kd/bos/openapi/api/model&quot;;\nimport&nbsp;{&nbsp;OpenApiResult&nbsp;}&nbsp;from&nbsp;&quot;@cosmic/bos-core/kd/bos/openapi/common/result&quot;;\nimport&nbsp;{&nbsp;JSONUtils&nbsp;}&nbsp;from&nbsp;&quot;@cosmic/bos-core/kd/bos/util&quot;;\n//序列化出参插件\nclass&nbsp;MySerializerPlugin&nbsp;implements&nbsp;ApiSerializerPlugin&nbsp;{\n\n&nbsp;&nbsp;&nbsp;&nbsp;\n&nbsp;&nbsp;&nbsp;&nbsp;serialize(response:&nbsp;object,&nbsp;accept:&nbsp;string,&nbsp;contentType:&nbsp;string):&nbsp;SerializerResult&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//取原出参信息\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;resp=&nbsp;&lt;OpenApiResult&gt;&nbsp;response;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;message=resp.getMessage();\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;status=resp.isStatus();&nbsp;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;data=resp.getData();&nbsp;&nbsp;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;errorcode=resp.getErrorCode();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//...业务逻辑处理\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;new&nbsp;SerializerResult(&quot;application/json&quot;,&nbsp;JSONUtils.toString(resp));\n&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;//serializeByModel&nbsp;方法，可以取到入参相关信息\n&nbsp;&nbsp;&nbsp;&nbsp;serializeByModel(model:ApiSerializerModel):&nbsp;SerializerResult&nbsp;{\t\t//取入参信息\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;contentType&nbsp;=&nbsp;model.getContentType();//报文格式&nbsp;json、xml、text\n\tlet&nbsp;accept&nbsp;=&nbsp;model.getAccept();&nbsp;//响应报文格式\n\tlet&nbsp;reqData&nbsp;=&nbsp;model.getReqData();&nbsp;//请求参数\n\tlet&nbsp;response&nbsp;=&nbsp;model.getResponse();//返回参数\n\t//取原出参信息\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;resp=&nbsp;&lt;OpenApiResult&gt;&nbsp;response;&nbsp;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;message=resp.getMessage();&nbsp;//出参message\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;status=resp.isStatus();&nbsp;//出参status\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;data=resp.getData();&nbsp;//出参data域\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;errorcode=resp.getErrorCode();&nbsp;//出参errorcode\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//...业务逻辑处理\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;new&nbsp;SerializerResult(&quot;application/json&quot;,&nbsp;JSONUtils.toString(resp));\n&nbsp;&nbsp;&nbsp;&nbsp;}\n\n&nbsp;&nbsp;&nbsp;&nbsp;getVersion():ApiSerializerVersion{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n&nbsp;&nbsp;&nbsp;&nbsp;//return&nbsp;ApiSerializerVersion.MODEL;&nbsp;//使用serializeByModel(model:ApiSerializerModel)方法返回\n&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;ApiSerializerVersion.DEFAULT;&nbsp;//使用serialize(response:&nbsp;object,&nbsp;accept:&nbsp;string,&nbsp;contentType:&nbsp;string)方法返回\n&nbsp;&nbsp;&nbsp;&nbsp;}\n\n}\nlet&nbsp;plugin&nbsp;=&nbsp;new&nbsp;MySerializerPlugin();export&nbsp;{&nbsp;plugin&nbsp;};</pre><p style=\"\"><span style=\"font-size: 20px; font-weight: 700; text-align: justify; background-color: rgb(255, 255, 255);\"><br/></span></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">4 更多资讯</h2><p style=\"background-color: rgb(255, 255, 255); text-align: justify;\"><a href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=386536775126291968&id=448792125560557568&productLineId=29\" title=\"\" target=\"_blank\" class=\"\" style=\"color: rgb(0, 112, 192);\"></a>关于OpenAPI的更多资讯，请随时关注<a href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=226337371640594944&id=226708319996323072&productLineId=29\" target=\"_blank\" style=\"\">新特性公告</a>。</p><p style=\"\"><br/></p></div>"
+}

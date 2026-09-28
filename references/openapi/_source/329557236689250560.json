@@ -1,0 +1,521 @@
+{
+ "badNum": 0,
+ "templateId": null,
+ "identityTagIds": null,
+ "knowledgeId": "329557236689250560",
+ "createdAt": 1656380568000,
+ "collections": 3,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "329557236689250560",
+ "contentType": 1,
+ "updatedAt": 1698399921000,
+ "knowledgeUpdater": {
+  "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+  "department": null,
+  "id": "132488613174518784",
+  "name": "某个路易",
+  "nameSpell": "name"
+ },
+ "assessStatus": 0,
+ "knowledgeStatus": 4,
+ "assessHandleStatus": null,
+ "knowledgeCreatedAt": 1656380568000,
+ "version": 26,
+ "labels": [],
+ "editedAt": 1698399921000,
+ "identityTags": null,
+ "useful": 5,
+ "errors": [],
+ "isCollected": false,
+ "template": "{\"token\":2,\"title\":\"API接口匿名访问权限问题\",\"version\":\"苍穹V4.0\",\"range\":\"苍穹开放平台所有用户\",\"date\":\"2021-12-23\",\"patch\":\"V4.0.014（BOS）\",\"collection\":[\"\"],\"collectionNext\":[[]],\"collectionHref\":[[]],\"knowledgeContent\":\"<p style=\\\"text-align: justify;\\\">背景：金蝶云苍穹API接口允许匿名访问，但若不控制权限则存在安全风险，会导致企业数据资产被恶意修改或删除。</p><p style=\\\"text-align: justify;\\\"><br/></p><p style=\\\"text-align: justify;\\\">新版本（BOS_V4.0.014）加强了企业数据安全管控，若通过匿名的形式，调用API保存操作等接口，则会提示error:oAuth认证失败，guest用户没有访问权限？</p><p style=\\\"text-align: justify;\\\"><br/></p><p style=\\\"text-align: justify;\\\">此时，若要匿名调用API接口，必须按照元数据配置或<span style=\\\"text-align: justify;\\\">白名单配置</span>匿名访问能访问的元数据范围（<span style=\\\"color: rgb(0, 0, 0);\\\">公共基础资料如币别不会限制匿名访问</span>）。<br/></p><p style=\\\"text-align: justify;\\\"><br/></p><p style=\\\"text-align: justify;\\\">方法1：设计器修改相关元数据的属性，勾选匿名访问；&nbsp;<br/></p><p style=\\\"text-align: justify;\\\"><br/></p><p style=\\\"text-align: justify;\\\"><img src=\\\"https://vip.kingdee.com/download/0100b71fd212113e42edae509677b1c8820c.png\\\"/></p><p style=\\\"text-align: justify;\\\"><br/></p><p style=\\\"text-align: justify;\\\">方法2：mc增加租户级参数：security.meta.guestwhitelist，值为表单编码(小写逗号，分隔）;&nbsp;</p><p style=\\\"text-align: justify;\\\"><span style=\\\"color: rgb(255, 0, 0);\\\"><br/></span></p><p style=\\\"text-align: justify;\\\"><span style=\\\"color: rgb(255, 0, 0);\\\">注意：2种方法都有被非法访问的风险。</span></p><p><br/></p><p><br/></p><p><strong>更多资讯：</strong><a href=\\\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=322033766435165696&id=119023921520783104&productLineId=29\\\" title=\\\"\\\" target=\\\"_blank\\\" class=\\\"\\\">API接口支持匿名访问</a></p><p><br/></p><p><br/></p><p><br/></p>\"}",
+ "totalFeedBacks": 0,
+ "attachments": [],
+ "sources": [],
+ "editTitle": "API接口匿名访问权限问题",
+ "title": "API接口匿名访问权限问题",
+ "content": " <p class=\"table-title table-margin\"><span class=\"span-line\">发布说明</span><span class=\"line\"></span></p><p class=\"title-b\"><span class=\"span-b\">发布版本：</span><span class=\"span-nor\">苍穹V4.0</span></p><p class=\"title-b\"><span class=\"span-b\">适用范围：</span><span class=\"span-nor\">苍穹开放平台所有用户</span></p><p class=\"title-b\"><span class=\"span-b\">上线日期：</span><span class=\"span-nor\">2021-12-23</span></p><p class=\"title-b\"><span class=\"span-b\">补丁号：</span><span class=\"span-nor margin-patch\">V4.0.014（BOS）</span></p>\n              <p class=\"table-title title-detail\"><span class=\"span-line\">更多内容</span><span class=\"line\"></span></p>\n              <p style=\"text-align: justify;\">背景：金蝶AI苍穹API接口允许匿名访问，但若不控制权限则存在安全风险，会导致企业数据资产被恶意修改或删除。</p><p style=\"text-align: justify;\"><br/></p><p style=\"text-align: justify;\">新版本（BOS_V4.0.014）加强了企业数据安全管控，若通过匿名的形式，调用API保存操作等接口，则会提示error:oAuth认证失败，guest用户没有访问权限？</p><p style=\"text-align: justify;\"><br/></p><p style=\"text-align: justify;\">此时，若要匿名调用API接口，必须按照元数据配置或<span style=\"text-align: justify;\">白名单配置</span>匿名访问能访问的元数据范围（<span style=\"color: rgb(0, 0, 0);\">公共基础资料如币别不会限制匿名访问</span>）。<br/></p><p style=\"text-align: justify;\"><br/></p><p style=\"text-align: justify;\">方法1：设计器修改相关元数据的属性，勾选匿名访问；&nbsp;<br/></p><p style=\"text-align: justify;\"><br/></p><p style=\"text-align: justify;\"><img src=\"https://vip.kingdee.com/download/0100b71fd212113e42edae509677b1c8820c.png\"/></p><p style=\"text-align: justify;\"><br/></p><p style=\"text-align: justify;\">方法2：mc增加租户级参数：security.meta.guestwhitelist，值为表单编码(小写逗号，分隔）;&nbsp;</p><p style=\"text-align: justify;\"><span style=\"color: rgb(255, 0, 0);\"><br/></span></p><p style=\"text-align: justify;\"><span style=\"color: rgb(255, 0, 0);\">注意：2种方法都有被非法访问的风险。</span></p><p><br/></p><p><br/></p><p><strong>更多资讯：</strong><a href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=322033766435165696&id=119023921520783104&productLineId=29\" title=\"\" target=\"_blank\" class=\"\">API接口支持匿名访问</a></p><p><br/></p><p><br/></p><p><br/></p>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 87,
+   "isOpen": 1,
+   "name": "金蝶AI苍穹",
+   "productLineId": 29,
+   "series": "developer01",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "329557236689250560",
+         "entityType": "Knowledge",
+         "id": "329559107499829504",
+         "isCategory": false,
+         "name": "API接口匿名访问权限问题",
+         "parentId": "226337340351087360",
+         "sort": "11",
+         "specialId": "226337046514476288",
+         "status": 0
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": null,
+       "id": "226337340351087360",
+       "isCategory": true,
+       "name": "重要通知",
+       "parentId": "226337280724861696",
+       "sort": "1",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": "",
+     "entityId": null,
+     "entityType": null,
+     "id": "226337280724861696",
+     "isCategory": true,
+     "name": "动态与公告",
+     "parentId": "-1",
+     "sort": "1",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download/01010204d4b71b654a208006fa1004eac36a.png",
+  "department": null,
+  "id": "740211268992385024",
+  "name": "毛毛去哪儿",
+  "nameSpell": "name"
+ },
+ "totalAppraisalScore": 25,
+ "iflytekId": null,
+ "views": 3228,
+ "productLineId": 29,
+ "comments": 0,
+ "similarityCount": null,
+ "totalAppraisalUsers": 5,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1698399921000,
+ "appraisalScore": 0,
+ "unuseful": 0,
+ "knowledgeCheckStatus": 2,
+ "otherProductLineIds": [],
+ "auditAt": 1698400877000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": null,
+       "code": "open",
+       "id": "5614",
+       "name": "开放平台",
+       "productLineId": null,
+       "sort": 2,
+       "type": "module"
+      },
+      "code": "DEV",
+      "id": "5576",
+      "name": "开发服务云",
+      "productLineId": null,
+      "sort": 11,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 0,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": null,
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 1,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "HotIssues",
+     "createdAt": 1558618967000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "使用中经常遇到的应用类、报错类问题的解决方法",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/010046d15638963c4c388734601dd5f8ceec.png",
+     "id": "202203081644",
+     "name": "常见问题",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010176d38341668f44fdb94c95058a90e4b8.png",
+      "department": "云社区运营部",
+      "id": "2147406697",
+      "name": "多肉丸子",
+      "nameSpell": "kejuan"
+     },
+     "updatedAt": 1676857709000
+    },
+    {
+     "code": "GettingStarted",
+     "createdAt": 1556519230000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "推送至苍穹帮助中心",
+     "hasSpecifyUser": false,
+     "hide": true,
+     "icon": "/download/01001f079866652f4a68a71361a9509d404c.png",
+     "id": "202203081643",
+     "name": "推送至苍穹帮助中心",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 1,
+     "type": 2,
+     "updatePerson": {
+      "avatar": "/download?fileName=010162cfa9d5437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1129",
+      "name": "灏",
+      "nameSpell": "hao"
+     },
+     "updatedAt": 1605688859000
+    },
+    {
+     "code": "rumen",
+     "createdAt": 1605667807000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "入门类的知识可使用此标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100d322b9282bcc438faa894f4eec029977.png",
+     "id": "202203081646",
+     "name": "基础入门",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download?fileName=0101ec1d6ce599b442dab7d0b794c1fce88d.png",
+      "department": null,
+      "id": "1009",
+      "name": "一颗小星星",
+      "nameSpell": "fengling"
+     },
+     "updatedAt": 1657872008000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          {
+           "childCategory": [
+            null
+           ],
+           "code": null,
+           "description": "",
+           "entityId": "329557236689250560",
+           "entityType": "Knowledge",
+           "id": "329559107499829504",
+           "isCategory": false,
+           "name": "API接口匿名访问权限问题",
+           "parentId": "226337340351087360",
+           "sort": "11",
+           "specialId": "226337046514476288",
+           "status": 0
+          }
+         ],
+         "code": null,
+         "description": "",
+         "entityId": null,
+         "entityType": null,
+         "id": "226337340351087360",
+         "isCategory": true,
+         "name": "重要通知",
+         "parentId": "226337280724861696",
+         "sort": "1",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": null,
+       "id": "226337280724861696",
+       "isCategory": true,
+       "name": "动态与公告",
+       "parentId": "-1",
+       "sort": "1",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": " <p class=\"table-title table-margin\"><span class=\"span-line\">发布说明</span><span class=\"line\"></span></p><p class=\"title-b\"><span class=\"span-b\">发布版本：</span><span class=\"span-nor\">苍穹V4.0</span></p><p class=\"title-b\"><span class=\"span-b\">适用范围：</span><span class=\"span-nor\">苍穹开放平台所有用户</span></p><p class=\"title-b\"><span class=\"span-b\">上线日期：</span><span class=\"span-nor\">2021-12-23</span></p><p class=\"title-b\"><span class=\"span-b\">补丁号：</span><span class=\"span-nor margin-patch\">V4.0.014（BOS）</span></p>\n              <p class=\"table-title title-detail\"><span class=\"span-line\">更多内容</span><span class=\"line\"></span></p>\n              <p style=\"text-align: justify;\">背景：金蝶AI苍穹API接口允许匿名访问，但若不控制权限则存在安全风险，会导致企业数据资产被恶意修改或删除。</p><p style=\"text-align: justify;\"><br/></p><p style=\"text-align: justify;\">新版本（BOS_V4.0.014）加强了企业数据安全管控，若通过匿名的形式，调用API保存操作等接口，则会提示error:oAuth认证失败，guest用户没有访问权限？</p><p style=\"text-align: justify;\"><br/></p><p style=\"text-align: justify;\">此时，若要匿名调用API接口，必须按照元数据配置或<span style=\"text-align: justify;\">白名单配置</span>匿名访问能访问的元数据范围（<span style=\"color: rgb(0, 0, 0);\">公共基础资料如币别不会限制匿名访问</span>）。<br/></p><p style=\"text-align: justify;\"><br/></p><p style=\"text-align: justify;\">方法1：设计器修改相关元数据的属性，勾选匿名访问；&nbsp;<br/></p><p style=\"text-align: justify;\"><br/></p><p style=\"text-align: justify;\"><img src=\"https://vip.kingdee.com/download/0100b71fd212113e42edae509677b1c8820c.png\"/></p><p style=\"text-align: justify;\"><br/></p><p style=\"text-align: justify;\">方法2：mc增加租户级参数：security.meta.guestwhitelist，值为表单编码(小写逗号，分隔）;&nbsp;</p><p style=\"text-align: justify;\"><span style=\"color: rgb(255, 0, 0);\"><br/></span></p><p style=\"text-align: justify;\"><span style=\"color: rgb(255, 0, 0);\">注意：2种方法都有被非法访问的风险。</span></p><p><br/></p><p><br/></p><p><strong>更多资讯：</strong><a href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=322033766435165696&id=119023921520783104&productLineId=29\" title=\"\" target=\"_blank\" class=\"\">API接口支持匿名访问</a></p><p><br/></p><p><br/></p><p><br/></p>"
+}

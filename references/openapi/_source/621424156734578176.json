@@ -1,0 +1,453 @@
+{
+ "badNum": 0,
+ "identityTagIds": null,
+ "knowledgeId": "621424156734578176",
+ "createdAt": 1725967064000,
+ "collections": 1,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "621424156734578176",
+ "contentType": 1,
+ "updatedAt": 1725971470000,
+ "knowledgeUpdater": {
+  "avatar": "/download/010162cfa9d5437711e8b441060400ef5315.png",
+  "department": null,
+  "id": "334386482716649984",
+  "name": "顺溜",
+  "nameSpell": "name"
+ },
+ "assessStatus": 0,
+ "knowledgeStatus": 2,
+ "assessHandleStatus": null,
+ "knowledgeCreatedAt": 1725967064000,
+ "version": 5,
+ "labels": [],
+ "editedAt": 1725967157000,
+ "identityTags": null,
+ "useful": 1,
+ "errors": [],
+ "isCollected": false,
+ "totalFeedBacks": 0,
+ "attachments": [],
+ "sources": [],
+ "editTitle": "灰度特性密钥申请",
+ "title": "灰度特性密钥申请",
+ "content": "<p label=\"\" class=\"\" style=\"\"><span style=\"font-size: 20px; text-align: justify;\"></span></p><div style=\"\"><h2 label=\"一级标题\" class=\"first-title\" style=\"\"><span style=\"\">变更记录</span><br/></h2></div><p><br/></p><table width=\"100%\"><tbody style=\"\"><tr class=\"firstRow\" style=\"\"><td valign=\"middle\" width=\"116\" align=\"left\" style=\"\"><p style=\"\"><strong style=\"\">产品版本</strong><strong style=\"\"><strong style=\"color: rgb(0, 0, 0);\">（</strong></strong></p></td><td valign=\"middle\" width=\"359\" align=\"left\" style=\"\"><strong style=\"\">更新内容</strong></td><td valign=\"middle\" width=\"146.33333333333334\" align=\"left\" style=\"\"><strong style=\"\">更新日期</strong></td></tr><tr style=\"\"><td valign=\"middle\" width=\"117\" style=\"\" align=\"left\">V6.0.6</td><td valign=\"middle\" width=\"359\" style=\"\" align=\"left\">初始版本</td><td valign=\"middle\" width=\"146.33333333333334\" style=\"\" align=\"left\">2024年1月17日</td></tr></tbody></table><p><br/></p><p><br/></p><p><span style=\"font-size: 20px; text-align: justify;\"></span></p><hr/><p><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\"><span style=\"text-align: justify;\">1&nbsp;</span>灰度许可说明</h2><p style=\"\">开放事件功能作为OpenAPI的一大新特性，目前暂处于灰度试用阶段，需要使用的客户首次使用需要申请灰度许可，不然无法使用开放事件的功能。</p><p style=\"\"><br/></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\">1.1 申请步骤</h3><p style=\"\">1、进入【开放服务云】-【OpenAPI】-【开放事件】-【开放事件管理】列表页面，系统会自动校验当前租户是否拥有灰度许可，若有则打开页面可正常使用，若没有许可则显示申请灰度许可的弹窗。</p><p class=\"kd-image-content\" style=\"\"><img src=\"https://vip-admin.kingdee.com/download/010047961be3ef0841d1a9cc83f4d82b41e2.png\" alt=\"上传图片\"/></p><p style=\"\"><br/></p><p style=\"\">2、点击“申请密钥”按钮，跳转至门户页面，填写申请单中申请人姓名、联系电话、电子邮箱、企业名称、申请特性等信息，点击“提交”按钮。此后只需耐心等待开放事件管理员线下联系发放密钥。</p><p style=\"\"><img src=\"https://vip-admin.kingdee.com/download/0109d7837fc8c4d04aa7aff95abc8daa7c3e.png\"/></p><p style=\"\"><br/></p><p style=\"\">3、当开放事件管理员线下联系并发放完密钥信息后，再次前往【开放服务云】-【OpenAPI】-【开放事件】-【开放事件管理】列表页面，将密钥填写到系统展示的灰度特性申请弹窗的“许可密钥”字段中。</p><p style=\"\"><br/></p><p style=\"\">4、点击“验证密钥”按钮，系统会验证密钥的合法性和有效性，验证成功后，关闭弹窗。至此就可以使用开放事件的功能啦！</p><p style=\"\"><br/></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\">1.2 注意事项</h3><p style=\"\"><strong style=\"\">1、未申请灰度许可开放事件功能是不可用的</strong><strong style=\"\">！！！</strong>未申请许可直接关闭弹窗，但是<span style=\"color: rgb(79, 129, 189);\">即便配置了数据运行时也一样会报错的</span>。</p><p style=\"\">2、灰度特性许可申请单提交完成后，如需着急获取密钥，可发送邮件至hongchao_wu@kingdee.com进行催办。</p><p style=\"\">3、对于无法访问外网的私有云客户可能点击“申请密钥”按钮会报错，可将“特性编码”、“环境特征码”、“企业名称”以及您的联系方式（手机号）发送到hongchao_wu@kingdee.com邮箱进行线下联系办理。</p><p><br/></p><p><br/></p><p><br/></p>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 87,
+   "isOpen": 1,
+   "name": "金蝶AI苍穹",
+   "productLineId": 29,
+   "series": "developer01",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "621424156734578176",
+         "entityType": "Knowledge",
+         "id": "621424546536414720",
+         "isCategory": false,
+         "name": "灰度特性密钥申请",
+         "parentId": "535466550069896704",
+         "sort": "0",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": null,
+       "id": "535466550069896704",
+       "isCategory": true,
+       "name": "操作介绍",
+       "parentId": "535466471703678976",
+       "sort": "4",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": "",
+     "entityId": null,
+     "entityType": null,
+     "id": "535466471703678976",
+     "isCategory": true,
+     "name": "开放事件",
+     "parentId": "-1",
+     "sort": "7",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+  "department": null,
+  "id": "132488613174518784",
+  "name": "某个路易",
+  "nameSpell": "name"
+ },
+ "totalAppraisalScore": 4,
+ "iflytekId": null,
+ "views": 1206,
+ "productLineId": 29,
+ "comments": 0,
+ "similarityCount": 0,
+ "totalAppraisalUsers": 1,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1725971470000,
+ "appraisalScore": 0,
+ "unuseful": 0,
+ "knowledgeCheckStatus": 2,
+ "otherProductLineIds": [],
+ "auditAt": 1725971470000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "kemeventopen",
+        "id": "535464126735421440",
+        "name": "开放事件定义",
+        "productLineId": null,
+        "sort": 14,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 0,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "OperatingGuide",
+     "createdAt": 1556519201000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "某一功能的具体说明介绍，包括应用场景、参数说明、具体操作步骤等",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/010037894174802d4b9f8782f1f0010a6ddd.png",
+     "id": "202203081641",
+     "name": "功能介绍",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010176d38341668f44fdb94c95058a90e4b8.png",
+      "department": "云社区运营部",
+      "id": "2147406697",
+      "name": "多肉丸子",
+      "nameSpell": "kejuan"
+     },
+     "updatedAt": 1676857681000
+    },
+    {
+     "code": "rumen",
+     "createdAt": 1605667807000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "入门类的知识可使用此标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100d322b9282bcc438faa894f4eec029977.png",
+     "id": "202203081646",
+     "name": "基础入门",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download?fileName=0101ec1d6ce599b442dab7d0b794c1fce88d.png",
+      "department": null,
+      "id": "1009",
+      "name": "一颗小星星",
+      "nameSpell": "fengling"
+     },
+     "updatedAt": 1657872008000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          {
+           "childCategory": [
+            null
+           ],
+           "code": null,
+           "description": "",
+           "entityId": "621424156734578176",
+           "entityType": "Knowledge",
+           "id": "621424546536414720",
+           "isCategory": false,
+           "name": "灰度特性密钥申请",
+           "parentId": "535466550069896704",
+           "sort": "0",
+           "specialId": "226337046514476288",
+           "status": 1
+          }
+         ],
+         "code": null,
+         "description": "",
+         "entityId": null,
+         "entityType": null,
+         "id": "535466550069896704",
+         "isCategory": true,
+         "name": "操作介绍",
+         "parentId": "535466471703678976",
+         "sort": "4",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": null,
+       "id": "535466471703678976",
+       "isCategory": true,
+       "name": "开放事件",
+       "parentId": "-1",
+       "sort": "7",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": "<p label=\"\" class=\"\" style=\"\"><span style=\"font-size: 20px; text-align: justify;\"></span></p><div style=\"\"><h2 label=\"一级标题\" class=\"first-title\" style=\"\"><span style=\"\">变更记录</span><br/></h2></div><p><br/></p><table width=\"100%\"><tbody style=\"\"><tr class=\"firstRow\" style=\"\"><td valign=\"middle\" width=\"116\" align=\"left\" style=\"\"><p style=\"\"><strong style=\"\">产品版本</strong><strong style=\"\"><strong style=\"color: rgb(0, 0, 0);\">（</strong></strong></p></td><td valign=\"middle\" width=\"359\" align=\"left\" style=\"\"><strong style=\"\">更新内容</strong></td><td valign=\"middle\" width=\"146.33333333333334\" align=\"left\" style=\"\"><strong style=\"\">更新日期</strong></td></tr><tr style=\"\"><td valign=\"middle\" width=\"117\" style=\"\" align=\"left\">V6.0.6</td><td valign=\"middle\" width=\"359\" style=\"\" align=\"left\">初始版本</td><td valign=\"middle\" width=\"146.33333333333334\" style=\"\" align=\"left\">2024年1月17日</td></tr></tbody></table><p><br/></p><p><br/></p><p><span style=\"font-size: 20px; text-align: justify;\"></span></p><hr/><p><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\"><span style=\"text-align: justify;\">1&nbsp;</span>灰度许可说明</h2><p style=\"\">开放事件功能作为OpenAPI的一大新特性，目前暂处于灰度试用阶段，需要使用的客户首次使用需要申请灰度许可，不然无法使用开放事件的功能。</p><p style=\"\"><br/></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\">1.1 申请步骤</h3><p style=\"\">1、进入【开放服务云】-【OpenAPI】-【开放事件】-【开放事件管理】列表页面，系统会自动校验当前租户是否拥有灰度许可，若有则打开页面可正常使用，若没有许可则显示申请灰度许可的弹窗。</p><p class=\"kd-image-content\" style=\"\"><img src=\"https://vip-admin.kingdee.com/download/010047961be3ef0841d1a9cc83f4d82b41e2.png\" alt=\"上传图片\"/></p><p style=\"\"><br/></p><p style=\"\">2、点击“申请密钥”按钮，跳转至门户页面，填写申请单中申请人姓名、联系电话、电子邮箱、企业名称、申请特性等信息，点击“提交”按钮。此后只需耐心等待开放事件管理员线下联系发放密钥。</p><p style=\"\"><img src=\"https://vip-admin.kingdee.com/download/0109d7837fc8c4d04aa7aff95abc8daa7c3e.png\"/></p><p style=\"\"><br/></p><p style=\"\">3、当开放事件管理员线下联系并发放完密钥信息后，再次前往【开放服务云】-【OpenAPI】-【开放事件】-【开放事件管理】列表页面，将密钥填写到系统展示的灰度特性申请弹窗的“许可密钥”字段中。</p><p style=\"\"><br/></p><p style=\"\">4、点击“验证密钥”按钮，系统会验证密钥的合法性和有效性，验证成功后，关闭弹窗。至此就可以使用开放事件的功能啦！</p><p style=\"\"><br/></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\">1.2 注意事项</h3><p style=\"\"><strong style=\"\">1、未申请灰度许可开放事件功能是不可用的</strong><strong style=\"\">！！！</strong>未申请许可直接关闭弹窗，但是<span style=\"color: rgb(79, 129, 189);\">即便配置了数据运行时也一样会报错的</span>。</p><p style=\"\">2、灰度特性许可申请单提交完成后，如需着急获取密钥，可发送邮件至hongchao_wu@kingdee.com进行催办。</p><p style=\"\">3、对于无法访问外网的私有云客户可能点击“申请密钥”按钮会报错，可将“特性编码”、“环境特征码”、“企业名称”以及您的联系方式（手机号）发送到hongchao_wu@kingdee.com邮箱进行线下联系办理。</p><p><br/></p><p><br/></p><p><br/></p>"
+}

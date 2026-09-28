@@ -1,0 +1,507 @@
+{
+ "badNum": 0,
+ "templateId": null,
+ "identityTagIds": null,
+ "knowledgeId": "453557180935869184",
+ "createdAt": 1685944459000,
+ "collections": 6,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "453557180935869184",
+ "contentType": 1,
+ "updatedAt": 1766110343000,
+ "knowledgeUpdater": {
+  "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+  "department": null,
+  "id": "132488613174518784",
+  "name": "某个路易",
+  "nameSpell": "name"
+ },
+ "assessStatus": 0,
+ "knowledgeStatus": 2,
+ "assessHandleStatus": null,
+ "knowledgeCreatedAt": 1685944459000,
+ "version": 65,
+ "labels": [],
+ "editedAt": 1742795853000,
+ "identityTags": null,
+ "useful": 9,
+ "errors": [],
+ "isCollected": false,
+ "template": "{\"token\":0,\"title\":\"OpenAPI国际化多语言功能优化\",\"version\":\"苍穹V5.0\",\"range\":\"优化了OpenAPI对多语言文本的支持，更加灵活易用。\",\"date\":\"2023-05-21\",\"patch\":\"V5.0.021（BOS）\",\"knowledgeContent\":\"<h2 label=\\\"一级标题\\\" class=\\\"first-title\\\" style=\\\"text-align: justify;\\\">1&nbsp;<strong style=\\\"\\\">功能介绍</strong></h2><p style=\\\"color: rgb(0, 0, 0);\\\"><span style=\\\"\\\">苍穹平台</span><span style=\\\"\\\">O</span>penAPI支持国际化多语言，当<span style=\\\"\\\">通过</span><span style=\\\"\\\">O</span>penAPI执行查询或<span style=\\\"\\\">保存</span>操作<span style=\\\"\\\">时</span><span style=\\\"\\\">，系统会获取访问令牌（</span><span style=\\\"\\\">access_token</span><span style=\\\"\\\">）上下文中的语言（</span><span style=\\\"\\\">language</span><span style=\\\"\\\">），</span>自动处理多语言文本。旧版本中API仅返回或保存当前语言的数据<span style=\\\"\\\">；</span><span style=\\\"\\\">新版本优化了</span>对多语言文本的支持，具体优化如下：</p><ol class=\\\" list-paddingleft-2\\\" style=\\\"\\\"><li style=\\\"\\\"><p style=\\\"color: rgb(0, 0, 0);\\\"><span style=\\\"\\\">查询</span><span style=\\\"\\\">操作</span><span style=\\\"\\\">API</span><span style=\\\"\\\">，</span>通过开关配置<span style=\\\"\\\">，</span>支持<span style=\\\"\\\">一次返回</span>字段的<span style=\\\"\\\">所有语言</span>数据<span style=\\\"\\\">；</span></p></li><li style=\\\"\\\"><p style=\\\"color: rgb(0, 0, 0);\\\"><span style=\\\"\\\">保存</span><span style=\\\"\\\">操作</span><span style=\\\"\\\">API</span><span style=\\\"\\\">，<span style=\\\"color: rgb(0, 0, 0);\\\">支持</span></span><span style=\\\"\\\">使用</span><span style=\\\"\\\">map</span><span style=\\\"\\\">形式传入多语言字段</span><span style=\\\"\\\">，</span><span style=\\\"\\\">保存</span>字段<span style=\\\"\\\">所有语言</span>数据；</p></li><li style=\\\"\\\"><p style=\\\"color: rgb(0, 0, 0);\\\"><span style=\\\"\\\">调用</span>接口<span style=\\\"\\\">时支持自定义语言</span>环境<span style=\\\"\\\">，在请求头中传入Accept-Language（仅v2接口），优先级高于</span><span style=\\\"\\\">访问令牌上下文</span><span style=\\\"\\\">。</span></p></li></ol><p style=\\\"color: rgb(0, 0, 0);\\\">&nbsp;</p><h2 label=\\\"一级标题\\\" class=\\\"first-title\\\" style=\\\"text-align: justify;\\\">2&nbsp;<strong style=\\\"\\\">应用场景</strong></h2><p label=\\\"正文\\\" style=\\\"\\\"><span style=\\\"\\\">在金蝶云苍穹</span>单据或基础资料<span style=\\\"\\\">中，</span>多语言文本<span style=\\\"\\\">是比较特殊的字段，</span><span style=\\\"\\\"></span>OpenAPI支持查询单据或基础资料中的多语言文本字段。同时，用户可以通过接口保存当前语言或所有语言的数据<span style=\\\"\\\">。</span></p><p style=\\\"color: rgb(0, 0, 0);\\\">&nbsp;</p><h2 label=\\\"一级标题\\\" class=\\\"first-title\\\" style=\\\"text-align: justify;\\\">3&nbsp;<strong style=\\\"\\\">操作示例</strong></h2><h3 label=\\\"二级标题\\\" class=\\\"second-title\\\" style=\\\"text-align: justify;\\\">3.1&nbsp;<strong style=\\\"\\\">查询接口，返回所有语言的供应商名称</strong></h3><p style=\\\"color: rgb(0, 0, 0);\\\">当企业有部分供应商为跨国公司时，因此，在进行供应商管理时，需要启用多语言字段，分别维护供应商的英语名称与简称。</p><p style=\\\"color: rgb(0, 0, 0);\\\"><br/></p><p style=\\\"text-align: justify; color: rgb(0, 0, 0);\\\"><img src=\\\"/download/010900a90e30e6e4444d8074f65c2b12474a.png\\\"/></p><p style=\\\"color: rgb(0, 0, 0);\\\"><span style=\\\"color: rgb(127, 127, 127);\\\"><br/></span></p><p style=\\\"color: rgb(0, 0, 0);\\\">第三方系统<span style=\\\"\\\">通过接口查询供应商信息时，首先需要获取</span><span style=\\\"\\\">access_token</span>，此时需要传入默认系统语言作为参数，不同语言的标识如下：</p><ul class=\\\" list-paddingleft-2\\\" style=\\\"\\\"><li style=\\\"\\\"><p style=\\\"color: rgb(0, 0, 0);\\\">简体中文：<span style=\\\"\\\">zh_CN</span></p></li><li style=\\\"\\\"><p style=\\\"color: rgb(0, 0, 0);\\\">繁体中文：<span style=\\\"\\\">zh_TW</span></p></li><li style=\\\"\\\"><p style=\\\"color: rgb(0, 0, 0);\\\">英文：<span style=\\\"\\\">en</span>_US</p></li></ul><p style=\\\"text-align: center; color: rgb(0, 0, 0);\\\"><span style=\\\"color: rgb(127, 127, 127);\\\">&nbsp;</span></p><p style=\\\"text-align: center; color: rgb(0, 0, 0);\\\"><span style=\\\"color: rgb(127, 127, 127);\\\"><img src=\\\"/download/01098e962e67944d41c3a5e531b57255b438.png\\\"/></span></p><p style=\\\"color: rgb(0, 0, 0);\\\"><span style=\\\"color: rgb(127, 127, 127);\\\"><br/></span></p><p style=\\\"color: rgb(0, 0, 0);\\\"><span style=\\\"\\\">在请求头中携带</span><span style=\\\"\\\">accesstoken并</span><span style=\\\"\\\">调用查询接口，默认返回对应语言的数据，即，如传入英文语言标识，那么查询供应商名称和简称时，会返回对应的英文名称。</span></p><p style=\\\"text-align: justify; color: rgb(0, 0, 0);\\\">&nbsp;<img src=\\\"/download/0109aa72f7d0f9984fa5916fb8a7d6a58ef6.png\\\"/></p><p style=\\\"text-align: justify; color: rgb(0, 0, 0);\\\">&nbsp;</p><p style=\\\"color: rgb(0, 0, 0);\\\">若第三方系统需要一次返回所有语言的供应商名称信息，可以通过打开API配置中的‘返回多语言’选项实现路径：【开放服务云】&nbsp;→&nbsp;【OpenAPI】→&nbsp;<span style=\\\"\\\">【</span><span style=\\\"\\\">API</span><span style=\\\"\\\">管理】→</span>&nbsp;<span style=\\\"\\\">【</span><span style=\\\"\\\">API</span><span style=\\\"\\\">开发】</span></p><p style=\\\"text-align: justify; color: rgb(0, 0, 0);\\\">&nbsp;</p><p style=\\\"text-align: center; color: rgb(0, 0, 0);\\\"><span style=\\\"color: rgb(127, 127, 127);\\\"><img src=\\\"/download/01091293735d437a435e9fb578bc2ab6bd7a.png\\\"/>&nbsp;</span></p><p style=\\\"color: rgb(0, 0, 0);\\\"><span style=\\\"color: rgb(127, 127, 127);\\\"><span style=\\\"\\\"><br/></span></span></p><p style=\\\"color: rgb(0, 0, 0);\\\">第三方系统若再次调用接口，此时会返回所有语言的供应商名称信息。</p><p style=\\\"text-align: justify; color: rgb(0, 0, 0);\\\">&nbsp;&nbsp;<img src=\\\"/download/0109ddfc1b72ee514fc6b051823d0f9da3dc.png\\\"/></p><p style=\\\"text-align: center; color: rgb(0, 0, 0);\\\"><br/></p><h3 label=\\\"二级标题\\\" class=\\\"second-title\\\" style=\\\"text-align: justify;\\\">3.2&nbsp;<strong style=\\\"\\\">保存接口，保存所有语言的供应商名称</strong></h3><p style=\\\"color: rgb(0, 0, 0);\\\">以供应商基础资料为例，通过接口保存不同语言的供应商名称。</p><p style=\\\"color: rgb(0, 0, 0);\\\"><span style=\\\"\\\">当只需要保存某种语言数据时，同样在获取</span><span style=\\\"\\\">accesstoken</span><span style=\\\"\\\">的请求参数中，定义</span><span style=\\\"\\\">language，</span>将系统语言定义为英文。</p><p style=\\\"text-align: justify; color: rgb(0, 0, 0);\\\">&nbsp;&nbsp;<img src=\\\"/download/010953df3da47e30409a8e336ce262c57a50.png\\\"/></p><p style=\\\"text-align: center; color: rgb(0, 0, 0);\\\"><span style=\\\"color: rgb(127, 127, 127);\\\">&nbsp;</span></p><p style=\\\"color: rgb(0, 0, 0);\\\"><span style=\\\"color: rgb(0, 0, 0);\\\">在请求头中携带</span><span style=\\\"color: rgb(0, 0, 0);\\\">accesstoken并</span><span style=\\\"color: rgb(0, 0, 0);\\\">调用保存接口，就能成功将英文数据保存成功。</span></p><p style=\\\"text-align: justify; color: rgb(0, 0, 0);\\\">&nbsp;</p><p style=\\\"text-align: center; color: rgb(0, 0, 0);\\\"><span style=\\\"color: rgb(127, 127, 127);\\\"><img src=\\\"/download/01094a1c58808cf948fc848a008d54301d4d.png\\\"/>&nbsp;</span></p><p style=\\\"text-align: justify; color: rgb(0, 0, 0);\\\">&nbsp;</p><p style=\\\"color: rgb(0, 0, 0);\\\"><span style=\\\"\\\">当需要一次保存所以语言的供应商名称时，在请求参数中传入如下</span><span style=\\\"\\\">map</span><span style=\\\"\\\">样式：</span></p><p style=\\\"color: rgb(0, 0, 0);\\\">&nbsp;&nbsp;&nbsp;&nbsp;&quot;name&quot;:</p><p style=\\\"color: rgb(0, 0, 0);\\\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</p><p style=\\\"color: rgb(0, 0, 0);\\\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;zh_CN&quot;: &quot;<span style=\\\"\\\">这是简体</span>&quot;,</p><p style=\\\"color: rgb(0, 0, 0);\\\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;zh_TW&quot;: &quot;<span style=\\\"\\\">这是繁体</span>&quot;,</p><p style=\\\"color: rgb(0, 0, 0);\\\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;en_US&quot;: &quot;this is e&quot;</p><p style=\\\"color: rgb(0, 0, 0);\\\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p><p style=\\\"text-align: justify; color: rgb(0, 0, 0);\\\">&nbsp;</p><p style=\\\"text-align: justify; color: rgb(0, 0, 0);\\\">&nbsp;<img src=\\\"/download/01093098f756596046918991cbcf8f38b53e.png\\\"/></p><p style=\\\"text-align: center; color: rgb(0, 0, 0);\\\"><span style=\\\"text-align: justify;\\\">&nbsp;</span><br/></p><p style=\\\"text-align: justify; color: rgb(0, 0, 0);\\\"><img src=\\\"/download/0109b4203c42c8da482f824d7e84ae007aed.png\\\"/>&nbsp;</p><p style=\\\"text-align: justify; color: rgb(0, 0, 0);\\\">&nbsp;</p><h3 label=\\\"二级标题\\\" class=\\\"second-title\\\" style=\\\"text-align: justify;\\\">3.3&nbsp;<strong style=\\\"\\\">请求头自定义语言环境</strong></h3><p style=\\\"text-align: justify; color: rgb(0, 0, 0);\\\"><span style=\\\"\\\"><strong style=\\\"\\\">使用场景：</strong>当使用基本认证等方式，无法定义访问令牌的语言环境上下文，或使用</span><span style=\\\"\\\">accesstoken</span><span style=\\\"\\\">认证时，不想在上下文中固定环境</span><span style=\\\"\\\">language</span><span style=\\\"\\\">，而是在接口调用时定义语言环境，OpenAPI也支持在</span>请求头中自定义Accept-Language，定义后的效果如下：</p><ul class=\\\" list-paddingleft-2\\\" style=\\\"\\\"><li style=\\\"\\\"><p style=\\\"text-align: justify; color: rgb(0, 0, 0);\\\">接口<span style=\\\"\\\">查询多语言字段（不</span>打开<span style=\\\"\\\">返回多语言</span>开关<span style=\\\"\\\">），会返回</span>Accept-Language<span style=\\\"\\\">中的多语言</span>数据；</p></li><li style=\\\"\\\"><p style=\\\"text-align: justify; color: rgb(0, 0, 0);\\\">接口保存<span style=\\\"\\\">多语言字段</span><span style=\\\"\\\">（</span>不传入map）<span style=\\\"\\\">，会保存</span>Accept-Language<span style=\\\"\\\">中</span>定义的<span style=\\\"\\\">语言</span>数据<span style=\\\"\\\">。</span></p></li></ul><p style=\\\"text-align: justify; color: rgb(0, 0, 0);\\\">&nbsp;</p><p style=\\\"text-align: justify; color: rgb(0, 0, 0);\\\"><img src=\\\"/download/0109ec1acfccf78842558b6ad9c8f9beb8b2.png\\\"/>&nbsp;<span style=\\\"text-align: center; color: rgb(127, 127, 127);\\\">&nbsp;</span>&nbsp;</p><p style=\\\"text-align: justify; color: rgb(0, 0, 0);\\\"><img src=\\\"/download/01098adbcc9490484ab385489f2d30c0ac08.png\\\"/></p><p style=\\\"color: rgb(0, 0, 0);\\\">&nbsp;</p><h2 label=\\\"一级标题\\\" class=\\\"first-title\\\" style=\\\"text-align: justify;\\\">4&nbsp;<strong style=\\\"\\\"><span style=\\\"\\\">更多资讯</span></strong></h2><p style=\\\"color: rgb(0, 0, 0);\\\"><span style=\\\"\\\"></span><span style=\\\"text-align: justify;\\\">关于OpenAPI的更多资讯，请随时关注</span><a href=\\\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=226337371640594944&id=226708319996323072&productLineId=29\\\" target=\\\"_blank\\\" style=\\\"text-align: justify;\\\">新特性公告</a><span style=\\\"text-align: justify;\\\">。</span></p><p><br/></p>\",\"collection\":[\"\"],\"more\":[\"\"]}",
+ "totalFeedBacks": 0,
+ "attachments": [],
+ "sources": [],
+ "editTitle": "OpenAPI国际化多语言功能优化",
+ "title": "OpenAPI国际化多语言功能优化",
+ "content": "<p class=\"title-b title-font\"><span class=\"span-b span-font\">优化了OpenAPI对多语言文本的支持，更加灵活易用。</span></p><p class=\"title-b\"><span class=\"span-b\">发布版本：</span><span class=\"span-nor\">苍穹V5.0</span></p><p class=\"title-b\"><span class=\"span-b\">上线日期：</span><span class=\"span-nor\">2023-05-21</span></p><p class=\"title-b\"><span class=\"span-b\">补丁号：</span><span class=\"span-nor margin-patch\">V5.0.021（BOS）</span></p>\n              <p class=\"table-title title-detail\"><span class=\"span-line\">特性效果展示</span><span class=\"line\"></span></p>\n              <h2 label=\"一级标题\" class=\"first-title\" style=\"text-align: justify;\">1&nbsp;<strong style=\"\">功能介绍</strong></h2><p style=\"color: rgb(0, 0, 0);\"><span style=\"\">苍穹平台</span><span style=\"\">O</span>penAPI支持国际化多语言，当<span style=\"\">通过</span><span style=\"\">O</span>penAPI执行查询或<span style=\"\">保存</span>操作<span style=\"\">时</span><span style=\"\">，系统会获取访问令牌（</span><span style=\"\">access_token</span><span style=\"\">）上下文中的语言（</span><span style=\"\">language</span><span style=\"\">），</span>自动处理多语言文本。旧版本中API仅返回或保存当前语言的数据<span style=\"\">；</span><span style=\"\">新版本优化了</span>对多语言文本的支持，具体优化如下：</p><ol class=\" list-paddingleft-2\" style=\"\"><li style=\"\"><p style=\"color: rgb(0, 0, 0);\"><span style=\"\">查询</span><span style=\"\">操作</span><span style=\"\">API</span><span style=\"\">，</span>通过开关配置<span style=\"\">，</span>支持<span style=\"\">一次返回</span>字段的<span style=\"\">所有语言</span>数据<span style=\"\">；</span></p></li><li style=\"\"><p style=\"color: rgb(0, 0, 0);\"><span style=\"\">保存</span><span style=\"\">操作</span><span style=\"\">API</span><span style=\"\">，<span style=\"color: rgb(0, 0, 0);\">支持</span></span><span style=\"\">使用</span><span style=\"\">map</span><span style=\"\">形式传入多语言字段</span><span style=\"\">，</span><span style=\"\">保存</span>字段<span style=\"\">所有语言</span>数据；</p></li><li style=\"\"><p style=\"color: rgb(0, 0, 0);\"><span style=\"\">调用</span>接口<span style=\"\">时支持自定义语言</span>环境<span style=\"\">，在请求头中传入Accept-Language（仅v2接口），优先级高于</span><span style=\"\">访问令牌上下文</span><span style=\"\">。</span></p></li></ol><p style=\"color: rgb(0, 0, 0);\">&nbsp;</p><h2 label=\"一级标题\" class=\"first-title\" style=\"text-align: justify;\">2&nbsp;<strong style=\"\">应用场景</strong></h2><p label=\"正文\" style=\"\"><span style=\"\">在金蝶AI苍穹</span>单据或基础资料<span style=\"\">中，</span>多语言文本<span style=\"\">是比较特殊的字段，</span><span style=\"\"></span>OpenAPI支持查询单据或基础资料中的多语言文本字段。同时，用户可以通过接口保存当前语言或所有语言的数据<span style=\"\">。</span></p><p style=\"color: rgb(0, 0, 0);\">&nbsp;</p><h2 label=\"一级标题\" class=\"first-title\" style=\"text-align: justify;\">3&nbsp;<strong style=\"\">操作示例</strong></h2><h3 label=\"二级标题\" class=\"second-title\" style=\"text-align: justify;\">3.1&nbsp;<strong style=\"\">查询接口，返回所有语言的供应商名称</strong></h3><p style=\"color: rgb(0, 0, 0);\">当企业有部分供应商为跨国公司时，因此，在进行供应商管理时，需要启用多语言字段，分别维护供应商的英语名称与简称。</p><p style=\"color: rgb(0, 0, 0);\"><br/></p><p style=\"text-align: justify; color: rgb(0, 0, 0);\"><img src=\"/download/010900a90e30e6e4444d8074f65c2b12474a.png\"/></p><p style=\"color: rgb(0, 0, 0);\"><span style=\"color: rgb(127, 127, 127);\"><br/></span></p><p style=\"color: rgb(0, 0, 0);\">第三方系统<span style=\"\">通过接口查询供应商信息时，首先需要获取</span><span style=\"\">access_token</span>，此时需要传入默认系统语言作为参数，不同语言的标识如下：</p><ul class=\" list-paddingleft-2\" style=\"\"><li style=\"\"><p style=\"color: rgb(0, 0, 0);\">简体中文：<span style=\"\">zh_CN</span></p></li><li style=\"\"><p style=\"color: rgb(0, 0, 0);\">繁体中文：<span style=\"\">zh_TW</span></p></li><li style=\"\"><p style=\"color: rgb(0, 0, 0);\">英文：<span style=\"\">en</span>_US</p></li></ul><p style=\"text-align: center; color: rgb(0, 0, 0);\"><span style=\"color: rgb(127, 127, 127);\">&nbsp;</span></p><p style=\"text-align: center; color: rgb(0, 0, 0);\"><span style=\"color: rgb(127, 127, 127);\"><img src=\"/download/01098e962e67944d41c3a5e531b57255b438.png\"/></span></p><p style=\"color: rgb(0, 0, 0);\"><span style=\"color: rgb(127, 127, 127);\"><br/></span></p><p style=\"color: rgb(0, 0, 0);\"><span style=\"\">在请求头中携带</span><span style=\"\">accesstoken并</span><span style=\"\">调用查询接口，默认返回对应语言的数据，即，如传入英文语言标识，那么查询供应商名称和简称时，会返回对应的英文名称。</span></p><p style=\"text-align: justify; color: rgb(0, 0, 0);\">&nbsp;<img src=\"/download/0109aa72f7d0f9984fa5916fb8a7d6a58ef6.png\"/></p><p style=\"text-align: justify; color: rgb(0, 0, 0);\">&nbsp;</p><p style=\"color: rgb(0, 0, 0);\">若第三方系统需要一次返回所有语言的供应商名称信息，可以通过打开API配置中的‘返回多语言’选项实现路径：【开放服务云】&nbsp;→&nbsp;【OpenAPI】→&nbsp;<span style=\"\">【</span><span style=\"\">API</span><span style=\"\">管理】→</span>&nbsp;<span style=\"\">【</span><span style=\"\">API</span><span style=\"\">开发】</span></p><p style=\"text-align: justify; color: rgb(0, 0, 0);\">&nbsp;</p><p style=\"text-align: center; color: rgb(0, 0, 0);\"><span style=\"color: rgb(127, 127, 127);\"><img src=\"/download/01091293735d437a435e9fb578bc2ab6bd7a.png\"/>&nbsp;</span></p><p style=\"color: rgb(0, 0, 0);\"><span style=\"color: rgb(127, 127, 127);\"><span style=\"\"><br/></span></span></p><p style=\"color: rgb(0, 0, 0);\">第三方系统若再次调用接口，此时会返回所有语言的供应商名称信息。</p><p style=\"text-align: justify; color: rgb(0, 0, 0);\">&nbsp;&nbsp;<img src=\"/download/0109ddfc1b72ee514fc6b051823d0f9da3dc.png\"/></p><p style=\"text-align: center; color: rgb(0, 0, 0);\"><br/></p><h3 label=\"二级标题\" class=\"second-title\" style=\"text-align: justify;\">3.2&nbsp;<strong style=\"\">保存接口，保存所有语言的供应商名称</strong></h3><p style=\"color: rgb(0, 0, 0);\">以供应商基础资料为例，通过接口保存不同语言的供应商名称。</p><p style=\"color: rgb(0, 0, 0);\"><span style=\"\">当只需要保存某种语言数据时，同样在获取</span><span style=\"\">accesstoken</span><span style=\"\">的请求参数中，定义</span><span style=\"\">language，</span>将系统语言定义为英文。</p><p style=\"text-align: justify; color: rgb(0, 0, 0);\">&nbsp;&nbsp;<img src=\"/download/010953df3da47e30409a8e336ce262c57a50.png\"/></p><p style=\"text-align: center; color: rgb(0, 0, 0);\"><span style=\"color: rgb(127, 127, 127);\">&nbsp;</span></p><p style=\"color: rgb(0, 0, 0);\"><span style=\"color: rgb(0, 0, 0);\">在请求头中携带</span><span style=\"color: rgb(0, 0, 0);\">accesstoken并</span><span style=\"color: rgb(0, 0, 0);\">调用保存接口，就能成功将英文数据保存成功。</span></p><p style=\"text-align: justify; color: rgb(0, 0, 0);\">&nbsp;</p><p style=\"text-align: center; color: rgb(0, 0, 0);\"><span style=\"color: rgb(127, 127, 127);\"><img src=\"/download/01094a1c58808cf948fc848a008d54301d4d.png\"/>&nbsp;</span></p><p style=\"text-align: justify; color: rgb(0, 0, 0);\">&nbsp;</p><p style=\"color: rgb(0, 0, 0);\"><span style=\"\">当需要一次保存所以语言的供应商名称时，在请求参数中传入如下</span><span style=\"\">map</span><span style=\"\">样式：</span></p><p style=\"color: rgb(0, 0, 0);\">&nbsp;&nbsp;&nbsp;&nbsp;&quot;name&quot;:</p><p style=\"color: rgb(0, 0, 0);\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</p><p style=\"color: rgb(0, 0, 0);\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;zh_CN&quot;: &quot;<span style=\"\">这是简体</span>&quot;,</p><p style=\"color: rgb(0, 0, 0);\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;zh_TW&quot;: &quot;<span style=\"\">这是繁体</span>&quot;,</p><p style=\"color: rgb(0, 0, 0);\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;en_US&quot;: &quot;this is e&quot;</p><p style=\"color: rgb(0, 0, 0);\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p><p style=\"text-align: justify; color: rgb(0, 0, 0);\">&nbsp;</p><p style=\"text-align: justify; color: rgb(0, 0, 0);\">&nbsp;<img src=\"/download/01093098f756596046918991cbcf8f38b53e.png\"/></p><p style=\"text-align: center; color: rgb(0, 0, 0);\"><span style=\"text-align: justify;\">&nbsp;</span><br/></p><p style=\"text-align: justify; color: rgb(0, 0, 0);\"><img src=\"/download/0109b4203c42c8da482f824d7e84ae007aed.png\"/>&nbsp;</p><p style=\"text-align: justify; color: rgb(0, 0, 0);\">&nbsp;</p><h3 label=\"二级标题\" class=\"second-title\" style=\"text-align: justify;\">3.3&nbsp;<strong style=\"\">请求头自定义语言环境</strong></h3><p style=\"text-align: justify; color: rgb(0, 0, 0);\"><span style=\"\"><strong style=\"\">使用场景：</strong>当使用基本认证等方式，无法定义访问令牌的语言环境上下文，或使用</span><span style=\"\">accesstoken</span><span style=\"\">认证时，不想在上下文中固定环境</span><span style=\"\">language</span><span style=\"\">，而是在接口调用时定义语言环境，OpenAPI也支持在</span>请求头中自定义Accept-Language，定义后的效果如下：</p><ul class=\" list-paddingleft-2\" style=\"\"><li style=\"\"><p style=\"text-align: justify; color: rgb(0, 0, 0);\">接口<span style=\"\">查询多语言字段（不</span>打开<span style=\"\">返回多语言</span>开关<span style=\"\">），会返回</span>Accept-Language<span style=\"\">中的多语言</span>数据；</p></li><li style=\"\"><p style=\"text-align: justify; color: rgb(0, 0, 0);\">接口保存<span style=\"\">多语言字段</span><span style=\"\">（</span>不传入map）<span style=\"\">，会保存</span>Accept-Language<span style=\"\">中</span>定义的<span style=\"\">语言</span>数据<span style=\"\">。</span></p></li></ul><p style=\"text-align: justify; color: rgb(0, 0, 0);\">&nbsp;</p><p style=\"text-align: justify; color: rgb(0, 0, 0);\"><img src=\"/download/0109ec1acfccf78842558b6ad9c8f9beb8b2.png\"/>&nbsp;<span style=\"text-align: center; color: rgb(127, 127, 127);\">&nbsp;</span>&nbsp;</p><p style=\"text-align: justify; color: rgb(0, 0, 0);\"><img src=\"/download/01098adbcc9490484ab385489f2d30c0ac08.png\"/></p><p style=\"color: rgb(0, 0, 0);\">&nbsp;</p><h2 label=\"一级标题\" class=\"first-title\" style=\"text-align: justify;\">4&nbsp;<strong style=\"\"><span style=\"\">更多资讯</span></strong></h2><p style=\"color: rgb(0, 0, 0);\"><span style=\"\"></span><span style=\"text-align: justify;\">关于OpenAPI的更多资讯，请随时关注</span><a href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=226337371640594944&id=226708319996323072&productLineId=29\" target=\"_blank\" style=\"text-align: justify;\">新特性公告</a><span style=\"text-align: justify;\">。</span></p><p><br/></p>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 87,
+   "isOpen": 1,
+   "name": "金蝶AI苍穹",
+   "productLineId": 29,
+   "series": "developer01",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        null
+       ],
+       "code": null,
+       "description": "",
+       "entityId": "453557180935869184",
+       "entityType": "Knowledge",
+       "id": "453559855090014208",
+       "isCategory": false,
+       "name": "API国际化多语言",
+       "parentId": "226337544983020032",
+       "sort": "10",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": null,
+     "entityId": null,
+     "entityType": null,
+     "id": "226337544983020032",
+     "isCategory": true,
+     "name": "用户手册",
+     "parentId": "-1",
+     "sort": "6",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download/01010204d4b71b654a208006fa1004eac36a.png",
+  "department": null,
+  "id": "740211268992385024",
+  "name": "毛毛去哪儿",
+  "nameSpell": "name"
+ },
+ "totalAppraisalScore": 45,
+ "iflytekId": null,
+ "views": 4591,
+ "productLineId": 29,
+ "comments": 0,
+ "similarityCount": 0,
+ "totalAppraisalUsers": 9,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1766110343000,
+ "appraisalScore": 0,
+ "unuseful": 0,
+ "knowledgeCheckStatus": 2,
+ "otherProductLineIds": [],
+ "auditAt": 1742795870000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapiapilistlayout",
+        "id": "344582232549528320",
+        "name": "API管理",
+        "productLineId": null,
+        "sort": 1,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "5614",
+       "name": "开放平台",
+       "productLineId": null,
+       "sort": 2,
+       "type": "module"
+      },
+      "code": "DEV",
+      "id": "5576",
+      "name": "开发服务云",
+      "productLineId": null,
+      "sort": 11,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 0,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapi_apilist_layout",
+        "id": "505686038019362304",
+        "name": "异步API",
+        "productLineId": null,
+        "sort": 1,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 1,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "AdvancedSkills",
+     "createdAt": 1556519216000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "高阶技巧标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/01005cea40211bf14113a6004322e86a6780.png",
+     "id": "202203081642",
+     "name": "高级技巧",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download/010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "306913800727243776",
+      "name": "Paim",
+      "nameSpell": "name"
+     },
+     "updatedAt": 1657851500000
+    },
+    {
+     "code": "NewFeatures",
+     "createdAt": 1558619051000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "新特性",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/01009c9898f919a24034b3b37b2ebf42931c.png",
+     "id": "202203081645",
+     "name": "新特性",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010145330b44d45a47ae9b8aac30617b6992.png",
+      "department": null,
+      "id": "2147443044",
+      "name": "Lucky_tiao",
+      "nameSpell": "laoli"
+     },
+     "updatedAt": 1668739541000
+    },
+    {
+     "code": "essencesummary",
+     "createdAt": 1606118073000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "精华汇总",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100402c6f8df169483db114f71043c19ec2.png",
+     "id": "202203081649",
+     "name": "精华汇总",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 2,
+     "updatePerson": {
+      "avatar": "/download?fileName=010162cfa9d5437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1129",
+      "name": "灏",
+      "nameSpell": "hao"
+     },
+     "updatedAt": 1606118073000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "453557180935869184",
+         "entityType": "Knowledge",
+         "id": "453559855090014208",
+         "isCategory": false,
+         "name": "API国际化多语言",
+         "parentId": "226337544983020032",
+         "sort": "10",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": null,
+       "entityId": null,
+       "entityType": null,
+       "id": "226337544983020032",
+       "isCategory": true,
+       "name": "用户手册",
+       "parentId": "-1",
+       "sort": "6",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": "<p class=\"title-b title-font\"><span class=\"span-b span-font\">优化了OpenAPI对多语言文本的支持，更加灵活易用。</span></p><p class=\"title-b\"><span class=\"span-b\">发布版本：</span><span class=\"span-nor\">苍穹V5.0</span></p><p class=\"title-b\"><span class=\"span-b\">上线日期：</span><span class=\"span-nor\">2023-05-21</span></p><p class=\"title-b\"><span class=\"span-b\">补丁号：</span><span class=\"span-nor margin-patch\">V5.0.021（BOS）</span></p>\n              <p class=\"table-title title-detail\"><span class=\"span-line\">特性效果展示</span><span class=\"line\"></span></p>\n              <h2 label=\"一级标题\" class=\"first-title\" style=\"text-align: justify;\">1&nbsp;<strong style=\"\">功能介绍</strong></h2><p style=\"color: rgb(0, 0, 0);\"><span style=\"\">苍穹平台</span><span style=\"\">O</span>penAPI支持国际化多语言，当<span style=\"\">通过</span><span style=\"\">O</span>penAPI执行查询或<span style=\"\">保存</span>操作<span style=\"\">时</span><span style=\"\">，系统会获取访问令牌（</span><span style=\"\">access_token</span><span style=\"\">）上下文中的语言（</span><span style=\"\">language</span><span style=\"\">），</span>自动处理多语言文本。旧版本中API仅返回或保存当前语言的数据<span style=\"\">；</span><span style=\"\">新版本优化了</span>对多语言文本的支持，具体优化如下：</p><ol class=\" list-paddingleft-2\" style=\"\"><li style=\"\"><p style=\"color: rgb(0, 0, 0);\"><span style=\"\">查询</span><span style=\"\">操作</span><span style=\"\">API</span><span style=\"\">，</span>通过开关配置<span style=\"\">，</span>支持<span style=\"\">一次返回</span>字段的<span style=\"\">所有语言</span>数据<span style=\"\">；</span></p></li><li style=\"\"><p style=\"color: rgb(0, 0, 0);\"><span style=\"\">保存</span><span style=\"\">操作</span><span style=\"\">API</span><span style=\"\">，<span style=\"color: rgb(0, 0, 0);\">支持</span></span><span style=\"\">使用</span><span style=\"\">map</span><span style=\"\">形式传入多语言字段</span><span style=\"\">，</span><span style=\"\">保存</span>字段<span style=\"\">所有语言</span>数据；</p></li><li style=\"\"><p style=\"color: rgb(0, 0, 0);\"><span style=\"\">调用</span>接口<span style=\"\">时支持自定义语言</span>环境<span style=\"\">，在请求头中传入Accept-Language（仅v2接口），优先级高于</span><span style=\"\">访问令牌上下文</span><span style=\"\">。</span></p></li></ol><p style=\"color: rgb(0, 0, 0);\">&nbsp;</p><h2 label=\"一级标题\" class=\"first-title\" style=\"text-align: justify;\">2&nbsp;<strong style=\"\">应用场景</strong></h2><p label=\"正文\" style=\"\"><span style=\"\">在金蝶AI苍穹</span>单据或基础资料<span style=\"\">中，</span>多语言文本<span style=\"\">是比较特殊的字段，</span><span style=\"\"></span>OpenAPI支持查询单据或基础资料中的多语言文本字段。同时，用户可以通过接口保存当前语言或所有语言的数据<span style=\"\">。</span></p><p style=\"color: rgb(0, 0, 0);\">&nbsp;</p><h2 label=\"一级标题\" class=\"first-title\" style=\"text-align: justify;\">3&nbsp;<strong style=\"\">操作示例</strong></h2><h3 label=\"二级标题\" class=\"second-title\" style=\"text-align: justify;\">3.1&nbsp;<strong style=\"\">查询接口，返回所有语言的供应商名称</strong></h3><p style=\"color: rgb(0, 0, 0);\">当企业有部分供应商为跨国公司时，因此，在进行供应商管理时，需要启用多语言字段，分别维护供应商的英语名称与简称。</p><p style=\"color: rgb(0, 0, 0);\"><br/></p><p style=\"text-align: justify; color: rgb(0, 0, 0);\"><img src=\"/download/010900a90e30e6e4444d8074f65c2b12474a.png\"/></p><p style=\"color: rgb(0, 0, 0);\"><span style=\"color: rgb(127, 127, 127);\"><br/></span></p><p style=\"color: rgb(0, 0, 0);\">第三方系统<span style=\"\">通过接口查询供应商信息时，首先需要获取</span><span style=\"\">access_token</span>，此时需要传入默认系统语言作为参数，不同语言的标识如下：</p><ul class=\" list-paddingleft-2\" style=\"\"><li style=\"\"><p style=\"color: rgb(0, 0, 0);\">简体中文：<span style=\"\">zh_CN</span></p></li><li style=\"\"><p style=\"color: rgb(0, 0, 0);\">繁体中文：<span style=\"\">zh_TW</span></p></li><li style=\"\"><p style=\"color: rgb(0, 0, 0);\">英文：<span style=\"\">en</span>_US</p></li></ul><p style=\"text-align: center; color: rgb(0, 0, 0);\"><span style=\"color: rgb(127, 127, 127);\">&nbsp;</span></p><p style=\"text-align: center; color: rgb(0, 0, 0);\"><span style=\"color: rgb(127, 127, 127);\"><img src=\"/download/01098e962e67944d41c3a5e531b57255b438.png\"/></span></p><p style=\"color: rgb(0, 0, 0);\"><span style=\"color: rgb(127, 127, 127);\"><br/></span></p><p style=\"color: rgb(0, 0, 0);\"><span style=\"\">在请求头中携带</span><span style=\"\">accesstoken并</span><span style=\"\">调用查询接口，默认返回对应语言的数据，即，如传入英文语言标识，那么查询供应商名称和简称时，会返回对应的英文名称。</span></p><p style=\"text-align: justify; color: rgb(0, 0, 0);\">&nbsp;<img src=\"/download/0109aa72f7d0f9984fa5916fb8a7d6a58ef6.png\"/></p><p style=\"text-align: justify; color: rgb(0, 0, 0);\">&nbsp;</p><p style=\"color: rgb(0, 0, 0);\">若第三方系统需要一次返回所有语言的供应商名称信息，可以通过打开API配置中的‘返回多语言’选项实现路径：【开放服务云】&nbsp;→&nbsp;【OpenAPI】→&nbsp;<span style=\"\">【</span><span style=\"\">API</span><span style=\"\">管理】→</span>&nbsp;<span style=\"\">【</span><span style=\"\">API</span><span style=\"\">开发】</span></p><p style=\"text-align: justify; color: rgb(0, 0, 0);\">&nbsp;</p><p style=\"text-align: center; color: rgb(0, 0, 0);\"><span style=\"color: rgb(127, 127, 127);\"><img src=\"/download/01091293735d437a435e9fb578bc2ab6bd7a.png\"/>&nbsp;</span></p><p style=\"color: rgb(0, 0, 0);\"><span style=\"color: rgb(127, 127, 127);\"><span style=\"\"><br/></span></span></p><p style=\"color: rgb(0, 0, 0);\">第三方系统若再次调用接口，此时会返回所有语言的供应商名称信息。</p><p style=\"text-align: justify; color: rgb(0, 0, 0);\">&nbsp;&nbsp;<img src=\"/download/0109ddfc1b72ee514fc6b051823d0f9da3dc.png\"/></p><p style=\"text-align: center; color: rgb(0, 0, 0);\"><br/></p><h3 label=\"二级标题\" class=\"second-title\" style=\"text-align: justify;\">3.2&nbsp;<strong style=\"\">保存接口，保存所有语言的供应商名称</strong></h3><p style=\"color: rgb(0, 0, 0);\">以供应商基础资料为例，通过接口保存不同语言的供应商名称。</p><p style=\"color: rgb(0, 0, 0);\"><span style=\"\">当只需要保存某种语言数据时，同样在获取</span><span style=\"\">accesstoken</span><span style=\"\">的请求参数中，定义</span><span style=\"\">language，</span>将系统语言定义为英文。</p><p style=\"text-align: justify; color: rgb(0, 0, 0);\">&nbsp;&nbsp;<img src=\"/download/010953df3da47e30409a8e336ce262c57a50.png\"/></p><p style=\"text-align: center; color: rgb(0, 0, 0);\"><span style=\"color: rgb(127, 127, 127);\">&nbsp;</span></p><p style=\"color: rgb(0, 0, 0);\"><span style=\"color: rgb(0, 0, 0);\">在请求头中携带</span><span style=\"color: rgb(0, 0, 0);\">accesstoken并</span><span style=\"color: rgb(0, 0, 0);\">调用保存接口，就能成功将英文数据保存成功。</span></p><p style=\"text-align: justify; color: rgb(0, 0, 0);\">&nbsp;</p><p style=\"text-align: center; color: rgb(0, 0, 0);\"><span style=\"color: rgb(127, 127, 127);\"><img src=\"/download/01094a1c58808cf948fc848a008d54301d4d.png\"/>&nbsp;</span></p><p style=\"text-align: justify; color: rgb(0, 0, 0);\">&nbsp;</p><p style=\"color: rgb(0, 0, 0);\"><span style=\"\">当需要一次保存所以语言的供应商名称时，在请求参数中传入如下</span><span style=\"\">map</span><span style=\"\">样式：</span></p><p style=\"color: rgb(0, 0, 0);\">&nbsp;&nbsp;&nbsp;&nbsp;&quot;name&quot;:</p><p style=\"color: rgb(0, 0, 0);\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</p><p style=\"color: rgb(0, 0, 0);\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;zh_CN&quot;: &quot;<span style=\"\">这是简体</span>&quot;,</p><p style=\"color: rgb(0, 0, 0);\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;zh_TW&quot;: &quot;<span style=\"\">这是繁体</span>&quot;,</p><p style=\"color: rgb(0, 0, 0);\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;en_US&quot;: &quot;this is e&quot;</p><p style=\"color: rgb(0, 0, 0);\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p><p style=\"text-align: justify; color: rgb(0, 0, 0);\">&nbsp;</p><p style=\"text-align: justify; color: rgb(0, 0, 0);\">&nbsp;<img src=\"/download/01093098f756596046918991cbcf8f38b53e.png\"/></p><p style=\"text-align: center; color: rgb(0, 0, 0);\"><span style=\"text-align: justify;\">&nbsp;</span><br/></p><p style=\"text-align: justify; color: rgb(0, 0, 0);\"><img src=\"/download/0109b4203c42c8da482f824d7e84ae007aed.png\"/>&nbsp;</p><p style=\"text-align: justify; color: rgb(0, 0, 0);\">&nbsp;</p><h3 label=\"二级标题\" class=\"second-title\" style=\"text-align: justify;\">3.3&nbsp;<strong style=\"\">请求头自定义语言环境</strong></h3><p style=\"text-align: justify; color: rgb(0, 0, 0);\"><span style=\"\"><strong style=\"\">使用场景：</strong>当使用基本认证等方式，无法定义访问令牌的语言环境上下文，或使用</span><span style=\"\">accesstoken</span><span style=\"\">认证时，不想在上下文中固定环境</span><span style=\"\">language</span><span style=\"\">，而是在接口调用时定义语言环境，OpenAPI也支持在</span>请求头中自定义Accept-Language，定义后的效果如下：</p><ul class=\" list-paddingleft-2\" style=\"\"><li style=\"\"><p style=\"text-align: justify; color: rgb(0, 0, 0);\">接口<span style=\"\">查询多语言字段（不</span>打开<span style=\"\">返回多语言</span>开关<span style=\"\">），会返回</span>Accept-Language<span style=\"\">中的多语言</span>数据；</p></li><li style=\"\"><p style=\"text-align: justify; color: rgb(0, 0, 0);\">接口保存<span style=\"\">多语言字段</span><span style=\"\">（</span>不传入map）<span style=\"\">，会保存</span>Accept-Language<span style=\"\">中</span>定义的<span style=\"\">语言</span>数据<span style=\"\">。</span></p></li></ul><p style=\"text-align: justify; color: rgb(0, 0, 0);\">&nbsp;</p><p style=\"text-align: justify; color: rgb(0, 0, 0);\"><img src=\"/download/0109ec1acfccf78842558b6ad9c8f9beb8b2.png\"/>&nbsp;<span style=\"text-align: center; color: rgb(127, 127, 127);\">&nbsp;</span>&nbsp;</p><p style=\"text-align: justify; color: rgb(0, 0, 0);\"><img src=\"/download/01098adbcc9490484ab385489f2d30c0ac08.png\"/></p><p style=\"color: rgb(0, 0, 0);\">&nbsp;</p><h2 label=\"一级标题\" class=\"first-title\" style=\"text-align: justify;\">4&nbsp;<strong style=\"\"><span style=\"\">更多资讯</span></strong></h2><p style=\"color: rgb(0, 0, 0);\"><span style=\"\"></span><span style=\"text-align: justify;\">关于OpenAPI的更多资讯，请随时关注</span><a href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=226337371640594944&id=226708319996323072&productLineId=29\" target=\"_blank\" style=\"text-align: justify;\">新特性公告</a><span style=\"text-align: justify;\">。</span></p><p><br/></p>"
+}

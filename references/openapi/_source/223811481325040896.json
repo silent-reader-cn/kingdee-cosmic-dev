@@ -1,0 +1,565 @@
+{
+ "badNum": 0,
+ "identityTagIds": null,
+ "knowledgeId": "223811481325040896",
+ "createdAt": 1631168815000,
+ "collections": 16,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "223811481325040896",
+ "contentType": 1,
+ "updatedAt": 1766040469000,
+ "knowledgeUpdater": {
+  "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+  "department": null,
+  "id": "132488613174518784",
+  "name": "某个路易",
+  "nameSpell": "name"
+ },
+ "assessStatus": 0,
+ "knowledgeStatus": 2,
+ "assessHandleStatus": null,
+ "knowledgeCreatedAt": 1631168815000,
+ "version": 36,
+ "labels": [],
+ "editedAt": 1744183964000,
+ "identityTags": null,
+ "useful": 7,
+ "errors": [],
+ "isCollected": false,
+ "totalFeedBacks": 0,
+ "attachments": [],
+ "sources": [],
+ "editTitle": "保存操作接口",
+ "title": "保存操作接口",
+ "content": "<p label=\"一级标题\" style=\"font-size: 20px; font-weight: bold; line-height: 42px;\">1 接口介绍</p><p style=\"\">保存操作服务是指通过在请求体中按规范输入json格式的参数，调用界面保存操作，快速保存单笔或大批量的数据。</p><p style=\"\"><br/></p><p label=\"一级标题\" style=\"font-size: 20px; font-weight: bold; line-height: 42px;\">2 注意事项</p><p style=\"\">1）当一次保存多条数据时，请求体的参数data需要修改为datas；</p><p style=\"\">2）当请求体的list数据中携带有主键id时，默认是更新操作，否则判断为新增保存操作，可以在同一批数据中既执行新增又执行更新操作。</p><p label=\"正文\" style=\"\"><br/></p><p label=\"一级标题\" style=\"font-size: 20px; font-weight: bold; line-height: 42px;\">3 接口示例</p><p label=\"二级标题\" style=\"font-size: 18px; font-weight: bold; line-height: 42px;\">采购订单保存</p><table style=\"\"><tbody style=\"\"><tr class=\"firstRow ueditor-new-first-row\" style=\"\"><td width=\"655\" style=\"\"><p style=\"\"><strong style=\"\">URL：</strong><span style=\"\">{{host}}/kapi</span>/sys/pm_purorderbill/save</p><p style=\"\"><br/></p><p style=\"\"><strong style=\"\">请求方式：</strong>POST</p><p style=\"\"><br/></p><p style=\"\"><strong style=\"\">请求Header参数：</strong></p><p style=\"\">Content-Type=application/json</p><p style=\"\">accessToken: xxxxxxxxxxxxx</p></td></tr></tbody></table><p style=\"\"><br/></p><table style=\"\"><tbody style=\"\"><tr class=\"firstRow ueditor-new-first-row\" style=\"\"><td width=\"655\" style=\"\"><p style=\"\"><strong style=\"\">请求Body：</strong></p><p style=\"\">{</p><p style=\"\">&nbsp; &nbsp;&quot;data&quot;: {</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;&quot;org&quot;: {</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;: &quot;xyd2024&quot;</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;},</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;&quot;biztype&quot;: {</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;: &quot;110&quot;</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;},</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;&quot;billtype&quot;: {</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;: &quot;pm_PurOrderBill_Cost_BT_S&quot;</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;},</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;&quot;biztime&quot;: &quot;2021-07-25 15:15:22&quot;,</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;&quot;billstatus&quot;: &quot;A&quot;,</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;&quot;bizorg&quot;: {</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;: &quot;xyd2024&quot;</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;},</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;&quot;supplier&quot;: {</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;: &quot;sup-00122&quot;</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;},</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;&quot;settlecurrency&quot;: {</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;: &quot;CNY&quot;</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;},</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;&quot;exratetable&quot;: {</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;: &quot;0001&quot;</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;},</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;&quot;comment&quot;:&quot;采购订单备注&quot;,</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;&quot;exratedate&quot;: &quot;2021-07-25 15:15:22&quot;,</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;&quot;paymode&quot;: &quot;CREDIT&quot;,</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;&quot;exchangerate&quot;: 1.0000000000,</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;&quot;istax&quot;: &quot;1&quot;,</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;&quot;billentry&quot;: [</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{ &nbsp;</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;material&quot;: {</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;: &quot;ZH-00009257&quot;</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;},</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;qty&quot;: &quot;1010&quot;,</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;unit&quot;: {</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;: &quot;ZH-TON&quot;</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;},</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;entrysettleorg&quot;:{</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;:&quot;xyd2024&quot;</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;},</p><p style=\"\">&quot;entrycomment<span style=\"\">&quot;</span>:<span style=\"\">&quot;</span>分录1<span style=\"\">&quot;</span></p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;},</p><p style=\"\">{ &nbsp;</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;material&quot;: {</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;: &quot;ZH-00009257&quot;</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;},</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;qty&quot;: &quot;1020&quot;,</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;unit&quot;: {</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;: &quot;ZH-TON&quot;</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;},</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;entrysettleorg&quot;:{</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;:&quot;xyd2024&quot;</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;},</p><p style=\"\"><span style=\"\">&quot;</span>entrycomment<span style=\"\">&quot;</span>:<span style=\"\">&quot;</span>分录2<span style=\"\">&quot;</span></p><p style=\"\"><br/></p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</p><p style=\"\"><br/></p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;]</p><p style=\"\">&nbsp; &nbsp;}</p><p style=\"\">}</p></td></tr></tbody></table><p style=\"\"><br/></p><table style=\"\"><tbody style=\"\"><tr class=\"firstRow ueditor-new-first-row\" style=\"\"><td width=\"655\" style=\"\"><p style=\"\"><strong style=\"\">请求结果：</strong></p><p style=\"\">{</p><p style=\"\">&nbsp; &nbsp;&quot;data&quot;: {</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;&quot;success&quot;: true,</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;&quot;needSign&quot;: false,</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;&quot;needWfAssignPersons&quot;: false,</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;&quot;cancelWriteLog&quot;: true,</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;&quot;showMessage&quot;: true,</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;&quot;billCount&quot;: 1,</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;&quot;successPkIds&quot;: [</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1235479318616893440</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;],</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;&quot;billNos&quot;: {</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;1235479318616893440&quot;: &quot;CGDD-202109-152203&quot;</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;},</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;&quot;validateResult&quot;: {</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;validateErrors&quot;: [],</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;success&quot;: true,</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;message&quot;: &quot;&quot;,</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;errorPkIds&quot;: [],</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;errorDataIndexs&quot;: []</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;},</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;&quot;allErrorOrValidateInfo&quot;: [],</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;&quot;runSecond&quot;: 0,</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;&quot;allErrorInfo&quot;: []</p><p style=\"\">&nbsp; &nbsp;},</p><p style=\"\">&nbsp; &nbsp;&quot;success&quot;: true,</p><p style=\"\">&nbsp; &nbsp;&quot;errorCode&quot;: &quot;success&quot;,</p><p style=\"\">&nbsp; &nbsp;&quot;message&quot;: null</p><p style=\"\">}</p></td></tr></tbody></table><p style=\"\"><br/></p><p label=\"一级标题\" style=\"font-size: 20px; font-weight: bold; line-height: 42px;\">4 返回参数说明</p><table style=\"\"><tbody style=\"\"><tr class=\"firstRow ueditor-new-first-row\" style=\"\"><td width=\"36\" style=\"\"><p style=\"\"><strong style=\"\">序号</strong></p></td><td width=\"64\" style=\"\"><p style=\"\"><strong style=\"\">参数</strong></p></td><td width=\"100\" style=\"\"><p style=\"\"><strong style=\"\">解释</strong></p></td><td width=\"405\" style=\"\"><p style=\"\"><strong style=\"\">返回值实例</strong></p></td></tr><tr style=\"\"><td width=\"16\" style=\"\"><p style=\"\">1</p></td><td width=\"64\" style=\"\"><p style=\"\">success</p></td><td width=\"53\" style=\"\"><p style=\"\">是否成功</p></td><td width=\"405\" style=\"\"><p style=\"\">true/false</p></td></tr><tr style=\"\"><td width=\"16\" style=\"\"><p style=\"\">2</p></td><td width=\"64\" style=\"\"><p style=\"\">errorCode</p></td><td width=\"53\" style=\"\"><p style=\"\">错误编码</p></td><td width=\"405\" style=\"\"><p style=\"\">success/false</p></td></tr><tr style=\"\"><td width=\"16\" style=\"\"><p style=\"\">3</p></td><td width=\"64\" style=\"\"><p style=\"\">message</p></td><td width=\"53\" style=\"\"><p style=\"\">提示信息</p></td><td width=\"405\" style=\"\"><p style=\"\"><span style=\"\">成功时为null，失败时会返回错误信息</span></p></td></tr><tr style=\"\"><td width=\"16\" style=\"\"><p style=\"\">4</p></td><td width=\"64\" style=\"\"><p style=\"\">data</p></td><td width=\"53\" style=\"\"><p style=\"\">业务对象数据</p></td><td width=\"405\" style=\"\"><p style=\"\">{&quot;successPkIds&quot;:[1235479318616893440],&quot;billNos&quot;:{&quot;1235479318616893440&quot;: &quot;CGDD-202109-152203&quot;},}</p></td></tr></tbody></table><p style=\"\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\"><strong style=\"\">5. 参数格式示例</strong></h2><p style=\"\">保存接口所有字段类型的入参格式可参考下表，其中基础资料类型的字段在入参时，建议通过id或number保存。</p><p style=\"\"><strong style=\"\"><br/></strong></p><table style=\"\"><tbody style=\"\"><tr class=\"firstRow ueditor-new-first-row\" style=\"\"><td style=\"\"><p style=\"\"><strong style=\"\">序号</strong></p></td><td width=\"117\" style=\"\"><p style=\"\"><strong style=\"\">参数名称</strong></p></td><td width=\"466\" style=\"\"><p style=\"\"><strong style=\"\">入参示例</strong></p></td></tr><tr style=\"\"><td style=\"\"><p style=\"\">1</p></td><td width=\"6\" style=\"\"><p style=\"\">单据ID</p></td><td width=\"466\" style=\"\"><p style=\"\">&quot;id&quot;: &quot;1007171369592427520&quot;</p></td></tr><tr style=\"\"><td style=\"\"><p style=\"\">2</p></td><td width=\"6\" style=\"\"><p style=\"\">单据编码</p></td><td width=\"466\" style=\"\"><p style=\"\">&quot;billno&quot; : &quot;4&quot;</p></td></tr><tr style=\"\"><td style=\"\"><p style=\"\">3</p></td><td width=\"6\" style=\"\"><p style=\"\">单据状态</p></td><td width=\"466\" style=\"\"><p style=\"\">&quot;billstatus&quot;: &quot;A&quot;</p></td></tr><tr style=\"\"><td style=\"\"><p style=\"\">4</p></td><td width=\"6\" style=\"\"><p style=\"\">创建人</p></td><td width=\"466\" style=\"\"><p style=\"\">&quot;creator&quot;: {<br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;id&quot;: &quot;13466739&quot;,<br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;: &quot;13466739&quot;,<br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;name&quot;:&nbsp;&quot;IERP&quot;<br/></p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;}</p></td></tr><tr style=\"\"><td style=\"\"><p style=\"\">5</p></td><td width=\"6\" style=\"\"><p style=\"\">创建时间</p></td><td width=\"466\" style=\"\"><p style=\"\">&quot;createtime&quot;: &quot;2020-10-22 14:12:46&quot;</p></td></tr><tr style=\"\"><td style=\"\"><p style=\"\">6</p></td><td width=\"6\" style=\"\"><p style=\"\">组织</p></td><td width=\"466\" style=\"\"><p style=\"\">&quot;org&quot;: {<br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;id&quot;: &quot;100000&quot;,<br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;: &quot;00&quot;,<br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;name&quot;: &quot;环宇国际集团有限公司&quot;<br/></p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;}</p></td></tr><tr style=\"\"><td style=\"\"><p style=\"\">7</p></td><td width=\"6\" style=\"\"><p style=\"\">文本</p></td><td width=\"466\" style=\"\"><p style=\"\">textfield: &quot;4&quot;</p></td></tr><tr style=\"\"><td style=\"\"><p style=\"\">8</p></td><td width=\"6\" style=\"\"><p style=\"\">整数</p></td><td width=\"466\" style=\"\"><p style=\"\">&quot;integerfield&quot;: 4</p></td></tr><tr style=\"\"><td style=\"\"><p style=\"\">9</p></td><td width=\"6\" style=\"\"><p style=\"\">小数</p></td><td width=\"466\" style=\"\"><p style=\"\">&quot;decimalfield&quot;: &quot;4.0000000000&quot;</p></td></tr><tr style=\"\"><td style=\"\"><p style=\"\">10</p></td><td width=\"6\" style=\"\"><p style=\"\">长整数</p></td><td width=\"466\" style=\"\"><p style=\"\">&quot;bigintfield&quot;: 4</p></td></tr><tr style=\"\"><td style=\"\"><p style=\"\">11</p></td><td width=\"6\" style=\"\"><p style=\"\">多行文本</p></td><td width=\"466\" style=\"\"><p style=\"\">&quot;textareafield&quot;: &quot;4&quot;</p></td></tr><tr style=\"\"><td style=\"\"><p style=\"\">12</p></td><td width=\"6\" style=\"\"><p style=\"\">大文本</p></td><td width=\"466\" style=\"\"><p style=\"\">&quot;largetextfield&quot;: &quot;4&quot;</p></td></tr><tr style=\"\"><td style=\"\"><p style=\"\">13</p></td><td width=\"6\" style=\"\"><p style=\"\">多语言文本</p></td><td width=\"466\" style=\"\"><p style=\"\">&quot;mulilangtextfield&quot;: {<br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;zh_TW&quot;: &quot;4&quot;,<br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;zh_CN&quot;: &quot;4&quot;<br/>&nbsp; &nbsp; &nbsp; &nbsp;}</p></td></tr><tr style=\"\"><td style=\"\"><p style=\"\">14</p></td><td width=\"6\" style=\"\"><p style=\"\">复选框</p></td><td width=\"466\" style=\"\"><p style=\"\">&quot;checkboxfield&quot;: true</p></td></tr><tr style=\"\"><td style=\"\"><p style=\"\">15</p></td><td width=\"6\" style=\"\"><p style=\"\">单选按钮</p></td><td width=\"466\" style=\"\"><p style=\"\">&quot;radiofield&quot;: false</p></td></tr><tr style=\"\"><td style=\"\"><p style=\"\">16</p></td><td width=\"6\" style=\"\"><p style=\"\">单选按钮组</p></td><td width=\"466\" style=\"\"><p style=\"\">&quot;radiogroupfield&quot;: &quot;1&quot;</p></td></tr><tr style=\"\"><td style=\"\"><p style=\"\">17</p></td><td width=\"6\" style=\"\"><p style=\"\">下拉列表</p></td><td width=\"466\" style=\"\"><p style=\"\">&quot;combofield&quot;: &quot;1&quot;</p></td></tr><tr style=\"\"><td style=\"\"><p style=\"\">18</p></td><td width=\"6\" style=\"\"><p style=\"\">多选下拉列表</p></td><td width=\"466\" style=\"\"><p style=\"\">&quot;mulcombofield&quot;: &quot;a,b&quot;</p></td></tr><tr style=\"\"><td style=\"\"><p style=\"\">19</p></td><td width=\"6\" style=\"\"><p style=\"\">基础资料</p></td><td width=\"466\" style=\"\"><p style=\"\">用户基础资料<br/>&quot;userfield&quot;: {<br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;id&quot;: &quot;577197513895838720&quot;,<br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;: &quot;&quot;,<br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;name&quot;: &quot;周云冲&quot;<br/></p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;}</p></td></tr><tr style=\"\"><td style=\"\"><p style=\"\">20</p></td><td width=\"6\" style=\"\"><p style=\"\">辅助资料</p></td><td width=\"466\" style=\"\"><p style=\"\">&quot;assistantfield&quot;: {<br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;id&quot;: &quot;438033444614721536&quot;,<br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;: &quot;COT01&quot;,<br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;name&quot;: &quot;畜禽养殖&quot;<br/></p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;}</p></td></tr><tr style=\"\"><td style=\"\"><p style=\"\">21</p></td><td width=\"6\" style=\"\"><p style=\"\">单据体/子单据体</p></td><td width=\"466\" style=\"\"><p style=\"\">&quot;entryentity&quot;: [<br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{<br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;id&quot;: &quot;1007191118741270528&quot;,<br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;seq&quot;: 1,<br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;integerfield1&quot;: 4,<br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;textfield1&quot;: &quot;单据体4&quot;,<br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;subentryentity&quot;: [<br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{<br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;id&quot;: &quot;1007191118741246976&quot;,<br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;seq&quot;: 1,<br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;integerfield2&quot;: 4,<br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;textfield2&quot;: &quot;子单据体4&quot;<br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}<br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]<br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}<br/>&nbsp; &nbsp; &nbsp; &nbsp;]</p></td></tr><tr style=\"\"><td colspan=\"1\" rowspan=\"1\" style=\"\">22</td><td colspan=\"1\" rowspan=\"1\" style=\"\">核算维度</td><td colspan=\"1\" rowspan=\"1\" style=\"\"><p style=\"\">&nbsp;&quot;assgrp&quot;: {</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &quot;客户&quot;: {</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &quot;number&quot;: &quot;Cus-000001&quot;</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; },</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &quot;费用项目&quot;:{</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &quot;number&quot;: &quot;111&quot;</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p></td></tr><tr style=\"\"><td colspan=\"1\" rowspan=\"1\" style=\"\">23</td><td colspan=\"1\" rowspan=\"1\" style=\"\">辅助属性</td><td colspan=\"1\" rowspan=\"1\" style=\"\"><p style=\"\"><br/></p><p style=\"\">&quot;auxpty&quot;: {</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &quot;颜色&quot;: {</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &quot;number&quot;: &quot;blue&quot;</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p></td></tr><tr style=\"\"><td colspan=\"1\" rowspan=\"1\" style=\"\">24</td><td colspan=\"1\" rowspan=\"1\" style=\"\">多选基础资料</td><td colspan=\"1\" rowspan=\"1\" style=\"\"><p style=\"\">&quot;mulbasedatafield&quot;: {</p><p style=\"\">&nbsp; &nbsp; &quot;importprop&quot;: &quot;number/name&quot;, 支持指定按编码或名称查找赋值</p><p style=\"\">&nbsp; &nbsp; &quot;number&quot;: &quot;基础资料编码&quot;,</p><p style=\"\"><span style=\"\">&nbsp; &nbsp; &quot;name&quot;: &quot;基础资料名称&quot;</span></p><p style=\"\">}</p><p style=\"\"><br/></p><p style=\"\">以高等院校的院校特性（多选基础资料）为例，入参格式如下：</p><p style=\"\"><br/></p><div style=\"color: rgb(0, 0, 0);\"><span style=\"color: rgb(163, 21, 21);\"></span><p style=\"\">&quot;collegecharact&quot;:</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &quot;number&quot;:&quot;1010_S,1020_S,1030_S&quot;</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p></div><p style=\"\">不同的基础资料编码之间用逗号&quot;,&quot;分隔<br/></p></td></tr></tbody></table><p style=\"\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">6. 特殊参数</h2><p label=\"正文\" style=\"\"><strong style=\"\">option</strong>（该参数与data同级）：</p><ul class=\" list-paddingleft-2\" style=\"\"><li style=\"\"><p label=\"正文\" style=\"\">importtype：引入类型，设置值如新增new、更新override、更新并新增overridenew。</p></li><li style=\"\"><p label=\"正文\" style=\"\">KeyFields：分隔字串，引入数据时的匹配字段，用来查找待更新的数据&nbsp;比如单据编码billno、名称name等其他候选键。</p></li><li style=\"\"><p label=\"正文\" style=\"\">OverrideEntry：设置值为true，会完整覆盖分录，例：某个单据有10条分录，调用请求，会把10条全删除，然后只保留新增的分录。若设置为false，会根据请求体数据中有分录内码的分录来更新分录行，若没有就会追加分录。</p></li><li style=\"\"><p label=\"正文\" style=\"\">firePropChanged：设置值为true，覆盖引入单据时，是否触发值更新事件。值更新事件非常消耗性能，可设置为false，默认不触发。</p></li><li style=\"\"><p label=\"正文\" style=\"\">fireAfterImportData：设置值为true，引入单据结束后，是否触发afterImportData事件，并执行业务服务规则。默认执行，可设置为false，参数关闭，提升性能 。</p></li><li style=\"\"><p label=\"正文\" style=\"\">ForUpdateMultiLangFields：设置值为true ，更新数据时仅更新多语言字段。</p></li></ul><p style=\"\"><br/></p><div style=\"color: rgb(0, 0, 0);\"><table style=\"\"><tbody style=\"\"><tr class=\"firstRow ueditor-new-first-row\" style=\"\"><td width=\"655\" style=\"word-break: break-all;\"><p style=\"\"><strong style=\"\"></strong></p><p style=\"\"><strong style=\"\">使用示例：</strong></p><p style=\"\">{</p><div style=\"\">&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"color: rgb(163, 21, 21);\">&quot;data&quot;</span>:&nbsp;{</div><div style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span style=\"color: rgb(163, 21, 21);\">&quot;billno&quot;</span>:&nbsp;&nbsp;<span style=\"color: rgb(4, 81, 165);\">&quot;<span style=\"color: rgb(0, 112, 192);\">CGDD-202110-153158</span>&quot;</span><span style=\"color: rgb(4, 81, 165);\"></span></div><div style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;...</div><div style=\"\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},</div><div style=\"\">&nbsp; &nbsp; &nbsp;<span style=\"color: rgb(163, 21, 21);\">&quot;option&quot;</span>:&nbsp;{</div><div style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style=\"color: rgb(163, 21, 21);\">&quot;importtype&quot;</span>:&nbsp;<span style=\"color: rgb(4, 81, 165);\">&quot;override&quot;</span>,</div><div style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span style=\"color: rgb(163, 21, 21);\">&quot;KeyFields&quot;</span>:&nbsp;<span style=\"color: rgb(4, 81, 165);\">&quot;id&quot;</span>,</div><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span style=\"color: rgb(163, 21, 21);\">&quot;OverrideEntry&quot;</span>:&nbsp;<span style=\"color: rgb(4, 81, 165);\">true,</span></p><p style=\"\"><span style=\"color: rgb(4, 81, 165);\"><span style=\"color: rgb(0, 0, 0);\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><span style=\"color: rgb(163, 21, 21);\">&quot;ForUpdateMultiLangFields&quot;</span><span style=\"color: rgb(0, 0, 0);\">:&nbsp;</span>true</span></p><p style=\"\"><span style=\"color: rgb(4, 81, 165); font-weight: bold;\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ...</span></p><p style=\"\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p><p style=\"\"><br/></p><p style=\"\">注意：若非上列参数，属于业务自定义的参数，则将option改为optionvariables。</p><p style=\"\"><br/></p></td></tr></tbody></table></div><p label=\"正文\" style=\"\">&nbsp;</p><p label=\"正文\" style=\"\"><strong style=\"\">Forcedsubmit：</strong>单据上的操作Key，<span style=\"text-align: justify;\">在请求体中可以添加参数</span><span style=\"font-weight: 700; text-align: justify;\">&quot;forcedsubmit&quot;，</span><span style=\"text-align: justify;\">设置值为submit，调用保存操作，业务对象会在保存后自动提交。</span></p><p label=\"正文\" style=\"\"><span style=\"text-align: justify;\"><br/></span></p><p label=\"正文\" style=\"\"><span style=\"text-align: justify;\"><strong style=\"\">appid：</strong>可以指定API路由到某个应用，入参时传入对应的appid。</span></p><p label=\"正文\" style=\"\"><span style=\"text-align: justify;\"><br/></span></p><p label=\"正文\" style=\"\"><strong style=\"\">updateFields：</strong>仅更新body参数中的指定字段。</p><p label=\"正文\" style=\"\"><br/></p><p label=\"正文\" style=\"\"><strong style=\"\"></strong></p><div style=\"color: rgb(0, 0, 0);\"><table style=\"\"><tbody style=\"\"><tr class=\"firstRow ueditor-new-first-row\" style=\"\"><td width=\"655\" style=\"\"><p style=\"\"><strong style=\"\"></strong></p><p style=\"\"><strong style=\"\">使用示例：</strong></p><p style=\"\">{</p><div style=\"\">&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"color: rgb(163, 21, 21);\">&quot;data&quot;</span>:&nbsp;{</div><div style=\"\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"color: rgb(163, 21, 21);\">&quot;billno&quot;</span>:&nbsp;&nbsp;<span style=\"color: rgb(4, 81, 165);\">&quot;<span style=\"color: rgb(0, 112, 192);\">CGDD-202110-153158</span>&quot;</span></div><div style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;...</div><p style=\"\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},</p><div style=\"\"><span style=\"color: rgb(163, 21, 21);\">&nbsp;&quot;forcedsubmit&quot;</span>:&nbsp;<span style=\"color: rgb(4, 81, 165);\">&quot;submit&quot;</span>,</div><div style=\"\"><div style=\"\">&nbsp;<span style=\"color: rgb(163, 21, 21);\">&quot;updateFields&quot;</span>:&nbsp;[</div><div style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style=\"color: rgb(4, 81, 165);\">&quot;billno&quot;</span>,</div><div style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style=\"color: rgb(4, 81, 165);\">&quot;billentry&quot;</span>,</div><div style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style=\"color: rgb(4, 81, 165);\">&quot;material&quot;</span>,</div><p style=\"\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"color: rgb(4, 81, 165);\">&quot;unit&quot;</span></p><p style=\"\"><span style=\"color: rgb(4, 81, 165);\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ...</span></p><p style=\"\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]</p><p style=\"\">}</p></div></td></tr></tbody></table></div><p label=\"正文\" style=\"\"><br/></p><p><br/></p>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 87,
+   "isOpen": 1,
+   "name": "金蝶AI苍穹",
+   "productLineId": 29,
+   "series": "developer01",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          {
+           "childCategory": [
+            null
+           ],
+           "code": null,
+           "description": null,
+           "entityId": "223811481325040896",
+           "entityType": "Knowledge",
+           "id": "322034602930378240",
+           "isCategory": false,
+           "name": "保存操作接口",
+           "parentId": "322033766435165696",
+           "sort": "7",
+           "specialId": "226337046514476288",
+           "status": 1
+          }
+         ],
+         "code": null,
+         "description": null,
+         "entityId": null,
+         "entityType": null,
+         "id": "322033766435165696",
+         "isCategory": true,
+         "name": "API服务管理",
+         "parentId": "322033541636710144",
+         "sort": "1",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": null,
+       "id": "322033541636710144",
+       "isCategory": true,
+       "name": "API1.0",
+       "parentId": "226337544983020032",
+       "sort": "26",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": null,
+     "entityId": null,
+     "entityType": null,
+     "id": "226337544983020032",
+     "isCategory": true,
+     "name": "用户手册",
+     "parentId": "-1",
+     "sort": "6",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download/01010204d4b71b654a208006fa1004eac36a.png",
+  "department": null,
+  "id": "740211268992385024",
+  "name": "毛毛去哪儿",
+  "nameSpell": "name"
+ },
+ "totalAppraisalScore": 35,
+ "iflytekId": null,
+ "views": 10897,
+ "productLineId": 29,
+ "comments": 3,
+ "similarityCount": 0,
+ "totalAppraisalUsers": 7,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1766040469000,
+ "appraisalScore": 0,
+ "unuseful": 0,
+ "knowledgeCheckStatus": 2,
+ "otherProductLineIds": [],
+ "auditAt": 1744183974000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapiservicenew",
+        "id": "505687093087987200",
+        "name": "API服务管理1.0",
+        "productLineId": null,
+        "sort": 12,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 0,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapiservicenew",
+        "id": "344594257418019328",
+        "name": "API服务管理1.0",
+        "productLineId": null,
+        "sort": 13,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "5614",
+       "name": "开放平台",
+       "productLineId": null,
+       "sort": 2,
+       "type": "module"
+      },
+      "code": "DEV",
+      "id": "5576",
+      "name": "开发服务云",
+      "productLineId": null,
+      "sort": 11,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 1,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "rumen",
+     "createdAt": 1605667807000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "入门类的知识可使用此标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100d322b9282bcc438faa894f4eec029977.png",
+     "id": "202203081646",
+     "name": "基础入门",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download?fileName=0101ec1d6ce599b442dab7d0b794c1fce88d.png",
+      "department": null,
+      "id": "1009",
+      "name": "一颗小星星",
+      "nameSpell": "fengling"
+     },
+     "updatedAt": 1657872008000
+    },
+    {
+     "code": "typicalinstance",
+     "createdAt": 1605836164000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "基于典型客户的应用场景，介绍客户痛点，给出本应用/功能的解决方案",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100905e7651dcc940099286e9ee4a35cb2d.png",
+     "id": "202203081648",
+     "name": "最佳实践",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010176d38341668f44fdb94c95058a90e4b8.png",
+      "department": "云社区运营部",
+      "id": "2147406697",
+      "name": "多肉丸子",
+      "nameSpell": "kejuan"
+     },
+     "updatedAt": 1676857737000
+    },
+    {
+     "code": "essencesummary",
+     "createdAt": 1606118073000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "精华汇总",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100402c6f8df169483db114f71043c19ec2.png",
+     "id": "202203081649",
+     "name": "精华汇总",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 2,
+     "updatePerson": {
+      "avatar": "/download?fileName=010162cfa9d5437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1129",
+      "name": "灏",
+      "nameSpell": "hao"
+     },
+     "updatedAt": 1606118073000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          {
+           "childCategory": [
+            {
+             "childCategory": [
+              null
+             ],
+             "code": null,
+             "description": null,
+             "entityId": "223811481325040896",
+             "entityType": "Knowledge",
+             "id": "322034602930378240",
+             "isCategory": false,
+             "name": "保存操作接口",
+             "parentId": "322033766435165696",
+             "sort": "7",
+             "specialId": "226337046514476288",
+             "status": 1
+            }
+           ],
+           "code": null,
+           "description": null,
+           "entityId": null,
+           "entityType": null,
+           "id": "322033766435165696",
+           "isCategory": true,
+           "name": "API服务管理",
+           "parentId": "322033541636710144",
+           "sort": "1",
+           "specialId": "226337046514476288",
+           "status": 1
+          }
+         ],
+         "code": null,
+         "description": "",
+         "entityId": null,
+         "entityType": null,
+         "id": "322033541636710144",
+         "isCategory": true,
+         "name": "API1.0",
+         "parentId": "226337544983020032",
+         "sort": "26",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": null,
+       "entityId": null,
+       "entityType": null,
+       "id": "226337544983020032",
+       "isCategory": true,
+       "name": "用户手册",
+       "parentId": "-1",
+       "sort": "6",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": "<p label=\"一级标题\" style=\"font-size: 20px; font-weight: bold; line-height: 42px;\">1 接口介绍</p><p style=\"\">保存操作服务是指通过在请求体中按规范输入json格式的参数，调用界面保存操作，快速保存单笔或大批量的数据。</p><p style=\"\"><br/></p><p label=\"一级标题\" style=\"font-size: 20px; font-weight: bold; line-height: 42px;\">2 注意事项</p><p style=\"\">1）当一次保存多条数据时，请求体的参数data需要修改为datas；</p><p style=\"\">2）当请求体的list数据中携带有主键id时，默认是更新操作，否则判断为新增保存操作，可以在同一批数据中既执行新增又执行更新操作。</p><p label=\"正文\" style=\"\"><br/></p><p label=\"一级标题\" style=\"font-size: 20px; font-weight: bold; line-height: 42px;\">3 接口示例</p><p label=\"二级标题\" style=\"font-size: 18px; font-weight: bold; line-height: 42px;\">采购订单保存</p><table style=\"\"><tbody style=\"\"><tr class=\"firstRow ueditor-new-first-row\" style=\"\"><td width=\"655\" style=\"\"><p style=\"\"><strong style=\"\">URL：</strong><span style=\"\">{{host}}/kapi</span>/sys/pm_purorderbill/save</p><p style=\"\"><br/></p><p style=\"\"><strong style=\"\">请求方式：</strong>POST</p><p style=\"\"><br/></p><p style=\"\"><strong style=\"\">请求Header参数：</strong></p><p style=\"\">Content-Type=application/json</p><p style=\"\">accessToken: xxxxxxxxxxxxx</p></td></tr></tbody></table><p style=\"\"><br/></p><table style=\"\"><tbody style=\"\"><tr class=\"firstRow ueditor-new-first-row\" style=\"\"><td width=\"655\" style=\"\"><p style=\"\"><strong style=\"\">请求Body：</strong></p><p style=\"\">{</p><p style=\"\">&nbsp; &nbsp;&quot;data&quot;: {</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;&quot;org&quot;: {</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;: &quot;xyd2024&quot;</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;},</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;&quot;biztype&quot;: {</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;: &quot;110&quot;</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;},</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;&quot;billtype&quot;: {</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;: &quot;pm_PurOrderBill_Cost_BT_S&quot;</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;},</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;&quot;biztime&quot;: &quot;2021-07-25 15:15:22&quot;,</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;&quot;billstatus&quot;: &quot;A&quot;,</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;&quot;bizorg&quot;: {</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;: &quot;xyd2024&quot;</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;},</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;&quot;supplier&quot;: {</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;: &quot;sup-00122&quot;</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;},</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;&quot;settlecurrency&quot;: {</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;: &quot;CNY&quot;</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;},</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;&quot;exratetable&quot;: {</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;: &quot;0001&quot;</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;},</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;&quot;comment&quot;:&quot;采购订单备注&quot;,</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;&quot;exratedate&quot;: &quot;2021-07-25 15:15:22&quot;,</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;&quot;paymode&quot;: &quot;CREDIT&quot;,</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;&quot;exchangerate&quot;: 1.0000000000,</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;&quot;istax&quot;: &quot;1&quot;,</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;&quot;billentry&quot;: [</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{ &nbsp;</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;material&quot;: {</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;: &quot;ZH-00009257&quot;</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;},</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;qty&quot;: &quot;1010&quot;,</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;unit&quot;: {</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;: &quot;ZH-TON&quot;</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;},</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;entrysettleorg&quot;:{</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;:&quot;xyd2024&quot;</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;},</p><p style=\"\">&quot;entrycomment<span style=\"\">&quot;</span>:<span style=\"\">&quot;</span>分录1<span style=\"\">&quot;</span></p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;},</p><p style=\"\">{ &nbsp;</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;material&quot;: {</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;: &quot;ZH-00009257&quot;</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;},</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;qty&quot;: &quot;1020&quot;,</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;unit&quot;: {</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;: &quot;ZH-TON&quot;</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;},</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;entrysettleorg&quot;:{</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;:&quot;xyd2024&quot;</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;},</p><p style=\"\"><span style=\"\">&quot;</span>entrycomment<span style=\"\">&quot;</span>:<span style=\"\">&quot;</span>分录2<span style=\"\">&quot;</span></p><p style=\"\"><br/></p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</p><p style=\"\"><br/></p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;]</p><p style=\"\">&nbsp; &nbsp;}</p><p style=\"\">}</p></td></tr></tbody></table><p style=\"\"><br/></p><table style=\"\"><tbody style=\"\"><tr class=\"firstRow ueditor-new-first-row\" style=\"\"><td width=\"655\" style=\"\"><p style=\"\"><strong style=\"\">请求结果：</strong></p><p style=\"\">{</p><p style=\"\">&nbsp; &nbsp;&quot;data&quot;: {</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;&quot;success&quot;: true,</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;&quot;needSign&quot;: false,</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;&quot;needWfAssignPersons&quot;: false,</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;&quot;cancelWriteLog&quot;: true,</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;&quot;showMessage&quot;: true,</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;&quot;billCount&quot;: 1,</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;&quot;successPkIds&quot;: [</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1235479318616893440</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;],</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;&quot;billNos&quot;: {</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;1235479318616893440&quot;: &quot;CGDD-202109-152203&quot;</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;},</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;&quot;validateResult&quot;: {</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;validateErrors&quot;: [],</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;success&quot;: true,</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;message&quot;: &quot;&quot;,</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;errorPkIds&quot;: [],</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;errorDataIndexs&quot;: []</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;},</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;&quot;allErrorOrValidateInfo&quot;: [],</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;&quot;runSecond&quot;: 0,</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;&quot;allErrorInfo&quot;: []</p><p style=\"\">&nbsp; &nbsp;},</p><p style=\"\">&nbsp; &nbsp;&quot;success&quot;: true,</p><p style=\"\">&nbsp; &nbsp;&quot;errorCode&quot;: &quot;success&quot;,</p><p style=\"\">&nbsp; &nbsp;&quot;message&quot;: null</p><p style=\"\">}</p></td></tr></tbody></table><p style=\"\"><br/></p><p label=\"一级标题\" style=\"font-size: 20px; font-weight: bold; line-height: 42px;\">4 返回参数说明</p><table style=\"\"><tbody style=\"\"><tr class=\"firstRow ueditor-new-first-row\" style=\"\"><td width=\"36\" style=\"\"><p style=\"\"><strong style=\"\">序号</strong></p></td><td width=\"64\" style=\"\"><p style=\"\"><strong style=\"\">参数</strong></p></td><td width=\"100\" style=\"\"><p style=\"\"><strong style=\"\">解释</strong></p></td><td width=\"405\" style=\"\"><p style=\"\"><strong style=\"\">返回值实例</strong></p></td></tr><tr style=\"\"><td width=\"16\" style=\"\"><p style=\"\">1</p></td><td width=\"64\" style=\"\"><p style=\"\">success</p></td><td width=\"53\" style=\"\"><p style=\"\">是否成功</p></td><td width=\"405\" style=\"\"><p style=\"\">true/false</p></td></tr><tr style=\"\"><td width=\"16\" style=\"\"><p style=\"\">2</p></td><td width=\"64\" style=\"\"><p style=\"\">errorCode</p></td><td width=\"53\" style=\"\"><p style=\"\">错误编码</p></td><td width=\"405\" style=\"\"><p style=\"\">success/false</p></td></tr><tr style=\"\"><td width=\"16\" style=\"\"><p style=\"\">3</p></td><td width=\"64\" style=\"\"><p style=\"\">message</p></td><td width=\"53\" style=\"\"><p style=\"\">提示信息</p></td><td width=\"405\" style=\"\"><p style=\"\"><span style=\"\">成功时为null，失败时会返回错误信息</span></p></td></tr><tr style=\"\"><td width=\"16\" style=\"\"><p style=\"\">4</p></td><td width=\"64\" style=\"\"><p style=\"\">data</p></td><td width=\"53\" style=\"\"><p style=\"\">业务对象数据</p></td><td width=\"405\" style=\"\"><p style=\"\">{&quot;successPkIds&quot;:[1235479318616893440],&quot;billNos&quot;:{&quot;1235479318616893440&quot;: &quot;CGDD-202109-152203&quot;},}</p></td></tr></tbody></table><p style=\"\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\"><strong style=\"\">5. 参数格式示例</strong></h2><p style=\"\">保存接口所有字段类型的入参格式可参考下表，其中基础资料类型的字段在入参时，建议通过id或number保存。</p><p style=\"\"><strong style=\"\"><br/></strong></p><table style=\"\"><tbody style=\"\"><tr class=\"firstRow ueditor-new-first-row\" style=\"\"><td style=\"\"><p style=\"\"><strong style=\"\">序号</strong></p></td><td width=\"117\" style=\"\"><p style=\"\"><strong style=\"\">参数名称</strong></p></td><td width=\"466\" style=\"\"><p style=\"\"><strong style=\"\">入参示例</strong></p></td></tr><tr style=\"\"><td style=\"\"><p style=\"\">1</p></td><td width=\"6\" style=\"\"><p style=\"\">单据ID</p></td><td width=\"466\" style=\"\"><p style=\"\">&quot;id&quot;: &quot;1007171369592427520&quot;</p></td></tr><tr style=\"\"><td style=\"\"><p style=\"\">2</p></td><td width=\"6\" style=\"\"><p style=\"\">单据编码</p></td><td width=\"466\" style=\"\"><p style=\"\">&quot;billno&quot; : &quot;4&quot;</p></td></tr><tr style=\"\"><td style=\"\"><p style=\"\">3</p></td><td width=\"6\" style=\"\"><p style=\"\">单据状态</p></td><td width=\"466\" style=\"\"><p style=\"\">&quot;billstatus&quot;: &quot;A&quot;</p></td></tr><tr style=\"\"><td style=\"\"><p style=\"\">4</p></td><td width=\"6\" style=\"\"><p style=\"\">创建人</p></td><td width=\"466\" style=\"\"><p style=\"\">&quot;creator&quot;: {<br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;id&quot;: &quot;13466739&quot;,<br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;: &quot;13466739&quot;,<br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;name&quot;:&nbsp;&quot;IERP&quot;<br/></p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;}</p></td></tr><tr style=\"\"><td style=\"\"><p style=\"\">5</p></td><td width=\"6\" style=\"\"><p style=\"\">创建时间</p></td><td width=\"466\" style=\"\"><p style=\"\">&quot;createtime&quot;: &quot;2020-10-22 14:12:46&quot;</p></td></tr><tr style=\"\"><td style=\"\"><p style=\"\">6</p></td><td width=\"6\" style=\"\"><p style=\"\">组织</p></td><td width=\"466\" style=\"\"><p style=\"\">&quot;org&quot;: {<br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;id&quot;: &quot;100000&quot;,<br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;: &quot;00&quot;,<br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;name&quot;: &quot;环宇国际集团有限公司&quot;<br/></p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;}</p></td></tr><tr style=\"\"><td style=\"\"><p style=\"\">7</p></td><td width=\"6\" style=\"\"><p style=\"\">文本</p></td><td width=\"466\" style=\"\"><p style=\"\">textfield: &quot;4&quot;</p></td></tr><tr style=\"\"><td style=\"\"><p style=\"\">8</p></td><td width=\"6\" style=\"\"><p style=\"\">整数</p></td><td width=\"466\" style=\"\"><p style=\"\">&quot;integerfield&quot;: 4</p></td></tr><tr style=\"\"><td style=\"\"><p style=\"\">9</p></td><td width=\"6\" style=\"\"><p style=\"\">小数</p></td><td width=\"466\" style=\"\"><p style=\"\">&quot;decimalfield&quot;: &quot;4.0000000000&quot;</p></td></tr><tr style=\"\"><td style=\"\"><p style=\"\">10</p></td><td width=\"6\" style=\"\"><p style=\"\">长整数</p></td><td width=\"466\" style=\"\"><p style=\"\">&quot;bigintfield&quot;: 4</p></td></tr><tr style=\"\"><td style=\"\"><p style=\"\">11</p></td><td width=\"6\" style=\"\"><p style=\"\">多行文本</p></td><td width=\"466\" style=\"\"><p style=\"\">&quot;textareafield&quot;: &quot;4&quot;</p></td></tr><tr style=\"\"><td style=\"\"><p style=\"\">12</p></td><td width=\"6\" style=\"\"><p style=\"\">大文本</p></td><td width=\"466\" style=\"\"><p style=\"\">&quot;largetextfield&quot;: &quot;4&quot;</p></td></tr><tr style=\"\"><td style=\"\"><p style=\"\">13</p></td><td width=\"6\" style=\"\"><p style=\"\">多语言文本</p></td><td width=\"466\" style=\"\"><p style=\"\">&quot;mulilangtextfield&quot;: {<br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;zh_TW&quot;: &quot;4&quot;,<br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;zh_CN&quot;: &quot;4&quot;<br/>&nbsp; &nbsp; &nbsp; &nbsp;}</p></td></tr><tr style=\"\"><td style=\"\"><p style=\"\">14</p></td><td width=\"6\" style=\"\"><p style=\"\">复选框</p></td><td width=\"466\" style=\"\"><p style=\"\">&quot;checkboxfield&quot;: true</p></td></tr><tr style=\"\"><td style=\"\"><p style=\"\">15</p></td><td width=\"6\" style=\"\"><p style=\"\">单选按钮</p></td><td width=\"466\" style=\"\"><p style=\"\">&quot;radiofield&quot;: false</p></td></tr><tr style=\"\"><td style=\"\"><p style=\"\">16</p></td><td width=\"6\" style=\"\"><p style=\"\">单选按钮组</p></td><td width=\"466\" style=\"\"><p style=\"\">&quot;radiogroupfield&quot;: &quot;1&quot;</p></td></tr><tr style=\"\"><td style=\"\"><p style=\"\">17</p></td><td width=\"6\" style=\"\"><p style=\"\">下拉列表</p></td><td width=\"466\" style=\"\"><p style=\"\">&quot;combofield&quot;: &quot;1&quot;</p></td></tr><tr style=\"\"><td style=\"\"><p style=\"\">18</p></td><td width=\"6\" style=\"\"><p style=\"\">多选下拉列表</p></td><td width=\"466\" style=\"\"><p style=\"\">&quot;mulcombofield&quot;: &quot;a,b&quot;</p></td></tr><tr style=\"\"><td style=\"\"><p style=\"\">19</p></td><td width=\"6\" style=\"\"><p style=\"\">基础资料</p></td><td width=\"466\" style=\"\"><p style=\"\">用户基础资料<br/>&quot;userfield&quot;: {<br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;id&quot;: &quot;577197513895838720&quot;,<br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;: &quot;&quot;,<br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;name&quot;: &quot;周云冲&quot;<br/></p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;}</p></td></tr><tr style=\"\"><td style=\"\"><p style=\"\">20</p></td><td width=\"6\" style=\"\"><p style=\"\">辅助资料</p></td><td width=\"466\" style=\"\"><p style=\"\">&quot;assistantfield&quot;: {<br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;id&quot;: &quot;438033444614721536&quot;,<br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;number&quot;: &quot;COT01&quot;,<br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;name&quot;: &quot;畜禽养殖&quot;<br/></p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;}</p></td></tr><tr style=\"\"><td style=\"\"><p style=\"\">21</p></td><td width=\"6\" style=\"\"><p style=\"\">单据体/子单据体</p></td><td width=\"466\" style=\"\"><p style=\"\">&quot;entryentity&quot;: [<br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{<br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;id&quot;: &quot;1007191118741270528&quot;,<br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;seq&quot;: 1,<br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;integerfield1&quot;: 4,<br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;textfield1&quot;: &quot;单据体4&quot;,<br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;subentryentity&quot;: [<br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{<br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;id&quot;: &quot;1007191118741246976&quot;,<br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;seq&quot;: 1,<br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;integerfield2&quot;: 4,<br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;textfield2&quot;: &quot;子单据体4&quot;<br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}<br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]<br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}<br/>&nbsp; &nbsp; &nbsp; &nbsp;]</p></td></tr><tr style=\"\"><td colspan=\"1\" rowspan=\"1\" style=\"\">22</td><td colspan=\"1\" rowspan=\"1\" style=\"\">核算维度</td><td colspan=\"1\" rowspan=\"1\" style=\"\"><p style=\"\">&nbsp;&quot;assgrp&quot;: {</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &quot;客户&quot;: {</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &quot;number&quot;: &quot;Cus-000001&quot;</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; },</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &quot;费用项目&quot;:{</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &quot;number&quot;: &quot;111&quot;</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p></td></tr><tr style=\"\"><td colspan=\"1\" rowspan=\"1\" style=\"\">23</td><td colspan=\"1\" rowspan=\"1\" style=\"\">辅助属性</td><td colspan=\"1\" rowspan=\"1\" style=\"\"><p style=\"\"><br/></p><p style=\"\">&quot;auxpty&quot;: {</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &quot;颜色&quot;: {</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &quot;number&quot;: &quot;blue&quot;</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p></td></tr><tr style=\"\"><td colspan=\"1\" rowspan=\"1\" style=\"\">24</td><td colspan=\"1\" rowspan=\"1\" style=\"\">多选基础资料</td><td colspan=\"1\" rowspan=\"1\" style=\"\"><p style=\"\">&quot;mulbasedatafield&quot;: {</p><p style=\"\">&nbsp; &nbsp; &quot;importprop&quot;: &quot;number/name&quot;, 支持指定按编码或名称查找赋值</p><p style=\"\">&nbsp; &nbsp; &quot;number&quot;: &quot;基础资料编码&quot;,</p><p style=\"\"><span style=\"\">&nbsp; &nbsp; &quot;name&quot;: &quot;基础资料名称&quot;</span></p><p style=\"\">}</p><p style=\"\"><br/></p><p style=\"\">以高等院校的院校特性（多选基础资料）为例，入参格式如下：</p><p style=\"\"><br/></p><div style=\"color: rgb(0, 0, 0);\"><span style=\"color: rgb(163, 21, 21);\"></span><p style=\"\">&quot;collegecharact&quot;:</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &quot;number&quot;:&quot;1010_S,1020_S,1030_S&quot;</p><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p></div><p style=\"\">不同的基础资料编码之间用逗号&quot;,&quot;分隔<br/></p></td></tr></tbody></table><p style=\"\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">6. 特殊参数</h2><p label=\"正文\" style=\"\"><strong style=\"\">option</strong>（该参数与data同级）：</p><ul class=\" list-paddingleft-2\" style=\"\"><li style=\"\"><p label=\"正文\" style=\"\">importtype：引入类型，设置值如新增new、更新override、更新并新增overridenew。</p></li><li style=\"\"><p label=\"正文\" style=\"\">KeyFields：分隔字串，引入数据时的匹配字段，用来查找待更新的数据&nbsp;比如单据编码billno、名称name等其他候选键。</p></li><li style=\"\"><p label=\"正文\" style=\"\">OverrideEntry：设置值为true，会完整覆盖分录，例：某个单据有10条分录，调用请求，会把10条全删除，然后只保留新增的分录。若设置为false，会根据请求体数据中有分录内码的分录来更新分录行，若没有就会追加分录。</p></li><li style=\"\"><p label=\"正文\" style=\"\">firePropChanged：设置值为true，覆盖引入单据时，是否触发值更新事件。值更新事件非常消耗性能，可设置为false，默认不触发。</p></li><li style=\"\"><p label=\"正文\" style=\"\">fireAfterImportData：设置值为true，引入单据结束后，是否触发afterImportData事件，并执行业务服务规则。默认执行，可设置为false，参数关闭，提升性能 。</p></li><li style=\"\"><p label=\"正文\" style=\"\">ForUpdateMultiLangFields：设置值为true ，更新数据时仅更新多语言字段。</p></li></ul><p style=\"\"><br/></p><div style=\"color: rgb(0, 0, 0);\"><table style=\"\"><tbody style=\"\"><tr class=\"firstRow ueditor-new-first-row\" style=\"\"><td width=\"655\" style=\"word-break: break-all;\"><p style=\"\"><strong style=\"\"></strong></p><p style=\"\"><strong style=\"\">使用示例：</strong></p><p style=\"\">{</p><div style=\"\">&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"color: rgb(163, 21, 21);\">&quot;data&quot;</span>:&nbsp;{</div><div style=\"\">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span style=\"color: rgb(163, 21, 21);\">&quot;billno&quot;</span>:&nbsp;&nbsp;<span style=\"color: rgb(4, 81, 165);\">&quot;<span style=\"color: rgb(0, 112, 192);\">CGDD-202110-153158</span>&quot;</span><span style=\"color: rgb(4, 81, 165);\"></span></div><div style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;...</div><div style=\"\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},</div><div style=\"\">&nbsp; &nbsp; &nbsp;<span style=\"color: rgb(163, 21, 21);\">&quot;option&quot;</span>:&nbsp;{</div><div style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style=\"color: rgb(163, 21, 21);\">&quot;importtype&quot;</span>:&nbsp;<span style=\"color: rgb(4, 81, 165);\">&quot;override&quot;</span>,</div><div style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span style=\"color: rgb(163, 21, 21);\">&quot;KeyFields&quot;</span>:&nbsp;<span style=\"color: rgb(4, 81, 165);\">&quot;id&quot;</span>,</div><p style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span style=\"color: rgb(163, 21, 21);\">&quot;OverrideEntry&quot;</span>:&nbsp;<span style=\"color: rgb(4, 81, 165);\">true,</span></p><p style=\"\"><span style=\"color: rgb(4, 81, 165);\"><span style=\"color: rgb(0, 0, 0);\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><span style=\"color: rgb(163, 21, 21);\">&quot;ForUpdateMultiLangFields&quot;</span><span style=\"color: rgb(0, 0, 0);\">:&nbsp;</span>true</span></p><p style=\"\"><span style=\"color: rgb(4, 81, 165); font-weight: bold;\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ...</span></p><p style=\"\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p><p style=\"\"><br/></p><p style=\"\">注意：若非上列参数，属于业务自定义的参数，则将option改为optionvariables。</p><p style=\"\"><br/></p></td></tr></tbody></table></div><p label=\"正文\" style=\"\">&nbsp;</p><p label=\"正文\" style=\"\"><strong style=\"\">Forcedsubmit：</strong>单据上的操作Key，<span style=\"text-align: justify;\">在请求体中可以添加参数</span><span style=\"font-weight: 700; text-align: justify;\">&quot;forcedsubmit&quot;，</span><span style=\"text-align: justify;\">设置值为submit，调用保存操作，业务对象会在保存后自动提交。</span></p><p label=\"正文\" style=\"\"><span style=\"text-align: justify;\"><br/></span></p><p label=\"正文\" style=\"\"><span style=\"text-align: justify;\"><strong style=\"\">appid：</strong>可以指定API路由到某个应用，入参时传入对应的appid。</span></p><p label=\"正文\" style=\"\"><span style=\"text-align: justify;\"><br/></span></p><p label=\"正文\" style=\"\"><strong style=\"\">updateFields：</strong>仅更新body参数中的指定字段。</p><p label=\"正文\" style=\"\"><br/></p><p label=\"正文\" style=\"\"><strong style=\"\"></strong></p><div style=\"color: rgb(0, 0, 0);\"><table style=\"\"><tbody style=\"\"><tr class=\"firstRow ueditor-new-first-row\" style=\"\"><td width=\"655\" style=\"\"><p style=\"\"><strong style=\"\"></strong></p><p style=\"\"><strong style=\"\">使用示例：</strong></p><p style=\"\">{</p><div style=\"\">&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"color: rgb(163, 21, 21);\">&quot;data&quot;</span>:&nbsp;{</div><div style=\"\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"color: rgb(163, 21, 21);\">&quot;billno&quot;</span>:&nbsp;&nbsp;<span style=\"color: rgb(4, 81, 165);\">&quot;<span style=\"color: rgb(0, 112, 192);\">CGDD-202110-153158</span>&quot;</span></div><div style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;...</div><p style=\"\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},</p><div style=\"\"><span style=\"color: rgb(163, 21, 21);\">&nbsp;&quot;forcedsubmit&quot;</span>:&nbsp;<span style=\"color: rgb(4, 81, 165);\">&quot;submit&quot;</span>,</div><div style=\"\"><div style=\"\">&nbsp;<span style=\"color: rgb(163, 21, 21);\">&quot;updateFields&quot;</span>:&nbsp;[</div><div style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style=\"color: rgb(4, 81, 165);\">&quot;billno&quot;</span>,</div><div style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style=\"color: rgb(4, 81, 165);\">&quot;billentry&quot;</span>,</div><div style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style=\"color: rgb(4, 81, 165);\">&quot;material&quot;</span>,</div><p style=\"\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"color: rgb(4, 81, 165);\">&quot;unit&quot;</span></p><p style=\"\"><span style=\"color: rgb(4, 81, 165);\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ...</span></p><p style=\"\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]</p><p style=\"\">}</p></div></td></tr></tbody></table></div><p label=\"正文\" style=\"\"><br/></p><p><br/></p>"
+}

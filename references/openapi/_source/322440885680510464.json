@@ -1,0 +1,472 @@
+{
+ "badNum": 0,
+ "identityTagIds": null,
+ "knowledgeId": "322440885680510464",
+ "createdAt": 1654683898000,
+ "collections": 1,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "322440885680510464",
+ "contentType": 1,
+ "updatedAt": 1766110203000,
+ "knowledgeUpdater": {
+  "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+  "department": null,
+  "id": "132488613174518784",
+  "name": "某个路易",
+  "nameSpell": "name"
+ },
+ "assessStatus": 0,
+ "knowledgeStatus": 2,
+ "assessHandleStatus": null,
+ "knowledgeCreatedAt": 1654683898000,
+ "version": 29,
+ "labels": [],
+ "editedAt": 1713352801000,
+ "identityTags": null,
+ "useful": 4,
+ "errors": [],
+ "isCollected": false,
+ "totalFeedBacks": 0,
+ "attachments": [],
+ "sources": [],
+ "editTitle": "帮助手册介绍",
+ "title": "帮助手册介绍",
+ "content": "<p style=\"text-align: justify;\"><span style=\"font-size: 20px; font-weight: bold;\"></span></p><div style=\"\"><h2 label=\"一级标题\" class=\"first-title html-anchor-list0-1712131307662\" id=\"html-anchor-list0-1712131307662\" style=\"\">变更记录<br/></h2></div><p style=\"\"><br/></p><table width=\"100%\"><tbody style=\"\"><tr class=\"firstRow\" style=\"\"><td valign=\"middle\" width=\"116\" align=\"left\" style=\"\"><p style=\"\"><strong style=\"\">产品版本</strong></p></td><td valign=\"middle\" width=\"359\" align=\"left\" style=\"\"><strong style=\"\">更新内容</strong></td><td valign=\"middle\" width=\"146.33333333333334\" align=\"left\" style=\"\"><strong style=\"\">更新日期</strong></td></tr><tr style=\"\"><td valign=\"middle\" width=\"117\" align=\"left\" style=\"\"><span style=\"color: rgb(0, 0, 0);\">V5.0.001</span></td><td valign=\"middle\" width=\"359\" align=\"left\" style=\"\">初始版本</td><td valign=\"middle\" width=\"146.33333333333334\" align=\"left\" style=\"\">2022年6月</td></tr></tbody></table><p style=\"\"><br/></p><p style=\"\"><span style=\"font-size: 20px; text-align: justify;\"></span></p><hr/><p style=\"\"><br/><span style=\"font-size: 20px; text-align: justify;\"></span></p><h2 label=\"一级标题\" class=\"first-title html-anchor-list1-1712131307662\" id=\"html-anchor-list1-1712131307662\" style=\"\"></h2><p label=\"一级标题\" class=\" html-anchor-list0\" id=\"html-anchor-list0\" style=\"text-align: justify; font-size: 20px; font-weight: bold; line-height: 42px;\">1 简介<br/></p><p label=\"二级标题\" class=\" html-anchor-list1\" id=\"html-anchor-list1\" style=\"text-align: justify; font-size: 18px; font-weight: bold; line-height: 42px;\">1.1 功能介绍</p><p style=\"text-align: justify;\">帮助手册主要展示了自定义API中需要用到的常用脚本或函数的用法，帮助用户快速上手API开发。</p><p style=\"text-align: justify;\"><br/></p><p label=\"二级标题\" class=\" html-anchor-list2\" id=\"html-anchor-list2\" style=\"text-align: justify; font-size: 18px; font-weight: bold; line-height: 42px;\">1.2 应用场景</p><p style=\"text-align: justify;\">当开发人员使用脚本开发API时，需要用到各种函数和脚本方法，此时可以查看脚本帮助手册，提升API开发效率。</p><p style=\"text-align: justify;\"><br/></p><p label=\"二级标题\" class=\" html-anchor-list3\" id=\"html-anchor-list3\" style=\"text-align: justify; font-size: 18px; font-weight: bold; line-height: 42px;\">1.3 系统路径</p><p style=\"text-align: justify;\">【开放服务云】→【OpenAPI】→【其他】→【帮助手册】</p><p style=\"text-align: justify;\"><br/></p><p label=\"二级标题\" class=\" html-anchor-list4\" id=\"html-anchor-list4\" style=\"text-align: justify; font-size: 18px; font-weight: bold; line-height: 42px;\">1.4 字段/按钮说明</p><p style=\"text-align: justify;\"><span style=\"font-weight: 700;\">字段说明：</span></p><table><tbody style=\"\"><tr class=\"firstRow\" style=\"\"><td width=\"70.33333333333333\" style=\"\">字段名称</td><td width=\"571.3333333333334\" style=\"\">详细解释</td></tr><tr style=\"\"><td width=\"39\" style=\"\">编码</td><td width=\"571.3333333333334\" style=\"\">脚本编码</td></tr><tr style=\"\"><td width=\"39\" style=\"\">主题</td><td width=\"571.3333333333334\" style=\"\">脚本主题</td></tr><tr style=\"\"><td width=\"39\" style=\"\">作者</td><td width=\"571.3333333333334\" style=\"\">脚本编写的作者</td></tr><tr style=\"\"><td width=\"39\" style=\"\">适用场景</td><td width=\"571.3333333333334\" style=\"\">脚本的适用场景</td></tr><tr style=\"\"><td colspan=\"1\" rowspan=\"1\" style=\"\">分类</td><td colspan=\"1\" rowspan=\"1\" style=\"\">脚本的分类</td></tr></tbody></table><p style=\"text-align: justify;\"><span style=\"font-weight: 700; text-align: justify;\"><br/></span></p><p style=\"text-align: justify;\"><span style=\"font-weight: 700; text-align: justify;\">按钮说明：</span></p><table><tbody style=\"\"><tr class=\"firstRow\" style=\"\"><td width=\"70.33333333333333\" style=\"\">按钮名称</td><td width=\"571.3333333333334\" style=\"\">详细解释</td></tr><tr style=\"\"><td width=\"39\" style=\"\">退出</td><td width=\"571.3333333333334\" style=\"\"><span style=\"\">点击退出按钮，退出当前页面。</span></td></tr></tbody></table><p style=\"text-align: justify;\"><br/></p><p label=\"一级标题\" class=\" html-anchor-list5\" id=\"html-anchor-list5\" style=\"text-align: justify; font-size: 20px; font-weight: bold; line-height: 42px;\">2 主要操作</p><p style=\"text-align: justify;\">用户可以通过输入关键字或选择分类来查看和过滤脚本，以便快速找到所需脚本的使用说明。</p><p><br/></p><p><img src=\"/download/010956173151a805436988d85af12a6acfd6.png\"/></p><p><br/></p><p><br/></p><h2 label=\"一级标题\" class=\"first-title html-anchor-list6-1708396901577\" id=\"html-anchor-list6-1708396901577\" style=\"\">3 更多资讯</h2><p style=\"text-align: justify;\">关于OpenAPI的更多资讯，请随时关注<a href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=226337371640594944&id=226708319996323072&productLineId=29\" target=\"_blank\" style=\"\">新特性公告</a>。</p><p><br/></p>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 87,
+   "isOpen": 1,
+   "name": "金蝶AI苍穹",
+   "productLineId": 29,
+   "series": "developer01",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        null
+       ],
+       "code": null,
+       "description": "",
+       "entityId": "322440885680510464",
+       "entityType": "Knowledge",
+       "id": "322442030893305088",
+       "isCategory": false,
+       "name": "帮助手册介绍",
+       "parentId": "226337544983020032",
+       "sort": "22",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": null,
+     "entityId": null,
+     "entityType": null,
+     "id": "226337544983020032",
+     "isCategory": true,
+     "name": "用户手册",
+     "parentId": "-1",
+     "sort": "6",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download/01010204d4b71b654a208006fa1004eac36a.png",
+  "department": null,
+  "id": "740211268992385024",
+  "name": "毛毛去哪儿",
+  "nameSpell": "name"
+ },
+ "totalAppraisalScore": 20,
+ "iflytekId": null,
+ "views": 5261,
+ "productLineId": 29,
+ "comments": 0,
+ "similarityCount": 0,
+ "totalAppraisalUsers": 4,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1766110203000,
+ "appraisalScore": 0,
+ "unuseful": 0,
+ "knowledgeCheckStatus": 2,
+ "otherProductLineIds": [],
+ "auditAt": 1712131578000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapiscripthelper",
+        "id": "344585435118815488",
+        "name": "帮助手册",
+        "productLineId": null,
+        "sort": 9,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "5614",
+       "name": "开放平台",
+       "productLineId": null,
+       "sort": 2,
+       "type": "module"
+      },
+      "code": "DEV",
+      "id": "5576",
+      "name": "开发服务云",
+      "productLineId": null,
+      "sort": 11,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 0,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "OperatingGuide",
+     "createdAt": 1556519201000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "某一功能的具体说明介绍，包括应用场景、参数说明、具体操作步骤等",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/010037894174802d4b9f8782f1f0010a6ddd.png",
+     "id": "202203081641",
+     "name": "功能介绍",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010176d38341668f44fdb94c95058a90e4b8.png",
+      "department": "云社区运营部",
+      "id": "2147406697",
+      "name": "多肉丸子",
+      "nameSpell": "kejuan"
+     },
+     "updatedAt": 1676857681000
+    },
+    {
+     "code": "rumen",
+     "createdAt": 1605667807000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "入门类的知识可使用此标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100d322b9282bcc438faa894f4eec029977.png",
+     "id": "202203081646",
+     "name": "基础入门",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download?fileName=0101ec1d6ce599b442dab7d0b794c1fce88d.png",
+      "department": null,
+      "id": "1009",
+      "name": "一颗小星星",
+      "nameSpell": "fengling"
+     },
+     "updatedAt": 1657872008000
+    },
+    {
+     "code": "NewFeatures",
+     "createdAt": 1558619051000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "新特性",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/01009c9898f919a24034b3b37b2ebf42931c.png",
+     "id": "202203081645",
+     "name": "新特性",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010145330b44d45a47ae9b8aac30617b6992.png",
+      "department": null,
+      "id": "2147443044",
+      "name": "Lucky_tiao",
+      "nameSpell": "laoli"
+     },
+     "updatedAt": 1668739541000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "322440885680510464",
+         "entityType": "Knowledge",
+         "id": "322442030893305088",
+         "isCategory": false,
+         "name": "帮助手册介绍",
+         "parentId": "226337544983020032",
+         "sort": "22",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": null,
+       "entityId": null,
+       "entityType": null,
+       "id": "226337544983020032",
+       "isCategory": true,
+       "name": "用户手册",
+       "parentId": "-1",
+       "sort": "6",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": "<p style=\"text-align: justify;\"><span style=\"font-size: 20px; font-weight: bold;\"></span></p><div style=\"\"><h2 label=\"一级标题\" class=\"first-title html-anchor-list0-1712131307662\" id=\"html-anchor-list0-1712131307662\" style=\"\">变更记录<br/></h2></div><p style=\"\"><br/></p><table width=\"100%\"><tbody style=\"\"><tr class=\"firstRow\" style=\"\"><td valign=\"middle\" width=\"116\" align=\"left\" style=\"\"><p style=\"\"><strong style=\"\">产品版本</strong></p></td><td valign=\"middle\" width=\"359\" align=\"left\" style=\"\"><strong style=\"\">更新内容</strong></td><td valign=\"middle\" width=\"146.33333333333334\" align=\"left\" style=\"\"><strong style=\"\">更新日期</strong></td></tr><tr style=\"\"><td valign=\"middle\" width=\"117\" align=\"left\" style=\"\"><span style=\"color: rgb(0, 0, 0);\">V5.0.001</span></td><td valign=\"middle\" width=\"359\" align=\"left\" style=\"\">初始版本</td><td valign=\"middle\" width=\"146.33333333333334\" align=\"left\" style=\"\">2022年6月</td></tr></tbody></table><p style=\"\"><br/></p><p style=\"\"><span style=\"font-size: 20px; text-align: justify;\"></span></p><hr/><p style=\"\"><br/><span style=\"font-size: 20px; text-align: justify;\"></span></p><h2 label=\"一级标题\" class=\"first-title html-anchor-list1-1712131307662\" id=\"html-anchor-list1-1712131307662\" style=\"\"></h2><p label=\"一级标题\" class=\" html-anchor-list0\" id=\"html-anchor-list0\" style=\"text-align: justify; font-size: 20px; font-weight: bold; line-height: 42px;\">1 简介<br/></p><p label=\"二级标题\" class=\" html-anchor-list1\" id=\"html-anchor-list1\" style=\"text-align: justify; font-size: 18px; font-weight: bold; line-height: 42px;\">1.1 功能介绍</p><p style=\"text-align: justify;\">帮助手册主要展示了自定义API中需要用到的常用脚本或函数的用法，帮助用户快速上手API开发。</p><p style=\"text-align: justify;\"><br/></p><p label=\"二级标题\" class=\" html-anchor-list2\" id=\"html-anchor-list2\" style=\"text-align: justify; font-size: 18px; font-weight: bold; line-height: 42px;\">1.2 应用场景</p><p style=\"text-align: justify;\">当开发人员使用脚本开发API时，需要用到各种函数和脚本方法，此时可以查看脚本帮助手册，提升API开发效率。</p><p style=\"text-align: justify;\"><br/></p><p label=\"二级标题\" class=\" html-anchor-list3\" id=\"html-anchor-list3\" style=\"text-align: justify; font-size: 18px; font-weight: bold; line-height: 42px;\">1.3 系统路径</p><p style=\"text-align: justify;\">【开放服务云】→【OpenAPI】→【其他】→【帮助手册】</p><p style=\"text-align: justify;\"><br/></p><p label=\"二级标题\" class=\" html-anchor-list4\" id=\"html-anchor-list4\" style=\"text-align: justify; font-size: 18px; font-weight: bold; line-height: 42px;\">1.4 字段/按钮说明</p><p style=\"text-align: justify;\"><span style=\"font-weight: 700;\">字段说明：</span></p><table><tbody style=\"\"><tr class=\"firstRow\" style=\"\"><td width=\"70.33333333333333\" style=\"\">字段名称</td><td width=\"571.3333333333334\" style=\"\">详细解释</td></tr><tr style=\"\"><td width=\"39\" style=\"\">编码</td><td width=\"571.3333333333334\" style=\"\">脚本编码</td></tr><tr style=\"\"><td width=\"39\" style=\"\">主题</td><td width=\"571.3333333333334\" style=\"\">脚本主题</td></tr><tr style=\"\"><td width=\"39\" style=\"\">作者</td><td width=\"571.3333333333334\" style=\"\">脚本编写的作者</td></tr><tr style=\"\"><td width=\"39\" style=\"\">适用场景</td><td width=\"571.3333333333334\" style=\"\">脚本的适用场景</td></tr><tr style=\"\"><td colspan=\"1\" rowspan=\"1\" style=\"\">分类</td><td colspan=\"1\" rowspan=\"1\" style=\"\">脚本的分类</td></tr></tbody></table><p style=\"text-align: justify;\"><span style=\"font-weight: 700; text-align: justify;\"><br/></span></p><p style=\"text-align: justify;\"><span style=\"font-weight: 700; text-align: justify;\">按钮说明：</span></p><table><tbody style=\"\"><tr class=\"firstRow\" style=\"\"><td width=\"70.33333333333333\" style=\"\">按钮名称</td><td width=\"571.3333333333334\" style=\"\">详细解释</td></tr><tr style=\"\"><td width=\"39\" style=\"\">退出</td><td width=\"571.3333333333334\" style=\"\"><span style=\"\">点击退出按钮，退出当前页面。</span></td></tr></tbody></table><p style=\"text-align: justify;\"><br/></p><p label=\"一级标题\" class=\" html-anchor-list5\" id=\"html-anchor-list5\" style=\"text-align: justify; font-size: 20px; font-weight: bold; line-height: 42px;\">2 主要操作</p><p style=\"text-align: justify;\">用户可以通过输入关键字或选择分类来查看和过滤脚本，以便快速找到所需脚本的使用说明。</p><p><br/></p><p><img src=\"/download/010956173151a805436988d85af12a6acfd6.png\"/></p><p><br/></p><p><br/></p><h2 label=\"一级标题\" class=\"first-title html-anchor-list6-1708396901577\" id=\"html-anchor-list6-1708396901577\" style=\"\">3 更多资讯</h2><p style=\"text-align: justify;\">关于OpenAPI的更多资讯，请随时关注<a href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=226337371640594944&id=226708319996323072&productLineId=29\" target=\"_blank\" style=\"\">新特性公告</a>。</p><p><br/></p>"
+}

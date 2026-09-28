@@ -1,0 +1,450 @@
+{
+ "badNum": 0,
+ "templateId": "335738408951726336",
+ "identityTagIds": null,
+ "knowledgeId": "875792595354608128",
+ "createdAt": 1786613226186,
+ "collections": 8,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "875792595354608128",
+ "contentType": 1,
+ "updatedAt": 1790145899502,
+ "knowledgeUpdater": {
+  "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+  "department": null,
+  "id": "132488613174518784",
+  "name": "某个路易",
+  "nameSpell": "name"
+ },
+ "assessStatus": 0,
+ "knowledgeStatus": 2,
+ "assessHandleStatus": null,
+ "knowledgeCreatedAt": 1786613226186,
+ "version": 196,
+ "labels": [],
+ "editedAt": 1790145900000,
+ "identityTags": null,
+ "useful": 3,
+ "errors": [],
+ "isCollected": false,
+ "template": "",
+ "totalFeedBacks": 0,
+ "attachments": [],
+ "sources": [],
+ "editTitle": "MCP服务（for灵基）",
+ "title": "MCP服务（for灵基）",
+ "content": "<h2>变更记录</h2><table class=\"is-max\" style=\"min-width: auto; width: 997px\"><colgroup><col style=\"width: 260px\"><col style=\"width: 526px\"><col style=\"width: 211px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"260\" data-background-color=\"\" class=\"\"><p><strong>产品版本</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"526\" data-background-color=\"\" class=\"\"><p><strong>更新内容</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"211\" data-background-color=\"\" class=\"\"><p><strong>更新时间</strong></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"260\" data-background-color=\"\" class=\"\"><p><strong>V9.0.0</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"526\" data-background-color=\"\" class=\"\"><p>初始版本</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"211\" data-background-color=\"\" class=\"\"><p>2026年9月</p></td></tr></tbody></table><hr><p></p><h2 style=\"text-align: justify\">1&nbsp;功能介绍</h2><p style=\"text-align: justify\"><strong>MCP服务</strong>是苍穹平台<strong>为灵基</strong>提供的AI工具网关，通过将OpenAPI契约自动转化为MCP协议工具（Tool）的能力，以双层Token认证保障安全，使灵基能够以标准化方式调用苍穹业务 API。</p><p>平台在原【集群级MCP服务】基础上进行升级，支持<strong>客户将二开 API</strong> 发布为MCP服务，目前共两种服务来源：</p><ul style=\"box-sizing: border-box; --tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgb(59 130 246 / .5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; margin: 0.8em 0px; padding-left: 30px; caret-color: rgb(0, 122, 255); color: rgb(51, 51, 51)\"><li><p><strong>系统内置</strong>：由金蝶开发商发布，将金蝶标品API发布为 MCP 服务，面向全体租户开放。</p></li><li><p><strong>租户自建</strong>：由企业客户的 IT/实施团队自主配置，仅允许选择本租户的二开 API，工具可见范围限定在当前账套，实现企业个性化业务场景的智能化扩展。</p></li></ul><p style=\"text-align: justify\"></p><p style=\"text-align: justify\"><strong>核心概念速览：</strong></p><table class=\"is-max\" style=\"min-width: auto; width: 930px\"><colgroup><col style=\"width: 200px\"><col style=\"width: 730px\"></colgroup><tbody><tr><th colspan=\"1\" rowspan=\"1\" colwidth=\"200\" data-background-color=\"\" class=\"\"><p>概念</p></th><th colspan=\"1\" rowspan=\"1\" colwidth=\"730\" data-background-color=\"\" class=\"\"><p>说明</p></th></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"200\" data-background-color=\"\" class=\"\"><p><span style=\"color: rgb(6, 6, 6); font-size: 14px\"><strong>MCP</strong></span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"730\" data-background-color=\"\" class=\"\"><p><span style=\"color: rgb(6, 6, 6); font-size: 14px\">Model Context Protocol，AI 客户端与工具提供方之间的协议</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"200\" data-background-color=\"\" class=\"\"><p><span style=\"color: rgb(6, 6, 6); font-size: 14px\"><strong>工具（Tool）</strong></span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"730\" data-background-color=\"\" class=\"\"><p><span style=\"color: rgb(6, 6, 6); font-size: 14px\">一个可被 AI 发现与调用的业务接口抽象，由「工具定义（名称 / 描述 / 参数 schema / 调用方式）」构成</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"200\" data-background-color=\"\" class=\"\"><p><span style=\"color: rgb(6, 6, 6); font-size: 14px\"><strong>账套（account）</strong></span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"730\" data-background-color=\"\" class=\"\"><p><span style=\"color: rgb(6, 6, 6); font-size: 14px\">苍穹的独立业务数据库单元，本功能按账套隔离工具</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"200\" data-background-color=\"\" class=\"\"><p><span style=\"color: rgb(6, 6, 6); font-size: 14px\"><strong>Gateway</strong></span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"730\" data-background-color=\"\" class=\"\"><p><span style=\"color: rgb(6, 6, 6); font-size: 14px\">MCP网关进程，自动读取数据并对外提供 MCP 服务</span></p></td></tr></tbody></table><h2 style=\"text-align: justify\">2 应用场景</h2><p style=\"text-align: justify\">适用于需要让灵基直接操作苍穹平台业务数据的场景：</p><ul style=\"box-sizing: border-box; --tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgb(59 130 246 / .5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; margin: 0.8em 0px; padding-left: 30px; caret-color: rgb(0, 122, 255); color: rgb(51, 51, 51)\"><li><p><strong>标准业务场景</strong>（系统内置）：金蝶标品预置的MCP服务，让智能体完成通用单据查询、数据录入、流程审批等标准化业务操作。</p></li><li><p><strong>企业二开扩展场景</strong>（租户自建）：企业将自定义的二开 API 发布为 MCP 服务，让智能体直接操作企业特有的业务单据和流程，无需为大模型单独定制 API 对接开发。</p><p></p></li></ul><h2 style=\"text-align: justify\">3 系统路径</h2><p style=\"text-align: justify\">【开放服务云】→【OpenAPI】→【MCP服务】→【MCP服务】</p><p style=\"text-align: justify\"></p><h2 style=\"text-align: justify\">4 关键字段/按钮说明</h2><h3 style=\"text-align: justify\"><strong>4.1 关键字段说明</strong></h3><table class=\"is-max\" style=\"min-width: 161px\"><colgroup><col style=\"width: 136px\"><col style=\"min-width: 25px\"></colgroup><tbody><tr><th colspan=\"1\" rowspan=\"1\" colwidth=\"136\" data-background-color=\"\" class=\"\"><p><strong>字段名称</strong></p></th><th colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p><strong>详细解释</strong></p></th></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"136\" data-background-color=\"\" class=\"\"><p>API类型</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p>支持的API引擎类型，API服务/RESTful API</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"136\" data-background-color=\"\" class=\"\"><p>目标API</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p>手工录入，选择要发布的API服务。注意：租户目前只支持选择二开 API</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"136\" data-background-color=\"\" class=\"\"><p>所属云编码</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p>API所属云编码</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"136\" data-background-color=\"\" class=\"\"><p>所属应用编码</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p>API所属应用编码</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"136\" data-background-color=\"\" class=\"\"><p>操作类型</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p>如查询操作、创建操作、更新操作、删除操作等</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"136\" data-background-color=\"\" class=\"\"><p>是否敏感操作</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p>标记MCP工具是否为敏感操作，方便智能体调用时进行二次确认</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"136\" data-background-color=\"\" class=\"\"><p>所属领域</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p>语义化信息，MCP工具所属领域，如供应链云</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"136\" data-background-color=\"\" class=\"\"><p>所属模块</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p>语义化信息，MCP工具所属模块，如采购管理</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"136\" data-background-color=\"\" class=\"\"><p>自定义参数扩展配置</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p>若已有信息不满足大模型要求，可补充自定义参数，Map结构如：{\"key\":\"value\"}</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"136\" data-background-color=\"\" class=\"\"><p>注册状态</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p>待注册/已发布/待更新/下架中/已下架/失败。发布后若服务或API变更则变为待更新，异常为失败</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"136\" data-background-color=\"\" class=\"\"><p>服务来源</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p>系统内置 / 租户自建</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"136\" data-background-color=\"\" class=\"\"><p>工具名称</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p>工具唯一标识，按 <code>{domain}_{app}_{isvid}_{httpmethod}_{apiuri}</code> 规则生成，apiuri 中的\"/\"统一替换为\"_\"，最大长度 <strong>55</strong> 字符，超长自动截断并附加5位随机数。支持手动修改（建议调整 {apiuri} 部分以增强语义）。</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"136\" data-background-color=\"\" class=\"\"><p>说明</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p>MCP工具功能说明</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"136\" data-background-color=\"\" class=\"\"><p>前置条件</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p>MCP工具前置条件</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"136\" data-background-color=\"\" class=\"\"><p>后置效果</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p>MCP工具后置效果</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"136\" data-background-color=\"\" class=\"\"><p>错误恢复</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p>MCP工具错误恢复</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"136\" data-background-color=\"\" class=\"\"><p>异常日志</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p>服务出现异常时的日志</p></td></tr></tbody></table><h3 style=\"text-align: justify\"><strong>4.2&nbsp;关键按钮说明</strong></h3><table class=\"is-max\" style=\"min-width: 167px\"><colgroup><col style=\"width: 142px\"><col style=\"min-width: 25px\"></colgroup><tbody><tr><th colspan=\"1\" rowspan=\"1\" colwidth=\"142\" data-background-color=\"\" class=\"\"><p><strong>按钮名称</strong></p></th><th colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p><strong>详细解释</strong></p></th></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"142\" data-background-color=\"\" class=\"\"><p>新增</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p>点击按钮，打开新增MCP服务页面</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"142\" data-background-color=\"\" class=\"\"><p>重置注册状态</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p>点击按钮，可将已下架或失败状态的MCP服务重置为待注册状态，等待MCP网关下次自动扫描（默认 5 分钟一次），重新注册发布</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"142\" data-background-color=\"\" class=\"\"><p>下架</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p>点击按钮，下架状态为已发布的 MCP 服务</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"142\" data-background-color=\"\" class=\"\"><p>修改</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p>点击按钮，修改MCP服务，<strong>已发布和待更新状态</strong>的MCP服务，<strong>必须先下架</strong>才允许修改。</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"142\" data-background-color=\"\" class=\"\"><p>导入YAML</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p>导入语义化契约YAML文件，快速生成 MCP 服务</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"142\" data-background-color=\"\" class=\"\"><p>导出MCP</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p>导出MCP服务为dts文件，支持单条或批量导出，用于跨环境数据迁移</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"142\" data-background-color=\"\" class=\"\"><p>导入MCP</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p>导入dts文件格式的MCP服务，支持单条或批量导入，用于跨环境数据迁移（<strong>该能力不支持跨开发商标识的数据同步</strong>，租户无法直接导入标准MCP服务）。</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"142\" data-background-color=\"\" class=\"\"><p>导出预置脚本</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p>导出 MCP 服务的SQL脚本，方便在升级时通过脚本预置MCP服务</p></td></tr></tbody></table><p></p><h2>5 主要操作</h2><h3><strong>5.1 新增 MCP 服务</strong></h3><p>登录金蝶AI苍穹环境，进入菜单 <strong>开放服务云 → OpenAPI → MCP 服务</strong><span style=\"color: rgb(51, 51, 51); font-size: 16px\"> → </span><strong>MCP 服务</strong><span style=\"color: rgb(51, 51, 51); font-size: 16px\">，</span>点击新增按钮，即可新增 MCP 服务。</p><p style=\"font-size: 16px\"></p><p><img src=\"/download/0100cd19a988293142f6a53ce512f45a9c64.png\" alt=\"上传图片\"></p><p></p><p><strong>1）新增方式</strong><span style=\"color: rgb(51, 51, 51)\"><strong>：手工/导入</strong></span></p><table class=\"is-max\" style=\"min-width: auto; width: 660px\"><colgroup><col style=\"width: 158px\"><col style=\"width: 502px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"158\" data-background-color=\"rgb(216, 216, 216)\" class=\"\" style=\"background-color: rgb(216, 216, 216)\"><p><span style=\"color: rgb(51, 51, 51); font-size: 14px\"><strong>方式</strong></span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"502\" data-background-color=\"rgb(216, 216, 216)\" class=\"\" style=\"background-color: rgb(216, 216, 216)\"><p><span style=\"color: rgb(51, 51, 51); font-size: 14px\"><strong>适合场景</strong></span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"158\" data-background-color=\"\" class=\"\"><p><span style=\"color: rgb(51, 51, 51); font-size: 14px\"><strong>手工新增</strong></span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"502\" data-background-color=\"\" class=\"\"><p><span style=\"color: rgb(51, 51, 51); font-size: 14px\">少量API快速接入，逐个配置</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"158\" data-background-color=\"\" class=\"\"><p><span style=\"color: rgb(51, 51, 51); font-size: 14px\"><strong>导入YAML</strong></span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"502\" data-background-color=\"\" class=\"\"><p><span style=\"color: rgb(51, 51, 51); font-size: 14px\">根据OpenAPI规范文档，通过skill生成规范的yaml文件，逐个导入</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"158\" data-background-color=\"\" class=\"\"><p><span style=\"color: rgb(51, 51, 51); font-size: 14px\"><strong>导入MCP（.dts）</strong></span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"502\" data-background-color=\"\" class=\"\"><p><span style=\"color: rgb(51, 51, 51); font-size: 14px\">跨环境批量迁移，一键搬家</span></p></td></tr></tbody></table><p></p><p><strong>2）服务来源：</strong><span style=\"color: rgb(51, 51, 51)\"><strong>系统内置 vs 租户自建</strong></span></p><table class=\"is-max\" style=\"min-width: 421px\"><colgroup><col style=\"min-width: 25px\"><col style=\"min-width: 25px\"><col style=\"width: 109px\"><col style=\"width: 262px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p><strong>来源类型</strong></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p><strong>谁发布？</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"109\" data-background-color=\"\" class=\"\"><p><strong>谁可用？</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"262\" data-background-color=\"\" class=\"\"><p><strong>适合场景</strong></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p><strong>系统内置</strong></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p>金蝶开发商发布</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"109\" data-background-color=\"\" class=\"\"><p>全体租户开放</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"262\" data-background-color=\"\" class=\"\"><p>使用金蝶标品API即可满足</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p><strong>租户自建</strong></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p>企业IT/实施团队自主配置</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"109\" data-background-color=\"\" class=\"\"><p>仅限本账套</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"262\" data-background-color=\"\" class=\"\"><p>需要二开API定制化解决</p></td></tr></tbody></table><ul style=\"box-sizing: border-box; --tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgb(59 130 246 / .5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; margin: 0.8em 0px; padding-left: 30px; caret-color: rgb(0, 122, 255); color: rgb(51, 51, 51)\"><li><p>注意：系统内置的 MCP 服务关联的接口均为标准 API；租户自建的 MCP 服务只允许关联二开 API（即开发商标识不为 kingdee 的 API）。</p></li></ul><p></p><p><strong>3）权限控制</strong></p><p>租户环境（非金蝶标准环境）<strong>仅支持维护租户自建的MCP服务</strong>，<strong>不能修改系统内置MCP服务</strong>，<strong>也无法通过导入YAML或导入MCP等方式新增金蝶标准系统内置的服务 </strong>— 导入功能仅限当前租户自建的服务，两种来源的MCP服务<strong>相互独立</strong>。</p><p></p><p><strong>4）语义化信息</strong></p><p>语义化字段包含有说明、操作类型、所属领域、所属模块、前置条件、后置效果、错误恢复。以上字段作为API契约的补充，帮助大模型更好地理解MCP工具。</p><p>同时有自动化规则：系统会将删除操作和反审核操作自动标记为敏感操作，在MCP工具列表中标记为sensitive。</p><blockquote class=\"\"><p><strong>工具提示</strong>：语义化信息契约生成器下载地址：<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://skills.kingdee.com/skills/438\">https://skills.kingdee.com/skills/438</a><span style=\"color: inherit\"> </span><strong>，</strong>通过契约生成的 YAML 文件，业务开发人员应在导入前完成契约质量审核，确保生成的语义化信息易于理解。</p><p><strong>特别注意：</strong>苍穹9.0版本，<strong>MCP服务不再保存原始YAML信息</strong>，MCP工具中API相关信息，默认取自API契约，请规范维护API本身的请求参数，<strong>避免出现$key以及$value 等虚参数</strong>，影响大模型理解。</p></blockquote><p></p><p><strong>5） 多语言</strong></p><p>MCP网关（mcp/gateway）默认返回英文<strong>语言的工具信息（含工具说明、语义化信息、接口 inputSchema等）</strong>；若对应字段没有英文翻译，则返回中文。无需额外参数，语言返回由服务端根据字段是否存在英文值决定。</p><p></p><p></p><p><img src=\"/download/01008c1e187f12d04e41bf6e4ff059c2eb49.png\" alt=\"上传图片\"></p><p><img src=\"/download/0100aa5162f2004f487592c654e5e670658c.png\" alt=\"上传图片\"></p><p style=\"font-size: 16px\"></p><p><strong>6）导入/导出MCP</strong></p><p>若用户需要批量迁移自建的MCP服务，还可以通过导入/导出功能，进行跨环境之间的MCP服务数据迁移。</p><p>注意：导入/导出MCP服务，<strong>不支持跨开发商标识的数据同步</strong>，租户无法直接导入标准MCP服务。</p><p style=\"font-size: 16px\"></p><p><img src=\"/download/0100b75165e1b6934cd6bda66b33cf443a10.png\" alt=\"上传图片\"></p><p style=\"font-size: 16px\"></p><h3><strong>5.2 MCP 服务自动注册</strong></h3><p>新增MCP 服务后，等待系统自动注册工具到苍穹 <strong>MCP Gateway</strong>（系统每 5 分钟自动扫描并注册MCP服务，无需手动触发），然后灵基后台即可拉取ERP侧最新的MCP服务。</p><p><strong>注意：</strong></p><ul style=\"box-sizing: border-box; margin: 8px 0px; padding-left: 1.5rem; list-style-type: disc; color: rgba(0, 0, 0, 0.82)\"><li><p>若修改了 MCP 服务关联的 API 信息，该服务将自动转为「待更新」状态，等待下次 MCP 网关扫描（默认5分钟一次）时重新注册并刷新信息。</p></li><li><p>若标品更新了 API 字段，建议将对应 MCP 服务脚本中的状态手动改为「待注册（UNPUBLISH）」。否则，需客户手工下架该服务后，再将注册状态重置为「待注册」，才能使最新 API 信息生效。</p></li><li><p><span style=\"color: rgb(26, 26, 26); font-size: 15px\">灵基获取工具列表时，请求头会携带</span><code>cosmic_mcp_token</code><span style=\"color: rgb(26, 26, 26); font-size: 15px\">与</span><code>erpAccountId</code><span style=\"color: rgb(26, 26, 26); font-size: 15px\">（账套级MCP服务必传）；若缺失</span><code>erpAccountId</code><span style=\"color: rgb(26, 26, 26); font-size: 15px\">，会出现返回空列表、或只能查询到部分</span>非 API<span style=\"color: rgb(26, 26, 26); font-size: 15px\"> 类工具的问题。</span></p></li></ul><p></p><h3><strong>5.3 灵基对接MCP服务</strong></h3><p style=\"font-size: 16px\">详见<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://www.kingdee.com/docs/lingee#admin-ops-guide\" title=\"灵基操作手册：管理员配置与运维指南\">灵基操作手册：管理员配置与运维指南</a></p><p style=\"font-size: 16px\"></p><p style=\"font-size: 16px\"><span style=\"color: rgb(26, 26, 26)\">参考上方配置文档，在灵基企业后台管理页维护好ERP相关参数，工具列表<strong>自动同步</strong>最新的ERP侧工具。</span></p><p style=\"font-size: 16px\"></p><p><img src=\"/download/010069edd4d14bc4458b95e4772a4460733a.png\" alt=\"上传图片\"></p><p style=\"font-size: 16px\"></p><p style=\"font-size: 16px\"><span style=\"color: rgb(26, 26, 26)\">接下来</span>灵基用户只需创建一个 Skill（技能），就能用自然语言指挥ERP了。</p><p>具体的业务场景示例如下：</p><p>&gt;用户说：「帮我把销售变更单处理一下」</p><p>&gt; 灵基自动执行：</p><p>&gt; ① 调用MCP工具 → 查找当前待处理的销售订单</p><p>&gt; ② 按「运费支付方」维度自动分类整理</p><p>&gt; ③ 清晰提示用户：哪些订单需要处理、运费分别怎么分摊</p><p></p><p><img src=\"/download/01007c3b205a4f0045b0888623b55011bdba.png\" alt=\"上传图片\"></p><p></p><p>&nbsp;</p><p><img src=\"/download/01002d91986c1c53413382c0852f7b3fe910.png\" alt=\"上传图片\"></p><p></p><h2>6 注意事项（苍穹9.0变更）</h2><p><strong>MCP 服务升级为账套级</strong></p><ul><li><p style=\"font-size: 14px\">苍穹 9.0 开始，集群级 MCP 服务升级为<strong>账套级 MCP 服务</strong>。MCP 与 API 的对应关系为<strong>一对一</strong>，同时支持用户新增二开MCP服务。Monitor日志查询的关键字为【<span style=\"color: rgb(26, 26, 26); font-size: 15px\">McpAccountTool</span>】。</p><p style=\"font-size: 14px\"></p></li></ul><p style=\"font-size: 14px\"><strong>MCP中API相关信息默认取自API契约</strong></p><ul><li><p style=\"font-size: 14px\">苍穹 V9.0版本，MCP服务不再保存原始YAML信息，<span style=\"color: rgb(6, 6, 6); font-size: 14px\">但为保证兼容 — MCP的参数inputSchema仍会正常生成：有已保存yaml的优先读yaml，没有的<strong>自动读API契约</strong>（OpenAPI接口参数）。</span></p></li><li><p style=\"font-size: 14px\">已发布的历史MCP服务，如果脚本中yaml和API契约参数不一致，<strong>不要随意删除yaml信息</strong>！清除后会回退读取API契约，可能导致线上行为变更。正确做法是先把两者对齐再清理。</p></li><li><p style=\"font-size: 14px\">请规范维护API本身的请求参数，避免出现 <code>$key</code>、<code>$value</code> 等虚参数，以免影响大模型理解。</p></li></ul><p style=\"font-size: 14px\"></p><p style=\"font-size: 14px\"></p><p style=\"font-size: 14px\"></p><h2>7 相关文档</h2><p><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://developer.kingdee.com/knowledge/876101744852734464\">MCP服务常见问题</a></p><p></p>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 87,
+   "isOpen": 1,
+   "name": "金蝶AI苍穹",
+   "productLineId": 29,
+   "series": "developer01",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        null
+       ],
+       "code": null,
+       "description": "",
+       "entityId": "875792595354608128",
+       "entityType": "Knowledge",
+       "id": "877225182032040448",
+       "isCategory": false,
+       "name": "MCP服务（for灵基）",
+       "parentId": "226337544983020032",
+       "sort": "25",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": null,
+     "entityId": null,
+     "entityType": null,
+     "id": "226337544983020032",
+     "isCategory": true,
+     "name": "用户手册",
+     "parentId": "-1",
+     "sort": "6",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+  "department": null,
+  "id": "132488613174518784",
+  "name": "某个路易",
+  "nameSpell": "name"
+ },
+ "totalAppraisalScore": 15,
+ "iflytekId": null,
+ "views": 1321,
+ "productLineId": 29,
+ "comments": 0,
+ "similarityCount": null,
+ "totalAppraisalUsers": 3,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1790145899502,
+ "appraisalScore": 0,
+ "unuseful": 0,
+ "knowledgeCheckStatus": 2,
+ "otherProductLineIds": [],
+ "auditAt": 1790145912000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "open_mcp_ext",
+        "id": "760141781395833856",
+        "name": "MCP服务",
+        "productLineId": null,
+        "sort": 26,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 0,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": null,
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 1,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "OperatingGuide",
+     "createdAt": 1556519201000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "某一功能的具体说明介绍，包括应用场景、参数说明、具体操作步骤等",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/010037894174802d4b9f8782f1f0010a6ddd.png",
+     "id": "202203081641",
+     "name": "功能介绍",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010176d38341668f44fdb94c95058a90e4b8.png",
+      "department": "云社区运营部",
+      "id": "2147406697",
+      "name": "多肉丸子",
+      "nameSpell": "kejuan"
+     },
+     "updatedAt": 1676857681000
+    },
+    {
+     "code": "rumen",
+     "createdAt": 1605667807000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "入门类的知识可使用此标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100d322b9282bcc438faa894f4eec029977.png",
+     "id": "202203081646",
+     "name": "基础入门",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download?fileName=0101ec1d6ce599b442dab7d0b794c1fce88d.png",
+      "department": null,
+      "id": "1009",
+      "name": "一颗小星星",
+      "nameSpell": "fengling"
+     },
+     "updatedAt": 1657872008000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "875792595354608128",
+         "entityType": "Knowledge",
+         "id": "877225182032040448",
+         "isCategory": false,
+         "name": "MCP服务（for灵基）",
+         "parentId": "226337544983020032",
+         "sort": "25",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": null,
+       "entityId": null,
+       "entityType": null,
+       "id": "226337544983020032",
+       "isCategory": true,
+       "name": "用户手册",
+       "parentId": "-1",
+       "sort": "6",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": "<h2>变更记录</h2><table class=\"is-max\" style=\"min-width: auto; width: 997px\"><colgroup><col style=\"width: 260px\"><col style=\"width: 526px\"><col style=\"width: 211px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"260\" data-background-color=\"\" class=\"\"><p><strong>产品版本</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"526\" data-background-color=\"\" class=\"\"><p><strong>更新内容</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"211\" data-background-color=\"\" class=\"\"><p><strong>更新时间</strong></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"260\" data-background-color=\"\" class=\"\"><p><strong>V9.0.0</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"526\" data-background-color=\"\" class=\"\"><p>初始版本</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"211\" data-background-color=\"\" class=\"\"><p>2026年9月</p></td></tr></tbody></table><hr><p></p><h2 style=\"text-align: justify\">1&nbsp;功能介绍</h2><p style=\"text-align: justify\"><strong>MCP服务</strong>是苍穹平台<strong>为灵基</strong>提供的AI工具网关，通过将OpenAPI契约自动转化为MCP协议工具（Tool）的能力，以双层Token认证保障安全，使灵基能够以标准化方式调用苍穹业务 API。</p><p>平台在原【集群级MCP服务】基础上进行升级，支持<strong>客户将二开 API</strong> 发布为MCP服务，目前共两种服务来源：</p><ul style=\"box-sizing: border-box; --tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgb(59 130 246 / .5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; margin: 0.8em 0px; padding-left: 30px; caret-color: rgb(0, 122, 255); color: rgb(51, 51, 51)\"><li><p><strong>系统内置</strong>：由金蝶开发商发布，将金蝶标品API发布为 MCP 服务，面向全体租户开放。</p></li><li><p><strong>租户自建</strong>：由企业客户的 IT/实施团队自主配置，仅允许选择本租户的二开 API，工具可见范围限定在当前账套，实现企业个性化业务场景的智能化扩展。</p></li></ul><p style=\"text-align: justify\"></p><p style=\"text-align: justify\"><strong>核心概念速览：</strong></p><table class=\"is-max\" style=\"min-width: auto; width: 930px\"><colgroup><col style=\"width: 200px\"><col style=\"width: 730px\"></colgroup><tbody><tr><th colspan=\"1\" rowspan=\"1\" colwidth=\"200\" data-background-color=\"\" class=\"\"><p>概念</p></th><th colspan=\"1\" rowspan=\"1\" colwidth=\"730\" data-background-color=\"\" class=\"\"><p>说明</p></th></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"200\" data-background-color=\"\" class=\"\"><p><span style=\"color: rgb(6, 6, 6); font-size: 14px\"><strong>MCP</strong></span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"730\" data-background-color=\"\" class=\"\"><p><span style=\"color: rgb(6, 6, 6); font-size: 14px\">Model Context Protocol，AI 客户端与工具提供方之间的协议</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"200\" data-background-color=\"\" class=\"\"><p><span style=\"color: rgb(6, 6, 6); font-size: 14px\"><strong>工具（Tool）</strong></span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"730\" data-background-color=\"\" class=\"\"><p><span style=\"color: rgb(6, 6, 6); font-size: 14px\">一个可被 AI 发现与调用的业务接口抽象，由「工具定义（名称 / 描述 / 参数 schema / 调用方式）」构成</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"200\" data-background-color=\"\" class=\"\"><p><span style=\"color: rgb(6, 6, 6); font-size: 14px\"><strong>账套（account）</strong></span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"730\" data-background-color=\"\" class=\"\"><p><span style=\"color: rgb(6, 6, 6); font-size: 14px\">苍穹的独立业务数据库单元，本功能按账套隔离工具</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"200\" data-background-color=\"\" class=\"\"><p><span style=\"color: rgb(6, 6, 6); font-size: 14px\"><strong>Gateway</strong></span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"730\" data-background-color=\"\" class=\"\"><p><span style=\"color: rgb(6, 6, 6); font-size: 14px\">MCP网关进程，自动读取数据并对外提供 MCP 服务</span></p></td></tr></tbody></table><h2 style=\"text-align: justify\">2 应用场景</h2><p style=\"text-align: justify\">适用于需要让灵基直接操作苍穹平台业务数据的场景：</p><ul style=\"box-sizing: border-box; --tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgb(59 130 246 / .5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; margin: 0.8em 0px; padding-left: 30px; caret-color: rgb(0, 122, 255); color: rgb(51, 51, 51)\"><li><p><strong>标准业务场景</strong>（系统内置）：金蝶标品预置的MCP服务，让智能体完成通用单据查询、数据录入、流程审批等标准化业务操作。</p></li><li><p><strong>企业二开扩展场景</strong>（租户自建）：企业将自定义的二开 API 发布为 MCP 服务，让智能体直接操作企业特有的业务单据和流程，无需为大模型单独定制 API 对接开发。</p><p></p></li></ul><h2 style=\"text-align: justify\">3 系统路径</h2><p style=\"text-align: justify\">【开放服务云】→【OpenAPI】→【MCP服务】→【MCP服务】</p><p style=\"text-align: justify\"></p><h2 style=\"text-align: justify\">4 关键字段/按钮说明</h2><h3 style=\"text-align: justify\"><strong>4.1 关键字段说明</strong></h3><table class=\"is-max\" style=\"min-width: 161px\"><colgroup><col style=\"width: 136px\"><col style=\"min-width: 25px\"></colgroup><tbody><tr><th colspan=\"1\" rowspan=\"1\" colwidth=\"136\" data-background-color=\"\" class=\"\"><p><strong>字段名称</strong></p></th><th colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p><strong>详细解释</strong></p></th></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"136\" data-background-color=\"\" class=\"\"><p>API类型</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p>支持的API引擎类型，API服务/RESTful API</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"136\" data-background-color=\"\" class=\"\"><p>目标API</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p>手工录入，选择要发布的API服务。注意：租户目前只支持选择二开 API</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"136\" data-background-color=\"\" class=\"\"><p>所属云编码</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p>API所属云编码</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"136\" data-background-color=\"\" class=\"\"><p>所属应用编码</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p>API所属应用编码</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"136\" data-background-color=\"\" class=\"\"><p>操作类型</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p>如查询操作、创建操作、更新操作、删除操作等</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"136\" data-background-color=\"\" class=\"\"><p>是否敏感操作</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p>标记MCP工具是否为敏感操作，方便智能体调用时进行二次确认</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"136\" data-background-color=\"\" class=\"\"><p>所属领域</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p>语义化信息，MCP工具所属领域，如供应链云</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"136\" data-background-color=\"\" class=\"\"><p>所属模块</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p>语义化信息，MCP工具所属模块，如采购管理</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"136\" data-background-color=\"\" class=\"\"><p>自定义参数扩展配置</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p>若已有信息不满足大模型要求，可补充自定义参数，Map结构如：{\"key\":\"value\"}</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"136\" data-background-color=\"\" class=\"\"><p>注册状态</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p>待注册/已发布/待更新/下架中/已下架/失败。发布后若服务或API变更则变为待更新，异常为失败</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"136\" data-background-color=\"\" class=\"\"><p>服务来源</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p>系统内置 / 租户自建</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"136\" data-background-color=\"\" class=\"\"><p>工具名称</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p>工具唯一标识，按 <code>{domain}_{app}_{isvid}_{httpmethod}_{apiuri}</code> 规则生成，apiuri 中的\"/\"统一替换为\"_\"，最大长度 <strong>55</strong> 字符，超长自动截断并附加5位随机数。支持手动修改（建议调整 {apiuri} 部分以增强语义）。</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"136\" data-background-color=\"\" class=\"\"><p>说明</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p>MCP工具功能说明</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"136\" data-background-color=\"\" class=\"\"><p>前置条件</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p>MCP工具前置条件</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"136\" data-background-color=\"\" class=\"\"><p>后置效果</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p>MCP工具后置效果</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"136\" data-background-color=\"\" class=\"\"><p>错误恢复</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p>MCP工具错误恢复</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"136\" data-background-color=\"\" class=\"\"><p>异常日志</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p>服务出现异常时的日志</p></td></tr></tbody></table><h3 style=\"text-align: justify\"><strong>4.2&nbsp;关键按钮说明</strong></h3><table class=\"is-max\" style=\"min-width: 167px\"><colgroup><col style=\"width: 142px\"><col style=\"min-width: 25px\"></colgroup><tbody><tr><th colspan=\"1\" rowspan=\"1\" colwidth=\"142\" data-background-color=\"\" class=\"\"><p><strong>按钮名称</strong></p></th><th colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p><strong>详细解释</strong></p></th></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"142\" data-background-color=\"\" class=\"\"><p>新增</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p>点击按钮，打开新增MCP服务页面</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"142\" data-background-color=\"\" class=\"\"><p>重置注册状态</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p>点击按钮，可将已下架或失败状态的MCP服务重置为待注册状态，等待MCP网关下次自动扫描（默认 5 分钟一次），重新注册发布</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"142\" data-background-color=\"\" class=\"\"><p>下架</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p>点击按钮，下架状态为已发布的 MCP 服务</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"142\" data-background-color=\"\" class=\"\"><p>修改</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p>点击按钮，修改MCP服务，<strong>已发布和待更新状态</strong>的MCP服务，<strong>必须先下架</strong>才允许修改。</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"142\" data-background-color=\"\" class=\"\"><p>导入YAML</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p>导入语义化契约YAML文件，快速生成 MCP 服务</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"142\" data-background-color=\"\" class=\"\"><p>导出MCP</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p>导出MCP服务为dts文件，支持单条或批量导出，用于跨环境数据迁移</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"142\" data-background-color=\"\" class=\"\"><p>导入MCP</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p>导入dts文件格式的MCP服务，支持单条或批量导入，用于跨环境数据迁移（<strong>该能力不支持跨开发商标识的数据同步</strong>，租户无法直接导入标准MCP服务）。</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"142\" data-background-color=\"\" class=\"\"><p>导出预置脚本</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p>导出 MCP 服务的SQL脚本，方便在升级时通过脚本预置MCP服务</p></td></tr></tbody></table><p></p><h2>5 主要操作</h2><h3><strong>5.1 新增 MCP 服务</strong></h3><p>登录金蝶AI苍穹环境，进入菜单 <strong>开放服务云 → OpenAPI → MCP 服务</strong><span style=\"color: rgb(51, 51, 51); font-size: 16px\"> → </span><strong>MCP 服务</strong><span style=\"color: rgb(51, 51, 51); font-size: 16px\">，</span>点击新增按钮，即可新增 MCP 服务。</p><p style=\"font-size: 16px\"></p><p><img src=\"/download/0100cd19a988293142f6a53ce512f45a9c64.png\" alt=\"上传图片\"></p><p></p><p><strong>1）新增方式</strong><span style=\"color: rgb(51, 51, 51)\"><strong>：手工/导入</strong></span></p><table class=\"is-max\" style=\"min-width: auto; width: 660px\"><colgroup><col style=\"width: 158px\"><col style=\"width: 502px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"158\" data-background-color=\"rgb(216, 216, 216)\" class=\"\" style=\"background-color: rgb(216, 216, 216)\"><p><span style=\"color: rgb(51, 51, 51); font-size: 14px\"><strong>方式</strong></span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"502\" data-background-color=\"rgb(216, 216, 216)\" class=\"\" style=\"background-color: rgb(216, 216, 216)\"><p><span style=\"color: rgb(51, 51, 51); font-size: 14px\"><strong>适合场景</strong></span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"158\" data-background-color=\"\" class=\"\"><p><span style=\"color: rgb(51, 51, 51); font-size: 14px\"><strong>手工新增</strong></span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"502\" data-background-color=\"\" class=\"\"><p><span style=\"color: rgb(51, 51, 51); font-size: 14px\">少量API快速接入，逐个配置</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"158\" data-background-color=\"\" class=\"\"><p><span style=\"color: rgb(51, 51, 51); font-size: 14px\"><strong>导入YAML</strong></span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"502\" data-background-color=\"\" class=\"\"><p><span style=\"color: rgb(51, 51, 51); font-size: 14px\">根据OpenAPI规范文档，通过skill生成规范的yaml文件，逐个导入</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"158\" data-background-color=\"\" class=\"\"><p><span style=\"color: rgb(51, 51, 51); font-size: 14px\"><strong>导入MCP（.dts）</strong></span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"502\" data-background-color=\"\" class=\"\"><p><span style=\"color: rgb(51, 51, 51); font-size: 14px\">跨环境批量迁移，一键搬家</span></p></td></tr></tbody></table><p></p><p><strong>2）服务来源：</strong><span style=\"color: rgb(51, 51, 51)\"><strong>系统内置 vs 租户自建</strong></span></p><table class=\"is-max\" style=\"min-width: 421px\"><colgroup><col style=\"min-width: 25px\"><col style=\"min-width: 25px\"><col style=\"width: 109px\"><col style=\"width: 262px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p><strong>来源类型</strong></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p><strong>谁发布？</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"109\" data-background-color=\"\" class=\"\"><p><strong>谁可用？</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"262\" data-background-color=\"\" class=\"\"><p><strong>适合场景</strong></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p><strong>系统内置</strong></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p>金蝶开发商发布</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"109\" data-background-color=\"\" class=\"\"><p>全体租户开放</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"262\" data-background-color=\"\" class=\"\"><p>使用金蝶标品API即可满足</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p><strong>租户自建</strong></p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p>企业IT/实施团队自主配置</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"109\" data-background-color=\"\" class=\"\"><p>仅限本账套</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"262\" data-background-color=\"\" class=\"\"><p>需要二开API定制化解决</p></td></tr></tbody></table><ul style=\"box-sizing: border-box; --tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgb(59 130 246 / .5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; margin: 0.8em 0px; padding-left: 30px; caret-color: rgb(0, 122, 255); color: rgb(51, 51, 51)\"><li><p>注意：系统内置的 MCP 服务关联的接口均为标准 API；租户自建的 MCP 服务只允许关联二开 API（即开发商标识不为 kingdee 的 API）。</p></li></ul><p></p><p><strong>3）权限控制</strong></p><p>租户环境（非金蝶标准环境）<strong>仅支持维护租户自建的MCP服务</strong>，<strong>不能修改系统内置MCP服务</strong>，<strong>也无法通过导入YAML或导入MCP等方式新增金蝶标准系统内置的服务 </strong>— 导入功能仅限当前租户自建的服务，两种来源的MCP服务<strong>相互独立</strong>。</p><p></p><p><strong>4）语义化信息</strong></p><p>语义化字段包含有说明、操作类型、所属领域、所属模块、前置条件、后置效果、错误恢复。以上字段作为API契约的补充，帮助大模型更好地理解MCP工具。</p><p>同时有自动化规则：系统会将删除操作和反审核操作自动标记为敏感操作，在MCP工具列表中标记为sensitive。</p><blockquote class=\"\"><p><strong>工具提示</strong>：语义化信息契约生成器下载地址：<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://skills.kingdee.com/skills/438\">https://skills.kingdee.com/skills/438</a><span style=\"color: inherit\"> </span><strong>，</strong>通过契约生成的 YAML 文件，业务开发人员应在导入前完成契约质量审核，确保生成的语义化信息易于理解。</p><p><strong>特别注意：</strong>苍穹9.0版本，<strong>MCP服务不再保存原始YAML信息</strong>，MCP工具中API相关信息，默认取自API契约，请规范维护API本身的请求参数，<strong>避免出现$key以及$value 等虚参数</strong>，影响大模型理解。</p></blockquote><p></p><p><strong>5） 多语言</strong></p><p>MCP网关（mcp/gateway）默认返回英文<strong>语言的工具信息（含工具说明、语义化信息、接口 inputSchema等）</strong>；若对应字段没有英文翻译，则返回中文。无需额外参数，语言返回由服务端根据字段是否存在英文值决定。</p><p></p><p></p><p><img src=\"/download/01008c1e187f12d04e41bf6e4ff059c2eb49.png\" alt=\"上传图片\"></p><p><img src=\"/download/0100aa5162f2004f487592c654e5e670658c.png\" alt=\"上传图片\"></p><p style=\"font-size: 16px\"></p><p><strong>6）导入/导出MCP</strong></p><p>若用户需要批量迁移自建的MCP服务，还可以通过导入/导出功能，进行跨环境之间的MCP服务数据迁移。</p><p>注意：导入/导出MCP服务，<strong>不支持跨开发商标识的数据同步</strong>，租户无法直接导入标准MCP服务。</p><p style=\"font-size: 16px\"></p><p><img src=\"/download/0100b75165e1b6934cd6bda66b33cf443a10.png\" alt=\"上传图片\"></p><p style=\"font-size: 16px\"></p><h3><strong>5.2 MCP 服务自动注册</strong></h3><p>新增MCP 服务后，等待系统自动注册工具到苍穹 <strong>MCP Gateway</strong>（系统每 5 分钟自动扫描并注册MCP服务，无需手动触发），然后灵基后台即可拉取ERP侧最新的MCP服务。</p><p><strong>注意：</strong></p><ul style=\"box-sizing: border-box; margin: 8px 0px; padding-left: 1.5rem; list-style-type: disc; color: rgba(0, 0, 0, 0.82)\"><li><p>若修改了 MCP 服务关联的 API 信息，该服务将自动转为「待更新」状态，等待下次 MCP 网关扫描（默认5分钟一次）时重新注册并刷新信息。</p></li><li><p>若标品更新了 API 字段，建议将对应 MCP 服务脚本中的状态手动改为「待注册（UNPUBLISH）」。否则，需客户手工下架该服务后，再将注册状态重置为「待注册」，才能使最新 API 信息生效。</p></li><li><p><span style=\"color: rgb(26, 26, 26); font-size: 15px\">灵基获取工具列表时，请求头会携带</span><code>cosmic_mcp_token</code><span style=\"color: rgb(26, 26, 26); font-size: 15px\">与</span><code>erpAccountId</code><span style=\"color: rgb(26, 26, 26); font-size: 15px\">（账套级MCP服务必传）；若缺失</span><code>erpAccountId</code><span style=\"color: rgb(26, 26, 26); font-size: 15px\">，会出现返回空列表、或只能查询到部分</span>非 API<span style=\"color: rgb(26, 26, 26); font-size: 15px\"> 类工具的问题。</span></p></li></ul><p></p><h3><strong>5.3 灵基对接MCP服务</strong></h3><p style=\"font-size: 16px\">详见<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://www.kingdee.com/docs/lingee#admin-ops-guide\" title=\"灵基操作手册：管理员配置与运维指南\">灵基操作手册：管理员配置与运维指南</a></p><p style=\"font-size: 16px\"></p><p style=\"font-size: 16px\"><span style=\"color: rgb(26, 26, 26)\">参考上方配置文档，在灵基企业后台管理页维护好ERP相关参数，工具列表<strong>自动同步</strong>最新的ERP侧工具。</span></p><p style=\"font-size: 16px\"></p><p><img src=\"/download/010069edd4d14bc4458b95e4772a4460733a.png\" alt=\"上传图片\"></p><p style=\"font-size: 16px\"></p><p style=\"font-size: 16px\"><span style=\"color: rgb(26, 26, 26)\">接下来</span>灵基用户只需创建一个 Skill（技能），就能用自然语言指挥ERP了。</p><p>具体的业务场景示例如下：</p><p>&gt;用户说：「帮我把销售变更单处理一下」</p><p>&gt; 灵基自动执行：</p><p>&gt; ① 调用MCP工具 → 查找当前待处理的销售订单</p><p>&gt; ② 按「运费支付方」维度自动分类整理</p><p>&gt; ③ 清晰提示用户：哪些订单需要处理、运费分别怎么分摊</p><p></p><p><img src=\"/download/01007c3b205a4f0045b0888623b55011bdba.png\" alt=\"上传图片\"></p><p></p><p>&nbsp;</p><p><img src=\"/download/01002d91986c1c53413382c0852f7b3fe910.png\" alt=\"上传图片\"></p><p></p><h2>6 注意事项（苍穹9.0变更）</h2><p><strong>MCP 服务升级为账套级</strong></p><ul><li><p style=\"font-size: 14px\">苍穹 9.0 开始，集群级 MCP 服务升级为<strong>账套级 MCP 服务</strong>。MCP 与 API 的对应关系为<strong>一对一</strong>，同时支持用户新增二开MCP服务。Monitor日志查询的关键字为【<span style=\"color: rgb(26, 26, 26); font-size: 15px\">McpAccountTool</span>】。</p><p style=\"font-size: 14px\"></p></li></ul><p style=\"font-size: 14px\"><strong>MCP中API相关信息默认取自API契约</strong></p><ul><li><p style=\"font-size: 14px\">苍穹 V9.0版本，MCP服务不再保存原始YAML信息，<span style=\"color: rgb(6, 6, 6); font-size: 14px\">但为保证兼容 — MCP的参数inputSchema仍会正常生成：有已保存yaml的优先读yaml，没有的<strong>自动读API契约</strong>（OpenAPI接口参数）。</span></p></li><li><p style=\"font-size: 14px\">已发布的历史MCP服务，如果脚本中yaml和API契约参数不一致，<strong>不要随意删除yaml信息</strong>！清除后会回退读取API契约，可能导致线上行为变更。正确做法是先把两者对齐再清理。</p></li><li><p style=\"font-size: 14px\">请规范维护API本身的请求参数，避免出现 <code>$key</code>、<code>$value</code> 等虚参数，以免影响大模型理解。</p></li></ul><p style=\"font-size: 14px\"></p><p style=\"font-size: 14px\"></p><p style=\"font-size: 14px\"></p><h2>7 相关文档</h2><p><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://developer.kingdee.com/knowledge/876101744852734464\">MCP服务常见问题</a></p><p></p>"
+}

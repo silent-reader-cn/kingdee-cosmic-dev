@@ -1,0 +1,494 @@
+{
+ "badNum": 0,
+ "identityTagIds": null,
+ "knowledgeId": "457115890811666944",
+ "createdAt": 1686792921000,
+ "collections": 2,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "457115890811666944",
+ "contentType": 1,
+ "updatedAt": 1719478209000,
+ "knowledgeUpdater": {
+  "avatar": "/download/01018b00f45fe4f245a9a102410a9682bb28.png",
+  "department": null,
+  "id": "430437059824456704",
+  "name": "Pennyzz",
+  "nameSpell": "name"
+ },
+ "assessStatus": 0,
+ "knowledgeStatus": 4,
+ "assessHandleStatus": null,
+ "knowledgeCreatedAt": 1686792921000,
+ "version": 79,
+ "labels": [],
+ "editedAt": 1719478209000,
+ "identityTags": null,
+ "useful": 2,
+ "errors": [],
+ "isCollected": false,
+ "totalFeedBacks": 0,
+ "attachments": [],
+ "sources": [],
+ "editTitle": "持续更新 | 【OpenAPI】重大新特性发布汇总",
+ "title": "持续更新 | 【OpenAPI】重大新特性发布汇总",
+ "content": "<p style=\"text-align: justify;\"><br/></p><p style=\"text-align: justify;\">想知道<span style=\"color: rgb(0, 0, 0);\"></span>OpenAPI<span style=\"color: rgb(0, 0, 0);\"></span>的最新功能特性有哪些？</p><p style=\"text-align: justify;\">想了解新功能是否能满足你的场景需求？</p><p style=\"text-align: justify;\"><br/></p><p style=\"text-align: justify;\">那就不要错过本帖子！汇总<span style=\"font-weight: 700; color: rgb(247, 150, 70);\">OpenAPI</span><span style=\"color: rgb(247, 150, 70); font-weight: 700;\">每月重大新特性</span>，带你第一时间获取产品最新特性资讯~<br/></p><p style=\"text-align: justify;\"><span style=\"font-weight: 700; color: rgb(247, 150, 70);\"><img src=\"https://vipfront.obs.cn-north-4.myhuaweicloud.com/emotion/define/86.gif\" width=\"35\" height=\"35\" class=\"emoji\"/>&nbsp;帖子持续更新，推荐收藏，回看干货不迷路！</span></p><p style=\"text-align: justify;\"><span style=\"font-weight: 700; color: rgb(247, 150, 70);\"><br/></span></p><p style=\"text-align: justify;\"><span style=\"font-weight: 700; color: rgb(0, 0, 0);\">附：OpenAPI完整特性帖：<a href=\"https://developer.kingdee.com/knowledge/specialDetail/174931520225092096?category=181160777515051776&id=447460388506859520&productLineId=29\" title=\"\" target=\"_blank\" class=\"\">金蝶AI苍穹开发平台补丁新特性汇总</a></span></p><p style=\"text-align: justify;\"><span style=\"font-weight: 700; color: rgb(247, 150, 70);\"><span style=\"color: rgb(0, 0, 0);\">苍穹补丁下载路径：</span><a href=\"https://vip.kingdee.com/tolink?target=http%3A%2F%2Fdownload.kdcloud.com%2Flogin%23%2Fdownload\" title=\"\" target=\"_blank\" class=\"\" style=\"\">http://download.kdcloud.com/login#/download</a></span></p><p style=\"text-align: justify;\"><span style=\"font-weight: 700;\"><br/></span></p><p style=\"text-align: justify;\"><span style=\"font-weight: 700;\"></span></p><hr/><h2 label=\"一级标题\" class=\"first-title\" style=\"text-align: justify;\"><strong><span style=\"font-size: 20px;\"></span></strong></h2><h2 label=\"一级标题\" class=\"first-title\" style=\"text-align: justify;\"><strong style=\"\">2023.06 重大新特性</strong></h2><p><strong style=\"\"><br/></strong></p><p><strong><span style=\"font-size: 20px;\"></span></strong></p><p><span style=\"font-weight: 700; color: rgb(0, 0, 0);\">1、</span><span style=\"font-weight: 700; color: rgb(0, 0, 0);\">支持<span style=\"font-weight: 700; color: rgb(0, 0, 0);\">“<span style=\"font-weight: 700;\">操作API”</span></span><span style=\"font-weight: 700; color: rgb(247, 150, 70);\">零代码配置余额模型和日志表单的查询接口</span>，降低API开发门槛</span></p><p><span style=\"font-weight: 700; color: rgb(0, 0, 0);\"><br/></span></p><p label=\"正文\" style=\"text-align: justify;\"><span style=\"text-align: justify;\">为提升用户接口开发效率，降低集成工作量，新版本开放平台<strong>支持零代码配置日志表单和余额模型的查询接口</strong>，本次支持了<strong>“操作API”</strong><span style=\"text-align: justify; font-weight: 700; color: rgb(0, 0, 0);\">零代码配置余额模型和日志表单的查询接口。</span></span></p><p label=\"正文\" style=\"text-align: justify;\"><span style=\"text-align: justify;\"><span style=\"text-align: justify; font-weight: 700; color: rgb(0, 0, 0);\"><br/></span></span></p><p label=\"正文\" style=\"text-align: justify;\"><span style=\"text-align: justify;\"><span style=\"text-align: justify; font-weight: 700; color: rgb(0, 0, 0);\"></span></span></p><p label=\"正文\" style=\"text-align: justify;\">同样的操作方法，也可以<strong style=\"\">零代码配置日志表单</strong>的查询接口。</p><p style=\"\"><br/></p><p style=\"\"><strong><span style=\"text-align: justify; color: rgb(0, 0, 0);\">发布版本：</span></strong><em style=\"text-align: justify; color: rgb(0, 0, 0);\"><span style=\"font-weight: 700;\">BOS V5.0.023&nbsp;</span></em><span style=\"text-align: justify; color: rgb(0, 0, 0);\">更多功能细节，点击<span style=\"color: rgb(79, 129, 189);\">&nbsp;</span><a href=\"https://vip.kingdee.com/article/464748428388700416?productLineId=29&isKnowledge=2\" target=\"_blank\" style=\"color: rgb(79, 129, 189);\">操作API支持余额模型和日志表单</a>了解。</span></p><p label=\"正文\" style=\"text-align: justify;\"><span style=\"text-align: justify;\"><span style=\"text-align: justify; font-weight: 700; color: rgb(0, 0, 0);\"><br/></span></span></p><p><span style=\"font-weight: 700; color: rgb(0, 0, 0);\"><img src=\"/download/01091f8215a5ff5648518fceb26cc1b4825f.png\"/></span></p><p label=\"正文\" style=\"text-align: center;\"><em style=\"\"><span style=\"color: rgb(0, 0, 0); text-align: justify;\">打开API管理列表 - 新增操作API</span></em></p><p><strong><em><span style=\"font-weight: 700; color: rgb(0, 0, 0);\"><br/></span></em></strong></p><h2 label=\"一级标题\" class=\"first-title\" style=\"text-align: justify;\"><strong><span style=\"font-size: 20px;\"><img src=\"/download/010964139f747eef4722b8fb32506e9da00a.png\"/></span></strong></h2><p style=\"text-align: center;\"><em><span style=\"color: rgb(0, 0, 0); text-align: justify;\">新增操作API - 业务对象选择余额模型</span></em></p><p><br/></p><p><span style=\"text-align: justify; color: rgb(0, 0, 0);\"><br/></span></p><p><span style=\"text-align: justify; color: rgb(0, 0, 0);\"><br/></span></p><p style=\"text-align: justify; \"><strong><span style=\"color:#000000\">2、优化<span style=\"color: rgb(247, 150, 70);\">第三方应用交互</span>，以<span style=\"color: rgb(247, 150, 70);\">卡片形式</span>提升用户体验</span></strong></p><p style=\"text-align: justify; \"><strong><span style=\"color:#000000\"><br/></span></strong></p><p style=\"text-align: justify; \"><span style=\"color:#000000\">进一步优化了第三方应用交互，<span style=\"text-align: justify;\">将<strong>认证方式、访问控制和加密策略展示成卡片形式</strong>，提升用户体验。</span></span></p><p style=\"text-align: justify; \"><span style=\"color:#000000\"><span style=\"text-align: justify;\"><br/></span></span></p><p style=\"text-align: justify; \"><strong><span style=\"color:#000000\"><span style=\"text-align: justify;\"><span style=\"text-align: justify; color: rgb(0, 0, 0);\">发布版本：</span></span></span></strong><span style=\"color:#000000\"><span style=\"text-align: justify;\"><span style=\"text-align: justify; color: rgb(0, 0, 0);\"></span><em style=\"text-align: justify; color: rgb(0, 0, 0);\"><span style=\"font-weight: 700;\">BOS V5.0.023&nbsp;</span></em><span style=\"text-align: justify; color: rgb(0, 0, 0);\">更多功能细节，点击<span style=\"color: rgb(79, 129, 189);\">&nbsp;</span><a href=\"https://vip.kingdee.com/article/464754959607876608?productLineId=29&isKnowledge=2\" target=\"_blank\" style=\"color: rgb(79, 129, 189);\"><span style=\"text-align: justify; color: rgb(79, 129, 189);\">第三方应用新版交互体验</span></a>了解。</span></span></span></p><p style=\"text-align: justify; \"><span style=\"color:#000000\"><span style=\"text-align: justify;\"><br/></span></span></p><p style=\"text-align: justify; \"><span style=\"color:#000000\"><span style=\"text-align: justify;\"><img src=\"/download/010975b1eaa38ca646ddbc7f1bf4126f6b2f.png\"/></span></span></p><p style=\"text-align: justify; \"><br/></p><p style=\"text-align: center;\"><em><span style=\"color: rgb(0, 0, 0); text-align: justify;\">卡片形式</span></em></p><p><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"text-align: justify;\"><strong><span style=\"font-size: 20px;\">2023.05 重大新特性</span></strong></h2><div style=\"\"><strong><span style=\"font-weight: 700;\"></span></strong></div><p><br/></p><p><span style=\"font-weight: 700; color: rgb(247, 150, 70);\">1、开发必备！苍穹开放平台一键导出Swagger API文档！</span></p><p><br/></p><p><span style=\"text-align: justify; color: rgb(0, 0, 0);\">API列表</span><span style=\"text-align: justify;\">支持导出Swagger文档，遵循最新的Swagger3.0规范，<span style=\"text-align: justify;\">提供更友好的统一交互体验。</span>Swagger是一种广泛使用的API文档规范，它具有清晰的结构和交互式的界面，帮助开发人员更直观地了解和调试API。</span></p><p><span style=\"text-align: justify;\"><br/></span></p><p><strong><span style=\"text-align: justify;\"><span style=\"color: rgb(0, 0, 0); text-align: justify;\">发布版本：</span></span></strong><span style=\"text-align: justify;\"><span style=\"color: rgb(0, 0, 0); text-align: justify;\"></span><em style=\"color: rgb(0, 0, 0); text-align: justify;\"><span style=\"font-weight: 700;\">BOS V5.0.021&nbsp;</span></em><span style=\"color: rgb(0, 0, 0); text-align: justify;\">更多功能细节，点击<span style=\"text-align: justify; color: rgb(84, 141, 212);\">&nbsp;</span><a href=\"https://vip.kingdee.com/article/454600313165665024?productLineId=29&isKnowledge=2\" title=\"\" target=\"_blank\" class=\"\" style=\"color: rgb(84, 141, 212);\"><span style=\"text-align: justify; color: rgb(84, 141, 212);\">开放平台新特性：导出Swagger</span></a>了解。</span></span></p><p><span style=\"color: rgb(0, 0, 0); text-align: justify;\"><br/></span></p><p><span style=\"color: rgb(0, 0, 0); text-align: justify;\"><img src=\"/download/010941c6f2fd3afa48aba729a3f5ad61913e.png\"/></span></p><p style=\"text-align: center;\"><em><span style=\"color: rgb(0, 0, 0); text-align: justify;\"><span style=\"\">“导出s</span>wagger”按钮操作界面</span></em></p><p><span style=\"text-align: justify;\"><br/></span></p><p><img src=\"/download/0109b71711ae51c240e987874e2d32b1ff90.png\"/></p><p style=\"text-align: center;\"><em><span style=\"text-align: justify;\">Swagger样式的API文档</span></em></p><p><span style=\"text-align: justify;\"><br/></span></p><p><span style=\"text-align: justify;\"><br/></span></p><p><span style=\"font-weight: 700; color: rgb(247, 150, 70);\">2、提升API多语言支持，实现一次获取所有语言数据</span></p><p><br/><span style=\"text-align: justify;\"></span></p><p style=\"color: rgb(0, 0, 0);\"><span style=\"\">在旧版本中，API只会把当前语言的</span>返回或保存<span style=\"\">。</span><strong><span style=\"\">该版本优化了</span>对多语言文本的支持</strong>，更加灵活，具体优化如下：</p><p style=\"color: rgb(0, 0, 0);\">&nbsp; 1)&nbsp;<span style=\"\">查询操作API，</span>通过开关配置<span style=\"\">，</span>支持<strong><span style=\"\">一次返回</span>字段<span style=\"\">所有语言</span>数据</strong><span style=\"\">；</span></p><p style=\"color: rgb(0, 0, 0);\">&nbsp; 2)&nbsp;<span style=\"\">保存操作API，使用map形式传入多语言字段，</span>支持<span style=\"\">保存</span>字段<span style=\"\">所有语言</span>数据；</p><p style=\"color: rgb(0, 0, 0);\">&nbsp; 3)&nbsp;<span style=\"\">支持调用</span>接口<span style=\"\">时自定义语言</span>环境<span style=\"\">，在请求头传入Accept-Language（仅v2接口），优先级比访问令牌中</span>language更高<span style=\"\">。</span></p><p><br/></p><p><strong><span style=\"text-align: justify; color: rgb(0, 0, 0);\">发布版本：</span></strong><em style=\"text-align: justify; color: rgb(0, 0, 0);\"><span style=\"font-weight: 700;\">BOS V5.0.021&nbsp;</span></em><span style=\"text-align: justify; color: rgb(0, 0, 0);\">更多功能细节，点击<a href=\"https://vip.kingdee.com/article/453557180919091968?productLineId=29&isKnowledge=2\" title=\"\" target=\"_blank\" class=\"\" style=\"color: rgb(84, 141, 212);\"><span style=\"text-align: justify; color: rgb(84, 141, 212);\">OpenAPI 国际化多语言功能优化</span></a>了解。</span></p><p><span style=\"text-align: justify; color: rgb(0, 0, 0);\"><br/></span></p><p><span style=\"text-align: justify; color: rgb(0, 0, 0);\"><img src=\"/download/01096db4db702df2446fa1b5cd224520b6a0.png\"/></span></p><p style=\"text-align: center;\"><em><span style=\"text-align: justify; color: rgb(0, 0, 0);\">示例：接口保存的供应商名称所有多语言信息</span></em></p><p><br/></p><p style=\"text-align: center;\"><span style=\"text-align: justify; color: rgb(0, 0, 0);\"><br/></span></p>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 87,
+   "isOpen": 1,
+   "name": "金蝶AI苍穹",
+   "productLineId": 29,
+   "series": "developer01",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "457115890811666944",
+         "entityType": "Knowledge",
+         "id": "457126063693155328",
+         "isCategory": false,
+         "name": "持续更新 | 【OpenAPI】重大新特性发布汇总",
+         "parentId": "226337371640594944",
+         "sort": "10",
+         "specialId": "226337046514476288",
+         "status": 0
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": null,
+       "id": "226337371640594944",
+       "isCategory": true,
+       "name": "新特性公告",
+       "parentId": "226337280724861696",
+       "sort": "2",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": "",
+     "entityId": null,
+     "entityType": null,
+     "id": "226337280724861696",
+     "isCategory": true,
+     "name": "动态与公告",
+     "parentId": "-1",
+     "sort": "1",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download/010146d51d7f73914fe786b0bc57813a1653.png",
+  "department": null,
+  "id": "181488",
+  "name": "Kathy",
+  "nameSpell": "name"
+ },
+ "totalAppraisalScore": 10,
+ "iflytekId": null,
+ "views": 1164,
+ "productLineId": 29,
+ "comments": 0,
+ "similarityCount": null,
+ "totalAppraisalUsers": 2,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1719478209000,
+ "appraisalScore": 0,
+ "unuseful": 0,
+ "knowledgeCheckStatus": 2,
+ "otherProductLineIds": [],
+ "auditAt": 1689041150000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": null,
+       "code": "open",
+       "id": "5614",
+       "name": "开放平台",
+       "productLineId": null,
+       "sort": 2,
+       "type": "module"
+      },
+      "code": "DEV",
+      "id": "5576",
+      "name": "开发服务云",
+      "productLineId": null,
+      "sort": 11,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 0,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "rumen",
+     "createdAt": 1605667807000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "入门类的知识可使用此标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100d322b9282bcc438faa894f4eec029977.png",
+     "id": "202203081646",
+     "name": "基础入门",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download?fileName=0101ec1d6ce599b442dab7d0b794c1fce88d.png",
+      "department": null,
+      "id": "1009",
+      "name": "一颗小星星",
+      "nameSpell": "fengling"
+     },
+     "updatedAt": 1657872008000
+    },
+    {
+     "code": "NewFeatures",
+     "createdAt": 1558619051000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "新特性",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/01009c9898f919a24034b3b37b2ebf42931c.png",
+     "id": "202203081645",
+     "name": "新特性",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010145330b44d45a47ae9b8aac30617b6992.png",
+      "department": null,
+      "id": "2147443044",
+      "name": "Lucky_tiao",
+      "nameSpell": "laoli"
+     },
+     "updatedAt": 1668739541000
+    },
+    {
+     "code": "essencesummary",
+     "createdAt": 1606118073000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "精华汇总",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100402c6f8df169483db114f71043c19ec2.png",
+     "id": "202203081649",
+     "name": "精华汇总",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 2,
+     "updatePerson": {
+      "avatar": "/download?fileName=010162cfa9d5437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1129",
+      "name": "灏",
+      "nameSpell": "hao"
+     },
+     "updatedAt": 1606118073000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          {
+           "childCategory": [
+            null
+           ],
+           "code": null,
+           "description": "",
+           "entityId": "457115890811666944",
+           "entityType": "Knowledge",
+           "id": "457126063693155328",
+           "isCategory": false,
+           "name": "持续更新 | 【OpenAPI】重大新特性发布汇总",
+           "parentId": "226337371640594944",
+           "sort": "10",
+           "specialId": "226337046514476288",
+           "status": 0
+          }
+         ],
+         "code": null,
+         "description": "",
+         "entityId": null,
+         "entityType": null,
+         "id": "226337371640594944",
+         "isCategory": true,
+         "name": "新特性公告",
+         "parentId": "226337280724861696",
+         "sort": "2",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": null,
+       "id": "226337280724861696",
+       "isCategory": true,
+       "name": "动态与公告",
+       "parentId": "-1",
+       "sort": "1",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": "<p style=\"text-align: justify;\"><br/></p><p style=\"text-align: justify;\">想知道<span style=\"color: rgb(0, 0, 0);\"></span>OpenAPI<span style=\"color: rgb(0, 0, 0);\"></span>的最新功能特性有哪些？</p><p style=\"text-align: justify;\">想了解新功能是否能满足你的场景需求？</p><p style=\"text-align: justify;\"><br/></p><p style=\"text-align: justify;\">那就不要错过本帖子！汇总<span style=\"font-weight: 700; color: rgb(247, 150, 70);\">OpenAPI</span><span style=\"color: rgb(247, 150, 70); font-weight: 700;\">每月重大新特性</span>，带你第一时间获取产品最新特性资讯~<br/></p><p style=\"text-align: justify;\"><span style=\"font-weight: 700; color: rgb(247, 150, 70);\"><img src=\"https://vipfront.obs.cn-north-4.myhuaweicloud.com/emotion/define/86.gif\" width=\"35\" height=\"35\" class=\"emoji\"/>&nbsp;帖子持续更新，推荐收藏，回看干货不迷路！</span></p><p style=\"text-align: justify;\"><span style=\"font-weight: 700; color: rgb(247, 150, 70);\"><br/></span></p><p style=\"text-align: justify;\"><span style=\"font-weight: 700; color: rgb(0, 0, 0);\">附：OpenAPI完整特性帖：<a href=\"https://developer.kingdee.com/knowledge/specialDetail/174931520225092096?category=181160777515051776&id=447460388506859520&productLineId=29\" title=\"\" target=\"_blank\" class=\"\">金蝶AI苍穹开发平台补丁新特性汇总</a></span></p><p style=\"text-align: justify;\"><span style=\"font-weight: 700; color: rgb(247, 150, 70);\"><span style=\"color: rgb(0, 0, 0);\">苍穹补丁下载路径：</span><a href=\"https://vip.kingdee.com/tolink?target=http%3A%2F%2Fdownload.kdcloud.com%2Flogin%23%2Fdownload\" title=\"\" target=\"_blank\" class=\"\" style=\"\">http://download.kdcloud.com/login#/download</a></span></p><p style=\"text-align: justify;\"><span style=\"font-weight: 700;\"><br/></span></p><p style=\"text-align: justify;\"><span style=\"font-weight: 700;\"></span></p><hr/><h2 label=\"一级标题\" class=\"first-title\" style=\"text-align: justify;\"><strong><span style=\"font-size: 20px;\"></span></strong></h2><h2 label=\"一级标题\" class=\"first-title\" style=\"text-align: justify;\"><strong style=\"\">2023.06 重大新特性</strong></h2><p><strong style=\"\"><br/></strong></p><p><strong><span style=\"font-size: 20px;\"></span></strong></p><p><span style=\"font-weight: 700; color: rgb(0, 0, 0);\">1、</span><span style=\"font-weight: 700; color: rgb(0, 0, 0);\">支持<span style=\"font-weight: 700; color: rgb(0, 0, 0);\">“<span style=\"font-weight: 700;\">操作API”</span></span><span style=\"font-weight: 700; color: rgb(247, 150, 70);\">零代码配置余额模型和日志表单的查询接口</span>，降低API开发门槛</span></p><p><span style=\"font-weight: 700; color: rgb(0, 0, 0);\"><br/></span></p><p label=\"正文\" style=\"text-align: justify;\"><span style=\"text-align: justify;\">为提升用户接口开发效率，降低集成工作量，新版本开放平台<strong>支持零代码配置日志表单和余额模型的查询接口</strong>，本次支持了<strong>“操作API”</strong><span style=\"text-align: justify; font-weight: 700; color: rgb(0, 0, 0);\">零代码配置余额模型和日志表单的查询接口。</span></span></p><p label=\"正文\" style=\"text-align: justify;\"><span style=\"text-align: justify;\"><span style=\"text-align: justify; font-weight: 700; color: rgb(0, 0, 0);\"><br/></span></span></p><p label=\"正文\" style=\"text-align: justify;\"><span style=\"text-align: justify;\"><span style=\"text-align: justify; font-weight: 700; color: rgb(0, 0, 0);\"></span></span></p><p label=\"正文\" style=\"text-align: justify;\">同样的操作方法，也可以<strong style=\"\">零代码配置日志表单</strong>的查询接口。</p><p style=\"\"><br/></p><p style=\"\"><strong><span style=\"text-align: justify; color: rgb(0, 0, 0);\">发布版本：</span></strong><em style=\"text-align: justify; color: rgb(0, 0, 0);\"><span style=\"font-weight: 700;\">BOS V5.0.023&nbsp;</span></em><span style=\"text-align: justify; color: rgb(0, 0, 0);\">更多功能细节，点击<span style=\"color: rgb(79, 129, 189);\">&nbsp;</span><a href=\"https://vip.kingdee.com/article/464748428388700416?productLineId=29&isKnowledge=2\" target=\"_blank\" style=\"color: rgb(79, 129, 189);\">操作API支持余额模型和日志表单</a>了解。</span></p><p label=\"正文\" style=\"text-align: justify;\"><span style=\"text-align: justify;\"><span style=\"text-align: justify; font-weight: 700; color: rgb(0, 0, 0);\"><br/></span></span></p><p><span style=\"font-weight: 700; color: rgb(0, 0, 0);\"><img src=\"/download/01091f8215a5ff5648518fceb26cc1b4825f.png\"/></span></p><p label=\"正文\" style=\"text-align: center;\"><em style=\"\"><span style=\"color: rgb(0, 0, 0); text-align: justify;\">打开API管理列表 - 新增操作API</span></em></p><p><strong><em><span style=\"font-weight: 700; color: rgb(0, 0, 0);\"><br/></span></em></strong></p><h2 label=\"一级标题\" class=\"first-title\" style=\"text-align: justify;\"><strong><span style=\"font-size: 20px;\"><img src=\"/download/010964139f747eef4722b8fb32506e9da00a.png\"/></span></strong></h2><p style=\"text-align: center;\"><em><span style=\"color: rgb(0, 0, 0); text-align: justify;\">新增操作API - 业务对象选择余额模型</span></em></p><p><br/></p><p><span style=\"text-align: justify; color: rgb(0, 0, 0);\"><br/></span></p><p><span style=\"text-align: justify; color: rgb(0, 0, 0);\"><br/></span></p><p style=\"text-align: justify; \"><strong><span style=\"color:#000000\">2、优化<span style=\"color: rgb(247, 150, 70);\">第三方应用交互</span>，以<span style=\"color: rgb(247, 150, 70);\">卡片形式</span>提升用户体验</span></strong></p><p style=\"text-align: justify; \"><strong><span style=\"color:#000000\"><br/></span></strong></p><p style=\"text-align: justify; \"><span style=\"color:#000000\">进一步优化了第三方应用交互，<span style=\"text-align: justify;\">将<strong>认证方式、访问控制和加密策略展示成卡片形式</strong>，提升用户体验。</span></span></p><p style=\"text-align: justify; \"><span style=\"color:#000000\"><span style=\"text-align: justify;\"><br/></span></span></p><p style=\"text-align: justify; \"><strong><span style=\"color:#000000\"><span style=\"text-align: justify;\"><span style=\"text-align: justify; color: rgb(0, 0, 0);\">发布版本：</span></span></span></strong><span style=\"color:#000000\"><span style=\"text-align: justify;\"><span style=\"text-align: justify; color: rgb(0, 0, 0);\"></span><em style=\"text-align: justify; color: rgb(0, 0, 0);\"><span style=\"font-weight: 700;\">BOS V5.0.023&nbsp;</span></em><span style=\"text-align: justify; color: rgb(0, 0, 0);\">更多功能细节，点击<span style=\"color: rgb(79, 129, 189);\">&nbsp;</span><a href=\"https://vip.kingdee.com/article/464754959607876608?productLineId=29&isKnowledge=2\" target=\"_blank\" style=\"color: rgb(79, 129, 189);\"><span style=\"text-align: justify; color: rgb(79, 129, 189);\">第三方应用新版交互体验</span></a>了解。</span></span></span></p><p style=\"text-align: justify; \"><span style=\"color:#000000\"><span style=\"text-align: justify;\"><br/></span></span></p><p style=\"text-align: justify; \"><span style=\"color:#000000\"><span style=\"text-align: justify;\"><img src=\"/download/010975b1eaa38ca646ddbc7f1bf4126f6b2f.png\"/></span></span></p><p style=\"text-align: justify; \"><br/></p><p style=\"text-align: center;\"><em><span style=\"color: rgb(0, 0, 0); text-align: justify;\">卡片形式</span></em></p><p><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"text-align: justify;\"><strong><span style=\"font-size: 20px;\">2023.05 重大新特性</span></strong></h2><div style=\"\"><strong><span style=\"font-weight: 700;\"></span></strong></div><p><br/></p><p><span style=\"font-weight: 700; color: rgb(247, 150, 70);\">1、开发必备！苍穹开放平台一键导出Swagger API文档！</span></p><p><br/></p><p><span style=\"text-align: justify; color: rgb(0, 0, 0);\">API列表</span><span style=\"text-align: justify;\">支持导出Swagger文档，遵循最新的Swagger3.0规范，<span style=\"text-align: justify;\">提供更友好的统一交互体验。</span>Swagger是一种广泛使用的API文档规范，它具有清晰的结构和交互式的界面，帮助开发人员更直观地了解和调试API。</span></p><p><span style=\"text-align: justify;\"><br/></span></p><p><strong><span style=\"text-align: justify;\"><span style=\"color: rgb(0, 0, 0); text-align: justify;\">发布版本：</span></span></strong><span style=\"text-align: justify;\"><span style=\"color: rgb(0, 0, 0); text-align: justify;\"></span><em style=\"color: rgb(0, 0, 0); text-align: justify;\"><span style=\"font-weight: 700;\">BOS V5.0.021&nbsp;</span></em><span style=\"color: rgb(0, 0, 0); text-align: justify;\">更多功能细节，点击<span style=\"text-align: justify; color: rgb(84, 141, 212);\">&nbsp;</span><a href=\"https://vip.kingdee.com/article/454600313165665024?productLineId=29&isKnowledge=2\" title=\"\" target=\"_blank\" class=\"\" style=\"color: rgb(84, 141, 212);\"><span style=\"text-align: justify; color: rgb(84, 141, 212);\">开放平台新特性：导出Swagger</span></a>了解。</span></span></p><p><span style=\"color: rgb(0, 0, 0); text-align: justify;\"><br/></span></p><p><span style=\"color: rgb(0, 0, 0); text-align: justify;\"><img src=\"/download/010941c6f2fd3afa48aba729a3f5ad61913e.png\"/></span></p><p style=\"text-align: center;\"><em><span style=\"color: rgb(0, 0, 0); text-align: justify;\"><span style=\"\">“导出s</span>wagger”按钮操作界面</span></em></p><p><span style=\"text-align: justify;\"><br/></span></p><p><img src=\"/download/0109b71711ae51c240e987874e2d32b1ff90.png\"/></p><p style=\"text-align: center;\"><em><span style=\"text-align: justify;\">Swagger样式的API文档</span></em></p><p><span style=\"text-align: justify;\"><br/></span></p><p><span style=\"text-align: justify;\"><br/></span></p><p><span style=\"font-weight: 700; color: rgb(247, 150, 70);\">2、提升API多语言支持，实现一次获取所有语言数据</span></p><p><br/><span style=\"text-align: justify;\"></span></p><p style=\"color: rgb(0, 0, 0);\"><span style=\"\">在旧版本中，API只会把当前语言的</span>返回或保存<span style=\"\">。</span><strong><span style=\"\">该版本优化了</span>对多语言文本的支持</strong>，更加灵活，具体优化如下：</p><p style=\"color: rgb(0, 0, 0);\">&nbsp; 1)&nbsp;<span style=\"\">查询操作API，</span>通过开关配置<span style=\"\">，</span>支持<strong><span style=\"\">一次返回</span>字段<span style=\"\">所有语言</span>数据</strong><span style=\"\">；</span></p><p style=\"color: rgb(0, 0, 0);\">&nbsp; 2)&nbsp;<span style=\"\">保存操作API，使用map形式传入多语言字段，</span>支持<span style=\"\">保存</span>字段<span style=\"\">所有语言</span>数据；</p><p style=\"color: rgb(0, 0, 0);\">&nbsp; 3)&nbsp;<span style=\"\">支持调用</span>接口<span style=\"\">时自定义语言</span>环境<span style=\"\">，在请求头传入Accept-Language（仅v2接口），优先级比访问令牌中</span>language更高<span style=\"\">。</span></p><p><br/></p><p><strong><span style=\"text-align: justify; color: rgb(0, 0, 0);\">发布版本：</span></strong><em style=\"text-align: justify; color: rgb(0, 0, 0);\"><span style=\"font-weight: 700;\">BOS V5.0.021&nbsp;</span></em><span style=\"text-align: justify; color: rgb(0, 0, 0);\">更多功能细节，点击<a href=\"https://vip.kingdee.com/article/453557180919091968?productLineId=29&isKnowledge=2\" title=\"\" target=\"_blank\" class=\"\" style=\"color: rgb(84, 141, 212);\"><span style=\"text-align: justify; color: rgb(84, 141, 212);\">OpenAPI 国际化多语言功能优化</span></a>了解。</span></p><p><span style=\"text-align: justify; color: rgb(0, 0, 0);\"><br/></span></p><p><span style=\"text-align: justify; color: rgb(0, 0, 0);\"><img src=\"/download/01096db4db702df2446fa1b5cd224520b6a0.png\"/></span></p><p style=\"text-align: center;\"><em><span style=\"text-align: justify; color: rgb(0, 0, 0);\">示例：接口保存的供应商名称所有多语言信息</span></em></p><p><br/></p><p style=\"text-align: center;\"><span style=\"text-align: justify; color: rgb(0, 0, 0);\"><br/></span></p>"
+}

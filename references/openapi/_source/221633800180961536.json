@@ -1,0 +1,565 @@
+{
+ "badNum": 0,
+ "identityTagIds": null,
+ "knowledgeId": "221633800180961536",
+ "createdAt": 1630649616000,
+ "collections": 6,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "221633800180961536",
+ "contentType": 1,
+ "updatedAt": 1766040423000,
+ "knowledgeUpdater": {
+  "avatar": "/download/010162cfa9d5437711e8b441060400ef5315.png",
+  "department": null,
+  "id": "471269512533423360",
+  "name": "hana",
+  "nameSpell": "name"
+ },
+ "assessStatus": 0,
+ "knowledgeStatus": 2,
+ "assessHandleStatus": null,
+ "knowledgeCreatedAt": 1630649616000,
+ "version": 32,
+ "labels": [],
+ "editedAt": 1713351227000,
+ "identityTags": null,
+ "useful": 7,
+ "errors": [],
+ "isCollected": false,
+ "totalFeedBacks": 0,
+ "attachments": [],
+ "sources": [],
+ "editTitle": "AI服务介绍",
+ "title": "AI服务介绍",
+ "content": "<p label=\"一级标题\" style=\"font-size: 20px; font-weight: bold; line-height: 42px; margin: 0px;\">1 简介</p><p label=\"二级标题\" style=\"font-size: 18px; font-weight: bold; padding: 8px 0px; line-height: 42px; margin: 0px;\">1.1 功能介绍</p><p>AI服务是金蝶AI苍穹对接金蝶AI平台的一种特殊自定义服务，可以将AI平台的命令与插件适配，在调用API时执行对应的插件逻辑。</p><p><br/></p><p label=\"二级标题\" style=\"font-size: 18px; font-weight: bold; padding: 8px 0px; line-height: 42px; margin: 0px;\">1.2 应用场景</p><p>1）发布苍穹AI服务接口供外部第三方应用调用；</p><p>2）预置标准AI接口，提供给苍穹其他模块调用。</p><p><br/></p><p label=\"二级标题\" style=\"font-size: 18px; font-weight: bold; padding: 8px 0px; line-height: 42px; margin: 0px;\">1.3 操作路径</p><p>路径：【开发服务云】→【开放平台】→【其他】<span style=\"\">→</span><span style=\"\">【API1.0】→【API服务管理1.0】</span></p><p><br/></p><p label=\"二级标题\" style=\"font-size: 18px; font-weight: bold; padding: 8px 0px; line-height: 42px; margin: 0px;\">1.4 字段/按钮说明</p><p><strong>字段解释</strong><br/></p><table><colgroup><col/><col/></colgroup><tbody><tr class=\"firstRow\"><td style=\"\"><strong>字段名称</strong></td><td style=\"\"><strong>详细解释</strong></td></tr><tr><td style=\"\">API服务信息</td><td style=\"\"><br/></td></tr><tr><td style=\"\">服务操作码</td><td style=\"\">AI服务编码</td></tr><tr><td style=\"\">名称</td><td style=\"\">AI服务名称</td></tr><tr><td style=\"\">所属应用</td><td style=\"\">AI服务所属应用</td></tr><tr><td style=\"\">描述</td><td style=\"\">API详细描述及功能用途</td></tr><tr><td style=\"\">匿名访问</td><td style=\"\">设置API匿名，API不需要通过认证即可调用，但存在数据泄露风险，谨慎使用</td></tr><tr><td style=\"\">API高级信息</td><td style=\"\"><br/></td></tr><tr><td style=\"\">请求路径</td><td style=\"\">请求url地址，自动生成，默认为/ai/do</td></tr><tr><td style=\"\">请求方式</td><td style=\"\">API请求方法，支持GET/POST</td></tr><tr><td style=\"\">内容格式</td><td style=\"\">请求参数的内容格式，默认为application/json</td></tr><tr><td style=\"\">插件</td><td style=\"\">具体API服务逻辑运行的地方</td></tr><tr><td style=\"\">AI命令</td><td style=\"\"><br/></td></tr><tr><td style=\"\">AI命令操作码</td><td style=\"\">AI服务调用的标识，全局唯一</td></tr><tr><td style=\"\">AI名称</td><td style=\"\">AI名称</td></tr><tr><td style=\"\">AI命令描述</td><td style=\"\">AI命令的描述</td></tr></tbody></table><p label=\"正文\" style=\"font-size: 15px;\"><strong><br/></strong></p><p label=\"正文\" style=\"font-size: 15px;\"><strong>按钮解释</strong></p><table><colgroup><col/><col/></colgroup><tbody><tr class=\"firstRow\"><td width=\"89\" style=\"\"><strong>按钮名称</strong></td><td width=\"511\" style=\"\"><strong>详细解释</strong></td></tr><tr><td width=\"29\" style=\"\">保存</td><td width=\"511\" style=\"\">保存AI服务信息</td></tr><tr><td width=\"29\" style=\"\">退出</td><td width=\"511\" style=\"\">退出当前弹窗界面</td></tr></tbody></table><p><br/></p><p><br/></p><p label=\"一级标题\" style=\"font-size: 20px; font-weight: bold; line-height: 42px; margin: 0px;\">2 主要操作</p><p label=\"二级标题\" style=\"font-size: 18px; font-weight: bold; padding: 8px 0px; line-height: 42px; margin: 0px;\">2.1 开发AI服务插件</p><p label=\"正文\" style=\"font-size: 15px;\">AI服务与自定义服务类似，主要处理逻辑都写在插件之中，所以也需要先开发插件，然后发布API。用户在开发插件可以使用自定义的java插件或脚本插件，不同的AI服务实现的效果和处理逻辑都有差异，但都会根据AI服务中的命令，去进行方法的调用和逻辑处理。</p><p><br/></p><p><strong>AI服务插件代码示例：</strong></p><table><tbody><tr class=\"firstRow\"><td style=\"\"><p><br/></p><p>import kd.bos.bill.IBillWebApiPlugin;</p><p>import kd.bos.bill.events.AICommandEvent;</p><p>import kd.bos.entity.api.AICommand;</p><p>import kd.bos.entity.api.ApiResult;</p><p><br/></p><p>public class DemoAPIAIService implements IBillWebApiPlugin{&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p><p><br/></p><p>&nbsp; @Override</p><p>&nbsp; public void doAICommand(AICommandEvent event) {</p><p>&nbsp;&nbsp;</p><p>&nbsp;&nbsp;&nbsp; // AI服务的请求，抽象成 AICommand</p><p>&nbsp;&nbsp;&nbsp; AICommand command = event.getCommand();</p><p>&nbsp;&nbsp;&nbsp; // 可以获取API请求中携带的参数</p><p>&nbsp;&nbsp;&nbsp; Map&lt;String, Object&gt; parameter = command.getParameter();</p><p>&nbsp;&nbsp;&nbsp; // 可以获取API请求中携带的APPID&nbsp;</p><p>&nbsp;&nbsp;&nbsp; String appId =&nbsp; Command.getAppId();</p><p>&nbsp;&nbsp;&nbsp;&nbsp;</p><p>&nbsp;&nbsp;&nbsp; // 具体业务逻辑&nbsp;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;</p><p>&nbsp;&nbsp;&nbsp; // 返回数据</p><p>&nbsp;&nbsp;&nbsp; ApiResult result = event.getResult();</p><p>&nbsp;&nbsp;&nbsp; result.setData(&quot;success&quot;);</p><p>&nbsp;&nbsp;&nbsp; result.setSuccess(true);</p><p>&nbsp; }</p><p>}</p></td></tr></tbody></table><p><br/></p><p label=\"二级标题\" style=\"font-size: 18px; font-weight: bold; padding: 8px 0px; line-height: 42px; margin: 0px;\">2.2 维护AI服务基本信息</p><p>打开【API服务管理】菜单，点击“新增”按钮，选择AI服务，进入到操作服务新增界面，录入API服务信息等字段。</p><p><br/></p><p><img src=\"/download/0109ce770fc238754339a3fe0ad072e5bc28.png\"/></p><p><br/></p><p label=\"二级标题\" style=\"font-size: 18px; font-weight: bold; padding: 8px 0px; line-height: 42px; margin: 0px;\">2.3 &nbsp;发布AI服务<br/></p><p>在API高级信息的最下方插件栏，注册已经开发好的插件等信息，点击“保存”按钮，AI服务完成发布。</p><p><br/></p><p><img src=\"https://vip.kingdee.com/download/01003da1f2d7c39d449fa62a693014fa807f.png\"/></p><p><br/></p><p><img src=\"https://vip.kingdee.com/download/01003efce7b4427d49a9b8417e88b9574b9f.png\"/></p><p><br/></p><p label=\"二级标题\" style=\"font-size: 18px; font-weight: bold; padding: 8px 0px; line-height: 42px; margin: 0px;\">2.4 服务访问</p><p><strong>请求地址</strong></p><p><span style=\"\">&nbsp; • </span>url：{{host}}/kapi/ai/do</p><p><br/><span style=\"\"></span></p><p><strong>HTTP请求头</strong></p><p>&nbsp; &nbsp;• Content-Type：内容类型，目前默认为application/json</p><p>&nbsp; &nbsp;• accessToken：用户认证后的访问令牌，在请求头中传输</p><p><br/></p><p><strong>请求body示例：</strong></p><table><tbody><tr class=\"firstRow\"><td style=\"\"><p>{</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;taskid&quot;:&quot;1001&quot;,&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;appid&quot;:&quot;xxx&quot;,</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;command&quot;:&quot;xxxx&quot;,</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;parameter&quot;:{</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; key:value</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</p><p>}</p></td></tr></tbody></table><p><br/></p><p><strong>参数说明：</strong></p><table><tbody><tr class=\"firstRow\"><td style=\"\" width=\"96\"><p>参数名称</p></td><td style=\"\" width=\"527\"><p>说明</p></td></tr><tr><td width=\"22\" style=\"\"><p>taskid</p></td><td width=\"527\" style=\"\"><p>AI平台每次和业务系统交互的id（自动生成）</p></td></tr><tr><td width=\"22\" style=\"\"><p>appid</p></td><td style=\"\" width=\"527\"><p>应用id（用户在某个场景下的具体目的，可指定对应的应用id，如果业务系统没有区分应用，可以忽略该参数）</p></td></tr><tr><td width=\"22\" style=\"\"><p>command</p></td><td width=\"527\" style=\"\"><p>业务指令，即AI命令操作码</p></td></tr><tr><td width=\"22\" style=\"\"><p>parameter</p></td><td width=\"527\" style=\"\"><p>具体的请求参数</p></td></tr></tbody></table><p><strong><br/></strong></p><p><strong>POSTMAN 示例：</strong></p><p><br/></p><table><tbody style=\"\"><tr class=\"firstRow\" style=\"\"><td style=\"word-break: break-all;\"><p style=\"\"><span style=\"color: rgb(0, 0, 0);\">{</span></p><div style=\"color: rgb(0, 0, 0);\">&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"color: rgb(163, 21, 21);\">&quot;<span style=\"\">taskid</span>&quot;</span>: <span style=\"\">&quot;1001&quot;,&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></div><div style=\"color: rgb(0, 0, 0);\"><span style=\"color: rgb(163, 21, 21);\">&nbsp; &nbsp; &quot;<span style=\"\">appid</span>&quot;</span>:&nbsp;<span style=\"\">&quot;ISRM&quot;,</span></div><div style=\"color: rgb(0, 0, 0);\"><p style=\"\">&nbsp; &nbsp;&nbsp;<span style=\"color: rgb(163, 21, 21);\">&quot;<span style=\"\">command</span>&quot;</span>:<span style=\"\">&quot;getFrontPeriods&quot;,</span></p><p style=\"\"><span style=\"\"></span></p><p style=\"color: rgb(0, 0, 0);\">&nbsp; &nbsp;&nbsp;<span style=\"color: rgb(163, 21, 21);\">&quot;<span style=\"\">parameter</span>&quot;</span>:{</p><p label=\"正文\" style=\"\"><span style=\"\"><span style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></span><span style=\"color: rgb(163, 21, 21);\">&nbsp; &nbsp;&quot;periods&quot;</span><span style=\"\">: &quot;本月&quot;</span></p><p style=\"color: rgb(0, 0, 0);\">&nbsp; &nbsp; &nbsp;}</p><p style=\"\">}</p></div><p style=\"\"><br/></p></td></tr></tbody></table><p><br/></p><p><br/></p><p style=\"\"><img src=\"/download/01007a2b9faaab864aa3af4e422df82d83ec.png\"/><br/></p><p label=\"一级标题\" style=\"font-size: 20px; font-weight: bold; line-height: 42px; margin: 0px;\"><br/></p><p label=\"一级标题\" style=\"font-size: 20px; font-weight: bold; line-height: 42px; margin: 0px;\">更多</p><p><a href=\"https://ai.kingdee.com/doc/#/\" target=\"_blank\">苍穹对话平台开发者指南</a>&nbsp;</p><p><br/></p>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 87,
+   "isOpen": 1,
+   "name": "金蝶AI苍穹",
+   "productLineId": 29,
+   "series": "developer01",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          {
+           "childCategory": [
+            null
+           ],
+           "code": null,
+           "description": "",
+           "entityId": "221633800180961536",
+           "entityType": "Knowledge",
+           "id": "322034517098141184",
+           "isCategory": false,
+           "name": "AI服务介绍",
+           "parentId": "322033766435165696",
+           "sort": "3",
+           "specialId": "226337046514476288",
+           "status": 1
+          }
+         ],
+         "code": null,
+         "description": null,
+         "entityId": null,
+         "entityType": null,
+         "id": "322033766435165696",
+         "isCategory": true,
+         "name": "API服务管理",
+         "parentId": "322033541636710144",
+         "sort": "1",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": null,
+       "id": "322033541636710144",
+       "isCategory": true,
+       "name": "API1.0",
+       "parentId": "226337544983020032",
+       "sort": "26",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": null,
+     "entityId": null,
+     "entityType": null,
+     "id": "226337544983020032",
+     "isCategory": true,
+     "name": "用户手册",
+     "parentId": "-1",
+     "sort": "6",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download/01010204d4b71b654a208006fa1004eac36a.png",
+  "department": null,
+  "id": "740211268992385024",
+  "name": "毛毛去哪儿",
+  "nameSpell": "name"
+ },
+ "totalAppraisalScore": 35,
+ "iflytekId": null,
+ "views": 7032,
+ "productLineId": 29,
+ "comments": 0,
+ "similarityCount": 0,
+ "totalAppraisalUsers": 7,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1766040423000,
+ "appraisalScore": 0,
+ "unuseful": 0,
+ "knowledgeCheckStatus": 2,
+ "otherProductLineIds": [],
+ "auditAt": 1711452069000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapiservicenew",
+        "id": "505687093087987200",
+        "name": "API服务管理1.0",
+        "productLineId": null,
+        "sort": 12,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 0,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapiservicenew",
+        "id": "344594257418019328",
+        "name": "API服务管理1.0",
+        "productLineId": null,
+        "sort": 13,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "5614",
+       "name": "开放平台",
+       "productLineId": null,
+       "sort": 2,
+       "type": "module"
+      },
+      "code": "DEV",
+      "id": "5576",
+      "name": "开发服务云",
+      "productLineId": null,
+      "sort": 11,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 1,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "OperatingGuide",
+     "createdAt": 1556519201000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "某一功能的具体说明介绍，包括应用场景、参数说明、具体操作步骤等",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/010037894174802d4b9f8782f1f0010a6ddd.png",
+     "id": "202203081641",
+     "name": "功能介绍",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010176d38341668f44fdb94c95058a90e4b8.png",
+      "department": "云社区运营部",
+      "id": "2147406697",
+      "name": "多肉丸子",
+      "nameSpell": "kejuan"
+     },
+     "updatedAt": 1676857681000
+    },
+    {
+     "code": "rumen",
+     "createdAt": 1605667807000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "入门类的知识可使用此标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100d322b9282bcc438faa894f4eec029977.png",
+     "id": "202203081646",
+     "name": "基础入门",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download?fileName=0101ec1d6ce599b442dab7d0b794c1fce88d.png",
+      "department": null,
+      "id": "1009",
+      "name": "一颗小星星",
+      "nameSpell": "fengling"
+     },
+     "updatedAt": 1657872008000
+    },
+    {
+     "code": "essencesummary",
+     "createdAt": 1606118073000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "精华汇总",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100402c6f8df169483db114f71043c19ec2.png",
+     "id": "202203081649",
+     "name": "精华汇总",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 2,
+     "updatePerson": {
+      "avatar": "/download?fileName=010162cfa9d5437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1129",
+      "name": "灏",
+      "nameSpell": "hao"
+     },
+     "updatedAt": 1606118073000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          {
+           "childCategory": [
+            {
+             "childCategory": [
+              null
+             ],
+             "code": null,
+             "description": "",
+             "entityId": "221633800180961536",
+             "entityType": "Knowledge",
+             "id": "322034517098141184",
+             "isCategory": false,
+             "name": "AI服务介绍",
+             "parentId": "322033766435165696",
+             "sort": "3",
+             "specialId": "226337046514476288",
+             "status": 1
+            }
+           ],
+           "code": null,
+           "description": null,
+           "entityId": null,
+           "entityType": null,
+           "id": "322033766435165696",
+           "isCategory": true,
+           "name": "API服务管理",
+           "parentId": "322033541636710144",
+           "sort": "1",
+           "specialId": "226337046514476288",
+           "status": 1
+          }
+         ],
+         "code": null,
+         "description": "",
+         "entityId": null,
+         "entityType": null,
+         "id": "322033541636710144",
+         "isCategory": true,
+         "name": "API1.0",
+         "parentId": "226337544983020032",
+         "sort": "26",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": null,
+       "entityId": null,
+       "entityType": null,
+       "id": "226337544983020032",
+       "isCategory": true,
+       "name": "用户手册",
+       "parentId": "-1",
+       "sort": "6",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": "<p label=\"一级标题\" style=\"font-size: 20px; font-weight: bold; line-height: 42px; margin: 0px;\">1 简介</p><p label=\"二级标题\" style=\"font-size: 18px; font-weight: bold; padding: 8px 0px; line-height: 42px; margin: 0px;\">1.1 功能介绍</p><p>AI服务是金蝶AI苍穹对接金蝶AI平台的一种特殊自定义服务，可以将AI平台的命令与插件适配，在调用API时执行对应的插件逻辑。</p><p><br/></p><p label=\"二级标题\" style=\"font-size: 18px; font-weight: bold; padding: 8px 0px; line-height: 42px; margin: 0px;\">1.2 应用场景</p><p>1）发布苍穹AI服务接口供外部第三方应用调用；</p><p>2）预置标准AI接口，提供给苍穹其他模块调用。</p><p><br/></p><p label=\"二级标题\" style=\"font-size: 18px; font-weight: bold; padding: 8px 0px; line-height: 42px; margin: 0px;\">1.3 操作路径</p><p>路径：【开发服务云】→【开放平台】→【其他】<span style=\"\">→</span><span style=\"\">【API1.0】→【API服务管理1.0】</span></p><p><br/></p><p label=\"二级标题\" style=\"font-size: 18px; font-weight: bold; padding: 8px 0px; line-height: 42px; margin: 0px;\">1.4 字段/按钮说明</p><p><strong>字段解释</strong><br/></p><table><colgroup><col/><col/></colgroup><tbody><tr class=\"firstRow\"><td style=\"\"><strong>字段名称</strong></td><td style=\"\"><strong>详细解释</strong></td></tr><tr><td style=\"\">API服务信息</td><td style=\"\"><br/></td></tr><tr><td style=\"\">服务操作码</td><td style=\"\">AI服务编码</td></tr><tr><td style=\"\">名称</td><td style=\"\">AI服务名称</td></tr><tr><td style=\"\">所属应用</td><td style=\"\">AI服务所属应用</td></tr><tr><td style=\"\">描述</td><td style=\"\">API详细描述及功能用途</td></tr><tr><td style=\"\">匿名访问</td><td style=\"\">设置API匿名，API不需要通过认证即可调用，但存在数据泄露风险，谨慎使用</td></tr><tr><td style=\"\">API高级信息</td><td style=\"\"><br/></td></tr><tr><td style=\"\">请求路径</td><td style=\"\">请求url地址，自动生成，默认为/ai/do</td></tr><tr><td style=\"\">请求方式</td><td style=\"\">API请求方法，支持GET/POST</td></tr><tr><td style=\"\">内容格式</td><td style=\"\">请求参数的内容格式，默认为application/json</td></tr><tr><td style=\"\">插件</td><td style=\"\">具体API服务逻辑运行的地方</td></tr><tr><td style=\"\">AI命令</td><td style=\"\"><br/></td></tr><tr><td style=\"\">AI命令操作码</td><td style=\"\">AI服务调用的标识，全局唯一</td></tr><tr><td style=\"\">AI名称</td><td style=\"\">AI名称</td></tr><tr><td style=\"\">AI命令描述</td><td style=\"\">AI命令的描述</td></tr></tbody></table><p label=\"正文\" style=\"font-size: 15px;\"><strong><br/></strong></p><p label=\"正文\" style=\"font-size: 15px;\"><strong>按钮解释</strong></p><table><colgroup><col/><col/></colgroup><tbody><tr class=\"firstRow\"><td width=\"89\" style=\"\"><strong>按钮名称</strong></td><td width=\"511\" style=\"\"><strong>详细解释</strong></td></tr><tr><td width=\"29\" style=\"\">保存</td><td width=\"511\" style=\"\">保存AI服务信息</td></tr><tr><td width=\"29\" style=\"\">退出</td><td width=\"511\" style=\"\">退出当前弹窗界面</td></tr></tbody></table><p><br/></p><p><br/></p><p label=\"一级标题\" style=\"font-size: 20px; font-weight: bold; line-height: 42px; margin: 0px;\">2 主要操作</p><p label=\"二级标题\" style=\"font-size: 18px; font-weight: bold; padding: 8px 0px; line-height: 42px; margin: 0px;\">2.1 开发AI服务插件</p><p label=\"正文\" style=\"font-size: 15px;\">AI服务与自定义服务类似，主要处理逻辑都写在插件之中，所以也需要先开发插件，然后发布API。用户在开发插件可以使用自定义的java插件或脚本插件，不同的AI服务实现的效果和处理逻辑都有差异，但都会根据AI服务中的命令，去进行方法的调用和逻辑处理。</p><p><br/></p><p><strong>AI服务插件代码示例：</strong></p><table><tbody><tr class=\"firstRow\"><td style=\"\"><p><br/></p><p>import kd.bos.bill.IBillWebApiPlugin;</p><p>import kd.bos.bill.events.AICommandEvent;</p><p>import kd.bos.entity.api.AICommand;</p><p>import kd.bos.entity.api.ApiResult;</p><p><br/></p><p>public class DemoAPIAIService implements IBillWebApiPlugin{&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p><p><br/></p><p>&nbsp; @Override</p><p>&nbsp; public void doAICommand(AICommandEvent event) {</p><p>&nbsp;&nbsp;</p><p>&nbsp;&nbsp;&nbsp; // AI服务的请求，抽象成 AICommand</p><p>&nbsp;&nbsp;&nbsp; AICommand command = event.getCommand();</p><p>&nbsp;&nbsp;&nbsp; // 可以获取API请求中携带的参数</p><p>&nbsp;&nbsp;&nbsp; Map&lt;String, Object&gt; parameter = command.getParameter();</p><p>&nbsp;&nbsp;&nbsp; // 可以获取API请求中携带的APPID&nbsp;</p><p>&nbsp;&nbsp;&nbsp; String appId =&nbsp; Command.getAppId();</p><p>&nbsp;&nbsp;&nbsp;&nbsp;</p><p>&nbsp;&nbsp;&nbsp; // 具体业务逻辑&nbsp;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;</p><p>&nbsp;&nbsp;&nbsp; // 返回数据</p><p>&nbsp;&nbsp;&nbsp; ApiResult result = event.getResult();</p><p>&nbsp;&nbsp;&nbsp; result.setData(&quot;success&quot;);</p><p>&nbsp;&nbsp;&nbsp; result.setSuccess(true);</p><p>&nbsp; }</p><p>}</p></td></tr></tbody></table><p><br/></p><p label=\"二级标题\" style=\"font-size: 18px; font-weight: bold; padding: 8px 0px; line-height: 42px; margin: 0px;\">2.2 维护AI服务基本信息</p><p>打开【API服务管理】菜单，点击“新增”按钮，选择AI服务，进入到操作服务新增界面，录入API服务信息等字段。</p><p><br/></p><p><img src=\"/download/0109ce770fc238754339a3fe0ad072e5bc28.png\"/></p><p><br/></p><p label=\"二级标题\" style=\"font-size: 18px; font-weight: bold; padding: 8px 0px; line-height: 42px; margin: 0px;\">2.3 &nbsp;发布AI服务<br/></p><p>在API高级信息的最下方插件栏，注册已经开发好的插件等信息，点击“保存”按钮，AI服务完成发布。</p><p><br/></p><p><img src=\"https://vip.kingdee.com/download/01003da1f2d7c39d449fa62a693014fa807f.png\"/></p><p><br/></p><p><img src=\"https://vip.kingdee.com/download/01003efce7b4427d49a9b8417e88b9574b9f.png\"/></p><p><br/></p><p label=\"二级标题\" style=\"font-size: 18px; font-weight: bold; padding: 8px 0px; line-height: 42px; margin: 0px;\">2.4 服务访问</p><p><strong>请求地址</strong></p><p><span style=\"\">&nbsp; • </span>url：{{host}}/kapi/ai/do</p><p><br/><span style=\"\"></span></p><p><strong>HTTP请求头</strong></p><p>&nbsp; &nbsp;• Content-Type：内容类型，目前默认为application/json</p><p>&nbsp; &nbsp;• accessToken：用户认证后的访问令牌，在请求头中传输</p><p><br/></p><p><strong>请求body示例：</strong></p><table><tbody><tr class=\"firstRow\"><td style=\"\"><p>{</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;taskid&quot;:&quot;1001&quot;,&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;appid&quot;:&quot;xxx&quot;,</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;command&quot;:&quot;xxxx&quot;,</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;parameter&quot;:{</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; key:value</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</p><p>}</p></td></tr></tbody></table><p><br/></p><p><strong>参数说明：</strong></p><table><tbody><tr class=\"firstRow\"><td style=\"\" width=\"96\"><p>参数名称</p></td><td style=\"\" width=\"527\"><p>说明</p></td></tr><tr><td width=\"22\" style=\"\"><p>taskid</p></td><td width=\"527\" style=\"\"><p>AI平台每次和业务系统交互的id（自动生成）</p></td></tr><tr><td width=\"22\" style=\"\"><p>appid</p></td><td style=\"\" width=\"527\"><p>应用id（用户在某个场景下的具体目的，可指定对应的应用id，如果业务系统没有区分应用，可以忽略该参数）</p></td></tr><tr><td width=\"22\" style=\"\"><p>command</p></td><td width=\"527\" style=\"\"><p>业务指令，即AI命令操作码</p></td></tr><tr><td width=\"22\" style=\"\"><p>parameter</p></td><td width=\"527\" style=\"\"><p>具体的请求参数</p></td></tr></tbody></table><p><strong><br/></strong></p><p><strong>POSTMAN 示例：</strong></p><p><br/></p><table><tbody style=\"\"><tr class=\"firstRow\" style=\"\"><td style=\"word-break: break-all;\"><p style=\"\"><span style=\"color: rgb(0, 0, 0);\">{</span></p><div style=\"color: rgb(0, 0, 0);\">&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"color: rgb(163, 21, 21);\">&quot;<span style=\"\">taskid</span>&quot;</span>: <span style=\"\">&quot;1001&quot;,&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></div><div style=\"color: rgb(0, 0, 0);\"><span style=\"color: rgb(163, 21, 21);\">&nbsp; &nbsp; &quot;<span style=\"\">appid</span>&quot;</span>:&nbsp;<span style=\"\">&quot;ISRM&quot;,</span></div><div style=\"color: rgb(0, 0, 0);\"><p style=\"\">&nbsp; &nbsp;&nbsp;<span style=\"color: rgb(163, 21, 21);\">&quot;<span style=\"\">command</span>&quot;</span>:<span style=\"\">&quot;getFrontPeriods&quot;,</span></p><p style=\"\"><span style=\"\"></span></p><p style=\"color: rgb(0, 0, 0);\">&nbsp; &nbsp;&nbsp;<span style=\"color: rgb(163, 21, 21);\">&quot;<span style=\"\">parameter</span>&quot;</span>:{</p><p label=\"正文\" style=\"\"><span style=\"\"><span style=\"\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></span><span style=\"color: rgb(163, 21, 21);\">&nbsp; &nbsp;&quot;periods&quot;</span><span style=\"\">: &quot;本月&quot;</span></p><p style=\"color: rgb(0, 0, 0);\">&nbsp; &nbsp; &nbsp;}</p><p style=\"\">}</p></div><p style=\"\"><br/></p></td></tr></tbody></table><p><br/></p><p><br/></p><p style=\"\"><img src=\"/download/01007a2b9faaab864aa3af4e422df82d83ec.png\"/><br/></p><p label=\"一级标题\" style=\"font-size: 20px; font-weight: bold; line-height: 42px; margin: 0px;\"><br/></p><p label=\"一级标题\" style=\"font-size: 20px; font-weight: bold; line-height: 42px; margin: 0px;\">更多</p><p><a href=\"https://ai.kingdee.com/doc/#/\" target=\"_blank\">苍穹对话平台开发者指南</a>&nbsp;</p><p><br/></p>"
+}

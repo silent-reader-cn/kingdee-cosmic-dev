@@ -1,0 +1,500 @@
+{
+ "badNum": 0,
+ "identityTagIds": null,
+ "knowledgeId": "815251507280459008",
+ "createdAt": 1772179106000,
+ "collections": 0,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "815251507280459008",
+ "contentType": 1,
+ "updatedAt": 1772181013000,
+ "knowledgeUpdater": {
+  "avatar": "/download/01010204d4b71b654a208006fa1004eac36a.png",
+  "department": null,
+  "id": "740211268992385024",
+  "name": "毛毛去哪儿",
+  "nameSpell": "name"
+ },
+ "assessStatus": 0,
+ "knowledgeStatus": 2,
+ "assessHandleStatus": null,
+ "knowledgeCreatedAt": 1772179106000,
+ "version": 5,
+ "labels": [],
+ "editedAt": 1772180997000,
+ "identityTags": null,
+ "useful": 0,
+ "errors": [],
+ "isCollected": false,
+ "totalFeedBacks": 0,
+ "attachments": [],
+ "sources": [],
+ "editTitle": "OpenAPI 查询操作API支持读写分离",
+ "title": "OpenAPI 查询操作API支持读写分离",
+ "content": "<h2>变更记录</h2><table style=\"min-width: auto; width: 1023px\" class=\"is-max\"><colgroup><col style=\"width: 176px\"><col style=\"width: 551px\"><col style=\"width: 296px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"176\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><strong>产品版本</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"551\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><strong>更新内容</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"296\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><strong>更新时间</strong></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"176\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><strong>V8.0.2</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"551\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>OpenAPI 查询操作API支持读写分离</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"296\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>2025年11月</p></td></tr></tbody></table><h4><strong>1. 简介</strong></h4><p style=\"font-size: 16px\">大部分中小客户通常只部署写库，查询和写入均在同一数据库上进行，当查询数据量过大，查询并发增大时，数据库会成为系统的性能瓶颈。在实际场景中，可能某个单据的查询所占用的资源就会拖垮数据库，造成严重的系统性能问题。当出现这种情况时，可以采用读写分离的方案，把查询的负载分担到读库（从库），减轻主库的负载压力，提升系统的性能及稳定性。</p><h4><strong>2. 主要操作</strong></h4><p style=\"font-size: 16px\">参考 <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/knowledge/626770489779829760?productLineId=29&amp;isKnowledge=2&amp;lang=zh-CN\"><span style=\"color: rgb(192, 0, 0)\"><strong><mark>读写分离整体介绍</mark></strong></span></a></p><p style=\"font-size: 16px\"></p><p style=\"font-size: 16px\"><strong>OpenAPI读写分离配置</strong></p><p style=\"font-size: 16px\">“系统服务云” &gt;&gt; “分布式管理” &gt;&gt; “读写分离” &gt;&gt; “读写分离配置”</p><p style=\"font-size: 16px\"></p><p><img src=\"/download/01004914e5bdf21b4b73ac8ac9908c949c49.png\" alt=\"上传图片\"></p><p style=\"font-size: 16px\">所属场景选择openapi</p><p style=\"font-size: 16px\">编码选择需要进行读写分离查询的业务对象</p><p style=\"font-size: 16px\">配置: “从库优先”代表优先从读库进行查询，“主库优先”优先从主库进行查询。</p>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 87,
+   "isOpen": 1,
+   "name": "金蝶AI苍穹",
+   "productLineId": 29,
+   "series": "developer01",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          {
+           "childCategory": [
+            null
+           ],
+           "code": null,
+           "description": "",
+           "entityId": "815251507280459008",
+           "entityType": "Knowledge",
+           "id": "815258858335168256",
+           "isCategory": false,
+           "name": "OpenAPI 查询操作API支持读写分离",
+           "parentId": "408200984532495104",
+           "sort": "12",
+           "specialId": "226337046514476288",
+           "status": 1
+          }
+         ],
+         "code": null,
+         "description": "",
+         "entityId": null,
+         "entityType": null,
+         "id": "408200984532495104",
+         "isCategory": true,
+         "name": "API实例",
+         "parentId": "322414926260669696",
+         "sort": "12",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": null,
+       "entityId": null,
+       "entityType": null,
+       "id": "322414926260669696",
+       "isCategory": true,
+       "name": "操作API",
+       "parentId": "226337544983020032",
+       "sort": "2",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": null,
+     "entityId": null,
+     "entityType": null,
+     "id": "226337544983020032",
+     "isCategory": true,
+     "name": "用户手册",
+     "parentId": "-1",
+     "sort": "6",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download/01010204d4b71b654a208006fa1004eac36a.png",
+  "department": null,
+  "id": "740211268992385024",
+  "name": "毛毛去哪儿",
+  "nameSpell": "name"
+ },
+ "totalAppraisalScore": 0,
+ "iflytekId": null,
+ "views": 621,
+ "productLineId": 29,
+ "comments": 0,
+ "similarityCount": 0,
+ "totalAppraisalUsers": 0,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1772181013000,
+ "appraisalScore": 0,
+ "unuseful": 0,
+ "knowledgeCheckStatus": 2,
+ "otherProductLineIds": [],
+ "auditAt": 1772181013000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": null,
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 0,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapi_apilist_layout",
+        "id": "505686038019362304",
+        "name": "异步API",
+        "productLineId": null,
+        "sort": 1,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 1,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "OperatingGuide",
+     "createdAt": 1556519201000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "某一功能的具体说明介绍，包括应用场景、参数说明、具体操作步骤等",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/010037894174802d4b9f8782f1f0010a6ddd.png",
+     "id": "202203081641",
+     "name": "功能介绍",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010176d38341668f44fdb94c95058a90e4b8.png",
+      "department": "云社区运营部",
+      "id": "2147406697",
+      "name": "多肉丸子",
+      "nameSpell": "kejuan"
+     },
+     "updatedAt": 1676857681000
+    },
+    {
+     "code": "rumen",
+     "createdAt": 1605667807000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "入门类的知识可使用此标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100d322b9282bcc438faa894f4eec029977.png",
+     "id": "202203081646",
+     "name": "基础入门",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download?fileName=0101ec1d6ce599b442dab7d0b794c1fce88d.png",
+      "department": null,
+      "id": "1009",
+      "name": "一颗小星星",
+      "nameSpell": "fengling"
+     },
+     "updatedAt": 1657872008000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          {
+           "childCategory": [
+            {
+             "childCategory": [
+              null
+             ],
+             "code": null,
+             "description": "",
+             "entityId": "815251507280459008",
+             "entityType": "Knowledge",
+             "id": "815258858335168256",
+             "isCategory": false,
+             "name": "OpenAPI 查询操作API支持读写分离",
+             "parentId": "408200984532495104",
+             "sort": "12",
+             "specialId": "226337046514476288",
+             "status": 1
+            }
+           ],
+           "code": null,
+           "description": "",
+           "entityId": null,
+           "entityType": null,
+           "id": "408200984532495104",
+           "isCategory": true,
+           "name": "API实例",
+           "parentId": "322414926260669696",
+           "sort": "12",
+           "specialId": "226337046514476288",
+           "status": 1
+          }
+         ],
+         "code": null,
+         "description": null,
+         "entityId": null,
+         "entityType": null,
+         "id": "322414926260669696",
+         "isCategory": true,
+         "name": "操作API",
+         "parentId": "226337544983020032",
+         "sort": "2",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": null,
+       "entityId": null,
+       "entityType": null,
+       "id": "226337544983020032",
+       "isCategory": true,
+       "name": "用户手册",
+       "parentId": "-1",
+       "sort": "6",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": "<h2>变更记录</h2><table style=\"min-width: auto; width: 1023px\" class=\"is-max\"><colgroup><col style=\"width: 176px\"><col style=\"width: 551px\"><col style=\"width: 296px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"176\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><strong>产品版本</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"551\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><strong>更新内容</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"296\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><strong>更新时间</strong></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"176\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p><strong>V8.0.2</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"551\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>OpenAPI 查询操作API支持读写分离</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"296\" data-background-color=\"\" style=\"background-color: \" class=\"\"><p>2025年11月</p></td></tr></tbody></table><h4><strong>1. 简介</strong></h4><p style=\"font-size: 16px\">大部分中小客户通常只部署写库，查询和写入均在同一数据库上进行，当查询数据量过大，查询并发增大时，数据库会成为系统的性能瓶颈。在实际场景中，可能某个单据的查询所占用的资源就会拖垮数据库，造成严重的系统性能问题。当出现这种情况时，可以采用读写分离的方案，把查询的负载分担到读库（从库），减轻主库的负载压力，提升系统的性能及稳定性。</p><h4><strong>2. 主要操作</strong></h4><p style=\"font-size: 16px\">参考 <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/knowledge/626770489779829760?productLineId=29&amp;isKnowledge=2&amp;lang=zh-CN\"><span style=\"color: rgb(192, 0, 0)\"><strong><mark>读写分离整体介绍</mark></strong></span></a></p><p style=\"font-size: 16px\"></p><p style=\"font-size: 16px\"><strong>OpenAPI读写分离配置</strong></p><p style=\"font-size: 16px\">“系统服务云” &gt;&gt; “分布式管理” &gt;&gt; “读写分离” &gt;&gt; “读写分离配置”</p><p style=\"font-size: 16px\"></p><p><img src=\"/download/01004914e5bdf21b4b73ac8ac9908c949c49.png\" alt=\"上传图片\"></p><p style=\"font-size: 16px\">所属场景选择openapi</p><p style=\"font-size: 16px\">编码选择需要进行读写分离查询的业务对象</p><p style=\"font-size: 16px\">配置: “从库优先”代表优先从读库进行查询，“主库优先”优先从主库进行查询。</p>"
+}

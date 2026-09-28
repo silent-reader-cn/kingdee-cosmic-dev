@@ -1,0 +1,502 @@
+{
+ "badNum": 0,
+ "identityTagIds": null,
+ "knowledgeId": "535457042203523840",
+ "createdAt": 1705470907000,
+ "collections": 4,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "535457042203523840",
+ "contentType": 1,
+ "updatedAt": 1722582976000,
+ "knowledgeUpdater": {
+  "avatar": "/download/010162cfa9d5437711e8b441060400ef5315.png",
+  "department": null,
+  "id": "334386482716649984",
+  "name": "顺溜",
+  "nameSpell": "name"
+ },
+ "assessStatus": 0,
+ "knowledgeStatus": 2,
+ "assessHandleStatus": null,
+ "knowledgeCreatedAt": 1705470907000,
+ "version": 104,
+ "labels": [],
+ "editedAt": 1725969790000,
+ "identityTags": null,
+ "useful": 2,
+ "errors": [],
+ "isCollected": false,
+ "totalFeedBacks": 0,
+ "attachments": [],
+ "sources": [],
+ "editTitle": "事件推送订阅",
+ "title": "事件推送订阅",
+ "content": "<p><strong><span style=\"\">变更记录</span></strong></p><p><span style=\"\"></span></p><p><br/></p><table width=\"100%\"><tbody><tr class=\"firstRow\"><td valign=\"top\" width=\"248\"><strong>产品版本</strong></td><td valign=\"top\" width=\"248\"><strong>更新内容</strong></td><td valign=\"top\" width=\"248\"><strong>更新日期</strong></td></tr><tr><td valign=\"top\" width=\"248\"><span style=\"\">V6.0.6</span></td><td valign=\"top\" width=\"248\"><span style=\"\">初始版本</span></td><td valign=\"top\" width=\"248\"><span style=\"\">2024.01.17</span></td></tr><tr><td valign=\"top\" width=\"248\">V6.0.13</td><td valign=\"top\" width=\"248\">事件推送支持签名和加密</td><td valign=\"top\" width=\"246.33333333333334\">2024.06.14</td></tr></tbody></table><p><br/></p><p><br/></p><hr/><p><span style=\"\"></span><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\"><span style=\"\">1 简介</span></h2><h3 label=\"二级标题\" class=\"second-title\" style=\"\"><span style=\"\">1.1 功能介绍</span></h3><p><span style=\"\">提供事件订阅的配置功能。用户使用此功能配置需要监听的开放事件、回调第三方的Webhook地址、及请求签名加密策略。</span></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\"><span style=\"\">1.2 面向用户</span></h3><p><span style=\"\">事件消费者</span></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\"><span style=\"\">1.3 应用场景</span></h3><p><span style=\"\">异构系统监听苍穹业务数据变化情况做出实时响应。</span></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\"><span style=\"\">1.4 系统路径</span></h3><p><span style=\"\">【开放服务云】-【OpenAPI】-【开放事件】-【事件推送订阅】</span></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\"><span style=\"\">1.5 关键字段/按钮说明</span></h3><h4 label=\"三级标题\" class=\"third-title\" style=\"\"><span style=\"\">1.5.1 字段说明</span></h4><p><span style=\"\"></span></p><table width=\"99%\"><thead style=\"\"></thead><tbody style=\"\"><tr class=\"firstRow\"><td colspan=\"1\" rowspan=\"1\" style=\"\" width=\"114.33333333333333\"><strong>字段名称</strong></td><td colspan=\"1\" rowspan=\"1\" style=\"\" width=\"645.3333333333334\"><strong>字段说明</strong></td></tr><tr style=\"\"><td style=\"background-color: rgb(253, 234, 218)\" rowspan=\"1\" colspan=\"2\">基本信息</td></tr><tr style=\"\"><td style=\"\" width=\"82\">订阅批号</td><td style=\"\" width=\"645.3333333333334\">事件推送订阅的编码</td></tr><tr style=\"\"><td style=\"\" width=\"82\">订阅名称</td><td style=\"\" width=\"645.3333333333334\">事件推送订阅的名称</td></tr><tr style=\"\"><td style=\"\" width=\"82\">状态</td><td style=\"\" width=\"645.3333333333334\">订阅状态，分为草稿、已发布两种。<br/>草稿：订阅配置未生效，数据可修改。<br/>已发布：订阅配置已生效，数据不可修改。事件触发时会产生订阅推送记录。</td></tr><tr style=\"\"><td style=\"\" width=\"82\">订阅描述</td><td style=\"\" width=\"645.3333333333334\">事件推送订阅的描述信息</td></tr><tr style=\"\"><td style=\"\" width=\"82\">开发商标识</td><td style=\"\" width=\"645.3333333333334\">配置订阅的用户所属开发商的标识。非本开发商的数据不允许修改。</td></tr><tr style=\"\"><td style=\"background-color: rgb(253, 234, 218)\" rowspan=\"1\" colspan=\"2\">回调配置</td></tr><tr style=\"\"><td style=\"\" width=\"82\">回调业务方</td><td style=\"\" width=\"645.3333333333334\">用于标识事件对接系统的名称</td></tr><tr style=\"\"><td style=\"\" width=\"82\">回调地址</td><td style=\"\" width=\"645.3333333333334\">对接系统接收事件消息的接口地址，需由对接方按照 <a href=\"https://vip.kingdee.com/article/535418940877411840\" target=\"_blank\"><span style=\"text-decoration: none; color: rgb(0, 176, 240);\">回调接口要求</span></a> 提供。</td></tr><tr style=\"\"><td style=\"\" width=\"82\">签名策略</td><td style=\"\" width=\"645.3333333333334\">调用Webhook地址时请求签名方式，<strong style=\"\">请求签名为必须</strong>，支持 HMAC_SHA_256 和 SHA_256 两种。</td></tr><tr style=\"\"><td style=\"\" width=\"82\">签名密钥</td><td style=\"\" width=\"645.3333333333334\">签名认证密钥，支持在线生成</td></tr><tr style=\"\"><td style=\"\" width=\"82\">加密策略</td><td style=\"\" width=\"645.3333333333334\">请求时传输数据加密策略。<strong style=\"\">数据加密为非必须</strong>，用户可根据安全要求自行选择。提供 AES/CBC/PKCS5Padding 或 SM4/CBC/PKCS5Padding 两种加密算法，订阅选择加密算法后，WebHook接口需要实现对应的解密逻辑。</td></tr><tr style=\"\"><td style=\"\" width=\"82\">密钥长度(bit)</td><td style=\"\" width=\"645.3333333333334\">加密密钥长度，不同加密算法支持的密钥长度不一样：<br/>对于 AES 算法，密钥长度可选 128bit，192bit，256bit；<br/>对于 SM4 算法，密钥长度可选 128bit。</td></tr><tr style=\"\"><td style=\"\" width=\"82\">加密密钥</td><td style=\"\" width=\"645.3333333333334\">加密密钥，密钥需符合Base64编码规范，支持在线生成</td></tr><tr style=\"\"><td style=\"\" width=\"82\">重试机制</td><td style=\"\" width=\"645.3333333333334\">事件推送失败时，系统是否重新推送的机制：<br/>重试3次后挂起：事件推送失败后，系统自动重试3次，重试间隔为1min，2min，4min，每次间隔前后有10秒的随机时间。<br/>直接挂起：事件推送失败后，不会自动重试。</td></tr></tbody></table><p label=\"\" class=\"\" style=\"\"><span style=\"\"></span></p><p label=\"\" class=\"\" style=\"\"><br/></p><h4 label=\"三级标题\" class=\"third-title\" style=\"\">1.5.2 按钮说明</h4><p><span style=\"\"></span></p><table width=\"98%\"><thead style=\"\"></thead><tbody style=\"\"><tr class=\"firstRow\"><td rowspan=\"1\" colspan=\"1\" width=\"112.33333333333333\">按钮名称<br/></td><td rowspan=\"1\" colspan=\"1\" width=\"637.3333333333334\">按钮说明</td></tr><tr style=\"\"><td style=\"background-color: rgb(253, 234, 218)\" rowspan=\"1\" colspan=\"2\" width=\"101\">订阅操作按钮</td></tr><tr style=\"\"><td style=\"\" width=\"114\">新增</td><td style=\"\" width=\"637.3333333333334\">新增事件推送订阅</td></tr><tr style=\"\"><td style=\"\" width=\"114\">复制</td><td style=\"\" width=\"637.3333333333334\">勾选某个事件推送订阅复制出来一个新的事件推送订阅数据</td></tr><tr style=\"\"><td style=\"\" width=\"114\">删除</td><td style=\"\" width=\"637.3333333333334\">删除事件推送订阅，仅草稿状态的数据允许删除，支持批量操作</td></tr><tr style=\"\"><td style=\"\" width=\"114\">发布</td><td style=\"\" width=\"637.3333333333334\">发布事件推送订阅</td></tr><tr style=\"\"><td style=\"\" width=\"114\">撤销</td><td style=\"\" width=\"637.3333333333334\">撤销事件推动订阅</td></tr><tr style=\"\"><td style=\"\" width=\"114\">测试</td><td style=\"\" width=\"637.3333333333334\">向用户配置的回调地址发送一个测试的请求，用于验证填写的回调地址的合法性<br/>请求方式：application/json + POST <br/>请求数据：null<br/>响应要求：3秒内返回，且没有抛错。</td></tr><tr style=\"\"><td style=\"background-color: rgb(253, 234, 218)\" rowspan=\"1\" colspan=\"2\" width=\"101\">订阅事件操作</td></tr><tr style=\"\"><td style=\"\" width=\"114\">新增分录</td><td style=\"\" width=\"637.3333333333334\">新增订阅事件</td></tr><tr style=\"\"><td style=\"\" width=\"114\">删除分录</td><td style=\"\" width=\"637.3333333333334\">取消订阅事件</td></tr></tbody></table><h2 label=\"一级标题\" class=\"first-title\" style=\"\"><br/></h2><h2 label=\"一级标题\" class=\"first-title\" style=\"\">2 主要操作</h2><h3 label=\"二级标题\" class=\"second-title\" style=\"\">2.1 查询事件推送订阅</h3><p>事件推送订阅列表页面展示租户下所有订阅数据，支持按订阅批号和订阅名称做模糊搜索，也支持表头字段做筛选。</p><p><span style=\"\"><img src=\"/download/01092065abf490a44710a4451be4155d1aa4.png\"/></span></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\"><span style=\"\">2.2 配置事件推送订阅</span></h3><p><span style=\"\">操作步骤如下：</span></p><p><span style=\"\">1、进入事件推送订阅列表，点击“<span style=\"\">新增</span>”按钮进入新增页面。</span></p><p><span style=\"\">2、配置订阅批号、订阅名称、订阅描述等基本信息。</span></p><p><span style=\"\">3、配置回调业务方、回调地址、签名策略和签名密钥、加密策略和加密密钥、并设置错误重试机制。</span></p><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><p><span style=\"\">回调地址：填写对接系统接收事件消息的接口地址，由对接方提供。地址需满足URL正则规范，且能通过Http/Https + Post能直接调通，对接系统如有防火墙或者IP白名单限制请提前开通。回调接口详细要求请参考： <a href=\"https://vip.kingdee.com/article/535418940877411840\" target=\"_blank\" style=\"color: rgb(0, 176, 240);\"><span style=\"color: rgb(0, 176, 240);\">回调接口要求</span></a></span></p></li><li><p><span style=\"\">签名策略：指平台调用回调接口时请求的签名策略。从6.0.13版本后签名策略为必须，用户选择签名策略后，回调接口中需实现对应的验签逻辑。</span></p></li><li><p>加密策略：指平台调用回调接口时对事件消息进行的加密策略，加密策略为非必须，用户可按需选择。如果用户选择了加密策略，回调接口中需实现对应的解密逻辑方可拿到真实的事件消息。</p></li></ul><p><span style=\"color: rgb(227, 108, 9);\"><em>注意：</em></span></p><p label=\"正文\"><span style=\"color: rgb(227, 108, 9);\"><em>1) 签名密钥和加密密钥生成后请线下记录，订阅保存后密钥将加密保存，后续无法查看。</em></span></p><p label=\"正文\"><span style=\"color: rgb(227, 108, 9);\"><em>2) 一旦Webhook上线使用，请不要轻易修改签名和加密策略及密钥，否则会导致Webhook验签和解密失败，导致事件传输失败。</em></span></p><p><br/></p><p><span style=\"\">4、点击“<span style=\"\">测试</span>”按钮，测试配置的回调地址是否合规。测试时，系统会向所配置的地址发起一个请求参数为空的POST请求，回调业务方在3秒内返回且不报错即为测试成功。</span></p><p><span style=\"\">5、配置订阅事件，点击“<span style=\"\">新增分录</span>”按钮，选择需要订阅的开放事件，<strong>支持一个回调地址订阅多个开放事件。</strong></span></p><p><span style=\"color: rgb(51, 51, 51);\">6、点击“<span style=\"color: rgb(51, 51, 51);\">保存</span>”和“发布”按钮，发布成功后订阅配置数据生效。当有对应事件触发时系统会向配置的回调地址推送一条事件消息。</span></p><p class=\"md-end-block md-p md-focus\" style=\"color: rgb(51, 51, 51);\"><span style=\"color: rgb(227, 108, 9);\"><em style=\"\">注意：新增事件推送订阅时，默认为“草稿”状态，需发布后才生效。</em><em style=\"\"></em></span></p><p><span style=\"\"><img src=\"/download/0109b722480aad7e4d7d8c2d1e25106b8935.png\"/></span><br/></p><p><br/></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\"><span style=\"\">2.3 撤销事件推送订阅</span></h3><p><span style=\"\">进入事件推送订阅列表，勾选已发布的数据点击“<span style=\"\">撤销</span>”按钮，事件推动订阅撤销成功后，事件触发时将不会向对接业务方推送事件消息。</span></p><p><img src=\"/download/01094e0c8475ffc345e091a867192a5ccacc.png\"/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\"><strong style=\"\"><br/></strong></h2><h2 label=\"一级标题\" class=\"first-title\" style=\"\"><strong style=\"\">3 注意事项</strong><br/></h2><p><span style=\"\">1、事件推送订阅新增时默认是草稿状态，配置完成后请进行发布操作。</span></p><p><span style=\"\">2、事件推送订阅发布前，<strong>务必进行回调地址测试</strong>，以确保回调地址有效合规。</span></p><p><br/></p>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 87,
+   "isOpen": 1,
+   "name": "金蝶AI苍穹",
+   "productLineId": 29,
+   "series": "developer01",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "535457042203523840",
+         "entityType": "Knowledge",
+         "id": "535479008713095936",
+         "isCategory": false,
+         "name": "事件推送订阅",
+         "parentId": "535466550069896704",
+         "sort": "2",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": null,
+       "id": "535466550069896704",
+       "isCategory": true,
+       "name": "操作介绍",
+       "parentId": "535466471703678976",
+       "sort": "4",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": "",
+     "entityId": null,
+     "entityType": null,
+     "id": "535466471703678976",
+     "isCategory": true,
+     "name": "开放事件",
+     "parentId": "-1",
+     "sort": "7",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+  "department": null,
+  "id": "132488613174518784",
+  "name": "某个路易",
+  "nameSpell": "name"
+ },
+ "totalAppraisalScore": 9,
+ "iflytekId": null,
+ "views": 3657,
+ "productLineId": 29,
+ "comments": 0,
+ "similarityCount": 0,
+ "totalAppraisalUsers": 2,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1722582976000,
+ "appraisalScore": 0,
+ "unuseful": 0,
+ "knowledgeCheckStatus": 0,
+ "otherProductLineIds": [],
+ "auditAt": 1722582976000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "kemsubopen",
+        "id": "535465136673529600",
+        "name": "事件推送订阅",
+        "productLineId": null,
+        "sort": 15,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 0,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "OperatingGuide",
+     "createdAt": 1556519201000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "某一功能的具体说明介绍，包括应用场景、参数说明、具体操作步骤等",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/010037894174802d4b9f8782f1f0010a6ddd.png",
+     "id": "202203081641",
+     "name": "功能介绍",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010176d38341668f44fdb94c95058a90e4b8.png",
+      "department": "云社区运营部",
+      "id": "2147406697",
+      "name": "多肉丸子",
+      "nameSpell": "kejuan"
+     },
+     "updatedAt": 1676857681000
+    },
+    {
+     "code": "GettingStarted",
+     "createdAt": 1556519230000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "推送至苍穹帮助中心",
+     "hasSpecifyUser": false,
+     "hide": true,
+     "icon": "/download/01001f079866652f4a68a71361a9509d404c.png",
+     "id": "202203081643",
+     "name": "推送至苍穹帮助中心",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 1,
+     "type": 2,
+     "updatePerson": {
+      "avatar": "/download?fileName=010162cfa9d5437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1129",
+      "name": "灏",
+      "nameSpell": "hao"
+     },
+     "updatedAt": 1605688859000
+    },
+    {
+     "code": "rumen",
+     "createdAt": 1605667807000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "入门类的知识可使用此标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100d322b9282bcc438faa894f4eec029977.png",
+     "id": "202203081646",
+     "name": "基础入门",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download?fileName=0101ec1d6ce599b442dab7d0b794c1fce88d.png",
+      "department": null,
+      "id": "1009",
+      "name": "一颗小星星",
+      "nameSpell": "fengling"
+     },
+     "updatedAt": 1657872008000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          {
+           "childCategory": [
+            null
+           ],
+           "code": null,
+           "description": "",
+           "entityId": "535457042203523840",
+           "entityType": "Knowledge",
+           "id": "535479008713095936",
+           "isCategory": false,
+           "name": "事件推送订阅",
+           "parentId": "535466550069896704",
+           "sort": "2",
+           "specialId": "226337046514476288",
+           "status": 1
+          }
+         ],
+         "code": null,
+         "description": "",
+         "entityId": null,
+         "entityType": null,
+         "id": "535466550069896704",
+         "isCategory": true,
+         "name": "操作介绍",
+         "parentId": "535466471703678976",
+         "sort": "4",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": null,
+       "id": "535466471703678976",
+       "isCategory": true,
+       "name": "开放事件",
+       "parentId": "-1",
+       "sort": "7",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": "<p><strong><span style=\"\">变更记录</span></strong></p><p><span style=\"\"></span></p><p><br/></p><table width=\"100%\"><tbody><tr class=\"firstRow\"><td valign=\"top\" width=\"134.33333333333334\"><strong>产品版本</strong></td><td valign=\"top\" width=\"359\"><strong>更新内容</strong></td><td valign=\"top\" width=\"248\"><strong>更新日期</strong></td></tr><tr><td valign=\"top\" width=\"134.33333333333334\"><span style=\"\">V6.0.6</span></td><td valign=\"top\" width=\"359\"><span style=\"\">初始版本</span></td><td valign=\"top\" width=\"248\"><span style=\"\">2024年01月17日</span></td></tr><tr><td valign=\"top\" width=\"134.33333333333334\">V6.0.13</td><td valign=\"top\" width=\"359\">事件推送支持签名和加密</td><td valign=\"top\" width=\"246.33333333333334\">2024年06月14日</td></tr><tr><td valign=\"top\" colspan=\"1\" rowspan=\"1\" width=\"132.33333333333334\">V7.0.0</td><td valign=\"top\" colspan=\"1\" rowspan=\"1\" width=\"111\"><p>1、事件推送支持脚本插件</p><p>2、Webhook回调支持自定义结果断言</p></td><td valign=\"top\" colspan=\"1\" rowspan=\"1\">2024年09月10日</td></tr></tbody></table><p><br/></p><hr/><p><span style=\"\"></span><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\"><span style=\"\">1 简介</span></h2><h3 label=\"二级标题\" class=\"second-title\" style=\"\"><span style=\"\">1.1 功能介绍</span></h3><p><span style=\"\">用户或</span>系统可通过配置事件推送订阅方案监听苍穹平台业务变化。</p><h3 label=\"二级标题\" class=\"second-title\" style=\"\"><span style=\"\">1.2 面向用户</span></h3><p><span style=\"\">事件消费者</span></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\"><span style=\"\">1.3 应用场景</span></h3><p>苍穹业务事件触发时，通过回调对接系统提供Webhook接口/WebAPI接口向第三方系统传递事件消息。</p><p><span style=\"\"><br/></span></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\"><span style=\"\">1.4 系统路径</span></h3><p><span style=\"\">【开放服务云】-【OpenAPI】-【开放事件】-【事件推送订阅】</span></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\"><span style=\"\">1.5 关键字段/按钮说明</span></h3><h4 label=\"三级标题\" class=\"third-title\" style=\"\"><span style=\"\">1.5.1 字段说明</span></h4><p><span style=\"\"></span></p><table width=\"99%\"><thead style=\"\"></thead><tbody style=\"\"><tr class=\"firstRow\"><td colspan=\"1\" rowspan=\"1\" style=\"\" width=\"114.33333333333333\"><strong>字段名称</strong></td><td colspan=\"1\" rowspan=\"1\" style=\"\" width=\"645.3333333333334\"><strong>字段说明</strong></td></tr><tr style=\"\"><td style=\"background-color: rgb(253, 234, 218)\" rowspan=\"1\" colspan=\"2\">基本信息</td></tr><tr style=\"\"><td style=\"\" width=\"82\">订阅批号</td><td style=\"\" width=\"645.3333333333334\">事件推送订阅的编码</td></tr><tr style=\"\"><td style=\"\" width=\"82\">订阅名称</td><td style=\"\" width=\"645.3333333333334\">事件推送订阅的名称</td></tr><tr style=\"\"><td style=\"\" width=\"82\">状态</td><td style=\"\" width=\"645.3333333333334\">订阅状态，分为草稿、已发布两种。<br/>草稿：订阅配置未生效，数据可修改。<br/>已发布：订阅配置已生效，数据不可修改。事件触发时会产生订阅推送记录。</td></tr><tr style=\"\"><td style=\"\" width=\"82\">订阅描述</td><td style=\"\" width=\"645.3333333333334\">事件推送订阅的描述信息</td></tr><tr style=\"\"><td style=\"\" width=\"82\">开发商标识</td><td style=\"\" width=\"645.3333333333334\">配置订阅的用户所属开发商的标识。非本开发商的数据不允许修改。</td></tr><tr style=\"\"><td style=\"background-color: rgb(253, 234, 218)\" rowspan=\"1\" colspan=\"2\">推送配置</td></tr><tr><td colspan=\"1\" rowspan=\"1\">推送方式<br/></td><td colspan=\"1\" rowspan=\"1\"><p>推送方式分为：Webhook回调、脚本插件</p><p>Webhook回调：当对接系统可按&nbsp;<a href=\"https://vip.kingdee.com/article/535418940877411840\" target=\"_blank\">开放事件回调要求</a> 提供可直接回调的Webhook地址，</p></td></tr><tr style=\"\"><td style=\"\" width=\"82\">回调业务方</td><td style=\"\" width=\"645.3333333333334\">用于标识事件对接系统的名称</td></tr><tr style=\"\"><td style=\"\" width=\"82\">回调地址</td><td style=\"\" width=\"645.3333333333334\">对接系统接收事件消息的接口地址，需由对接方按照 <a href=\"https://vip.kingdee.com/article/535418940877411840\" target=\"_blank\"><span style=\"text-decoration: none; color: rgb(0, 176, 240);\">回调接口要求</span></a> 提供。</td></tr><tr style=\"\"><td style=\"\" width=\"82\">签名策略</td><td style=\"\" width=\"645.3333333333334\">调用Webhook地址时请求签名方式，<strong style=\"\">请求签名为必须</strong>，支持 HMAC_SHA_256 和 SHA_256 两种。</td></tr><tr style=\"\"><td style=\"\" width=\"82\">签名密钥</td><td style=\"\" width=\"645.3333333333334\">签名认证密钥，支持在线生成</td></tr><tr style=\"\"><td style=\"\" width=\"82\">加密策略</td><td style=\"\" width=\"645.3333333333334\">请求时传输数据加密策略。<strong style=\"\">数据加密为非必须</strong>，用户可根据安全要求自行选择。提供 AES/CBC/PKCS5Padding 或 SM4/CBC/PKCS5Padding 两种加密算法，订阅选择加密算法后，WebHook接口需要实现对应的解密逻辑。</td></tr><tr style=\"\"><td style=\"\" width=\"82\">密钥长度(bit)</td><td style=\"\" width=\"645.3333333333334\">加密密钥长度，不同加密算法支持的密钥长度不一样：<br/>对于 AES 算法，密钥长度可选 128bit，192bit，256bit；<br/>对于 SM4 算法，密钥长度可选 128bit。</td></tr><tr style=\"\"><td style=\"\" width=\"82\">加密密钥</td><td style=\"\" width=\"645.3333333333334\">加密密钥，密钥需符合Base64编码规范，支持在线生成</td></tr><tr style=\"\"><td style=\"\" width=\"82\">重试机制</td><td style=\"\" width=\"645.3333333333334\">事件推送失败时，系统是否重新推送的机制：<br/>重试3次后挂起：事件推送失败后，系统自动重试3次，重试间隔为1min，2min，4min，每次间隔前后有10秒的随机时间。<br/>直接挂起：事件推送失败后，不会自动重试。</td></tr></tbody></table><p label=\"\" class=\"\" style=\"\"><span style=\"\"></span></p><p label=\"\" class=\"\" style=\"\"><br/></p><h4 label=\"三级标题\" class=\"third-title\" style=\"\">1.5.2 按钮说明</h4><p><span style=\"\"></span></p><table width=\"98%\"><thead style=\"\"></thead><tbody style=\"\"><tr class=\"firstRow\"><td rowspan=\"1\" colspan=\"1\" width=\"112.33333333333333\">按钮名称<br/></td><td rowspan=\"1\" colspan=\"1\" width=\"637.3333333333334\">按钮说明</td></tr><tr style=\"\"><td style=\"background-color: rgb(253, 234, 218)\" rowspan=\"1\" colspan=\"2\" width=\"101\">订阅操作按钮</td></tr><tr style=\"\"><td style=\"\" width=\"114\">新增</td><td style=\"\" width=\"637.3333333333334\">新增事件推送订阅</td></tr><tr style=\"\"><td style=\"\" width=\"114\">复制</td><td style=\"\" width=\"637.3333333333334\">勾选某个事件推送订阅复制出来一个新的事件推送订阅数据</td></tr><tr style=\"\"><td style=\"\" width=\"114\">删除</td><td style=\"\" width=\"637.3333333333334\">删除事件推送订阅，仅草稿状态的数据允许删除，支持批量操作</td></tr><tr style=\"\"><td style=\"\" width=\"114\">发布</td><td style=\"\" width=\"637.3333333333334\">发布事件推送订阅</td></tr><tr style=\"\"><td style=\"\" width=\"114\">撤销</td><td style=\"\" width=\"637.3333333333334\">撤销事件推动订阅</td></tr><tr style=\"\"><td style=\"\" width=\"114\">测试</td><td style=\"\" width=\"637.3333333333334\">向用户配置的回调地址发送一个测试的请求，用于验证填写的回调地址的合法性<br/>请求方式：application/json + POST <br/>请求数据：null<br/>响应要求：3秒内返回，且没有抛错。</td></tr><tr style=\"\"><td style=\"background-color: rgb(253, 234, 218)\" rowspan=\"1\" colspan=\"2\" width=\"101\">订阅事件操作</td></tr><tr style=\"\"><td style=\"\" width=\"114\">新增分录</td><td style=\"\" width=\"637.3333333333334\">新增订阅事件</td></tr><tr style=\"\"><td style=\"\" width=\"114\">删除分录</td><td style=\"\" width=\"637.3333333333334\">取消订阅事件</td></tr></tbody></table><h2 label=\"一级标题\" class=\"first-title\" style=\"\"><br/></h2><h2 label=\"一级标题\" class=\"first-title\" style=\"\">2 主要操作</h2><h3 label=\"二级标题\" class=\"second-title\" style=\"\">2.1 查询事件推送订阅</h3><p>事件推送订阅列表页面展示租户下所有订阅数据，支持按订阅批号和订阅名称做模糊搜索，也支持表头字段做筛选。</p><p><span style=\"\"><img src=\"/download/01092065abf490a44710a4451be4155d1aa4.png\"/></span></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\"><span style=\"\">2.2 配置事件推送订阅</span></h3><p><span style=\"\">操作步骤如下：</span></p><p><span style=\"\">1、进入事件推送订阅列表，点击“<span style=\"\">新增</span>”按钮进入新增页面。</span></p><p><span style=\"\">2、配置订阅批号、订阅名称、订阅描述等基本信息。</span></p><p><span style=\"\">3、配置回调业务方、回调地址、签名策略和签名密钥、加密策略和加密密钥、并设置错误重试机制。</span></p><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><p><span style=\"\">回调地址：填写对接系统接收事件消息的接口地址，由对接方提供。地址需满足URL正则规范，且能通过Http/Https + Post能直接调通，对接系统如有防火墙或者IP白名单限制请提前开通。回调接口详细要求请参考： <a href=\"https://vip.kingdee.com/article/535418940877411840\" target=\"_blank\" style=\"color: rgb(0, 176, 240);\"><span style=\"color: rgb(0, 176, 240);\">回调接口要求</span></a></span></p></li><li><p><span style=\"\">签名策略：指平台调用回调接口时请求的签名策略。从6.0.13版本后签名策略为必须，用户选择签名策略后，回调接口中需实现对应的验签逻辑。</span></p></li><li><p>加密策略：指平台调用回调接口时对事件消息进行的加密策略，加密策略为非必须，用户可按需选择。如果用户选择了加密策略，回调接口中需实现对应的解密逻辑方可拿到真实的事件消息。</p></li></ul><p><span style=\"color: rgb(227, 108, 9);\"><em>注意：</em></span></p><p label=\"正文\"><span style=\"color: rgb(227, 108, 9);\"><em>1) 签名密钥和加密密钥生成后请线下记录，订阅保存后密钥将加密保存，后续无法查看。</em></span></p><p label=\"正文\"><span style=\"color: rgb(227, 108, 9);\"><em>2) 一旦Webhook上线使用，请不要轻易修改签名和加密策略及密钥，否则会导致Webhook验签和解密失败，导致事件传输失败。</em></span></p><p><br/></p><p><span style=\"\">4、点击“<span style=\"\">测试</span>”按钮，测试配置的回调地址是否合规。测试时，系统会向所配置的地址发起一个请求参数为空的POST请求，回调业务方在3秒内返回且不报错即为测试成功。</span></p><p><span style=\"\">5、配置订阅事件，点击“<span style=\"\">新增分录</span>”按钮，选择需要订阅的开放事件，<strong>支持一个回调地址订阅多个开放事件。</strong></span></p><p><span style=\"color: rgb(51, 51, 51);\">6、点击“<span style=\"color: rgb(51, 51, 51);\">保存</span>”和“发布”按钮，发布成功后订阅配置数据生效。当有对应事件触发时系统会向配置的回调地址推送一条事件消息。</span></p><p class=\"md-end-block md-p md-focus\" style=\"color: rgb(51, 51, 51);\"><span style=\"color: rgb(227, 108, 9);\"><em style=\"\">注意：新增事件推送订阅时，默认为“草稿”状态，需发布后才生效。</em><em style=\"\"></em></span></p><p><span style=\"\"><img src=\"/download/0109b722480aad7e4d7d8c2d1e25106b8935.png\"/></span><br/></p><p><br/></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\"><span style=\"\">2.3 撤销事件推送订阅</span></h3><p><span style=\"\">进入事件推送订阅列表，勾选已发布的数据点击“<span style=\"\">撤销</span>”按钮，事件推动订阅撤销成功后，事件触发时将不会向对接业务方推送事件消息。</span></p><p><img src=\"/download/01094e0c8475ffc345e091a867192a5ccacc.png\"/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\"><strong style=\"\"><br/></strong></h2><h2 label=\"一级标题\" class=\"first-title\" style=\"\"><strong style=\"\">3 注意事项</strong><br/></h2><p><span style=\"\">1、事件推送订阅新增时默认是草稿状态，配置完成后请进行发布操作。</span></p><p><span style=\"\">2、事件推送订阅发布前，<strong>务必进行回调地址测试</strong>，以确保回调地址有效合规。</span></p><p><br/></p>"
+}

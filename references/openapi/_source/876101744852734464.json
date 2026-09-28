@@ -1,0 +1,448 @@
+{
+ "badNum": 0,
+ "identityTagIds": null,
+ "knowledgeId": "876101744852734464",
+ "createdAt": 1786686933170,
+ "collections": 0,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "876101744852734464",
+ "contentType": 1,
+ "updatedAt": 1789711944998,
+ "knowledgeUpdater": {
+  "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+  "department": null,
+  "id": "132488613174518784",
+  "name": "某个路易",
+  "nameSpell": "name"
+ },
+ "assessStatus": 0,
+ "knowledgeStatus": 2,
+ "assessHandleStatus": null,
+ "knowledgeCreatedAt": 1786686933170,
+ "version": 138,
+ "labels": [],
+ "editedAt": 1789711945000,
+ "identityTags": null,
+ "useful": 2,
+ "errors": [],
+ "isCollected": false,
+ "totalFeedBacks": 0,
+ "attachments": [],
+ "sources": [],
+ "editTitle": "MCP服务常见问题",
+ "title": "MCP服务常见问题",
+ "content": "<h3><span style=\"color: rgb(102, 102, 102); font-size: 16px\">本帖汇总MCP服务常见问题，涵盖<strong>集群级MCP服务和账套级MCP服务（苍穹V9.0）</strong>。使用前请先确认苍穹版本：低于V9.0 则为集群级MCP服务。</span></h3><p></p><h2><strong><mark>1 Token认证问题</mark></strong></h2><h3><strong><mark>1.1&nbsp;&nbsp;调用 MCP 工具时返回 401 未认证错误，是什么原因？</mark></strong></h3><blockquote class=\"\"><p style=\"font-size: 15px\">401 错误通常由于token过期或未传入 token 导致。access_token有效期固定 2 小时，需重新登录获取新 token。</p></blockquote><p style=\"font-size: 16px\"></p><h3><strong><mark>1.2 调用 MCP 工具时返回 403 权限不足错误，是什么原因？</mark></strong></h3><blockquote class=\"\"><p style=\"font-size: 15px\">403 错误通常由于第三方应用的权限不足导致。解决方法：登录ERP系统，路径：开放服务云 - OpenAPI - 安全策略 - 第三方应用。查看第三方应用（灵基第三方应用编码为kwork），是否拥有该MCP服务关联的API的访问权限。</p></blockquote><p style=\"font-size: 15px\"></p><h3><strong><mark>1.3 若灵基侧维护了正确的mcp.server.appId 和mcp.server.secret，获取到cosmic_mcp_token后提示错误码-32001，Unauthorized MCP access，或维护了正确的第三方应用如kwork和对应的appSecret，但是仍然返回401认证错误是什么原因？</mark></strong></h3><blockquote class=\"\"><p style=\"font-size: 15px\">高版本 Nginx 默认过滤带下划线的请求头参数，可能导致 <code>cosmic_mcp_token</code> 或 <code>access_token</code> 被丢弃。解决方法如下：</p><ol><li><p>打开 <code>nginx.conf</code>，在 <code>http</code> 块中添加：</p><pre><code class=\"language-plaintext\">underscores_in_headers on;</code></pre></li><li><p>保存后重启 Nginx 。</p></li></ol></blockquote><p style=\"font-size: 16px\"></p><h2>2 服务注册与状态问题</h2><h3><strong>2.1 MCP 服务导入/新增后一直处于“待注册”状态，未自动发布？</strong></h3><blockquote class=\"\"><p>系统每 5 分钟自动全量扫描并注册一次，一般等待5分钟内即可完成注册。若超过 10 分钟仍未发布，请检查：</p><ol><li><p style=\"font-size: 15px\">MCP镜像是否已部署，环境是否存在mcpweb节点，若存在，mcp服务是否正常运行。</p></li><li><p>苍穹版本低于 V9.0，且菜单为【集群级MCP服务】时，请检查：</p><p>a. 通过Monitor日志搜 <strong>OpenApiMcpProvider</strong>，确认本集群MCP网关注册服务的目标数据中心。</p><p>b. 只有被扫描的数据中心下的MCP服务会更新为<strong>已发布状态</strong>，其他数据中心状态不变，若集群内各数据中心MCP数据一致，则各数据中心MCP服务均可调用。</p></li></ol></blockquote><p></p><h3><strong>2.2 MCP 服务注册状态变为“失败”，如何处理？</strong></h3><blockquote class=\"\"><p>MCP 服务注册失败，常见原因包括 API 不存在或状态异常，以及 MCP 服务不可用。可按以下步骤排查：</p><ol><li><p style=\"font-size: 15px\">在「MCP服务」列表中找到失败的服务，查看异常日志字段，了解具体失败原因。</p></li><li><p>根据日志提示修复问题（如API不存在、参数格式错误等）。</p></li><li><p>修复后点击[重置注册状态]按钮，将服务重置为“待注册”，等待系统下次自动扫描重新注册。</p><p>若多次重置仍失败，请联系平台管理员或研发人员排查MCP服务日志（Monitor日志搜<strong>OpenApiMcpProvider</strong>）。</p></li></ol></blockquote><p></p><h3><strong>2.3 服务状态为“已发布”，但灵基侧工具列表拉取的工具数量与预期（ERP侧）不符？</strong></h3><blockquote class=\"\"><p>根据苍穹版本，通过Monitor日志检索对应关键字：</p><table class=\"\" style=\"min-width: 460px\"><colgroup><col style=\"min-width: 25px\"><col style=\"width: 100px\"><col style=\"width: 335px\"></colgroup><tbody><tr><th colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p><span style=\"font-size: 14px\">服务类型</span></p></th><th colspan=\"1\" rowspan=\"1\" colwidth=\"100\" data-background-color=\"\" class=\"\"><p><span style=\"font-size: 14px\">版本条件</span></p></th><th colspan=\"1\" rowspan=\"1\" colwidth=\"335\" data-background-color=\"\" class=\"\"><p><span style=\"font-size: 14px\">Monitor日志关键字</span></p></th></tr><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p><span style=\"font-size: 12px\"><strong>集群级MCP服务</strong></span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"100\" data-background-color=\"\" class=\"\"><p><span style=\"font-size: 12px\">V9.0以下</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"335\" data-background-color=\"\" class=\"\"><p><code>OpenApiMcpProvider</code></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p><span style=\"font-size: 12px\"><strong>MCP服务</strong></span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"100\" data-background-color=\"\" class=\"\"><p><span style=\"font-size: 12px\">V9.0及以上</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"335\" data-background-color=\"\" class=\"\"><p><code>McpAccountTool</code></p></td></tr></tbody></table><p>逐项核对以下 5 个要点：</p><p style=\"font-size: 14px\"><strong>1. 核查工具运行状态</strong></p><p style=\"font-size: 14px\">已下架、失败状态的工具不会展示在工具列表中。请前往「MCP 服务」管理页面核对工具服务状态。</p><p style=\"font-size: 14px\"><strong>2. 确认是否为标品预置 MCP 服务</strong></p><p style=\"font-size: 14px\">标品预置的 MCP 服务，脚本中 MCP 服务的状态为<strong>待注册（UNPUBLISH）</strong>。MCP 网关不会重复扫描注册状态为已发布（SUCCESS）的 MCP 服务。</p><p style=\"font-size: 14px\"><strong>3. 注册等待时间</strong></p><p style=\"font-size: 14px\">手工新增或导入 MCP 服务后，系统存在扫描注册延时。建议等待 <strong>5 分钟</strong>左右，等待注册完成。</p><p style=\"font-size: 14px\"><strong>4. 请求头参数</strong></p><p style=\"font-size: 14px\">调用工具列表接口时，请求头必须同时携带：</p><ol><li><p><code>cosmic_mcp_token</code></p></li><li><p><code>erpAccountId</code>（账套级 MCP 服务<strong>必传</strong>）</p><p>若缺失 <code>erpAccountId</code>，会出现返回空列表，或仅返回部分非 API 类工具的问题。</p></li></ol><p style=\"font-size: 14px\"><strong>5. 校验数据中心正确性</strong></p><p style=\"font-size: 14px\">工具列表按账套做数据隔离，传入错误的账套 ID 仅能返回该错误账套下的工具数据。此外，集群级 MCP 服务若默认扫描其他数据中心，<strong>当两个数据中心中系统内置的 MCP 服务不一致时</strong>，也可能导致结果差异。</p></blockquote><p></p><h2>3 配置与接入问题</h2><h3><strong>3.1 erpAccountId（数据中心 ID）在哪里获取？</strong></h3><blockquote class=\"\"><ol><li><p style=\"font-size: 14px\">通过 MC 管理中心：登录苍穹 MC 管理中心 → 租户列表 → 租户，点击租户详情可查看数据中心 ID。</p></li><li><p>通过第三方应用配置页：如在第三方应用列表界面，点击按钮【更多】-【当前账套信息】，可查看当前数据中心 ID。</p></li></ol></blockquote><p style=\"font-size: 16px\"></p><h3><strong>3.2 在智能体中配置 MCP 服务后，工具列表加载正常，但调用业务 API 时报错？</strong></h3><blockquote class=\"\"><p>MCP工具加载需要传入cosmic_mcp_token，业务 API 调用需要 access_token，两者相互独立。若工具列表正常但业务调用失败，所以重点排查 access_token：</p><ul><li><p>access_token 是否过期：有效期为 2 小时，过期后业务调用会返回认证错误（401）。</p></li><li><p>access_token 对应的用户是否有权限：access_token关联具体业务用户，若该用户无对应单据或模块的操作权限，调用会返回业务权限错误而非认证错误。</p></li><li><p>erpAccountId 与 access_token 是否匹配：两者必须属于同一账套，跨账套使用会导致认证失败。</p></li><li><p>直接验证 API 可用性：通过Postman携带 access_token直接调用目标 API，确认 API 本身可正常访问。</p></li></ul></blockquote><p style=\"font-size: 16px\"></p><h3><strong>3.3 有些工具被标记为 sensitive（敏感操作），调用时多次确认无法删除，怎么处理？</strong></h3><blockquote class=\"\"><p><strong>高风险操作二次确认流程：</strong>标记为 <strong>敏感（sensitive）</strong> 的工具属于高风险操作，调用时需要经过二次确认：</p><ul><li><p style=\"font-size: 14px\"><strong>第一步：首次调用</strong></p><p style=\"font-size: 14px\">调用工具后，MCP网关可能返回 <code>MCP_CONFIRMATION_REQUIRED</code> 错误，并附带 <code>confirmationToken</code>或<span style=\"color: rgba(0, 0, 0, 0.82); font-size: 14px\">进入了流程循环。</span></p></li><li><p style=\"font-size: 14px\"><strong>第二步：二次调用</strong></p><p style=\"font-size: 14px\">将 <code>confirmationToken</code> 放入请求参数的 <code>_meta</code> 中：</p><pre><code class=\"language-plaintext\">params._meta[\"bos.mcp.confirmationToken\"] = confirmationToken</code></pre><p style=\"font-size: 14px\">然后重新调用同一工具。</p><p style=\"font-size: 14px\"></p></li><li><p style=\"font-size: 14px\"><strong>若仍然无法执行，可以尝试要求智能体走原生MCP协议调用工具。</strong></p></li></ul></blockquote><p></p><h2>4 服务发布与管理问题</h2><h3><strong>4.1 租户新增 MCP 服务时（苍穹V9.0以上）无法选择标品 API，只能选二开API，这是为什么？</strong></h3><blockquote class=\"\"><p>设计核心目的：<strong>保证MCP与API保持一对一的对应关系</strong>，避免因MCP服务数量膨胀导致网关缓存过大而影响系统性能。</p><p>具体规则如下：</p><ul style=\"list-style-type: disc\"><li><p><strong>租户自建 MCP 服务</strong>：仅允许开放二开 API，防止租户越权暴露标品接口。</p></li><li><p><strong>标品 API 发布为 MCP 服务</strong>：须由金蝶标准开发商以「系统内置」来源发布。</p></li></ul></blockquote><p></p><h3><strong>4.2 工具名称按规则自动生成后超过 55 字符被截断，导致名称含义不清晰，怎么处理？</strong></h3><blockquote class=\"\"><ul><li><p>工具名称支持手动修改。在「MCP 服务」列表中找到对应服务，将其改为更简短、语义清晰的名称。</p></li><li><p>推荐命名风格：<code>{domain}_{module}_{action}</code>，将 <code>{apiuri}</code> 替换为更易理解的 action。</p></li><li><p>命名重要性：工具名称是智能体识别和选择工具的关键依据，直接影响大模型的调用准确性。</p></li></ul></blockquote><p style=\"font-size: 16px\"></p><h3><strong>4.3 已发布的 MCP 服务，关联的 API 发生变更（如新增参数），如何同步更新？</strong></h3><blockquote class=\"\"><p><strong>1）自动更新机制</strong></p><p style=\"font-size: 14px\">API 变更后，对应的 MCP 服务注册状态会自动变为 <strong>「待更新」</strong>，系统在下次扫描（约 5 分钟内）会自动重新注册并同步最新的 API 定义，<strong>无需手动操作</strong>。</p><p style=\"font-size: 14px\"></p><p><strong>2）手动触发方式：若 5 分钟后状态仍未更新，可手动操作：</strong></p><ol><li><p>点击 <strong>「下架」</strong> 按钮</p></li><li><p>下架后点击 <strong>「重置注册状态」</strong>，触发重新注册流程</p></li></ol><p style=\"font-size: 14px\"></p><p><strong>3）标品更新说明</strong></p><p style=\"font-size: 14px\">若标品更新了 API 字段，需将对应 MCP 服务脚本中的状态改为 <strong>「待注册（UNPUBLISH）」</strong>，客户端 MCP 网关在自动扫描时才能更新 MCP 服务信息。</p></blockquote><p></p><h4></h4><h2><strong>5 相关文档</strong></h2><p style=\"font-size: 15px\"><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://www.kingdee.com/docs/lingee#admin-ops-guide\" title=\"灵基操作手册：管理员配置与运维指南\">灵基操作手册：管理员配置与运维指南</a></p><p><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=226337544983020032&amp;id=875792595354608128&amp;type=Knowledge&amp;productLineId=29&amp;lang=zh-CN\">MCP服务（for灵基）</a></p><p style=\"font-size: 16px\"></p>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 87,
+   "isOpen": 1,
+   "name": "金蝶AI苍穹",
+   "productLineId": 29,
+   "series": "developer01",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        null
+       ],
+       "code": null,
+       "description": "",
+       "entityId": "876101744852734464",
+       "entityType": "Knowledge",
+       "id": "877228994570018560",
+       "isCategory": false,
+       "name": "MCP服务常见问题",
+       "parentId": "226337785987048960",
+       "sort": "34",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": "",
+     "entityId": null,
+     "entityType": null,
+     "id": "226337785987048960",
+     "isCategory": true,
+     "name": "常见问题",
+     "parentId": "-1",
+     "sort": "9",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+  "department": null,
+  "id": "132488613174518784",
+  "name": "某个路易",
+  "nameSpell": "name"
+ },
+ "totalAppraisalScore": 10,
+ "iflytekId": null,
+ "views": 620,
+ "productLineId": 29,
+ "comments": 0,
+ "similarityCount": null,
+ "totalAppraisalUsers": 2,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1789711944998,
+ "appraisalScore": 0,
+ "unuseful": 0,
+ "knowledgeCheckStatus": 2,
+ "otherProductLineIds": [],
+ "auditAt": 1789889198000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "open_mcp_ext",
+        "id": "760141781395833856",
+        "name": "MCP服务",
+        "productLineId": null,
+        "sort": 26,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 0,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": null,
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 1,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "HotIssues",
+     "createdAt": 1558618967000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "使用中经常遇到的应用类、报错类问题的解决方法",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/010046d15638963c4c388734601dd5f8ceec.png",
+     "id": "202203081644",
+     "name": "常见问题",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010176d38341668f44fdb94c95058a90e4b8.png",
+      "department": "云社区运营部",
+      "id": "2147406697",
+      "name": "多肉丸子",
+      "nameSpell": "kejuan"
+     },
+     "updatedAt": 1676857709000
+    },
+    {
+     "code": "rumen",
+     "createdAt": 1605667807000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "入门类的知识可使用此标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100d322b9282bcc438faa894f4eec029977.png",
+     "id": "202203081646",
+     "name": "基础入门",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download?fileName=0101ec1d6ce599b442dab7d0b794c1fce88d.png",
+      "department": null,
+      "id": "1009",
+      "name": "一颗小星星",
+      "nameSpell": "fengling"
+     },
+     "updatedAt": 1657872008000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "876101744852734464",
+         "entityType": "Knowledge",
+         "id": "877228994570018560",
+         "isCategory": false,
+         "name": "MCP服务常见问题",
+         "parentId": "226337785987048960",
+         "sort": "34",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": null,
+       "id": "226337785987048960",
+       "isCategory": true,
+       "name": "常见问题",
+       "parentId": "-1",
+       "sort": "9",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": "<h3><span style=\"color: rgb(102, 102, 102); font-size: 16px\">本帖汇总MCP服务常见问题，涵盖<strong>集群级MCP服务和账套级MCP服务（苍穹V9.0）</strong>。使用前请先确认苍穹版本：低于V9.0 则为集群级MCP服务。</span></h3><p></p><h2><strong><mark>1 Token认证问题</mark></strong></h2><h3><strong><mark>1.1&nbsp;&nbsp;调用 MCP 工具时返回 401 未认证错误，是什么原因？</mark></strong></h3><blockquote class=\"\"><p style=\"font-size: 15px\">401 错误通常由于token过期或未传入 token 导致。access_token有效期固定 2 小时，需重新登录获取新 token。</p></blockquote><p style=\"font-size: 16px\"></p><h3><strong><mark>1.2 调用 MCP 工具时返回 403 权限不足错误，是什么原因？</mark></strong></h3><blockquote class=\"\"><p style=\"font-size: 15px\">403 错误通常由于第三方应用的权限不足导致。解决方法：登录ERP系统，路径：开放服务云 - OpenAPI - 安全策略 - 第三方应用。查看第三方应用（灵基第三方应用编码为kwork），是否拥有该MCP服务关联的API的访问权限。</p></blockquote><p style=\"font-size: 15px\"></p><h3><strong><mark>1.3 若灵基侧维护了正确的mcp.server.appId 和mcp.server.secret，获取到cosmic_mcp_token后提示错误码-32001，Unauthorized MCP access，或维护了正确的第三方应用如kwork和对应的appSecret，但是仍然返回401认证错误是什么原因？</mark></strong></h3><blockquote class=\"\"><p style=\"font-size: 15px\">高版本 Nginx 默认过滤带下划线的请求头参数，可能导致 <code>cosmic_mcp_token</code> 或 <code>access_token</code> 被丢弃。解决方法如下：</p><ol><li><p>打开 <code>nginx.conf</code>，在 <code>http</code> 块中添加：</p><pre><code class=\"language-plaintext\">underscores_in_headers on;</code></pre></li><li><p>保存后重启 Nginx 。</p></li></ol></blockquote><p style=\"font-size: 16px\"></p><h2>2 服务注册与状态问题</h2><h3><strong>2.1 MCP 服务导入/新增后一直处于“待注册”状态，未自动发布？</strong></h3><blockquote class=\"\"><p>系统每 5 分钟自动全量扫描并注册一次，一般等待5分钟内即可完成注册。若超过 10 分钟仍未发布，请检查：</p><ol><li><p style=\"font-size: 15px\">MCP镜像是否已部署，环境是否存在mcpweb节点，若存在，mcp服务是否正常运行。</p></li><li><p>苍穹版本低于 V9.0，且菜单为【集群级MCP服务】时，请检查：</p><p>a. 通过Monitor日志搜 <strong>OpenApiMcpProvider</strong>，确认本集群MCP网关注册服务的目标数据中心。</p><p>b. 只有被扫描的数据中心下的MCP服务会更新为<strong>已发布状态</strong>，其他数据中心状态不变，若集群内各数据中心MCP数据一致，则各数据中心MCP服务均可调用。</p></li></ol></blockquote><p></p><h3><strong>2.2 MCP 服务注册状态变为“失败”，如何处理？</strong></h3><blockquote class=\"\"><p>MCP 服务注册失败，常见原因包括 API 不存在或状态异常，以及 MCP 服务不可用。可按以下步骤排查：</p><ol><li><p style=\"font-size: 15px\">在「MCP服务」列表中找到失败的服务，查看异常日志字段，了解具体失败原因。</p></li><li><p>根据日志提示修复问题（如API不存在、参数格式错误等）。</p></li><li><p>修复后点击[重置注册状态]按钮，将服务重置为“待注册”，等待系统下次自动扫描重新注册。</p><p>若多次重置仍失败，请联系平台管理员或研发人员排查MCP服务日志（Monitor日志搜<strong>OpenApiMcpProvider</strong>）。</p></li></ol></blockquote><p></p><h3><strong>2.3 服务状态为“已发布”，但灵基侧工具列表拉取的工具数量与预期（ERP侧）不符？</strong></h3><blockquote class=\"\"><p>根据苍穹版本，通过Monitor日志检索对应关键字：</p><table class=\"\" style=\"min-width: 460px\"><colgroup><col style=\"min-width: 25px\"><col style=\"width: 100px\"><col style=\"width: 335px\"></colgroup><tbody><tr><th colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p><span style=\"font-size: 14px\">服务类型</span></p></th><th colspan=\"1\" rowspan=\"1\" colwidth=\"100\" data-background-color=\"\" class=\"\"><p><span style=\"font-size: 14px\">版本条件</span></p></th><th colspan=\"1\" rowspan=\"1\" colwidth=\"335\" data-background-color=\"\" class=\"\"><p><span style=\"font-size: 14px\">Monitor日志关键字</span></p></th></tr><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p><span style=\"font-size: 12px\"><strong>集群级MCP服务</strong></span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"100\" data-background-color=\"\" class=\"\"><p><span style=\"font-size: 12px\">V9.0以下</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"335\" data-background-color=\"\" class=\"\"><p><code>OpenApiMcpProvider</code></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" class=\"\"><p><span style=\"font-size: 12px\"><strong>MCP服务</strong></span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"100\" data-background-color=\"\" class=\"\"><p><span style=\"font-size: 12px\">V9.0及以上</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"335\" data-background-color=\"\" class=\"\"><p><code>McpAccountTool</code></p></td></tr></tbody></table><p>逐项核对以下 5 个要点：</p><p style=\"font-size: 14px\"><strong>1. 核查工具运行状态</strong></p><p style=\"font-size: 14px\">已下架、失败状态的工具不会展示在工具列表中。请前往「MCP 服务」管理页面核对工具服务状态。</p><p style=\"font-size: 14px\"><strong>2. 确认是否为标品预置 MCP 服务</strong></p><p style=\"font-size: 14px\">标品预置的 MCP 服务，脚本中 MCP 服务的状态为<strong>待注册（UNPUBLISH）</strong>。MCP 网关不会重复扫描注册状态为已发布（SUCCESS）的 MCP 服务。</p><p style=\"font-size: 14px\"><strong>3. 注册等待时间</strong></p><p style=\"font-size: 14px\">手工新增或导入 MCP 服务后，系统存在扫描注册延时。建议等待 <strong>5 分钟</strong>左右，等待注册完成。</p><p style=\"font-size: 14px\"><strong>4. 请求头参数</strong></p><p style=\"font-size: 14px\">调用工具列表接口时，请求头必须同时携带：</p><ol><li><p><code>cosmic_mcp_token</code></p></li><li><p><code>erpAccountId</code>（账套级 MCP 服务<strong>必传</strong>）</p><p>若缺失 <code>erpAccountId</code>，会出现返回空列表，或仅返回部分非 API 类工具的问题。</p></li></ol><p style=\"font-size: 14px\"><strong>5. 校验数据中心正确性</strong></p><p style=\"font-size: 14px\">工具列表按账套做数据隔离，传入错误的账套 ID 仅能返回该错误账套下的工具数据。此外，集群级 MCP 服务若默认扫描其他数据中心，<strong>当两个数据中心中系统内置的 MCP 服务不一致时</strong>，也可能导致结果差异。</p></blockquote><p></p><h2>3 配置与接入问题</h2><h3><strong>3.1 erpAccountId（数据中心 ID）在哪里获取？</strong></h3><blockquote class=\"\"><ol><li><p style=\"font-size: 14px\">通过 MC 管理中心：登录苍穹 MC 管理中心 → 租户列表 → 租户，点击租户详情可查看数据中心 ID。</p></li><li><p>通过第三方应用配置页：如在第三方应用列表界面，点击按钮【更多】-【当前账套信息】，可查看当前数据中心 ID。</p></li></ol></blockquote><p style=\"font-size: 16px\"></p><h3><strong>3.2 在智能体中配置 MCP 服务后，工具列表加载正常，但调用业务 API 时报错？</strong></h3><blockquote class=\"\"><p>MCP工具加载需要传入cosmic_mcp_token，业务 API 调用需要 access_token，两者相互独立。若工具列表正常但业务调用失败，所以重点排查 access_token：</p><ul><li><p>access_token 是否过期：有效期为 2 小时，过期后业务调用会返回认证错误（401）。</p></li><li><p>access_token 对应的用户是否有权限：access_token关联具体业务用户，若该用户无对应单据或模块的操作权限，调用会返回业务权限错误而非认证错误。</p></li><li><p>erpAccountId 与 access_token 是否匹配：两者必须属于同一账套，跨账套使用会导致认证失败。</p></li><li><p>直接验证 API 可用性：通过Postman携带 access_token直接调用目标 API，确认 API 本身可正常访问。</p></li></ul></blockquote><p style=\"font-size: 16px\"></p><h3><strong>3.3 有些工具被标记为 sensitive（敏感操作），调用时多次确认无法删除，怎么处理？</strong></h3><blockquote class=\"\"><p><strong>高风险操作二次确认流程：</strong>标记为 <strong>敏感（sensitive）</strong> 的工具属于高风险操作，调用时需要经过二次确认：</p><ul><li><p style=\"font-size: 14px\"><strong>第一步：首次调用</strong></p><p style=\"font-size: 14px\">调用工具后，MCP网关可能返回 <code>MCP_CONFIRMATION_REQUIRED</code> 错误，并附带 <code>confirmationToken</code>或<span style=\"color: rgba(0, 0, 0, 0.82); font-size: 14px\">进入了流程循环。</span></p></li><li><p style=\"font-size: 14px\"><strong>第二步：二次调用</strong></p><p style=\"font-size: 14px\">将 <code>confirmationToken</code> 放入请求参数的 <code>_meta</code> 中：</p><pre><code class=\"language-plaintext\">params._meta[\"bos.mcp.confirmationToken\"] = confirmationToken</code></pre><p style=\"font-size: 14px\">然后重新调用同一工具。</p><p style=\"font-size: 14px\"></p></li><li><p style=\"font-size: 14px\"><strong>若仍然无法执行，可以尝试要求智能体走原生MCP协议调用工具。</strong></p></li></ul></blockquote><p></p><h2>4 服务发布与管理问题</h2><h3><strong>4.1 租户新增 MCP 服务时（苍穹V9.0以上）无法选择标品 API，只能选二开API，这是为什么？</strong></h3><blockquote class=\"\"><p>设计核心目的：<strong>保证MCP与API保持一对一的对应关系</strong>，避免因MCP服务数量膨胀导致网关缓存过大而影响系统性能。</p><p>具体规则如下：</p><ul style=\"list-style-type: disc\"><li><p><strong>租户自建 MCP 服务</strong>：仅允许开放二开 API，防止租户越权暴露标品接口。</p></li><li><p><strong>标品 API 发布为 MCP 服务</strong>：须由金蝶标准开发商以「系统内置」来源发布。</p></li></ul></blockquote><p></p><h3><strong>4.2 工具名称按规则自动生成后超过 55 字符被截断，导致名称含义不清晰，怎么处理？</strong></h3><blockquote class=\"\"><ul><li><p>工具名称支持手动修改。在「MCP 服务」列表中找到对应服务，将其改为更简短、语义清晰的名称。</p></li><li><p>推荐命名风格：<code>{domain}_{module}_{action}</code>，将 <code>{apiuri}</code> 替换为更易理解的 action。</p></li><li><p>命名重要性：工具名称是智能体识别和选择工具的关键依据，直接影响大模型的调用准确性。</p></li></ul></blockquote><p style=\"font-size: 16px\"></p><h3><strong>4.3 已发布的 MCP 服务，关联的 API 发生变更（如新增参数），如何同步更新？</strong></h3><blockquote class=\"\"><p><strong>1）自动更新机制</strong></p><p style=\"font-size: 14px\">API 变更后，对应的 MCP 服务注册状态会自动变为 <strong>「待更新」</strong>，系统在下次扫描（约 5 分钟内）会自动重新注册并同步最新的 API 定义，<strong>无需手动操作</strong>。</p><p style=\"font-size: 14px\"></p><p><strong>2）手动触发方式：若 5 分钟后状态仍未更新，可手动操作：</strong></p><ol><li><p>点击 <strong>「下架」</strong> 按钮</p></li><li><p>下架后点击 <strong>「重置注册状态」</strong>，触发重新注册流程</p></li></ol><p style=\"font-size: 14px\"></p><p><strong>3）标品更新说明</strong></p><p style=\"font-size: 14px\">若标品更新了 API 字段，需将对应 MCP 服务脚本中的状态改为 <strong>「待注册（UNPUBLISH）」</strong>，客户端 MCP 网关在自动扫描时才能更新 MCP 服务信息。</p></blockquote><p></p><h4></h4><h2><strong>5 相关文档</strong></h2><p style=\"font-size: 15px\"><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://www.kingdee.com/docs/lingee#admin-ops-guide\" title=\"灵基操作手册：管理员配置与运维指南\">灵基操作手册：管理员配置与运维指南</a></p><p><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=226337544983020032&amp;id=875792595354608128&amp;type=Knowledge&amp;productLineId=29&amp;lang=zh-CN\">MCP服务（for灵基）</a></p><p style=\"font-size: 16px\"></p>"
+}

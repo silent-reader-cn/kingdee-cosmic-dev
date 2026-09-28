@@ -1,0 +1,606 @@
+{
+ "badNum": 0,
+ "templateId": "335738408951726336",
+ "identityTagIds": null,
+ "knowledgeId": "783706444222381056",
+ "createdAt": 1764658177000,
+ "collections": 2,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "783706444222381056",
+ "contentType": 1,
+ "updatedAt": 1779760853000,
+ "knowledgeUpdater": {
+  "avatar": "/download/0101d484c5557ed54c72bb0b1a6318f0121d.png",
+  "department": null,
+  "id": "118688",
+  "name": "郭玲_流程集成开放",
+  "nameSpell": "name"
+ },
+ "assessStatus": 0,
+ "knowledgeStatus": 4,
+ "assessHandleStatus": null,
+ "knowledgeCreatedAt": 1764658177000,
+ "version": 50,
+ "labels": [],
+ "editedAt": 1764663105000,
+ "identityTags": null,
+ "useful": 0,
+ "errors": [],
+ "isCollected": false,
+ "template": "",
+ "totalFeedBacks": 0,
+ "attachments": [],
+ "sources": [],
+ "editTitle": "MCP服务介绍",
+ "title": "MCP服务介绍",
+ "content": "<h2 style=\"text-align: justify\">1&nbsp;功能介绍</h2><p style=\"text-align: justify\">苍穹MCP服务支持将苍穹REST API一键打包发布为MCP工具包，苍穹Agent或第三方AI工具通过标准协议实现标准接口的智能调用。</p><p style=\"text-align: justify\"></p><h2 style=\"text-align: justify\">2 应用场景</h2><p style=\"text-align: justify\">通过该功能，企业能够使用AI自主调用苍穹标准接口，实现业务流程自动化运行。</p><p style=\"text-align: justify\"></p><h2 style=\"text-align: justify\">3 系统路径</h2><p style=\"text-align: justify\">开放服务云&gt;OpenAPI &gt;MCP服务</p><p style=\"text-align: justify\"></p><h2 style=\"text-align: justify\">4 关键字段/按钮说明</h2><h3 style=\"text-align: justify\"><strong>4.1&nbsp;关键按钮说明</strong></h3><table style=\"min-width: 50px\"><colgroup><col style=\"min-width: 25px\"><col style=\"min-width: 25px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p>按钮名称</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p>详细解释</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p>获取URL</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p>获取MCP服务包的SSE服务地址</p></td></tr></tbody></table><p style=\"text-align: justify\"></p><h2>5 主要操作</h2><p>MCP服务主要分为内部与外部两种：</p><ul><li><p>外部MCP服务是将OpenAPI的RESTful API包装为MCP工具给第三方AI客户端进行调用。</p></li><li><p>内部MCP服务通过代码注解的方式将JAVA方法包装为MCP工具给苍穹AI Agent进行调用。</p></li></ul><p><img src=\"/download/01002efc0e4d34d6499b8d20a99e7c8c097b.png\" alt=\"上传图片\"></p><h3>5.1 创建外部MCP服务包</h3><ul><li><p style=\"text-align: justify\"><strong>前提条件</strong></p></li></ul><p style=\"text-align: justify\">已经创建好了RESTful API</p><ul><li><p style=\"text-align: justify\"><strong>操作步骤</strong></p></li></ul><p style=\"text-align: justify\"><span style=\"color: rgb(227, 108, 9)\"><em>注：外部MCP服务需要依赖领域模型提供的MCP服务实例，可联系领域模型部门的曹勇老师提供镜像。</em></span></p><p style=\"text-align: justify\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-步骤1： 将领域模型提供的MCP服务实例镜像安装到服务器上，确保该服务器能被AI客户端和苍穹所访问。</p><p style=\"text-align: justify\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-步骤2：将部署好的MCP服务实例地址配置到公共参数中，配置路径：公共设置&gt;系统参数&gt;OpenAPI参数&gt;MCP服务地址。</p><p><img src=\"/download/01001637bca0ee5d45389bf1d874953e2749.png\" alt=\"上传图片\"></p><p></p><p style=\"text-align: justify\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-步骤3：在MCP服务页面创建MCP服务包，可以选择多个相关业务领域的REST API包装为MCP工具。</p><p style=\"text-align: justify\"></p><p><img src=\"/download/0100720919d2d6b1421fb66aea6d15da64bb.png\" alt=\"上传图片\"></p><p></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-步骤4：由于AI客户端调用MCP工具最后会透传到OpenAPI，所以鉴权机制还是沿用OpenAPI的。可以创建一个第三方应用，配置好访问策略，AI客户端也配置响应的ID与秘钥。此处以基本认证为例，需要将对应的秘钥配置到AI客户端的请求头中。</p><p></p><p style=\"text-align: center\"><img src=\"/download/010095a3ece5a9a04ef39b6f0b771bd82b0f.png\" alt=\"上传图片\"></p><p style=\"text-align: center\"></p><p><img src=\"/download/010000fd74c417fe4a62b58717357fa24afb.png\" alt=\"上传图片\"></p><p></p><ul><li><p style=\"text-align: justify\"><strong>后续操作</strong></p><p style=\"text-align: justify\">测试连接正常后可以同步拉取MCP工具，将MCP工具添加到智能体中便可进行自主调用。</p><p style=\"text-align: justify\"></p></li></ul><p style=\"text-align: justify\"></p><h3>5.2 创建内部MCP服务</h3><ul><li><p style=\"text-align: justify\"><strong>操作步骤</strong></p></li></ul><p style=\"text-align: justify\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-步骤1： 内部MCP服务需要统一放到kd.bos.mcp.tools包名下才能扫描到，MCP注解方式参考下图：</p><p style=\"text-align: center\"><img src=\"/download/01009fe06fb1e4804de4af91cce90fabac4d.png\" alt=\"上传图片\"></p><p style=\"text-align: left\"><span style=\"color: rgb(227, 108, 9)\"><em>注：服务编码格式为</em></span><span style=\"color: rgb(227, 108, 9); font-size: 13px\"><em>isv_cloud_app_serviceCode，如果是标品的，默认isv为kingdee，然后是云，应用，服务编码。</em></span></p><p style=\"text-align: justify\"></p><p style=\"text-align: justify\"></p><p style=\"text-align: justify\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-步骤2：在苍穹Agent开发平台中新增内部MCP工具。</p><p><img src=\"/download/0100722e92ad505e43e7a985c336fee25931.png\" alt=\"上传图片\"></p><p style=\"text-align: justify\"></p><p style=\"text-align: justify\">可以选择当前环境中已扫描到的内部MCP服务，系统将自动拉取该服务下的所有MCP工具。</p><p><img src=\"/download/0100a1c3cf63801d49149d926130e81d1b74.png\" alt=\"上传图片\"></p><p style=\"text-align: justify\"></p><p><img src=\"/download/01006ae3f2d17d804e1ba5d9c4996bc3a53a.png\" alt=\"上传图片\"></p><p></p><ul><li><p style=\"text-align: justify\"><strong>后续操作</strong></p><p style=\"text-align: justify\">在测试与启用工具后，便可以将工具添加到智能体中进行调用。</p></li></ul><p></p><h2>6 注意事项</h2><p>AI调用工具存在一定安全风险，请勿将关键操作发布为MCP工具。</p><p></p><hr><p></p><p></p><h2>变更记录</h2><table style=\"width: 681px\"><colgroup><col style=\"width: 176px\"><col style=\"width: 359px\"><col style=\"width: 146px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"176\" data-background-color=\"\" style=\"background-color: \"><p><strong>产品版本</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"359\" data-background-color=\"\" style=\"background-color: \"><p><strong>更新内容</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"146\" data-background-color=\"\" style=\"background-color: \"><p><strong>更新时间</strong></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"176\" data-background-color=\"\" style=\"background-color: \"><p><strong>V8.0.1</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"359\" data-background-color=\"\" style=\"background-color: \"><p>初始版本</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"146\" data-background-color=\"\" style=\"background-color: \"><p>2025年11月</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"176\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\"><strong>V8.0.4</strong></span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"359\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">支持嵌入式MCP</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"146\" data-background-color=\"\" style=\"background-color: \"><p>2025年12月</p></td></tr></tbody></table>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 93,
+   "isOpen": 1,
+   "name": "金蝶AI套件",
+   "productLineId": 40,
+   "series": "S0361",
+   "sort": 1
+  },
+  {
+   "alias": null,
+   "code": null,
+   "id": 87,
+   "isOpen": 1,
+   "name": "金蝶AI苍穹",
+   "productLineId": 29,
+   "series": "developer01",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "783706444222381056",
+         "entityType": "Knowledge",
+         "id": "783727560110129152",
+         "isCategory": false,
+         "name": "MCP服务介绍",
+         "parentId": "755471013420411648",
+         "sort": "11",
+         "specialId": "226337046514476288",
+         "status": 0
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": "",
+       "id": "755471013420411648",
+       "isCategory": true,
+       "name": "RESTful API",
+       "parentId": "226337544983020032",
+       "sort": "24",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": null,
+     "entityId": null,
+     "entityType": null,
+     "id": "226337544983020032",
+     "isCategory": true,
+     "name": "用户手册",
+     "parentId": "-1",
+     "sort": "6",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download/0101d484c5557ed54c72bb0b1a6318f0121d.png",
+  "department": null,
+  "id": "118688",
+  "name": "郭玲_流程集成开放",
+  "nameSpell": "name"
+ },
+ "totalAppraisalScore": 0,
+ "iflytekId": null,
+ "views": 1017,
+ "productLineId": 29,
+ "comments": 0,
+ "similarityCount": null,
+ "totalAppraisalUsers": 0,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1779760853000,
+ "appraisalScore": 0,
+ "unuseful": 0,
+ "knowledgeCheckStatus": 2,
+ "otherProductLineIds": [
+  40
+ ],
+ "auditAt": 1764663225000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "open_mcp_server",
+        "id": "827969936067517696",
+        "name": "MCP服务",
+        "productLineId": null,
+        "sort": 22,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "272103818790291456",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "563356589114194944",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 33,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "93",
+     "name": "金蝶AI套件",
+     "productLineId": 40,
+     "sort": 0,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "XSRM",
+     "createdAt": 1726129666000,
+     "creator": {
+      "avatar": "/download?fileName=01014c2c1c8b203f4a8aaa1e18dce7725efa.png",
+      "department": null,
+      "id": "1155",
+      "name": "陈旭",
+      "nameSpell": "lansehuanxiang"
+     },
+     "description": "快速入门",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download?fileName=01007ab64f34c9004072ad021d226f8216fe.png",
+     "id": "622106158584431616",
+     "name": "快速入门",
+     "productLine": {
+      "active": true,
+      "appLogo": "金蝶云星空|旗舰版",
+      "categoryCode": "X04",
+      "courseLogo": "",
+      "domain": "",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": false,
+      "id": 40,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/01006d278204e9994fe9b4fc05bcdcf7ba45.png",
+      "name": "金蝶AI套件",
+      "rank": 3,
+      "seriesCode": "S0361"
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download?fileName=01011dc4dc4a745a4974a64ff09ab41e9eab.png",
+      "department": null,
+      "id": "1012",
+      "name": "angel",
+      "nameSpell": "angel"
+     },
+     "updatedAt": 1726129666000
+    },
+    {
+     "code": "OperatingGuide",
+     "createdAt": 1726129117000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "功能介绍",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/010067c2eb39e20946d0a9c9adc55eb5f864.png",
+     "id": "622103852958745600",
+     "name": "功能介绍",
+     "productLine": {
+      "active": true,
+      "appLogo": "金蝶云星空|旗舰版",
+      "categoryCode": "X04",
+      "courseLogo": "",
+      "domain": "",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": false,
+      "id": 40,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/01006d278204e9994fe9b4fc05bcdcf7ba45.png",
+      "name": "金蝶AI套件",
+      "rank": 3,
+      "seriesCode": "S0361"
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download?fileName=01011dc4dc4a745a4974a64ff09ab41e9eab.png",
+      "department": null,
+      "id": "1012",
+      "name": "angel",
+      "nameSpell": "angel"
+     },
+     "updatedAt": 1726129117000
+    }
+   ],
+   "productLineId": 40,
+   "specials": null
+  },
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openmcpext",
+        "id": "760141781395833856",
+        "name": "MCP服务",
+        "productLineId": null,
+        "sort": 26,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 1,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "OperatingGuide",
+     "createdAt": 1556519201000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "某一功能的具体说明介绍，包括应用场景、参数说明、具体操作步骤等",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/010037894174802d4b9f8782f1f0010a6ddd.png",
+     "id": "202203081641",
+     "name": "功能介绍",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010176d38341668f44fdb94c95058a90e4b8.png",
+      "department": "云社区运营部",
+      "id": "2147406697",
+      "name": "多肉丸子",
+      "nameSpell": "kejuan"
+     },
+     "updatedAt": 1676857681000
+    },
+    {
+     "code": "rumen",
+     "createdAt": 1605667807000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "入门类的知识可使用此标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100d322b9282bcc438faa894f4eec029977.png",
+     "id": "202203081646",
+     "name": "基础入门",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download?fileName=0101ec1d6ce599b442dab7d0b794c1fce88d.png",
+      "department": null,
+      "id": "1009",
+      "name": "一颗小星星",
+      "nameSpell": "fengling"
+     },
+     "updatedAt": 1657872008000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          {
+           "childCategory": [
+            null
+           ],
+           "code": null,
+           "description": "",
+           "entityId": "783706444222381056",
+           "entityType": "Knowledge",
+           "id": "783727560110129152",
+           "isCategory": false,
+           "name": "MCP服务介绍",
+           "parentId": "755471013420411648",
+           "sort": "11",
+           "specialId": "226337046514476288",
+           "status": 0
+          }
+         ],
+         "code": null,
+         "description": "",
+         "entityId": null,
+         "entityType": "",
+         "id": "755471013420411648",
+         "isCategory": true,
+         "name": "RESTful API",
+         "parentId": "226337544983020032",
+         "sort": "24",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": null,
+       "entityId": null,
+       "entityType": null,
+       "id": "226337544983020032",
+       "isCategory": true,
+       "name": "用户手册",
+       "parentId": "-1",
+       "sort": "6",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": "<h2 style=\"text-align: justify\">1&nbsp;功能介绍</h2><p style=\"text-align: justify\">苍穹MCP服务支持将苍穹REST API一键打包发布为MCP工具包，苍穹Agent或第三方AI工具通过标准协议实现标准接口的智能调用。</p><p style=\"text-align: justify\"></p><h2 style=\"text-align: justify\">2 应用场景</h2><p style=\"text-align: justify\">通过该功能，企业能够使用AI自主调用苍穹标准接口，实现业务流程自动化运行。</p><p style=\"text-align: justify\"></p><h2 style=\"text-align: justify\">3 系统路径</h2><p style=\"text-align: justify\">开放服务云&gt;OpenAPI &gt;MCP服务</p><p style=\"text-align: justify\"></p><h2 style=\"text-align: justify\">4 关键字段/按钮说明</h2><h3 style=\"text-align: justify\"><strong>4.1&nbsp;关键按钮说明</strong></h3><table style=\"min-width: 50px\"><colgroup><col style=\"min-width: 25px\"><col style=\"min-width: 25px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p>按钮名称</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p>详细解释</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p>获取URL</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p>获取MCP服务包的SSE服务地址</p></td></tr></tbody></table><p style=\"text-align: justify\"></p><h2>5 主要操作</h2><p>MCP服务主要分为内部与外部两种：</p><ul><li><p>外部MCP服务是将OpenAPI的RESTful API包装为MCP工具给第三方AI客户端进行调用。</p></li><li><p>内部MCP服务通过代码注解的方式将JAVA方法包装为MCP工具给苍穹AI Agent进行调用。</p></li></ul><p><img src=\"/download/01002efc0e4d34d6499b8d20a99e7c8c097b.png\" alt=\"上传图片\"></p><h3>5.1 创建外部MCP服务包</h3><ul><li><p style=\"text-align: justify\"><strong>前提条件</strong></p></li></ul><p style=\"text-align: justify\">已经创建好了RESTful API</p><ul><li><p style=\"text-align: justify\"><strong>操作步骤</strong></p></li></ul><p style=\"text-align: justify\"><span style=\"color: rgb(227, 108, 9)\"><em>注：外部MCP服务需要依赖领域模型提供的MCP服务实例，可联系领域模型部门的曹勇老师提供镜像。</em></span></p><p style=\"text-align: justify\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-步骤1： 将领域模型提供的MCP服务实例镜像安装到服务器上，确保该服务器能被AI客户端和苍穹所访问。</p><p style=\"text-align: justify\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-步骤2：将部署好的MCP服务实例地址配置到公共参数中，配置路径：公共设置&gt;系统参数&gt;OpenAPI参数&gt;MCP服务地址。</p><p><img src=\"/download/01001637bca0ee5d45389bf1d874953e2749.png\" alt=\"上传图片\"></p><p></p><p style=\"text-align: justify\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-步骤3：在MCP服务页面创建MCP服务包，可以选择多个相关业务领域的REST API包装为MCP工具。</p><p style=\"text-align: justify\"></p><p><img src=\"/download/0100720919d2d6b1421fb66aea6d15da64bb.png\" alt=\"上传图片\"></p><p></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-步骤4：由于AI客户端调用MCP工具最后会透传到OpenAPI，所以鉴权机制还是沿用OpenAPI的。可以创建一个第三方应用，配置好访问策略，AI客户端也配置响应的ID与秘钥。此处以基本认证为例，需要将对应的秘钥配置到AI客户端的请求头中。</p><p></p><p style=\"text-align: center\"><img src=\"/download/010095a3ece5a9a04ef39b6f0b771bd82b0f.png\" alt=\"上传图片\"></p><p style=\"text-align: center\"></p><p><img src=\"/download/010000fd74c417fe4a62b58717357fa24afb.png\" alt=\"上传图片\"></p><p></p><ul><li><p style=\"text-align: justify\"><strong>后续操作</strong></p><p style=\"text-align: justify\">测试连接正常后可以同步拉取MCP工具，将MCP工具添加到智能体中便可进行自主调用。</p><p style=\"text-align: justify\"></p></li></ul><p style=\"text-align: justify\"></p><h3>5.2 创建内部MCP服务</h3><ul><li><p style=\"text-align: justify\"><strong>操作步骤</strong></p></li></ul><p style=\"text-align: justify\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-步骤1： 内部MCP服务需要统一放到kd.bos.mcp.tools包名下才能扫描到，MCP注解方式参考下图：</p><p style=\"text-align: center\"><img src=\"/download/01009fe06fb1e4804de4af91cce90fabac4d.png\" alt=\"上传图片\"></p><p style=\"text-align: left\"><span style=\"color: rgb(227, 108, 9)\"><em>注：服务编码格式为</em></span><span style=\"color: rgb(227, 108, 9); font-size: 13px\"><em>isv_cloud_app_serviceCode，如果是标品的，默认isv为kingdee，然后是云，应用，服务编码。</em></span></p><p style=\"text-align: justify\"></p><p style=\"text-align: justify\"></p><p style=\"text-align: justify\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-步骤2：在苍穹Agent开发平台中新增内部MCP工具。</p><p><img src=\"/download/0100722e92ad505e43e7a985c336fee25931.png\" alt=\"上传图片\"></p><p style=\"text-align: justify\"></p><p style=\"text-align: justify\">可以选择当前环境中已扫描到的内部MCP服务，系统将自动拉取该服务下的所有MCP工具。</p><p><img src=\"/download/0100a1c3cf63801d49149d926130e81d1b74.png\" alt=\"上传图片\"></p><p style=\"text-align: justify\"></p><p><img src=\"/download/01006ae3f2d17d804e1ba5d9c4996bc3a53a.png\" alt=\"上传图片\"></p><p></p><ul><li><p style=\"text-align: justify\"><strong>后续操作</strong></p><p style=\"text-align: justify\">在测试与启用工具后，便可以将工具添加到智能体中进行调用。</p></li></ul><p></p><h2>6 注意事项</h2><p>AI调用工具存在一定安全风险，请勿将关键操作发布为MCP工具。</p><p></p><hr><p></p><p></p><h2>变更记录</h2><table style=\"width: 681px\"><colgroup><col style=\"width: 176px\"><col style=\"width: 359px\"><col style=\"width: 146px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"176\" data-background-color=\"\" style=\"background-color: \"><p><strong>产品版本</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"359\" data-background-color=\"\" style=\"background-color: \"><p><strong>更新内容</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"146\" data-background-color=\"\" style=\"background-color: \"><p><strong>更新时间</strong></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"176\" data-background-color=\"\" style=\"background-color: \"><p><strong>V8.0.1</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"359\" data-background-color=\"\" style=\"background-color: \"><p>初始版本</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"146\" data-background-color=\"\" style=\"background-color: \"><p>2025年11月</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"176\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\"><strong>V8.0.4</strong></span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"359\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(0, 0, 0)\">支持嵌入式MCP</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"146\" data-background-color=\"\" style=\"background-color: \"><p>2025年12月</p></td></tr></tbody></table>"
+}

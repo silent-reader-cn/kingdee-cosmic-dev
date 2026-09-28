@@ -1,0 +1,992 @@
+{
+ "badNum": 0,
+ "identityTagIds": null,
+ "knowledgeId": "386485262278647808",
+ "createdAt": 1669953267000,
+ "collections": 8,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "386485262278647808",
+ "contentType": 1,
+ "updatedAt": 1715928352000,
+ "knowledgeUpdater": {
+  "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+  "department": null,
+  "id": "132488613174518784",
+  "name": "某个路易",
+  "nameSpell": "name"
+ },
+ "assessStatus": 0,
+ "knowledgeStatus": 2,
+ "assessHandleStatus": null,
+ "knowledgeCreatedAt": 1669953267000,
+ "version": 47,
+ "labels": [],
+ "editedAt": 1715928352000,
+ "identityTags": null,
+ "useful": 14,
+ "errors": [],
+ "isCollected": false,
+ "totalFeedBacks": 0,
+ "attachments": [],
+ "sources": [],
+ "editTitle": "OpenAPI（开放平台）新手指引",
+ "title": "OpenAPI（开放平台）新手指引",
+ "content": "<p label=\"\" class=\"\" style=\"\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">1. 简介</h2><p style=\"color: rgb(10, 19, 37);\">OpenAPI（原开放平台）功能分为以下几个部分。<br/></p><p style=\"color: rgb(10, 19, 37);\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">2. 注册第三方应用</h2><p style=\"color: rgb(10, 19, 37);\">第三方应用作为外部系统调用苍穹接口的身份标识，拥有登录认证、接口授权、IP限制等功能。</p><p style=\"color: rgb(10, 19, 37);\">有关详细信息，请参阅<a href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=226337544983020032&id=225286231527892224&productLineId=29\" title=\"\" target=\"_blank\" class=\"\"><span style=\"color: rgb(0, 176, 240);\">第三</span><span style=\"color: rgb(0, 176, 240);\">方</span><span style=\"color: rgb(0, 176, 240);\">应用</span><span style=\"color: rgb(0, 176, 240);\">介绍</span></a>&nbsp;。</p><p style=\"color: rgb(10, 19, 37);\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">3.&nbsp;认证</h2><p style=\"color: rgb(10, 19, 37);\">开放平台OpenAPI 要求其用户进行身份认证，这是通过使用第三方应用appId和appSecret完成的。</p><p style=\"color: rgb(10, 19, 37);\">继续阅读<a href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=239331354741842688&id=218694224487485696&productLineId=29\" title=\"\" target=\"_blank\" class=\"\"><span style=\"color: rgb(0, 176, 240);\">身份认证</span></a>。</p><p style=\"color: rgb(10, 19, 37);\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">4.&nbsp;开发操作API</h2><p style=\"color: rgb(10, 19, 37);\">通过开放平台零代码配置的方式开发API，您可以使用操作API，快速发布业务对象的所有操作接口。</p><p style=\"color: rgb(10, 19, 37);\">有关详细信息，请参阅<a href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=322414926260669696&id=263964194037744640&productLineId=29\" title=\"\" target=\"_blank\" class=\"\"><span style=\"color: rgb(0, 176, 240);\">操作API</span></a>。</p><p style=\"color: rgb(10, 19, 37);\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">5.&nbsp;开发Java插件API</h2><p style=\"color: rgb(10, 19, 37);\">通过开放平台高代码方式开发API， 您可以使用Java插件API，这类API不依附任何业务对象，出入参数可以完全自定义。</p><p style=\"color: rgb(10, 19, 37);\">使用<a href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=358247193897143040&id=294499338368404736&productLineId=29\" title=\"\" target=\"_blank\" class=\"\"><span style=\"color: rgb(0, 176, 240);\">Java插件API</span></a>。</p><p style=\"color: rgb(10, 19, 37);\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">6.&nbsp;开发脚本API</h2><p style=\"color: rgb(10, 19, 37);\">通过开放平台低代码方式开发API，您可以使用脚本API，通过脚本可实现多个API、微服务、函数库等之间的组合调用和数据处理，部署灵活。</p><p style=\"\"><span style=\"color: rgb(10, 19, 37);\">使用</span><a href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=358247193897143040&id=322686880653270784&productLineId=29\" title=\"\" target=\"_blank\" class=\"\"><span style=\"color: rgb(0, 176, 240);\">脚本API</span></a><span style=\"color: rgb(10, 19, 37);\">。</span></p><p style=\"\"><span style=\"color: rgb(10, 19, 37);\"><br/></span></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">7. 开发WebService接口</h2><p style=\"\"><span style=\"color: rgb(10, 19, 37);\">通过开放平台可以</span>将OpenAPI一键发布为WebService接口，支持SOAP1.1、SOAP1.2 协议标准。</p><p style=\"color: rgb(10, 19, 37);\">请参阅<a href=\"https://vip.kingdee.com/article/292625960623314176\" title=\"\" target=\"_blank\" class=\"\" style=\"\"><span style=\"color: rgb(0, 176, 240);\">发布WebService接口</span></a>。</p><p style=\"color: rgb(10, 19, 37);\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">8. API测试</h2><p style=\"\">开放平台可模拟真实数据调用API服务。无需配置Postman，即可完成一键调试。支持JSON、XML、SOAP1.1、SOAP1.2四种格式。</p><p style=\"color: rgb(10, 19, 37);\">详见<a href=\"https://vip.kingdee.com/article/264387370336526592?productLineId=29&isKnowledge=2\" title=\"\" target=\"_blank\" class=\"\" style=\"\"><span style=\"color: rgb(0, 176, 240);\">API在线测试</span></a>。</p><p style=\"color: rgb(10, 19, 37);\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">9. API监控</h2><p style=\"color: rgb(10, 19, 37);\">通过开放平台API日志、调用统计看板，<span style=\"color: rgb(26, 26, 26);\">帮助用户快速定位故障，</span><span style=\"color: rgb(26, 26, 26);\">实时监控目标偏离情况</span>。</p><p style=\"color: rgb(10, 19, 37);\">详见<a href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=226337544983020032&id=263990262375226880&productLineId=29\" title=\"\" target=\"_blank\" class=\"\"><span style=\"color: rgb(0, 176, 240);\">API日志</span></a>、<a href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=226337544983020032&id=263991453691855872&productLineId=29\" title=\"\" target=\"_blank\" class=\"\"><span style=\"color: rgb(0, 176, 240);\">API统计</span></a>。</p><p style=\"color: rgb(10, 19, 37);\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">10. API安全</h2><p style=\"color: rgb(10, 19, 37);\">开放平台支除多种不同的<a href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=239331354741842688&id=218694224487485696&productLineId=29\" title=\"\" target=\"_blank\" class=\"\"><span style=\"color: rgb(0, 176, 240);\">认证方式</span></a>外，还<span style=\"color: rgb(26, 26, 26);\">支持API授权、IP白名单、<a href=\"https://vip.kingdee.com/article/383567026112739840\" title=\"\" target=\"_blank\" class=\"\" style=\"\"><span style=\"color: rgb(0, 176, 240);\">签名加密</span></a>、<a href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=226337544983020032&id=322444102627254016&productLineId=29\" title=\"\" target=\"_blank\" class=\"\"><span style=\"color: rgb(0, 176, 240);\">限流策略</span></a>等功能，严格控制访问数据权限，避免发生接口越权。</span></p><p style=\"color: rgb(10, 19, 37);\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">11.&nbsp;Webhooks</h2><p style=\"color: rgb(10, 19, 37);\">开放平台Webhook回调地址可以通过简单的配置生成，对方系统调用接口时，无需进行登录认证。</p><p style=\"color: rgb(10, 19, 37);\">请参阅<a href=\"https://vip.kingdee.com/article/352773265946763776?productLineId=29&isKnowledge=2\" title=\"\" target=\"_blank\" class=\"\" style=\"\"><span style=\"color: rgb(0, 176, 240);\">Webhook</span></a>。</p><p style=\"color: rgb(10, 19, 37);\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">12. API文档</h2><p style=\"color: rgb(10, 19, 37);\">通过API文档展示接口基本信息、参数示例、错误码等信息，帮助开发人员快速上手，提升系统对接效率。</p><p style=\"color: rgb(10, 19, 37);\">详见<a href=\"https://dev.kingdee.com/sub/index/open/api/home\" title=\"\" target=\"_blank\" class=\"\"><span style=\"color: rgb(0, 176, 240);\">API文档</span></a>。</p><p style=\"color: rgb(10, 19, 37);\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">13.平台SDK</h2><p style=\"color: rgb(10, 19, 37);\">使用这些 SDK 可以访问快速访问金蝶AI苍穹内部接口。</p><p style=\"color: rgb(10, 19, 37);\">详见<a href=\"https://dev.kingdee.com/sdk/Cosmic%20V5.0.011/index.html?nav=class&module=kd.bos.open.api&package=kd.bos.openapi.common.util&name=OpenApiSdkUtil\" title=\"\" target=\"_blank\" class=\"\"><span style=\"color: rgb(0, 176, 240);\">平台SDK</span>&nbsp;</a>。</p><p style=\"color: rgb(10, 19, 37);\"><br/></p><p style=\"color: rgb(10, 19, 37);\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">14. 接口规范</h2><p>苍穹平台OpenAPI接口规范。</p><p><span style=\"color: rgb(10, 19, 37);\">详见</span><a href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=386536775126291968&id=448792125560557568&productLineId=29\" title=\"\" target=\"_blank\" class=\"\"><span style=\"color: rgb(0, 176, 240);\">接口规范</span>&nbsp;</a><span style=\"color: rgb(10, 19, 37);\">。</span></p><p style=\"\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">15. 自定义API示例</h2><p style=\"color: rgb(10, 19, 37);\">开放门户中提供了更多自定义API开发示例。</p><p label=\"正文\" style=\"\">请参阅<a href=\"https://dev.kingdee.com/open/detail/sdk/1915311708319005696\" target=\"_blank\"><span style=\"color: rgb(0, 176, 240);\">自定义API传输TextPlain</span></a>、<a href=\"https://dev.kingdee.com/open/detail/sdk/1915311708881043456\" target=\"_blank\"><span style=\"color: rgb(0, 176, 240);\">请求头及响应头特殊处理</span></a>、<a href=\"https://dev.kingdee.com/open/detail/sdk/1915311709392747520\" target=\"_blank\"><span style=\"color: rgb(0, 176, 240);\">异常及状态码</span></a>、<a href=\"https://dev.kingdee.com/open/detail/sdk/1915311709887676416\" target=\"_blank\"><span style=\"color: rgb(0, 176, 240);\">文件流处理接口</span></a>、<a href=\"https://dev.kingdee.com/open/detail/sdk/1915311711984828416\" target=\"_blank\" style=\"color: rgb(0, 176, 240);\"><span style=\"color: rgb(0, 176, 240);\">脚本API中API的调用及传参</span></a><span style=\"color: rgb(0, 0, 0);\">。</span></p><p label=\"正文\" style=\"\"><br/></p><p style=\"\"><br/></p><p><br/></p>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 87,
+   "isOpen": 1,
+   "name": "金蝶AI苍穹",
+   "productLineId": 29,
+   "series": "developer01",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        null
+       ],
+       "code": null,
+       "description": "",
+       "entityId": "386485262278647808",
+       "entityType": "Knowledge",
+       "id": "386536914444293632",
+       "isCategory": false,
+       "name": "OpenAPI（开放平台）新手指引",
+       "parentId": "386536775126291968",
+       "sort": "1",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": "",
+     "entityId": null,
+     "entityType": null,
+     "id": "386536775126291968",
+     "isCategory": true,
+     "name": "新手指引",
+     "parentId": "-1",
+     "sort": "2",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download/01010204d4b71b654a208006fa1004eac36a.png",
+  "department": null,
+  "id": "740211268992385024",
+  "name": "毛毛去哪儿",
+  "nameSpell": "name"
+ },
+ "totalAppraisalScore": 70,
+ "iflytekId": null,
+ "views": 38996,
+ "productLineId": 29,
+ "comments": 1,
+ "similarityCount": 0,
+ "totalAppraisalUsers": 14,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1715928352000,
+ "appraisalScore": 0,
+ "unuseful": 0,
+ "knowledgeCheckStatus": 2,
+ "otherProductLineIds": [],
+ "auditAt": 1715928352000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapistatdatareport",
+        "id": "344584967017250560",
+        "name": "API统计信息",
+        "productLineId": null,
+        "sort": 5,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "5614",
+       "name": "开放平台",
+       "productLineId": null,
+       "sort": 2,
+       "type": "module"
+      },
+      "code": "DEV",
+      "id": "5576",
+      "name": "开发服务云",
+      "productLineId": null,
+      "sort": 11,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 0,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapiservicenew",
+        "id": "344594257418019328",
+        "name": "API服务管理1.0",
+        "productLineId": null,
+        "sort": 13,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "5614",
+       "name": "开放平台",
+       "productLineId": null,
+       "sort": 2,
+       "type": "module"
+      },
+      "code": "DEV",
+      "id": "5576",
+      "name": "开发服务云",
+      "productLineId": null,
+      "sort": 11,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 1,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapiscript",
+        "id": "344585285701100032",
+        "name": "代码片段管理",
+        "productLineId": null,
+        "sort": 7,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "5614",
+       "name": "开放平台",
+       "productLineId": null,
+       "sort": 2,
+       "type": "module"
+      },
+      "code": "DEV",
+      "id": "5576",
+      "name": "开发服务云",
+      "productLineId": null,
+      "sort": 11,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 2,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": null,
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 3,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapiunittest",
+        "id": "344592450260322816",
+        "name": "开放平台示例",
+        "productLineId": null,
+        "sort": 12,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "5614",
+       "name": "开放平台",
+       "productLineId": null,
+       "sort": 2,
+       "type": "module"
+      },
+      "code": "DEV",
+      "id": "5576",
+      "name": "开发服务云",
+      "productLineId": null,
+      "sort": 11,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 4,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapi_apilist_layout",
+        "id": "505686038019362304",
+        "name": "异步API",
+        "productLineId": null,
+        "sort": 1,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 5,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapilogdata",
+        "id": "344592117601683968",
+        "name": "API日志",
+        "productLineId": null,
+        "sort": 11,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "5614",
+       "name": "开放平台",
+       "productLineId": null,
+       "sort": 2,
+       "type": "module"
+      },
+      "code": "DEV",
+      "id": "5576",
+      "name": "开发服务云",
+      "productLineId": null,
+      "sort": 11,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 6,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapicustomsort",
+        "id": "344585738685761792",
+        "name": "自定义分类",
+        "productLineId": null,
+        "sort": 10,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "5614",
+       "name": "开放平台",
+       "productLineId": null,
+       "sort": 2,
+       "type": "module"
+      },
+      "code": "DEV",
+      "id": "5576",
+      "name": "开发服务云",
+      "productLineId": null,
+      "sort": 11,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 7,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "bosparameterconsole",
+        "id": "344585186178779648",
+        "name": "参数配置",
+        "productLineId": null,
+        "sort": 6,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "5614",
+       "name": "开放平台",
+       "productLineId": null,
+       "sort": 2,
+       "type": "module"
+      },
+      "code": "DEV",
+      "id": "5576",
+      "name": "开发服务云",
+      "productLineId": null,
+      "sort": 11,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 8,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapiscripthelper",
+        "id": "344585435118815488",
+        "name": "帮助手册",
+        "productLineId": null,
+        "sort": 9,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "5614",
+       "name": "开放平台",
+       "productLineId": null,
+       "sort": 2,
+       "type": "module"
+      },
+      "code": "DEV",
+      "id": "5576",
+      "name": "开发服务云",
+      "productLineId": null,
+      "sort": 11,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 9,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapidoctable",
+        "id": "344584123828560384",
+        "name": "API文档",
+        "productLineId": null,
+        "sort": 0,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "5614",
+       "name": "开放平台",
+       "productLineId": null,
+       "sort": 2,
+       "type": "module"
+      },
+      "code": "DEV",
+      "id": "5576",
+      "name": "开发服务云",
+      "productLineId": null,
+      "sort": 11,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 10,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapiscriptdebug",
+        "id": "344585366751955456",
+        "name": "脚本调试",
+        "productLineId": null,
+        "sort": 8,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "5614",
+       "name": "开放平台",
+       "productLineId": null,
+       "sort": 2,
+       "type": "module"
+      },
+      "code": "DEV",
+      "id": "5576",
+      "name": "开发服务云",
+      "productLineId": null,
+      "sort": 11,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 11,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapiapilistlayout",
+        "id": "344582232549528320",
+        "name": "API管理",
+        "productLineId": null,
+        "sort": 1,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "5614",
+       "name": "开放平台",
+       "productLineId": null,
+       "sort": 2,
+       "type": "module"
+      },
+      "code": "DEV",
+      "id": "5576",
+      "name": "开发服务云",
+      "productLineId": null,
+      "sort": 11,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 12,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapilimitstrategy",
+        "id": "344584842228779264",
+        "name": "限流策略",
+        "productLineId": null,
+        "sort": 3,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "5614",
+       "name": "开放平台",
+       "productLineId": null,
+       "sort": 2,
+       "type": "module"
+      },
+      "code": "DEV",
+      "id": "5576",
+      "name": "开发服务云",
+      "productLineId": null,
+      "sort": 11,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 13,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapiservicedoc",
+        "id": "225559723150255360",
+        "name": "API清单",
+        "productLineId": null,
+        "sort": 14,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "5614",
+       "name": "开放平台",
+       "productLineId": null,
+       "sort": 2,
+       "type": "module"
+      },
+      "code": "DEV",
+      "id": "5576",
+      "name": "开发服务云",
+      "productLineId": null,
+      "sort": 11,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 14,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "thirdapp",
+        "id": "6254",
+        "name": "第三方应用",
+        "productLineId": null,
+        "sort": 2,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "5614",
+       "name": "开放平台",
+       "productLineId": null,
+       "sort": 2,
+       "type": "module"
+      },
+      "code": "DEV",
+      "id": "5576",
+      "name": "开发服务云",
+      "productLineId": null,
+      "sort": 11,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 15,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapireporttable",
+        "id": "344585077059010304",
+        "name": "API统计看板",
+        "productLineId": null,
+        "sort": 4,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "5614",
+       "name": "开放平台",
+       "productLineId": null,
+       "sort": 2,
+       "type": "module"
+      },
+      "code": "DEV",
+      "id": "5576",
+      "name": "开发服务云",
+      "productLineId": null,
+      "sort": 11,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 16,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "rumen",
+     "createdAt": 1605667807000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "入门类的知识可使用此标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100d322b9282bcc438faa894f4eec029977.png",
+     "id": "202203081646",
+     "name": "基础入门",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download?fileName=0101ec1d6ce599b442dab7d0b794c1fce88d.png",
+      "department": null,
+      "id": "1009",
+      "name": "一颗小星星",
+      "nameSpell": "fengling"
+     },
+     "updatedAt": 1657872008000
+    },
+    {
+     "code": "ScenarioBasedGuidance",
+     "createdAt": 1676978333000,
+     "creator": {
+      "avatar": "/download/010176d38341668f44fdb94c95058a90e4b8.png",
+      "department": "云社区运营部",
+      "id": "2147406697",
+      "name": "多肉丸子",
+      "nameSpell": "kejuan"
+     },
+     "description": "基于标准产品，按使用场景指引操作，包含一个或多个功能的组合应用",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/01006b7b8ed9461b4d0e9670ec0d4cb7e48f.png",
+     "id": "415950525675139584",
+     "name": "场景指引",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010176d38341668f44fdb94c95058a90e4b8.png",
+      "department": "云社区运营部",
+      "id": "2147406697",
+      "name": "多肉丸子",
+      "nameSpell": "kejuan"
+     },
+     "updatedAt": 1676978333000
+    },
+    {
+     "code": "essencesummary",
+     "createdAt": 1606118073000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "精华汇总",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100402c6f8df169483db114f71043c19ec2.png",
+     "id": "202203081649",
+     "name": "精华汇总",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 2,
+     "updatePerson": {
+      "avatar": "/download?fileName=010162cfa9d5437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1129",
+      "name": "灏",
+      "nameSpell": "hao"
+     },
+     "updatedAt": 1606118073000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "386485262278647808",
+         "entityType": "Knowledge",
+         "id": "386536914444293632",
+         "isCategory": false,
+         "name": "OpenAPI（开放平台）新手指引",
+         "parentId": "386536775126291968",
+         "sort": "1",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": null,
+       "id": "386536775126291968",
+       "isCategory": true,
+       "name": "新手指引",
+       "parentId": "-1",
+       "sort": "2",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": "<p label=\"\" class=\"\" style=\"\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">1. 简介</h2><p style=\"color: rgb(10, 19, 37);\">OpenAPI（原开放平台）功能分为以下几个部分。<br/></p><p style=\"color: rgb(10, 19, 37);\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">2. 注册第三方应用</h2><p style=\"color: rgb(10, 19, 37);\">第三方应用作为外部系统调用苍穹接口的身份标识，拥有登录认证、接口授权、IP限制等功能。</p><p style=\"color: rgb(10, 19, 37);\">有关详细信息，请参阅<a href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=226337544983020032&id=225286231527892224&productLineId=29\" title=\"\" target=\"_blank\" class=\"\"><span style=\"color: rgb(0, 176, 240);\">第三</span><span style=\"color: rgb(0, 176, 240);\">方</span><span style=\"color: rgb(0, 176, 240);\">应用</span><span style=\"color: rgb(0, 176, 240);\">介绍</span></a>&nbsp;。</p><p style=\"color: rgb(10, 19, 37);\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">3.&nbsp;认证</h2><p style=\"color: rgb(10, 19, 37);\">开放平台OpenAPI 要求其用户进行身份认证，这是通过使用第三方应用appId和appSecret完成的。</p><p style=\"color: rgb(10, 19, 37);\">继续阅读<a href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=239331354741842688&id=218694224487485696&productLineId=29\" title=\"\" target=\"_blank\" class=\"\"><span style=\"color: rgb(0, 176, 240);\">身份认证</span></a>。</p><p style=\"color: rgb(10, 19, 37);\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">4.&nbsp;开发操作API</h2><p style=\"color: rgb(10, 19, 37);\">通过开放平台零代码配置的方式开发API，您可以使用操作API，快速发布业务对象的所有操作接口。</p><p style=\"color: rgb(10, 19, 37);\">有关详细信息，请参阅<a href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=322414926260669696&id=263964194037744640&productLineId=29\" title=\"\" target=\"_blank\" class=\"\"><span style=\"color: rgb(0, 176, 240);\">操作API</span></a>。</p><p style=\"color: rgb(10, 19, 37);\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">5.&nbsp;开发Java插件API</h2><p style=\"color: rgb(10, 19, 37);\">通过开放平台高代码方式开发API， 您可以使用Java插件API，这类API不依附任何业务对象，出入参数可以完全自定义。</p><p style=\"color: rgb(10, 19, 37);\">使用<a href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=358247193897143040&id=294499338368404736&productLineId=29\" title=\"\" target=\"_blank\" class=\"\"><span style=\"color: rgb(0, 176, 240);\">Java插件API</span></a>。</p><p style=\"color: rgb(10, 19, 37);\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">6.&nbsp;开发脚本API</h2><p style=\"color: rgb(10, 19, 37);\">通过开放平台低代码方式开发API，您可以使用脚本API，通过脚本可实现多个API、微服务、函数库等之间的组合调用和数据处理，部署灵活。</p><p style=\"\"><span style=\"color: rgb(10, 19, 37);\">使用</span><a href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=358247193897143040&id=322686880653270784&productLineId=29\" title=\"\" target=\"_blank\" class=\"\"><span style=\"color: rgb(0, 176, 240);\">脚本API</span></a><span style=\"color: rgb(10, 19, 37);\">。</span></p><p style=\"\"><span style=\"color: rgb(10, 19, 37);\"><br/></span></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">7. 开发WebService接口</h2><p style=\"\"><span style=\"color: rgb(10, 19, 37);\">通过开放平台可以</span>将OpenAPI一键发布为WebService接口，支持SOAP1.1、SOAP1.2 协议标准。</p><p style=\"color: rgb(10, 19, 37);\">请参阅<a href=\"https://vip.kingdee.com/article/292625960623314176\" title=\"\" target=\"_blank\" class=\"\" style=\"\"><span style=\"color: rgb(0, 176, 240);\">发布WebService接口</span></a>。</p><p style=\"color: rgb(10, 19, 37);\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">8. API测试</h2><p style=\"\">开放平台可模拟真实数据调用API服务。无需配置Postman，即可完成一键调试。支持JSON、XML、SOAP1.1、SOAP1.2四种格式。</p><p style=\"color: rgb(10, 19, 37);\">详见<a href=\"https://vip.kingdee.com/article/264387370336526592?productLineId=29&isKnowledge=2\" title=\"\" target=\"_blank\" class=\"\" style=\"\"><span style=\"color: rgb(0, 176, 240);\">API在线测试</span></a>。</p><p style=\"color: rgb(10, 19, 37);\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">9. API监控</h2><p style=\"color: rgb(10, 19, 37);\">通过开放平台API日志、调用统计看板，<span style=\"color: rgb(26, 26, 26);\">帮助用户快速定位故障，</span><span style=\"color: rgb(26, 26, 26);\">实时监控目标偏离情况</span>。</p><p style=\"color: rgb(10, 19, 37);\">详见<a href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=226337544983020032&id=263990262375226880&productLineId=29\" title=\"\" target=\"_blank\" class=\"\"><span style=\"color: rgb(0, 176, 240);\">API日志</span></a>、<a href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=226337544983020032&id=263991453691855872&productLineId=29\" title=\"\" target=\"_blank\" class=\"\"><span style=\"color: rgb(0, 176, 240);\">API统计</span></a>。</p><p style=\"color: rgb(10, 19, 37);\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">10. API安全</h2><p style=\"color: rgb(10, 19, 37);\">开放平台支除多种不同的<a href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=239331354741842688&id=218694224487485696&productLineId=29\" title=\"\" target=\"_blank\" class=\"\"><span style=\"color: rgb(0, 176, 240);\">认证方式</span></a>外，还<span style=\"color: rgb(26, 26, 26);\">支持API授权、IP白名单、<a href=\"https://vip.kingdee.com/article/383567026112739840\" title=\"\" target=\"_blank\" class=\"\" style=\"\"><span style=\"color: rgb(0, 176, 240);\">签名加密</span></a>、<a href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=226337544983020032&id=322444102627254016&productLineId=29\" title=\"\" target=\"_blank\" class=\"\"><span style=\"color: rgb(0, 176, 240);\">限流策略</span></a>等功能，严格控制访问数据权限，避免发生接口越权。</span></p><p style=\"color: rgb(10, 19, 37);\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">11.&nbsp;Webhooks</h2><p style=\"color: rgb(10, 19, 37);\">开放平台Webhook回调地址可以通过简单的配置生成，对方系统调用接口时，无需进行登录认证。</p><p style=\"color: rgb(10, 19, 37);\">请参阅<a href=\"https://vip.kingdee.com/article/352773265946763776?productLineId=29&isKnowledge=2\" title=\"\" target=\"_blank\" class=\"\" style=\"\"><span style=\"color: rgb(0, 176, 240);\">Webhook</span></a>。</p><p style=\"color: rgb(10, 19, 37);\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">12. API文档</h2><p style=\"color: rgb(10, 19, 37);\">通过API文档展示接口基本信息、参数示例、错误码等信息，帮助开发人员快速上手，提升系统对接效率。</p><p style=\"color: rgb(10, 19, 37);\">详见<a href=\"https://dev.kingdee.com/sub/index/open/api/home\" title=\"\" target=\"_blank\" class=\"\"><span style=\"color: rgb(0, 176, 240);\">API文档</span></a>。</p><p style=\"color: rgb(10, 19, 37);\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">13.平台SDK</h2><p style=\"color: rgb(10, 19, 37);\">使用这些 SDK 可以访问快速访问金蝶AI苍穹内部接口。</p><p style=\"color: rgb(10, 19, 37);\">详见<a href=\"https://dev.kingdee.com/sdk/Cosmic%20V5.0.011/index.html?nav=class&module=kd.bos.open.api&package=kd.bos.openapi.common.util&name=OpenApiSdkUtil\" title=\"\" target=\"_blank\" class=\"\"><span style=\"color: rgb(0, 176, 240);\">平台SDK</span>&nbsp;</a>。</p><p style=\"color: rgb(10, 19, 37);\"><br/></p><p style=\"color: rgb(10, 19, 37);\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">14. 接口规范</h2><p>苍穹平台OpenAPI接口规范。</p><p><span style=\"color: rgb(10, 19, 37);\">详见</span><a href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=386536775126291968&id=448792125560557568&productLineId=29\" title=\"\" target=\"_blank\" class=\"\"><span style=\"color: rgb(0, 176, 240);\">接口规范</span>&nbsp;</a><span style=\"color: rgb(10, 19, 37);\">。</span></p><p style=\"\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\">15. 自定义API示例</h2><p style=\"color: rgb(10, 19, 37);\">开放门户中提供了更多自定义API开发示例。</p><p label=\"正文\" style=\"\">请参阅<a href=\"https://dev.kingdee.com/open/detail/sdk/1915311708319005696\" target=\"_blank\"><span style=\"color: rgb(0, 176, 240);\">自定义API传输TextPlain</span></a>、<a href=\"https://dev.kingdee.com/open/detail/sdk/1915311708881043456\" target=\"_blank\"><span style=\"color: rgb(0, 176, 240);\">请求头及响应头特殊处理</span></a>、<a href=\"https://dev.kingdee.com/open/detail/sdk/1915311709392747520\" target=\"_blank\"><span style=\"color: rgb(0, 176, 240);\">异常及状态码</span></a>、<a href=\"https://dev.kingdee.com/open/detail/sdk/1915311709887676416\" target=\"_blank\"><span style=\"color: rgb(0, 176, 240);\">文件流处理接口</span></a>、<a href=\"https://dev.kingdee.com/open/detail/sdk/1915311711984828416\" target=\"_blank\" style=\"color: rgb(0, 176, 240);\"><span style=\"color: rgb(0, 176, 240);\">脚本API中API的调用及传参</span></a><span style=\"color: rgb(0, 0, 0);\">。</span></p><p label=\"正文\" style=\"\"><br/></p><p style=\"\"><br/></p><p><br/></p>"
+}

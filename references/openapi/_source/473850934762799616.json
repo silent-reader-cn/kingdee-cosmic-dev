@@ -1,0 +1,440 @@
+{
+ "badNum": 0,
+ "identityTagIds": null,
+ "knowledgeId": "473850934762799616",
+ "createdAt": 1690782867000,
+ "collections": 10,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "473850934762799616",
+ "contentType": 1,
+ "updatedAt": 1732012198000,
+ "knowledgeUpdater": {
+  "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+  "department": null,
+  "id": "132488613174518784",
+  "name": "某个路易",
+  "nameSpell": "name"
+ },
+ "assessStatus": 0,
+ "knowledgeStatus": 2,
+ "assessHandleStatus": null,
+ "knowledgeCreatedAt": 1690782867000,
+ "version": 40,
+ "labels": [],
+ "editedAt": 1732011986000,
+ "identityTags": null,
+ "useful": 2,
+ "errors": [],
+ "isCollected": false,
+ "totalFeedBacks": 0,
+ "attachments": [],
+ "sources": [],
+ "editTitle": "access_token报错合集",
+ "title": "access_token报错合集",
+ "content": "<p><br/></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\">1. 获取appToken时，报错提示：<span style=\"color: rgb(56, 56, 56);\">&lt;</span><span style=\"color: rgb(128, 0, 0);\">title</span><span style=\"color: rgb(56, 56, 56);\">&gt;</span><span style=\"color: rgb(0, 0, 0);\">404 Not Found</span><span style=\"color: rgb(56, 56, 56);\">&lt;/</span><span style=\"color: rgb(128, 0, 0);\">title</span><span style=\"color: rgb(56, 56, 56);\">&gt;</span></h3><p><span style=\"color: rgb(56, 56, 56);\"></span></p><p><span style=\"color: rgb(56, 56, 56);\"></span></p><p><br/></p><p>&nbsp; <strong>&nbsp;原因：</strong><strong><span style=\"color: rgb(0, 112, 192);\">请求地址错误</span></strong>，检查url末尾是否有空格、换行，或者请求地址多了ierp/等</p><p><br/></p><p><img src=\"/download/0109512d8b50ec8e48ae9c09798e476ff024.png\"/></p><p><br/></p><p><br/></p><p><br/></p><p><br/></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\">2. 获取appToken时，报错提示：<span style=\"color: rgb(56, 56, 56);\"></span>第三方应用ID或应用密钥不正确。<span style=\"color: rgb(56, 56, 56);\"></span></h3><p style=\"\"><span style=\"color: rgb(56, 56, 56);\"></span></p><p style=\"\"><span style=\"color: rgb(56, 56, 56);\"></span></p><p style=\"\"><br/></p><p style=\"\">&nbsp;&nbsp;<strong style=\"\">&nbsp;原因：<span style=\"color:#0070c0\">第三方应用ID或密钥不正确，或这个第三方应用被禁用了</span></strong>，重新传入正确的appId/appSecret或启用第三方应用即可。</p><p style=\"\"><br/></p><p style=\"\"><img src=\"/download/01094630cc2b706446eebaa21a2fc10dee16.png\"/><br/></p><p style=\"\"><br/></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\">3. 获取accessToken时，报错提示：<span style=\"color: rgb(4, 81, 165);\">&quot;非法操作。&quot;,</span><span style=\"color: rgb(163, 21, 21);\">&quot;errorCode&quot;</span><span style=\"color: rgb(0, 0, 0);\">: </span><span style=\"color: rgb(4, 81, 165);\">&quot;login.loginBizException&quot;</span><span style=\"color: rgb(0, 0, 0);\">,</span></h3><p style=\"\"><br/><span style=\"color: rgb(4, 81, 165);\"></span></p><p style=\"\"><span style=\"color: rgb(56, 56, 56);\"></span></p><p style=\"\"><span style=\"color: rgb(56, 56, 56);\"></span></p><p style=\"\"><span style=\"color: rgb(56, 56, 56);\"></span></p><p label=\"正文\" style=\"\"><strong style=\"\">&nbsp; &nbsp;原因：</strong><strong style=\"\"><span style=\"color: rgb(0, 112, 192);\">请求方式<strong style=\"\">错误</strong></span></strong>，login.do接口的请求方式必须为“POST”，否则执行失败。</p><p><br/></p><p><img src=\"/download/01093c9936e8cb96421ab91640a1f0822990.png\"/></p><p><br/></p><p style=\"\"><br/></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\"><span style=\"color: rgb(0, 0, 0);\">4. 请求头参数使用access_token，调用失败，提示“未经授权的访问”，但使用accesstoken，却可以调用成功</span></h3><p><span style=\"color: rgb(0, 0, 0);\"><br/></span></p><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><p style=\"\"><strong>原因</strong>：nginx代理默认会忽略请求头中带下划线的参数，所以需要修改nigix配置。</p></li><li><p style=\"\">操作步骤：进入nginx文件夹下面的conf文件夹，在conf里面找到nginx.conf， 然后在http里面添加属性underscores_in_headers，该参数默认为off，会将带下划线的请求头参数标记为无效。将<span style=\"\">underscores_in_headers&nbsp;</span><span style=\"color: rgb(0, 112, 192);\">赋值为on</span>。然后进入sbin目录下，重启nginx就可以了。</p><p style=\"\">（Linux重启密令：./nginx -s reload 。）</p></li></ul><p><br/></p><p><br/></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\"><span style=\"color: rgb(0, 0, 0);\">5.&nbsp;保存第三方应用时，系统提示“AccessToken加密认证密钥”不符合密码复杂性及长度要求？</span></h3><ul class=\" list-paddingleft-2\" style=\"\"><li><p style=\"\"><strong>&nbsp;原因：</strong><span style=\"\">第三方应用设置了密码强度校验，必</span><span style=\"\">须包含大小写、数字和特殊符号，长度介于</span>16~50个字符（<span style=\"color: rgb(255, 0, 0);\">下划线“_”不算特殊字符</span>）。</p></li></ul><p style=\"\"><br/></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\"><span style=\"color: rgb(0, 0, 0);\">6. 调用API报错，提示：“未经授权的访问。</span>”？</h3><ul class=\" list-paddingleft-2\" style=\"\"><li><p style=\"\"><strong>原因</strong><strong>1</strong>：accessToken已失效，建议重新<span style=\"color: rgb(0, 112, 192);\">获取accessToken</span>。</p></li><li><p style=\"\"><strong>原</strong><strong>因2</strong>：第三方应用已被禁用，需要去开放平台<span style=\"color: rgb(0, 112, 192);\">启用第三方应用</span>。<br/></p></li></ul><p style=\"\"><br/></p><p style=\"\"><img src=\"/download/01090e2f0c805ca341f7ae6ac20714be7655.png\"/></p><p style=\"\"><br/></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\"><span style=\"color: rgb(0, 0, 0);\">7. 调用API报错，提示：“</span>当前第三方应用不在启用时间范围内”？</h3><ul class=\" list-paddingleft-2\" style=\"\"><li><p style=\"\"><strong>原因</strong>：第三方应用当前不可用，需要修改第三方应用的<span style=\"color: rgb(0, 112, 192);\">启用时间或停止时间</span>。</p></li></ul><p style=\"\"><br/></p><p style=\"\"><img src=\"https://vip-admin.kingdee.com/download/01097bcbe88799fc46bab3ca92c729687ec3.png\"/></p><p style=\"text-align: justify;\"><br/></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\"><span style=\"color: rgb(0, 0, 0);\">8. 调用API报错，提示：“</span>该第三方应用-ISRM没有此接口访问权限”？</h3><ul class=\" list-paddingleft-2\" style=\"\"><li><p style=\"\"><strong>原因</strong>：新增的第三方应用，默认没有API访问权限，需要手工配置“API授权清单”。</p></li></ul><p style=\"\"><br/></p><p style=\"\"><img src=\"https://vip-admin.kingdee.com/download/0109f4f805d081c247c98e42d5007a733d8a.png\"/></p><p><br/></p>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 87,
+   "isOpen": 1,
+   "name": "金蝶AI苍穹",
+   "productLineId": 29,
+   "series": "developer01",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        null
+       ],
+       "code": null,
+       "description": "",
+       "entityId": "473850934762799616",
+       "entityType": "Knowledge",
+       "id": "473865198298723328",
+       "isCategory": false,
+       "name": "access_token报错合集",
+       "parentId": "226337785987048960",
+       "sort": "2",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": "",
+     "entityId": null,
+     "entityType": null,
+     "id": "226337785987048960",
+     "isCategory": true,
+     "name": "常见问题",
+     "parentId": "-1",
+     "sort": "9",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download/01010204d4b71b654a208006fa1004eac36a.png",
+  "department": null,
+  "id": "740211268992385024",
+  "name": "毛毛去哪儿",
+  "nameSpell": "name"
+ },
+ "totalAppraisalScore": 10,
+ "iflytekId": null,
+ "views": 11620,
+ "productLineId": 29,
+ "comments": 1,
+ "similarityCount": 0,
+ "totalAppraisalUsers": 2,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1732012198000,
+ "appraisalScore": 0,
+ "unuseful": 0,
+ "knowledgeCheckStatus": 2,
+ "otherProductLineIds": [],
+ "auditAt": 1732012198000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": null,
+       "code": "open",
+       "id": "5614",
+       "name": "开放平台",
+       "productLineId": null,
+       "sort": 2,
+       "type": "module"
+      },
+      "code": "DEV",
+      "id": "5576",
+      "name": "开发服务云",
+      "productLineId": null,
+      "sort": 11,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 0,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": null,
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 1,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "HotIssues",
+     "createdAt": 1558618967000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "使用中经常遇到的应用类、报错类问题的解决方法",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/010046d15638963c4c388734601dd5f8ceec.png",
+     "id": "202203081644",
+     "name": "常见问题",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010176d38341668f44fdb94c95058a90e4b8.png",
+      "department": "云社区运营部",
+      "id": "2147406697",
+      "name": "多肉丸子",
+      "nameSpell": "kejuan"
+     },
+     "updatedAt": 1676857709000
+    },
+    {
+     "code": "rumen",
+     "createdAt": 1605667807000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "入门类的知识可使用此标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100d322b9282bcc438faa894f4eec029977.png",
+     "id": "202203081646",
+     "name": "基础入门",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download?fileName=0101ec1d6ce599b442dab7d0b794c1fce88d.png",
+      "department": null,
+      "id": "1009",
+      "name": "一颗小星星",
+      "nameSpell": "fengling"
+     },
+     "updatedAt": 1657872008000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "473850934762799616",
+         "entityType": "Knowledge",
+         "id": "473865198298723328",
+         "isCategory": false,
+         "name": "access_token报错合集",
+         "parentId": "226337785987048960",
+         "sort": "2",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": null,
+       "id": "226337785987048960",
+       "isCategory": true,
+       "name": "常见问题",
+       "parentId": "-1",
+       "sort": "9",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": "<p><br/></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\">1. 获取appToken时，报错提示：<span style=\"color: rgb(56, 56, 56);\">&lt;</span><span style=\"color: rgb(128, 0, 0);\">title</span><span style=\"color: rgb(56, 56, 56);\">&gt;</span><span style=\"color: rgb(0, 0, 0);\">404 Not Found</span><span style=\"color: rgb(56, 56, 56);\">&lt;/</span><span style=\"color: rgb(128, 0, 0);\">title</span><span style=\"color: rgb(56, 56, 56);\">&gt;</span></h3><p><span style=\"color: rgb(56, 56, 56);\"></span></p><p><span style=\"color: rgb(56, 56, 56);\"></span></p><p><br/></p><p>&nbsp; <strong>&nbsp;原因：</strong><strong><span style=\"color: rgb(0, 112, 192);\">请求地址错误</span></strong>，检查url末尾是否有空格、换行，或者请求地址多了ierp/等</p><p><br/></p><p><img src=\"/download/0109512d8b50ec8e48ae9c09798e476ff024.png\"/></p><p><br/></p><p><br/></p><p><br/></p><p><br/></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\">2. 获取appToken时，报错提示：<span style=\"color: rgb(56, 56, 56);\"></span>第三方应用ID或应用密钥不正确。<span style=\"color: rgb(56, 56, 56);\"></span></h3><p style=\"\"><span style=\"color: rgb(56, 56, 56);\"></span></p><p style=\"\"><span style=\"color: rgb(56, 56, 56);\"></span></p><p style=\"\"><br/></p><p style=\"\">&nbsp;&nbsp;<strong style=\"\">&nbsp;原因：<span style=\"color:#0070c0\">第三方应用ID或密钥不正确，或这个第三方应用被禁用了</span></strong>，重新传入正确的appId/appSecret或启用第三方应用即可。</p><p style=\"\"><br/></p><p style=\"\"><img src=\"/download/01094630cc2b706446eebaa21a2fc10dee16.png\"/><br/></p><p style=\"\"><br/></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\">3. 获取accessToken时，报错提示：<span style=\"color: rgb(4, 81, 165);\">&quot;非法操作。&quot;,</span><span style=\"color: rgb(163, 21, 21);\">&quot;errorCode&quot;</span><span style=\"color: rgb(0, 0, 0);\">: </span><span style=\"color: rgb(4, 81, 165);\">&quot;login.loginBizException&quot;</span><span style=\"color: rgb(0, 0, 0);\">,</span></h3><p style=\"\"><br/><span style=\"color: rgb(4, 81, 165);\"></span></p><p style=\"\"><span style=\"color: rgb(56, 56, 56);\"></span></p><p style=\"\"><span style=\"color: rgb(56, 56, 56);\"></span></p><p style=\"\"><span style=\"color: rgb(56, 56, 56);\"></span></p><p label=\"正文\" style=\"\"><strong style=\"\">&nbsp; &nbsp;原因：</strong><strong style=\"\"><span style=\"color: rgb(0, 112, 192);\">请求方式<strong style=\"\">错误</strong></span></strong>，login.do接口的请求方式必须为“POST”，否则执行失败。</p><p><br/></p><p><img src=\"/download/01093c9936e8cb96421ab91640a1f0822990.png\"/></p><p><br/></p><p style=\"\"><br/></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\"><span style=\"color: rgb(0, 0, 0);\">4. 请求头参数使用access_token，调用失败，提示“未经授权的访问”，但使用accesstoken，却可以调用成功</span></h3><p><span style=\"color: rgb(0, 0, 0);\"><br/></span></p><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><p style=\"\"><strong>原因</strong>：nginx代理默认会忽略请求头中带下划线的参数，所以需要修改nigix配置。</p></li><li><p style=\"\">操作步骤：进入nginx文件夹下面的conf文件夹，在conf里面找到nginx.conf， 然后在http里面添加属性underscores_in_headers，该参数默认为off，会将带下划线的请求头参数标记为无效。将<span style=\"\">underscores_in_headers&nbsp;</span><span style=\"color: rgb(0, 112, 192);\">赋值为on</span>。然后进入sbin目录下，重启nginx就可以了。</p><p style=\"\">（Linux重启密令：./nginx -s reload 。）</p></li></ul><p><br/></p><p><br/></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\"><span style=\"color: rgb(0, 0, 0);\">5.&nbsp;保存第三方应用时，系统提示“AccessToken加密认证密钥”不符合密码复杂性及长度要求？</span></h3><ul class=\" list-paddingleft-2\" style=\"\"><li><p style=\"\"><strong>&nbsp;原因：</strong><span style=\"\">第三方应用设置了密码强度校验，必</span><span style=\"\">须包含大小写、数字和特殊符号，长度介于</span>16~50个字符（<span style=\"color: rgb(255, 0, 0);\">下划线“_”不算特殊字符</span>）。</p></li></ul><p style=\"\"><br/></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\"><span style=\"color: rgb(0, 0, 0);\">6. 调用API报错，提示：“未经授权的访问。</span>”？</h3><ul class=\" list-paddingleft-2\" style=\"\"><li><p style=\"\"><strong>原因</strong><strong>1</strong>：accessToken已失效，建议重新<span style=\"color: rgb(0, 112, 192);\">获取accessToken</span>。</p></li><li><p style=\"\"><strong>原</strong><strong>因2</strong>：第三方应用已被禁用，需要去开放平台<span style=\"color: rgb(0, 112, 192);\">启用第三方应用</span>。<br/></p></li></ul><p style=\"\"><br/></p><p style=\"\"><img src=\"/download/01090e2f0c805ca341f7ae6ac20714be7655.png\"/></p><p style=\"\"><br/></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\"><span style=\"color: rgb(0, 0, 0);\">7. 调用API报错，提示：“</span>当前第三方应用不在启用时间范围内”？</h3><ul class=\" list-paddingleft-2\" style=\"\"><li><p style=\"\"><strong>原因</strong>：第三方应用当前不可用，需要修改第三方应用的<span style=\"color: rgb(0, 112, 192);\">启用时间或停止时间</span>。</p></li></ul><p style=\"\"><br/></p><p style=\"\"><img src=\"https://vip-admin.kingdee.com/download/01097bcbe88799fc46bab3ca92c729687ec3.png\"/></p><p style=\"text-align: justify;\"><br/></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\"><span style=\"color: rgb(0, 0, 0);\">8. 调用API报错，提示：“</span>该第三方应用-ISRM没有此接口访问权限”？</h3><ul class=\" list-paddingleft-2\" style=\"\"><li><p style=\"\"><strong>原因</strong>：新增的第三方应用，默认没有API访问权限，需要手工配置“API授权清单”。</p></li></ul><p style=\"\"><br/></p><p style=\"\"><img src=\"https://vip-admin.kingdee.com/download/0109f4f805d081c247c98e42d5007a733d8a.png\"/></p><p><br/></p>"
+}

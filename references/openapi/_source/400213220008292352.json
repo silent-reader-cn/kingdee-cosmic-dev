@@ -1,0 +1,618 @@
+{
+ "badNum": 0,
+ "identityTagIds": null,
+ "knowledgeId": "400213220008292352",
+ "createdAt": 1673226267000,
+ "collections": 7,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "400213220008292352",
+ "contentType": 1,
+ "updatedAt": 1764668672000,
+ "knowledgeUpdater": {
+  "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+  "department": null,
+  "id": "132488613174518784",
+  "name": "某个路易",
+  "nameSpell": "name"
+ },
+ "assessStatus": 0,
+ "knowledgeStatus": 2,
+ "assessHandleStatus": null,
+ "knowledgeCreatedAt": 1673226267000,
+ "version": 16,
+ "labels": [],
+ "editedAt": 1764668522000,
+ "identityTags": null,
+ "useful": 2,
+ "errors": [],
+ "isCollected": false,
+ "totalFeedBacks": 0,
+ "attachments": [],
+ "sources": [],
+ "editTitle": "学会苍穹基本认证快速搞定接口回调场景",
+ "title": "学会苍穹基本认证快速搞定接口回调场景",
+ "content": "<p>目前，随着API接口在软件系统中的广泛应用，接口回调的场景在实际的系统交互过程中变得越来越多，在<span style=\"color: #0070c0\">匿名访问安全性难以保障</span>的前提下，我们该如何解决接口回调问题呢？以下述两个场景为例：</p><p></p><p><strong>场景一：</strong>不同系统间接口回调场景，如<span style=\"color: rgb(96, 157, 239)\"><strong>异构系统间数据同步</strong></span>，A系统数据通过API传递给B系统后，不管数据同步成功还是失败，B系统需要回调A系统接口，<span style=\"color: rgb(96, 157, 239)\"><strong>无需复杂的认证授权过程</strong></span>，快速方便地回写数据同步状态到A系统。</p><p></p><p><strong>场景二：</strong>企业系统部署在安全的局域网中，不同系统间相互信任，数据安全性有保障。当通过API进行系统交互时，<span style=\"color: rgb(96, 157, 239)\"><strong>无需重复获取系统登录令牌</strong></span>，即可调用接口。</p><p></p><p></p><hr><p></p><h1><strong>1 适用版本</strong></h1><p>该功能适用版本为金蝶AI苍穹<span style=\"color: rgb(95, 156, 239)\"><strong>V5.0.011</strong></span>及以上。</p><p></p><h1><strong>2 功能详情</strong></h1><p>API支持在详情界面配置<span style=\"color: rgb(95, 156, 239)\"><strong>第三方应用</strong></span>和<span style=\"color: rgb(95, 156, 239)\"><strong>代理用户信息</strong></span>，系统<span style=\"color: rgb(96, 157, 239)\"><strong>自动生成接口回调地址</strong></span>，该地址可以作为固定URL传给外部系统，<span style=\"color: rgb(96, 157, 239)\"><strong>调用时无需再次进行登录认证</strong></span>。功能详情如下：</p><p></p><h2><span><strong>2.1 配置第三方应用基本认证</strong></span></h2><p></p><p>在开放平台中，为需要回调接口的外部系统注册第三方应用，路径为：【开放服务云】→【OpenAPI】→【安全策略】→【第三方应用】，同时启用<span style=\"color: rgb(95, 156, 239)\"><strong>基本认证模式</strong></span>，并配置<span style=\"color: rgb(95, 156, 239)\"><strong>代理用户</strong></span>和<span style=\"color: rgb(95, 156, 239)\"><strong>授权API清单</strong></span>。</p><p>由于基本认证方式会生成一个<span style=\"color: rgb(95, 156, 239)\"><strong>固定可访问苍穹接口的密钥</strong></span>，所以<span style=\"color: rgb(96, 157, 239)\"><strong>必须为第三方应用配置API授权清单</strong></span>，防止接口权限失控。</p><p></p><p><img src=\"/download/0100074aef1e68ac41f38d254eca3d14270d.png\" alt=\"上传图片\"></p><p style=\"text-align: center\">第三方应用配置基本认证</p><p></p><p></p><h2><span><strong>2.2 打开API服务管理列表</strong></span></h2><p>路径：【开放服务云】→【OpenAPI】→【API管理】，在API服务管理列表查找需要回调地址的接口，如<span style=\"color: rgb(95, 156, 239)\"><strong>“通用换算保存”</strong></span>接口。</p><p></p><p style=\"text-align: center\"></p><p><img src=\"/download/010044bbddbf216c449c9595bbcddd90c37d.png\" alt=\"上传图片\"></p><p style=\"text-align: center\">API管理列表</p><p></p><p></p><h2><span><strong>2.3 生成回调地址</strong></span></h2><p></p><p>在API详情中点击<span style=\"color: rgb(95, 156, 239)\"><strong>“回调地址”</strong></span>按钮，配置步骤1中注册的第三方应用和代理用户信息，点击<span style=\"color: rgb(95, 156, 239)\"><strong>“保存”</strong></span>按钮，生成回调地址。</p><p style=\"text-align: center\"></p><p><img src=\"/download/0100ab3d8e7459e04f8387a25eec21a98e67.png\" alt=\"上传图片\"></p><p style=\"text-align: center\">新增回调地址</p><p style=\"text-align: center\"></p><p><img src=\"/download/01003c8dacc818c048f8a13253e0245a1483.png\" alt=\"上传图片\"></p><p style=\"text-align: center\">回调地址创建成功</p><p></p><p>当苍穹与外围系统对接时，若存在某个接口回调场景，对方系统接口协议规定：访问路径需要为<span style=\"color: rgb(95, 156, 239)\"><strong>固定接口且不可添加参数</strong></span>，或在接口访问路径中不允许有<span style=\"color: rgb(95, 156, 239)\"><strong>“?”</strong></span>，苍穹开放平台回调接口可使用pathVariable格式：<span style=\"color: rgb(95, 156, 239)\"><strong>{host}/$/openApiSign/xxx</strong></span>，如下图所示：</p><p style=\"text-align: center\"></p><p><img src=\"/download/01009f6610abd15249a8912f6400fbfc1dba.png\" alt=\"上传图片\"></p><p style=\"text-align: center\">回调地址列表</p><p></p><h1><strong>3 亮点价值</strong></h1><p>通过基本认证的方式实现企业接口回调，能够在系统交互时的接口安全性和友好性找到一个平衡点，<strong>既能够快速实现接口回调，又能准确管控调用方接口身份、权限、以及IP等</strong>。</p><p></p><h1><strong>4 划重点</strong></h1><p>1) 开放平台基本认证支持生成固定接口访问地址，<span style=\"color: rgb(95, 156, 239)\"><strong>调用方无需获取登录令牌</strong></span>，即可快速调用接口，实现数据交互。</p><p>2) 基本认证能生成两种不同的请求路径，<span style=\"color: rgb(96, 157, 239)\"><strong>满足不同异构系统的接口URL规范</strong></span>。同时，对使用基本认证的第三方系统，还可以<span style=\"color: rgb(96, 157, 239)\"><strong>管理其接口权限</strong></span>、<span style=\"color: rgb(96, 157, 239)\"><strong>代理用户</strong></span><span>和</span><span style=\"color: rgb(96, 157, 239)\"><strong>IP白名单等信息</strong></span>，系统对接，安全可靠。</p><p></p><p></p><hr><p></p><p></p><p><strong>#往期推荐#</strong></p><p></p><p><span style=\"color: rgb(255, 164, 30)\">#</span>&nbsp;<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/knowledge/specialDetail/282527627108140288?category=283972955728903680&amp;id=374930468375911680&amp;productLineId=29\">实践案例 | OpenAPI助力企业业财一体化</a></p><p><span style=\"color: rgb(255, 164, 30)\">#&nbsp;</span><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/knowledge/specialDetail/282527627108140288?category=283972955728903680&amp;id=369902593835442944&amp;productLineId=29\"><span style=\"color: rgb(255, 164, 30)\">实践案例 | 零代码配置API接口，打破信息孤岛</span></a></p><p><span style=\"color: rgb(255, 164, 30)\">#</span>&nbsp;<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/knowledge/specialDetail/282527627108140288?category=283972955728903680&amp;id=358181128073232896&amp;productLineId=29\">苍穹OpenAPI新体验 之 保存接口</a></p><p></p><p></p><p style=\"text-align: justify\">更多精彩内容，“码”上了解！↓</p><p style=\"text-align: justify\"></p><p style=\"text-align: justify\"><img src=\"https://vip.kingdee.com/download/010957218dc557b04a7bac3b58596dd5a81d.png\"></p>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 87,
+   "isOpen": 1,
+   "name": "金蝶AI苍穹",
+   "productLineId": 29,
+   "series": "developer01",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        null
+       ],
+       "code": null,
+       "description": "",
+       "entityId": "400213220008292352",
+       "entityType": "Knowledge",
+       "id": "400214513078900736",
+       "isCategory": false,
+       "name": "学会苍穹基本认证快速搞定接口回调场景",
+       "parentId": "283972955728903680",
+       "sort": "16",
+       "specialId": "282527627108140288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": "",
+     "entityId": null,
+     "entityType": null,
+     "id": "283972955728903680",
+     "isCategory": true,
+     "name": "开放服务OpenAPI",
+     "parentId": "-1",
+     "sort": "10",
+     "specialId": "282527627108140288",
+     "status": 1
+    }
+   ],
+   "classifies": null,
+   "collections": 358,
+   "createdAt": "2022-02-18T15:03:55.000+08:00",
+   "creator": {
+    "avatar": "/download/0101c9e21267d75b4786863ee0d53d74d4a6.png",
+    "department": null,
+    "id": "281005769653540096",
+    "name": "PaaS平台那些事",
+    "nameSpell": "name"
+   },
+   "description": "分享苍穹平台新功能、新特性、开发技巧，做苍穹用户、开发者的知心朋友。有它，玩转苍穹不用愁！",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "282527627108140288",
+   "identityTags": null,
+   "itemNum": 706,
+   "logo": "/download/0100b5c220fe7d884e38834487eddcc5815d.png",
+   "name": "苍穹平台那些事",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 1,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 6,
+   "totalAppraisalUsers": 2,
+   "updatedAt": "2025-11-27T20:05:58.000+08:00",
+   "updaterId": "430437059824456704",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 6631050
+  },
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        null
+       ],
+       "code": null,
+       "description": "",
+       "entityId": "400213220008292352",
+       "entityType": "Knowledge",
+       "id": "511864835785746944",
+       "isCategory": false,
+       "name": "学会苍穹基本认证快速搞定接口回调场景",
+       "parentId": "376365761788406272",
+       "sort": "4",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": "",
+     "entityId": null,
+     "entityType": null,
+     "id": "376365761788406272",
+     "isCategory": true,
+     "name": "优秀实践",
+     "parentId": "-1",
+     "sort": "8",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download/01010204d4b71b654a208006fa1004eac36a.png",
+  "department": null,
+  "id": "740211268992385024",
+  "name": "毛毛去哪儿",
+  "nameSpell": "name"
+ },
+ "totalAppraisalScore": 10,
+ "iflytekId": null,
+ "views": 4236,
+ "productLineId": 29,
+ "comments": 0,
+ "similarityCount": null,
+ "totalAppraisalUsers": 2,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1764668672000,
+ "appraisalScore": 0,
+ "unuseful": 0,
+ "knowledgeCheckStatus": 2,
+ "otherProductLineIds": [],
+ "auditAt": 1764668672000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": null,
+       "code": "open",
+       "id": "5614",
+       "name": "开放平台",
+       "productLineId": null,
+       "sort": 2,
+       "type": "module"
+      },
+      "code": "DEV",
+      "id": "5576",
+      "name": "开发服务云",
+      "productLineId": null,
+      "sort": 11,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 0,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "OperatingGuide",
+     "createdAt": 1556519201000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "某一功能的具体说明介绍，包括应用场景、参数说明、具体操作步骤等",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/010037894174802d4b9f8782f1f0010a6ddd.png",
+     "id": "202203081641",
+     "name": "功能介绍",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010176d38341668f44fdb94c95058a90e4b8.png",
+      "department": "云社区运营部",
+      "id": "2147406697",
+      "name": "多肉丸子",
+      "nameSpell": "kejuan"
+     },
+     "updatedAt": 1676857681000
+    },
+    {
+     "code": "GettingStarted",
+     "createdAt": 1556519230000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "推送至苍穹帮助中心",
+     "hasSpecifyUser": false,
+     "hide": true,
+     "icon": "/download/01001f079866652f4a68a71361a9509d404c.png",
+     "id": "202203081643",
+     "name": "推送至苍穹帮助中心",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 1,
+     "type": 2,
+     "updatePerson": {
+      "avatar": "/download?fileName=010162cfa9d5437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1129",
+      "name": "灏",
+      "nameSpell": "hao"
+     },
+     "updatedAt": 1605688859000
+    },
+    {
+     "code": "rumen",
+     "createdAt": 1605667807000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "入门类的知识可使用此标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100d322b9282bcc438faa894f4eec029977.png",
+     "id": "202203081646",
+     "name": "基础入门",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download?fileName=0101ec1d6ce599b442dab7d0b794c1fce88d.png",
+      "department": null,
+      "id": "1009",
+      "name": "一颗小星星",
+      "nameSpell": "fengling"
+     },
+     "updatedAt": 1657872008000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "400213220008292352",
+         "entityType": "Knowledge",
+         "id": "400214513078900736",
+         "isCategory": false,
+         "name": "学会苍穹基本认证快速搞定接口回调场景",
+         "parentId": "283972955728903680",
+         "sort": "16",
+         "specialId": "282527627108140288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": null,
+       "id": "283972955728903680",
+       "isCategory": true,
+       "name": "开放服务OpenAPI",
+       "parentId": "-1",
+       "sort": "10",
+       "specialId": "282527627108140288",
+       "status": 1
+      }
+     ],
+     "classifies": null,
+     "collections": 358,
+     "createdAt": "2022-02-18T15:03:55.000+08:00",
+     "creator": {
+      "avatar": "/download/0101c9e21267d75b4786863ee0d53d74d4a6.png",
+      "department": null,
+      "id": "281005769653540096",
+      "name": "PaaS平台那些事",
+      "nameSpell": "name"
+     },
+     "description": "分享苍穹平台新功能、新特性、开发技巧，做苍穹用户、开发者的知心朋友。有它，玩转苍穹不用愁！",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "282527627108140288",
+     "identityTags": null,
+     "itemNum": 706,
+     "logo": "/download/0100b5c220fe7d884e38834487eddcc5815d.png",
+     "name": "苍穹平台那些事",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 1,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 6,
+     "totalAppraisalUsers": 2,
+     "updatedAt": "2025-11-27T20:05:58.000+08:00",
+     "updaterId": "430437059824456704",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 6631050
+    },
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "400213220008292352",
+         "entityType": "Knowledge",
+         "id": "511864835785746944",
+         "isCategory": false,
+         "name": "学会苍穹基本认证快速搞定接口回调场景",
+         "parentId": "376365761788406272",
+         "sort": "4",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": null,
+       "id": "376365761788406272",
+       "isCategory": true,
+       "name": "优秀实践",
+       "parentId": "-1",
+       "sort": "8",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": "<p>目前，随着API接口在软件系统中的广泛应用，接口回调的场景在实际的系统交互过程中变得越来越多，在<span style=\"color: #0070c0\">匿名访问安全性难以保障</span>的前提下，我们该如何解决接口回调问题呢？以下述两个场景为例：</p><p></p><p><strong>场景一：</strong>不同系统间接口回调场景，如<span style=\"color: rgb(96, 157, 239)\"><strong>异构系统间数据同步</strong></span>，A系统数据通过API传递给B系统后，不管数据同步成功还是失败，B系统需要回调A系统接口，<span style=\"color: rgb(96, 157, 239)\"><strong>无需复杂的认证授权过程</strong></span>，快速方便地回写数据同步状态到A系统。</p><p></p><p><strong>场景二：</strong>企业系统部署在安全的局域网中，不同系统间相互信任，数据安全性有保障。当通过API进行系统交互时，<span style=\"color: rgb(96, 157, 239)\"><strong>无需重复获取系统登录令牌</strong></span>，即可调用接口。</p><p></p><p></p><hr><p></p><h1><strong>1 适用版本</strong></h1><p>该功能适用版本为金蝶AI苍穹<span style=\"color: rgb(95, 156, 239)\"><strong>V5.0.011</strong></span>及以上。</p><p></p><h1><strong>2 功能详情</strong></h1><p>API支持在详情界面配置<span style=\"color: rgb(95, 156, 239)\"><strong>第三方应用</strong></span>和<span style=\"color: rgb(95, 156, 239)\"><strong>代理用户信息</strong></span>，系统<span style=\"color: rgb(96, 157, 239)\"><strong>自动生成接口回调地址</strong></span>，该地址可以作为固定URL传给外部系统，<span style=\"color: rgb(96, 157, 239)\"><strong>调用时无需再次进行登录认证</strong></span>。功能详情如下：</p><p></p><h2><span><strong>2.1 配置第三方应用基本认证</strong></span></h2><p></p><p>在开放平台中，为需要回调接口的外部系统注册第三方应用，路径为：【开放服务云】→【OpenAPI】→【安全策略】→【第三方应用】，同时启用<span style=\"color: rgb(95, 156, 239)\"><strong>基本认证模式</strong></span>，并配置<span style=\"color: rgb(95, 156, 239)\"><strong>代理用户</strong></span>和<span style=\"color: rgb(95, 156, 239)\"><strong>授权API清单</strong></span>。</p><p>由于基本认证方式会生成一个<span style=\"color: rgb(95, 156, 239)\"><strong>固定可访问苍穹接口的密钥</strong></span>，所以<span style=\"color: rgb(96, 157, 239)\"><strong>必须为第三方应用配置API授权清单</strong></span>，防止接口权限失控。</p><p></p><p><img src=\"/download/0100074aef1e68ac41f38d254eca3d14270d.png\" alt=\"上传图片\"></p><p style=\"text-align: center\">第三方应用配置基本认证</p><p></p><p></p><h2><span><strong>2.2 打开API服务管理列表</strong></span></h2><p>路径：【开放服务云】→【OpenAPI】→【API管理】，在API服务管理列表查找需要回调地址的接口，如<span style=\"color: rgb(95, 156, 239)\"><strong>“通用换算保存”</strong></span>接口。</p><p></p><p style=\"text-align: center\"></p><p><img src=\"/download/010044bbddbf216c449c9595bbcddd90c37d.png\" alt=\"上传图片\"></p><p style=\"text-align: center\">API管理列表</p><p></p><p></p><h2><span><strong>2.3 生成回调地址</strong></span></h2><p></p><p>在API详情中点击<span style=\"color: rgb(95, 156, 239)\"><strong>“回调地址”</strong></span>按钮，配置步骤1中注册的第三方应用和代理用户信息，点击<span style=\"color: rgb(95, 156, 239)\"><strong>“保存”</strong></span>按钮，生成回调地址。</p><p style=\"text-align: center\"></p><p><img src=\"/download/0100ab3d8e7459e04f8387a25eec21a98e67.png\" alt=\"上传图片\"></p><p style=\"text-align: center\">新增回调地址</p><p style=\"text-align: center\"></p><p><img src=\"/download/01003c8dacc818c048f8a13253e0245a1483.png\" alt=\"上传图片\"></p><p style=\"text-align: center\">回调地址创建成功</p><p></p><p>当苍穹与外围系统对接时，若存在某个接口回调场景，对方系统接口协议规定：访问路径需要为<span style=\"color: rgb(95, 156, 239)\"><strong>固定接口且不可添加参数</strong></span>，或在接口访问路径中不允许有<span style=\"color: rgb(95, 156, 239)\"><strong>“?”</strong></span>，苍穹开放平台回调接口可使用pathVariable格式：<span style=\"color: rgb(95, 156, 239)\"><strong>{host}/$/openApiSign/xxx</strong></span>，如下图所示：</p><p style=\"text-align: center\"></p><p><img src=\"/download/01009f6610abd15249a8912f6400fbfc1dba.png\" alt=\"上传图片\"></p><p style=\"text-align: center\">回调地址列表</p><p></p><h1><strong>3 亮点价值</strong></h1><p>通过基本认证的方式实现企业接口回调，能够在系统交互时的接口安全性和友好性找到一个平衡点，<strong>既能够快速实现接口回调，又能准确管控调用方接口身份、权限、以及IP等</strong>。</p><p></p><h1><strong>4 划重点</strong></h1><p>1) 开放平台基本认证支持生成固定接口访问地址，<span style=\"color: rgb(95, 156, 239)\"><strong>调用方无需获取登录令牌</strong></span>，即可快速调用接口，实现数据交互。</p><p>2) 基本认证能生成两种不同的请求路径，<span style=\"color: rgb(96, 157, 239)\"><strong>满足不同异构系统的接口URL规范</strong></span>。同时，对使用基本认证的第三方系统，还可以<span style=\"color: rgb(96, 157, 239)\"><strong>管理其接口权限</strong></span>、<span style=\"color: rgb(96, 157, 239)\"><strong>代理用户</strong></span><span>和</span><span style=\"color: rgb(96, 157, 239)\"><strong>IP白名单等信息</strong></span>，系统对接，安全可靠。</p><p></p><p></p><hr><p></p><p></p><p><strong>#往期推荐#</strong></p><p></p><p><span style=\"color: rgb(255, 164, 30)\">#</span>&nbsp;<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/knowledge/specialDetail/282527627108140288?category=283972955728903680&amp;id=374930468375911680&amp;productLineId=29\">实践案例 | OpenAPI助力企业业财一体化</a></p><p><span style=\"color: rgb(255, 164, 30)\">#&nbsp;</span><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/knowledge/specialDetail/282527627108140288?category=283972955728903680&amp;id=369902593835442944&amp;productLineId=29\"><span style=\"color: rgb(255, 164, 30)\">实践案例 | 零代码配置API接口，打破信息孤岛</span></a></p><p><span style=\"color: rgb(255, 164, 30)\">#</span>&nbsp;<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/knowledge/specialDetail/282527627108140288?category=283972955728903680&amp;id=358181128073232896&amp;productLineId=29\">苍穹OpenAPI新体验 之 保存接口</a></p><p></p><p></p><p style=\"text-align: justify\">更多精彩内容，“码”上了解！↓</p><p style=\"text-align: justify\"></p><p style=\"text-align: justify\"><img src=\"https://vip.kingdee.com/download/010957218dc557b04a7bac3b58596dd5a81d.png\"></p>"
+}

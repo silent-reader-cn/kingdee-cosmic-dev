@@ -1,0 +1,505 @@
+{
+ "badNum": 0,
+ "identityTagIds": null,
+ "knowledgeId": "535418940910966272",
+ "createdAt": 1705461823000,
+ "collections": 6,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "535418940910966272",
+ "contentType": 1,
+ "updatedAt": 1765534338000,
+ "knowledgeUpdater": {
+  "avatar": "/download/010162cfa9d5437711e8b441060400ef5315.png",
+  "department": null,
+  "id": "334386482716649984",
+  "name": "顺溜",
+  "nameSpell": "name"
+ },
+ "assessStatus": 0,
+ "knowledgeStatus": 2,
+ "assessHandleStatus": null,
+ "knowledgeCreatedAt": 1705461823000,
+ "version": 147,
+ "labels": [],
+ "editedAt": 1765534128000,
+ "identityTags": null,
+ "useful": 3,
+ "errors": [],
+ "isCollected": false,
+ "totalFeedBacks": 0,
+ "attachments": [],
+ "sources": [],
+ "editTitle": "事件对接说明（回调接口要求）",
+ "title": "事件对接说明（回调接口要求）",
+ "content": "<p><span><strong>变更记录</strong></span></p><p></p><p></p><table style=\"width: 744px\"><colgroup><col style=\"width: 248px\"><col style=\"width: 248px\"><col style=\"width: 248px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"248\" data-background-color=\"\" style=\"background-color: \"><p><strong>产品版本</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"248\" data-background-color=\"\" style=\"background-color: \"><p><strong>更新内容</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"248\" data-background-color=\"\" style=\"background-color: \"><p><strong>更新日期</strong></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"248\" data-background-color=\"\" style=\"background-color: \"><p>V6.0.6</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"248\" data-background-color=\"\" style=\"background-color: \"><p><span>初始版本</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"248\" data-background-color=\"\" style=\"background-color: \"><p><span>2024年01月17日</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"248\" data-background-color=\"\" style=\"background-color: \"><p><span>V6.0.13</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"248\" data-background-color=\"\" style=\"background-color: \"><p><span>事件推送支持签名和加密</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"248\" data-background-color=\"\" style=\"background-color: \"><p><span>2024年06月14日</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p>V7.0.0</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p>1、事件推送支持脚本插件 2、Webhook回调支持自定义断言</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p></p></td></tr></tbody></table><p></p><hr><p></p><h2>1 介绍</h2><p><span>开放事件订阅时，要求第三方系统提供一个可直接访问的Webhook回调接口，当事件触发时，系统会调用该接口向第三方系统传递事件消息。下面是平台对回调接口要求。</span></p><p><span>为保障数据传输安全，防止传输过程中数据被篡改和泄露，从V6.0.13版本开始，开放事件支持签名和加密。用户可以在事件订阅推送页面配置<strong>签名(页面必选，对接方也可不验签)和加密(可选)</strong>策略，操作详情见&nbsp;</span><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/article/535457042169969408\"><span style=\"color: rgb(0, 176, 240)\">事件推送订阅</span></a><span>&nbsp;，平台在推送事件前会根据配置进行请求签名和数据加密。回调接口需要实现对应的验签和解密算法才能拿到事件数据。</span></p><p style=\"text-align: center\"><span><img src=\"/download/01094fb88641ba56476d98c24847c0a8c610.png\"></span></p><p style=\"text-align: center\"><span>事件触发时序</span></p><p></p><h2><span>2 回调接口协议</span></h2><p><span>支持http/https协议。</span></p><p></p><h2><span>3 请求说明</span></h2><h3><span>3.1 请求方式</span></h3><p><span>POST+ application/json</span></p><h3><span>3.2 请求参数</span></h3><p><span><strong>&nbsp;请求头（Header)</strong></span></p><p></p><table style=\"width: 724px\"><colgroup><col style=\"width: 181px\"><col style=\"width: 181px\"><col style=\"width: 181px\"><col style=\"width: 181px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span><strong>参数</strong></span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span><strong>参数类型</strong></span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span><strong>是否必填</strong></span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span><strong>参数说明</strong></span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>x-kem-request-timestamp</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>长整数</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>是&nbsp;</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>时间戳</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>x-kem-request-nonce</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>字符串</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>是</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>随机数</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>x-kem-signature</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p>字符串</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p>是</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>消息签名，防止请求截获篡改</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>x-kem-encrypt-iv</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>字符串</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p>是</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>初始向量，用于数据解密&nbsp;</span></p></td></tr></tbody></table><p></p><p></p><p><strong>请求体-加密报文</strong></p><p></p><table style=\"width: 724px\"><colgroup><col style=\"width: 181px\"><col style=\"width: 181px\"><col style=\"width: 181px\"><col style=\"width: 181px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><strong>参数</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><strong>参数类型</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><strong>是否必填</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><strong>参数说明</strong></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p>encrypt</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p>字符串</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p>是</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p>加密后的密文</p></td></tr></tbody></table><p></p><p>参数示例：</p><pre><code class=\"language-plaintext\">{\"encrypt\":\"TgwQHnE78p83RiqIiuPSyMSjv89Aj0MBhvcd5Pq3mIXxpwF4YWOi/TARaDnAo0WkgATJwl5p13KznUKJJ25NDQylO3VebDsIXuN3hvS93qb2v6gkDuF9IaEDOUdOBxJhYJKcfX2o3wvAU84lfqH4F8yqLOGsSsljUvNKeWKpEPBgpn/+ZDS3v+K9Gi8cF0Ix5A/DMeBLkqO5sJQuuPb5ni5W7YLEfZrPMQh1r2BcaKqJ8wUrz6e8ZyfAGJ4s38OMIzEflHdX5FHjsQNJ4CgqsnUHAynE4nZRhBYrVLiVba3SBqqr+Fw8H3OaAuN0G5RijCyItrOUtG20z9UFEPF+LqGJ9XqroAGUJ0ijK0V9jTb0ExEibNxjCtYMGzthbMOo\"}</code></pre><p><span style=\"color: rgb(247, 150, 70)\"><em>注意：加密是对整个消息体做的加密。</em></span></p><p></p><p><span><strong>请求体-不加密或解密报文</strong></span></p><p></p><table style=\"width: 724px\"><colgroup><col style=\"width: 181px\"><col style=\"width: 181px\"><col style=\"width: 181px\"><col style=\"width: 181px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><strong>参数</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><strong>参数类型</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><strong>是否必填</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><strong>参数说明</strong></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>eventNumber</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>字符串</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>是</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>触发事件编码</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>msgId</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>长整数</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>是</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>订阅执行实例&nbsp;</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>entityNumber</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>字符串</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>是</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>变化的业务对象编码</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>operation</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>字符串</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>是</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>业务对象操作方式</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>data&nbsp;</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>结构</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>是</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>事件传递参数&nbsp;</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>&nbsp;-xxx&nbsp;</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p>-</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>否&nbsp;</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>事件参数xxx</span></p></td></tr></tbody></table><p></p><p><span>参数示例：</span></p><pre><code class=\"language-plaintext\">{\n&nbsp;&nbsp;&nbsp;&nbsp;\"data\":{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"id\":\"1858013541517285376\",\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"number\":\"eeee\",\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"name\":\"eeee\",\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"enable\":\"1\",\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"status\":\"C\",\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"remark\":\"\",\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"creator\":\"1754371843654946816\",\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"createtime\":\"2024-01-08&nbsp;13:41:07.472\",\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"modifytime\":\"2024-01-08&nbsp;13:41:14.326\",\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"modifier\":\"1754371843654946816\"\n&nbsp;&nbsp;&nbsp;&nbsp;},\n&nbsp;&nbsp;&nbsp;&nbsp;\"eventNumber\":\"kdtest.kemopenevt.osc.open.sortdelete\",\n&nbsp;&nbsp;&nbsp;&nbsp;\"msgId\":\"1858013636274991104\",\n&nbsp;&nbsp;&nbsp;&nbsp;\"entityNumber\":\"openapi_custom_sort\",\n&nbsp;&nbsp;&nbsp;&nbsp;\"operation\":\"save\"\n}</code></pre><p></p><h2><span>&nbsp;4 验签说明</span></h2><p><span>从V6.0.13版本后，所有开放事件推送必须进行请求签名，确保回调地址收到的请求来至于可信的源。用户可在事件订阅推送页面配置签名策略和签名密钥，签名策略支持HMAC_SHA_256和SHA_256两种。请根据页面配置的签名策略和密钥，使用对应的算法进行签名计算。</span></p><p><span style=\"color: rgb(227, 108, 9)\"><em>注意：V6.0.13版本后，开放事件推送时必须加签，所以订阅页面必须配置签名策略和密钥，对接方可选择验签或不验签，都不影响事件参数传递，但建议对接方做验签处理，避免传输过程中数据被篡改。</em></span></p><h3>4.1 验签过程</h3><p><span>1、从请求中获取如下参数</span></p><ul><li><p><span>timestamp：时间戳，获取请求头中的 x-kem-request-timestamp。</span></p></li><li><p><span>nonce：数据数，获取请求头中的 x-kem-request-nonce。</span></p></li><li><p><span>signature：消息签名，获取请求头中的&nbsp; x-kem-signature。</span></p></li><li><p><span>body：接收的请求体。</span></p></li></ul><p><span>2、订阅推送页面设置的签名密钥 signsecretkey；</span></p><p><span>3、组装签名内容：signsecretkey + timestamp + nonce + body；</span></p><p><span>4、用订阅推送页面配置的签名算法对签名内容进行签名；</span></p><p><span>5、将签名结果转为16进制字符串，并与请求头中 x-kem-signature&nbsp;签名内容进行比较是否一致。</span></p><h3><span>4.2 Java示例代码</span></h3><p><span>以 HMAC_SHA_256为例：</span></p><pre><code class=\"language-plaintext\">public&nbsp;String&nbsp;calculateSignature(String&nbsp;signsecretkey,&nbsp;String&nbsp;timestamp,&nbsp;String&nbsp;nonce,&nbsp;String&nbsp;bodyString)&nbsp;throws&nbsp;NoSuchAlgorithmException,&nbsp;InvalidKeyException&nbsp;{\n&nbsp;&nbsp;&nbsp;String&nbsp;content&nbsp;=&nbsp;signsecretkey&nbsp;+&nbsp;timestamp&nbsp;+&nbsp;nonce&nbsp;+&nbsp;bodyString;\n&nbsp;&nbsp;&nbsp;\n&nbsp;&nbsp;&nbsp;Mac&nbsp;hmacSHA256&nbsp;=&nbsp;Mac.getInstance(\"HmacSHA256\");\n&nbsp;&nbsp;&nbsp;SecretKeySpec&nbsp;secretKeySpec&nbsp;=&nbsp;new&nbsp;SecretKeySpec(signsecretkey.getBytes(StandardCharsets.UTF_8),&nbsp;\"HmacSHA256\");\n&nbsp;&nbsp;&nbsp;hmacSHA256.init(secretKeySpec);\n\n&nbsp;&nbsp;&nbsp;byte[]&nbsp;signData&nbsp;=&nbsp;hmacSHA256.doFinal(content.getBytes(StandardCharsets.UTF_8));\n\n&nbsp;&nbsp;&nbsp;return&nbsp;Hex.encodeHexString(signData);\n\n}</code></pre><p></p><h2><span>5 解密说明</span></h2><p><span>为防止数据传输过程中泄露，从V6.0.13版本后，支持对推送的事件消息进行数据加密。用户可在事件订阅推送页面配置加密策略和加密密钥，对接时根据配置进行数据解密。<strong>事件传输加密为非必须</strong>，可根据数据安全要求自行选择。</span></p><p><span>支持的加密策略如下：</span></p><p></p><table style=\"min-width: 506px\"><colgroup><col style=\"width: 228px\"><col style=\"width: 228px\"><col style=\"min-width: 25px\"><col style=\"min-width: 25px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"228\" data-background-color=\"\" style=\"background-color: \"><p><strong>算法</strong></p></td><td colspan=\"3\" rowspan=\"1\" colwidth=\"228\" data-background-color=\"\" style=\"background-color: \"><p><strong>密钥长度（bit）</strong></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"228\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(33, 33, 33)\">AES/CBC/PKCS5Padding</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"62\" data-background-color=\"\" style=\"background-color: \"><p>128</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"63\" data-background-color=\"\" style=\"background-color: \"><p>192</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"57\" data-background-color=\"\" style=\"background-color: \"><p>256</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"228\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(33, 33, 33)\">SM4/CBC/PKCS5Padding</span></p></td><td colspan=\"3\" rowspan=\"1\" colwidth=\"228\" data-background-color=\"\" style=\"background-color: \"><p>128</p></td></tr></tbody></table><p></p><h3><span>5.1 解密过程</span></h3><p><span>1、获取请求体加密报文 encrypt；</span></p><p><span>2、获取请求头中的初始向量 x-kem-encrypt-iv；</span></p><p><span>3、使用Base64解码 encrypt，即为加密数据encrypted_data；</span></p><p><span>4、使用Base64解码请求头 x-kem-encrypt-iv 的值，即为初始向量iv；</span></p><p><span>5、用订阅推送页面配置的加密算法，使用初始向量 iv 和页面配置的加密密钥 encryptsecretkey 对加密数据encrypted_data进行解密，将解密结果转为字符串即为请求体的解密报文。</span></p><h3><span>5.2 Java示例代码</span></h3><p><span>以AES/CBC/PKCS5Padding算法为例：</span></p><pre><code class=\"language-plaintext\">public&nbsp;String&nbsp;decrypt(String&nbsp;encrypt,&nbsp;String&nbsp;encryptsecretkey,&nbsp;String&nbsp;ivStr)&nbsp;throws&nbsp;Exception&nbsp;{\n&nbsp;&nbsp;&nbsp;Cipher&nbsp;cipher&nbsp;=&nbsp;Cipher.getInstance(\"AES/CBC/PKCS5Padding\");\n&nbsp;&nbsp;&nbsp;byte[]&nbsp;key&nbsp;=&nbsp;Base64.decodeBase64(encryptsecretkey);\n&nbsp;&nbsp;&nbsp;byte[]&nbsp;data&nbsp;=&nbsp;Base64.decodeBase64(encrypt);\n&nbsp;&nbsp;&nbsp;//&nbsp;获取iv\n&nbsp;&nbsp;&nbsp;byte[]&nbsp;iv&nbsp;=&nbsp;Base64.decodeBase64(ivStr);\n&nbsp;&nbsp;&nbsp;SecretKeySpec&nbsp;keySpec&nbsp;=&nbsp;new&nbsp;SecretKeySpec(key,&nbsp;\"AES\");&nbsp;//&nbsp;或&nbsp;SM4\n&nbsp;&nbsp;&nbsp;AlgorithmParameterSpec&nbsp;paramSpec&nbsp;=&nbsp;new&nbsp;IvParameterSpec(iv);\n&nbsp;&nbsp;&nbsp;cipher.init(Cipher.DECRYPT_MODE,&nbsp;keySpec,&nbsp;paramSpec);\n\n&nbsp;&nbsp;&nbsp;return&nbsp;new&nbsp;String(cipher.doFinal(data),&nbsp;StandardCharsets.UTF_8);\n}</code></pre><p></p><h2><span>6 返回要求</span></h2><h3><span>6.1 返回结构</span></h3><p><span>Json</span></p><h3>6.2 返回参数</h3><ul><li><p><span>请求返回参数不报错、不超时默认为推送成功，，返回结果不需要进行加密和签名。</span></p></li><li><p>回调方可以返回任意结果，若需要对结果进行判断，可以在请求断言中通过$result获取响应结果，并判断请求是否成功。</p></li></ul><p></p><h2><span>7 超时和重试</span></h2><p><span>1、回调接口需确保在3s内返回，如果3s不返回则认为超时失败。</span></p><p><span>2、事件推送订阅默认配置重试3次，即首次推送失败后系统会重复推送3次，对接方需要<strong>确保回调接口请求的可重试性</strong>，避免出现业务重复处理。</span></p><p><span>3、如果重试3次依然失败，系统不再重试。后续可前往推送日志列表进行手工重试。</span></p><p></p><h2><span>8 兼容性说明</span></h2><p><span>V6.0.13版本之前配置的事件订阅推送数据，在平台版本升级后，运行时还会按照无签名和无加密的方式继续正常推送事件消息。</span></p><p></p>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 87,
+   "isOpen": 1,
+   "name": "金蝶AI苍穹",
+   "productLineId": 29,
+   "series": "developer01",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        null
+       ],
+       "code": null,
+       "description": "",
+       "entityId": "535418940910966272",
+       "entityType": "Knowledge",
+       "id": "535473151216618496",
+       "isCategory": false,
+       "name": "事件对接说明（回调接口要求）",
+       "parentId": "535466471703678976",
+       "sort": "2",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": "",
+     "entityId": null,
+     "entityType": null,
+     "id": "535466471703678976",
+     "isCategory": true,
+     "name": "开放事件",
+     "parentId": "-1",
+     "sort": "7",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+  "department": null,
+  "id": "132488613174518784",
+  "name": "某个路易",
+  "nameSpell": "name"
+ },
+ "totalAppraisalScore": 15,
+ "iflytekId": null,
+ "views": 5360,
+ "productLineId": 29,
+ "comments": 0,
+ "similarityCount": 0,
+ "totalAppraisalUsers": 3,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1765534338000,
+ "appraisalScore": 0,
+ "unuseful": 0,
+ "knowledgeCheckStatus": 2,
+ "otherProductLineIds": [],
+ "auditAt": 1765534338000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "kemsubopen",
+        "id": "535465136673529600",
+        "name": "事件推送订阅",
+        "productLineId": null,
+        "sort": 15,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 0,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "kemeventopen",
+        "id": "535464126735421440",
+        "name": "开放事件定义",
+        "productLineId": null,
+        "sort": 14,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 1,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "GettingStarted",
+     "createdAt": 1556519230000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "推送至苍穹帮助中心",
+     "hasSpecifyUser": false,
+     "hide": true,
+     "icon": "/download/01001f079866652f4a68a71361a9509d404c.png",
+     "id": "202203081643",
+     "name": "推送至苍穹帮助中心",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 1,
+     "type": 2,
+     "updatePerson": {
+      "avatar": "/download?fileName=010162cfa9d5437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1129",
+      "name": "灏",
+      "nameSpell": "hao"
+     },
+     "updatedAt": 1605688859000
+    },
+    {
+     "code": "KFZN",
+     "createdAt": 1657854097000,
+     "creator": {
+      "avatar": "/download/010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "306913800727243776",
+      "name": "Paim",
+      "nameSpell": "name"
+     },
+     "description": "对开发的使用实例、应用技巧、基本知识点及注意事项等进行总结， 用于指导和规范相应模块的开发过程",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/01007702def2b9454c5983d3d2ff24919094.png",
+     "id": "335737665134146048",
+     "name": "开发指南",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010176d38341668f44fdb94c95058a90e4b8.png",
+      "department": "云社区运营部",
+      "id": "2147406697",
+      "name": "多肉丸子",
+      "nameSpell": "kejuan"
+     },
+     "updatedAt": 1676857749000
+    },
+    {
+     "code": "rumen",
+     "createdAt": 1605667807000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "入门类的知识可使用此标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100d322b9282bcc438faa894f4eec029977.png",
+     "id": "202203081646",
+     "name": "基础入门",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download?fileName=0101ec1d6ce599b442dab7d0b794c1fce88d.png",
+      "department": null,
+      "id": "1009",
+      "name": "一颗小星星",
+      "nameSpell": "fengling"
+     },
+     "updatedAt": 1657872008000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "535418940910966272",
+         "entityType": "Knowledge",
+         "id": "535473151216618496",
+         "isCategory": false,
+         "name": "事件对接说明（回调接口要求）",
+         "parentId": "535466471703678976",
+         "sort": "2",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": null,
+       "id": "535466471703678976",
+       "isCategory": true,
+       "name": "开放事件",
+       "parentId": "-1",
+       "sort": "7",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": "<p><span><strong>变更记录</strong></span></p><p></p><p></p><table style=\"width: 744px\"><colgroup><col style=\"width: 248px\"><col style=\"width: 248px\"><col style=\"width: 248px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"248\" data-background-color=\"\" style=\"background-color: \"><p><strong>产品版本</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"248\" data-background-color=\"\" style=\"background-color: \"><p><strong>更新内容</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"248\" data-background-color=\"\" style=\"background-color: \"><p><strong>更新日期</strong></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"248\" data-background-color=\"\" style=\"background-color: \"><p>V6.0.6</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"248\" data-background-color=\"\" style=\"background-color: \"><p><span>初始版本</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"248\" data-background-color=\"\" style=\"background-color: \"><p><span>2024年01月17日</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"248\" data-background-color=\"\" style=\"background-color: \"><p><span>V6.0.13</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"248\" data-background-color=\"\" style=\"background-color: \"><p><span>事件推送支持签名和加密</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"248\" data-background-color=\"\" style=\"background-color: \"><p><span>2024年06月14日</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p>V7.0.0</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p>1、事件推送支持脚本插件 2、Webhook回调支持自定义断言</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p></p></td></tr></tbody></table><p></p><hr><p></p><h2>1 介绍</h2><p><span>开放事件订阅时，要求第三方系统提供一个可直接访问的Webhook回调接口，当事件触发时，系统会调用该接口向第三方系统传递事件消息。下面是平台对回调接口要求。</span></p><p><span>为保障数据传输安全，防止传输过程中数据被篡改和泄露，从V6.0.13版本开始，开放事件支持签名和加密。用户可以在事件订阅推送页面配置<strong>签名(页面必选，对接方也可不验签)和加密(可选)</strong>策略，操作详情见&nbsp;</span><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/article/535457042169969408\"><span style=\"color: rgb(0, 176, 240)\">事件推送订阅</span></a><span>&nbsp;，平台在推送事件前会根据配置进行请求签名和数据加密。回调接口需要实现对应的验签和解密算法才能拿到事件数据。</span></p><p style=\"text-align: center\"><span><img src=\"/download/01094fb88641ba56476d98c24847c0a8c610.png\"></span></p><p style=\"text-align: center\"><span>事件触发时序</span></p><p></p><h2><span>2 回调接口协议</span></h2><p><span>支持http/https协议。</span></p><p></p><h2><span>3 请求说明</span></h2><h3><span>3.1 请求方式</span></h3><p><span>POST+ application/json</span></p><h3><span>3.2 请求参数</span></h3><p><span><strong>&nbsp;请求头（Header)</strong></span></p><p></p><table style=\"width: 724px\"><colgroup><col style=\"width: 181px\"><col style=\"width: 181px\"><col style=\"width: 181px\"><col style=\"width: 181px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span><strong>参数</strong></span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span><strong>参数类型</strong></span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span><strong>是否必填</strong></span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span><strong>参数说明</strong></span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>x-kem-request-timestamp</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>长整数</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>是&nbsp;</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>时间戳</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>x-kem-request-nonce</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>字符串</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>是</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>随机数</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>x-kem-signature</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p>字符串</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p>是</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>消息签名，防止请求截获篡改</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>x-kem-encrypt-iv</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>字符串</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p>是</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>初始向量，用于数据解密&nbsp;</span></p></td></tr></tbody></table><p></p><p></p><p><strong>请求体-加密报文</strong></p><p></p><table style=\"width: 724px\"><colgroup><col style=\"width: 181px\"><col style=\"width: 181px\"><col style=\"width: 181px\"><col style=\"width: 181px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><strong>参数</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><strong>参数类型</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><strong>是否必填</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><strong>参数说明</strong></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p>encrypt</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p>字符串</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p>是</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p>加密后的密文</p></td></tr></tbody></table><p></p><p>参数示例：</p><pre><code class=\"language-plaintext\">{\"encrypt\":\"TgwQHnE78p83RiqIiuPSyMSjv89Aj0MBhvcd5Pq3mIXxpwF4YWOi/TARaDnAo0WkgATJwl5p13KznUKJJ25NDQylO3VebDsIXuN3hvS93qb2v6gkDuF9IaEDOUdOBxJhYJKcfX2o3wvAU84lfqH4F8yqLOGsSsljUvNKeWKpEPBgpn/+ZDS3v+K9Gi8cF0Ix5A/DMeBLkqO5sJQuuPb5ni5W7YLEfZrPMQh1r2BcaKqJ8wUrz6e8ZyfAGJ4s38OMIzEflHdX5FHjsQNJ4CgqsnUHAynE4nZRhBYrVLiVba3SBqqr+Fw8H3OaAuN0G5RijCyItrOUtG20z9UFEPF+LqGJ9XqroAGUJ0ijK0V9jTb0ExEibNxjCtYMGzthbMOo\"}</code></pre><p><span style=\"color: rgb(247, 150, 70)\"><em>注意：加密是对整个消息体做的加密。</em></span></p><p></p><p><span><strong>请求体-不加密或解密报文</strong></span></p><p></p><table style=\"width: 724px\"><colgroup><col style=\"width: 181px\"><col style=\"width: 181px\"><col style=\"width: 181px\"><col style=\"width: 181px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><strong>参数</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><strong>参数类型</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><strong>是否必填</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><strong>参数说明</strong></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>eventNumber</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>字符串</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>是</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>触发事件编码</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>msgId</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>长整数</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>是</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>订阅执行实例&nbsp;</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>entityNumber</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>字符串</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>是</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>变化的业务对象编码</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>operation</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>字符串</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>是</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>业务对象操作方式</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>data&nbsp;</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>结构</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>是</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>事件传递参数&nbsp;</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>&nbsp;-xxx&nbsp;</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p>-</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>否&nbsp;</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"181\" data-background-color=\"\" style=\"background-color: \"><p><span>事件参数xxx</span></p></td></tr></tbody></table><p></p><p><span>参数示例：</span></p><pre><code class=\"language-plaintext\">{\n&nbsp;&nbsp;&nbsp;&nbsp;\"data\":{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"id\":\"1858013541517285376\",\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"number\":\"eeee\",\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"name\":\"eeee\",\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"enable\":\"1\",\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"status\":\"C\",\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"remark\":\"\",\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"creator\":\"1754371843654946816\",\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"createtime\":\"2024-01-08&nbsp;13:41:07.472\",\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"modifytime\":\"2024-01-08&nbsp;13:41:14.326\",\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"modifier\":\"1754371843654946816\"\n&nbsp;&nbsp;&nbsp;&nbsp;},\n&nbsp;&nbsp;&nbsp;&nbsp;\"eventNumber\":\"kdtest.kemopenevt.osc.open.sortdelete\",\n&nbsp;&nbsp;&nbsp;&nbsp;\"msgId\":\"1858013636274991104\",\n&nbsp;&nbsp;&nbsp;&nbsp;\"entityNumber\":\"openapi_custom_sort\",\n&nbsp;&nbsp;&nbsp;&nbsp;\"operation\":\"save\"\n}</code></pre><p></p><h2><span>&nbsp;4 验签说明</span></h2><p><span>从V6.0.13版本后，所有开放事件推送必须进行请求签名，确保回调地址收到的请求来至于可信的源。用户可在事件订阅推送页面配置签名策略和签名密钥，签名策略支持HMAC_SHA_256和SHA_256两种。请根据页面配置的签名策略和密钥，使用对应的算法进行签名计算。</span></p><p><span style=\"color: rgb(227, 108, 9)\"><em>注意：V6.0.13版本后，开放事件推送时必须加签，所以订阅页面必须配置签名策略和密钥，对接方可选择验签或不验签，都不影响事件参数传递，但建议对接方做验签处理，避免传输过程中数据被篡改。</em></span></p><h3>4.1 验签过程</h3><p><span>1、从请求中获取如下参数</span></p><ul><li><p><span>timestamp：时间戳，获取请求头中的 x-kem-request-timestamp。</span></p></li><li><p><span>nonce：数据数，获取请求头中的 x-kem-request-nonce。</span></p></li><li><p><span>signature：消息签名，获取请求头中的&nbsp; x-kem-signature。</span></p></li><li><p><span>body：接收的请求体。</span></p></li></ul><p><span>2、订阅推送页面设置的签名密钥 signsecretkey；</span></p><p><span>3、组装签名内容：signsecretkey + timestamp + nonce + body；</span></p><p><span>4、用订阅推送页面配置的签名算法对签名内容进行签名；</span></p><p><span>5、将签名结果转为16进制字符串，并与请求头中 x-kem-signature&nbsp;签名内容进行比较是否一致。</span></p><h3><span>4.2 Java示例代码</span></h3><p><span>以 HMAC_SHA_256为例：</span></p><pre><code class=\"language-plaintext\">public&nbsp;String&nbsp;calculateSignature(String&nbsp;signsecretkey,&nbsp;String&nbsp;timestamp,&nbsp;String&nbsp;nonce,&nbsp;String&nbsp;bodyString)&nbsp;throws&nbsp;NoSuchAlgorithmException,&nbsp;InvalidKeyException&nbsp;{\n&nbsp;&nbsp;&nbsp;String&nbsp;content&nbsp;=&nbsp;signsecretkey&nbsp;+&nbsp;timestamp&nbsp;+&nbsp;nonce&nbsp;+&nbsp;bodyString;\n&nbsp;&nbsp;&nbsp;\n&nbsp;&nbsp;&nbsp;Mac&nbsp;hmacSHA256&nbsp;=&nbsp;Mac.getInstance(\"HmacSHA256\");\n&nbsp;&nbsp;&nbsp;SecretKeySpec&nbsp;secretKeySpec&nbsp;=&nbsp;new&nbsp;SecretKeySpec(signsecretkey.getBytes(StandardCharsets.UTF_8),&nbsp;\"HmacSHA256\");\n&nbsp;&nbsp;&nbsp;hmacSHA256.init(secretKeySpec);\n\n&nbsp;&nbsp;&nbsp;byte[]&nbsp;signData&nbsp;=&nbsp;hmacSHA256.doFinal(content.getBytes(StandardCharsets.UTF_8));\n\n&nbsp;&nbsp;&nbsp;return&nbsp;Hex.encodeHexString(signData);\n\n}</code></pre><p></p><h2><span>5 解密说明</span></h2><p><span>为防止数据传输过程中泄露，从V6.0.13版本后，支持对推送的事件消息进行数据加密。用户可在事件订阅推送页面配置加密策略和加密密钥，对接时根据配置进行数据解密。<strong>事件传输加密为非必须</strong>，可根据数据安全要求自行选择。</span></p><p><span>支持的加密策略如下：</span></p><p></p><table style=\"min-width: 506px\"><colgroup><col style=\"width: 228px\"><col style=\"width: 228px\"><col style=\"min-width: 25px\"><col style=\"min-width: 25px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"228\" data-background-color=\"\" style=\"background-color: \"><p><strong>算法</strong></p></td><td colspan=\"3\" rowspan=\"1\" colwidth=\"228\" data-background-color=\"\" style=\"background-color: \"><p><strong>密钥长度（bit）</strong></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"228\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(33, 33, 33)\">AES/CBC/PKCS5Padding</span></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"62\" data-background-color=\"\" style=\"background-color: \"><p>128</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"63\" data-background-color=\"\" style=\"background-color: \"><p>192</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"57\" data-background-color=\"\" style=\"background-color: \"><p>256</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"228\" data-background-color=\"\" style=\"background-color: \"><p><span style=\"color: rgb(33, 33, 33)\">SM4/CBC/PKCS5Padding</span></p></td><td colspan=\"3\" rowspan=\"1\" colwidth=\"228\" data-background-color=\"\" style=\"background-color: \"><p>128</p></td></tr></tbody></table><p></p><h3><span>5.1 解密过程</span></h3><p><span>1、获取请求体加密报文 encrypt；</span></p><p><span>2、获取请求头中的初始向量 x-kem-encrypt-iv；</span></p><p><span>3、使用Base64解码 encrypt，即为加密数据encrypted_data；</span></p><p><span>4、使用Base64解码请求头 x-kem-encrypt-iv 的值，即为初始向量iv；</span></p><p><span>5、用订阅推送页面配置的加密算法，使用初始向量 iv 和页面配置的加密密钥 encryptsecretkey 对加密数据encrypted_data进行解密，将解密结果转为字符串即为请求体的解密报文。</span></p><h3><span>5.2 Java示例代码</span></h3><p><span>以AES/CBC/PKCS5Padding算法为例：</span></p><pre><code class=\"language-plaintext\">public&nbsp;String&nbsp;decrypt(String&nbsp;encrypt,&nbsp;String&nbsp;encryptsecretkey,&nbsp;String&nbsp;ivStr)&nbsp;throws&nbsp;Exception&nbsp;{\n&nbsp;&nbsp;&nbsp;Cipher&nbsp;cipher&nbsp;=&nbsp;Cipher.getInstance(\"AES/CBC/PKCS5Padding\");\n&nbsp;&nbsp;&nbsp;byte[]&nbsp;key&nbsp;=&nbsp;Base64.decodeBase64(encryptsecretkey);\n&nbsp;&nbsp;&nbsp;byte[]&nbsp;data&nbsp;=&nbsp;Base64.decodeBase64(encrypt);\n&nbsp;&nbsp;&nbsp;//&nbsp;获取iv\n&nbsp;&nbsp;&nbsp;byte[]&nbsp;iv&nbsp;=&nbsp;Base64.decodeBase64(ivStr);\n&nbsp;&nbsp;&nbsp;SecretKeySpec&nbsp;keySpec&nbsp;=&nbsp;new&nbsp;SecretKeySpec(key,&nbsp;\"AES\");&nbsp;//&nbsp;或&nbsp;SM4\n&nbsp;&nbsp;&nbsp;AlgorithmParameterSpec&nbsp;paramSpec&nbsp;=&nbsp;new&nbsp;IvParameterSpec(iv);\n&nbsp;&nbsp;&nbsp;cipher.init(Cipher.DECRYPT_MODE,&nbsp;keySpec,&nbsp;paramSpec);\n\n&nbsp;&nbsp;&nbsp;return&nbsp;new&nbsp;String(cipher.doFinal(data),&nbsp;StandardCharsets.UTF_8);\n}</code></pre><p></p><h2><span>6 返回要求</span></h2><h3><span>6.1 返回结构</span></h3><p><span>Json</span></p><h3>6.2 返回参数</h3><ul><li><p><span>请求返回参数不报错、不超时默认为推送成功，，返回结果不需要进行加密和签名。</span></p></li><li><p>回调方可以返回任意结果，若需要对结果进行判断，可以在请求断言中通过$result获取响应结果，并判断请求是否成功。</p></li></ul><p></p><h2><span>7 超时和重试</span></h2><p><span>1、回调接口需确保在3s内返回，如果3s不返回则认为超时失败。</span></p><p><span>2、事件推送订阅默认配置重试3次，即首次推送失败后系统会重复推送3次，对接方需要<strong>确保回调接口请求的可重试性</strong>，避免出现业务重复处理。</span></p><p><span>3、如果重试3次依然失败，系统不再重试。后续可前往推送日志列表进行手工重试。</span></p><p></p><h2><span>8 兼容性说明</span></h2><p><span>V6.0.13版本之前配置的事件订阅推送数据，在平台版本升级后，运行时还会按照无签名和无加密的方式继续正常推送事件消息。</span></p><p></p>"
+}

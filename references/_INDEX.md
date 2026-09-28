@@ -1,247 +1,79 @@
-# 金蝶云苍穹库表总索引
+# 金蝶云苍穹开发知识库 · 总索引
 
-> 共收录 **22769** 张表定义，分布在 **224** 个模块 / **8606** 个 Markdown 文件中。
+本知识库由两大块构成，**全部内容可用同一个检索脚本定位**：
+
+| 块 | 内容 | 规模 | 入口 |
+| :--- | :--- | :--- | :--- |
+| **块一 数据库** | 全量物理表结构（字段/列规则/索引） | 22769 张表 / 224 模块 | [db/_INDEX.md](./db/_INDEX.md) |
+| **块二 OpenAPI 手册** | 金蝶云社区开放平台官方手册 | 144 篇 / 8 分类 | [openapi/_INDEX.md](./openapi/_INDEX.md) |
+
 > 索引由 `scripts/build_index.py` 从 Markdown 自动生成，请勿手工编辑。
 
-> 检索表结构请优先用统一检索脚本（比翻本文件快得多）：
-> ```bash
-> python scripts/search.py 销售订单                  # 全模块关键词检索
-> python scripts/search.py t_sm_salorder --table     # 按表名精确定位
-> python scripts/search.py 凭证 --scope gl --brief   # 只看总账模块摘要
-> python scripts/search.py --list-modules            # 列出全部模块
-> ```
+## 检索
 
-> [!TIP]
-> 写 SQL 前留意金蝶约定：多语言表以 `_l` 结尾（关联时需过滤 `flocaleid`）；
-> 主子表通过 `fid` / `fentryid` 关联；备注列常含枚举值定义（如 `A: 暂存, B: 已提交`）。
-> 目标库为 **PostgreSQL 12**。
+```bash
+python scripts/search.py 销售订单                            # 全库检索
+python scripts/search.py t_sm_salorder --table --full        # 精确取表字段
+python scripts/search.py 自定义API --scope openapi           # 只搜开发手册
+python scripts/search.py 回调 --scope openapi --category 开放事件
+python scripts/search.py --list                              # 列出模块与分类
+```
 
-## 模块统计概览
+## 块一 数据库 · 模块概览
 
-| 序号 | 模块 | 表数量 | 文件数 | 模块索引 |
-| :---: | :--- | ---: | ---: | :--- |
-| 1 | `src` | **1400** | 358 | [src_files/_INDEX.md](./src_files/_INDEX.md) |
-| 2 | `em` | **675** | 138 | [em_files/_INDEX.md](./em_files/_INDEX.md) |
-| 3 | `base` | **624** | 311 | [base_files/_INDEX.md](./base_files/_INDEX.md) |
-| 4 | `mpdm` | **618** | 192 | [mpdm_files/_INDEX.md](./mpdm_files/_INDEX.md) |
-| 5 | `srm` | **606** | 123 | [srm_files/_INDEX.md](./srm_files/_INDEX.md) |
-| 6 | `im` | **587** | 117 | [im_files/_INDEX.md](./im_files/_INDEX.md) |
-| 7 | `iscb` | **482** | 219 | [iscb_files/_INDEX.md](./iscb_files/_INDEX.md) |
-| 8 | `tccit` | **419** | 345 | [tccit_files/_INDEX.md](./tccit_files/_INDEX.md) |
-| 9 | `pbd` | **408** | 124 | [pbd_files/_INDEX.md](./pbd_files/_INDEX.md) |
-| 10 | `tcvat` | **407** | 263 | [tcvat_files/_INDEX.md](./tcvat_files/_INDEX.md) |
-| 11 | `plmsm` | **397** | 150 | [plmsm_files/_INDEX.md](./plmsm_files/_INDEX.md) |
-| 12 | `basedata` | **362** | 119 | [basedata_files/_INDEX.md](./basedata_files/_INDEX.md) |
-| 13 | `fmm` | **358** | 88 | [fmm_files/_INDEX.md](./fmm_files/_INDEX.md) |
-| 14 | `sfc` | **321** | 57 | [sfc_files/_INDEX.md](./sfc_files/_INDEX.md) |
-| 15 | `fa` | **313** | 105 | [fa_files/_INDEX.md](./fa_files/_INDEX.md) |
-| 16 | `sco` | **302** | 111 | [sco_files/_INDEX.md](./sco_files/_INDEX.md) |
-| 17 | `cas` | **300** | 96 | [cas_files/_INDEX.md](./cas_files/_INDEX.md) |
-| 18 | `cal` | **290** | 115 | [cal_files/_INDEX.md](./cal_files/_INDEX.md) |
-| 19 | `wf` | **279** | 141 | [wf_files/_INDEX.md](./wf_files/_INDEX.md) |
-| 20 | `gl` | **259** | 111 | [gl_files/_INDEX.md](./gl_files/_INDEX.md) |
-| 21 | `qcbd` | **256** | 75 | [qcbd_files/_INDEX.md](./qcbd_files/_INDEX.md) |
-| 22 | `mds` | **254** | 77 | [mds_files/_INDEX.md](./mds_files/_INDEX.md) |
-| 23 | `tdm` | **251** | 131 | [tdm_files/_INDEX.md](./tdm_files/_INDEX.md) |
-| 24 | `msplan` | **244** | 73 | [msplan_files/_INDEX.md](./msplan_files/_INDEX.md) |
-| 25 | `scp` | **242** | 39 | [scp_files/_INDEX.md](./scp_files/_INDEX.md) |
-| 26 | `ar` | **239** | 65 | [ar_files/_INDEX.md](./ar_files/_INDEX.md) |
-| 27 | `ifm` | **238** | 46 | [ifm_files/_INDEX.md](./ifm_files/_INDEX.md) |
-| 28 | `ssc` | **221** | 100 | [ssc_files/_INDEX.md](./ssc_files/_INDEX.md) |
-| 29 | `plmpm` | **219** | 66 | [plmpm_files/_INDEX.md](./plmpm_files/_INDEX.md) |
-| 30 | `pds` | **217** | 63 | [pds_files/_INDEX.md](./pds_files/_INDEX.md) |
-| 31 | `cts` | **207** | 98 | [cts_files/_INDEX.md](./cts_files/_INDEX.md) |
-| 32 | `pom` | **207** | 36 | [pom_files/_INDEX.md](./pom_files/_INDEX.md) |
-| 33 | `adm` | **205** | 34 | [adm_files/_INDEX.md](./adm_files/_INDEX.md) |
-| 34 | `ocdbd` | **204** | 80 | [ocdbd_files/_INDEX.md](./ocdbd_files/_INDEX.md) |
-| 35 | `mpm` | **200** | 56 | [mpm_files/_INDEX.md](./mpm_files/_INDEX.md) |
-| 36 | `ap` | **199** | 64 | [ap_files/_INDEX.md](./ap_files/_INDEX.md) |
-| 37 | `sm` | **190** | 49 | [sm_files/_INDEX.md](./sm_files/_INDEX.md) |
-| 38 | `mrp` | **189** | 76 | [mrp_files/_INDEX.md](./mrp_files/_INDEX.md) |
-| 39 | `tcret` | **183** | 112 | [tcret_files/_INDEX.md](./tcret_files/_INDEX.md) |
-| 40 | `xkbm` | **181** | 57 | [xkbm_files/_INDEX.md](./xkbm_files/_INDEX.md) |
-| 41 | `pm` | **174** | 44 | [pm_files/_INDEX.md](./pm_files/_INDEX.md) |
-| 42 | `sbd` | **171** | 60 | [sbd_files/_INDEX.md](./sbd_files/_INDEX.md) |
-| 43 | `sca` | **170** | 65 | [sca_files/_INDEX.md](./sca_files/_INDEX.md) |
-| 44 | `tctb` | **169** | 73 | [tctb_files/_INDEX.md](./tctb_files/_INDEX.md) |
-| 45 | `som` | **165** | 55 | [som_files/_INDEX.md](./som_files/_INDEX.md) |
-| 46 | `cdm` | **158** | 37 | [cdm_files/_INDEX.md](./cdm_files/_INDEX.md) |
-| 47 | `pmm` | **157** | 38 | [pmm_files/_INDEX.md](./pmm_files/_INDEX.md) |
-| 48 | `aqap` | **154** | 86 | [aqap_files/_INDEX.md](./aqap_files/_INDEX.md) |
-| 49 | `cad` | **154** | 63 | [cad_files/_INDEX.md](./cad_files/_INDEX.md) |
-| 50 | `fbd` | **154** | 55 | [fbd_files/_INDEX.md](./fbd_files/_INDEX.md) |
-| 51 | `open` | **151** | 46 | [open_files/_INDEX.md](./open_files/_INDEX.md) |
-| 52 | `plmrm` | **149** | 63 | [plmrm_files/_INDEX.md](./plmrm_files/_INDEX.md) |
-| 53 | `bdtaxr` | **141** | 61 | [bdtaxr_files/_INDEX.md](./bdtaxr_files/_INDEX.md) |
-| 54 | `mscommon` | **129** | 52 | [mscommon_files/_INDEX.md](./mscommon_files/_INDEX.md) |
-| 55 | `xkcr` | **128** | 39 | [xkcr_files/_INDEX.md](./xkcr_files/_INDEX.md) |
-| 56 | `fibd` | **127** | 57 | [fibd_files/_INDEX.md](./fibd_files/_INDEX.md) |
-| 57 | `barcm` | **122** | 39 | [barcm_files/_INDEX.md](./barcm_files/_INDEX.md) |
-| 58 | `conm` | **119** | 33 | [conm_files/_INDEX.md](./conm_files/_INDEX.md) |
-| 59 | `occba` | **119** | 41 | [occba_files/_INDEX.md](./occba_files/_INDEX.md) |
-| 60 | `rim` | **117** | 83 | [rim_files/_INDEX.md](./rim_files/_INDEX.md) |
-| 61 | `mdl` | **110** | 63 | [mdl_files/_INDEX.md](./mdl_files/_INDEX.md) |
-| 62 | `pa` | **110** | 41 | [pa_files/_INDEX.md](./pa_files/_INDEX.md) |
-| 63 | `ocmem` | **109** | 35 | [ocmem_files/_INDEX.md](./ocmem_files/_INDEX.md) |
-| 64 | `ocbsoc` | **108** | 18 | [ocbsoc_files/_INDEX.md](./ocbsoc_files/_INDEX.md) |
-| 65 | `aca` | **107** | 35 | [aca_files/_INDEX.md](./aca_files/_INDEX.md) |
-| 66 | `tcvvt` | **106** | 87 | [tcvvt_files/_INDEX.md](./tcvvt_files/_INDEX.md) |
-| 67 | `om` | **103** | 23 | [om_files/_INDEX.md](./om_files/_INDEX.md) |
-| 68 | `bei` | **102** | 37 | [bei_files/_INDEX.md](./bei_files/_INDEX.md) |
-| 69 | `pdm` | **99** | 28 | [pdm_files/_INDEX.md](./pdm_files/_INDEX.md) |
-| 70 | `plmipdsm` | **99** | 40 | [plmipdsm_files/_INDEX.md](./plmipdsm_files/_INDEX.md) |
-| 71 | `invp` | **98** | 37 | [invp_files/_INDEX.md](./invp_files/_INDEX.md) |
-| 72 | `ocdpm` | **98** | 29 | [ocdpm_files/_INDEX.md](./ocdpm_files/_INDEX.md) |
-| 73 | `cbs` | **97** | 62 | [cbs_files/_INDEX.md](./cbs_files/_INDEX.md) |
-| 74 | `tctrc` | **95** | 30 | [tctrc_files/_INDEX.md](./tctrc_files/_INDEX.md) |
-| 75 | `ococic` | **90** | 36 | [ococic_files/_INDEX.md](./ococic_files/_INDEX.md) |
-| 76 | `tnd` | **90** | 25 | [tnd_files/_INDEX.md](./tnd_files/_INDEX.md) |
-| 77 | `ism` | **89** | 36 | [ism_files/_INDEX.md](./ism_files/_INDEX.md) |
-| 78 | `log` | **89** | 65 | [log_files/_INDEX.md](./log_files/_INDEX.md) |
-| 79 | `sim` | **87** | 48 | [sim_files/_INDEX.md](./sim_files/_INDEX.md) |
-| 80 | `ccm` | **86** | 35 | [ccm_files/_INDEX.md](./ccm_files/_INDEX.md) |
-| 81 | `xkrpt` | **85** | 32 | [xkrpt_files/_INDEX.md](./xkrpt_files/_INDEX.md) |
-| 82 | `bastax` | **84** | 31 | [bastax_files/_INDEX.md](./bastax_files/_INDEX.md) |
-| 83 | `ds` | **82** | 79 | [ds_files/_INDEX.md](./ds_files/_INDEX.md) |
-| 84 | `bdm` | **80** | 55 | [bdm_files/_INDEX.md](./bdm_files/_INDEX.md) |
-| 85 | `am` | **71** | 17 | [am_files/_INDEX.md](./am_files/_INDEX.md) |
-| 86 | `tsate` | **71** | 51 | [tsate_files/_INDEX.md](./tsate_files/_INDEX.md) |
-| 87 | `qcp` | **70** | 8 | [qcp_files/_INDEX.md](./qcp_files/_INDEX.md) |
-| 88 | `xkoac` | **70** | 24 | [xkoac_files/_INDEX.md](./xkoac_files/_INDEX.md) |
-| 89 | `gai` | **69** | 27 | [gai_files/_INDEX.md](./gai_files/_INDEX.md) |
-| 90 | `qcpp` | **69** | 8 | [qcpp_files/_INDEX.md](./qcpp_files/_INDEX.md) |
-| 91 | `sou` | **68** | 10 | [sou_files/_INDEX.md](./sou_files/_INDEX.md) |
-| 92 | `theme` | **68** | 42 | [theme_files/_INDEX.md](./theme_files/_INDEX.md) |
-| 93 | `fsa` | **65** | 29 | [fsa_files/_INDEX.md](./fsa_files/_INDEX.md) |
-| 94 | `qcnp` | **65** | 10 | [qcnp_files/_INDEX.md](./qcnp_files/_INDEX.md) |
-| 95 | `occbo` | **62** | 26 | [occbo_files/_INDEX.md](./occbo_files/_INDEX.md) |
-| 96 | `wftask` | **62** | 45 | [wftask_files/_INDEX.md](./wftask_files/_INDEX.md) |
-| 97 | `pca` | **61** | 26 | [pca_files/_INDEX.md](./pca_files/_INDEX.md) |
-| 98 | `plmdc` | **61** | 26 | [plmdc_files/_INDEX.md](./plmdc_files/_INDEX.md) |
-| 99 | `qcas` | **60** | 7 | [qcas_files/_INDEX.md](./qcas_files/_INDEX.md) |
-| 100 | `portal` | **57** | 41 | [portal_files/_INDEX.md](./portal_files/_INDEX.md) |
-| 101 | `didc` | **55** | 21 | [didc_files/_INDEX.md](./didc_files/_INDEX.md) |
-| 102 | `fcs` | **55** | 29 | [fcs_files/_INDEX.md](./fcs_files/_INDEX.md) |
-| 103 | `ipocommon` | **55** | 55 | [ipocommon_files/_INDEX.md](./ipocommon_files/_INDEX.md) |
-| 104 | `totf` | **54** | 41 | [totf_files/_INDEX.md](./totf_files/_INDEX.md) |
-| 105 | `amccsa` | **53** | 16 | [amccsa_files/_INDEX.md](./amccsa_files/_INDEX.md) |
-| 106 | `fca` | **53** | 14 | [fca_files/_INDEX.md](./fca_files/_INDEX.md) |
-| 107 | `frm` | **53** | 14 | [frm_files/_INDEX.md](./frm_files/_INDEX.md) |
-| 108 | `ipobase` | **53** | 28 | [ipobase_files/_INDEX.md](./ipobase_files/_INDEX.md) |
-| 109 | `scax` | **53** | 16 | [scax_files/_INDEX.md](./scax_files/_INDEX.md) |
-| 110 | `tctsa` | **51** | 19 | [tctsa_files/_INDEX.md](./tctsa_files/_INDEX.md) |
-| 111 | `ipop` | **50** | 33 | [ipop_files/_INDEX.md](./ipop_files/_INDEX.md) |
-| 112 | `iptm` | **50** | 21 | [iptm_files/_INDEX.md](./iptm_files/_INDEX.md) |
-| 113 | `mal` | **48** | 16 | [mal_files/_INDEX.md](./mal_files/_INDEX.md) |
-| 114 | `qcop` | **46** | 6 | [qcop_files/_INDEX.md](./qcop_files/_INDEX.md) |
-| 115 | `ent` | **45** | 12 | [ent_files/_INDEX.md](./ent_files/_INDEX.md) |
-| 116 | `ids` | **45** | 30 | [ids_files/_INDEX.md](./ids_files/_INDEX.md) |
-| 117 | `devgptas` | **44** | 22 | [devgptas_files/_INDEX.md](./devgptas_files/_INDEX.md) |
-| 118 | `xkpb` | **43** | 12 | [xkpb_files/_INDEX.md](./xkpb_files/_INDEX.md) |
-| 119 | `fircm` | **41** | 16 | [fircm_files/_INDEX.md](./fircm_files/_INDEX.md) |
-| 120 | `msbd` | **41** | 18 | [msbd_files/_INDEX.md](./msbd_files/_INDEX.md) |
-| 121 | `aef` | **39** | 25 | [aef_files/_INDEX.md](./aef_files/_INDEX.md) |
-| 122 | `frame` | **39** | 24 | [frame_files/_INDEX.md](./frame_files/_INDEX.md) |
-| 123 | `occpic` | **39** | 15 | [occpic_files/_INDEX.md](./occpic_files/_INDEX.md) |
-| 124 | `iba` | **38** | 19 | [iba_files/_INDEX.md](./iba_files/_INDEX.md) |
-| 125 | `cvp` | **37** | 24 | [cvp_files/_INDEX.md](./cvp_files/_INDEX.md) |
-| 126 | `nocode_sys` | **37** | 36 | [nocode_sys_files/_INDEX.md](./nocode_sys_files/_INDEX.md) |
-| 127 | `quo` | **37** | 9 | [quo_files/_INDEX.md](./quo_files/_INDEX.md) |
-| 128 | `er` | **35** | 20 | [er_files/_INDEX.md](./er_files/_INDEX.md) |
-| 129 | `clmcd` | **34** | 12 | [clmcd_files/_INDEX.md](./clmcd_files/_INDEX.md) |
-| 130 | `psw` | **33** | 19 | [psw_files/_INDEX.md](./psw_files/_INDEX.md) |
-| 131 | `edah` | **31** | 22 | [edah_files/_INDEX.md](./edah_files/_INDEX.md) |
-| 132 | `evp` | **31** | 24 | [evp_files/_INDEX.md](./evp_files/_INDEX.md) |
-| 133 | `fgptas` | **30** | 13 | [fgptas_files/_INDEX.md](./fgptas_files/_INDEX.md) |
-| 134 | `iscx` | **30** | 17 | [iscx_files/_INDEX.md](./iscx_files/_INDEX.md) |
-| 135 | `arm` | **29** | 11 | [arm_files/_INDEX.md](./arm_files/_INDEX.md) |
-| 136 | `botp` | **29** | 20 | [botp_files/_INDEX.md](./botp_files/_INDEX.md) |
-| 137 | `fea` | **28** | 12 | [fea_files/_INDEX.md](./fea_files/_INDEX.md) |
-| 138 | `kem` | **28** | 12 | [kem_files/_INDEX.md](./kem_files/_INDEX.md) |
-| 139 | `mbase` | **28** | 11 | [mbase_files/_INDEX.md](./mbase_files/_INDEX.md) |
-| 140 | `receipt` | **28** | 28 | [receipt_files/_INDEX.md](./receipt_files/_INDEX.md) |
-| 141 | `rpap` | **28** | 12 | [rpap_files/_INDEX.md](./rpap_files/_INDEX.md) |
-| 142 | `sbs` | **28** | 14 | [sbs_files/_INDEX.md](./sbs_files/_INDEX.md) |
-| 143 | `fatvs` | **27** | 13 | [fatvs_files/_INDEX.md](./fatvs_files/_INDEX.md) |
-| 144 | `idi` | **27** | 17 | [idi_files/_INDEX.md](./idi_files/_INDEX.md) |
-| 145 | `irew` | **27** | 7 | [irew_files/_INDEX.md](./irew_files/_INDEX.md) |
-| 146 | `fr` | **26** | 7 | [fr_files/_INDEX.md](./fr_files/_INDEX.md) |
-| 147 | `privacy` | **26** | 11 | [privacy_files/_INDEX.md](./privacy_files/_INDEX.md) |
-| 148 | `msrcs` | **25** | 10 | [msrcs_files/_INDEX.md](./msrcs_files/_INDEX.md) |
-| 149 | `til` | **25** | 12 | [til_files/_INDEX.md](./til_files/_INDEX.md) |
-| 150 | `bal` | **24** | 19 | [bal_files/_INDEX.md](./bal_files/_INDEX.md) |
-| 151 | `dhc` | **23** | 14 | [dhc_files/_INDEX.md](./dhc_files/_INDEX.md) |
-| 152 | `xkzlzc` | **23** | 9 | [xkzlzc_files/_INDEX.md](./xkzlzc_files/_INDEX.md) |
-| 153 | `devnew` | **22** | 16 | [devnew_files/_INDEX.md](./devnew_files/_INDEX.md) |
-| 154 | `msmob` | **22** | 9 | [msmob_files/_INDEX.md](./msmob_files/_INDEX.md) |
-| 155 | `ysq_rpamc` | **22** | 13 | [ysq_rpamc_files/_INDEX.md](./ysq_rpamc_files/_INDEX.md) |
-| 156 | `ipoapi` | **21** | 22 | [ipoapi_files/_INDEX.md](./ipoapi_files/_INDEX.md) |
-| 157 | `tam` | **21** | 15 | [tam_files/_INDEX.md](./tam_files/_INDEX.md) |
-| 158 | `tpl` | **21** | 19 | [tpl_files/_INDEX.md](./tpl_files/_INDEX.md) |
-| 159 | `ict` | **20** | 10 | [ict_files/_INDEX.md](./ict_files/_INDEX.md) |
-| 160 | `iq` | **20** | 11 | [iq_files/_INDEX.md](./iq_files/_INDEX.md) |
-| 161 | `cosmic_mob_comp` | **19** | 10 | [cosmic_mob_comp_files/_INDEX.md](./cosmic_mob_comp_files/_INDEX.md) |
-| 162 | `sysext` | **19** | 11 | [sysext_files/_INDEX.md](./sysext_files/_INDEX.md) |
-| 163 | `ysq_rpaac` | **19** | 5 | [ysq_rpaac_files/_INDEX.md](./ysq_rpaac_files/_INDEX.md) |
-| 164 | `cfa` | **18** | 9 | [cfa_files/_INDEX.md](./cfa_files/_INDEX.md) |
-| 165 | `diif` | **18** | 7 | [diif_files/_INDEX.md](./diif_files/_INDEX.md) |
-| 166 | `ide` | **18** | 10 | [ide_files/_INDEX.md](./ide_files/_INDEX.md) |
-| 167 | `iep` | **18** | 10 | [iep_files/_INDEX.md](./iep_files/_INDEX.md) |
-| 168 | `qcmp` | **18** | 6 | [qcmp_files/_INDEX.md](./qcmp_files/_INDEX.md) |
-| 169 | `qcqs` | **18** | 6 | [qcqs_files/_INDEX.md](./qcqs_files/_INDEX.md) |
-| 170 | `aicc` | **17** | 10 | [aicc_files/_INDEX.md](./aicc_files/_INDEX.md) |
-| 171 | `msisv` | **17** | 6 | [msisv_files/_INDEX.md](./msisv_files/_INDEX.md) |
-| 172 | `bec` | **16** | 10 | [bec_files/_INDEX.md](./bec_files/_INDEX.md) |
-| 173 | `calx` | **16** | 9 | [calx_files/_INDEX.md](./calx_files/_INDEX.md) |
-| 174 | `ccas` | **16** | 10 | [ccas_files/_INDEX.md](./ccas_files/_INDEX.md) |
-| 175 | `gmc` | **16** | 9 | [gmc_files/_INDEX.md](./gmc_files/_INDEX.md) |
-| 176 | `ocrpos` | **16** | 6 | [ocrpos_files/_INDEX.md](./ocrpos_files/_INDEX.md) |
-| 177 | `pqt` | **16** | 7 | [pqt_files/_INDEX.md](./pqt_files/_INDEX.md) |
-| 178 | `unit` | **16** | 15 | [unit_files/_INDEX.md](./unit_files/_INDEX.md) |
-| 179 | `invsm` | **15** | 13 | [invsm_files/_INDEX.md](./invsm_files/_INDEX.md) |
-| 180 | `iprm` | **15** | 11 | [iprm_files/_INDEX.md](./iprm_files/_INDEX.md) |
-| 181 | `plat` | **15** | 7 | [plat_files/_INDEX.md](./plat_files/_INDEX.md) |
-| 182 | `rsa` | **14** | 6 | [rsa_files/_INDEX.md](./rsa_files/_INDEX.md) |
-| 183 | `xkda` | **14** | 4 | [xkda_files/_INDEX.md](./xkda_files/_INDEX.md) |
-| 184 | `bpm` | **13** | 7 | [bpm_files/_INDEX.md](./bpm_files/_INDEX.md) |
-| 185 | `dbc` | **13** | 7 | [dbc_files/_INDEX.md](./dbc_files/_INDEX.md) |
-| 186 | `ippm` | **13** | 6 | [ippm_files/_INDEX.md](./ippm_files/_INDEX.md) |
-| 187 | `mscm` | **13** | 5 | [mscm_files/_INDEX.md](./mscm_files/_INDEX.md) |
-| 188 | `iv` | **12** | 3 | [iv_files/_INDEX.md](./iv_files/_INDEX.md) |
-| 189 | `fcp` | **11** | 7 | [fcp_files/_INDEX.md](./fcp_files/_INDEX.md) |
-| 190 | `devportal` | **9** | 8 | [devportal_files/_INDEX.md](./devportal_files/_INDEX.md) |
-| 191 | `mai` | **9** | 7 | [mai_files/_INDEX.md](./mai_files/_INDEX.md) |
-| 192 | `xkpac` | **9** | 3 | [xkpac_files/_INDEX.md](./xkpac_files/_INDEX.md) |
-| 193 | `ipm` | **8** | 5 | [ipm_files/_INDEX.md](./ipm_files/_INDEX.md) |
-| 194 | `osr` | **8** | 4 | [osr_files/_INDEX.md](./osr_files/_INDEX.md) |
-| 195 | `superquery` | **8** | 6 | [superquery_files/_INDEX.md](./superquery_files/_INDEX.md) |
-| 196 | `plmcm` | **7** | 3 | [plmcm_files/_INDEX.md](./plmcm_files/_INDEX.md) |
-| 197 | `plmpsm` | **7** | 3 | [plmpsm_files/_INDEX.md](./plmpsm_files/_INDEX.md) |
-| 198 | `aifs` | **6** | 4 | [aifs_files/_INDEX.md](./aifs_files/_INDEX.md) |
-| 199 | `clmrv` | **6** | 2 | [clmrv_files/_INDEX.md](./clmrv_files/_INDEX.md) |
-| 200 | `mgwb` | **6** | 2 | [mgwb_files/_INDEX.md](./mgwb_files/_INDEX.md) |
-| 201 | `modelm` | **6** | 4 | [modelm_files/_INDEX.md](./modelm_files/_INDEX.md) |
-| 202 | `xkfsa` | **6** | 3 | [xkfsa_files/_INDEX.md](./xkfsa_files/_INDEX.md) |
-| 203 | `dtmg` | **5** | 3 | [dtmg_files/_INDEX.md](./dtmg_files/_INDEX.md) |
-| 204 | `fmb` | **5** | 3 | [fmb_files/_INDEX.md](./fmb_files/_INDEX.md) |
-| 205 | `plmpw` | **5** | 2 | [plmpw_files/_INDEX.md](./plmpw_files/_INDEX.md) |
-| 206 | `scrim` | **5** | 6 | [scrim_files/_INDEX.md](./scrim_files/_INDEX.md) |
-| 207 | `note` | **4** | 3 | [note_files/_INDEX.md](./note_files/_INDEX.md) |
-| 208 | `ocbmall` | **4** | 4 | [ocbmall_files/_INDEX.md](./ocbmall_files/_INDEX.md) |
-| 209 | `secm` | **4** | 4 | [secm_files/_INDEX.md](./secm_files/_INDEX.md) |
-| 210 | `dcsplat` | **3** | 4 | [dcsplat_files/_INDEX.md](./dcsplat_files/_INDEX.md) |
-| 211 | `ocsaa` | **3** | 2 | [ocsaa_files/_INDEX.md](./ocsaa_files/_INDEX.md) |
-| 212 | `cbp` | **2** | 3 | [cbp_files/_INDEX.md](./cbp_files/_INDEX.md) |
-| 213 | `eci` | **2** | 3 | [eci_files/_INDEX.md](./eci_files/_INDEX.md) |
-| 214 | `fbp` | **2** | 3 | [fbp_files/_INDEX.md](./fbp_files/_INDEX.md) |
-| 215 | `mib` | **2** | 2 | [mib_files/_INDEX.md](./mib_files/_INDEX.md) |
-| 216 | `ocdma` | **2** | 2 | [ocdma_files/_INDEX.md](./ocdma_files/_INDEX.md) |
-| 217 | `sdm` | **2** | 2 | [sdm_files/_INDEX.md](./sdm_files/_INDEX.md) |
-| 218 | `dm` | **1** | 2 | [dm_files/_INDEX.md](./dm_files/_INDEX.md) |
-| 219 | `ef` | **1** | 13 | [ef_files/_INDEX.md](./ef_files/_INDEX.md) |
-| 220 | `integ` | **1** | 2 | [integ_files/_INDEX.md](./integ_files/_INDEX.md) |
-| 221 | `iscr` | **1** | 2 | [iscr_files/_INDEX.md](./iscr_files/_INDEX.md) |
-| 222 | `plmmm` | **1** | 2 | [plmmm_files/_INDEX.md](./plmmm_files/_INDEX.md) |
-| 223 | `rpacp` | **1** | 2 | [rpacp_files/_INDEX.md](./rpacp_files/_INDEX.md) |
-| 224 | `moa` | **0** | 5 | [moa_files/_INDEX.md](./moa_files/_INDEX.md) |
-| **合计** | **224 个模块** | **22769** | **8606** | - |
+| 序号 | 模块 | 表数量 | 模块索引 |
+| :---: | :--- | ---: | :--- |
+| 1 | `src` | 1400 | [src_files/_INDEX.md](./db/src_files/_INDEX.md) |
+| 2 | `em` | 675 | [em_files/_INDEX.md](./db/em_files/_INDEX.md) |
+| 3 | `base` | 624 | [base_files/_INDEX.md](./db/base_files/_INDEX.md) |
+| 4 | `mpdm` | 618 | [mpdm_files/_INDEX.md](./db/mpdm_files/_INDEX.md) |
+| 5 | `srm` | 606 | [srm_files/_INDEX.md](./db/srm_files/_INDEX.md) |
+| 6 | `im` | 587 | [im_files/_INDEX.md](./db/im_files/_INDEX.md) |
+| 7 | `iscb` | 482 | [iscb_files/_INDEX.md](./db/iscb_files/_INDEX.md) |
+| 8 | `tccit` | 419 | [tccit_files/_INDEX.md](./db/tccit_files/_INDEX.md) |
+| 9 | `pbd` | 408 | [pbd_files/_INDEX.md](./db/pbd_files/_INDEX.md) |
+| 10 | `tcvat` | 407 | [tcvat_files/_INDEX.md](./db/tcvat_files/_INDEX.md) |
+| 11 | `plmsm` | 397 | [plmsm_files/_INDEX.md](./db/plmsm_files/_INDEX.md) |
+| 12 | `basedata` | 362 | [basedata_files/_INDEX.md](./db/basedata_files/_INDEX.md) |
+| 13 | `fmm` | 358 | [fmm_files/_INDEX.md](./db/fmm_files/_INDEX.md) |
+| 14 | `sfc` | 321 | [sfc_files/_INDEX.md](./db/sfc_files/_INDEX.md) |
+| 15 | `fa` | 313 | [fa_files/_INDEX.md](./db/fa_files/_INDEX.md) |
+| 16 | `sco` | 302 | [sco_files/_INDEX.md](./db/sco_files/_INDEX.md) |
+| 17 | `cas` | 300 | [cas_files/_INDEX.md](./db/cas_files/_INDEX.md) |
+| 18 | `cal` | 290 | [cal_files/_INDEX.md](./db/cal_files/_INDEX.md) |
+| 19 | `wf` | 279 | [wf_files/_INDEX.md](./db/wf_files/_INDEX.md) |
+| 20 | `gl` | 259 | [gl_files/_INDEX.md](./db/gl_files/_INDEX.md) |
+| 21 | `qcbd` | 256 | [qcbd_files/_INDEX.md](./db/qcbd_files/_INDEX.md) |
+| 22 | `mds` | 254 | [mds_files/_INDEX.md](./db/mds_files/_INDEX.md) |
+| 23 | `tdm` | 251 | [tdm_files/_INDEX.md](./db/tdm_files/_INDEX.md) |
+| 24 | `msplan` | 244 | [msplan_files/_INDEX.md](./db/msplan_files/_INDEX.md) |
+| 25 | `scp` | 242 | [scp_files/_INDEX.md](./db/scp_files/_INDEX.md) |
+| 26 | `ar` | 239 | [ar_files/_INDEX.md](./db/ar_files/_INDEX.md) |
+| 27 | `ifm` | 238 | [ifm_files/_INDEX.md](./db/ifm_files/_INDEX.md) |
+| 28 | `ssc` | 221 | [ssc_files/_INDEX.md](./db/ssc_files/_INDEX.md) |
+| 29 | `plmpm` | 219 | [plmpm_files/_INDEX.md](./db/plmpm_files/_INDEX.md) |
+| 30 | `pds` | 217 | [pds_files/_INDEX.md](./db/pds_files/_INDEX.md) |
+| 31 | `cts` | 207 | [cts_files/_INDEX.md](./db/cts_files/_INDEX.md) |
+| 32 | `pom` | 207 | [pom_files/_INDEX.md](./db/pom_files/_INDEX.md) |
+| 33 | `adm` | 205 | [adm_files/_INDEX.md](./db/adm_files/_INDEX.md) |
+| 34 | `ocdbd` | 204 | [ocdbd_files/_INDEX.md](./db/ocdbd_files/_INDEX.md) |
+| 35 | `mpm` | 200 | [mpm_files/_INDEX.md](./db/mpm_files/_INDEX.md) |
+| 36 | `ap` | 199 | [ap_files/_INDEX.md](./db/ap_files/_INDEX.md) |
+| 37 | `sm` | 190 | [sm_files/_INDEX.md](./db/sm_files/_INDEX.md) |
+| 38 | `mrp` | 189 | [mrp_files/_INDEX.md](./db/mrp_files/_INDEX.md) |
+| 39 | `tcret` | 183 | [tcret_files/_INDEX.md](./db/tcret_files/_INDEX.md) |
+| 40 | `xkbm` | 181 | [xkbm_files/_INDEX.md](./db/xkbm_files/_INDEX.md) |
+| … | 其余 184 个模块 | | 见 [db/_INDEX.md](./db/_INDEX.md) |
+
+## 块二 OpenAPI 手册 · 分类概览
+
+| 序号 | 一级分类 | 篇数 |
+| :---: | :--- | ---: |
+| 1 | [用户手册](./openapi/_INDEX.md#用户手册) | 81 |
+| 2 | [常见问题](./openapi/_INDEX.md#常见问题) | 35 |
+| 3 | [动态与公告](./openapi/_INDEX.md#动态与公告) | 11 |
+| 4 | [开放事件](./openapi/_INDEX.md#开放事件) | 7 |
+| 5 | [优秀实践](./openapi/_INDEX.md#优秀实践) | 5 |
+| 6 | [接口规范](./openapi/_INDEX.md#接口规范) | 2 |
+| 7 | [新手指引](./openapi/_INDEX.md#新手指引) | 2 |
+| 8 | [整体介绍](./openapi/_INDEX.md#整体介绍) | 1 |

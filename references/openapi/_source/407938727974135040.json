@@ -1,0 +1,586 @@
+{
+ "badNum": 0,
+ "templateId": null,
+ "identityTagIds": null,
+ "knowledgeId": "407938727974135040",
+ "createdAt": 1675068172000,
+ "collections": 10,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "407938727974135040",
+ "contentType": 1,
+ "updatedAt": 1766110299000,
+ "knowledgeUpdater": {
+  "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+  "department": null,
+  "id": "132488613174518784",
+  "name": "某个路易",
+  "nameSpell": "name"
+ },
+ "assessStatus": 0,
+ "knowledgeStatus": 2,
+ "assessHandleStatus": null,
+ "knowledgeCreatedAt": 1675068172000,
+ "version": 40,
+ "labels": [],
+ "editedAt": 1730788173000,
+ "identityTags": null,
+ "useful": 5,
+ "errors": [],
+ "isCollected": false,
+ "template": "{\"token\":0,\"title\":\"自定义Servlet开发API接口\",\"version\":\"苍穹V7.0\",\"range\":\"\",\"date\":\"2024-10-17\",\"patch\":\"V5.0.014（BOS）、V7.0.1（BOS）\",\"knowledgeContent\":\"<h2 label=\\\"一级标题\\\" class=\\\"first-title\\\" style=\\\"\\\"><span style=\\\"color: rgb(51, 51, 51); font-weight: bold;\\\">1. 概述</span></h2><div style=\\\"\\\"><span style=\\\"color: rgb(51, 51, 51);\\\">OpenAPI2.0引擎 （&gt;=5.0.014版本）允许客户开发自定义的Servlet来开发接口，用来处理复杂场景。例如：</span></div><div style=\\\"\\\"><span style=\\\"color: rgb(51, 51, 51);\\\">&nbsp;1. 处理流的断点续传；</span></div><div style=\\\"\\\"><span style=\\\"color: rgb(51, 51, 51);\\\">&nbsp;2. 与异构系统对接，第三方系统做了很多参数限制。如限制了特殊的URL、请求方式、特殊的Content-Type；</span></div><div style=\\\"\\\"><span style=\\\"color: rgb(51, 51, 51);\\\">&nbsp;3. 特殊的数据加密、证书处理API（标准引擎目前支持 AES/SM4数据加密，以及SHA256签名）；</span></div><div style=\\\"\\\"><span style=\\\"color: rgb(51, 51, 51);\\\">&nbsp;4. 自行处理入参的反序列化、出参结果的序列化操作；</span></div><div style=\\\"\\\"><span style=\\\"color: rgb(51, 51, 51);\\\">&nbsp;5. 需要自行处理HttpServletRequest或HttpServletResponse对象的特殊需求；</span></div><p style=\\\"\\\"><span style=\\\"color: rgb(51, 51, 51);\\\">&nbsp;6. 其他的复杂场景需求。</span></p><p style=\\\"\\\"><span style=\\\"color: rgb(84, 141, 212);\\\">具体接口开发demo，参考<span class=\\\"kd-attachment-content\\\" contenteditable=\\\"false\\\" id=\\\"\\\" vid=\\\"641593607849448192\\\"><span class=\\\"name\\\" contenteditable=\\\"false\\\">自定义Servlet开发API接口.pdf</span></span></span></p><p style=\\\"\\\"><span style=\\\"color: rgb(84, 141, 212);\\\">Servlet接口流式处理开发案例，参考<span class=\\\"kd-attachment-content\\\" contenteditable=\\\"false\\\" id=\\\"\\\" vid=\\\"641593377581963776\\\"><span class=\\\"name\\\" contenteditable=\\\"false\\\">Stream流式API开发案例.pdf</span></span></span></p><p style=\\\"\\\"><span style=\\\"color: rgb(51, 51, 51);\\\"></span></p><h2 label=\\\"一级标题\\\" class=\\\"first-title\\\" style=\\\"\\\"><span style=\\\"color: rgb(51, 51, 51);\\\"><br/></span></h2><h2 label=\\\"一级标题\\\" class=\\\"first-title\\\" style=\\\"\\\"><span style=\\\"color: rgb(51, 51, 51);\\\">2. 操作示例</span></h2><h3 label=\\\"二级标题\\\" class=\\\"second-title\\\" style=\\\"\\\"><span style=\\\"color: rgb(51, 51, 51);\\\">2.1 打开参数开关</span></h3><p style=\\\"\\\"><span style=\\\"color: rgb(51, 51, 51);\\\"></span></p><p style=\\\"\\\"><span style=\\\"color: rgb(51, 51, 51);\\\">路径：【开发服务云】 → 【开放平台】→ 【参数配置】，打开“自定义servlet功能”&nbsp;<span style=\\\"color: rgb(51, 51, 51);\\\">开关。打开后新增API时可以选择Servlet开发选项。</span></span></p><p style=\\\"\\\"><span style=\\\"color: rgb(51, 51, 51);\\\"><br/></span></p><p style=\\\"\\\"><span style=\\\"color: rgb(51, 51, 51);\\\"><img src=\\\"/download/01091d4b7b8958854d1fb1c6e9e0914b49d4.png\\\"/></span></p><p style=\\\"\\\"><span style=\\\"color: rgb(51, 51, 51);\\\"><br/></span></p><p style=\\\"\\\"><span style=\\\"color: rgb(51, 51, 51);\\\"><br/></span></p><p style=\\\"\\\"><span style=\\\"color: rgb(51, 51, 51);\\\"></span></p><h3 label=\\\"二级标题\\\" class=\\\"second-title\\\" style=\\\"\\\"><span style=\\\"color: rgb(51, 51, 51);\\\">2.2 Servlet开发自定义API</span></h3><p style=\\\"\\\"><span style=\\\"color: rgb(51, 51, 51);\\\"></span></p><p style=\\\"\\\"><span style=\\\"color: rgb(51, 51, 51);\\\">路径：【开发服务云】 → 【开放平台】→ 【API管理】<span style=\\\"color: rgb(51, 51, 51);\\\">→ 【API开发】</span>，进入API列表界面，点击“新增”按钮，选择自定义API（Servlet开发）。</span></p><p style=\\\"\\\"><span style=\\\"color: rgb(51, 51, 51);\\\"><br/></span><img src=\\\"/download/01097136054b0dca48dd9818570519e038b3.png\\\"/></p><p style=\\\"\\\"><span style=\\\"color: rgb(51, 51, 51);\\\"><br/></span></p><p style=\\\"\\\"><br/></p><p style=\\\"\\\"><span style=\\\"color: rgb(51, 51, 51);\\\">开发者事先实现ICustomApiServlet接口，并将类名正确填写在接口基本信息中，根据实际场景，维护API编码、API名称、请求地址、请求参数和返回参数等信息。点击“保存”按钮，接口开发完成。</span></p><p style=\\\"\\\"><span style=\\\"color: rgb(51, 51, 51);\\\"><br/></span></p><p style=\\\"\\\"><span style=\\\"color: rgb(51, 51, 51);\\\"><img src=\\\"/download/010994530610b64d4b9a8f0a66303ebe8e96.png\\\"/></span></p><p style=\\\"\\\"><br/></p><p style=\\\"\\\">可以点击“API测试”按钮，来测试接口是否满足实际需求。</p><p style=\\\"\\\"><br/></p><p style=\\\"\\\"><img src=\\\"/download/010973b1df8a05944a978c457a33f03bb481.png\\\"/><br/></p><p style=\\\"\\\"><br/></p><p style=\\\"\\\"><span style=\\\"color: rgb(51, 51, 51);\\\"></span></p><h2 label=\\\"一级标题\\\" class=\\\"first-title\\\" style=\\\"\\\"><span style=\\\"color: rgb(51, 51, 51); font-weight: bold;\\\">3. 注意事项</span></h2><div style=\\\"\\\"><span style=\\\"color: rgb(51, 51, 51);\\\">&nbsp;1. 自行开发的Servlet-API接口仍然受认证鉴权、API安全、IP策略、限流策略等统一控制；</span></div><div style=\\\"\\\"><span style=\\\"color: rgb(51, 51, 51);\\\">&nbsp;2. 只允许处理当前数据中心的上下文（当前数据中心的RequestContext），不能创建新的线程；</span></div><div style=\\\"\\\"><span style=\\\"color: rgb(51, 51, 51);\\\">&nbsp;3. 会统一记录请求日志、执行API统计监控；</span></div><div style=\\\"\\\"><span style=\\\"color: rgb(51, 51, 51);\\\">&nbsp;4. </span><span style=\\\"color: rgb(51, 51, 51); font-weight: bold;\\\">自定义的Servlet-API实现类必须部署在Web节点</span><span style=\\\"color: rgb(51, 51, 51);\\\">，其内部逻辑仍然可以调用微服务操作。建议对HttpServletRequest或HttpServletResponse对象的操作部署在Web节点，但具体的</span><span style=\\\"color: rgb(51, 51, 51); font-weight: bold;\\\">业务逻辑处理，代码仍部署在二开业务JAR包及对应的业务容器中，实现更清晰的逻辑分离</span><span style=\\\"color: rgb(51, 51, 51);\\\">；</span></div><div style=\\\"\\\"><span style=\\\"color: rgb(51, 51, 51);\\\">&nbsp;5. 在处理HttpServletResponse等操作时，注意及时释放、关闭Stream流，以避免资源泄露。</span></div><p><br/></p>\",\"collection\":[\"路径：【开发服务云】 → 【开放平台】→ 【参数配置】，打开开关“自定义servlet功能” \",\"开发者自行开发一个插件，测试此API功能是否符合预期\"],\"more\":[\"自定义API支持Servlet开发\",\"自定义Servlet API支持流式模式\"]}",
+ "totalFeedBacks": 0,
+ "attachments": [],
+ "sources": [],
+ "editTitle": "自定义Servlet开发API接口",
+ "title": "自定义Servlet开发API接口",
+ "content": "<p class=\"title-b\"><span class=\"span-b\">发布版本：</span><span class=\"span-nor\">苍穹V7.0</span></p><p class=\"title-b\"><span class=\"span-b\">上线日期：</span><span class=\"span-nor\">2024-10-17</span></p><p class=\"title-b\"><span class=\"span-b\">补丁号：</span><span class=\"span-nor margin-patch\">V5.0.014（BOS）、V7.0.1（BOS）</span></p>\n              <p class=\"table-title table-detail\"><span class=\"span-line\">新特性介绍</span><span class=\"line\"></span></p>\n              <ul><li class=\"publish-detail\"><span class=\"publish-span\">自定义API支持Servlet开发</span></li><li class=\"publish-detail\"><span class=\"publish-span\">自定义Servlet API支持流式模式</span></li></ul>\n              <p class=\"table-title\"><span class=\"span-line\">操作指引</span><span class=\"line\"></span></p>\n              <p class=\"more\"><span class=\"more-border\">1</span>路径：【开发服务云】 → 【开放平台】→ 【参数配置】，打开开关“自定义servlet功能” </p><p class=\"more\"><span class=\"more-border\">2</span>开发者自行开发一个插件，测试此API功能是否符合预期</p>\n              <p class=\"table-title title-detail\"><span class=\"span-line\">特性效果展示</span><span class=\"line\"></span></p>\n              <h2 label=\"一级标题\" class=\"first-title\" style=\"\"><span style=\"color: rgb(51, 51, 51); font-weight: bold;\">1. 概述</span></h2><div style=\"\"><span style=\"color: rgb(51, 51, 51);\">OpenAPI2.0引擎 （&gt;=5.0.014版本）允许客户开发自定义的Servlet来开发接口，用来处理复杂场景。例如：</span></div><div style=\"\"><span style=\"color: rgb(51, 51, 51);\">&nbsp;1. 处理流的断点续传；</span></div><div style=\"\"><span style=\"color: rgb(51, 51, 51);\">&nbsp;2. 与异构系统对接，第三方系统做了很多参数限制。如限制了特殊的URL、请求方式、特殊的Content-Type；</span></div><div style=\"\"><span style=\"color: rgb(51, 51, 51);\">&nbsp;3. 特殊的数据加密、证书处理API（标准引擎目前支持 AES/SM4数据加密，以及SHA256签名）；</span></div><div style=\"\"><span style=\"color: rgb(51, 51, 51);\">&nbsp;4. 自行处理入参的反序列化、出参结果的序列化操作；</span></div><div style=\"\"><span style=\"color: rgb(51, 51, 51);\">&nbsp;5. 需要自行处理HttpServletRequest或HttpServletResponse对象的特殊需求；</span></div><p style=\"\"><span style=\"color: rgb(51, 51, 51);\">&nbsp;6. 其他的复杂场景需求。</span></p><p style=\"\"><span style=\"color: rgb(84, 141, 212);\">具体接口开发demo，参考<span class=\"kd-attachment-content\" contenteditable=\"false\" id=\"\" vid=\"641593607849448192\"><span class=\"name\" contenteditable=\"false\">自定义Servlet开发API接口.pdf</span></span></span></p><p style=\"\"><span style=\"color: rgb(84, 141, 212);\">Servlet接口流式处理开发案例，参考<span class=\"kd-attachment-content\" contenteditable=\"false\" id=\"\" vid=\"641593377581963776\"><span class=\"name\" contenteditable=\"false\">Stream流式API开发案例.pdf</span></span></span></p><p style=\"\"><span style=\"color: rgb(51, 51, 51);\"></span></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\"><span style=\"color: rgb(51, 51, 51);\"><br/></span></h2><h2 label=\"一级标题\" class=\"first-title\" style=\"\"><span style=\"color: rgb(51, 51, 51);\">2. 操作示例</span></h2><h3 label=\"二级标题\" class=\"second-title\" style=\"\"><span style=\"color: rgb(51, 51, 51);\">2.1 打开参数开关</span></h3><p style=\"\"><span style=\"color: rgb(51, 51, 51);\"></span></p><p style=\"\"><span style=\"color: rgb(51, 51, 51);\">路径：【开发服务云】 → 【开放平台】→ 【参数配置】，打开“自定义servlet功能”&nbsp;<span style=\"color: rgb(51, 51, 51);\">开关。打开后新增API时可以选择Servlet开发选项。</span></span></p><p style=\"\"><span style=\"color: rgb(51, 51, 51);\"><br/></span></p><p style=\"\"><span style=\"color: rgb(51, 51, 51);\"><img src=\"/download/01091d4b7b8958854d1fb1c6e9e0914b49d4.png\"/></span></p><p style=\"\"><span style=\"color: rgb(51, 51, 51);\"><br/></span></p><p style=\"\"><span style=\"color: rgb(51, 51, 51);\"><br/></span></p><p style=\"\"><span style=\"color: rgb(51, 51, 51);\"></span></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\"><span style=\"color: rgb(51, 51, 51);\">2.2 Servlet开发自定义API</span></h3><p style=\"\"><span style=\"color: rgb(51, 51, 51);\"></span></p><p style=\"\"><span style=\"color: rgb(51, 51, 51);\">路径：【开发服务云】 → 【开放平台】→ 【API管理】<span style=\"color: rgb(51, 51, 51);\">→ 【API开发】</span>，进入API列表界面，点击“新增”按钮，选择自定义API（Servlet开发）。</span></p><p style=\"\"><span style=\"color: rgb(51, 51, 51);\"><br/></span><img src=\"/download/01097136054b0dca48dd9818570519e038b3.png\"/></p><p style=\"\"><span style=\"color: rgb(51, 51, 51);\"><br/></span></p><p style=\"\"><br/></p><p style=\"\"><span style=\"color: rgb(51, 51, 51);\">开发者事先实现ICustomApiServlet接口，并将类名正确填写在接口基本信息中，根据实际场景，维护API编码、API名称、请求地址、请求参数和返回参数等信息。点击“保存”按钮，接口开发完成。</span></p><p style=\"\"><span style=\"color: rgb(51, 51, 51);\"><br/></span></p><p style=\"\"><span style=\"color: rgb(51, 51, 51);\"><img src=\"/download/010994530610b64d4b9a8f0a66303ebe8e96.png\"/></span></p><p style=\"\"><br/></p><p style=\"\">可以点击“API测试”按钮，来测试接口是否满足实际需求。</p><p style=\"\"><br/></p><p style=\"\"><img src=\"/download/010973b1df8a05944a978c457a33f03bb481.png\"/><br/></p><p style=\"\"><br/></p><p style=\"\"><span style=\"color: rgb(51, 51, 51);\"></span></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\"><span style=\"color: rgb(51, 51, 51); font-weight: bold;\">3. 注意事项</span></h2><div style=\"\"><span style=\"color: rgb(51, 51, 51);\">&nbsp;1. 自行开发的Servlet-API接口仍然受认证鉴权、API安全、IP策略、限流策略等统一控制；</span></div><div style=\"\"><span style=\"color: rgb(51, 51, 51);\">&nbsp;2. 只允许处理当前数据中心的上下文（当前数据中心的RequestContext），不能创建新的线程；</span></div><div style=\"\"><span style=\"color: rgb(51, 51, 51);\">&nbsp;3. 会统一记录请求日志、执行API统计监控；</span></div><div style=\"\"><span style=\"color: rgb(51, 51, 51);\">&nbsp;4. </span><span style=\"color: rgb(51, 51, 51); font-weight: bold;\">自定义的Servlet-API实现类必须部署在Web节点</span><span style=\"color: rgb(51, 51, 51);\">，其内部逻辑仍然可以调用微服务操作。建议对HttpServletRequest或HttpServletResponse对象的操作部署在Web节点，但具体的</span><span style=\"color: rgb(51, 51, 51); font-weight: bold;\">业务逻辑处理，代码仍部署在二开业务JAR包及对应的业务容器中，实现更清晰的逻辑分离</span><span style=\"color: rgb(51, 51, 51);\">；</span></div><div style=\"\"><span style=\"color: rgb(51, 51, 51);\">&nbsp;5. 在处理HttpServletResponse等操作时，注意及时释放、关闭Stream流，以避免资源泄露。</span></div><p><br/></p>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 87,
+   "isOpen": 1,
+   "name": "金蝶AI苍穹",
+   "productLineId": 29,
+   "series": "developer01",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "407938727974135040",
+         "entityType": "Knowledge",
+         "id": "407944841138781696",
+         "isCategory": false,
+         "name": "自定义API（Servlet开发）",
+         "parentId": "358247193897143040",
+         "sort": "3",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": null,
+       "id": "358247193897143040",
+       "isCategory": true,
+       "name": "自定义API",
+       "parentId": "226337544983020032",
+       "sort": "3",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": null,
+     "entityId": null,
+     "entityType": null,
+     "id": "226337544983020032",
+     "isCategory": true,
+     "name": "用户手册",
+     "parentId": "-1",
+     "sort": "6",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download/01010204d4b71b654a208006fa1004eac36a.png",
+  "department": null,
+  "id": "740211268992385024",
+  "name": "毛毛去哪儿",
+  "nameSpell": "name"
+ },
+ "totalAppraisalScore": 25,
+ "iflytekId": null,
+ "views": 9708,
+ "productLineId": 29,
+ "comments": 3,
+ "similarityCount": 0,
+ "totalAppraisalUsers": 5,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1766110299000,
+ "appraisalScore": 0,
+ "unuseful": 0,
+ "knowledgeCheckStatus": 2,
+ "otherProductLineIds": [],
+ "auditAt": 1730788347000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapiapilistlayout",
+        "id": "344582232549528320",
+        "name": "API管理",
+        "productLineId": null,
+        "sort": 1,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "5614",
+       "name": "开放平台",
+       "productLineId": null,
+       "sort": 2,
+       "type": "module"
+      },
+      "code": "DEV",
+      "id": "5576",
+      "name": "开发服务云",
+      "productLineId": null,
+      "sort": 11,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 0,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapi_apilist_layout",
+        "id": "505686038019362304",
+        "name": "异步API",
+        "productLineId": null,
+        "sort": 1,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 1,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "AdvancedSkills",
+     "createdAt": 1556519216000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "高阶技巧标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/01005cea40211bf14113a6004322e86a6780.png",
+     "id": "202203081642",
+     "name": "高级技巧",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download/010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "306913800727243776",
+      "name": "Paim",
+      "nameSpell": "name"
+     },
+     "updatedAt": 1657851500000
+    },
+    {
+     "code": "GettingStarted",
+     "createdAt": 1556519230000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "推送至苍穹帮助中心",
+     "hasSpecifyUser": false,
+     "hide": true,
+     "icon": "/download/01001f079866652f4a68a71361a9509d404c.png",
+     "id": "202203081643",
+     "name": "推送至苍穹帮助中心",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 1,
+     "type": 2,
+     "updatePerson": {
+      "avatar": "/download?fileName=010162cfa9d5437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1129",
+      "name": "灏",
+      "nameSpell": "hao"
+     },
+     "updatedAt": 1605688859000
+    },
+    {
+     "code": "NewFeatures",
+     "createdAt": 1558619051000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "新特性",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/01009c9898f919a24034b3b37b2ebf42931c.png",
+     "id": "202203081645",
+     "name": "新特性",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010145330b44d45a47ae9b8aac30617b6992.png",
+      "department": null,
+      "id": "2147443044",
+      "name": "Lucky_tiao",
+      "nameSpell": "laoli"
+     },
+     "updatedAt": 1668739541000
+    },
+    {
+     "code": "essencesummary",
+     "createdAt": 1606118073000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "精华汇总",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100402c6f8df169483db114f71043c19ec2.png",
+     "id": "202203081649",
+     "name": "精华汇总",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 2,
+     "updatePerson": {
+      "avatar": "/download?fileName=010162cfa9d5437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1129",
+      "name": "灏",
+      "nameSpell": "hao"
+     },
+     "updatedAt": 1606118073000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          {
+           "childCategory": [
+            null
+           ],
+           "code": null,
+           "description": "",
+           "entityId": "407938727974135040",
+           "entityType": "Knowledge",
+           "id": "407944841138781696",
+           "isCategory": false,
+           "name": "自定义API（Servlet开发）",
+           "parentId": "358247193897143040",
+           "sort": "3",
+           "specialId": "226337046514476288",
+           "status": 1
+          }
+         ],
+         "code": null,
+         "description": "",
+         "entityId": null,
+         "entityType": null,
+         "id": "358247193897143040",
+         "isCategory": true,
+         "name": "自定义API",
+         "parentId": "226337544983020032",
+         "sort": "3",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": null,
+       "entityId": null,
+       "entityType": null,
+       "id": "226337544983020032",
+       "isCategory": true,
+       "name": "用户手册",
+       "parentId": "-1",
+       "sort": "6",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": "<p class=\"title-b\"><span class=\"span-b\">发布版本：</span><span class=\"span-nor\">苍穹V7.0</span></p><p class=\"title-b\"><span class=\"span-b\">上线日期：</span><span class=\"span-nor\">2024-10-17</span></p><p class=\"title-b\"><span class=\"span-b\">补丁号：</span><span class=\"span-nor margin-patch\">V5.0.014（BOS）、V7.0.1（BOS）</span></p>\n              <p class=\"table-title table-detail\"><span class=\"span-line\">新特性介绍</span><span class=\"line\"></span></p>\n              <ul><li class=\"publish-detail\"><span class=\"publish-span\">自定义API支持Servlet开发</span></li><li class=\"publish-detail\"><span class=\"publish-span\">自定义Servlet API支持流式模式</span></li></ul>\n              <p class=\"table-title\"><span class=\"span-line\">操作指引</span><span class=\"line\"></span></p>\n              <p class=\"more\"><span class=\"more-border\">1</span>路径：【开发服务云】 → 【开放平台】→ 【参数配置】，打开开关“自定义servlet功能” </p><p class=\"more\"><span class=\"more-border\">2</span>开发者自行开发一个插件，测试此API功能是否符合预期</p>\n              <p class=\"table-title title-detail\"><span class=\"span-line\">特性效果展示</span><span class=\"line\"></span></p>\n              <h2 label=\"一级标题\" class=\"first-title\" style=\"\"><span style=\"color: rgb(51, 51, 51); font-weight: bold;\">1. 概述</span></h2><div style=\"\"><span style=\"color: rgb(51, 51, 51);\">OpenAPI2.0引擎 （&gt;=5.0.014版本）允许客户开发自定义的Servlet来开发接口，用来处理复杂场景。例如：</span></div><div style=\"\"><span style=\"color: rgb(51, 51, 51);\">&nbsp;1. 处理流的断点续传；</span></div><div style=\"\"><span style=\"color: rgb(51, 51, 51);\">&nbsp;2. 与异构系统对接，第三方系统做了很多参数限制。如限制了特殊的URL、请求方式、特殊的Content-Type；</span></div><div style=\"\"><span style=\"color: rgb(51, 51, 51);\">&nbsp;3. 特殊的数据加密、证书处理API（标准引擎目前支持 AES/SM4数据加密，以及SHA256签名）；</span></div><div style=\"\"><span style=\"color: rgb(51, 51, 51);\">&nbsp;4. 自行处理入参的反序列化、出参结果的序列化操作；</span></div><div style=\"\"><span style=\"color: rgb(51, 51, 51);\">&nbsp;5. 需要自行处理HttpServletRequest或HttpServletResponse对象的特殊需求；</span></div><p style=\"\"><span style=\"color: rgb(51, 51, 51);\">&nbsp;6. 其他的复杂场景需求。</span></p><p style=\"\"><span style=\"color: rgb(84, 141, 212);\">具体接口开发demo，参考<span class=\"kd-attachment-content\" contenteditable=\"false\" id=\"\" vid=\"641593607849448192\"><span class=\"name\" contenteditable=\"false\">自定义Servlet开发API接口.pdf</span></span></span></p><p style=\"\"><span style=\"color: rgb(84, 141, 212);\">Servlet接口流式处理开发案例，参考<span class=\"kd-attachment-content\" contenteditable=\"false\" id=\"\" vid=\"641593377581963776\"><span class=\"name\" contenteditable=\"false\">Stream流式API开发案例.pdf</span></span></span></p><p style=\"\"><span style=\"color: rgb(51, 51, 51);\"></span></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\"><span style=\"color: rgb(51, 51, 51);\"><br/></span></h2><h2 label=\"一级标题\" class=\"first-title\" style=\"\"><span style=\"color: rgb(51, 51, 51);\">2. 操作示例</span></h2><h3 label=\"二级标题\" class=\"second-title\" style=\"\"><span style=\"color: rgb(51, 51, 51);\">2.1 打开参数开关</span></h3><p style=\"\"><span style=\"color: rgb(51, 51, 51);\"></span></p><p style=\"\"><span style=\"color: rgb(51, 51, 51);\">路径：【开发服务云】 → 【开放平台】→ 【参数配置】，打开“自定义servlet功能”&nbsp;<span style=\"color: rgb(51, 51, 51);\">开关。打开后新增API时可以选择Servlet开发选项。</span></span></p><p style=\"\"><span style=\"color: rgb(51, 51, 51);\"><br/></span></p><p style=\"\"><span style=\"color: rgb(51, 51, 51);\"><img src=\"/download/01091d4b7b8958854d1fb1c6e9e0914b49d4.png\"/></span></p><p style=\"\"><span style=\"color: rgb(51, 51, 51);\"><br/></span></p><p style=\"\"><span style=\"color: rgb(51, 51, 51);\"><br/></span></p><p style=\"\"><span style=\"color: rgb(51, 51, 51);\"></span></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\"><span style=\"color: rgb(51, 51, 51);\">2.2 Servlet开发自定义API</span></h3><p style=\"\"><span style=\"color: rgb(51, 51, 51);\"></span></p><p style=\"\"><span style=\"color: rgb(51, 51, 51);\">路径：【开发服务云】 → 【开放平台】→ 【API管理】<span style=\"color: rgb(51, 51, 51);\">→ 【API开发】</span>，进入API列表界面，点击“新增”按钮，选择自定义API（Servlet开发）。</span></p><p style=\"\"><span style=\"color: rgb(51, 51, 51);\"><br/></span><img src=\"/download/01097136054b0dca48dd9818570519e038b3.png\"/></p><p style=\"\"><span style=\"color: rgb(51, 51, 51);\"><br/></span></p><p style=\"\"><br/></p><p style=\"\"><span style=\"color: rgb(51, 51, 51);\">开发者事先实现ICustomApiServlet接口，并将类名正确填写在接口基本信息中，根据实际场景，维护API编码、API名称、请求地址、请求参数和返回参数等信息。点击“保存”按钮，接口开发完成。</span></p><p style=\"\"><span style=\"color: rgb(51, 51, 51);\"><br/></span></p><p style=\"\"><span style=\"color: rgb(51, 51, 51);\"><img src=\"/download/010994530610b64d4b9a8f0a66303ebe8e96.png\"/></span></p><p style=\"\"><br/></p><p style=\"\">可以点击“API测试”按钮，来测试接口是否满足实际需求。</p><p style=\"\"><br/></p><p style=\"\"><img src=\"/download/010973b1df8a05944a978c457a33f03bb481.png\"/><br/></p><p style=\"\"><br/></p><p style=\"\"><span style=\"color: rgb(51, 51, 51);\"></span></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\"><span style=\"color: rgb(51, 51, 51); font-weight: bold;\">3. 注意事项</span></h2><div style=\"\"><span style=\"color: rgb(51, 51, 51);\">&nbsp;1. 自行开发的Servlet-API接口仍然受认证鉴权、API安全、IP策略、限流策略等统一控制；</span></div><div style=\"\"><span style=\"color: rgb(51, 51, 51);\">&nbsp;2. 只允许处理当前数据中心的上下文（当前数据中心的RequestContext），不能创建新的线程；</span></div><div style=\"\"><span style=\"color: rgb(51, 51, 51);\">&nbsp;3. 会统一记录请求日志、执行API统计监控；</span></div><div style=\"\"><span style=\"color: rgb(51, 51, 51);\">&nbsp;4. </span><span style=\"color: rgb(51, 51, 51); font-weight: bold;\">自定义的Servlet-API实现类必须部署在Web节点</span><span style=\"color: rgb(51, 51, 51);\">，其内部逻辑仍然可以调用微服务操作。建议对HttpServletRequest或HttpServletResponse对象的操作部署在Web节点，但具体的</span><span style=\"color: rgb(51, 51, 51); font-weight: bold;\">业务逻辑处理，代码仍部署在二开业务JAR包及对应的业务容器中，实现更清晰的逻辑分离</span><span style=\"color: rgb(51, 51, 51);\">；</span></div><div style=\"\"><span style=\"color: rgb(51, 51, 51);\">&nbsp;5. 在处理HttpServletResponse等操作时，注意及时释放、关闭Stream流，以避免资源泄露。</span></div><p><br/></p>"
+}

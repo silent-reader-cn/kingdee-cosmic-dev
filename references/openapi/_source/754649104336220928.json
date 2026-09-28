@@ -1,0 +1,483 @@
+{
+ "badNum": 0,
+ "identityTagIds": null,
+ "knowledgeId": "754649104336220928",
+ "createdAt": 1757730367000,
+ "collections": 0,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "754649104336220928",
+ "contentType": 1,
+ "updatedAt": 1766022632000,
+ "knowledgeUpdater": {
+  "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+  "department": null,
+  "id": "132488613174518784",
+  "name": "某个路易",
+  "nameSpell": "name"
+ },
+ "assessStatus": 0,
+ "knowledgeStatus": 2,
+ "assessHandleStatus": null,
+ "knowledgeCreatedAt": 1757730367000,
+ "version": 4,
+ "labels": [],
+ "editedAt": 1757731741000,
+ "identityTags": null,
+ "useful": 0,
+ "errors": [],
+ "isCollected": false,
+ "totalFeedBacks": 0,
+ "attachments": [],
+ "sources": [],
+ "editTitle": "标准GET方法 - 查询资源列表",
+ "title": "标准GET方法 - 查询资源列表",
+ "content": "<h2><strong>1 接口介绍</strong></h2><p><span>将业务对象的批量资源查询操作发布为RESTful API，支持通过分页、过滤条件筛选数据（如按创建时间查询采购订单列表），支撑外部系统获取批量业务数据需求（如财务系统导出某时间段内的所有订单）。</span></p><p></p><h2><strong>2 接口示例</strong></h2><p><span>点击“快速创建”或“新增”按钮，新增列表查询操作的RESTful API，在详情页面维护API信息。</span></p><ul><li><p><span><strong>实体信息：</strong>业务对象、操作类型和操作会根据创建向导中的配置自动带出，</span></p><p></p></li><li><p><span><strong>维护基本信息：</strong></span></p><p><span>名称：录入 “查询采购订单列表（需体现业务语义）；</span></p><p><span>编码：系统自动生成，支持手工修改；</span></p><p><span>所属应用：按业务对象关联自动带出；</span></p><p><span>日志级别：默认记录基本日志，可选择 “详细日志”（记录出入参，便于故障排查）；</span></p><p><span>详细描述：手工录入，如 “根据创建时间查询采购订单详情，包含单据编号、供应商、创建人等字段”。</span></p><p></p></li><li><p><span><strong>请求端点配置：</strong></span></p><p><span>方法：GET</span></p><p><span>资源路径：系统自动生成，支持修改；</span></p><p><span>路由唯一标识：系统自动拼接；</span></p><p><span>完整请求地址 ：系统自动拼接。</span></p><p></p></li><li><p><span><strong>维护请求参数（Query 参数）：</strong></span></p><p>- <span>“offset”：默认参数，整数类型，起始位置，默认值 “0”，示例值 “0”；</span></p><p>- <span>“limit”：默认参数，整数类型，每页条数，默认值 “10”，示例值 “10”；</span></p><p>- <span>“with_total”：默认参数，布尔类型，是否返回总条数，默认值 “false”（数据量大时建议不返回，避免影响性能）；</span></p><p>- <span>“createtime”：用户自定义参数，日期类型，创建时间（过滤条件），示例值 “2025-06-01T00:00:00Z”。</span></p><p></p></li><li><p><span><strong>维护响应参数：</strong></span></p><p><span>选择 HTTP 状态码 “200-OK”，点击 “添加字段”，勾选需返回的字段（如 “id”“billno”（单据编号）、“billstatus”（单据状态）、“billentry”（物料明细））；补充示例值（如 “billno” 示例 “CGDD-250601-001”）。</span></p><p><span>列表查询时，响应报文在&nbsp;pagination&nbsp;字段中包含以下分页信息：</span></p><p><span>- total：符合条件的总记录数。</span></p><p>- <span>offset：当前请求的起始位置（与请求参数一致）。</span></p><p>- <span>limit：当前请求的每页记录数（与请求参数一致）。</span></p><p>- <span>has_more：是否为最后一页（布尔值，便于前端判断是否显示 “下一页” 按钮）。</span></p></li></ul><p></p><p><img src=\"/download/010087df53d68e36403b9b1c9e4193319611.png\" alt=\"上传图片\"></p><p></p><p><img src=\"/download/010066ad63cf6688412896193c39a4adabb9.png\" alt=\"上传图片\"></p><p></p><p><span>点击 “保存”并“启用”，API 可对外调用；用户在获取到请求令牌后，可通过完整请求地址，查询订单列表。</span></p>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 87,
+   "isOpen": 1,
+   "name": "金蝶AI苍穹",
+   "productLineId": 29,
+   "series": "developer01",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          {
+           "childCategory": [
+            null
+           ],
+           "code": null,
+           "description": "",
+           "entityId": "754649104336220928",
+           "entityType": "Knowledge",
+           "id": "755471295277626369",
+           "isCategory": false,
+           "name": "标准GET方法 - 查询资源列表",
+           "parentId": "755471229359958784",
+           "sort": "2",
+           "specialId": "226337046514476288",
+           "status": 1
+          }
+         ],
+         "code": null,
+         "description": "",
+         "entityId": null,
+         "entityType": "",
+         "id": "755471229359958784",
+         "isCategory": true,
+         "name": "RESTful API最佳实践",
+         "parentId": "755471013420411648",
+         "sort": "3",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": "",
+       "id": "755471013420411648",
+       "isCategory": true,
+       "name": "RESTful API",
+       "parentId": "226337544983020032",
+       "sort": "24",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": null,
+     "entityId": null,
+     "entityType": null,
+     "id": "226337544983020032",
+     "isCategory": true,
+     "name": "用户手册",
+     "parentId": "-1",
+     "sort": "6",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download/01010204d4b71b654a208006fa1004eac36a.png",
+  "department": null,
+  "id": "740211268992385024",
+  "name": "毛毛去哪儿",
+  "nameSpell": "name"
+ },
+ "totalAppraisalScore": 0,
+ "iflytekId": null,
+ "views": 790,
+ "productLineId": 29,
+ "comments": 0,
+ "similarityCount": null,
+ "totalAppraisalUsers": 0,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1766022632000,
+ "appraisalScore": 0,
+ "unuseful": 0,
+ "knowledgeCheckStatus": 2,
+ "otherProductLineIds": [],
+ "auditAt": 1759052190000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "open_rest_api",
+        "id": "760141571462408192",
+        "name": "RESTful API管理",
+        "productLineId": null,
+        "sort": 22,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 0,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "OperatingGuide",
+     "createdAt": 1556519201000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "某一功能的具体说明介绍，包括应用场景、参数说明、具体操作步骤等",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/010037894174802d4b9f8782f1f0010a6ddd.png",
+     "id": "202203081641",
+     "name": "功能介绍",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010176d38341668f44fdb94c95058a90e4b8.png",
+      "department": "云社区运营部",
+      "id": "2147406697",
+      "name": "多肉丸子",
+      "nameSpell": "kejuan"
+     },
+     "updatedAt": 1676857681000
+    },
+    {
+     "code": "rumen",
+     "createdAt": 1605667807000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "入门类的知识可使用此标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100d322b9282bcc438faa894f4eec029977.png",
+     "id": "202203081646",
+     "name": "基础入门",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download?fileName=0101ec1d6ce599b442dab7d0b794c1fce88d.png",
+      "department": null,
+      "id": "1009",
+      "name": "一颗小星星",
+      "nameSpell": "fengling"
+     },
+     "updatedAt": 1657872008000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          {
+           "childCategory": [
+            {
+             "childCategory": [
+              null
+             ],
+             "code": null,
+             "description": "",
+             "entityId": "754649104336220928",
+             "entityType": "Knowledge",
+             "id": "755471295277626369",
+             "isCategory": false,
+             "name": "标准GET方法 - 查询资源列表",
+             "parentId": "755471229359958784",
+             "sort": "2",
+             "specialId": "226337046514476288",
+             "status": 1
+            }
+           ],
+           "code": null,
+           "description": "",
+           "entityId": null,
+           "entityType": "",
+           "id": "755471229359958784",
+           "isCategory": true,
+           "name": "RESTful API最佳实践",
+           "parentId": "755471013420411648",
+           "sort": "3",
+           "specialId": "226337046514476288",
+           "status": 1
+          }
+         ],
+         "code": null,
+         "description": "",
+         "entityId": null,
+         "entityType": "",
+         "id": "755471013420411648",
+         "isCategory": true,
+         "name": "RESTful API",
+         "parentId": "226337544983020032",
+         "sort": "24",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": null,
+       "entityId": null,
+       "entityType": null,
+       "id": "226337544983020032",
+       "isCategory": true,
+       "name": "用户手册",
+       "parentId": "-1",
+       "sort": "6",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": "<h2><strong>1 接口介绍</strong></h2><p><span>将业务对象的批量资源查询操作发布为RESTful API，支持通过分页、过滤条件筛选数据（如按创建时间查询采购订单列表），支撑外部系统获取批量业务数据需求（如财务系统导出某时间段内的所有订单）。</span></p><p></p><h2><strong>2 接口示例</strong></h2><p><span>点击“快速创建”或“新增”按钮，新增列表查询操作的RESTful API，在详情页面维护API信息。</span></p><ul><li><p><span><strong>实体信息：</strong>业务对象、操作类型和操作会根据创建向导中的配置自动带出，</span></p><p></p></li><li><p><span><strong>维护基本信息：</strong></span></p><p><span>名称：录入 “查询采购订单列表（需体现业务语义）；</span></p><p><span>编码：系统自动生成，支持手工修改；</span></p><p><span>所属应用：按业务对象关联自动带出；</span></p><p><span>日志级别：默认记录基本日志，可选择 “详细日志”（记录出入参，便于故障排查）；</span></p><p><span>详细描述：手工录入，如 “根据创建时间查询采购订单详情，包含单据编号、供应商、创建人等字段”。</span></p><p></p></li><li><p><span><strong>请求端点配置：</strong></span></p><p><span>方法：GET</span></p><p><span>资源路径：系统自动生成，支持修改；</span></p><p><span>路由唯一标识：系统自动拼接；</span></p><p><span>完整请求地址 ：系统自动拼接。</span></p><p></p></li><li><p><span><strong>维护请求参数（Query 参数）：</strong></span></p><p>- <span>“offset”：默认参数，整数类型，起始位置，默认值 “0”，示例值 “0”；</span></p><p>- <span>“limit”：默认参数，整数类型，每页条数，默认值 “10”，示例值 “10”；</span></p><p>- <span>“with_total”：默认参数，布尔类型，是否返回总条数，默认值 “false”（数据量大时建议不返回，避免影响性能）；</span></p><p>- <span>“createtime”：用户自定义参数，日期类型，创建时间（过滤条件），示例值 “2025-06-01T00:00:00Z”。</span></p><p></p></li><li><p><span><strong>维护响应参数：</strong></span></p><p><span>选择 HTTP 状态码 “200-OK”，点击 “添加字段”，勾选需返回的字段（如 “id”“billno”（单据编号）、“billstatus”（单据状态）、“billentry”（物料明细））；补充示例值（如 “billno” 示例 “CGDD-250601-001”）。</span></p><p><span>列表查询时，响应报文在&nbsp;pagination&nbsp;字段中包含以下分页信息：</span></p><p><span>- total：符合条件的总记录数。</span></p><p>- <span>offset：当前请求的起始位置（与请求参数一致）。</span></p><p>- <span>limit：当前请求的每页记录数（与请求参数一致）。</span></p><p>- <span>has_more：是否为最后一页（布尔值，便于前端判断是否显示 “下一页” 按钮）。</span></p></li></ul><p></p><p><img src=\"/download/010087df53d68e36403b9b1c9e4193319611.png\" alt=\"上传图片\"></p><p></p><p><img src=\"/download/010066ad63cf6688412896193c39a4adabb9.png\" alt=\"上传图片\"></p><p></p><p><span>点击 “保存”并“启用”，API 可对外调用；用户在获取到请求令牌后，可通过完整请求地址，查询订单列表。</span></p>"
+}

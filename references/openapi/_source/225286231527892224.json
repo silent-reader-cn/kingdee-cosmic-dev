@@ -1,0 +1,554 @@
+{
+ "badNum": 0,
+ "identityTagIds": null,
+ "knowledgeId": "225286231527892224",
+ "createdAt": 1631520423000,
+ "collections": 6,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "225286231527892224",
+ "contentType": 1,
+ "updatedAt": 1766109939000,
+ "knowledgeUpdater": {
+  "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+  "department": null,
+  "id": "132488613174518784",
+  "name": "某个路易",
+  "nameSpell": "name"
+ },
+ "assessStatus": 0,
+ "knowledgeStatus": 2,
+ "assessHandleStatus": null,
+ "knowledgeCreatedAt": 1631520423000,
+ "version": 79,
+ "labels": [],
+ "editedAt": 1728886644000,
+ "identityTags": null,
+ "useful": 25,
+ "errors": [],
+ "isCollected": false,
+ "totalFeedBacks": 0,
+ "attachments": [],
+ "sources": [],
+ "editTitle": "第三方应用介绍",
+ "title": "第三方应用介绍",
+ "content": "<div class=\"import-attachment-loading\"><div style=\"width: auto; margin: 0px;\"><p label=\"一级标题\" style=\"font-size: 20px; font-weight: bold; line-height: 42px; margin: 0px;\"><span class=\"X1 X19\" style=\"font-size:15.;font-weight:bold;white-space:pre-wrap;\"></span></p><h2 label=\"一级标题\" class=\"first-title html-anchor-list0-1694481588318 html-anchor-list0-1694506451024 html-anchor-list0-1695015348964 html-anchor-list0-1695035216156\" id=\"html-anchor-list0-1694481588318\" style=\"color: rgb(73, 80, 96);\"><span style=\"color: rgb(26, 26, 26);\">变更记录</span><br/></h2><p style=\"\"><br/></p><table width=\"100%\"><tbody style=\"\"><tr class=\"firstRow\" style=\"\"><td valign=\"middle\" width=\"116\" align=\"left\" style=\"\"><p style=\"\"><strong style=\"\">产品版本</strong></p></td><td valign=\"middle\" width=\"359\" align=\"left\" style=\"\"><strong style=\"\">更新内容</strong></td><td valign=\"middle\" width=\"146.33333333333334\" align=\"left\" style=\"\"><strong style=\"\">更新日期</strong></td></tr><tr><td width=\"92\" valign=\"top\">V5.0.001</td><td width=\"498\" valign=\"top\">初始版本</td><td width=\"150\" valign=\"top\">2022年6月</td></tr><tr><td width=\"92\" valign=\"top\">V6.0.1</td><td width=\"498\" valign=\"top\"><p style=\"text-align: inherit; font-size: 15px;\"><span style=\"text-align: inherit;\">支持增强型Token认证，合并</span><span style=\"text-align: inherit;\">AccessToken</span><span style=\"text-align: inherit;\">认证和JWT认证策略，第三方应用增加代理用户控制、应用联系人和详细描述</span></p></td><td width=\"150\" valign=\"top\">2023年10月</td></tr></tbody></table><p style=\"\"><br/></p><p style=\"\"><span style=\"font-size: 20px; text-align: justify;\"></span></p><hr/><p style=\"\"><br/><span style=\"font-size: 20px; text-align: justify;\"></span></p><h2 label=\"一级标题\" class=\"first-title html-anchor-list1-1712129000423\" id=\"html-anchor-list1-1712129000423\" style=\"\"></h2><p label=\"一级标题\" style=\"font-size: 20px; font-weight: bold; line-height: 42px; margin: 0px;\"><span class=\"X1 X19\" style=\"font-size:15.;font-weight:bold;white-space:pre-wrap;\">1 简介</span><br/></p><p label=\"二级标题\" style=\"font-size: 18px; font-weight: bold; padding: 8px 0px; line-height: 42px; margin: 0px;\"><span class=\"X1 X19\" style=\"font-size:13.;font-weight:bold;white-space:pre-wrap;\">1.1 功能介绍</span></p><p>统一管理需要调用苍穹OpenAPI的外部应用；支持多种认证方式，如accessToken认证、摘要认证、JWT认证、基本认证、签名认证（V5.0.011版本及以上），是外部系统登录金蝶AI苍穹的身份凭证；同时支持API接口授权、IP白名单等功能。</p><p><br/></p><p label=\"二级标题\" style=\"font-size: 18px; font-weight: bold; padding: 8px 0px; line-height: 42px; margin: 0px;\">1.2 应用场景</p><p label=\"正文\" style=\"font-size: 15px;\">外部系统注册第三方应用，获取身份凭证并调用苍穹OpenAPI。<br/></p><p><br/></p><p label=\"二级标题\" style=\"font-size: 18px; font-weight: bold; padding: 8px 0px; line-height: 42px; margin: 0px;\">1.3 操作路径</p><p>路径：【开放服务云】→【OpenAPI】→<span style=\"\">【安全策略】<span style=\"\">→</span></span>【第三方应用】</p><p><br/></p><p label=\"二级标题\" style=\"font-size: 18px; font-weight: bold; padding: 8px 0px; line-height: 42px; margin: 0px;\">1.4 字段/按钮说明</p><p><strong>字段说明</strong></p><table><tbody><tr class=\"firstRow\"><td style=\"word-break: break-all;\"><p><span style=\"color: rgb(0, 0, 0);\"><strong>字段名称</strong></span></p></td><td width=\"434\"><p><span style=\"color: rgb(0, 0, 0);\"><strong>详细解释</strong></span></p></td></tr><tr><td style=\"background-color: rgb(253, 234, 218);\"><p><span style=\"color: rgb(0, 0, 0);\">基本信息</span></p></td><td style=\"background-color: rgb(253, 234, 218);\" width=\"434\"><br/></td></tr><tr><td><p><span style=\"color: rgb(0, 0, 0);\">系统编码</span></p></td><td width=\"434\" style=\"word-break: break-all;\"><p><span style=\"color: rgb(0, 0, 0);\">第三方应用编码，即appId/client_id</span></p></td></tr><tr><td><p><span style=\"color: rgb(0, 0, 0);\">系统名称</span></p></td><td width=\"434\"><p><span style=\"color: rgb(0, 0, 0);\">第三方应用名称</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">创建人</span></td><td colspan=\"1\" rowspan=\"1\" style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">创建人<br/></span></td></tr><tr><td colspan=\"1\" rowspan=\"1\" style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">是否启用</span></td><td colspan=\"1\" rowspan=\"1\" style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">第三方应用状态，可用/禁用</span></td></tr><tr><td style=\"word-break: break-all;\"><p><span style=\"color: rgb(0, 0, 0);\">启用时间</span></p></td><td width=\"434\" style=\"word-break: break-all;\"><p><span style=\"color: rgb(0, 0, 0);\">第三方应用的启用时间</span></p></td></tr><tr><td style=\"word-break: break-all;\"><p><span style=\"color: rgb(0, 0, 0);\">停止时间</span></p></td><td width=\"434\" style=\"word-break: break-all;\"><p><span style=\"color: rgb(0, 0, 0);\">第三方应用的停机时间</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" style=\"word-break: break-all;\">应用联系人</td><td colspan=\"1\" rowspan=\"1\" style=\"word-break: break-all;\">第三方应用联系人</td></tr><tr><td colspan=\"1\" rowspan=\"1\" style=\"word-break: break-all;\">启用代理用户控制<br/></td><td colspan=\"1\" rowspan=\"1\" style=\"word-break: break-all;\">建议开启，获取Token时，校验是否是指定用户</td></tr><tr><td colspan=\"1\" rowspan=\"1\" style=\"word-break: break-all;\">代理用户</td><td colspan=\"1\" rowspan=\"1\" style=\"word-break: break-all;\">接口代理用户（鉴权用）<br/></td></tr><tr><td colspan=\"1\" rowspan=\"1\" style=\"word-break: break-all;\">所属国家地区</td><td colspan=\"1\" rowspan=\"1\" style=\"word-break: break-all;\">默认为空，当通过接口跨境数据传输时维护</td></tr><tr><td colspan=\"1\" rowspan=\"1\" style=\"word-break: break-all;\">详细描述</td><td colspan=\"1\" rowspan=\"1\" style=\"word-break: break-all;\">第三方应用详细描述</td></tr><tr><td style=\"background-color: rgb(253, 234, 218); word-break: break-all;\"><p><span style=\"color: rgb(0, 0, 0);\">访问策略 -&nbsp;AccessToken认证</span></p></td><td style=\"background-color: rgb(253, 234, 218);\" width=\"434\"><br/></td></tr><tr><td style=\"word-break: break-all;\"><p><span style=\"color: rgb(0, 0, 0);\">AccessToken认证密钥</span></p></td><td width=\"434\" style=\"word-break: break-all;\"><p><span style=\"color: rgb(0, 0, 0);\">第三方应用的认证密钥，即appSecret/client_secret</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">增强型Token认证</span></td><td colspan=\"1\" rowspan=\"1\" style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">启用后，将采用更加标准的Token认证规范，只需一步即可获取access_token和JWT，并禁用login.do的获取方式。默认限制token获取频率，避免频繁创建会话，影响系统稳定性。</span></td></tr><tr><td colspan=\"1\" rowspan=\"1\" style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">启用JWT认证</span></td><td colspan=\"1\" rowspan=\"1\" style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">JWT认证开关，默认为否</span></td></tr><tr><td colspan=\"1\" rowspan=\"1\" style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">JWT签名策略</span></td><td colspan=\"1\" rowspan=\"1\" style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">SHA256/RSA</span></td></tr><tr><td style=\"background-color: rgb(253, 234, 218); word-break: break-all;\"><p><span style=\"color: rgb(0, 0, 0);\">访问策略 -&nbsp;摘要认证</span></p></td><td width=\"434\" style=\"background-color: rgb(253, 234, 218);\"><br/></td></tr><tr><td colspan=\"1\" rowspan=\"1\" style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">签名策略</span></td><td colspan=\"1\" rowspan=\"1\" style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">SHA256</span></td></tr><tr><td style=\"word-break: break-all;\"><p><span style=\"color: rgb(0, 0, 0);\">认证密钥</span></p></td><td width=\"434\"><p><span style=\"color: rgb(0, 0, 0);\">摘要加密认证key</span></p></td></tr><tr><td style=\"background-color: rgb(253, 234, 218); word-break: break-all;\"><p><span style=\"color: rgb(0, 0, 0);\">访问策略 -&nbsp;基本认证</span></p></td><td width=\"434\" style=\"background-color: rgb(253, 234, 218);\"><br/></td></tr><tr><td style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">基本认证用户</span></td><td style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">登录时的代理用户（基本认证和签名认证必须维护）</span></td></tr><tr><td style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">Secret Key</span></td><td style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">基本认证密钥，系统自动生成<br/></span></td></tr><tr><td style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">显示密钥<br/></span></td><td style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">是否在界面显示密钥</span></td></tr><tr><td style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">是否有效</span></td><td style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">密钥有效开关，是/否</span></td></tr><tr><td style=\"word-break: break-all; background-color: rgb(253, 234, 218);\"><span style=\"color: rgb(0, 0, 0);\">访问策略 -&nbsp;IP黑白名单<br/></span></td><td style=\"background-color: rgb(253, 234, 218);\"><br/></td></tr><tr><td colspan=\"1\" rowspan=\"1\" style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">允许全部IP访问</span></td><td colspan=\"1\" rowspan=\"1\" style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">IP黑白名单开关，默认打开</span></td></tr><tr><td colspan=\"1\" rowspan=\"1\" style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">IP策略<br/></span></td><td colspan=\"1\" rowspan=\"1\" style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">黑名单/白名单</span></td></tr><tr><td style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">起始IP<br/></span></td><td style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">起始IP</span></td></tr><tr><td style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">结束IP</span></td><td style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">结束IP</span></td></tr><tr><td style=\"word-break: break-all; background-color: rgb(253, 234, 218);\"><span style=\"color: rgb(0, 0, 0);\">访问策略 - 加密策略<br/></span></td><td style=\"background-color: rgb(253, 234, 218);\"><br/></td></tr><tr><td style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">加密策略</span><div class=\"uGTwvQaG kd-hover-color _3Oqnzx2S underLine theme field-in-edit\" style=\"color: rgb(61, 70, 83);\"><div class=\"_21od--cy _3S6Ar4-C _1e2oVFKQ _3MN-_9A6 _3oihbIiz _11TiYXly _3lMoborx\" style=\"color: rgb(51, 51, 51);\"><div class=\"_2XHj23x3 _3UVT-hu_\" style=\"\"><span style=\"color: rgb(0, 0, 0);\"></span></div></div></div></td><td style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">接口数据加密策略，支持不加密/AES/SM4</span></td></tr><tr><td style=\"word-break: break-all;\"><p><span style=\"color: rgb(0, 0, 0);\">加密全部API</span></p></td><td width=\"434\" style=\"word-break: break-all;\"><p><span style=\"color: rgb(0, 0, 0);\">API加密开关，默认为否</span></p></td></tr><tr><td><p><span style=\"color: rgb(0, 0, 0);\">API编码</span></p></td><td width=\"434\" style=\"word-break: break-all;\"><p><span style=\"color: rgb(0, 0, 0);\">当为API加密开关为否时，通过F7批量选择后在列表展示的API服务编码</span></p></td></tr><tr><td style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">API名称<br/></span></td><td style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">API名称</span></td></tr><tr><td style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">URL</span></td><td style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">请求地址</span></td></tr><tr><td style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">业务对象</span></td><td style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">API所属业务对象</span></td></tr><tr><td style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">所属应用<br/></span></td><td style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">API所属应用</span></td></tr><tr><td style=\"background-color: rgb(253, 234, 218);\"><p><span style=\"color: rgb(0, 0, 0);\">API授权</span></p></td><td style=\"background-color: rgb(253, 234, 218);\" width=\"434\"><br/></td></tr><tr><td style=\"word-break: break-all;\"><p><span style=\"color: rgb(0, 0, 0);\">授权全部API</span></p></td><td width=\"434\" style=\"word-break: break-all;\"><p><span style=\"color: rgb(0, 0, 0);\">API授权开关，默认为否</span></p></td></tr><tr><td><p><span style=\"color: rgb(0, 0, 0);\">API编码</span></p></td><td width=\"434\"><p><span style=\"color: rgb(0, 0, 0);\">当为API授权开关为否时，通过F7批量选择后在列表展示的API服务编码</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">API名称<br/></span></td><td colspan=\"1\" rowspan=\"1\" style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">API名称</span></td></tr><tr><td colspan=\"1\" rowspan=\"1\" style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">URL</span></td><td colspan=\"1\" rowspan=\"1\" style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">请求地址</span></td></tr><tr><td colspan=\"1\" rowspan=\"1\" style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">业务对象</span></td><td colspan=\"1\" rowspan=\"1\" style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">API所属业务对象</span></td></tr><tr><td colspan=\"1\" rowspan=\"1\" style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">所属应用<br/></span></td><td colspan=\"1\" rowspan=\"1\" style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">API所属应用</span></td></tr></tbody></table><p><br/></p><p><strong>按钮说明</strong></p><table><tbody><tr class=\"firstRow\"><td width=\"181\"><p><strong>按钮名称</strong></p></td><td width=\"436\"><p><strong>详细解释</strong></p></td></tr><tr><td width=\"121\" style=\"word-break: break-all;\">保存</td><td width=\"436\"><p>保存第三方应用信息</p></td></tr><tr><td width=\"121\"><p>退出</p></td><td width=\"436\"><p>退出当前界面</p></td></tr></tbody></table><p><br/></p><p label=\"一级标题\" style=\"font-size: 20px; font-weight: bold; line-height: 42px; margin: 0px;\">2 主要操作</p><p label=\"二级标题\" style=\"font-size: 18px; font-weight: bold; padding: 8px 0px; line-height: 42px; margin: 0px;\">2.1 新增第三方应用</p><p label=\"正文\" style=\"font-size: 15px;\">打开第三方应用列表界面，管理所有第三方应用信息。</p><p><br/></p><p><img src=\"/download/0109e7f09425770740dfaa3f2e9e804a4780.png\"/></p><p label=\"正文\" style=\"font-size: 15px;\"><br/></p><p label=\"正文\" style=\"font-size: 15px;\">点击“新增”按钮，打开第三方应用新增界面，用户可以在访问策略中选择需要的策略：</p><p><strong>认证策略：</strong><br/></p><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><p label=\"正文\" style=\"font-size: 15px;\">常用认证方式为<strong>AccessToken认证</strong>，用户需要手工维护符合安全规范的AccessToken认证密钥；</p></li><li><p label=\"正文\" style=\"font-size: 15px;\">使用安全性更高的<strong>摘要认证密钥</strong>，可点击字段后的“刷新”按钮，系统自动生成认证密钥；</p></li><li><p label=\"正文\" style=\"font-size: 15px;\"><strong>签名</strong><strong>认证</strong> 对请求入参和出参都进行加签的的认证方式，有效保护接口数据正确性，防篡改；</p></li><li><p label=\"正文\" style=\"font-size: 15px;\"><strong>基本认证</strong>（主要用于接口回调场景），在选择代理用户后，系统自动生成认证签名。</p></li></ul><p><br/></p><p><strong style=\"\">加密策略：</strong></p><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><p><span style=\"color: rgb(0, 0, 0);\">支持使用AES/SM4算法对API传输过程中的数据进行加密，保障数据安全，支持批量选择加密API。</span></p></li></ul><p><br/></p><p><strong style=\"\">访问控制策略：</strong></p><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><p>支持配置IP黑白名单，只<span style=\"color: rgb(0, 0, 0);\">允许白名单中的第三方系统IP调用OpenAPI，禁止黑名单<span style=\"color: rgb(0, 0, 0);\">的IP</span>调用。</span></p></li></ul><p><br/></p><p><br/></p><p><img src=\"/download/01094543809be4144fc1aab84150be34b37a.png\"/></p><p><br/></p><p><img src=\"/download/010919a25bb083624084b4356d1d8177dbdc.png\"/></p><p><br/></p><p label=\"二级标题\" style=\"font-size: 18px; font-weight: bold; padding: 8px 0px; line-height: 42px; margin: 0px;\">2.2 API授权</p><p label=\"正文\" style=\"font-size: 15px;\">新增的第三方应用还需要设置可访问的接口范围，支持选择系统中的所有OpenAPI。当完全信任对方系统<span style=\"\">时，可以打开“授权全部API”开关。</span></p><p><br/></p><p><img src=\"/download/0109a7c81a2eadb7443a89bd511f38b96b0c.png\"/></p><p><br/></p><p><br/></p></div></div><p label=\"一级标题\" style=\"font-size: 20px; font-weight: bold; line-height: 42px; margin: 0px;\">3 更多资讯</p><p><span style=\"text-align: justify;\">关于认证方式的<span style=\"text-align: justify;\">更多</span>信息，请关注<a href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=239331354741842688&id=218694224487485696\" title=\"\" target=\"_blank\" class=\"\" style=\"\">金蝶AI苍穹OpenAPI开发认证指南</a>。</span></p>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 87,
+   "isOpen": 1,
+   "name": "金蝶AI苍穹",
+   "productLineId": 29,
+   "series": "developer01",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        null
+       ],
+       "code": null,
+       "description": "",
+       "entityId": "225286231527892224",
+       "entityType": "Knowledge",
+       "id": "322037734599101696",
+       "isCategory": false,
+       "name": "第三方应用",
+       "parentId": "226337544983020032",
+       "sort": "12",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": null,
+     "entityId": null,
+     "entityType": null,
+     "id": "226337544983020032",
+     "isCategory": true,
+     "name": "用户手册",
+     "parentId": "-1",
+     "sort": "6",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download/01010204d4b71b654a208006fa1004eac36a.png",
+  "department": null,
+  "id": "740211268992385024",
+  "name": "毛毛去哪儿",
+  "nameSpell": "name"
+ },
+ "totalAppraisalScore": 124,
+ "iflytekId": null,
+ "views": 23474,
+ "productLineId": 29,
+ "comments": 3,
+ "similarityCount": 0,
+ "totalAppraisalUsers": 25,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1766109939000,
+ "appraisalScore": 0,
+ "unuseful": 0,
+ "knowledgeCheckStatus": 2,
+ "otherProductLineIds": [],
+ "auditAt": 1728887807000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "thirdapp",
+        "id": "505686150007485696",
+        "name": "第三方应用",
+        "productLineId": null,
+        "sort": 2,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 0,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "thirdapp",
+        "id": "6254",
+        "name": "第三方应用",
+        "productLineId": null,
+        "sort": 2,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "5614",
+       "name": "开放平台",
+       "productLineId": null,
+       "sort": 2,
+       "type": "module"
+      },
+      "code": "DEV",
+      "id": "5576",
+      "name": "开发服务云",
+      "productLineId": null,
+      "sort": 11,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 1,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "OperatingGuide",
+     "createdAt": 1556519201000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "某一功能的具体说明介绍，包括应用场景、参数说明、具体操作步骤等",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/010037894174802d4b9f8782f1f0010a6ddd.png",
+     "id": "202203081641",
+     "name": "功能介绍",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010176d38341668f44fdb94c95058a90e4b8.png",
+      "department": "云社区运营部",
+      "id": "2147406697",
+      "name": "多肉丸子",
+      "nameSpell": "kejuan"
+     },
+     "updatedAt": 1676857681000
+    },
+    {
+     "code": "GettingStarted",
+     "createdAt": 1556519230000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "推送至苍穹帮助中心",
+     "hasSpecifyUser": false,
+     "hide": true,
+     "icon": "/download/01001f079866652f4a68a71361a9509d404c.png",
+     "id": "202203081643",
+     "name": "推送至苍穹帮助中心",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 1,
+     "type": 2,
+     "updatePerson": {
+      "avatar": "/download?fileName=010162cfa9d5437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1129",
+      "name": "灏",
+      "nameSpell": "hao"
+     },
+     "updatedAt": 1605688859000
+    },
+    {
+     "code": "rumen",
+     "createdAt": 1605667807000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "入门类的知识可使用此标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100d322b9282bcc438faa894f4eec029977.png",
+     "id": "202203081646",
+     "name": "基础入门",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download?fileName=0101ec1d6ce599b442dab7d0b794c1fce88d.png",
+      "department": null,
+      "id": "1009",
+      "name": "一颗小星星",
+      "nameSpell": "fengling"
+     },
+     "updatedAt": 1657872008000
+    },
+    {
+     "code": "essencesummary",
+     "createdAt": 1606118073000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "精华汇总",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100402c6f8df169483db114f71043c19ec2.png",
+     "id": "202203081649",
+     "name": "精华汇总",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 2,
+     "updatePerson": {
+      "avatar": "/download?fileName=010162cfa9d5437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1129",
+      "name": "灏",
+      "nameSpell": "hao"
+     },
+     "updatedAt": 1606118073000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "225286231527892224",
+         "entityType": "Knowledge",
+         "id": "322037734599101696",
+         "isCategory": false,
+         "name": "第三方应用",
+         "parentId": "226337544983020032",
+         "sort": "12",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": null,
+       "entityId": null,
+       "entityType": null,
+       "id": "226337544983020032",
+       "isCategory": true,
+       "name": "用户手册",
+       "parentId": "-1",
+       "sort": "6",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": "<div class=\"import-attachment-loading\"><div style=\"width: auto; margin: 0px;\"><p label=\"一级标题\" style=\"font-size: 20px; font-weight: bold; line-height: 42px; margin: 0px;\"><span class=\"X1 X19\" style=\"font-size:15.;font-weight:bold;white-space:pre-wrap;\"></span></p><h2 label=\"一级标题\" class=\"first-title html-anchor-list0-1694481588318 html-anchor-list0-1694506451024 html-anchor-list0-1695015348964 html-anchor-list0-1695035216156\" id=\"html-anchor-list0-1694481588318\" style=\"color: rgb(73, 80, 96);\"><span style=\"color: rgb(26, 26, 26);\">变更记录</span><br/></h2><p style=\"\"><br/></p><table width=\"100%\"><tbody style=\"\"><tr class=\"firstRow\" style=\"\"><td valign=\"middle\" width=\"116\" align=\"left\" style=\"\"><p style=\"\"><strong style=\"\">产品版本</strong></p></td><td valign=\"middle\" width=\"359\" align=\"left\" style=\"\"><strong style=\"\">更新内容</strong></td><td valign=\"middle\" width=\"146.33333333333334\" align=\"left\" style=\"\"><strong style=\"\">更新日期</strong></td></tr><tr><td width=\"92\" valign=\"top\">V5.0.001</td><td width=\"498\" valign=\"top\">初始版本</td><td width=\"150\" valign=\"top\">2022年6月</td></tr><tr><td width=\"92\" valign=\"top\">V6.0.1</td><td width=\"498\" valign=\"top\"><p style=\"text-align: inherit; font-size: 15px;\"><span style=\"text-align: inherit;\">支持增强型Token认证，合并</span><span style=\"text-align: inherit;\">AccessToken</span><span style=\"text-align: inherit;\">认证和JWT认证策略，第三方应用增加代理用户控制、应用联系人和详细描述</span></p></td><td width=\"150\" valign=\"top\">2023年10月</td></tr></tbody></table><p style=\"\"><br/></p><p style=\"\"><span style=\"font-size: 20px; text-align: justify;\"></span></p><hr/><p style=\"\"><br/><span style=\"font-size: 20px; text-align: justify;\"></span></p><h2 label=\"一级标题\" class=\"first-title html-anchor-list1-1712129000423\" id=\"html-anchor-list1-1712129000423\" style=\"\"></h2><p label=\"一级标题\" style=\"font-size: 20px; font-weight: bold; line-height: 42px; margin: 0px;\"><span class=\"X1 X19\" style=\"font-size:15.;font-weight:bold;white-space:pre-wrap;\">1 简介</span><br/></p><p label=\"二级标题\" style=\"font-size: 18px; font-weight: bold; padding: 8px 0px; line-height: 42px; margin: 0px;\"><span class=\"X1 X19\" style=\"font-size:13.;font-weight:bold;white-space:pre-wrap;\">1.1 功能介绍</span></p><p>统一管理需要调用苍穹OpenAPI的外部应用；支持多种认证方式，如accessToken认证、摘要认证、JWT认证、基本认证、签名认证（V5.0.011版本及以上），是外部系统登录金蝶AI苍穹的身份凭证；同时支持API接口授权、IP白名单等功能。</p><p><br/></p><p label=\"二级标题\" style=\"font-size: 18px; font-weight: bold; padding: 8px 0px; line-height: 42px; margin: 0px;\">1.2 应用场景</p><p label=\"正文\" style=\"font-size: 15px;\">外部系统注册第三方应用，获取身份凭证并调用苍穹OpenAPI。<br/></p><p><br/></p><p label=\"二级标题\" style=\"font-size: 18px; font-weight: bold; padding: 8px 0px; line-height: 42px; margin: 0px;\">1.3 操作路径</p><p>路径：【开放服务云】→【OpenAPI】→<span style=\"\">【安全策略】<span style=\"\">→</span></span>【第三方应用】</p><p><br/></p><p label=\"二级标题\" style=\"font-size: 18px; font-weight: bold; padding: 8px 0px; line-height: 42px; margin: 0px;\">1.4 字段/按钮说明</p><p><strong>字段说明</strong></p><table><tbody><tr class=\"firstRow\"><td style=\"word-break: break-all;\"><p><span style=\"color: rgb(0, 0, 0);\"><strong>字段名称</strong></span></p></td><td width=\"434\"><p><span style=\"color: rgb(0, 0, 0);\"><strong>详细解释</strong></span></p></td></tr><tr><td style=\"background-color: rgb(253, 234, 218);\"><p><span style=\"color: rgb(0, 0, 0);\">基本信息</span></p></td><td style=\"background-color: rgb(253, 234, 218);\" width=\"434\"><br/></td></tr><tr><td><p><span style=\"color: rgb(0, 0, 0);\">系统编码</span></p></td><td width=\"434\" style=\"word-break: break-all;\"><p><span style=\"color: rgb(0, 0, 0);\">第三方应用编码，即appId/client_id</span></p></td></tr><tr><td><p><span style=\"color: rgb(0, 0, 0);\">系统名称</span></p></td><td width=\"434\"><p><span style=\"color: rgb(0, 0, 0);\">第三方应用名称</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">创建人</span></td><td colspan=\"1\" rowspan=\"1\" style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">创建人<br/></span></td></tr><tr><td colspan=\"1\" rowspan=\"1\" style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">是否启用</span></td><td colspan=\"1\" rowspan=\"1\" style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">第三方应用状态，可用/禁用</span></td></tr><tr><td style=\"word-break: break-all;\"><p><span style=\"color: rgb(0, 0, 0);\">启用时间</span></p></td><td width=\"434\" style=\"word-break: break-all;\"><p><span style=\"color: rgb(0, 0, 0);\">第三方应用的启用时间</span></p></td></tr><tr><td style=\"word-break: break-all;\"><p><span style=\"color: rgb(0, 0, 0);\">停止时间</span></p></td><td width=\"434\" style=\"word-break: break-all;\"><p><span style=\"color: rgb(0, 0, 0);\">第三方应用的停机时间</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" style=\"word-break: break-all;\">应用联系人</td><td colspan=\"1\" rowspan=\"1\" style=\"word-break: break-all;\">第三方应用联系人</td></tr><tr><td colspan=\"1\" rowspan=\"1\" style=\"word-break: break-all;\">启用代理用户控制<br/></td><td colspan=\"1\" rowspan=\"1\" style=\"word-break: break-all;\">建议开启，获取Token时，校验是否是指定用户</td></tr><tr><td colspan=\"1\" rowspan=\"1\" style=\"word-break: break-all;\">代理用户</td><td colspan=\"1\" rowspan=\"1\" style=\"word-break: break-all;\">接口代理用户（鉴权用）<br/></td></tr><tr><td colspan=\"1\" rowspan=\"1\" style=\"word-break: break-all;\">所属国家地区</td><td colspan=\"1\" rowspan=\"1\" style=\"word-break: break-all;\">默认为空，当通过接口跨境数据传输时维护</td></tr><tr><td colspan=\"1\" rowspan=\"1\" style=\"word-break: break-all;\">详细描述</td><td colspan=\"1\" rowspan=\"1\" style=\"word-break: break-all;\">第三方应用详细描述</td></tr><tr><td style=\"background-color: rgb(253, 234, 218); word-break: break-all;\"><p><span style=\"color: rgb(0, 0, 0);\">访问策略 -&nbsp;AccessToken认证</span></p></td><td style=\"background-color: rgb(253, 234, 218);\" width=\"434\"><br/></td></tr><tr><td style=\"word-break: break-all;\"><p><span style=\"color: rgb(0, 0, 0);\">AccessToken认证密钥</span></p></td><td width=\"434\" style=\"word-break: break-all;\"><p><span style=\"color: rgb(0, 0, 0);\">第三方应用的认证密钥，即appSecret/client_secret</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">增强型Token认证</span></td><td colspan=\"1\" rowspan=\"1\" style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">启用后，将采用更加标准的Token认证规范，只需一步即可获取access_token和JWT，并禁用login.do的获取方式。默认限制token获取频率，避免频繁创建会话，影响系统稳定性。</span></td></tr><tr><td colspan=\"1\" rowspan=\"1\" style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">启用JWT认证</span></td><td colspan=\"1\" rowspan=\"1\" style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">JWT认证开关，默认为否</span></td></tr><tr><td colspan=\"1\" rowspan=\"1\" style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">JWT签名策略</span></td><td colspan=\"1\" rowspan=\"1\" style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">SHA256/RSA</span></td></tr><tr><td style=\"background-color: rgb(253, 234, 218); word-break: break-all;\"><p><span style=\"color: rgb(0, 0, 0);\">访问策略 -&nbsp;摘要认证</span></p></td><td width=\"434\" style=\"background-color: rgb(253, 234, 218);\"><br/></td></tr><tr><td colspan=\"1\" rowspan=\"1\" style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">签名策略</span></td><td colspan=\"1\" rowspan=\"1\" style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">SHA256</span></td></tr><tr><td style=\"word-break: break-all;\"><p><span style=\"color: rgb(0, 0, 0);\">认证密钥</span></p></td><td width=\"434\"><p><span style=\"color: rgb(0, 0, 0);\">摘要加密认证key</span></p></td></tr><tr><td style=\"background-color: rgb(253, 234, 218); word-break: break-all;\"><p><span style=\"color: rgb(0, 0, 0);\">访问策略 -&nbsp;基本认证</span></p></td><td width=\"434\" style=\"background-color: rgb(253, 234, 218);\"><br/></td></tr><tr><td style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">基本认证用户</span></td><td style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">登录时的代理用户（基本认证和签名认证必须维护）</span></td></tr><tr><td style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">Secret Key</span></td><td style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">基本认证密钥，系统自动生成<br/></span></td></tr><tr><td style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">显示密钥<br/></span></td><td style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">是否在界面显示密钥</span></td></tr><tr><td style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">是否有效</span></td><td style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">密钥有效开关，是/否</span></td></tr><tr><td style=\"word-break: break-all; background-color: rgb(253, 234, 218);\"><span style=\"color: rgb(0, 0, 0);\">访问策略 -&nbsp;IP黑白名单<br/></span></td><td style=\"background-color: rgb(253, 234, 218);\"><br/></td></tr><tr><td colspan=\"1\" rowspan=\"1\" style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">允许全部IP访问</span></td><td colspan=\"1\" rowspan=\"1\" style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">IP黑白名单开关，默认打开</span></td></tr><tr><td colspan=\"1\" rowspan=\"1\" style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">IP策略<br/></span></td><td colspan=\"1\" rowspan=\"1\" style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">黑名单/白名单</span></td></tr><tr><td style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">起始IP<br/></span></td><td style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">起始IP</span></td></tr><tr><td style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">结束IP</span></td><td style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">结束IP</span></td></tr><tr><td style=\"word-break: break-all; background-color: rgb(253, 234, 218);\"><span style=\"color: rgb(0, 0, 0);\">访问策略 - 加密策略<br/></span></td><td style=\"background-color: rgb(253, 234, 218);\"><br/></td></tr><tr><td style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">加密策略</span><div class=\"uGTwvQaG kd-hover-color _3Oqnzx2S underLine theme field-in-edit\" style=\"color: rgb(61, 70, 83);\"><div class=\"_21od--cy _3S6Ar4-C _1e2oVFKQ _3MN-_9A6 _3oihbIiz _11TiYXly _3lMoborx\" style=\"color: rgb(51, 51, 51);\"><div class=\"_2XHj23x3 _3UVT-hu_\" style=\"\"><span style=\"color: rgb(0, 0, 0);\"></span></div></div></div></td><td style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">接口数据加密策略，支持不加密/AES/SM4</span></td></tr><tr><td style=\"word-break: break-all;\"><p><span style=\"color: rgb(0, 0, 0);\">加密全部API</span></p></td><td width=\"434\" style=\"word-break: break-all;\"><p><span style=\"color: rgb(0, 0, 0);\">API加密开关，默认为否</span></p></td></tr><tr><td><p><span style=\"color: rgb(0, 0, 0);\">API编码</span></p></td><td width=\"434\" style=\"word-break: break-all;\"><p><span style=\"color: rgb(0, 0, 0);\">当为API加密开关为否时，通过F7批量选择后在列表展示的API服务编码</span></p></td></tr><tr><td style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">API名称<br/></span></td><td style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">API名称</span></td></tr><tr><td style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">URL</span></td><td style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">请求地址</span></td></tr><tr><td style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">业务对象</span></td><td style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">API所属业务对象</span></td></tr><tr><td style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">所属应用<br/></span></td><td style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">API所属应用</span></td></tr><tr><td style=\"background-color: rgb(253, 234, 218);\"><p><span style=\"color: rgb(0, 0, 0);\">API授权</span></p></td><td style=\"background-color: rgb(253, 234, 218);\" width=\"434\"><br/></td></tr><tr><td style=\"word-break: break-all;\"><p><span style=\"color: rgb(0, 0, 0);\">授权全部API</span></p></td><td width=\"434\" style=\"word-break: break-all;\"><p><span style=\"color: rgb(0, 0, 0);\">API授权开关，默认为否</span></p></td></tr><tr><td><p><span style=\"color: rgb(0, 0, 0);\">API编码</span></p></td><td width=\"434\"><p><span style=\"color: rgb(0, 0, 0);\">当为API授权开关为否时，通过F7批量选择后在列表展示的API服务编码</span></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">API名称<br/></span></td><td colspan=\"1\" rowspan=\"1\" style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">API名称</span></td></tr><tr><td colspan=\"1\" rowspan=\"1\" style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">URL</span></td><td colspan=\"1\" rowspan=\"1\" style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">请求地址</span></td></tr><tr><td colspan=\"1\" rowspan=\"1\" style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">业务对象</span></td><td colspan=\"1\" rowspan=\"1\" style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">API所属业务对象</span></td></tr><tr><td colspan=\"1\" rowspan=\"1\" style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">所属应用<br/></span></td><td colspan=\"1\" rowspan=\"1\" style=\"word-break: break-all;\"><span style=\"color: rgb(0, 0, 0);\">API所属应用</span></td></tr></tbody></table><p><br/></p><p><strong>按钮说明</strong></p><table><tbody><tr class=\"firstRow\"><td width=\"181\"><p><strong>按钮名称</strong></p></td><td width=\"436\"><p><strong>详细解释</strong></p></td></tr><tr><td width=\"121\" style=\"word-break: break-all;\">保存</td><td width=\"436\"><p>保存第三方应用信息</p></td></tr><tr><td width=\"121\"><p>退出</p></td><td width=\"436\"><p>退出当前界面</p></td></tr></tbody></table><p><br/></p><p label=\"一级标题\" style=\"font-size: 20px; font-weight: bold; line-height: 42px; margin: 0px;\">2 主要操作</p><p label=\"二级标题\" style=\"font-size: 18px; font-weight: bold; padding: 8px 0px; line-height: 42px; margin: 0px;\">2.1 新增第三方应用</p><p label=\"正文\" style=\"font-size: 15px;\">打开第三方应用列表界面，管理所有第三方应用信息。</p><p><br/></p><p><img src=\"/download/0109e7f09425770740dfaa3f2e9e804a4780.png\"/></p><p label=\"正文\" style=\"font-size: 15px;\"><br/></p><p label=\"正文\" style=\"font-size: 15px;\">点击“新增”按钮，打开第三方应用新增界面，用户可以在访问策略中选择需要的策略：</p><p><strong>认证策略：</strong><br/></p><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><p label=\"正文\" style=\"font-size: 15px;\">常用认证方式为<strong>AccessToken认证</strong>，用户需要手工维护符合安全规范的AccessToken认证密钥；</p></li><li><p label=\"正文\" style=\"font-size: 15px;\">使用安全性更高的<strong>摘要认证密钥</strong>，可点击字段后的“刷新”按钮，系统自动生成认证密钥；</p></li><li><p label=\"正文\" style=\"font-size: 15px;\"><strong>签名</strong><strong>认证</strong> 对请求入参和出参都进行加签的的认证方式，有效保护接口数据正确性，防篡改；</p></li><li><p label=\"正文\" style=\"font-size: 15px;\"><strong>基本认证</strong>（主要用于接口回调场景），在选择代理用户后，系统自动生成认证签名。</p></li></ul><p><br/></p><p><strong style=\"\">加密策略：</strong></p><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><p><span style=\"color: rgb(0, 0, 0);\">支持使用AES/SM4算法对API传输过程中的数据进行加密，保障数据安全，支持批量选择加密API。</span></p></li></ul><p><br/></p><p><strong style=\"\">访问控制策略：</strong></p><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><p>支持配置IP黑白名单，只<span style=\"color: rgb(0, 0, 0);\">允许白名单中的第三方系统IP调用OpenAPI，禁止黑名单<span style=\"color: rgb(0, 0, 0);\">的IP</span>调用。</span></p></li></ul><p><br/></p><p><br/></p><p><img src=\"/download/01094543809be4144fc1aab84150be34b37a.png\"/></p><p><br/></p><p><img src=\"/download/010919a25bb083624084b4356d1d8177dbdc.png\"/></p><p><br/></p><p label=\"二级标题\" style=\"font-size: 18px; font-weight: bold; padding: 8px 0px; line-height: 42px; margin: 0px;\">2.2 API授权</p><p label=\"正文\" style=\"font-size: 15px;\">新增的第三方应用还需要设置可访问的接口范围，支持选择系统中的所有OpenAPI。当完全信任对方系统<span style=\"\">时，可以打开“授权全部API”开关。</span></p><p><br/></p><p><img src=\"/download/0109a7c81a2eadb7443a89bd511f38b96b0c.png\"/></p><p><br/></p><p><br/></p></div></div><p label=\"一级标题\" style=\"font-size: 20px; font-weight: bold; line-height: 42px; margin: 0px;\">3 更多资讯</p><p><span style=\"text-align: justify;\">关于认证方式的<span style=\"text-align: justify;\">更多</span>信息，请关注<a href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=239331354741842688&id=218694224487485696\" title=\"\" target=\"_blank\" class=\"\" style=\"\">金蝶AI苍穹OpenAPI开发认证指南</a>。</span></p>"
+}

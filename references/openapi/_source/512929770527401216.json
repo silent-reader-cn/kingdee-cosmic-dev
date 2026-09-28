@@ -1,0 +1,529 @@
+{
+ "badNum": 0,
+ "templateId": "335738408951726336",
+ "identityTagIds": null,
+ "knowledgeId": "512929770527401216",
+ "createdAt": 1700099987000,
+ "collections": 7,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "512929770527401216",
+ "contentType": 1,
+ "updatedAt": 1767870688000,
+ "knowledgeUpdater": {
+  "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+  "department": null,
+  "id": "132488613174518784",
+  "name": "某个路易",
+  "nameSpell": "name"
+ },
+ "assessStatus": 0,
+ "knowledgeStatus": 2,
+ "assessHandleStatus": null,
+ "knowledgeCreatedAt": 1700099987000,
+ "version": 103,
+ "labels": [],
+ "editedAt": 1767779402000,
+ "identityTags": null,
+ "useful": 8,
+ "errors": [],
+ "isCollected": false,
+ "template": "",
+ "totalFeedBacks": 0,
+ "attachments": [],
+ "sources": [],
+ "editTitle": "OpenAPI扩展插件：序列化出入参",
+ "title": "OpenAPI扩展插件：序列化出入参",
+ "content": "<h1><span style=\"font-size: 20px\">变更记录</span></h1><p></p><table style=\"width: 621px\"><colgroup><col style=\"width: 116px\"><col style=\"width: 359px\"><col style=\"width: 146px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"116\" data-background-color=\"\" style=\"background-color: \"><p><strong>产品版本</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"359\" data-background-color=\"\" style=\"background-color: \"><p><strong>更新内容</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"146\" data-background-color=\"\" style=\"background-color: \"><p><strong>更新日期</strong></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"141\" data-background-color=\"\" style=\"background-color: \"><p>V5.0.018</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"454\" data-background-color=\"\" style=\"background-color: \"><p>初始版本</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"146\" data-background-color=\"\" style=\"background-color: \"><p>2023年3月</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p>V6.0.8</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p>序列化插件新增方法，支持获取全部参数</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span>2024年4月</span></p></td></tr></tbody></table><p></p><p></p><hr><p></p><h2></h2><h1 style=\"text-align: justify\"><strong>1 简介</strong></h1><h2 style=\"text-align: justify\"><strong>1.1 功能介绍</strong></h2><p>OpenAPI支持在<strong>操作API、自定义API、脚本API</strong>中注册序列化插件，通过编写插件，可以根据具体业务场景自定义API的出参和入参的序列化和反序列化类。</p><p></p><h2>1.2 系统路径</h2><p style=\"text-align: justify\">【开放服务云】→【OpenAPI】→【API管理】 →【API开发】</p><p style=\"text-align: justify\"></p><h1 style=\"text-align: justify\"><strong>2 主要操作</strong></h1><h2><span><strong>2.1 反序列化入参</strong></span></h2><p><span>当接口传参时，可能存在请求头Content-Type类型为Text/plain，但OpenAPI暂没对这种类型的入参进行处理，那么此时可以编写反序列化插件进行入参的反序列化，拿到反序列化后的入参后，对入参进行干预。</span></p><p></p><p><img src=\"/download/0109a59d10aab62a41219c17896d395f9262.png\"></p><p></p><p><span>1）首先，用户需要编写反序列化插件，在类中需实现对应接口，该方法中，request即为还没反序列化的原入参，处理逻辑是将原Text/plain类型的入参反序列化为map，然后进行入参干预处理，最后返回这个map给OpenAPI进行处理。</span></p><p></p><table style=\"width: 713px\"><colgroup><col style=\"width: 69px\"><col style=\"width: 490px\"><col style=\"width: 154px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"69\" data-background-color=\"\" style=\"background-color: \"><p style=\"text-align: left\">操作</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"490\" data-background-color=\"\" style=\"background-color: \"><p style=\"text-align: left\">接口</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"154\" data-background-color=\"\" style=\"background-color: \"><p style=\"text-align: left\">重写方法</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"69\" data-background-color=\"\" style=\"background-color: \"><p style=\"text-align: left\">反序列化</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"490\" data-background-color=\"\" style=\"background-color: \"><p style=\"text-align: left\">kd.bos.openapi.api.plugin.ApiDeserializerPlugin</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"154\" data-background-color=\"\" style=\"background-color: \"><p style=\"text-align: left\">deserializer</p></td></tr></tbody></table><p></p><pre><code class=\"language-plaintext\">import&nbsp;com.fasterxml.jackson.core.JsonProcessingException;\nimport&nbsp;com.fasterxml.jackson.core.type.TypeReference;\nimport&nbsp;com.fasterxml.jackson.databind.ObjectMapper;\nimport&nbsp;kd.bos.openapi.api.plugin.ApiDeserializerPlugin;\nimport&nbsp;kd.bos.openapi.common.constant.MediaType;\n\nimport&nbsp;java.util.Map;\n\npublic&nbsp;class&nbsp;DemoApiDeserializerPlugin&nbsp;implements&nbsp;ApiDeserializerPlugin&nbsp;{\n\tprivate&nbsp;static&nbsp;final&nbsp;long&nbsp;serialVersionUID&nbsp;=&nbsp;4568461229506221705L;\n\n\t@Override\n\tpublic&nbsp;Map&lt;String,&nbsp;Object&gt;&nbsp;deserializer(String&nbsp;request,&nbsp;String&nbsp;contentType)&nbsp;{\n\t\ttry&nbsp;{\n\t\t\tif(contentType.contains(MediaType.TEXT_PLAIN)){\n\t\t\t\t//请求的text/plain类型反序列化为Map\n\t\t\t\tMap&lt;String,&nbsp;Object&gt;&nbsp;map&nbsp;=&nbsp;new&nbsp;ObjectMapper().readValue(request,&nbsp;new&nbsp;TypeReference&lt;Map&lt;String,&nbsp;Object&gt;&gt;()&nbsp;{});\n\t\t\t\t//干预入参\n\t\t\t\tMap&lt;String,&nbsp;Object&gt;&nbsp;data&nbsp;=&nbsp;(Map&lt;String,&nbsp;Object&gt;)&nbsp;map.get(\"data\");\n\t\t\t\tdata.put(\"billno\",\"unittest-001\");\n\t\t\t\treturn&nbsp;map;\n\t\t\t}else&nbsp;if(contentType.contains(MediaType.APPLICATION_XML)){\n\t\t\t\t//XML格式反序列化逻辑\n\t\t\t\treturn&nbsp;...;\n\t\t\t}else&nbsp;{\n\t\t\t\treturn&nbsp;...;\n\t\t\t}\n\t\t}&nbsp;catch&nbsp;(JsonProcessingException&nbsp;e)&nbsp;{\n\t\t\tthrow&nbsp;new&nbsp;RuntimeException(e);\n\t\t}\n\t}\n}</code></pre><p></p><p><span>2）接下来，回到OpenAPI应用，在API详情中注册并启用插件。</span></p><p></p><p><span><img src=\"/download/010980f50a5884a8402c8ff0e8850686ba9b.png\"></span></p><p></p><p><span>3）最后，点击“API测试”按钮，打开在线测试弹窗，在系统中实时调试API功能，若插件执行生效，</span><span style=\"color: rgb(26, 26, 26)\">传Text文本时正常能正常解析入参并返回保存结果。</span></p><p><span style=\"color: rgb(119, 119, 119)\">&nbsp;<img src=\"/download/010957c606ddc11d40f1a627695ae57398df.png\"></span></p><p></p><h2><span><strong>2.2 序列化出参</strong></span></h2><p><span>在实际的业务场景中，第三方需要接收的返回参数可能是特定的非JSON格式数据，如Text文本格式，结果不带引号，那么此时也可以通过编写序列化插件对出参进行个性化处理。</span></p><p></p><p><span>1）首先，仍然是编写插件，重写serialize方法。</span></p><p></p><table style=\"width: 709px\"><colgroup><col style=\"width: 124px\"><col style=\"width: 406px\"><col style=\"width: 179px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"124\" data-background-color=\"\" style=\"background-color: \"><p style=\"text-align: left\">操作</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"406\" data-background-color=\"\" style=\"background-color: \"><p style=\"text-align: left\">接口</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"179\" data-background-color=\"\" style=\"background-color: \"><p style=\"text-align: left\">重写方法</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"124\" data-background-color=\"\" style=\"background-color: \"><p style=\"text-align: left\">序列化</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"406\" data-background-color=\"\" style=\"background-color: \"><p style=\"text-align: left\">kd.bos.openapi.api.plugin.ApiSerializerPlugin</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"179\" data-background-color=\"\" style=\"background-color: \"><p style=\"text-align: left\">serialize</p></td></tr></tbody></table><p><span>其中参数response为还没序列化的原出参，这里逻辑直接重新返回一个自定义的字符文本。</span></p><p><span style=\"color: rgb(0, 112, 192)\"><strong>注意：序列化出参插件严禁直接抛出异常，需要用户自行处理并返回异常错误信息。</strong></span></p><p></p><pre><code class=\"language-plaintext\">import&nbsp;com.fasterxml.jackson.core.JsonProcessingException;\nimport&nbsp;com.fasterxml.jackson.databind.ObjectMapper;\nimport&nbsp;kd.bos.openapi.api.plugin.ApiSerializerPlugin;\nimport&nbsp;kd.bos.openapi.api.plugin.SerializerResult;\nimport&nbsp;kd.bos.openapi.common.constant.MediaType;\n\npublic&nbsp;class&nbsp;DemoApiSerializerPlugin&nbsp;implements&nbsp;ApiSerializerPlugin&nbsp;{\n\tprivate&nbsp;static&nbsp;final&nbsp;long&nbsp;serialVersionUID&nbsp;=&nbsp;1747368553053757065L;\n\n\t@Override\n\tpublic&nbsp;SerializerResult&nbsp;serialize(Object&nbsp;response,&nbsp;String&nbsp;accept,&nbsp;String&nbsp;contentType)&nbsp;{\n\t\ttry&nbsp;{\n\t\t\tif&nbsp;(contentType.contains(MediaType.APPLICATION_JSON))&nbsp;{\n\t\t\t\t//返回text文本\n\t\t\t\tString&nbsp;responseStr&nbsp;=&nbsp;new&nbsp;ObjectMapper().writeValueAsString(response);\n\t\t\t\treturn&nbsp;new&nbsp;SerializerResult(MediaType.TEXT_PLAIN,&nbsp;\"实际返回：\"&nbsp;+&nbsp;responseStr);\n\t\t\t}&nbsp;else&nbsp;{\n\t\t\t\t//其他类型的出参序列化\n\t\t\t\treturn&nbsp;...;\n\t\t\t}\n\t\t}&nbsp;catch&nbsp;(JsonProcessingException&nbsp;e)&nbsp;{\n\t\t\t//处理异常时严禁抛出异常，可以定义自己的错误返回信息\n\t\t\tString&nbsp;result=\"...\";\n\t\t\treturn&nbsp;new&nbsp;SerializerResult(MediaType.TEXT_PLAIN,result);\n\t\t}\n\t}\n}\t</code></pre><p></p><p><span>2）接下来，用户需要注册插件并打开在线测试弹窗，在系统中实时调试API功能，若插件执行生效，则返回参数会从被替换成自定义的Text文本出参。</span></p><p></p><p style=\"text-align: justify\"><img src=\"/download/01094b780a317a6c4f2ba06cf79c3e014f9a.png\"></p><p style=\"text-align: justify\"></p><p>补充说明：若用户在集成场景中需要获取全部参数，扩展插件也提供了以下序列化方法来获取更多参数。</p><pre><code class=\"language-plaintext\">\t/**\n\t&nbsp;*&nbsp;模型参数序列化方法，提供更多参数信息\n\t&nbsp;**/&nbsp;\n\t@Override\n\tpublic&nbsp;SerializerResult&nbsp;serializeByModel(ApiSerializerModel&nbsp;model)&nbsp;{\n\t\tString&nbsp;s&nbsp;=&nbsp;JacksonUtil.writeValueAsPrettyString(model.getResponse());\n\t\treturn&nbsp;new&nbsp;SerializerResult(MediaType.APPLICATION_JSON,&nbsp;s);\n\t}\n\n\t/**\n\t&nbsp;*&nbsp;根据版本来决定执行那个序列化方法&nbsp;(只需要实现相应版本的序列化方法即可)\n\t&nbsp;*&nbsp;ApiSerializerVersion.DEFAULT&nbsp;-&nbsp;&nbsp;执行&nbsp;serialize&nbsp;序列化方法（默认）\n\t&nbsp;*&nbsp;ApiSerializerVersion.MODEL\t-&nbsp;&nbsp;执行&nbsp;serializeByModel&nbsp;序列化方法\n\t&nbsp;**/&nbsp;\n\t@Override\n\tpublic&nbsp;ApiSerializerVersion&nbsp;getVersion()&nbsp;{\n\t\treturn&nbsp;ApiSerializerVersion.MODEL;\n\t}\n}</code></pre><p></p><h1>3 更多资讯</h1><p style=\"text-align: justify\"><span>关于OpenAPI的更多资讯，请随时关注</span><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=226337371640594944&amp;id=226708319996323072&amp;productLineId=29\">新特性公告</a><span>。</span></p>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 87,
+   "isOpen": 1,
+   "name": "金蝶AI苍穹",
+   "productLineId": 29,
+   "series": "developer01",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "512929770527401216",
+         "entityType": "Knowledge",
+         "id": "512935233272973312",
+         "isCategory": false,
+         "name": "OpenAPI扩展插件：序列化出入参",
+         "parentId": "239331354741842688",
+         "sort": "8",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": null,
+       "id": "239331354741842688",
+       "isCategory": true,
+       "name": "开发指南",
+       "parentId": "226337544983020032",
+       "sort": "1",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": null,
+     "entityId": null,
+     "entityType": null,
+     "id": "226337544983020032",
+     "isCategory": true,
+     "name": "用户手册",
+     "parentId": "-1",
+     "sort": "6",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download/01010204d4b71b654a208006fa1004eac36a.png",
+  "department": null,
+  "id": "740211268992385024",
+  "name": "毛毛去哪儿",
+  "nameSpell": "name"
+ },
+ "totalAppraisalScore": 40,
+ "iflytekId": null,
+ "views": 15878,
+ "productLineId": 29,
+ "comments": 2,
+ "similarityCount": 0,
+ "totalAppraisalUsers": 8,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1767870688000,
+ "appraisalScore": 0,
+ "unuseful": 0,
+ "knowledgeCheckStatus": 2,
+ "otherProductLineIds": [],
+ "auditAt": 1767870688000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": null,
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 0,
+     "type": "product"
+    },
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapi_apilist_layout",
+        "id": "505686038019362304",
+        "name": "异步API",
+        "productLineId": null,
+        "sort": 1,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 1,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "AdvancedSkills",
+     "createdAt": 1556519216000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "高阶技巧标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/01005cea40211bf14113a6004322e86a6780.png",
+     "id": "202203081642",
+     "name": "高级技巧",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download/010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "306913800727243776",
+      "name": "Paim",
+      "nameSpell": "name"
+     },
+     "updatedAt": 1657851500000
+    },
+    {
+     "code": "OperatingGuide",
+     "createdAt": 1556519201000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "某一功能的具体说明介绍，包括应用场景、参数说明、具体操作步骤等",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/010037894174802d4b9f8782f1f0010a6ddd.png",
+     "id": "202203081641",
+     "name": "功能介绍",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010176d38341668f44fdb94c95058a90e4b8.png",
+      "department": "云社区运营部",
+      "id": "2147406697",
+      "name": "多肉丸子",
+      "nameSpell": "kejuan"
+     },
+     "updatedAt": 1676857681000
+    },
+    {
+     "code": "GettingStarted",
+     "createdAt": 1556519230000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "推送至苍穹帮助中心",
+     "hasSpecifyUser": false,
+     "hide": true,
+     "icon": "/download/01001f079866652f4a68a71361a9509d404c.png",
+     "id": "202203081643",
+     "name": "推送至苍穹帮助中心",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 1,
+     "type": 2,
+     "updatePerson": {
+      "avatar": "/download?fileName=010162cfa9d5437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1129",
+      "name": "灏",
+      "nameSpell": "hao"
+     },
+     "updatedAt": 1605688859000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          {
+           "childCategory": [
+            null
+           ],
+           "code": null,
+           "description": "",
+           "entityId": "512929770527401216",
+           "entityType": "Knowledge",
+           "id": "512935233272973312",
+           "isCategory": false,
+           "name": "OpenAPI扩展插件：序列化出入参",
+           "parentId": "239331354741842688",
+           "sort": "8",
+           "specialId": "226337046514476288",
+           "status": 1
+          }
+         ],
+         "code": null,
+         "description": "",
+         "entityId": null,
+         "entityType": null,
+         "id": "239331354741842688",
+         "isCategory": true,
+         "name": "开发指南",
+         "parentId": "226337544983020032",
+         "sort": "1",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": null,
+       "entityId": null,
+       "entityType": null,
+       "id": "226337544983020032",
+       "isCategory": true,
+       "name": "用户手册",
+       "parentId": "-1",
+       "sort": "6",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": "<h1><span style=\"font-size: 20px\">变更记录</span></h1><p></p><table style=\"width: 621px\"><colgroup><col style=\"width: 116px\"><col style=\"width: 359px\"><col style=\"width: 146px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"116\" data-background-color=\"\" style=\"background-color: \"><p><strong>产品版本</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"359\" data-background-color=\"\" style=\"background-color: \"><p><strong>更新内容</strong></p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"146\" data-background-color=\"\" style=\"background-color: \"><p><strong>更新日期</strong></p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"141\" data-background-color=\"\" style=\"background-color: \"><p>V5.0.018</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"454\" data-background-color=\"\" style=\"background-color: \"><p>初始版本</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"146\" data-background-color=\"\" style=\"background-color: \"><p>2023年3月</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p>V6.0.8</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p>序列化插件新增方法，支持获取全部参数</p></td><td colspan=\"1\" rowspan=\"1\" data-background-color=\"\" style=\"background-color: \"><p><span>2024年4月</span></p></td></tr></tbody></table><p></p><p></p><hr><p></p><h2></h2><h1 style=\"text-align: justify\"><strong>1 简介</strong></h1><h2 style=\"text-align: justify\"><strong>1.1 功能介绍</strong></h2><p>OpenAPI支持在<strong>操作API、自定义API、脚本API</strong>中注册序列化插件，通过编写插件，可以根据具体业务场景自定义API的出参和入参的序列化和反序列化类。</p><p></p><h2>1.2 系统路径</h2><p style=\"text-align: justify\">【开放服务云】→【OpenAPI】→【API管理】 →【API开发】</p><p style=\"text-align: justify\"></p><h1 style=\"text-align: justify\"><strong>2 主要操作</strong></h1><h2><span><strong>2.1 反序列化入参</strong></span></h2><p><span>当接口传参时，可能存在请求头Content-Type类型为Text/plain，但OpenAPI暂没对这种类型的入参进行处理，那么此时可以编写反序列化插件进行入参的反序列化，拿到反序列化后的入参后，对入参进行干预。</span></p><p></p><p><img src=\"/download/0109a59d10aab62a41219c17896d395f9262.png\"></p><p></p><p><span>1）首先，用户需要编写反序列化插件，在类中需实现对应接口，该方法中，request即为还没反序列化的原入参，处理逻辑是将原Text/plain类型的入参反序列化为map，然后进行入参干预处理，最后返回这个map给OpenAPI进行处理。</span></p><p></p><table style=\"width: 713px\"><colgroup><col style=\"width: 69px\"><col style=\"width: 490px\"><col style=\"width: 154px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"69\" data-background-color=\"\" style=\"background-color: \"><p style=\"text-align: left\">操作</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"490\" data-background-color=\"\" style=\"background-color: \"><p style=\"text-align: left\">接口</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"154\" data-background-color=\"\" style=\"background-color: \"><p style=\"text-align: left\">重写方法</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"69\" data-background-color=\"\" style=\"background-color: \"><p style=\"text-align: left\">反序列化</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"490\" data-background-color=\"\" style=\"background-color: \"><p style=\"text-align: left\">kd.bos.openapi.api.plugin.ApiDeserializerPlugin</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"154\" data-background-color=\"\" style=\"background-color: \"><p style=\"text-align: left\">deserializer</p></td></tr></tbody></table><p></p><pre><code class=\"language-plaintext\">import&nbsp;com.fasterxml.jackson.core.JsonProcessingException;\nimport&nbsp;com.fasterxml.jackson.core.type.TypeReference;\nimport&nbsp;com.fasterxml.jackson.databind.ObjectMapper;\nimport&nbsp;kd.bos.openapi.api.plugin.ApiDeserializerPlugin;\nimport&nbsp;kd.bos.openapi.common.constant.MediaType;\n\nimport&nbsp;java.util.Map;\n\npublic&nbsp;class&nbsp;DemoApiDeserializerPlugin&nbsp;implements&nbsp;ApiDeserializerPlugin&nbsp;{\n\tprivate&nbsp;static&nbsp;final&nbsp;long&nbsp;serialVersionUID&nbsp;=&nbsp;4568461229506221705L;\n\n\t@Override\n\tpublic&nbsp;Map&lt;String,&nbsp;Object&gt;&nbsp;deserializer(String&nbsp;request,&nbsp;String&nbsp;contentType)&nbsp;{\n\t\ttry&nbsp;{\n\t\t\tif(contentType.contains(MediaType.TEXT_PLAIN)){\n\t\t\t\t//请求的text/plain类型反序列化为Map\n\t\t\t\tMap&lt;String,&nbsp;Object&gt;&nbsp;map&nbsp;=&nbsp;new&nbsp;ObjectMapper().readValue(request,&nbsp;new&nbsp;TypeReference&lt;Map&lt;String,&nbsp;Object&gt;&gt;()&nbsp;{});\n\t\t\t\t//干预入参\n\t\t\t\tMap&lt;String,&nbsp;Object&gt;&nbsp;data&nbsp;=&nbsp;(Map&lt;String,&nbsp;Object&gt;)&nbsp;map.get(\"data\");\n\t\t\t\tdata.put(\"billno\",\"unittest-001\");\n\t\t\t\treturn&nbsp;map;\n\t\t\t}else&nbsp;if(contentType.contains(MediaType.APPLICATION_XML)){\n\t\t\t\t//XML格式反序列化逻辑\n\t\t\t\treturn&nbsp;...;\n\t\t\t}else&nbsp;{\n\t\t\t\treturn&nbsp;...;\n\t\t\t}\n\t\t}&nbsp;catch&nbsp;(JsonProcessingException&nbsp;e)&nbsp;{\n\t\t\tthrow&nbsp;new&nbsp;RuntimeException(e);\n\t\t}\n\t}\n}</code></pre><p></p><p><span>2）接下来，回到OpenAPI应用，在API详情中注册并启用插件。</span></p><p></p><p><span><img src=\"/download/010980f50a5884a8402c8ff0e8850686ba9b.png\"></span></p><p></p><p><span>3）最后，点击“API测试”按钮，打开在线测试弹窗，在系统中实时调试API功能，若插件执行生效，</span><span style=\"color: rgb(26, 26, 26)\">传Text文本时正常能正常解析入参并返回保存结果。</span></p><p><span style=\"color: rgb(119, 119, 119)\">&nbsp;<img src=\"/download/010957c606ddc11d40f1a627695ae57398df.png\"></span></p><p></p><h2><span><strong>2.2 序列化出参</strong></span></h2><p><span>在实际的业务场景中，第三方需要接收的返回参数可能是特定的非JSON格式数据，如Text文本格式，结果不带引号，那么此时也可以通过编写序列化插件对出参进行个性化处理。</span></p><p></p><p><span>1）首先，仍然是编写插件，重写serialize方法。</span></p><p></p><table style=\"width: 709px\"><colgroup><col style=\"width: 124px\"><col style=\"width: 406px\"><col style=\"width: 179px\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"124\" data-background-color=\"\" style=\"background-color: \"><p style=\"text-align: left\">操作</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"406\" data-background-color=\"\" style=\"background-color: \"><p style=\"text-align: left\">接口</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"179\" data-background-color=\"\" style=\"background-color: \"><p style=\"text-align: left\">重写方法</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\" colwidth=\"124\" data-background-color=\"\" style=\"background-color: \"><p style=\"text-align: left\">序列化</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"406\" data-background-color=\"\" style=\"background-color: \"><p style=\"text-align: left\">kd.bos.openapi.api.plugin.ApiSerializerPlugin</p></td><td colspan=\"1\" rowspan=\"1\" colwidth=\"179\" data-background-color=\"\" style=\"background-color: \"><p style=\"text-align: left\">serialize</p></td></tr></tbody></table><p><span>其中参数response为还没序列化的原出参，这里逻辑直接重新返回一个自定义的字符文本。</span></p><p><span style=\"color: rgb(0, 112, 192)\"><strong>注意：序列化出参插件严禁直接抛出异常，需要用户自行处理并返回异常错误信息。</strong></span></p><p></p><pre><code class=\"language-plaintext\">import&nbsp;com.fasterxml.jackson.core.JsonProcessingException;\nimport&nbsp;com.fasterxml.jackson.databind.ObjectMapper;\nimport&nbsp;kd.bos.openapi.api.plugin.ApiSerializerPlugin;\nimport&nbsp;kd.bos.openapi.api.plugin.SerializerResult;\nimport&nbsp;kd.bos.openapi.common.constant.MediaType;\n\npublic&nbsp;class&nbsp;DemoApiSerializerPlugin&nbsp;implements&nbsp;ApiSerializerPlugin&nbsp;{\n\tprivate&nbsp;static&nbsp;final&nbsp;long&nbsp;serialVersionUID&nbsp;=&nbsp;1747368553053757065L;\n\n\t@Override\n\tpublic&nbsp;SerializerResult&nbsp;serialize(Object&nbsp;response,&nbsp;String&nbsp;accept,&nbsp;String&nbsp;contentType)&nbsp;{\n\t\ttry&nbsp;{\n\t\t\tif&nbsp;(contentType.contains(MediaType.APPLICATION_JSON))&nbsp;{\n\t\t\t\t//返回text文本\n\t\t\t\tString&nbsp;responseStr&nbsp;=&nbsp;new&nbsp;ObjectMapper().writeValueAsString(response);\n\t\t\t\treturn&nbsp;new&nbsp;SerializerResult(MediaType.TEXT_PLAIN,&nbsp;\"实际返回：\"&nbsp;+&nbsp;responseStr);\n\t\t\t}&nbsp;else&nbsp;{\n\t\t\t\t//其他类型的出参序列化\n\t\t\t\treturn&nbsp;...;\n\t\t\t}\n\t\t}&nbsp;catch&nbsp;(JsonProcessingException&nbsp;e)&nbsp;{\n\t\t\t//处理异常时严禁抛出异常，可以定义自己的错误返回信息\n\t\t\tString&nbsp;result=\"...\";\n\t\t\treturn&nbsp;new&nbsp;SerializerResult(MediaType.TEXT_PLAIN,result);\n\t\t}\n\t}\n}\t</code></pre><p></p><p><span>2）接下来，用户需要注册插件并打开在线测试弹窗，在系统中实时调试API功能，若插件执行生效，则返回参数会从被替换成自定义的Text文本出参。</span></p><p></p><p style=\"text-align: justify\"><img src=\"/download/01094b780a317a6c4f2ba06cf79c3e014f9a.png\"></p><p style=\"text-align: justify\"></p><p>补充说明：若用户在集成场景中需要获取全部参数，扩展插件也提供了以下序列化方法来获取更多参数。</p><pre><code class=\"language-plaintext\">\t/**\n\t&nbsp;*&nbsp;模型参数序列化方法，提供更多参数信息\n\t&nbsp;**/&nbsp;\n\t@Override\n\tpublic&nbsp;SerializerResult&nbsp;serializeByModel(ApiSerializerModel&nbsp;model)&nbsp;{\n\t\tString&nbsp;s&nbsp;=&nbsp;JacksonUtil.writeValueAsPrettyString(model.getResponse());\n\t\treturn&nbsp;new&nbsp;SerializerResult(MediaType.APPLICATION_JSON,&nbsp;s);\n\t}\n\n\t/**\n\t&nbsp;*&nbsp;根据版本来决定执行那个序列化方法&nbsp;(只需要实现相应版本的序列化方法即可)\n\t&nbsp;*&nbsp;ApiSerializerVersion.DEFAULT&nbsp;-&nbsp;&nbsp;执行&nbsp;serialize&nbsp;序列化方法（默认）\n\t&nbsp;*&nbsp;ApiSerializerVersion.MODEL\t-&nbsp;&nbsp;执行&nbsp;serializeByModel&nbsp;序列化方法\n\t&nbsp;**/&nbsp;\n\t@Override\n\tpublic&nbsp;ApiSerializerVersion&nbsp;getVersion()&nbsp;{\n\t\treturn&nbsp;ApiSerializerVersion.MODEL;\n\t}\n}</code></pre><p></p><h1>3 更多资讯</h1><p style=\"text-align: justify\"><span>关于OpenAPI的更多资讯，请随时关注</span><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=226337371640594944&amp;id=226708319996323072&amp;productLineId=29\">新特性公告</a><span>。</span></p>"
+}

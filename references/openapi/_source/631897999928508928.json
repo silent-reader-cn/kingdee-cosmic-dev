@@ -1,0 +1,772 @@
+{
+ "badNum": 0,
+ "identityTagIds": null,
+ "knowledgeId": "631897999928508928",
+ "createdAt": 1728464223000,
+ "collections": 8,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "631897999928508928",
+ "contentType": 1,
+ "updatedAt": 1728610920000,
+ "knowledgeUpdater": {
+  "avatar": "/download/0101678496884d9a4091a502f6b6bd12c992.png",
+  "department": null,
+  "id": "204995267567778048",
+  "name": "shawyen",
+  "nameSpell": "zhuangdandan"
+ },
+ "assessStatus": 0,
+ "knowledgeStatus": 2,
+ "assessHandleStatus": null,
+ "knowledgeCreatedAt": 1728464223000,
+ "version": 19,
+ "labels": [],
+ "editedAt": 1728610121000,
+ "identityTags": null,
+ "useful": 13,
+ "errors": [],
+ "isCollected": false,
+ "totalFeedBacks": 0,
+ "attachments": [],
+ "sources": [],
+ "editTitle": "实践案例 | OpenAPI简化系统集成，赋能数字化转型",
+ "title": "实践案例 | OpenAPI简化系统集成，赋能数字化转型",
+ "content": "<p style=\"color: rgba(0, 0, 0, 0.9); text-align: justify; background-color: rgb(255, 255, 255);\">客户是大型珠宝集团型企业，旗下分公司独立运营，拥有自己的业务和财务系统，导致财务数据分散、管理效率低下。</p><p style=\"color: rgba(0, 0, 0, 0.9); text-align: justify; background-color: rgb(255, 255, 255);\"><br/></p><p style=\"color: rgba(0, 0, 0, 0.9); text-align: justify; background-color: rgb(255, 255, 255);\">为满足集团对财务数据集中管控、资源优化配置和成本有效控制的需求，客户计划建设一个<strong style=\"\">统一的财务信息化平台</strong>。本案例通过苍穹OpenAPI高效实现系统集成，赋能客户的数字化转型，推荐阅读。</p><p style=\"color: rgba(0, 0, 0, 0.9); text-align: justify; background-color: rgb(255, 255, 255);\"><br/></p><hr/><h2 label=\"一级标题\" class=\"first-title\" style=\"\">业务背景</h2><p style=\"\"><span style=\"\"></span></p><p style=\"color: rgba(0, 0, 0, 0.9); text-align: justify; background-color: rgb(255, 255, 255);\">客户是一家综合性大型珠宝企业集团，业务涵盖珠宝设计、制造、批发和零售等多个环节。凭借先进的生产工艺、严格的质量控制和显著的品牌优势，集团在中国黄金珠宝行业占据龙头地位，取得了领先的市场地位。</p><p style=\"color: rgba(0, 0, 0, 0.9); text-align: justify; background-color: rgb(255, 255, 255);\"><br/></p><p style=\"color: rgba(0, 0, 0, 0.9); text-align: justify; background-color: rgb(255, 255, 255);\">集团旗下每家分公司独立运营，拥有自己的业务和财务系统，导致财务数据分散、管理效率低下。这种分散的财务管理模式难以满足集团对财务数据集中管控、资源优化配置和成本有效控制的需求。</p><p style=\"color: rgba(0, 0, 0, 0.9); text-align: justify; background-color: rgb(255, 255, 255);\"><br/></p><p style=\"color: rgba(0, 0, 0, 0.9); text-align: justify; background-color: rgb(255, 255, 255);\">为解决当前财务管理面临的挑战，集团计划<strong style=\"\">建设一个统一的财务信息化平台</strong>。该平台将<strong style=\"\">整合各分公司的财务数据，实现集中管控，提高财务管理效率</strong>。通过打破信息孤岛，促进数据共享和业务协同，平台将为管理层提供及时、准确、全面的财务决策支持。</p><p style=\"color: rgba(0, 0, 0, 0.9); text-align: justify; background-color: rgb(255, 255, 255);\"><br/></p><p style=\"color: rgba(0, 0, 0, 0.9); text-align: justify; background-color: rgb(255, 255, 255);\">集团期望该平台能够成为推动可持续发展和实现战略目标的有力工具，助力集团在激烈的市场竞争中保持领先优势。</p><p style=\"color: rgba(0, 0, 0, 0.9); text-align: justify; background-color: rgb(255, 255, 255);\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\"><span style=\"\">解决方案</span><br/><span style=\"\"></span></h2><h3 label=\"二级标题\" class=\"second-title\" style=\"\"><span style=\"\">方案的整体思路</span></h3><p style=\"\"><span style=\"\"></span></p><section style=\"\"><p style=\"\">1. 首先，需要将<strong style=\"\">主数据进行统一</strong>，提高数据质量，促进数据共享，提升业务效率，降低管理成本，并强化合规风险管控。对此，需<span style=\"color: rgba(0, 0, 0, 0.9); background-color: rgb(255, 255, 255);\">提供</span><strong style=\"color: rgba(0, 0, 0, 0.9);\">主数据接口</strong><span style=\"color: rgba(0, 0, 0, 0.9); background-color: rgb(255, 255, 255);\">，让对方系统完成调用，实现主数据集成同步。</span></p><p style=\"\">2.&nbsp;<strong style=\"\">将业务系统数据集成财务系统</strong>，加速财务流程，实现实时财务管理，增强业财协同。对此，需<span style=\"color: rgba(0, 0, 0, 0.9); background-color: rgb(255, 255, 255);\">提供</span><strong style=\"color: rgba(0, 0, 0, 0.9);\">应收应付、凭证</strong><span style=\"color: rgba(0, 0, 0, 0.9); background-color: rgb(255, 255, 255);\">相关接口，完成业务数据集成。</span></p></section><p style=\"\"><br/></p><p style=\"\"><img src=\"/download/010091656b7725004f1d9632c8fb4ea13b00.png\"/></p><p style=\"color: rgba(0, 0, 0, 0.9); background-color: rgb(255, 255, 255);\">接口清单如下：</p><p style=\"\"><br/></p><table class=\"X8 X9\" width=\"100%\"><tbody style=\"\"><tr class=\"X8 X9 firstRow\" style=\"\"><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\"><span style=\"font-weight: bold;\">接口名称</span></p></td><td class=\"X8 X9\" width=\"39\" style=\"\"><p style=\"\"><span style=\"font-weight: bold;\">请求类型</span></p></td><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\"><span style=\"font-weight: bold;\">插件类型</span></p></td><td class=\"X8 X9\" width=\"77\" style=\"\"><p style=\"\"><span style=\"font-weight: bold;\">所属应用</span></p></td><td class=\"X8 X9\" width=\"351\" style=\"\"><p style=\"\"><span style=\"font-weight: bold;\">注意事项</span></p></td></tr><tr class=\"X8 X9\" style=\"\"><td class=\"X8 X9\" width=\"153\" style=\"\"><p style=\"\">会计科目查询</p></td><td class=\"X8 X9\" width=\"39\" style=\"\"><p style=\"\">POST</p></td><td class=\"X8 X9\" width=\"78\" style=\"\"><p style=\"\">Java插件</p></td><td class=\"X8 X9\" width=\"77\" style=\"\"><p style=\"\">基础资料</p></td><td class=\"X8 X9\" width=\"351\" style=\"\"><p style=\"\">会计科目存在版本化，需要按照时间去过滤查询对应版本。</p></td></tr><tr class=\"X8 X9\" style=\"\"><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">辅助资料查询接口</p></td><td class=\"X8 X9\" width=\"39\" style=\"\"><p style=\"\">POST</p></td><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">零代码配置</p></td><td class=\"X8 X9\" width=\"77\" style=\"\"><p style=\"\">企业建模</p></td><td class=\"X8 X9\" width=\"351\" style=\"\"><br/></td></tr><tr class=\"X8 X9\" style=\"\"><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">凭证提交并审核</p></td><td class=\"X8 X9\" width=\"39\" style=\"\"><p style=\"\">POST</p></td><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">零代码配置</p></td><td class=\"X8 X9\" width=\"77\" style=\"\"><p style=\"\">总账</p></td><td class=\"X8 X9\" width=\"351\" style=\"\"><p style=\"\">凭证接口与前台导入是同类型，受到会计科目是否允许手工录入控制。</p></td></tr><tr class=\"X8 X9\" style=\"\"><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">物料保存</p></td><td class=\"X8 X9\" width=\"39\" style=\"\"><p style=\"\">POST</p></td><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">零代码配置</p></td><td class=\"X8 X9\" width=\"77\" style=\"\"><p style=\"\">基础资料</p></td><td class=\"X8 X9\" width=\"351\" style=\"\"><br/></td></tr><tr class=\"X8 X9\" style=\"\"><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">物料更新</p></td><td class=\"X8 X9\" width=\"39\" style=\"\"><p style=\"\">POST</p></td><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">零代码配置</p></td><td class=\"X8 X9\" width=\"77\" style=\"\"><p style=\"\">基础资料</p></td><td class=\"X8 X9\" width=\"351\" style=\"\"><p style=\"\">物料更新与物料保存都是保存操作，更新时需要带数据ID。</p></td></tr><tr class=\"X8 X9\" style=\"\"><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">财务应付单提交并审核</p></td><td class=\"X8 X9\" width=\"39\" style=\"\"><p style=\"\">POST</p></td><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">零代码配置</p></td><td class=\"X8 X9\" width=\"77\" style=\"\"><p style=\"\">应付</p></td><td class=\"X8 X9\" width=\"351\" style=\"\"><br/></td></tr><tr class=\"X8 X9\" style=\"\"><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">财务应付单保存</p></td><td class=\"X8 X9\" width=\"39\" style=\"\"><p style=\"\">POST</p></td><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">零代码配置</p></td><td class=\"X8 X9\" width=\"77\" style=\"\"><p style=\"\">应付</p></td><td class=\"X8 X9\" width=\"351\" style=\"\"><br/></td></tr><tr class=\"X8 X9\" style=\"\"><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">暂估应付单保存</p></td><td class=\"X8 X9\" width=\"39\" style=\"\"><p style=\"\">POST</p></td><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">零代码配置</p></td><td class=\"X8 X9\" width=\"77\" style=\"\"><p style=\"\">应付</p></td><td class=\"X8 X9\" width=\"351\" style=\"\"><br/></td></tr><tr class=\"X8 X9\" style=\"\"><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">暂估应付单提交并审核</p></td><td class=\"X8 X9\" width=\"39\" style=\"\"><p style=\"\">POST</p></td><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">零代码配置</p></td><td class=\"X8 X9\" width=\"77\" style=\"\"><p style=\"\">应付</p></td><td class=\"X8 X9\" width=\"351\" style=\"\"><br/></td></tr><tr class=\"X8 X9\" style=\"\"><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">财务应收单提交并审核</p></td><td class=\"X8 X9\" width=\"39\" style=\"\"><p style=\"\">POST</p></td><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">零代码配置</p></td><td class=\"X8 X9\" width=\"77\" style=\"\"><p style=\"\">应收</p></td><td class=\"X8 X9\" width=\"351\" style=\"\"><br/></td></tr><tr class=\"X8 X9\" style=\"\"><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">凭证反审核删除</p></td><td class=\"X8 X9\" width=\"39\" style=\"\"><p style=\"\">POST</p></td><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">脚本开发</p></td><td class=\"X8 X9\" width=\"77\" style=\"\"><p style=\"\">总账</p></td><td class=\"X8 X9\" width=\"351\" style=\"\"><p style=\"\">现金类凭证需要在审核前先进行反复合。</p></td></tr><tr class=\"X8 X9\" style=\"\"><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">反复核</p></td><td class=\"X8 X9\" width=\"39\" style=\"\"><p style=\"\">POST</p></td><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">零代码配置</p></td><td class=\"X8 X9\" width=\"77\" style=\"\"><p style=\"\">总账</p></td><td class=\"X8 X9\" width=\"351\" style=\"\"><br/></td></tr><tr class=\"X8 X9\" style=\"\"><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">客户保存</p></td><td class=\"X8 X9\" width=\"39\" style=\"\"><p style=\"\">POST</p></td><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">零代码配置</p></td><td class=\"X8 X9\" width=\"77\" style=\"\"><p style=\"\">基础资料</p></td><td class=\"X8 X9\" width=\"351\" style=\"\"><br/></td></tr><tr class=\"X8 X9\" style=\"\"><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">更新客户</p></td><td class=\"X8 X9\" width=\"39\" style=\"\"><p style=\"\">POST</p></td><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">零代码配置</p></td><td class=\"X8 X9\" width=\"77\" style=\"\"><p style=\"\">基础资料</p></td><td class=\"X8 X9\" width=\"351\" style=\"\"><br/></td></tr><tr class=\"X8 X9\" style=\"\"><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">更新供应商</p></td><td class=\"X8 X9\" width=\"39\" style=\"\"><p style=\"\">POST</p></td><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">零代码配置</p></td><td class=\"X8 X9\" width=\"77\" style=\"\"><p style=\"\">基础资料</p></td><td class=\"X8 X9\" width=\"351\" style=\"\"><br/></td></tr><tr class=\"X8 X9\" style=\"\"><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">供应商保存分配</p></td><td class=\"X8 X9\" width=\"39\" style=\"\"><p style=\"\">POST</p></td><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">脚本开发</p></td><td class=\"X8 X9\" width=\"77\" style=\"\"><p style=\"\">基础资料</p></td><td class=\"X8 X9\" width=\"351\" style=\"\"><br/></td></tr><tr class=\"X8 X9\" style=\"\"><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">客户保存分配</p></td><td class=\"X8 X9\" width=\"39\" style=\"\"><p style=\"\">POST</p></td><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">脚本开发</p></td><td class=\"X8 X9\" width=\"77\" style=\"\"><p style=\"\">基础资料</p></td><td class=\"X8 X9\" width=\"351\" style=\"\"><br/></td></tr><tr class=\"X8 X9\" style=\"\"><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">供应商保存</p></td><td class=\"X8 X9\" width=\"39\" style=\"\"><p style=\"\">POST</p></td><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">零代码配置</p></td><td class=\"X8 X9\" width=\"77\" style=\"\"><p style=\"\">基础资料</p></td><td class=\"X8 X9\" width=\"351\" style=\"\"><br/></td></tr><tr class=\"X8 X9\" style=\"\"><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">物料分配</p></td><td class=\"X8 X9\" width=\"39\" style=\"\"><p style=\"\">POST</p></td><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">Java插件</p></td><td class=\"X8 X9\" width=\"77\" style=\"\"><p style=\"\">基础资料</p></td><td class=\"X8 X9\" rowspan=\"3\" width=\"351\" style=\"\"><p style=\"\">客商，物料管理存在分配策略需要新增后调用分配功能。</p><p style=\"\"><br/></p><p style=\"\"><br/></p></td></tr><tr class=\"X8 X9\" style=\"\"><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">客户分配</p></td><td class=\"X8 X9\" width=\"39\" style=\"\"><p style=\"\">POST</p></td><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">Java插件</p></td><td class=\"X8 X9\" width=\"77\" style=\"\"><p style=\"\">基础资料</p></td></tr><tr class=\"X8 X9\" style=\"\"><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">供应商分配</p></td><td class=\"X8 X9\" width=\"39\" style=\"\"><p style=\"\">POST</p></td><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">Java插件</p></td><td class=\"X8 X9\" width=\"77\" style=\"\"><p style=\"\">基础资料</p></td></tr><tr class=\"X8 X9\" style=\"\"><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">财务应付单查询</p></td><td class=\"X8 X9\" width=\"39\" style=\"\"><p style=\"\">POST</p></td><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">Java插件</p></td><td class=\"X8 X9\" width=\"77\" style=\"\"><p style=\"\">应付</p></td><td class=\"X8 X9\" rowspan=\"2\" width=\"351\" style=\"\"><p style=\"\">跨月结算记录会有多条结算记录数据。</p><p style=\"\"><br/></p></td></tr><tr class=\"X8 X9\" style=\"\"><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">财务应收单查询</p></td><td class=\"X8 X9\" width=\"39\" style=\"\"><p style=\"\">POST</p></td><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">Java插件</p></td><td class=\"X8 X9\" width=\"77\" style=\"\"><p style=\"\">应收</p></td></tr><tr class=\"X8 X9\" style=\"\"><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">应付冲回接口</p></td><td class=\"X8 X9\" width=\"39\" style=\"\"><p style=\"\">POST</p></td><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">Java插件</p></td><td class=\"X8 X9\" width=\"77\" style=\"\"><p style=\"\">应付</p></td><td class=\"X8 X9\" width=\"351\" style=\"\"><br/></td></tr><tr class=\"X8 X9\" style=\"\"><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">付款处理提交并审核</p></td><td class=\"X8 X9\" width=\"39\" style=\"\"><p style=\"\">POST</p></td><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">零代码配置</p></td><td class=\"X8 X9\" width=\"77\" style=\"\"><p style=\"\">出纳</p></td><td class=\"X8 X9\" width=\"351\" style=\"\"><br/></td></tr><tr class=\"X8 X9\" style=\"\"><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">财务应付单结算状态查询</p></td><td class=\"X8 X9\" width=\"39\" style=\"\"><p style=\"\">GET</p></td><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">零代码配置</p></td><td class=\"X8 X9\" width=\"77\" style=\"\"><p style=\"\">应付</p></td><td class=\"X8 X9\" width=\"351\" style=\"\"><br/></td></tr></tbody></table><p style=\"\"><br/></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\"><span style=\"\">关键实现步骤</span></h3><p style=\"\"><span style=\"\"></span></p><p style=\"color: rgba(0, 0, 0, 0.9); background-color: rgb(255, 255, 255);\"><br/></p><p style=\"\"><span style=\"\">1. 首先通过OpenAPI，新增第三方应用，并将登录认证接口提供给第三方。</span></p><p style=\"\"><br/></p><p style=\"\"><span style=\"\">2. 提供行政组织，人员，客户，供应商，物料等接口。</span></p><p style=\"\"><span style=\"color: rgb(247, 150, 70);\">注：这些接口需要从OpenAPI云更新同步，并未预制在系统中。</span></p><p style=\"\"><br/></p><p style=\"\"><span style=\"\">3. </span><span style=\"\">行政组织和人员新增和更新使用的是同一个接口，并且也不需要考虑数据审核状态。</span></p><p style=\"\"><span style=\"\">但是更新时需要带上当前对应数据ID，但是主数据系统一般不会存业务系统数据ID，可以通过主数据的主数据内码先查询出ID，然后在拼接至对方接口请求中。</span></p><p style=\"\"><br/></p><p style=\"\"><span style=\"\">4. </span><span style=\"\">客户和供应商还有物料接口比较特殊，存在审核状态和分配功能，为了解决客户，供应商，物料的<strong>更新，数据状态，分配相关</strong>的问题。</span></p><p style=\"\"><span style=\"\"><br/></span></p><p><span style=\"\">4.1：新增数据状态解决方案</span></p><p style=\"\"><span style=\"\"><br/></span></p><p style=\"\"><span style=\"\">新增的数据默认数据状态为暂存，但是新增的数据是必须审核后才可以使用，虽然系统还会提供对应的提交和审核接口，但是对于通过OpenAPI脚本来实现组合接口也是一个比较繁琐的事情，在6.0版本后可以通过<strong>参数配置</strong>解决，可参考文末链接。</span></p><p style=\"\"><span style=\"\"><br/></span></p><p style=\"\"><img src=\"/download/0100e0ee117430eb45caba22d0f779704f69.png\"/></p><p style=\"\"><br/></p><span style=\"\">4.2：数据更新解决方案</span><p style=\"\"><span style=\"\"><br/></span></p><p style=\"\"><span style=\"\">在修改客户，供应商，物料等相关数据时，需要反审核数据才能修改，所以更新接口需要多个组合，反审核，修改，提交审核。6.0也可以通过参数配置，允许修改以审核的数据。</span></p><p style=\"\"><span style=\"\"><br/></span></p><p style=\"\"><img src=\"/download/0100ede51fa2753a42c6ad96f517d29485b7.png\"/></p><p style=\"\"><br/></p><span style=\"\">4.3：数据分配解决方案&nbsp;</span><p style=\"\"><span style=\"\"><br/></span></p><p style=\"\"><span style=\"\">由于系统中没有提供对应的功能，需要进行开发来实现客户，供应商，物料等分配接口。</span>参考代码如下：</p><p style=\"\"><br/></p><p style=\"\"><br/></p><p style=\"\"><img src=\"/download/01009bdf625bab464979bf8ef42c07f95754.png\"/></p><p style=\"\"><span style=\"\"><br/></span></p><p style=\"\"><span style=\"\">然后通过集成云脚本组合，实现新增并分配接口。</span></p><p style=\"\"><span style=\"\"><br/></span></p><p style=\"\"><img src=\"/download/0100c2a19663b00f439cbb9e2206c79fcb9e.png\"/></p><p style=\"\"><br/></p><p style=\"\"><strong><span style=\"\">5. 应收，应付接口集成</span></strong></p><p style=\"\"><span style=\"\">通过OpenAPI,应收应付单的业务字段扩展和调整变得更加敏捷和高效。OpenAPI提供了灵活配置的接口方式,允许开发者根据业务需求快速添加、修改或删除应收应付单接口字段。更新OpenAPI的接口,系统可以自动生成相应的API文档,减少了手动编写和维护接口的工作量。</span></p><p style=\"\"><br/></p><p style=\"\"><strong><span style=\"\">6. 凭证接口集成</span></strong></p><p style=\"\"><span style=\"\">凭证提交并审核接口比较特殊，这个接口是与表单上通过引入模板相同的逻辑原理。所以会受到有一些会计科目不允许手工录入的场景控制。</span></p><p style=\"\"><span style=\"\"><br/></span></p><p style=\"\"><img src=\"/download/0100e2991dee4b8144b59d4b8f32b0fd2284.png\"/></p><p style=\"\"><br/></p><p style=\"\"><span style=\"\">解决办法：通过二开，在凭证保存时校验，那些科目不允许手工录入，不允许手工录入的科目在配置表中进行配置，而非通过这里的手工录入处理。</span></p><p style=\"\"><span style=\"\"><br/></span></p><h3 class=\"second-title\" label=\"二级标题\">方案的可推广价值</h3><p style=\"\"><span style=\"\"></span></p><section style=\"\"><p style=\"text-align: justify;\">通过实施数据集成方案，客户的零售和批发业务数据现已无缝集成到财务系统中，系统自动生成了相应的会计凭证，实现了<strong style=\"\">业务与财务数据的实时同步</strong>。</p><p style=\"\"><br/></p><p style=\"text-align: justify;\">此外，客户的行政组织架构、人员信息、客户资料、供应商档案以及物料主数据都得到了<strong style=\"\">全面整合和统一管理</strong>。基于集成后的数据，财务系统还可以通过报表模块自动生成各类财务和管理报表，<strong style=\"\">提供准确、及时的决策支持</strong>。</p><p style=\"\"><br/></p><p style=\"text-align: justify;\">数据集成不仅提高了财务核算效率，还为客户构建了一个<strong style=\"\">高度协同、数据驱动的业务财务管理平台</strong>，为企业的精细化管理和可持续发展奠定了坚实基础。</p></section><p style=\"\"><br/></p><p style=\"\"><span style=\"\"></span></p><h3 class=\"second-title\" label=\"二级标题\">相关资料</h3><p><span style=\"\">金蝶AI苍穹OpenAPI开发认证指南: <a href=\"https://vip.kingdee.com/link/s/lCVtw\" target=\"_blank\">https://vip.kingdee.com/link/s/lCVtw</a></span></p><p><span style=\"\">&nbsp;一键同步原厂标准API接口: &nbsp;<a href=\"https://vip.kingdee.com/link/s/lCVGJ\" target=\"_blank\">https://vip.kingdee.com/link/s/lCVGJ</a></span></p><p><span style=\"\"> &nbsp; 保存操作API支持自动提交并审核: &nbsp;<a href=\"https://vip.kingdee.com/link/s/lCVG2\" target=\"_blank\">https://vip.kingdee.com/link/s/lCVG2</a></span></p><p><span style=\"\"> &nbsp; 修改数据提示已审核不允许修改: &nbsp;<a href=\"https://vip.kingdee.com/link/s/lCVGE\" target=\"_blank\">https://vip.kingdee.com/link/s/lCVGE</a> </span></p><p><br/></p><hr/><p style=\"\"><br/></p><section style=\"color: rgba(0, 0, 0, 0.9); background-color: rgb(255, 255, 255); text-align: justify;\"><section style=\"\"><section style=\"\"><section style=\"background-color: rgba(95, 156, 239, 0.1);\"><section style=\"\"><section style=\"color: rgb(95, 156, 239);\"><p style=\"\"><strong style=\"\">#往期推荐#</strong></p></section></section></section></section></section></section><p></p><section style=\"color: rgba(0, 0, 0, 0.9); background-color: rgb(255, 255, 255); text-align: justify;\"><section style=\"\"><section style=\"\"><section style=\"\"><section style=\"\"><section style=\"\"><section style=\"\"><section style=\"color: rgb(54, 59, 70);\"><p style=\"\"><span style=\"color: rgb(255, 164, 30);\">#</span>&nbsp;<a target=\"_blank\" href=\"/tolink?target=http%3A%2F%2Fmp.weixin.qq.com%2Fs%3F__biz%3DMzg5NDU2MTIxMQ%3D%3D%26mid%3D2247500829%26idx%3D1%26sn%3Da3050660c039eac2a6adb214c15b0a04%26chksm%3Dc01f3ac9f768b3dfebee77791ea3016aef32a08447898df8cf190a1b7aa8884972e66a9f77a4%26scene%3D21%23wechat_redirect\" style=\"color: rgb(247, 150, 70);\"><span style=\"color: rgb(247, 150, 70);\">实践案例 | 苍穹数据库扩容及分应用部署方案，保你系统稳定！</span></a></p></section></section><section style=\"\"><section style=\"background-color: rgba(95, 156, 239, 0.2);\"></section></section></section></section><section style=\"\"><section style=\"\"><section style=\"\"><section style=\"color: rgb(54, 59, 70);\"><p style=\"\"><span style=\"color: rgb(255, 164, 30);\">#&nbsp;<a target=\"_blank\" href=\"/tolink?target=http%3A%2F%2Fmp.weixin.qq.com%2Fs%3F__biz%3DMzg5NDU2MTIxMQ%3D%3D%26mid%3D2247499887%26idx%3D1%26sn%3D26ce6738e4627de4cbfb8f3d95e3e14a%26chksm%3Dc01f3ebbf768b7ad58f342d98f0bc423eb61ff8f40665ca248b286de7905d7515da5d7f13325%26scene%3D21%23wechat_redirect\" style=\"color: var(--weui-LINK);\">实践案例 | 超详细苍穹环境迁移方案，你值得拥有！</a></span></p></section></section><section style=\"\"><section style=\"background-color: rgba(95, 156, 239, 0.2);\"></section></section></section></section><section style=\"\"><section style=\"\"><section style=\"\"><section style=\"color: rgb(54, 59, 70);\"><p style=\"\"><span style=\"color: rgb(255, 164, 30);\">#&nbsp;<a target=\"_blank\" href=\"/tolink?target=http%3A%2F%2Fmp.weixin.qq.com%2Fs%3F__biz%3DMzg5NDU2MTIxMQ%3D%3D%26mid%3D2247500974%26idx%3D1%26sn%3D73c2534cb91e5029031982c07cbebea4%26chksm%3Dc01f3a7af768b36caa35d19a071466ee56cf44b4aeb36b129490beb4358ab935f1dd829bbe90%26scene%3D21%23wechat_redirect\" style=\"color: var(--weui-LINK);\">实践案例 | 如何在内外网IP端口不一致下搭建苍穹开发环境</a></span></p></section></section><section style=\"\"><section style=\"background-color: rgba(95, 156, 239, 0.2);\"></section></section></section></section><section style=\"\"><section style=\"\"><section style=\"\"><section style=\"color: rgb(54, 59, 70);\"><p style=\"\"><span style=\"color: rgb(255, 164, 30);\">#&nbsp;<a target=\"_blank\" href=\"/tolink?target=http%3A%2F%2Fmp.weixin.qq.com%2Fs%3F__biz%3DMzg5NDU2MTIxMQ%3D%3D%26mid%3D2247504575%26idx%3D1%26sn%3Db58a1f3844b3e583beb3a96ede9225f8%26chksm%3Dc01f2c6bf768a57d04d2841af276e271719bf26b6f7dafc5dce213f073331ffd4a07fae78ed6%26scene%3D21%23wechat_redirect\" style=\"color: var(--weui-LINK);\">实践案例 | 协议不同？OpenAPI助力个性化开发</a></span></p></section></section></section></section></section></section></section></section><p></p><p style=\"\"><br/></p><p class=\"p1\" style=\"font-size: 12px; color: rgb(20, 20, 20);\"><span style=\"font-size: 15px;\"><span class=\"s1\" style=\"background-color: rgb(255, 255, 255);\">更多精彩内容，“码”上了解！↓</span><span class=\"s2\" style=\"color: rgb(38, 38, 38);\"> </span></span><span class=\"s2\" style=\"color: rgb(38, 38, 38);\">&nbsp;</span></p><p class=\"kd-image-content\"><img src=\"/download/01007aeb44ac5fa446b6ba58b424f2e293b3.png\" alt=\"上传图片\"/></p>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 87,
+   "isOpen": 1,
+   "name": "金蝶AI苍穹",
+   "productLineId": 29,
+   "series": "developer01",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        null
+       ],
+       "code": null,
+       "description": "",
+       "entityId": "631897999928508928",
+       "entityType": "Knowledge",
+       "id": "631900903074704640",
+       "isCategory": false,
+       "name": "实践案例 | OpenAPI简化系统集成，赋能数字化转型",
+       "parentId": "371336392497719040",
+       "sort": "7",
+       "specialId": "371310653380080128",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": "",
+     "entityId": null,
+     "entityType": null,
+     "id": "371336392497719040",
+     "isCategory": true,
+     "name": "开放服务云",
+     "parentId": "-1",
+     "sort": "7",
+     "specialId": "371310653380080128",
+     "status": 1
+    }
+   ],
+   "classifies": null,
+   "collections": 71,
+   "createdAt": "2022-10-21T14:55:58.000+08:00",
+   "creator": {
+    "avatar": "/download/01018b00f45fe4f245a9a102410a9682bb28.png",
+    "department": null,
+    "id": "430437059824456704",
+    "name": "Pennyzz",
+    "nameSpell": "name"
+   },
+   "description": "带你了解苍穹产品在不同项目上的运用，一线案例，亲测有效~",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "371310653380080128",
+   "identityTags": null,
+   "itemNum": 127,
+   "logo": "/download/0100dd256adc04984b949b0b12d0d00ecf97.png",
+   "name": "一线项目实践案例",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 1,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 20,
+   "totalAppraisalUsers": 4,
+   "updatedAt": "2025-01-06T16:15:05.000+08:00",
+   "updaterId": "430437059824456704",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1369072
+  },
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        null
+       ],
+       "code": null,
+       "description": "",
+       "entityId": "631897999928508928",
+       "entityType": "Knowledge",
+       "id": "631900903074704642",
+       "isCategory": false,
+       "name": "实践案例 | OpenAPI简化系统集成，赋能数字化转型",
+       "parentId": "283972955728903680",
+       "sort": "32",
+       "specialId": "282527627108140288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": "",
+     "entityId": null,
+     "entityType": null,
+     "id": "283972955728903680",
+     "isCategory": true,
+     "name": "开放服务OpenAPI",
+     "parentId": "-1",
+     "sort": "10",
+     "specialId": "282527627108140288",
+     "status": 1
+    }
+   ],
+   "classifies": null,
+   "collections": 358,
+   "createdAt": "2022-02-18T15:03:55.000+08:00",
+   "creator": {
+    "avatar": "/download/0101c9e21267d75b4786863ee0d53d74d4a6.png",
+    "department": null,
+    "id": "281005769653540096",
+    "name": "PaaS平台那些事",
+    "nameSpell": "name"
+   },
+   "description": "分享苍穹平台新功能、新特性、开发技巧，做苍穹用户、开发者的知心朋友。有它，玩转苍穹不用愁！",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "282527627108140288",
+   "identityTags": null,
+   "itemNum": 706,
+   "logo": "/download/0100b5c220fe7d884e38834487eddcc5815d.png",
+   "name": "苍穹平台那些事",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 1,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 6,
+   "totalAppraisalUsers": 2,
+   "updatedAt": "2025-11-27T20:05:58.000+08:00",
+   "updaterId": "430437059824456704",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 6631050
+  },
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        null
+       ],
+       "code": null,
+       "description": "",
+       "entityId": "631897999928508928",
+       "entityType": "Knowledge",
+       "id": "631900903074704641",
+       "isCategory": false,
+       "name": "实践案例 | OpenAPI简化系统集成，赋能数字化转型",
+       "parentId": "376365761788406272",
+       "sort": "5",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": "",
+     "entityId": null,
+     "entityType": null,
+     "id": "376365761788406272",
+     "isCategory": true,
+     "name": "优秀实践",
+     "parentId": "-1",
+     "sort": "8",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download/01018b00f45fe4f245a9a102410a9682bb28.png",
+  "department": null,
+  "id": "430437059824456704",
+  "name": "Pennyzz",
+  "nameSpell": "name"
+ },
+ "totalAppraisalScore": 64,
+ "iflytekId": null,
+ "views": 3780,
+ "productLineId": 29,
+ "comments": 0,
+ "similarityCount": 0,
+ "totalAppraisalUsers": 13,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1728610920000,
+ "appraisalScore": 0,
+ "unuseful": 0,
+ "knowledgeCheckStatus": 2,
+ "otherProductLineIds": [],
+ "auditAt": 1728610920000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": null,
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 0,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "GettingStarted",
+     "createdAt": 1556519230000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "推送至苍穹帮助中心",
+     "hasSpecifyUser": false,
+     "hide": true,
+     "icon": "/download/01001f079866652f4a68a71361a9509d404c.png",
+     "id": "202203081643",
+     "name": "推送至苍穹帮助中心",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 1,
+     "type": 2,
+     "updatePerson": {
+      "avatar": "/download?fileName=010162cfa9d5437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1129",
+      "name": "灏",
+      "nameSpell": "hao"
+     },
+     "updatedAt": 1605688859000
+    },
+    {
+     "code": "rumen",
+     "createdAt": 1605667807000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "入门类的知识可使用此标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100d322b9282bcc438faa894f4eec029977.png",
+     "id": "202203081646",
+     "name": "基础入门",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download?fileName=0101ec1d6ce599b442dab7d0b794c1fce88d.png",
+      "department": null,
+      "id": "1009",
+      "name": "一颗小星星",
+      "nameSpell": "fengling"
+     },
+     "updatedAt": 1657872008000
+    },
+    {
+     "code": "typicalinstance",
+     "createdAt": 1605836164000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "基于典型客户的应用场景，介绍客户痛点，给出本应用/功能的解决方案",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100905e7651dcc940099286e9ee4a35cb2d.png",
+     "id": "202203081648",
+     "name": "最佳实践",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010176d38341668f44fdb94c95058a90e4b8.png",
+      "department": "云社区运营部",
+      "id": "2147406697",
+      "name": "多肉丸子",
+      "nameSpell": "kejuan"
+     },
+     "updatedAt": 1676857737000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "631897999928508928",
+         "entityType": "Knowledge",
+         "id": "631900903074704640",
+         "isCategory": false,
+         "name": "实践案例 | OpenAPI简化系统集成，赋能数字化转型",
+         "parentId": "371336392497719040",
+         "sort": "7",
+         "specialId": "371310653380080128",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": null,
+       "id": "371336392497719040",
+       "isCategory": true,
+       "name": "开放服务云",
+       "parentId": "-1",
+       "sort": "7",
+       "specialId": "371310653380080128",
+       "status": 1
+      }
+     ],
+     "classifies": null,
+     "collections": 71,
+     "createdAt": "2022-10-21T14:55:58.000+08:00",
+     "creator": {
+      "avatar": "/download/01018b00f45fe4f245a9a102410a9682bb28.png",
+      "department": null,
+      "id": "430437059824456704",
+      "name": "Pennyzz",
+      "nameSpell": "name"
+     },
+     "description": "带你了解苍穹产品在不同项目上的运用，一线案例，亲测有效~",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "371310653380080128",
+     "identityTags": null,
+     "itemNum": 127,
+     "logo": "/download/0100dd256adc04984b949b0b12d0d00ecf97.png",
+     "name": "一线项目实践案例",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 1,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 20,
+     "totalAppraisalUsers": 4,
+     "updatedAt": "2025-01-06T16:15:05.000+08:00",
+     "updaterId": "430437059824456704",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1369072
+    },
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "631897999928508928",
+         "entityType": "Knowledge",
+         "id": "631900903074704642",
+         "isCategory": false,
+         "name": "实践案例 | OpenAPI简化系统集成，赋能数字化转型",
+         "parentId": "283972955728903680",
+         "sort": "32",
+         "specialId": "282527627108140288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": null,
+       "id": "283972955728903680",
+       "isCategory": true,
+       "name": "开放服务OpenAPI",
+       "parentId": "-1",
+       "sort": "10",
+       "specialId": "282527627108140288",
+       "status": 1
+      }
+     ],
+     "classifies": null,
+     "collections": 358,
+     "createdAt": "2022-02-18T15:03:55.000+08:00",
+     "creator": {
+      "avatar": "/download/0101c9e21267d75b4786863ee0d53d74d4a6.png",
+      "department": null,
+      "id": "281005769653540096",
+      "name": "PaaS平台那些事",
+      "nameSpell": "name"
+     },
+     "description": "分享苍穹平台新功能、新特性、开发技巧，做苍穹用户、开发者的知心朋友。有它，玩转苍穹不用愁！",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "282527627108140288",
+     "identityTags": null,
+     "itemNum": 706,
+     "logo": "/download/0100b5c220fe7d884e38834487eddcc5815d.png",
+     "name": "苍穹平台那些事",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 1,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 6,
+     "totalAppraisalUsers": 2,
+     "updatedAt": "2025-11-27T20:05:58.000+08:00",
+     "updaterId": "430437059824456704",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 6631050
+    },
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "631897999928508928",
+         "entityType": "Knowledge",
+         "id": "631900903074704641",
+         "isCategory": false,
+         "name": "实践案例 | OpenAPI简化系统集成，赋能数字化转型",
+         "parentId": "376365761788406272",
+         "sort": "5",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": null,
+       "id": "376365761788406272",
+       "isCategory": true,
+       "name": "优秀实践",
+       "parentId": "-1",
+       "sort": "8",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": "<p style=\"color: rgba(0, 0, 0, 0.9); text-align: justify; background-color: rgb(255, 255, 255);\">客户是大型珠宝集团型企业，旗下分公司独立运营，拥有自己的业务和财务系统，导致财务数据分散、管理效率低下。</p><p style=\"color: rgba(0, 0, 0, 0.9); text-align: justify; background-color: rgb(255, 255, 255);\"><br/></p><p style=\"color: rgba(0, 0, 0, 0.9); text-align: justify; background-color: rgb(255, 255, 255);\">为满足集团对财务数据集中管控、资源优化配置和成本有效控制的需求，客户计划建设一个<strong style=\"\">统一的财务信息化平台</strong>。本案例通过苍穹OpenAPI高效实现系统集成，赋能客户的数字化转型，推荐阅读。</p><p style=\"color: rgba(0, 0, 0, 0.9); text-align: justify; background-color: rgb(255, 255, 255);\"><br/></p><hr/><h2 label=\"一级标题\" class=\"first-title\" style=\"\">业务背景</h2><p style=\"\"><span style=\"\"></span></p><p style=\"color: rgba(0, 0, 0, 0.9); text-align: justify; background-color: rgb(255, 255, 255);\">客户是一家综合性大型珠宝企业集团，业务涵盖珠宝设计、制造、批发和零售等多个环节。凭借先进的生产工艺、严格的质量控制和显著的品牌优势，集团在中国黄金珠宝行业占据龙头地位，取得了领先的市场地位。</p><p style=\"color: rgba(0, 0, 0, 0.9); text-align: justify; background-color: rgb(255, 255, 255);\"><br/></p><p style=\"color: rgba(0, 0, 0, 0.9); text-align: justify; background-color: rgb(255, 255, 255);\">集团旗下每家分公司独立运营，拥有自己的业务和财务系统，导致财务数据分散、管理效率低下。这种分散的财务管理模式难以满足集团对财务数据集中管控、资源优化配置和成本有效控制的需求。</p><p style=\"color: rgba(0, 0, 0, 0.9); text-align: justify; background-color: rgb(255, 255, 255);\"><br/></p><p style=\"color: rgba(0, 0, 0, 0.9); text-align: justify; background-color: rgb(255, 255, 255);\">为解决当前财务管理面临的挑战，集团计划<strong style=\"\">建设一个统一的财务信息化平台</strong>。该平台将<strong style=\"\">整合各分公司的财务数据，实现集中管控，提高财务管理效率</strong>。通过打破信息孤岛，促进数据共享和业务协同，平台将为管理层提供及时、准确、全面的财务决策支持。</p><p style=\"color: rgba(0, 0, 0, 0.9); text-align: justify; background-color: rgb(255, 255, 255);\"><br/></p><p style=\"color: rgba(0, 0, 0, 0.9); text-align: justify; background-color: rgb(255, 255, 255);\">集团期望该平台能够成为推动可持续发展和实现战略目标的有力工具，助力集团在激烈的市场竞争中保持领先优势。</p><p style=\"color: rgba(0, 0, 0, 0.9); text-align: justify; background-color: rgb(255, 255, 255);\"><br/></p><h2 label=\"一级标题\" class=\"first-title\" style=\"\"><span style=\"\">解决方案</span><br/><span style=\"\"></span></h2><h3 label=\"二级标题\" class=\"second-title\" style=\"\"><span style=\"\">方案的整体思路</span></h3><p style=\"\"><span style=\"\"></span></p><section style=\"\"><p style=\"\">1. 首先，需要将<strong style=\"\">主数据进行统一</strong>，提高数据质量，促进数据共享，提升业务效率，降低管理成本，并强化合规风险管控。对此，需<span style=\"color: rgba(0, 0, 0, 0.9); background-color: rgb(255, 255, 255);\">提供</span><strong style=\"color: rgba(0, 0, 0, 0.9);\">主数据接口</strong><span style=\"color: rgba(0, 0, 0, 0.9); background-color: rgb(255, 255, 255);\">，让对方系统完成调用，实现主数据集成同步。</span></p><p style=\"\">2.&nbsp;<strong style=\"\">将业务系统数据集成财务系统</strong>，加速财务流程，实现实时财务管理，增强业财协同。对此，需<span style=\"color: rgba(0, 0, 0, 0.9); background-color: rgb(255, 255, 255);\">提供</span><strong style=\"color: rgba(0, 0, 0, 0.9);\">应收应付、凭证</strong><span style=\"color: rgba(0, 0, 0, 0.9); background-color: rgb(255, 255, 255);\">相关接口，完成业务数据集成。</span></p></section><p style=\"\"><br/></p><p style=\"\"><img src=\"/download/010091656b7725004f1d9632c8fb4ea13b00.png\"/></p><p style=\"color: rgba(0, 0, 0, 0.9); background-color: rgb(255, 255, 255);\">接口清单如下：</p><p style=\"\"><br/></p><table class=\"X8 X9\" width=\"100%\"><tbody style=\"\"><tr class=\"X8 X9 firstRow\" style=\"\"><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\"><span style=\"font-weight: bold;\">接口名称</span></p></td><td class=\"X8 X9\" width=\"39\" style=\"\"><p style=\"\"><span style=\"font-weight: bold;\">请求类型</span></p></td><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\"><span style=\"font-weight: bold;\">插件类型</span></p></td><td class=\"X8 X9\" width=\"77\" style=\"\"><p style=\"\"><span style=\"font-weight: bold;\">所属应用</span></p></td><td class=\"X8 X9\" width=\"351\" style=\"\"><p style=\"\"><span style=\"font-weight: bold;\">注意事项</span></p></td></tr><tr class=\"X8 X9\" style=\"\"><td class=\"X8 X9\" width=\"153\" style=\"\"><p style=\"\">会计科目查询</p></td><td class=\"X8 X9\" width=\"39\" style=\"\"><p style=\"\">POST</p></td><td class=\"X8 X9\" width=\"78\" style=\"\"><p style=\"\">Java插件</p></td><td class=\"X8 X9\" width=\"77\" style=\"\"><p style=\"\">基础资料</p></td><td class=\"X8 X9\" width=\"351\" style=\"\"><p style=\"\">会计科目存在版本化，需要按照时间去过滤查询对应版本。</p></td></tr><tr class=\"X8 X9\" style=\"\"><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">辅助资料查询接口</p></td><td class=\"X8 X9\" width=\"39\" style=\"\"><p style=\"\">POST</p></td><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">零代码配置</p></td><td class=\"X8 X9\" width=\"77\" style=\"\"><p style=\"\">企业建模</p></td><td class=\"X8 X9\" width=\"351\" style=\"\"><br/></td></tr><tr class=\"X8 X9\" style=\"\"><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">凭证提交并审核</p></td><td class=\"X8 X9\" width=\"39\" style=\"\"><p style=\"\">POST</p></td><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">零代码配置</p></td><td class=\"X8 X9\" width=\"77\" style=\"\"><p style=\"\">总账</p></td><td class=\"X8 X9\" width=\"351\" style=\"\"><p style=\"\">凭证接口与前台导入是同类型，受到会计科目是否允许手工录入控制。</p></td></tr><tr class=\"X8 X9\" style=\"\"><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">物料保存</p></td><td class=\"X8 X9\" width=\"39\" style=\"\"><p style=\"\">POST</p></td><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">零代码配置</p></td><td class=\"X8 X9\" width=\"77\" style=\"\"><p style=\"\">基础资料</p></td><td class=\"X8 X9\" width=\"351\" style=\"\"><br/></td></tr><tr class=\"X8 X9\" style=\"\"><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">物料更新</p></td><td class=\"X8 X9\" width=\"39\" style=\"\"><p style=\"\">POST</p></td><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">零代码配置</p></td><td class=\"X8 X9\" width=\"77\" style=\"\"><p style=\"\">基础资料</p></td><td class=\"X8 X9\" width=\"351\" style=\"\"><p style=\"\">物料更新与物料保存都是保存操作，更新时需要带数据ID。</p></td></tr><tr class=\"X8 X9\" style=\"\"><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">财务应付单提交并审核</p></td><td class=\"X8 X9\" width=\"39\" style=\"\"><p style=\"\">POST</p></td><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">零代码配置</p></td><td class=\"X8 X9\" width=\"77\" style=\"\"><p style=\"\">应付</p></td><td class=\"X8 X9\" width=\"351\" style=\"\"><br/></td></tr><tr class=\"X8 X9\" style=\"\"><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">财务应付单保存</p></td><td class=\"X8 X9\" width=\"39\" style=\"\"><p style=\"\">POST</p></td><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">零代码配置</p></td><td class=\"X8 X9\" width=\"77\" style=\"\"><p style=\"\">应付</p></td><td class=\"X8 X9\" width=\"351\" style=\"\"><br/></td></tr><tr class=\"X8 X9\" style=\"\"><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">暂估应付单保存</p></td><td class=\"X8 X9\" width=\"39\" style=\"\"><p style=\"\">POST</p></td><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">零代码配置</p></td><td class=\"X8 X9\" width=\"77\" style=\"\"><p style=\"\">应付</p></td><td class=\"X8 X9\" width=\"351\" style=\"\"><br/></td></tr><tr class=\"X8 X9\" style=\"\"><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">暂估应付单提交并审核</p></td><td class=\"X8 X9\" width=\"39\" style=\"\"><p style=\"\">POST</p></td><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">零代码配置</p></td><td class=\"X8 X9\" width=\"77\" style=\"\"><p style=\"\">应付</p></td><td class=\"X8 X9\" width=\"351\" style=\"\"><br/></td></tr><tr class=\"X8 X9\" style=\"\"><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">财务应收单提交并审核</p></td><td class=\"X8 X9\" width=\"39\" style=\"\"><p style=\"\">POST</p></td><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">零代码配置</p></td><td class=\"X8 X9\" width=\"77\" style=\"\"><p style=\"\">应收</p></td><td class=\"X8 X9\" width=\"351\" style=\"\"><br/></td></tr><tr class=\"X8 X9\" style=\"\"><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">凭证反审核删除</p></td><td class=\"X8 X9\" width=\"39\" style=\"\"><p style=\"\">POST</p></td><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">脚本开发</p></td><td class=\"X8 X9\" width=\"77\" style=\"\"><p style=\"\">总账</p></td><td class=\"X8 X9\" width=\"351\" style=\"\"><p style=\"\">现金类凭证需要在审核前先进行反复合。</p></td></tr><tr class=\"X8 X9\" style=\"\"><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">反复核</p></td><td class=\"X8 X9\" width=\"39\" style=\"\"><p style=\"\">POST</p></td><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">零代码配置</p></td><td class=\"X8 X9\" width=\"77\" style=\"\"><p style=\"\">总账</p></td><td class=\"X8 X9\" width=\"351\" style=\"\"><br/></td></tr><tr class=\"X8 X9\" style=\"\"><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">客户保存</p></td><td class=\"X8 X9\" width=\"39\" style=\"\"><p style=\"\">POST</p></td><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">零代码配置</p></td><td class=\"X8 X9\" width=\"77\" style=\"\"><p style=\"\">基础资料</p></td><td class=\"X8 X9\" width=\"351\" style=\"\"><br/></td></tr><tr class=\"X8 X9\" style=\"\"><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">更新客户</p></td><td class=\"X8 X9\" width=\"39\" style=\"\"><p style=\"\">POST</p></td><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">零代码配置</p></td><td class=\"X8 X9\" width=\"77\" style=\"\"><p style=\"\">基础资料</p></td><td class=\"X8 X9\" width=\"351\" style=\"\"><br/></td></tr><tr class=\"X8 X9\" style=\"\"><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">更新供应商</p></td><td class=\"X8 X9\" width=\"39\" style=\"\"><p style=\"\">POST</p></td><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">零代码配置</p></td><td class=\"X8 X9\" width=\"77\" style=\"\"><p style=\"\">基础资料</p></td><td class=\"X8 X9\" width=\"351\" style=\"\"><br/></td></tr><tr class=\"X8 X9\" style=\"\"><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">供应商保存分配</p></td><td class=\"X8 X9\" width=\"39\" style=\"\"><p style=\"\">POST</p></td><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">脚本开发</p></td><td class=\"X8 X9\" width=\"77\" style=\"\"><p style=\"\">基础资料</p></td><td class=\"X8 X9\" width=\"351\" style=\"\"><br/></td></tr><tr class=\"X8 X9\" style=\"\"><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">客户保存分配</p></td><td class=\"X8 X9\" width=\"39\" style=\"\"><p style=\"\">POST</p></td><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">脚本开发</p></td><td class=\"X8 X9\" width=\"77\" style=\"\"><p style=\"\">基础资料</p></td><td class=\"X8 X9\" width=\"351\" style=\"\"><br/></td></tr><tr class=\"X8 X9\" style=\"\"><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">供应商保存</p></td><td class=\"X8 X9\" width=\"39\" style=\"\"><p style=\"\">POST</p></td><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">零代码配置</p></td><td class=\"X8 X9\" width=\"77\" style=\"\"><p style=\"\">基础资料</p></td><td class=\"X8 X9\" width=\"351\" style=\"\"><br/></td></tr><tr class=\"X8 X9\" style=\"\"><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">物料分配</p></td><td class=\"X8 X9\" width=\"39\" style=\"\"><p style=\"\">POST</p></td><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">Java插件</p></td><td class=\"X8 X9\" width=\"77\" style=\"\"><p style=\"\">基础资料</p></td><td class=\"X8 X9\" rowspan=\"3\" width=\"351\" style=\"\"><p style=\"\">客商，物料管理存在分配策略需要新增后调用分配功能。</p><p style=\"\"><br/></p><p style=\"\"><br/></p></td></tr><tr class=\"X8 X9\" style=\"\"><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">客户分配</p></td><td class=\"X8 X9\" width=\"39\" style=\"\"><p style=\"\">POST</p></td><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">Java插件</p></td><td class=\"X8 X9\" width=\"77\" style=\"\"><p style=\"\">基础资料</p></td></tr><tr class=\"X8 X9\" style=\"\"><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">供应商分配</p></td><td class=\"X8 X9\" width=\"39\" style=\"\"><p style=\"\">POST</p></td><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">Java插件</p></td><td class=\"X8 X9\" width=\"77\" style=\"\"><p style=\"\">基础资料</p></td></tr><tr class=\"X8 X9\" style=\"\"><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">财务应付单查询</p></td><td class=\"X8 X9\" width=\"39\" style=\"\"><p style=\"\">POST</p></td><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">Java插件</p></td><td class=\"X8 X9\" width=\"77\" style=\"\"><p style=\"\">应付</p></td><td class=\"X8 X9\" rowspan=\"2\" width=\"351\" style=\"\"><p style=\"\">跨月结算记录会有多条结算记录数据。</p><p style=\"\"><br/></p></td></tr><tr class=\"X8 X9\" style=\"\"><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">财务应收单查询</p></td><td class=\"X8 X9\" width=\"39\" style=\"\"><p style=\"\">POST</p></td><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">Java插件</p></td><td class=\"X8 X9\" width=\"77\" style=\"\"><p style=\"\">应收</p></td></tr><tr class=\"X8 X9\" style=\"\"><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">应付冲回接口</p></td><td class=\"X8 X9\" width=\"39\" style=\"\"><p style=\"\">POST</p></td><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">Java插件</p></td><td class=\"X8 X9\" width=\"77\" style=\"\"><p style=\"\">应付</p></td><td class=\"X8 X9\" width=\"351\" style=\"\"><br/></td></tr><tr class=\"X8 X9\" style=\"\"><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">付款处理提交并审核</p></td><td class=\"X8 X9\" width=\"39\" style=\"\"><p style=\"\">POST</p></td><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">零代码配置</p></td><td class=\"X8 X9\" width=\"77\" style=\"\"><p style=\"\">出纳</p></td><td class=\"X8 X9\" width=\"351\" style=\"\"><br/></td></tr><tr class=\"X8 X9\" style=\"\"><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">财务应付单结算状态查询</p></td><td class=\"X8 X9\" width=\"39\" style=\"\"><p style=\"\">GET</p></td><td class=\"X8 X9\" width=\"13\" style=\"\"><p style=\"\">零代码配置</p></td><td class=\"X8 X9\" width=\"77\" style=\"\"><p style=\"\">应付</p></td><td class=\"X8 X9\" width=\"351\" style=\"\"><br/></td></tr></tbody></table><p style=\"\"><br/></p><h3 label=\"二级标题\" class=\"second-title\" style=\"\"><span style=\"\">关键实现步骤</span></h3><p style=\"\"><span style=\"\"></span></p><p style=\"color: rgba(0, 0, 0, 0.9); background-color: rgb(255, 255, 255);\"><br/></p><p style=\"\"><span style=\"\">1. 首先通过OpenAPI，新增第三方应用，并将登录认证接口提供给第三方。</span></p><p style=\"\"><br/></p><p style=\"\"><span style=\"\">2. 提供行政组织，人员，客户，供应商，物料等接口。</span></p><p style=\"\"><span style=\"color: rgb(247, 150, 70);\">注：这些接口需要从OpenAPI云更新同步，并未预制在系统中。</span></p><p style=\"\"><br/></p><p style=\"\"><span style=\"\">3. </span><span style=\"\">行政组织和人员新增和更新使用的是同一个接口，并且也不需要考虑数据审核状态。</span></p><p style=\"\"><span style=\"\">但是更新时需要带上当前对应数据ID，但是主数据系统一般不会存业务系统数据ID，可以通过主数据的主数据内码先查询出ID，然后在拼接至对方接口请求中。</span></p><p style=\"\"><br/></p><p style=\"\"><span style=\"\">4. </span><span style=\"\">客户和供应商还有物料接口比较特殊，存在审核状态和分配功能，为了解决客户，供应商，物料的<strong>更新，数据状态，分配相关</strong>的问题。</span></p><p style=\"\"><span style=\"\"><br/></span></p><p><span style=\"\">4.1：新增数据状态解决方案</span></p><p style=\"\"><span style=\"\"><br/></span></p><p style=\"\"><span style=\"\">新增的数据默认数据状态为暂存，但是新增的数据是必须审核后才可以使用，虽然系统还会提供对应的提交和审核接口，但是对于通过OpenAPI脚本来实现组合接口也是一个比较繁琐的事情，在6.0版本后可以通过<strong>参数配置</strong>解决，可参考文末链接。</span></p><p style=\"\"><span style=\"\"><br/></span></p><p style=\"\"><img src=\"/download/0100e0ee117430eb45caba22d0f779704f69.png\"/></p><p style=\"\"><br/></p><span style=\"\">4.2：数据更新解决方案</span><p style=\"\"><span style=\"\"><br/></span></p><p style=\"\"><span style=\"\">在修改客户，供应商，物料等相关数据时，需要反审核数据才能修改，所以更新接口需要多个组合，反审核，修改，提交审核。6.0也可以通过参数配置，允许修改以审核的数据。</span></p><p style=\"\"><span style=\"\"><br/></span></p><p style=\"\"><img src=\"/download/0100ede51fa2753a42c6ad96f517d29485b7.png\"/></p><p style=\"\"><br/></p><span style=\"\">4.3：数据分配解决方案&nbsp;</span><p style=\"\"><span style=\"\"><br/></span></p><p style=\"\"><span style=\"\">由于系统中没有提供对应的功能，需要进行开发来实现客户，供应商，物料等分配接口。</span>参考代码如下：</p><p style=\"\"><br/></p><p style=\"\"><br/></p><p style=\"\"><img src=\"/download/01009bdf625bab464979bf8ef42c07f95754.png\"/></p><p style=\"\"><span style=\"\"><br/></span></p><p style=\"\"><span style=\"\">然后通过集成云脚本组合，实现新增并分配接口。</span></p><p style=\"\"><span style=\"\"><br/></span></p><p style=\"\"><img src=\"/download/0100c2a19663b00f439cbb9e2206c79fcb9e.png\"/></p><p style=\"\"><br/></p><p style=\"\"><strong><span style=\"\">5. 应收，应付接口集成</span></strong></p><p style=\"\"><span style=\"\">通过OpenAPI,应收应付单的业务字段扩展和调整变得更加敏捷和高效。OpenAPI提供了灵活配置的接口方式,允许开发者根据业务需求快速添加、修改或删除应收应付单接口字段。更新OpenAPI的接口,系统可以自动生成相应的API文档,减少了手动编写和维护接口的工作量。</span></p><p style=\"\"><br/></p><p style=\"\"><strong><span style=\"\">6. 凭证接口集成</span></strong></p><p style=\"\"><span style=\"\">凭证提交并审核接口比较特殊，这个接口是与表单上通过引入模板相同的逻辑原理。所以会受到有一些会计科目不允许手工录入的场景控制。</span></p><p style=\"\"><span style=\"\"><br/></span></p><p style=\"\"><img src=\"/download/0100e2991dee4b8144b59d4b8f32b0fd2284.png\"/></p><p style=\"\"><br/></p><p style=\"\"><span style=\"\">解决办法：通过二开，在凭证保存时校验，那些科目不允许手工录入，不允许手工录入的科目在配置表中进行配置，而非通过这里的手工录入处理。</span></p><p style=\"\"><span style=\"\"><br/></span></p><h3 class=\"second-title\" label=\"二级标题\">方案的可推广价值</h3><p style=\"\"><span style=\"\"></span></p><section style=\"\"><p style=\"text-align: justify;\">通过实施数据集成方案，客户的零售和批发业务数据现已无缝集成到财务系统中，系统自动生成了相应的会计凭证，实现了<strong style=\"\">业务与财务数据的实时同步</strong>。</p><p style=\"\"><br/></p><p style=\"text-align: justify;\">此外，客户的行政组织架构、人员信息、客户资料、供应商档案以及物料主数据都得到了<strong style=\"\">全面整合和统一管理</strong>。基于集成后的数据，财务系统还可以通过报表模块自动生成各类财务和管理报表，<strong style=\"\">提供准确、及时的决策支持</strong>。</p><p style=\"\"><br/></p><p style=\"text-align: justify;\">数据集成不仅提高了财务核算效率，还为客户构建了一个<strong style=\"\">高度协同、数据驱动的业务财务管理平台</strong>，为企业的精细化管理和可持续发展奠定了坚实基础。</p></section><p style=\"\"><br/></p><p style=\"\"><span style=\"\"></span></p><h3 class=\"second-title\" label=\"二级标题\">相关资料</h3><p><span style=\"\">金蝶AI苍穹OpenAPI开发认证指南: <a href=\"https://vip.kingdee.com/link/s/lCVtw\" target=\"_blank\">https://vip.kingdee.com/link/s/lCVtw</a></span></p><p><span style=\"\">&nbsp;一键同步原厂标准API接口: &nbsp;<a href=\"https://vip.kingdee.com/link/s/lCVGJ\" target=\"_blank\">https://vip.kingdee.com/link/s/lCVGJ</a></span></p><p><span style=\"\"> &nbsp; 保存操作API支持自动提交并审核: &nbsp;<a href=\"https://vip.kingdee.com/link/s/lCVG2\" target=\"_blank\">https://vip.kingdee.com/link/s/lCVG2</a></span></p><p><span style=\"\"> &nbsp; 修改数据提示已审核不允许修改: &nbsp;<a href=\"https://vip.kingdee.com/link/s/lCVGE\" target=\"_blank\">https://vip.kingdee.com/link/s/lCVGE</a> </span></p><p><br/></p><hr/><p style=\"\"><br/></p><section style=\"color: rgba(0, 0, 0, 0.9); background-color: rgb(255, 255, 255); text-align: justify;\"><section style=\"\"><section style=\"\"><section style=\"background-color: rgba(95, 156, 239, 0.1);\"><section style=\"\"><section style=\"color: rgb(95, 156, 239);\"><p style=\"\"><strong style=\"\">#往期推荐#</strong></p></section></section></section></section></section></section><p></p><section style=\"color: rgba(0, 0, 0, 0.9); background-color: rgb(255, 255, 255); text-align: justify;\"><section style=\"\"><section style=\"\"><section style=\"\"><section style=\"\"><section style=\"\"><section style=\"\"><section style=\"color: rgb(54, 59, 70);\"><p style=\"\"><span style=\"color: rgb(255, 164, 30);\">#</span>&nbsp;<a target=\"_blank\" href=\"/tolink?target=http%3A%2F%2Fmp.weixin.qq.com%2Fs%3F__biz%3DMzg5NDU2MTIxMQ%3D%3D%26mid%3D2247500829%26idx%3D1%26sn%3Da3050660c039eac2a6adb214c15b0a04%26chksm%3Dc01f3ac9f768b3dfebee77791ea3016aef32a08447898df8cf190a1b7aa8884972e66a9f77a4%26scene%3D21%23wechat_redirect\" style=\"color: rgb(247, 150, 70);\"><span style=\"color: rgb(247, 150, 70);\">实践案例 | 苍穹数据库扩容及分应用部署方案，保你系统稳定！</span></a></p></section></section><section style=\"\"><section style=\"background-color: rgba(95, 156, 239, 0.2);\"></section></section></section></section><section style=\"\"><section style=\"\"><section style=\"\"><section style=\"color: rgb(54, 59, 70);\"><p style=\"\"><span style=\"color: rgb(255, 164, 30);\">#&nbsp;<a target=\"_blank\" href=\"/tolink?target=http%3A%2F%2Fmp.weixin.qq.com%2Fs%3F__biz%3DMzg5NDU2MTIxMQ%3D%3D%26mid%3D2247499887%26idx%3D1%26sn%3D26ce6738e4627de4cbfb8f3d95e3e14a%26chksm%3Dc01f3ebbf768b7ad58f342d98f0bc423eb61ff8f40665ca248b286de7905d7515da5d7f13325%26scene%3D21%23wechat_redirect\" style=\"color: var(--weui-LINK);\">实践案例 | 超详细苍穹环境迁移方案，你值得拥有！</a></span></p></section></section><section style=\"\"><section style=\"background-color: rgba(95, 156, 239, 0.2);\"></section></section></section></section><section style=\"\"><section style=\"\"><section style=\"\"><section style=\"color: rgb(54, 59, 70);\"><p style=\"\"><span style=\"color: rgb(255, 164, 30);\">#&nbsp;<a target=\"_blank\" href=\"/tolink?target=http%3A%2F%2Fmp.weixin.qq.com%2Fs%3F__biz%3DMzg5NDU2MTIxMQ%3D%3D%26mid%3D2247500974%26idx%3D1%26sn%3D73c2534cb91e5029031982c07cbebea4%26chksm%3Dc01f3a7af768b36caa35d19a071466ee56cf44b4aeb36b129490beb4358ab935f1dd829bbe90%26scene%3D21%23wechat_redirect\" style=\"color: var(--weui-LINK);\">实践案例 | 如何在内外网IP端口不一致下搭建苍穹开发环境</a></span></p></section></section><section style=\"\"><section style=\"background-color: rgba(95, 156, 239, 0.2);\"></section></section></section></section><section style=\"\"><section style=\"\"><section style=\"\"><section style=\"color: rgb(54, 59, 70);\"><p style=\"\"><span style=\"color: rgb(255, 164, 30);\">#&nbsp;<a target=\"_blank\" href=\"/tolink?target=http%3A%2F%2Fmp.weixin.qq.com%2Fs%3F__biz%3DMzg5NDU2MTIxMQ%3D%3D%26mid%3D2247504575%26idx%3D1%26sn%3Db58a1f3844b3e583beb3a96ede9225f8%26chksm%3Dc01f2c6bf768a57d04d2841af276e271719bf26b6f7dafc5dce213f073331ffd4a07fae78ed6%26scene%3D21%23wechat_redirect\" style=\"color: var(--weui-LINK);\">实践案例 | 协议不同？OpenAPI助力个性化开发</a></span></p></section></section></section></section></section></section></section></section><p></p><p style=\"\"><br/></p><p class=\"p1\" style=\"font-size: 12px; color: rgb(20, 20, 20);\"><span style=\"font-size: 15px;\"><span class=\"s1\" style=\"background-color: rgb(255, 255, 255);\">更多精彩内容，“码”上了解！↓</span><span class=\"s2\" style=\"color: rgb(38, 38, 38);\"> </span></span><span class=\"s2\" style=\"color: rgb(38, 38, 38);\">&nbsp;</span></p><p class=\"kd-image-content\"><img src=\"/download/01007aeb44ac5fa446b6ba58b424f2e293b3.png\" alt=\"上传图片\"/></p>"
+}

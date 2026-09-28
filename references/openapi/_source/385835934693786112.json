@@ -1,0 +1,423 @@
+{
+ "badNum": 0,
+ "identityTagIds": null,
+ "knowledgeId": "385835934693786112",
+ "createdAt": 1669798455000,
+ "collections": 5,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "385835934693786112",
+ "contentType": 1,
+ "updatedAt": 1766110285000,
+ "knowledgeUpdater": {
+  "avatar": "/download/010162cfa9d5437711e8b441060400ef5315.png",
+  "department": null,
+  "id": "334386482716649984",
+  "name": "顺溜",
+  "nameSpell": "name"
+ },
+ "assessStatus": 0,
+ "knowledgeStatus": 2,
+ "assessHandleStatus": null,
+ "knowledgeCreatedAt": 1669798455000,
+ "version": 132,
+ "labels": [],
+ "editedAt": 1713353045000,
+ "identityTags": null,
+ "useful": 6,
+ "errors": [],
+ "isCollected": false,
+ "totalFeedBacks": 0,
+ "attachments": [],
+ "sources": [],
+ "editTitle": "一键同步原厂标准API接口",
+ "title": "一键同步原厂标准API接口",
+ "content": "<div style=\"\"><div style=\"\"><div style=\"\"><p label=\"一级标题\" style=\"text-align: justify; font-size: 20px; font-weight: bold; line-height: 42px;\">1 简介<br/></p><div style=\"\"><p label=\"二级标题\" style=\"text-align: justify; font-size: 18px; font-weight: bold; line-height: 42px;\">1.1 功能介绍</p><p style=\"text-align: justify;\"><span style=\"color: rgb(17, 17, 17);\"><span style=\"color: rgb(17, 17, 17); text-align: justify;\"><span style=\"color: rgb(17, 17, 17); text-align: justify;\"></span></span><span style=\"color: rgb(5, 7, 59);\">用户可在API管理页面轻松使用云更新功能，一键同步原厂提供的标准API接口。该功能让用户无需繁琐地升级补丁包，即可在线获取最新的原厂标准API接口，从而极大地提升了现场实施的效率。</span></span></p><p style=\"text-align: justify;\"><span style=\"color: rgb(17, 17, 17);\"><br/></span></p><p label=\"正文\" style=\"text-align: justify;\"><strong>适用版本：V5.0.011（BOS）</strong></p><p label=\"正文\" style=\"text-align: justify;\"><strong><br/></strong></p><p label=\"二级标题\" style=\"text-align: justify; font-size: 18px; font-weight: bold; line-height: 42px;\">1.2 应用场景</p><p style=\"text-align: justify;\">客户<span style=\"color: rgb(17, 17, 17);\">按需同步苍穹、星瀚、金蝶AI套件的最新标准API接口</span>，从而满足业务需求。<br/></p><p style=\"text-align: justify;\"><br/></p><p label=\"二级标题\" style=\"text-align: justify; font-size: 18px; font-weight: bold; line-height: 42px;\">1.3 系统路径</p><p style=\"text-align: justify;\">【开放服务云】→【开放平台】→【API管理】</p><p style=\"text-align: justify;\"><br/></p><p label=\"一级标题\" style=\"text-align: justify; font-size: 20px; font-weight: bold; line-height: 42px;\">2 主要操作<br/></p><p label=\"二级标题\" style=\"text-align: justify; font-size: 18px; font-weight: bold; line-height: 42px;\">步骤一 资源权限申请</p><p><span style=\"text-align: justify;\"><span style=\"color: rgb(17, 17, 17);\">用户当前环境首次使用此功能时，需要申请云端的资源访问权限。具体</span>操作路径：【集成服务云】&nbsp;→ 【资源中心】&nbsp;→ 【应用密钥申请】</span></p><p style=\"text-align: justify; \">具体操作步骤：</p><p><span style=\"text-align: justify;\">（1）</span><span style=\"color: rgb(17, 17, 17); text-align: justify;\">打开应用密钥申请页面。</span></p><p><span style=\"color: rgb(17, 17, 17); text-align: justify;\">（2）填写云端地址、云端账套等必要信息。</span></p><p><span style=\"color: rgb(17, 17, 17); text-align: justify;\">（3）<span style=\"color: rgb(17, 17, 17);\">在“AccessToken认证密钥”和“摘要认证密钥”字段中，点击刷新图标，以重新生成认证密钥。</span></span></p><p><span style=\"color: rgb(17, 17, 17); text-align: justify;\">（4）点击“保存”和“提交”按钮，完成申请。</span></p><p><span style=\"color: rgb(17, 17, 17); text-align: justify;\">（5）提交后，系统将提示申请正在审核中。通常等待30s后，点击“刷新”按钮，申请状态会更新为“申请成功”。</span><span style=\"color: rgb(17, 17, 17); text-align: justify;\">至此，</span><span style=\"color: rgb(17, 17, 17); text-align: justify;\">云端资源访问权限申请已完成</span><span style=\"color: rgb(17, 17, 17); text-align: justify;\">。</span></p><p><span style=\"color: rgb(17, 17, 17); text-align: justify;\"><img src=\"/download/010901c07a39a5aa47d7ad52587760da96c5.png\"/></span></p><p style=\"text-align: justify;\"><br/></p><p label=\"正文\" style=\"text-align: justify;\"><span style=\"color: rgb(255, 192, 0);\"><em style=\"color: rgb(227, 108, 9); text-align: justify;\">注意：</em></span></p><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><p label=\"正文\" style=\"text-align: justify;\"><span style=\"color: rgb(255, 192, 0);\"><em style=\"color: rgb(227, 108, 9);\">如果当前环境已经申请过应用密钥，此步骤可跳过。</em></span></p></li><li><p label=\"正文\" style=\"text-align: justify;\"><span style=\"color: rgb(255, 192, 0);\"><em style=\"color: rgb(227, 108, 9);\">云端生产环境地址为：<span style=\"text-align: justify;\">https://resource.kdcloud.com/</span></em></span></p></li><li><p label=\"正文\" style=\"text-align: justify;\"><span style=\"color: rgb(255, 192, 0);\"><em style=\"color: rgb(227, 108, 9);\"><span style=\"text-align: justify;\">若点击“刷新”后状态未更新，可能是当前环境无许可或者许可不合法，此时资源权限申请将进入了人工审核环节。人工审核通常1天内完成，紧急情况下请联系 樊鑫 处理。</span></em></span></p></li></ul><p label=\"正文\" style=\"text-align: justify;\"><br/></p><p style=\"text-align: center; color: rgb(73, 80, 96);\"><br/></p><p label=\"二级标题\" style=\"text-align: justify; font-size: 18px; font-weight: bold; line-height: 42px;\">步骤二 API在线云更新</p><p label=\"正文\" style=\"text-align: justify;\">云更新时，系统会自动对比云端与当前环境的API配置信息的差异，并将有差异的API接口展示在云更新列表中。每条数据上均明确标注了“更新类型”，<span style=\"color: rgb(5, 7, 59);\">以便用户了解API的云更新方式</span>。<br/></p><p><span style=\"\"></span></p><p style=\"\">更新类型说明：</p><ul class=\" list-paddingleft-2\" style=\"\"><li><p label=\"正文\" style=\"\">新增：<span style=\"color: rgb(5, 7, 59);\">若API在当前环境不存在，云更新将自动将其配置新增至当前环境</span>。</p></li><li><p style=\"\">覆盖：<span style=\"color: rgb(5, 7, 59);\">若API在云端存在新版本，云更新将用云端的新版本配置覆盖当前环境的配置</span>。</p></li></ul><p style=\"\">具体操作步骤：</p><p style=\"\">（1）进入OpenAPI应用，并打开API管理页面。</p><p style=\"\">（2）点击列表上方的“云更新”按钮，进入云更新列表。</p><p style=\"\">（3）在列表中搜索并勾选所需的API接口，然后点击“确认”按钮。</p><p style=\"\">（4）系统将对所选API进行新增或覆盖处理，并实时反馈云更新结果。</p><p style=\"\"><span style=\"text-align: justify;\">（5）<span style=\"text-align: justify;\"><span style=\"color: rgb(5, 7, 59);\">返回API管理列表，可看到所需API已同步至当前环境中。至此，</span></span></span><span style=\"color: rgb(5, 7, 59); text-align: justify;\">用户即可使用最新的原厂标准API接口了。</span></p><p><span style=\"\"><br/></span></p><p><img src=\"/download/0109f392f22d875d47409c0f3f7a28c5a978.png\"/></p><p style=\"text-align: center; color: rgb(73, 80, 96);\">&nbsp;</p><h1 label=\"一级标题\" class=\" html-anchor-list1 html-anchor-list8 html-anchor-list7 html-anchor-list6 html-anchor-list6 html-anchor-list6 html-anchor-list6 html-anchor-list7 html-anchor-list7\" style=\"\">3. 更多资讯</h1><p style=\"text-align: justify;\">请关注<a href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=226337371640594944&id=226708319996323072\" title=\"\" target=\"_blank\" class=\"\" style=\"\">开放平台新特性公告</a>的最新特性。</p><p style=\"text-align: justify;\"><br/></p></div></div></div><p style=\"\"><br/></p></div><p style=\"\"><br/></p><p style=\"\"><br/></p><p><br/></p>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 87,
+   "isOpen": 1,
+   "name": "金蝶AI苍穹",
+   "productLineId": 29,
+   "series": "developer01",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        null
+       ],
+       "code": null,
+       "description": "",
+       "entityId": "385835934693786112",
+       "entityType": "Knowledge",
+       "id": "386537182225787136",
+       "isCategory": false,
+       "name": "标准接口同步",
+       "parentId": "226337544983020032",
+       "sort": "9",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": null,
+     "entityId": null,
+     "entityType": null,
+     "id": "226337544983020032",
+     "isCategory": true,
+     "name": "用户手册",
+     "parentId": "-1",
+     "sort": "6",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download/010162cfa9d5437711e8b441060400ef5315.png",
+  "department": null,
+  "id": "334386482716649984",
+  "name": "顺溜",
+  "nameSpell": "name"
+ },
+ "totalAppraisalScore": 30,
+ "iflytekId": null,
+ "views": 9191,
+ "productLineId": 29,
+ "comments": 0,
+ "similarityCount": 0,
+ "totalAppraisalUsers": 6,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1766110285000,
+ "appraisalScore": 0,
+ "unuseful": 0,
+ "knowledgeCheckStatus": 2,
+ "otherProductLineIds": [],
+ "auditAt": 1710149059000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": {
+        "child": null,
+        "code": "openapi_apilist_layout",
+        "id": "505686038019362304",
+        "name": "异步API",
+        "productLineId": null,
+        "sort": 1,
+        "type": "bizentity"
+       },
+       "code": "open",
+       "id": "505685573021885952",
+       "name": "OpenAPI",
+       "productLineId": null,
+       "sort": 1,
+       "type": "module"
+      },
+      "code": "OSC",
+      "id": "505685491920823808",
+      "name": "开放服务云",
+      "productLineId": null,
+      "sort": 15,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 0,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "OperatingGuide",
+     "createdAt": 1556519201000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "某一功能的具体说明介绍，包括应用场景、参数说明、具体操作步骤等",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/010037894174802d4b9f8782f1f0010a6ddd.png",
+     "id": "202203081641",
+     "name": "功能介绍",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010176d38341668f44fdb94c95058a90e4b8.png",
+      "department": "云社区运营部",
+      "id": "2147406697",
+      "name": "多肉丸子",
+      "nameSpell": "kejuan"
+     },
+     "updatedAt": 1676857681000
+    },
+    {
+     "code": "rumen",
+     "createdAt": 1605667807000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "入门类的知识可使用此标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/0100d322b9282bcc438faa894f4eec029977.png",
+     "id": "202203081646",
+     "name": "基础入门",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download?fileName=0101ec1d6ce599b442dab7d0b794c1fce88d.png",
+      "department": null,
+      "id": "1009",
+      "name": "一颗小星星",
+      "nameSpell": "fengling"
+     },
+     "updatedAt": 1657872008000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "385835934693786112",
+         "entityType": "Knowledge",
+         "id": "386537182225787136",
+         "isCategory": false,
+         "name": "标准接口同步",
+         "parentId": "226337544983020032",
+         "sort": "9",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": null,
+       "entityId": null,
+       "entityType": null,
+       "id": "226337544983020032",
+       "isCategory": true,
+       "name": "用户手册",
+       "parentId": "-1",
+       "sort": "6",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": "<div style=\"\"><div style=\"\"><div style=\"\"><p label=\"一级标题\" style=\"text-align: justify; font-size: 20px; font-weight: bold; line-height: 42px;\">1 简介<br/></p><div style=\"\"><p label=\"二级标题\" style=\"text-align: justify; font-size: 18px; font-weight: bold; line-height: 42px;\">1.1 功能介绍</p><p style=\"text-align: justify;\"><span style=\"color: rgb(17, 17, 17);\"><span style=\"color: rgb(17, 17, 17); text-align: justify;\"><span style=\"color: rgb(17, 17, 17); text-align: justify;\"></span></span><span style=\"color: rgb(5, 7, 59);\">用户可在API管理页面轻松使用云更新功能，一键同步原厂提供的标准API接口。该功能让用户无需繁琐地升级补丁包，即可在线获取最新的原厂标准API接口，从而极大地提升了现场实施的效率。</span></span></p><p style=\"text-align: justify;\"><span style=\"color: rgb(17, 17, 17);\"><br/></span></p><p label=\"正文\" style=\"text-align: justify;\"><strong>适用版本：V5.0.011（BOS）</strong></p><p label=\"正文\" style=\"text-align: justify;\"><strong><br/></strong></p><p label=\"二级标题\" style=\"text-align: justify; font-size: 18px; font-weight: bold; line-height: 42px;\">1.2 应用场景</p><p style=\"text-align: justify;\">客户<span style=\"color: rgb(17, 17, 17);\">按需同步苍穹、星瀚、金蝶AI套件的最新标准API接口</span>，从而满足业务需求。<br/></p><p style=\"text-align: justify;\"><br/></p><p label=\"二级标题\" style=\"text-align: justify; font-size: 18px; font-weight: bold; line-height: 42px;\">1.3 系统路径</p><p style=\"text-align: justify;\">【开放服务云】→【开放平台】→【API管理】</p><p style=\"text-align: justify;\"><br/></p><p label=\"一级标题\" style=\"text-align: justify; font-size: 20px; font-weight: bold; line-height: 42px;\">2 主要操作<br/></p><p label=\"二级标题\" style=\"text-align: justify; font-size: 18px; font-weight: bold; line-height: 42px;\">步骤一 资源权限申请</p><p><span style=\"text-align: justify;\"><span style=\"color: rgb(17, 17, 17);\">用户当前环境首次使用此功能时，需要申请云端的资源访问权限。具体</span>操作路径：【集成服务云】&nbsp;→ 【资源中心】&nbsp;→ 【应用密钥申请】</span></p><p style=\"text-align: justify; \">具体操作步骤：</p><p><span style=\"text-align: justify;\">（1）</span><span style=\"color: rgb(17, 17, 17); text-align: justify;\">打开应用密钥申请页面。</span></p><p><span style=\"color: rgb(17, 17, 17); text-align: justify;\">（2）填写云端地址、云端账套等必要信息。</span></p><p><span style=\"color: rgb(17, 17, 17); text-align: justify;\">（3）<span style=\"color: rgb(17, 17, 17);\">在“AccessToken认证密钥”和“摘要认证密钥”字段中，点击刷新图标，以重新生成认证密钥。</span></span></p><p><span style=\"color: rgb(17, 17, 17); text-align: justify;\">（4）点击“保存”和“提交”按钮，完成申请。</span></p><p><span style=\"color: rgb(17, 17, 17); text-align: justify;\">（5）提交后，系统将提示申请正在审核中。通常等待30s后，点击“刷新”按钮，申请状态会更新为“申请成功”。</span><span style=\"color: rgb(17, 17, 17); text-align: justify;\">至此，</span><span style=\"color: rgb(17, 17, 17); text-align: justify;\">云端资源访问权限申请已完成</span><span style=\"color: rgb(17, 17, 17); text-align: justify;\">。</span></p><p><span style=\"color: rgb(17, 17, 17); text-align: justify;\"><img src=\"/download/010901c07a39a5aa47d7ad52587760da96c5.png\"/></span></p><p style=\"text-align: justify;\"><br/></p><p label=\"正文\" style=\"text-align: justify;\"><span style=\"color: rgb(255, 192, 0);\"><em style=\"color: rgb(227, 108, 9); text-align: justify;\">注意：</em></span></p><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><p label=\"正文\" style=\"text-align: justify;\"><span style=\"color: rgb(255, 192, 0);\"><em style=\"color: rgb(227, 108, 9);\">如果当前环境已经申请过应用密钥，此步骤可跳过。</em></span></p></li><li><p label=\"正文\" style=\"text-align: justify;\"><span style=\"color: rgb(255, 192, 0);\"><em style=\"color: rgb(227, 108, 9);\">云端生产环境地址为：<span style=\"text-align: justify;\">https://resource.kdcloud.com/</span></em></span></p></li><li><p label=\"正文\" style=\"text-align: justify;\"><span style=\"color: rgb(255, 192, 0);\"><em style=\"color: rgb(227, 108, 9);\"><span style=\"text-align: justify;\">若点击“刷新”后状态未更新，可能是当前环境无许可或者许可不合法，此时资源权限申请将进入了人工审核环节。人工审核通常1天内完成，紧急情况下请联系 樊鑫 处理。</span></em></span></p></li></ul><p label=\"正文\" style=\"text-align: justify;\"><br/></p><p style=\"text-align: center; color: rgb(73, 80, 96);\"><br/></p><p label=\"二级标题\" style=\"text-align: justify; font-size: 18px; font-weight: bold; line-height: 42px;\">步骤二 API在线云更新</p><p label=\"正文\" style=\"text-align: justify;\">云更新时，系统会自动对比云端与当前环境的API配置信息的差异，并将有差异的API接口展示在云更新列表中。每条数据上均明确标注了“更新类型”，<span style=\"color: rgb(5, 7, 59);\">以便用户了解API的云更新方式</span>。<br/></p><p><span style=\"\"></span></p><p style=\"\">更新类型说明：</p><ul class=\" list-paddingleft-2\" style=\"\"><li><p label=\"正文\" style=\"\">新增：<span style=\"color: rgb(5, 7, 59);\">若API在当前环境不存在，云更新将自动将其配置新增至当前环境</span>。</p></li><li><p style=\"\">覆盖：<span style=\"color: rgb(5, 7, 59);\">若API在云端存在新版本，云更新将用云端的新版本配置覆盖当前环境的配置</span>。</p></li></ul><p style=\"\">具体操作步骤：</p><p style=\"\">（1）进入OpenAPI应用，并打开API管理页面。</p><p style=\"\">（2）点击列表上方的“云更新”按钮，进入云更新列表。</p><p style=\"\">（3）在列表中搜索并勾选所需的API接口，然后点击“确认”按钮。</p><p style=\"\">（4）系统将对所选API进行新增或覆盖处理，并实时反馈云更新结果。</p><p style=\"\"><span style=\"text-align: justify;\">（5）<span style=\"text-align: justify;\"><span style=\"color: rgb(5, 7, 59);\">返回API管理列表，可看到所需API已同步至当前环境中。至此，</span></span></span><span style=\"color: rgb(5, 7, 59); text-align: justify;\">用户即可使用最新的原厂标准API接口了。</span></p><p><span style=\"\"><br/></span></p><p><img src=\"/download/0109f392f22d875d47409c0f3f7a28c5a978.png\"/></p><p style=\"text-align: center; color: rgb(73, 80, 96);\">&nbsp;</p><h1 label=\"一级标题\" class=\" html-anchor-list1 html-anchor-list8 html-anchor-list7 html-anchor-list6 html-anchor-list6 html-anchor-list6 html-anchor-list6 html-anchor-list7 html-anchor-list7\" style=\"\">3. 更多资讯</h1><p style=\"text-align: justify;\">请关注<a href=\"https://vip.kingdee.com/knowledge/specialDetail/226337046514476288?category=226337371640594944&id=226708319996323072\" title=\"\" target=\"_blank\" class=\"\" style=\"\">开放平台新特性公告</a>的最新特性。</p><p style=\"text-align: justify;\"><br/></p></div></div></div><p style=\"\"><br/></p></div><p style=\"\"><br/></p><p style=\"\"><br/></p><p><br/></p>"
+}

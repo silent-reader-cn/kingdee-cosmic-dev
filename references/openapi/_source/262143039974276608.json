@@ -1,0 +1,417 @@
+{
+ "badNum": 0,
+ "templateId": null,
+ "identityTagIds": null,
+ "knowledgeId": "262143039974276608",
+ "createdAt": 1640307771000,
+ "collections": 2,
+ "viewAuthority": 1,
+ "feedbackNum": 0,
+ "classifies": [],
+ "id": "262143039974276608",
+ "contentType": 1,
+ "updatedAt": 1766976594000,
+ "knowledgeUpdater": {
+  "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+  "department": null,
+  "id": "132488613174518784",
+  "name": "某个路易",
+  "nameSpell": "name"
+ },
+ "assessStatus": 0,
+ "knowledgeStatus": 2,
+ "assessHandleStatus": null,
+ "knowledgeCreatedAt": 1640307771000,
+ "version": 24,
+ "labels": [],
+ "editedAt": 1766976579000,
+ "identityTags": null,
+ "useful": 0,
+ "errors": [],
+ "isCollected": false,
+ "template": "{\"date\":\"2021-08-26\",\"patch\":\"V4.0.006（BOS）\",\"knowledgeContent\":\"<p></p><h2><strong>1. 简介</strong></h2><p>我们知道，苍穹是微服务容器的调用方式，可以非常方便的进行弹性扩容伸缩容器。</p><p>针对api开放<span>接口</span>调用，当调用的QPS较高时，为了不影响正常的系统功能，可以按需部署微服务容器，</p><p>具体的容器路由规则如下：</p><h2><strong>2. 开放平台微服务节点查找规则</strong></h2><ul><li><p>确认 API 配置核心属性：需先查看 API 所属应用，并由运维确认相关插件已部署至该应用节点对应的容器中（容器启动属性 BizLibs 需包含对应 JAR 包）。</p></li><li><p>路由匹配优先级（从高到低）：实体名 → 应用 Id-Api - api (常量) → 应用 ID（示例：ar/ap）→ bos (常量)。</p></li><li><p>补充备注：invokerAppids 格式示例为 <a target=\\\"_blank\\\" rel=\\\"noopener noreferrer nofollow\\\" href=\\\"http://bos.fi.api.fi-api.gl\\\">bos.fi.api.fi-api.gl</a>_voucher 或 <a target=\\\"_blank\\\" rel=\\\"noopener noreferrer nofollow\\\" href=\\\"http://bos.fi.api.fi\\\">bos.fi.api.fi</a>-api.custapi。</p></li></ul><h2><strong>3. API 容器部署规则（4 种模式，按优先级排序）</strong></h2><ol class=\\\"custom_num2\\\"><li><p>单实体 API 独立容器：将单个实体对象的 API 配置为独立容器，容器 appId 命名规则：</p><ul style=\\\"outline: none; -webkit-font-smoothing: antialiased; box-sizing: border-box; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); border: 0px solid; margin: 0px; padding: 0px 0px 0px 20px; list-style: none; overflow-anchor: auto;\\\"><li><p>零代码配置 API：<a target=\\\"_blank\\\" rel=\\\"noopener noreferrer nofollow\\\" href=\\\"http://bos.fi.api.fi-api.gl\\\">bos.fi.api.fi-api.gl</a>_voucher</p></li><li><p>自定义 API：<a target=\\\"_blank\\\" rel=\\\"noopener noreferrer nofollow\\\" href=\\\"http://bos.fi.api.fi\\\">bos.fi.api.fi</a>-api.custapi</p></li></ul></li><li><p>全量 API 统一容器：所有 API 配置至同一个独立容器，容器 appId 固定命名为 api。</p></li><li><p>单应用 API 独立容器：将某一应用下的所有 API 配置为独立容器，容器 appId 命名为 fiapi（需同步将 API 配置的所属应用设为 fiapi）。</p></li><li><p>bos 节点兜底：以上模式均不匹配时，默认路由至 bos 节点。</p></li></ol><h2><strong>4. 苍穹微服务路由规则</strong></h2><ol class=\\\"custom_num2\\\"><li><p>节点服务标识（APPID）：由<code>appIdsFromAppStore（XML配置）</code> + <code>appIds（运维容器配置）</code>共同决定。</p></li><li><p>集群 APPID 匹配：优先匹配集群已注册的 registedAppIds 清单；若未匹配到，且已部署 custom 节点，则路由至 custom。</p></li><li><p>容器 JAR 包配置（运维侧）：需在容器属性 BIZLIBS 中配置加载的 JAR 包清单，格式示例：hr.xml,ebg.xml,xxx.xml。</p><p></p></li></ol><h3><strong>核心优先级总结</strong></h3><p>gl_voucher → fi-api → api → fi → bos</p><h3><strong>核心路由规则公式</strong></h3><p>bos.[appid].api.[实体 formId|custapi|aiapi|scriptapi]</p><p></p>\",\"collectionNext\":[[]],\"range\":\"苍穹开放平台所有用户\",\"collectionHref\":[[]],\"collection\":[\"\"],\"title\":\"API高可用部署及多级路由规则\",\"version\":\"苍穹V4.0\",\"token\":2}",
+ "totalFeedBacks": 0,
+ "attachments": [],
+ "sources": [],
+ "editTitle": "API高可用部署及多级路由规则",
+ "title": "API高可用部署及多级路由规则",
+ "content": " <p class=\"table-title table-margin\"><span class=\"span-line\">发布说明</span><span class=\"line\"></span></p><p class=\"title-b\"><span class=\"span-b\">发布版本：</span><span class=\"span-nor\">苍穹V4.0</span></p><p class=\"title-b\"><span class=\"span-b\">适用范围：</span><span class=\"span-nor\">苍穹开放平台所有用户</span></p><p class=\"title-b\"><span class=\"span-b\">上线日期：</span><span class=\"span-nor\">2021-08-26</span></p><p class=\"title-b\"><span class=\"span-b\">补丁号：</span><span class=\"span-nor margin-patch\">V4.0.006（BOS）</span></p>\n              <p class=\"table-title title-detail\"><span class=\"span-line\">更多内容</span><span class=\"line\"></span></p>\n              <p></p><h2><strong>1. 简介</strong></h2><p>我们知道，苍穹是微服务容器的调用方式，可以非常方便的进行弹性扩容伸缩容器。</p><p>针对api开放<span>接口</span>调用，当调用的QPS较高时，为了不影响正常的系统功能，可以按需部署微服务容器，</p><p>具体的容器路由规则如下：</p><h2><strong>2. 开放平台微服务节点查找规则</strong></h2><ul><li><p>确认 API 配置核心属性：需先查看 API 所属应用，并由运维确认相关插件已部署至该应用节点对应的容器中（容器启动属性 BizLibs 需包含对应 JAR 包）。</p></li><li><p>路由匹配优先级（从高到低）：实体名 → 应用 Id-Api - api (常量) → 应用 ID（示例：ar/ap）→ bos (常量)。</p></li><li><p>补充备注：invokerAppids 格式示例为 <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"/tolink?target=http%3A%2F%2Fbos.fi.api.fi-api.gl\">bos.fi.api.fi-api.gl</a>_voucher 或 <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"/tolink?target=http%3A%2F%2Fbos.fi.api.fi\">bos.fi.api.fi</a>-api.custapi。</p></li></ul><h2><strong>3. API 容器部署规则（4 种模式，按优先级排序）</strong></h2><ol class=\"custom_num2\"><li><p>单实体 API 独立容器：将单个实体对象的 API 配置为独立容器，容器 appId 命名规则：</p><ul style=\"outline: none; -webkit-font-smoothing: antialiased; box-sizing: border-box; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); border: 0px solid; margin: 0px; padding: 0px 0px 0px 20px; list-style: none; overflow-anchor: auto;\"><li><p>零代码配置 API：<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"/tolink?target=http%3A%2F%2Fbos.fi.api.fi-api.gl\">bos.fi.api.fi-api.gl</a>_voucher</p></li><li><p>自定义 API：<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"/tolink?target=http%3A%2F%2Fbos.fi.api.fi\">bos.fi.api.fi</a>-api.custapi</p></li></ul></li><li><p>全量 API 统一容器：所有 API 配置至同一个独立容器，容器 appId 固定命名为 api。</p></li><li><p>单应用 API 独立容器：将某一应用下的所有 API 配置为独立容器，容器 appId 命名为 fiapi（需同步将 API 配置的所属应用设为 fiapi）。</p></li><li><p>bos 节点兜底：以上模式均不匹配时，默认路由至 bos 节点。</p></li></ol><h2><strong>4. 苍穹微服务路由规则</strong></h2><ol class=\"custom_num2\"><li><p>节点服务标识（APPID）：由<code>appIdsFromAppStore（XML配置）</code> + <code>appIds（运维容器配置）</code>共同决定。</p></li><li><p>集群 APPID 匹配：优先匹配集群已注册的 registedAppIds 清单；若未匹配到，且已部署 custom 节点，则路由至 custom。</p></li><li><p>容器 JAR 包配置（运维侧）：需在容器属性 BIZLIBS 中配置加载的 JAR 包清单，格式示例：hr.xml,ebg.xml,xxx.xml。</p><p></p></li></ol><h3><strong>核心优先级总结</strong></h3><p>gl_voucher → fi-api → api → fi → bos</p><h3><strong>核心路由规则公式</strong></h3><p>bos.[appid].api.[实体 formId|custapi|aiapi|scriptapi]</p><p></p>",
+ "products": [
+  {
+   "alias": null,
+   "code": null,
+   "id": 3,
+   "isOpen": 1,
+   "name": "金蝶AI星瀚",
+   "productLineId": 2,
+   "series": "S039",
+   "sort": 0
+  }
+ ],
+ "knowledgeSpecial": [
+  {
+   "categoryList": [
+    {
+     "childCategory": [
+      {
+       "childCategory": [
+        null
+       ],
+       "code": null,
+       "description": "",
+       "entityId": "262143039974276608",
+       "entityType": "Knowledge",
+       "id": "793432337450101504",
+       "isCategory": false,
+       "name": "API高可用部署及多级路由规则",
+       "parentId": "226337785987048960",
+       "sort": "32",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "code": null,
+     "description": "",
+     "entityId": null,
+     "entityType": null,
+     "id": "226337785987048960",
+     "isCategory": true,
+     "name": "常见问题",
+     "parentId": "-1",
+     "sort": "9",
+     "specialId": "226337046514476288",
+     "status": 1
+    }
+   ],
+   "classifies": [
+    {
+     "code": null,
+     "name": "金蝶AI苍穹",
+     "id": 87,
+     "sort": 0,
+     "type": "product",
+     "child": {
+      "code": "DEV",
+      "name": "开发服务云",
+      "id": 5576,
+      "sort": 11,
+      "type": "domain",
+      "child": {
+       "code": "open",
+       "name": "开放平台",
+       "id": 5614,
+       "sort": 2,
+       "type": "module",
+       "child": null,
+       "productLineId": null
+      },
+      "productLineId": null
+     },
+     "productLineId": 29
+    }
+   ],
+   "collections": 232,
+   "createdAt": "2021-09-16T13:42:36.000+08:00",
+   "creator": {
+    "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+    "department": null,
+    "id": "132488613174518784",
+    "name": "某个路易",
+    "nameSpell": "name"
+   },
+   "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+   "hasCollected": null,
+   "hasHomePage": 1,
+   "id": "226337046514476288",
+   "identityTags": null,
+   "itemNum": 137,
+   "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+   "name": "OpenAPI（开放平台）",
+   "otherProductLineIds": null,
+   "productLineId": "29",
+   "productList": [
+    {
+     "alias": null,
+     "code": null,
+     "id": 87,
+     "isOpen": 1,
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "series": "developer01",
+     "sort": 0
+    }
+   ],
+   "sort": 10,
+   "status": 2,
+   "style": 3,
+   "totalAppraisalScore": 23,
+   "totalAppraisalUsers": 5,
+   "updatedAt": "2026-09-15T09:37:40.000+08:00",
+   "updaterId": "132488613174518784",
+   "useCategory": 1,
+   "viewAuthority": 1,
+   "views": 1577246
+  }
+ ],
+ "entityUrl": null,
+ "needTranslate": null,
+ "knowledgeCreator": {
+  "avatar": "/download?fileName=01012dea2ba9f29a412e99343db016c6e1c4.png",
+  "department": null,
+  "id": "2147403461",
+  "name": "whlalhj",
+  "nameSpell": "whlalhj"
+ },
+ "totalAppraisalScore": 0,
+ "iflytekId": null,
+ "views": 1100,
+ "productLineId": 29,
+ "comments": 0,
+ "similarityCount": null,
+ "totalAppraisalUsers": 0,
+ "isKnowledge": 1,
+ "knowledgeUpdatedAt": 1766976594000,
+ "appraisalScore": 0,
+ "unuseful": 0,
+ "knowledgeCheckStatus": 2,
+ "otherProductLineIds": [],
+ "auditAt": 1766976594000,
+ "attributes": [
+  {
+   "classifies": [
+    {
+     "child": {
+      "child": {
+       "child": null,
+       "code": "open",
+       "id": "5614",
+       "name": "开放平台",
+       "productLineId": null,
+       "sort": 2,
+       "type": "module"
+      },
+      "code": "DEV",
+      "id": "5576",
+      "name": "开发服务云",
+      "productLineId": null,
+      "sort": 11,
+      "type": "domain"
+     },
+     "code": null,
+     "id": "87",
+     "name": "金蝶AI苍穹",
+     "productLineId": 29,
+     "sort": 0,
+     "type": "product"
+    }
+   ],
+   "labels": [
+    {
+     "code": "AdvancedSkills",
+     "createdAt": 1556519216000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "高阶技巧标签",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/01005cea40211bf14113a6004322e86a6780.png",
+     "id": "202203081642",
+     "name": "高级技巧",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 1,
+     "updatePerson": {
+      "avatar": "/download/010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "306913800727243776",
+      "name": "Paim",
+      "nameSpell": "name"
+     },
+     "updatedAt": 1657851500000
+    },
+    {
+     "code": "NewFeatures",
+     "createdAt": 1558619051000,
+     "creator": {
+      "avatar": "/download?fileName=010162cfa9d4437711e8b441060400ef5315.png",
+      "department": null,
+      "id": "1",
+      "name": "administrator",
+      "nameSpell": "administrator"
+     },
+     "description": "新特性",
+     "hasSpecifyUser": false,
+     "hide": false,
+     "icon": "/download/01009c9898f919a24034b3b37b2ebf42931c.png",
+     "id": "202203081645",
+     "name": "新特性",
+     "productLine": {
+      "active": true,
+      "appLogo": "开发者社区",
+      "categoryCode": "developer01",
+      "courseLogo": "/download/010070fbfeb0843c427b8794fb64b1bc72cf.svg",
+      "domain": "https://developer.kingdee.com",
+      "enablePaymentCourse": false,
+      "hasAtlas": true,
+      "hasIdea": true,
+      "hasKnowledge": true,
+      "hasQZ": null,
+      "id": 29,
+      "isDefault": null,
+      "isOpen": true,
+      "isValidLearning": true,
+      "isVirtual": false,
+      "logo": "/download/010012f20a942ac04b589b0948866c84a059.png",
+      "name": "金蝶AI苍穹",
+      "rank": 2,
+      "seriesCode": ""
+     },
+     "specifyUsers": [],
+     "style": 0,
+     "type": 0,
+     "updatePerson": {
+      "avatar": "/download/010145330b44d45a47ae9b8aac30617b6992.png",
+      "department": null,
+      "id": "2147443044",
+      "name": "Lucky_tiao",
+      "nameSpell": "laoli"
+     },
+     "updatedAt": 1668739541000
+    }
+   ],
+   "productLineId": 29,
+   "specials": [
+    {
+     "categoryList": [
+      {
+       "childCategory": [
+        {
+         "childCategory": [
+          null
+         ],
+         "code": null,
+         "description": "",
+         "entityId": "262143039974276608",
+         "entityType": "Knowledge",
+         "id": "793432337450101504",
+         "isCategory": false,
+         "name": "API高可用部署及多级路由规则",
+         "parentId": "226337785987048960",
+         "sort": "32",
+         "specialId": "226337046514476288",
+         "status": 1
+        }
+       ],
+       "code": null,
+       "description": "",
+       "entityId": null,
+       "entityType": null,
+       "id": "226337785987048960",
+       "isCategory": true,
+       "name": "常见问题",
+       "parentId": "-1",
+       "sort": "9",
+       "specialId": "226337046514476288",
+       "status": 1
+      }
+     ],
+     "classifies": [
+      {
+       "code": null,
+       "name": "金蝶AI苍穹",
+       "id": 87,
+       "sort": 0,
+       "type": "product",
+       "child": {
+        "code": "DEV",
+        "name": "开发服务云",
+        "id": 5576,
+        "sort": 11,
+        "type": "domain",
+        "child": {
+         "code": "open",
+         "name": "开放平台",
+         "id": 5614,
+         "sort": 2,
+         "type": "module",
+         "child": null,
+         "productLineId": null
+        },
+        "productLineId": null
+       },
+       "productLineId": 29
+      }
+     ],
+     "collections": 232,
+     "createdAt": "2021-09-16T13:42:36.000+08:00",
+     "creator": {
+      "avatar": "/download/0101d145bc8217b840d6afc9fc93e9ee1b8d.png",
+      "department": null,
+      "id": "132488613174518784",
+      "name": "某个路易",
+      "nameSpell": "name"
+     },
+     "description": "本专题全面介绍了金蝶云苍穹OpenAPI的整体功能和接口调用流程，同时提供操作服务接口示例和自定义插件代码示例，帮忙用户快速上手接口开发及调用。",
+     "hasCollected": null,
+     "hasHomePage": 1,
+     "id": "226337046514476288",
+     "identityTags": null,
+     "itemNum": 137,
+     "logo": "/download/010044f0dfefadc7466cbd83725cd2d5f478.png",
+     "name": "OpenAPI（开放平台）",
+     "otherProductLineIds": null,
+     "productLineId": "29",
+     "productList": [
+      {
+       "alias": null,
+       "code": null,
+       "id": 87,
+       "isOpen": 1,
+       "name": "金蝶AI苍穹",
+       "productLineId": 29,
+       "series": "developer01",
+       "sort": 0
+      }
+     ],
+     "sort": 10,
+     "status": 2,
+     "style": 3,
+     "totalAppraisalScore": 23,
+     "totalAppraisalUsers": 5,
+     "updatedAt": "2026-09-15T09:37:40.000+08:00",
+     "updaterId": "132488613174518784",
+     "useCategory": 1,
+     "viewAuthority": 1,
+     "views": 1577246
+    }
+   ]
+  }
+ ],
+ "editContent": " <p class=\"table-title table-margin\"><span class=\"span-line\">发布说明</span><span class=\"line\"></span></p><p class=\"title-b\"><span class=\"span-b\">发布版本：</span><span class=\"span-nor\">苍穹V4.0</span></p><p class=\"title-b\"><span class=\"span-b\">适用范围：</span><span class=\"span-nor\">苍穹开放平台所有用户</span></p><p class=\"title-b\"><span class=\"span-b\">上线日期：</span><span class=\"span-nor\">2021-08-26</span></p><p class=\"title-b\"><span class=\"span-b\">补丁号：</span><span class=\"span-nor margin-patch\">V4.0.006（BOS）</span></p>\n              <p class=\"table-title title-detail\"><span class=\"span-line\">更多内容</span><span class=\"line\"></span></p>\n              <p></p><h2><strong>1. 简介</strong></h2><p>我们知道，苍穹是微服务容器的调用方式，可以非常方便的进行弹性扩容伸缩容器。</p><p>针对api开放<span>接口</span>调用，当调用的QPS较高时，为了不影响正常的系统功能，可以按需部署微服务容器，</p><p>具体的容器路由规则如下：</p><h2><strong>2. 开放平台微服务节点查找规则</strong></h2><ul><li><p>确认 API 配置核心属性：需先查看 API 所属应用，并由运维确认相关插件已部署至该应用节点对应的容器中（容器启动属性 BizLibs 需包含对应 JAR 包）。</p></li><li><p>路由匹配优先级（从高到低）：实体名 → 应用 Id-Api - api (常量) → 应用 ID（示例：ar/ap）→ bos (常量)。</p></li><li><p>补充备注：invokerAppids 格式示例为 <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"/tolink?target=http%3A%2F%2Fbos.fi.api.fi-api.gl\">bos.fi.api.fi-api.gl</a>_voucher 或 <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"/tolink?target=http%3A%2F%2Fbos.fi.api.fi\">bos.fi.api.fi</a>-api.custapi。</p></li></ul><h2><strong>3. API 容器部署规则（4 种模式，按优先级排序）</strong></h2><ol class=\"custom_num2\"><li><p>单实体 API 独立容器：将单个实体对象的 API 配置为独立容器，容器 appId 命名规则：</p><ul style=\"outline: none; -webkit-font-smoothing: antialiased; box-sizing: border-box; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); border: 0px solid; margin: 0px; padding: 0px 0px 0px 20px; list-style: none; overflow-anchor: auto;\"><li><p>零代码配置 API：<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"/tolink?target=http%3A%2F%2Fbos.fi.api.fi-api.gl\">bos.fi.api.fi-api.gl</a>_voucher</p></li><li><p>自定义 API：<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"/tolink?target=http%3A%2F%2Fbos.fi.api.fi\">bos.fi.api.fi</a>-api.custapi</p></li></ul></li><li><p>全量 API 统一容器：所有 API 配置至同一个独立容器，容器 appId 固定命名为 api。</p></li><li><p>单应用 API 独立容器：将某一应用下的所有 API 配置为独立容器，容器 appId 命名为 fiapi（需同步将 API 配置的所属应用设为 fiapi）。</p></li><li><p>bos 节点兜底：以上模式均不匹配时，默认路由至 bos 节点。</p></li></ol><h2><strong>4. 苍穹微服务路由规则</strong></h2><ol class=\"custom_num2\"><li><p>节点服务标识（APPID）：由<code>appIdsFromAppStore（XML配置）</code> + <code>appIds（运维容器配置）</code>共同决定。</p></li><li><p>集群 APPID 匹配：优先匹配集群已注册的 registedAppIds 清单；若未匹配到，且已部署 custom 节点，则路由至 custom。</p></li><li><p>容器 JAR 包配置（运维侧）：需在容器属性 BIZLIBS 中配置加载的 JAR 包清单，格式示例：hr.xml,ebg.xml,xxx.xml。</p><p></p></li></ol><h3><strong>核心优先级总结</strong></h3><p>gl_voucher → fi-api → api → fi → bos</p><h3><strong>核心路由规则公式</strong></h3><p>bos.[appid].api.[实体 formId|custapi|aiapi|scriptapi]</p><p></p>"
+}
