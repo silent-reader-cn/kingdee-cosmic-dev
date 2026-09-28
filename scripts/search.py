@@ -35,7 +35,9 @@ kingdee-cosmic-dev 统一检索工具
 ----
   --scope S      检索范围：db | openapi | all（默认 all）
   --category C   仅块一按模块过滤（如 gl）；仅块二按分类过滤（如 用户手册/常见问题）
-  --table        关键词按「表名」精确匹配（忽略大小写与首尾空格，仅块一）
+  --table        关键词按「表名」精确匹配（忽略大小写与首尾空格，仅块一）；
+                 此时**默认返回完整字段定义**（相当于自动加 --full），
+                 避免上百字段的表被截断后当成完整定义
   --brief        精简输出：仅一行摘要
   --full         输出命中条目的完整正文（不截断）
   --all          多个关键词需全部命中（默认任一命中即可）
@@ -260,6 +262,7 @@ def main(argv):
     terms, scopes = [], ["all"]
     brief = full = all_match = table_mode = False
     limit, max_chars, category = 20, 1600, None
+    max_given = False
 
     i = 0
     while i < len(args):
@@ -301,6 +304,7 @@ def main(argv):
         elif a == "--max":
             i += 1
             max_chars = int(args[i]) if i < len(args) else 1600
+            max_given = True
         elif a.startswith("-"):
             pass
         else:
@@ -310,6 +314,11 @@ def main(argv):
     if not terms:
         print(__doc__)
         return 1
+
+    # 按表名精确查表时默认给全字段：否则动辄上百个字段的表会被截断，
+    # 使用方容易只看到前一半字段就当成完整定义（除非显式指定了 --max）。
+    if table_mode and not full and not max_given:
+        full = True
 
     # 归一化 scope
     if "all" in scopes:
