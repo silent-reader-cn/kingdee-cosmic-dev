@@ -40,6 +40,9 @@ description: >-
 | 调 OpenAPI 报错、拿不到 token | 块二：`search.py access_token --scope openapi` |
 | 自定义API 插件怎么写 | 块二：`search.py 自定义API --scope openapi` |
 | 开放事件 / 回调怎么配 | 块二：`search.py 回调 --scope openapi --category 开放事件` |
+| 刚拿到一个环境，怎么接入（账套 / 凭据 / 登录） | **第五节 环境接入与排错** |
+| 报错看不懂（401/403/404/603 分别是什么意思） | **第五节 5.3 错误码对照** |
+| 想要个能跑的查询示例 | [`examples/salorder_query.py`](./examples/salorder_query.py) |
 
 ---
 
@@ -159,10 +162,88 @@ PY="<你的 python3 路径>"
 | 接口超时 | 批量数据过大，参考「批量处理数据时接口超时问题」 |
 | 高并发产生重复数据 | 参考「高并发时接口生成重复数据问题」与 API 幂等性规范 |
 | 权限相关报错 | 操作API 按用户权限管控；**自定义API 需在插件中自行处理权限控制** |
+| `403 该接口需要第三方应用授权` | 该 API 的「第三方应用授权」开关**打开**了，服务端在 `checkThirdACL` 里直接拒掉 cookie / 匿名认证。网页登录拿到会话也没用，必须用第三方应用的 `client_id`/`client_secret` 取 token |
 
 ---
 
-## 五、目录结构
+## 五、环境接入与排错（实测补充）
+
+> 以下是官方手册**没覆盖**的平台级接入细节，为真实环境实测所得，供对接起步时参考。
+> 具体接口与开关以目标环境实际配置为准。
+
+### 5.1 三步接入
+
+```
+列账套（拿 accountId） → 建第三方应用（拿 client_id/client_secret） → 取 token → 调业务接口
+```
+
+**列账套**（无需登录，可直接调）：
+
+```
+POST /ierp/auth/getAllDatacenters.do
+→ [{"accountId":"…","accountNumber":"<accountNumber>","accountName":"某账套"}, …]
+```
+
+`accountId` 就是 `getToken` 要传的那个。**「账套」= 数据中心 = accountId。**
+
+**建第三方应用**：网页登录 → 【开放服务云】→【OpenAPI】→【第三方应用】→ 新增。
+系统编码 = `client_id`，AccessToken 认证密钥 = `client_secret`。
+这一步**只能在 UI 里做**，没有对应的开放接口。
+
+### 5.2 只有网页账号密码时（应急）
+
+官方手册没讲这条路径，实测契约如下：
+
+```
+POST /ierp/api/login.do
+Content-Type: application/json
+{"user": "<用户名>", "password": "<密码>"}      ← 键名是 user，不是 username
+→ {"data":{"access_token":"<accountId>_<…>","KERPSESSIONID":"<同值>","success":true}}
+```
+
+`access_token` 与 `KERPSESSIONID` 同值，作为 Cookie 回传即可通过内部接口认证
+（实测 `/ierp/kapi/v2` 用该 Cookie 能过认证关）。
+
+⚠️ 但**仅当目标 API 的「第三方应用授权」开关关闭时**才能用它调业务接口；
+开关打开时一律 403。所以网页会话只能用于调试，不能作为生产方案。
+
+### 5.3 错误码对照（可用它反推路径对不对）
+
+| errorCode | 含义 | 怎么用 |
+| :--- | :--- | :--- |
+| `401` | 未经授权的访问 | 没带 token / token 失效 |
+| `403` | 该接口需要第三方应用授权 | **路径是对的**，但认证方式不合规 |
+| `404` | `Cannot found OpenAPI(or disabled)` | **路径不对**：`appId`/`formId`/`serviceName` 组合错 |
+| `405` | 请求方式不对 | 如 `getToken` 只支持 POST |
+| `603` | 请求参数错误（会指明缺哪个） | 如 `client_id为空` |
+
+> **实用技巧**：不确定某对象的查询 API 路径时，把候选路径挨个 POST 一次，
+> **`403` 说明路径存在**、`404` 说明不存在 —— 比翻文档快得多。
+> 例：`/ierp/kapi/v2/sm/sm_salorder/query` 返回 403（存在），
+> `/ierp/kapi/v2/sm/sm_salorder/list` 返回 404（不存在）。
+
+### 5.4 认证相关的其它探针
+
+| 接口 | 用途 |
+| :--- | :--- |
+| `POST /ierp/auth/queryParameters.do` | 返回 `closeEncrypt`（密码是否需要加密）、`userSourceType` 等 |
+| `POST /ierp/auth/isNeedDisplayVerify.do` | 是否需要图形验证码 |
+| `POST /ierp/auth/getLoginErrorMessage.do` | 取上一次登录失败的原因 |
+
+### 5.5 别高频试密码
+
+连续多次登录失败后，接口会返回**含糊**的
+「无法获取云通行证AccessToken，原因：远程服务不可用，或者用户名与密码不匹配」——
+它既可能是密码错，也可能是**被限流**，还可能是环境连不上金蝶云。
+写自动化脚本时务必退避重试，不要无脑循环。
+
+### 5.6 可运行示例
+
+[`examples/salorder_query.py`](./examples/salorder_query.py) —— 销售订单查询工具，
+含 `--probe` 探路模式（无需凭据即可摸清账套、接口是否存在、是否要求第三方应用授权）。
+用法与踩坑记录见 [`examples/README.md`](./examples/README.md)。
+
+## 六、目录结构
 
 ```
 kingdee-cosmic-dev/
@@ -177,6 +258,9 @@ kingdee-cosmic-dev/
 │   ├── fetch_manual.py            # 抓取金蝶云社区专题手册（块二）
 │   ├── build_db_from_dict.py      # 数据字典导出包 → 表结构 Markdown（块一）
 │   └── selftest.py                # 内容/检索完整性自检
+├── examples/                      # 可运行示例
+│   ├── salorder_query.py          #   销售订单查询工具（含 --probe 探路模式）
+│   └── README.md                  #   用法与实测踩坑记录
 └── references/
     ├── _INDEX.md                  # 总索引
     ├── db/                        # 【块一】数据库（来自官方数据字典导出 V5.0.011.0）
@@ -192,11 +276,11 @@ kingdee-cosmic-dev/
 
 ---
 
-## 六、内容维护
+## 七、内容维护
 
 两块内容都是**从上游生成的，不是手写的**。
 
-### 6.1 块一 数据库（数据字典导出包）
+### 7.1 块一 数据库（数据字典导出包）
 
 ```bash
 python tools/build_db_from_dict.py <数据字典导出.zip>    # 转换（自动清理过期文件）
@@ -210,7 +294,7 @@ python scripts/build_index.py                            # 重建索引
   例如 `[业务单元 bos_org](../base_files/bos_org.md)`，方便顺着关联摸过去。
 - 源包不在仓库里（几十 MB），需要时从金蝶导出。
 
-### 6.2 块二 OpenAPI 手册
+### 7.2 块二 OpenAPI 手册
 
 ```bash
 python tools/fetch_manual.py            # 重新抓取（已存在的跳过）
@@ -221,7 +305,7 @@ python tools/fetch_manual.py --render   # 不联网，用 _source/ 存档重新�
 `fetch_manual.py` 会把原始 JSON 存到 `references/openapi/_source/`，
 所以格式调整（改 `tools/html2md.py`）后可以直接 `--render` 离线重出，不必再联网。
 
-### 6.3 改完必须跑自检
+### 7.3 改完必须跑自检
 
 ```bash
 python tools/selftest.py                          # 基础 11 项（约 30 秒）
@@ -236,7 +320,7 @@ python tools/selftest.py --dict-zip <导出包>       # 额外校验块一 HTML�
 
 ---
 
-## 七、免责声明
+## 八、免责声明
 
 - **块一**：表结构整理自金蝶云苍穹数据字典导出，最终解释权归金蝶所有，请以实际数据库为准。
 - **块二**：手册内容抓取自金蝶云社区公开专题，版权归金蝶所有，仅供学习与开发参考；
