@@ -40,6 +40,50 @@ python examples/kd_doctor.py --base-url ... --token <Token> --identity <x-acgw-i
 
 ## salorder_query.py · 销售订单查询工具
 
+```bash
+# 基本查询
+python examples/salorder_query.py --base-url ... --client-id ... --client-secret ... \
+    --account-id ... --username admin --limit 20
+
+# 过滤（filter 支持 SQL 风格表达式，实测可用）
+... --filter "billno like 'HSH%'"
+... --filter "bizdate >= '2025-03-01'"
+... --filter "totalamount > 5000"
+
+# 排序（服务端不认，这里是客户端排序）
+... --sort "totalamount:desc,billno:asc"
+
+# 翻页取全量
+... --all --limit 100
+
+# 只看指定字段 / 看全部字段
+... --fields "billno,customer_name,totalamount"
+... --json
+
+# 导出（.csv 带 BOM，Excel 打开不乱码；.json 原样）
+... --export salorder.csv
+... --export salorder.json
+
+# 直接给请求体（JSON 字符串或 @文件）
+... --body '{"data":{},"pageNo":1,"pageSize":10,"filter":"totalamount > 5000"}'
+```
+
+| 参数 | 说明 |
+| :--- | :--- |
+| `--limit N` | 每页条数（默认 20） |
+| `--page N` | 页码（默认 1） |
+| `--filter EXPR` | SQL 风格过滤表达式，实测支持 `like` / `>=` / `>` 等 |
+| `--sort F[:desc]` | **客户端**排序，逗号分隔多字段 |
+| `--order-by` | 发给服务端的 orderBy —— ⚠️ 实测被静默忽略，别依赖 |
+| `--all` | 翻页取全量（按响应里的 `lastPage` 判断结束） |
+| `--fields a,b,c` | 只取这些字段（同时作为展示列） |
+| `--json` | 原样输出 JSON |
+| `--export FILE` | 导出 `.csv` 或 `.json` |
+
+---
+
+## kd_doctor.py · 环境接入诊断
+
 只读工具：登录 → 取令牌 → 调用销售订单查询操作API，把结果打成表格。
 
 ```bash
@@ -214,7 +258,32 @@ POST /ierp/auth/getAllDatacenters.do      （无需登录）
 > 同一个 `client_id` 换一个账套就会报「不存在或未启用」。
 > 实测 `test1` 只在「某测试账套」下有效，换到「另一账套」就报不存在。
 
-### 9. 其它有用的事实
+### 9. ⚠️ 排序参数被静默忽略（最坑的一条）
+
+实测 `orderBy` **完全不生效**，而且**不报错**（`code=0`，顺序不变）。
+试过 12 种写法全部无效：
+
+```
+orderBy=billno desc / billno DESC / billno / fbillno desc / -billno
+orderBy=totalamount desc / createtime desc
+orderby= / order= / sort= / sortBy= / orderField=
+sortField=billno + sortOrder=desc
+orderBy=[{"field":"billno","desc":true}]
+orderBy="billno:desc"
+```
+
+结论：**排序由 API 配置决定，运行时改不了**。
+这类「不报错但不生效」的行为最危险 —— 调用方会以为排序已经生效。
+
+所以工具用 `--sort` 做**客户端排序**（拿回数据后本地排）：
+
+```bash
+python examples/salorder_query.py ... --sort "totalamount:desc,billno:asc"
+```
+
+`--order-by` 仍然会发给服务端（别的环境可能认），但不要依赖它。
+
+### 10. 其它有用的事实
 
 | 接口 | 用途 |
 | :--- | :--- |

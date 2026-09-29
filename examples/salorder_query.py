@@ -259,8 +259,71 @@ def query_salorder(client, app=SALORDER_APP_ID, form=SALORDER_FORM_ID,
     headers = {}
     if use_token and client.access_token:
         headers["access_token"] = client.access_token
-    return client.request(path, body or {"pageNo": 1, "pageSize": 20},
+    return client.request(path, body or {"data": {}, "pageNo": 1, "pageSize": 20},
                           headers=headers)
+
+
+def query_all_pages(client, base_body, app, form, service, max_rows=5000, verbose=True):
+    """翻页取全量。
+
+    响应里有 `lastPage`，据此判断是否还有下一页。
+    """
+    rows = []
+    page = 1
+    while len(rows) < max_rows:
+        body = dict(base_body)
+        body["pageNo"] = page
+        resp = query_salorder(client, app, form, service, body)
+        if not resp.get("status", True) and resp.get("errorCode") not in (None, "", "0"):
+            raise KingdeeError("第 %d 页查询失败：%s" % (page, resp.get("message")))
+        d = resp.get("data") or {}
+        got = d.get("rows") or []
+        rows.extend(got)
+        if verbose:
+            print("  第 %d 页：%d 条%s" % (page, len(got), "（末页）" if d.get("lastPage") else ""))
+        if d.get("lastPage") or not got:
+            break
+        page += 1
+    return rows[:max_rows]
+
+
+def sort_rows(rows, spec):
+    """客户端排序。
+
+    为什么要自己做：实测发现该查询接口**静默忽略** orderBy 参数
+    （试了 12 种写法，全部返回 code=0 但顺序不变），
+    排序由 API 配置决定，运行时改不了。所以要在本地排。
+    """
+    if not spec or not rows:
+        return rows
+    parts = spec.split(",")
+    # 依次按每个键排序（从最后一个键往前，保证稳定性）
+    for part in reversed(parts):
+        part = part.strip()
+        desc = False
+        for sep in (":", " "):
+            if sep in part:
+                f, _, d = part.partition(sep)
+                desc = d.strip().lower() in ("desc", "descending", "-1")
+                part = f.strip()
+                break
+        key = part
+
+        def sort_key(r, _k=key):
+            v = r.get(_k)
+            if v is None:
+                return (1, "")
+            if isinstance(v, (int, float)):
+                return (0, v)
+            s = str(v)
+            # 数字型字符串按数值排，否则按文本
+            try:
+                return (0, float(s))
+            except ValueError:
+                return (0, s)
+
+        rows = sorted(rows, key=sort_key, reverse=desc)
+    return rows
 
 
 def build_query_body(args):
@@ -306,6 +369,33 @@ def rows_of(resp):
         if d:
             return [d]
     return []
+
+
+def export_rows(rows, path):
+    """导出结果。按扩展名决定格式：.json 原样，其余按 .csv 处理。
+
+    CSV 用 utf-8-sig（带 BOM），否则 Excel 打开中文会乱码。
+    """
+    if not rows:
+        return 0
+    if path.lower().endswith(".json"):
+        with open(path, "w", encoding="utf-8", newline="\n") as f:
+            json.dump(rows, f, ensure_ascii=False, indent=1)
+        return len(rows)
+
+    import csv
+    fields = list(rows[0].keys())
+    with open(path, "w", encoding="utf-8-sig", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=fields, extrasaction="ignore")
+        w.writeheader()
+        for r in rows:
+            row = {}
+            for k, v in r.items():
+                if isinstance(v, (list, dict)):
+                    v = json.dumps(v, ensure_ascii=False)
+                row[k] = v
+            w.writerow(row)
+    return len(rows)
 
 
 def print_table(rows, fields=None, max_col=34, headers=None):
@@ -448,7 +538,11 @@ def main(argv):
     ap.add_argument("--page", type=int, default=1)
     ap.add_argument("--limit", type=int, default=20, help="每页条数")
     ap.add_argument("--filter", help="过滤条件，如 \"fbillno like '%%SO%%'\"")
-    ap.add_argument("--order-by")
+    ap.add_argument("--order-by", help="传给接口的 orderBy —— ⚠️ 实测多数环境会**静默忽略**，"
+                                       "要排序请用 --sort")
+    ap.add_argument("--sort", help="客户端排序，如 totalamount:desc,billno:asc（服务端不认排序，只能本地排）")
+    ap.add_argument("--all", action="store_true", help="翻页取全量（配合 --limit 作为每页大小）")
+    ap.add_argument("--export", metavar="FILE", help="把结果导出为文件（.csv 或 .json）")
     ap.add_argument("--fields", help="只取这些字段，逗号分隔")
     ap.add_argument("--body", help="直接给定查询请求体（JSON 字符串或 @文件）")
     ap.add_argument("--session-token", help="已有网页会话令牌时直接复用（形如 <accountId>_<...>）")
@@ -511,11 +605,19 @@ def main(argv):
         print("已获取 access_token（有效期默认 2 小时）")
 
     body = build_query_body(args)
-    resp = query_salorder(client, cfg.get("app", SALORDER_APP_ID),
-                          cfg.get("form", SALORDER_FORM_ID),
-                          cfg.get("service", DEFAULT_QUERY_API), body)
+    app = cfg.get("app", SALORDER_APP_ID)
+    form = cfg.get("form", SALORDER_FORM_ID)
+    service = cfg.get("service", DEFAULT_QUERY_API)
 
-    if args.json:
+    if args.all:
+        print("翻页取全量（每页 %d 条）..." % args.limit)
+        rows = query_all_pages(client, body, app, form, service,
+                               max_rows=max(args.limit * 100, 1000))
+        resp = {"status": True, "data": {"rows": rows}}
+    else:
+        resp = query_salorder(client, app, form, service, body)
+
+    if args.json and not args.export:
         print(json.dumps(resp, ensure_ascii=False, indent=2))
         return 0
 
@@ -525,6 +627,15 @@ def main(argv):
         return 1
 
     rows = rows_of(resp)
+    if args.sort:
+        rows = sort_rows(rows, args.sort)
+
+    if args.export:
+        n = export_rows(rows, args.export)
+        print("已导出 %d 条到 %s" % (n, args.export))
+        if args.json:
+            return 0
+
     print("共返回 %d 条（请求体：%s）\n"
           % (len(rows), json.dumps(body, ensure_ascii=False)))
     requested = args.fields.split(",") if args.fields else None

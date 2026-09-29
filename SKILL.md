@@ -180,7 +180,12 @@ PY="<你的 python3 路径>"
 > `data` 这层壳是必须的，只是**业务字段**和分页参数平铺在顶层。
 
 查询操作API 的其它可用顶层参数：`filter`（如 `billno like 'SO%'`）、
-`orderBy`、`selectFields`（逗号分隔）。
+`selectFields`（逗号分隔）。
+
+> ⚠️ **`orderBy` 实测被静默忽略**：试了 12 种写法（`billno desc`、`fbillno desc`、
+> `-billno`、`sortField`+`sortOrder`、JSON 数组…）全部返回 `code=0` 但顺序不变。
+> 排序由 API 配置决定，运行时改不了。**这类「不报错但不生效」最危险**，
+> 需要排序就在客户端做（参考 `examples/salorder_query.py --sort`）。
 
 ### 4.7 代理用户：第三方应用的隐藏必填项
 
