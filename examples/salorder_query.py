@@ -153,8 +153,18 @@ def login_web(client, username, password, account_id=None):
     r = client.request(WEB_LOGIN_PATH, body)
     d = r.get("data") or {}
     if not d.get("success"):
-        raise KingdeeError("网页登录失败：%s" % (d.get("error_desc") or r))
+        desc = str(d.get("error_desc") or r)
+        hint = ""
+        if "云通行证" in desc:
+            # 这个报错有歧义，直接给出排查方向，别让人误判成密码错
+            hint = ("\n  ⚠️ 这个报错有三种可能：①密码错 ②登录被限流（前面试太多次）"
+                    "③环境连不上金蝶云通行证。\n"
+                    "     先手工在网页上登一次确认账号正常，再回来跑；"
+                    "不要连续重试。")
+        raise KingdeeError("网页登录失败：%s%s" % (desc, hint))
     token = d.get("access_token") or ""
+    if not token:
+        raise KingdeeError("登录返回成功但没有 access_token：%s" % json.dumps(r, ensure_ascii=False)[:300])
     client.cookies["KERPSESSIONID"] = token
     client.cookies["access_token"] = token
     return token

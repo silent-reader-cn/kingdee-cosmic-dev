@@ -219,8 +219,16 @@ Content-Type: application/json
 
 > **实用技巧**：不确定某对象的查询 API 路径时，把候选路径挨个 POST 一次，
 > **`403` 说明路径存在**、`404` 说明不存在 —— 比翻文档快得多。
-> 例：`/ierp/kapi/v2/sm/sm_salorder/query` 返回 403（存在），
-> `/ierp/kapi/v2/sm/sm_salorder/list` 返回 404（不存在）。
+>
+> ⚠️ **前提：必须已认证。** 未认证时服务端在鉴权阶段就返回 `401`，
+> 存在的路径和不存在的路径返回**完全一样**，据此判断会把不存在的路径误判成「存在」。
+> 实测对比：
+>
+> | 路径 | 未认证 | 已认证 |
+> | :--- | :--- | :--- |
+> | `/kapi/v2/sm/sm_salorder/query` | 401 | **403**（存在） |
+> | `/kapi/v2/sm/sm_salorder/list` | 401 | **404**（不存在） |
+> | `/kapi/v2/sm/sm_salorder/save` | 401 | **404**（不存在） |
 
 ### 5.4 认证相关的其它探针
 
@@ -239,8 +247,19 @@ Content-Type: application/json
 
 ### 5.6 可运行示例
 
-[`examples/salorder_query.py`](./examples/salorder_query.py) —— 销售订单查询工具，
-含 `--probe` 探路模式（无需凭据即可摸清账套、接口是否存在、是否要求第三方应用授权）。
+| 文件 | 用途 |
+| :--- | :--- |
+| [`examples/kd_doctor.py`](./examples/kd_doctor.py) | **环境接入诊断**：连通性、账套、登录契约、取令牌接口、接口路径与授权开关，一键体检 |
+| [`examples/salorder_query.py`](./examples/salorder_query.py) | 销售订单查询工具，含 `--probe` 探路模式 |
+
+```bash
+# 只做匿名检查（不碰账号，不会触发限流）
+python examples/kd_doctor.py --base-url http://<host>:<port>
+
+# 带凭据做完整检查（默认只登录 1 次，不重试）
+python examples/kd_doctor.py --base-url ... --username admin --password ... --account-id ...
+```
+
 用法与踩坑记录见 [`examples/README.md`](./examples/README.md)。
 
 ## 六、目录结构

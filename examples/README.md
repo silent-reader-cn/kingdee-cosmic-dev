@@ -1,5 +1,31 @@
 # examples —— 可运行示例
 
+| 文件 | 用途 |
+| :--- | :--- |
+| [`kd_doctor.py`](./kd_doctor.py) | **环境接入诊断**：连通性、账套、登录契约、取令牌接口、接口路径与授权开关，一键体检 |
+| [`salorder_query.py`](./salorder_query.py) | 销售订单查询工具 |
+
+---
+
+## kd_doctor.py · 环境接入诊断
+
+刚拿到一个环境时先跑它，把我踩过的坑一次性检出来：
+
+```bash
+# 只做匿名检查（不碰账号，不会触发限流）
+python examples/kd_doctor.py --base-url http://<host>:<port>
+
+# 带凭据做完整检查（默认只登录 1 次、不重试，避免触发限流）
+python examples/kd_doctor.py --base-url ... \
+    --username admin --password <密码> --account-id <数据中心ID>
+
+# 批量探测候选接口路径
+python examples/kd_doctor.py --base-url ... \
+    --probe-paths /ierp/kapi/v2/sm/sm_salorder/query,/ierp/kapi/v2/sm/sm_salorder/list
+```
+
+---
+
 ## salorder_query.py · 销售订单查询工具
 
 只读工具：登录 → 取令牌 → 调用销售订单查询操作API，把结果打成表格。
@@ -47,6 +73,19 @@ POST /ierp/kapi/v2/{appId}/{formId}/{serviceName}
 
 **怎么确认路径对不对**：错路径返回 `404 Cannot found OpenAPI(or disabled)`，
 对路径返回别的错误码。用错误码区分，比翻文档快。
+
+⚠️ **但必须已认证**。未认证时服务端在鉴权阶段就返回 `401`，
+存在的和不存在的路径返回一模一样 —— 据此判断会把不存在的路径误判成「存在」。
+实测对比：
+
+| 路径 | 未认证 | 已认证（带会话） |
+| :--- | :--- | :--- |
+| `/kapi/v2/sm/sm_salorder/query` | 401 | **403** ← 存在 |
+| `/kapi/v2/sm/sm_salorder/list` | 401 | **404** ← 不存在 |
+| `/kapi/v2/sm/sm_salorder/save` | 401 | **404** ← 不存在 |
+
+> 这个坑是我先写了个诊断脚本、跑出「三个路径都存在」的假阳性才发现的。
+> `kd_doctor.py` 现在会在未登录时明确标注「无法判定」。
 
 ### 2. 「该接口需要第三方应用授权」= 不能用 cookie 认证
 
