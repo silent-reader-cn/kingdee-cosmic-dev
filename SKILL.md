@@ -43,6 +43,7 @@ description: >-
 | 刚拿到一个环境，怎么接入（账套 / 凭据 / 登录） | **第五节 环境接入与排错** |
 | 报错看不懂（401/403/404/603 分别是什么意思） | **第五节 5.3 错误码对照** |
 | 想要个能跑的查询示例 | [`examples/salorder_query.py`](./examples/salorder_query.py) |
+| 刚拿到一个环境，想先体检 / 探接口路径 | [`examples/kd_doctor.py`](./examples/kd_doctor.py) |
 
 ---
 
@@ -428,6 +429,19 @@ python examples/kd_doctor.py --base-url ... --username admin --password ... --ac
 
 # 体检别人给的一个 token：常见摆放方式全试一遍，给明确结论
 python examples/kd_doctor.py --base-url ... --token <AccessToken> --identity <x-acgw-identity>
+
+# 搜索/探测候选接口路径 —— 403=存在、404=不存在（必须先认证，见 5.3）
+python examples/kd_doctor.py --base-url ... --client-id ... --client-secret ... \
+    --account-id ... --username admin \
+    --probe-paths /ierp/kapi/v2/sm/sm_salorder/query,/ierp/kapi/v2/sm/sm_salorder/list
+python examples/kd_doctor.py --base-url ... --json        # 结果机读，便于脚本消费
+```
+
+`salorder_query.py` 也能探路，且**不需要任何凭据**：
+
+```bash
+python examples/salorder_query.py --base-url http://<host>:<port> --probe   # 只探路不查询
+python examples/salorder_query.py --base-url ... --list-datacenters        # 列账套，拿 accountId
 ```
 
 用法与踩坑记录见 [`examples/README.md`](./examples/README.md)。
@@ -447,8 +461,9 @@ kingdee-cosmic-dev/
 │   ├── fetch_manual.py            # 抓取金蝶云社区专题手册（块二）
 │   ├── build_db_from_dict.py      # 数据字典导出包 → 表结构 Markdown（块一）
 │   └── selftest.py                # 内容/检索完整性自检
-├── examples/                      # 可运行示例
+├── examples/                      # 可运行示例（已在真实环境端到端验证）
 │   ├── salorder_query.py          #   销售订单查询工具（含 --probe 探路模式）
+│   ├── kd_doctor.py               #   环境接入诊断 + 外部凭据体检 + 接口路径探测
 │   └── README.md                  #   用法与实测踩坑记录
 └── references/
     ├── _INDEX.md                  # 总索引

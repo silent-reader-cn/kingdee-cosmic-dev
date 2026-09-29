@@ -82,7 +82,7 @@ python examples/salorder_query.py --base-url ... --client-id ... --client-secret
 
 ---
 
-## kd_doctor.py · 环境接入诊断
+## salorder_query.py · 销售订单查询工具
 
 只读工具：登录 → 取令牌 → 调用销售订单查询操作API，把结果打成表格。
 
