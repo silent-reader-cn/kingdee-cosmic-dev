@@ -98,9 +98,10 @@ def check_login_contract(client):
 
 
 def check_login(client, username, password, account_id, retry):
-    section("4. 登录")
-    if not username:
-        record(LEVEL_INFO, "跳过", "未提供 --username")
+    section("4. 网页登录")
+    if not username or not password:
+        record(LEVEL_INFO, "跳过",
+               "未提供 --username/--password（这一项只测网页会话，与 OpenAPI 凭据无关）")
         return None
     for i in range(retry + 1):
         try:
@@ -176,29 +177,37 @@ def classify(resp, has_session):
         return LEVEL_BAD, "路径不存在（appId/formId/serviceName 组合错）"
     if code == "403" or "第三方应用授权" in msg:
         return LEVEL_WARN, "路径存在，但要求第三方应用授权（cookie 认证会被拒）"
+    if code == "400":
+        # 已经进到业务逻辑层（报的是请求体问题）—— 路径一定是存在的
+        return LEVEL_OK, "路径存在（只是请求体不对：%s）" % msg[:34]
     if code in ("0", "200") or resp.get("status") is True:
         return LEVEL_OK, "路径存在且调用成功"
     return LEVEL_INFO, "返回 errorCode=%s %s" % (code, msg[:40])
 
 
-def check_paths(client, paths, has_session):
+def check_paths(client, paths, has_auth, auth_kind=""):
     section("6/7. 业务接口路径与授权要求")
     if not paths:
         paths = [QUERY_PATH.format(app=SALORDER_APP_ID, form=SALORDER_FORM_ID,
                                    service=DEFAULT_QUERY_API)]
-    if not has_session:
-        record(LEVEL_WARN, "未登录，路径探测不可靠",
+    if not has_auth:
+        record(LEVEL_WARN, "未认证，路径探测不可靠",
                "未认证时所有 kapi 路径都返回 401，无法区分存在与否")
-        record(LEVEL_INFO, "建议", "先带 --username/--password 登录，再做路径探测")
+        record(LEVEL_INFO, "建议",
+               "提供网页凭据（--username/--password）或 OpenAPI 凭据"
+               "（--client-id/--client-secret）后再探")
+    else:
+        record(LEVEL_INFO, "探测身份", auth_kind or "已认证")
     for p in paths:
         try:
-            r = client.request(p, {})
+            r = client.request(p, {}, headers=({"access_token": client.access_token}
+                                               if client.access_token else None))
         except KingdeeError as e:
             record(LEVEL_BAD, p, str(e).split("\n")[0][:70])
             continue
-        level, note = classify(r, has_session)
+        level, note = classify(r, has_auth)
         record(level, p, note)
-    if has_session:
+    if has_auth:
         record(LEVEL_INFO, "判断技巧",
                "403 = 路径对但认证方式不合规；404 = 路径本身不存在。可据此快速筛路径。")
 
@@ -318,8 +327,11 @@ def main(argv):
     tok = check_login(client, cfg.get("username"), cfg.get("password"),
                       cfg.get("account_id"), args.retry)
     check_token_endpoint(client, cfg)
+    # 有 OpenAPI token 也算「已认证」——路径探测要在这两种身份下做才有意义
+    has_auth = bool(tok or client.access_token)
+    auth_kind = ("网页会话" if tok else "") + ("OpenAPI token" if client.access_token else "")
     paths = [p.strip() for p in args.probe_paths.split(",")] if args.probe_paths else []
-    check_paths(client, paths, bool(tok))
+    check_paths(client, paths, has_auth, auth_kind)
 
     target = (paths[0] if paths
               else QUERY_PATH.format(app=SALORDER_APP_ID, form=SALORDER_FORM_ID,
