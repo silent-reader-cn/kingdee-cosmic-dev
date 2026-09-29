@@ -258,6 +258,9 @@ python examples/kd_doctor.py --base-url http://<host>:<port>
 
 # 带凭据做完整检查（默认只登录 1 次，不重试）
 python examples/kd_doctor.py --base-url ... --username admin --password ... --account-id ...
+
+# 体检别人给的一个 token：常见摆放方式全试一遍，给明确结论
+python examples/kd_doctor.py --base-url ... --token <AccessToken> --identity <x-acgw-identity>
 ```
 
 用法与踩坑记录见 [`examples/README.md`](./examples/README.md)。

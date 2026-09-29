@@ -192,6 +192,81 @@ def check_paths(client, paths, has_session):
                "403 = 路径对但认证方式不合规；404 = 路径本身不存在。可据此快速筛路径。")
 
 
+def check_external_credentials(client, token, identity, path):
+    """体检「别人给的一个 token / 身份串」到底能不能用。
+
+    这是很常见的一幕：同事甩过来一个 AccessToken，不知道往哪放。
+    与其一个一个试，不如把常见摆放方式全试一遍，并明确报告哪个（如果有）生效。
+    """
+    section("8. 外部凭据体检")
+    if not token and not identity:
+        record(LEVEL_INFO, "跳过", "未提供 --token / --identity")
+        return
+
+    if token:
+        record(LEVEL_INFO, "AccessToken", "%s…（长度 %d）" % (token[:22], len(token)))
+        # 格式体检：金蝶苍穹的 access_token 形如 <accountId>_<随机串>
+        if "_" not in token:
+            record(LEVEL_WARN, "格式可疑",
+                   "不像 <accountId>_<随机串>；疑似占位符或来自别的产品")
+        if any(s in token.lower() for s in ("asdasd", "xxxxx", "123456", "test123", "your_token", "placeholder")):
+            record(LEVEL_WARN, "疑似占位符", "含明显的示例/连打片段")
+
+    if identity:
+        try:
+            import base64
+            raw = base64.urlsafe_b64decode(identity).decode("latin-1").split("|")
+            record(LEVEL_INFO, "x-acgw-identity 结构",
+                   "v=%s | %s | %s | %d 字节签名"
+                   % (raw[0], raw[1] if len(raw) > 1 else "?",
+                      raw[2] if len(raw) > 2 else "?", len(raw[3]) if len(raw) > 3 else 0))
+            record(LEVEL_INFO, "  ↳ 解读",
+                   "像「API 网关」的身份串（v1|id|数字|HMAC-SHA256 签名），"
+                   "未必是苍穹 /ierp 直连用的")
+        except Exception:  # noqa: BLE001
+            record(LEVEL_INFO, "x-acgw-identity", "无法 base64 解码，可能不是该格式")
+
+    placements = []
+    if token:
+        placements += [
+            ("access_token 头", {"access_token": token}),
+            ("Authorization: Bearer", {"Authorization": "Bearer " + token}),
+            ("Cookie: access_token", {"Cookie": "access_token=" + token}),
+            ("Cookie: KERPSESSIONID", {"Cookie": "KERPSESSIONID=" + token}),
+        ]
+    if identity:
+        placements += [
+            ("x-acgw-identity 头", {"x-acgw-identity": identity}),
+        ]
+    if token and identity:
+        placements.append(("token + x-acgw-identity",
+                           {"access_token": token, "x-acgw-identity": identity}))
+
+    worked = []
+    for name, hdrs in placements:
+        try:
+            r = client.request(path, {}, headers=hdrs)
+        except KingdeeError as e:
+            record(LEVEL_BAD, name, str(e).split("\n")[0][:70])
+            continue
+        code = str(r.get("errorCode"))
+        if code in ("0", "200") or r.get("status") is True:
+            record(LEVEL_OK, name, "**生效**")
+            worked.append(name)
+        elif code == "401":
+            record(LEVEL_BAD, name, "401 未授权（该摆放方式不认）")
+        elif code == "403":
+            record(LEVEL_WARN, name, "403 认证通过，但该 API 要求第三方应用授权")
+            worked.append(name + "（认证通过，但被 API 级开关拦住）")
+        else:
+            record(LEVEL_INFO, name, "errorCode=%s %s" % (code, str(r.get("message") or "")[:40]))
+
+    if not worked:
+        record(LEVEL_BAD, "结论", "以上摆放方式全部无效，这组凭据在 %s 上不能用" % path)
+    else:
+        record(LEVEL_OK, "结论", "可用：%s" % "；".join(worked))
+
+
 # --------------------------------------------------------------------------
 
 def main(argv):
@@ -205,6 +280,8 @@ def main(argv):
     ap.add_argument("--client-id")
     ap.add_argument("--client-secret")
     ap.add_argument("--probe-paths", help="逗号分隔的候选接口路径")
+    ap.add_argument("--token", help="体检一个外部给的 AccessToken：把常见摆放方式全试一遍")
+    ap.add_argument("--identity", help="体检一个 x-acgw-identity（会先解析其结构）")
     ap.add_argument("--retry", type=int, default=0,
                     help="登录失败后的重试次数（默认 0，避免触发限流）")
     ap.add_argument("--json", action="store_true", help="以 JSON 输出结果")
@@ -232,6 +309,11 @@ def main(argv):
     check_token_endpoint(client, cfg)
     paths = [p.strip() for p in args.probe_paths.split(",")] if args.probe_paths else []
     check_paths(client, paths, bool(tok))
+
+    target = (paths[0] if paths
+              else QUERY_PATH.format(app=SALORDER_APP_ID, form=SALORDER_FORM_ID,
+                                     service=DEFAULT_QUERY_API))
+    check_external_credentials(client, args.token, args.identity, target)
 
     print("\n" + "=" * 68)
     ok = sum(1 for lv, _, _ in RESULTS if lv == LEVEL_OK)

@@ -22,7 +22,19 @@ python examples/kd_doctor.py --base-url ... \
 # 批量探测候选接口路径
 python examples/kd_doctor.py --base-url ... \
     --probe-paths /ierp/kapi/v2/sm/sm_salorder/query,/ierp/kapi/v2/sm/sm_salorder/list
+
+# 体检「别人给的一个 token」—— 把常见摆放方式全试一遍并给结论
+python examples/kd_doctor.py --base-url ... --token <AccessToken>
+python examples/kd_doctor.py --base-url ... --token <Token> --identity <x-acgw-identity>
 ```
+
+`--token` 会做格式体检（是否像 `<accountId>_<随机串>`、是否含占位符特征），
+再依次尝试 `access_token` 头 / `Authorization: Bearer` / 两种 Cookie / `x-acgw-identity`，
+最后明确告诉你**哪个摆放方式生效**、或者**全都无效**。
+
+`--identity` 会先 base64 解码出结构再试 —— 实测解出来是
+`v1|<20位hex>|<13位数字>|<32字节签名>`，看着像「API 网关」的身份串，
+未必是苍穹 `/ierp` 直连用的。
 
 ---
 
