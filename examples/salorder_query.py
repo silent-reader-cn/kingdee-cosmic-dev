@@ -61,6 +61,20 @@ SALORDER_FORM_ID = "sm_salorder"      # 销售订单业务对象编码
 SALORDER_APP_ID = "sm"                # 所属应用编码
 DEFAULT_QUERY_API = "query"           # 标准查询操作API的编码
 
+# 查询接口默认返回上百个字段，直接打表没法看。
+# 这里挑一小组「一眼能判断单据状态」的列作为默认视图；用 --fields 可覆盖。
+DEFAULT_VIEW_FIELDS = [
+    ("billno", "单据编号"),
+    ("billstatus", "单据状态"),
+    ("orderstatus", "订单状态"),
+    ("bizdate", "业务日期"),
+    ("customer_name", "客户"),
+    ("totalamount", "金额"),
+    ("auditdate", "审核日期"),
+    ("createtime", "创建时间"),
+    ("modifier_name", "修改人"),
+]
+
 TOKEN_PATH = "/ierp/kapi/oauth2/getToken"
 QUERY_PATH = "/ierp/kapi/v2/{app}/{form}/{service}"
 WEB_LOGIN_PATH = "/ierp/api/login.do"
@@ -170,6 +184,42 @@ def login_web(client, username, password, account_id=None):
     return token
 
 
+def explain_token_error(resp):
+    """把 getToken 的各种报错翻译成「下一步该干什么」。
+
+    这些报错的字面意思都不难懂，但**排查方向**不直观，尤其是：
+      - 「密钥验证失败」其实意味着 client_id 已经通过了；
+      - 「代理用户为空」是应用配置问题，不是凭据问题。
+    实测逐个确认过，见 examples/README.md。
+    """
+    msg = str(resp.get("message") or "")
+    if "在系统中不存在或未启用" in msg:
+        return ("client_id 无效",
+                "该第三方应用不存在或未启用。注意第三方应用是**按数据中心隔离**的："
+                "同一个 client_id 换一个 accountId 就会报「不存在」，先确认账套对不对。")
+    if "代理用户为空或userName不在代理用户中" in msg:
+        return ("代理用户未配置（凭据本身是对的！）",
+                "该应用开启了「启用代理用户控制」，但传的 username 不在它的代理用户列表里。"
+                "处理：【开放服务云】→【OpenAPI】→【安全策略】→【第三方应用】→ 该应用，"
+                "把 username 加进「代理用户」，或关掉「启用代理用户控制」。")
+    if "用户无效或不可用" in msg:
+        return ("username 无效", "该用户名在系统中不存在；换一个有效用户。"
+                                "（注意这条和上一条不同：上一条说明用户有效但没被授权）")
+    if "username为空" in msg:
+        return ("缺少 username", "getToken 必须传 username（第三方应用代理用户）")
+    if "密钥验证失败" in msg:
+        return ("client_secret 不对（但 client_id 已经通过了）",
+                "看到这条就说明 client_id 是对的。去应用详情核对/重置 AccessToken 认证密钥。"
+                "⚠️ 连续 5 次失败会锁定 180 秒，不要靠猜。")
+    if "锁定" in msg or "已连续5次" in msg:
+        return ("已被锁定", "密钥连续失败 5 次，等 180 秒再试")
+    if "nonce" in msg and "调用过" in msg:
+        return ("nonce 重复", "每次请求都要用新的随机 nonce")
+    if "client_id为空" in msg:
+        return ("缺少 client_id", "需要第三方应用的系统编码（appId）")
+    return ("未知错误", msg[:160])
+
+
 def get_openapi_token(client, client_id, client_secret, username, account_id,
                       language="zh_CN"):
     """OpenAPI 第三方应用取 access_token（有效期默认 2 小时）。
@@ -183,7 +233,7 @@ def get_openapi_token(client, client_id, client_secret, username, account_id,
         "username": username,
         "accountId": account_id,
         "language": language,
-        "nonce": uuid.uuid4().hex[:16],
+        "nonce": uuid.uuid4().hex[:16],     # 必须每次不同，否则会被判重放
         "timestamp": time.strftime("%Y-%m-%d %H:%M:%S"),
     }
     r = client.request(TOKEN_PATH, body)
@@ -191,11 +241,11 @@ def get_openapi_token(client, client_id, client_secret, username, account_id,
     if isinstance(data, dict) and data.get("access_token"):
         client.access_token = data["access_token"]
         return data["access_token"]
-    # 有的版本把 token 放在顶层
     if r.get("access_token"):
         client.access_token = r["access_token"]
         return client.access_token
-    raise KingdeeError("取 access_token 失败：%s" % json.dumps(r, ensure_ascii=False)[:400])
+    what, todo = explain_token_error(r)
+    raise KingdeeError("取 access_token 失败 —— %s\n  怎么办：%s" % (what, todo))
 
 
 # --------------------------------------------------------------------------
@@ -214,12 +264,21 @@ def query_salorder(client, app=SALORDER_APP_ID, form=SALORDER_FORM_ID,
 
 
 def build_query_body(args):
+    """构造查询请求体。
+
+    ⚠️ 苍穹 OpenAPI 操作API 用的是**扁平结构**，实测契约：
+        {"data": {}, "pageNo": 1, "pageSize": 20, "filter": "..."}
+      - `data` 键**必须存在**（查询时传空对象即可）；
+        少了它服务端报 `400 请求参数没有 data 数据`
+      - 但 `pageNo`/`pageSize` 要放在**顶层**，塞进 `data` 里会被忽略，
+        报 `400 页大小pageSize不能为空`
+    """
     if args.body:
         text = args.body
         if text.startswith("@"):
             text = open(text[1:], encoding="utf-8").read()
         return json.loads(text)
-    body = {"pageNo": args.page, "pageSize": args.limit}
+    body = {"data": {}, "pageNo": args.page, "pageSize": args.limit}
     if args.filter:
         body["filter"] = args.filter
     if args.order_by:
@@ -249,22 +308,40 @@ def rows_of(resp):
     return []
 
 
-def print_table(rows, fields=None, max_col=30):
+def print_table(rows, fields=None, max_col=34, headers=None):
     if not rows:
         print("（无数据）")
         return
     if not fields:
         fields = list(rows[0].keys())
+    titles = [headers.get(f, f) if headers else f for f in fields]
+
     def cell(v):
+        if isinstance(v, (list, dict)):
+            v = json.dumps(v, ensure_ascii=False)
         s = "" if v is None else str(v)
         return s if len(s) <= max_col else s[:max_col - 1] + "…"
-    widths = [min(max(len(f), *(len(cell(r.get(f, ""))) for r in rows)), max_col)
-              for f in fields]
-    line = "  ".join(f.ljust(w) for f, w in zip(fields, widths))
-    print(line)
+
+    widths = [min(max(len(t), *(len(cell(r.get(f, ""))) for r in rows)), max_col)
+              for t, f in zip(titles, fields)]
+    print("  ".join(t.ljust(w) for t, w in zip(titles, widths)))
     print("  ".join("-" * w for w in widths))
     for r in rows:
         print("  ".join(cell(r.get(f, "")).ljust(w) for f, w in zip(fields, widths)))
+
+
+def pick_view_fields(rows, requested=None):
+    """决定展示哪些列。显式指定就用指定的；否则挑默认视图里存在的列。"""
+    if requested:
+        return requested, None
+    if not rows:
+        return None, None
+    keys = set(rows[0].keys())
+    picked = [f for f, _ in DEFAULT_VIEW_FIELDS if f in keys]
+    if len(picked) >= 3:
+        return picked, dict(DEFAULT_VIEW_FIELDS)
+    # 字段名对不上（别的环境/别的对象）就退回「前 10 列」
+    return list(rows[0].keys())[:10], None
 
 
 # --------------------------------------------------------------------------
@@ -450,8 +527,12 @@ def main(argv):
     rows = rows_of(resp)
     print("共返回 %d 条（请求体：%s）\n"
           % (len(rows), json.dumps(body, ensure_ascii=False)))
-    fields = args.fields.split(",") if args.fields else None
-    print_table(rows, fields)
+    requested = args.fields.split(",") if args.fields else None
+    fields, headers = pick_view_fields(rows, requested)
+    if not requested and rows and len(rows[0]) > len(fields or []):
+        print("（共 %d 个字段，默认只展示 %d 个关键列；加 --fields 可指定，--json 看全部）\n"
+              % (len(rows[0]), len(fields)))
+    print_table(rows, fields, headers=headers)
     return 0
 
 

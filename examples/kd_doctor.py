@@ -137,15 +137,26 @@ def check_token_endpoint(client, cfg):
     if code == "603":
         record(LEVEL_INFO, "需要 client_id",
                "第三方应用在【开放服务云】→【OpenAPI】→【第三方应用】创建")
-    if cfg.get("client_id") and cfg.get("client_secret"):
-        try:
-            get_openapi_token(client, cfg["client_id"], cfg["client_secret"],
-                              cfg.get("username", ""), cfg.get("account_id", ""))
-            record(LEVEL_OK, "取 access_token", "成功")
-        except KingdeeError as e:
-            record(LEVEL_BAD, "取 access_token", str(e)[:120])
-    else:
+
+    if not (cfg.get("client_id") and cfg.get("client_secret")):
         record(LEVEL_INFO, "跳过实际取令牌", "未提供 --client-id/--client-secret")
+        return
+
+    # ⚠️ 密钥验证连续失败 5 次会锁定 180 秒 —— 所以这里只试 1 次，且先讲清楚代价
+    record(LEVEL_WARN, "注意",
+           "client_secret 连续验证失败 5 次会锁定 180 秒；本脚本只试 1 次，不会连试")
+    try:
+        get_openapi_token(client, cfg["client_id"], cfg["client_secret"],
+                          cfg.get("username", ""), cfg.get("account_id", ""))
+        record(LEVEL_OK, "取 access_token", "成功")
+    except KingdeeError as e:
+        # 复用统一的报错翻译，避免两处逻辑漂移
+        text = str(e)
+        what = text.split("——", 1)[-1].split("\n")[0].strip() if "——" in text else text[:80]
+        todo = text.split("怎么办：", 1)[-1].strip() if "怎么办：" in text else ""
+        record(LEVEL_BAD, "取 access_token", what)
+        if todo:
+            record(LEVEL_INFO, "怎么办", todo)
 
 
 def classify(resp, has_session):
