@@ -195,31 +195,59 @@ POST /ierp/auth/getAllDatacenters.do      （无需登录）
 这个报错**有歧义**（既可能是密码错，也可能是被限流，还可能是环境连不上金蝶云）。
 写自动化脚本时要退避重试，不要无脑循环。
 
-### 6. 请求体是「扁平结构」，但 `data` 壳必须有 ⭐
+### 6. 请求体是「内外两层」⭐
 
-**这是最容易卡住的一步。** 分页参数在**顶层**，同时必须带一个 `data` 键：
+**这是最容易卡住的一步。** 请求体分内外两层，职责不同：
 
 ```json
-{ "data": {}, "pageNo": 1, "pageSize": 20 }
+{
+  "data": { … },          ← 内层：业务入参，由每个 API 的配置决定
+  "pageNo": 1,            ← 外层：通用分页/过滤参数
+  "pageSize": 20,
+  "filter": "…"
+}
 ```
 
-两种写错的方式报错完全不同，都容易被误判：
+三种写错的方式，报错各不相同：
 
 | 写法 | 报错 |
 | :--- | :--- |
 | 不带 `data` 键 | `400 请求参数没有 data 数据。` |
-| 把分页参数塞进 `data` | `400 页大小pageSize不能为空。` |
+| 把 `pageNo`/`pageSize` 塞进 `data` | `400 页大小pageSize不能为空。` |
+| 把业务必填参数放外层 | `603 参数【billno】必填。` |
 
-成功返回：
+⚠️ **同名操作在不同对象上，必填参数不一样** —— 操作API 是**按业务对象逐个配置**的。
+实测：
 
-```json
-{"data": {"rows": [...], "pageNo": 1, "pageSize": 20,
-          "lastPage": false, "filter": "[1 = 1]"}}
+| 对象 | 路径 | 业务必填参数 |
+| :--- | :--- | :--- |
+| 销售订单 | `/kapi/v2/sm/sm_salorder/query` | 无（`data` 传 `{}` 即可） |
+| 采购订单 | `/kapi/v2/pm/pm_purorderbill/query` | **`billno` 必填，且必须放在 `data` 里** |
+
+```bash
+# 销售订单
+--body '{"data": {}, "pageNo": 1, "pageSize": 10}'
+# 采购订单（billno 进 data）
+--param billno=XXX
 ```
 
-> 文档说「扁平化出入参」，别理解成「什么都不用包」——
-> `data` 这层壳是必须的，只是**业务字段**和分页参数平铺在顶层。
-> 其它可用顶层参数：`filter`、`orderBy`、`selectFields`。
+服务端会把 `data` 里的业务参数转成过滤条件，响应里能看到：
+
+```json
+"filter": "[1 = 1 AND billno = 'XXX']"
+```
+
+**别假设 `/query` 的行为在对象之间通用。**
+
+### 6.1 `appId` 不能从 `formId` 前缀推
+
+| 业务对象 | formId | 实际 appId |
+| :--- | :--- | :--- |
+| 销售订单 | `sm_salorder` | `sm` |
+| 采购订单 | `pm_purorderbill` | `pm` |
+| 客户 | `bd_customer` | **`basedata`**（不是 `bd`） |
+
+猜错 `appId` 返回 `404`，和「路径不存在」看起来一样。用 403/400 vs 404 逐个试最快。
 
 ### 7. 代理用户：第三方应用的隐藏必填项
 

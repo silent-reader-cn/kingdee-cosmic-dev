@@ -203,21 +203,38 @@ PY="<你的 python3 路径>"
 
 成功判定看 `status === true`；失败时看 `errorCode` 与 `message`。
 
-### 4.6 操作API 的请求体：扁平结构（实测）
+### 4.6 操作API 的请求体：内外两层（实测）
 
-**这是最容易卡住的一步。** 苍穹 OpenAPI 操作API 的请求体是**扁平结构**，
-分页参数在**顶层**，同时**必须带一个 `data` 键**（查询时传空对象即可）：
+**这是最容易卡住的一步。** 请求体分**内外两层**，职责不同：
 
 ```json
-{ "data": {}, "pageNo": 1, "pageSize": 20 }
+{
+  "data": { … },          ← 内层：业务入参，由每个 API 的配置决定
+  "pageNo": 1,            ← 外层：通用分页/过滤参数
+  "pageSize": 20,
+  "filter": "…",
+  "orderBy": "…",
+  "selectFields": "…"
+}
 ```
 
-两种写错的方式，报错完全不同，都很容易被误判成别的问题：
+- **内层 `data`**：装**业务参数**。销售订单的查询不需要业务参数，
+  传空对象 `{}` 即可；**采购订单的查询则强制要求 `billno`**，且**必须放在 `data` 里**。
+- **外层**：`pageNo` / `pageSize` / `filter` / `orderBy` / `selectFields` 平铺在顶层。
+
+`data` 键**必须存在**（哪怕是空对象）。两种写错的方式报错完全不同：
 
 | 写法 | 报错 |
 | :--- | :--- |
 | 完全不带 `data` 键 | `400 请求参数没有 data 数据。` |
-| 把分页参数塞进 `data` 里 | `400 页大小pageSize不能为空。` |
+| 把 `pageNo`/`pageSize` 塞进 `data` | `400 页大小pageSize不能为空。` |
+| 把业务必填参数（如 `billno`）放外层 | `603 参数【billno】必填。` |
+
+> ⚠️ **同名操作在不同对象上，必填参数不一样** ——
+> 因为操作API 是**按业务对象逐个配置**的，「查询」的过滤条件与必填项属于 API 配置的一部分。
+> 实测：销售订单 `/kapi/v2/sm/sm_salorder/query` 不需要任何业务参数；
+> 采购订单 `/kapi/v2/pm/pm_purorderbill/query` 强制要求 `billno`。
+> **别假设 `/query` 的行为在对象之间通用。**
 
 成功时返回：
 
@@ -226,8 +243,19 @@ PY="<你的 python3 路径>"
           "lastPage": false, "filter": "[1 = 1]"}}
 ```
 
-> 别被「扁平化出入参」这句话误导成「什么都不用包」——
-> `data` 这层壳是必须的，只是**业务字段**和分页参数平铺在顶层。
+### 4.6.1 `appId` 不能从 `formId` 前缀推
+
+地址是 `/kapi/v2/{appId}/{formId}/{serviceName}`，
+但 `appId` **不是** `formId` 的前缀 —— 实测：
+
+| 业务对象 | formId | 实际 appId |
+| :--- | :--- | :--- |
+| 销售订单 | `sm_salorder` | `sm` |
+| 采购订单 | `pm_purorderbill` | `pm` |
+| 客户 | `bd_customer` | **`basedata`**（不是 `bd`） |
+
+猜错 `appId` 会返回 `404`，和「路径不存在」看起来一样。
+**用 403/400 vs 404 逐个试**是最快的确定办法（见 5.3）。
 
 查询操作API 的其它可用顶层参数：`filter`（如 `billno like 'SO%'`）、
 `selectFields`（逗号分隔）。

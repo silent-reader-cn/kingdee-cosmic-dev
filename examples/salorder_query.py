@@ -329,19 +329,40 @@ def sort_rows(rows, spec):
 def build_query_body(args):
     """构造查询请求体。
 
-    ⚠️ 苍穹 OpenAPI 操作API 用的是**扁平结构**，实测契约：
-        {"data": {}, "pageNo": 1, "pageSize": 20, "filter": "..."}
-      - `data` 键**必须存在**（查询时传空对象即可）；
-        少了它服务端报 `400 请求参数没有 data 数据`
-      - 但 `pageNo`/`pageSize` 要放在**顶层**，塞进 `data` 里会被忽略，
-        报 `400 页大小pageSize不能为空`
+    实测契约 —— 请求体分**内外两层**：
+
+        {
+          "data": { … },        ← 内层：业务入参，由每个 API 的配置决定
+          "pageNo": 1,          ← 外层：通用分页/过滤参数
+          "pageSize": 20,
+          "filter": "...", "orderBy": "...", "selectFields": "..."
+        }
+
+    - `data` 键**必须存在**（销售订单查询传空对象即可）；
+      少了它报 `400 请求参数没有 data 数据`
+    - `pageNo`/`pageSize` 必须在**顶层**，塞进 `data` 里会被忽略，
+      报 `400 页大小pageSize不能为空`
+    - **业务必填参数要放进 `data`**：例如采购订单的查询强制要求 `billno`，
+      且必须放在 `data` 里（放外层报 `603 参数【billno】必填`）。
+      用 `--param billno=XXX` 传。
+    - ⚠️ 同名操作在不同对象上必填参数不同 —— 操作API 是按业务对象逐个配置的。
     """
     if args.body:
         text = args.body
         if text.startswith("@"):
             text = open(text[1:], encoding="utf-8").read()
         return json.loads(text)
-    body = {"data": {}, "pageNo": args.page, "pageSize": args.limit}
+
+    data = {}
+    for kv in (args.param or []):
+        if "=" not in kv:
+            raise KingdeeError("--param 需要 k=v 形式，收到：%s" % kv)
+        k, v = kv.split("=", 1)
+        data[k.strip()] = v
+    if args.data_json:
+        data.update(json.loads(args.data_json))
+
+    body = {"data": data, "pageNo": args.page, "pageSize": args.limit}
     if args.filter:
         body["filter"] = args.filter
     if args.order_by:
@@ -538,6 +559,10 @@ def main(argv):
     ap.add_argument("--page", type=int, default=1)
     ap.add_argument("--limit", type=int, default=20, help="每页条数")
     ap.add_argument("--filter", help="过滤条件，如 \"fbillno like '%%SO%%'\"")
+    ap.add_argument("--param", action="append", metavar="K=V",
+                    help="业务入参，放进请求体的 data 里（可重复）。"
+                         "例：采购订单查询必须 --param billno=XXX")
+    ap.add_argument("--data-json", help="直接给定 data 对象的 JSON（与 --param 合并）")
     ap.add_argument("--order-by", help="传给接口的 orderBy —— ⚠️ 实测多数环境会**静默忽略**，"
                                        "要排序请用 --sort")
     ap.add_argument("--sort", help="客户端排序，如 totalamount:desc,billno:asc（服务端不认排序，只能本地排）")
