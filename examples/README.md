@@ -3,7 +3,94 @@
 | 文件 | 用途 |
 | :--- | :--- |
 | [`kd_doctor.py`](./kd_doctor.py) | **环境接入诊断**：连通性、账套、登录契约、取令牌接口、接口路径与授权开关，一键体检 |
+| [`kd_probe.py`](./kd_probe.py) | **探路 + 查配置**：`services`/`body` 直读三张 API 配置表，`accounts`/`token`/`paths`/`ref`/`doc` 走 HTTP |
 | [`salorder_query.py`](./salorder_query.py) | 销售订单查询工具 |
+
+## 这些示例什么时候需要凭据
+
+**离线用法不需要任何凭据**（查表结构、写 SQL、查手册都走 `scripts/search.py`）。
+只有下面这些**实际连环境**的示例才要，用之前先向使用者索取：
+
+| 示例 / 子命令 | 需要什么 |
+| :--- | :--- |
+| `kd_probe.py accounts` | 只要环境地址 |
+| `kd_probe.py paths` / `token` / `ref` / `doc` | 环境地址 + 账套 + `client_id`/`client_secret`/`username`（或 `--auth web` + 账号密码） |
+| `kd_probe.py services` / `body` / `search` | **数据库**：主机 / 端口 / 库名 / 用户名 / 密码 |
+| `kd_doctor.py` / `salorder_query.py` | 同 kd_probe 的 HTTP 侧 |
+
+凭据的获取位置与存放方式见 [`../SKILL.md` 第零节「开工前先收凭据」](../SKILL.md)。
+CLI 在缺凭据时的报错里也会带上这份「向用户索取」的清单，可直接转述给使用者。
+
+---
+
+## kd_probe.py · 探路 + 查配置
+
+接一个新业务对象时，最耗时间的两个猜测是：**服务名到底叫什么**、**这个 API 要传什么参数**。
+`kd_probe.py` 用两条互补的路子回答它们。
+
+### A. 直读 API 配置表（推荐先跑这个）
+
+苍穹把「发布了哪些 API、每个 API 的参数模板」存在数据库里，读出来即可，不用猜：
+
+| 表 | 内容 |
+| :--- | :--- |
+| `t_open_apiservice` | 服务清单：业务对象 / 服务名 / 操作 / 启用 / **是否需第三方应用授权** |
+| `t_open_apibodyentry` | **入参模板**：参数名 / 类型 / 是否必填 / 层级（1 单据级 · 2 分录级 · 3 子分录级） |
+| `t_open_apirespentry` | 返回结构 |
+
+```bash
+PY=python
+"$PY" examples/kd_probe.py services                  # 全部已发布服务（按对象分组）
+"$PY" examples/kd_probe.py services sm_salorder      # 某对象的服务
+"$PY" examples/kd_probe.py body sm_salorder query    # 某服务的入参模板 + 返回结构
+"$PY" examples/kd_probe.py search 发货               # 按中文名/表名模糊找对象
+```
+
+输出里的 `*` = 该 API 开了「第三方应用授权」，必须用 `client_id`/`client_secret` 取 token。
+
+需要数据库连接（也可写进 `kd.json`）：
+
+```bash
+export KD_DB_HOST=... KD_DB_PORT=5432 KD_DB_NAME=... KD_DB_USER=... KD_DB_PASSWORD=...
+```
+
+### B. HTTP 侧（需要 `--base-url`）
+
+```bash
+"$PY" examples/kd_probe.py accounts                  # 列账套拿 accountId（匿名接口，不需凭据）
+"$PY" examples/kd_probe.py token                     # 只验认证：能否取到 access_token
+"$PY" examples/kd_probe.py paths                     # 探一批常见路径（内置默认清单）
+"$PY" examples/kd_probe.py paths /ierp/kapi/v2/sm/sm_salorder/query,/ierp/kapi/v2/sm/sm_salorder/list
+"$PY" examples/kd_probe.py ref                       # 从真实单据取可用过滤值（组织/单据类型/物料…）
+"$PY" examples/kd_probe.py doc sm_salorder query --billno SO-20250303-0296
+"$PY" examples/kd_probe.py doc sm_salorder query --filter "billno like 'SO%'" --limit 5
+```
+
+加 `--json` 可机读，便于脚本消费。
+
+### 两个实现上的坑（已处理）
+
+**① 数据库连接不用 psycopg2，改调 `psql -c`。**
+本机 PyPI 不可达，装不了第三方包。`psql --csv` 输出的 CSV 比 psql 的表格对齐输出可靠得多
+（表格里的 `-` 分隔线、折行、列宽都会干扰解析），所以用 `--csv` + 标准库 `csv.DictReader`。
+SQL 参数走 `psql -v key=value` + SQL 里写 `:'key'`，让 psql 自己做字面量转义。
+
+**② Windows 上 `psql` 往往不在 PATH 里。**
+实测本机 `which psql` 找不到，但 PostgreSQL 18 其实装在
+`C:\Program Files\PostgreSQL\18\bin\psql.exe`。所以脚本会按
+「`--psql` 显式指定 → PATH → 常见安装目录（含 macOS/Linux 路径）」的顺序自动探测，版本号大的优先。
+
+**没有 psql 客户端时**：用 `--print-sql` 只打印 SQL，拿去别的数据库工具里跑。
+
+```bash
+"$PY" examples/kd_probe.py body sm_salorder query --print-sql
+```
+
+### 为什么 `paths` 会输出「无法判定」
+
+这是**故意**的，也是它比「无脑试路径」可靠的原因：未认证时服务端在鉴权阶段就返回 `401`，
+**存在的路径和不存在的路径返回完全一样**。据此判断会把不存在的路径误判成「存在」。
+所以未认证时它明确输出「无法判定」，而不是给一个假阳性结论。
 
 ---
 

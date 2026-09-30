@@ -13,6 +13,10 @@ description: >-
   或对接/开发金蝶云苍穹 OpenAPI、获取 access_token、排查接口报错、
   开发自定义API插件、配置开放事件回调、使用 KingScript 时使用。
   全部内容可用内置统一检索脚本按关键词定位，无需逐个打开文档。
+  注意：查表结构、写 SQL、查手册、看错误码等**离线用法不需要任何凭据**；
+  仅当要实际调用接口或直读 ERP 数据库示例时，才需先向用户索取
+  环境地址/账套/client_id/client_secret（或网页账号密码）及数据库连接信息，
+  详见 SKILL.md 第零节「开工前先收凭据」。
 ---
 
 # 金蝶云苍穹开发指南
@@ -29,21 +33,84 @@ description: >-
 
 ---
 
+## 零、开工前先收凭据 ⚠️
+
+**本 skill 大部分内容是离线的**（表结构、OpenAPI 手册、SQL 编写），**不需要任何凭据**。
+只有「连真实环境跑接口」或「直读 ERP 数据库」时才需要——**这类操作一旦要涉及，
+先停下来向使用者索取下面对应的信息，不要凭猜硬跑，更不要瞎试密钥。**
+
+> 判定口径：如果任务只是「查表结构 / 写 SQL / 查手册 / 看错误码含义」，
+> 直接用 `search.py` 即可，**不要向用户要凭据**。
+> 只有要**实际发起 HTTP 调用**或**连数据库查询**时，才走下面的清单。
+
+### 0.1 需要用户提供什么（按用途分）
+
+| 用途 | 需要用户提供 | 去哪拿 |
+| :--- | :--- | :--- |
+| **列账套 / 探接口路径**（不登录） | 只要环境地址 | 使用者给 |
+| **调 OpenAPI（推荐）** | 环境地址 + `accountId` + `client_id` + `client_secret` + `username` | 见 0.2 |
+| **网页会话方式（应急）** | 环境地址 + 用户名 + 密码 + `accountId`，并加 `--auth web` | 网页账号 |
+| **已有令牌，只想体检** | `--session-token <token>` | 使用者给 |
+| **直读 API 配置表**（`services`/`body`/`search`） | 数据库主机 / 端口 / 库名 / 用户名 / 密码 | 见 0.3 |
+
+### 0.2 OpenAPI 凭据怎么取（向用户说明这几步）
+
+| 项 | 变量名 | 说明 |
+| :--- | :--- | :--- |
+| 环境地址 | `KD_BASE_URL` | 形如 `http://host:port` |
+| 账套 | `KD_ACCOUNT_ID` | = 数据中心 = `accountId`。可先匿名列出：`kd_probe.py accounts --base-url <地址>` |
+| 系统编码 | `KD_CLIENT_ID` | 网页登录 →【开放服务云】→【OpenAPI】→【第三方应用】新增，界面上的「系统编码」 |
+| 认证密钥 | `KD_CLIENT_SECRET` | 同上界面的「AccessToken 认证密钥」 |
+| 代理用户 | `KD_USERNAME` | 默认 `admin`。若该应用开了「启用代理用户控制」，此用户须在其「代理用户」列表里（否则报 603，见 4.7） |
+
+⚠️ `client_secret` **连续验证失败 5 次会锁定 180 秒**（见 5.5）——
+所以只试 1 次，不要靠猜、不要循环重试。这是**必须提前告知使用者**的一条。
+
+### 0.3 数据库信息（仅 `services`/`body`/`search` 需要）
+
+| 项 | 变量名 | 对应 |
+| :--- | :--- | :--- |
+| 主机 | `KD_DB_HOST` | 苍穹后台库地址 |
+| 端口 | `KD_DB_PORT` | 默认 5432 |
+| 库名 | `KD_DB_NAME` | 苍穹所在的 ERPDB |
+| 用户名 / 密码 | `KD_DB_USER` / `KD_DB_PASSWORD` | 有读权限的账号即可 |
+
+> 这是**苍穹后台数据库**的直连信息，**不是** OpenAPI 的应用凭据，两者别搞混。
+> 还要有 PostgreSQL 客户端（`psql`）；找不到时会提示，也可用 `--psql <路径>` 指定。
+> 拿不到数据库信息时，用 `--print-sql` 只打印 SQL，让使用者在自己的工具里跑。
+
+### 0.4 凭据怎么存（别写进命令行历史）
+
+```bash
+# 方式一：环境变量
+export KD_BASE_URL=... KD_ACCOUNT_ID=... KD_CLIENT_ID=... KD_CLIENT_SECRET=... KD_USERNAME=admin
+
+# 方式二：本地配置文件（kd.json 已在 .gitignore 中）
+python examples/salorder_query.py --save-config kd.json
+```
+
+> CLI 在缺凭据时也会输出这份清单（`kd_probe.py` 的报错里带着「需要向使用者索取什么」），
+> 可以直接把它转述给用户。
+
+---
+
 ## 一、何时用本 skill
 
-| 场景 | 去哪一块 |
-|---|---|
-| 业务术语 → 物理表名（「销售订单」是哪张表） | 块一：`search.py 销售订单` |
-| 已知表名 → 字段清单、类型、枚举值 | 块一：`search.py t_sm_salorder --table --full` |
-| 主子表 / 多语言表怎么关联 | 块一：检索到表后看 `### 表格列定义` |
-| 写业务 SQL | 块一：检索定位 → 取字段与枚举 → 按第三节约定编写 |
-| 调 OpenAPI 报错、拿不到 token | 块二：`search.py access_token --scope openapi` |
-| 自定义API 插件怎么写 | 块二：`search.py 自定义API --scope openapi` |
-| 开放事件 / 回调怎么配 | 块二：`search.py 回调 --scope openapi --category 开放事件` |
-| 刚拿到一个环境，怎么接入（账套 / 凭据 / 登录） | **第五节 环境接入与排错** |
-| 报错看不懂（401/403/404/603 分别是什么意思） | **第五节 5.3 错误码对照** |
-| 想要个能跑的查询示例 | [`examples/salorder_query.py`](./examples/salorder_query.py) |
-| 刚拿到一个环境，想先体检 / 探接口路径 | [`examples/kd_doctor.py`](./examples/kd_doctor.py) |
+| 场景 | 去哪一块 | 要向用户要凭据吗 |
+|---|---|---|
+| 业务术语 → 物理表名（「销售订单」是哪张表） | 块一：`search.py 销售订单` | 不用 |
+| 已知表名 → 字段清单、类型、枚举值 | 块一：`search.py t_sm_salorder --table --full` | 不用 |
+| 主子表 / 多语言表怎么关联 | 块一：检索到表后看 `### 表格列定义` | 不用 |
+| 写业务 SQL | 块一：检索定位 → 取字段与枚举 → 按第三节约定编写 | 不用 |
+| 调 OpenAPI 报错、拿不到 token | 块二：`search.py access_token --scope openapi` | 不用 |
+| 自定义API 插件怎么写 | 块二：`search.py 自定义API --scope openapi` | 不用 |
+| 开放事件 / 回调怎么配 | 块二：`search.py 回调 --scope openapi --category 开放事件` | 不用 |
+| 报错看不懂（401/403/404/603 分别是什么意思） | **第五节 5.3 错误码对照** | 不用 |
+| 刚拿到一个环境，怎么接入 | **第五节 环境接入与排错** | **要**（见第零节） |
+| 列账套 / 探接口路径 | [`examples/kd_probe.py`](./examples/kd_probe.py) `accounts` / `paths` | 只要地址；探路径要凭据 |
+| **某对象发布了哪些 API、每个 API 要传什么** | [`examples/kd_probe.py`](./examples/kd_probe.py) `services` / `body` | **要**（数据库信息） |
+| 刚拿到一个环境，想先体检 | [`examples/kd_doctor.py`](./examples/kd_doctor.py) | **要**（见第零节） |
+| 想要个能跑的查询示例 | [`examples/salorder_query.py`](./examples/salorder_query.py) | **要**（见第零节） |
 
 ---
 
@@ -363,6 +430,34 @@ Content-Type: application/json
 > | `/kapi/v2/sm/sm_salorder/query` | 401 | **403**（存在） |
 > | `/kapi/v2/sm/sm_salorder/list` | 401 | **404**（不存在） |
 > | `/kapi/v2/sm/sm_salorder/save` | 401 | **404**（不存在） |
+>
+> `kd_probe.py paths` 已内置这条防误判逻辑：未认证时输出「无法判定」，不会给假阳性结论。
+
+### 5.3.1 更快的办法：直接读 API 配置表（不用猜）
+
+试错法要一次次数错误码；其实苍穹把「发布了哪些 API、每个 API 要传什么」
+**存在数据库里**，直连读出来即可，一步到位：
+
+| 表 | 内容 |
+| :--- | :--- |
+| `t_open_apiservice` | 服务清单：业务对象 / 服务名 / 操作 / 是否启用 / **是否需第三方应用授权** |
+| `t_open_apibodyentry` | **入参模板**：参数名 / 类型 / 是否必填 / 层级（1 单据级 · 2 分录级 · 3 子分录级） |
+| `t_open_apirespentry` | 返回结构 |
+
+```bash
+PY=python
+"$PY" examples/kd_probe.py services                 # 全部已发布服务（按对象分组）
+"$PY" examples/kd_probe.py services sm_salorder     # 某对象的服务
+"$PY" examples/kd_probe.py body sm_salorder query   # 某服务的入参模板 + 返回结构
+"$PY" examples/kd_probe.py search 发货              # 按中文名/表名找对象
+```
+
+这直接回答了两个最耗时的猜测：**服务名到底叫什么**（`query`? `batchQuery`? 大小写？）
+和**这个 API 要传什么参数**（尤其「必填项」，因为同名操作在不同对象上必填项不一样，见 4.6）。
+
+> 标签里的 `*` = 该 API 开了「第三方应用授权」，必须用 `client_id`/`client_secret` 取 token。
+> 服务名**区分大小写**（`query` ≠ `Query`）。
+> 读库需要 PostgreSQL 客户端（见 5.6 的说明）。
 
 ### 5.4 认证相关的其它探针
 
@@ -418,9 +513,30 @@ message: 本次参数nonce:1已经调用过了，不需要重复调用。
 | 文件 | 用途 |
 | :--- | :--- |
 | [`examples/kd_doctor.py`](./examples/kd_doctor.py) | **环境接入诊断**：连通性、账套、登录契约、取令牌接口、接口路径与授权开关，一键体检 |
+| [`examples/kd_probe.py`](./examples/kd_probe.py) | **探路 + 查配置**：`services`/`body` 直读 API 配置表（不用猜服务名与参数）、`accounts`、`token`、`paths`、`ref`、`doc` |
 | [`examples/salorder_query.py`](./examples/salorder_query.py) | 销售订单查询工具，含 `--probe` 探路模式 |
 
 ```bash
+# —— 探路 & 查配置（kd_probe.py）——
+# 先看对象发布了哪些服务、每个服务要传什么（读 ERP 配置表，最省事）
+python examples/kd_probe.py services sm_salorder
+python examples/kd_probe.py body sm_salorder query
+python examples/kd_probe.py search 发货
+
+# HTTP 侧（需要 --base-url；凭据可选）
+python examples/kd_probe.py accounts                       # 列账套拿 accountId
+python examples/kd_probe.py token                          # 只验认证
+python examples/kd_probe.py paths                          # 探路径（内置默认清单）
+python examples/kd_probe.py paths /ierp/kapi/v2/sm/sm_salorder/query,/ierp/kapi/v2/sm/sm_salorder/list
+python examples/kd_probe.py ref                            # 取可用过滤值
+python examples/kd_probe.py doc sm_salorder query --billno SO-20250303-0296
+
+# 查配置表用的数据库连接（也可写进 kd.json）
+#   KD_DB_HOST / KD_DB_PORT / KD_DB_NAME / KD_DB_USER / KD_DB_PASSWORD
+# 没有 psql 客户端时，先拿 SQL 去别的工具里跑：
+python examples/kd_probe.py body sm_salorder query --print-sql
+
+# —— 环境体检（kd_doctor.py）——
 # 只做匿名检查（不碰账号，不会触发限流）
 python examples/kd_doctor.py --base-url http://<host>:<port>
 
@@ -464,6 +580,7 @@ kingdee-cosmic-dev/
 ├── examples/                      # 可运行示例（已在真实环境端到端验证）
 │   ├── salorder_query.py          #   销售订单查询工具（含 --probe 探路模式）
 │   ├── kd_doctor.py               #   环境接入诊断 + 外部凭据体检 + 接口路径探测
+│   ├── kd_probe.py                #   探路 + 查配置：直读 t_open_apiservice 等三张表
 │   └── README.md                  #   用法与实测踩坑记录
 └── references/
     ├── _INDEX.md                  # 总索引
