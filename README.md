@@ -1,6 +1,6 @@
 # kingdee-cosmic-dev
 
-**金蝶云苍穹（Kingdee Cloud Cosmic / 金蝶AI苍穹）开发知识库与 AI Skill** —— 31,547 张物理表结构 + 144 篇 OpenAPI 开放平台官方手册，两块钱内容用一套全文检索脚本统一检索，另附可直接运行的接口对接示例。
+**金蝶云苍穹（Kingdee Cloud Cosmic / 金蝶AI苍穹）开发知识库与 AI Skill** —— 31,547 张物理表结构 + 144 篇 OpenAPI 开放平台官方手册，两块内容用一套全文检索脚本统一检索，另附可直接运行的接口对接示例。
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Kingdee](https://img.shields.io/badge/Kingdee-Cloud%20Cosmic-green.svg)
